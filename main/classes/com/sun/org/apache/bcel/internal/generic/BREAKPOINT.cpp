@@ -1,0 +1,73 @@
+#include <com/sun/org/apache/bcel/internal/generic/BREAKPOINT.h>
+
+#include <com/sun/org/apache/bcel/internal/Const.h>
+#include <com/sun/org/apache/bcel/internal/generic/Instruction.h>
+#include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+#undef BREAKPOINT
+
+using $Const = ::com::sun::org::apache::bcel::internal::Const;
+using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
+using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace bcel {
+					namespace internal {
+						namespace generic {
+
+$MethodInfo _BREAKPOINT_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(BREAKPOINT::*)()>(&BREAKPOINT::init$))},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{}
+};
+
+$ClassInfo _BREAKPOINT_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER,
+	"com.sun.org.apache.bcel.internal.generic.BREAKPOINT",
+	"com.sun.org.apache.bcel.internal.generic.Instruction",
+	nullptr,
+	nullptr,
+	_BREAKPOINT_MethodInfo_
+};
+
+$Object* allocate$BREAKPOINT($Class* clazz) {
+	return $of($alloc(BREAKPOINT));
+}
+
+void BREAKPOINT::init$() {
+	$Instruction::init$($Const::BREAKPOINT, (int16_t)1);
+}
+
+void BREAKPOINT::accept($Visitor* v) {
+	$nc(v)->visitBREAKPOINT(this);
+}
+
+BREAKPOINT::BREAKPOINT() {
+}
+
+$Class* BREAKPOINT::load$($String* name, bool initialize) {
+	$loadClass(BREAKPOINT, name, initialize, &_BREAKPOINT_ClassInfo_, allocate$BREAKPOINT);
+	return class$;
+}
+
+$Class* BREAKPOINT::class$ = nullptr;
+
+						} // generic
+					} // internal
+				} // bcel
+			} // apache
+		} // org
+	} // sun
+} // com

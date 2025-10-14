@@ -1,0 +1,48 @@
+#include <org/w3c/dom/ls/LSSerializerFilter.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
+
+namespace org {
+	namespace w3c {
+		namespace dom {
+			namespace ls {
+
+$MethodInfo _LSSerializerFilter_MethodInfo_[] = {
+	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _LSSerializerFilter_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"org.w3c.dom.ls.LSSerializerFilter",
+	nullptr,
+	"org.w3c.dom.traversal.NodeFilter",
+	nullptr,
+	_LSSerializerFilter_MethodInfo_
+};
+
+$Object* allocate$LSSerializerFilter($Class* clazz) {
+	return $of($alloc(LSSerializerFilter));
+}
+
+$Class* LSSerializerFilter::load$($String* name, bool initialize) {
+	$loadClass(LSSerializerFilter, name, initialize, &_LSSerializerFilter_ClassInfo_, allocate$LSSerializerFilter);
+	return class$;
+}
+
+$Class* LSSerializerFilter::class$ = nullptr;
+
+			} // ls
+		} // dom
+	} // w3c
+} // org

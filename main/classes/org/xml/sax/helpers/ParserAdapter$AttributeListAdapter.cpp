@@ -1,0 +1,154 @@
+#include <org/xml/sax/helpers/ParserAdapter$AttributeListAdapter.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/InnerClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <org/xml/sax/AttributeList.h>
+#include <org/xml/sax/helpers/AttributesImpl.h>
+#include <org/xml/sax/helpers/ParserAdapter.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $InnerClassInfo = ::java::lang::InnerClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $AttributeList = ::org::xml::sax::AttributeList;
+using $Attributes = ::org::xml::sax::Attributes;
+using $AttributesImpl = ::org::xml::sax::helpers::AttributesImpl;
+using $ParserAdapter = ::org::xml::sax::helpers::ParserAdapter;
+
+namespace org {
+	namespace xml {
+		namespace sax {
+			namespace helpers {
+
+$FieldInfo _ParserAdapter$AttributeListAdapter_FieldInfo_[] = {
+	{"this$0", "Lorg/xml/sax/helpers/ParserAdapter;", nullptr, $FINAL | $SYNTHETIC, $field(ParserAdapter$AttributeListAdapter, this$0)},
+	{"qAtts", "Lorg/xml/sax/AttributeList;", nullptr, $PRIVATE, $field(ParserAdapter$AttributeListAdapter, qAtts)},
+	{}
+};
+
+$MethodInfo _ParserAdapter$AttributeListAdapter_MethodInfo_[] = {
+	{"<init>", "(Lorg/xml/sax/helpers/ParserAdapter;)V", nullptr, 0, $method(static_cast<void(ParserAdapter$AttributeListAdapter::*)($ParserAdapter*)>(&ParserAdapter$AttributeListAdapter::init$))},
+	{"getIndex", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PUBLIC},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
+	{"getLength", "()I", nullptr, $PUBLIC},
+	{"getLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getQName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getType", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"setAttributeList", "(Lorg/xml/sax/AttributeList;)V", nullptr, 0, $method(static_cast<void(ParserAdapter$AttributeListAdapter::*)($AttributeList*)>(&ParserAdapter$AttributeListAdapter::setAttributeList))},
+	{}
+};
+
+$InnerClassInfo _ParserAdapter$AttributeListAdapter_InnerClassesInfo_[] = {
+	{"org.xml.sax.helpers.ParserAdapter$AttributeListAdapter", "org.xml.sax.helpers.ParserAdapter", "AttributeListAdapter", $FINAL},
+	{}
+};
+
+$ClassInfo _ParserAdapter$AttributeListAdapter_ClassInfo_ = {
+	$FINAL | $ACC_SUPER,
+	"org.xml.sax.helpers.ParserAdapter$AttributeListAdapter",
+	"java.lang.Object",
+	"org.xml.sax.Attributes",
+	_ParserAdapter$AttributeListAdapter_FieldInfo_,
+	_ParserAdapter$AttributeListAdapter_MethodInfo_,
+	nullptr,
+	nullptr,
+	_ParserAdapter$AttributeListAdapter_InnerClassesInfo_,
+	nullptr,
+	nullptr,
+	nullptr,
+	"org.xml.sax.helpers.ParserAdapter"
+};
+
+$Object* allocate$ParserAdapter$AttributeListAdapter($Class* clazz) {
+	return $of($alloc(ParserAdapter$AttributeListAdapter));
+}
+
+void ParserAdapter$AttributeListAdapter::init$($ParserAdapter* this$0) {
+	$set(this, this$0, this$0);
+}
+
+void ParserAdapter$AttributeListAdapter::setAttributeList($AttributeList* qAtts) {
+	$set(this, qAtts, qAtts);
+}
+
+int32_t ParserAdapter$AttributeListAdapter::getLength() {
+	return $nc(this->qAtts)->getLength();
+}
+
+$String* ParserAdapter$AttributeListAdapter::getURI(int32_t i) {
+	return ""_s;
+}
+
+$String* ParserAdapter$AttributeListAdapter::getLocalName(int32_t i) {
+	return ""_s;
+}
+
+$String* ParserAdapter$AttributeListAdapter::getQName(int32_t i) {
+	return $nc($($nc(this->qAtts)->getName(i)))->intern();
+}
+
+$String* ParserAdapter$AttributeListAdapter::getType(int32_t i) {
+	return $nc($($nc(this->qAtts)->getType(i)))->intern();
+}
+
+$String* ParserAdapter$AttributeListAdapter::getValue(int32_t i) {
+	return $nc(this->qAtts)->getValue(i);
+}
+
+int32_t ParserAdapter$AttributeListAdapter::getIndex($String* uri, $String* localName) {
+	return -1;
+}
+
+int32_t ParserAdapter$AttributeListAdapter::getIndex($String* qName) {
+	int32_t max = $nc(this->this$0->atts)->getLength();
+	for (int32_t i = 0; i < max; ++i) {
+		if ($nc($($nc(this->qAtts)->getName(i)))->equals(qName)) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+$String* ParserAdapter$AttributeListAdapter::getType($String* uri, $String* localName) {
+	return nullptr;
+}
+
+$String* ParserAdapter$AttributeListAdapter::getType($String* qName) {
+	return $nc($($nc(this->qAtts)->getType(qName)))->intern();
+}
+
+$String* ParserAdapter$AttributeListAdapter::getValue($String* uri, $String* localName) {
+	return nullptr;
+}
+
+$String* ParserAdapter$AttributeListAdapter::getValue($String* qName) {
+	return $nc(this->qAtts)->getValue(qName);
+}
+
+ParserAdapter$AttributeListAdapter::ParserAdapter$AttributeListAdapter() {
+}
+
+$Class* ParserAdapter$AttributeListAdapter::load$($String* name, bool initialize) {
+	$loadClass(ParserAdapter$AttributeListAdapter, name, initialize, &_ParserAdapter$AttributeListAdapter_ClassInfo_, allocate$ParserAdapter$AttributeListAdapter);
+	return class$;
+}
+
+$Class* ParserAdapter$AttributeListAdapter::class$ = nullptr;
+
+			} // helpers
+		} // sax
+	} // xml
+} // org

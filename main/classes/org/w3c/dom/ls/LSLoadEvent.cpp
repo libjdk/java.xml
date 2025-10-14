@@ -1,0 +1,53 @@
+#include <org/w3c/dom/ls/LSLoadEvent.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <org/w3c/dom/Document.h>
+#include <org/w3c/dom/ls/LSInput.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $Document = ::org::w3c::dom::Document;
+using $Event = ::org::w3c::dom::events::Event;
+using $LSInput = ::org::w3c::dom::ls::LSInput;
+
+namespace org {
+	namespace w3c {
+		namespace dom {
+			namespace ls {
+
+$MethodInfo _LSLoadEvent_MethodInfo_[] = {
+	{"getInput", "()Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getNewDocument", "()Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _LSLoadEvent_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"org.w3c.dom.ls.LSLoadEvent",
+	nullptr,
+	"org.w3c.dom.events.Event",
+	nullptr,
+	_LSLoadEvent_MethodInfo_
+};
+
+$Object* allocate$LSLoadEvent($Class* clazz) {
+	return $of($alloc(LSLoadEvent));
+}
+
+$Class* LSLoadEvent::load$($String* name, bool initialize) {
+	$loadClass(LSLoadEvent, name, initialize, &_LSLoadEvent_ClassInfo_, allocate$LSLoadEvent);
+	return class$;
+}
+
+$Class* LSLoadEvent::class$ = nullptr;
+
+			} // ls
+		} // dom
+	} // w3c
+} // org

@@ -1,0 +1,86 @@
+#include <com/sun/org/apache/xerces/internal/impl/xs/models/XSCMRepeatingLeaf.h>
+
+#include <com/sun/org/apache/xerces/internal/impl/xs/models/XSCMLeaf.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $XSCMLeaf = ::com::sun::org::apache::xerces::internal::impl::xs::models::XSCMLeaf;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xerces {
+					namespace internal {
+						namespace impl {
+							namespace xs {
+								namespace models {
+
+$FieldInfo _XSCMRepeatingLeaf_FieldInfo_[] = {
+	{"fMinOccurs", "I", nullptr, $PRIVATE | $FINAL, $field(XSCMRepeatingLeaf, fMinOccurs)},
+	{"fMaxOccurs", "I", nullptr, $PRIVATE | $FINAL, $field(XSCMRepeatingLeaf, fMaxOccurs)},
+	{}
+};
+
+$MethodInfo _XSCMRepeatingLeaf_MethodInfo_[] = {
+	{"<init>", "(ILjava/lang/Object;IIII)V", nullptr, $PUBLIC, $method(static_cast<void(XSCMRepeatingLeaf::*)(int32_t,Object$*,int32_t,int32_t,int32_t,int32_t)>(&XSCMRepeatingLeaf::init$))},
+	{"getMaxOccurs", "()I", nullptr, $FINAL, $method(static_cast<int32_t(XSCMRepeatingLeaf::*)()>(&XSCMRepeatingLeaf::getMaxOccurs))},
+	{"getMinOccurs", "()I", nullptr, $FINAL, $method(static_cast<int32_t(XSCMRepeatingLeaf::*)()>(&XSCMRepeatingLeaf::getMinOccurs))},
+	{}
+};
+
+$ClassInfo _XSCMRepeatingLeaf_ClassInfo_ = {
+	$PUBLIC | $FINAL | $ACC_SUPER,
+	"com.sun.org.apache.xerces.internal.impl.xs.models.XSCMRepeatingLeaf",
+	"com.sun.org.apache.xerces.internal.impl.xs.models.XSCMLeaf",
+	nullptr,
+	_XSCMRepeatingLeaf_FieldInfo_,
+	_XSCMRepeatingLeaf_MethodInfo_
+};
+
+$Object* allocate$XSCMRepeatingLeaf($Class* clazz) {
+	return $of($alloc(XSCMRepeatingLeaf));
+}
+
+void XSCMRepeatingLeaf::init$(int32_t type, Object$* leaf, int32_t minOccurs, int32_t maxOccurs, int32_t id, int32_t position) {
+	$XSCMLeaf::init$(type, leaf, id, position);
+	this->fMinOccurs = minOccurs;
+	this->fMaxOccurs = maxOccurs;
+}
+
+int32_t XSCMRepeatingLeaf::getMinOccurs() {
+	return this->fMinOccurs;
+}
+
+int32_t XSCMRepeatingLeaf::getMaxOccurs() {
+	return this->fMaxOccurs;
+}
+
+XSCMRepeatingLeaf::XSCMRepeatingLeaf() {
+}
+
+$Class* XSCMRepeatingLeaf::load$($String* name, bool initialize) {
+	$loadClass(XSCMRepeatingLeaf, name, initialize, &_XSCMRepeatingLeaf_ClassInfo_, allocate$XSCMRepeatingLeaf);
+	return class$;
+}
+
+$Class* XSCMRepeatingLeaf::class$ = nullptr;
+
+								} // models
+							} // xs
+						} // impl
+					} // internal
+				} // xerces
+			} // apache
+		} // org
+	} // sun
+} // com

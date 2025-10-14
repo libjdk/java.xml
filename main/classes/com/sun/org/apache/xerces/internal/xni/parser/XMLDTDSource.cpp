@@ -1,0 +1,58 @@
+#include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDSource.h>
+
+#include <com/sun/org/apache/xerces/internal/xni/XMLDTDHandler.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $XMLDTDHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDTDHandler;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xerces {
+					namespace internal {
+						namespace xni {
+							namespace parser {
+
+$MethodInfo _XMLDTDSource_MethodInfo_[] = {
+	{"getDTDHandler", "()Lcom/sun/org/apache/xerces/internal/xni/XMLDTDHandler;", nullptr, $PUBLIC | $ABSTRACT},
+	{"setDTDHandler", "(Lcom/sun/org/apache/xerces/internal/xni/XMLDTDHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _XMLDTDSource_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource",
+	nullptr,
+	nullptr,
+	nullptr,
+	_XMLDTDSource_MethodInfo_
+};
+
+$Object* allocate$XMLDTDSource($Class* clazz) {
+	return $of($alloc(XMLDTDSource));
+}
+
+$Class* XMLDTDSource::load$($String* name, bool initialize) {
+	$loadClass(XMLDTDSource, name, initialize, &_XMLDTDSource_ClassInfo_, allocate$XMLDTDSource);
+	return class$;
+}
+
+$Class* XMLDTDSource::class$ = nullptr;
+
+							} // parser
+						} // xni
+					} // internal
+				} // xerces
+			} // apache
+		} // org
+	} // sun
+} // com

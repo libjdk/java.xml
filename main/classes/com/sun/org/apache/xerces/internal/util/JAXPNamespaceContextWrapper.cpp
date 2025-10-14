@@ -1,0 +1,209 @@
+#include <com/sun/org/apache/xerces/internal/util/JAXPNamespaceContextWrapper.h>
+
+#include <com/sun/org/apache/xerces/internal/util/SymbolTable.h>
+#include <java/lang/Array.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/System.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <java/util/AbstractCollection.h>
+#include <java/util/AbstractList.h>
+#include <java/util/AbstractSet.h>
+#include <java/util/Collection.h>
+#include <java/util/Collections.h>
+#include <java/util/Enumeration.h>
+#include <java/util/List.h>
+#include <java/util/TreeSet.h>
+#include <java/util/Vector.h>
+#include <javax/xml/XMLConstants.h>
+#include <javax/xml/namespace/NamespaceContext.h>
+#include <jcpp.h>
+
+#undef DEFAULT_NS_PREFIX
+#undef NULL_NS_URI
+
+using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
+using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $AbstractCollection = ::java::util::AbstractCollection;
+using $AbstractList = ::java::util::AbstractList;
+using $AbstractSet = ::java::util::AbstractSet;
+using $Collection = ::java::util::Collection;
+using $Collections = ::java::util::Collections;
+using $Enumeration = ::java::util::Enumeration;
+using $List = ::java::util::List;
+using $TreeSet = ::java::util::TreeSet;
+using $Vector = ::java::util::Vector;
+using $XMLConstants = ::javax::xml::XMLConstants;
+using $1NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xerces {
+					namespace internal {
+						namespace util {
+
+$FieldInfo _JAXPNamespaceContextWrapper_FieldInfo_[] = {
+	{"fNamespaceContext", "Ljavax/xml/namespace/NamespaceContext;", nullptr, $PRIVATE, $field(JAXPNamespaceContextWrapper, fNamespaceContext)},
+	{"fSymbolTable", "Lcom/sun/org/apache/xerces/internal/util/SymbolTable;", nullptr, $PRIVATE, $field(JAXPNamespaceContextWrapper, fSymbolTable)},
+	{"fPrefixes", "Ljava/util/List;", "Ljava/util/List<Ljava/lang/String;>;", $PRIVATE, $field(JAXPNamespaceContextWrapper, fPrefixes)},
+	{"fAllPrefixes", "Ljava/util/Vector;", "Ljava/util/Vector<Ljava/lang/String;>;", $PRIVATE | $FINAL, $field(JAXPNamespaceContextWrapper, fAllPrefixes)},
+	{"fContext", "[I", nullptr, $PRIVATE, $field(JAXPNamespaceContextWrapper, fContext)},
+	{"fCurrentContext", "I", nullptr, $PRIVATE, $field(JAXPNamespaceContextWrapper, fCurrentContext)},
+	{}
+};
+
+$MethodInfo _JAXPNamespaceContextWrapper_MethodInfo_[] = {
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($SymbolTable*)>(&JAXPNamespaceContextWrapper::init$))},
+	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
+	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
+	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC},
+	{"getDeclaredPrefixes", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC, $method(static_cast<$List*(JAXPNamespaceContextWrapper::*)()>(&JAXPNamespaceContextWrapper::getDeclaredPrefixes))},
+	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC, $method(static_cast<$1NamespaceContext*(JAXPNamespaceContextWrapper::*)()>(&JAXPNamespaceContextWrapper::getNamespaceContext))},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getSymbolTable", "()Lcom/sun/org/apache/xerces/internal/util/SymbolTable;", nullptr, $PUBLIC, $method(static_cast<$SymbolTable*(JAXPNamespaceContextWrapper::*)()>(&JAXPNamespaceContextWrapper::getSymbolTable))},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"popContext", "()V", nullptr, $PUBLIC},
+	{"pushContext", "()V", nullptr, $PUBLIC},
+	{"reset", "()V", nullptr, $PUBLIC},
+	{"setDeclaredPrefixes", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($List*)>(&JAXPNamespaceContextWrapper::setDeclaredPrefixes))},
+	{"setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($1NamespaceContext*)>(&JAXPNamespaceContextWrapper::setNamespaceContext))},
+	{"setSymbolTable", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($SymbolTable*)>(&JAXPNamespaceContextWrapper::setSymbolTable))},
+	{}
+};
+
+$ClassInfo _JAXPNamespaceContextWrapper_ClassInfo_ = {
+	$PUBLIC | $FINAL | $ACC_SUPER,
+	"com.sun.org.apache.xerces.internal.util.JAXPNamespaceContextWrapper",
+	"java.lang.Object",
+	"com.sun.org.apache.xerces.internal.xni.NamespaceContext",
+	_JAXPNamespaceContextWrapper_FieldInfo_,
+	_JAXPNamespaceContextWrapper_MethodInfo_
+};
+
+$Object* allocate$JAXPNamespaceContextWrapper($Class* clazz) {
+	return $of($alloc(JAXPNamespaceContextWrapper));
+}
+
+void JAXPNamespaceContextWrapper::init$($SymbolTable* symbolTable) {
+	$set(this, fAllPrefixes, $new($Vector));
+	$set(this, fContext, $new($ints, 8));
+	setSymbolTable(symbolTable);
+}
+
+void JAXPNamespaceContextWrapper::setNamespaceContext($1NamespaceContext* context) {
+	$set(this, fNamespaceContext, context);
+}
+
+$1NamespaceContext* JAXPNamespaceContextWrapper::getNamespaceContext() {
+	return this->fNamespaceContext;
+}
+
+void JAXPNamespaceContextWrapper::setSymbolTable($SymbolTable* symbolTable) {
+	$set(this, fSymbolTable, symbolTable);
+}
+
+$SymbolTable* JAXPNamespaceContextWrapper::getSymbolTable() {
+	return this->fSymbolTable;
+}
+
+void JAXPNamespaceContextWrapper::setDeclaredPrefixes($List* prefixes) {
+	$set(this, fPrefixes, prefixes);
+}
+
+$List* JAXPNamespaceContextWrapper::getDeclaredPrefixes() {
+	return this->fPrefixes;
+}
+
+$String* JAXPNamespaceContextWrapper::getURI($String* prefix) {
+	if (this->fNamespaceContext != nullptr) {
+		$var($String, uri, $nc(this->fNamespaceContext)->getNamespaceURI(prefix));
+		$init($XMLConstants);
+		if (uri != nullptr && !$nc($XMLConstants::NULL_NS_URI)->equals(uri)) {
+			return (this->fSymbolTable != nullptr) ? $nc(this->fSymbolTable)->addSymbol(uri) : uri->intern();
+		}
+	}
+	return nullptr;
+}
+
+$String* JAXPNamespaceContextWrapper::getPrefix($String* uri$renamed) {
+	$var($String, uri, uri$renamed);
+	if (this->fNamespaceContext != nullptr) {
+		if (uri == nullptr) {
+			$init($XMLConstants);
+			$assign(uri, $XMLConstants::NULL_NS_URI);
+		}
+		$var($String, prefix, $nc(this->fNamespaceContext)->getPrefix(uri));
+		if (prefix == nullptr) {
+			$init($XMLConstants);
+			$assign(prefix, $XMLConstants::DEFAULT_NS_PREFIX);
+		}
+		return (this->fSymbolTable != nullptr) ? $nc(this->fSymbolTable)->addSymbol(prefix) : $nc(prefix)->intern();
+	}
+	return nullptr;
+}
+
+$Enumeration* JAXPNamespaceContextWrapper::getAllPrefixes() {
+	return $Collections::enumeration(static_cast<$Collection*>(static_cast<$AbstractCollection*>(static_cast<$AbstractSet*>($$new($TreeSet, static_cast<$Collection*>(static_cast<$AbstractCollection*>(static_cast<$AbstractList*>(this->fAllPrefixes))))))));
+}
+
+void JAXPNamespaceContextWrapper::pushContext() {
+	if (this->fCurrentContext + 1 == $nc(this->fContext)->length) {
+		$var($ints, contextarray, $new($ints, $nc(this->fContext)->length * 2));
+		$System::arraycopy(this->fContext, 0, contextarray, 0, $nc(this->fContext)->length);
+		$set(this, fContext, contextarray);
+	}
+	$nc(this->fContext)->set(++this->fCurrentContext, $nc(this->fAllPrefixes)->size());
+	if (this->fPrefixes != nullptr) {
+		$nc(this->fAllPrefixes)->addAll(this->fPrefixes);
+	}
+}
+
+void JAXPNamespaceContextWrapper::popContext() {
+	$nc(this->fAllPrefixes)->setSize($nc(this->fContext)->get(this->fCurrentContext--));
+}
+
+bool JAXPNamespaceContextWrapper::declarePrefix($String* prefix, $String* uri) {
+	return true;
+}
+
+int32_t JAXPNamespaceContextWrapper::getDeclaredPrefixCount() {
+	return (this->fPrefixes != nullptr) ? $nc(this->fPrefixes)->size() : 0;
+}
+
+$String* JAXPNamespaceContextWrapper::getDeclaredPrefixAt(int32_t index) {
+	return $cast($String, $nc(this->fPrefixes)->get(index));
+}
+
+void JAXPNamespaceContextWrapper::reset() {
+	this->fCurrentContext = 0;
+	$nc(this->fContext)->set(this->fCurrentContext, 0);
+	$nc(this->fAllPrefixes)->clear();
+}
+
+JAXPNamespaceContextWrapper::JAXPNamespaceContextWrapper() {
+}
+
+$Class* JAXPNamespaceContextWrapper::load$($String* name, bool initialize) {
+	$loadClass(JAXPNamespaceContextWrapper, name, initialize, &_JAXPNamespaceContextWrapper_ClassInfo_, allocate$JAXPNamespaceContextWrapper);
+	return class$;
+}
+
+$Class* JAXPNamespaceContextWrapper::class$ = nullptr;
+
+						} // util
+					} // internal
+				} // xerces
+			} // apache
+		} // org
+	} // sun
+} // com

@@ -1,0 +1,135 @@
+#include <com/sun/org/apache/xpath/internal/functions/Function.h>
+
+#include <com/sun/org/apache/xalan/internal/res/XSLMessages.h>
+#include <com/sun/org/apache/xpath/internal/Expression.h>
+#include <com/sun/org/apache/xpath/internal/ExpressionOwner.h>
+#include <com/sun/org/apache/xpath/internal/XPathContext.h>
+#include <com/sun/org/apache/xpath/internal/XPathVisitor.h>
+#include <com/sun/org/apache/xpath/internal/compiler/Compiler.h>
+#include <com/sun/org/apache/xpath/internal/functions/WrongNumberArgsException.h>
+#include <com/sun/org/apache/xpath/internal/objects/XObject.h>
+#include <java/io/PrintStream.h>
+#include <java/lang/Array.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/System.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $XSLMessages = ::com::sun::org::apache::xalan::internal::res::XSLMessages;
+using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
+using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
+using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
+using $XPathVisitor = ::com::sun::org::apache::xpath::internal::XPathVisitor;
+using $Compiler = ::com::sun::org::apache::xpath::internal::compiler::Compiler;
+using $WrongNumberArgsException = ::com::sun::org::apache::xpath::internal::functions::WrongNumberArgsException;
+using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
+using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
+using $PrintStream = ::java::io::PrintStream;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xpath {
+					namespace internal {
+						namespace functions {
+
+$FieldInfo _Function_FieldInfo_[] = {
+	{"serialVersionUID", "J", nullptr, $STATIC | $FINAL, $constField(Function, serialVersionUID)},
+	{}
+};
+
+$MethodInfo _Function_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Function::*)()>(&Function::init$))},
+	{"callArgVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
+	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
+	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"postCompileStep", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;)V", nullptr, $PUBLIC},
+	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"setArg", "(Lcom/sun/org/apache/xpath/internal/Expression;I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{}
+};
+
+$ClassInfo _Function_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER | $ABSTRACT,
+	"com.sun.org.apache.xpath.internal.functions.Function",
+	"com.sun.org.apache.xpath.internal.Expression",
+	nullptr,
+	_Function_FieldInfo_,
+	_Function_MethodInfo_
+};
+
+$Object* allocate$Function($Class* clazz) {
+	return $of($alloc(Function));
+}
+
+void Function::init$() {
+	$Expression::init$();
+}
+
+void Function::setArg($Expression* arg, int32_t argNum) {
+	reportWrongNumberArgs();
+}
+
+void Function::checkNumberArgs(int32_t argNum) {
+	if (argNum != 0) {
+		reportWrongNumberArgs();
+	}
+}
+
+void Function::reportWrongNumberArgs() {
+	$throwNew($WrongNumberArgsException, $($XSLMessages::createXPATHMessage("zero"_s, nullptr)));
+}
+
+$XObject* Function::execute($XPathContext* xctxt) {
+	$init($System);
+	$nc($System::out)->println("Error! Function.execute should not be called!"_s);
+	return nullptr;
+}
+
+void Function::callArgVisitors($XPathVisitor* visitor) {
+}
+
+void Function::callVisitors($ExpressionOwner* owner, $XPathVisitor* visitor) {
+	if ($nc(visitor)->visitFunction(owner, this)) {
+		callArgVisitors(visitor);
+	}
+}
+
+bool Function::deepEquals($Expression* expr) {
+	if (!isSameClass(expr)) {
+		return false;
+	}
+	return true;
+}
+
+void Function::postCompileStep($Compiler* compiler) {
+}
+
+Function::Function() {
+}
+
+$Class* Function::load$($String* name, bool initialize) {
+	$loadClass(Function, name, initialize, &_Function_ClassInfo_, allocate$Function);
+	return class$;
+}
+
+$Class* Function::class$ = nullptr;
+
+						} // functions
+					} // internal
+				} // xpath
+			} // apache
+		} // org
+	} // sun
+} // com

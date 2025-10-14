@@ -1,0 +1,80 @@
+#include <com/sun/org/apache/bcel/internal/generic/DSTORE.h>
+
+#include <com/sun/org/apache/bcel/internal/Const.h>
+#include <com/sun/org/apache/bcel/internal/generic/StoreInstruction.h>
+#include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+#undef DSTORE
+#undef DSTORE_0
+
+using $Const = ::com::sun::org::apache::bcel::internal::Const;
+using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
+using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace bcel {
+					namespace internal {
+						namespace generic {
+
+$MethodInfo _DSTORE_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DSTORE::*)()>(&DSTORE::init$))},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(DSTORE::*)(int32_t)>(&DSTORE::init$))},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{}
+};
+
+$ClassInfo _DSTORE_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER,
+	"com.sun.org.apache.bcel.internal.generic.DSTORE",
+	"com.sun.org.apache.bcel.internal.generic.StoreInstruction",
+	nullptr,
+	nullptr,
+	_DSTORE_MethodInfo_
+};
+
+$Object* allocate$DSTORE($Class* clazz) {
+	return $of($alloc(DSTORE));
+}
+
+void DSTORE::init$() {
+	$StoreInstruction::init$($Const::DSTORE, $Const::DSTORE_0);
+}
+
+void DSTORE::init$(int32_t n) {
+	$StoreInstruction::init$($Const::DSTORE, $Const::DSTORE_0, n);
+}
+
+void DSTORE::accept($Visitor* v) {
+	$StoreInstruction::accept(v);
+	$nc(v)->visitDSTORE(this);
+}
+
+DSTORE::DSTORE() {
+}
+
+$Class* DSTORE::load$($String* name, bool initialize) {
+	$loadClass(DSTORE, name, initialize, &_DSTORE_ClassInfo_, allocate$DSTORE);
+	return class$;
+}
+
+$Class* DSTORE::class$ = nullptr;
+
+						} // generic
+					} // internal
+				} // bcel
+			} // apache
+		} // org
+	} // sun
+} // com

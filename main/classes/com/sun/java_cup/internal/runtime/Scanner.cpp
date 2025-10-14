@@ -1,0 +1,51 @@
+#include <com/sun/java_cup/internal/runtime/Scanner.h>
+
+#include <com/sun/java_cup/internal/runtime/Symbol.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $Symbol = ::com::sun::java_cup::internal::runtime::Symbol;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace java_cup {
+			namespace internal {
+				namespace runtime {
+
+$MethodInfo _Scanner_MethodInfo_[] = {
+	{"next_token", "()Lcom/sun/java_cup/internal/runtime/Symbol;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.Exception"},
+	{}
+};
+
+$ClassInfo _Scanner_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"com.sun.java_cup.internal.runtime.Scanner",
+	nullptr,
+	nullptr,
+	nullptr,
+	_Scanner_MethodInfo_
+};
+
+$Object* allocate$Scanner($Class* clazz) {
+	return $of($alloc(Scanner));
+}
+
+$Class* Scanner::load$($String* name, bool initialize) {
+	$loadClass(Scanner, name, initialize, &_Scanner_ClassInfo_, allocate$Scanner);
+	return class$;
+}
+
+$Class* Scanner::class$ = nullptr;
+
+				} // runtime
+			} // internal
+		} // java_cup
+	} // sun
+} // com

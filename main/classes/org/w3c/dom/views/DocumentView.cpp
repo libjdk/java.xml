@@ -1,0 +1,49 @@
+#include <org/w3c/dom/views/DocumentView.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <org/w3c/dom/views/AbstractView.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $AbstractView = ::org::w3c::dom::views::AbstractView;
+
+namespace org {
+	namespace w3c {
+		namespace dom {
+			namespace views {
+
+$MethodInfo _DocumentView_MethodInfo_[] = {
+	{"getDefaultView", "()Lorg/w3c/dom/views/AbstractView;", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _DocumentView_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"org.w3c.dom.views.DocumentView",
+	nullptr,
+	nullptr,
+	nullptr,
+	_DocumentView_MethodInfo_
+};
+
+$Object* allocate$DocumentView($Class* clazz) {
+	return $of($alloc(DocumentView));
+}
+
+$Class* DocumentView::load$($String* name, bool initialize) {
+	$loadClass(DocumentView, name, initialize, &_DocumentView_ClassInfo_, allocate$DocumentView);
+	return class$;
+}
+
+$Class* DocumentView::class$ = nullptr;
+
+			} // views
+		} // dom
+	} // w3c
+} // org

@@ -1,0 +1,59 @@
+#include <com/sun/org/apache/xpath/internal/compiler/XPathDumper.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xpath {
+					namespace internal {
+						namespace compiler {
+
+$MethodInfo _XPathDumper_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathDumper::*)()>(&XPathDumper::init$))},
+	{}
+};
+
+$ClassInfo _XPathDumper_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER,
+	"com.sun.org.apache.xpath.internal.compiler.XPathDumper",
+	"java.lang.Object",
+	nullptr,
+	nullptr,
+	_XPathDumper_MethodInfo_
+};
+
+$Object* allocate$XPathDumper($Class* clazz) {
+	return $of($alloc(XPathDumper));
+}
+
+void XPathDumper::init$() {
+}
+
+XPathDumper::XPathDumper() {
+}
+
+$Class* XPathDumper::load$($String* name, bool initialize) {
+	$loadClass(XPathDumper, name, initialize, &_XPathDumper_ClassInfo_, allocate$XPathDumper);
+	return class$;
+}
+
+$Class* XPathDumper::class$ = nullptr;
+
+						} // compiler
+					} // internal
+				} // xpath
+			} // apache
+		} // org
+	} // sun
+} // com

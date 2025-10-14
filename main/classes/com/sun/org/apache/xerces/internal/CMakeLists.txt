@@ -1,0 +1,21 @@
+#machine generated
+
+add_subdirectory("dom")
+add_subdirectory("impl")
+add_subdirectory("jaxp")
+add_subdirectory("parsers")
+add_subdirectory("util")
+add_subdirectory("utils")
+add_subdirectory("xinclude")
+add_subdirectory("xni")
+add_subdirectory("xpointer")
+add_subdirectory("xs")
+
+aux_source_directory("${CMAKE_CURRENT_SOURCE_DIR}" classes.com.sun.org.apache._23_SRCS)
+file(GLOB classes.com.sun.org.apache._23_HEADERS *.h *.hpp)
+source_group("Include" FILES ${classes.com.sun.org.apache._23_HEADERS}) 
+list(LENGTH classes.com.sun.org.apache._23_SRCS classes.com.sun.org.apache._23_SRCS_LENGTH)
+if(classes.com.sun.org.apache._23_SRCS_LENGTH)
+	add_library(classes.com.sun.org.apache._23 OBJECT "${classes.com.sun.org.apache._23_SRCS}" "${classes.com.sun.org.apache._23_HEADERS}")
+	jcpp_enable_bigobj(classes.com.sun.org.apache._23)
+endif()

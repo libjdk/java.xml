@@ -1,0 +1,59 @@
+#include <com/sun/org/apache/xerces/internal/impl/dtd/models/ContentModelValidator.h>
+
+#include <com/sun/org/apache/xerces/internal/xni/QName.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $QNameArray = $Array<::com::sun::org::apache::xerces::internal::xni::QName>;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xerces {
+					namespace internal {
+						namespace impl {
+							namespace dtd {
+								namespace models {
+
+$MethodInfo _ContentModelValidator_MethodInfo_[] = {
+	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _ContentModelValidator_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"com.sun.org.apache.xerces.internal.impl.dtd.models.ContentModelValidator",
+	nullptr,
+	nullptr,
+	nullptr,
+	_ContentModelValidator_MethodInfo_
+};
+
+$Object* allocate$ContentModelValidator($Class* clazz) {
+	return $of($alloc(ContentModelValidator));
+}
+
+$Class* ContentModelValidator::load$($String* name, bool initialize) {
+	$loadClass(ContentModelValidator, name, initialize, &_ContentModelValidator_ClassInfo_, allocate$ContentModelValidator);
+	return class$;
+}
+
+$Class* ContentModelValidator::class$ = nullptr;
+
+								} // models
+							} // dtd
+						} // impl
+					} // internal
+				} // xerces
+			} // apache
+		} // org
+	} // sun
+} // com

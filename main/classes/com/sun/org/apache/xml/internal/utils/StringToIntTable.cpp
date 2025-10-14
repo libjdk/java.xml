@@ -1,0 +1,152 @@
+#include <com/sun/org/apache/xml/internal/utils/StringToIntTable.h>
+
+#include <java/lang/Array.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/System.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+#undef INVALID_KEY
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xml {
+					namespace internal {
+						namespace utils {
+
+$FieldInfo _StringToIntTable_FieldInfo_[] = {
+	{"INVALID_KEY", "I", nullptr, $PUBLIC | $STATIC | $FINAL, $constField(StringToIntTable, INVALID_KEY)},
+	{"m_blocksize", "I", nullptr, $PRIVATE, $field(StringToIntTable, m_blocksize)},
+	{"m_map", "[Ljava/lang/String;", nullptr, $PRIVATE, $field(StringToIntTable, m_map)},
+	{"m_values", "[I", nullptr, $PRIVATE, $field(StringToIntTable, m_values)},
+	{"m_firstFree", "I", nullptr, $PRIVATE, $field(StringToIntTable, m_firstFree)},
+	{"m_mapSize", "I", nullptr, $PRIVATE, $field(StringToIntTable, m_mapSize)},
+	{}
+};
+
+$MethodInfo _StringToIntTable_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringToIntTable::*)()>(&StringToIntTable::init$))},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(StringToIntTable::*)(int32_t)>(&StringToIntTable::init$))},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringToIntTable::*)($String*)>(&StringToIntTable::contains))},
+	{"get", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToIntTable::*)($String*)>(&StringToIntTable::get))},
+	{"getIgnoreCase", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToIntTable::*)($String*)>(&StringToIntTable::getIgnoreCase))},
+	{"getLength", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToIntTable::*)()>(&StringToIntTable::getLength))},
+	{"keys", "()[Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$StringArray*(StringToIntTable::*)()>(&StringToIntTable::keys))},
+	{"put", "(Ljava/lang/String;I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringToIntTable::*)($String*,int32_t)>(&StringToIntTable::put))},
+	{}
+};
+
+$ClassInfo _StringToIntTable_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER,
+	"com.sun.org.apache.xml.internal.utils.StringToIntTable",
+	"java.lang.Object",
+	nullptr,
+	_StringToIntTable_FieldInfo_,
+	_StringToIntTable_MethodInfo_
+};
+
+$Object* allocate$StringToIntTable($Class* clazz) {
+	return $of($alloc(StringToIntTable));
+}
+
+void StringToIntTable::init$() {
+	this->m_firstFree = 0;
+	this->m_blocksize = 8;
+	this->m_mapSize = this->m_blocksize;
+	$set(this, m_map, $new($StringArray, this->m_blocksize));
+	$set(this, m_values, $new($ints, this->m_blocksize));
+}
+
+void StringToIntTable::init$(int32_t blocksize) {
+	this->m_firstFree = 0;
+	this->m_blocksize = blocksize;
+	this->m_mapSize = blocksize;
+	$set(this, m_map, $new($StringArray, blocksize));
+	$set(this, m_values, $new($ints, this->m_blocksize));
+}
+
+int32_t StringToIntTable::getLength() {
+	return this->m_firstFree;
+}
+
+void StringToIntTable::put($String* key, int32_t value) {
+	if ((this->m_firstFree + 1) >= this->m_mapSize) {
+		this->m_mapSize += this->m_blocksize;
+		$var($StringArray, newMap, $new($StringArray, this->m_mapSize));
+		$System::arraycopy(this->m_map, 0, newMap, 0, this->m_firstFree + 1);
+		$set(this, m_map, newMap);
+		$var($ints, newValues, $new($ints, this->m_mapSize));
+		$System::arraycopy(this->m_values, 0, newValues, 0, this->m_firstFree + 1);
+		$set(this, m_values, newValues);
+	}
+	$nc(this->m_map)->set(this->m_firstFree, key);
+	$nc(this->m_values)->set(this->m_firstFree, value);
+	++this->m_firstFree;
+}
+
+int32_t StringToIntTable::get($String* key) {
+	for (int32_t i = 0; i < this->m_firstFree; ++i) {
+		if ($nc($nc(this->m_map)->get(i))->equals(key)) {
+			return $nc(this->m_values)->get(i);
+		}
+	}
+	return StringToIntTable::INVALID_KEY;
+}
+
+int32_t StringToIntTable::getIgnoreCase($String* key) {
+	if (nullptr == key) {
+		return StringToIntTable::INVALID_KEY;
+	}
+	for (int32_t i = 0; i < this->m_firstFree; ++i) {
+		if ($nc($nc(this->m_map)->get(i))->equalsIgnoreCase(key)) {
+			return $nc(this->m_values)->get(i);
+		}
+	}
+	return StringToIntTable::INVALID_KEY;
+}
+
+bool StringToIntTable::contains($String* key) {
+	for (int32_t i = 0; i < this->m_firstFree; ++i) {
+		if ($nc($nc(this->m_map)->get(i))->equals(key)) {
+			return true;
+		}
+	}
+	return false;
+}
+
+$StringArray* StringToIntTable::keys() {
+	$var($StringArray, keysArr, $new($StringArray, this->m_firstFree));
+	for (int32_t i = 0; i < this->m_firstFree; ++i) {
+		keysArr->set(i, $nc(this->m_map)->get(i));
+	}
+	return keysArr;
+}
+
+StringToIntTable::StringToIntTable() {
+}
+
+$Class* StringToIntTable::load$($String* name, bool initialize) {
+	$loadClass(StringToIntTable, name, initialize, &_StringToIntTable_ClassInfo_, allocate$StringToIntTable);
+	return class$;
+}
+
+$Class* StringToIntTable::class$ = nullptr;
+
+						} // utils
+					} // internal
+				} // xml
+			} // apache
+		} // org
+	} // sun
+} // com

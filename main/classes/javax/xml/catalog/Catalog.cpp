@@ -1,0 +1,50 @@
+#include <javax/xml/catalog/Catalog.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <java/util/stream/Stream.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $Stream = ::java::util::stream::Stream;
+
+namespace javax {
+	namespace xml {
+		namespace catalog {
+
+$MethodInfo _Catalog_MethodInfo_[] = {
+	{"catalogs", "()Ljava/util/stream/Stream;", "()Ljava/util/stream/Stream<Ljavax/xml/catalog/Catalog;>;", $PUBLIC | $ABSTRACT},
+	{"matchPublic", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"matchSystem", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"matchURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _Catalog_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"javax.xml.catalog.Catalog",
+	nullptr,
+	nullptr,
+	nullptr,
+	_Catalog_MethodInfo_
+};
+
+$Object* allocate$Catalog($Class* clazz) {
+	return $of($alloc(Catalog));
+}
+
+$Class* Catalog::load$($String* name, bool initialize) {
+	$loadClass(Catalog, name, initialize, &_Catalog_ClassInfo_, allocate$Catalog);
+	return class$;
+}
+
+$Class* Catalog::class$ = nullptr;
+
+		} // catalog
+	} // xml
+} // javax

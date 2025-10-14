@@ -1,0 +1,188 @@
+#include <com/sun/org/apache/bcel/internal/generic/IINC.h>
+
+#include <com/sun/org/apache/bcel/internal/Const.h>
+#include <com/sun/org/apache/bcel/internal/generic/BasicType.h>
+#include <com/sun/org/apache/bcel/internal/generic/ClassGenException.h>
+#include <com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.h>
+#include <com/sun/org/apache/bcel/internal/generic/Instruction.h>
+#include <com/sun/org/apache/bcel/internal/generic/LocalVariableInstruction.h>
+#include <com/sun/org/apache/bcel/internal/generic/Type.h>
+#include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
+#include <com/sun/org/apache/bcel/internal/util/ByteSequence.h>
+#include <java/io/DataOutputStream.h>
+#include <java/lang/Byte.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+#undef IINC
+#undef INT
+#undef MAX_BYTE
+#undef MAX_VALUE
+#undef MIN_VALUE
+#undef WIDE
+
+using $Const = ::com::sun::org::apache::bcel::internal::Const;
+using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
+using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
+using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
+using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
+using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
+using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
+using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
+using $DataInputStream = ::java::io::DataInputStream;
+using $DataOutputStream = ::java::io::DataOutputStream;
+using $Byte = ::java::lang::Byte;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace bcel {
+					namespace internal {
+						namespace generic {
+
+$FieldInfo _IINC_FieldInfo_[] = {
+	{"wide", "Z", nullptr, $PRIVATE, $field(IINC, wide)},
+	{"c", "I", nullptr, $PRIVATE, $field(IINC, c)},
+	{}
+};
+
+$MethodInfo _IINC_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, 0, $method(static_cast<void(IINC::*)()>(&IINC::init$))},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(IINC::*)(int32_t,int32_t)>(&IINC::init$))},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"getIncrement", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(IINC::*)()>(&IINC::getIncrement))},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"setIncrement", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(IINC::*)(int32_t)>(&IINC::setIncrement))},
+	{"setIndex", "(I)V", nullptr, $PUBLIC | $FINAL},
+	{"setWide", "()V", nullptr, $PRIVATE, $method(static_cast<void(IINC::*)()>(&IINC::setWide))},
+	{"toString", "(Z)Ljava/lang/String;", nullptr, $PUBLIC},
+	{}
+};
+
+$ClassInfo _IINC_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER,
+	"com.sun.org.apache.bcel.internal.generic.IINC",
+	"com.sun.org.apache.bcel.internal.generic.LocalVariableInstruction",
+	nullptr,
+	_IINC_FieldInfo_,
+	_IINC_MethodInfo_
+};
+
+$Object* allocate$IINC($Class* clazz) {
+	return $of($alloc(IINC));
+}
+
+void IINC::init$() {
+	$LocalVariableInstruction::init$();
+}
+
+void IINC::init$(int32_t n, int32_t c) {
+	$LocalVariableInstruction::init$();
+	$LocalVariableInstruction::setOpcode($Const::IINC);
+	$LocalVariableInstruction::setLength((int16_t)3);
+	setIndex(n);
+	setIncrement(c);
+}
+
+void IINC::dump($DataOutputStream* out) {
+	if (this->wide) {
+		$nc(out)->writeByte($Const::WIDE);
+	}
+	$nc(out)->writeByte($LocalVariableInstruction::getOpcode());
+	if (this->wide) {
+		out->writeShort($LocalVariableInstruction::getIndex());
+		out->writeShort(this->c);
+	} else {
+		out->writeByte($LocalVariableInstruction::getIndex());
+		out->writeByte(this->c);
+	}
+}
+
+void IINC::setWide() {
+	this->wide = $LocalVariableInstruction::getIndex() > $Const::MAX_BYTE;
+	if (this->c > 0) {
+		this->wide = this->wide || (this->c > $Byte::MAX_VALUE);
+	} else {
+		this->wide = this->wide || (this->c < $Byte::MIN_VALUE);
+	}
+	if (this->wide) {
+		$LocalVariableInstruction::setLength(6);
+	} else {
+		$LocalVariableInstruction::setLength(3);
+	}
+}
+
+void IINC::initFromFile($ByteSequence* bytes, bool wide) {
+	this->wide = wide;
+	if (wide) {
+		$LocalVariableInstruction::setLength(6);
+		$LocalVariableInstruction::setIndexOnly($nc(bytes)->readUnsignedShort());
+		this->c = $nc(bytes)->readShort();
+	} else {
+		$LocalVariableInstruction::setLength(3);
+		$LocalVariableInstruction::setIndexOnly($nc(bytes)->readUnsignedByte());
+		this->c = $nc(bytes)->readByte();
+	}
+}
+
+$String* IINC::toString(bool verbose) {
+	return $str({$($LocalVariableInstruction::toString(verbose)), " "_s, $$str(this->c)});
+}
+
+void IINC::setIndex(int32_t n) {
+	if (n < 0) {
+		$throwNew($ClassGenException, $$str({"Negative index value: "_s, $$str(n)}));
+	}
+	$LocalVariableInstruction::setIndexOnly(n);
+	setWide();
+}
+
+int32_t IINC::getIncrement() {
+	return this->c;
+}
+
+void IINC::setIncrement(int32_t c) {
+	this->c = c;
+	setWide();
+}
+
+$Type* IINC::getType($ConstantPoolGen* cp) {
+	$init($Type);
+	return $Type::INT;
+}
+
+void IINC::accept($Visitor* v) {
+	$nc(v)->visitLocalVariableInstruction(this);
+	v->visitIINC(this);
+}
+
+IINC::IINC() {
+}
+
+$Class* IINC::load$($String* name, bool initialize) {
+	$loadClass(IINC, name, initialize, &_IINC_ClassInfo_, allocate$IINC);
+	return class$;
+}
+
+$Class* IINC::class$ = nullptr;
+
+						} // generic
+					} // internal
+				} // bcel
+			} // apache
+		} // org
+	} // sun
+} // com

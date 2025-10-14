@@ -1,0 +1,48 @@
+#include <org/w3c/dom/NodeList.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <org/w3c/dom/Node.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
+
+namespace org {
+	namespace w3c {
+		namespace dom {
+
+$MethodInfo _NodeList_MethodInfo_[] = {
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _NodeList_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"org.w3c.dom.NodeList",
+	nullptr,
+	nullptr,
+	nullptr,
+	_NodeList_MethodInfo_
+};
+
+$Object* allocate$NodeList($Class* clazz) {
+	return $of($alloc(NodeList));
+}
+
+$Class* NodeList::load$($String* name, bool initialize) {
+	$loadClass(NodeList, name, initialize, &_NodeList_ClassInfo_, allocate$NodeList);
+	return class$;
+}
+
+$Class* NodeList::class$ = nullptr;
+
+		} // dom
+	} // w3c
+} // org

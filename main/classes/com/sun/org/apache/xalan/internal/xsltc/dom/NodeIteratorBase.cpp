@@ -1,0 +1,161 @@
+#include <com/sun/org/apache/xalan/internal/xsltc/dom/NodeIteratorBase.h>
+
+#include <com/sun/org/apache/xalan/internal/xsltc/NodeIterator.h>
+#include <com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/CloneNotSupportedException.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/Throwable.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+#undef END
+#undef ITERATOR_CLONE_ERR
+
+using $NodeIterator = ::com::sun::org::apache::xalan::internal::xsltc::NodeIterator;
+using $BasisLibrary = ::com::sun::org::apache::xalan::internal::xsltc::runtime::BasisLibrary;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xalan {
+					namespace internal {
+						namespace xsltc {
+							namespace dom {
+
+$FieldInfo _NodeIteratorBase_FieldInfo_[] = {
+	{"_last", "I", nullptr, $PROTECTED, $field(NodeIteratorBase, _last)},
+	{"_position", "I", nullptr, $PROTECTED, $field(NodeIteratorBase, _position)},
+	{"_markedNode", "I", nullptr, $PROTECTED, $field(NodeIteratorBase, _markedNode)},
+	{"_startNode", "I", nullptr, $PROTECTED, $field(NodeIteratorBase, _startNode)},
+	{"_includeSelf", "Z", nullptr, $PROTECTED, $field(NodeIteratorBase, _includeSelf)},
+	{"_isRestartable", "Z", nullptr, $PROTECTED, $field(NodeIteratorBase, _isRestartable)},
+	{}
+};
+
+$MethodInfo _NodeIteratorBase_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NodeIteratorBase::*)()>(&NodeIteratorBase::init$))},
+	{"cloneIterator", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC},
+	{"getLast", "()I", nullptr, $PUBLIC},
+	{"getPosition", "()I", nullptr, $PUBLIC},
+	{"includeSelf", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC},
+	{"isReverse", "()Z", nullptr, $PUBLIC},
+	{"reset", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC},
+	{"resetPosition", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PROTECTED | $FINAL, $method(static_cast<$NodeIterator*(NodeIteratorBase::*)()>(&NodeIteratorBase::resetPosition))},
+	{"returnNode", "(I)I", nullptr, $PROTECTED | $FINAL, $method(static_cast<int32_t(NodeIteratorBase::*)(int32_t)>(&NodeIteratorBase::returnNode))},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT},
+	{}
+};
+
+$ClassInfo _NodeIteratorBase_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER | $ABSTRACT,
+	"com.sun.org.apache.xalan.internal.xsltc.dom.NodeIteratorBase",
+	"java.lang.Object",
+	"com.sun.org.apache.xalan.internal.xsltc.NodeIterator",
+	_NodeIteratorBase_FieldInfo_,
+	_NodeIteratorBase_MethodInfo_
+};
+
+$Object* allocate$NodeIteratorBase($Class* clazz) {
+	return $of($alloc(NodeIteratorBase));
+}
+
+void NodeIteratorBase::init$() {
+	this->_last = -1;
+	this->_position = 0;
+	this->_startNode = $NodeIterator::END;
+	this->_includeSelf = false;
+	this->_isRestartable = true;
+}
+
+void NodeIteratorBase::setRestartable(bool isRestartable) {
+	this->_isRestartable = isRestartable;
+}
+
+$NodeIterator* NodeIteratorBase::reset() {
+	bool temp = this->_isRestartable;
+	this->_isRestartable = true;
+	setStartNode(this->_includeSelf ? this->_startNode + 1 : this->_startNode);
+	this->_isRestartable = temp;
+	return this;
+}
+
+$NodeIterator* NodeIteratorBase::includeSelf() {
+	this->_includeSelf = true;
+	return this;
+}
+
+int32_t NodeIteratorBase::getLast() {
+	if (this->_last == -1) {
+		int32_t temp = this->_position;
+		setMark();
+		reset();
+		do {
+			++this->_last;
+		} while (next() != $NodeIterator::END);
+		gotoMark();
+		this->_position = temp;
+	}
+	return this->_last;
+}
+
+int32_t NodeIteratorBase::getPosition() {
+	return this->_position == 0 ? 1 : this->_position;
+}
+
+bool NodeIteratorBase::isReverse() {
+	return false;
+}
+
+$NodeIterator* NodeIteratorBase::cloneIterator() {
+	try {
+		$var(NodeIteratorBase, clone, $cast(NodeIteratorBase, $NodeIterator::clone()));
+		$nc(clone)->_isRestartable = false;
+		return clone->reset();
+	} catch ($CloneNotSupportedException&) {
+		$var($CloneNotSupportedException, e, $catch());
+		$init($BasisLibrary);
+		$BasisLibrary::runTimeError($BasisLibrary::ITERATOR_CLONE_ERR, $($of(e->toString())));
+		return nullptr;
+	}
+	$shouldNotReachHere();
+}
+
+int32_t NodeIteratorBase::returnNode(int32_t node) {
+	++this->_position;
+	return node;
+}
+
+$NodeIterator* NodeIteratorBase::resetPosition() {
+	this->_position = 0;
+	return this;
+}
+
+NodeIteratorBase::NodeIteratorBase() {
+}
+
+$Class* NodeIteratorBase::load$($String* name, bool initialize) {
+	$loadClass(NodeIteratorBase, name, initialize, &_NodeIteratorBase_ClassInfo_, allocate$NodeIteratorBase);
+	return class$;
+}
+
+$Class* NodeIteratorBase::class$ = nullptr;
+
+							} // dom
+						} // xsltc
+					} // internal
+				} // xalan
+			} // apache
+		} // org
+	} // sun
+} // com

@@ -1,0 +1,138 @@
+#include <com/sun/org/apache/xerces/internal/impl/xs/XSGroupDecl.h>
+
+#include <com/sun/org/apache/xerces/internal/impl/xs/XSModelGroupImpl.h>
+#include <com/sun/org/apache/xerces/internal/impl/xs/util/XSObjectListImpl.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSAnnotation.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSConstants.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSModelGroup.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSNamespaceItem.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSObject.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/FieldInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+#undef EMPTY_LIST
+#undef MODEL_GROUP_DEFINITION
+
+using $XSModelGroupImpl = ::com::sun::org::apache::xerces::internal::impl::xs::XSModelGroupImpl;
+using $XSObjectListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl;
+using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
+using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
+using $XSModelGroup = ::com::sun::org::apache::xerces::internal::xs::XSModelGroup;
+using $XSModelGroupDefinition = ::com::sun::org::apache::xerces::internal::xs::XSModelGroupDefinition;
+using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
+using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $FieldInfo = ::java::lang::FieldInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xerces {
+					namespace internal {
+						namespace impl {
+							namespace xs {
+
+$FieldInfo _XSGroupDecl_FieldInfo_[] = {
+	{"fName", "Ljava/lang/String;", nullptr, $PUBLIC, $field(XSGroupDecl, fName)},
+	{"fTargetNamespace", "Ljava/lang/String;", nullptr, $PUBLIC, $field(XSGroupDecl, fTargetNamespace)},
+	{"fModelGroup", "Lcom/sun/org/apache/xerces/internal/impl/xs/XSModelGroupImpl;", nullptr, $PUBLIC, $field(XSGroupDecl, fModelGroup)},
+	{"fAnnotations", "Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC, $field(XSGroupDecl, fAnnotations)},
+	{"fNamespaceItem", "Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PRIVATE, $field(XSGroupDecl, fNamespaceItem)},
+	{}
+};
+
+$MethodInfo _XSGroupDecl_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSGroupDecl::*)()>(&XSGroupDecl::init$))},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC},
+	{"getModelGroup", "()Lcom/sun/org/apache/xerces/internal/xs/XSModelGroup;", nullptr, $PUBLIC},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
+	{"getType", "()S", nullptr, $PUBLIC},
+	{"setNamespaceItem", "(Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;)V", nullptr, 0},
+	{}
+};
+
+$ClassInfo _XSGroupDecl_ClassInfo_ = {
+	$PUBLIC | $ACC_SUPER,
+	"com.sun.org.apache.xerces.internal.impl.xs.XSGroupDecl",
+	"java.lang.Object",
+	"com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition",
+	_XSGroupDecl_FieldInfo_,
+	_XSGroupDecl_MethodInfo_
+};
+
+$Object* allocate$XSGroupDecl($Class* clazz) {
+	return $of($alloc(XSGroupDecl));
+}
+
+void XSGroupDecl::init$() {
+	$set(this, fName, nullptr);
+	$set(this, fTargetNamespace, nullptr);
+	$set(this, fModelGroup, nullptr);
+	$set(this, fAnnotations, nullptr);
+	$set(this, fNamespaceItem, nullptr);
+}
+
+int16_t XSGroupDecl::getType() {
+	return $XSConstants::MODEL_GROUP_DEFINITION;
+}
+
+$String* XSGroupDecl::getName() {
+	return this->fName;
+}
+
+$String* XSGroupDecl::getNamespace() {
+	return this->fTargetNamespace;
+}
+
+$XSModelGroup* XSGroupDecl::getModelGroup() {
+	return this->fModelGroup;
+}
+
+$XSAnnotation* XSGroupDecl::getAnnotation() {
+	return (this->fAnnotations != nullptr) ? $cast($XSAnnotation, $nc(this->fAnnotations)->item(0)) : ($XSAnnotation*)nullptr;
+}
+
+$XSObjectList* XSGroupDecl::getAnnotations() {
+	$init($XSObjectListImpl);
+	return (this->fAnnotations != nullptr) ? this->fAnnotations : static_cast<$XSObjectList*>($XSObjectListImpl::EMPTY_LIST);
+}
+
+$XSNamespaceItem* XSGroupDecl::getNamespaceItem() {
+	return this->fNamespaceItem;
+}
+
+void XSGroupDecl::setNamespaceItem($XSNamespaceItem* namespaceItem) {
+	$set(this, fNamespaceItem, namespaceItem);
+}
+
+XSGroupDecl::XSGroupDecl() {
+}
+
+$Class* XSGroupDecl::load$($String* name, bool initialize) {
+	$loadClass(XSGroupDecl, name, initialize, &_XSGroupDecl_ClassInfo_, allocate$XSGroupDecl);
+	return class$;
+}
+
+$Class* XSGroupDecl::class$ = nullptr;
+
+							} // xs
+						} // impl
+					} // internal
+				} // xerces
+			} // apache
+		} // org
+	} // sun
+} // com

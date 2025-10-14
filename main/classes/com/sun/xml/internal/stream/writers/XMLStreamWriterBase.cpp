@@ -1,0 +1,52 @@
+#include <com/sun/xml/internal/stream/writers/XMLStreamWriterBase.h>
+
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+using $XMLStreamWriter = ::javax::xml::stream::XMLStreamWriter;
+
+namespace com {
+	namespace sun {
+		namespace xml {
+			namespace internal {
+				namespace stream {
+					namespace writers {
+
+$MethodInfo _XMLStreamWriterBase_MethodInfo_[] = {
+	{"writeStartDocument", "(Ljava/lang/String;Ljava/lang/String;ZZ)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
+	{}
+};
+
+$ClassInfo _XMLStreamWriterBase_ClassInfo_ = {
+	$PUBLIC | $INTERFACE | $ABSTRACT,
+	"com.sun.xml.internal.stream.writers.XMLStreamWriterBase",
+	nullptr,
+	"javax.xml.stream.XMLStreamWriter",
+	nullptr,
+	_XMLStreamWriterBase_MethodInfo_
+};
+
+$Object* allocate$XMLStreamWriterBase($Class* clazz) {
+	return $of($alloc(XMLStreamWriterBase));
+}
+
+$Class* XMLStreamWriterBase::load$($String* name, bool initialize) {
+	$loadClass(XMLStreamWriterBase, name, initialize, &_XMLStreamWriterBase_ClassInfo_, allocate$XMLStreamWriterBase);
+	return class$;
+}
+
+$Class* XMLStreamWriterBase::class$ = nullptr;
+
+					} // writers
+				} // stream
+			} // internal
+		} // xml
+	} // sun
+} // com

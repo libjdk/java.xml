@@ -1,0 +1,63 @@
+#include <com/sun/org/apache/xpath/internal/objects/Comparator.h>
+
+#include <com/sun/org/apache/xml/internal/utils/XMLString.h>
+#include <java/lang/Class.h>
+#include <java/lang/ClassInfo.h>
+#include <java/lang/MethodInfo.h>
+#include <java/lang/String.h>
+#include <java/lang/reflect/Constructor.h>
+#include <java/lang/reflect/Method.h>
+#include <jcpp.h>
+
+using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
+using $ClassInfo = ::java::lang::ClassInfo;
+using $MethodInfo = ::java::lang::MethodInfo;
+
+namespace com {
+	namespace sun {
+		namespace org {
+			namespace apache {
+				namespace xpath {
+					namespace internal {
+						namespace objects {
+
+$MethodInfo _Comparator_MethodInfo_[] = {
+	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Comparator::*)()>(&Comparator::init$))},
+	{"compareNumbers", "(DD)Z", nullptr, $ABSTRACT},
+	{"compareStrings", "(Lcom/sun/org/apache/xml/internal/utils/XMLString;Lcom/sun/org/apache/xml/internal/utils/XMLString;)Z", nullptr, $ABSTRACT},
+	{}
+};
+
+$ClassInfo _Comparator_ClassInfo_ = {
+	$ACC_SUPER | $ABSTRACT,
+	"com.sun.org.apache.xpath.internal.objects.Comparator",
+	"java.lang.Object",
+	nullptr,
+	nullptr,
+	_Comparator_MethodInfo_
+};
+
+$Object* allocate$Comparator($Class* clazz) {
+	return $of($alloc(Comparator));
+}
+
+void Comparator::init$() {
+}
+
+Comparator::Comparator() {
+}
+
+$Class* Comparator::load$($String* name, bool initialize) {
+	$loadClass(Comparator, name, initialize, &_Comparator_ClassInfo_, allocate$Comparator);
+	return class$;
+}
+
+$Class* Comparator::class$ = nullptr;
+
+						} // objects
+					} // internal
+				} // xpath
+			} // apache
+		} // org
+	} // sun
+} // com
