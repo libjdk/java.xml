@@ -564,7 +564,7 @@ $Object* TransformerFactoryImpl::getAttribute($String* name) {
 }
 
 void TransformerFactoryImpl::setAttribute($String* name, Object$* value) {
-	if (name->equals(TransformerFactoryImpl::TRANSLET_NAME) && $instanceOf($String, value)) {
+	if ($nc(name)->equals(TransformerFactoryImpl::TRANSLET_NAME) && $instanceOf($String, value)) {
 		$set(this, _transletName, $cast($String, value));
 		return;
 	} else if (name->equals(TransformerFactoryImpl::DESTINATION_DIRECTORY) && $instanceOf($String, value)) {
@@ -699,7 +699,7 @@ void TransformerFactoryImpl::setFeature($String* name, bool value) {
 		$throwNew($NullPointerException, $(err->toString()));
 	} else {
 		$init($XMLConstants);
-		if (name->equals($XMLConstants::FEATURE_SECURE_PROCESSING)) {
+		if ($nc(name)->equals($XMLConstants::FEATURE_SECURE_PROCESSING)) {
 			if ((this->_isSecureMode) && (!value)) {
 				$init($ErrorMsg);
 				$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::JAXP_SECUREPROCESSING_FEATURE));
@@ -774,12 +774,12 @@ bool TransformerFactoryImpl::getFeature($String* name) {
 		$throwNew($NullPointerException, $(err->toString()));
 	}
 	for (int32_t i = 0; i < features->length; ++i) {
-		if (name->equals(features->get(i))) {
+		if ($nc(name)->equals(features->get(i))) {
 			return true;
 		}
 	}
 	$init($XMLConstants);
-	if (name->equals($XMLConstants::FEATURE_SECURE_PROCESSING)) {
+	if ($nc(name)->equals($XMLConstants::FEATURE_SECURE_PROCESSING)) {
 		return !this->_isNotSecureProcessing;
 	}
 	int32_t index = $nc(this->_xmlFeatures)->getIndex(name);

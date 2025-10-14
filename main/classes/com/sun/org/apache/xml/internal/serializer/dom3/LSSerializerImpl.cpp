@@ -425,7 +425,7 @@ bool LSSerializerImpl::canSetParameter($String* name, Object$* value) {
 		}
 	} else {
 		$init($DOMConstants);
-		if (name->equalsIgnoreCase($DOMConstants::DOM_ERROR_HANDLER) && value == nullptr || $instanceOf($DOMErrorHandler, value)) {
+		if ($nc(name)->equalsIgnoreCase($DOMConstants::DOM_ERROR_HANDLER) && value == nullptr || $instanceOf($DOMErrorHandler, value)) {
 			return true;
 		}
 	}
@@ -434,7 +434,7 @@ bool LSSerializerImpl::canSetParameter($String* name, Object$* value) {
 
 $Object* LSSerializerImpl::getParameter($String* name) {
 	$init($DOMConstants);
-	if (name->equalsIgnoreCase($DOMConstants::DOM_NORMALIZE_CHARACTERS)) {
+	if ($nc(name)->equalsIgnoreCase($DOMConstants::DOM_NORMALIZE_CHARACTERS)) {
 		return $of(nullptr);
 	} else {
 		if (name->equalsIgnoreCase($DOMConstants::DOM_COMMENTS)) {
@@ -545,7 +545,7 @@ void LSSerializerImpl::setParameter($String* name, Object$* value) {
 	if ($instanceOf($Boolean, value)) {
 		bool bValue = $nc(($cast($Boolean, value)))->booleanValue();
 		$init($DOMConstants);
-		if (name->equalsIgnoreCase($DOMConstants::DOM_COMMENTS)) {
+		if ($nc(name)->equalsIgnoreCase($DOMConstants::DOM_COMMENTS)) {
 			this->fFeatures = bValue ? this->fFeatures | LSSerializerImpl::COMMENTS : (int32_t)(this->fFeatures & (uint32_t)~LSSerializerImpl::COMMENTS);
 			if (bValue) {
 				$nc(this->fDOMConfigProperties)->setProperty($$str({$DOMConstants::S_DOM3_PROPERTIES_NS, $DOMConstants::DOM_COMMENTS}), $DOMConstants::DOM3_EXPLICIT_TRUE);
@@ -730,7 +730,7 @@ void LSSerializerImpl::setParameter($String* name, Object$* value) {
 		}
 	} else {
 		$init($DOMConstants);
-		if (name->equalsIgnoreCase($DOMConstants::DOM_ERROR_HANDLER)) {
+		if ($nc(name)->equalsIgnoreCase($DOMConstants::DOM_ERROR_HANDLER)) {
 			if (value == nullptr || $instanceOf($DOMErrorHandler, value)) {
 				$set(this, fDOMErrorHandler, $cast($DOMErrorHandler, value));
 			} else {

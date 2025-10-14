@@ -333,7 +333,7 @@ $XSElementDecl* XSDElementTraverser::traverseNamedElement($Element* elmDecl, $Ob
 			} else {
 				$set($nc(element), fTargetNamespace, nullptr);
 			}
-		} else if (schemaDoc->fAreLocalElementsQualified) {
+		} else if ($nc(schemaDoc)->fAreLocalElementsQualified) {
 			$set($nc(element), fTargetNamespace, schemaDoc->fTargetNamespace);
 		} else {
 			$set($nc(element), fTargetNamespace, nullptr);

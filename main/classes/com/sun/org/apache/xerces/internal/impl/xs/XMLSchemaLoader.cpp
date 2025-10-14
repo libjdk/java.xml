@@ -850,7 +850,7 @@ void XMLSchemaLoader::processJAXPSchemaSource($Map* locationPairs) {
 		bool var$4 = var$5 && !$InputStream::class$->isAssignableFrom(componentType);
 		$load($InputSource);
 		bool var$3 = var$4 && !$InputSource::class$->isAssignableFrom(componentType);
-		if (var$3 && !componentType->isInterface()) {
+		if (var$3 && !$nc(componentType)->isInterface()) {
 			$init($XSMessageFormatter);
 			$var($MessageFormatter, mf, $nc(this->fErrorReporter)->getMessageFormatter($XSMessageFormatter::SCHEMA_DOMAIN));
 			$init($Status);

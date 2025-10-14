@@ -367,7 +367,7 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 								$init($Constants);
 								$nc(il)->append($Constants::NOP);
 							} else {
-								if (clazz->isAssignableFrom($Double::class$)) {
+								if ($nc(clazz)->isAssignableFrom($Double::class$)) {
 									$init($1Type);
 									translateTo(classGen, methodGen, $1Type::Reference);
 								} else {

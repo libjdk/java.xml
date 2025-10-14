@@ -1591,7 +1591,7 @@ $ContentModelValidator* DTDGrammar::createChildModel(int32_t contentSpecIndex) {
 $CMNode* DTDGrammar::buildSyntaxTree(int32_t startNode, $XMLContentSpec* contentSpec) {
 	$var($CMNode, nodeRet, nullptr);
 	getContentSpec(startNode, contentSpec);
-	if (((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY) {
+	if (((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY) {
 		$assign(nodeRet, $new($CMAny, contentSpec->type, $cast($String, contentSpec->otherValue), this->fLeafCount++));
 	} else if (((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_OTHER) {
 		$assign(nodeRet, $new($CMAny, contentSpec->type, $cast($String, contentSpec->otherValue), this->fLeafCount++));
@@ -1620,7 +1620,7 @@ $CMNode* DTDGrammar::buildSyntaxTree(int32_t startNode, $XMLContentSpec* content
 
 void DTDGrammar::contentSpecTree(int32_t contentSpecIndex, $XMLContentSpec* contentSpec, $DTDGrammar$ChildrenList* children) {
 	getContentSpec(contentSpecIndex, contentSpec);
-	if (contentSpec->type == $XMLContentSpec::CONTENTSPECNODE_LEAF || ((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY || ((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_LOCAL || ((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_OTHER) {
+	if ($nc(contentSpec)->type == $XMLContentSpec::CONTENTSPECNODE_LEAF || ((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY || ((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_LOCAL || ((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_OTHER) {
 		if ($nc(children)->length == $nc(children->qname)->length) {
 			$var($QNameArray, newQName, $new($QNameArray, children->length * 2));
 			$System::arraycopy(children->qname, 0, newQName, 0, children->length);
@@ -1634,7 +1634,7 @@ void DTDGrammar::contentSpecTree(int32_t contentSpecIndex, $XMLContentSpec* cont
 		++children->length;
 		return;
 	}
-	int32_t leftNode = contentSpec->value != nullptr ? $nc((($cast($ints, contentSpec->value))))->get(0) : -1;
+	int32_t leftNode = $nc(contentSpec)->value != nullptr ? $nc((($cast($ints, $nc(contentSpec)->value))))->get(0) : -1;
 	int32_t rightNode = -1;
 	if (contentSpec->otherValue != nullptr) {
 		rightNode = $nc((($cast($ints, contentSpec->otherValue))))->get(0);

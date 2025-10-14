@@ -1086,14 +1086,14 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 				}), schemaRoot);
 				return nullptr;
 			}
-		} else if (referType != $XSDDescription::CONTEXT_PREPARSE && callerTNS != currSchemaInfo->fTargetNamespace) {
+		} else if (referType != $XSDDescription::CONTEXT_PREPARSE && callerTNS != $nc(currSchemaInfo)->fTargetNamespace) {
 			reportSchemaError($nc($nc(XSDHandler::NS_ERROR_CODES)->get(referType))->get(secondIdx), $$new($ObjectArray, {
 				$of(callerTNS),
 				$of(currSchemaInfo->fTargetNamespace)
 			}), schemaRoot);
 			return nullptr;
 		}
-	} else if (currSchemaInfo->fTargetNamespace != nullptr) {
+	} else if ($nc(currSchemaInfo)->fTargetNamespace != nullptr) {
 		if (referType == $XSDDescription::CONTEXT_PREPARSE) {
 			desc->setTargetNamespace(currSchemaInfo->fTargetNamespace);
 			$assign(callerTNS, currSchemaInfo->fTargetNamespace);
@@ -1106,7 +1106,7 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 			return nullptr;
 		}
 	}
-	currSchemaInfo->addAllowedNS(currSchemaInfo->fTargetNamespace);
+	$nc(currSchemaInfo)->addAllowedNS(currSchemaInfo->fTargetNamespace);
 	$var($SchemaGrammar, sg, nullptr);
 	if (nsCollision) {
 		$var($SchemaGrammar, sg2, $nc(this->fGrammarBucket)->getGrammar(currSchemaInfo->fTargetNamespace));
@@ -1199,7 +1199,7 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 						$assign(ins, $new($ArrayList));
 						$nc(this->fImportMap)->put(tns, ins);
 						ins->add(schemaNamespace);
-					} else if (!ins->contains(schemaNamespace)) {
+					} else if (!$nc(ins)->contains(schemaNamespace)) {
 						ins->add(schemaNamespace);
 					}
 					$nc(this->fSchemaGrammarDescription)->reset();
@@ -1325,7 +1325,7 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 			} else {
 				$assign(newSchemaInfo, constructTrees(newSchemaRoot, schemaHint, this->fSchemaGrammarDescription, importCollision));
 			}
-			if (localName->equals($SchemaSymbols::ELT_REDEFINE) && newSchemaInfo != nullptr) {
+			if ($nc(localName)->equals($SchemaSymbols::ELT_REDEFINE) && newSchemaInfo != nullptr) {
 				if (this->fRedefine2XSDMap == nullptr) {
 					$set(this, fRedefine2XSDMap, $new($HashMap));
 				}
@@ -1347,7 +1347,7 @@ bool XSDHandler::isExistingGrammar($XSDDescription* desc, bool ignoreConflict) {
 	$var($SchemaGrammar, sg, $nc(this->fGrammarBucket)->getGrammar($($nc(desc)->getTargetNamespace())));
 	if (sg == nullptr) {
 		return findGrammar(desc, ignoreConflict) != nullptr;
-	} else if (sg->isImmutable()) {
+	} else if ($nc(sg)->isImmutable()) {
 		return true;
 	} else {
 		try {
@@ -1562,7 +1562,7 @@ void XSDHandler::traverseSchemas($List* annotationInfo) {
 					}
 					currSchemaDoc->restoreNSSupport();
 				} else {
-					if (componentType->equals($SchemaSymbols::ELT_ATTRIBUTE)) {
+					if ($nc(componentType)->equals($SchemaSymbols::ELT_ATTRIBUTE)) {
 						$nc(this->fAttributeTraverser)->traverseGlobal(globalComp, currSchemaDoc, currSG);
 					} else {
 						if (componentType->equals($SchemaSymbols::ELT_ATTRIBUTEGROUP)) {
@@ -2573,7 +2573,7 @@ bool XSDHandler::canAddComponent($XSObject* component, $XSDDescription* desc) {
 	$var($SchemaGrammar, sg, findGrammar(desc, false));
 	if (sg == nullptr) {
 		return true;
-	} else if (sg->isImmutable()) {
+	} else if ($nc(sg)->isImmutable()) {
 		return false;
 	}
 	int16_t componentType = $nc(component)->getType();
@@ -2581,42 +2581,42 @@ bool XSDHandler::canAddComponent($XSObject* component, $XSDDescription* desc) {
 	switch (componentType) {
 	case $XSConstants::TYPE_DEFINITION:
 		{
-			if ($equals(sg->getGlobalTypeDecl(name), component)) {
+			if ($equals($nc(sg)->getGlobalTypeDecl(name), component)) {
 				return true;
 			}
 			break;
 		}
 	case $XSConstants::ATTRIBUTE_DECLARATION:
 		{
-			if ($equals(sg->getGlobalAttributeDecl(name), component)) {
+			if ($equals($nc(sg)->getGlobalAttributeDecl(name), component)) {
 				return true;
 			}
 			break;
 		}
 	case $XSConstants::ATTRIBUTE_GROUP:
 		{
-			if ($equals(sg->getGlobalAttributeDecl(name), component)) {
+			if ($equals($nc(sg)->getGlobalAttributeDecl(name), component)) {
 				return true;
 			}
 			break;
 		}
 	case $XSConstants::ELEMENT_DECLARATION:
 		{
-			if ($equals(sg->getGlobalElementDecl(name), component)) {
+			if ($equals($nc(sg)->getGlobalElementDecl(name), component)) {
 				return true;
 			}
 			break;
 		}
 	case $XSConstants::MODEL_GROUP_DEFINITION:
 		{
-			if ($equals(sg->getGlobalGroupDecl(name), component)) {
+			if ($equals($nc(sg)->getGlobalGroupDecl(name), component)) {
 				return true;
 			}
 			break;
 		}
 	case $XSConstants::NOTATION_DECLARATION:
 		{
-			if ($equals(sg->getGlobalNotationDecl(name), component)) {
+			if ($equals($nc(sg)->getGlobalNotationDecl(name), component)) {
 				return true;
 			}
 			break;
@@ -3272,7 +3272,7 @@ $SchemaGrammar* XSDHandler::getSchemaGrammar($XSDDescription* desc) {
 		$var($String, var$0, $nc(desc)->getNamespace());
 		$assign(sg, $new($SchemaGrammar, var$0, $(desc->makeClone()), this->fSymbolTable));
 		$nc(this->fGrammarBucket)->putGrammar(sg);
-	} else if (sg->isImmutable()) {
+	} else if ($nc(sg)->isImmutable()) {
 		$assign(sg, createGrammarFrom(sg));
 	}
 	return sg;
@@ -3673,7 +3673,7 @@ void XSDHandler::checkForDuplicateNames($String* qName, int32_t declType, $Eleme
 
 void XSDHandler::renameRedefiningComponents($XSDocumentInfo* currSchema, $Element* child, $String* componentType, $String* oldName, $String* newName) {
 	$init($SchemaSymbols);
-	if (componentType->equals($SchemaSymbols::ELT_SIMPLETYPE)) {
+	if ($nc(componentType)->equals($SchemaSymbols::ELT_SIMPLETYPE)) {
 		$var($Element, grandKid, $DOMUtil::getFirstChildElement(child));
 		if (grandKid == nullptr) {
 			reportSchemaError("src-redefine.5.a.a"_s, nullptr, child);

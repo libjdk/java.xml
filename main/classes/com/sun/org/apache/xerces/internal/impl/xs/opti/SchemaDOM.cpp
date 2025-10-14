@@ -243,7 +243,7 @@ void SchemaDOM::characters($XMLString* text) {
 			}
 		}
 	} else {
-		$nc(this->fAnnotationBuffer)->append(text->ch, text->offset, text->length);
+		$nc(this->fAnnotationBuffer)->append($nc(text)->ch, text->offset, text->length);
 	}
 }
 

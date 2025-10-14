@@ -382,7 +382,7 @@ void DOMSerializerImpl::setParameter($String* name, Object$* value) {
 		}
 	} else {
 		$init($Constants);
-		if (name->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
+		if ($nc(name)->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
 			if (value == nullptr || $instanceOf($DOMErrorHandler, value)) {
 				$set(this, fErrorHandler, $cast($DOMErrorHandler, value));
 			} else {
@@ -414,17 +414,17 @@ bool DOMSerializerImpl::canSetParameter($String* name, Object$* state) {
 	if ($instanceOf($Boolean, state)) {
 		bool value = $nc(($cast($Boolean, state)))->booleanValue();
 		$init($Constants);
-		bool var$9 = name->equalsIgnoreCase($Constants::DOM_NAMESPACES);
-		bool var$8 = var$9 || name->equalsIgnoreCase($Constants::DOM_SPLIT_CDATA);
-		bool var$7 = var$8 || name->equalsIgnoreCase($Constants::DOM_DISCARD_DEFAULT_CONTENT);
-		bool var$6 = var$7 || name->equalsIgnoreCase($Constants::DOM_XMLDECL);
-		bool var$5 = var$6 || name->equalsIgnoreCase($Constants::DOM_WELLFORMED);
-		bool var$4 = var$5 || name->equalsIgnoreCase($Constants::DOM_INFOSET);
-		bool var$3 = var$4 || name->equalsIgnoreCase($Constants::DOM_ENTITIES);
-		bool var$2 = var$3 || name->equalsIgnoreCase($Constants::DOM_CDATA_SECTIONS);
-		bool var$1 = var$2 || name->equalsIgnoreCase($Constants::DOM_COMMENTS);
-		bool var$0 = var$1 || name->equalsIgnoreCase($Constants::DOM_FORMAT_PRETTY_PRINT);
-		if (var$0 || name->equalsIgnoreCase($Constants::DOM_NAMESPACE_DECLARATIONS)) {
+		bool var$9 = $nc(name)->equalsIgnoreCase($Constants::DOM_NAMESPACES);
+		bool var$8 = var$9 || $nc(name)->equalsIgnoreCase($Constants::DOM_SPLIT_CDATA);
+		bool var$7 = var$8 || $nc(name)->equalsIgnoreCase($Constants::DOM_DISCARD_DEFAULT_CONTENT);
+		bool var$6 = var$7 || $nc(name)->equalsIgnoreCase($Constants::DOM_XMLDECL);
+		bool var$5 = var$6 || $nc(name)->equalsIgnoreCase($Constants::DOM_WELLFORMED);
+		bool var$4 = var$5 || $nc(name)->equalsIgnoreCase($Constants::DOM_INFOSET);
+		bool var$3 = var$4 || $nc(name)->equalsIgnoreCase($Constants::DOM_ENTITIES);
+		bool var$2 = var$3 || $nc(name)->equalsIgnoreCase($Constants::DOM_CDATA_SECTIONS);
+		bool var$1 = var$2 || $nc(name)->equalsIgnoreCase($Constants::DOM_COMMENTS);
+		bool var$0 = var$1 || $nc(name)->equalsIgnoreCase($Constants::DOM_FORMAT_PRETTY_PRINT);
+		if (var$0 || $nc(name)->equalsIgnoreCase($Constants::DOM_NAMESPACE_DECLARATIONS)) {
 			return true;
 		} else {
 			bool var$17 = name->equalsIgnoreCase($Constants::DOM_CANONICAL_FORM);
@@ -442,7 +442,7 @@ bool DOMSerializerImpl::canSetParameter($String* name, Object$* state) {
 		}
 	} else {
 		$init($Constants);
-		if (name->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER) && state == nullptr || $instanceOf($DOMErrorHandler, state)) {
+		if ($nc(name)->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER) && state == nullptr || $instanceOf($DOMErrorHandler, state)) {
 			return true;
 		}
 	}
@@ -479,7 +479,7 @@ $DOMStringList* DOMSerializerImpl::getParameterNames() {
 
 $Object* DOMSerializerImpl::getParameter($String* name) {
 	$init($Constants);
-	if (name->equalsIgnoreCase($Constants::DOM_NORMALIZE_CHARACTERS)) {
+	if ($nc(name)->equalsIgnoreCase($Constants::DOM_NORMALIZE_CHARACTERS)) {
 		return $of(nullptr);
 	} else {
 		if (name->equalsIgnoreCase($Constants::DOM_COMMENTS)) {
@@ -844,7 +844,7 @@ bool DOMSerializerImpl::writeToURI($Node* node, $String* URI) {
 				prepareForSerialization(ser, node);
 				$nc($nc(ser)->_format)->setEncoding(encoding);
 				ser->setOutputByteStream($($XMLEntityManager::createOutputStream(URI)));
-				if (node->getNodeType() == $Node::DOCUMENT_NODE) {
+				if ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) {
 					ser->serialize($cast($Document, node));
 				} else if (node->getNodeType() == $Node::DOCUMENT_FRAGMENT_NODE) {
 					ser->serialize($cast($DocumentFragment, node));
@@ -917,7 +917,7 @@ void DOMSerializerImpl::prepareForSerialization($XMLSerializer* ser, $Node* node
 		$assign(root, node);
 		$var($Method, versionChanged, nullptr);
 		bool verifyNames = true;
-		$var($Document, document, (node->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : node->getOwnerDocument());
+		$var($Document, document, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 		try {
 			$assign(versionChanged, $nc($of(document))->getClass()->getMethod("isXMLVersionChanged()"_s, $$new($ClassArray, 0)));
 			if (versionChanged != nullptr) {
@@ -950,7 +950,7 @@ void DOMSerializerImpl::prepareForSerialization($XMLSerializer* ser, $Node* node
 }
 
 void DOMSerializerImpl::verify($Node* node, bool verifyNames, bool xml11Version) {
-	int32_t type = node->getNodeType();
+	int32_t type = $nc(node)->getNodeType();
 	$set($nc(this->fLocator), fRelatedNode, node);
 	bool wellformed = false;
 	switch (type) {
@@ -1070,7 +1070,7 @@ void DOMSerializerImpl::verify($Node* node, bool verifyNames, bool xml11Version)
 }
 
 $String* DOMSerializerImpl::_getXmlVersion($Node* node) {
-	$var($Document, doc, (node->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : node->getOwnerDocument());
+	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
 			return doc->getXmlVersion();
@@ -1088,7 +1088,7 @@ $String* DOMSerializerImpl::_getXmlVersion($Node* node) {
 }
 
 $String* DOMSerializerImpl::_getInputEncoding($Node* node) {
-	$var($Document, doc, (node->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : node->getOwnerDocument());
+	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
 			return doc->getInputEncoding();
@@ -1106,7 +1106,7 @@ $String* DOMSerializerImpl::_getInputEncoding($Node* node) {
 }
 
 $String* DOMSerializerImpl::_getXmlEncoding($Node* node) {
-	$var($Document, doc, (node->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : node->getOwnerDocument());
+	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
 			return doc->getXmlEncoding();

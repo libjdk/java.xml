@@ -1056,8 +1056,8 @@ void ToHTMLStream::addUniqueAttribute($String* name, $String* value, int32_t fla
 		} else {
 			bool var$2 = ((int32_t)(flags & (uint32_t)$ExtendedContentHandler::HTML_ATTREMPTY)) > 0;
 			if (var$2) {
-				bool var$3 = value->length() == 0;
-				var$2 = (var$3 || value->equalsIgnoreCase(name));
+				bool var$3 = $nc(value)->length() == 0;
+				var$2 = (var$3 || $nc(value)->equalsIgnoreCase(name));
 			}
 			if (var$2) {
 				$nc(writer)->write((int32_t)u' ');

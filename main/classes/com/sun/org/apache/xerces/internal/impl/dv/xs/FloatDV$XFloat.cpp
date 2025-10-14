@@ -83,7 +83,7 @@ $Object* allocate$FloatDV$XFloat($Class* clazz) {
 void FloatDV$XFloat::init$($String* s) {
 	if ($DoubleDV::isPossibleFP(s)) {
 		this->value = $Float::parseFloat(s);
-	} else if (s->equals("INF"_s)) {
+	} else if ($nc(s)->equals("INF"_s)) {
 		$init($Float);
 		this->value = $Float::POSITIVE_INFINITY;
 	} else if (s->equals("-INF"_s)) {

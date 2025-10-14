@@ -1124,7 +1124,7 @@ bool RegularExpression::matchAnchor($RegularExpression$ExpressionTarget* target,
 				if (!(offset == $nc(con)->start || offset > $nc(con)->start && offset < con->limit && isEOLChar($nc(target)->charAt(offset - 1)))) {
 					return false;
 				}
-			} else if (offset != con->start) {
+			} else if (offset != $nc(con)->start) {
 				return false;
 			}
 			break;
@@ -1143,9 +1143,9 @@ bool RegularExpression::matchAnchor($RegularExpression$ExpressionTarget* target,
 					return false;
 				}
 			} else {
-				bool var$2 = offset == con->limit || offset + 1 == con->limit && isEOLChar(target->charAt(offset));
+				bool var$2 = offset == $nc(con)->limit || offset + 1 == $nc(con)->limit && isEOLChar($nc(target)->charAt(offset));
 				if (!var$2) {
-					bool var$3 = offset + 2 == con->limit && target->charAt(offset) == RegularExpression::CARRIAGE_RETURN;
+					bool var$3 = offset + 2 == $nc(con)->limit && $nc(target)->charAt(offset) == RegularExpression::CARRIAGE_RETURN;
 					var$2 = var$3 && target->charAt(offset + 1) == RegularExpression::LINE_FEED;
 				}
 				if (!(var$2)) {

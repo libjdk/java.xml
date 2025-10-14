@@ -64,8 +64,8 @@ bool DOMErrorHandlerImpl::handleError($DOMError* error) {
 		$assign(severity, "[Fatal Error]"_s);
 	}
 	$init($System);
-	$nc($System::err)->println($$str({severity, ": "_s, $(error->getMessage()), "\t"_s}));
-	$var($String, var$2, $$str({"Type : "_s, $(error->getType()), "\tRelated Data: "_s}));
+	$nc($System::err)->println($$str({severity, ": "_s, $($nc(error)->getMessage()), "\t"_s}));
+	$var($String, var$2, $$str({"Type : "_s, $($nc(error)->getType()), "\tRelated Data: "_s}));
 	$var($String, var$1, $$concat(var$2, $(error->getRelatedData())));
 	$var($String, var$0, $$concat(var$1, "\tRelated Exception: "));
 	$nc($System::err)->println($$concat(var$0, $(error->getRelatedException())));

@@ -1323,7 +1323,7 @@ $Reader* XMLEntityScanner::createReader($InputStream* inputStream, $String* enco
 			$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "EncodingDeclInvalid"_s, $$new($ObjectArray, {$of(encoding)}), $XMLErrorReporter::SEVERITY_FATAL_ERROR);
 			$assign(javaEncoding, "ISO8859_1"_s);
 		}
-	} else if (javaEncoding->equals("ASCII"_s)) {
+	} else if ($nc(javaEncoding)->equals("ASCII"_s)) {
 		$var($InputStream, var$6, inputStream);
 		int32_t var$7 = this->fBufferSize;
 		$init($XMLMessageFormatter);

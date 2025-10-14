@@ -2159,7 +2159,7 @@ void XMLSchemaValidator::processAttributes($1QName* element, $XMLAttributes* att
 				}
 				continue;
 			} else {
-				bool var$1 = $nc(currDecl->fType)->getTypeCategory() == $XSTypeDefinition::SIMPLE_TYPE;
+				bool var$1 = $nc($nc(currDecl)->fType)->getTypeCategory() == $XSTypeDefinition::SIMPLE_TYPE;
 				if (var$1 && $nc((currDecl->fType))->isIDType()) {
 					if (wildcardIDName != nullptr) {
 						reportSchemaError("cvc-complex-type.5.1"_s, $$new($ObjectArray, {
@@ -2442,7 +2442,7 @@ $Object* XMLSchemaValidator::elementLocallyValidComplexType($1QName* element, Ob
 	if (!this->fNil) {
 		if ($nc(ctype)->fContentType == $XSComplexTypeDecl::CONTENTTYPE_EMPTY && (this->fSubElement || this->fSawText)) {
 			reportSchemaError("cvc-complex-type.2.1"_s, $$new($ObjectArray, {$of($nc(element)->rawname)}));
-		} else if (ctype->fContentType == $XSComplexTypeDecl::CONTENTTYPE_SIMPLE) {
+		} else if ($nc(ctype)->fContentType == $XSComplexTypeDecl::CONTENTTYPE_SIMPLE) {
 			if (this->fSubElement) {
 				reportSchemaError("cvc-complex-type.2.2"_s, $$new($ObjectArray, {$of($nc(element)->rawname)}));
 			}
@@ -2463,7 +2463,7 @@ $Object* XMLSchemaValidator::elementLocallyValidComplexType($1QName* element, Ob
 				reportSchemaError("cvc-complex-type.2.3"_s, $$new($ObjectArray, {$of($nc(element)->rawname)}));
 			}
 		}
-		if (ctype->fContentType == $XSComplexTypeDecl::CONTENTTYPE_ELEMENT || ctype->fContentType == $XSComplexTypeDecl::CONTENTTYPE_MIXED) {
+		if ($nc(ctype)->fContentType == $XSComplexTypeDecl::CONTENTTYPE_ELEMENT || $nc(ctype)->fContentType == $XSComplexTypeDecl::CONTENTTYPE_MIXED) {
 			if ($nc(this->fCurrCMState)->get(0) >= 0 && !$nc(this->fCurrentCM)->endContentModel(this->fCurrCMState)) {
 				$var($String, expected, expectedStr($($nc(this->fCurrentCM)->whatCanGoHere(this->fCurrCMState))));
 				$var($ints, occurenceInfo, $nc(this->fCurrentCM)->occurenceInfo(this->fCurrCMState));

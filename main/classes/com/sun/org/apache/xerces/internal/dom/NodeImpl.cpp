@@ -618,7 +618,7 @@ int16_t NodeImpl::compareDocumentPosition($Node* other) {
 								} else {
 									return ((int16_t)($Node::DOCUMENT_POSITION_FOLLOWING | $Node::DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC));
 								}
-							} else if ($nc(($cast($NamedNodeMapImpl, $(container->getEntities()))))->precedes(otherAncestor, thisAncestor)) {
+							} else if ($nc(($cast($NamedNodeMapImpl, $($nc(container)->getEntities()))))->precedes(otherAncestor, thisAncestor)) {
 								return ((int16_t)($Node::DOCUMENT_POSITION_PRECEDING | $Node::DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC));
 							} else {
 								return ((int16_t)($Node::DOCUMENT_POSITION_FOLLOWING | $Node::DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC));

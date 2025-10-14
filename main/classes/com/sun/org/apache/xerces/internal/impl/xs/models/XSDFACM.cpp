@@ -519,7 +519,7 @@ void XSDFACM::dumpTree($CMNode* nodeCur, int32_t level) {
 		$init($System);
 		$nc($System::out)->print("   "_s);
 	}
-	int32_t type = nodeCur->type();
+	int32_t type = $nc(nodeCur)->type();
 	switch (type) {
 	case $XSModelGroupImpl::MODELGROUP_CHOICE:
 		{}
@@ -616,12 +616,12 @@ $ints* XSDFACM::makeDefStateList() {
 }
 
 void XSDFACM::postTreeBuildInit($CMNode* nodeCur) {
-	nodeCur->setMaxStates(this->fLeafCount);
+	$nc(nodeCur)->setMaxStates(this->fLeafCount);
 	$var($XSCMLeaf, leaf, nullptr);
 	int32_t pos = 0;
 	if (nodeCur->type() == $XSParticleDecl::PARTICLE_WILDCARD) {
 		$assign(leaf, $cast($XSCMLeaf, nodeCur));
-		pos = $nc(leaf)->getPosition();
+		pos = leaf->getPosition();
 		$nc(this->fLeafList)->set(pos, leaf);
 		$nc(this->fLeafListType)->set(pos, $XSParticleDecl::PARTICLE_WILDCARD);
 	} else {
@@ -636,7 +636,7 @@ void XSDFACM::postTreeBuildInit($CMNode* nodeCur) {
 				postTreeBuildInit($($nc(($cast($XSCMUniOp, nodeCur)))->getChild()));
 			} else if (nodeCur->type() == $XSParticleDecl::PARTICLE_ELEMENT) {
 				$assign(leaf, $cast($XSCMLeaf, nodeCur));
-				pos = $nc(leaf)->getPosition();
+				pos = leaf->getPosition();
 				$nc(this->fLeafList)->set(pos, leaf);
 				$nc(this->fLeafListType)->set(pos, $XSParticleDecl::PARTICLE_ELEMENT);
 			} else {

@@ -181,7 +181,7 @@ bool FunctionMultiArgs::deepEquals($Expression* expr) {
 				return false;
 			}
 		}
-	} else if (nullptr != fma->m_args) {
+	} else if (nullptr != $nc(fma)->m_args) {
 		return false;
 	}
 	return true;

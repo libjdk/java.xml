@@ -260,7 +260,7 @@ void JAXPValidatorComponent::updateAttributes($Attributes* atts) {
 			$var($String, var$3, symbolize(aqn));
 			$var($QName, var$0, $new($QName, var$1, var$2, var$3, $(symbolize($(atts->getURI(i))))));
 			j = $nc(this->fCurrentAttributes)->addAttribute(var$0, $(atts->getType(i)), av);
-		} else if (!av->equals($($nc(this->fCurrentAttributes)->getValue(j)))) {
+		} else if (!$nc(av)->equals($($nc(this->fCurrentAttributes)->getValue(j)))) {
 			$nc(this->fCurrentAttributes)->setValue(j, av);
 		}
 	}

@@ -231,7 +231,7 @@ $XSGroupDecl* XSDGroupTraverser::traverseGlobal($Element* elmNode, $XSDocumentIn
 				$of("(annotation?, (all | choice | sequence))"_s)
 			}), elmNode);
 		} else {
-			if (childName->equals($SchemaSymbols::ELT_ALL)) {
+			if ($nc(childName)->equals($SchemaSymbols::ELT_ALL)) {
 				$assign(particle, traverseAll(l_elmChild, schemaDoc, grammar, $XSDAbstractTraverser::CHILD_OF_GROUP, group));
 			} else {
 				if (childName->equals($SchemaSymbols::ELT_CHOICE)) {

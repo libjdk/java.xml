@@ -359,7 +359,7 @@ $Object* XSLTC::getProperty($String* name) {
 
 void XSLTC::setProperty($String* name, Object$* value) {
 	$init($XMLConstants);
-	if (name->equals($XMLConstants::ACCESS_EXTERNAL_STYLESHEET)) {
+	if ($nc(name)->equals($XMLConstants::ACCESS_EXTERNAL_STYLESHEET)) {
 		$set(this, _accessExternalStylesheet, $cast($String, value));
 	} else {
 		if (name->equals($XMLConstants::ACCESS_EXTERNAL_DTD)) {
@@ -746,11 +746,11 @@ $Stylesheet* XSLTC::getStylesheet() {
 }
 
 int32_t XSLTC::registerAttribute($QName* name) {
-	$var($Integer, code, $cast($Integer, $nc(this->_attributes)->get($(name->toString()))));
+	$var($Integer, code, $cast($Integer, $nc(this->_attributes)->get($($nc(name)->toString()))));
 	if (code == nullptr) {
 		$assign(code, $Integer::valueOf(this->_nextGType++));
-		$nc(this->_attributes)->put($(name->toString()), code);
-		$var($String, uri, name->getNamespace());
+		$nc(this->_attributes)->put($($nc(name)->toString()), code);
+		$var($String, uri, $nc(name)->getNamespace());
 		$var($String, local, $str({"@"_s, $(name->getLocalPart())}));
 		if ((uri != nullptr) && (!uri->equals(""_s))) {
 			$nc(this->_namesIndex)->add($$str({uri, ":"_s, local}));
@@ -765,24 +765,24 @@ int32_t XSLTC::registerAttribute($QName* name) {
 }
 
 int32_t XSLTC::registerElement($QName* name) {
-	$var($Integer, code, $cast($Integer, $nc(this->_elements)->get($(name->toString()))));
+	$var($Integer, code, $cast($Integer, $nc(this->_elements)->get($($nc(name)->toString()))));
 	if (code == nullptr) {
-		$var($Object, var$0, $of(name->toString()));
+		$var($Object, var$0, $of($nc(name)->toString()));
 		$nc(this->_elements)->put(var$0, $assign(code, $Integer::valueOf(this->_nextGType++)));
-		$nc(this->_namesIndex)->add($(name->toString()));
+		$nc(this->_namesIndex)->add($($nc(name)->toString()));
 	}
-	if ($nc($(name->getLocalPart()))->equals("*"_s)) {
+	if ($nc($($nc(name)->getLocalPart()))->equals("*"_s)) {
 		registerNamespace($(name->getNamespace()));
 	}
 	return $nc(code)->intValue();
 }
 
 int32_t XSLTC::registerNamespacePrefix($QName* name) {
-	$var($Integer, code, $cast($Integer, $nc(this->_namespacePrefixes)->get($(name->toString()))));
+	$var($Integer, code, $cast($Integer, $nc(this->_namespacePrefixes)->get($($nc(name)->toString()))));
 	if (code == nullptr) {
 		$assign(code, $Integer::valueOf(this->_nextGType++));
-		$nc(this->_namespacePrefixes)->put($(name->toString()), code);
-		$var($String, uri, name->getNamespace());
+		$nc(this->_namespacePrefixes)->put($($nc(name)->toString()), code);
+		$var($String, uri, $nc(name)->getNamespace());
 		if ((uri != nullptr) && (!uri->equals(""_s))) {
 			$nc(this->_namesIndex)->add("?"_s);
 		} else {

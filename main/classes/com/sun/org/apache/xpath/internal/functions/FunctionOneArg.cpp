@@ -162,7 +162,7 @@ bool FunctionOneArg::deepEquals($Expression* expr) {
 		if (!$nc(this->m_arg0)->deepEquals($nc(($cast(FunctionOneArg, expr)))->m_arg0)) {
 			return false;
 		}
-	} else if (nullptr != ($cast(FunctionOneArg, expr))->m_arg0) {
+	} else if (nullptr != $nc(($cast(FunctionOneArg, expr)))->m_arg0) {
 		return false;
 	}
 	return true;

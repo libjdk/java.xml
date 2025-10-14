@@ -646,7 +646,7 @@ void InstructionList::remove($InstructionHandle* prev, $InstructionHandle* next$
 }
 
 void InstructionList::delete$($InstructionHandle* ih) {
-	$var($InstructionHandle, var$0, ih->getPrev());
+	$var($InstructionHandle, var$0, $nc(ih)->getPrev());
 	remove(var$0, $(ih->getNext()));
 }
 

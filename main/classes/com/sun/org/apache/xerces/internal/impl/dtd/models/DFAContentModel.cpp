@@ -332,7 +332,7 @@ void DFAContentModel::dumpTree($CMNode* nodeCur, int32_t level) {
 		$init($System);
 		$nc($System::out)->print("   "_s);
 	}
-	int32_t type = nodeCur->type();
+	int32_t type = $nc(nodeCur)->type();
 	if ((type == $XMLContentSpec::CONTENTSPECNODE_CHOICE) || (type == $XMLContentSpec::CONTENTSPECNODE_SEQ)) {
 		if (type == $XMLContentSpec::CONTENTSPECNODE_CHOICE) {
 			$init($System);
@@ -391,7 +391,7 @@ $ints* DFAContentModel::makeDefStateList() {
 }
 
 int32_t DFAContentModel::postTreeBuildInit($CMNode* nodeCur, int32_t curIndex) {
-	nodeCur->setMaxStates(this->fLeafCount);
+	$nc(nodeCur)->setMaxStates(this->fLeafCount);
 	bool var$1 = ((int32_t)(nodeCur->type() & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY;
 	bool var$0 = var$1 || ((int32_t)(nodeCur->type() & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_LOCAL;
 	if (var$0 || ((int32_t)(nodeCur->type() & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_OTHER) {

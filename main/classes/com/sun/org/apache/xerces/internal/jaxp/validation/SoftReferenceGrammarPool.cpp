@@ -252,15 +252,15 @@ bool SoftReferenceGrammarPool::equals($XMLGrammarDescription* desc1, $XMLGrammar
 			if (!targetNamespace->equals($($nc(sd2)->getTargetNamespace()))) {
 				return false;
 			}
-		} else if (sd2->getTargetNamespace() != nullptr) {
+		} else if ($nc(sd2)->getTargetNamespace() != nullptr) {
 			return false;
 		}
 		$var($String, expandedSystemId, sd1->getExpandedSystemId());
 		if (expandedSystemId != nullptr) {
-			if (!expandedSystemId->equals($(sd2->getExpandedSystemId()))) {
+			if (!expandedSystemId->equals($($nc(sd2)->getExpandedSystemId()))) {
 				return false;
 			}
-		} else if (sd2->getExpandedSystemId() != nullptr) {
+		} else if ($nc(sd2)->getExpandedSystemId() != nullptr) {
 			return false;
 		}
 		return true;

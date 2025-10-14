@@ -1280,15 +1280,15 @@ void AbstractDOMParser::handleBaseURI($Node* node) {
 				if ($nc(($cast($Element, node)))->getAttributeNodeNS("http://www.w3.org/XML/1998/namespace"_s, "base"_s) != nullptr) {
 					return;
 				}
-			} else if (($cast($Element, node))->getAttributeNode("xml:base"_s) != nullptr) {
+			} else if ($nc(($cast($Element, node)))->getAttributeNode("xml:base"_s) != nullptr) {
 				return;
 			}
 			$assign(baseURI, $nc(($cast($EntityReferenceImpl, this->fCurrentNode)))->getBaseURI());
 			if (baseURI != nullptr && !baseURI->equals($($nc(this->fDocumentImpl)->getDocumentURI()))) {
 				if (this->fNamespaceAware) {
-					($cast($Element, node))->setAttributeNS("http://www.w3.org/XML/1998/namespace"_s, "xml:base"_s, baseURI);
+					$nc(($cast($Element, node)))->setAttributeNS("http://www.w3.org/XML/1998/namespace"_s, "xml:base"_s, baseURI);
 				} else {
-					($cast($Element, node))->setAttribute("xml:base"_s, baseURI);
+					$nc(($cast($Element, node)))->setAttribute("xml:base"_s, baseURI);
 				}
 			}
 		} else if (nodeType == $Node::PROCESSING_INSTRUCTION_NODE) {

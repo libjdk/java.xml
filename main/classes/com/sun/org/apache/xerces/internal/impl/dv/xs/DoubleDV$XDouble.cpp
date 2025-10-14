@@ -81,7 +81,7 @@ $Object* allocate$DoubleDV$XDouble($Class* clazz) {
 void DoubleDV$XDouble::init$($String* s) {
 	if ($DoubleDV::isPossibleFP(s)) {
 		this->value = $Double::parseDouble(s);
-	} else if (s->equals("INF"_s)) {
+	} else if ($nc(s)->equals("INF"_s)) {
 		$init($Double);
 		this->value = $Double::POSITIVE_INFINITY;
 	} else if (s->equals("-INF"_s)) {

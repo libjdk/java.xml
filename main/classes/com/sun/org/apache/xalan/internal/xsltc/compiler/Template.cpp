@@ -259,7 +259,7 @@ bool Template::resolveNamedTemplates(Template* other, $Parser* parser) {
 	}
 	$var($SymbolTable, stable, $nc(parser)->getSymbolTable());
 	int32_t us = this->getImportPrecedence();
-	int32_t them = other->getImportPrecedence();
+	int32_t them = $nc(other)->getImportPrecedence();
 	if (us > them) {
 		other->disable();
 		return true;

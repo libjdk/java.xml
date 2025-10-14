@@ -149,7 +149,7 @@ bool Function3Args::deepEquals($Expression* expr) {
 		if (!$nc(this->m_arg2)->deepEquals($nc(($cast(Function3Args, expr)))->m_arg2)) {
 			return false;
 		}
-	} else if (nullptr != ($cast(Function3Args, expr))->m_arg2) {
+	} else if (nullptr != $nc(($cast(Function3Args, expr)))->m_arg2) {
 		return false;
 	}
 	return true;

@@ -384,8 +384,8 @@ int32_t NamedNodeMapImpl::findNamePoint($String* namespaceURI, $String* name) {
 				return i;
 			}
 		} else {
-			bool var$3 = namespaceURI->equals(aNamespaceURI);
-			if (var$3 && name->equals(aLocalName)) {
+			bool var$3 = $nc(namespaceURI)->equals(aNamespaceURI);
+			if (var$3 && $nc(name)->equals(aLocalName)) {
 				return i;
 			}
 		}

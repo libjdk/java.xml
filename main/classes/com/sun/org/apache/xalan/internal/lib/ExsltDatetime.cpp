@@ -799,7 +799,7 @@ $String* ExsltDatetime::strip($String* symbols, $String* pattern) {
 			}
 			result->append($(pattern->substring(i, endQuote)));
 			i = endQuote++;
-		} else if (symbols->indexOf((int32_t)ch) > -1) {
+		} else if ($nc(symbols)->indexOf((int32_t)ch) > -1) {
 			++i;
 		} else {
 			result->append(ch);

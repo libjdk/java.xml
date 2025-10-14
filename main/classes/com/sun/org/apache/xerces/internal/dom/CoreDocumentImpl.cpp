@@ -1211,7 +1211,7 @@ int32_t CoreDocumentImpl::getNodeNumber($Node* node) {
 			num = --this->nodeCounter;
 			$nc(this->nodeTable)->put(node, $($Integer::valueOf(num)));
 		} else {
-			num = n->intValue();
+			num = $nc(n)->intValue();
 		}
 	}
 	return num;
@@ -1436,7 +1436,7 @@ $Node* CoreDocumentImpl::adoptNode($Node* source) {
 	}
 	if (source == nullptr) {
 		return nullptr;
-	} else if (source->getOwnerDocument() != nullptr) {
+	} else if ($nc(source)->getOwnerDocument() != nullptr) {
 		$var($DOMImplementation, thisImpl, this->getImplementation());
 		$var($DOMImplementation, otherImpl, $nc($(source->getOwnerDocument()))->getImplementation());
 		if (thisImpl != otherImpl) {
@@ -1849,9 +1849,9 @@ void CoreDocumentImpl::checkDOMNSErr($String* prefix, $String* namespace$) {
 			$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NAMESPACE_ERR"_s, nullptr));
 			$throwNew($DOMException, $DOMException::NAMESPACE_ERR, msg);
 		} else {
-			bool var$1 = prefix->equals("xml"_s);
+			bool var$1 = $nc(prefix)->equals("xml"_s);
 			$init($NamespaceContext);
-			if (var$1 && !namespace$->equals($NamespaceContext::XML_URI)) {
+			if (var$1 && !$nc(namespace$)->equals($NamespaceContext::XML_URI)) {
 				$init($DOMMessageFormatter);
 				$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NAMESPACE_ERR"_s, nullptr));
 				$throwNew($DOMException, $DOMException::NAMESPACE_ERR, msg);

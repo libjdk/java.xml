@@ -229,7 +229,7 @@ void SAX2StAXBaseWriter::startPrefixMapping($String* prefix$renamed, $String* ur
 	$var($String, prefix, prefix$renamed);
 	if (prefix == nullptr) {
 		$assign(prefix, ""_s);
-	} else if (prefix->equals("xml"_s)) {
+	} else if ($nc(prefix)->equals("xml"_s)) {
 		return;
 	}
 	if (this->namespaces == nullptr) {

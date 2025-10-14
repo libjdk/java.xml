@@ -1038,7 +1038,7 @@ void TransformerImpl::transferOutputProperties($SerializationHandler* handler) {
 			continue;
 		}
 		$init($OutputKeys);
-		if (name->equals($OutputKeys::DOCTYPE_PUBLIC)) {
+		if ($nc(name)->equals($OutputKeys::DOCTYPE_PUBLIC)) {
 			$assign(doctypePublic, value);
 		} else {
 			if (name->equals($OutputKeys::DOCTYPE_SYSTEM)) {
@@ -1155,19 +1155,19 @@ void TransformerImpl::setDefaults($Properties* props, $String* method) {
 
 bool TransformerImpl::validOutputProperty($String* name) {
 	$init($OutputKeys);
-	bool var$10 = name->equals($OutputKeys::ENCODING);
-	bool var$9 = var$10 || name->equals($OutputKeys::METHOD);
-	bool var$8 = var$9 || name->equals($OutputKeys::INDENT);
-	bool var$7 = var$8 || name->equals($OutputKeys::DOCTYPE_PUBLIC);
-	bool var$6 = var$7 || name->equals($OutputKeys::DOCTYPE_SYSTEM);
-	bool var$5 = var$6 || name->equals($OutputKeys::CDATA_SECTION_ELEMENTS);
-	bool var$4 = var$5 || name->equals($OutputKeys::MEDIA_TYPE);
-	bool var$3 = var$4 || name->equals($OutputKeys::OMIT_XML_DECLARATION);
-	bool var$2 = var$3 || name->equals($OutputKeys::STANDALONE);
-	bool var$1 = var$2 || name->equals($OutputKeys::VERSION);
+	bool var$10 = $nc(name)->equals($OutputKeys::ENCODING);
+	bool var$9 = var$10 || $nc(name)->equals($OutputKeys::METHOD);
+	bool var$8 = var$9 || $nc(name)->equals($OutputKeys::INDENT);
+	bool var$7 = var$8 || $nc(name)->equals($OutputKeys::DOCTYPE_PUBLIC);
+	bool var$6 = var$7 || $nc(name)->equals($OutputKeys::DOCTYPE_SYSTEM);
+	bool var$5 = var$6 || $nc(name)->equals($OutputKeys::CDATA_SECTION_ELEMENTS);
+	bool var$4 = var$5 || $nc(name)->equals($OutputKeys::MEDIA_TYPE);
+	bool var$3 = var$4 || $nc(name)->equals($OutputKeys::OMIT_XML_DECLARATION);
+	bool var$2 = var$3 || $nc(name)->equals($OutputKeys::STANDALONE);
+	bool var$1 = var$2 || $nc(name)->equals($OutputKeys::VERSION);
 	$init($JdkProperty$ImplPropMap);
 	bool var$0 = var$1 || $JdkProperty$ImplPropMap::XSLTCISSTANDALONE->is(name);
-	return (var$0 || name->charAt(0) == u'{');
+	return (var$0 || $nc(name)->charAt(0) == u'{');
 }
 
 bool TransformerImpl::isDefaultProperty($String* name, $Properties* properties) {

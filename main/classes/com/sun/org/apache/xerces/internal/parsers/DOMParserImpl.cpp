@@ -547,7 +547,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 		}
 	} else {
 		$init($Constants);
-		if (name->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
+		if ($nc(name)->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
 			if ($instanceOf($DOMErrorHandler, value) || value == nullptr) {
 				try {
 					$set(this, fErrorHandler, $new($DOMErrorHandlerWrapper, $cast($DOMErrorHandler, value)));
@@ -614,7 +614,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 									$nc(this->fConfiguration)->setProperty($$str({$Constants::JAXP_PROPERTY_PREFIX, $Constants::SCHEMA_LANGUAGE}), nullptr);
 									$set(this, fSchemaType, nullptr);
 								} else {
-									if ($of(value)->equals($Constants::NS_XMLSCHEMA)) {
+									if ($nc($of(value))->equals($Constants::NS_XMLSCHEMA)) {
 										$nc(this->fConfiguration)->setFeature(DOMParserImpl::XMLSCHEMA, true);
 										$nc(this->fConfiguration)->setFeature(DOMParserImpl::XMLSCHEMA_FULL_CHECKING, true);
 										$nc(this->fConfiguration)->setProperty($$str({$Constants::JAXP_PROPERTY_PREFIX, $Constants::SCHEMA_LANGUAGE}), $Constants::NS_XMLSCHEMA);
@@ -671,7 +671,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 
 $Object* DOMParserImpl::getParameter($String* name) {
 	$init($Constants);
-	if (name->equalsIgnoreCase($Constants::DOM_COMMENTS)) {
+	if ($nc(name)->equalsIgnoreCase($Constants::DOM_COMMENTS)) {
 		$init($AbstractDOMParser);
 		$init($Boolean);
 		return $of(($nc(this->fConfiguration)->getFeature($AbstractDOMParser::INCLUDE_COMMENTS_FEATURE)) ? $Boolean::TRUE : $Boolean::FALSE);
@@ -818,10 +818,10 @@ bool DOMParserImpl::canSetParameter($String* name, Object$* value) {
 	if ($instanceOf($Boolean, value)) {
 		bool state = $nc(($cast($Boolean, value)))->booleanValue();
 		$init($Constants);
-		bool var$2 = name->equalsIgnoreCase($Constants::DOM_SUPPORTED_MEDIATYPES_ONLY);
-		bool var$1 = var$2 || name->equalsIgnoreCase($Constants::DOM_NORMALIZE_CHARACTERS);
-		bool var$0 = var$1 || name->equalsIgnoreCase($Constants::DOM_CHECK_CHAR_NORMALIZATION);
-		if (var$0 || name->equalsIgnoreCase($Constants::DOM_CANONICAL_FORM)) {
+		bool var$2 = $nc(name)->equalsIgnoreCase($Constants::DOM_SUPPORTED_MEDIATYPES_ONLY);
+		bool var$1 = var$2 || $nc(name)->equalsIgnoreCase($Constants::DOM_NORMALIZE_CHARACTERS);
+		bool var$0 = var$1 || $nc(name)->equalsIgnoreCase($Constants::DOM_CHECK_CHAR_NORMALIZATION);
+		if (var$0 || $nc(name)->equalsIgnoreCase($Constants::DOM_CANONICAL_FORM)) {
 			return (state) ? false : true;
 		} else {
 			bool var$4 = name->equalsIgnoreCase($Constants::DOM_WELLFORMED);
@@ -847,7 +847,7 @@ bool DOMParserImpl::canSetParameter($String* name, Object$* value) {
 		}
 		try {
 			$var($String, normalizedName, nullptr);
-			if (name->equalsIgnoreCase(DOMParserImpl::NAMESPACE_GROWTH)) {
+			if ($nc(name)->equalsIgnoreCase(DOMParserImpl::NAMESPACE_GROWTH)) {
 				$assign(normalizedName, DOMParserImpl::NAMESPACE_GROWTH);
 			} else if (name->equalsIgnoreCase(DOMParserImpl::TOLERATE_DUPLICATES)) {
 				$assign(normalizedName, DOMParserImpl::TOLERATE_DUPLICATES);
@@ -863,7 +863,7 @@ bool DOMParserImpl::canSetParameter($String* name, Object$* value) {
 		}
 	} else {
 		$init($Constants);
-		if (name->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
+		if ($nc(name)->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
 			if ($instanceOf($DOMErrorHandler, value) || value == nullptr) {
 				return true;
 			}

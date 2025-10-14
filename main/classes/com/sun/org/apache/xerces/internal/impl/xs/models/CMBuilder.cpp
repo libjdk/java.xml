@@ -232,8 +232,8 @@ $CMNode* CMBuilder::expandContentModel($CMNode* node$renamed, int32_t minOccurs,
 	} else if (minOccurs == 1 && maxOccurs == $SchemaSymbols::OCCURRENCE_UNBOUNDED) {
 		$assign(nodeRet, $nc(this->fNodeFactory)->getCMUniOpNode($XSParticleDecl::PARTICLE_ONE_OR_MORE, node));
 	} else {
-		bool var$1 = optimize && node->type() == $XSParticleDecl::PARTICLE_ELEMENT;
-		if (var$1 || node->type() == $XSParticleDecl::PARTICLE_WILDCARD) {
+		bool var$1 = optimize && $nc(node)->type() == $XSParticleDecl::PARTICLE_ELEMENT;
+		if (var$1 || $nc(node)->type() == $XSParticleDecl::PARTICLE_WILDCARD) {
 			$assign(nodeRet, $nc(this->fNodeFactory)->getCMUniOpNode(minOccurs == 0 ? $XSParticleDecl::PARTICLE_ZERO_OR_MORE : $XSParticleDecl::PARTICLE_ONE_OR_MORE, node));
 			$nc(nodeRet)->setUserData($$new($ints, {
 				minOccurs,
@@ -273,7 +273,7 @@ $CMNode* CMBuilder::multiNodes($CMNode* node, int32_t num, bool copyFirst) {
 
 $CMNode* CMBuilder::copyNode($CMNode* node$renamed) {
 	$var($CMNode, node, node$renamed);
-	int32_t type = node->type();
+	int32_t type = $nc(node)->type();
 	if (type == $XSModelGroupImpl::MODELGROUP_CHOICE || type == $XSModelGroupImpl::MODELGROUP_SEQUENCE) {
 		$var($XSCMBinOp, bin, $cast($XSCMBinOp, node));
 		int32_t var$0 = type;

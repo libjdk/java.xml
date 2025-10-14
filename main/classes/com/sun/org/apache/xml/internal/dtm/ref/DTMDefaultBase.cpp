@@ -304,18 +304,18 @@ void DTMDefaultBase::ensureSizeOfIndex(int32_t namespaceID, int32_t LocalNameID)
 	if (nullptr == localNameIndex) {
 		$assign(localNameIndex, $new($intArray2, LocalNameID + 100));
 		$nc(this->m_elemIndexes)->set(namespaceID, localNameIndex);
-	} else if (localNameIndex->length <= LocalNameID) {
+	} else if ($nc(localNameIndex)->length <= LocalNameID) {
 		$var($intArray2, indexes, localNameIndex);
 		$assign(localNameIndex, $new($intArray2, LocalNameID + 100));
 		$System::arraycopy(indexes, 0, localNameIndex, 0, indexes->length);
 		$nc(this->m_elemIndexes)->set(namespaceID, localNameIndex);
 	}
-	$var($ints, elemHandles, localNameIndex->get(LocalNameID));
+	$var($ints, elemHandles, $nc(localNameIndex)->get(LocalNameID));
 	if (nullptr == elemHandles) {
 		$assign(elemHandles, $new($ints, 128));
 		localNameIndex->set(LocalNameID, elemHandles);
 		elemHandles->set(0, 1);
-	} else if (elemHandles->length <= elemHandles->get(0) + 1) {
+	} else if ($nc(elemHandles)->length <= elemHandles->get(0) + 1) {
 		$var($ints, indexes, elemHandles);
 		$assign(elemHandles, $new($ints, elemHandles->get(0) + 1024));
 		$System::arraycopy(indexes, 0, elemHandles, 0, indexes->length);

@@ -182,7 +182,7 @@ XSWildcardDecl* XSWildcardDecl::performUnionWith(XSWildcardDecl* wildcard, int16
 	if (areSame(wildcard)) {
 		unionWildcard->fType = this->fType;
 		$set(unionWildcard, fNamespaceList, this->fNamespaceList);
-	} else if ((this->fType == $XSWildcard::NSCONSTRAINT_ANY) || (wildcard->fType == $XSWildcard::NSCONSTRAINT_ANY)) {
+	} else if ((this->fType == $XSWildcard::NSCONSTRAINT_ANY) || ($nc(wildcard)->fType == $XSWildcard::NSCONSTRAINT_ANY)) {
 		unionWildcard->fType = $XSWildcard::NSCONSTRAINT_ANY;
 	} else if ((this->fType == $XSWildcard::NSCONSTRAINT_LIST) && (wildcard->fType == $XSWildcard::NSCONSTRAINT_LIST)) {
 		unionWildcard->fType = $XSWildcard::NSCONSTRAINT_LIST;
@@ -237,7 +237,7 @@ XSWildcardDecl* XSWildcardDecl::performIntersectionWith(XSWildcardDecl* wildcard
 	if (areSame(wildcard)) {
 		intersectWildcard->fType = this->fType;
 		$set(intersectWildcard, fNamespaceList, this->fNamespaceList);
-	} else if ((this->fType == $XSWildcard::NSCONSTRAINT_ANY) || (wildcard->fType == $XSWildcard::NSCONSTRAINT_ANY)) {
+	} else if ((this->fType == $XSWildcard::NSCONSTRAINT_ANY) || ($nc(wildcard)->fType == $XSWildcard::NSCONSTRAINT_ANY)) {
 		$var(XSWildcardDecl, other, this);
 		if (this->fType == $XSWildcard::NSCONSTRAINT_ANY) {
 			$assign(other, wildcard);
@@ -283,7 +283,7 @@ XSWildcardDecl* XSWildcardDecl::performIntersectionWith(XSWildcardDecl* wildcard
 }
 
 bool XSWildcardDecl::areSame(XSWildcardDecl* wildcard) {
-	if (this->fType == wildcard->fType) {
+	if (this->fType == $nc(wildcard)->fType) {
 		if (this->fType == $XSWildcard::NSCONSTRAINT_ANY) {
 			return true;
 		}

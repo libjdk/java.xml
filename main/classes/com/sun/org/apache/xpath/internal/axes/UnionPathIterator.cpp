@@ -373,7 +373,7 @@ bool UnionPathIterator::deepEquals($Expression* expr) {
 				return false;
 			}
 		}
-	} else if (nullptr != upi->m_exprs) {
+	} else if (nullptr != $nc(upi)->m_exprs) {
 		return false;
 	}
 	return true;

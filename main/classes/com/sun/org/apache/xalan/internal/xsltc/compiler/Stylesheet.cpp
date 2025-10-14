@@ -916,7 +916,7 @@ void Stylesheet::compileStaticInitializer($ClassGenerator* classGen) {
 		if (index == 0) {
 			namesArray->set(i, encodedName);
 		} else {
-			namesArray->set(i, $(encodedName->substring(index)));
+			namesArray->set(i, $($nc(encodedName)->substring(index)));
 		}
 	}
 	staticConst->markChunkStart();

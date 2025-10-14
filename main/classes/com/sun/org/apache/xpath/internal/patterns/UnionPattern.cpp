@@ -136,8 +136,8 @@ $XObject* UnionPattern::execute($XPathContext* xctxt) {
 			if (nullptr == bestScore) {
 				$assign(bestScore, score);
 			} else {
-				double var$1 = score->num();
-				if (var$1 > bestScore->num()) {
+				double var$1 = $nc(score)->num();
+				if (var$1 > $nc(bestScore)->num()) {
 					$assign(bestScore, score);
 				}
 			}
@@ -175,7 +175,7 @@ bool UnionPattern::deepEquals($Expression* expr) {
 				return false;
 			}
 		}
-	} else if (up->m_patterns != nullptr) {
+	} else if ($nc(up)->m_patterns != nullptr) {
 		return false;
 	}
 	return true;

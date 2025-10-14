@@ -191,7 +191,7 @@ int32_t MethodType::distanceTo($Type* other) {
 					}
 				}
 			}
-		} else if (mtype->_argsType == nullptr) {
+		} else if ($nc(mtype)->_argsType == nullptr) {
 			result = 0;
 		}
 	}

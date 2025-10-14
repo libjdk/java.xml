@@ -342,7 +342,7 @@ $Node* TreeWalkerImpl::getFirstChild($Node* node) {
 	int32_t accept = acceptNode(newNode);
 	if (accept == $NodeFilter::FILTER_ACCEPT) {
 		return newNode;
-	} else if (accept == $NodeFilter::FILTER_SKIP && newNode->hasChildNodes()) {
+	} else if (accept == $NodeFilter::FILTER_SKIP && $nc(newNode)->hasChildNodes()) {
 		$var($Node, fChild, getFirstChild(newNode));
 		if (fChild == nullptr) {
 			return getNextSibling(newNode, node);
@@ -367,7 +367,7 @@ $Node* TreeWalkerImpl::getLastChild($Node* node) {
 	int32_t accept = acceptNode(newNode);
 	if (accept == $NodeFilter::FILTER_ACCEPT) {
 		return newNode;
-	} else if (accept == $NodeFilter::FILTER_SKIP && newNode->hasChildNodes()) {
+	} else if (accept == $NodeFilter::FILTER_SKIP && $nc(newNode)->hasChildNodes()) {
 		$var($Node, lChild, getLastChild(newNode));
 		if (lChild == nullptr) {
 			return getPreviousSibling(newNode, node);
@@ -385,7 +385,7 @@ int16_t TreeWalkerImpl::acceptNode($Node* node) {
 		} else {
 			return $NodeFilter::FILTER_SKIP;
 		}
-	} else if (((int32_t)(this->fWhatToShow & (uint32_t)($sl(1, node->getNodeType() - 1)))) != 0) {
+	} else if (((int32_t)(this->fWhatToShow & (uint32_t)($sl(1, $nc(node)->getNodeType() - 1)))) != 0) {
 		return $nc(this->fNodeFilter)->acceptNode(node);
 	} else {
 		return $NodeFilter::FILTER_SKIP;

@@ -125,8 +125,8 @@ $Node* DeepNodeListImpl::nextMatchingElementAfter($Node* current$renamed) {
 			$assign(current, next);
 		} else {
 			$assign(next, nullptr);
-			for (; !$equals(current, this->rootNode); $assign(current, current->getParentNode())) {
-				$assign(next, $nc(current)->getNextSibling());
+			for (; !$equals(current, this->rootNode); $assign(current, $nc(current)->getParentNode())) {
+				$assign(next, current->getNextSibling());
 				if (next != nullptr) {
 					break;
 				}

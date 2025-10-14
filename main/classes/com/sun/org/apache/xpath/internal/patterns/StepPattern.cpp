@@ -784,7 +784,7 @@ $String* StepPattern::toString() {
 			} else {
 				buf->append(u'?')->append($($Integer::toHexString(pat->m_whatToShow)));
 			}
-			if (nullptr != pat->m_predicates) {
+			if (nullptr != $nc(pat)->m_predicates) {
 				for (int32_t i = 0; i < $nc(pat->m_predicates)->length; ++i) {
 					buf->append("["_s);
 					buf->append($of($nc(pat->m_predicates)->get(i)));
@@ -877,14 +877,14 @@ bool StepPattern::deepEquals($Expression* expr) {
 				return false;
 			}
 		}
-	} else if (nullptr != sp->m_predicates) {
+	} else if (nullptr != $nc(sp)->m_predicates) {
 		return false;
 	}
 	if (nullptr != this->m_relativePathPattern) {
-		if (!$nc(this->m_relativePathPattern)->deepEquals(sp->m_relativePathPattern)) {
+		if (!$nc(this->m_relativePathPattern)->deepEquals($nc(sp)->m_relativePathPattern)) {
 			return false;
 		}
-	} else if (sp->m_relativePathPattern != nullptr) {
+	} else if ($nc(sp)->m_relativePathPattern != nullptr) {
 		return false;
 	}
 	return true;

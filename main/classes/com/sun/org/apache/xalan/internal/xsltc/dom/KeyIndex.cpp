@@ -216,7 +216,7 @@ void KeyIndex::add($String* value, int32_t node, int32_t rootNode) {
 		$assign(nodes, $new($IntegerArray));
 		$nc(this->_index)->put(value, nodes);
 		nodes->add(node);
-	} else if (node != nodes->at(nodes->cardinality() - 1)) {
+	} else if (node != $nc(nodes)->at(nodes->cardinality() - 1)) {
 		nodes->add(node);
 	}
 }

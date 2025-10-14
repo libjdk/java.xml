@@ -1522,8 +1522,8 @@ $Symbol* parser_actions::parser_do_action(int32_t parser_act_num, $lr_parser* pa
 					if (fname == $nc(this->parser)->getQName($Constants::TRANSLET_URI, "xsltc"_s, "cast"_s)) {
 						$assign(result, $new($CastCall, fname, argl));
 					} else {
-						bool var$113 = $nc($(fname->getLocalPart()))->equals("nodeset"_s);
-						if (var$113 || $nc($(fname->getLocalPart()))->equals("node-set"_s)) {
+						bool var$113 = $nc($($nc(fname)->getLocalPart()))->equals("nodeset"_s);
+						if (var$113 || $nc($($nc(fname)->getLocalPart()))->equals("node-set"_s)) {
 							$nc(this->parser)->setCallsNodeset(true);
 							$assign(result, $new($FunctionCall, fname, argl));
 						} else {

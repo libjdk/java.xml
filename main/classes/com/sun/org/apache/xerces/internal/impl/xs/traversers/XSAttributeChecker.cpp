@@ -1129,7 +1129,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 	case XSAttributeChecker::DT_PROCESSCONTENTS:
 		{
 			$init($SchemaSymbols);
-			if (value->equals($SchemaSymbols::ATTVAL_STRICT)) {
+			if ($nc(value)->equals($SchemaSymbols::ATTVAL_STRICT)) {
 				$assign(retValue, XSAttributeChecker::INT_ANY_STRICT);
 			} else {
 				if (value->equals($SchemaSymbols::ATTVAL_LAX)) {
@@ -1150,7 +1150,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 	case XSAttributeChecker::DT_USE:
 		{
 			$init($SchemaSymbols);
-			if (value->equals($SchemaSymbols::ATTVAL_OPTIONAL)) {
+			if ($nc(value)->equals($SchemaSymbols::ATTVAL_OPTIONAL)) {
 				$assign(retValue, XSAttributeChecker::INT_USE_OPTIONAL);
 			} else {
 				if (value->equals($SchemaSymbols::ATTVAL_REQUIRED)) {
@@ -1171,7 +1171,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 	case XSAttributeChecker::DT_WHITESPACE:
 		{
 			$init($SchemaSymbols);
-			if (value->equals($SchemaSymbols::ATTVAL_PRESERVE)) {
+			if ($nc(value)->equals($SchemaSymbols::ATTVAL_PRESERVE)) {
 				$assign(retValue, XSAttributeChecker::INT_WS_PRESERVE);
 			} else {
 				if (value->equals($SchemaSymbols::ATTVAL_REPLACE)) {

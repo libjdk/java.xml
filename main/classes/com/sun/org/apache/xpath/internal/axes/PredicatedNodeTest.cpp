@@ -444,7 +444,7 @@ bool PredicatedNodeTest::deepEquals($Expression* expr) {
 				return false;
 			}
 		}
-	} else if (nullptr != pnt->m_predicates) {
+	} else if (nullptr != $nc(pnt)->m_predicates) {
 		return false;
 	}
 	return true;

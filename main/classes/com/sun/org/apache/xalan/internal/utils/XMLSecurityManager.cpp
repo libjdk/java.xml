@@ -217,7 +217,7 @@ void XMLSecurityManager::setLimit(int32_t index, $JdkProperty$State* state, int3
 	if (index == this->indexEntityCountInfo) {
 		$init($JdkConstants);
 		$set(this, printEntityCountInfo$, $JdkConstants::JDK_YES);
-	} else if (state->compareTo(static_cast<$Enum*>($nc(this->states)->get(index))) >= 0) {
+	} else if ($nc(state)->compareTo(static_cast<$Enum*>($nc(this->states)->get(index))) >= 0) {
 		$nc(this->values)->set(index, value);
 		$nc(this->states)->set(index, state);
 		$nc(this->isSet$)->set(index, true);

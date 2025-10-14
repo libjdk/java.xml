@@ -297,7 +297,7 @@ $XSAttributeDecl* XSDAttributeTraverser::traverseNamedAttr($Element* attrDecl, $
 			if (formAtt->intValue() == $SchemaSymbols::FORM_QUALIFIED) {
 				$assign(tnsAtt, $nc(schemaDoc)->fTargetNamespace);
 			}
-		} else if (schemaDoc->fAreLocalAttributesQualified) {
+		} else if ($nc(schemaDoc)->fAreLocalAttributesQualified) {
 			$assign(tnsAtt, schemaDoc->fTargetNamespace);
 		}
 	}

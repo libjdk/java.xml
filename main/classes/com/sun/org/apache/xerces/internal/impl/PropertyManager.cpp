@@ -272,13 +272,13 @@ void PropertyManager::setProperty($String* property, Object$* value) {
 		}
 	}
 	$init($Constants);
-	if (property->equals($Constants::SECURITY_MANAGER)) {
+	if ($nc(property)->equals($Constants::SECURITY_MANAGER)) {
 		$set(this, fSecurityManager, $XMLSecurityManager::convert(value, this->fSecurityManager));
 		$nc(this->supportedProps)->put($Constants::SECURITY_MANAGER, this->fSecurityManager);
 		return;
 	}
 	$init($JdkConstants);
-	if (property->equals($JdkConstants::XML_SECURITY_PROPERTY_MANAGER)) {
+	if ($nc(property)->equals($JdkConstants::XML_SECURITY_PROPERTY_MANAGER)) {
 		if (value == nullptr) {
 			$set(this, fSecurityPropertyMgr, $new($XMLSecurityPropertyManager));
 		} else {

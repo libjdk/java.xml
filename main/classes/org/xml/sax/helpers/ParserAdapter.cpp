@@ -281,7 +281,7 @@ void ParserAdapter::setFeature($String* name, bool value) {
 }
 
 bool ParserAdapter::getFeature($String* name) {
-	if (name->equals(ParserAdapter::NAMESPACES)) {
+	if ($nc(name)->equals(ParserAdapter::NAMESPACES)) {
 		return this->namespaces;
 	} else if (name->equals(ParserAdapter::NAMESPACE_PREFIXES)) {
 		return this->prefixes;

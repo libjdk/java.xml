@@ -712,7 +712,7 @@ void URI::appendPath($String* p_addToPath) {
 		} else {
 			$set(this, m_path, $nc(this->m_path)->concat(p_addToPath));
 		}
-	} else if (p_addToPath->startsWith("/"_s)) {
+	} else if ($nc(p_addToPath)->startsWith("/"_s)) {
 		$set(this, m_path, $nc(this->m_path)->concat(p_addToPath));
 	} else {
 		$set(this, m_path, $nc(this->m_path)->concat($$str({"/"_s, p_addToPath})));

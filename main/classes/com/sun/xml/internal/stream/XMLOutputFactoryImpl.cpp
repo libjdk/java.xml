@@ -143,7 +143,7 @@ $XMLStreamWriter* XMLOutputFactoryImpl::createXMLStreamWriter($Result* result) {
 		} else {
 			$throwNew($UnsupportedOperationException, $$str({"Result of type "_s, result, " is not supported"_s}));
 		}
-	} else if (result->getSystemId() != nullptr) {
+	} else if ($nc(result)->getSystemId() != nullptr) {
 		return createXMLStreamWriter(static_cast<$Result*>($$new($StreamResult, $(result->getSystemId()))));
 	} else {
 		$throwNew($UnsupportedOperationException, $$str({"Result of type "_s, result, " is not supported. Supported result types are: DOMResult, StAXResult and StreamResult."_s}));

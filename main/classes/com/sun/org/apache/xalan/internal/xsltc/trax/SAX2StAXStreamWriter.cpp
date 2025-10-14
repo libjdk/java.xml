@@ -143,7 +143,7 @@ void SAX2StAXStreamWriter::startElement($String* uri, $String* localName, $Strin
 								$nc(this->writer)->setPrefix(attrLocal, attrValue);
 							}
 							$nc(this->writer)->writeNamespace(attrLocal, attrValue);
-						} else if (attrPrefix->length() > 0) {
+						} else if ($nc(attrPrefix)->length() > 0) {
 							$nc(this->writer)->writeAttribute(attrPrefix, attrURI, attrLocal, attrValue);
 						} else {
 							$nc(this->writer)->writeAttribute(attrQName, attrValue);

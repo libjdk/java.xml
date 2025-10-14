@@ -201,7 +201,7 @@ int16_t AbstractDateTimeDV::compareDates($AbstractDateTimeDV$DateTimeData* date1
 			return c2;
 		}
 		return $TypeValidator::INDETERMINATE;
-	} else if (date2->utc == u'Z') {
+	} else if ($nc(date2)->utc == u'Z') {
 		cloneDate(date1, tempDate);
 		tempDate->timezoneHr = -14;
 		tempDate->timezoneMin = 0;
@@ -317,11 +317,11 @@ int32_t AbstractDateTimeDV::getYearMonth($String* buffer, int32_t start, int32_t
 	int32_t length = i - start;
 	if (length < 4) {
 		$throwNew($RuntimeException, "Year must have \'CCYY\' format"_s);
-	} else if (length > 4 && buffer->charAt(start) == u'0') {
+	} else if (length > 4 && $nc(buffer)->charAt(start) == u'0') {
 		$throwNew($RuntimeException, "Leading zeros are required if the year value would otherwise have fewer than four digits; otherwise they are forbidden"_s);
 	}
 	$nc(date)->year = parseIntYear(buffer, i);
-	if (buffer->charAt(i) != u'-') {
+	if ($nc(buffer)->charAt(i) != u'-') {
 		$throwNew($RuntimeException, "CCYY must be followed by \'-\' sign"_s);
 	}
 	start = ++i;
@@ -541,7 +541,7 @@ void AbstractDateTimeDV::saveUnnormalized($AbstractDateTimeDV$DateTimeData* date
 }
 
 void AbstractDateTimeDV::resetDateObj($AbstractDateTimeDV$DateTimeData* data) {
-	data->year = 0;
+	$nc(data)->year = 0;
 	data->month = 0;
 	data->day = 0;
 	data->hour = 0;
@@ -753,7 +753,7 @@ $Duration* AbstractDateTimeDV::getDuration($AbstractDateTimeDV$DateTimeData* dat
 
 $BigDecimal* AbstractDateTimeDV::getFractionalSecondsAsBigDecimal($AbstractDateTimeDV$DateTimeData* data) {
 	$var($StringBuffer, buf, $new($StringBuffer));
-	append3(buf, data->unNormSecond);
+	append3(buf, $nc(data)->unNormSecond);
 	$var($String, value, buf->toString());
 	int32_t index = $nc(value)->indexOf((int32_t)u'.');
 	if (index == -1) {

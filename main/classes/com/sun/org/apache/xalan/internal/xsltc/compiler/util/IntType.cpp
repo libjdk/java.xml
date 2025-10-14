@@ -351,7 +351,7 @@ void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen
 								$init($Constants);
 								$nc(il)->append(static_cast<$Instruction*>($Constants::I2D));
 							} else {
-								if (clazz->isAssignableFrom($Double::class$)) {
+								if ($nc(clazz)->isAssignableFrom($Double::class$)) {
 									$init($Constants);
 									$nc(il)->append(static_cast<$Instruction*>($Constants::I2D));
 									$init($1Type);

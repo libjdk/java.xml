@@ -358,7 +358,7 @@ $String* FunctionCall::getClassNameFromUri($String* uri) {
 	$var($String, className, $cast($String, $nc(FunctionCall::EXTENSIONNAMESPACE)->get(uri)));
 	if (className != nullptr) {
 		return className;
-	} else if (uri->startsWith(FunctionCall::JAVA_EXT_XSLTC)) {
+	} else if ($nc(uri)->startsWith(FunctionCall::JAVA_EXT_XSLTC)) {
 		int32_t length = $nc(FunctionCall::JAVA_EXT_XSLTC)->length() + 1;
 		$init($Constants);
 		return (uri->length() > length) ? uri->substring(length) : $Constants::EMPTYSTRING;
@@ -496,7 +496,7 @@ $1Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
 					$var($ObjectType, objectType, $cast($ObjectType, intType));
 					if ($nc(objectType)->getJavaClass() == extType) {
 						continue;
-					} else if (extType->isAssignableFrom(objectType->getJavaClass())) {
+					} else if ($nc(extType)->isAssignableFrom(objectType->getJavaClass())) {
 						currConstrDistance += 1;
 					} else {
 						currConstrDistance = $Integer::MAX_VALUE;

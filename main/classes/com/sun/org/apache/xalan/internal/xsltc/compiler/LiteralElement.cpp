@@ -306,7 +306,7 @@ $String* LiteralElement::translateQName($QName* qname, $SymbolTable* stable) {
 		$assign(prefix, $Constants::EMPTYSTRING);
 	} else {
 		$init($Constants);
-		if (prefix->equals($Constants::XMLNS_PREFIX)) {
+		if ($nc(prefix)->equals($Constants::XMLNS_PREFIX)) {
 			return ($Constants::XMLNS_PREFIX);
 		}
 	}

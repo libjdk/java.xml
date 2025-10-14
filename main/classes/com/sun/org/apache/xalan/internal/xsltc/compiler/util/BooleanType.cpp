@@ -248,7 +248,7 @@ void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 		$init($Constants);
 		$nc($($nc(methodGen)->getInstructionList()))->append($Constants::NOP);
 	} else {
-		if (clazz->isAssignableFrom($Boolean::class$)) {
+		if ($nc(clazz)->isAssignableFrom($Boolean::class$)) {
 			$init($1Type);
 			translateTo(classGen, methodGen, $1Type::Reference);
 		} else {

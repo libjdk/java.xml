@@ -975,7 +975,7 @@ $StaxXMLInputSource* XMLEntityManager::resolveEntityAsPerStax($XMLResourceIdenti
 	}
 	if (staxInputSource == nullptr) {
 		$assign(staxInputSource, $new($StaxXMLInputSource, $$new($XMLInputSource, publicId, literalSystemId, baseSystemId, true), false));
-	} else if (staxInputSource->hasXMLStreamOrXMLEventReader()) {
+	} else if ($nc(staxInputSource)->hasXMLStreamOrXMLEventReader()) {
 	}
 	return staxInputSource;
 }

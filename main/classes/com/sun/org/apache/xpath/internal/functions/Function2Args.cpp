@@ -147,7 +147,7 @@ bool Function2Args::deepEquals($Expression* expr) {
 		if (!$nc(this->m_arg1)->deepEquals($nc(($cast(Function2Args, expr)))->m_arg1)) {
 			return false;
 		}
-	} else if (nullptr != ($cast(Function2Args, expr))->m_arg1) {
+	} else if (nullptr != $nc(($cast(Function2Args, expr)))->m_arg1) {
 		return false;
 	}
 	return true;

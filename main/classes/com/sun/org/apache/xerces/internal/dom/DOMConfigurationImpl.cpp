@@ -781,7 +781,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 	if (!found || !($instanceOf($Boolean, value))) {
 		found = true;
 		$init($Constants);
-		if (name->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
+		if ($nc(name)->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
 			if ($instanceOf($DOMErrorHandler, value) || value == nullptr) {
 				$nc(this->fErrorHandlerWrapper)->setErrorHandler($cast($DOMErrorHandler, value));
 				setErrorHandler(this->fErrorHandlerWrapper);
@@ -833,7 +833,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 								if (value == nullptr) {
 									setProperty($$str({$Constants::JAXP_PROPERTY_PREFIX, $Constants::SCHEMA_LANGUAGE}), nullptr);
 								} else {
-									if ($of(value)->equals($Constants::NS_XMLSCHEMA)) {
+									if ($nc($of(value))->equals($Constants::NS_XMLSCHEMA)) {
 										setProperty($$str({$Constants::JAXP_PROPERTY_PREFIX, $Constants::SCHEMA_LANGUAGE}), $Constants::NS_XMLSCHEMA);
 									} else {
 										if ($of(value)->equals($Constants::NS_DTD)) {
@@ -880,7 +880,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 
 $Object* DOMConfigurationImpl::getParameter($String* name) {
 	$init($Constants);
-	if (name->equalsIgnoreCase($Constants::DOM_COMMENTS)) {
+	if ($nc(name)->equalsIgnoreCase($Constants::DOM_COMMENTS)) {
 		$init($Boolean);
 		return $of((((int32_t)(this->features & (uint32_t)(int32_t)DOMConfigurationImpl::COMMENTS)) != 0) ? $Boolean::TRUE : $Boolean::FALSE);
 	} else {
@@ -988,16 +988,16 @@ bool DOMConfigurationImpl::canSetParameter($String* name, Object$* value) {
 	}
 	if ($instanceOf($Boolean, value)) {
 		$init($Constants);
-		bool var$8 = name->equalsIgnoreCase($Constants::DOM_COMMENTS);
-		bool var$7 = var$8 || name->equalsIgnoreCase($Constants::DOM_DATATYPE_NORMALIZATION);
-		bool var$6 = var$7 || name->equalsIgnoreCase($Constants::DOM_CDATA_SECTIONS);
-		bool var$5 = var$6 || name->equalsIgnoreCase($Constants::DOM_ENTITIES);
-		bool var$4 = var$5 || name->equalsIgnoreCase($Constants::DOM_SPLIT_CDATA);
-		bool var$3 = var$4 || name->equalsIgnoreCase($Constants::DOM_NAMESPACES);
-		bool var$2 = var$3 || name->equalsIgnoreCase($Constants::DOM_VALIDATE);
-		bool var$1 = var$2 || name->equalsIgnoreCase($Constants::DOM_WELLFORMED);
-		bool var$0 = var$1 || name->equalsIgnoreCase($Constants::DOM_INFOSET);
-		if (var$0 || name->equalsIgnoreCase($Constants::DOM_NAMESPACE_DECLARATIONS)) {
+		bool var$8 = $nc(name)->equalsIgnoreCase($Constants::DOM_COMMENTS);
+		bool var$7 = var$8 || $nc(name)->equalsIgnoreCase($Constants::DOM_DATATYPE_NORMALIZATION);
+		bool var$6 = var$7 || $nc(name)->equalsIgnoreCase($Constants::DOM_CDATA_SECTIONS);
+		bool var$5 = var$6 || $nc(name)->equalsIgnoreCase($Constants::DOM_ENTITIES);
+		bool var$4 = var$5 || $nc(name)->equalsIgnoreCase($Constants::DOM_SPLIT_CDATA);
+		bool var$3 = var$4 || $nc(name)->equalsIgnoreCase($Constants::DOM_NAMESPACES);
+		bool var$2 = var$3 || $nc(name)->equalsIgnoreCase($Constants::DOM_VALIDATE);
+		bool var$1 = var$2 || $nc(name)->equalsIgnoreCase($Constants::DOM_WELLFORMED);
+		bool var$0 = var$1 || $nc(name)->equalsIgnoreCase($Constants::DOM_INFOSET);
+		if (var$0 || $nc(name)->equalsIgnoreCase($Constants::DOM_NAMESPACE_DECLARATIONS)) {
 			return true;
 		} else {
 			bool var$14 = name->equalsIgnoreCase($Constants::DOM_NORMALIZE_CHARACTERS);
@@ -1018,7 +1018,7 @@ bool DOMConfigurationImpl::canSetParameter($String* name, Object$* value) {
 		}
 	} else {
 		$init($Constants);
-		if (name->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
+		if ($nc(name)->equalsIgnoreCase($Constants::DOM_ERROR_HANDLER)) {
 			return ($instanceOf($DOMErrorHandler, value)) ? true : false;
 		} else {
 			if (name->equalsIgnoreCase($Constants::DOM_RESOURCE_RESOLVER)) {

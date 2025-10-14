@@ -228,14 +228,14 @@ bool XMLDTDDescription::equals(Object$* desc) {
 		if (!$nc(this->fExpandedSystemId)->equals($nc(dtdDesc)->fExpandedSystemId)) {
 			return false;
 		}
-	} else if (dtdDesc->fExpandedSystemId != nullptr) {
+	} else if ($nc(dtdDesc)->fExpandedSystemId != nullptr) {
 		return false;
 	}
 	if (this->fPublicId != nullptr) {
-		if (!$nc(this->fPublicId)->equals(dtdDesc->fPublicId)) {
+		if (!$nc(this->fPublicId)->equals($nc(dtdDesc)->fPublicId)) {
 			return false;
 		}
-	} else if (dtdDesc->fPublicId != nullptr) {
+	} else if ($nc(dtdDesc)->fPublicId != nullptr) {
 		return false;
 	}
 	return true;

@@ -662,7 +662,7 @@ $String* SAX2DTM2::getNodeName(int32_t nodeHandle) {
 			int32_t dataIndex = _dataOrQName(nodeID);
 			dataIndex = $nc(this->m_data)->elementAt(-dataIndex);
 			return $nc(this->m_valuesOrPrefixes)->indexToString(dataIndex);
-		} else if (localName->length() == 0) {
+		} else if ($nc(localName)->length() == 0) {
 			return getFixedNames(type);
 		} else {
 			return localName;

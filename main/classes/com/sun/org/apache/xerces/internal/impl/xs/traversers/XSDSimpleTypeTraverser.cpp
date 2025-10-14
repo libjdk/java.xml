@@ -372,7 +372,7 @@ $XSSimpleType* XSDSimpleTypeTraverser::getSimpleType($String* name, $Element* si
 		}
 	} else if ((restriction || list) && baseTypeName == nullptr) {
 		reportSchemaError(list ? "src-simple-type.3.b"_s : "src-simple-type.2.b"_s, nullptr, child);
-	} else if (union$ && (memberTypes == nullptr || memberTypes->size() == 0)) {
+	} else if (union$ && (memberTypes == nullptr || $nc(memberTypes)->size() == 0)) {
 		reportSchemaError("src-union-memberTypes-or-simpleTypes"_s, nullptr, child);
 	}
 	if ((restriction || list) && baseValidator == nullptr) {

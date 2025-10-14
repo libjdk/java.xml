@@ -202,7 +202,7 @@ void BitArray::setBit(int32_t bit) {
 BitArray* BitArray::merge(BitArray* other) {
 	if (this->_last == -1) {
 		$set(this, _bits, $nc(other)->_bits);
-	} else if (other->_last != -1) {
+	} else if ($nc(other)->_last != -1) {
 		int32_t start = (this->_first < other->_first) ? this->_first : other->_first;
 		int32_t stop = (this->_last > other->_last) ? this->_last : other->_last;
 		if (other->_intSize > this->_intSize) {

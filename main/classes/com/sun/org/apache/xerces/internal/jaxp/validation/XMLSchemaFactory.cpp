@@ -555,7 +555,7 @@ void XMLSchemaFactory::setFeature($String* name, bool value) {
 		$init($JdkProperty$ImplPropMap);
 		bool var$3 = ($JdkProperty$ImplPropMap::OVERRIDEPARSER->is(name));
 		$init($JdkXmlUtils);
-		if (var$3 || name->equals($JdkXmlUtils::USE_CATALOG)) {
+		if (var$3 || $nc(name)->equals($JdkXmlUtils::USE_CATALOG)) {
 			$nc(this->fXMLSchemaLoader)->setFeature(name, value);
 		}
 		return;
@@ -578,7 +578,7 @@ void XMLSchemaFactory::setProperty($String* name, Object$* object) {
 	if (name == nullptr) {
 		$throwNew($NullPointerException, $($JAXPValidationMessageFormatter::formatMessage($($nc(this->fXMLSchemaLoader)->getLocale()), "ProperyNameNull"_s, nullptr)));
 	}
-	if (name->equals(XMLSchemaFactory::SECURITY_MANAGER)) {
+	if ($nc(name)->equals(XMLSchemaFactory::SECURITY_MANAGER)) {
 		$set(this, fSecurityManager, $XMLSecurityManager::convert(object, this->fSecurityManager));
 		$nc(this->fXMLSchemaLoader)->setProperty(XMLSchemaFactory::SECURITY_MANAGER, this->fSecurityManager);
 		return;

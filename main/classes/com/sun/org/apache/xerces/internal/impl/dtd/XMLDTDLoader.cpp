@@ -323,7 +323,7 @@ $Object* XMLDTDLoader::getProperty($String* propertyId) {
 
 void XMLDTDLoader::setProperty($String* propertyId, Object$* value) {
 	$init($XMLDTDProcessor);
-	if (propertyId->equals($XMLDTDProcessor::SYMBOL_TABLE)) {
+	if ($nc(propertyId)->equals($XMLDTDProcessor::SYMBOL_TABLE)) {
 		$set(this, fSymbolTable, $cast($SymbolTable, value));
 		$nc(this->fDTDScanner)->setProperty(propertyId, value);
 		$nc(this->fEntityManager)->setProperty(propertyId, value);
@@ -358,7 +358,7 @@ void XMLDTDLoader::setProperty($String* propertyId, Object$* value) {
 
 bool XMLDTDLoader::getFeature($String* featureId) {
 	$init($XMLDTDProcessor);
-	if (featureId->equals($XMLDTDProcessor::VALIDATION)) {
+	if ($nc(featureId)->equals($XMLDTDProcessor::VALIDATION)) {
 		return this->fValidation;
 	} else {
 		if (featureId->equals($XMLDTDProcessor::WARN_ON_DUPLICATE_ATTDEF)) {

@@ -336,7 +336,7 @@ void TreeWalker::startNode($Node* node) {
 void TreeWalker::endNode($Node* node) {
 	{
 		$var($String, ns, nullptr)
-		switch (node->getNodeType()) {
+		switch ($nc(node)->getNodeType()) {
 		case $Node::DOCUMENT_NODE:
 			{
 				break;

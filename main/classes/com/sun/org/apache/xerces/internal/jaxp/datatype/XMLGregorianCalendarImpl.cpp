@@ -861,7 +861,7 @@ $XMLGregorianCalendar* XMLGregorianCalendarImpl::normalizeToTimezone(int32_t tim
 int32_t XMLGregorianCalendarImpl::internalCompare($XMLGregorianCalendar* P, $XMLGregorianCalendar* Q) {
 	$init(XMLGregorianCalendarImpl);
 	int32_t result = 0;
-	if (P->getEon() == Q->getEon()) {
+	if ($nc(P)->getEon() == $nc(Q)->getEon()) {
 		int32_t var$0 = P->getYear();
 		result = compareField(var$0, Q->getYear());
 		if (result != $DatatypeConstants::EQUAL) {
@@ -874,33 +874,33 @@ int32_t XMLGregorianCalendarImpl::internalCompare($XMLGregorianCalendar* P, $XML
 			return result;
 		}
 	}
-	int32_t var$2 = P->getMonth();
-	result = compareField(var$2, Q->getMonth());
+	int32_t var$2 = $nc(P)->getMonth();
+	result = compareField(var$2, $nc(Q)->getMonth());
 	if (result != $DatatypeConstants::EQUAL) {
 		return result;
 	}
-	int32_t var$3 = P->getDay();
-	result = compareField(var$3, Q->getDay());
+	int32_t var$3 = $nc(P)->getDay();
+	result = compareField(var$3, $nc(Q)->getDay());
 	if (result != $DatatypeConstants::EQUAL) {
 		return result;
 	}
-	int32_t var$4 = P->getHour();
-	result = compareField(var$4, Q->getHour());
+	int32_t var$4 = $nc(P)->getHour();
+	result = compareField(var$4, $nc(Q)->getHour());
 	if (result != $DatatypeConstants::EQUAL) {
 		return result;
 	}
-	int32_t var$5 = P->getMinute();
-	result = compareField(var$5, Q->getMinute());
+	int32_t var$5 = $nc(P)->getMinute();
+	result = compareField(var$5, $nc(Q)->getMinute());
 	if (result != $DatatypeConstants::EQUAL) {
 		return result;
 	}
-	int32_t var$6 = P->getSecond();
-	result = compareField(var$6, Q->getSecond());
+	int32_t var$6 = $nc(P)->getSecond();
+	result = compareField(var$6, $nc(Q)->getSecond());
 	if (result != $DatatypeConstants::EQUAL) {
 		return result;
 	}
-	$var($BigDecimal, var$7, P->getFractionalSecond());
-	result = compareField(var$7, $(Q->getFractionalSecond()));
+	$var($BigDecimal, var$7, $nc(P)->getFractionalSecond());
+	result = compareField(var$7, $($nc(Q)->getFractionalSecond()));
 	return result;
 }
 
@@ -1233,9 +1233,9 @@ int32_t XMLGregorianCalendarImpl::maximumDayInMonthFor($BigInteger* year, int32_
 		return $nc($XMLGregorianCalendarImpl$DaysInMonth::table)->get(month);
 	} else {
 		$init($BigInteger);
-		bool var$2 = $nc($(year->mod(XMLGregorianCalendarImpl::FOUR_HUNDRED)))->equals($BigInteger::ZERO);
+		bool var$2 = $nc($($nc(year)->mod(XMLGregorianCalendarImpl::FOUR_HUNDRED)))->equals($BigInteger::ZERO);
 		if (!var$2) {
-			bool var$3 = !$nc($(year->mod(XMLGregorianCalendarImpl::HUNDRED)))->equals($BigInteger::ZERO);
+			bool var$3 = !$nc($($nc(year)->mod(XMLGregorianCalendarImpl::HUNDRED)))->equals($BigInteger::ZERO);
 			var$2 = (var$3 && $nc($(year->mod(XMLGregorianCalendarImpl::FOUR)))->equals($BigInteger::ZERO));
 		}
 		if (var$2) {
@@ -1363,7 +1363,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* tim
 	if (this->month != $DatatypeConstants::FIELD_UNDEFINED) {
 		result->set($Calendar::MONTH, this->month - 1);
 	} else {
-		int32_t defaultMonth = (defaults != nullptr) ? defaults->getMonth() : $DatatypeConstants::FIELD_UNDEFINED;
+		int32_t defaultMonth = (defaults != nullptr) ? $nc(defaults)->getMonth() : $DatatypeConstants::FIELD_UNDEFINED;
 		if (defaultMonth != $DatatypeConstants::FIELD_UNDEFINED) {
 			result->set($Calendar::MONTH, defaultMonth - 1);
 		}
@@ -1371,7 +1371,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* tim
 	if (this->day != $DatatypeConstants::FIELD_UNDEFINED) {
 		result->set($Calendar::DAY_OF_MONTH, this->day);
 	} else {
-		int32_t defaultDay = (defaults != nullptr) ? defaults->getDay() : $DatatypeConstants::FIELD_UNDEFINED;
+		int32_t defaultDay = (defaults != nullptr) ? $nc(defaults)->getDay() : $DatatypeConstants::FIELD_UNDEFINED;
 		if (defaultDay != $DatatypeConstants::FIELD_UNDEFINED) {
 			result->set($Calendar::DAY_OF_MONTH, defaultDay);
 		}
@@ -1379,7 +1379,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* tim
 	if (this->hour != $DatatypeConstants::FIELD_UNDEFINED) {
 		result->set($Calendar::HOUR_OF_DAY, this->hour);
 	} else {
-		int32_t defaultHour = (defaults != nullptr) ? defaults->getHour() : $DatatypeConstants::FIELD_UNDEFINED;
+		int32_t defaultHour = (defaults != nullptr) ? $nc(defaults)->getHour() : $DatatypeConstants::FIELD_UNDEFINED;
 		if (defaultHour != $DatatypeConstants::FIELD_UNDEFINED) {
 			result->set($Calendar::HOUR_OF_DAY, defaultHour);
 		}
@@ -1387,7 +1387,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* tim
 	if (this->minute != $DatatypeConstants::FIELD_UNDEFINED) {
 		result->set($Calendar::MINUTE, this->minute);
 	} else {
-		int32_t defaultMinute = (defaults != nullptr) ? defaults->getMinute() : $DatatypeConstants::FIELD_UNDEFINED;
+		int32_t defaultMinute = (defaults != nullptr) ? $nc(defaults)->getMinute() : $DatatypeConstants::FIELD_UNDEFINED;
 		if (defaultMinute != $DatatypeConstants::FIELD_UNDEFINED) {
 			result->set($Calendar::MINUTE, defaultMinute);
 		}
@@ -1395,7 +1395,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* tim
 	if (this->second != $DatatypeConstants::FIELD_UNDEFINED) {
 		result->set($Calendar::SECOND, this->second);
 	} else {
-		int32_t defaultSecond = (defaults != nullptr) ? defaults->getSecond() : $DatatypeConstants::FIELD_UNDEFINED;
+		int32_t defaultSecond = (defaults != nullptr) ? $nc(defaults)->getSecond() : $DatatypeConstants::FIELD_UNDEFINED;
 		if (defaultSecond != $DatatypeConstants::FIELD_UNDEFINED) {
 			result->set($Calendar::SECOND, defaultSecond);
 		}
@@ -1403,7 +1403,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* tim
 	if (this->fractionalSecond != nullptr) {
 		result->set($Calendar::MILLISECOND, getMillisecond());
 	} else {
-		$var($BigDecimal, defaultFractionalSecond, (defaults != nullptr) ? defaults->getFractionalSecond() : ($BigDecimal*)nullptr);
+		$var($BigDecimal, defaultFractionalSecond, (defaults != nullptr) ? $nc(defaults)->getFractionalSecond() : ($BigDecimal*)nullptr);
 		if (defaultFractionalSecond != nullptr) {
 			result->set($Calendar::MILLISECOND, defaults->getMillisecond());
 		}

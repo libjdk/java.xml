@@ -344,7 +344,7 @@ void DOM3TreeWalker::traverse($Node* pos$renamed) {
 		if (ownerDoc != nullptr && $nc($(ownerDoc->getImplementation()))->hasFeature("Core"_s, "3.0"_s)) {
 			this->fIsLevel3DOM = true;
 		}
-	} else if ($nc($(($cast($Document, pos))->getImplementation()))->hasFeature("Core"_s, "3.0"_s)) {
+	} else if ($nc($($nc(($cast($Document, pos)))->getImplementation()))->hasFeature("Core"_s, "3.0"_s)) {
 		this->fIsLevel3DOM = true;
 	}
 	if ($instanceOf($LexicalHandler, this->fSerializer)) {
@@ -388,7 +388,7 @@ void DOM3TreeWalker::traverse($Node* pos$renamed, $Node* top) {
 		if (ownerDoc != nullptr && $nc($(ownerDoc->getImplementation()))->hasFeature("Core"_s, "3.0"_s)) {
 			this->fIsLevel3DOM = true;
 		}
-	} else if ($nc($(($cast($Document, pos))->getImplementation()))->hasFeature("Core"_s, "3.0"_s)) {
+	} else if ($nc($($nc(($cast($Document, pos)))->getImplementation()))->hasFeature("Core"_s, "3.0"_s)) {
 		this->fIsLevel3DOM = true;
 	}
 	if ($instanceOf($LexicalHandler, this->fSerializer)) {

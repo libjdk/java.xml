@@ -191,13 +191,13 @@ void BalancedDTDGrammar::addToCurrentGroup(int32_t contentSpec) {
 	if (currentGroup == nullptr) {
 		$assign(currentGroup, $new($ints, 8));
 		$nc(this->fGroupIndexStack)->set(this->fDepth, currentGroup);
-	} else if (length == currentGroup->length) {
+	} else if (length == $nc(currentGroup)->length) {
 		$var($ints, newGroup, $new($ints, currentGroup->length * 2));
 		$System::arraycopy(currentGroup, 0, newGroup, 0, currentGroup->length);
 		$assign(currentGroup, newGroup);
 		$nc(this->fGroupIndexStack)->set(this->fDepth, currentGroup);
 	}
-	currentGroup->set(length, contentSpec);
+	$nc(currentGroup)->set(length, contentSpec);
 }
 
 BalancedDTDGrammar::BalancedDTDGrammar() {

@@ -1235,10 +1235,10 @@ int8_t Utility::typeOfMethodSignature($String* signature) {
 	$init(Utility);
 	int32_t index = 0;
 	try {
-		if (signature->charAt(0) != u'(') {
+		if ($nc(signature)->charAt(0) != u'(') {
 			$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}));
 		}
-		index = signature->lastIndexOf((int32_t)u')') + 1;
+		index = $nc(signature)->lastIndexOf((int32_t)u')') + 1;
 		return typeOfSignature($(signature->substring(index)));
 	} catch ($StringIndexOutOfBoundsException&) {
 		$var($StringIndexOutOfBoundsException, e, $catch());
@@ -1250,7 +1250,7 @@ int8_t Utility::typeOfMethodSignature($String* signature) {
 int8_t Utility::typeOfSignature($String* signature) {
 	$init(Utility);
 	try {
-		switch (signature->charAt(0)) {
+		switch ($nc(signature)->charAt(0)) {
 		case u'B':
 			{
 				return $Const::T_BYTE;

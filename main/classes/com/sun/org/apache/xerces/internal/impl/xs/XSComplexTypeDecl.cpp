@@ -454,7 +454,7 @@ bool XSComplexTypeDecl::isDerivedByRestriction($String* ancestorNS, $String* anc
 				$assign(ancestorName, $SchemaSymbols::ATTVAL_ANYSIMPLETYPE);
 			}
 			return $nc(($cast($XSSimpleTypeDecl, type)))->isDOMDerivedFrom(ancestorNS, ancestorName, derivationMethod);
-		} else if (($cast(XSComplexTypeDecl, type))->getDerivationMethod() != $XSConstants::DERIVATION_RESTRICTION) {
+		} else if ($nc(($cast(XSComplexTypeDecl, type)))->getDerivationMethod() != $XSConstants::DERIVATION_RESTRICTION) {
 			return false;
 		}
 		$assign(oldType, type);
@@ -494,7 +494,7 @@ bool XSComplexTypeDecl::isDerivedByExtension($String* ancestorNS, $String* ances
 			} else {
 				return extension & $nc(($cast($XSSimpleTypeDecl, type)))->isDOMDerivedFrom(ancestorNS, ancestorName, derivationMethod);
 			}
-		} else if (($cast(XSComplexTypeDecl, type))->getDerivationMethod() == $XSConstants::DERIVATION_EXTENSION) {
+		} else if ($nc(($cast(XSComplexTypeDecl, type)))->getDerivationMethod() == $XSConstants::DERIVATION_EXTENSION) {
 			extension = extension | true;
 		}
 		$assign(oldType, type);

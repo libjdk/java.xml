@@ -589,7 +589,7 @@ bool XSConstraints::particleValidRestriction($XSParticleDecl* dParticle$renamed,
 			$throwNew($XMLSchemaException, "cos-particle-restrict.b"_s, nullptr);
 		}
 	}
-	int16_t dType = dParticle->fType;
+	int16_t dType = $nc(dParticle)->fType;
 	if (dType == $XSParticleDecl::PARTICLE_MODELGROUP) {
 		dType = $nc(($cast($XSModelGroupImpl, dParticle->fValue)))->fCompositor;
 		$var($XSParticleDecl, dtmp, getNonUnaryGroup(dParticle));
@@ -622,7 +622,7 @@ bool XSConstraints::particleValidRestriction($XSParticleDecl* dParticle$renamed,
 			}
 		}
 	}
-	int16_t bType = bParticle->fType;
+	int16_t bType = $nc(bParticle)->fType;
 	if (bType == $XSParticleDecl::PARTICLE_MODELGROUP) {
 		bType = $nc(($cast($XSModelGroupImpl, bParticle->fValue)))->fCompositor;
 		$var($XSParticleDecl, btmp, getNonUnaryGroup(bParticle));

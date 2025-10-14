@@ -896,9 +896,9 @@ void URI::setRegBasedAuthority($String* authority) {
 		$set(this, m_regAuthority, nullptr);
 		return;
 	} else {
-		bool var$3 = authority->length() < 1;
+		bool var$3 = $nc(authority)->length() < 1;
 		bool var$2 = var$3 || !isValidRegistryBasedAuthority(authority);
-		if (var$2 || authority->indexOf((int32_t)u'/') != -1) {
+		if (var$2 || $nc(authority)->indexOf((int32_t)u'/') != -1) {
 			$throwNew($URI$MalformedURIException, "Registry based authority is not well formed."_s);
 		}
 	}
@@ -937,7 +937,7 @@ void URI::appendPath($String* p_addToPath) {
 		} else {
 			$set(this, m_path, $nc(this->m_path)->concat(p_addToPath));
 		}
-	} else if (p_addToPath->startsWith("/"_s)) {
+	} else if ($nc(p_addToPath)->startsWith("/"_s)) {
 		$set(this, m_path, $nc(this->m_path)->concat(p_addToPath));
 	} else {
 		$set(this, m_path, $nc(this->m_path)->concat($$str({"/"_s, p_addToPath})));

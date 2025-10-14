@@ -726,7 +726,7 @@ void MethodGen::addAnnotationsAsAttribute($ConstantPoolGen* cp) {
 	$var($AttributeArray, attrs, $AnnotationEntryGen::getAnnotationAttributes(cp, $($FieldGenOrMethodGen::getAnnotationEntries())));
 	{
 		$var($AttributeArray, arr$, attrs);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($Attribute, attr, arr$->get(i$));
@@ -761,7 +761,7 @@ $AttributeArray* MethodGen::addRuntimeAnnotationsAsAttribute($ConstantPoolGen* c
 	$var($AttributeArray, attrs, $AnnotationEntryGen::getAnnotationAttributes(cp, $($FieldGenOrMethodGen::getAnnotationEntries())));
 	{
 		$var($AttributeArray, arr$, attrs);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($Attribute, attr, arr$->get(i$));
@@ -780,7 +780,7 @@ $AttributeArray* MethodGen::addRuntimeParameterAnnotationsAsAttribute($ConstantP
 	$var($AttributeArray, attrs, $AnnotationEntryGen::getParameterAnnotationAttributes(cp, this->paramAnnotations));
 	{
 		$var($AttributeArray, arr$, attrs);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($Attribute, attr, arr$->get(i$));
@@ -795,7 +795,7 @@ $AttributeArray* MethodGen::addRuntimeParameterAnnotationsAsAttribute($ConstantP
 void MethodGen::removeRuntimeAttributes($AttributeArray* attrs) {
 	{
 		$var($AttributeArray, arr$, attrs);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($Attribute, attr, arr$->get(i$));
@@ -834,7 +834,7 @@ $Method* MethodGen::getMethod() {
 	int32_t attrs_len = 0;
 	{
 		$var($AttributeArray, arr$, code_attrs);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($Attribute, code_attr, arr$->get(i$));
@@ -851,7 +851,7 @@ $Method* MethodGen::getMethod() {
 		$var($AttributeArray, attributes, getAttributes());
 		{
 			$var($AttributeArray, arr$, attributes);
-			int32_t len$ = arr$->length;
+			int32_t len$ = $nc(arr$)->length;
 			int32_t i$ = 0;
 			for (; i$ < len$; ++i$) {
 				$var($Attribute, a, arr$->get(i$));
@@ -908,7 +908,7 @@ void MethodGen::updateLocalVariableTable($LocalVariableTable* a) {
 	removeLocalVariables();
 	{
 		$var($LocalVariableArray, arr$, lv);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($LocalVariable, l, arr$->get(i$));
@@ -935,7 +935,7 @@ void MethodGen::adjustLocalVariableTypeTable($LocalVariableTable* lvt) {
 	$var($LocalVariableArray, lvg, $nc(this->localVariableTypeTable)->getLocalVariableTypeTable());
 	{
 		$var($LocalVariableArray, arr$, lvg);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($LocalVariable, element, arr$->get(i$));
@@ -980,7 +980,7 @@ void MethodGen::removeNOPs() {
 						$var($TargetLostException, e, $catch());
 						{
 							$var($InstructionHandleArray, arr$, e->getTargets());
-							int32_t len$ = arr$->length;
+							int32_t len$ = $nc(arr$)->length;
 							int32_t i$ = 0;
 							for (; i$ < len$; ++i$) {
 								$var($InstructionHandle, target, arr$->get(i$));
@@ -1098,7 +1098,7 @@ void MethodGen::setMaxLocals() {
 		if (this->argTypes != nullptr) {
 			{
 				$var($TypeArray, arr$, this->argTypes);
-				int32_t len$ = arr$->length;
+				int32_t len$ = $nc(arr$)->length;
 				int32_t i$ = 0;
 				for (; i$ < len$; ++i$) {
 					$var($Type, arg_type, arr$->get(i$));
@@ -1136,7 +1136,7 @@ int32_t MethodGen::getMaxStack($ConstantPoolGen* cp, $InstructionList* il, $Code
 	$var($MethodGen$BranchStack, branchTargets, $new($MethodGen$BranchStack));
 	{
 		$var($CodeExceptionGenArray, arr$, et);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($CodeExceptionGen, element, arr$->get(i$));
@@ -1167,7 +1167,7 @@ int32_t MethodGen::getMaxStack($ConstantPoolGen* cp, $InstructionList* il, $Code
 				$var($InstructionHandleArray, targets, select->getTargets());
 				{
 					$var($InstructionHandleArray, arr$, targets);
-					int32_t len$ = arr$->length;
+					int32_t len$ = $nc(arr$)->length;
 					int32_t i$ = 0;
 					for (; i$ < len$; ++i$) {
 						$var($InstructionHandle, target, arr$->get(i$));
@@ -1238,7 +1238,7 @@ $String* MethodGen::toString() {
 	$var($StringBuilder, buf, $new($StringBuilder, signature));
 	{
 		$var($AttributeArray, arr$, getAttributes());
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($Attribute, a, arr$->get(i$));
@@ -1290,7 +1290,7 @@ void MethodGen::ensureExistingParameterAnnotationsUnpacked() {
 	$var($ParameterAnnotations, paramAnnInvisAttr, nullptr);
 	{
 		$var($AttributeArray, arr$, attrs);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($Attribute, attribute, arr$->get(i$));
@@ -1333,7 +1333,7 @@ $List* MethodGen::makeMutableVersion($AnnotationEntryArray* mutableArray) {
 	$var($List, result, $new($ArrayList));
 	{
 		$var($AnnotationEntryArray, arr$, mutableArray);
-		int32_t len$ = arr$->length;
+		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
 			$var($AnnotationEntry, element, arr$->get(i$));

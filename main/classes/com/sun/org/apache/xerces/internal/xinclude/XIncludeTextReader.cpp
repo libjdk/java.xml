@@ -228,7 +228,7 @@ $Reader* XIncludeTextReader::getReader($XMLInputSource* source) {
 			$var($MessageFormatter, aFormatter, $nc(this->fErrorReporter)->getMessageFormatter($XMLMessageFormatter::XML_DOMAIN));
 			$var($Locale, aLocale, $nc(this->fErrorReporter)->getLocale());
 			$throwNew($IOException, $($nc(aFormatter)->formatMessage(aLocale, "EncodingDeclInvalid"_s, $$new($ObjectArray, {$of(encoding)}))));
-		} else if (javaEncoding->equals("ASCII"_s)) {
+		} else if ($nc(javaEncoding)->equals("ASCII"_s)) {
 			return createASCIIReader(stream);
 		} else if (javaEncoding->equals("ISO8859_1"_s)) {
 			return createLatin1Reader(stream);
@@ -282,7 +282,7 @@ $String* XIncludeTextReader::consumeBOM($InputStream* stream, $String* encoding)
 	$var($bytes, b, $new($bytes, 3));
 	int32_t count = 0;
 	$nc(stream)->mark(3);
-	if (encoding->equals("UTF-8"_s)) {
+	if ($nc(encoding)->equals("UTF-8"_s)) {
 		count = stream->read(b, 0, 3);
 		if (count == 3) {
 			int32_t b0 = (int32_t)(b->get(0) & (uint32_t)255);

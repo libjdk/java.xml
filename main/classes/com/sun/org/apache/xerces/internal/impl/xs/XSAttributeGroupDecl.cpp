@@ -270,7 +270,7 @@ $ObjectArray* XSAttributeGroupDecl::validRestrictionOf($String* typeName, XSAttr
 			return errorArgs;
 		}
 	}
-	for (int32_t i = 0; i < baseGroup->fAttrUseNum; ++i) {
+	for (int32_t i = 0; i < $nc(baseGroup)->fAttrUseNum; ++i) {
 		$assign(baseAttrUse, $nc(baseGroup->fAttributeUses)->get(i));
 		if ($nc(baseAttrUse)->fUse == $SchemaSymbols::USE_REQUIRED) {
 			$assign(baseAttrDecl, baseAttrUse->fAttrDecl);
@@ -285,25 +285,25 @@ $ObjectArray* XSAttributeGroupDecl::validRestrictionOf($String* typeName, XSAttr
 		}
 	}
 	if (this->fAttributeWC != nullptr) {
-		if (baseGroup->fAttributeWC == nullptr) {
+		if ($nc(baseGroup)->fAttributeWC == nullptr) {
 			$assign(errorArgs, $new($ObjectArray, {
 				$of(typeName),
 				$of("derivation-ok-restriction.4.1"_s)
 			}));
 			return errorArgs;
 		}
-		if (!$nc(this->fAttributeWC)->isSubsetOf(baseGroup->fAttributeWC)) {
+		if (!$nc(this->fAttributeWC)->isSubsetOf($nc(baseGroup)->fAttributeWC)) {
 			$assign(errorArgs, $new($ObjectArray, {
 				$of(typeName),
 				$of("derivation-ok-restriction.4.2"_s)
 			}));
 			return errorArgs;
 		}
-		if ($nc(this->fAttributeWC)->weakerProcessContents(baseGroup->fAttributeWC)) {
+		if ($nc(this->fAttributeWC)->weakerProcessContents($nc(baseGroup)->fAttributeWC)) {
 			$assign(errorArgs, $new($ObjectArray, {
 				$of(typeName),
 				$($of($nc(this->fAttributeWC)->getProcessContentsAsString())),
-				$($of($nc(baseGroup->fAttributeWC)->getProcessContentsAsString())),
+				$($of($nc($nc(baseGroup)->fAttributeWC)->getProcessContentsAsString())),
 				$of("derivation-ok-restriction.4.3"_s)
 			}));
 			return errorArgs;

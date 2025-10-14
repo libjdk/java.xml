@@ -390,7 +390,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
-	if ($nc($(clazz->getName()))->equals("java.lang.Object"_s)) {
+	if ($nc($($nc(clazz)->getName()))->equals("java.lang.Object"_s)) {
 		$init($Constants);
 		$nc($($nc(methodGen)->getInstructionList()))->append($Constants::NOP);
 	} else {
