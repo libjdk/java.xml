@@ -111,6 +111,7 @@ InstructionComparator* InstructionComparator::DEFAULT = nullptr;
 
 bool InstructionComparator::lambda$static$0($Instruction* i1, $Instruction* i2) {
 	$init(InstructionComparator);
+	$useLocalCurrentObjectStackCache();
 	int16_t var$0 = $nc(i1)->getOpcode();
 	if (var$0 == $nc(i2)->getOpcode()) {
 		if ($instanceOf($BranchInstruction, i1)) {

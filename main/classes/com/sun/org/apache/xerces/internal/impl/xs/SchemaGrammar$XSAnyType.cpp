@@ -152,6 +152,7 @@ $XSNamespaceItem* SchemaGrammar$XSAnyType::getNamespaceItem() {
 }
 
 $XSAttributeGroupDecl* SchemaGrammar$XSAnyType::createAttrGrp() {
+	$useLocalCurrentObjectStackCache();
 	$var($XSWildcardDecl, wildcard, $new($XSWildcardDecl));
 	wildcard->fProcessContents = $XSWildcardDecl::PC_LAX;
 	$var($XSAttributeGroupDecl, attrGrp, $new($XSAttributeGroupDecl));
@@ -160,6 +161,7 @@ $XSAttributeGroupDecl* SchemaGrammar$XSAnyType::createAttrGrp() {
 }
 
 $XSParticleDecl* SchemaGrammar$XSAnyType::createParticle() {
+	$useLocalCurrentObjectStackCache();
 	$var($XSWildcardDecl, wildcard, $new($XSWildcardDecl));
 	wildcard->fProcessContents = $XSWildcardDecl::PC_LAX;
 	$var($XSParticleDecl, particleW, $new($XSParticleDecl));

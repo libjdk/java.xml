@@ -154,6 +154,7 @@ bool OneStepIterator::isReverseAxes() {
 }
 
 int32_t OneStepIterator::getProximityPosition(int32_t predicateIndex) {
+	$useLocalCurrentObjectStackCache();
 	if (!isReverseAxes()) {
 		return $ChildTestIterator::getProximityPosition(predicateIndex);
 	}
@@ -194,6 +195,7 @@ int32_t OneStepIterator::getProximityPosition(int32_t predicateIndex) {
 }
 
 int32_t OneStepIterator::getLength() {
+	$useLocalCurrentObjectStackCache();
 	if (!isReverseAxes()) {
 		return $ChildTestIterator::getLength();
 	}

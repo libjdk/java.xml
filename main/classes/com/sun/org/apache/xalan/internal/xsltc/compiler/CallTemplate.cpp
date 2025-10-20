@@ -153,6 +153,7 @@ bool CallTemplate::hasWithParams() {
 }
 
 void CallTemplate::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	if ($nc(name)->length() > 0) {
 		if (!$XML11Char::isXML11ValidQName(name)) {
@@ -169,6 +170,7 @@ void CallTemplate::parseContents($Parser* parser) {
 }
 
 $Type* CallTemplate::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Template, template$, $nc(stable)->lookupTemplate(this->_name));
 	if (template$ != nullptr) {
 		typeCheckContents(stable);
@@ -182,6 +184,7 @@ $Type* CallTemplate::typeCheck($SymbolTable* stable) {
 }
 
 void CallTemplate::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($Stylesheet, stylesheet, $nc(classGen)->getStylesheet());
 	$var($ConstantPoolGen, cpg, classGen->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
@@ -241,11 +244,13 @@ void CallTemplate::translate($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 $Template* CallTemplate::getCalleeTemplate() {
+	$useLocalCurrentObjectStackCache();
 	$var($Template, foundTemplate, $nc($($nc($($nc($(getXSLTC()))->getParser()))->getSymbolTable()))->lookupTemplate(this->_name));
 	return $nc(foundTemplate)->isSimpleNamedTemplate() ? foundTemplate : ($Template*)nullptr;
 }
 
 void CallTemplate::buildParameterList() {
+	$useLocalCurrentObjectStackCache();
 	$var($List, defaultParams, $nc(this->_calleeTemplate)->getParameters());
 	int32_t numParams = $nc(defaultParams)->size();
 	$set(this, _parameters, $new($SyntaxTreeNodeArray, numParams));

@@ -301,6 +301,7 @@ int32_t DTMNodeProxy::getDTMNodeNumber() {
 }
 
 bool DTMNodeProxy::equals($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(DTMNodeProxy, dtmp, $cast(DTMNodeProxy, node));
 		return ($nc(dtmp)->node == this->node) && (dtmp->dtm == this->dtm);
@@ -550,6 +551,7 @@ $EntityReference* DTMNodeProxy::createEntityReference($String* name) {
 }
 
 $NodeList* DTMNodeProxy::getElementsByTagName($String* tagname) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, listVector, $new($ArrayList));
 	$var($Node, retNode, $nc(this->dtm)->getNode(this->node));
 	if (retNode != nullptr) {
@@ -572,6 +574,7 @@ $NodeList* DTMNodeProxy::getElementsByTagName($String* tagname) {
 }
 
 void DTMNodeProxy::traverseChildren($List* listVector, $Node* tempNode, $String* tagname, bool isTagNameWildCard) {
+	$useLocalCurrentObjectStackCache();
 	if (tempNode == nullptr) {
 		return;
 	} else {
@@ -604,6 +607,7 @@ $Attr* DTMNodeProxy::createAttributeNS($String* namespaceURI, $String* qualified
 }
 
 $NodeList* DTMNodeProxy::getElementsByTagNameNS($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, listVector, $new($ArrayList));
 	$var($Node, retNode, $nc(this->dtm)->getNode(this->node));
 	if (retNode != nullptr) {
@@ -627,6 +631,7 @@ $NodeList* DTMNodeProxy::getElementsByTagNameNS($String* namespaceURI, $String* 
 }
 
 void DTMNodeProxy::traverseChildren($List* listVector, $Node* tempNode, $String* namespaceURI, $String* localname, bool isNamespaceURIWildCard, bool isLocalNameWildCard) {
+	$useLocalCurrentObjectStackCache();
 	if (tempNode == nullptr) {
 		return;
 	} else {
@@ -692,6 +697,7 @@ $String* DTMNodeProxy::getTagName() {
 }
 
 $String* DTMNodeProxy::getAttribute($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMNamedNodeMap, map, $new($DTMNamedNodeMap, this->dtm, this->node));
 	$var($Node, n, map->getNamedItem(name));
 	return (nullptr == n) ? DTMNodeProxy::EMPTYSTRING : $nc(n)->getNodeValue();
@@ -837,6 +843,7 @@ $Object* DTMNodeProxy::getFeature($String* feature, $String* version) {
 }
 
 bool DTMNodeProxy::isEqualNode($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(arg, this)) {
 		return true;
 	}
@@ -883,6 +890,7 @@ bool DTMNodeProxy::isEqualNode($Node* arg) {
 }
 
 $String* DTMNodeProxy::lookupNamespaceURI($String* specifiedPrefix) {
+	$useLocalCurrentObjectStackCache();
 	int16_t type = this->getNodeType();
 	switch (type) {
 	case $Node::ELEMENT_NODE:
@@ -953,6 +961,7 @@ bool DTMNodeProxy::isDefaultNamespace($String* namespaceURI) {
 }
 
 $String* DTMNodeProxy::lookupPrefix($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if (namespaceURI == nullptr) {
 		return nullptr;
 	}

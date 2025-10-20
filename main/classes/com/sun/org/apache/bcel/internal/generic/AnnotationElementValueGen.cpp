@@ -78,6 +78,7 @@ void AnnotationElementValueGen::init$($AnnotationEntryGen* a, $ConstantPoolGen* 
 }
 
 void AnnotationElementValueGen::init$(int32_t type, $AnnotationEntryGen* annotation, $ConstantPoolGen* cpool) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValueGen::init$(type, cpool);
 	if (type != $ElementValueGen::ANNOTATION) {
 		$throwNew($IllegalArgumentException, $$str({"Only element values of type annotation can be built with this ctor - type specified: "_s, $$str(type)}));
@@ -101,6 +102,7 @@ $String* AnnotationElementValueGen::stringifyValue() {
 }
 
 $ElementValue* AnnotationElementValueGen::getElementValue() {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $ElementValueGen::getElementValueType();
 	$var($AnnotationEntry, var$1, $nc(this->a)->getAnnotation());
 	return $new($AnnotationElementValue, var$0, var$1, $($nc($(getConstantPool()))->getConstantPool()));

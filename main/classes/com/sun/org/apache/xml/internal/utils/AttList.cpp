@@ -76,6 +76,7 @@ int32_t AttList::getLength() {
 }
 
 $String* AttList::getURI(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ns, $DOM2Helper::getNamespaceOfNode(($cast($Attr, $($nc(this->m_attrs)->item(index))))));
 	if (nullptr == ns) {
 		$assign(ns, ""_s);
@@ -118,6 +119,7 @@ $String* AttList::getValue($String* uri, $String* localName) {
 }
 
 int32_t AttList::getIndex($String* uri, $String* localPart) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = $nc(this->m_attrs)->getLength() - 1; i >= 0; --i) {
 		$var($Node, a, $nc(this->m_attrs)->item(i));
 		$var($String, u, $nc(a)->getNamespaceURI());
@@ -130,6 +132,7 @@ int32_t AttList::getIndex($String* uri, $String* localPart) {
 }
 
 int32_t AttList::getIndex($String* qName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = $nc(this->m_attrs)->getLength() - 1; i >= 0; --i) {
 		$var($Node, a, $nc(this->m_attrs)->item(i));
 		if ($nc($($nc(a)->getNodeName()))->equals(qName)) {

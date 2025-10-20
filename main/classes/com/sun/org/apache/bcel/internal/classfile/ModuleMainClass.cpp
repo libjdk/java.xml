@@ -104,6 +104,7 @@ void ModuleMainClass::setHostClassIndex(int32_t mainClassIndex) {
 }
 
 $String* ModuleMainClass::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	buf->append("ModuleMainClass: "_s);
 	$var($String, class_name, $nc($($Attribute::getConstantPool()))->getConstantString(this->mainClassIndex, $Const::CONSTANT_Class));

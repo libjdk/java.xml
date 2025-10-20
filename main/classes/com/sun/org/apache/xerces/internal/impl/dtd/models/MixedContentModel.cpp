@@ -63,6 +63,7 @@ $Object* allocate$MixedContentModel($Class* clazz) {
 }
 
 void MixedContentModel::init$($QNameArray* children, $ints* type, int32_t offset, int32_t length, bool ordered) {
+	$useLocalCurrentObjectStackCache();
 	this->fCount = length;
 	$set(this, fChildren, $new($QNameArray, this->fCount));
 	$set(this, fChildrenType, $new($ints, this->fCount));
@@ -74,6 +75,7 @@ void MixedContentModel::init$($QNameArray* children, $ints* type, int32_t offset
 }
 
 int32_t MixedContentModel::validate($QNameArray* children, int32_t offset, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fOrdered) {
 		int32_t inIndex = 0;
 		for (int32_t outIndex = 0; outIndex < length; ++outIndex) {

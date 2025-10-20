@@ -165,6 +165,7 @@ void XML11Serializer::init$($OutputStream* output, $OutputFormat* format) {
 }
 
 void XML11Serializer::characters($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	try {
 		$assign(state, content());
@@ -221,6 +222,7 @@ void XML11Serializer::characters($chars* chars, int32_t start, int32_t length) {
 }
 
 void XML11Serializer::printEscaped($String* source) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(source)->length();
 	for (int32_t i = 0; i < length; ++i) {
 		int32_t ch = source->charAt(i);
@@ -249,6 +251,7 @@ void XML11Serializer::printEscaped($String* source) {
 }
 
 void XML11Serializer::printCDATAText($String* text) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(text)->length();
 	char16_t ch = 0;
 	for (int32_t index = 0; index < length; ++index) {
@@ -314,6 +317,7 @@ void XML11Serializer::printXMLChar(int32_t ch) {
 }
 
 void XML11Serializer::surrogates(int32_t high, int32_t low, bool inContent) {
+	$useLocalCurrentObjectStackCache();
 	if ($XMLChar::isHighSurrogate(high)) {
 		if (!$XMLChar::isLowSurrogate(low)) {
 			fatalError($$str({"The character \'"_s, $$str((char16_t)low), "\' is an invalid XML character"_s}));
@@ -335,6 +339,7 @@ void XML11Serializer::surrogates(int32_t high, int32_t low, bool inContent) {
 }
 
 void XML11Serializer::printText($String* text, bool preserveSpace, bool unescaped) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	char16_t ch = 0;
 	int32_t length = $nc(text)->length();
@@ -376,6 +381,7 @@ void XML11Serializer::printText($String* text, bool preserveSpace, bool unescape
 }
 
 void XML11Serializer::printText($chars* chars, int32_t start, int32_t length, bool preserveSpace, bool unescaped) {
+	$useLocalCurrentObjectStackCache();
 	if (preserveSpace) {
 		while (length-- > 0) {
 			char16_t ch = $nc(chars)->get(start++);

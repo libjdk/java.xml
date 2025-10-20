@@ -293,6 +293,7 @@ void DTMDefaultBase::init$($DTMManager* mgr, $Source* source, int32_t dtmIdentit
 }
 
 void DTMDefaultBase::ensureSizeOfIndex(int32_t namespaceID, int32_t LocalNameID) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr == this->m_elemIndexes) {
 		$set(this, m_elemIndexes, $new($intArray3, namespaceID + 20));
 	} else if ($nc(this->m_elemIndexes)->length <= namespaceID) {
@@ -324,6 +325,7 @@ void DTMDefaultBase::ensureSizeOfIndex(int32_t namespaceID, int32_t LocalNameID)
 }
 
 void DTMDefaultBase::indexNode(int32_t expandedTypeID, int32_t identity) {
+	$useLocalCurrentObjectStackCache();
 	$var($ExpandedNameTable, ent, this->m_expandedNameTable);
 	int16_t type = $nc(ent)->getType(expandedTypeID);
 	if ($DTM::ELEMENT_NODE == type) {
@@ -355,6 +357,7 @@ int32_t DTMDefaultBase::findGTE($ints* list, int32_t start, int32_t len, int32_t
 }
 
 int32_t DTMDefaultBase::findElementFromIndex(int32_t nsIndex, int32_t lnIndex, int32_t firstPotential) {
+	$useLocalCurrentObjectStackCache();
 	$var($intArray3, indexes, this->m_elemIndexes);
 	if (nullptr != indexes && nsIndex < indexes->length) {
 		$var($intArray2, lnIndexs, indexes->get(nsIndex));
@@ -467,6 +470,7 @@ int32_t DTMDefaultBase::_parent(int32_t identity) {
 }
 
 void DTMDefaultBase::dumpDTM($OutputStream* os$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($OutputStream, os, os$renamed);
 	try {
 		if (os == nullptr) {
@@ -618,6 +622,7 @@ void DTMDefaultBase::dumpDTM($OutputStream* os$renamed) {
 }
 
 $String* DTMDefaultBase::dumpNode(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeHandle == $DTM::NULL) {
 		return "[null]"_s;
 	}
@@ -883,6 +888,7 @@ int32_t DTMDefaultBase::getNextAttributeIdentity(int32_t identity) {
 }
 
 void DTMDefaultBase::declareNamespaceInContext(int32_t elementNodeIndex, int32_t namespaceNodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	$var($SuballocatedIntVector, nsList, nullptr);
 	if (this->m_namespaceDeclSets == nullptr) {
 		$set(this, m_namespaceDeclSetElements, $new($SuballocatedIntVector, 32));
@@ -1062,6 +1068,7 @@ int32_t DTMDefaultBase::getOwnerDocument(int32_t nodeHandle) {
 }
 
 int32_t DTMDefaultBase::getDocumentRoot(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	return $nc($($nc($(getManager()))->getDTM(nodeHandle)))->getDocument();
 }
 

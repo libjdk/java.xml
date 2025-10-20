@@ -79,6 +79,7 @@ $XSModel* XSGrammarPool::toXSModel() {
 }
 
 $XSModel* XSGrammarPool::toXSModel(int16_t schemaVersion) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, list, $new($ArrayList));
 	for (int32_t i = 0; i < $nc(this->fGrammars)->length; ++i) {
 		{

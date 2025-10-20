@@ -128,6 +128,7 @@ void SIPUSH::dump($DataOutputStream* out) {
 }
 
 $String* SIPUSH::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Instruction::toString(verbose)), " "_s, $$str(this->b)});
 }
 

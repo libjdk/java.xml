@@ -390,6 +390,7 @@ $String* AbstractDOMParser::getDocumentClassName() {
 }
 
 void AbstractDOMParser::setDocumentClassName($String* documentClassName$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, documentClassName, documentClassName$renamed);
 	if (documentClassName == nullptr) {
 		$assign(documentClassName, AbstractDOMParser::DEFAULT_DOCUMENT_CLASS_NAME);
@@ -462,6 +463,7 @@ void AbstractDOMParser::setLocale($Locale* locale) {
 }
 
 void AbstractDOMParser::startGeneralEntity($String* name, $XMLResourceIdentifier* identifier, $String* encoding, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fDeferNodeExpansion) {
 		if (this->fFilterReject) {
 			return;
@@ -528,6 +530,7 @@ void AbstractDOMParser::textDecl($String* version, $String* encoding, $Augmentat
 }
 
 void AbstractDOMParser::comment($XMLString* text, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInDTD) {
 		if (this->fInternalSubset != nullptr && !this->fInDTDExternalSubset) {
 			$nc(this->fInternalSubset)->append("<!--"_s);
@@ -582,6 +585,7 @@ void AbstractDOMParser::comment($XMLString* text, $Augmentations* augs) {
 }
 
 void AbstractDOMParser::processingInstruction($String* target, $XMLString* data, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInDTD) {
 		if (this->fInternalSubset != nullptr && !this->fInDTDExternalSubset) {
 			$nc(this->fInternalSubset)->append("<?"_s);
@@ -637,6 +641,7 @@ void AbstractDOMParser::processingInstruction($String* target, $XMLString* data,
 }
 
 void AbstractDOMParser::startDocument($XMLLocator* locator, $String* encoding, $NamespaceContext* namespaceContext, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$set(this, fLocator, locator);
 	if (!this->fDeferNodeExpansion) {
@@ -720,6 +725,7 @@ void AbstractDOMParser::doctypeDecl($String* rootElement, $String* publicId, $St
 }
 
 void AbstractDOMParser::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fDeferNodeExpansion) {
 		if (this->fFilterReject) {
 			++this->fRejectedElementDepth;
@@ -876,6 +882,7 @@ void AbstractDOMParser::emptyElement($QName* element, $XMLAttributes* attributes
 }
 
 void AbstractDOMParser::characters($XMLString* text, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fDeferNodeExpansion) {
 		if (this->fFilterReject) {
 			return;
@@ -933,6 +940,7 @@ void AbstractDOMParser::characters($XMLString* text, $Augmentations* augs) {
 }
 
 void AbstractDOMParser::ignorableWhitespace($XMLString* text, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fIncludeIgnorableWhitespace || this->fFilterReject) {
 		return;
 	}
@@ -956,6 +964,7 @@ void AbstractDOMParser::ignorableWhitespace($XMLString* text, $Augmentations* au
 }
 
 void AbstractDOMParser::endElement($QName* element, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fDeferNodeExpansion) {
 		if (augs != nullptr && this->fDocumentImpl != nullptr && (this->fNamespaceAware || this->fStorePSVI)) {
 			$init($Constants);
@@ -1109,6 +1118,7 @@ void AbstractDOMParser::endCDATA($Augmentations* augs) {
 }
 
 void AbstractDOMParser::endDocument($Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fDeferNodeExpansion) {
 		if (this->fDocumentImpl != nullptr) {
 			if (this->fLocator != nullptr) {
@@ -1130,6 +1140,7 @@ void AbstractDOMParser::endDocument($Augmentations* augs) {
 }
 
 void AbstractDOMParser::endGeneralEntity($String* name, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fDeferNodeExpansion) {
 		if (this->fFilterReject) {
 			return;
@@ -1272,6 +1283,7 @@ void AbstractDOMParser::endGeneralEntity($String* name, $Augmentations* augs) {
 }
 
 void AbstractDOMParser::handleBaseURI($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDocumentImpl != nullptr) {
 		$var($String, baseURI, nullptr);
 		int16_t nodeType = $nc(node)->getNodeType();
@@ -1305,6 +1317,7 @@ void AbstractDOMParser::handleBaseURI($Node* node) {
 }
 
 void AbstractDOMParser::handleBaseURI(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	int16_t nodeType = $nc(this->fDeferredDocumentImpl)->getNodeType(node, false);
 	if (nodeType == $Node::ELEMENT_NODE) {
 		$var($String, baseURI, $nc(this->fDeferredDocumentImpl)->getNodeValueString(this->fCurrentNodeIndex, false));
@@ -1373,6 +1386,7 @@ void AbstractDOMParser::endExternalSubset($Augmentations* augs) {
 }
 
 void AbstractDOMParser::internalEntityDecl($String* name, $XMLString* text, $XMLString* nonNormalizedText, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInternalSubset != nullptr && !this->fInDTDExternalSubset) {
 		$nc(this->fInternalSubset)->append("<!ENTITY "_s);
 		if ($nc(name)->startsWith("%"_s)) {
@@ -1423,6 +1437,7 @@ void AbstractDOMParser::internalEntityDecl($String* name, $XMLString* text, $XML
 }
 
 void AbstractDOMParser::externalEntityDecl($String* name, $XMLResourceIdentifier* identifier, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, $nc(identifier)->getPublicId());
 	$var($String, literalSystemId, identifier->getLiteralSystemId());
 	if (this->fInternalSubset != nullptr && !this->fInDTDExternalSubset) {
@@ -1480,6 +1495,7 @@ void AbstractDOMParser::externalEntityDecl($String* name, $XMLResourceIdentifier
 }
 
 void AbstractDOMParser::startParameterEntity($String* name, $XMLResourceIdentifier* identifier, $String* encoding, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$init($Boolean);
 	$init($Constants);
 	if (augs != nullptr && this->fInternalSubset != nullptr && !this->fInDTDExternalSubset && $nc($Boolean::TRUE)->equals($(augs->getItem($Constants::ENTITY_SKIPPED)))) {
@@ -1493,6 +1509,7 @@ void AbstractDOMParser::endParameterEntity($String* name, $Augmentations* augs) 
 }
 
 void AbstractDOMParser::unparsedEntityDecl($String* name, $XMLResourceIdentifier* identifier, $String* notation, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, $nc(identifier)->getPublicId());
 	$var($String, literalSystemId, identifier->getLiteralSystemId());
 	if (this->fInternalSubset != nullptr && !this->fInDTDExternalSubset) {
@@ -1548,6 +1565,7 @@ void AbstractDOMParser::unparsedEntityDecl($String* name, $XMLResourceIdentifier
 }
 
 void AbstractDOMParser::notationDecl($String* name, $XMLResourceIdentifier* identifier, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, $nc(identifier)->getPublicId());
 	$var($String, literalSystemId, identifier->getLiteralSystemId());
 	if (this->fInternalSubset != nullptr && !this->fInDTDExternalSubset) {
@@ -1611,6 +1629,7 @@ void AbstractDOMParser::elementDecl($String* name, $String* contentModel, $Augme
 }
 
 void AbstractDOMParser::attributeDecl($String* elementName, $String* attributeName, $String* type, $StringArray* enumeration, $String* defaultType, $XMLString* defaultValue, $XMLString* nonNormalizedDefaultValue, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInternalSubset != nullptr && !this->fInDTDExternalSubset) {
 		$nc(this->fInternalSubset)->append("<!ATTLIST "_s);
 		$nc(this->fInternalSubset)->append(elementName);
@@ -1743,6 +1762,7 @@ $Attr* AbstractDOMParser::createAttrNode($QName* attrQName) {
 }
 
 void AbstractDOMParser::setCharacterData(bool sawChars) {
+	$useLocalCurrentObjectStackCache();
 	this->fFirstChunk = sawChars;
 	$var($Node, child, $nc(this->fCurrentNode)->getLastChild());
 	if (child != nullptr) {

@@ -82,6 +82,7 @@ $Object* allocate$XMLDocumentFragmentScannerImpl$ElementStack($Class* clazz) {
 }
 
 void XMLDocumentFragmentScannerImpl$ElementStack::init$($XMLDocumentFragmentScannerImpl* this$0) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, this$0, this$0);
 	$set(this, fInt, $new($ints, 20));
 	$set(this, fElements, $new($QNameArray, 20));
@@ -91,6 +92,7 @@ void XMLDocumentFragmentScannerImpl$ElementStack::init$($XMLDocumentFragmentScan
 }
 
 $QName* XMLDocumentFragmentScannerImpl$ElementStack::pushElement($QName* element) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDepth == $nc(this->fElements)->length) {
 		$var($QNameArray, array, $new($QNameArray, $nc(this->fElements)->length * 2));
 		$System::arraycopy(this->fElements, 0, array, 0, this->fDepth);
@@ -143,6 +145,7 @@ bool XMLDocumentFragmentScannerImpl$ElementStack::matchElement($QName* element) 
 }
 
 $QName* XMLDocumentFragmentScannerImpl$ElementStack::nextElement() {
+	$useLocalCurrentObjectStackCache();
 	if (this->this$0->fSkip) {
 		++this->fDepth;
 		return $nc(this->fElements)->get(this->fCount++);

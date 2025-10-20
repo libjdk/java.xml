@@ -81,6 +81,7 @@ void NotCall::init$($QName* fname, $List* arguments) {
 }
 
 void NotCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc($(argument()))->translate(classGen, methodGen);
 	$init($Constants);
@@ -89,6 +90,7 @@ void NotCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) 
 }
 
 void NotCall::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($Expression, exp, argument());
 	$nc(exp)->translateDesynthesized(classGen, methodGen);

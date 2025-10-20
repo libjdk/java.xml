@@ -183,6 +183,7 @@ void FieldGen::init$(int32_t access_flags, $Type* type, $String* name, $Constant
 }
 
 void FieldGen::init$($Field* field, $ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(field)->getAccessFlags();
 	$var($Type, var$1, $Type::getType($(field->getSignature())));
 	FieldGen::init$(var$0, var$1, $(field->getName()), cp);
@@ -219,6 +220,7 @@ void FieldGen::init$($Field* field, $ConstantPoolGen* cp) {
 }
 
 void FieldGen::setValue(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc($($FieldGenOrMethodGen::getConstantPool()))->getConstantPool());
 	$var($Constant, c, $nc(cp)->getConstant(index));
 	$set(this, value, $nc(($cast($ConstantObject, c)))->getConstantValue(cp));
@@ -300,6 +302,7 @@ void FieldGen::cancelInitValue() {
 }
 
 void FieldGen::checkType($Type* atype) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, superType, $FieldGenOrMethodGen::getType());
 	if (superType == nullptr) {
 		$throwNew($ClassGenException, "You haven\'t defined the type of the field yet"_s);
@@ -313,6 +316,7 @@ void FieldGen::checkType($Type* atype) {
 }
 
 $Field* FieldGen::getField() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, signature, getSignature());
 	int32_t name_index = $nc($($FieldGenOrMethodGen::getConstantPool()))->addUtf8($($FieldGenOrMethodGen::getName()));
 	int32_t signature_index = $nc($($FieldGenOrMethodGen::getConstantPool()))->addUtf8(signature);
@@ -332,6 +336,7 @@ $Field* FieldGen::getField() {
 }
 
 void FieldGen::addAnnotationsAsAttribute($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($AttributeArray, attrs, $AnnotationEntryGen::getAnnotationAttributes(cp, $($FieldGenOrMethodGen::getAnnotationEntries())));
 	{
 		$var($AttributeArray, arr$, attrs);
@@ -347,6 +352,7 @@ void FieldGen::addAnnotationsAsAttribute($ConstantPoolGen* cp) {
 }
 
 int32_t FieldGen::addConstant() {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc($($FieldGenOrMethodGen::getType()))->getType()) {
 	case $Const::T_INT:
 		{}
@@ -401,6 +407,7 @@ void FieldGen::removeObserver($FieldObserver* o) {
 }
 
 void FieldGen::update() {
+	$useLocalCurrentObjectStackCache();
 	if (this->observers != nullptr) {
 		{
 			$var($Iterator, i$, $nc(this->observers)->iterator());
@@ -422,6 +429,7 @@ $String* FieldGen::getInitValue() {
 }
 
 $String* FieldGen::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, nullptr);
 	$var($String, signature, nullptr);
 	$var($String, access, nullptr);

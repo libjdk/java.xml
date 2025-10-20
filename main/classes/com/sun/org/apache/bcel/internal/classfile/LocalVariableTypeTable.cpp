@@ -74,6 +74,7 @@ $Object* allocate$LocalVariableTypeTable($Class* clazz) {
 }
 
 void LocalVariableTypeTable::init$(LocalVariableTypeTable* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($LocalVariableArray, var$2, c->getLocalVariableTypeTable());
@@ -86,6 +87,7 @@ void LocalVariableTypeTable::init$(int32_t name_index, int32_t length, $LocalVar
 }
 
 void LocalVariableTypeTable::init$(int32_t nameIdx, int32_t len, $DataInput* input, $ConstantPool* cpool) {
+	$useLocalCurrentObjectStackCache();
 	LocalVariableTypeTable::init$(nameIdx, len, ($LocalVariableArray*)nullptr, cpool);
 	int32_t local_variable_type_table_length = $nc(input)->readUnsignedShort();
 	$set(this, localVariableTypeTable, $new($LocalVariableArray, local_variable_type_table_length));
@@ -99,6 +101,7 @@ void LocalVariableTypeTable::accept($Visitor* v) {
 }
 
 void LocalVariableTypeTable::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort($nc(this->localVariableTypeTable)->length);
 	{
@@ -119,6 +122,7 @@ $LocalVariableArray* LocalVariableTypeTable::getLocalVariableTypeTable() {
 }
 
 $LocalVariable* LocalVariableTypeTable::getLocalVariable(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($LocalVariableArray, arr$, this->localVariableTypeTable);
 		int32_t len$ = $nc(arr$)->length;
@@ -140,6 +144,7 @@ void LocalVariableTypeTable::setLocalVariableTable($LocalVariableArray* local_va
 }
 
 $String* LocalVariableTypeTable::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	for (int32_t i = 0; i < $nc(this->localVariableTypeTable)->length; ++i) {
 		buf->append($($nc($nc(this->localVariableTypeTable)->get(i))->toStringShared(true)));
@@ -151,6 +156,7 @@ $String* LocalVariableTypeTable::toString() {
 }
 
 $Attribute* LocalVariableTypeTable::copy($ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(LocalVariableTypeTable, c, $cast(LocalVariableTypeTable, clone()));
 	$set($nc(c), localVariableTypeTable, $new($LocalVariableArray, $nc(this->localVariableTypeTable)->length));
 	for (int32_t i = 0; i < $nc(this->localVariableTypeTable)->length; ++i) {

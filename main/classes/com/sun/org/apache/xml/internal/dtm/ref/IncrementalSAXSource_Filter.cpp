@@ -236,6 +236,7 @@ $IncrementalSAXSource* IncrementalSAXSource_Filter::createIncrementalSAXSource($
 }
 
 void IncrementalSAXSource_Filter::init($CoroutineManager* co$renamed, int32_t controllerCoroutineID, int32_t sourceCoroutineID) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoroutineManager, co, co$renamed);
 	if (co == nullptr) {
 		$assign(co, $new($CoroutineManager));
@@ -493,6 +494,7 @@ void IncrementalSAXSource_Filter::count_and_yield(bool moreExpected) {
 }
 
 void IncrementalSAXSource_Filter::co_entry_pause() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCoroutineManager == nullptr) {
 		init(nullptr, -1, -1);
 	}
@@ -512,6 +514,7 @@ void IncrementalSAXSource_Filter::co_entry_pause() {
 }
 
 void IncrementalSAXSource_Filter::co_yield$(bool moreRemains) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNoMoreEvents) {
 		return;
 	}
@@ -537,6 +540,7 @@ void IncrementalSAXSource_Filter::co_yield$(bool moreRemains) {
 }
 
 void IncrementalSAXSource_Filter::startParse($InputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNoMoreEvents) {
 		$init($XMLErrorResources);
 		$throwNew($SAXException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE, nullptr)));
@@ -550,6 +554,7 @@ void IncrementalSAXSource_Filter::startParse($InputSource* source) {
 }
 
 void IncrementalSAXSource_Filter::run() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fXMLReader == nullptr) {
 		return;
 	}
@@ -600,6 +605,7 @@ void IncrementalSAXSource_Filter::run() {
 }
 
 $Object* IncrementalSAXSource_Filter::deliverMoreNodes(bool parsemore) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNoMoreEvents) {
 		$init($Boolean);
 		return $of($Boolean::FALSE);

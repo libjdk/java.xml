@@ -248,6 +248,7 @@ int32_t RealType::distanceTo($1Type* type) {
 }
 
 void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
@@ -273,6 +274,7 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -280,6 +282,7 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($FlowList, falsel, translateToDesynthesized(classGen, methodGen, type));
 	$init($Constants);
@@ -290,6 +293,7 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $IntType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -297,6 +301,7 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 $FlowList* RealType::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableGen, local, nullptr);
 	$var($FlowList, flowlist, $new($FlowList));
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
@@ -317,6 +322,7 @@ $FlowList* RealType::translateToDesynthesized($ClassGenerator* classGen, $Method
 }
 
 void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $ReferenceType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -328,6 +334,7 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Character);
 	if (clazz == $Character::TYPE) {
@@ -387,6 +394,7 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void RealType::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Character);
 	$init($Byte);
@@ -428,6 +436,7 @@ void RealType::translateBox($ClassGenerator* classGen, $MethodGenerator* methodG
 }
 
 void RealType::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

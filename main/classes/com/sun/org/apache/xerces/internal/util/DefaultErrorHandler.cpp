@@ -87,6 +87,7 @@ void DefaultErrorHandler::fatalError($String* domain, $String* key, $XMLParseExc
 }
 
 void DefaultErrorHandler::printError($String* type, $XMLParseException* ex) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fOut)->print("["_s);
 	$nc(this->fOut)->print(type);
 	$nc(this->fOut)->print("] "_s);

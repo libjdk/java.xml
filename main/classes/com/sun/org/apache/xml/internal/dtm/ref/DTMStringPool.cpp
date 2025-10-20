@@ -97,6 +97,7 @@ $String* DTMStringPool::indexToString(int32_t i) {
 }
 
 int32_t DTMStringPool::stringToIndex($String* s) {
+	$useLocalCurrentObjectStackCache();
 	if (s == nullptr) {
 		return DTMStringPool::NULL;
 	}
@@ -125,6 +126,7 @@ int32_t DTMStringPool::stringToIndex($String* s) {
 }
 
 void DTMStringPool::_main($StringArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, word, $new($StringArray, {
 		"Zero"_s,
 		"One"_s,

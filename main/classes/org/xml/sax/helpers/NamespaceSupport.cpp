@@ -180,6 +180,7 @@ $String* NamespaceSupport::getPrefix($String* uri) {
 }
 
 $Enumeration* NamespaceSupport::getPrefixes($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, prefixes, $new($ArrayList));
 	$var($Enumeration, allPrefixes, getPrefixes());
 	while ($nc(allPrefixes)->hasMoreElements()) {

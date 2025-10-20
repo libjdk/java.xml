@@ -104,6 +104,7 @@ $String* XMLMessages::createXMLMessage($String* msgKey, $ObjectArray* args) {
 
 $String* XMLMessages::createMsg($ResourceBundle* fResourceBundle, $String* msgKey, $ObjectArray* args) {
 	$init(XMLMessages);
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, nullptr);
 	bool throwex = false;
 	$var($String, msg, nullptr);

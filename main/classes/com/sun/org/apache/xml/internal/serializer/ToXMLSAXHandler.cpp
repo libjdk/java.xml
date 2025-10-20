@@ -199,6 +199,7 @@ void ToXMLSAXHandler::endDocument() {
 }
 
 void ToXMLSAXHandler::closeStartTag() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->m_elemContext)->m_startTagOpen = false;
 	$var($String, localName, getLocalName($nc(this->m_elemContext)->m_elementName));
 	$var($String, uri, getNamespaceURI($nc(this->m_elemContext)->m_elementName, true));
@@ -220,6 +221,7 @@ void ToXMLSAXHandler::closeCDATA() {
 }
 
 void ToXMLSAXHandler::endElement($String* namespaceURI$renamed, $String* localName$renamed, $String* qName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localName, localName$renamed);
 	$var($String, namespaceURI, namespaceURI$renamed);
 	flushPending();
@@ -409,6 +411,7 @@ void ToXMLSAXHandler::startCDATA() {
 }
 
 void ToXMLSAXHandler::startElement($String* namespaceURI, $String* localName, $String* name, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	flushPending();
 	$ToSAXHandler::startElement(namespaceURI, localName, name, atts);
 	if (this->m_needToOutputDocTypeDecl) {
@@ -432,6 +435,7 @@ void ToXMLSAXHandler::startElement($String* namespaceURI, $String* localName, $S
 }
 
 void ToXMLSAXHandler::ensurePrefixIsDeclared($String* ns, $String* rawName) {
+	$useLocalCurrentObjectStackCache();
 	if (ns != nullptr && ns->length() > 0) {
 		int32_t index = 0;
 		bool no_prefix = ((index = $nc(rawName)->indexOf(":"_s)) < 0);

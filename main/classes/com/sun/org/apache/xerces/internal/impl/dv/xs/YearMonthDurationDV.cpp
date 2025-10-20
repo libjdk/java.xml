@@ -72,6 +72,7 @@ void YearMonthDurationDV::init$() {
 }
 
 $Object* YearMonthDurationDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content, $DurationDV::YEARMONTHDURATION_TYPE));
 	} catch ($Exception&) {
@@ -85,6 +86,7 @@ $Object* YearMonthDurationDV::getActualValue($String* content, $ValidationContex
 }
 
 $Duration* YearMonthDurationDV::getDuration($AbstractDateTimeDV$DateTimeData* date) {
+	$useLocalCurrentObjectStackCache();
 	int32_t sign = 1;
 	if ($nc(date)->year < 0 || $nc(date)->month < 0) {
 		sign = -1;

@@ -70,6 +70,7 @@ void NamedNodeMapImpl::init$($AttrArray* attrs) {
 }
 
 $Node* NamedNodeMapImpl::getNamedItem($String* name) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		if ($nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(name)) {
 			return $nc(this->attrs)->get(i);
@@ -90,6 +91,7 @@ int32_t NamedNodeMapImpl::getLength() {
 }
 
 $Node* NamedNodeMapImpl::getNamedItemNS($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		bool var$0 = $nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(localName);
 		if (var$0 && $nc($($nc($nc(this->attrs)->get(i))->getNamespaceURI()))->equals(namespaceURI)) {

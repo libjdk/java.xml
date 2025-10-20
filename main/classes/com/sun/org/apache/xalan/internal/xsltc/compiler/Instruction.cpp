@@ -68,6 +68,7 @@ $Type* Instruction::typeCheck($SymbolTable* stable) {
 }
 
 void Instruction::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::NOT_IMPLEMENTED_ERR, $of($of(this)->getClass()), static_cast<$SyntaxTreeNode*>(this)));
 	$nc($(getParser()))->reportError($Constants::FATAL, msg);

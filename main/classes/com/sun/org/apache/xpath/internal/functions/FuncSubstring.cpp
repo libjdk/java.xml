@@ -83,6 +83,7 @@ void FuncSubstring::init$() {
 }
 
 $XObject* FuncSubstring::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLString, s1, $nc($($nc(this->m_arg0)->execute(xctxt)))->xstr());
 	double start = $nc($($nc(this->m_arg1)->execute(xctxt)))->num();
 	int32_t lenOfS1 = $nc(s1)->length();

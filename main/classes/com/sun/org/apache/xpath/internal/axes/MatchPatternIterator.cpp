@@ -169,6 +169,7 @@ int32_t MatchPatternIterator::getNextNode() {
 }
 
 int32_t MatchPatternIterator::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_foundLast) {
 		return $DTM::NULL;
 	}
@@ -229,6 +230,7 @@ int32_t MatchPatternIterator::nextNode() {
 }
 
 int16_t MatchPatternIterator::acceptNode(int32_t n, $XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		int16_t var$2 = 0;

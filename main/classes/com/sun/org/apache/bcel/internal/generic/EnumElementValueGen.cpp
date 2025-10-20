@@ -82,6 +82,7 @@ $Object* allocate$EnumElementValueGen($Class* clazz) {
 }
 
 void EnumElementValueGen::init$(int32_t typeIdx, int32_t valueIdx, $ConstantPoolGen* cpool) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValueGen::init$($ElementValueGen::ENUM_CONSTANT, cpool);
 	if ($ElementValueGen::getElementValueType() != $ElementValueGen::ENUM_CONSTANT) {
 		$throwNew($IllegalArgumentException, $$str({"Only element values of type enum can be built with this ctor - type specified: "_s, $$str($ElementValueGen::getElementValueType())}));
@@ -91,6 +92,7 @@ void EnumElementValueGen::init$(int32_t typeIdx, int32_t valueIdx, $ConstantPool
 }
 
 $ElementValue* EnumElementValueGen::getElementValue() {
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$var($String, var$0, $$str({"Duplicating value: "_s, $(getEnumTypeString()), ":"_s}));
 	$nc($System::err)->println($$concat(var$0, $(getEnumValueString())));
@@ -107,6 +109,7 @@ void EnumElementValueGen::init$($ObjectType* t, $String* value, $ConstantPoolGen
 }
 
 void EnumElementValueGen::init$($EnumElementValue* value, $ConstantPoolGen* cpool, bool copyPoolEntries) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValueGen::init$($ElementValueGen::ENUM_CONSTANT, cpool);
 	if (copyPoolEntries) {
 		this->typeIdx = $nc(cpool)->addUtf8($($nc(value)->getEnumTypeString()));
@@ -124,15 +127,18 @@ void EnumElementValueGen::dump($DataOutputStream* dos) {
 }
 
 $String* EnumElementValueGen::stringifyValue() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, cu8, $cast($ConstantUtf8, $nc($(getConstantPool()))->getConstant(this->valueIdx)));
 	return $nc(cu8)->getBytes();
 }
 
 $String* EnumElementValueGen::getEnumTypeString() {
+	$useLocalCurrentObjectStackCache();
 	return $nc(($cast($ConstantUtf8, $($nc($(getConstantPool()))->getConstant(this->typeIdx)))))->getBytes();
 }
 
 $String* EnumElementValueGen::getEnumValueString() {
+	$useLocalCurrentObjectStackCache();
 	return $nc(($cast($ConstantUtf8, $($nc($(getConstantPool()))->getConstant(this->valueIdx)))))->getBytes();
 }
 

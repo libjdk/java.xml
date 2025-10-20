@@ -109,6 +109,7 @@ $String* ConstantCP::getClass($ConstantPool* cp) {
 }
 
 $String* ConstantCP::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(class_index = "_s, $$str(this->class_index), ", name_and_type_index = "_s, $$str(this->name_and_type_index), ")"_s});
 }
 

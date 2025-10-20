@@ -256,6 +256,7 @@ void parser_actions::init$($XPathParser* parser) {
 }
 
 $Symbol* parser_actions::parser_do_action(int32_t parser_act_num, $lr_parser* parser_parser, $Stack* parser_stack, int32_t parser_top) {
+	$useLocalCurrentObjectStackCache();
 	$var($Symbol, parser_result, nullptr);
 	switch (parser_act_num) {
 	case 0:

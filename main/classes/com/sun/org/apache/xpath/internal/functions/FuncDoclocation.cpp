@@ -63,6 +63,7 @@ void FuncDoclocation::init$() {
 }
 
 $XObject* FuncDoclocation::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t whereNode = getArg0AsNode(xctxt);
 	$var($String, fileLocation, nullptr);
 	if ($DTM::NULL != whereNode) {

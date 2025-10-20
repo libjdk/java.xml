@@ -202,6 +202,7 @@ void XMLDOMWriterImpl::setPrefix($String* prefix, $String* uri) {
 }
 
 void XMLDOMWriterImpl::writeAttribute($String* localName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->currentNode)->getNodeType() == $Node::ELEMENT_NODE) {
 		$var($Attr, attr, $nc(this->ownerDoc)->createAttribute(localName));
 		$nc(attr)->setValue(value);
@@ -212,6 +213,7 @@ void XMLDOMWriterImpl::writeAttribute($String* localName, $String* value) {
 }
 
 void XMLDOMWriterImpl::writeAttribute($String* namespaceURI, $String* localName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->currentNode)->getNodeType() == $Node::ELEMENT_NODE) {
 		$var($String, prefix, nullptr);
 		if (namespaceURI == nullptr) {
@@ -241,6 +243,7 @@ void XMLDOMWriterImpl::writeAttribute($String* namespaceURI, $String* localName,
 }
 
 void XMLDOMWriterImpl::writeAttribute($String* prefix, $String* namespaceURI, $String* localName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->currentNode)->getNodeType() == $Node::ELEMENT_NODE) {
 		if (namespaceURI == nullptr) {
 			$throwNew($XMLStreamException, "NamespaceURI cannot be null"_s);
@@ -266,6 +269,7 @@ void XMLDOMWriterImpl::writeAttribute($String* prefix, $String* namespaceURI, $S
 }
 
 void XMLDOMWriterImpl::writeCData($String* data) {
+	$useLocalCurrentObjectStackCache();
 	if (data == nullptr) {
 		$throwNew($XMLStreamException, "CDATA cannot be null"_s);
 	}
@@ -279,11 +283,13 @@ void XMLDOMWriterImpl::writeCharacters($String* charData) {
 }
 
 void XMLDOMWriterImpl::writeCharacters($chars* values, int32_t param, int32_t param2) {
+	$useLocalCurrentObjectStackCache();
 	$var($Text, text, $nc(this->ownerDoc)->createTextNode($$new($String, values, param, param2)));
 	$nc(this->currentNode)->appendChild(text);
 }
 
 void XMLDOMWriterImpl::writeComment($String* str) {
+	$useLocalCurrentObjectStackCache();
 	$var($Comment, comment, $nc(this->ownerDoc)->createComment(str));
 	$nc($(getNode()))->appendChild(comment);
 }
@@ -293,6 +299,7 @@ void XMLDOMWriterImpl::writeDTD($String* str) {
 }
 
 void XMLDOMWriterImpl::writeDefaultNamespace($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->currentNode)->getNodeType() == $Node::ELEMENT_NODE) {
 		$init($XMLConstants);
 		$var($String, qname, $XMLConstants::XMLNS_ATTRIBUTE);
@@ -314,6 +321,7 @@ void XMLDOMWriterImpl::writeEmptyElement($String* localName) {
 }
 
 void XMLDOMWriterImpl::writeEmptyElement($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ownerDoc != nullptr) {
 		$var($String, qualifiedName, nullptr);
 		$var($String, prefix, nullptr);
@@ -344,6 +352,7 @@ void XMLDOMWriterImpl::writeEmptyElement($String* namespaceURI, $String* localNa
 }
 
 void XMLDOMWriterImpl::writeEmptyElement($String* prefix, $String* localName, $String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ownerDoc != nullptr) {
 		if (namespaceURI == nullptr) {
 			$throwNew($XMLStreamException, "NamespaceURI cannot be null"_s);
@@ -475,6 +484,7 @@ void XMLDOMWriterImpl::writeStartElement($String* localName) {
 }
 
 void XMLDOMWriterImpl::writeStartElement($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ownerDoc != nullptr) {
 		$var($String, qualifiedName, nullptr);
 		$var($String, prefix, nullptr);
@@ -510,6 +520,7 @@ void XMLDOMWriterImpl::writeStartElement($String* namespaceURI, $String* localNa
 }
 
 void XMLDOMWriterImpl::writeStartElement($String* prefix, $String* localName, $String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ownerDoc != nullptr) {
 		$var($String, qname, nullptr);
 		if (namespaceURI == nullptr) {

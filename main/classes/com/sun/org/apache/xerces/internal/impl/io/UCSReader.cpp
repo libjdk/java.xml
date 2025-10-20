@@ -95,6 +95,7 @@ void UCSReader::init$($InputStream* inputStream, int32_t size, int16_t encoding)
 }
 
 int32_t UCSReader::read() {
+	$useLocalCurrentObjectStackCache();
 	int32_t b0 = (int32_t)($nc(this->fInputStream)->read() & (uint32_t)255);
 	if (b0 == 255) {
 		return -1;

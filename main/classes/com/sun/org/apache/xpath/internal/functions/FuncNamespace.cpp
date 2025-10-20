@@ -65,6 +65,7 @@ void FuncNamespace::init$() {
 }
 
 $XObject* FuncNamespace::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t context = getArg0AsNode(xctxt);
 	$var($String, s, nullptr);
 	if (context != $DTM::NULL) {

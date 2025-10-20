@@ -83,6 +83,7 @@ $Object* allocate$UTF16Reader($Class* clazz) {
 }
 
 void UTF16Reader::init$($InputStream* inputStream, bool isBigEndian) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputStream, var$0, inputStream);
 	int32_t var$1 = UTF16Reader::DEFAULT_BUFFER_SIZE;
 	bool var$2 = isBigEndian;
@@ -168,6 +169,7 @@ bool UTF16Reader::markSupported() {
 }
 
 void UTF16Reader::mark(int32_t readAheadLimit) {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($IOException, $($nc(this->fFormatter)->formatMessage(this->fLocale, "OperationNotSupported"_s, $$new($ObjectArray, {
 		$of("mark()"_s),
 		$of("UTF-16"_s)

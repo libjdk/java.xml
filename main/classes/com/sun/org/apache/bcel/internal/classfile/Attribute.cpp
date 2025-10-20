@@ -214,6 +214,7 @@ void Attribute::println($String* msg) {
 
 Attribute* Attribute::readAttribute($DataInput* file, $ConstantPool* constant_pool) {
 	$init(Attribute);
+	$useLocalCurrentObjectStackCache();
 	int8_t tag = $Const::ATTR_UNKNOWN;
 	int32_t name_index = $nc(file)->readUnsignedShort();
 	$var($ConstantUtf8, c, $cast($ConstantUtf8, $nc(constant_pool)->getConstant(name_index, $Const::CONSTANT_Utf8)));
@@ -371,6 +372,7 @@ void Attribute::init$(int8_t tag, int32_t name_index, int32_t length, $ConstantP
 }
 
 $Object* Attribute::clone() {
+	$useLocalCurrentObjectStackCache();
 	$var(Attribute, attr, nullptr);
 	try {
 		$assign(attr, $cast(Attribute, $Cloneable::clone()));

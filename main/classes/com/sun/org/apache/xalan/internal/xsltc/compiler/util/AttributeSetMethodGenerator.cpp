@@ -102,6 +102,7 @@ $StringArray* AttributeSetMethodGenerator::argNames = nullptr;
 $TypeArray* AttributeSetMethodGenerator::argTypes = nullptr;
 
 void AttributeSetMethodGenerator::init$($String* methodName, $ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($Type);
 	$var($Type, var$0, static_cast<$Type*>($Type::VOID));
 	$var($TypeArray, var$1, AttributeSetMethodGenerator::argTypes);
@@ -128,6 +129,7 @@ $Instruction* AttributeSetMethodGenerator::storeParameter(int32_t index) {
 }
 
 void clinit$AttributeSetMethodGenerator($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(AttributeSetMethodGenerator::argNames, $new($StringArray, 4));
 	$assignStatic(AttributeSetMethodGenerator::argTypes, $new($TypeArray, 4));
 	{

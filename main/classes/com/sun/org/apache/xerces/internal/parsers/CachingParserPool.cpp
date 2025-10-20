@@ -91,6 +91,7 @@ $Object* allocate$CachingParserPool($Class* clazz) {
 }
 
 void CachingParserPool::init$() {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, var$0, $new($SymbolTable));
 	CachingParserPool::init$(var$0, $$new($XMLGrammarPoolImpl));
 }
@@ -115,12 +116,14 @@ void CachingParserPool::setShadowSymbolTable(bool shadow) {
 }
 
 $DOMParser* CachingParserPool::createDOMParser() {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, symbolTable, this->fShadowSymbolTable ? static_cast<$SymbolTable*>($new($ShadowedSymbolTable, this->fSynchronizedSymbolTable)) : this->fSynchronizedSymbolTable);
 	$var($XMLGrammarPool, grammarPool, this->fShadowGrammarPool ? static_cast<$XMLGrammarPool*>($new($CachingParserPool$ShadowedGrammarPool, this->fSynchronizedGrammarPool)) : this->fSynchronizedGrammarPool);
 	return $new($DOMParser, symbolTable, grammarPool);
 }
 
 $SAXParser* CachingParserPool::createSAXParser() {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, symbolTable, this->fShadowSymbolTable ? static_cast<$SymbolTable*>($new($ShadowedSymbolTable, this->fSynchronizedSymbolTable)) : this->fSynchronizedSymbolTable);
 	$var($XMLGrammarPool, grammarPool, this->fShadowGrammarPool ? static_cast<$XMLGrammarPool*>($new($CachingParserPool$ShadowedGrammarPool, this->fSynchronizedGrammarPool)) : this->fSynchronizedGrammarPool);
 	return $new($SAXParser, symbolTable, grammarPool);

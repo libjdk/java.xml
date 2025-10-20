@@ -96,6 +96,7 @@ void SuballocatedByteVector::setSize(int32_t sz) {
 }
 
 void SuballocatedByteVector::addElement(int8_t value) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_firstFree < this->m_blocksize) {
 		$nc(this->m_map0)->set(this->m_firstFree++, value);
 	} else {
@@ -117,6 +118,7 @@ void SuballocatedByteVector::addElement(int8_t value) {
 }
 
 void SuballocatedByteVector::addElements(int8_t value, int32_t numberOfElements) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_firstFree + numberOfElements < this->m_blocksize) {
 		for (int32_t i = 0; i < numberOfElements; ++i) {
 			$nc(this->m_map0)->set(this->m_firstFree++, value);
@@ -148,6 +150,7 @@ void SuballocatedByteVector::addElements(int8_t value, int32_t numberOfElements)
 }
 
 void SuballocatedByteVector::addElements(int32_t numberOfElements) {
+	$useLocalCurrentObjectStackCache();
 	int32_t newlen = this->m_firstFree + numberOfElements;
 	if (newlen > this->m_blocksize) {
 		int32_t index = $mod(this->m_firstFree, this->m_blocksize);
@@ -160,6 +163,7 @@ void SuballocatedByteVector::addElements(int32_t numberOfElements) {
 }
 
 void SuballocatedByteVector::insertElementAt(int8_t value, int32_t at) {
+	$useLocalCurrentObjectStackCache();
 	if (at == this->m_firstFree) {
 		addElement(value);
 	} else if (at > this->m_firstFree) {
@@ -215,6 +219,7 @@ bool SuballocatedByteVector::removeElement(int8_t s) {
 }
 
 void SuballocatedByteVector::removeElementAt(int32_t at) {
+	$useLocalCurrentObjectStackCache();
 	if (at < this->m_firstFree) {
 		int32_t index = $div(at, this->m_blocksize);
 		int32_t maxindex = $div(this->m_firstFree, this->m_blocksize);
@@ -243,6 +248,7 @@ void SuballocatedByteVector::removeElementAt(int32_t at) {
 }
 
 void SuballocatedByteVector::setElementAt(int8_t value, int32_t at) {
+	$useLocalCurrentObjectStackCache();
 	if (at < this->m_blocksize) {
 		$nc(this->m_map0)->set(at, value);
 		return;
@@ -310,6 +316,7 @@ int32_t SuballocatedByteVector::indexOf(int8_t elem) {
 }
 
 int32_t SuballocatedByteVector::lastIndexOf(int8_t elem) {
+	$useLocalCurrentObjectStackCache();
 	int32_t boffset = $mod(this->m_firstFree, this->m_blocksize);
 	for (int32_t index = $div(this->m_firstFree, this->m_blocksize); index >= 0; --index) {
 		$var($bytes, block, $nc(this->m_map)->get(index));

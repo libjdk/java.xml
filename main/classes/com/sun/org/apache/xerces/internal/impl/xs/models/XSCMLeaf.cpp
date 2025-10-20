@@ -95,6 +95,7 @@ bool XSCMLeaf::isNullable() {
 }
 
 $String* XSCMLeaf::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, strRet, $new($StringBuffer, $($nc($of(this->fLeaf))->toString())));
 	if (this->fPosition >= 0) {
 		strRet->append($$str({" (Pos:"_s, $($Integer::toString(this->fPosition)), ")"_s}));

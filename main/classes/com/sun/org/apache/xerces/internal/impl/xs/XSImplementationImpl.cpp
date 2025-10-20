@@ -114,6 +114,7 @@ bool XSImplementationImpl::hasFeature($String* feature, $String* version) {
 }
 
 $XSLoader* XSImplementationImpl::createXSLoader($StringList* versions) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSLoader, loader, $new($XSLoaderImpl));
 	if (versions == nullptr) {
 		return loader;
@@ -129,6 +130,7 @@ $XSLoader* XSImplementationImpl::createXSLoader($StringList* versions) {
 }
 
 $StringList* XSImplementationImpl::getRecognizedVersions() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringListImpl, list, $new($StringListImpl, $$new($StringArray, {"1.0"_s}), 1));
 	return list;
 }

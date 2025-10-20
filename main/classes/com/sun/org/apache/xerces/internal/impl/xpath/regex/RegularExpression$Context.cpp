@@ -97,6 +97,7 @@ void RegularExpression$Context::init$() {
 }
 
 void RegularExpression$Context::resetCommon(int32_t nofclosures) {
+	$useLocalCurrentObjectStackCache();
 	this->length = this->limit - this->start;
 	setInUse(true);
 	$set(this, match, nullptr);

@@ -119,10 +119,12 @@ void BootstrapMethod::setBootstrapArguments($ints* bootstrapArguments) {
 }
 
 $String* BootstrapMethod::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"BootstrapMethod("_s, $$str(this->bootstrapMethodRef), ", "_s, $$str($nc(this->bootstrapArguments)->length), ", "_s, $($Arrays::toString(this->bootstrapArguments)), ")"_s});
 }
 
 $String* BootstrapMethod::toString($ConstantPool* constantPool) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($String, bootstrap_method_name, nullptr);
 	$assign(bootstrap_method_name, $nc(constantPool)->constantToString(this->bootstrapMethodRef, $Const::CONSTANT_MethodHandle));

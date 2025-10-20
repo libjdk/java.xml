@@ -69,6 +69,7 @@ void virtual_parse_stack::init$($Stack* shadowing_stack) {
 }
 
 void virtual_parse_stack::get_from_real() {
+	$useLocalCurrentObjectStackCache();
 	$var($Symbol, stack_sym, nullptr);
 	if (this->real_next >= $nc(this->real_stack)->size()) {
 		return;

@@ -97,6 +97,7 @@ void JAXPValidatorComponent$2::init$($JAXPValidatorComponent* this$0) {
 }
 
 $LSInput* JAXPValidatorComponent$2::resolveResource($String* type, $String* ns, $String* publicId, $String* systemId, $String* baseUri) {
+	$useLocalCurrentObjectStackCache();
 	if (this->this$0->fEntityResolver == nullptr) {
 		return nullptr;
 	}

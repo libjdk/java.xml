@@ -118,6 +118,7 @@ bool NodeIteratorBase::isReverse() {
 }
 
 $NodeIterator* NodeIteratorBase::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(NodeIteratorBase, clone, $cast(NodeIteratorBase, $NodeIterator::clone()));
 		$nc(clone)->_isRestartable = false;

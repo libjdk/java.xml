@@ -84,6 +84,7 @@ void XSDNotationTraverser::init$($XSDHandler* handler, $XSAttributeChecker* gAtt
 }
 
 $XSNotationDecl* XSDNotationTraverser::traverse($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, true, schemaDoc));
 	$var($String, nameAttr, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	$var($String, publicAttr, $cast($String, attrValues->get($XSAttributeChecker::ATTIDX_PUBLIC)));

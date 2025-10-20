@@ -96,6 +96,7 @@ void SAX2DTM2$TypedAncestorIterator::init$($SAX2DTM2* this$0, int32_t type) {
 }
 
 $DTMAxisIterator* SAX2DTM2$TypedAncestorIterator::setStartNode(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == $DTMDefaultBase::ROOTNODE) {
 		node = this->this$0->getDocument();
 	}

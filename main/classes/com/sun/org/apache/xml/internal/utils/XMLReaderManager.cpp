@@ -141,6 +141,7 @@ XMLReaderManager* XMLReaderManager::getInstance(bool overrideDefaultParser) {
 
 $XMLReader* XMLReaderManager::getXMLReader() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$var($XMLReader, reader, nullptr);
 		if (this->m_readers == nullptr) {
 			$set(this, m_readers, $new($ThreadLocal));

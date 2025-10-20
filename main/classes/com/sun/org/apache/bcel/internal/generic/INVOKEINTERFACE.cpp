@@ -101,6 +101,7 @@ void INVOKEINTERFACE::init$() {
 }
 
 void INVOKEINTERFACE::init$(int32_t index, int32_t nargs) {
+	$useLocalCurrentObjectStackCache();
 	$InvokeInstruction::init$($Const::INVOKEINTERFACE, index);
 	$InvokeInstruction::setLength(5);
 	if (nargs < 1) {
@@ -128,6 +129,7 @@ void INVOKEINTERFACE::initFromFile($ByteSequence* bytes, bool wide) {
 }
 
 $String* INVOKEINTERFACE::toString($ConstantPool* cp) {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($InvokeInstruction::toString(cp)), " "_s, $$str(this->nargs)});
 }
 

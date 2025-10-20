@@ -127,6 +127,7 @@ $Type* Message::typeCheck($SymbolTable* stable) {
 }
 
 void Message::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(il)->append($(classGen->loadTranslet()));

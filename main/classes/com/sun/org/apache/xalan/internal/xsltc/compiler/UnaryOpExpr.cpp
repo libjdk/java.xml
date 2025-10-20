@@ -99,6 +99,7 @@ void UnaryOpExpr::setParser($Parser* parser) {
 }
 
 $Type* UnaryOpExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, tleft, $nc(this->_left)->typeCheck(stable));
 	$init($Type);
 	$var($MethodType, ptype, lookupPrimop(stable, "u-"_s, $$new($MethodType, $Type::Void, tleft)));
@@ -113,10 +114,12 @@ $Type* UnaryOpExpr::typeCheck($SymbolTable* stable) {
 }
 
 $String* UnaryOpExpr::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"u-"_s, $$str(u'('), this->_left, $$str(u')')});
 }
 
 void UnaryOpExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_left)->translate(classGen, methodGen);
 	$nc(il)->append($($nc(this->_type)->NEG()));

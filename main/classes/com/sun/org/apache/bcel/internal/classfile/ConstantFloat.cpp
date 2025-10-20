@@ -118,6 +118,7 @@ void ConstantFloat::setBytes(float bytes) {
 }
 
 $String* ConstantFloat::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(bytes = "_s, $$str(this->bytes), ")"_s});
 }
 

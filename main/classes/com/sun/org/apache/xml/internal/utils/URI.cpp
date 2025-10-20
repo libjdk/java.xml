@@ -198,6 +198,7 @@ void URI::init$(URI* p_base, $String* p_uriSpec) {
 }
 
 void URI::init$($String* p_scheme, $String* p_schemeSpecificPart) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_scheme, nullptr);
 	$set(this, m_userinfo, nullptr);
 	$set(this, m_host, nullptr);
@@ -220,6 +221,7 @@ void URI::init$($String* p_scheme, $String* p_host, $String* p_path, $String* p_
 }
 
 void URI::init$($String* p_scheme, $String* p_userinfo, $String* p_host, int32_t p_port, $String* p_path, $String* p_queryString, $String* p_fragment) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_scheme, nullptr);
 	$set(this, m_userinfo, nullptr);
 	$set(this, m_host, nullptr);
@@ -271,6 +273,7 @@ void URI::initialize(URI* p_other) {
 }
 
 void URI::initialize(URI* p_base$renamed, $String* p_uriSpec) {
+	$useLocalCurrentObjectStackCache();
 	$var(URI, p_base, p_base$renamed);
 	if (p_base == nullptr && (p_uriSpec == nullptr || $($nc(p_uriSpec)->trim())->length() == 0)) {
 		$init($XMLErrorResources);
@@ -385,6 +388,7 @@ void URI::initialize(URI* p_base$renamed, $String* p_uriSpec) {
 }
 
 void URI::initializeScheme($String* p_uriSpec) {
+	$useLocalCurrentObjectStackCache();
 	int32_t uriSpecLen = $nc(p_uriSpec)->length();
 	int32_t index = 0;
 	$var($String, scheme, nullptr);
@@ -406,6 +410,7 @@ void URI::initializeScheme($String* p_uriSpec) {
 }
 
 void URI::initializeAuthority($String* p_uriSpec) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	int32_t start = 0;
 	int32_t end = $nc(p_uriSpec)->length();
@@ -461,6 +466,7 @@ void URI::initializeAuthority($String* p_uriSpec) {
 }
 
 void URI::initializePath($String* p_uriSpec) {
+	$useLocalCurrentObjectStackCache();
 	if (p_uriSpec == nullptr) {
 		$throwNew($URI$MalformedURIException, "Cannot initialize path from null string!"_s);
 	}
@@ -608,6 +614,7 @@ $String* URI::getFragment() {
 }
 
 void URI::setScheme($String* p_scheme) {
+	$useLocalCurrentObjectStackCache();
 	if (p_scheme == nullptr) {
 		$init($XMLErrorResources);
 		$throwNew($URI$MalformedURIException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_SCHEME_FROM_NULL_STRING, nullptr)));
@@ -620,6 +627,7 @@ void URI::setScheme($String* p_scheme) {
 }
 
 void URI::setUserinfo($String* p_userinfo) {
+	$useLocalCurrentObjectStackCache();
 	if (p_userinfo == nullptr) {
 		$set(this, m_userinfo, nullptr);
 	} else {
@@ -649,6 +657,7 @@ void URI::setUserinfo($String* p_userinfo) {
 }
 
 void URI::setHost($String* p_host) {
+	$useLocalCurrentObjectStackCache();
 	if (p_host == nullptr || $($nc(p_host)->trim())->length() == 0) {
 		$set(this, m_host, p_host);
 		$set(this, m_userinfo, nullptr);
@@ -661,6 +670,7 @@ void URI::setHost($String* p_host) {
 }
 
 void URI::setPort(int32_t p_port) {
+	$useLocalCurrentObjectStackCache();
 	if (p_port >= 0 && p_port <= 0x0000FFFF) {
 		if (this->m_host == nullptr) {
 			$init($XMLErrorResources);
@@ -684,6 +694,7 @@ void URI::setPath($String* p_path) {
 }
 
 void URI::appendPath($String* p_addToPath) {
+	$useLocalCurrentObjectStackCache();
 	if (p_addToPath == nullptr || $($nc(p_addToPath)->trim())->length() == 0) {
 		return;
 	}
@@ -725,6 +736,7 @@ void URI::setQueryString($String* p_queryString) {
 }
 
 void URI::setFragment($String* p_fragment) {
+	$useLocalCurrentObjectStackCache();
 	if (p_fragment == nullptr) {
 		$set(this, m_fragment, nullptr);
 	} else if (!isGenericURI()) {
@@ -769,6 +781,7 @@ int32_t URI::hashCode() {
 }
 
 $String* URI::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, uriSpecString, $new($StringBuilder));
 	if (this->m_scheme != nullptr) {
 		uriSpecString->append(this->m_scheme);
@@ -803,6 +816,7 @@ bool URI::isConformantSchemeName($String* p_scheme) {
 
 bool URI::isWellFormedAddress($String* p_address) {
 	$init(URI);
+	$useLocalCurrentObjectStackCache();
 	if (p_address == nullptr) {
 		return false;
 	}

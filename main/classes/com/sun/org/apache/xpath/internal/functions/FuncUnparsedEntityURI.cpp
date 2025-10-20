@@ -62,6 +62,7 @@ void FuncUnparsedEntityURI::init$() {
 }
 
 $XObject* FuncUnparsedEntityURI::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, $nc($($nc(this->m_arg0)->execute(xctxt)))->str());
 	int32_t context = $nc(xctxt)->getCurrentNode();
 	$var($DTM, dtm, xctxt->getDTM(context));

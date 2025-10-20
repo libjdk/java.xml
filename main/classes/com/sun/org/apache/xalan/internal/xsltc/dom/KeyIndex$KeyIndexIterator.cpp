@@ -118,6 +118,7 @@ void KeyIndex$KeyIndexIterator::init$($KeyIndex* this$0, $DTMAxisIterator* keyVa
 }
 
 $IntegerArray* KeyIndex$KeyIndexIterator::lookupNodes(int32_t root, $String* keyValue) {
+	$useLocalCurrentObjectStackCache();
 	$var($IntegerArray, result, nullptr);
 	$var($Map, index, $cast($Map, $nc(this->this$0->_rootToIndexMap)->get($($Integer::valueOf(root)))));
 	if (!this->_isKeyIterator) {
@@ -178,6 +179,7 @@ $DTMAxisIterator* KeyIndex$KeyIndexIterator::reset() {
 }
 
 void KeyIndex$KeyIndexIterator::init() {
+	$useLocalCurrentObjectStackCache();
 	$MultiValuedNodeHeapIterator::init();
 	this->_position = 0;
 	int32_t rootHandle = $nc($($nc($($nc(this->this$0->_dom)->getAxisIterator($Axis::ROOT)))->setStartNode(this->_startNode)))->next();

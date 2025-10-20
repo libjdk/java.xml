@@ -304,6 +304,7 @@ $String* StringListImpl::item(int32_t index) {
 }
 
 $Object* StringListImpl::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fLength) {
 		if (this->fVector != nullptr) {
 			return $of($cast($String, $nc(this->fVector)->get(index)));

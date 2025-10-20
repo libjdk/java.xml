@@ -242,12 +242,14 @@ void UnImplNode::init$() {
 }
 
 void UnImplNode::error($String* msg) {
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$nc($System::out)->println($$str({"DOM ERROR! class: "_s, $($of(this)->getClass()->getName())}));
 	$throwNew($RuntimeException, $($XMLMessages::createXMLMessage(msg, nullptr)));
 }
 
 void UnImplNode::error($String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$nc($System::out)->println($$str({"DOM ERROR! class: "_s, $($of(this)->getClass()->getName())}));
 	$throwNew($RuntimeException, $($XMLMessages::createXMLMessage(msg, args)));
@@ -709,6 +711,7 @@ $Object* UnImplNode::getFeature($String* feature, $String* version) {
 }
 
 bool UnImplNode::isEqualNode($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(arg, this)) {
 		return true;
 	}
@@ -755,6 +758,7 @@ bool UnImplNode::isEqualNode($Node* arg) {
 }
 
 $String* UnImplNode::lookupNamespaceURI($String* specifiedPrefix) {
+	$useLocalCurrentObjectStackCache();
 	int16_t type = this->getNodeType();
 	switch (type) {
 	case $Node::ELEMENT_NODE:
@@ -825,6 +829,7 @@ bool UnImplNode::isDefaultNamespace($String* namespaceURI) {
 }
 
 $String* UnImplNode::lookupPrefix($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if (namespaceURI == nullptr) {
 		return nullptr;
 	}

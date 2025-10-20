@@ -102,6 +102,7 @@ void SecurityManager::setElementAttrLimit(int32_t limit) {
 }
 
 void SecurityManager::readSystemProperties() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$init($JdkConstants);
 		$var($String, value, $System::getProperty($JdkConstants::ENTITY_EXPANSION_LIMIT));

@@ -1046,6 +1046,7 @@ void XMLSchemaValidator::init$() {
 }
 
 void XMLSchemaValidator::reset($XMLComponentManager* componentManager) {
+	$useLocalCurrentObjectStackCache();
 	this->fIdConstraint = false;
 	$nc(this->fLocationPairs)->clear();
 	$nc(this->fValidationState)->resetIDTables();
@@ -1171,6 +1172,7 @@ void XMLSchemaValidator::startValueScopeFor($IdentityConstraint* identityConstra
 }
 
 $XPathMatcher* XMLSchemaValidator::activateField($Field* field, int32_t initialDepth) {
+	$useLocalCurrentObjectStackCache();
 	$var($ValueStore, valueStore, $nc(this->fValueStoreCache)->getValueStoreFor($($nc(field)->getIdentityConstraint()), initialDepth));
 	$var($XPathMatcher, matcher, $nc(field)->createMatcher(valueStore));
 	$nc(this->fMatcherStack)->addMatcher(matcher);
@@ -1184,6 +1186,7 @@ void XMLSchemaValidator::endValueScopeFor($IdentityConstraint* identityConstrain
 }
 
 void XMLSchemaValidator::activateSelectorFor($IdentityConstraint* ic) {
+	$useLocalCurrentObjectStackCache();
 	$var($Selector, selector, $nc(ic)->getSelector());
 	$var($FieldActivator, activator, this);
 	if (selector == nullptr) {
@@ -1203,6 +1206,7 @@ $XSElementDecl* XMLSchemaValidator::getGlobalElementDecl($1QName* element) {
 }
 
 void XMLSchemaValidator::ensureStackCapacity() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fElementDepth == $nc(this->fElemDeclStack)->length) {
 		int32_t newSize = this->fElementDepth + XMLSchemaValidator::INC_STACK_SIZE;
 		$var($booleans, newArrayB, $new($booleans, newSize));
@@ -1255,6 +1259,7 @@ void XMLSchemaValidator::handleEndDocument() {
 }
 
 $XMLString* XMLSchemaValidator::handleCharacters($XMLString* text$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLString, text, text$renamed);
 	if (this->fSkipValidationDepth >= 0) {
 		return text;
@@ -1372,6 +1377,7 @@ void XMLSchemaValidator::handleIgnorableWhitespace($XMLString* text) {
 }
 
 $Augmentations* XMLSchemaValidator::handleStartElement($1QName* element, $XMLAttributes* attributes, $Augmentations* augs$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Augmentations, augs, augs$renamed);
 	if (this->fElementDepth == -1 && $nc(this->fValidationManager)->isGrammarFound()) {
 		if (this->fSchemaType == nullptr && !this->fUseGrammarPoolOnly) {
@@ -1669,6 +1675,7 @@ $Augmentations* XMLSchemaValidator::handleStartElement($1QName* element, $XMLAtt
 }
 
 $Augmentations* XMLSchemaValidator::handleEndElement($1QName* element, $Augmentations* augs$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Augmentations, augs, augs$renamed);
 	if (this->fSkipValidationDepth >= 0) {
 		if (this->fSkipValidationDepth == this->fElementDepth && this->fSkipValidationDepth > 0) {
@@ -1783,6 +1790,7 @@ $Augmentations* XMLSchemaValidator::handleEndElement($1QName* element, $Augmenta
 }
 
 $Augmentations* XMLSchemaValidator::endElementPSVI(bool root, $SchemaGrammarArray* grammars, $Augmentations* augs$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Augmentations, augs, augs$renamed);
 	if (this->fAugPSVI) {
 		$assign(augs, getEmptyAugs(augs));
@@ -1837,6 +1845,7 @@ $Augmentations* XMLSchemaValidator::getEmptyAugs($Augmentations* augs$renamed) {
 }
 
 void XMLSchemaValidator::storeLocations($String* sLocation, $String* nsLocation$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, nsLocation, nsLocation$renamed);
 	if (sLocation != nullptr) {
 		if (!$XMLSchemaLoader::tokenizeSchemaLocationStr(sLocation, this->fLocationPairs, this->fLocator == nullptr ? ($String*)nullptr : $($nc(this->fLocator)->getExpandedSystemId()))) {
@@ -1863,6 +1872,7 @@ void XMLSchemaValidator::storeLocations($String* sLocation, $String* nsLocation$
 }
 
 $SchemaGrammar* XMLSchemaValidator::findSchemaGrammar(int16_t contextType, $String* namespace$, $1QName* enclosingElement, $1QName* triggeringComponent, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, grammar, nullptr);
 	$assign(grammar, $nc(this->fGrammarBucket)->getGrammar(namespace$));
 	if (grammar == nullptr) {
@@ -1981,6 +1991,7 @@ void XMLSchemaValidator::setLocationHints($XSDDescription* desc, $StringArray* l
 }
 
 $XSTypeDefinition* XMLSchemaValidator::getAndCheckXsiType($1QName* element, $String* xsiType, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$var($1QName, typeName, nullptr);
 	try {
 		$assign(typeName, $cast($1QName, $nc(this->fQNameDV)->validate(xsiType, static_cast<$ValidationContext*>(this->fValidationState), ($ValidatedInfo*)nullptr)));
@@ -2035,6 +2046,7 @@ $XSTypeDefinition* XMLSchemaValidator::getAndCheckXsiType($1QName* element, $Str
 }
 
 bool XMLSchemaValidator::getXsiNil($1QName* element, $String* xsiNil) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentElemDecl != nullptr && !$nc(this->fCurrentElemDecl)->getNillable()) {
 			$init($SchemaSymbols);
 		reportSchemaError("cvc-elt.3.1"_s, $$new($ObjectArray, {
@@ -2059,6 +2071,7 @@ bool XMLSchemaValidator::getXsiNil($1QName* element, $String* xsiNil) {
 }
 
 void XMLSchemaValidator::processAttributes($1QName* element, $XMLAttributes* attributes, $XSAttributeGroupDecl* attrGrp) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, wildcardIDName, nullptr);
 	int32_t attCount = $nc(attributes)->getLength();
 	$var($Augmentations, augs, nullptr);
@@ -2185,6 +2198,7 @@ void XMLSchemaValidator::processAttributes($1QName* element, $XMLAttributes* att
 }
 
 void XMLSchemaValidator::processOneAttribute($1QName* element, $XMLAttributes* attributes, int32_t index, $XSAttributeDecl* currDecl, $XSAttributeUseImpl* currUse, $AttributePSVImpl* attrPSVI) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, attrValue, $nc(attributes)->getValue(index));
 	$nc(this->fXSIErrorReporter)->pushContext();
 	$var($XSSimpleType, attDV, $nc(currDecl)->fType);
@@ -2253,6 +2267,7 @@ void XMLSchemaValidator::processOneAttribute($1QName* element, $XMLAttributes* a
 }
 
 void XMLSchemaValidator::addDefaultAttributes($1QName* element, $XMLAttributes* attributes, $XSAttributeGroupDecl* attrGrp) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSObjectList, attrUses, $nc(attrGrp)->getAttributeUses());
 	int32_t useCount = $nc(attrUses)->getLength();
 	$var($XSAttributeUseImpl, currUse, nullptr);
@@ -2308,6 +2323,7 @@ void XMLSchemaValidator::addDefaultAttributes($1QName* element, $XMLAttributes* 
 }
 
 void XMLSchemaValidator::processElementContent($1QName* element) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentElemDecl != nullptr && $nc(this->fCurrentElemDecl)->fDefault != nullptr && !this->fSawText && !this->fSubElement && !this->fNil) {
 		$var($String, strv, $nc($nc(this->fCurrentElemDecl)->fDefault)->stringValue());
 		int32_t bufLen = $nc(strv)->length();
@@ -2405,6 +2421,7 @@ void XMLSchemaValidator::processElementContent($1QName* element) {
 }
 
 $Object* XMLSchemaValidator::elementLocallyValidType($1QName* element, Object$* textContent) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentType == nullptr) {
 		return $of(nullptr);
 	}
@@ -2437,6 +2454,7 @@ $Object* XMLSchemaValidator::elementLocallyValidType($1QName* element, Object$* 
 }
 
 $Object* XMLSchemaValidator::elementLocallyValidComplexType($1QName* element, Object$* textContent) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, actualValue, nullptr);
 	$var($XSComplexTypeDecl, ctype, $cast($XSComplexTypeDecl, this->fCurrentType));
 	if (!this->fNil) {
@@ -2516,6 +2534,7 @@ $Object* XMLSchemaValidator::elementLocallyValidComplexType($1QName* element, Ob
 }
 
 void XMLSchemaValidator::processRootTypeQName($QName* rootTypeQName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rootTypeNamespace, $nc(rootTypeQName)->getNamespaceURI());
 	$assign(rootTypeNamespace, $nc(this->fSymbolTable)->addSymbol(rootTypeNamespace));
 	$init($XMLConstants);
@@ -2546,6 +2565,7 @@ void XMLSchemaValidator::processRootTypeQName($QName* rootTypeQName) {
 }
 
 void XMLSchemaValidator::processRootElementDeclQName($QName* rootElementDeclQName, $1QName* element) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rootElementDeclNamespace, $nc(rootElementDeclQName)->getNamespaceURI());
 	$assign(rootElementDeclNamespace, $nc(this->fSymbolTable)->addSymbol(rootElementDeclNamespace));
 	$init($XMLConstants);
@@ -2588,6 +2608,7 @@ void XMLSchemaValidator::reportSchemaError($String* key, $ObjectArray* arguments
 }
 
 $String* XMLSchemaValidator::expectedStr($List* expected) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, ret, $new($StringBuilder, "{"_s));
 	int32_t size = $nc(expected)->size();
 	for (int32_t i = 0; i < size; ++i) {
@@ -2601,6 +2622,7 @@ $String* XMLSchemaValidator::expectedStr($List* expected) {
 }
 
 void clinit$XMLSchemaValidator($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$assignStatic(XMLSchemaValidator::VALIDATION, $str({$Constants::SAX_FEATURE_PREFIX, $Constants::VALIDATION_FEATURE}));
 	$assignStatic(XMLSchemaValidator::SCHEMA_VALIDATION, $str({$Constants::XERCES_FEATURE_PREFIX, $Constants::SCHEMA_VALIDATION_FEATURE}));

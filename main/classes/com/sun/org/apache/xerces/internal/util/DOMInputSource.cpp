@@ -81,6 +81,7 @@ void DOMInputSource::setNode($Node* node) {
 
 $String* DOMInputSource::getSystemIdFromNode($Node* node) {
 	$init(DOMInputSource);
+	$useLocalCurrentObjectStackCache();
 	if (node != nullptr) {
 		try {
 			return node->getBaseURI();

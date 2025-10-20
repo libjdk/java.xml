@@ -80,6 +80,7 @@ $Object* IDDV::getActualValue($String* content, $ValidationContext* context) {
 }
 
 void IDDV::checkExtraRules(Object$* value, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, content, $cast($String, value));
 	if ($nc(context)->isIdDeclared(content)) {
 		$throwNew($InvalidDatatypeValueException, "cvc-id.2"_s, $$new($ObjectArray, {$of(content)}));

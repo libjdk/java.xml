@@ -73,6 +73,7 @@ $Object* allocate$BootstrapMethods($Class* clazz) {
 }
 
 void BootstrapMethods::init$(BootstrapMethods* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($BootstrapMethodArray, var$2, c->getBootstrapMethods());
@@ -85,6 +86,7 @@ void BootstrapMethods::init$(int32_t name_index, int32_t length, $BootstrapMetho
 }
 
 void BootstrapMethods::init$(int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	BootstrapMethods::init$(name_index, length, ($BootstrapMethodArray*)nullptr, constant_pool);
 	int32_t num_bootstrap_methods = $nc(input)->readUnsignedShort();
 	$set(this, bootstrapMethods, $new($BootstrapMethodArray, num_bootstrap_methods));
@@ -106,6 +108,7 @@ void BootstrapMethods::accept($Visitor* v) {
 }
 
 BootstrapMethods* BootstrapMethods::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(BootstrapMethods, c, $cast(BootstrapMethods, clone()));
 	$set($nc(c), bootstrapMethods, $new($BootstrapMethodArray, $nc(this->bootstrapMethods)->length));
 	for (int32_t i = 0; i < $nc(this->bootstrapMethods)->length; ++i) {
@@ -116,6 +119,7 @@ BootstrapMethods* BootstrapMethods::copy($ConstantPool* _constant_pool) {
 }
 
 void BootstrapMethods::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort($nc(this->bootstrapMethods)->length);
 	{
@@ -132,6 +136,7 @@ void BootstrapMethods::dump($DataOutputStream* file) {
 }
 
 $String* BootstrapMethods::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	buf->append("BootstrapMethods("_s);
 	buf->append($nc(this->bootstrapMethods)->length);

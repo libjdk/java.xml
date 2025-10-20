@@ -133,6 +133,7 @@ $Type* DecimalFormatting::typeCheck($SymbolTable* stable) {
 }
 
 void DecimalFormatting::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	if ($nc(name)->length() > 0) {
 		if (!$XML11Char::isXML11ValidQName(name)) {
@@ -156,6 +157,7 @@ void DecimalFormatting::parseContents($Parser* parser) {
 }
 
 void DecimalFormatting::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -229,6 +231,7 @@ void DecimalFormatting::translate($ClassGenerator* classGen, $MethodGenerator* m
 
 void DecimalFormatting::translateDefaultDFS($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 	$init(DecimalFormatting);
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

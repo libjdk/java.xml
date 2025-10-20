@@ -215,6 +215,7 @@ bool HTMLdtd::isURI($String* tagName, $String* attrName) {
 
 bool HTMLdtd::isBoolean($String* tagName, $String* attrName) {
 	$init(HTMLdtd);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, attrNames, nullptr);
 	$init($Locale);
 	$assign(attrNames, $cast($StringArray, $nc(HTMLdtd::_boolAttrs)->get($($nc(tagName)->toUpperCase($Locale::ENGLISH)))));
@@ -243,6 +244,7 @@ int32_t HTMLdtd::charFromName($String* name) {
 
 $String* HTMLdtd::fromChar(int32_t value) {
 	$init(HTMLdtd);
+	$useLocalCurrentObjectStackCache();
 	if (value > 0x0000FFFF) {
 		return nullptr;
 	}
@@ -254,6 +256,7 @@ $String* HTMLdtd::fromChar(int32_t value) {
 
 void HTMLdtd::initialize() {
 	$init(HTMLdtd);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($InputStream, is, nullptr);
 	$var($BufferedReader, reader, nullptr);
@@ -328,6 +331,7 @@ void HTMLdtd::initialize() {
 
 void HTMLdtd::defineEntity($String* name, char16_t value) {
 	$init(HTMLdtd);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(HTMLdtd::_byName)->get(name) == nullptr) {
 		$nc(HTMLdtd::_byName)->put(name, $($Integer::valueOf((int32_t)value)));
 		$nc(HTMLdtd::_byChar)->put($($Integer::valueOf((int32_t)value)), name);
@@ -351,6 +355,7 @@ void HTMLdtd::defineBoolean($String* tagName, $StringArray* attrNames) {
 
 bool HTMLdtd::isElement($String* name, int32_t flag) {
 	$init(HTMLdtd);
+	$useLocalCurrentObjectStackCache();
 	$var($Integer, flags, nullptr);
 	$init($Locale);
 	$assign(flags, $cast($Integer, $nc(HTMLdtd::_elemDefs)->get($($nc(name)->toUpperCase($Locale::ENGLISH)))));
@@ -362,6 +367,7 @@ bool HTMLdtd::isElement($String* name, int32_t flag) {
 }
 
 void clinit$HTMLdtd($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(HTMLdtd::HTMLPublicId, "-//W3C//DTD HTML 4.01//EN"_s);
 	$assignStatic(HTMLdtd::HTMLSystemId, "http://www.w3.org/TR/html4/strict.dtd"_s);
 	$assignStatic(HTMLdtd::XHTMLPublicId, "-//W3C//DTD XHTML 1.0 Strict//EN"_s);

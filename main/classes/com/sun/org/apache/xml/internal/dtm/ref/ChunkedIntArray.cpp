@@ -90,6 +90,7 @@ $Object* allocate$ChunkedIntArray($Class* clazz) {
 }
 
 void ChunkedIntArray::init$(int32_t slotsize) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, chunks, $new($ChunkedIntArray$ChunksVector, this));
 	$set(this, fastArray, $new($ints, ChunkedIntArray::chunkalloc));
 	this->lastUsed = 0;
@@ -104,6 +105,7 @@ void ChunkedIntArray::init$(int32_t slotsize) {
 }
 
 int32_t ChunkedIntArray::appendSlot(int32_t w0, int32_t w1, int32_t w2, int32_t w3) {
+	$useLocalCurrentObjectStackCache();
 	{
 		int32_t slotsize = 4;
 		int32_t newoffset = (this->lastUsed + 1) * slotsize;
@@ -122,6 +124,7 @@ int32_t ChunkedIntArray::appendSlot(int32_t w0, int32_t w1, int32_t w2, int32_t 
 }
 
 int32_t ChunkedIntArray::readEntry(int32_t position, int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	{
 		if (offset >= this->slotsize) {
 			$init($XMLErrorResources);
@@ -136,6 +139,7 @@ int32_t ChunkedIntArray::readEntry(int32_t position, int32_t offset) {
 }
 
 int32_t ChunkedIntArray::specialFind(int32_t startPos, int32_t position) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ancestor = startPos;
 	while (ancestor > 0) {
 		ancestor *= this->slotsize;
@@ -162,6 +166,7 @@ void ChunkedIntArray::discardLast() {
 }
 
 void ChunkedIntArray::writeEntry(int32_t position, int32_t offset, int32_t value) {
+	$useLocalCurrentObjectStackCache();
 	{
 		if (offset >= this->slotsize) {
 			$init($XMLErrorResources);
@@ -176,6 +181,7 @@ void ChunkedIntArray::writeEntry(int32_t position, int32_t offset, int32_t value
 }
 
 void ChunkedIntArray::writeSlot(int32_t position, int32_t w0, int32_t w1, int32_t w2, int32_t w3) {
+	$useLocalCurrentObjectStackCache();
 	position *= this->slotsize;
 	int32_t chunkpos = $sr(position, ChunkedIntArray::lowbits);
 	int32_t slotpos = ((int32_t)(position & (uint32_t)ChunkedIntArray::lowmask));
@@ -190,6 +196,7 @@ void ChunkedIntArray::writeSlot(int32_t position, int32_t w0, int32_t w1, int32_
 }
 
 void ChunkedIntArray::readSlot(int32_t position, $ints* buffer) {
+	$useLocalCurrentObjectStackCache();
 	{
 		position *= this->slotsize;
 		int32_t chunkpos = $sr(position, ChunkedIntArray::lowbits);

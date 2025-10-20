@@ -208,6 +208,7 @@ void StandardParserConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPo
 }
 
 void StandardParserConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$DTDConfiguration::init$(symbolTable, grammarPool, parentSettings);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		StandardParserConfiguration::NORMALIZE_DATA,

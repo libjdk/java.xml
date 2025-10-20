@@ -92,6 +92,7 @@ void BasicTestIterator::init$($PrefixResolver* nscontext) {
 }
 
 void BasicTestIterator::init$($Compiler* compiler, int32_t opPos, int32_t analysis) {
+	$useLocalCurrentObjectStackCache();
 	$LocPathIterator::init$(compiler, opPos, analysis, false);
 	int32_t firstStepPos = $OpMap::getFirstChildPos(opPos);
 	int32_t whatToShow = $nc(compiler)->getWhatToShow(firstStepPos);
@@ -110,6 +111,7 @@ void BasicTestIterator::init$($Compiler* compiler, int32_t opPos, int32_t analys
 }
 
 int32_t BasicTestIterator::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_foundLast) {
 		this->m_lastFetched = $DTM::NULL;
 		return $DTM::NULL;

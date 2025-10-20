@@ -74,6 +74,7 @@ $String* EncodingMap::getJava2IANAMapping($String* javaEncoding) {
 }
 
 void clinit$EncodingMap($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Map, aIANA2JavaMap, $new($HashMap));
 		$var($Map, aJava2IANAMap, $new($HashMap));

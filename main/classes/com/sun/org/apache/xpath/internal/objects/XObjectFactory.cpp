@@ -111,6 +111,7 @@ $XObject* XObjectFactory::create(Object$* val) {
 }
 
 $XObject* XObjectFactory::create(Object$* val, $XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, result, nullptr);
 	if ($instanceOf($XObject, val)) {
 		$assign(result, $cast($XObject, val));

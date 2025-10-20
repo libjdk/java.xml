@@ -204,6 +204,7 @@ void DOMResultAugmentor::processingInstruction($String* target, $XMLString* data
 }
 
 void DOMResultAugmentor::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, currentElement, $cast($Element, $nc(this->fDOMValidatorHelper)->getCurrentElement()));
 	$var($NamedNodeMap, attrMap, $nc(currentElement)->getAttributes());
 	int32_t oldLength = $nc(attrMap)->getLength();
@@ -261,6 +262,7 @@ void DOMResultAugmentor::endGeneralEntity($String* name, $Augmentations* augs) {
 }
 
 void DOMResultAugmentor::characters($XMLString* text, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fIgnoreChars) {
 		$var($Element, currentElement, $cast($Element, $nc(this->fDOMValidatorHelper)->getCurrentElement()));
 		$nc(currentElement)->appendChild($($nc(this->fDocument)->createTextNode($($nc(text)->toString()))));
@@ -272,6 +274,7 @@ void DOMResultAugmentor::ignorableWhitespace($XMLString* text, $Augmentations* a
 }
 
 void DOMResultAugmentor::endElement($QName* element, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, currentElement, $nc(this->fDOMValidatorHelper)->getCurrentElement());
 	if (augs != nullptr && this->fDocumentImpl != nullptr) {
 		$init($Constants);

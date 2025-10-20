@@ -126,10 +126,12 @@ void ModuleExports::dump($DataOutputStream* file) {
 }
 
 $String* ModuleExports::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"exports("_s, $$str(this->exportsIndex), ", "_s, $$str(this->exportsFlags), ", "_s, $$str(this->exportsToCount), ", ...)"_s});
 }
 
 $String* ModuleExports::toString($ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($String, package_name, $nc(constant_pool)->constantToString(this->exportsIndex, $Const::CONSTANT_Package));
 	buf->append($($Utility::compactClassName(package_name, false)));

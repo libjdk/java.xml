@@ -334,6 +334,7 @@ void DOMNormalizer::init$() {
 }
 
 void DOMNormalizer::normalizeDocument($CoreDocumentImpl* document, $DOMConfigurationImpl* config) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fDocument, document);
 	$set(this, fConfiguration, config);
 	this->fAllWhitespace = false;
@@ -423,6 +424,7 @@ void DOMNormalizer::normalizeDocument($CoreDocumentImpl* document, $DOMConfigura
 }
 
 $Node* DOMNormalizer::normalizeNode($Node* node$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, node$renamed);
 	int32_t type = $nc(node)->getNodeType();
 	bool wellformed = false;
@@ -716,6 +718,7 @@ $Node* DOMNormalizer::normalizeNode($Node* node$renamed) {
 }
 
 void DOMNormalizer::processDTD($String* xmlVersion, $String* schemaLocation) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rootName, nullptr);
 	$var($String, publicId, nullptr);
 	$var($String, systemId, schemaLocation);
@@ -770,6 +773,7 @@ void DOMNormalizer::processDTD($String* xmlVersion, $String* schemaLocation) {
 }
 
 void DOMNormalizer::expandEntityRef($Node* parent, $Node* reference) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, kid, nullptr);
 	$var($Node, next, nullptr);
 	for ($assign(kid, $nc(reference)->getFirstChild()); kid != nullptr; $assign(kid, next)) {
@@ -779,6 +783,7 @@ void DOMNormalizer::expandEntityRef($Node* parent, $Node* reference) {
 }
 
 void DOMNormalizer::namespaceFixUp($ElementImpl* element, $AttributeMap* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, value, nullptr);
 	$var($String, uri, nullptr);
 	$var($String, prefix, nullptr);
@@ -948,6 +953,7 @@ void DOMNormalizer::addNamespaceDecl($String* prefix, $String* uri, $ElementImpl
 
 void DOMNormalizer::isCDataWF($DOMErrorHandler* errorHandler, $DOMErrorImpl* error, $DOMLocatorImpl* locator, $String* datavalue, bool isXML11Version) {
 	$init(DOMNormalizer);
+	$useLocalCurrentObjectStackCache();
 	if (datavalue == nullptr || ($nc(datavalue)->length() == 0)) {
 		return;
 	}
@@ -1026,6 +1032,7 @@ void DOMNormalizer::isCDataWF($DOMErrorHandler* errorHandler, $DOMErrorImpl* err
 
 void DOMNormalizer::isXMLCharWF($DOMErrorHandler* errorHandler, $DOMErrorImpl* error, $DOMLocatorImpl* locator, $String* datavalue, bool isXML11Version) {
 	$init(DOMNormalizer);
+	$useLocalCurrentObjectStackCache();
 	if (datavalue == nullptr || ($nc(datavalue)->length() == 0)) {
 		return;
 	}
@@ -1070,6 +1077,7 @@ void DOMNormalizer::isXMLCharWF($DOMErrorHandler* errorHandler, $DOMErrorImpl* e
 
 void DOMNormalizer::isCommentWF($DOMErrorHandler* errorHandler, $DOMErrorImpl* error, $DOMLocatorImpl* locator, $String* datavalue, bool isXML11Version) {
 	$init(DOMNormalizer);
+	$useLocalCurrentObjectStackCache();
 	if (datavalue == nullptr || ($nc(datavalue)->length() == 0)) {
 		return;
 	}
@@ -1122,6 +1130,7 @@ void DOMNormalizer::isCommentWF($DOMErrorHandler* errorHandler, $DOMErrorImpl* e
 
 void DOMNormalizer::isAttrValueWF($DOMErrorHandler* errorHandler, $DOMErrorImpl* error, $DOMLocatorImpl* locator, $NamedNodeMap* attributes, $Attr* a, $String* value, bool xml11Version) {
 	$init(DOMNormalizer);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($AttrImpl, a) && $nc(($cast($AttrImpl, a)))->hasStringValue()) {
 		isXMLCharWF(errorHandler, error, locator, value, xml11Version);
 	} else {
@@ -1169,6 +1178,7 @@ void DOMNormalizer::reportDOMError($DOMErrorHandler* errorHandler, $DOMErrorImpl
 }
 
 void DOMNormalizer::updateQName($Node* node, $QName* qname) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, $nc(node)->getPrefix());
 	$var($String, namespace$, node->getNamespaceURI());
 	$var($String, localName, node->getLocalName());
@@ -1228,6 +1238,7 @@ void DOMNormalizer::processingInstruction($String* target, $XMLString* data, $Au
 }
 
 void DOMNormalizer::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, currentElement, $cast($Element, this->fCurrentNode));
 	int32_t attrCount = $nc(attributes)->getLength();
 	for (int32_t i = 0; i < attrCount; ++i) {
@@ -1304,6 +1315,7 @@ void DOMNormalizer::ignorableWhitespace($XMLString* text, $Augmentations* augs) 
 }
 
 void DOMNormalizer::endElement($QName* element, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (augs != nullptr) {
 		$init($Constants);
 		$var($ElementPSVI, elementPSVI, $cast($ElementPSVI, augs->getItem($Constants::ELEMENT_PSVI)));

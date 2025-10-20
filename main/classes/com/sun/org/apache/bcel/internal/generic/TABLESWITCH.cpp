@@ -77,6 +77,7 @@ void TABLESWITCH::init$($ints* match, $InstructionHandleArray* targets, $Instruc
 }
 
 void TABLESWITCH::dump($DataOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$Select::dump(out);
 	int32_t _match_length = getMatch_length();
 	int32_t low = (_match_length > 0) ? $Select::getMatch(0) : 0;
@@ -89,6 +90,7 @@ void TABLESWITCH::dump($DataOutputStream* out) {
 }
 
 void TABLESWITCH::initFromFile($ByteSequence* bytes, bool wide) {
+	$useLocalCurrentObjectStackCache();
 	$Select::initFromFile(bytes, wide);
 	int32_t low = $nc(bytes)->readInt();
 	int32_t high = bytes->readInt();

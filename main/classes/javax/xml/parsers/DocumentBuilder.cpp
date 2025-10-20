@@ -75,6 +75,7 @@ void DocumentBuilder::init$() {
 }
 
 void DocumentBuilder::reset() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$3, $$str({"This DocumentBuilder, \""_s, $($of(this)->getClass()->getName()), "\", does not support the reset functionality.  Specification \""_s}));
 	$var($String, var$2, $$concat(var$3, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationTitle())));
 	$var($String, var$1, $$concat(var$2, "\" version \""));
@@ -108,6 +109,7 @@ $Document* DocumentBuilder::parse($String* uri) {
 }
 
 $Document* DocumentBuilder::parse($File* f) {
+	$useLocalCurrentObjectStackCache();
 	if (f == nullptr) {
 		$throwNew($IllegalArgumentException, "File cannot be null"_s);
 	}
@@ -116,6 +118,7 @@ $Document* DocumentBuilder::parse($File* f) {
 }
 
 $Schema* DocumentBuilder::getSchema() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"This parser does not support specification \""_s, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationTitle()), "\" version \""_s}));
 	$var($String, var$0, $$concat(var$1, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationVersion())));
 	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""));
@@ -123,6 +126,7 @@ $Schema* DocumentBuilder::getSchema() {
 }
 
 bool DocumentBuilder::isXIncludeAware() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"This parser does not support specification \""_s, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationTitle()), "\" version \""_s}));
 	$var($String, var$0, $$concat(var$1, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationVersion())));
 	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""));

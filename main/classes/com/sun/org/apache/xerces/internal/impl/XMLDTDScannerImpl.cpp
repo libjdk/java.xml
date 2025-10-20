@@ -382,6 +382,7 @@ bool XMLDTDScannerImpl::scanDTDInternalSubset(bool complete, bool standalone, bo
 }
 
 bool XMLDTDScannerImpl::skipDTD(bool supportDTD) {
+	$useLocalCurrentObjectStackCache();
 	if (supportDTD) {
 		return false;
 	}
@@ -487,6 +488,7 @@ void XMLDTDScannerImpl::startEntity($String* name, $XMLResourceIdentifier* ident
 }
 
 void XMLDTDScannerImpl::endEntity($String* name, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$XMLScanner::endEntity(name, augs);
 	if (this->fScannerState == XMLDTDScannerImpl::SCANNER_STATE_END_OF_INPUT) {
 		return;
@@ -540,6 +542,7 @@ void XMLDTDScannerImpl::setScannerState(int32_t state) {
 
 $String* XMLDTDScannerImpl::getScannerStateName(int32_t state) {
 	$init(XMLDTDScannerImpl);
+	$useLocalCurrentObjectStackCache();
 	return $str({"??? ("_s, $$str(state), $$str(u')')});
 }
 
@@ -548,6 +551,7 @@ bool XMLDTDScannerImpl::scanningInternalSubset() {
 }
 
 void XMLDTDScannerImpl::startPE($String* name, bool literal) {
+	$useLocalCurrentObjectStackCache();
 	int32_t depth = this->fPEDepth;
 	$var($String, pName, $str({"%"_s, name}));
 	if (this->fValidation && !$nc(this->fEntityStore)->isDeclaredEntity(pName)) {
@@ -561,6 +565,7 @@ void XMLDTDScannerImpl::startPE($String* name, bool literal) {
 }
 
 bool XMLDTDScannerImpl::scanTextDecl() {
+	$useLocalCurrentObjectStackCache();
 	bool textDecl = false;
 	if ($nc(this->fEntityScanner)->skipString("<?xml"_s)) {
 		++this->fMarkUpDepth;
@@ -608,6 +613,7 @@ void XMLDTDScannerImpl::scanComment() {
 }
 
 void XMLDTDScannerImpl::scanElementDecl() {
+	$useLocalCurrentObjectStackCache();
 	this->fReportEntity = false;
 	if (!skipSeparator(true, !scanningInternalSubset())) {
 		reportFatalError("MSG_SPACE_REQUIRED_BEFORE_ELEMENT_TYPE_IN_ELEMENTDECL"_s, nullptr);
@@ -672,6 +678,7 @@ void XMLDTDScannerImpl::scanElementDecl() {
 }
 
 void XMLDTDScannerImpl::scanMixed($String* elName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, childName, nullptr);
 	$nc(this->fStringBuffer)->append("#PCDATA"_s);
 	if (this->fDTDContentModelHandler != nullptr) {
@@ -715,6 +722,7 @@ void XMLDTDScannerImpl::scanMixed($String* elName) {
 }
 
 void XMLDTDScannerImpl::scanChildren($String* elName) {
+	$useLocalCurrentObjectStackCache();
 	this->fContentDepth = 0;
 	pushContentStack(0);
 	int32_t currentOp = 0;
@@ -817,6 +825,7 @@ void XMLDTDScannerImpl::scanChildren($String* elName) {
 }
 
 void XMLDTDScannerImpl::scanAttlistDecl() {
+	$useLocalCurrentObjectStackCache();
 	this->fReportEntity = false;
 	if (!skipSeparator(true, !scanningInternalSubset())) {
 		reportFatalError("MSG_SPACE_REQUIRED_BEFORE_ELEMENT_TYPE_IN_ATTLISTDECL"_s, nullptr);
@@ -896,6 +905,7 @@ void XMLDTDScannerImpl::scanAttlistDecl() {
 }
 
 $String* XMLDTDScannerImpl::scanAttType($String* elName, $String* atName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, type, nullptr);
 	this->fEnumerationCount = 0;
 	if ($nc(this->fEntityScanner)->skipString("CDATA"_s)) {
@@ -988,6 +998,7 @@ $String* XMLDTDScannerImpl::scanAttType($String* elName, $String* atName) {
 }
 
 $String* XMLDTDScannerImpl::scanAttDefaultDecl($String* elName, $String* atName, $String* type, $XMLString* defaultVal, $XMLString* nonNormalizedDefaultVal) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, defaultType, nullptr);
 	$nc(this->fString)->clear();
 	$nc(defaultVal)->clear();
@@ -1012,6 +1023,7 @@ $String* XMLDTDScannerImpl::scanAttDefaultDecl($String* elName, $String* atName,
 }
 
 void XMLDTDScannerImpl::scanEntityDecl() {
+	$useLocalCurrentObjectStackCache();
 	bool isPEDecl = false;
 	bool sawPERef = false;
 	this->fReportEntity = false;
@@ -1137,6 +1149,7 @@ void XMLDTDScannerImpl::scanEntityDecl() {
 }
 
 void XMLDTDScannerImpl::scanEntityValue($String* entityName, bool isPEDecl, $XMLString* value, $XMLString* nonNormalizedValue) {
+	$useLocalCurrentObjectStackCache();
 	int32_t quote = $nc(this->fEntityScanner)->scanChar(nullptr);
 	if (quote != u'\'' && quote != u'\"') {
 		reportFatalError("OpenQuoteMissingInDecl"_s, nullptr);
@@ -1246,6 +1259,7 @@ void XMLDTDScannerImpl::scanEntityValue($String* entityName, bool isPEDecl, $XML
 }
 
 void XMLDTDScannerImpl::scanNotationDecl() {
+	$useLocalCurrentObjectStackCache();
 	this->fReportEntity = false;
 	if (!skipSeparator(true, !scanningInternalSubset())) {
 		reportFatalError("MSG_SPACE_REQUIRED_BEFORE_NOTATION_NAME_IN_NOTATIONDECL"_s, nullptr);
@@ -1281,6 +1295,7 @@ void XMLDTDScannerImpl::scanNotationDecl() {
 }
 
 void XMLDTDScannerImpl::scanConditionalSect(int32_t currPEDepth) {
+	$useLocalCurrentObjectStackCache();
 	this->fReportEntity = false;
 	skipSeparator(false, !scanningInternalSubset());
 	if ($nc(this->fEntityScanner)->skipString("INCLUDE"_s)) {
@@ -1436,6 +1451,7 @@ bool XMLDTDScannerImpl::scanDecls(bool complete) {
 }
 
 bool XMLDTDScannerImpl::skipSeparator(bool spaceRequired, bool lookForPERefs) {
+	$useLocalCurrentObjectStackCache();
 	int32_t depth = this->fPEDepth;
 	bool sawSpace = $nc(this->fEntityScanner)->skipSpaces();
 	$init($XMLScanner$NameType);
@@ -1473,6 +1489,7 @@ int32_t XMLDTDScannerImpl::popContentStack() {
 }
 
 void XMLDTDScannerImpl::pushPEStack(int32_t depth, bool report) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fPEStack)->length == this->fPEDepth) {
 		$var($ints, newIntStack, $new($ints, this->fPEDepth * 2));
 		$System::arraycopy(this->fPEStack, 0, newIntStack, 0, this->fPEDepth);

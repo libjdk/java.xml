@@ -98,6 +98,7 @@ $Object* allocate$SymbolTable($Class* clazz) {
 }
 
 void SymbolTable::init$(int32_t initialCapacity, float loadFactor) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fBuckets, nullptr);
 	if (initialCapacity < 0) {
 		$throwNew($IllegalArgumentException, $$str({"Illegal Capacity: "_s, $$str(initialCapacity)}));
@@ -244,6 +245,7 @@ void SymbolTable::rebalance() {
 }
 
 void SymbolTable::rehashCommon(int32_t newCapacity) {
+	$useLocalCurrentObjectStackCache();
 	int32_t oldCapacity = $nc(this->fBuckets)->length;
 	$var($SymbolTable$EntryArray, oldTable, this->fBuckets);
 	$var($SymbolTable$EntryArray, newTable, $new($SymbolTable$EntryArray, newCapacity));

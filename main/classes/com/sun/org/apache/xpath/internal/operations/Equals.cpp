@@ -69,6 +69,7 @@ $XObject* Equals::operate($XObject* left, $XObject* right) {
 }
 
 bool Equals::bool$($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, left, $nc(this->m_left)->execute(xctxt, true));
 	$var($XObject, right, $nc(this->m_right)->execute(xctxt, true));
 	bool result = $nc(left)->equals(right) ? true : false;

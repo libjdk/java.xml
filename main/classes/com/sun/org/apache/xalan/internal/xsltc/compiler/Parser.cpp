@@ -475,6 +475,7 @@ void Parser::addParameter($Param* param) {
 }
 
 void Parser::addVariableOrParam($VariableBase* var) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, existing, $nc(this->_variableScope)->get($($nc($($nc(var)->getName()))->getStringRep())));
 	if (existing != nullptr) {
 		if ($instanceOf($Stack, existing)) {
@@ -492,6 +493,7 @@ void Parser::addVariableOrParam($VariableBase* var) {
 }
 
 void Parser::removeVariable($QName* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, existing, $nc(this->_variableScope)->get($($nc(name)->getStringRep())));
 	if ($instanceOf($Stack, existing)) {
 		$var($Stack, stack, $cast($Stack, existing));
@@ -506,6 +508,7 @@ void Parser::removeVariable($QName* name) {
 }
 
 $VariableBase* Parser::lookupVariable($QName* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, existing, $nc(this->_variableScope)->get($($nc(name)->getStringRep())));
 	if ($instanceOf($VariableBase, existing)) {
 		return $cast($VariableBase, existing);
@@ -545,6 +548,7 @@ $Stylesheet* Parser::getTopLevelStylesheet() {
 }
 
 $QName* Parser::getQNameSafe($String* stringRep) {
+	$useLocalCurrentObjectStackCache();
 	int32_t colon = $nc(stringRep)->lastIndexOf((int32_t)u':');
 	if (colon != -1) {
 		$var($String, prefix, stringRep->substring(0, colon));
@@ -578,6 +582,7 @@ $QName* Parser::getQName($String* stringRep, bool reportError) {
 }
 
 $QName* Parser::getQName($String* stringRep, bool reportError, bool ignoreDefaultNs) {
+	$useLocalCurrentObjectStackCache();
 	int32_t colon = $nc(stringRep)->lastIndexOf((int32_t)u':');
 	if (colon != -1) {
 		$var($String, prefix, stringRep->substring(0, colon));
@@ -605,6 +610,7 @@ $QName* Parser::getQName($String* stringRep, bool reportError, bool ignoreDefaul
 }
 
 $QName* Parser::getQName($String* namespace$, $String* prefix, $String* localname) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if (namespace$ == nullptr || $nc(namespace$)->equals($Constants::EMPTYSTRING)) {
 		$var($QName, name, $cast($QName, $nc(this->_qNames)->get(localname)));
@@ -637,6 +643,7 @@ $QName* Parser::getQName($String* scope, $String* name) {
 }
 
 $QName* Parser::getQName($QName* scope, $QName* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $($nc(scope)->toString()));
 	return getQName($$concat(var$0, $($nc(name)->toString())));
 }
@@ -654,6 +661,7 @@ $QName* Parser::getExcludeResultPrefixes() {
 }
 
 $Stylesheet* Parser::makeStylesheet($SyntaxTreeNode* element) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Stylesheet, stylesheet, nullptr);
 		if ($instanceOf($Stylesheet, element)) {
@@ -680,6 +688,7 @@ $Stylesheet* Parser::makeStylesheet($SyntaxTreeNode* element) {
 }
 
 void Parser::createAST($Stylesheet* stylesheet) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (stylesheet != nullptr) {
 			stylesheet->parseContents(this);
@@ -705,6 +714,7 @@ void Parser::createAST($Stylesheet* stylesheet) {
 }
 
 $SyntaxTreeNode* Parser::parse($XMLReader* reader, $InputSource* input) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(reader)->setContentHandler(this);
 		if (this->_hasUserErrListener) {
@@ -749,6 +759,7 @@ $SyntaxTreeNode* Parser::parse($XMLReader* reader, $InputSource* input) {
 }
 
 $SyntaxTreeNode* Parser::parse($InputSource* input) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($XMLReader, reader, $JdkXmlUtils::getXMLReader(this->_overrideDefaultParser, $nc(this->_xsltc)->isSecureProcessing()));
 		$init($XMLConstants);
@@ -832,6 +843,7 @@ void Parser::setPIParameters($String* media, $String* title, $String* charset) {
 }
 
 $SyntaxTreeNode* Parser::getStylesheet($SyntaxTreeNode* root) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_target == nullptr) {
 		if (!this->_rootNamespaceDef) {
 			$init($ErrorMsg);
@@ -872,6 +884,7 @@ $SyntaxTreeNode* Parser::getStylesheet($SyntaxTreeNode* root) {
 }
 
 $SyntaxTreeNode* Parser::findStylesheet($SyntaxTreeNode* root, $String* href) {
+	$useLocalCurrentObjectStackCache();
 	if (root == nullptr) {
 		return nullptr;
 	}
@@ -896,6 +909,7 @@ $SyntaxTreeNode* Parser::findStylesheet($SyntaxTreeNode* root, $String* href) {
 }
 
 $SyntaxTreeNode* Parser::loadExternalStylesheet($String* location) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputSource, source, nullptr);
 	if (($$new($File, location))->exists()) {
 		$assign(source, $new($InputSource, $$str({"file:"_s, location})));
@@ -907,11 +921,13 @@ $SyntaxTreeNode* Parser::loadExternalStylesheet($String* location) {
 }
 
 void Parser::initAttrTable($String* elementName, $StringArray* attrs) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$nc(this->_instructionAttrs)->put($($nc($(getQName($Constants::XSLT_URI, Parser::XSL, elementName)))->getStringRep()), attrs);
 }
 
 void Parser::initInstructionAttrs() {
+	$useLocalCurrentObjectStackCache();
 	initAttrTable("template"_s, $$new($StringArray, {
 		"match"_s,
 		"name"_s,
@@ -1074,11 +1090,13 @@ void Parser::initStdClasses() {
 }
 
 void Parser::initStdClass($String* elementName, $String* className) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$nc(this->_instructionClasses)->put($($nc($(getQName($Constants::XSLT_URI, Parser::XSL, elementName)))->getStringRep()), $$str({$Constants::COMPILER_PACKAGE, $$str(u'.'), className}));
 }
 
 bool Parser::elementSupported($String* namespace$, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	return ($nc(this->_instructionClasses)->get($($nc($(getQName(namespace$, Parser::XSL, localName)))->getStringRep())) != nullptr);
 }
 
@@ -1093,16 +1111,19 @@ void Parser::initExtClasses() {
 }
 
 void Parser::initExtClass($String* elementName, $String* className) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$nc(this->_instructionClasses)->put($($nc($(getQName($Constants::TRANSLET_URI, Parser::TRANSLET, elementName)))->getStringRep()), $$str({$Constants::COMPILER_PACKAGE, $$str(u'.'), className}));
 }
 
 void Parser::initExtClass($String* namespace$, $String* elementName, $String* className) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$nc(this->_instructionClasses)->put($($nc($(getQName(namespace$, Parser::TRANSLET, elementName)))->getStringRep()), $$str({$Constants::COMPILER_PACKAGE, $$str(u'.'), className}));
 }
 
 void Parser::initSymbolTable() {
+	$useLocalCurrentObjectStackCache();
 	$init($Type);
 	$var($MethodType, I_V, $new($MethodType, $Type::Int, $Type::Void));
 	$var($MethodType, I_R, $new($MethodType, $Type::Int, $Type::Real));
@@ -1239,6 +1260,7 @@ int32_t Parser::getTemplateIndex() {
 }
 
 $SyntaxTreeNode* Parser::makeInstance($String* uri, $String* prefix, $String* local, $Attributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($SyntaxTreeNode, node, nullptr);
 	$var($QName, qname, getQName(uri, prefix, local));
@@ -1312,6 +1334,7 @@ $SyntaxTreeNode* Parser::makeInstance($String* uri, $String* prefix, $String* lo
 }
 
 void Parser::checkForSuperfluousAttributes($SyntaxTreeNode* node, $Attributes* attrs) {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, qname, $nc(node)->getQName());
 	bool isStylesheet = ($instanceOf($Stylesheet, node));
 	$var($StringArray, legal, $cast($StringArray, $nc(this->_instructionAttrs)->get($($nc(qname)->getStringRep()))));
@@ -1347,6 +1370,7 @@ $Expression* Parser::parseExpression($SyntaxTreeNode* parent, $String* exp) {
 }
 
 $Expression* Parser::parseExpression($SyntaxTreeNode* parent, $String* attr, $String* def) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, exp, $nc(parent)->getAttribute(attr));
 	if (($nc(exp)->length() == 0) && (def != nullptr)) {
 		$assign(exp, def);
@@ -1359,6 +1383,7 @@ $Pattern* Parser::parsePattern($SyntaxTreeNode* parent, $String* pattern) {
 }
 
 $Pattern* Parser::parsePattern($SyntaxTreeNode* parent, $String* attr, $String* def) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, pattern, $nc(parent)->getAttribute(attr));
 	if (($nc(pattern)->length() == 0) && (def != nullptr)) {
 		$assign(pattern, def);
@@ -1367,6 +1392,7 @@ $Pattern* Parser::parsePattern($SyntaxTreeNode* parent, $String* attr, $String* 
 }
 
 $SyntaxTreeNode* Parser::parseTopLevel($SyntaxTreeNode* parent, $String* text, $String* expression) {
+	$useLocalCurrentObjectStackCache();
 	int32_t line = getLineNumber();
 	try {
 		$nc(this->_xpathParser)->setScanner($$new($XPathLexer, static_cast<$Reader*>($$new($StringReader, text))));
@@ -1400,6 +1426,7 @@ bool Parser::errorsFound() {
 }
 
 void Parser::printErrors() {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->_errors)->size();
 	if (size > 0) {
 		$init($System);
@@ -1412,6 +1439,7 @@ void Parser::printErrors() {
 }
 
 void Parser::printWarnings() {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->_warnings)->size();
 	if (size > 0) {
 		$init($System);
@@ -1482,6 +1510,7 @@ void Parser::endPrefixMapping($String* prefix) {
 }
 
 void Parser::startElement($String* uri, $String* localname, $String* qname, $Attributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	int32_t col = $nc(qname)->lastIndexOf((int32_t)u':');
 	$var($String, prefix, (col == -1) ? ($String*)nullptr : qname->substring(0, col));
 	$var($SyntaxTreeNode, element, makeInstance(uri, prefix, localname, attributes));
@@ -1525,6 +1554,7 @@ void Parser::endElement($String* uri, $String* localname, $String* qname) {
 }
 
 void Parser::characters($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, string, $new($String, ch, start, length));
 	$var($SyntaxTreeNode, parent, $cast($SyntaxTreeNode, $nc(this->_parentStack)->peek()));
 	if (string->length() == 0) {
@@ -1557,6 +1587,7 @@ $String* Parser::getTokenValue($String* token) {
 }
 
 void Parser::processingInstruction($String* name, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if ((this->_target == nullptr) && ($nc(name)->equals("xml-stylesheet"_s))) {
 		$var($String, href, nullptr);
 		$var($String, media, nullptr);

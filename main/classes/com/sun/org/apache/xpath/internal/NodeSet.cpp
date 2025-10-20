@@ -306,6 +306,7 @@ void NodeSet::removeNode($Node* n) {
 }
 
 void NodeSet::addNodes($NodeList* nodelist) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -330,6 +331,7 @@ void NodeSet::addNodes(NodeSet* ns) {
 }
 
 void NodeSet::addNodes($NodeIterator* iterator) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -343,6 +345,7 @@ void NodeSet::addNodes($NodeIterator* iterator) {
 }
 
 void NodeSet::addNodesInDocOrder($NodeList* nodelist, $XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -357,6 +360,7 @@ void NodeSet::addNodesInDocOrder($NodeList* nodelist, $XPathContext* support) {
 }
 
 void NodeSet::addNodesInDocOrder($NodeIterator* iterator, $XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -368,6 +372,7 @@ void NodeSet::addNodesInDocOrder($NodeIterator* iterator, $XPathContext* support
 }
 
 bool NodeSet::addNodesInDocOrder(int32_t start, int32_t end, int32_t testIndex, $NodeList* nodelist, $XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -400,6 +405,7 @@ bool NodeSet::addNodesInDocOrder(int32_t start, int32_t end, int32_t testIndex, 
 }
 
 int32_t NodeSet::addNodeInDocOrder($Node* node, bool test, $XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -459,6 +465,7 @@ void NodeSet::setCurrentPos(int32_t i) {
 }
 
 $Node* NodeSet::getCurrentNode() {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_cacheNodes) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_CANNOT_INDEX, nullptr)));
@@ -504,6 +511,7 @@ int32_t NodeSet::size() {
 }
 
 void NodeSet::addElement($Node* value) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -601,6 +609,7 @@ $Node* NodeSet::peepTailSub1() {
 }
 
 void NodeSet::insertElementAt($Node* value, int32_t at) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -647,6 +656,7 @@ void NodeSet::removeAllElements() {
 }
 
 bool NodeSet::removeElement($Node* s) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESET_NOT_MUTABLE, nullptr)));
@@ -669,6 +679,7 @@ bool NodeSet::removeElement($Node* s) {
 }
 
 void NodeSet::removeElementAt(int32_t i) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr == this->m_map) {
 		return;
 	}
@@ -704,6 +715,7 @@ $Node* NodeSet::elementAt(int32_t i) {
 }
 
 bool NodeSet::contains($Node* s) {
+	$useLocalCurrentObjectStackCache();
 	runTo(-1);
 	if (nullptr == this->m_map) {
 		return false;
@@ -718,6 +730,7 @@ bool NodeSet::contains($Node* s) {
 }
 
 int32_t NodeSet::indexOf($Node* elem, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	runTo(-1);
 	if (nullptr == this->m_map) {
 		return -1;
@@ -732,6 +745,7 @@ int32_t NodeSet::indexOf($Node* elem, int32_t index) {
 }
 
 int32_t NodeSet::indexOf($Node* elem) {
+	$useLocalCurrentObjectStackCache();
 	runTo(-1);
 	if (nullptr == this->m_map) {
 		return -1;

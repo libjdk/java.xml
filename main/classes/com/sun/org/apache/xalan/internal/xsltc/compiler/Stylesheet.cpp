@@ -571,6 +571,7 @@ void Stylesheet::numberFormattingUsed() {
 }
 
 void Stylesheet::setImportPrecedence(int32_t precedence) {
+	$useLocalCurrentObjectStackCache();
 	this->_importPrecedence = precedence;
 	$var($Iterator, elements, this->elements());
 	while ($nc(elements)->hasNext()) {
@@ -600,6 +601,7 @@ int32_t Stylesheet::getImportPrecedence() {
 }
 
 int32_t Stylesheet::getMinimumDescendantPrecedence() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_minimumDescendantPrecedence == -1) {
 		int32_t min = getImportPrecedence();
 		int32_t inclImpCount = (this->_includedStylesheets != nullptr) ? $nc(this->_includedStylesheets)->size() : 0;
@@ -673,6 +675,7 @@ $SourceLoader* Stylesheet::getSourceLoader() {
 }
 
 $QName* Stylesheet::makeStylesheetName($String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	return $nc($(getParser()))->getQName($$str({prefix, $$str($nc($(getXSLTC()))->nextStylesheetSerial())}));
 }
 
@@ -681,6 +684,7 @@ bool Stylesheet::hasGlobals() {
 }
 
 bool Stylesheet::hasLocalParams() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_hasLocalParams == nullptr) {
 		$var($List, templates, getAllValidTemplates());
 		int32_t n = $nc(templates)->size();
@@ -710,6 +714,7 @@ void Stylesheet::addPrefixMapping($String* prefix, $String* uri) {
 }
 
 void Stylesheet::extensionURI($String* prefixes, $SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (prefixes != nullptr) {
 		$var($StringTokenizer, tokens, $new($StringTokenizer, prefixes));
 		while (tokens->hasMoreTokens()) {
@@ -727,12 +732,14 @@ bool Stylesheet::isExtension($String* uri) {
 }
 
 void Stylesheet::declareExtensionPrefixes($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, stable, $nc(parser)->getSymbolTable());
 	$var($String, extensionPrefixes, getAttribute("extension-element-prefixes"_s));
 	extensionURI(extensionPrefixes, stable);
 }
 
 void Stylesheet::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, stable, $nc(parser)->getSymbolTable());
 	addPrefixMapping("xml"_s, "http://www.w3.org/XML/1998/namespace"_s);
 	$var(Stylesheet, sheet, $nc(stable)->addStylesheet(this->_name, this));
@@ -752,6 +759,7 @@ void Stylesheet::parseContents($Parser* parser) {
 }
 
 void Stylesheet::parseOwnChildren($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, stable, $nc(parser)->getSymbolTable());
 	$var($String, excludePrefixes, getAttribute("exclude-result-prefixes"_s));
 	$var($String, extensionPrefixes, getAttribute("extension-element-prefixes"_s));
@@ -785,6 +793,7 @@ void Stylesheet::parseOwnChildren($Parser* parser) {
 }
 
 void Stylesheet::processModes() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_defaultMode == nullptr) {
 		$init($Constants);
 		$set(this, _defaultMode, $new($Mode, nullptr, this, $Constants::EMPTYSTRING));
@@ -794,11 +803,13 @@ void Stylesheet::processModes() {
 }
 
 void Stylesheet::compileModes($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_defaultMode)->compileApplyTemplates(classGen);
 	$nc($($nc($($nc(this->_modes)->values()))->stream()))->forEach(static_cast<$Consumer*>($$new(Stylesheet$$Lambda$lambda$compileModes$1$1, classGen)));
 }
 
 $Mode* Stylesheet::getMode($QName* modeName) {
+	$useLocalCurrentObjectStackCache();
 	if (modeName == nullptr) {
 		if (this->_defaultMode == nullptr) {
 			$init($Constants);
@@ -817,6 +828,7 @@ $Mode* Stylesheet::getMode($QName* modeName) {
 }
 
 $1Type* Stylesheet::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->_globals)->size();
 	for (int32_t i = 0; i < count; ++i) {
 		$var($VariableBase, var, $cast($VariableBase, $nc(this->_globals)->get(i)));
@@ -830,6 +842,7 @@ void Stylesheet::translate($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void Stylesheet::addDOMField($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $Constants::ACC_PUBLIC;
 	$init($Constants);
 	$var($Type, var$1, $Util::getJCRefType($Constants::DOM_INTF_SIG));
@@ -839,6 +852,7 @@ void Stylesheet::addDOMField($ClassGenerator* classGen) {
 }
 
 void Stylesheet::addStaticField($ClassGenerator* classGen, $String* type, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $Constants::ACC_PROTECTED | $Constants::ACC_STATIC;
 	$var($Type, var$1, $Util::getJCRefType(type));
 	$var($String, var$2, name);
@@ -847,6 +861,7 @@ void Stylesheet::addStaticField($ClassGenerator* classGen, $String* type, $Strin
 }
 
 void Stylesheet::translate() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _className, $nc($(getXSLTC()))->getClassName());
 	$init($Constants);
 	$var($ClassGenerator, classGen, $new($ClassGenerator, this->_className, $Constants::TRANSLET_CLASS, $Constants::EMPTYSTRING, $Constants::ACC_PUBLIC | $Constants::ACC_SUPER, nullptr, this));
@@ -879,6 +894,7 @@ void Stylesheet::translate() {
 }
 
 void Stylesheet::compileStaticInitializer($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
 	$init($Type);
@@ -994,6 +1010,7 @@ void Stylesheet::compileStaticInitializer($ClassGenerator* classGen) {
 }
 
 void Stylesheet::compileConstructor($ClassGenerator* classGen, $Output* output) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
 	$init($Type);
@@ -1047,6 +1064,7 @@ void Stylesheet::compileConstructor($ClassGenerator* classGen, $Output* output) 
 }
 
 $String* Stylesheet::compileTopLevel($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 		$init($Constants);
 	$var($TypeArray, argTypes, $new($TypeArray, {
@@ -1112,6 +1130,7 @@ $String* Stylesheet::compileTopLevel($ClassGenerator* classGen) {
 }
 
 $List* Stylesheet::resolveDependencies($List* input) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, result, $new($ArrayList));
 	while ($nc(input)->size() > 0) {
 		bool changed = false;
@@ -1137,6 +1156,7 @@ $List* Stylesheet::resolveDependencies($List* input) {
 }
 
 $String* Stylesheet::compileBuildKeys($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 		$init($Constants);
 		$init($Type);
@@ -1174,6 +1194,7 @@ $String* Stylesheet::compileBuildKeys($ClassGenerator* classGen) {
 }
 
 void Stylesheet::compileTransform($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($TypeArray, argTypes, $new($TypeArray, 3));
 	$init($Constants);
@@ -1245,6 +1266,7 @@ void Stylesheet::compileTransform($ClassGenerator* classGen) {
 }
 
 void Stylesheet::peepHoleOptimization($MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, pattern, "`aload\'`pop\'`instruction\'"_s);
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($InstructionFinder, find, $new($InstructionFinder, il));
@@ -1290,6 +1312,7 @@ $List* Stylesheet::getTemplates() {
 }
 
 $List* Stylesheet::getAllValidTemplates() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_includedStylesheets == nullptr) {
 		return this->_templates;
 	}

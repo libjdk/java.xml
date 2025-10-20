@@ -73,6 +73,7 @@ void XMLStreamException::init$($String* msg, $Throwable* th) {
 }
 
 void XMLStreamException::init$($String* msg, $Location* location, $Throwable* th) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$2, $$str({"ParseError at [row,col]:["_s, $$str($nc(location)->getLineNumber()), ","_s}));
 	$var($String, var$1, $$concat(var$2, $$str(location->getColumnNumber())));
 	$var($String, var$0, $$concat(var$1, "]\nMessage: "));
@@ -82,6 +83,7 @@ void XMLStreamException::init$($String* msg, $Location* location, $Throwable* th
 }
 
 void XMLStreamException::init$($String* msg, $Location* location) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$2, $$str({"ParseError at [row,col]:["_s, $$str($nc(location)->getLineNumber()), ","_s}));
 	$var($String, var$1, $$concat(var$2, $$str(location->getColumnNumber())));
 	$var($String, var$0, $$concat(var$1, "]\nMessage: "));

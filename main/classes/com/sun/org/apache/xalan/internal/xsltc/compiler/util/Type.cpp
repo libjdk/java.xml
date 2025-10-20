@@ -205,6 +205,7 @@ void Type::init$() {
 
 Type* Type::newObjectType($String* javaClassName) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	if (javaClassName == "java.lang.Object"_s) {
 		return Type::Object;
 	} else if (javaClassName == "java.lang.String"_s) {
@@ -248,6 +249,7 @@ int32_t Type::distanceTo(Type* type) {
 }
 
 void Type::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
 	$var($Object, var$1, $of(toString()));
@@ -266,6 +268,7 @@ $FlowList* Type::translateToDesynthesized($ClassGenerator* classGen, $MethodGene
 }
 
 $FlowList* Type::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
 	$var($Object, var$1, $of(toString()));
@@ -275,6 +278,7 @@ $FlowList* Type::translateToDesynthesized($ClassGenerator* classGen, $MethodGene
 }
 
 void Type::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
 	$var($Object, var$1, $of(toString()));
@@ -283,6 +287,7 @@ void Type::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $
 }
 
 void Type::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
 	$var($Object, var$1, $of($nc($of(clazz))->getClass()->toString()));
@@ -291,6 +296,7 @@ void Type::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen,
 }
 
 void Type::translateBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
 	$var($Object, var$1, $of(toString()));
@@ -299,6 +305,7 @@ void Type::translateBox($ClassGenerator* classGen, $MethodGenerator* methodGen) 
 }
 
 void Type::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
 	$var($Object, var$1, $of($str({"["_s, $(toString()), "]"_s})));

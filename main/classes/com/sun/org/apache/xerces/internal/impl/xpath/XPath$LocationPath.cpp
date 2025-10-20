@@ -80,6 +80,7 @@ void XPath$LocationPath::init$($XPath$StepArray* steps) {
 }
 
 void XPath$LocationPath::init$(XPath$LocationPath* path) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, steps, $new($XPath$StepArray, $nc($nc(path)->steps)->length));
 	for (int32_t i = 0; i < $nc(this->steps)->length; ++i) {
 		$nc(this->steps)->set(i, $cast($XPath$Step, $($nc($nc(path->steps)->get(i))->clone())));
@@ -87,6 +88,7 @@ void XPath$LocationPath::init$(XPath$LocationPath* path) {
 }
 
 $String* XPath$LocationPath::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, str, $new($StringBuffer));
 	for (int32_t i = 0; i < $nc(this->steps)->length; ++i) {
 		if (i > 0 && ($nc($nc($nc(this->steps)->get(i - 1))->axis)->type != $XPath$Axis::DESCENDANT && $nc($nc($nc(this->steps)->get(i))->axis)->type != $XPath$Axis::DESCENDANT)) {

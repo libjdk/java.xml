@@ -225,6 +225,7 @@ void XMLSerializer::setNamespaces(bool namespaces) {
 }
 
 void XMLSerializer::startElement($String* namespaceURI, $String* localName, $String* rawName$renamed, $Attributes* attrs$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rawName, rawName$renamed);
 	$var($Attributes, attrs, attrs$renamed);
 	int32_t i = 0;
@@ -386,6 +387,7 @@ void XMLSerializer::endElementIO($String* namespaceURI, $String* localName, $Str
 }
 
 void XMLSerializer::startElement($String* tagName, $AttributeList* attrs) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	bool preserveSpace = false;
 	$var($ElementState, state, nullptr);
@@ -452,6 +454,7 @@ void XMLSerializer::endElement($String* tagName) {
 }
 
 void XMLSerializer::startDocument($String* rootTagName) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	$var($String, dtd, nullptr);
 	$assign(dtd, $nc(this->_printer)->leaveDTD());
@@ -520,6 +523,7 @@ void XMLSerializer::startDocument($String* rootTagName) {
 }
 
 void XMLSerializer::serializeElement($Element* elem) {
+	$useLocalCurrentObjectStackCache();
 	$var($Attr, attr, nullptr);
 	$var($NamedNodeMap, attrMap, nullptr);
 	int32_t i = 0;
@@ -852,6 +856,7 @@ $String* XMLSerializer::getEntityRef(int32_t ch) {
 }
 
 $Attributes* XMLSerializer::extractNamespaces($Attributes* attrs) {
+	$useLocalCurrentObjectStackCache();
 	$var($AttributesImpl, attrsOnly, nullptr);
 	$var($String, rawName, nullptr);
 	int32_t i = 0;
@@ -878,6 +883,7 @@ $Attributes* XMLSerializer::extractNamespaces($Attributes* attrs) {
 }
 
 void XMLSerializer::printEscaped($String* source) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(source)->length();
 	for (int32_t i = 0; i < length; ++i) {
 		int32_t ch = source->charAt(i);
@@ -922,6 +928,7 @@ void XMLSerializer::printXMLChar(int32_t ch) {
 }
 
 void XMLSerializer::printText($String* text, bool preserveSpace, bool unescaped) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	char16_t ch = 0;
 	int32_t length = $nc(text)->length();
@@ -963,6 +970,7 @@ void XMLSerializer::printText($String* text, bool preserveSpace, bool unescaped)
 }
 
 void XMLSerializer::printText($chars* chars, int32_t start, int32_t length, bool preserveSpace, bool unescaped) {
+	$useLocalCurrentObjectStackCache();
 	if (preserveSpace) {
 		while (length-- > 0) {
 			char16_t ch = $nc(chars)->get(start++);
@@ -1001,6 +1009,7 @@ void XMLSerializer::printText($chars* chars, int32_t start, int32_t length, bool
 }
 
 void XMLSerializer::checkUnboundNamespacePrefixedNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNamespaces) {
 		$var($Node, child, nullptr);
 		$var($Node, next, nullptr);

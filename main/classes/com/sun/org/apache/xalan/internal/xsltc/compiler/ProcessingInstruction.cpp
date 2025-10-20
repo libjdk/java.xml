@@ -134,6 +134,7 @@ void ProcessingInstruction::init$() {
 }
 
 void ProcessingInstruction::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	if ($nc(name)->length() > 0) {
 		this->_isLiteral = $Util::isLiteral(name);
@@ -164,6 +165,7 @@ $1Type* ProcessingInstruction::typeCheck($SymbolTable* stable) {
 }
 
 void ProcessingInstruction::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (!this->_isLiteral) {

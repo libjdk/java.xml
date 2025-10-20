@@ -87,6 +87,7 @@ void TemplatesImpl$3::init$($TemplatesImpl* this$0) {
 }
 
 $Object* TemplatesImpl$3::run() {
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, var$0, $ObjectFactory::findClassLoader());
 	return $of($new($TemplatesImpl$TransletClassLoader, var$0, $($nc(this->this$0->_tfactory)->getExternalExtensionsMap())));
 }

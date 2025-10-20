@@ -104,6 +104,7 @@ $String* JdkXmlFeatures::CATALOG_FEATURES = nullptr;
 $String* JdkXmlFeatures::PROPERTY_USE_CATALOG = nullptr;
 
 void JdkXmlFeatures::init$(bool secureProcessing) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, featureValues, $new($booleans, $($JdkXmlFeatures$XmlFeature::values())->length));
 	$set(this, states, $new($JdkProperty$StateArray, $($JdkXmlFeatures$XmlFeature::values())->length));
 	this->secureProcessing = secureProcessing;
@@ -216,6 +217,7 @@ int32_t JdkXmlFeatures::getIndex($String* propertyName) {
 }
 
 void JdkXmlFeatures::readSystemProperties() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($JdkXmlFeatures$XmlFeatureArray, arr$, $JdkXmlFeatures$XmlFeature::values());
 		int32_t len$ = $nc(arr$)->length;
@@ -235,6 +237,7 @@ void JdkXmlFeatures::readSystemProperties() {
 }
 
 bool JdkXmlFeatures::getSystemProperty($JdkXmlFeatures$XmlFeature* feature, $String* sysPropertyName) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, value, $SecuritySupport::getSystemProperty(sysPropertyName));
 		if (value != nullptr && !value->isEmpty()) {

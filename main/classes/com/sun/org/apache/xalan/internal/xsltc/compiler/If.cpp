@@ -133,6 +133,7 @@ $Type* If::typeCheck($SymbolTable* stable) {
 }
 
 void If::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_test)->translateDesynthesized(classGen, methodGen);
 	$var($InstructionHandle, truec, $nc(il)->getEnd());

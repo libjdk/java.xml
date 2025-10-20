@@ -113,6 +113,7 @@ void ParserConfigurationSettings::init$($XMLComponentManager* parent) {
 }
 
 void ParserConfigurationSettings::addRecognizedFeatures($StringArray* featureIds) {
+	$useLocalCurrentObjectStackCache();
 	int32_t featureIdsCount = featureIds != nullptr ? $nc(featureIds)->length : 0;
 	for (int32_t i = 0; i < featureIdsCount; ++i) {
 		$var($String, featureId, featureIds->get(i));
@@ -123,6 +124,7 @@ void ParserConfigurationSettings::addRecognizedFeatures($StringArray* featureIds
 }
 
 void ParserConfigurationSettings::setFeature($String* featureId, bool state) {
+	$useLocalCurrentObjectStackCache();
 	$var($FeatureState, checkState, checkFeature(featureId));
 	if ($nc(checkState)->isExceptional()) {
 		$throwNew($XMLConfigurationException, checkState->status, featureId);
@@ -159,6 +161,7 @@ bool ParserConfigurationSettings::getFeature($String* featureId, bool defaultVal
 }
 
 $FeatureState* ParserConfigurationSettings::getFeatureState($String* featureId) {
+	$useLocalCurrentObjectStackCache();
 	$var($Boolean, state, $cast($Boolean, $nc(this->fFeatures)->get(featureId)));
 	if (state == nullptr) {
 		$var($FeatureState, checkState, checkFeature(featureId));
@@ -187,6 +190,7 @@ $Object* ParserConfigurationSettings::getProperty($String* propertyId, Object$* 
 }
 
 $PropertyState* ParserConfigurationSettings::getPropertyState($String* propertyId) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, propertyValue, $nc(this->fProperties)->get(propertyId));
 	if (propertyValue == nullptr) {
 		$var($PropertyState, state, checkProperty(propertyId));

@@ -77,6 +77,7 @@ void ErrorHandlerAdaptor::reset() {
 }
 
 void ErrorHandlerAdaptor::fatalError($String* domain, $String* key, $XMLParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		this->hadError$ = true;
 		$nc($(getErrorHandler()))->fatalError($($Util::toSAXParseException(e)));
@@ -87,6 +88,7 @@ void ErrorHandlerAdaptor::fatalError($String* domain, $String* key, $XMLParseExc
 }
 
 void ErrorHandlerAdaptor::error($String* domain, $String* key, $XMLParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		this->hadError$ = true;
 		$nc($(getErrorHandler()))->error($($Util::toSAXParseException(e)));
@@ -97,6 +99,7 @@ void ErrorHandlerAdaptor::error($String* domain, $String* key, $XMLParseExceptio
 }
 
 void ErrorHandlerAdaptor::warning($String* domain, $String* key, $XMLParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc($(getErrorHandler()))->warning($($Util::toSAXParseException(e)));
 	} catch ($SAXException&) {

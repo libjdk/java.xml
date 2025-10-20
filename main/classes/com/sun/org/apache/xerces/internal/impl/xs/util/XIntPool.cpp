@@ -68,6 +68,7 @@ $XInt* XIntPool::getXInt(int32_t value) {
 }
 
 void clinit$XIntPool($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XIntPool::fXIntPool, $new($XIntArray, XIntPool::POOL_SIZE));
 	{
 		for (int32_t i = 0; i < XIntPool::POOL_SIZE; ++i) {

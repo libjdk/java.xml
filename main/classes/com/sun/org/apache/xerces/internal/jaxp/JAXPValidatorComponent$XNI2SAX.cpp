@@ -129,6 +129,7 @@ void JAXPValidatorComponent$XNI2SAX::xmlDecl($String* version, $String* encoding
 }
 
 void JAXPValidatorComponent$XNI2SAX::startDocument($XMLLocator* locator, $String* encoding, $NamespaceContext* namespaceContext, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fNamespaceContext, namespaceContext);
 	$nc(this->fContentHandler)->setDocumentLocator($$new($LocatorProxy, locator));
 	try {
@@ -149,6 +150,7 @@ void JAXPValidatorComponent$XNI2SAX::endDocument($Augmentations* augs) {
 }
 
 void JAXPValidatorComponent$XNI2SAX::processingInstruction($String* target, $XMLString* data, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fContentHandler)->processingInstruction(target, $($nc(data)->toString()));
 	} catch ($SAXException&) {
@@ -158,6 +160,7 @@ void JAXPValidatorComponent$XNI2SAX::processingInstruction($String* target, $XML
 }
 
 void JAXPValidatorComponent$XNI2SAX::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t count = $nc(this->fNamespaceContext)->getDeclaredPrefixCount();
 		if (count > 0) {
@@ -180,6 +183,7 @@ void JAXPValidatorComponent$XNI2SAX::startElement($QName* element, $XMLAttribute
 }
 
 void JAXPValidatorComponent$XNI2SAX::endElement($QName* element, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, uri, $nc(element)->uri != nullptr ? $nc(element)->uri : ""_s);
 		$var($String, localpart, element->localpart);

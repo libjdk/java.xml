@@ -85,6 +85,7 @@ void FuncCurrent::init$() {
 }
 
 $XObject* FuncCurrent::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($SubContextList, subContextList, $nc(xctxt)->getCurrentNodeList());
 	int32_t currentNode = $DTM::NULL;
 	if (nullptr != subContextList) {

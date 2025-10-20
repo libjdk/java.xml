@@ -124,6 +124,7 @@ $AugmentationsImpl$AugmentationsItemsContainer* AugmentationsImpl$LargeContainer
 }
 
 $String* AugmentationsImpl$LargeContainer::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buff, $new($StringBuilder));
 	buff->append("LargeContainer"_s);
 	{

@@ -95,6 +95,7 @@ bool LastCall::hasLastCall() {
 }
 
 void LastCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if ($instanceOf($CompareGenerator, methodGen)) {
 		$nc(il)->append($($nc(($cast($CompareGenerator, methodGen)))->loadLastNode()));

@@ -199,6 +199,7 @@ void AttributesImpl::clear() {
 }
 
 void AttributesImpl::setAttributes($Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	clear();
 	this->length = $nc(atts)->getLength();
 	if (this->length > 0) {
@@ -315,6 +316,7 @@ void AttributesImpl::ensureCapacity(int32_t n) {
 }
 
 void AttributesImpl::badIndex(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, msg, $str({"Attempt to modify attribute at illegal index: "_s, $$str(index)}));
 	$throwNew($ArrayIndexOutOfBoundsException, msg);
 }

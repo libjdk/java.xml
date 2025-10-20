@@ -108,6 +108,7 @@ $Instruction* VoidType::POP() {
 }
 
 void VoidType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
@@ -121,11 +122,13 @@ void VoidType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void VoidType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(il)->append(static_cast<$CompoundInstruction*>($$new($PUSH, $($nc(classGen)->getConstantPool()), ""_s)));
 }
 
 void VoidType::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc($($nc(clazz)->getName()))->equals("void"_s)) {
 		$init($ErrorMsg);
 		$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);

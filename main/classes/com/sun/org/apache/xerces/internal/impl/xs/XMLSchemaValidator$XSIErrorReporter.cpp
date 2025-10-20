@@ -105,6 +105,7 @@ void XMLSchemaValidator$XSIErrorReporter::pushContext() {
 }
 
 $StringArray* XMLSchemaValidator$XSIErrorReporter::popContext() {
+	$useLocalCurrentObjectStackCache();
 	if (!this->this$0->fAugPSVI) {
 		return nullptr;
 	}
@@ -122,6 +123,7 @@ $StringArray* XMLSchemaValidator$XSIErrorReporter::popContext() {
 }
 
 $StringArray* XMLSchemaValidator$XSIErrorReporter::mergeContext() {
+	$useLocalCurrentObjectStackCache();
 	if (!this->this$0->fAugPSVI) {
 		return nullptr;
 	}

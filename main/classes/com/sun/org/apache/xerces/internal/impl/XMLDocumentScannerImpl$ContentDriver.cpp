@@ -139,6 +139,7 @@ void XMLDocumentScannerImpl$ContentDriver::endOfFileHook($EOFException* e) {
 }
 
 void XMLDocumentScannerImpl$ContentDriver::resolveExternalSubsetAndRead() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->this$0->fDTDDescription)->setValues(nullptr, nullptr, $($nc($($nc(this->this$0->fEntityManager)->getCurrentResourceIdentifier()))->getExpandedSystemId()), nullptr);
 	$nc(this->this$0->fDTDDescription)->setRootName($nc(this->this$0->fElementQName)->rawname);
 	$var($XMLInputSource, src, $nc(this->this$0->fExternalSubsetResolver)->getExternalSubset(this->this$0->fDTDDescription));

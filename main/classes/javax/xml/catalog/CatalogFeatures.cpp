@@ -207,6 +207,7 @@ $String* CatalogFeatures::get($CatalogFeatures$Feature* cf) {
 }
 
 void CatalogFeatures::init() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, values, $new($StringArray, $($CatalogFeatures$Feature::values())->length));
 	$set(this, states, $new($CatalogFeatures$StateArray, $($CatalogFeatures$Feature::values())->length));
 	{
@@ -225,6 +226,7 @@ void CatalogFeatures::init() {
 }
 
 void CatalogFeatures::setProperties($CatalogFeatures$Builder* builder) {
+	$useLocalCurrentObjectStackCache();
 	$nc($($nc($($nc($nc(builder)->values)->entrySet()))->stream()))->forEach(static_cast<$Consumer*>($$new(CatalogFeatures$$Lambda$lambda$setProperties$0, this)));
 }
 
@@ -243,6 +245,7 @@ void CatalogFeatures::setProperty($CatalogFeatures$Feature* feature, $CatalogFea
 }
 
 void CatalogFeatures::readSystemProperties() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($CatalogFeatures$FeatureArray, arr$, $CatalogFeatures$Feature::values());
 		int32_t len$ = $nc(arr$)->length;
@@ -280,6 +283,7 @@ $CatalogFeatures$Builder* CatalogFeatures::builder() {
 }
 
 void CatalogFeatures::lambda$setProperties$0($Map$Entry* entry) {
+	$useLocalCurrentObjectStackCache();
 	$var($CatalogFeatures$Feature, var$0, $cast($CatalogFeatures$Feature, $nc(entry)->getKey()));
 	$init($CatalogFeatures$State);
 	$var($CatalogFeatures$State, var$1, $CatalogFeatures$State::APIPROPERTY);

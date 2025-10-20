@@ -801,6 +801,7 @@ void XSLTErrorResources_zh_CN::init$() {
 }
 
 $ObjectArray2* XSLTErrorResources_zh_CN::getContents() {
+	$useLocalCurrentObjectStackCache();
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of("ER0000"_s),

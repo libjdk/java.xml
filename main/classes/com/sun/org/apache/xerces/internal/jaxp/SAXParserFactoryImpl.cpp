@@ -126,6 +126,7 @@ void SAXParserFactoryImpl::init$() {
 }
 
 $SAXParser* SAXParserFactoryImpl::newSAXParser() {
+	$useLocalCurrentObjectStackCache();
 	$var($SAXParser, saxParserImpl, nullptr);
 	try {
 		$assign(saxParserImpl, $new($SAXParserImpl, this, this->features, this->fSecureProcess));
@@ -137,6 +138,7 @@ $SAXParser* SAXParserFactoryImpl::newSAXParser() {
 }
 
 $SAXParserImpl* SAXParserFactoryImpl::newSAXParserImpl() {
+	$useLocalCurrentObjectStackCache();
 	$var($SAXParserImpl, saxParserImpl, nullptr);
 	try {
 		$assign(saxParserImpl, $new($SAXParserImpl, this, this->features));
@@ -154,6 +156,7 @@ $SAXParserImpl* SAXParserFactoryImpl::newSAXParserImpl() {
 }
 
 void SAXParserFactoryImpl::setFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -181,6 +184,7 @@ void SAXParserFactoryImpl::setFeature($String* name, bool value) {
 }
 
 bool SAXParserFactoryImpl::getFeature($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}

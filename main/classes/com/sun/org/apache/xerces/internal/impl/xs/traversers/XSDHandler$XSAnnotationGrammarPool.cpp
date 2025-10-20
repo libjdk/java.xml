@@ -99,6 +99,7 @@ void XSDHandler$XSAnnotationGrammarPool::init$() {
 }
 
 $GrammarArray* XSDHandler$XSAnnotationGrammarPool::retrieveInitialGrammarSet($String* grammarType) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLGrammarDescription);
 	if (grammarType == $XMLGrammarDescription::XML_SCHEMA) {
 		if (this->fInitialGrammarSet == nullptr) {
@@ -130,6 +131,7 @@ void XSDHandler$XSAnnotationGrammarPool::cacheGrammars($String* grammarType, $Gr
 }
 
 $Grammar* XSDHandler$XSAnnotationGrammarPool::retrieveGrammar($XMLGrammarDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLGrammarDescription);
 	if ($nc(desc)->getGrammarType() == $XMLGrammarDescription::XML_SCHEMA) {
 		$var($String, tns, $nc(($cast($XMLSchemaDescription, desc)))->getTargetNamespace());

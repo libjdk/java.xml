@@ -128,6 +128,7 @@ void CatalogResolverImpl::init$($Catalog* catalog) {
 }
 
 $InputSource* CatalogResolverImpl::resolveEntity($String* publicId$renamed, $String* systemId$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, systemId, systemId$renamed);
 	$var($String, publicId, publicId$renamed);
 	$CatalogMessages::reportNPEOnNull("systemId"_s, systemId);
@@ -166,6 +167,7 @@ $InputSource* CatalogResolverImpl::resolveEntity($String* publicId$renamed, $Str
 }
 
 $Source* CatalogResolverImpl::resolve($String* href$renamed, $String* base$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, href, href$renamed);
 	$var($String, base, base$renamed);
 	$CatalogMessages::reportNPEOnNull("href"_s, href);
@@ -231,6 +233,7 @@ $Source* CatalogResolverImpl::resolve($String* href$renamed, $String* base$renam
 }
 
 void CatalogResolverImpl::setEntityResolver($SAXSource* source) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLReader, reader, $nc(source)->getXMLReader());
 	if (reader == nullptr) {
 		$var($SAXParserFactory, spFactory, $new($SAXParserFactoryImpl));
@@ -255,6 +258,7 @@ void CatalogResolverImpl::setEntityResolver($SAXSource* source) {
 }
 
 $Object* CatalogResolverImpl::resolveEntity($String* publicId, $String* systemId, $String* baseUri, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputSource, is, resolveEntity(publicId, systemId));
 	if (is != nullptr && !is->isEmpty()) {
 		try {
@@ -283,6 +287,7 @@ $Object* CatalogResolverImpl::resolveEntity($String* publicId, $String* systemId
 }
 
 $LSInput* CatalogResolverImpl::resolveResource($String* type, $String* namespaceURI, $String* publicId, $String* systemId, $String* baseURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputSource, is, resolveEntity(publicId, systemId));
 	if (is != nullptr && !is->isEmpty()) {
 		return $new($CatalogResolverImpl$LSInputImpl, this, $(is->getSystemId()));

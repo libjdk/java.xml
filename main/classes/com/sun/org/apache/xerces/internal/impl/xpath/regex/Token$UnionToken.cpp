@@ -179,6 +179,7 @@ void Token$UnionToken::init$(int32_t type) {
 }
 
 void Token$UnionToken::addChild($Token* tok) {
+	$useLocalCurrentObjectStackCache();
 	if (tok == nullptr) {
 		return;
 	}
@@ -243,6 +244,7 @@ $Token* Token$UnionToken::getChild(int32_t index) {
 }
 
 $String* Token$UnionToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	if (this->type == $Token::CONCAT) {
 		if ($nc(this->children)->size() == 2) {
@@ -284,6 +286,7 @@ $String* Token$UnionToken::toString(int32_t options) {
 }
 
 void Token$UnionToken::writeObject($ObjectOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$var($Vector, vChildren, (this->children == nullptr) ? ($Vector*)nullptr : $new($Vector, static_cast<$Collection*>(this->children)));
 	$var($ObjectOutputStream$PutField, pf, $nc(out)->putFields());
 	$nc(pf)->put("children"_s, $of(vChildren));
@@ -291,6 +294,7 @@ void Token$UnionToken::writeObject($ObjectOutputStream* out) {
 }
 
 void Token$UnionToken::readObject($ObjectInputStream* in) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectInputStream$GetField, gf, $nc(in)->readFields());
 	$var($Vector, vChildren, $cast($Vector, $nc(gf)->get("children"_s, ($Object*)nullptr)));
 	if (vChildren != nullptr) {

@@ -531,6 +531,7 @@ void ToUnknownStream::endDocument() {
 }
 
 void ToUnknownStream::endElement($String* namespaceURI$renamed, $String* localName$renamed, $String* qName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localName, localName$renamed);
 	$var($String, namespaceURI, namespaceURI$renamed);
 	if (this->m_firstTagNotEmitted) {
@@ -607,6 +608,7 @@ void ToUnknownStream::startEntity($String* name) {
 }
 
 void ToUnknownStream::initStreamOutput() {
+	$useLocalCurrentObjectStackCache();
 	bool firstElementIsHTML = isFirstElemHTML();
 	if (firstElementIsHTML) {
 		$var($SerializationHandler, oldHandler, this->m_handler);
@@ -637,6 +639,7 @@ void ToUnknownStream::initStreamOutput() {
 }
 
 void ToUnknownStream::emitFirstTag() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_firstElementName != nullptr) {
 		if (this->m_wrapped_handler_not_initialized) {
 			initStreamOutput();
@@ -677,6 +680,7 @@ $String* ToUnknownStream::getPrefixPartUnknown($String* qname) {
 }
 
 bool ToUnknownStream::isFirstElemHTML() {
+	$useLocalCurrentObjectStackCache();
 	bool isHTML = false;
 	isHTML = $nc($(getLocalNameUnknown(this->m_firstElementName)))->equalsIgnoreCase("html"_s);
 	if (isHTML && this->m_firstElementURI != nullptr && !$nc(ToUnknownStream::EMPTYSTRING)->equals(this->m_firstElementURI)) {
@@ -723,6 +727,7 @@ void ToUnknownStream::flushPending() {
 }
 
 void ToUnknownStream::flush() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->m_firstTagNotEmitted) {
 			emitFirstTag();
@@ -775,6 +780,7 @@ void ToUnknownStream::setSourceLocator($SourceLocator* locator) {
 }
 
 void ToUnknownStream::firePseudoElement($String* elementName) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_tracer != nullptr) {
 		$var($StringBuffer, sb, $new($StringBuffer));
 		sb->append(u'<');

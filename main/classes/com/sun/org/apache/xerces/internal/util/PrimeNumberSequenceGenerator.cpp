@@ -121,6 +121,7 @@ void PrimeNumberSequenceGenerator::init$() {
 
 void PrimeNumberSequenceGenerator::generateSequence($ints* arrayToFill) {
 	$init(PrimeNumberSequenceGenerator);
+	$useLocalCurrentObjectStackCache();
 	$var($Random, r, $new($Random));
 	$nc($($IntStream::range(0, $nc(arrayToFill)->length)))->forEach(static_cast<$IntConsumer*>($$new(PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0, arrayToFill, r)));
 }

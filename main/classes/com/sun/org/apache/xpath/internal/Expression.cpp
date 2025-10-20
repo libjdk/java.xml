@@ -173,11 +173,13 @@ bool Expression::isNodesetExpr() {
 }
 
 int32_t Expression::asNode($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMIterator, iter, $nc($(execute(xctxt)))->iter());
 	return $nc(iter)->nextNode();
 }
 
 $DTMIterator* Expression::asIterator($XPathContext* xctxt, int32_t contextNode) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		$var($DTMIterator, var$2, nullptr);
@@ -203,6 +205,7 @@ $DTMIterator* Expression::asIterator($XPathContext* xctxt, int32_t contextNode) 
 }
 
 $DTMIterator* Expression::asIteratorRaw($XPathContext* xctxt, int32_t contextNode) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		$var($DTMIterator, var$2, nullptr);
@@ -246,6 +249,7 @@ bool Expression::isSameClass(Expression* expr) {
 }
 
 void Expression::warn($XPathContext* xctxt, $String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHWarning(msg, args));
 	if (nullptr != xctxt) {
 		$var($ErrorListener, eh, xctxt->getErrorListener());
@@ -254,6 +258,7 @@ void Expression::warn($XPathContext* xctxt, $String* msg, $ObjectArray* args) {
 }
 
 void Expression::assertion(bool b, $String* msg) {
+	$useLocalCurrentObjectStackCache();
 	if (!b) {
 		$init($XPATHErrorResources);
 		$var($String, fMsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_INCORRECT_PROGRAMMER_ASSERTION, $$new($ObjectArray, {$of(msg)})));
@@ -262,6 +267,7 @@ void Expression::assertion(bool b, $String* msg) {
 }
 
 void Expression::error($XPathContext* xctxt, $String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHMessage(msg, args));
 	if (nullptr != xctxt) {
 		$var($ErrorListener, eh, xctxt->getErrorListener());

@@ -122,6 +122,7 @@ void DocumentBuilderFactoryImpl::init$() {
 }
 
 $DocumentBuilder* DocumentBuilderFactoryImpl::newDocumentBuilder() {
+	$useLocalCurrentObjectStackCache();
 	if (this->grammar != nullptr && this->attributes != nullptr) {
 		$init($JAXPConstants);
 		if ($nc(this->attributes)->containsKey($JAXPConstants::JAXP_SCHEMA_LANGUAGE)) {
@@ -142,6 +143,7 @@ $DocumentBuilder* DocumentBuilderFactoryImpl::newDocumentBuilder() {
 }
 
 void DocumentBuilderFactoryImpl::setAttribute($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		if (this->attributes != nullptr) {
 			$nc(this->attributes)->remove(name);
@@ -172,6 +174,7 @@ void DocumentBuilderFactoryImpl::setAttribute($String* name, Object$* value) {
 }
 
 $Object* DocumentBuilderFactoryImpl::getAttribute($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, pName, nullptr);
 	if (($assign(pName, $nc(this->fSecurityManager)->find(name))) != nullptr) {
 		return $of($nc(this->attributes)->get(pName));
@@ -219,6 +222,7 @@ void DocumentBuilderFactoryImpl::setXIncludeAware(bool state) {
 }
 
 bool DocumentBuilderFactoryImpl::getFeature($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLConstants);
 	if ($nc(name)->equals($XMLConstants::FEATURE_SECURE_PROCESSING)) {
 		return this->fSecureProcess;
@@ -240,6 +244,7 @@ bool DocumentBuilderFactoryImpl::getFeature($String* name) {
 }
 
 void DocumentBuilderFactoryImpl::setFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (this->features == nullptr) {
 		$set(this, features, $new($HashMap));
 	}

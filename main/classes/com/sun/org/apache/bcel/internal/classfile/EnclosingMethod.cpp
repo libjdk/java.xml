@@ -113,11 +113,13 @@ void EnclosingMethod::setEnclosingMethodIndex(int32_t idx) {
 }
 
 $ConstantClass* EnclosingMethod::getEnclosingClass() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantClass, c, $cast($ConstantClass, $nc($($Attribute::getConstantPool()))->getConstant(this->classIndex, $Const::CONSTANT_Class)));
 	return c;
 }
 
 $ConstantNameAndType* EnclosingMethod::getEnclosingMethod() {
+	$useLocalCurrentObjectStackCache();
 	if (this->methodIndex == 0) {
 		return nullptr;
 	}

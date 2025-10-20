@@ -127,6 +127,7 @@ void LineNumber::setStartPC(int32_t startPc) {
 }
 
 $String* LineNumber::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"LineNumber("_s, $$str(this->startPc), ", "_s, $$str(this->lineNumber), ")"_s});
 }
 

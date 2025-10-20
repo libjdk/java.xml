@@ -159,6 +159,7 @@ bool ObjectFactory::isDebugEnabled() {
 
 void ObjectFactory::debugPrintln($Supplier* msgGen) {
 	$init(ObjectFactory);
+	$useLocalCurrentObjectStackCache();
 	if (ObjectFactory::DEBUG) {
 		$init($System);
 		$nc($System::err)->println($$str({"XERCES: "_s, $cast($String, $($nc(msgGen)->get()))}));
@@ -167,6 +168,7 @@ void ObjectFactory::debugPrintln($Supplier* msgGen) {
 
 $ClassLoader* ObjectFactory::findClassLoader() {
 	$init(ObjectFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if ($System::getSecurityManager() != nullptr) {
 		return nullptr;
@@ -208,6 +210,7 @@ $Object* ObjectFactory::newInstance($String* className, bool doFallback) {
 
 $Object* ObjectFactory::newInstance($String* className, $ClassLoader* cl, bool doFallback) {
 	$init(ObjectFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		$Class* providerClass = findProviderClass(className, cl, doFallback);
@@ -231,6 +234,7 @@ $Class* ObjectFactory::findProviderClass($String* className, bool doFallback) {
 
 $Class* ObjectFactory::findProviderClass($String* className, $ClassLoader* cl$renamed, bool doFallback) {
 	$init(ObjectFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, cl, cl$renamed);
 	$beforeCallerSensitive();
 	$var($SecurityManager, security, $System::getSecurityManager());

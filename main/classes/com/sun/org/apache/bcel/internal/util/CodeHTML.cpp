@@ -177,6 +177,7 @@ $Object* allocate$CodeHTML($Class* clazz) {
 bool CodeHTML::wide = false;
 
 void CodeHTML::init$($String* dir, $String* class_name, $MethodArray* methods, $ConstantPool* constant_pool, $ConstantHTML* constant_html) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, className, class_name);
 	$set(this, constantPool, constant_pool);
 	$set(this, constantHtml, constant_html);
@@ -190,6 +191,7 @@ void CodeHTML::init$($String* dir, $String* class_name, $MethodArray* methods, $
 }
 
 $String* CodeHTML::codeToHTML($ByteSequence* bytes, int32_t method_number) {
+	$useLocalCurrentObjectStackCache();
 	int16_t opcode = (int16_t)$nc(bytes)->readUnsignedByte();
 	$var($String, name, nullptr);
 	$var($String, signature, nullptr);
@@ -516,6 +518,7 @@ $String* CodeHTML::codeToHTML($ByteSequence* bytes, int32_t method_number) {
 }
 
 void CodeHTML::findGotos($ByteSequence* bytes, $Code* code) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$set(this, gotoSet, $new($BitSet, $nc(bytes)->available()));
 	int32_t opcode = 0;
@@ -666,6 +669,7 @@ void CodeHTML::findGotos($ByteSequence* bytes, $Code* code) {
 }
 
 void CodeHTML::writeMethod($Method* method, int32_t method_number) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, signature, $nc(method)->getSignature());
 	$var($StringArray, args, $Utility::methodSignatureArgumentTypes(signature, false));
 	$var($String, type, $Utility::methodSignatureReturnType(signature, false));

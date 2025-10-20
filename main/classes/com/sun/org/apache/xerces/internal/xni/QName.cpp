@@ -121,6 +121,7 @@ bool QName::equals(Object$* object) {
 }
 
 $String* QName::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, str, $new($StringBuffer));
 	bool comma = false;
 	if (this->prefix != nullptr) {

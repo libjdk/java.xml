@@ -115,6 +115,7 @@ bool DTMDefaultBaseIterators$AncestorIterator::isReverse() {
 }
 
 $DTMAxisIterator* DTMDefaultBaseIterators$AncestorIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	this->_isRestartable = false;
 	try {
 		$var(DTMDefaultBaseIterators$AncestorIterator, clone, $cast(DTMDefaultBaseIterators$AncestorIterator, $DTMDefaultBaseIterators$InternalAxisIteratorBase::clone()));

@@ -191,6 +191,7 @@ $String* CommentEvent::getText() {
 }
 
 void CommentEvent::writeAsEncodedUnicodeEx($Writer* writer) {
+	$useLocalCurrentObjectStackCache();
 	$nc(writer)->write($$str({"<!--"_s, $(getText()), "-->"_s}));
 }
 

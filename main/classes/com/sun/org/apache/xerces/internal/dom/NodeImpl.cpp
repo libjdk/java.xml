@@ -282,6 +282,7 @@ $Node* NodeImpl::appendChild($Node* newChild) {
 }
 
 $Node* NodeImpl::cloneNode(bool deep) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -405,6 +406,7 @@ void NodeImpl::normalize() {
 }
 
 bool NodeImpl::isSupported($String* feature, $String* version) {
+	$useLocalCurrentObjectStackCache();
 	return $nc($($nc($(ownerDocument()))->getImplementation()))->hasFeature(feature, version);
 }
 
@@ -442,6 +444,7 @@ $String* NodeImpl::getBaseURI() {
 }
 
 int16_t NodeImpl::compareTreePosition($Node* other) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(this, other)) {
 		return ((int16_t)(NodeImpl::TREE_POSITION_SAME_NODE | NodeImpl::TREE_POSITION_EQUIVALENT));
 	}
@@ -542,6 +545,7 @@ int16_t NodeImpl::compareTreePosition($Node* other) {
 }
 
 int16_t NodeImpl::compareDocumentPosition($Node* other) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(this, other)) {
 		return (int16_t)0;
 	}
@@ -773,6 +777,7 @@ bool NodeImpl::isSameNode($Node* other) {
 }
 
 bool NodeImpl::isDefaultNamespace($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	int16_t type = this->getNodeType();
 	switch (type) {
 	case $Node::ELEMENT_NODE:
@@ -847,6 +852,7 @@ bool NodeImpl::isDefaultNamespace($String* namespaceURI) {
 }
 
 $String* NodeImpl::lookupPrefix($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if (namespaceURI == nullptr) {
 		return nullptr;
 	}
@@ -902,6 +908,7 @@ $String* NodeImpl::lookupPrefix($String* namespaceURI) {
 }
 
 $String* NodeImpl::lookupNamespaceURI($String* specifiedPrefix) {
+	$useLocalCurrentObjectStackCache();
 	int16_t type = this->getNodeType();
 	switch (type) {
 	case $Node::ELEMENT_NODE:
@@ -998,6 +1005,7 @@ $Node* NodeImpl::getElementAncestor($Node* currentNode) {
 }
 
 $String* NodeImpl::lookupNamespacePrefix($String* namespaceURI, $ElementImpl* el) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, this->getNamespaceURI());
 	$var($String, prefix, this->getPrefix());
 	if (namespace$ != nullptr && namespace$->equals(namespaceURI)) {
@@ -1040,6 +1048,7 @@ $String* NodeImpl::lookupNamespacePrefix($String* namespaceURI, $ElementImpl* el
 }
 
 bool NodeImpl::isEqualNode($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(arg, this)) {
 		return true;
 	}
@@ -1223,6 +1232,7 @@ void NodeImpl::isIdAttribute(bool value) {
 }
 
 $String* NodeImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"["_s, $(getNodeName()), ": "_s}));
 	$var($String, var$0, $$concat(var$1, $(getNodeValue())));
 	return $concat(var$0, "]");

@@ -103,6 +103,7 @@ $NodeCounter* MultipleNodeCounter::setStartNode(int32_t node) {
 }
 
 $String* MultipleNodeCounter::getCounter() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_value != $Integer::MIN_VALUE) {
 		if (this->_value == 0) {
 			return "0"_s;

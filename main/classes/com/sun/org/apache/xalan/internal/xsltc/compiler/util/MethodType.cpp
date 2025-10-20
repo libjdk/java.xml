@@ -118,6 +118,7 @@ void MethodType::init$($Type* resultType, $List* argsType) {
 }
 
 $String* MethodType::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, result, $new($StringBuffer, "method{"_s));
 	if (this->_argsType != nullptr) {
 		int32_t count = $nc(this->_argsType)->size();
@@ -139,6 +140,7 @@ $String* MethodType::toSignature() {
 }
 
 $String* MethodType::toSignature($String* lastArgSig) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buffer, $new($StringBuffer));
 	buffer->append(u'(');
 	if (this->_argsType != nullptr) {
@@ -155,6 +157,7 @@ $1Type* MethodType::toJCType() {
 }
 
 bool MethodType::identicalTo($Type* other) {
+	$useLocalCurrentObjectStackCache();
 	bool result = false;
 	if ($instanceOf(MethodType, other)) {
 		$var(MethodType, temp, $cast(MethodType, other));
@@ -172,6 +175,7 @@ bool MethodType::identicalTo($Type* other) {
 }
 
 int32_t MethodType::distanceTo($Type* other) {
+	$useLocalCurrentObjectStackCache();
 	int32_t result = $Integer::MAX_VALUE;
 	if ($instanceOf(MethodType, other)) {
 		$var(MethodType, mtype, $cast(MethodType, other));

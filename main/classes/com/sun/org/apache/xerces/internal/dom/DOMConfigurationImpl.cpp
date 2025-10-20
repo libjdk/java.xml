@@ -490,6 +490,7 @@ void DOMConfigurationImpl::init$($SymbolTable* symbolTable) {
 }
 
 void DOMConfigurationImpl::init$($SymbolTable* symbolTable$renamed, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, symbolTable, symbolTable$renamed);
 	$ParserConfigurationSettings::init$(parentSettings);
 	this->features = (int16_t)0;
@@ -701,6 +702,7 @@ $Locale* DOMConfigurationImpl::getLocale() {
 }
 
 void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	bool found = true;
 	if ($instanceOf($Boolean, value)) {
 		bool state = $nc(($cast($Boolean, value)))->booleanValue();
@@ -879,6 +881,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 }
 
 $Object* DOMConfigurationImpl::getParameter($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if ($nc(name)->equalsIgnoreCase($Constants::DOM_COMMENTS)) {
 		$init($Boolean);
@@ -1083,6 +1086,7 @@ $DOMStringList* DOMConfigurationImpl::getParameterNames() {
 }
 
 void DOMConfigurationImpl::reset() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fValidationManager != nullptr) {
 		$nc(this->fValidationManager)->reset();
 	}
@@ -1108,6 +1112,7 @@ $PropertyState* DOMConfigurationImpl::checkProperty($String* propertyId) {
 }
 
 void DOMConfigurationImpl::addComponent($XMLComponent* component) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fComponents)->contains(component)) {
 		return;
 	}
@@ -1136,6 +1141,7 @@ void DOMConfigurationImpl::setDTDValidatorFactory($String* version) {
 
 $DOMException* DOMConfigurationImpl::newFeatureNotSupportedError($String* name) {
 	$init(DOMConfigurationImpl);
+	$useLocalCurrentObjectStackCache();
 	$init($DOMMessageFormatter);
 	$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "FEATURE_NOT_SUPPORTED"_s, $$new($ObjectArray, {$of(name)})));
 	return $new($DOMException, $DOMException::NOT_SUPPORTED_ERR, msg);
@@ -1143,6 +1149,7 @@ $DOMException* DOMConfigurationImpl::newFeatureNotSupportedError($String* name) 
 
 $DOMException* DOMConfigurationImpl::newFeatureNotFoundError($String* name) {
 	$init(DOMConfigurationImpl);
+	$useLocalCurrentObjectStackCache();
 	$init($DOMMessageFormatter);
 	$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "FEATURE_NOT_FOUND"_s, $$new($ObjectArray, {$of(name)})));
 	return $new($DOMException, $DOMException::NOT_FOUND_ERR, msg);
@@ -1150,6 +1157,7 @@ $DOMException* DOMConfigurationImpl::newFeatureNotFoundError($String* name) {
 
 $DOMException* DOMConfigurationImpl::newTypeMismatchError($String* name) {
 	$init(DOMConfigurationImpl);
+	$useLocalCurrentObjectStackCache();
 	$init($DOMMessageFormatter);
 	$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "TYPE_MISMATCH_ERR"_s, $$new($ObjectArray, {$of(name)})));
 	return $new($DOMException, $DOMException::TYPE_MISMATCH_ERR, msg);

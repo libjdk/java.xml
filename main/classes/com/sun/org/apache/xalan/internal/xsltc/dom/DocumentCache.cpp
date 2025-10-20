@@ -143,6 +143,7 @@ void DocumentCache::init$(int32_t size) {
 }
 
 void DocumentCache::init$(int32_t size, $XSLTCDTMManager* dtmManager) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _dtmManager, dtmManager);
 	this->_count = 0;
 	this->_current = 0;
@@ -168,6 +169,7 @@ void DocumentCache::init$(int32_t size, $XSLTCDTMManager* dtmManager) {
 }
 
 int64_t DocumentCache::getLastModified($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($URL, url, $new($URL, uri));
 		$var($URLConnection, connection, url->openConnection());
@@ -217,6 +219,7 @@ void DocumentCache::replaceDocument($String* uri, $DocumentCache$CachedDocument*
 }
 
 $DOM* DocumentCache::retrieveDocument($String* baseURI, $String* href, $Translet* trs) {
+	$useLocalCurrentObjectStackCache();
 	$var($DocumentCache$CachedDocument, doc, nullptr);
 	$var($String, uri, href);
 	if (baseURI != nullptr && !baseURI->equals(""_s)) {
@@ -261,6 +264,7 @@ $DOM* DocumentCache::retrieveDocument($String* baseURI, $String* href, $Translet
 }
 
 void DocumentCache::getStatistics($PrintWriter* out) {
+	$useLocalCurrentObjectStackCache();
 	$nc(out)->println("<h2>DOM cache statistics</h2><center><table border=\"2\"><tr><td><b>Document URI</b></td><td><center><b>Build time</b></center></td><td><center><b>Access count</b></center></td><td><center><b>Last accessed</b></center></td><td><center><b>Last modified</b></center></td></tr>"_s);
 	for (int32_t i = 0; i < this->_count; ++i) {
 		$var($DocumentCache$CachedDocument, doc, $cast($DocumentCache$CachedDocument, $nc(this->_references)->get($nc(this->_URIs)->get(i))));

@@ -85,6 +85,7 @@ ObjectType* ObjectType::getInstance($String* className) {
 }
 
 void ObjectType::init$($String* className) {
+	$useLocalCurrentObjectStackCache();
 	$ReferenceType::init$($Const::T_REFERENCE, $$str({"L"_s, $($nc(className)->replace(u'.', u'/')), ";"_s}));
 	$set(this, className, $nc(className)->replace(u'/', u'.'));
 }
@@ -102,6 +103,7 @@ bool ObjectType::equals(Object$* type) {
 }
 
 bool ObjectType::referencesClass() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($JavaClass, jc, $Repository::lookupClass(this->className));
 		return $nc(jc)->isClass();
@@ -113,6 +115,7 @@ bool ObjectType::referencesClass() {
 }
 
 bool ObjectType::referencesInterface() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($JavaClass, jc, $Repository::lookupClass(this->className));
 		return !$nc(jc)->isClass();
@@ -142,6 +145,7 @@ bool ObjectType::subclassOf(ObjectType* superclass) {
 }
 
 bool ObjectType::accessibleTo(ObjectType* accessor) {
+	$useLocalCurrentObjectStackCache();
 	$var($JavaClass, jc, $Repository::lookupClass(this->className));
 	if ($nc(jc)->isPublic()) {
 		return true;

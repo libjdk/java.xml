@@ -106,6 +106,7 @@ void LocalVariableGen::finalize() {
 }
 
 void LocalVariableGen::init$(int32_t index, $String* name, $Type* type, $InstructionHandle* start, $InstructionHandle* end) {
+	$useLocalCurrentObjectStackCache();
 	if ((index < 0) || (index > $Const::MAX_SHORT)) {
 		$throwNew($ClassGenException, $$str({"Invalid index index: "_s, $$str(index)}));
 	}
@@ -124,6 +125,7 @@ void LocalVariableGen::init$(int32_t index, $String* name, $Type* type, $Instruc
 }
 
 $LocalVariable* LocalVariableGen::getLocalVariable($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int32_t start_pc = 0;
 	int32_t length = 0;
 	if ((this->start != nullptr) && (this->end != nullptr)) {

@@ -180,6 +180,7 @@ void SAX2StAXEventWriter::startDocument() {
 }
 
 void SAX2StAXEventWriter::writeStartDocument() {
+	$useLocalCurrentObjectStackCache();
 	$SAX2StAXBaseWriter::writeStartDocument();
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createStartDocument(this->encoding, this->xmlVersion))));
@@ -191,6 +192,7 @@ void SAX2StAXEventWriter::writeStartDocument() {
 }
 
 void SAX2StAXEventWriter::endDocument() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->eventFactory)->setLocation($(getCurrentLocation()));
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createEndDocument())));
@@ -203,6 +205,7 @@ void SAX2StAXEventWriter::endDocument() {
 }
 
 void SAX2StAXEventWriter::startElement($String* uri, $String* localName, $String* qName, $Attributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	if (this->needToCallStartDocument) {
 		writeStartDocument();
 	}
@@ -243,6 +246,7 @@ void SAX2StAXEventWriter::startElement($String* uri, $String* localName, $String
 }
 
 void SAX2StAXEventWriter::endElement($String* uri, $String* localName, $String* qName) {
+	$useLocalCurrentObjectStackCache();
 	$SAX2StAXBaseWriter::endElement(uri, localName, qName);
 	$nc(this->eventFactory)->setLocation($(getCurrentLocation()));
 	$var($StringArray, qname, $new($StringArray, {
@@ -261,6 +265,7 @@ void SAX2StAXEventWriter::endElement($String* uri, $String* localName, $String* 
 }
 
 void SAX2StAXEventWriter::comment($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (this->needToCallStartDocument) {
 		writeStartDocument();
 	}
@@ -275,6 +280,7 @@ void SAX2StAXEventWriter::comment($chars* ch, int32_t start, int32_t length) {
 }
 
 void SAX2StAXEventWriter::characters($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$SAX2StAXBaseWriter::characters(ch, start, length);
 	try {
 		if (!this->isCDATA) {
@@ -293,6 +299,7 @@ void SAX2StAXEventWriter::ignorableWhitespace($chars* ch, int32_t start, int32_t
 }
 
 void SAX2StAXEventWriter::processingInstruction($String* target, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	if (this->needToCallStartDocument) {
 		writeStartDocument();
 	}
@@ -306,6 +313,7 @@ void SAX2StAXEventWriter::processingInstruction($String* target, $String* data) 
 }
 
 void SAX2StAXEventWriter::endCDATA() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->eventFactory)->setLocation($(getCurrentLocation()));
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createCData($($nc(this->CDATABuffer)->toString())))));
@@ -317,6 +325,7 @@ void SAX2StAXEventWriter::endCDATA() {
 }
 
 void SAX2StAXEventWriter::createStartEvents($Attributes* attributes, $CollectionArray* events) {
+	$useLocalCurrentObjectStackCache();
 	$var($Map, nsMap, nullptr);
 	$var($List, attrs, nullptr);
 	if (this->namespaces != nullptr) {

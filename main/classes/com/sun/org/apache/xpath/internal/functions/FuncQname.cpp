@@ -63,6 +63,7 @@ void FuncQname::init$() {
 }
 
 $XObject* FuncQname::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t context = getArg0AsNode(xctxt);
 	$var($XObject, val, nullptr);
 	if ($DTM::NULL != context) {

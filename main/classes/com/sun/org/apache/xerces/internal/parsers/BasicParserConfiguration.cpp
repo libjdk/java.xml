@@ -241,6 +241,7 @@ void BasicParserConfiguration::init$($SymbolTable* symbolTable) {
 }
 
 void BasicParserConfiguration::init$($SymbolTable* symbolTable$renamed, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, symbolTable, symbolTable$renamed);
 	$ParserConfigurationSettings::init$(parentSettings);
 	$set(this, fComponents, $new($ArrayList));
@@ -276,6 +277,7 @@ void BasicParserConfiguration::init$($SymbolTable* symbolTable$renamed, $XMLComp
 }
 
 void BasicParserConfiguration::addComponent($XMLComponent* component) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fComponents)->contains(component)) {
 		return;
 	}
@@ -351,6 +353,7 @@ $XMLErrorHandler* BasicParserConfiguration::getErrorHandler() {
 }
 
 void BasicParserConfiguration::setFeature($String* featureId, bool state) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -364,6 +367,7 @@ void BasicParserConfiguration::setFeature($String* featureId, bool state) {
 }
 
 void BasicParserConfiguration::setProperty($String* propertyId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -385,6 +389,7 @@ $Locale* BasicParserConfiguration::getLocale() {
 }
 
 void BasicParserConfiguration::reset() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
 		for (; $nc(i$)->hasNext();) {

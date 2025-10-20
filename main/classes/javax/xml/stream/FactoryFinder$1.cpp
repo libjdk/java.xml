@@ -79,6 +79,7 @@ void FactoryFinder$1::init$($ClassLoader* val$cl, $Class* val$type) {
 }
 
 $Object* FactoryFinder$1::run() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ServiceLoader, serviceLoader, nullptr);
 	if (this->val$cl == nullptr) {

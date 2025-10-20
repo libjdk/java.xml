@@ -86,6 +86,7 @@ $Token* Token$ConcatToken::getChild(int32_t index) {
 }
 
 $String* Token$ConcatToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	if ($nc(this->child2)->type == $Token::CLOSURE && $nc(this->child2)->getChild(0) == this->child) {
 		$assign(ret, $str({$($nc(this->child)->toString(options)), "+"_s}));

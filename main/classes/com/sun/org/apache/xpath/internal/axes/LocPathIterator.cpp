@@ -261,12 +261,14 @@ $DTMManager* LocPathIterator::getDTMManager() {
 }
 
 $XObject* LocPathIterator::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XNodeSet, iter, $new($XNodeSet, $cast(LocPathIterator, $($nc(this->m_clones)->getInstance()))));
 	iter->setRoot($nc(xctxt)->getCurrentNode(), xctxt);
 	return iter;
 }
 
 void LocPathIterator::executeCharsToContentHandler($XPathContext* xctxt, $ContentHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	$var(LocPathIterator, clone, $cast(LocPathIterator, $nc(this->m_clones)->getInstance()));
 	int32_t current = $nc(xctxt)->getCurrentNode();
 	$nc(clone)->setRoot(current, xctxt);
@@ -279,6 +281,7 @@ void LocPathIterator::executeCharsToContentHandler($XPathContext* xctxt, $Conten
 }
 
 $DTMIterator* LocPathIterator::asIterator($XPathContext* xctxt, int32_t contextNode) {
+	$useLocalCurrentObjectStackCache();
 	$var($XNodeSet, iter, $new($XNodeSet, $cast(LocPathIterator, $($nc(this->m_clones)->getInstance()))));
 	iter->setRoot(contextNode, xctxt);
 	return iter;
@@ -310,6 +313,7 @@ bool LocPathIterator::getIsTopLevel() {
 }
 
 void LocPathIterator::setRoot(int32_t context, Object$* environment) {
+	$useLocalCurrentObjectStackCache();
 	this->m_context = context;
 	$var($XPathContext, xctxt, $cast($XPathContext, environment));
 	$set(this, m_execContext, xctxt);
@@ -366,6 +370,7 @@ void LocPathIterator::setItem(int32_t node, int32_t index) {
 }
 
 int32_t LocPathIterator::getLength() {
+	$useLocalCurrentObjectStackCache();
 	bool isPredicateTest = ($equals(this, $nc(this->m_execContext)->getSubContextList()));
 	int32_t predCount = getPredicateCount();
 	if (-1 != this->m_length && isPredicateTest && this->m_predicateIndex < 1) {

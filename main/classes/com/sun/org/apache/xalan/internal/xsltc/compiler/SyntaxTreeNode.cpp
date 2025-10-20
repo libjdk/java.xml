@@ -407,6 +407,7 @@ $String* SyntaxTreeNode::getAttribute($String* qname) {
 }
 
 $String* SyntaxTreeNode::getAttribute($String* prefix, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	return getAttribute($$str({prefix, $$str(u':'), localName}));
 }
 
@@ -415,6 +416,7 @@ bool SyntaxTreeNode::hasAttribute($String* qname) {
 }
 
 void SyntaxTreeNode::addAttribute($String* qname, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = $nc(this->_attributes)->getIndex(qname);
 	if (index != -1) {
 		$nc(this->_attributes)->setAttribute(index, ""_s, $($Util::getLocalName(qname)), qname, "CDATA"_s, value);
@@ -458,6 +460,7 @@ $String* SyntaxTreeNode::lookupNamespace($String* prefix) {
 }
 
 $String* SyntaxTreeNode::lookupPrefix($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	if ((this->_prefixMapping != nullptr) && ($nc(this->_prefixMapping)->containsValue(uri))) {
 		{
@@ -551,6 +554,7 @@ void SyntaxTreeNode::parseContents($Parser* parser) {
 }
 
 void SyntaxTreeNode::parseChildren($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, locals, nullptr);
 	{
 		$var($Iterator, i$, $nc(this->_contents)->iterator());
@@ -584,6 +588,7 @@ void SyntaxTreeNode::parseChildren($Parser* parser) {
 }
 
 $QName* SyntaxTreeNode::updateScope($Parser* parser, SyntaxTreeNode* node) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Variable, node)) {
 		$var($Variable, var, $cast($Variable, node));
 		$nc(parser)->addVariable(var);
@@ -598,6 +603,7 @@ $QName* SyntaxTreeNode::updateScope($Parser* parser, SyntaxTreeNode* node) {
 }
 
 $Type* SyntaxTreeNode::typeCheckContents($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->_contents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -612,6 +618,7 @@ $Type* SyntaxTreeNode::typeCheckContents($SymbolTable* stable) {
 }
 
 void SyntaxTreeNode::translateContents($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = elementCount();
 	{
 		$var($Iterator, i$, $nc(this->_contents)->iterator());
@@ -633,6 +640,7 @@ void SyntaxTreeNode::translateContents($ClassGenerator* classGen, $MethodGenerat
 }
 
 bool SyntaxTreeNode::notTypeOf($Class* type) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->_contents)->size() > 0) {
 		{
 			$var($Iterator, i$, $nc(this->_contents)->iterator());
@@ -650,6 +658,7 @@ bool SyntaxTreeNode::notTypeOf($Class* type) {
 }
 
 bool SyntaxTreeNode::isSimpleRTF(SyntaxTreeNode* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, contents, $nc(node)->getContents());
 	if (!$nc($($nc(contents)->stream()))->noneMatch(static_cast<$Predicate*>($$new(SyntaxTreeNode$$Lambda$lambda$isSimpleRTF$0, this)))) {
 		return false;
@@ -658,6 +667,7 @@ bool SyntaxTreeNode::isSimpleRTF(SyntaxTreeNode* node) {
 }
 
 bool SyntaxTreeNode::isAdaptiveRTF(SyntaxTreeNode* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, contents, $nc(node)->getContents());
 	{
 		$var($Iterator, i$, $nc(contents)->iterator());
@@ -674,6 +684,7 @@ bool SyntaxTreeNode::isAdaptiveRTF(SyntaxTreeNode* node) {
 }
 
 bool SyntaxTreeNode::isTextElement(SyntaxTreeNode* node, bool doExtendedCheck) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($ValueOf, node) || $instanceOf($Number, node) || $instanceOf($Text, node)) {
 		return true;
 	} else if ($instanceOf($If, node)) {
@@ -711,6 +722,7 @@ bool SyntaxTreeNode::isTextElement(SyntaxTreeNode* node, bool doExtendedCheck) {
 }
 
 void SyntaxTreeNode::compileResultTree($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($Stylesheet, stylesheet, classGen->getStylesheet());
@@ -782,6 +794,7 @@ bool SyntaxTreeNode::contextDependent() {
 }
 
 bool SyntaxTreeNode::dependentContents() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->_contents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -843,6 +856,7 @@ void SyntaxTreeNode::display(int32_t indent) {
 }
 
 void SyntaxTreeNode::displayContents(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->_contents)->iterator());
 		for (; $nc(i$)->hasNext();) {

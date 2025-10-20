@@ -124,6 +124,7 @@ void TreeWalker::init$($ContentHandler* contentHandler, $String* systemId) {
 }
 
 void TreeWalker::traverse($Node* pos$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, pos, pos$renamed);
 	$nc(this->m_contentHandler)->startDocument();
 	$var($Node, top, pos);
@@ -153,6 +154,7 @@ void TreeWalker::traverse($Node* pos$renamed) {
 }
 
 void TreeWalker::traverse($Node* pos$renamed, $Node* top) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, pos, pos$renamed);
 	$nc(this->m_contentHandler)->startDocument();
 	while (nullptr != pos) {
@@ -178,6 +180,7 @@ void TreeWalker::traverse($Node* pos$renamed, $Node* top) {
 }
 
 void TreeWalker::dispatachChars($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_Serializer != nullptr) {
 		$nc(this->m_Serializer)->characters(node);
 	} else {
@@ -188,6 +191,7 @@ void TreeWalker::dispatachChars($Node* node) {
 }
 
 void TreeWalker::startNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Locator, node)) {
 		$var($Locator, loc, $cast($Locator, node));
 		$nc(this->m_locator)->setColumnNumber($nc(loc)->getColumnNumber());
@@ -334,6 +338,7 @@ void TreeWalker::startNode($Node* node) {
 }
 
 void TreeWalker::endNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($String, ns, nullptr)
 		switch ($nc(node)->getNodeType()) {

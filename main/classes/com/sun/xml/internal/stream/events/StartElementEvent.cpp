@@ -221,6 +221,7 @@ void StartElementEvent::init$($QName* qname) {
 }
 
 void StartElementEvent::init$($StartElement* startelement) {
+	$useLocalCurrentObjectStackCache();
 	StartElementEvent::init$($($nc(startelement)->getName()));
 	addAttributes($($nc(startelement)->getAttributes()));
 	addNamespaceAttributes($($nc(startelement)->getNamespaces()));
@@ -241,6 +242,7 @@ void StartElementEvent::setName($QName* qname) {
 }
 
 $Iterator* StartElementEvent::getAttributes() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAttributes != nullptr) {
 		$var($Collection, coll, $nc(this->fAttributes)->values());
 		return $new($ReadOnlyIterator, $($nc(coll)->iterator()));
@@ -278,6 +280,7 @@ $String* StartElementEvent::getNamespaceURI($String* prefix) {
 }
 
 $String* StartElementEvent::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, startElement, $new($StringBuilder));
 	startElement->append("<"_s);
 	startElement->append($(nameAsString()));
@@ -304,6 +307,7 @@ $String* StartElementEvent::toString() {
 }
 
 $String* StartElementEvent::nameAsString() {
+	$useLocalCurrentObjectStackCache();
 	if (""_s->equals($($nc(this->fQName)->getNamespaceURI()))) {
 		return $nc(this->fQName)->getLocalPart();
 	}
@@ -339,6 +343,7 @@ void StartElementEvent::addAttribute($Attribute* attr) {
 }
 
 void StartElementEvent::addAttributes($Iterator* attrs) {
+	$useLocalCurrentObjectStackCache();
 	if (attrs == nullptr) {
 		return;
 	}
@@ -356,6 +361,7 @@ void StartElementEvent::addNamespaceAttribute($Namespace* attr) {
 }
 
 void StartElementEvent::addNamespaceAttributes($Iterator* attrs) {
+	$useLocalCurrentObjectStackCache();
 	if (attrs == nullptr) {
 		return;
 	}

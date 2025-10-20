@@ -85,6 +85,7 @@ $LSSerializerFilter* DOM3SerializerImpl::getNodeFilter() {
 }
 
 void DOM3SerializerImpl::serializeDOM3($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DOM3TreeWalker, walker, $new($DOM3TreeWalker, this->fSerializationHandler, this->fErrorHandler, this->fSerializerFilter, this->fNewLine));
 		walker->traverse(node);

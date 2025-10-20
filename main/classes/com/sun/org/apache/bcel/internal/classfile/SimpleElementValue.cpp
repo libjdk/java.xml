@@ -112,6 +112,7 @@ void SimpleElementValue::setIndex(int32_t index) {
 }
 
 $String* SimpleElementValue::getValueString() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::STRING) {
 		$throwNew($IllegalStateException, "Dont call getValueString() on a non STRING ElementValue"_s);
 	}
@@ -120,6 +121,7 @@ $String* SimpleElementValue::getValueString() {
 }
 
 int32_t SimpleElementValue::getValueInt() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_INT) {
 		$throwNew($IllegalStateException, "Dont call getValueString() on a non STRING ElementValue"_s);
 	}
@@ -128,6 +130,7 @@ int32_t SimpleElementValue::getValueInt() {
 }
 
 int8_t SimpleElementValue::getValueByte() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_BYTE) {
 		$throwNew($IllegalStateException, "Dont call getValueByte() on a non BYTE ElementValue"_s);
 	}
@@ -136,6 +139,7 @@ int8_t SimpleElementValue::getValueByte() {
 }
 
 char16_t SimpleElementValue::getValueChar() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_CHAR) {
 		$throwNew($IllegalStateException, "Dont call getValueChar() on a non CHAR ElementValue"_s);
 	}
@@ -144,6 +148,7 @@ char16_t SimpleElementValue::getValueChar() {
 }
 
 int64_t SimpleElementValue::getValueLong() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_LONG) {
 		$throwNew($IllegalStateException, "Dont call getValueLong() on a non LONG ElementValue"_s);
 	}
@@ -152,6 +157,7 @@ int64_t SimpleElementValue::getValueLong() {
 }
 
 float SimpleElementValue::getValueFloat() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_FLOAT) {
 		$throwNew($IllegalStateException, "Dont call getValueFloat() on a non FLOAT ElementValue"_s);
 	}
@@ -160,6 +166,7 @@ float SimpleElementValue::getValueFloat() {
 }
 
 double SimpleElementValue::getValueDouble() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_DOUBLE) {
 		$throwNew($IllegalStateException, "Dont call getValueDouble() on a non DOUBLE ElementValue"_s);
 	}
@@ -168,6 +175,7 @@ double SimpleElementValue::getValueDouble() {
 }
 
 bool SimpleElementValue::getValueBoolean() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_BOOLEAN) {
 		$throwNew($IllegalStateException, "Dont call getValueBoolean() on a non BOOLEAN ElementValue"_s);
 	}
@@ -176,6 +184,7 @@ bool SimpleElementValue::getValueBoolean() {
 }
 
 int16_t SimpleElementValue::getValueShort() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValue::getType() != $ElementValue::PRIMITIVE_SHORT) {
 		$throwNew($IllegalStateException, "Dont call getValueShort() on a non SHORT ElementValue"_s);
 	}
@@ -188,6 +197,7 @@ $String* SimpleElementValue::toString() {
 }
 
 $String* SimpleElementValue::stringifyValue() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cpool, $ElementValue::getConstantPool());
 	int32_t _type = $ElementValue::getType();
 	{
@@ -258,6 +268,7 @@ $String* SimpleElementValue::stringifyValue() {
 }
 
 void SimpleElementValue::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	int32_t _type = $ElementValue::getType();
 	$nc(dos)->writeByte(_type);
 	switch (_type) {

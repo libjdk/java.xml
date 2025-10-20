@@ -310,6 +310,7 @@ void Compiler::init$() {
 }
 
 $Expression* Compiler::compileExpression(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		this->countOp = 0;
 		return compile(opPos);
@@ -322,6 +323,7 @@ $Expression* Compiler::compileExpression(int32_t opPos) {
 }
 
 $Expression* Compiler::compile(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	int32_t op = getOp(opPos);
 	$var($Expression, expr, nullptr);
 	switch (op) {
@@ -491,6 +493,7 @@ $Expression* Compiler::compile(int32_t opPos) {
 }
 
 $Expression* Compiler::compileOperation($Operation* operation, int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	++this->countOp;
 	int32_t leftPos = getFirstChildPos(opPos);
 	int32_t rightPos = getNextOpPos(leftPos);
@@ -584,6 +587,7 @@ $Expression* Compiler::numberlit(int32_t opPos) {
 }
 
 $Expression* Compiler::variable(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	$var($Variable, var, $new($Variable));
 	opPos = getFirstChildPos(opPos);
 	int32_t nsPos = getOp(opPos);
@@ -603,6 +607,7 @@ $Expression* Compiler::arg(int32_t opPos) {
 }
 
 $Expression* Compiler::union$(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	++this->locPathDepth;
 	{
 		$var($Throwable, var$0, nullptr);
@@ -636,6 +641,7 @@ $FunctionTable* Compiler::getFunctionTable() {
 }
 
 $Expression* Compiler::locationPath(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	++this->locPathDepth;
 	{
 		$var($Throwable, var$0, nullptr);
@@ -666,6 +672,7 @@ $Expression* Compiler::predicate(int32_t opPos) {
 }
 
 $Expression* Compiler::matchPattern(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	++this->locPathDepth;
 	{
 		$var($Throwable, var$0, nullptr);
@@ -801,6 +808,7 @@ int32_t Compiler::getWhatToShow(int32_t opPos) {
 }
 
 $StepPattern* Compiler::stepPattern(int32_t opPos, int32_t stepCount, $StepPattern* ancestorPattern) {
+	$useLocalCurrentObjectStackCache();
 	int32_t startOpPos = opPos;
 	int32_t stepType = getOp(opPos);
 	if ($OpCodes::ENDOP == stepType) {
@@ -895,6 +903,7 @@ int32_t Compiler::countPredicates(int32_t opPos) {
 }
 
 void Compiler::compilePredicates(int32_t opPos, $ExpressionArray* predicates) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; $OpCodes::OP_PREDICATE == getOp(opPos); ++i) {
 		$nc(predicates)->set(i, $(predicate(opPos)));
 		opPos = getNextOpPos(opPos);
@@ -902,6 +911,7 @@ void Compiler::compilePredicates(int32_t opPos, $ExpressionArray* predicates) {
 }
 
 $Expression* Compiler::compileFunction(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	int32_t endFunc = opPos + getOp(opPos + 1) - 1;
 	opPos = getFirstChildPos(opPos);
 	int32_t funcID = getOp(opPos);
@@ -945,6 +955,7 @@ int64_t Compiler::getNextMethodId() {
 }
 
 $Expression* Compiler::compileExtension(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	int32_t endExtFunc = opPos + getOp(opPos + 1) - 1;
 	opPos = getFirstChildPos(opPos);
 	$var($String, ns, $cast($String, $nc($(getTokenQueue()))->elementAt(getOp(opPos))));
@@ -967,6 +978,7 @@ $Expression* Compiler::compileExtension(int32_t opPos) {
 }
 
 void Compiler::warn($String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHWarning(msg, args));
 	if (nullptr != this->m_errorHandler) {
 		$nc(this->m_errorHandler)->warning($$new($TransformerException, fmsg, this->m_locator));
@@ -980,6 +992,7 @@ void Compiler::warn($String* msg, $ObjectArray* args) {
 }
 
 void Compiler::assertion(bool b, $String* msg) {
+	$useLocalCurrentObjectStackCache();
 	if (!b) {
 		$init($XPATHErrorResources);
 		$var($String, fMsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_INCORRECT_PROGRAMMER_ASSERTION, $$new($ObjectArray, {$of(msg)})));
@@ -988,6 +1001,7 @@ void Compiler::assertion(bool b, $String* msg) {
 }
 
 void Compiler::error($String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHMessage(msg, args));
 	if (nullptr != this->m_errorHandler) {
 		$nc(this->m_errorHandler)->fatalError($$new($TransformerException, fmsg, this->m_locator));

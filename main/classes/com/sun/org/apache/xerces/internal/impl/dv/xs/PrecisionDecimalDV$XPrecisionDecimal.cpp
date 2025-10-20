@@ -113,6 +113,7 @@ void PrecisionDecimalDV$XPrecisionDecimal::init$($String* content) {
 }
 
 void PrecisionDecimalDV$XPrecisionDecimal::initD($String* content) {
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(content)->length();
 	if (len == 0) {
 		$throwNew($NumberFormatException);
@@ -246,6 +247,7 @@ int32_t PrecisionDecimalDV$XPrecisionDecimal::hashCode() {
 }
 
 int32_t PrecisionDecimalDV$XPrecisionDecimal::compareFractionalPart(PrecisionDecimalDV$XPrecisionDecimal* oval) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fvalue)->equals($nc(oval)->fvalue)) {
 		return 0;
 	}
@@ -301,6 +303,7 @@ int32_t PrecisionDecimalDV$XPrecisionDecimal::compareTo(PrecisionDecimalDV$XPrec
 }
 
 int32_t PrecisionDecimalDV$XPrecisionDecimal::compare(PrecisionDecimalDV$XPrecisionDecimal* val) {
+	$useLocalCurrentObjectStackCache();
 	if (this->pvalue != 0 || $nc(val)->pvalue != 0) {
 		if (this->pvalue == val->pvalue) {
 			return intComp(val);
@@ -354,6 +357,7 @@ int32_t PrecisionDecimalDV$XPrecisionDecimal::intComp(PrecisionDecimalDV$XPrecis
 }
 
 int32_t PrecisionDecimalDV$XPrecisionDecimal::compareDecimal($String* iValue, $String* fValue, $String* otherIValue, $String* otherFValue) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = $nc(iValue)->compareTo(otherIValue);
 	if (ret != 0) {
 		return ret > 0 ? (int16_t)1 : (int16_t)-1;

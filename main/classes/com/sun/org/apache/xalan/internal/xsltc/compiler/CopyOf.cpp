@@ -125,6 +125,7 @@ void CopyOf::init$() {
 }
 
 void CopyOf::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
 	$Util::println("CopyOf"_s);
 	this->indent(indent + $SyntaxTreeNode::IndentIncrement);
@@ -152,6 +153,7 @@ $Type* CopyOf::typeCheck($SymbolTable* stable) {
 }
 
 void CopyOf::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($Type, tselect, $nc(this->_select)->getType());

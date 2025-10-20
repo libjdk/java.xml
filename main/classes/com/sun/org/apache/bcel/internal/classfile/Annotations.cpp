@@ -67,6 +67,7 @@ $Object* allocate$Annotations($Class* clazz) {
 }
 
 void Annotations::init$(int8_t annotation_type, int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool, bool isRuntimeVisible) {
+	$useLocalCurrentObjectStackCache();
 	Annotations::init$(annotation_type, name_index, length, ($AnnotationEntryArray*)nullptr, constant_pool, isRuntimeVisible);
 	int32_t annotation_table_length = $nc(input)->readUnsignedShort();
 	$set(this, annotationTable, $new($AnnotationEntryArray, annotation_table_length));
@@ -105,6 +106,7 @@ bool Annotations::isRuntimeVisible() {
 }
 
 void Annotations::writeAnnotations($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	if (this->annotationTable == nullptr) {
 		return;
 	}

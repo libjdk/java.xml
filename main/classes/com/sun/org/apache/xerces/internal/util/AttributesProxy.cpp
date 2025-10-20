@@ -177,6 +177,7 @@ int32_t AttributesProxy::getIndex($String* uri, $String* localPart) {
 }
 
 bool AttributesProxy::isDeclared(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0 || index >= $nc(this->fAttributes)->getLength()) {
 		$throwNew($ArrayIndexOutOfBoundsException, index);
 	}
@@ -186,6 +187,7 @@ bool AttributesProxy::isDeclared(int32_t index) {
 }
 
 bool AttributesProxy::isDeclared($String* qName) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = getIndex(qName);
 	if (index == -1) {
 		$throwNew($IllegalArgumentException, qName);
@@ -196,6 +198,7 @@ bool AttributesProxy::isDeclared($String* qName) {
 }
 
 bool AttributesProxy::isDeclared($String* uri, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = getIndex(uri, localName);
 	if (index == -1) {
 		$throwNew($IllegalArgumentException, localName);

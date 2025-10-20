@@ -290,6 +290,7 @@ int32_t XMLDocumentScannerImpl::getScannetState() {
 }
 
 void XMLDocumentScannerImpl::reset($PropertyManager* propertyManager) {
+	$useLocalCurrentObjectStackCache();
 	$XMLDocumentFragmentScannerImpl::reset(propertyManager);
 	$set(this, fDoctypeName, nullptr);
 	$set(this, fDoctypePublicId, nullptr);
@@ -346,6 +347,7 @@ void XMLDocumentScannerImpl::reset($XMLComponentManager* componentManager) {
 }
 
 $StringArray* XMLDocumentScannerImpl::getRecognizedFeatures() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, featureIds, $XMLDocumentFragmentScannerImpl::getRecognizedFeatures());
 	int32_t length = featureIds != nullptr ? $nc(featureIds)->length : 0;
 	$var($StringArray, combinedFeatureIds, $new($StringArray, length + $nc(XMLDocumentScannerImpl::RECOGNIZED_FEATURES)->length));
@@ -377,6 +379,7 @@ void XMLDocumentScannerImpl::setFeature($String* featureId, bool state) {
 }
 
 $StringArray* XMLDocumentScannerImpl::getRecognizedProperties() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, propertyIds, $XMLDocumentFragmentScannerImpl::getRecognizedProperties());
 	int32_t length = propertyIds != nullptr ? $nc(propertyIds)->length : 0;
 	$var($StringArray, combinedPropertyIds, $new($StringArray, length + $nc(XMLDocumentScannerImpl::RECOGNIZED_PROPERTIES)->length));
@@ -477,6 +480,7 @@ $XMLDocumentFragmentScannerImpl$Driver* XMLDocumentScannerImpl::createContentDri
 }
 
 bool XMLDocumentScannerImpl::scanDoctypeDecl(bool supportDTD) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc(this->fEntityScanner)->skipSpaces()) {
 		reportFatalError("MSG_SPACE_REQUIRED_BEFORE_ROOT_ELEMENT_TYPE_IN_DOCTYPEDECL"_s, nullptr);
 	}

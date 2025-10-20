@@ -81,6 +81,7 @@ $XMLResolver* StaxEntityResolverWrapper::getStaxEntityResolver() {
 }
 
 $StaxXMLInputSource* StaxEntityResolverWrapper::resolveEntity($XMLResourceIdentifier* resourceIdentifier) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, object, nullptr);
 	try {
 		$var($String, var$0, $nc(resourceIdentifier)->getPublicId());

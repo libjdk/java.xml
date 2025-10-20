@@ -177,6 +177,7 @@ $XSSimpleType* BaseDVFactory::createTypeUnion($String* name, $String* targetName
 
 void BaseDVFactory::createBuiltInTypes($SymbolHash* types) {
 	$init(BaseDVFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($String, ANYSIMPLETYPE, "anySimpleType"_s);
 	$var($String, ANYURI, "anyURI"_s);
 	$var($String, BASE64BINARY, "base64Binary"_s);

@@ -115,6 +115,7 @@ $String* XSLTCSource::getSystemId() {
 }
 
 $DOM* XSLTCSource::getDOM($XSLTCDTMManager* dtmManager$renamed, $AbstractTranslet* translet) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTCDTMManager, dtmManager, dtmManager$renamed);
 	$var($SAXImpl, idom, $cast($SAXImpl, $nc(this->_dom)->get()));
 	if (idom != nullptr) {

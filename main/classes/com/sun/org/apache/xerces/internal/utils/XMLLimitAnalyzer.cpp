@@ -106,6 +106,7 @@ $Object* allocate$XMLLimitAnalyzer($Class* clazz) {
 }
 
 void XMLLimitAnalyzer::init$() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, values, $new($ints, $($XMLSecurityManager$Limit::values())->length));
 	$set(this, totalValue, $new($ints, $($XMLSecurityManager$Limit::values())->length));
 	$set(this, names, $new($StringArray, $($XMLSecurityManager$Limit::values())->length));
@@ -117,6 +118,7 @@ void XMLLimitAnalyzer::addValue($XMLSecurityManager$Limit* limit, $String* entit
 }
 
 void XMLLimitAnalyzer::addValue(int32_t index, $String* entityName, int32_t value) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLSecurityManager$Limit);
 	bool var$3 = index == $XMLSecurityManager$Limit::ENTITY_EXPANSION_LIMIT->ordinal();
 	bool var$2 = var$3 || index == $XMLSecurityManager$Limit::MAX_OCCUR_NODE_LIMIT->ordinal();
@@ -215,6 +217,7 @@ void XMLLimitAnalyzer::reset($XMLSecurityManager$Limit* limit) {
 }
 
 void XMLLimitAnalyzer::debugPrint($XMLSecurityManager* securityManager) {
+	$useLocalCurrentObjectStackCache();
 	$var($Formatter, formatter, $new($Formatter));
 	$init($System);
 	$nc($System::out)->println($($of(formatter->format("%30s %15s %15s %15s %30s"_s, $$new($ObjectArray, {

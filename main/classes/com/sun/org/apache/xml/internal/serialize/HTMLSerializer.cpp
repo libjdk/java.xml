@@ -169,6 +169,7 @@ void HTMLSerializer::setXHTMLNamespace($String* newNamespace) {
 }
 
 void HTMLSerializer::startElement($String* namespaceURI, $String* localName, $String* rawName$renamed, $Attributes* attrs) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rawName, rawName$renamed);
 	int32_t i = 0;
 	bool preserveSpace = false;
@@ -330,6 +331,7 @@ void HTMLSerializer::endElement($String* namespaceURI, $String* localName, $Stri
 }
 
 void HTMLSerializer::endElementIO($String* namespaceURI, $String* localName, $String* rawName) {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	$var($String, htmlName, nullptr);
 	$nc(this->_printer)->unindent();
@@ -388,6 +390,7 @@ void HTMLSerializer::endElementIO($String* namespaceURI, $String* localName, $St
 }
 
 void HTMLSerializer::characters($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	try {
 		$assign(state, content());
@@ -400,6 +403,7 @@ void HTMLSerializer::characters($chars* chars, int32_t start, int32_t length) {
 }
 
 void HTMLSerializer::startElement($String* tagName, $AttributeList* attrs) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	bool preserveSpace = false;
 	$var($ElementState, state, nullptr);
@@ -549,6 +553,7 @@ void HTMLSerializer::startDocument($String* rootTagName) {
 }
 
 void HTMLSerializer::serializeElement($Element* elem) {
+	$useLocalCurrentObjectStackCache();
 	$var($Attr, attr, nullptr);
 	$var($NamedNodeMap, attrMap, nullptr);
 	int32_t i = 0;

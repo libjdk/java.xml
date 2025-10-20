@@ -192,6 +192,7 @@ int32_t REUtil::getOptionValue(int32_t ch) {
 
 int32_t REUtil::parseOptions($String* opts) {
 	$init(REUtil);
+	$useLocalCurrentObjectStackCache();
 	if (opts == nullptr) {
 		return 0;
 	}
@@ -208,6 +209,7 @@ int32_t REUtil::parseOptions($String* opts) {
 
 $String* REUtil::createOptionString(int32_t options) {
 	$init(REUtil);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder, 9));
 	if (((int32_t)(options & (uint32_t)$RegularExpression::PROHIBIT_FIXED_STRING_OPTIMIZATION)) != 0) {
 		sb->append(u'F');
@@ -304,6 +306,7 @@ $String* REUtil::stripExtendedComment($String* regex) {
 
 void REUtil::main($StringArray* argv) {
 	$init(REUtil);
+	$useLocalCurrentObjectStackCache();
 	$var($String, pattern, nullptr);
 	try {
 		$var($String, options, ""_s);
@@ -387,6 +390,7 @@ void REUtil::main($StringArray* argv) {
 
 $RegularExpression* REUtil::createRegex($String* pattern, $String* options) {
 	$init(REUtil);
+	$useLocalCurrentObjectStackCache();
 	$var($RegularExpression, re, nullptr);
 	int32_t intOptions = REUtil::parseOptions(options);
 	$synchronized(REUtil::regexCache) {
@@ -428,6 +432,7 @@ bool REUtil::matches($String* regex, $String* options, $String* target) {
 
 $String* REUtil::quoteMeta($String* literal) {
 	$init(REUtil);
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(literal)->length();
 	$var($StringBuilder, buffer, nullptr);
 	for (int32_t i = 0; i < len; ++i) {
@@ -450,6 +455,7 @@ $String* REUtil::quoteMeta($String* literal) {
 
 void REUtil::dumpString($String* v) {
 	$init(REUtil);
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(v)->length(); ++i) {
 		$init($System);
 		$nc($System::out)->print($($Integer::toHexString(v->charAt(i))));

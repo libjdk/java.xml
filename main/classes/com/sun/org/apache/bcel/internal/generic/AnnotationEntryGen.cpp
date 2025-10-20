@@ -132,6 +132,7 @@ $Object* allocate$AnnotationEntryGen($Class* clazz) {
 }
 
 void AnnotationEntryGen::init$($AnnotationEntry* a, $ConstantPoolGen* cpool, bool copyPoolEntries) {
+	$useLocalCurrentObjectStackCache();
 	this->isRuntimeVisible$ = false;
 	$set(this, cpool, cpool);
 	if (copyPoolEntries) {
@@ -144,6 +145,7 @@ void AnnotationEntryGen::init$($AnnotationEntry* a, $ConstantPoolGen* cpool, boo
 }
 
 $List* AnnotationEntryGen::copyValues($ElementValuePairArray* in, $ConstantPoolGen* cpool, bool copyPoolEntries) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, out, $new($ArrayList));
 	{
 		$var($ElementValuePairArray, arr$, in);
@@ -165,6 +167,7 @@ void AnnotationEntryGen::init$($ConstantPoolGen* cpool) {
 }
 
 $AnnotationEntry* AnnotationEntryGen::getAnnotation() {
+	$useLocalCurrentObjectStackCache();
 	$var($AnnotationEntry, a, $new($AnnotationEntry, this->typeIndex, $($nc(this->cpool)->getConstantPool()), this->isRuntimeVisible$));
 	{
 		$var($Iterator, i$, $nc(this->evs)->iterator());
@@ -187,6 +190,7 @@ void AnnotationEntryGen::init$($ObjectType* type, $List* elements, bool vis, $Co
 }
 
 AnnotationEntryGen* AnnotationEntryGen::read($DataInput* dis, $ConstantPoolGen* cpool, bool b) {
+	$useLocalCurrentObjectStackCache();
 	$var(AnnotationEntryGen, a, $new(AnnotationEntryGen, cpool));
 	a->typeIndex = $nc(dis)->readUnsignedShort();
 	int32_t elemValuePairCount = dis->readUnsignedShort();
@@ -199,6 +203,7 @@ AnnotationEntryGen* AnnotationEntryGen::read($DataInput* dis, $ConstantPoolGen* 
 }
 
 void AnnotationEntryGen::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	$nc(dos)->writeShort(this->typeIndex);
 	dos->writeShort($nc(this->evs)->size());
 	{
@@ -237,6 +242,7 @@ $List* AnnotationEntryGen::getValues() {
 }
 
 $String* AnnotationEntryGen::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, s, $new($StringBuilder, 32));
 	s->append("AnnotationGen:["_s)->append($(getTypeName()))->append(" #"_s)->append($nc(this->evs)->size())->append(" {"_s);
 	for (int32_t i = 0; i < $nc(this->evs)->size(); ++i) {
@@ -250,6 +256,7 @@ $String* AnnotationEntryGen::toString() {
 }
 
 $String* AnnotationEntryGen::toShortString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, s, $new($StringBuilder));
 	s->append("@"_s)->append($(getTypeName()))->append("("_s);
 	for (int32_t i = 0; i < $nc(this->evs)->size(); ++i) {
@@ -271,6 +278,7 @@ bool AnnotationEntryGen::isRuntimeVisible() {
 }
 
 $AttributeArray* AnnotationEntryGen::getAnnotationAttributes($ConstantPoolGen* cp, $AnnotationEntryGenArray* annotationEntryGens) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(annotationEntryGens)->length == 0) {
 		return $new($AttributeArray, 0);
 	}
@@ -395,6 +403,7 @@ $AttributeArray* AnnotationEntryGen::getAnnotationAttributes($ConstantPoolGen* c
 }
 
 $AttributeArray* AnnotationEntryGen::getParameterAnnotationAttributes($ConstantPoolGen* cp, $ListArray* vec) {
+	$useLocalCurrentObjectStackCache();
 	$var($ints, visCount, $new($ints, $nc(vec)->length));
 	int32_t totalVisCount = 0;
 	$var($ints, invisCount, $new($ints, vec->length));

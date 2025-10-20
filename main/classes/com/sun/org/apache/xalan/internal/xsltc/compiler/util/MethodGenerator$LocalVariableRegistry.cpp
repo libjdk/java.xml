@@ -99,6 +99,7 @@ void MethodGenerator$LocalVariableRegistry::init$($MethodGenerator* this$0) {
 }
 
 void MethodGenerator$LocalVariableRegistry::registerLocalVariable($LocalVariableGen* lvg) {
+	$useLocalCurrentObjectStackCache();
 	int32_t slot = $nc(lvg)->getIndex();
 	int32_t registrySize = $nc(this->_variables)->size();
 	if (slot >= registrySize) {
@@ -125,6 +126,7 @@ void MethodGenerator$LocalVariableRegistry::registerLocalVariable($LocalVariable
 }
 
 $LocalVariableGen* MethodGenerator$LocalVariableRegistry::lookupRegisteredLocalVariable(int32_t slot, int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, localsInSlot, (this->_variables != nullptr) ? $nc(this->_variables)->get(slot) : ($Object*)nullptr);
 	if (localsInSlot != nullptr) {
 		if ($instanceOf($LocalVariableGen, localsInSlot)) {
@@ -151,6 +153,7 @@ $LocalVariableGen* MethodGenerator$LocalVariableRegistry::lookupRegisteredLocalV
 }
 
 void MethodGenerator$LocalVariableRegistry::registerByName($LocalVariableGen* lvg) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, duplicateNameEntry, $nc(this->_nameToLVGMap)->get($($nc(lvg)->getName())));
 	if (duplicateNameEntry == nullptr) {
 		$nc(this->_nameToLVGMap)->put($($nc(lvg)->getName()), lvg);
@@ -169,6 +172,7 @@ void MethodGenerator$LocalVariableRegistry::registerByName($LocalVariableGen* lv
 }
 
 void MethodGenerator$LocalVariableRegistry::removeByNameTracking($LocalVariableGen* lvg) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, duplicateNameEntry, $nc(this->_nameToLVGMap)->get($($nc(lvg)->getName())));
 	if ($instanceOf($ArrayList, duplicateNameEntry)) {
 		$var($List, sameNameList, $cast($List, duplicateNameEntry));
@@ -184,6 +188,7 @@ void MethodGenerator$LocalVariableRegistry::removeByNameTracking($LocalVariableG
 }
 
 $LocalVariableGen* MethodGenerator$LocalVariableRegistry::lookUpByName($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableGen, lvg, nullptr);
 	$var($Object, duplicateNameEntry, $nc(this->_nameToLVGMap)->get(name));
 	if ($instanceOf($ArrayList, duplicateNameEntry)) {
@@ -201,6 +206,7 @@ $LocalVariableGen* MethodGenerator$LocalVariableRegistry::lookUpByName($String* 
 }
 
 $LocalVariableGenArray* MethodGenerator$LocalVariableRegistry::getLocals() {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableGenArray, locals, nullptr);
 	$var($List, allVarsEverDeclared, $new($ArrayList));
 	{

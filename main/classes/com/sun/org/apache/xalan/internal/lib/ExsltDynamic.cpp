@@ -122,6 +122,7 @@ void ExsltDynamic::init$() {
 
 double ExsltDynamic::max($ExpressionContext* myContext, $NodeList* nl, $String* expr) {
 	$init(ExsltDynamic);
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, nullptr);
 	if ($instanceOf($XPathContext$XPathExpressionContext, myContext)) {
 		$assign(xctxt, $nc(($cast($XPathContext$XPathExpressionContext, myContext)))->getXPathContext());
@@ -163,6 +164,7 @@ double ExsltDynamic::max($ExpressionContext* myContext, $NodeList* nl, $String* 
 
 double ExsltDynamic::min($ExpressionContext* myContext, $NodeList* nl, $String* expr) {
 	$init(ExsltDynamic);
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, nullptr);
 	if ($instanceOf($XPathContext$XPathExpressionContext, myContext)) {
 		$assign(xctxt, $nc(($cast($XPathContext$XPathExpressionContext, myContext)))->getXPathContext());
@@ -204,6 +206,7 @@ double ExsltDynamic::min($ExpressionContext* myContext, $NodeList* nl, $String* 
 
 double ExsltDynamic::sum($ExpressionContext* myContext, $NodeList* nl, $String* expr) {
 	$init(ExsltDynamic);
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, nullptr);
 	if ($instanceOf($XPathContext$XPathExpressionContext, myContext)) {
 		$assign(xctxt, $nc(($cast($XPathContext$XPathExpressionContext, myContext)))->getXPathContext());
@@ -243,6 +246,7 @@ double ExsltDynamic::sum($ExpressionContext* myContext, $NodeList* nl, $String* 
 
 $NodeList* ExsltDynamic::map($ExpressionContext* myContext, $NodeList* nl, $String* expr) {
 	$init(ExsltDynamic);
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, nullptr);
 	$var($Document, lDoc, nullptr);
 	if ($instanceOf($XPathContext$XPathExpressionContext, myContext)) {
@@ -306,6 +310,7 @@ $NodeList* ExsltDynamic::map($ExpressionContext* myContext, $NodeList* nl, $Stri
 
 $XObject* ExsltDynamic::evaluate($ExpressionContext* myContext, $String* xpathExpr) {
 	$init(ExsltDynamic);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($XPathContext$XPathExpressionContext, myContext)) {
 		$var($XPathContext, xctxt, nullptr);
 		try {
@@ -329,6 +334,7 @@ $XObject* ExsltDynamic::evaluate($ExpressionContext* myContext, $String* xpathEx
 
 $NodeList* ExsltDynamic::closure($ExpressionContext* myContext, $NodeList* nl, $String* expr) {
 	$init(ExsltDynamic);
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, nullptr);
 	if ($instanceOf($XPathContext$XPathExpressionContext, myContext)) {
 		$assign(xctxt, $nc(($cast($XPathContext$XPathExpressionContext, myContext)))->getXPathContext());

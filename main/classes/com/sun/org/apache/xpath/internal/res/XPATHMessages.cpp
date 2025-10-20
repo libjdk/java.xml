@@ -102,6 +102,7 @@ $String* XPATHMessages::createXPATHWarning($String* msgKey, $ObjectArray* args) 
 
 $String* XPATHMessages::createXPATHMsg($ResourceBundle* fResourceBundle, $String* msgKey, $ObjectArray* args) {
 	$init(XPATHMessages);
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, nullptr);
 	bool throwex = false;
 	$var($String, msg, nullptr);

@@ -421,6 +421,7 @@ void DTMDocumentImpl::startDocument() {
 }
 
 void DTMDocumentImpl::startElement($String* namespaceURI, $String* localName$renamed, $String* qName$renamed, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localName, localName$renamed);
 	$var($String, qName, qName$renamed);
 	processAccumulatedText();
@@ -748,6 +749,7 @@ $chars* DTMDocumentImpl::getStringValueChunk(int32_t nodeHandle, int32_t chunkIn
 }
 
 int32_t DTMDocumentImpl::getExpandedTypeID(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->nodes)->readSlot(nodeHandle, this->gotslot);
 	$var($String, qName, $nc(this->m_localNames)->indexToString($nc(this->gotslot)->get(3)));
 	int32_t colonpos = $nc(qName)->indexOf(":"_s);
@@ -765,6 +767,7 @@ int32_t DTMDocumentImpl::getExpandedTypeID($String* namespace$, $String* localNa
 }
 
 $String* DTMDocumentImpl::getLocalNameFromExpandedNameID(int32_t ExpandedNameID) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, expandedName, $nc(this->m_localNames)->indexToString(ExpandedNameID));
 	int32_t colonpos = $nc(expandedName)->indexOf(":"_s);
 	$var($String, localName, expandedName->substring(colonpos + 1));
@@ -772,6 +775,7 @@ $String* DTMDocumentImpl::getLocalNameFromExpandedNameID(int32_t ExpandedNameID)
 }
 
 $String* DTMDocumentImpl::getNamespaceFromExpandedNameID(int32_t ExpandedNameID) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, expandedName, $nc(this->m_localNames)->indexToString(ExpandedNameID));
 	int32_t colonpos = $nc(expandedName)->indexOf(":"_s);
 	$var($String, nsName, expandedName->substring(0, colonpos));
@@ -779,6 +783,7 @@ $String* DTMDocumentImpl::getNamespaceFromExpandedNameID(int32_t ExpandedNameID)
 }
 
 $String* DTMDocumentImpl::getNodeName(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->nodes)->readSlot(nodeHandle, this->gotslot);
 	int16_t type = (int16_t)((int32_t)($nc(this->gotslot)->get(0) & (uint32_t)0x0000FFFF));
 	$var($String, name, $nc(DTMDocumentImpl::fixednames)->get(type));
@@ -983,6 +988,7 @@ void DTMDocumentImpl::appendComment(int32_t m_char_current_start, int32_t conten
 }
 
 void DTMDocumentImpl::appendStartElement(int32_t namespaceIndex, int32_t localNameIndex, int32_t prefixIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t w0 = (namespaceIndex << 16) | $DTM::ELEMENT_NODE;
 	int32_t w1 = this->currentParent;
 	int32_t w2 = 0;
@@ -1010,6 +1016,7 @@ void DTMDocumentImpl::appendNSDeclaration(int32_t prefixIndex, int32_t namespace
 }
 
 void DTMDocumentImpl::appendAttribute(int32_t namespaceIndex, int32_t localNameIndex, int32_t prefixIndex, bool isID, int32_t m_char_current_start, int32_t contentLength) {
+	$useLocalCurrentObjectStackCache();
 	int32_t w0 = $DTM::ATTRIBUTE_NODE | (namespaceIndex << 16);
 	int32_t w1 = this->currentParent;
 	int32_t w2 = 0;

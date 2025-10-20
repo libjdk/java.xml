@@ -236,6 +236,7 @@ void StepPattern::init$(int32_t axis, int32_t nodeType, $List* predicates) {
 }
 
 void StepPattern::setParser($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$RelativePathPattern::setParser(parser);
 	if (this->_predicates != nullptr) {
 		{
@@ -310,6 +311,7 @@ void StepPattern::reduceKernelPattern() {
 }
 
 $String* StepPattern::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buffer, $new($StringBuffer, "stepPattern(\""_s));
 	buffer->append($($Axis::getNames(this->_axis)))->append("\", "_s)->append(this->_isEpsilon ? ($$str({"epsilon{"_s, $($Integer::toString(this->_nodeType)), "}"_s})) : $($Integer::toString(this->_nodeType)));
 	if (this->_predicates != nullptr) {
@@ -319,6 +321,7 @@ $String* StepPattern::toString() {
 }
 
 int32_t StepPattern::analyzeCases() {
+	$useLocalCurrentObjectStackCache();
 	bool noContext = true;
 	int32_t n = $nc(this->_predicates)->size();
 	for (int32_t i = 0; i < n && noContext; ++i) {
@@ -338,10 +341,12 @@ int32_t StepPattern::analyzeCases() {
 }
 
 $String* StepPattern::getNextFieldName() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"__step_pattern_iter_"_s, $$str($nc($(getXSLTC()))->nextStepPatternSerial())});
 }
 
 $1Type* StepPattern::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (hasPredicates()) {
 		{
 			$var($Iterator, i$, $nc(this->_predicates)->iterator());
@@ -385,6 +390,7 @@ $1Type* StepPattern::typeCheck($SymbolTable* stable) {
 }
 
 void StepPattern::translateKernel($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_nodeType == $DTM::ELEMENT_NODE) {
@@ -419,6 +425,7 @@ void StepPattern::translateKernel($ClassGenerator* classGen, $MethodGenerator* m
 }
 
 void StepPattern::translateNoContext($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(il)->append($(methodGen->loadCurrentNode()));
@@ -452,6 +459,7 @@ void StepPattern::translateNoContext($ClassGenerator* classGen, $MethodGenerator
 }
 
 void StepPattern::translateSimpleContext($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
@@ -497,6 +505,7 @@ void StepPattern::translateSimpleContext($ClassGenerator* classGen, $MethodGener
 }
 
 void StepPattern::translateGeneralContext($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	int32_t iteratorIndex = 0;
@@ -560,6 +569,7 @@ void StepPattern::translateGeneralContext($ClassGenerator* classGen, $MethodGene
 }
 
 void StepPattern::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (hasPredicates()) {

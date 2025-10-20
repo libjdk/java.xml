@@ -111,6 +111,7 @@ $Stylesheet* Include::getIncludedStylesheet() {
 }
 
 void Include::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTC, xsltc, $nc(parser)->getXSLTC());
 	$var($Stylesheet, context, parser->getCurrentStylesheet());
 	$var($String, docToLoad, getAttribute("href"_s));

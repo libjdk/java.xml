@@ -82,6 +82,7 @@ $Type* Otherwise::typeCheck($SymbolTable* stable) {
 }
 
 void Otherwise::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($Parser, parser, getParser());
 	$init($ErrorMsg);
 	$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::STRAY_OTHERWISE_ERR, static_cast<$SyntaxTreeNode*>(this)));

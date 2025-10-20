@@ -64,6 +64,7 @@ void ProcessorVersion::init$() {
 
 void ProcessorVersion::main($StringArray* args) {
 	$init(ProcessorVersion);
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$nc($System::out)->println($$str({"XSLTC version "_s, $$str(ProcessorVersion::MAJOR), "."_s, $$str(ProcessorVersion::MINOR), ((ProcessorVersion::DELTA > 0) ? ($$str({"."_s, $$str(ProcessorVersion::DELTA)})) : (""_s))}));
 }

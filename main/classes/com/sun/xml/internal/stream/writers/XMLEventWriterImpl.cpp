@@ -107,6 +107,7 @@ void XMLEventWriterImpl::init$($XMLStreamWriter* streamWriter) {
 }
 
 void XMLEventWriterImpl::add($XMLEventReader* xMLEventReader) {
+	$useLocalCurrentObjectStackCache();
 	if (xMLEventReader == nullptr) {
 		$throwNew($XMLStreamException, "Event reader shouldn\'t be null"_s);
 	}
@@ -116,6 +117,7 @@ void XMLEventWriterImpl::add($XMLEventReader* xMLEventReader) {
 }
 
 void XMLEventWriterImpl::add($XMLEvent* xMLEvent) {
+	$useLocalCurrentObjectStackCache();
 	int32_t type = $nc(xMLEvent)->getEventType();
 	switch (type) {
 	case $XMLEvent::DTD:

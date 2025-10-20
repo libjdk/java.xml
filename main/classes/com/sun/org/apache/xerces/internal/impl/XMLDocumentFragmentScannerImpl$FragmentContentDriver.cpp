@@ -221,6 +221,7 @@ void XMLDocumentFragmentScannerImpl$FragmentContentDriver::decideSubState() {
 }
 
 int32_t XMLDocumentFragmentScannerImpl$FragmentContentDriver::next() {
+	$useLocalCurrentObjectStackCache();
 	while (true) {
 		try {
 			if (this->this$0->fScannerState == 22) {

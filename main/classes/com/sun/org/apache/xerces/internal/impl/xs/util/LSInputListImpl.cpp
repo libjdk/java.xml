@@ -273,6 +273,7 @@ $LSInput* LSInputListImpl::item(int32_t index) {
 }
 
 $Object* LSInputListImpl::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fLength) {
 		return $of($nc(this->fArray)->get(index));
 	}

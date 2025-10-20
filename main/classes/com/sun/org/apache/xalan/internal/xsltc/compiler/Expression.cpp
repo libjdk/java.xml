@@ -156,12 +156,14 @@ $Type* Expression::typeCheck($SymbolTable* stable) {
 }
 
 void Expression::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::NOT_IMPLEMENTED_ERR, $of($of(this)->getClass()), static_cast<$SyntaxTreeNode*>(this)));
 	$nc($(getParser()))->reportError($Constants::FATAL, msg);
 }
 
 $InstructionList* Expression::compile($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, result, nullptr);
 	$var($InstructionList, save, $nc(methodGen)->getInstructionList());
 	methodGen->setInstructionList($assign(result, $new($InstructionList)));
@@ -178,6 +180,7 @@ void Expression::translateDesynthesized($ClassGenerator* classGen, $MethodGenera
 }
 
 void Expression::startIterator($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($NodeSetType, this->_type) == false) {
 		return;
 	}
@@ -193,6 +196,7 @@ void Expression::startIterator($ClassGenerator* classGen, $MethodGenerator* meth
 }
 
 void Expression::synthesize($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -203,6 +207,7 @@ void Expression::synthesize($ClassGenerator* classGen, $MethodGenerator* methodG
 }
 
 void Expression::desynthesize($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_falseList)->add($($nc(il)->append(static_cast<$BranchInstruction*>($$new($IFEQ, nullptr)))));
 }
@@ -224,6 +229,7 @@ void Expression::backPatchTrueList($InstructionHandle* ih) {
 }
 
 $MethodType* Expression::lookupPrimop($SymbolTable* stable, $String* op, $MethodType* ctype) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodType, result, nullptr);
 	$var($List, primop, $nc(stable)->lookupPrimop(op));
 	if (primop != nullptr) {

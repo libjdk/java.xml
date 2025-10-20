@@ -207,6 +207,7 @@ void DTDGrammarUtil::endCDATA($Augmentations* augs) {
 }
 
 void DTDGrammarUtil::addDTDDefaultAttrs($QName* elementName, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	int32_t elementIndex = 0;
 	elementIndex = $nc(this->fDTDGrammar)->getElementDeclIndex(elementName);
 	if (elementIndex == -1 || this->fDTDGrammar == nullptr) {
@@ -297,6 +298,7 @@ void DTDGrammarUtil::addDTDDefaultAttrs($QName* elementName, $XMLAttributes* att
 }
 
 bool DTDGrammarUtil::normalizeAttrValue($XMLAttributes* attributes, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	bool leadingSpace = true;
 	bool spaceStart = false;
 	bool readingNonSpace = false;
@@ -336,6 +338,7 @@ bool DTDGrammarUtil::normalizeAttrValue($XMLAttributes* attributes, int32_t inde
 }
 
 $String* DTDGrammarUtil::getAttributeTypeName($XMLAttributeDecl* attrDecl) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc($nc(attrDecl)->simpleType)->type) {
 	case $XMLSimpleType::TYPE_ENTITY:
 		{

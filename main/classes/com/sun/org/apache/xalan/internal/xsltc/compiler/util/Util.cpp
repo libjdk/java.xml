@@ -183,6 +183,7 @@ void Util::TRACE3() {
 
 $String* Util::replace($String* base, char16_t ch, $String* str) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	return ($nc(base)->indexOf((int32_t)ch) < 0) ? base : replace(base, $($String::valueOf(ch)), $$new($StringArray, {str}));
 }
 
@@ -239,6 +240,7 @@ bool Util::isLiteral($String* str) {
 
 bool Util::isValidQNames($String* str) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if ((str != nullptr) && (!str->equals($Constants::EMPTYSTRING))) {
 		$var($StringTokenizer, tokens, $new($StringTokenizer, str));

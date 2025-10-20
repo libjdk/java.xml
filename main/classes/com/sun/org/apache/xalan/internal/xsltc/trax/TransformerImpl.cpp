@@ -397,6 +397,7 @@ void TransformerImpl::init$($Properties* outputProperties, int32_t indentNumber,
 }
 
 void TransformerImpl::init$($Translet* translet, $Properties* outputProperties, int32_t indentNumber, $TransformerFactoryImpl* tfactory) {
+	$useLocalCurrentObjectStackCache();
 	$Transformer::init$();
 	$set(this, _translet, nullptr);
 	$set(this, _method, nullptr);
@@ -481,6 +482,7 @@ bool TransformerImpl::isIdentity() {
 }
 
 void TransformerImpl::transform($Source* source, $Result* result) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->_isIdentity) {
 		if (this->_translet == nullptr) {
 			$init($ErrorMsg);
@@ -531,6 +533,7 @@ void TransformerImpl::transform($Source* source, $Result* result) {
 }
 
 $SerializationHandler* TransformerImpl::getOutputHandler($Result* result) {
+	$useLocalCurrentObjectStackCache();
 	$init($OutputKeys);
 	$set(this, _method, $cast($String, $nc(this->_properties)->get($OutputKeys::METHOD)));
 	$set(this, _encoding, $nc(this->_properties)->getProperty($OutputKeys::ENCODING));
@@ -624,6 +627,7 @@ void TransformerImpl::setDOM($DOM* dom) {
 }
 
 $DOM* TransformerImpl::getDOM($Source* source) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DOM, dom, nullptr);
 		if (source != nullptr) {
@@ -668,6 +672,7 @@ $TransletOutputHandlerFactory* TransformerImpl::getTransletOutputHandlerFactory(
 }
 
 void TransformerImpl::transformIdentity($Source* source, $SerializationHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	if (source != nullptr) {
 		$set(this, _sourceSystemId, source->getSystemId());
 	}
@@ -772,6 +777,7 @@ void TransformerImpl::transformIdentity($Source* source, $SerializationHandler* 
 }
 
 void TransformerImpl::transform($Source* source$renamed, $SerializationHandler* handler, $String* encoding) {
+	$useLocalCurrentObjectStackCache();
 	$var($Source, source, source$renamed);
 	{
 		$var($Throwable, var$0, nullptr);
@@ -868,6 +874,7 @@ $ErrorListener* TransformerImpl::getErrorListener() {
 }
 
 void TransformerImpl::setErrorListener($ErrorListener* listener) {
+	$useLocalCurrentObjectStackCache();
 	if (listener == nullptr) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::ERROR_LISTENER_NULL_ERR, $of("Transformer"_s)));
@@ -900,6 +907,7 @@ $Properties* TransformerImpl::getOutputProperties() {
 }
 
 $String* TransformerImpl::getOutputProperty($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$init($JdkProperty$ImplPropMap);
 	if ($JdkProperty$ImplPropMap::XSLTCISSTANDALONE->is(name)) {
 		return $cast($String, $nc(this->_xsltcIsStandalone)->getValue());
@@ -913,6 +921,7 @@ $String* TransformerImpl::getOutputProperty($String* name) {
 }
 
 void TransformerImpl::setOutputProperties($Properties* properties) {
+	$useLocalCurrentObjectStackCache();
 	if (properties != nullptr) {
 		$var($Enumeration, names, properties->propertyNames());
 		while ($nc(names)->hasMoreElements()) {
@@ -934,6 +943,7 @@ void TransformerImpl::setOutputProperties($Properties* properties) {
 }
 
 void TransformerImpl::setOutputProperty($String* name, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if (!validOutputProperty(name)) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::JAXP_UNKNOWN_PROP_ERR, $of(name)));
@@ -949,6 +959,7 @@ void TransformerImpl::setOutputProperty($String* name, $String* value) {
 }
 
 void TransformerImpl::transferOutputProperties($AbstractTranslet* translet) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_properties == nullptr) {
 		return;
 	}
@@ -1025,6 +1036,7 @@ void TransformerImpl::transferOutputProperties($AbstractTranslet* translet) {
 }
 
 void TransformerImpl::transferOutputProperties($SerializationHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_properties == nullptr) {
 		return;
 	}
@@ -1114,6 +1126,7 @@ void TransformerImpl::transferOutputProperties($SerializationHandler* handler) {
 }
 
 $Properties* TransformerImpl::createOutputProperties($Properties* outputProperties) {
+	$useLocalCurrentObjectStackCache();
 	$var($Properties, defaults, $new($Properties));
 	setDefaults(defaults, "xml"_s);
 	$var($Properties, base, $new($Properties, defaults));
@@ -1143,6 +1156,7 @@ $Properties* TransformerImpl::createOutputProperties($Properties* outputProperti
 }
 
 void TransformerImpl::setDefaults($Properties* props, $String* method) {
+	$useLocalCurrentObjectStackCache();
 	$var($Properties, method_props, $OutputPropertiesFactory::getDefaultMethodProperties(method));
 	{
 		$var($Enumeration, names, $nc(method_props)->propertyNames());
@@ -1175,6 +1189,7 @@ bool TransformerImpl::isDefaultProperty($String* name, $Properties* properties) 
 }
 
 void TransformerImpl::setParameter($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::JAXP_INVALID_SET_PARAM_VALUE, $of(name)));
@@ -1215,6 +1230,7 @@ void TransformerImpl::setURIResolver($URIResolver* resolver) {
 }
 
 $DOM* TransformerImpl::retrieveDocument($String* baseURI, $String* href$renamed, $Translet* translet) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, href, href$renamed);
 	try {
 		if ($nc(href)->length() == 0) {

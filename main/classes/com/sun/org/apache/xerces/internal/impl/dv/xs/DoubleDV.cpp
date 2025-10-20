@@ -87,6 +87,7 @@ int16_t DoubleDV::getAllowedFacets() {
 }
 
 $Object* DoubleDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of($new($DoubleDV$XDouble, content));
 	} catch ($NumberFormatException&) {

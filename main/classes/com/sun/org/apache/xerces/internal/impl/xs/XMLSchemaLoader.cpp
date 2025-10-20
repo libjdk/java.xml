@@ -503,6 +503,7 @@ $String* XMLSchemaLoader::ACCESS_EXTERNAL_SCHEMA = nullptr;
 $StringArray* XMLSchemaLoader::RECOGNIZED_PROPERTIES = nullptr;
 
 void XMLSchemaLoader::init$() {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, var$0, $new($SymbolTable));
 	XMLSchemaLoader::init$(var$0, nullptr, $$new($XMLEntityManager), nullptr, nullptr, nullptr);
 }
@@ -516,6 +517,7 @@ void XMLSchemaLoader::init$($XMLErrorReporter* errorReporter, $XSGrammarBucket* 
 }
 
 void XMLSchemaLoader::init$($SymbolTable* symbolTable, $XMLErrorReporter* errorReporter$renamed, $XMLEntityManager* entityResolver, $XSGrammarBucket* grammarBucket$renamed, $SubstitutionGroupHandler* sHandler$renamed, $CMBuilder* builder$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLErrorReporter, errorReporter, errorReporter$renamed);
 	$var($CMBuilder, builder, builder$renamed);
 	$var($XSGrammarBucket, grammarBucket, grammarBucket$renamed);
@@ -605,6 +607,7 @@ $Object* XMLSchemaLoader::getProperty($String* propertyId) {
 }
 
 void XMLSchemaLoader::setProperty($String* propertyId, Object$* state) {
+	$useLocalCurrentObjectStackCache();
 	this->fSettingsChanged = true;
 	$nc(this->fLoaderConfig)->setProperty(propertyId, state);
 	if ($nc(propertyId)->equals(XMLSchemaLoader::JAXP_SCHEMA_SOURCE)) {
@@ -668,6 +671,7 @@ void XMLSchemaLoader::loadGrammar($XMLInputSourceArray* source) {
 }
 
 $Grammar* XMLSchemaLoader::loadGrammar($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	reset(this->fLoaderConfig);
 	this->fSettingsChanged = false;
 	$var($XSDDescription, desc, $new($XSDDescription));
@@ -688,6 +692,7 @@ $Grammar* XMLSchemaLoader::loadGrammar($XMLInputSource* source) {
 }
 
 $SchemaGrammar* XMLSchemaLoader::loadSchema($XSDDescription* desc, $XMLInputSource* source, $Map* locationPairs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fJAXPProcessed) {
 		processJAXPSchemaSource(locationPairs);
 	}
@@ -709,6 +714,7 @@ $SchemaGrammar* XMLSchemaLoader::loadSchema($XSDDescription* desc, $XMLInputSour
 
 $XMLInputSource* XMLSchemaLoader::resolveDocument($XSDDescription* desc, $Map* locationPairs, $XMLEntityResolver* entityResolver) {
 	$init(XMLSchemaLoader);
+	$useLocalCurrentObjectStackCache();
 	$var($String, loc, nullptr);
 	bool var$0 = $nc(desc)->getContextType() == $XSDDescription::CONTEXT_IMPORT;
 	if (var$0 || $nc(desc)->fromInstance()) {
@@ -734,6 +740,7 @@ $XMLInputSource* XMLSchemaLoader::resolveDocument($XSDDescription* desc, $Map* l
 
 void XMLSchemaLoader::processExternalHints($String* sl, $String* nsl, $Map* locations, $XMLErrorReporter* er) {
 	$init(XMLSchemaLoader);
+	$useLocalCurrentObjectStackCache();
 	if (sl != nullptr) {
 		try {
 			$init($SchemaGrammar);
@@ -777,6 +784,7 @@ void XMLSchemaLoader::processExternalHints($String* sl, $String* nsl, $Map* loca
 
 bool XMLSchemaLoader::tokenizeSchemaLocationStr($String* schemaStr, $Map* locations, $String* base) {
 	$init(XMLSchemaLoader);
+	$useLocalCurrentObjectStackCache();
 	if (schemaStr != nullptr) {
 		$var($StringTokenizer, t, $new($StringTokenizer, schemaStr, " \n\t\r"_s));
 		$var($String, namespace$, nullptr);
@@ -806,6 +814,7 @@ bool XMLSchemaLoader::tokenizeSchemaLocationStr($String* schemaStr, $Map* locati
 }
 
 void XMLSchemaLoader::processJAXPSchemaSource($Map* locationPairs) {
+	$useLocalCurrentObjectStackCache();
 	this->fJAXPProcessed = true;
 	if (this->fJAXPSource == nullptr) {
 		return;
@@ -903,6 +912,7 @@ void XMLSchemaLoader::processJAXPSchemaSource($Map* locationPairs) {
 }
 
 $XMLInputSource* XMLSchemaLoader::xsdToXMLInputSource(Object$* val) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($String, val)) {
 		$var($String, loc, $cast($String, val));
 		$nc(this->fXSDDescription)->reset();
@@ -945,6 +955,7 @@ $XMLInputSource* XMLSchemaLoader::xsdToXMLInputSource(Object$* val) {
 
 $XMLInputSource* XMLSchemaLoader::saxToXMLInputSource($InputSource* sis) {
 	$init(XMLSchemaLoader);
+	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, $nc(sis)->getPublicId());
 	$var($String, systemId, sis->getSystemId());
 	$var($Reader, charStream, sis->getCharacterStream());
@@ -971,6 +982,7 @@ $Object* XMLSchemaLoader::getPropertyDefault($String* propertyId) {
 }
 
 void XMLSchemaLoader::reset($XMLComponentManager* componentManager) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLSecurityPropertyManager, spm, $cast($XMLSecurityPropertyManager, $nc(componentManager)->getProperty(XMLSchemaLoader::XML_SECURITY_PROPERTY_MANAGER)));
 	if (spm == nullptr) {
 		$assign(spm, $new($XMLSecurityPropertyManager));
@@ -1069,6 +1081,7 @@ $DOMConfiguration* XMLSchemaLoader::getConfig() {
 }
 
 $XSModel* XMLSchemaLoader::load($LSInput* is) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Grammar, g, loadGrammar($(dom2xmlInputSource(is))));
 		return $nc(($cast($XSGrammar, g)))->toXSModel();
@@ -1081,6 +1094,7 @@ $XSModel* XMLSchemaLoader::load($LSInput* is) {
 }
 
 $XSModel* XMLSchemaLoader::loadInputList($LSInputList* is) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(is)->getLength();
 	$var($SchemaGrammarArray, gs, $new($SchemaGrammarArray, length));
 	for (int32_t i = 0; i < length; ++i) {
@@ -1096,6 +1110,7 @@ $XSModel* XMLSchemaLoader::loadInputList($LSInputList* is) {
 }
 
 $XSModel* XMLSchemaLoader::loadURI($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Grammar, g, loadGrammar($$new($XMLInputSource, nullptr, uri, nullptr, false)));
 		return $nc(($cast($XSGrammar, g)))->toXSModel();
@@ -1108,6 +1123,7 @@ $XSModel* XMLSchemaLoader::loadURI($String* uri) {
 }
 
 $XSModel* XMLSchemaLoader::loadURIList($StringList* uriList) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(uriList)->getLength();
 	$var($SchemaGrammarArray, gs, $new($SchemaGrammarArray, length));
 	for (int32_t i = 0; i < length; ++i) {
@@ -1123,6 +1139,7 @@ $XSModel* XMLSchemaLoader::loadURIList($StringList* uriList) {
 }
 
 void XMLSchemaLoader::reportDOMFatalError($Exception* e) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fErrorHandler != nullptr) {
 		$var($DOMErrorImpl, error, $new($DOMErrorImpl));
 		$set(error, fException, e);
@@ -1168,6 +1185,7 @@ bool XMLSchemaLoader::canSetParameter($String* name, Object$* value) {
 }
 
 $Object* XMLSchemaLoader::getParameter($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if ($nc(name)->equals($Constants::DOM_ERROR_HANDLER)) {
 		return $of((this->fErrorHandler != nullptr) ? $of($nc(this->fErrorHandler)->getErrorHandler()) : ($Object*)nullptr);
@@ -1227,6 +1245,7 @@ $DOMStringList* XMLSchemaLoader::getParameterNames() {
 }
 
 void XMLSchemaLoader::setParameter($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Boolean, value)) {
 		bool state = $nc(($cast($Boolean, value)))->booleanValue();
 		if ($nc(name)->equals("validate"_s) && state) {
@@ -1284,6 +1303,7 @@ void XMLSchemaLoader::setParameter($String* name, Object$* value) {
 }
 
 $XMLInputSource* XMLSchemaLoader::dom2xmlInputSource($LSInput* is) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLInputSource, xis, nullptr);
 	if ($nc(is)->getCharacterStream() != nullptr) {
 		$var($String, var$0, is->getPublicId());

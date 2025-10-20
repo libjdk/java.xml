@@ -409,6 +409,7 @@ $InvokeInstruction* InstructionFactory::createInvoke($String* class_name, $Strin
 }
 
 $InvokeInstruction* InstructionFactory::createInvoke($String* class_name, $String* name, $Type* ret_type, $TypeArray* arg_types, int16_t kind, bool use_interface) {
+	$useLocalCurrentObjectStackCache();
 	if (kind != $Const::INVOKESPECIAL && kind != $Const::INVOKEVIRTUAL && kind != $Const::INVOKESTATIC && kind != $Const::INVOKEINTERFACE && kind != $Const::INVOKEDYNAMIC) {
 		$throwNew($IllegalArgumentException, $$str({"Unknown invoke kind: "_s, $$str(kind)}));
 	}
@@ -460,6 +461,7 @@ $InvokeInstruction* InstructionFactory::createInvoke($String* class_name, $Strin
 }
 
 $InstructionList* InstructionFactory::createPrintln($String* s) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $new($InstructionList));
 	int32_t out = $nc(this->cp)->addFieldref("java.lang.System"_s, "out"_s, "Ljava/io/PrintStream;"_s);
 	int32_t println = $nc(this->cp)->addMethodref("java.io.PrintStream"_s, "println"_s, "(Ljava/lang/String;)V"_s);
@@ -470,6 +472,7 @@ $InstructionList* InstructionFactory::createPrintln($String* s) {
 }
 
 $Instruction* InstructionFactory::createConstant(Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($PUSH, push, nullptr);
 	if ($instanceOf($Number, value)) {
 		$assign(push, $new($PUSH, this->cp, $cast($Number, value)));
@@ -532,6 +535,7 @@ $Instruction* InstructionFactory::createAppend($Type* type) {
 }
 
 $FieldInstruction* InstructionFactory::createFieldAccess($String* class_name, $String* name, $Type* type, int16_t kind) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$var($String, signature, $nc(type)->getSignature());
 	index = $nc(this->cp)->addFieldref(class_name, name, signature);
@@ -736,6 +740,7 @@ $ArithmeticInstruction* InstructionFactory::createBinaryLongOp(char16_t first, $
 
 $ArithmeticInstruction* InstructionFactory::createBinaryFloatOp(char16_t op) {
 	$init(InstructionFactory);
+	$useLocalCurrentObjectStackCache();
 	switch (op) {
 	case u'-':
 		{
@@ -771,6 +776,7 @@ $ArithmeticInstruction* InstructionFactory::createBinaryFloatOp(char16_t op) {
 
 $ArithmeticInstruction* InstructionFactory::createBinaryDoubleOp(char16_t op) {
 	$init(InstructionFactory);
+	$useLocalCurrentObjectStackCache();
 	switch (op) {
 	case u'-':
 		{
@@ -1050,6 +1056,7 @@ $ArrayInstruction* InstructionFactory::createArrayStore($Type* type) {
 }
 
 $Instruction* InstructionFactory::createCast($Type* src_type, $Type* dest_type) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (($instanceOf($BasicType, src_type)) && ($instanceOf($BasicType, dest_type))) {
 		int8_t dest = $nc(dest_type)->getType();
@@ -1185,6 +1192,7 @@ $Instruction* InstructionFactory::createNull($Type* type) {
 
 $BranchInstruction* InstructionFactory::createBranchInstruction(int16_t opcode, $InstructionHandle* target) {
 	$init(InstructionFactory);
+	$useLocalCurrentObjectStackCache();
 	switch (opcode) {
 	case $Const::IFEQ:
 		{
@@ -1290,6 +1298,7 @@ $ConstantPoolGen* InstructionFactory::getConstantPool() {
 }
 
 void clinit$InstructionFactory($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(InstructionFactory::short_names, $new($StringArray, {
 		"C"_s,
 		"F"_s,

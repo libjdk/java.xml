@@ -149,6 +149,7 @@ void SchemaContentHandler::setDocumentLocator($Locator* locator) {
 }
 
 void SchemaContentHandler::startDocument() {
+	$useLocalCurrentObjectStackCache();
 	this->fNeedPushNSContext = true;
 	$nc(this->fNamespaceContext)->reset();
 	try {
@@ -163,6 +164,7 @@ void SchemaContentHandler::startDocument() {
 }
 
 void SchemaContentHandler::endDocument() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fSAXLocatorWrapper)->setLocator(nullptr);
 	try {
 		$nc(this->fSchemaDOMParser)->endDocument(nullptr);
@@ -176,6 +178,7 @@ void SchemaContentHandler::endDocument() {
 }
 
 void SchemaContentHandler::startPrefixMapping($String* prefix$renamed, $String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, uri, uri$renamed);
 	if (this->fNeedPushNSContext) {
@@ -202,6 +205,7 @@ void SchemaContentHandler::endPrefixMapping($String* prefix) {
 }
 
 void SchemaContentHandler::startElement($String* uri, $String* localName, $String* qName, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNeedPushNSContext) {
 		$nc(this->fNamespaceContext)->pushContext();
 	}
@@ -226,6 +230,7 @@ void SchemaContentHandler::startElement($String* uri, $String* localName, $Strin
 }
 
 void SchemaContentHandler::endElement($String* uri, $String* localName, $String* qName) {
+	$useLocalCurrentObjectStackCache();
 	fillQName(this->fElementQName, uri, localName, qName);
 	{
 		$var($Throwable, var$0, nullptr);
@@ -251,6 +256,7 @@ void SchemaContentHandler::endElement($String* uri, $String* localName, $String*
 }
 
 void SchemaContentHandler::characters($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaDOMParser)->characters(this->fTempString, nullptr);
@@ -264,6 +270,7 @@ void SchemaContentHandler::characters($chars* ch, int32_t start, int32_t length)
 }
 
 void SchemaContentHandler::ignorableWhitespace($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaDOMParser)->ignorableWhitespace(this->fTempString, nullptr);
@@ -277,6 +284,7 @@ void SchemaContentHandler::ignorableWhitespace($chars* ch, int32_t start, int32_
 }
 
 void SchemaContentHandler::processingInstruction($String* target, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($chars, var$0, $nc(data)->toCharArray());
 		$nc(this->fTempString)->setValues(var$0, 0, data->length());
@@ -294,6 +302,7 @@ void SchemaContentHandler::skippedEntity($String* arg) {
 }
 
 void SchemaContentHandler::fillQName($QName* toFill, $String* uri$renamed, $String* localpart$renamed, $String* rawname$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localpart, localpart$renamed);
 	$var($String, uri, uri$renamed);
 	$var($String, rawname, rawname$renamed);
@@ -332,6 +341,7 @@ void SchemaContentHandler::fillQName($QName* toFill, $String* uri$renamed, $Stri
 }
 
 void SchemaContentHandler::fillXMLAttributes($Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fAttributes)->removeAllAttributes();
 	int32_t attrCount = $nc(atts)->getLength();
 	for (int32_t i = 0; i < attrCount; ++i) {
@@ -347,6 +357,7 @@ void SchemaContentHandler::fillXMLAttributes($Attributes* atts) {
 }
 
 void SchemaContentHandler::addNamespaceDeclarations(int32_t prefixCount) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	$var($String, localpart, nullptr);
 	$var($String, rawname, nullptr);
@@ -386,6 +397,7 @@ void SchemaContentHandler::reset($SchemaDOMParser* schemaDOMParser, $SymbolTable
 
 void SchemaContentHandler::convertToSAXParseException($XMLParseException* e) {
 	$init(SchemaContentHandler);
+	$useLocalCurrentObjectStackCache();
 	$var($Exception, ex, $nc(e)->getException());
 	if (ex == nullptr) {
 		$var($LocatorImpl, locatorImpl, $new($LocatorImpl));
@@ -403,6 +415,7 @@ void SchemaContentHandler::convertToSAXParseException($XMLParseException* e) {
 
 void SchemaContentHandler::convertToSAXException($XNIException* e) {
 	$init(SchemaContentHandler);
+	$useLocalCurrentObjectStackCache();
 	$var($Exception, ex, $nc(e)->getException());
 	if (ex == nullptr) {
 		$throwNew($SAXException, $(e->getMessage()));

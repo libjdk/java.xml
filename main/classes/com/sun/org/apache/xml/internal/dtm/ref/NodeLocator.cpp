@@ -78,6 +78,7 @@ int32_t NodeLocator::getColumnNumber() {
 }
 
 $String* NodeLocator::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"file \'"_s, this->m_systemId, "\', line #"_s, $$str(this->m_lineNumber), ", column #"_s, $$str(this->m_columnNumber)});
 }
 

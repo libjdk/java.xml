@@ -73,6 +73,7 @@ $Object* allocate$InnerClasses($Class* clazz) {
 }
 
 void InnerClasses::init$(InnerClasses* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($InnerClassArray, var$2, c->getInnerClasses());
@@ -85,6 +86,7 @@ void InnerClasses::init$(int32_t name_index, int32_t length, $InnerClassArray* i
 }
 
 void InnerClasses::init$(int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	InnerClasses::init$(name_index, length, ($InnerClassArray*)nullptr, constant_pool);
 	int32_t number_of_classes = $nc(input)->readUnsignedShort();
 	$set(this, innerClasses, $new($InnerClassArray, number_of_classes));
@@ -98,6 +100,7 @@ void InnerClasses::accept($Visitor* v) {
 }
 
 void InnerClasses::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort($nc(this->innerClasses)->length);
 	{
@@ -122,6 +125,7 @@ void InnerClasses::setInnerClasses($InnerClassArray* innerClasses) {
 }
 
 $String* InnerClasses::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	buf->append("InnerClasses("_s);
 	buf->append($nc(this->innerClasses)->length);
@@ -141,6 +145,7 @@ $String* InnerClasses::toString() {
 }
 
 $Attribute* InnerClasses::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(InnerClasses, c, $cast(InnerClasses, clone()));
 	$set($nc(c), innerClasses, $new($InnerClassArray, $nc(this->innerClasses)->length));
 	for (int32_t i = 0; i < $nc(this->innerClasses)->length; ++i) {

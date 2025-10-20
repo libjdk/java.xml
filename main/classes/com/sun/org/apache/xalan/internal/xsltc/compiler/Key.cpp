@@ -165,6 +165,7 @@ void Key::init$() {
 }
 
 void Key::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	if (!$XML11Char::isXML11ValidQName(name)) {
 		$init($ErrorMsg);
@@ -208,6 +209,7 @@ $1Type* Key::typeCheck($SymbolTable* stable) {
 }
 
 void Key::traverseNodeSet($ClassGenerator* classGen, $MethodGenerator* methodGen, int32_t buildKeyIndex) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -244,6 +246,7 @@ void Key::traverseNodeSet($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 void Key::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	int32_t current = methodGen->getLocalIndex("current"_s);

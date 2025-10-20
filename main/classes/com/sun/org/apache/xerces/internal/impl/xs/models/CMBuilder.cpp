@@ -123,6 +123,7 @@ void CMBuilder::setDeclPool($XSDeclarationPool* declPool) {
 }
 
 $XSCMValidator* CMBuilder::getContentModel($XSComplexTypeDecl* typeDecl, bool forUPA) {
+	$useLocalCurrentObjectStackCache();
 	int16_t contentType = $nc(typeDecl)->getContentType();
 	if (contentType == $XSComplexTypeDecl::CONTENTTYPE_SIMPLE || contentType == $XSComplexTypeDecl::CONTENTTYPE_EMPTY) {
 		return nullptr;
@@ -145,6 +146,7 @@ $XSCMValidator* CMBuilder::getContentModel($XSComplexTypeDecl* typeDecl, bool fo
 }
 
 $XSCMValidator* CMBuilder::createAllCM($XSParticleDecl* particle) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(particle)->fMaxOccurs == 0) {
 		return nullptr;
 	}
@@ -167,6 +169,7 @@ $XSCMValidator* CMBuilder::createDFACM($XSParticleDecl* particle, bool forUPA) {
 }
 
 $CMNode* CMBuilder::buildSyntaxTree($XSParticleDecl* particle, bool forUPA, bool optimize) {
+	$useLocalCurrentObjectStackCache();
 	int32_t maxOccurs = $nc(particle)->fMaxOccurs;
 	int32_t minOccurs = particle->fMinOccurs;
 	bool compactedForUPA = false;
@@ -221,6 +224,7 @@ $CMNode* CMBuilder::buildSyntaxTree($XSParticleDecl* particle, bool forUPA, bool
 }
 
 $CMNode* CMBuilder::expandContentModel($CMNode* node$renamed, int32_t minOccurs, int32_t maxOccurs, bool optimize) {
+	$useLocalCurrentObjectStackCache();
 	$var($CMNode, node, node$renamed);
 	$var($CMNode, nodeRet, nullptr);
 	if (minOccurs == 1 && maxOccurs == 1) {
@@ -260,6 +264,7 @@ $CMNode* CMBuilder::expandContentModel($CMNode* node$renamed, int32_t minOccurs,
 }
 
 $CMNode* CMBuilder::multiNodes($CMNode* node, int32_t num, bool copyFirst) {
+	$useLocalCurrentObjectStackCache();
 	if (num == 0) {
 		return nullptr;
 	}
@@ -272,6 +277,7 @@ $CMNode* CMBuilder::multiNodes($CMNode* node, int32_t num, bool copyFirst) {
 }
 
 $CMNode* CMBuilder::copyNode($CMNode* node$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($CMNode, node, node$renamed);
 	int32_t type = $nc(node)->type();
 	if (type == $XSModelGroupImpl::MODELGROUP_CHOICE || type == $XSModelGroupImpl::MODELGROUP_SEQUENCE) {
@@ -292,6 +298,7 @@ $CMNode* CMBuilder::copyNode($CMNode* node$renamed) {
 }
 
 $CMNode* CMBuilder::buildCompactSyntaxTree($XSParticleDecl* particle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t maxOccurs = $nc(particle)->fMaxOccurs;
 	int32_t minOccurs = particle->fMinOccurs;
 	int16_t type = particle->fType;
@@ -351,6 +358,7 @@ $CMNode* CMBuilder::buildCompactSyntaxTree2($XSParticleDecl* particle, int32_t m
 }
 
 bool CMBuilder::useRepeatingLeafNodes($XSParticleDecl* particle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t maxOccurs = $nc(particle)->fMaxOccurs;
 	int32_t minOccurs = particle->fMinOccurs;
 	int16_t type = particle->fType;

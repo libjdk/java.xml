@@ -102,6 +102,7 @@ void ExsltMath::init$() {
 
 double ExsltMath::max($NodeList* nl) {
 	$init(ExsltMath);
+	$useLocalCurrentObjectStackCache();
 	if (nl == nullptr || $nc(nl)->getLength() == 0) {
 		$init($Double);
 		return $Double::NaN;
@@ -122,6 +123,7 @@ double ExsltMath::max($NodeList* nl) {
 
 double ExsltMath::min($NodeList* nl) {
 	$init(ExsltMath);
+	$useLocalCurrentObjectStackCache();
 	if (nl == nullptr || $nc(nl)->getLength() == 0) {
 		$init($Double);
 		return $Double::NaN;
@@ -142,6 +144,7 @@ double ExsltMath::min($NodeList* nl) {
 
 $NodeList* ExsltMath::highest($NodeList* nl) {
 	$init(ExsltMath);
+	$useLocalCurrentObjectStackCache();
 	double maxValue = max(nl);
 	$var($NodeSet, highNodes, $new($NodeSet));
 	highNodes->setShouldCacheNodes(true);
@@ -160,6 +163,7 @@ $NodeList* ExsltMath::highest($NodeList* nl) {
 
 $NodeList* ExsltMath::lowest($NodeList* nl) {
 	$init(ExsltMath);
+	$useLocalCurrentObjectStackCache();
 	double minValue = min(nl);
 	$var($NodeSet, lowNodes, $new($NodeSet));
 	lowNodes->setShouldCacheNodes(true);

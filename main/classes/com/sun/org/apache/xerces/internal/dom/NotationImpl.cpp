@@ -332,6 +332,7 @@ void NotationImpl::setSystemId($String* id) {
 }
 
 $String* NotationImpl::getBaseURI() {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}

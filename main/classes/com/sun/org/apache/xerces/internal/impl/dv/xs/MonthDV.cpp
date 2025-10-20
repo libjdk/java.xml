@@ -73,6 +73,7 @@ void MonthDV::init$() {
 }
 
 $Object* MonthDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content));
 	} catch ($Exception&) {
@@ -86,6 +87,7 @@ $Object* MonthDV::getActualValue($String* content, $ValidationContext* context) 
 }
 
 $AbstractDateTimeDV$DateTimeData* MonthDV::parse($String* str) {
+	$useLocalCurrentObjectStackCache();
 	$var($AbstractDateTimeDV$DateTimeData, date, $new($AbstractDateTimeDV$DateTimeData, str, this));
 	int32_t len = $nc(str)->length();
 	date->year = $AbstractDateTimeDV::YEAR;

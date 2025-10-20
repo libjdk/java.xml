@@ -92,6 +92,7 @@ void ConstantMethodType::setDescriptorIndex(int32_t descriptor_index) {
 }
 
 $String* ConstantMethodType::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(descriptorIndex = "_s, $$str(this->descriptorIndex), ")"_s});
 }
 

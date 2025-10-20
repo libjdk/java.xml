@@ -223,6 +223,7 @@ void XPointerHandler::setDocumentHandler($XMLDocumentHandler* handler) {
 }
 
 void XPointerHandler::parseXPointer($String* xpointer) {
+	$useLocalCurrentObjectStackCache();
 	init();
 	$var($XPointerHandler$Tokens, tokens, $new($XPointerHandler$Tokens, this, this->fSymbolTable));
 	$var($XPointerHandler$Scanner, scanner, $new($XPointerHandler$1, this, this->fSymbolTable));
@@ -364,6 +365,7 @@ $XPointerPart* XPointerHandler::getXPointerPart() {
 }
 
 void XPointerHandler::reportError($String* key, $ObjectArray* arguments) {
+	$useLocalCurrentObjectStackCache();
 	$init($XPointerMessageFormatter);
 	$throwNew($XNIException, $($nc(($($nc(this->fErrorReporter)->getMessageFormatter($XPointerMessageFormatter::XPOINTER_DOMAIN))))->formatMessage($($nc(this->fErrorReporter)->getLocale()), key, arguments)));
 }

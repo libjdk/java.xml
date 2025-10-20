@@ -220,6 +220,7 @@ bool ResultTreeType::implementedAsMethod() {
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
@@ -253,6 +254,7 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -261,6 +263,7 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_methodName == nullptr) {
@@ -299,6 +302,7 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $ReferenceType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_methodName == nullptr) {
@@ -342,6 +346,7 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $NodeSetType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -367,6 +372,7 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 }
 
 $FlowList* ResultTreeType::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($1Type);
 	translateTo(classGen, methodGen, $1Type::Boolean);
@@ -374,6 +380,7 @@ $FlowList* ResultTreeType::translateToDesynthesized($ClassGenerator* classGen, $
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, className, $nc(clazz)->getName());
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());

@@ -137,6 +137,7 @@ void FilterExprIteratorSimple::init$($Expression* expr) {
 }
 
 void FilterExprIteratorSimple::setRoot(int32_t context, Object$* environment) {
+	$useLocalCurrentObjectStackCache();
 	$LocPathIterator::setRoot(context, environment);
 	int32_t var$0 = context;
 	$var($XPathContext, var$1, this->m_execContext);
@@ -146,6 +147,7 @@ void FilterExprIteratorSimple::setRoot(int32_t context, Object$* environment) {
 
 $XNodeSet* FilterExprIteratorSimple::executeFilterExpr(int32_t context, $XPathContext* xctxt, $PrefixResolver* prefixResolver, bool isTopLevel, int32_t stackFrame, $Expression* expr) {
 	$init(FilterExprIteratorSimple);
+	$useLocalCurrentObjectStackCache();
 	$var($PrefixResolver, savedResolver, $nc(xctxt)->getNamespaceContext());
 	$var($XNodeSet, result, nullptr);
 	{

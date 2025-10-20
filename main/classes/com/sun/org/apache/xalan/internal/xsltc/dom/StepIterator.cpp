@@ -80,6 +80,7 @@ void StepIterator::setRestartable(bool isRestartable) {
 }
 
 $DTMAxisIterator* StepIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	this->_isRestartable = false;
 	try {
 		$var(StepIterator, clone, $cast(StepIterator, $DTMAxisIteratorBase::clone()));

@@ -792,6 +792,7 @@ $String* XSDHandler::emptyString2Null($String* ns) {
 }
 
 $String* XSDHandler::doc2SystemId($Element* ele) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, documentURI, nullptr);
 	if ($instanceOf($SchemaDOM, $($nc(ele)->getOwnerDocument()))) {
 		$assign(documentURI, $nc(($cast($SchemaDOM, $(ele->getOwnerDocument()))))->getDocumentURI());
@@ -878,6 +879,7 @@ void XSDHandler::init$($XSGrammarBucket* gBucket) {
 }
 
 $SchemaGrammar* XSDHandler::parseSchema($XMLInputSource* is, $XSDDescription* desc, $Map* locationPairs) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fLocationPairs, locationPairs);
 	$nc(this->fSchemaParser)->resetNodePool();
 	$var($SchemaGrammar, grammar, nullptr);
@@ -995,6 +997,7 @@ $SchemaGrammar* XSDHandler::parseSchema($XMLInputSource* is, $XSDDescription* de
 }
 
 void XSDHandler::validateAnnotations($List* annotationInfo) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAnnotationValidator == nullptr) {
 		createAnnotationValidator();
 	}
@@ -1017,6 +1020,7 @@ void XSDHandler::validateAnnotations($List* annotationInfo) {
 }
 
 void XSDHandler::createAnnotationValidator() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fAnnotationValidator, $new($XML11Configuration));
 	$set(this, fGrammarBucketAdapter, $new($XSDHandler$XSAnnotationGrammarPool));
 	$nc(this->fAnnotationValidator)->setFeature(XSDHandler::VALIDATION, true);
@@ -1040,6 +1044,7 @@ $SchemaGrammar* XSDHandler::getGrammar($String* tns) {
 }
 
 $SchemaGrammar* XSDHandler::findGrammar($XSDDescription* desc, bool ignoreConflict) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $nc(this->fGrammarBucket)->getGrammar($($nc(desc)->getTargetNamespace())));
 	if (sg == nullptr) {
 		if (this->fGrammarPool != nullptr) {
@@ -1056,6 +1061,7 @@ $SchemaGrammar* XSDHandler::findGrammar($XSDDescription* desc, bool ignoreConfli
 }
 
 $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locationHint, $XSDDescription* desc, bool nsCollision) {
+	$useLocalCurrentObjectStackCache();
 	if (schemaRoot == nullptr) {
 		return nullptr;
 	}
@@ -1344,6 +1350,7 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 }
 
 bool XSDHandler::isExistingGrammar($XSDDescription* desc, bool ignoreConflict) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $nc(this->fGrammarBucket)->getGrammar($($nc(desc)->getTargetNamespace())));
 	if (sg == nullptr) {
 		return findGrammar(desc, ignoreConflict) != nullptr;
@@ -1362,6 +1369,7 @@ bool XSDHandler::isExistingGrammar($XSDDescription* desc, bool ignoreConflict) {
 }
 
 void XSDHandler::updateImportListFor($SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, importedGrammars, $nc(grammar)->getImportedGrammars());
 	if (importedGrammars != nullptr) {
 		for (int32_t i = 0; i < importedGrammars->size(); ++i) {
@@ -1375,6 +1383,7 @@ void XSDHandler::updateImportListFor($SchemaGrammar* grammar) {
 }
 
 void XSDHandler::updateImportListWith($SchemaGrammar* newGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammarArray, schemaGrammars, $nc(this->fGrammarBucket)->getGrammars());
 	for (int32_t i = 0; i < $nc(schemaGrammars)->length; ++i) {
 		$var($SchemaGrammar, sg, schemaGrammars->get(i));
@@ -1396,6 +1405,7 @@ void XSDHandler::updateImportListWith($SchemaGrammar* newGrammar) {
 }
 
 void XSDHandler::buildGlobalNameRegistries() {
+	$useLocalCurrentObjectStackCache();
 	this->registryEmpty = false;
 	$var($Stack, schemasToProcess, $new($Stack));
 	schemasToProcess->push(this->fRoot);
@@ -1512,6 +1522,7 @@ void XSDHandler::buildGlobalNameRegistries() {
 }
 
 void XSDHandler::traverseSchemas($List* annotationInfo) {
+	$useLocalCurrentObjectStackCache();
 	setSchemasVisible(this->fRoot);
 	$var($Stack, schemasToProcess, $new($Stack));
 	schemasToProcess->push(this->fRoot);
@@ -1641,6 +1652,7 @@ bool XSDHandler::needReportTNSError($String* uri) {
 }
 
 void XSDHandler::addGlobalAttributeDecl($XSAttributeDecl* decl) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(decl)->getNamespace());
 	$var($String, declKey, (namespace$ == nullptr || $nc(namespace$)->length() == 0) ? $str({","_s, $(decl->getName())}) : $str({namespace$, ","_s, $(decl->getName())}));
 	if ($nc(this->fGlobalAttrDecls)->get(declKey) == nullptr) {
@@ -1649,6 +1661,7 @@ void XSDHandler::addGlobalAttributeDecl($XSAttributeDecl* decl) {
 }
 
 void XSDHandler::addGlobalAttributeGroupDecl($XSAttributeGroupDecl* decl) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(decl)->getNamespace());
 	$var($String, declKey, (namespace$ == nullptr || $nc(namespace$)->length() == 0) ? $str({","_s, $(decl->getName())}) : $str({namespace$, ","_s, $(decl->getName())}));
 	if ($nc(this->fGlobalAttrGrpDecls)->get(declKey) == nullptr) {
@@ -1657,6 +1670,7 @@ void XSDHandler::addGlobalAttributeGroupDecl($XSAttributeGroupDecl* decl) {
 }
 
 void XSDHandler::addGlobalElementDecl($XSElementDecl* decl) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(decl)->getNamespace());
 	$var($String, declKey, (namespace$ == nullptr || $nc(namespace$)->length() == 0) ? $str({","_s, $(decl->getName())}) : $str({namespace$, ","_s, $(decl->getName())}));
 	if ($nc(this->fGlobalElemDecls)->get(declKey) == nullptr) {
@@ -1665,6 +1679,7 @@ void XSDHandler::addGlobalElementDecl($XSElementDecl* decl) {
 }
 
 void XSDHandler::addGlobalGroupDecl($XSGroupDecl* decl) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(decl)->getNamespace());
 	$var($String, declKey, (namespace$ == nullptr || $nc(namespace$)->length() == 0) ? $str({","_s, $(decl->getName())}) : $str({namespace$, ","_s, $(decl->getName())}));
 	if ($nc(this->fGlobalGroupDecls)->get(declKey) == nullptr) {
@@ -1673,6 +1688,7 @@ void XSDHandler::addGlobalGroupDecl($XSGroupDecl* decl) {
 }
 
 void XSDHandler::addGlobalNotationDecl($XSNotationDecl* decl) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(decl)->getNamespace());
 	$var($String, declKey, (namespace$ == nullptr || $nc(namespace$)->length() == 0) ? $str({","_s, $(decl->getName())}) : $str({namespace$, ","_s, $(decl->getName())}));
 	if ($nc(this->fGlobalNotationDecls)->get(declKey) == nullptr) {
@@ -1681,6 +1697,7 @@ void XSDHandler::addGlobalNotationDecl($XSNotationDecl* decl) {
 }
 
 void XSDHandler::addGlobalTypeDecl($XSTypeDefinition* decl) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(decl)->getNamespace());
 	$var($String, declKey, (namespace$ == nullptr || $nc(namespace$)->length() == 0) ? $str({","_s, $(decl->getName())}) : $str({namespace$, ","_s, $(decl->getName())}));
 	if ($nc(this->fGlobalTypeDecls)->get(declKey) == nullptr) {
@@ -1689,6 +1706,7 @@ void XSDHandler::addGlobalTypeDecl($XSTypeDefinition* decl) {
 }
 
 void XSDHandler::addIDConstraintDecl($IdentityConstraint* decl) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(decl)->getNamespace());
 	$var($String, declKey, (namespace$ == nullptr || $nc(namespace$)->length() == 0) ? $str({","_s, $(decl->getIdentityConstraintName())}) : $str({namespace$, ","_s, $(decl->getIdentityConstraintName())}));
 	if ($nc(this->fGlobalIDConstraintDecls)->get(declKey) == nullptr) {
@@ -1725,6 +1743,7 @@ $IdentityConstraint* XSDHandler::getIDConstraintDecl($String* declKey) {
 }
 
 $Object* XSDHandler::getGlobalDecl($XSDocumentInfo* currSchema, int32_t declType, $QName* declToTraverse, $Element* elmNode) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaSymbols);
 	if ($nc(declToTraverse)->uri != nullptr && declToTraverse->uri == $SchemaSymbols::URI_SCHEMAFORSCHEMA) {
 		if (declType == XSDHandler::TYPEDECL_TYPE) {
@@ -1981,6 +2000,7 @@ $Object* XSDHandler::getGlobalDeclFromGrammar($SchemaGrammar* sGrammar, int32_t 
 }
 
 $Object* XSDHandler::traverseGlobalDecl(int32_t declType, $Element* decl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, retObj, nullptr);
 	$DOMUtil::setHidden(decl, this->fHiddenNodes);
 	$var($SchemaNamespaceSupport, nsSupport, nullptr);
@@ -2039,6 +2059,7 @@ $String* XSDHandler::schemaDocument2SystemId($XSDocumentInfo* schemaDoc) {
 }
 
 $Object* XSDHandler::getGrpOrAttrGrpRedefinedByRestriction(int32_t type, $QName* name, $XSDocumentInfo* currSchema, $Element* elmNode) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, realName, $nc(name)->uri != nullptr ? $str({$nc(name)->uri, ","_s, name->localpart}) : $str({","_s, name->localpart}));
 	$var($String, nameToFind, nullptr);
 	switch (type) {
@@ -2086,6 +2107,7 @@ $Object* XSDHandler::getGrpOrAttrGrpRedefinedByRestriction(int32_t type, $QName*
 }
 
 void XSDHandler::resolveKeyRefs() {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fKeyrefStackPos; ++i) {
 		$var($XSDocumentInfo, keyrefSchemaDoc, $nc(this->fKeyrefsMapXSDocumentInfo)->get(i));
 		$nc($nc(keyrefSchemaDoc)->fNamespaceSupport)->makeGlobal();
@@ -2105,6 +2127,7 @@ $Map* XSDHandler::getIDRegistry_sub() {
 }
 
 void XSDHandler::storeKeyRef($Element* keyrefToStore, $XSDocumentInfo* schemaDoc, $XSElementDecl* currElemDecl) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaSymbols);
 	$var($String, keyrefName, $DOMUtil::getAttrValue(keyrefToStore, $SchemaSymbols::ATT_NAME));
 	if ($nc(keyrefName)->length() != 0) {
@@ -2132,6 +2155,7 @@ void XSDHandler::storeKeyRef($Element* keyrefToStore, $XSDocumentInfo* schemaDoc
 }
 
 $Element* XSDHandler::resolveSchema($XSDDescription* desc, bool mustResolve, $Element* referElement, bool usePairs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLInputSource, schemaSource, nullptr);
 	try {
 		$var($Map, pairs, usePairs ? this->fLocationPairs : $Collections::emptyMap());
@@ -2169,6 +2193,7 @@ $Element* XSDHandler::resolveSchema($XSDDescription* desc, bool mustResolve, $El
 }
 
 $Element* XSDHandler::resolveSchema($XMLInputSource* schemaSource, $XSDDescription* desc, bool mustResolve, $Element* referElement) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($DOMInputSource, schemaSource)) {
 		$var($String, var$0, $nc(desc)->getTargetNamespace());
 		$var($DOMInputSource, var$1, $cast($DOMInputSource, schemaSource));
@@ -2194,6 +2219,7 @@ $Element* XSDHandler::resolveSchema($XMLInputSource* schemaSource, $XSDDescripti
 }
 
 $XMLInputSource* XSDHandler::resolveSchemaSource($XSDDescription* desc, bool mustResolve, $Element* referElement, bool usePairs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLInputSource, schemaSource, nullptr);
 	try {
 		$var($Map, pairs, usePairs ? this->fLocationPairs : $Collections::emptyMap());
@@ -2210,6 +2236,7 @@ $XMLInputSource* XSDHandler::resolveSchemaSource($XSDDescription* desc, bool mus
 }
 
 $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $XMLInputSource* schemaSource, bool mustResolve, int16_t referType, $Element* referElement) {
+	$useLocalCurrentObjectStackCache();
 	bool hasInput = true;
 	$var($IOException, exception, nullptr);
 	$var($Element, schemaElement, nullptr);
@@ -2257,6 +2284,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $XMLInputSourc
 }
 
 $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $SAXInputSource* schemaSource, bool mustResolve, int16_t referType, $Element* referElement) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLReader, parser, $nc(schemaSource)->getXMLReader());
 	$var($InputSource, inputSource, schemaSource->getInputSource());
 	bool hasInput = true;
@@ -2349,6 +2377,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $SAXInputSourc
 }
 
 $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $DOMInputSource* schemaSource, bool mustResolve, int16_t referType, $Element* referElement) {
+	$useLocalCurrentObjectStackCache();
 	bool hasInput = true;
 	$var($IOException, exception, nullptr);
 	$var($Element, schemaElement, nullptr);
@@ -2398,6 +2427,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $DOMInputSourc
 }
 
 $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $StAXInputSource* schemaSource, bool mustResolve, int16_t referType, $Element* referElement) {
+	$useLocalCurrentObjectStackCache();
 	$var($IOException, exception, nullptr);
 	$var($Element, schemaElement, nullptr);
 	try {
@@ -2476,6 +2506,7 @@ $Element* XSDHandler::getSchemaDocument0($XSDHandler$XSDKey* key, $String* schem
 }
 
 $Element* XSDHandler::getSchemaDocument1(bool mustResolve, bool hasInput, $XMLInputSource* schemaSource, $Element* referElement, $IOException* ioe) {
+	$useLocalCurrentObjectStackCache();
 	if (mustResolve) {
 		if (hasInput) {
 			reportSchemaError("schema_reference.4"_s, $$new($ObjectArray, {$($of($nc(schemaSource)->getSystemId()))}), referElement, ioe);
@@ -2490,6 +2521,7 @@ $Element* XSDHandler::getSchemaDocument1(bool mustResolve, bool hasInput, $XMLIn
 }
 
 $Element* XSDHandler::getSchemaDocument($XSInputSource* schemaSource, $XSDDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammarArray, grammars, $nc(schemaSource)->getGrammars());
 	int16_t referType = $nc(desc)->getContextType();
 	if (grammars != nullptr && grammars->length > 0) {
@@ -2517,6 +2549,7 @@ $Element* XSDHandler::getSchemaDocument($XSInputSource* schemaSource, $XSDDescri
 }
 
 $List* XSDHandler::expandGrammars($SchemaGrammarArray* grammars) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, currGrammars, $new($ArrayList));
 	for (int32_t i = 0; i < $nc(grammars)->length; ++i) {
 		if (!currGrammars->contains(grammars->get(i))) {
@@ -2543,6 +2576,7 @@ $List* XSDHandler::expandGrammars($SchemaGrammarArray* grammars) {
 }
 
 bool XSDHandler::existingGrammars($List* grammars) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(grammars)->size();
 	$var($XSDDescription, desc, $new($XSDDescription));
 	for (int32_t i = 0; i < length; ++i) {
@@ -2557,6 +2591,7 @@ bool XSDHandler::existingGrammars($List* grammars) {
 }
 
 bool XSDHandler::canAddComponents($List* components) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(components)->size();
 	$var($XSDDescription, desc, $new($XSDDescription));
 	for (int32_t i = 0; i < size; ++i) {
@@ -2569,6 +2604,7 @@ bool XSDHandler::canAddComponents($List* components) {
 }
 
 bool XSDHandler::canAddComponent($XSObject* component, $XSDDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$nc(desc)->setNamespace($($nc(component)->getNamespace()));
 	$var($SchemaGrammar, sg, findGrammar(desc, false));
 	if (sg == nullptr) {
@@ -2634,6 +2670,7 @@ bool XSDHandler::canAddComponent($XSObject* component, $XSDDescription* desc) {
 }
 
 void XSDHandler::addGrammars($List* grammars) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(grammars)->size();
 	$var($XSDDescription, desc, $new($XSDDescription));
 	for (int32_t i = 0; i < length; ++i) {
@@ -2669,6 +2706,7 @@ $SchemaGrammar* XSDHandler::createGrammarFrom($SchemaGrammar* grammar) {
 }
 
 void XSDHandler::addNewGrammarLocations($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringList, locations, $nc(srcGrammar)->getDocumentLocations());
 	int32_t locSize = $nc(locations)->size();
 	$var($StringList, locations2, $nc(dstGrammar)->getDocumentLocations());
@@ -2681,6 +2719,7 @@ void XSDHandler::addNewGrammarLocations($SchemaGrammar* srcGrammar, $SchemaGramm
 }
 
 void XSDHandler::addNewImportedGrammars($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ArrayList, src, $cast($ArrayList, $nc(srcGrammar)->getImportedGrammars()));
 	if (src != nullptr) {
 		$var($ArrayList, dst, $cast($ArrayList, $nc(dstGrammar)->getImportedGrammars()));
@@ -2707,6 +2746,7 @@ void XSDHandler::addNewImportedGrammars($SchemaGrammar* srcGrammar, $SchemaGramm
 }
 
 void XSDHandler::updateImportList($List* importedSrc, $List* importedDst) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(importedSrc)->size();
 	for (int32_t i = 0; i < size; ++i) {
 		$var($SchemaGrammar, sg, $cast($SchemaGrammar, importedSrc->get(i)));
@@ -2727,6 +2767,7 @@ void XSDHandler::addNewGrammarComponents($SchemaGrammar* srcGrammar, $SchemaGram
 }
 
 void XSDHandler::addGlobalElementDecls($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSNamedMap, components, $nc(srcGrammar)->getComponents($XSConstants::ELEMENT_DECLARATION));
 	int32_t len = $nc(components)->getLength();
 	$var($XSElementDecl, srcDecl, nullptr);
@@ -2756,6 +2797,7 @@ void XSDHandler::addGlobalElementDecls($SchemaGrammar* srcGrammar, $SchemaGramma
 }
 
 void XSDHandler::addGlobalAttributeDecls($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSNamedMap, components, $nc(srcGrammar)->getComponents($XSConstants::ATTRIBUTE_DECLARATION));
 	int32_t len = $nc(components)->getLength();
 	$var($XSAttributeDecl, srcDecl, nullptr);
@@ -2787,6 +2829,7 @@ void XSDHandler::addGlobalAttributeDecls($SchemaGrammar* srcGrammar, $SchemaGram
 }
 
 void XSDHandler::addGlobalAttributeGroupDecls($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSNamedMap, components, $nc(srcGrammar)->getComponents($XSConstants::ATTRIBUTE_GROUP));
 	int32_t len = $nc(components)->getLength();
 	$var($XSAttributeGroupDecl, srcDecl, nullptr);
@@ -2818,6 +2861,7 @@ void XSDHandler::addGlobalAttributeGroupDecls($SchemaGrammar* srcGrammar, $Schem
 }
 
 void XSDHandler::addGlobalNotationDecls($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSNamedMap, components, $nc(srcGrammar)->getComponents($XSConstants::NOTATION_DECLARATION));
 	int32_t len = $nc(components)->getLength();
 	$var($XSNotationDecl, srcDecl, nullptr);
@@ -2849,6 +2893,7 @@ void XSDHandler::addGlobalNotationDecls($SchemaGrammar* srcGrammar, $SchemaGramm
 }
 
 void XSDHandler::addGlobalGroupDecls($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSNamedMap, components, $nc(srcGrammar)->getComponents($XSConstants::MODEL_GROUP_DEFINITION));
 	int32_t len = $nc(components)->getLength();
 	$var($XSGroupDecl, srcDecl, nullptr);
@@ -2880,6 +2925,7 @@ void XSDHandler::addGlobalGroupDecls($SchemaGrammar* srcGrammar, $SchemaGrammar*
 }
 
 void XSDHandler::addGlobalTypeDecls($SchemaGrammar* srcGrammar, $SchemaGrammar* dstGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSNamedMap, components, $nc(srcGrammar)->getComponents($XSConstants::TYPE_DEFINITION));
 	int32_t len = $nc(components)->getLength();
 	$var($XSTypeDefinition, srcDecl, nullptr);
@@ -2911,6 +2957,7 @@ void XSDHandler::addGlobalTypeDecls($SchemaGrammar* srcGrammar, $SchemaGrammar* 
 }
 
 $List* XSDHandler::expandComponents($XSObjectArray* components, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, newComponents, $new($ArrayList));
 	for (int32_t i = 0; i < $nc(components)->length; ++i) {
 		if (!newComponents->contains(components->get(i))) {
@@ -2925,6 +2972,7 @@ $List* XSDHandler::expandComponents($XSObjectArray* components, $Map* dependenci
 }
 
 void XSDHandler::expandRelatedComponents($XSObject* component, $List* componentList, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	int16_t componentType = $nc(component)->getType();
 	switch (componentType) {
 	case $XSConstants::TYPE_DEFINITION:
@@ -2968,6 +3016,7 @@ void XSDHandler::expandRelatedAttributeComponents($XSAttributeDeclaration* decl,
 }
 
 void XSDHandler::expandRelatedElementComponents($XSElementDeclaration* decl, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	addRelatedType($($nc(decl)->getTypeDefinition()), componentList, namespace$, dependencies);
 	$var($XSElementDeclaration, subElemDecl, $nc(decl)->getSubstitutionGroupAffiliation());
 	if (subElemDecl != nullptr) {
@@ -2992,6 +3041,7 @@ void XSDHandler::expandRelatedAttributeGroupComponents($XSAttributeGroupDefiniti
 }
 
 void XSDHandler::expandRelatedComplexTypeComponents($XSComplexTypeDecl* type, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	addRelatedType($($nc(type)->getBaseType()), componentList, namespace$, dependencies);
 	expandRelatedAttributeUsesComponents($($nc(type)->getAttributeUses()), componentList, namespace$, dependencies);
 	$var($XSParticle, particle, $nc(type)->getParticle());
@@ -3001,6 +3051,7 @@ void XSDHandler::expandRelatedComplexTypeComponents($XSComplexTypeDecl* type, $L
 }
 
 void XSDHandler::expandRelatedSimpleTypeComponents($XSSimpleTypeDefinition* type, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSTypeDefinition, baseType, $nc(type)->getBaseType());
 	if (baseType != nullptr) {
 		addRelatedType(baseType, componentList, namespace$, dependencies);
@@ -3022,6 +3073,7 @@ void XSDHandler::expandRelatedSimpleTypeComponents($XSSimpleTypeDefinition* type
 }
 
 void XSDHandler::expandRelatedAttributeUsesComponents($XSObjectList* attrUses, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	int32_t attrUseSize = (attrUses == nullptr) ? 0 : $nc(attrUses)->size();
 	for (int32_t i = 0; i < attrUseSize; ++i) {
 		expandRelatedAttributeUseComponents($cast($XSAttributeUse, $(attrUses->item(i))), componentList, namespace$, dependencies);
@@ -3053,6 +3105,7 @@ void XSDHandler::expandRelatedParticleComponents($XSParticle* component, $List* 
 }
 
 void XSDHandler::expandRelatedModelGroupComponents($XSModelGroup* modelGroup, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSObjectList, particles, $nc(modelGroup)->getParticles());
 	int32_t length = (particles == nullptr) ? 0 : $nc(particles)->getLength();
 	for (int32_t i = 0; i < length; ++i) {
@@ -3061,6 +3114,7 @@ void XSDHandler::expandRelatedModelGroupComponents($XSModelGroup* modelGroup, $L
 }
 
 void XSDHandler::addRelatedType($XSTypeDefinition* type, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc(type)->getAnonymous()) {
 		$init($SchemaSymbols);
 		if (!$nc($SchemaSymbols::URI_SCHEMAFORSCHEMA)->equals($(type->getNamespace()))) {
@@ -3076,6 +3130,7 @@ void XSDHandler::addRelatedType($XSTypeDefinition* type, $List* componentList, $
 }
 
 void XSDHandler::addRelatedElement($XSElementDeclaration* decl, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(decl)->getScope() == $XSConstants::SCOPE_GLOBAL) {
 		if (!$nc(componentList)->contains(decl)) {
 			$var($List, importedNamespaces, findDependentNamespaces(namespace$, dependencies));
@@ -3088,6 +3143,7 @@ void XSDHandler::addRelatedElement($XSElementDeclaration* decl, $List* component
 }
 
 void XSDHandler::addRelatedAttribute($XSAttributeDeclaration* decl, $List* componentList, $String* namespace$, $Map* dependencies) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(decl)->getScope() == $XSConstants::SCOPE_GLOBAL) {
 		if (!$nc(componentList)->contains(decl)) {
 			$var($List, importedNamespaces, findDependentNamespaces(namespace$, dependencies));
@@ -3100,6 +3156,7 @@ void XSDHandler::addRelatedAttribute($XSAttributeDeclaration* decl, $List* compo
 }
 
 void XSDHandler::addGlobalComponents($List* components, $Map* importDependencies) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSDDescription, desc, $new($XSDDescription));
 	int32_t size = $nc(components)->size();
 	for (int32_t i = 0; i < size; ++i) {
@@ -3109,6 +3166,7 @@ void XSDHandler::addGlobalComponents($List* components, $Map* importDependencies
 }
 
 void XSDHandler::addGlobalComponent($XSObject* component, $XSDDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, $nc(component)->getNamespace());
 	$nc(desc)->setNamespace(namespace$);
 	$var($SchemaGrammar, sg, getSchemaGrammar(desc));
@@ -3194,6 +3252,7 @@ void XSDHandler::addGlobalComponent($XSObject* component, $XSDDescription* desc)
 }
 
 void XSDHandler::updateImportDependencies($Map* table) {
+	$useLocalCurrentObjectStackCache();
 	if (table == nullptr) {
 		return;
 	}
@@ -3215,6 +3274,7 @@ void XSDHandler::updateImportDependencies($Map* table) {
 }
 
 void XSDHandler::expandImportList($String* namespace$, $List* namespaceList) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $nc(this->fGrammarBucket)->getGrammar(namespace$));
 	if (sg != nullptr) {
 		$var($List, isgs, sg->getImportedGrammars());
@@ -3229,6 +3289,7 @@ void XSDHandler::expandImportList($String* namespace$, $List* namespaceList) {
 }
 
 void XSDHandler::addImportList($SchemaGrammar* sg, $List* importedGrammars, $List* namespaceList) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(namespaceList)->size();
 	$var($SchemaGrammar, isg, nullptr);
 	for (int32_t i = 0; i < size; ++i) {
@@ -3241,6 +3302,7 @@ void XSDHandler::addImportList($SchemaGrammar* sg, $List* importedGrammars, $Lis
 }
 
 void XSDHandler::updateImportList($SchemaGrammar* sg, $List* importedGrammars, $List* namespaceList) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(namespaceList)->size();
 	$var($SchemaGrammar, isg, nullptr);
 	for (int32_t i = 0; i < size; ++i) {
@@ -3255,6 +3317,7 @@ void XSDHandler::updateImportList($SchemaGrammar* sg, $List* importedGrammars, $
 }
 
 bool XSDHandler::containedImportedGrammar($List* importedGrammar, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(importedGrammar)->size();
 	$var($SchemaGrammar, sg, nullptr);
 	for (int32_t i = 0; i < size; ++i) {
@@ -3267,6 +3330,7 @@ bool XSDHandler::containedImportedGrammar($List* importedGrammar, $SchemaGrammar
 }
 
 $SchemaGrammar* XSDHandler::getSchemaGrammar($XSDDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, findGrammar(desc, this->fNamespaceGrowth));
 	if (sg == nullptr) {
 		$var($String, var$0, $nc(desc)->getNamespace());
@@ -3279,6 +3343,7 @@ $SchemaGrammar* XSDHandler::getSchemaGrammar($XSDDescription* desc) {
 }
 
 $List* XSDHandler::findDependentNamespaces($String* namespace$, $Map* table) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ns, null2EmptyString(namespace$));
 	$var($List, namespaceList, getFromMap(table, ns));
 	if (namespaceList == nullptr) {
@@ -3289,6 +3354,7 @@ $List* XSDHandler::findDependentNamespaces($String* namespace$, $Map* table) {
 }
 
 void XSDHandler::addNamespaceDependency($String* namespace1, $String* namespace2, $List* list) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ns1, null2EmptyString(namespace1));
 	$var($String, ns2, null2EmptyString(namespace2));
 	if (!$nc(ns1)->equals(ns2)) {
@@ -3299,6 +3365,7 @@ void XSDHandler::addNamespaceDependency($String* namespace1, $String* namespace2
 }
 
 void XSDHandler::reportSharingError($String* namespace$, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, qName, (namespace$ == nullptr) ? $str({","_s, name}) : $str({namespace$, ","_s, name}));
 	reportSchemaError("sch-props-correct.2"_s, $$new($ObjectArray, {$of(qName)}), nullptr);
 }
@@ -3410,6 +3477,7 @@ $SchemaDVFactory* XSDHandler::getDVFactory() {
 }
 
 void XSDHandler::reset($XMLComponentManager* componentManager) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fSymbolTable, $cast($SymbolTable, $nc(componentManager)->getProperty(XSDHandler::SYMBOL_TABLE)));
 	$set(this, fSecurityManager, $cast($XMLSecurityManager, componentManager->getProperty(XSDHandler::SECURITY_MANAGER, nullptr)));
 	$set(this, fEntityManager, $cast($XMLEntityManager, componentManager->getProperty(XSDHandler::ENTITY_MANAGER)));
@@ -3516,6 +3584,7 @@ void XSDHandler::reset($XMLComponentManager* componentManager) {
 }
 
 void XSDHandler::traverseLocalElements() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fElementTraverser)->fDeferTraversingLocalElements = false;
 	for (int32_t i = 0; i < this->fLocalElemStackPos; ++i) {
 		$var($Element, currElem, $nc(this->fLocalElementDecl)->get(i));
@@ -3560,6 +3629,7 @@ bool XSDHandler::removeParticle($XSModelGroupImpl* group, $XSParticleDecl* parti
 }
 
 void XSDHandler::fillInLocalElemInfo($Element* elmDecl, $XSDocumentInfo* schemaDoc, int32_t allContextFlags, $XSObject* parent, $XSParticleDecl* particle) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fParticle)->length == this->fLocalElemStackPos) {
 		$var($XSParticleDeclArray, newStackP, $new($XSParticleDeclArray, this->fLocalElemStackPos + XSDHandler::INC_STACK_SIZE));
 		$System::arraycopy(this->fParticle, 0, newStackP, 0, this->fLocalElemStackPos);
@@ -3589,6 +3659,7 @@ void XSDHandler::fillInLocalElemInfo($Element* elmDecl, $XSDocumentInfo* schemaD
 }
 
 void XSDHandler::checkForDuplicateNames($String* qName, int32_t declType, $Map* registry, $Map* registry_sub, $Element* currComp, $XSDocumentInfo* currSchema) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, objElem, nullptr);
 	if (($assign(objElem, $nc(registry)->get(qName))) == nullptr) {
 		if (this->fNamespaceGrowth && !this->fTolerateDuplicates) {
@@ -3660,6 +3731,7 @@ void XSDHandler::checkForDuplicateNames($String* qName, int32_t declType, $Map* 
 }
 
 void XSDHandler::checkForDuplicateNames($String* qName, int32_t declType, $Element* currComp) {
+	$useLocalCurrentObjectStackCache();
 	int32_t namespaceEnd = $nc(qName)->indexOf((int32_t)u',');
 	$var($String, namespace$, qName->substring(0, namespaceEnd));
 	$var($SchemaGrammar, grammar, $nc(this->fGrammarBucket)->getGrammar($(emptyString2Null(namespace$))));
@@ -3672,6 +3744,7 @@ void XSDHandler::checkForDuplicateNames($String* qName, int32_t declType, $Eleme
 }
 
 void XSDHandler::renameRedefiningComponents($XSDocumentInfo* currSchema, $Element* child, $String* componentType, $String* oldName, $String* newName) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaSymbols);
 	if ($nc(componentType)->equals($SchemaSymbols::ELT_SIMPLETYPE)) {
 		$var($Element, grandKid, $DOMUtil::getFirstChildElement(child));
@@ -3783,6 +3856,7 @@ void XSDHandler::renameRedefiningComponents($XSDocumentInfo* currSchema, $Elemen
 }
 
 $String* XSDHandler::findQName($String* name, $XSDocumentInfo* schemaDoc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaNamespaceSupport, currNSMap, $nc(schemaDoc)->fNamespaceSupport);
 	int32_t colonPtr = $nc(name)->indexOf((int32_t)u':');
 	$init($XMLSymbols);
@@ -3802,6 +3876,7 @@ $String* XSDHandler::findQName($String* name, $XSDocumentInfo* schemaDoc) {
 }
 
 int32_t XSDHandler::changeRedefineGroup($String* originalQName, $String* elementSought, $String* newName, $Element* curr, $XSDocumentInfo* schemaDoc) {
+	$useLocalCurrentObjectStackCache();
 	int32_t result = 0;
 	{
 		$var($Element, child, $DOMUtil::getFirstChildElement(curr));
@@ -3847,6 +3922,7 @@ int32_t XSDHandler::changeRedefineGroup($String* originalQName, $String* element
 }
 
 $XSDocumentInfo* XSDHandler::findXSDocumentForDecl($XSDocumentInfo* currSchema, $Element* decl, $XSDocumentInfo* decl_Doc) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, temp, decl_Doc);
 	if (temp == nullptr) {
 		return nullptr;
@@ -3856,6 +3932,7 @@ $XSDocumentInfo* XSDHandler::findXSDocumentForDecl($XSDocumentInfo* currSchema, 
 }
 
 bool XSDHandler::nonAnnotationContent($Element* elem) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Element, child, $DOMUtil::getFirstChildElement(elem));
 		for (; child != nullptr; $assign(child, $DOMUtil::getNextSiblingElement(child))) {
@@ -3869,6 +3946,7 @@ bool XSDHandler::nonAnnotationContent($Element* elem) {
 }
 
 void XSDHandler::setSchemasVisible($XSDocumentInfo* startSchema) {
+	$useLocalCurrentObjectStackCache();
 	if ($DOMUtil::isHidden($nc(startSchema)->fSchemaElement, this->fHiddenNodes)) {
 		$DOMUtil::setVisible($nc(startSchema)->fSchemaElement, this->fHiddenNodes);
 		$var($List, dependingSchemas, $cast($List, $nc(this->fDependencyMap)->get(startSchema)));
@@ -3887,6 +3965,7 @@ $SimpleLocator* XSDHandler::element2Locator($Element* e) {
 }
 
 bool XSDHandler::element2Locator($Element* e, $SimpleLocator* l) {
+	$useLocalCurrentObjectStackCache();
 	if (l == nullptr) {
 		return false;
 	}
@@ -3958,6 +4037,7 @@ void XSDHandler::setGenerateSyntheticAnnotations(bool state) {
 }
 
 void clinit$XSDHandler($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$assignStatic(XSDHandler::VALIDATION, $str({$Constants::SAX_FEATURE_PREFIX, $Constants::VALIDATION_FEATURE}));
 	$assignStatic(XSDHandler::XMLSCHEMA_VALIDATION, $str({$Constants::XERCES_FEATURE_PREFIX, $Constants::SCHEMA_VALIDATION_FEATURE}));

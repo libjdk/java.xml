@@ -386,6 +386,7 @@ void XMLStreamWriterImpl::reset(bool resetProperties) {
 }
 
 void XMLStreamWriterImpl::setOutput($StreamResult* sr, $String* encoding) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(sr)->getOutputStream() != nullptr) {
 		setOutputUsingStream($(sr->getOutputStream()), encoding);
 	} else if (sr->getWriter() != nullptr) {
@@ -396,6 +397,7 @@ void XMLStreamWriterImpl::setOutput($StreamResult* sr, $String* encoding) {
 }
 
 void XMLStreamWriterImpl::setOutputUsingWriter($Writer* writer) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fWriter, writer);
 	if ($instanceOf($OutputStreamWriter, writer)) {
 		$var($String, charset, $nc(($cast($OutputStreamWriter, writer)))->getEncoding());
@@ -406,6 +408,7 @@ void XMLStreamWriterImpl::setOutputUsingWriter($Writer* writer) {
 }
 
 void XMLStreamWriterImpl::setOutputUsingStream($OutputStream* os, $String* encoding$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, encoding$renamed);
 	$set(this, fOutputStream, os);
 	if (encoding != nullptr) {
@@ -485,6 +488,7 @@ $Object* XMLStreamWriterImpl::getProperty($String* str) {
 }
 
 void XMLStreamWriterImpl::setDefaultNamespace($String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, uri$renamed);
 	if (uri != nullptr) {
 		$assign(uri, $nc(this->fSymbolTable)->addSymbol(uri));
@@ -506,6 +510,7 @@ void XMLStreamWriterImpl::setNamespaceContext($NamespaceContext* namespaceContex
 }
 
 void XMLStreamWriterImpl::setPrefix($String* prefix$renamed, $String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, uri, uri$renamed);
 	if (prefix == nullptr) {
@@ -534,6 +539,7 @@ void XMLStreamWriterImpl::setPrefix($String* prefix$renamed, $String* uri$rename
 }
 
 void XMLStreamWriterImpl::writeAttribute($String* localName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (!this->fStartTagOpened) {
 			$throwNew($XMLStreamException, "Attribute not associated with any element"_s);
@@ -556,6 +562,7 @@ void XMLStreamWriterImpl::writeAttribute($String* localName, $String* value) {
 }
 
 void XMLStreamWriterImpl::writeAttribute($String* namespaceURI$renamed, $String* localName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespaceURI, namespaceURI$renamed);
 	try {
 		if (!this->fStartTagOpened) {
@@ -596,6 +603,7 @@ void XMLStreamWriterImpl::writeAttributeWithPrefix($String* prefix, $String* loc
 }
 
 void XMLStreamWriterImpl::writeAttribute($String* prefix$renamed, $String* namespaceURI$renamed, $String* localName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, namespaceURI, namespaceURI$renamed);
 	try {
@@ -716,6 +724,7 @@ void XMLStreamWriterImpl::writeDTD($String* dtd) {
 }
 
 void XMLStreamWriterImpl::writeDefaultNamespace($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespaceURINormalized, nullptr);
 	if (namespaceURI == nullptr) {
 		$assign(namespaceURINormalized, ""_s);
@@ -766,6 +775,7 @@ void XMLStreamWriterImpl::writeEmptyElement($String* localName) {
 }
 
 void XMLStreamWriterImpl::writeEmptyElement($String* namespaceURI$renamed, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespaceURI, namespaceURI$renamed);
 	if (namespaceURI == nullptr) {
 		$throwNew($XMLStreamException, "NamespaceURI cannot be null"_s);
@@ -776,6 +786,7 @@ void XMLStreamWriterImpl::writeEmptyElement($String* namespaceURI$renamed, $Stri
 }
 
 void XMLStreamWriterImpl::writeEmptyElement($String* prefix$renamed, $String* localName, $String* namespaceURI$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, namespaceURI, namespaceURI$renamed);
 	try {
@@ -815,6 +826,7 @@ void XMLStreamWriterImpl::writeEmptyElement($String* prefix$renamed, $String* lo
 }
 
 void XMLStreamWriterImpl::writeEndDocument() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->fStartTagOpened) {
 			closeStartTag();
@@ -843,6 +855,7 @@ void XMLStreamWriterImpl::writeEndDocument() {
 }
 
 void XMLStreamWriterImpl::writeEndElement() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->fStartTagOpened) {
 			closeStartTag();
@@ -886,6 +899,7 @@ void XMLStreamWriterImpl::writeEntityRef($String* refName) {
 }
 
 void XMLStreamWriterImpl::writeNamespace($String* prefix$renamed, $String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, namespaceURINormalized, nullptr);
 	if (namespaceURI == nullptr) {
@@ -1031,6 +1045,7 @@ void XMLStreamWriterImpl::writeStartDocument($String* encoding, $String* version
 }
 
 void XMLStreamWriterImpl::verifyEncoding($String* encoding) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, streamEncoding, nullptr);
 	if ($instanceOf($OutputStreamWriter, this->fWriter)) {
 		$assign(streamEncoding, $nc(($cast($OutputStreamWriter, this->fWriter)))->getEncoding());
@@ -1078,6 +1093,7 @@ void XMLStreamWriterImpl::writeStartElement($String* localName) {
 }
 
 void XMLStreamWriterImpl::writeStartElement($String* namespaceURI$renamed, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespaceURI, namespaceURI$renamed);
 	if (localName == nullptr) {
 		$throwNew($XMLStreamException, "Local Name cannot be null"_s);
@@ -1097,6 +1113,7 @@ void XMLStreamWriterImpl::writeStartElement($String* namespaceURI$renamed, $Stri
 }
 
 void XMLStreamWriterImpl::writeStartElement($String* prefix$renamed, $String* localName, $String* namespaceURI$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, namespaceURI, namespaceURI$renamed);
 	try {
@@ -1265,6 +1282,7 @@ void XMLStreamWriterImpl::writeXMLContent($String* content, bool escapeChars, bo
 }
 
 void XMLStreamWriterImpl::closeStartTag() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($XMLStreamWriterImpl$ElementState, currentElement, $nc(this->fElementStack)->peek());
 		if (this->fIsRepairingNamespace) {
@@ -1332,6 +1350,7 @@ void XMLStreamWriterImpl::openStartTag() {
 }
 
 void XMLStreamWriterImpl::correctPrefix($QName* attr, int32_t type) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, tmpPrefix, nullptr);
 	$var($String, prefix, nullptr);
 	$var($String, uri, nullptr);
@@ -1419,6 +1438,7 @@ bool XMLStreamWriterImpl::checkUserNamespaceContext($String* prefix, $String* ur
 }
 
 void XMLStreamWriterImpl::repair() {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLStreamWriterImpl$Attribute, attr, nullptr);
 	$var($XMLStreamWriterImpl$Attribute, attr2, nullptr);
 	$var($XMLStreamWriterImpl$ElementState, currentElement, $nc(this->fElementStack)->peek());
@@ -1471,6 +1491,7 @@ void XMLStreamWriterImpl::repair() {
 }
 
 void XMLStreamWriterImpl::correctPrefix($QName* attr1, $QName* attr2) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, tmpPrefix, nullptr);
 	$var($QName, decl, nullptr);
 	checkForNull(attr1);
@@ -1515,6 +1536,7 @@ void XMLStreamWriterImpl::checkForNull($QName* attr) {
 }
 
 void XMLStreamWriterImpl::removeDuplicateDecls() {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, decl1, nullptr);
 	$var($QName, decl2, nullptr);
 	for (int32_t i = 0; i < $nc(this->fNamespaceDecls)->size(); ++i) {
@@ -1532,6 +1554,7 @@ void XMLStreamWriterImpl::removeDuplicateDecls() {
 }
 
 void XMLStreamWriterImpl::repairNamespaceDecl($QName* attr) {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, decl, nullptr);
 	$var($String, tmpURI, nullptr);
 	for (int32_t j = 0; j < $nc(this->fNamespaceDecls)->size(); ++j) {
@@ -1602,6 +1625,7 @@ $Set* XMLStreamWriterImpl::entrySet() {
 }
 
 $String* XMLStreamWriterImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $$str({$($of(this)->getClass()->getName()), "@"_s}));
 	return $concat(var$0, $($Integer::toHexString(hashCode())));
 }

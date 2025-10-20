@@ -114,6 +114,7 @@ $Source* StylesheetPIHandler::getAssociatedStylesheet() {
 }
 
 void StylesheetPIHandler::processingInstruction($String* target, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(target)->equals("xml-stylesheet"_s)) {
 		$var($String, href, nullptr);
 		$var($String, type, nullptr);

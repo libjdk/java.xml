@@ -57,6 +57,7 @@ void SAXMessageFormatter::init$() {
 }
 
 $String* SAXMessageFormatter::formatMessage($Locale* locale, $String* key, $ObjectArray* arguments) {
+	$useLocalCurrentObjectStackCache();
 	$var($ResourceBundle, resourceBundle, nullptr);
 	if (locale != nullptr) {
 		$assign(resourceBundle, $SecuritySupport::getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.SAXMessages"_s, locale));

@@ -115,6 +115,7 @@ void XMLDocumentScannerImpl$PrologDriver::init$($XMLDocumentScannerImpl* this$0)
 }
 
 int32_t XMLDocumentScannerImpl$PrologDriver::next() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		do {
 			switch (this->this$0->fScannerState) {

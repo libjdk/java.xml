@@ -122,6 +122,7 @@ void XMLGregorianCalendar::setTime(int32_t hour, int32_t minute, int32_t second,
 }
 
 int32_t XMLGregorianCalendar::getMillisecond() {
+	$useLocalCurrentObjectStackCache();
 	$var($BigDecimal, fractionalSeconds, getFractionalSecond());
 	if (fractionalSeconds == nullptr) {
 		return $DatatypeConstants::FIELD_UNDEFINED;
@@ -140,6 +141,7 @@ bool XMLGregorianCalendar::equals(Object$* obj) {
 }
 
 int32_t XMLGregorianCalendar::hashCode() {
+	$useLocalCurrentObjectStackCache();
 	int32_t timezone = getTimezone();
 	if (timezone == $DatatypeConstants::FIELD_UNDEFINED) {
 		timezone = 0;

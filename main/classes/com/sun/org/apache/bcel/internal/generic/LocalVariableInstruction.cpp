@@ -173,6 +173,7 @@ void LocalVariableInstruction::dump($DataOutputStream* out) {
 }
 
 $String* LocalVariableInstruction::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	int16_t _opcode = $Instruction::getOpcode();
 	if (((_opcode >= $Const::ILOAD_0) && (_opcode <= $Const::ALOAD_3)) || ((_opcode >= $Const::ISTORE_0) && (_opcode <= $Const::ASTORE_3))) {
 		return $Instruction::toString(verbose);
@@ -204,6 +205,7 @@ int32_t LocalVariableInstruction::getIndex() {
 }
 
 void LocalVariableInstruction::setIndex(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	if ((n < 0) || (n > $Const::MAX_SHORT)) {
 		$throwNew($ClassGenException, $$str({"Illegal value: "_s, $$str(n)}));
 	}
@@ -226,6 +228,7 @@ int16_t LocalVariableInstruction::getCanonicalTag() {
 }
 
 $Type* LocalVariableInstruction::getType($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	switch (this->canonTag) {
 	case $Const::ILOAD:
 		{}

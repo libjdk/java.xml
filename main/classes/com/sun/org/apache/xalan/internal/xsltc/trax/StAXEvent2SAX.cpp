@@ -241,6 +241,7 @@ void StAXEvent2SAX::parse() {
 }
 
 void StAXEvent2SAX::bridge() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t depth = 0;
 		bool startedAtDocument = false;
@@ -417,6 +418,7 @@ void StAXEvent2SAX::handleStartDocument($XMLEvent* event) {
 }
 
 void StAXEvent2SAX::handlePI($ProcessingInstruction* event) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, var$0, $nc(event)->getTarget());
 		$nc(this->_sax)->processingInstruction(var$0, $(event->getData()));
@@ -427,6 +429,7 @@ void StAXEvent2SAX::handlePI($ProcessingInstruction* event) {
 }
 
 void StAXEvent2SAX::handleCharacters($Characters* event) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($chars, var$0, $nc($($nc(event)->getData()))->toCharArray());
 		$nc(this->_sax)->characters(var$0, 0, $nc($(event->getData()))->length());
@@ -437,6 +440,7 @@ void StAXEvent2SAX::handleCharacters($Characters* event) {
 }
 
 void StAXEvent2SAX::handleEndElement($EndElement* event) {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, qName, $nc(event)->getName());
 	$var($String, qname, ""_s);
 	bool var$0 = $nc(qName)->getPrefix() != nullptr;
@@ -464,6 +468,7 @@ void StAXEvent2SAX::handleEndElement($EndElement* event) {
 }
 
 void StAXEvent2SAX::handleStartElement($StartElement* event) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		{
 			$var($Iterator, i, $nc(event)->getNamespaces());
@@ -493,6 +498,7 @@ void StAXEvent2SAX::handleStartElement($StartElement* event) {
 }
 
 $Attributes* StAXEvent2SAX::getAttributes($StartElement* event) {
+	$useLocalCurrentObjectStackCache();
 	$var($AttributesImpl, attrs, $new($AttributesImpl));
 	if (!$nc(event)->isStartElement()) {
 		$throwNew($InternalError, $$str({"getAttributes() attempting to process: "_s, event}));

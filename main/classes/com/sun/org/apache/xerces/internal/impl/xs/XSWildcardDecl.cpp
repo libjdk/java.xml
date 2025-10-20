@@ -174,6 +174,7 @@ bool XSWildcardDecl::weakerProcessContents(XSWildcardDecl* superWildcard) {
 }
 
 XSWildcardDecl* XSWildcardDecl::performUnionWith(XSWildcardDecl* wildcard, int16_t processContents) {
+	$useLocalCurrentObjectStackCache();
 	if (wildcard == nullptr) {
 		return nullptr;
 	}
@@ -229,6 +230,7 @@ XSWildcardDecl* XSWildcardDecl::performUnionWith(XSWildcardDecl* wildcard, int16
 }
 
 XSWildcardDecl* XSWildcardDecl::performIntersectionWith(XSWildcardDecl* wildcard, int16_t processContents) {
+	$useLocalCurrentObjectStackCache();
 	if (wildcard == nullptr) {
 		return nullptr;
 	}
@@ -303,6 +305,7 @@ bool XSWildcardDecl::areSame(XSWildcardDecl* wildcard) {
 }
 
 $StringArray* XSWildcardDecl::intersect2sets($StringArray* one, $StringArray* theOther) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, result, $new($StringArray, $Math::min($nc(one)->length, $nc(theOther)->length)));
 	int32_t count = 0;
 	for (int32_t i = 0; i < $nc(one)->length; ++i) {
@@ -316,6 +319,7 @@ $StringArray* XSWildcardDecl::intersect2sets($StringArray* one, $StringArray* th
 }
 
 $StringArray* XSWildcardDecl::union2sets($StringArray* one, $StringArray* theOther) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, result1, $new($StringArray, $nc(one)->length));
 	int32_t count = 0;
 	for (int32_t i = 0; i < one->length; ++i) {

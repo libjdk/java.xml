@@ -226,6 +226,7 @@ void URI::init$(URI* p_base, $String* p_uriSpec, bool allowNonAbsoluteURI) {
 }
 
 void URI::init$($String* p_scheme, $String* p_schemeSpecificPart) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_scheme, nullptr);
 	$set(this, m_userinfo, nullptr);
 	$set(this, m_host, nullptr);
@@ -297,6 +298,7 @@ void URI::initialize(URI* p_other) {
 }
 
 void URI::initialize(URI* p_base, $String* p_uriSpec, bool allowNonAbsoluteURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uriSpec, p_uriSpec);
 	int32_t uriSpecLen = (uriSpec != nullptr) ? $nc(uriSpec)->length() : 0;
 	if (p_base == nullptr && uriSpecLen == 0) {
@@ -362,6 +364,7 @@ void URI::initialize(URI* p_base, $String* p_uriSpec, bool allowNonAbsoluteURI) 
 }
 
 void URI::initialize(URI* p_base, $String* p_uriSpec) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uriSpec, p_uriSpec);
 	int32_t uriSpecLen = (uriSpec != nullptr) ? $nc(uriSpec)->length() : 0;
 	if (p_base == nullptr && uriSpecLen == 0) {
@@ -425,6 +428,7 @@ void URI::initialize(URI* p_base, $String* p_uriSpec) {
 }
 
 void URI::absolutize(URI* p_base) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_path)->length() == 0 && this->m_scheme == nullptr && this->m_host == nullptr && this->m_regAuthority == nullptr) {
 		$set(this, m_scheme, $nc(p_base)->getScheme());
 		$set(this, m_userinfo, p_base->getUserinfo());
@@ -523,6 +527,7 @@ void URI::initializeScheme($String* p_uriSpec) {
 }
 
 bool URI::initializeAuthority($String* p_uriSpec) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	int32_t start = 0;
 	int32_t end = $nc(p_uriSpec)->length();
@@ -642,6 +647,7 @@ bool URI::isValidRegistryBasedAuthority($String* authority) {
 }
 
 void URI::initializePath($String* p_uriSpec, int32_t p_nStartIndex) {
+	$useLocalCurrentObjectStackCache();
 	if (p_uriSpec == nullptr) {
 		$throwNew($URI$MalformedURIException, "Cannot initialize path from null string!"_s);
 	}
@@ -838,6 +844,7 @@ void URI::setScheme($String* p_scheme) {
 }
 
 void URI::setUserinfo($String* p_userinfo) {
+	$useLocalCurrentObjectStackCache();
 	if (p_userinfo == nullptr) {
 		$set(this, m_userinfo, nullptr);
 		return;
@@ -919,6 +926,7 @@ void URI::setPath($String* p_path) {
 }
 
 void URI::appendPath($String* p_addToPath) {
+	$useLocalCurrentObjectStackCache();
 	if (p_addToPath == nullptr || $($nc(p_addToPath)->trim())->length() == 0) {
 		return;
 	}
@@ -1000,6 +1008,7 @@ int32_t URI::hashCode() {
 }
 
 $String* URI::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, uriSpecString, $new($StringBuilder));
 	if (this->m_scheme != nullptr) {
 		uriSpecString->append(this->m_scheme);
@@ -1119,6 +1128,7 @@ bool URI::isWellFormedIPv4Address($String* address) {
 
 bool URI::isWellFormedIPv6Reference($String* address) {
 	$init(URI);
+	$useLocalCurrentObjectStackCache();
 	int32_t addrLength = $nc(address)->length();
 	int32_t index = 1;
 	int32_t end = addrLength - 1;

@@ -182,6 +182,7 @@ $String* XSParticleDecl::toString() {
 }
 
 void XSParticleDecl::appendParticle($StringBuffer* buffer) {
+	$useLocalCurrentObjectStackCache();
 	switch (this->fType) {
 	case XSParticleDecl::PARTICLE_EMPTY:
 		{

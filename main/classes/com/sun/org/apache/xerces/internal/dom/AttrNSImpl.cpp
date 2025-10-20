@@ -95,6 +95,7 @@ void AttrNSImpl::init$($CoreDocumentImpl* ownerDocument, $String* namespaceURI, 
 }
 
 void AttrNSImpl::setName($String* namespaceURI, $String* qname) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	$var($String, prefix, nullptr);
 	$set(this, namespaceURI, namespaceURI);
@@ -163,6 +164,7 @@ $String* AttrNSImpl::getPrefix() {
 }
 
 void AttrNSImpl::setPrefix($String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}

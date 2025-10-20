@@ -168,10 +168,12 @@ void InnerClass::setOuterClassIndex(int32_t outerClassIndex) {
 }
 
 $String* InnerClass::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"InnerClass("_s, $$str(this->innerClassIndex), ", "_s, $$str(this->outerClassIndex), ", "_s, $$str(this->innerNameIndex), ", "_s, $$str(this->innerAccessFlags), ")"_s});
 }
 
 $String* InnerClass::toString($ConstantPool* constantPool) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, outer_class_name, nullptr);
 	$var($String, inner_name, nullptr);
 	$var($String, inner_class_name, $nc(constantPool)->getConstantString(this->innerClassIndex, $Const::CONSTANT_Class));

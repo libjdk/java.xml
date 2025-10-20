@@ -113,6 +113,7 @@ void ICONST::init$() {
 }
 
 void ICONST::init$(int32_t i) {
+	$useLocalCurrentObjectStackCache();
 	$Instruction::init$($Const::ICONST_0, (int16_t)1);
 	if ((i >= -1) && (i <= 5)) {
 		$Instruction::setOpcode((int16_t)($Const::ICONST_0 + i));

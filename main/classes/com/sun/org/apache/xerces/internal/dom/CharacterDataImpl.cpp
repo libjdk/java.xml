@@ -128,6 +128,7 @@ void CharacterDataImpl::setNodeValueInternal($String* value) {
 }
 
 void CharacterDataImpl::setNodeValueInternal($String* value, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);
@@ -163,6 +164,7 @@ int32_t CharacterDataImpl::getLength() {
 }
 
 void CharacterDataImpl::appendData($String* data) {
+	$useLocalCurrentObjectStackCache();
 	if (isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr));
@@ -182,6 +184,7 @@ void CharacterDataImpl::deleteData(int32_t offset, int32_t count) {
 }
 
 void CharacterDataImpl::internalDeleteData(int32_t offset, int32_t count, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking) {
 		if (isReadOnly()) {
@@ -217,6 +220,7 @@ void CharacterDataImpl::insertData(int32_t offset, $String* data) {
 }
 
 void CharacterDataImpl::internalInsertData(int32_t offset, $String* data, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);
@@ -239,6 +243,7 @@ void CharacterDataImpl::internalInsertData(int32_t offset, $String* data, bool r
 }
 
 void CharacterDataImpl::replaceData(int32_t offset, int32_t count, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);

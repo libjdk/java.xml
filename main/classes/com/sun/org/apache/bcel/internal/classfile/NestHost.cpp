@@ -104,6 +104,7 @@ void NestHost::setHostClassIndex(int32_t hostClassIndex) {
 }
 
 $String* NestHost::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	buf->append("NestHost: "_s);
 	$var($String, class_name, $nc($($Attribute::getConstantPool()))->getConstantString(this->hostClassIndex, $Const::CONSTANT_Class));

@@ -100,6 +100,7 @@ $String* TypeCheckError::getMessage() {
 }
 
 $String* TypeCheckError::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, result, nullptr);
 	if (this->_error == nullptr) {
 		if (this->_node != nullptr) {

@@ -93,6 +93,7 @@ int16_t AnyURIDV::getAllowedFacets() {
 }
 
 $Object* AnyURIDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if ($nc(content)->length() != 0) {
 			$var($String, encoded, encode(content));
@@ -110,6 +111,7 @@ $Object* AnyURIDV::getActualValue($String* content, $ValidationContext* context)
 
 $String* AnyURIDV::encode($String* anyURI) {
 	$init(AnyURIDV);
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(anyURI)->length();
 	int32_t ch = 0;
 	$var($StringBuffer, buffer, $new($StringBuffer, len * 3));
@@ -163,6 +165,7 @@ $String* AnyURIDV::encode($String* anyURI) {
 }
 
 void clinit$AnyURIDV($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($URI, uri, nullptr);
 		try {

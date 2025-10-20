@@ -75,6 +75,7 @@ $Object* allocate$ModulePackages($Class* clazz) {
 }
 
 void ModulePackages::init$(ModulePackages* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($ints, var$2, c->getPackageIndexTable());
@@ -124,6 +125,7 @@ int32_t ModulePackages::getNumberOfPackages() {
 }
 
 $StringArray* ModulePackages::getPackageNames() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, names, $new($StringArray, $nc(this->packageIndexTable)->length));
 	for (int32_t i = 0; i < $nc(this->packageIndexTable)->length; ++i) {
 		names->set(i, $($nc($($nc($($Attribute::getConstantPool()))->getConstantString($nc(this->packageIndexTable)->get(i), $Const::CONSTANT_Package)))->replace(u'/', u'.')));
@@ -136,6 +138,7 @@ void ModulePackages::setPackageIndexTable($ints* packageIndexTable) {
 }
 
 $String* ModulePackages::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	buf->append("ModulePackages("_s);
 	buf->append($nc(this->packageIndexTable)->length);

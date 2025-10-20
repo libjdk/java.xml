@@ -196,6 +196,7 @@ $Type* BooleanType::toJCType() {
 }
 
 void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
@@ -217,6 +218,7 @@ void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($BranchHandle, falsec, $nc(il)->append(static_cast<$BranchInstruction*>($$new($IFEQ, nullptr))));
@@ -233,6 +235,7 @@ void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $ReferenceType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -243,6 +246,7 @@ void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$init($Boolean);
 	if (clazz == $Boolean::TYPE) {
 		$init($Constants);
@@ -271,6 +275,7 @@ void BooleanType::translateBox($ClassGenerator* classGen, $MethodGenerator* meth
 }
 
 void BooleanType::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

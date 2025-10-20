@@ -332,6 +332,7 @@ $BigDecimal* XMLGregorianCalendarImpl::DECIMAL_TWENTY_FOUR = nullptr;
 $BigDecimal* XMLGregorianCalendarImpl::DECIMAL_SIXTY = nullptr;
 
 void XMLGregorianCalendarImpl::init$($String* lexicalRepresentation) {
+	$useLocalCurrentObjectStackCache();
 	$XMLGregorianCalendar::init$();
 	this->orig_year = $DatatypeConstants::FIELD_UNDEFINED;
 	this->orig_month = $DatatypeConstants::FIELD_UNDEFINED;
@@ -425,6 +426,7 @@ void XMLGregorianCalendarImpl::init$() {
 }
 
 void XMLGregorianCalendarImpl::init$($BigInteger* year, int32_t month, int32_t day, int32_t hour, int32_t minute, int32_t second, $BigDecimal* fractionalSecond, int32_t timezone) {
+	$useLocalCurrentObjectStackCache();
 	$XMLGregorianCalendar::init$();
 	this->orig_year = $DatatypeConstants::FIELD_UNDEFINED;
 	this->orig_month = $DatatypeConstants::FIELD_UNDEFINED;
@@ -463,6 +465,7 @@ void XMLGregorianCalendarImpl::init$($BigInteger* year, int32_t month, int32_t d
 }
 
 void XMLGregorianCalendarImpl::init$(int32_t year, int32_t month, int32_t day, int32_t hour, int32_t minute, int32_t second, int32_t millisecond, int32_t timezone) {
+	$useLocalCurrentObjectStackCache();
 	$XMLGregorianCalendar::init$();
 	this->orig_year = $DatatypeConstants::FIELD_UNDEFINED;
 	this->orig_month = $DatatypeConstants::FIELD_UNDEFINED;
@@ -642,6 +645,7 @@ $BigDecimal* XMLGregorianCalendarImpl::getFractionalSecond() {
 }
 
 void XMLGregorianCalendarImpl::setYear($BigInteger* year) {
+	$useLocalCurrentObjectStackCache();
 	if (year == nullptr) {
 		$set(this, eon, nullptr);
 		this->year = $DatatypeConstants::FIELD_UNDEFINED;
@@ -653,6 +657,7 @@ void XMLGregorianCalendarImpl::setYear($BigInteger* year) {
 }
 
 void XMLGregorianCalendarImpl::setYear(int32_t year) {
+	$useLocalCurrentObjectStackCache();
 	if (year == $DatatypeConstants::FIELD_UNDEFINED) {
 		this->year = $DatatypeConstants::FIELD_UNDEFINED;
 		$set(this, eon, nullptr);
@@ -708,6 +713,7 @@ void XMLGregorianCalendarImpl::setTime(int32_t hour, int32_t minute, int32_t sec
 }
 
 void XMLGregorianCalendarImpl::invalidFieldValue(int32_t field, int32_t value) {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($IllegalArgumentException, $($DatatypeMessageFormatter::formatMessage(nullptr, "InvalidFieldValue"_s, $$new($ObjectArray, {
 		$($of($Integer::valueOf(value))),
 		$of($nc(XMLGregorianCalendarImpl::FIELD_NAME)->get(field))
@@ -788,6 +794,7 @@ void XMLGregorianCalendarImpl::setTime(int32_t hour, int32_t minute, int32_t sec
 }
 
 int32_t XMLGregorianCalendarImpl::compare($XMLGregorianCalendar* rhs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLGregorianCalendar, lhs, this);
 	int32_t result = $DatatypeConstants::INDETERMINATE;
 	$var(XMLGregorianCalendarImpl, P, $cast(XMLGregorianCalendarImpl, lhs));
@@ -849,6 +856,7 @@ $XMLGregorianCalendar* XMLGregorianCalendarImpl::normalize() {
 }
 
 $XMLGregorianCalendar* XMLGregorianCalendarImpl::normalizeToTimezone(int32_t timezone) {
+	$useLocalCurrentObjectStackCache();
 	int32_t minutes = timezone;
 	$var($XMLGregorianCalendar, result, $cast($XMLGregorianCalendar, this->clone()));
 	minutes = -minutes;
@@ -860,6 +868,7 @@ $XMLGregorianCalendar* XMLGregorianCalendarImpl::normalizeToTimezone(int32_t tim
 
 int32_t XMLGregorianCalendarImpl::internalCompare($XMLGregorianCalendar* P, $XMLGregorianCalendar* Q) {
 	$init(XMLGregorianCalendarImpl);
+	$useLocalCurrentObjectStackCache();
 	int32_t result = 0;
 	if ($nc(P)->getEon() == $nc(Q)->getEon()) {
 		int32_t var$0 = P->getYear();
@@ -928,6 +937,7 @@ int32_t XMLGregorianCalendarImpl::compareField($BigInteger* Pfield, $BigInteger*
 
 int32_t XMLGregorianCalendarImpl::compareField($BigDecimal* Pfield$renamed, $BigDecimal* Qfield$renamed) {
 	$init(XMLGregorianCalendarImpl);
+	$useLocalCurrentObjectStackCache();
 	$var($BigDecimal, Pfield, Pfield$renamed);
 	$var($BigDecimal, Qfield, Qfield$renamed);
 	if (Pfield == Qfield) {
@@ -948,6 +958,7 @@ $XMLGregorianCalendar* XMLGregorianCalendarImpl::parse($String* lexicalRepresent
 }
 
 $String* XMLGregorianCalendarImpl::toXMLFormat() {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, typekind, getXMLSchemaType());
 	$var($String, formatString, nullptr);
 	$init($DatatypeConstants);
@@ -986,6 +997,7 @@ $String* XMLGregorianCalendarImpl::toXMLFormat() {
 }
 
 $QName* XMLGregorianCalendarImpl::getXMLSchemaType() {
+	$useLocalCurrentObjectStackCache();
 	int32_t mask = (((((this->year != $DatatypeConstants::FIELD_UNDEFINED ? 32 : 0) | (this->month != $DatatypeConstants::FIELD_UNDEFINED ? 16 : 0)) | (this->day != $DatatypeConstants::FIELD_UNDEFINED ? 8 : 0)) | (this->hour != $DatatypeConstants::FIELD_UNDEFINED ? 4 : 0)) | (this->minute != $DatatypeConstants::FIELD_UNDEFINED ? 2 : 0)) | (this->second != $DatatypeConstants::FIELD_UNDEFINED ? 1 : 0);
 	switch (mask) {
 	case 63:
@@ -1037,6 +1049,7 @@ $QName* XMLGregorianCalendarImpl::getXMLSchemaType() {
 }
 
 bool XMLGregorianCalendarImpl::isValid() {
+	$useLocalCurrentObjectStackCache();
 	if (this->month != $DatatypeConstants::FIELD_UNDEFINED && this->day != $DatatypeConstants::FIELD_UNDEFINED) {
 		if (this->year != $DatatypeConstants::FIELD_UNDEFINED) {
 			if (this->eon == nullptr) {
@@ -1060,6 +1073,7 @@ bool XMLGregorianCalendarImpl::isValid() {
 }
 
 void XMLGregorianCalendarImpl::add($Duration* duration) {
+	$useLocalCurrentObjectStackCache();
 	$var($booleans, fieldUndefined, $new($booleans, {
 		false,
 		false,
@@ -1228,6 +1242,7 @@ void XMLGregorianCalendarImpl::add($Duration* duration) {
 
 int32_t XMLGregorianCalendarImpl::maximumDayInMonthFor($BigInteger* year, int32_t month) {
 	$init(XMLGregorianCalendarImpl);
+	$useLocalCurrentObjectStackCache();
 	if (month != $DatatypeConstants::FEBRUARY) {
 		$init($XMLGregorianCalendarImpl$DaysInMonth);
 		return $nc($XMLGregorianCalendarImpl$DaysInMonth::table)->get(month);
@@ -1261,6 +1276,7 @@ int32_t XMLGregorianCalendarImpl::maximumDayInMonthFor(int32_t year, int32_t mon
 }
 
 $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar() {
+	$useLocalCurrentObjectStackCache();
 	$var($GregorianCalendar, result, nullptr);
 	int32_t DEFAULT_TIMEZONE_OFFSET = $DatatypeConstants::FIELD_UNDEFINED;
 	$var($TimeZone, tz, getTimeZone(DEFAULT_TIMEZONE_OFFSET));
@@ -1300,6 +1316,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar() {
 }
 
 $Locale* XMLGregorianCalendarImpl::getDefaultLocale() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, lang, $SecuritySupport::getSystemProperty("user.language.format"_s));
 	$var($String, country, $SecuritySupport::getSystemProperty("user.country.format"_s));
 	$var($String, variant, $SecuritySupport::getSystemProperty("user.variant.format"_s));
@@ -1322,6 +1339,7 @@ $Locale* XMLGregorianCalendarImpl::getDefaultLocale() {
 }
 
 $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* timezone, $Locale* aLocale$renamed, $XMLGregorianCalendar* defaults) {
+	$useLocalCurrentObjectStackCache();
 	$var($Locale, aLocale, aLocale$renamed);
 	$var($GregorianCalendar, result, nullptr);
 	$var($TimeZone, tz, timezone);
@@ -1412,6 +1430,7 @@ $GregorianCalendar* XMLGregorianCalendarImpl::toGregorianCalendar($TimeZone* tim
 }
 
 $TimeZone* XMLGregorianCalendarImpl::getTimeZone(int32_t defaultZoneoffset) {
+	$useLocalCurrentObjectStackCache();
 	$var($TimeZone, result, nullptr);
 	int32_t zoneoffset = getTimezone();
 	if (zoneoffset == $DatatypeConstants::FIELD_UNDEFINED) {
@@ -1471,6 +1490,7 @@ void XMLGregorianCalendarImpl::setMillisecond(int32_t millisecond) {
 }
 
 void XMLGregorianCalendarImpl::setFractionalSecond($BigDecimal* fractional) {
+	$useLocalCurrentObjectStackCache();
 	if (fractional != nullptr) {
 		bool var$0 = (fractional->compareTo(XMLGregorianCalendarImpl::DECIMAL_ZERO) < 0);
 		if (var$0 || (fractional->compareTo(XMLGregorianCalendarImpl::DECIMAL_ONE) > 0)) {
@@ -1486,6 +1506,7 @@ bool XMLGregorianCalendarImpl::isDigit(char16_t ch) {
 }
 
 $String* XMLGregorianCalendarImpl::format($String* format) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	int32_t fidx = 0;
 	int32_t flen = $nc(format)->length();

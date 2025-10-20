@@ -80,6 +80,7 @@ void StackMapType::init$($DataInput* file, $ConstantPool* constant_pool) {
 }
 
 void StackMapType::init$(int8_t type, int32_t index, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	this->index = -1;
 	if ((type < $Const::ITEM_Bogus) || (type > $Const::ITEM_NewObject)) {
 		$throwNew($IllegalArgumentException, $$str({"Illegal type for StackMapType: "_s, $$str(type)}));
@@ -90,6 +91,7 @@ void StackMapType::init$(int8_t type, int32_t index, $ConstantPool* constant_poo
 }
 
 void StackMapType::setType(int8_t t) {
+	$useLocalCurrentObjectStackCache();
 	if ((t < $Const::ITEM_Bogus) || (t > $Const::ITEM_NewObject)) {
 		$throwNew($IllegalArgumentException, $$str({"Illegal type for StackMapType: "_s, $$str(t)}));
 	}
@@ -120,6 +122,7 @@ bool StackMapType::hasIndex() {
 }
 
 $String* StackMapType::printIndex() {
+	$useLocalCurrentObjectStackCache();
 	if (this->type == $Const::ITEM_Object) {
 		if (this->index < 0) {
 			return ", class=<unknown>"_s;
@@ -133,6 +136,7 @@ $String* StackMapType::printIndex() {
 }
 
 $String* StackMapType::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"(type="_s, $($Const::getItemName(this->type))}));
 	$var($String, var$0, $$concat(var$1, $(printIndex())));
 	return $concat(var$0, ")");

@@ -206,6 +206,7 @@ $Object* allocate$XPath$Tokens($Class* clazz) {
 $StringArray* XPath$Tokens::fgTokenNames = nullptr;
 
 void XPath$Tokens::init$($SymbolTable* symbolTable) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fTokens, $new($ints, XPath$Tokens::INITIAL_TOKEN_COUNT));
 	this->fTokenCount = 0;
 	$set(this, fSymbolMapping, $new($HashMap));
@@ -286,6 +287,7 @@ $String* XPath$Tokens::getTokenString(int32_t token) {
 }
 
 void XPath$Tokens::addToken($String* tokenStr) {
+	$useLocalCurrentObjectStackCache();
 	$var($Integer, tokenInt, nullptr);
 	{
 		$var($Iterator, i$, $nc($($nc(this->fTokenNames)->entrySet()))->iterator());
@@ -306,6 +308,7 @@ void XPath$Tokens::addToken($String* tokenStr) {
 }
 
 void XPath$Tokens::addToken(int32_t token) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTokens)->set(this->fTokenCount, token);
 	} catch ($ArrayIndexOutOfBoundsException&) {
@@ -349,6 +352,7 @@ $String* XPath$Tokens::nextTokenAsString() {
 }
 
 void XPath$Tokens::dumpTokens() {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fTokenCount; ++i) {
 		switch ($nc(this->fTokens)->get(i)) {
 		case XPath$Tokens::EXPRTOKEN_OPEN_PAREN:

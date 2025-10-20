@@ -186,6 +186,7 @@ void XMLNSDocumentScannerImpl::setDTDValidator($XMLDTDValidatorFilter* dtd) {
 }
 
 bool XMLNSDocumentScannerImpl::scanStartElement() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fSkip && !this->fAdd) {
 		$var($QName, name, $nc(this->fElementStack)->getNext());
 		this->fSkip = $nc(this->fEntityScanner)->skipString($nc(name)->rawname);
@@ -331,6 +332,7 @@ bool XMLNSDocumentScannerImpl::scanStartElement() {
 }
 
 void XMLNSDocumentScannerImpl::scanAttribute($XMLAttributesImpl* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLScanner$NameType);
 	$nc(this->fEntityScanner)->scanQName(this->fAttributeQName, $XMLScanner$NameType::ATTRIBUTENAME);
 	$nc(this->fEntityScanner)->skipSpaces();

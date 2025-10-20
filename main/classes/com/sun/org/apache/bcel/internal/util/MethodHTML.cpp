@@ -89,6 +89,7 @@ $Object* allocate$MethodHTML($Class* clazz) {
 }
 
 void MethodHTML::init$($String* dir, $String* class_name, $MethodArray* methods, $FieldArray* fields, $ConstantHTML* constant_html, $AttributeHTML* attribute_html) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, className, class_name);
 	$set(this, attribute_html, attribute_html);
 	$set(this, constantHtml, constant_html);
@@ -116,6 +117,7 @@ void MethodHTML::init$($String* dir, $String* class_name, $MethodArray* methods,
 }
 
 void MethodHTML::writeField($Field* field) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, type, $Utility::signatureToString($($nc(field)->getSignature())));
 	$var($String, name, $nc(field)->getName());
 	$var($String, access, $Utility::accessToString(field->getAccessFlags()));
@@ -137,6 +139,7 @@ void MethodHTML::writeField($Field* field) {
 }
 
 void MethodHTML::writeMethod($Method* method, int32_t method_number) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, signature, $nc(method)->getSignature());
 	$var($StringArray, args, $Utility::methodSignatureArgumentTypes(signature, false));
 	$var($String, type, $Utility::methodSignatureReturnType(signature, false));

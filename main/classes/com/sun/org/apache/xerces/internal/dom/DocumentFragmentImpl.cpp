@@ -285,6 +285,7 @@ $String* DocumentFragmentImpl::getNodeName() {
 }
 
 void DocumentFragmentImpl::normalize() {
+	$useLocalCurrentObjectStackCache();
 	if (isNormalized()) {
 		return;
 	}

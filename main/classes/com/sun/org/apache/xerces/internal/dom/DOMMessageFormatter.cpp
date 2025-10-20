@@ -87,6 +87,7 @@ void DOMMessageFormatter::init$() {
 
 $String* DOMMessageFormatter::formatMessage($String* domain, $String* key, $ObjectArray* arguments) {
 	$init(DOMMessageFormatter);
+	$useLocalCurrentObjectStackCache();
 	$var($ResourceBundle, resourceBundle, getResourceBundle(domain));
 	if (resourceBundle == nullptr) {
 		init();

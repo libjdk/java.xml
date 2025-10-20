@@ -148,6 +148,7 @@ void XMLSchemaValidator$ValueStoreCache::startElement() {
 }
 
 void XMLSchemaValidator$ValueStoreCache::endElement() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fGlobalMapStack)->isEmpty()) {
 		return;
 	}
@@ -176,6 +177,7 @@ void XMLSchemaValidator$ValueStoreCache::endElement() {
 }
 
 void XMLSchemaValidator$ValueStoreCache::initValueStoresFor($XSElementDecl* eDecl, $FieldActivator* activator) {
+	$useLocalCurrentObjectStackCache();
 	$var($IdentityConstraintArray, icArray, $nc(eDecl)->fIDConstraints);
 	int32_t icCount = eDecl->fIDCPos;
 	for (int32_t i = 0; i < icCount; ++i) {
@@ -263,6 +265,7 @@ $XMLSchemaValidator$ValueStoreBase* XMLSchemaValidator$ValueStoreCache::getGloba
 }
 
 void XMLSchemaValidator$ValueStoreCache::transplant($IdentityConstraint* id, int32_t initialDepth) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fLocalId)->fDepth = initialDepth;
 	$set($nc(this->fLocalId), fId, id);
 	$var($XMLSchemaValidator$ValueStoreBase, newVals, $cast($XMLSchemaValidator$ValueStoreBase, $nc(this->fIdentityConstraint2ValueStoreMap)->get(this->fLocalId)));
@@ -279,6 +282,7 @@ void XMLSchemaValidator$ValueStoreCache::transplant($IdentityConstraint* id, int
 }
 
 void XMLSchemaValidator$ValueStoreCache::endDocument() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fValueStores)->iterator());
 		for (; $nc(i$)->hasNext();) {

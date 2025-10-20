@@ -118,6 +118,7 @@ void ConstantLong::setBytes(int64_t bytes) {
 }
 
 $String* ConstantLong::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(bytes = "_s, $$str(this->bytes), ")"_s});
 }
 

@@ -75,6 +75,7 @@ $Object* allocate$NestMembers($Class* clazz) {
 }
 
 void NestMembers::init$(NestMembers* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($ints, var$2, c->getClasses());
@@ -124,6 +125,7 @@ int32_t NestMembers::getNumberClasses() {
 }
 
 $StringArray* NestMembers::getClassNames() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, names, $new($StringArray, $nc(this->classes)->length));
 	for (int32_t i = 0; i < $nc(this->classes)->length; ++i) {
 		names->set(i, $($nc($($nc($($Attribute::getConstantPool()))->getConstantString($nc(this->classes)->get(i), $Const::CONSTANT_Class)))->replace(u'/', u'.')));
@@ -136,6 +138,7 @@ void NestMembers::setClasses($ints* classes) {
 }
 
 $String* NestMembers::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	buf->append("NestMembers("_s);
 	buf->append($nc(this->classes)->length);

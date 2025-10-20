@@ -121,6 +121,7 @@ $Object* CoroutineManager::co_entry_pause(int32_t thisCoroutine) {
 
 $Object* CoroutineManager::co_resume(Object$* arg_object, int32_t thisCoroutine, int32_t toCoroutine) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (!$nc(this->m_activeIDs)->get(toCoroutine)) {
 			$init($XMLErrorResources);
 			$throwNew($NoSuchMethodException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_COROUTINE_NOT_AVAIL, $$new($ObjectArray, {$($of($Integer::toString(toCoroutine)))}))));
@@ -154,6 +155,7 @@ void CoroutineManager::co_exit(int32_t thisCoroutine) {
 
 void CoroutineManager::co_exit_to(Object$* arg_object, int32_t thisCoroutine, int32_t toCoroutine) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (!$nc(this->m_activeIDs)->get(toCoroutine)) {
 			$init($XMLErrorResources);
 			$throwNew($NoSuchMethodException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_COROUTINE_NOT_AVAIL, $$new($ObjectArray, {$($of($Integer::toString(toCoroutine)))}))));

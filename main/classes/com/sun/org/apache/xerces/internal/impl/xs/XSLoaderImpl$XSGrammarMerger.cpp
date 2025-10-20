@@ -107,6 +107,7 @@ void XSLoaderImpl$XSGrammarMerger::init$() {
 }
 
 void XSLoaderImpl$XSGrammarMerger::putGrammar($Grammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, cachedGrammar, toSchemaGrammar($($XSGrammarPool::getGrammar($($nc(grammar)->getGrammarDescription())))));
 	if (cachedGrammar != nullptr) {
 		$var($SchemaGrammar, newGrammar, toSchemaGrammar(grammar));
@@ -123,6 +124,7 @@ $SchemaGrammar* XSLoaderImpl$XSGrammarMerger::toSchemaGrammar($Grammar* grammar)
 }
 
 void XSLoaderImpl$XSGrammarMerger::mergeSchemaGrammars($SchemaGrammar* cachedGrammar, $SchemaGrammar* newGrammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSNamedMap, map, $nc(newGrammar)->getComponents($XSConstants::ELEMENT_DECLARATION));
 	int32_t length = $nc(map)->getLength();
 	for (int32_t i = 0; i < length; ++i) {

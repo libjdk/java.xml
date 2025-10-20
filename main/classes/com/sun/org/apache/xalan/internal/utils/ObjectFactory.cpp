@@ -146,6 +146,7 @@ void ObjectFactory::debugPrintln($Supplier* msgGen) {
 
 $ClassLoader* ObjectFactory::findClassLoader() {
 	$init(ObjectFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if ($System::getSecurityManager() != nullptr) {
 		return nullptr;
@@ -178,6 +179,7 @@ $ClassLoader* ObjectFactory::findClassLoader() {
 
 $Object* ObjectFactory::newInstance($String* className, bool doFallback) {
 	$init(ObjectFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ClassLoader, cl, $System::getSecurityManager() != nullptr ? ($ClassLoader*)nullptr : findClassLoader());
 	try {
@@ -202,6 +204,7 @@ $Class* ObjectFactory::findProviderClass($String* className, bool doFallback) {
 
 $Class* ObjectFactory::findProviderClass($String* className, $ClassLoader* cl$renamed, bool doFallback) {
 	$init(ObjectFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, cl, cl$renamed);
 	$beforeCallerSensitive();
 	$var($SecurityManager, security, $System::getSecurityManager());

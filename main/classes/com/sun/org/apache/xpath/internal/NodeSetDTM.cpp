@@ -218,6 +218,7 @@ void NodeSetDTM::init$($NodeIterator* iterator, $XPathContext* xctxt) {
 }
 
 void NodeSetDTM::init$($NodeList* nodeList, $XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$NodeVector::init$();
 	this->m_next = 0;
 	this->m_mutable = true;
@@ -401,6 +402,7 @@ void NodeSetDTM::addNodesInDocOrder($DTMIterator* iterator, $XPathContext* suppo
 }
 
 int32_t NodeSetDTM::addNodeInDocOrder(int32_t node, bool test, $XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->m_mutable) {
 		$init($XPATHErrorResources);
 		$throwNew($RuntimeException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NODESETDTM_NOT_MUTABLE, nullptr)));

@@ -136,6 +136,7 @@ void Signature::setSignatureIndex(int32_t signatureIndex) {
 }
 
 $String* Signature::getSignature() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, c, $cast($ConstantUtf8, $nc($($Attribute::getConstantPool()))->getConstant(this->signatureIndex, $Const::CONSTANT_Utf8)));
 	return $nc(c)->getBytes();
 }
@@ -147,6 +148,7 @@ bool Signature::identStart(int32_t ch) {
 
 void Signature::matchIdent($Signature$MyByteArrayInputStream* in, $StringBuilder* buf) {
 	$init(Signature);
+	$useLocalCurrentObjectStackCache();
 	int32_t ch = 0;
 	if ((ch = $nc(in)->read()) == -1) {
 		$throwNew($IllegalArgumentException, $$str({"Illegal signature: "_s, $(in->getData()), " no ident, reaching EOF"_s}));
@@ -185,6 +187,7 @@ void Signature::matchIdent($Signature$MyByteArrayInputStream* in, $StringBuilder
 
 void Signature::matchGJIdent($Signature$MyByteArrayInputStream* in, $StringBuilder* buf) {
 	$init(Signature);
+	$useLocalCurrentObjectStackCache();
 	int32_t ch = 0;
 	matchIdent(in, buf);
 	ch = $nc(in)->read();
@@ -217,6 +220,7 @@ void Signature::matchGJIdent($Signature$MyByteArrayInputStream* in, $StringBuild
 
 $String* Signature::translate($String* s) {
 	$init(Signature);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	matchGJIdent($$new($Signature$MyByteArrayInputStream, s), buf);
 	return buf->toString();

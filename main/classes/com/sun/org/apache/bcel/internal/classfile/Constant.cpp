@@ -140,6 +140,7 @@ int8_t Constant::getTag() {
 }
 
 $String* Constant::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Const::getConstantName(this->tag)), "["_s, $$str(this->tag), "]"_s});
 }
 
@@ -164,6 +165,7 @@ $Object* Constant::clone() {
 
 Constant* Constant::readConstant($DataInput* dataInput) {
 	$init(Constant);
+	$useLocalCurrentObjectStackCache();
 	int8_t b = $nc(dataInput)->readByte();
 	switch (b) {
 	case $Const::CONSTANT_Class:

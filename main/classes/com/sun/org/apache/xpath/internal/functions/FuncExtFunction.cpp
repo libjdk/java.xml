@@ -120,6 +120,7 @@ $Object* allocate$FuncExtFunction($Class* clazz) {
 }
 
 void FuncExtFunction::fixupVariables($List* vars, int32_t globalsSize) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr != this->m_argVec) {
 		int32_t nArgs = $nc(this->m_argVec)->size();
 		for (int32_t i = 0; i < nArgs; ++i) {
@@ -162,6 +163,7 @@ void FuncExtFunction::init$($String* namespace$, $String* extensionName, Object$
 }
 
 $XObject* FuncExtFunction::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(xctxt)->isSecureProcessing()) {
 		$init($XPATHErrorResources);
 		$throwNew($TransformerException, $($XPATHMessages::createXPATHMessage($XPATHErrorResources::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED, $$new($ObjectArray, {$($of(toString()))}))));
@@ -194,6 +196,7 @@ void FuncExtFunction::checkNumberArgs(int32_t argNum) {
 }
 
 void FuncExtFunction::callArgVisitors($XPathVisitor* visitor) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->m_argVec)->size(); ++i) {
 		$var($Expression, exp, $cast($Expression, $nc(this->m_argVec)->get(i)));
 		$nc(exp)->callVisitors($$new($FuncExtFunction$ArgExtOwner, this, exp), visitor);
@@ -201,6 +204,7 @@ void FuncExtFunction::callArgVisitors($XPathVisitor* visitor) {
 }
 
 void FuncExtFunction::exprSetParent($ExpressionNode* n) {
+	$useLocalCurrentObjectStackCache();
 	$Function::exprSetParent(n);
 	int32_t nArgs = $nc(this->m_argVec)->size();
 	for (int32_t i = 0; i < nArgs; ++i) {
@@ -210,6 +214,7 @@ void FuncExtFunction::exprSetParent($ExpressionNode* n) {
 }
 
 void FuncExtFunction::reportWrongNumberArgs() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	$var($String, fMsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_INCORRECT_PROGRAMMER_ASSERTION, $$new($ObjectArray, {$of("Programmer\'s assertion:  the method FunctionMultiArgs.reportWrongNumberArgs() should never be called."_s)})));
 	$throwNew($RuntimeException, fMsg);

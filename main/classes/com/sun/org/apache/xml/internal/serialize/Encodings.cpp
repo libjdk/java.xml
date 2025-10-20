@@ -93,6 +93,7 @@ void Encodings::init$() {
 
 $EncodingInfo* Encodings::getEncodingInfo($String* encoding$renamed, bool allowJavaNames) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, encoding$renamed);
 	$var($EncodingInfo, eInfo, nullptr);
 	if (encoding == nullptr) {

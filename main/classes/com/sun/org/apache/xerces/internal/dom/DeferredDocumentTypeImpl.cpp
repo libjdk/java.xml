@@ -316,6 +316,7 @@ void DeferredDocumentTypeImpl::synchronizeData() {
 }
 
 void DeferredDocumentTypeImpl::synchronizeChildren() {
+	$useLocalCurrentObjectStackCache();
 	bool orig = $nc($(this->ownerDocument()))->getMutationEvents();
 	$nc($(this->ownerDocument()))->setMutationEvents(false);
 	needsSyncChildren(false);

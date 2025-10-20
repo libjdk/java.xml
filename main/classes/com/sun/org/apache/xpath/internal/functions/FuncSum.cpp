@@ -70,6 +70,7 @@ void FuncSum::init$() {
 }
 
 $XObject* FuncSum::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMIterator, nodes, $nc(this->m_arg0)->asIterator(xctxt, $nc(xctxt)->getCurrentNode()));
 	double sum = 0.0;
 	int32_t pos = 0;

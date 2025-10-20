@@ -95,6 +95,7 @@ int16_t QNameDV::getAllowedFacets() {
 }
 
 $Object* QNameDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	$var($String, localpart, nullptr);
 	int32_t colonptr = $nc(content)->indexOf(":"_s);

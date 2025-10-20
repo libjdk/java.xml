@@ -300,6 +300,7 @@ $DOMConfiguration* DOMSerializerImpl::getDomConfig() {
 }
 
 void DOMSerializerImpl::setParameter($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Boolean, value)) {
 		bool state = $nc(($cast($Boolean, value)))->booleanValue();
 		$init($Constants);
@@ -478,6 +479,7 @@ $DOMStringList* DOMSerializerImpl::getParameterNames() {
 }
 
 $Object* DOMSerializerImpl::getParameter($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if ($nc(name)->equalsIgnoreCase($Constants::DOM_NORMALIZE_CHARACTERS)) {
 		return $of(nullptr);
@@ -576,6 +578,7 @@ $Object* DOMSerializerImpl::getParameter($String* name) {
 }
 
 $String* DOMSerializerImpl::writeToString($Node* wnode) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLSerializer, ser, nullptr);
 	$var($String, ver, _getXmlVersion(wnode));
 	if (ver != nullptr && ver->equals("1.1"_s)) {
@@ -679,6 +682,7 @@ void DOMSerializerImpl::initSerializer($XMLSerializer* ser) {
 }
 
 void DOMSerializerImpl::copySettings($XMLSerializer* src, $XMLSerializer* dest) {
+	$useLocalCurrentObjectStackCache();
 	$set($nc(dest), fDOMErrorHandler, this->fErrorHandler);
 	$nc(dest->_format)->setEncoding($($nc($nc(src)->_format)->getEncoding()));
 	$nc(dest->_format)->setLineSeparator($($nc($nc(src)->_format)->getLineSeparator()));
@@ -686,6 +690,7 @@ void DOMSerializerImpl::copySettings($XMLSerializer* src, $XMLSerializer* dest) 
 }
 
 bool DOMSerializerImpl::write($Node* node, $LSOutput* destination) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return false;
 	}
@@ -813,6 +818,7 @@ bool DOMSerializerImpl::write($Node* node, $LSOutput* destination) {
 }
 
 bool DOMSerializerImpl::writeToURI($Node* node, $String* URI) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return false;
 	}
@@ -901,6 +907,7 @@ bool DOMSerializerImpl::writeToURI($Node* node, $String* URI) {
 }
 
 void DOMSerializerImpl::prepareForSerialization($XMLSerializer* ser, $Node* node$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, node$renamed);
 	$beforeCallerSensitive();
 	$nc(ser)->reset();
@@ -950,6 +957,7 @@ void DOMSerializerImpl::prepareForSerialization($XMLSerializer* ser, $Node* node
 }
 
 void DOMSerializerImpl::verify($Node* node, bool verifyNames, bool xml11Version) {
+	$useLocalCurrentObjectStackCache();
 	int32_t type = $nc(node)->getNodeType();
 	$set($nc(this->fLocator), fRelatedNode, node);
 	bool wellformed = false;
@@ -1070,6 +1078,7 @@ void DOMSerializerImpl::verify($Node* node, bool verifyNames, bool xml11Version)
 }
 
 $String* DOMSerializerImpl::_getXmlVersion($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
@@ -1088,6 +1097,7 @@ $String* DOMSerializerImpl::_getXmlVersion($Node* node) {
 }
 
 $String* DOMSerializerImpl::_getInputEncoding($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
@@ -1106,6 +1116,7 @@ $String* DOMSerializerImpl::_getInputEncoding($Node* node) {
 }
 
 $String* DOMSerializerImpl::_getXmlEncoding($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {

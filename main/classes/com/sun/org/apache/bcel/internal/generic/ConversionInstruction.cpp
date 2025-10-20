@@ -121,6 +121,7 @@ void ConversionInstruction::init$(int16_t opcode) {
 }
 
 $Type* ConversionInstruction::getType($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int16_t _opcode = $Instruction::getOpcode();
 	switch (_opcode) {
 	case $Const::D2I:

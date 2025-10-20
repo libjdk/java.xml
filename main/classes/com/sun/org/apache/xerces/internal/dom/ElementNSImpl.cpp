@@ -110,6 +110,7 @@ void ElementNSImpl::init$($CoreDocumentImpl* ownerDocument, $String* namespaceUR
 }
 
 void ElementNSImpl::setName($String* namespaceURI, $String* qname) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	$set(this, namespaceURI, namespaceURI);
 	if (namespaceURI != nullptr) {
@@ -199,6 +200,7 @@ $String* ElementNSImpl::getPrefix() {
 }
 
 void ElementNSImpl::setPrefix($String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}

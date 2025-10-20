@@ -64,6 +64,7 @@ void BufferAllocator::init$() {
 }
 
 $chars* BufferAllocator::getCharBuffer(int32_t size) {
+	$useLocalCurrentObjectStackCache();
 	if (size <= BufferAllocator::SMALL_SIZE_LIMIT) {
 		$var($chars, buffer, this->smallCharBuffer);
 		$set(this, smallCharBuffer, nullptr);
@@ -94,6 +95,7 @@ void BufferAllocator::returnCharBuffer($chars* c) {
 }
 
 $bytes* BufferAllocator::getByteBuffer(int32_t size) {
+	$useLocalCurrentObjectStackCache();
 	if (size <= BufferAllocator::SMALL_SIZE_LIMIT) {
 		$var($bytes, buffer, this->smallByteBuffer);
 		$set(this, smallByteBuffer, nullptr);

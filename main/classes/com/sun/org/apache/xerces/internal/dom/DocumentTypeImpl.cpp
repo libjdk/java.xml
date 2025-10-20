@@ -373,6 +373,7 @@ void DocumentTypeImpl::setTextContent($String* textContent) {
 }
 
 bool DocumentTypeImpl::isEqualNode($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	if (!$ParentNode::isEqualNode(arg)) {
 		return false;
 	}
@@ -518,6 +519,7 @@ $NamedNodeMap* DocumentTypeImpl::getElements() {
 }
 
 $Object* DocumentTypeImpl::setUserData($String* key, Object$* data, $UserDataHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	if (this->userData == nullptr) {
 		$set(this, userData, $new($HashMap));
 	}
@@ -554,6 +556,7 @@ $Map* DocumentTypeImpl::getUserDataRecord() {
 }
 
 void DocumentTypeImpl::writeObject($ObjectOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$var($Hashtable, ud, (this->userData == nullptr) ? ($Hashtable*)nullptr : $new($Hashtable, this->userData));
 	$var($ObjectOutputStream$PutField, pf, $nc(out)->putFields());
 	$nc(pf)->put("name"_s, $of(this->name));
@@ -569,6 +572,7 @@ void DocumentTypeImpl::writeObject($ObjectOutputStream* out) {
 }
 
 void DocumentTypeImpl::readObject($ObjectInputStream* in) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectInputStream$GetField, gf, $nc(in)->readFields());
 	$set(this, name, $cast($String, $nc(gf)->get("name"_s, ($Object*)nullptr)));
 	$set(this, entities, $cast($NamedNodeMapImpl, gf->get("entities"_s, ($Object*)nullptr)));
@@ -585,6 +589,7 @@ void DocumentTypeImpl::readObject($ObjectInputStream* in) {
 }
 
 void clinit$DocumentTypeImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 		$load($String);
 		$load($NamedNodeMapImpl);
 		$init($Integer);

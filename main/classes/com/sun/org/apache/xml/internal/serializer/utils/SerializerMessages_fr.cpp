@@ -111,6 +111,7 @@ void SerializerMessages_fr::init$() {
 }
 
 $ObjectArray2* SerializerMessages_fr::getContents() {
+	$useLocalCurrentObjectStackCache();
 			$init($MsgKey);
 	$var($ObjectArray2, contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {

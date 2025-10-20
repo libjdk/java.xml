@@ -65,6 +65,7 @@ void FuncGenerateId::init$() {
 }
 
 $XObject* FuncGenerateId::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t which = getArg0AsNode(xctxt);
 	if ($DTM::NULL != which) {
 		return $new($XString, $$str({"N"_s, $($nc($($Integer::toHexString(which)))->toUpperCase())}));

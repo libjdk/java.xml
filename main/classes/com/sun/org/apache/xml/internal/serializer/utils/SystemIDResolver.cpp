@@ -69,6 +69,7 @@ void SystemIDResolver::init$() {
 }
 
 $String* SystemIDResolver::getAbsoluteURIFromRelative($String* localPath) {
+	$useLocalCurrentObjectStackCache();
 	if (localPath == nullptr || $nc(localPath)->length() == 0) {
 		return ""_s;
 	}
@@ -164,6 +165,7 @@ $String* SystemIDResolver::replaceChars($String* str) {
 }
 
 $String* SystemIDResolver::getAbsoluteURI($String* systemId) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, absoluteURI, systemId);
 	if (isAbsoluteURI(systemId)) {
 		if ($nc(systemId)->startsWith("file:"_s)) {
@@ -198,6 +200,7 @@ $String* SystemIDResolver::getAbsoluteURI($String* systemId) {
 }
 
 $String* SystemIDResolver::getAbsoluteURI($String* urlString, $String* base) {
+	$useLocalCurrentObjectStackCache();
 	if (base == nullptr) {
 		return getAbsoluteURI(urlString);
 	}

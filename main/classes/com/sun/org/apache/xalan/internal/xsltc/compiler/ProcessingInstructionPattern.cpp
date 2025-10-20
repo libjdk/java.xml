@@ -153,6 +153,7 @@ bool ProcessingInstructionPattern::isWildcard() {
 }
 
 $Type* ProcessingInstructionPattern::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (hasPredicates()) {
 		int32_t n = $nc(this->_predicates)->size();
 		for (int32_t i = 0; i < n; ++i) {
@@ -165,6 +166,7 @@ $Type* ProcessingInstructionPattern::typeCheck($SymbolTable* stable) {
 }
 
 void ProcessingInstructionPattern::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

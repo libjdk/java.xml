@@ -78,6 +78,7 @@ void XSDUniqueOrKeyTraverser::init$($XSDHandler* handler, $XSAttributeChecker* g
 }
 
 void XSDUniqueOrKeyTraverser::traverse($Element* uElem, $XSElementDecl* element, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(uElem, false, schemaDoc));
 	$var($String, uName, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	if (uName == nullptr) {

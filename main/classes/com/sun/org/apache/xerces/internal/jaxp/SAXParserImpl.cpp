@@ -259,6 +259,7 @@ void SAXParserImpl::init$($SAXParserFactoryImpl* spf, $Map* features) {
 }
 
 void SAXParserImpl::init$($SAXParserFactoryImpl* spf, $Map* features, bool secureProcessing) {
+	$useLocalCurrentObjectStackCache();
 	$SAXParser::init$();
 	$set(this, schemaLanguage, nullptr);
 	$set(this, fSecurityManager, $new($XMLSecurityManager, secureProcessing));
@@ -326,6 +327,7 @@ void SAXParserImpl::init$($SAXParserFactoryImpl* spf, $Map* features, bool secur
 }
 
 void SAXParserImpl::setFeatures($Map* features) {
+	$useLocalCurrentObjectStackCache();
 	if (features != nullptr) {
 		{
 			$var($Iterator, i$, $nc($(features->entrySet()))->iterator());
@@ -349,6 +351,7 @@ $XMLReader* SAXParserImpl::getXMLReader() {
 }
 
 bool SAXParserImpl::isNamespaceAware() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->xmlReader)->getFeature(SAXParserImpl::NAMESPACES_FEATURE);
 	} catch ($SAXException&) {
@@ -359,6 +362,7 @@ bool SAXParserImpl::isNamespaceAware() {
 }
 
 bool SAXParserImpl::isValidating() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->xmlReader)->getFeature(SAXParserImpl::VALIDATION_FEATURE);
 	} catch ($SAXException&) {

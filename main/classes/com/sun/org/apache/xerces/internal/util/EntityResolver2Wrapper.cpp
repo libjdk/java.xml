@@ -89,6 +89,7 @@ $EntityResolver2* EntityResolver2Wrapper::getEntityResolver() {
 }
 
 $XMLInputSource* EntityResolver2Wrapper::getExternalSubset($XMLDTDDescription* grammarDescription) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEntityResolver != nullptr) {
 		$var($String, name, $nc(grammarDescription)->getRootName());
 		$var($String, baseURI, grammarDescription->getBaseSystemId());
@@ -108,6 +109,7 @@ $XMLInputSource* EntityResolver2Wrapper::getExternalSubset($XMLDTDDescription* g
 }
 
 $XMLInputSource* EntityResolver2Wrapper::resolveEntity($XMLResourceIdentifier* resourceIdentifier) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEntityResolver != nullptr) {
 		$var($String, pubId, $nc(resourceIdentifier)->getPublicId());
 		$var($String, sysId, resourceIdentifier->getLiteralSystemId());
@@ -137,6 +139,7 @@ $XMLInputSource* EntityResolver2Wrapper::resolveEntity($XMLResourceIdentifier* r
 }
 
 $XMLInputSource* EntityResolver2Wrapper::createXMLInputSource($InputSource* source, $String* baseURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, $nc(source)->getPublicId());
 	$var($String, systemId, source->getSystemId());
 	$var($String, baseSystemId, baseURI);

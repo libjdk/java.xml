@@ -118,6 +118,7 @@ void TestSeq::init$($List* patterns, int32_t kernelType, $Mode* mode) {
 }
 
 $String* TestSeq::toString() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->_patterns)->size();
 	$var($StringBuffer, result, $new($StringBuffer));
 	for (int32_t i = 0; i < count; ++i) {
@@ -135,16 +136,19 @@ $InstructionList* TestSeq::getInstructionList() {
 }
 
 double TestSeq::getPriority() {
+	$useLocalCurrentObjectStackCache();
 	$var($Template, template$, ($nc(this->_patterns)->isEmpty()) ? this->_default : $nc(($cast($Pattern, $($nc(this->_patterns)->get(0)))))->getTemplate());
 	return $nc(template$)->getPriority();
 }
 
 int32_t TestSeq::getPosition() {
+	$useLocalCurrentObjectStackCache();
 	$var($Template, template$, ($nc(this->_patterns)->isEmpty()) ? this->_default : $nc(($cast($Pattern, $($nc(this->_patterns)->get(0)))))->getTemplate());
 	return $nc(template$)->getPosition();
 }
 
 void TestSeq::reduce() {
+	$useLocalCurrentObjectStackCache();
 	$var($List, newPatterns, $new($ArrayList));
 	{
 		$var($Iterator, i$, $nc(this->_patterns)->iterator());
@@ -165,6 +169,7 @@ void TestSeq::reduce() {
 }
 
 void TestSeq::findTemplates($Map* templates) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_default != nullptr) {
 		$nc(templates)->put(this->_default, this);
 	}
@@ -188,6 +193,7 @@ $LocationPathPattern* TestSeq::getPattern(int32_t n) {
 }
 
 $InstructionHandle* TestSeq::compile($ClassGenerator* classGen, $MethodGenerator* methodGen, $InstructionHandle* continuation) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_start != nullptr) {
 		return this->_start;
 	}

@@ -146,6 +146,7 @@ $XMLDocumentHandler* SAX2XNI::getDocumentHandler() {
 }
 
 void SAX2XNI::startDocument() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->nsContext)->reset();
 		$var($XMLLocator, xmlLocator, nullptr);
@@ -171,6 +172,7 @@ void SAX2XNI::endDocument() {
 }
 
 void SAX2XNI::startElement($String* uri, $String* local, $String* qname, $Attributes* att) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($QName, var$0, createQName(uri, local, qname));
 		$nc(this->fCore)->startElement(var$0, $(createAttributes(att)), nullptr);
@@ -181,6 +183,7 @@ void SAX2XNI::startElement($String* uri, $String* local, $String* qname, $Attrib
 }
 
 void SAX2XNI::endElement($String* uri, $String* local, $String* qname) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fCore)->endElement($(createQName(uri, local, qname)), nullptr);
 	} catch ($WrappedSAXException&) {
@@ -190,6 +193,7 @@ void SAX2XNI::endElement($String* uri, $String* local, $String* qname) {
 }
 
 void SAX2XNI::characters($chars* buf, int32_t offset, int32_t len) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fCore)->characters($$new($XMLString, buf, offset, len), nullptr);
 	} catch ($WrappedSAXException&) {
@@ -199,6 +203,7 @@ void SAX2XNI::characters($chars* buf, int32_t offset, int32_t len) {
 }
 
 void SAX2XNI::ignorableWhitespace($chars* buf, int32_t offset, int32_t len) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fCore)->ignorableWhitespace($$new($XMLString, buf, offset, len), nullptr);
 	} catch ($WrappedSAXException&) {
@@ -217,6 +222,7 @@ void SAX2XNI::endPrefixMapping($String* prefix) {
 }
 
 void SAX2XNI::processingInstruction($String* target, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, var$0, symbolize(target));
 		$nc(this->fCore)->processingInstruction(var$0, $(createXMLString(data)), nullptr);
@@ -234,6 +240,7 @@ void SAX2XNI::setDocumentLocator($Locator* _loc) {
 }
 
 $QName* SAX2XNI::createQName($String* uri$renamed, $String* local$renamed, $String* raw) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, uri$renamed);
 	$var($String, local, local$renamed);
 	int32_t idx = $nc(raw)->indexOf((int32_t)u':');
@@ -274,6 +281,7 @@ $XMLString* SAX2XNI::createXMLString($String* str) {
 }
 
 $XMLAttributes* SAX2XNI::createAttributes($Attributes* att) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->xa)->removeAllAttributes();
 	int32_t len = $nc(att)->getLength();
 	for (int32_t i = 0; i < len; ++i) {

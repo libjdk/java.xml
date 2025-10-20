@@ -221,6 +221,7 @@ void StAXStream2SAX::parse($String* sysId) {
 }
 
 void StAXStream2SAX::bridge() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t depth = 0;
 		bool startedAtDocument = false;
@@ -388,6 +389,7 @@ void StAXStream2SAX::handleStartDocument() {
 }
 
 void StAXStream2SAX::handlePI() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, var$0, $nc(this->staxStreamReader)->getPITarget());
 		$nc(this->_sax)->processingInstruction(var$0, $($nc(this->staxStreamReader)->getPIData()));
@@ -398,6 +400,7 @@ void StAXStream2SAX::handlePI() {
 }
 
 void StAXStream2SAX::handleCharacters() {
+	$useLocalCurrentObjectStackCache();
 	int32_t textLength = $nc(this->staxStreamReader)->getTextLength();
 	$var($chars, chars, $new($chars, textLength));
 	$nc(this->staxStreamReader)->getTextCharacters(0, chars, 0, textLength);
@@ -410,6 +413,7 @@ void StAXStream2SAX::handleCharacters() {
 }
 
 void StAXStream2SAX::handleEndElement() {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, qName, $nc(this->staxStreamReader)->getName());
 	try {
 		$var($String, qname, ""_s);
@@ -435,6 +439,7 @@ void StAXStream2SAX::handleEndElement() {
 }
 
 void StAXStream2SAX::handleStartElement() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t nsCount = $nc(this->staxStreamReader)->getNamespaceCount();
 		for (int32_t i = 0; i < nsCount; ++i) {
@@ -466,6 +471,7 @@ void StAXStream2SAX::handleStartElement() {
 }
 
 $Attributes* StAXStream2SAX::getAttributes() {
+	$useLocalCurrentObjectStackCache();
 	$var($AttributesImpl, attrs, $new($AttributesImpl));
 	int32_t eventType = $nc(this->staxStreamReader)->getEventType();
 	if (eventType != $XMLStreamConstants::ATTRIBUTE && eventType != $XMLStreamConstants::START_ELEMENT) {

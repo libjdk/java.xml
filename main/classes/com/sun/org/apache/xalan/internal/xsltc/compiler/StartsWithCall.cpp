@@ -103,6 +103,7 @@ void StartsWithCall::init$($QName* fname, $List* arguments) {
 }
 
 $Type* StartsWithCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (argumentCount() != 2) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::ILLEGAL_ARG_ERR, $($of(getName())), static_cast<$SyntaxTreeNode*>(this)));
@@ -123,6 +124,7 @@ $Type* StartsWithCall::typeCheck($SymbolTable* stable) {
 }
 
 void StartsWithCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_base)->translate(classGen, methodGen);

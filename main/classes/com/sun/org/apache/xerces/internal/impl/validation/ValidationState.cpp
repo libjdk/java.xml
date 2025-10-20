@@ -136,6 +136,7 @@ void ValidationState::setSymbolTable($SymbolTable* sTable) {
 }
 
 $Iterator* ValidationState::checkIDRefID() {
+	$useLocalCurrentObjectStackCache();
 	$var($HashSet, missingIDs, nullptr);
 	if (this->fIdRefList != nullptr) {
 		$var($String, key, nullptr);

@@ -106,6 +106,7 @@ bool ReverseAxesWalker::isReverseAxes() {
 }
 
 int32_t ReverseAxesWalker::getProximityPosition(int32_t predicateIndex) {
+	$useLocalCurrentObjectStackCache();
 	if (predicateIndex < 0) {
 		return -1;
 	}
@@ -151,6 +152,7 @@ void ReverseAxesWalker::countProximityPosition(int32_t i) {
 }
 
 int32_t ReverseAxesWalker::getLastPos($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = 0;
 	$var($AxesWalker, savedWalker, $nc($(wi()))->getLastUsedWalker());
 	{

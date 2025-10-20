@@ -302,6 +302,7 @@ bool ShortListImpl::equals(Object$* obj) {
 }
 
 $Object* ShortListImpl::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fLength) {
 		return $of($Short::valueOf($nc(this->fArray)->get(index)));
 	}

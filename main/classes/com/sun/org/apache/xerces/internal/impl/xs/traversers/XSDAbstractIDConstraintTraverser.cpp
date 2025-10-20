@@ -92,6 +92,7 @@ void XSDAbstractIDConstraintTraverser::init$($XSDHandler* handler, $XSAttributeC
 }
 
 bool XSDAbstractIDConstraintTraverser::traverseIdentityConstraint($IdentityConstraint* ic, $Element* icElem, $XSDocumentInfo* schemaDoc, $ObjectArray* icElemAttrs) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, sElem, $DOMUtil::getFirstChildElement(icElem));
 	if (sElem == nullptr) {
 		reportSchemaError("s4s-elt-must-match.2"_s, $$new($ObjectArray, {

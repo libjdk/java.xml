@@ -120,6 +120,7 @@ void LDC2_W::init$(int32_t index) {
 }
 
 $Type* LDC2_W::getType($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc($($nc($($nc(cpg)->getConstantPool()))->getConstant($CPInstruction::getIndex())))->getTag()) {
 	case $Const::CONSTANT_Long:
 		{
@@ -139,6 +140,7 @@ $Type* LDC2_W::getType($ConstantPoolGen* cpg) {
 }
 
 $Number* LDC2_W::getValue($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, $nc($($nc(cpg)->getConstantPool()))->getConstant($CPInstruction::getIndex()));
 	switch ($nc(c)->getTag()) {
 	case $Const::CONSTANT_Long:

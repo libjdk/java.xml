@@ -161,6 +161,7 @@ void XMLVersionDetector::reset($XMLComponentManager* componentManager) {
 }
 
 void XMLVersionDetector::startDocumentParsing($XMLEntityHandler* scanner, int16_t version) {
+	$useLocalCurrentObjectStackCache();
 	if (version == $Constants::XML_VERSION_1_0) {
 		$nc(this->fEntityManager)->setScannerVersion($Constants::XML_VERSION_1_0);
 	} else {
@@ -172,6 +173,7 @@ void XMLVersionDetector::startDocumentParsing($XMLEntityHandler* scanner, int16_
 }
 
 int16_t XMLVersionDetector::determineDocVersion($XMLInputSource* inputSource) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fEncoding, $nc(this->fEntityManager)->setupCurrentEntity(false, XMLVersionDetector::fXMLSymbol, inputSource, false, true));
 	$nc(this->fEntityManager)->setScannerVersion($Constants::XML_VERSION_1_0);
 	$var($XMLEntityScanner, scanner, $nc(this->fEntityManager)->getEntityScanner());
@@ -241,6 +243,7 @@ int16_t XMLVersionDetector::determineDocVersion($XMLInputSource* inputSource) {
 }
 
 void XMLVersionDetector::fixupCurrentEntity($XMLEntityManager* manager, $chars* scannedChars, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$var($Entity$ScannedEntity, currentEntity, $nc(manager)->getCurrentEntity());
 	if ($nc(currentEntity)->count - currentEntity->position + length > $nc(currentEntity->ch)->length) {
 		$var($chars, tempCh, currentEntity->ch);

@@ -150,6 +150,7 @@ $Expression* FilterExpr::getExpr() {
 }
 
 void FilterExpr::setParser($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$Expression::setParser(parser);
 	$nc(this->_primary)->setParser(parser);
 	if (this->_predicates != nullptr) {
@@ -167,6 +168,7 @@ $String* FilterExpr::toString() {
 }
 
 $1Type* FilterExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($1Type, ptype, $nc(this->_primary)->typeCheck(stable));
 	bool canOptimize = $instanceOf($KeyCall, this->_primary);
 	if ($instanceOf($NodeSetType, ptype) == false) {
@@ -202,6 +204,7 @@ void FilterExpr::translateFilterExpr($ClassGenerator* classGen, $MethodGenerator
 }
 
 void FilterExpr::translatePredicates($ClassGenerator* classGen, $MethodGenerator* methodGen, int32_t predicateIndex) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (predicateIndex < 0) {

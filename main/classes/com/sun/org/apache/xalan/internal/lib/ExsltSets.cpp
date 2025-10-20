@@ -65,6 +65,7 @@ void ExsltSets::init$() {
 
 $NodeList* ExsltSets::leading($NodeList* nl1, $NodeList* nl2) {
 	$init(ExsltSets);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(nl2)->getLength() == 0) {
 		return nl1;
 	}
@@ -86,6 +87,7 @@ $NodeList* ExsltSets::leading($NodeList* nl1, $NodeList* nl2) {
 
 $NodeList* ExsltSets::trailing($NodeList* nl1, $NodeList* nl2) {
 	$init(ExsltSets);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(nl2)->getLength() == 0) {
 		return nl1;
 	}
@@ -107,6 +109,7 @@ $NodeList* ExsltSets::trailing($NodeList* nl1, $NodeList* nl2) {
 
 $NodeList* ExsltSets::intersection($NodeList* nl1, $NodeList* nl2) {
 	$init(ExsltSets);
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSet, ns1, $new($NodeSet, nl1));
 	$var($NodeSet, ns2, $new($NodeSet, nl2));
 	$var($NodeSet, inter, $new($NodeSet));
@@ -122,6 +125,7 @@ $NodeList* ExsltSets::intersection($NodeList* nl1, $NodeList* nl2) {
 
 $NodeList* ExsltSets::difference($NodeList* nl1, $NodeList* nl2) {
 	$init(ExsltSets);
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSet, ns1, $new($NodeSet, nl1));
 	$var($NodeSet, ns2, $new($NodeSet, nl2));
 	$var($NodeSet, diff, $new($NodeSet));
@@ -137,6 +141,7 @@ $NodeList* ExsltSets::difference($NodeList* nl1, $NodeList* nl2) {
 
 $NodeList* ExsltSets::distinct($NodeList* nl) {
 	$init(ExsltSets);
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSet, dist, $new($NodeSet));
 	dist->setShouldCacheNodes(true);
 	$var($Map, stringTable, $new($HashMap));
@@ -155,6 +160,7 @@ $NodeList* ExsltSets::distinct($NodeList* nl) {
 
 bool ExsltSets::hasSameNode($NodeList* nl1, $NodeList* nl2) {
 	$init(ExsltSets);
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSet, ns1, $new($NodeSet, nl1));
 	$var($NodeSet, ns2, $new($NodeSet, nl2));
 	for (int32_t i = 0; i < ns1->getLength(); ++i) {

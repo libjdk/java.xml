@@ -192,6 +192,7 @@ int32_t XSModelGroupImpl::maxEffectiveTotalRangeChoice() {
 }
 
 $String* XSModelGroupImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDescription == nullptr) {
 		$var($StringBuffer, buffer, $new($StringBuffer));
 		if (this->fCompositor == XSModelGroupImpl::MODELGROUP_ALL) {

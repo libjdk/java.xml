@@ -118,6 +118,7 @@ $String* SchemaValidatorConfiguration::VALIDATION_MANAGER = nullptr;
 $String* SchemaValidatorConfiguration::XMLGRAMMAR_POOL = nullptr;
 
 void SchemaValidatorConfiguration::init$($XMLComponentManager* parentManager, $XSGrammarPoolContainer* grammarContainer, $ValidationManager* validationManager) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fParentComponentManager, parentManager);
 	$set(this, fGrammarPool, $nc(grammarContainer)->getGrammarPool());
 	this->fUseGrammarPoolOnly = grammarContainer->isFullyComposed();

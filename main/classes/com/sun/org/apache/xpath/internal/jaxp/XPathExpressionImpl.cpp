@@ -156,6 +156,7 @@ $Object* XPathExpressionImpl::eval(Object$* item, $QName* returnType) {
 }
 
 $Object* XPathExpressionImpl::evaluate(Object$* item, $QName* returnType) {
+	$useLocalCurrentObjectStackCache();
 	isSupported(returnType);
 	try {
 		return $of(eval(item, returnType));
@@ -180,6 +181,7 @@ $String* XPathExpressionImpl::evaluate(Object$* item) {
 }
 
 $Object* XPathExpressionImpl::evaluate($InputSource* source, $QName* returnType) {
+	$useLocalCurrentObjectStackCache();
 	isSupported(returnType);
 	try {
 		$var($Document, document, getDocument(source));
@@ -197,6 +199,7 @@ $String* XPathExpressionImpl::evaluate($InputSource* source) {
 }
 
 $Object* XPathExpressionImpl::evaluateExpression(Object$* item, $Class* type) {
+	$useLocalCurrentObjectStackCache();
 	isSupportedClassType(type);
 	try {
 		$var($XObject, resultObject, eval(item, this->xpath));

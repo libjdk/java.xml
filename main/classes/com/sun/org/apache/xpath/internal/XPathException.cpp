@@ -139,6 +139,7 @@ void XPathException::init$($String* message, $Exception* e) {
 }
 
 void XPathException::printStackTrace($PrintStream* s$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($PrintStream, s, s$renamed);
 	if (s == nullptr) {
 		$init($System);
@@ -167,6 +168,7 @@ void XPathException::printStackTrace($PrintStream* s$renamed) {
 }
 
 $String* XPathException::getMessage() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, lastMessage, $TransformerException::getMessage());
 	$var($Throwable, exception, this->m_exception);
 	while (nullptr != exception) {
@@ -189,6 +191,7 @@ $String* XPathException::getMessage() {
 }
 
 void XPathException::printStackTrace($PrintWriter* s$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($PrintWriter, s, s$renamed);
 	$beforeCallerSensitive();
 	if (s == nullptr) {

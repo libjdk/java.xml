@@ -111,6 +111,7 @@ void SerializerMessages_zh_TW::init$() {
 }
 
 $ObjectArray2* SerializerMessages_zh_TW::getContents() {
+	$useLocalCurrentObjectStackCache();
 			$init($MsgKey);
 	$var($ObjectArray2, contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {

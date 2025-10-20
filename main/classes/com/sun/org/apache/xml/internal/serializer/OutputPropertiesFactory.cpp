@@ -142,6 +142,7 @@ void OutputPropertiesFactory::init$() {
 
 $Properties* OutputPropertiesFactory::getDefaultMethodProperties($String* method) {
 	$init(OutputPropertiesFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($Properties, defaultProperties, nullptr);
 	if (nullptr == OutputPropertiesFactory::m_xml_properties) {
 		$assignStatic(OutputPropertiesFactory::m_xml_properties, initProperties(OutputPropertiesFactory::PROP_XML, OutputPropertiesFactory::PROP_XML_VALUE, nullptr));
@@ -226,6 +227,7 @@ $Properties* OutputPropertiesFactory::getDefaultMethodProperties($String* method
 
 $Properties* OutputPropertiesFactory::initProperties($StringArray* keys, $StringArray* values, $Properties* defaults) {
 	$init(OutputPropertiesFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($Properties, props, $new($Properties, defaults));
 	for (int32_t i = 0; i < $nc(keys)->length; ++i) {
 		$var($String, sys, $SecuritySupport::getSystemProperty(keys->get(i)));

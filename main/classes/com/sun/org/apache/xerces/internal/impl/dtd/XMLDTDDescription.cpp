@@ -135,6 +135,7 @@ void XMLDTDDescription::finalize() {
 }
 
 void XMLDTDDescription::init$($XMLResourceIdentifier* id, $String* rootName) {
+	$useLocalCurrentObjectStackCache();
 	$XMLResourceIdentifierImpl::init$();
 	$set(this, fRootName, nullptr);
 	$set(this, fPossibleRoots, nullptr);
@@ -156,6 +157,7 @@ void XMLDTDDescription::init$($String* publicId, $String* literalId, $String* ba
 }
 
 void XMLDTDDescription::init$($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	$XMLResourceIdentifierImpl::init$();
 	$set(this, fRootName, nullptr);
 	$set(this, fPossibleRoots, nullptr);
@@ -185,6 +187,7 @@ void XMLDTDDescription::setPossibleRoots($List* possibleRoots) {
 }
 
 bool XMLDTDDescription::equals(Object$* desc) {
+	$useLocalCurrentObjectStackCache();
 	if (!($instanceOf($XMLGrammarDescription, desc))) {
 		return false;
 	}

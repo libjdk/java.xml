@@ -171,6 +171,7 @@ $Grammar* XMLGrammarCachingConfiguration::parseGrammar($String* type, $XMLInputS
 }
 
 $SchemaGrammar* XMLGrammarCachingConfiguration::parseXMLSchema($XMLInputSource* is) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLEntityResolver, resolver, getEntityResolver());
 	if (resolver != nullptr) {
 		$nc(this->fSchemaLoader)->setEntityResolver(resolver);
@@ -199,6 +200,7 @@ $SchemaGrammar* XMLGrammarCachingConfiguration::parseXMLSchema($XMLInputSource* 
 }
 
 $DTDGrammar* XMLGrammarCachingConfiguration::parseDTD($XMLInputSource* is) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLEntityResolver, resolver, getEntityResolver());
 	if (resolver != nullptr) {
 		$nc(this->fDTDLoader)->setEntityResolver(resolver);

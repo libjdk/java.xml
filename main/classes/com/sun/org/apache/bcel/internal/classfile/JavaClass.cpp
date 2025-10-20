@@ -250,6 +250,7 @@ void JavaClass::finalize() {
 $BCELComparator* JavaClass::bcelComparator = nullptr;
 
 void JavaClass::init$(int32_t classNameIndex, int32_t superclassNameIndex, $String* fileName, int32_t major, int32_t minor, int32_t access_flags, $ConstantPool* constantPool, $ints* interfaces$renamed, $FieldArray* fields$renamed, $MethodArray* methods$renamed, $AttributeArray* attributes$renamed, int8_t source) {
+	$useLocalCurrentObjectStackCache();
 	$var($ints, interfaces, interfaces$renamed);
 	$var($MethodArray, methods, methods$renamed);
 	$var($AttributeArray, attributes, attributes$renamed);
@@ -332,6 +333,7 @@ void JavaClass::Debug($String* str) {
 }
 
 void JavaClass::dump($File* file) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, parent, $nc(file)->getParent());
 	if (parent != nullptr) {
 		$var($File, dir, $new($File, parent));
@@ -375,6 +377,7 @@ void JavaClass::dump($String* _file_name) {
 }
 
 $bytes* JavaClass::getBytes() {
+	$useLocalCurrentObjectStackCache();
 	$var($ByteArrayOutputStream, s, $new($ByteArrayOutputStream));
 	$var($DataOutputStream, ds, $new($DataOutputStream, s));
 	{
@@ -410,6 +413,7 @@ void JavaClass::dump($OutputStream* file) {
 }
 
 void JavaClass::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$nc(file)->writeInt($Const::JVM_CLASSFILE_MAGIC);
 	file->writeShort(this->minor);
 	file->writeShort(this->major);
@@ -524,6 +528,7 @@ $MethodArray* JavaClass::getMethods() {
 }
 
 $1Method* JavaClass::getMethod($Method* m) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($MethodArray, arr$, this->methods);
 		int32_t len$ = $nc(arr$)->length;
@@ -619,6 +624,7 @@ void JavaClass::setSuperclassNameIndex(int32_t superclassNameIndex) {
 }
 
 $String* JavaClass::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, access, $Utility::accessToString($AccessFlags::getAccessFlags(), true));
 	$assign(access, $nc(access)->isEmpty() ? ""_s : ($str({access, " "_s})));
 	$var($StringBuilder, buf, $new($StringBuilder, 128));
@@ -702,6 +708,7 @@ $String* JavaClass::toString() {
 
 $String* JavaClass::indent(Object$* obj) {
 	$init(JavaClass);
+	$useLocalCurrentObjectStackCache();
 	$var($StringTokenizer, tok, $new($StringTokenizer, $($nc($of(obj))->toString()), "\n"_s));
 	$var($StringBuilder, buf, $new($StringBuilder));
 	while (tok->hasMoreTokens()) {
@@ -711,6 +718,7 @@ $String* JavaClass::indent(Object$* obj) {
 }
 
 JavaClass* JavaClass::copy() {
+	$useLocalCurrentObjectStackCache();
 	$var(JavaClass, c, nullptr);
 	try {
 		$assign(c, $cast(JavaClass, clone()));
@@ -754,6 +762,7 @@ bool JavaClass::isNested() {
 }
 
 void JavaClass::computeNestedTypeStatus() {
+	$useLocalCurrentObjectStackCache();
 	if (this->computedNestedTypeStatus) {
 		return;
 	}
@@ -808,6 +817,7 @@ void JavaClass::setRepository($Repository* repository) {
 }
 
 bool JavaClass::instanceOf(JavaClass* super_class) {
+	$useLocalCurrentObjectStackCache();
 	if (this->equals(super_class)) {
 		return true;
 	}
@@ -832,6 +842,7 @@ bool JavaClass::instanceOf(JavaClass* super_class) {
 }
 
 bool JavaClass::implementationOf(JavaClass* inter) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc(inter)->isInterface()) {
 		$throwNew($IllegalArgumentException, $$str({$(inter->getClassName()), " is no interface"_s}));
 	}
@@ -856,6 +867,7 @@ bool JavaClass::implementationOf(JavaClass* inter) {
 }
 
 JavaClass* JavaClass::getSuperClass() {
+	$useLocalCurrentObjectStackCache();
 	if ("java.lang.Object"_s->equals($(getClassName()))) {
 		return nullptr;
 	}
@@ -863,6 +875,7 @@ JavaClass* JavaClass::getSuperClass() {
 }
 
 $JavaClassArray* JavaClass::getSuperClasses() {
+	$useLocalCurrentObjectStackCache();
 	$var(JavaClass, clazz, this);
 	$var($List, allSuperClasses, $new($ArrayList));
 	for ($assign(clazz, clazz->getSuperClass()); clazz != nullptr; $assign(clazz, $nc(clazz)->getSuperClass())) {
@@ -872,6 +885,7 @@ $JavaClassArray* JavaClass::getSuperClasses() {
 }
 
 $JavaClassArray* JavaClass::getInterfaces() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, _interfaces, getInterfaceNames());
 	$var($JavaClassArray, classes, $new($JavaClassArray, $nc(_interfaces)->length));
 	for (int32_t i = 0; i < _interfaces->length; ++i) {
@@ -881,6 +895,7 @@ $JavaClassArray* JavaClass::getInterfaces() {
 }
 
 $JavaClassArray* JavaClass::getAllInterfaces() {
+	$useLocalCurrentObjectStackCache();
 	$var($ClassQueue, queue, $new($ClassQueue));
 	$var($Set, allInterfaces, static_cast<$Set*>(static_cast<$AbstractSet*>($new($TreeSet))));
 	queue->enqueue(this);
@@ -923,6 +938,7 @@ bool JavaClass::equals(Object$* obj) {
 }
 
 int32_t JavaClass::compareTo(JavaClass* obj) {
+	$useLocalCurrentObjectStackCache();
 	return $nc($(getClassName()))->compareTo($($nc(obj)->getClassName()));
 }
 

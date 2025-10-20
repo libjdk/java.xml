@@ -111,6 +111,7 @@ $InputSource* ValidatorHandlerImpl$ResolutionForwarder::getExternalSubset($Strin
 }
 
 $InputSource* ValidatorHandlerImpl$ResolutionForwarder::resolveEntity($String* name, $String* publicId, $String* baseURI, $String* systemId) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEntityResolver != nullptr) {
 		$var($LSInput, lsInput, $nc(this->fEntityResolver)->resolveResource(ValidatorHandlerImpl$ResolutionForwarder::XML_TYPE, nullptr, publicId, systemId, baseURI));
 		if (lsInput != nullptr) {

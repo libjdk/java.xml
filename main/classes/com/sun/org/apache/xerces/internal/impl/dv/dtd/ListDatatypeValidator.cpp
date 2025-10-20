@@ -61,6 +61,7 @@ void ListDatatypeValidator::init$($DatatypeValidator* itemDV) {
 }
 
 void ListDatatypeValidator::validate($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringTokenizer, parsedList, $new($StringTokenizer, content, " "_s));
 	int32_t numberOfTokens = parsedList->countTokens();
 	if (numberOfTokens == 0) {

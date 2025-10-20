@@ -72,6 +72,7 @@ void DateTimeDV::init$() {
 }
 
 $Object* DateTimeDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content));
 	} catch ($Exception&) {
@@ -85,6 +86,7 @@ $Object* DateTimeDV::getActualValue($String* content, $ValidationContext* contex
 }
 
 $AbstractDateTimeDV$DateTimeData* DateTimeDV::parse($String* str) {
+	$useLocalCurrentObjectStackCache();
 	$var($AbstractDateTimeDV$DateTimeData, date, $new($AbstractDateTimeDV$DateTimeData, str, this));
 	int32_t len = $nc(str)->length();
 	int32_t end = indexOf(str, 0, len, u'T');
@@ -102,6 +104,7 @@ $AbstractDateTimeDV$DateTimeData* DateTimeDV::parse($String* str) {
 }
 
 $XMLGregorianCalendar* DateTimeDV::getXMLGregorianCalendar($AbstractDateTimeDV$DateTimeData* date) {
+	$useLocalCurrentObjectStackCache();
 	$init($AbstractDateTimeDV);
 	$var($BigInteger, var$0, $BigInteger::valueOf((int64_t)$nc(date)->unNormYear));
 	int32_t var$1 = $nc(date)->unNormMonth;

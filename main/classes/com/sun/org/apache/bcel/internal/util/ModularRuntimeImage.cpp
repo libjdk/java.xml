@@ -104,10 +104,12 @@ $String* ModularRuntimeImage::MODULES_PATH = nullptr;
 $String* ModularRuntimeImage::PACKAGES_PATH = nullptr;
 
 void ModularRuntimeImage::init$() {
+	$useLocalCurrentObjectStackCache();
 	ModularRuntimeImage::init$(nullptr, $($FileSystems::getFileSystem($($URI::create("jrt:/"_s)))));
 }
 
 void ModularRuntimeImage::init$($String* javaHome) {
+	$useLocalCurrentObjectStackCache();
 	$var($Map, emptyMap, $Collections::emptyMap());
 	$var($Path, jrePath, $Paths::get(javaHome, $$new($StringArray, 0)));
 	$var($Path, jrtFsPath, $nc($($nc(jrePath)->resolve("lib"_s)))->resolve("jrt-fs.jar"_s));
@@ -130,6 +132,7 @@ void ModularRuntimeImage::close() {
 }
 
 $List* ModularRuntimeImage::list($Path* dirPath) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, list, $new($ArrayList));
 	{
 		$var($DirectoryStream, ds, $Files::newDirectoryStream(dirPath));
@@ -169,6 +172,7 @@ $List* ModularRuntimeImage::list($Path* dirPath) {
 }
 
 $List* ModularRuntimeImage::list($String* dirName) {
+	$useLocalCurrentObjectStackCache();
 	return list($($nc(this->fileSystem)->getPath(dirName, $$new($StringArray, 0))));
 }
 

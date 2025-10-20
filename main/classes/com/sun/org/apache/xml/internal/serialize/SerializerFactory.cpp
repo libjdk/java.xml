@@ -116,6 +116,7 @@ SerializerFactory* SerializerFactory::getSerializerFactory($String* method) {
 }
 
 void clinit$SerializerFactory($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(SerializerFactory::FactoriesProperty, "com.sun.org.apache.xml.internal.serialize.factories"_s);
 	$assignStatic(SerializerFactory::_factories, $Collections::synchronizedMap($$new($HashMap)));
 	{

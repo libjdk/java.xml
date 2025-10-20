@@ -258,6 +258,7 @@ void ListDV$ListData::init$($ObjectArray* data) {
 
 $String* ListDV$ListData::toString() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (this->canonical == nullptr) {
 			int32_t len = $nc(this->data)->length;
 			$var($StringBuffer, buf, $new($StringBuffer));
@@ -320,6 +321,7 @@ $Object* ListDV$ListData::item(int32_t index) {
 }
 
 $Object* ListDV$ListData::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < $nc(this->data)->length) {
 		return $of($nc(this->data)->get(index));
 	}

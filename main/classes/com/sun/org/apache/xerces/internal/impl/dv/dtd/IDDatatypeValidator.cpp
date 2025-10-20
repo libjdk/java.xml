@@ -52,6 +52,7 @@ void IDDatatypeValidator::init$() {
 }
 
 void IDDatatypeValidator::validate($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(context)->useNamespaces()) {
 		if (!$XMLChar::isValidNCName(content)) {
 			$throwNew($InvalidDatatypeValueException, "IDInvalidWithNamespaces"_s, $$new($ObjectArray, {$of(content)}));

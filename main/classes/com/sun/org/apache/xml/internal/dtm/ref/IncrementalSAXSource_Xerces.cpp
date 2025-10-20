@@ -150,6 +150,7 @@ $ObjectArray* IncrementalSAXSource_Xerces::noparms = nullptr;
 $ObjectArray* IncrementalSAXSource_Xerces::parmsfalse = nullptr;
 
 void IncrementalSAXSource_Xerces::init$() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$set(this, fParseSomeSetup, nullptr);
 	$set(this, fParseSome, nullptr);
@@ -229,6 +230,7 @@ void IncrementalSAXSource_Xerces::init$($SAXParser* parser) {
 
 $IncrementalSAXSource* IncrementalSAXSource_Xerces::createIncrementalSAXSource() {
 	$init(IncrementalSAXSource_Xerces);
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $new(IncrementalSAXSource_Xerces);
 	} catch ($NoSuchMethodException&) {
@@ -242,6 +244,7 @@ $IncrementalSAXSource* IncrementalSAXSource_Xerces::createIncrementalSAXSource()
 
 $IncrementalSAXSource* IncrementalSAXSource_Xerces::createIncrementalSAXSource($SAXParser* parser) {
 	$init(IncrementalSAXSource_Xerces);
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $new(IncrementalSAXSource_Xerces, parser);
 	} catch ($NoSuchMethodException&) {
@@ -272,6 +275,7 @@ void IncrementalSAXSource_Xerces::setDTDHandler($DTDHandler* handler) {
 }
 
 void IncrementalSAXSource_Xerces::startParse($InputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fIncrementalParser == nullptr) {
 		$init($XMLErrorResources);
 		$throwNew($SAXException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_STARTPARSE_NEEDS_SAXPARSER, nullptr)));
@@ -294,6 +298,7 @@ void IncrementalSAXSource_Xerces::startParse($InputSource* source) {
 }
 
 $Object* IncrementalSAXSource_Xerces::deliverMoreNodes(bool parsemore) {
+	$useLocalCurrentObjectStackCache();
 	if (!parsemore) {
 		this->fParseInProgress = false;
 		$init($Boolean);
@@ -318,6 +323,7 @@ $Object* IncrementalSAXSource_Xerces::deliverMoreNodes(bool parsemore) {
 }
 
 bool IncrementalSAXSource_Xerces::parseSomeSetup($InputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (this->fConfigSetInput != nullptr) {
 		$var($ObjectArray, parms1, $new($ObjectArray, {
@@ -345,6 +351,7 @@ bool IncrementalSAXSource_Xerces::parseSomeSetup($InputSource* source) {
 }
 
 bool IncrementalSAXSource_Xerces::parseSome() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (this->fConfigSetInput != nullptr) {
 		$var($Object, ret, ($cast($Boolean, $nc(this->fConfigParse)->invoke(this->fPullParserConfig, IncrementalSAXSource_Xerces::parmsfalse))));
@@ -357,6 +364,7 @@ bool IncrementalSAXSource_Xerces::parseSome() {
 
 void IncrementalSAXSource_Xerces::_main($StringArray* args) {
 	$init(IncrementalSAXSource_Xerces);
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$nc($System::out)->println("Starting..."_s);
 	$var($CoroutineManager, co, $new($CoroutineManager));

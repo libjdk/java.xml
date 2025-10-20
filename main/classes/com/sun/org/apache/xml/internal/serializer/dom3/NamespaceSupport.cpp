@@ -153,6 +153,7 @@ $String* NamespaceSupport::getURI($String* prefix) {
 }
 
 $String* NamespaceSupport::getPrefix($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = this->fNamespaceSize; i > 0; i -= 2) {
 		if ($nc($nc(this->fNamespace)->get(i - 1))->equals(uri)) {
 			if ($nc($(getURI($nc(this->fNamespace)->get(i - 2))))->equals(uri)) {
@@ -172,6 +173,7 @@ $String* NamespaceSupport::getDeclaredPrefixAt(int32_t index) {
 }
 
 $Enumeration* NamespaceSupport::getAllPrefixes() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = 0;
 	if ($nc(this->fPrefixes)->length < ($nc(this->fNamespace)->length / 2)) {
 		$var($StringArray, prefixes, $new($StringArray, this->fNamespaceSize));

@@ -177,6 +177,7 @@ void DTMDefaultBaseIterators::init$($DTMManager* mgr, $Source* source, int32_t d
 }
 
 $DTMAxisIterator* DTMDefaultBaseIterators::getTypedAxisIterator(int32_t axis, int32_t type) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMAxisIterator, iterator, nullptr);
 	{
 		switch (axis) {
@@ -257,6 +258,7 @@ $DTMAxisIterator* DTMDefaultBaseIterators::getTypedAxisIterator(int32_t axis, in
 }
 
 $DTMAxisIterator* DTMDefaultBaseIterators::getAxisIterator(int32_t axis) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMAxisIterator, iterator, nullptr);
 	switch (axis) {
 	case $Axis::SELF:

@@ -274,6 +274,7 @@ void DescendingVisitor::visit() {
 }
 
 void DescendingVisitor::visitJavaClass($JavaClass* _clazz) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(_clazz);
 	$nc(_clazz)->accept(this->visitor);
 	$var($FieldArray, fields, _clazz->getFields());
@@ -317,6 +318,7 @@ void DescendingVisitor::visitJavaClass($JavaClass* _clazz) {
 }
 
 void DescendingVisitor::visitAnnotation($Annotations* annotation) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(annotation);
 	$nc(annotation)->accept(this->visitor);
 	$var($AnnotationEntryArray, entries, annotation->getAnnotationEntries());
@@ -341,6 +343,7 @@ void DescendingVisitor::visitAnnotationEntry($AnnotationEntry* annotationEntry) 
 }
 
 void DescendingVisitor::visitField($Field* field) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(field);
 	$nc(field)->accept(this->visitor);
 	$var($AttributeArray, attributes, field->getAttributes());
@@ -365,6 +368,7 @@ void DescendingVisitor::visitConstantValue($ConstantValue* cv) {
 }
 
 void DescendingVisitor::visitMethod($Method* method) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(method);
 	$nc(method)->accept(this->visitor);
 	$var($AttributeArray, attributes, method->getAttributes());
@@ -389,6 +393,7 @@ void DescendingVisitor::visitExceptionTable($ExceptionTable* table) {
 }
 
 void DescendingVisitor::visitCode($Code* code) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(code);
 	$nc(code)->accept(this->visitor);
 	$var($CodeExceptionArray, table, code->getExceptionTable());
@@ -425,6 +430,7 @@ void DescendingVisitor::visitCodeException($CodeException* ce) {
 }
 
 void DescendingVisitor::visitLineNumberTable($LineNumberTable* table) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(table);
 	$nc(table)->accept(this->visitor);
 	$var($LineNumberArray, numbers, table->getLineNumberTable());
@@ -449,6 +455,7 @@ void DescendingVisitor::visitLineNumber($LineNumber* number) {
 }
 
 void DescendingVisitor::visitLocalVariableTable($LocalVariableTable* table) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(table);
 	$nc(table)->accept(this->visitor);
 	$var($LocalVariableArray, vars, table->getLocalVariableTable());
@@ -467,6 +474,7 @@ void DescendingVisitor::visitLocalVariableTable($LocalVariableTable* table) {
 }
 
 void DescendingVisitor::visitStackMap($StackMap* table) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(table);
 	$nc(table)->accept(this->visitor);
 	$var($StackMapEntryArray, vars, table->getStackMap());
@@ -581,6 +589,7 @@ void DescendingVisitor::visitConstantUtf8($ConstantUtf8* constant) {
 }
 
 void DescendingVisitor::visitInnerClasses($InnerClasses* ic) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(ic);
 	$nc(ic)->accept(this->visitor);
 	$var($InnerClassArray, ics, ic->getInnerClasses());
@@ -665,6 +674,7 @@ void DescendingVisitor::visitParameterAnnotation($ParameterAnnotations* obj) {
 }
 
 void DescendingVisitor::visitMethodParameters($MethodParameters* obj) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(obj);
 	$nc(obj)->accept(this->visitor);
 	$var($MethodParameterArray, table, obj->getParameters());
@@ -725,6 +735,7 @@ void DescendingVisitor::visitConstantDynamic($ConstantDynamic* obj) {
 }
 
 void DescendingVisitor::visitModule($Module* obj) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->stack)->push(obj);
 	$nc(obj)->accept(this->visitor);
 	$var($ModuleRequiresArray, rtable, obj->getRequiresTable());

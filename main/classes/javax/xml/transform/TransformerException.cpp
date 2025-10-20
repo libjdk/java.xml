@@ -216,6 +216,7 @@ void TransformerException::init$($String* message, $SourceLocator* locator, $Thr
 }
 
 $String* TransformerException::getMessageAndLocation() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sbuffer, $new($StringBuilder));
 	sbuffer->append($($Objects::toString($($Exception::getMessage()), ""_s)));
 	sbuffer->append($($Objects::toString($(getLocationAsString()), ""_s)));
@@ -223,6 +224,7 @@ $String* TransformerException::getMessageAndLocation() {
 }
 
 $String* TransformerException::getLocationAsString() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (this->locator == nullptr) {
 		return nullptr;
@@ -236,6 +238,7 @@ $String* TransformerException::getLocationAsString() {
 }
 
 $String* TransformerException::getLocationString() {
+	$useLocalCurrentObjectStackCache();
 	if (this->locator == nullptr) {
 		return nullptr;
 	}
@@ -268,6 +271,7 @@ void TransformerException::printStackTrace($PrintStream* s) {
 }
 
 void TransformerException::printStackTrace($PrintWriter* s$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($PrintWriter, s, s$renamed);
 	$beforeCallerSensitive();
 	if (s == nullptr) {
@@ -332,6 +336,7 @@ void TransformerException::printStackTrace($PrintWriter* s$renamed) {
 }
 
 $ProtectionDomain* TransformerException::getNonPrivDomain() {
+	$useLocalCurrentObjectStackCache();
 	$var($CodeSource, nullSource, $new($CodeSource, ($URL*)nullptr, ($CodeSignerArray*)nullptr));
 	$var($PermissionCollection, noPermission, $new($Permissions));
 	return $new($ProtectionDomain, nullSource, noPermission);

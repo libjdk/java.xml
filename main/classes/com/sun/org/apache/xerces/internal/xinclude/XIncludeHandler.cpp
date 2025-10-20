@@ -634,6 +634,7 @@ void XIncludeHandler::init$() {
 }
 
 void XIncludeHandler::reset($XMLComponentManager* componentManager) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fNamespaceContext, nullptr);
 	this->fDepth = 0;
 	this->fResultDepth = isRootDocument() ? 0 : $nc(this->fParentXIncludeHandler)->getResultDepth();
@@ -893,6 +894,7 @@ $XMLDocumentHandler* XIncludeHandler::getDocumentHandler() {
 }
 
 void XIncludeHandler::startDocument($XMLLocator* locator, $String* encoding, $NamespaceContext* namespaceContext, $Augmentations* augs$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Augmentations, augs, augs$renamed);
 	$nc(this->fErrorReporter)->setDocumentLocator(locator);
 	if (!($instanceOf($XIncludeNamespaceSupport, namespaceContext))) {
@@ -963,6 +965,7 @@ void XIncludeHandler::processingInstruction($String* target, $XMLString* data, $
 }
 
 void XIncludeHandler::startElement($QName* element, $XMLAttributes* attributes$renamed, $Augmentations* augs$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLAttributes, attributes, attributes$renamed);
 	$var($Augmentations, augs, augs$renamed);
 	++this->fDepth;
@@ -1015,6 +1018,7 @@ void XIncludeHandler::startElement($QName* element, $XMLAttributes* attributes$r
 }
 
 void XIncludeHandler::emptyElement($QName* element, $XMLAttributes* attributes$renamed, $Augmentations* augs$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLAttributes, attributes, attributes$renamed);
 	$var($Augmentations, augs, augs$renamed);
 	++this->fDepth;
@@ -1333,6 +1337,7 @@ void XIncludeHandler::handleFallbackElement() {
 }
 
 bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	if (getSawInclude(this->fDepth - 1)) {
 		reportFatalError("IncludeChild"_s, $$new($ObjectArray, {$of(XIncludeHandler::XINCLUDE_INCLUDE)}));
 	}
@@ -1689,6 +1694,7 @@ bool XIncludeHandler::isFallbackElement($QName* element) {
 }
 
 bool XIncludeHandler::sameBaseURIAsIncludeParent() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, parentBaseURI, getIncludeParentBaseURI());
 	$var($String, baseURI, $nc(this->fCurrentBaseURI)->getExpandedSystemId());
 	return parentBaseURI != nullptr && parentBaseURI->equals(baseURI);
@@ -1700,6 +1706,7 @@ bool XIncludeHandler::sameLanguageAsIncludeParent() {
 }
 
 void XIncludeHandler::setupCurrentBaseURI($XMLLocator* locator) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fCurrentBaseURI)->setBaseSystemId($($nc(locator)->getBaseSystemId()));
 	if ($nc(locator)->getLiteralSystemId() != nullptr) {
 		$nc(this->fCurrentBaseURI)->setLiteralSystemId($(locator->getLiteralSystemId()));
@@ -1746,6 +1753,7 @@ bool XIncludeHandler::isTopLevelIncludedItemViaFallback() {
 }
 
 $XMLAttributes* XIncludeHandler::processAttributes($XMLAttributes* attributes$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLAttributes, attributes, attributes$renamed);
 	if (isTopLevelIncludedItem()) {
 		if (this->fFixupBaseURIs && !sameBaseURIAsIncludeParent()) {
@@ -1836,6 +1844,7 @@ $XMLAttributes* XIncludeHandler::processAttributes($XMLAttributes* attributes$re
 }
 
 $String* XIncludeHandler::getRelativeBaseURI() {
+	$useLocalCurrentObjectStackCache();
 	int32_t includeParentDepth = getIncludeParentDepth();
 	$var($String, relativeURI, this->getRelativeURI(includeParentDepth));
 	if (isRootDocument()) {
@@ -2077,6 +2086,7 @@ void XIncludeHandler::checkNotation($String* notName) {
 }
 
 void XIncludeHandler::checkAndSendUnparsedEntity($XIncludeHandler$UnparsedEntity* ent) {
+	$useLocalCurrentObjectStackCache();
 	if (isRootDocument()) {
 		int32_t index = $nc(this->fUnparsedEntities)->indexOf(ent);
 		if (index == -1) {
@@ -2097,6 +2107,7 @@ void XIncludeHandler::checkAndSendUnparsedEntity($XIncludeHandler$UnparsedEntity
 }
 
 void XIncludeHandler::checkAndSendNotation($XIncludeHandler$Notation* not$) {
+	$useLocalCurrentObjectStackCache();
 	if (isRootDocument()) {
 		int32_t index = $nc(this->fNotations)->indexOf(not$);
 		if (index == -1) {
@@ -2160,6 +2171,7 @@ void XIncludeHandler::copyFeatures($XMLComponentManager* from, $XMLParserConfigu
 }
 
 void XIncludeHandler::copyFeatures1($Enumeration* features, $String* featurePrefix, $XMLComponentManager* from, $ParserConfigurationSettings* to) {
+	$useLocalCurrentObjectStackCache();
 	while ($nc(features)->hasMoreElements()) {
 		$var($String, featureId, $str({featurePrefix, $cast($String, $(features->nextElement()))}));
 		$nc(to)->addRecognizedFeatures($$new($StringArray, {featureId}));
@@ -2172,6 +2184,7 @@ void XIncludeHandler::copyFeatures1($Enumeration* features, $String* featurePref
 }
 
 void XIncludeHandler::copyFeatures1($Enumeration* features, $String* featurePrefix, $XMLComponentManager* from, $XMLParserConfiguration* to) {
+	$useLocalCurrentObjectStackCache();
 	while ($nc(features)->hasMoreElements()) {
 		$var($String, featureId, $str({featurePrefix, $cast($String, $(features->nextElement()))}));
 		bool value = $nc(from)->getFeature(featureId);
@@ -2184,6 +2197,7 @@ void XIncludeHandler::copyFeatures1($Enumeration* features, $String* featurePref
 }
 
 void XIncludeHandler::saveBaseURI() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fBaseURIScope)->push(this->fDepth);
 	$nc(this->fBaseURI)->push($($nc(this->fCurrentBaseURI)->getBaseSystemId()));
 	$nc(this->fLiteralSystemID)->push($($nc(this->fCurrentBaseURI)->getLiteralSystemId()));
@@ -2191,6 +2205,7 @@ void XIncludeHandler::saveBaseURI() {
 }
 
 void XIncludeHandler::restoreBaseURI() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fBaseURI)->pop();
 	$nc(this->fLiteralSystemID)->pop();
 	$nc(this->fExpandedSystemID)->pop();
@@ -2222,6 +2237,7 @@ $String* XIncludeHandler::getLanguage(int32_t depth) {
 }
 
 $String* XIncludeHandler::getRelativeURI(int32_t depth) {
+	$useLocalCurrentObjectStackCache();
 	int32_t start = scopeOfBaseURI(depth) + 1;
 	if (start == $nc(this->fBaseURIScope)->size()) {
 		return ""_s;
@@ -2252,6 +2268,7 @@ int32_t XIncludeHandler::scopeOfLanguage(int32_t depth) {
 }
 
 void XIncludeHandler::processXMLBaseAttributes($XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$init($NamespaceContext);
 	$var($String, baseURIValue, $nc(attributes)->getValue($NamespaceContext::XML_URI, "base"_s));
 	if (baseURIValue != nullptr) {
@@ -2299,6 +2316,7 @@ $XMLInputSource* XIncludeHandler::createInputSource($String* publicId, $String* 
 }
 
 $String* XIncludeHandler::escapeHref($String* href) {
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(href)->length();
 	int32_t ch = 0;
 	$var($StringBuilder, buffer, $new($StringBuilder, len * 3));
@@ -2369,6 +2387,7 @@ $String* XIncludeHandler::escapeHref($String* href) {
 }
 
 void clinit$XIncludeHandler($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XIncludeHandler::HTTP_ACCEPT, "Accept"_s);
 	$assignStatic(XIncludeHandler::HTTP_ACCEPT_LANGUAGE, "Accept-Language"_s);
 	$assignStatic(XIncludeHandler::XPOINTER, "xpointer"_s);

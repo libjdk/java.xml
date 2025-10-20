@@ -89,6 +89,7 @@ void MultipleScopeNamespaceSupport::init$($NamespaceContext* context) {
 }
 
 $Enumeration* MultipleScopeNamespaceSupport::getAllPrefixes() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = 0;
 	if ($nc(this->fPrefixes)->length < ($nc(this->fNamespace)->length / 2)) {
 		$var($StringArray, prefixes, $new($StringArray, this->fNamespaceSize));

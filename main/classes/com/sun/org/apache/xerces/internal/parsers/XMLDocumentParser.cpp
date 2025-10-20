@@ -71,12 +71,14 @@ void XMLDocumentParser::init$($XMLParserConfiguration* config) {
 }
 
 void XMLDocumentParser::init$($SymbolTable* symbolTable) {
+	$useLocalCurrentObjectStackCache();
 	$AbstractXMLDocumentParser::init$($$new($XIncludeAwareParserConfiguration));
 	$init($Constants);
 	$nc(this->fConfiguration)->setProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::SYMBOL_TABLE_PROPERTY}), symbolTable);
 }
 
 void XMLDocumentParser::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool) {
+	$useLocalCurrentObjectStackCache();
 	$AbstractXMLDocumentParser::init$($$new($XIncludeAwareParserConfiguration));
 	$init($Constants);
 	$nc(this->fConfiguration)->setProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::SYMBOL_TABLE_PROPERTY}), symbolTable);

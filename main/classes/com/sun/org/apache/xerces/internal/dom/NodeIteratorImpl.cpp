@@ -111,6 +111,7 @@ bool NodeIteratorImpl::getExpandEntityReferences() {
 }
 
 $Node* NodeIteratorImpl::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDetach) {
 		$init($DOMMessageFormatter);
 		$throwNew($DOMException, $DOMException::INVALID_STATE_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INVALID_STATE_ERR"_s, nullptr)));
@@ -145,6 +146,7 @@ $Node* NodeIteratorImpl::nextNode() {
 }
 
 $Node* NodeIteratorImpl::previousNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDetach) {
 		$init($DOMMessageFormatter);
 		$throwNew($DOMException, $DOMException::INVALID_STATE_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INVALID_STATE_ERR"_s, nullptr)));
@@ -201,6 +203,7 @@ $Node* NodeIteratorImpl::matchNodeOrParent($Node* node) {
 }
 
 $Node* NodeIteratorImpl::nextNode($Node* node, bool visitChildren) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return this->fRoot;
 	}
@@ -250,6 +253,7 @@ $Node* NodeIteratorImpl::previousNode($Node* node) {
 }
 
 void NodeIteratorImpl::removeNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return;
 	}

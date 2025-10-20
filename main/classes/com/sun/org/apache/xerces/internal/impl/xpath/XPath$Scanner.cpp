@@ -231,6 +231,7 @@ void XPath$Scanner::init$($SymbolTable* symbolTable) {
 }
 
 bool XPath$Scanner::scanExpr($SymbolTable* symbolTable, $XPath$Tokens* tokens, $String* data, int32_t currentOffset, int32_t endOffset) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nameOffset = 0;
 	$var($String, nameHandle, nullptr);
 	$var($String, prefixHandle, nullptr);

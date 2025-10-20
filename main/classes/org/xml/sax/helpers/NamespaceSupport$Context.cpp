@@ -127,6 +127,7 @@ void NamespaceSupport$Context::clear() {
 }
 
 void NamespaceSupport$Context::declarePrefix($String* prefix$renamed, $String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, uri, uri$renamed);
 	if (!this->declSeen) {
@@ -151,6 +152,7 @@ void NamespaceSupport$Context::declarePrefix($String* prefix$renamed, $String* u
 }
 
 $StringArray* NamespaceSupport$Context::processName($String* qName, bool isAttribute) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, name, nullptr);
 	$var($Map, table, nullptr);
 	if (isAttribute) {

@@ -498,6 +498,7 @@ void TemplatesImpl::init$() {
 }
 
 void TemplatesImpl::readObject($ObjectInputStream* is) {
+	$useLocalCurrentObjectStackCache();
 	$var($SecurityManager, security, $System::getSecurityManager());
 	if (security != nullptr) {
 		$var($String, temp, $SecuritySupport::getSystemProperty(TemplatesImpl::DESERIALIZE_TRANSLET));
@@ -606,6 +607,7 @@ $String* TemplatesImpl::getTransletName() {
 }
 
 $Module* TemplatesImpl::createModule($ModuleDescriptor* descriptor, $ClassLoader* loader) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($String, mn, $nc(descriptor)->name());
 	$var($ModuleReference, mref, $new($TemplatesImpl$1, this, descriptor, nullptr));
@@ -624,6 +626,7 @@ $Module* TemplatesImpl::createModule($ModuleDescriptor* descriptor, $ClassLoader
 }
 
 void TemplatesImpl::defineTransletClasses() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (this->_bytecodes == nullptr) {
 		$init($ErrorMsg);
@@ -680,6 +683,7 @@ void TemplatesImpl::defineTransletClasses() {
 }
 
 $Translet* TemplatesImpl::getTransletInstance() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		if (this->_name == nullptr) {
@@ -723,6 +727,7 @@ $Translet* TemplatesImpl::getTransletInstance() {
 
 $Transformer* TemplatesImpl::newTransformer() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$var($TransformerImpl, transformer, nullptr);
 		$assign(transformer, $new($TransformerImpl, $(getTransletInstance()), this->_outputProperties, this->_indentNumber, this->_tfactory));
 		if (this->_uriResolver != nullptr) {
@@ -738,6 +743,7 @@ $Transformer* TemplatesImpl::newTransformer() {
 
 $Properties* TemplatesImpl::getOutputProperties() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		try {
 			return $nc($(newTransformer()))->getOutputProperties();
 		} catch ($TransformerConfigurationException&) {
@@ -758,6 +764,7 @@ void TemplatesImpl::setStylesheetDOM($DOM* sdom) {
 
 void TemplatesImpl::lambda$defineTransletClasses$2($Module* thisModule, $Module* m, $PermissionCollection* perms, $String* p) {
 	$init(TemplatesImpl);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$nc(thisModule)->addExports(p, m);
 	$nc(perms)->add($$new($RuntimePermission, $$str({"accessClassInPackage."_s, p})));
@@ -774,6 +781,7 @@ $ClassLoader* TemplatesImpl::lambda$createModule$0($ClassLoader* loader, $String
 }
 
 void clinit$TemplatesImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(TemplatesImpl::DESERIALIZE_TRANSLET, "jdk.xml.enableTemplatesImplDeserialization"_s);
 	TemplatesImpl::$assertionsDisabled = !TemplatesImpl::class$->desiredAssertionStatus();
 	$assignStatic(TemplatesImpl::ABSTRACT_TRANSLET, "com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet"_s);

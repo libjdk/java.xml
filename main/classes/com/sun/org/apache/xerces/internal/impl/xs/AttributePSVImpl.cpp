@@ -133,6 +133,7 @@ void AttributePSVImpl::init$() {
 }
 
 void AttributePSVImpl::init$(bool isConstant, $AttributePSVI* attrPSVI) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fDeclaration, nullptr);
 	$set(this, fTypeDecl, nullptr);
 	this->fSpecified = false;

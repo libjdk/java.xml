@@ -93,6 +93,7 @@ $LSResourceResolver* DOMEntityResolverWrapper::getEntityResolver() {
 }
 
 $XMLInputSource* DOMEntityResolverWrapper::resolveEntity($XMLResourceIdentifier* resourceIdentifier) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEntityResolver != nullptr) {
 		$var($LSInput, var$0, nullptr);
 		if (resourceIdentifier == nullptr) {
@@ -129,6 +130,7 @@ $XMLInputSource* DOMEntityResolverWrapper::resolveEntity($XMLResourceIdentifier*
 }
 
 $String* DOMEntityResolverWrapper::getType($XMLResourceIdentifier* resourceIdentifier) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($XMLGrammarDescription, resourceIdentifier)) {
 		$var($XMLGrammarDescription, desc, $cast($XMLGrammarDescription, resourceIdentifier));
 		$init($XMLGrammarDescription);

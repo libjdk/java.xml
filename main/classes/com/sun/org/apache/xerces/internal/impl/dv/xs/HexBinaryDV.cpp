@@ -85,6 +85,7 @@ int16_t HexBinaryDV::getAllowedFacets() {
 }
 
 $Object* HexBinaryDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($bytes, decoded, $HexBin::decode(content));
 	if (decoded == nullptr) {
 		$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.1"_s, $$new($ObjectArray, {

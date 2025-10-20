@@ -173,6 +173,7 @@ $Type* StringType::toJCType() {
 }
 
 void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::Boolean) {
 		translateTo(classGen, methodGen, $cast($BooleanType, type));
@@ -197,6 +198,7 @@ void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($FlowList, falsel, translateToDesynthesized(classGen, methodGen, type));
 	$init($Constants);
@@ -207,6 +209,7 @@ void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $RealType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -214,6 +217,7 @@ void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 $FlowList* StringType::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -227,6 +231,7 @@ void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$load($String);
 	if ($nc(clazz)->isAssignableFrom($String::class$)) {
 		$init($Constants);
@@ -241,6 +246,7 @@ void StringType::translateTo($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void StringType::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if ($nc($($nc(clazz)->getName()))->equals("java.lang.String"_s)) {

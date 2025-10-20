@@ -156,6 +156,7 @@ void XML11NSDocumentScannerImpl::setDTDValidator($XMLDTDValidatorFilter* validat
 }
 
 bool XML11NSDocumentScannerImpl::scanStartElement() {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLScanner$NameType);
 	$nc(this->fEntityScanner)->scanQName(this->fElementQName, $XMLScanner$NameType::ELEMENTSTART);
 	$var($String, rawname, $nc(this->fElementQName)->rawname);
@@ -294,6 +295,7 @@ void XML11NSDocumentScannerImpl::scanStartElementName() {
 }
 
 bool XML11NSDocumentScannerImpl::scanStartElementAfterName() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rawname, $nc(this->fElementQName)->rawname);
 	if (this->fBindNamespaces) {
 		$nc(this->fNamespaceContext)->pushContext();
@@ -413,6 +415,7 @@ bool XML11NSDocumentScannerImpl::scanStartElementAfterName() {
 }
 
 void XML11NSDocumentScannerImpl::scanAttribute($XMLAttributesImpl* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLScanner$NameType);
 	$nc(this->fEntityScanner)->scanQName(this->fAttributeQName, $XMLScanner$NameType::ATTRIBUTENAME);
 	$nc(this->fEntityScanner)->skipSpaces();
@@ -492,6 +495,7 @@ void XML11NSDocumentScannerImpl::scanAttribute($XMLAttributesImpl* attributes) {
 }
 
 int32_t XML11NSDocumentScannerImpl::scanEndElement() {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, endElementName, $nc(this->fElementStack)->popElement());
 	if (!$nc(this->fEntityScanner)->skipString($nc(endElementName)->rawname)) {
 		reportFatalError("ETagRequired"_s, $$new($ObjectArray, {$of($nc(endElementName)->rawname)}));

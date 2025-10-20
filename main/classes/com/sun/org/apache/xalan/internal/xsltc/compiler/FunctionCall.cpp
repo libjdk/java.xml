@@ -343,6 +343,7 @@ $String* FunctionCall::getName() {
 }
 
 void FunctionCall::setParser($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$Expression::setParser(parser);
 	if (this->_arguments != nullptr) {
 		int32_t n = $nc(this->_arguments)->size();
@@ -377,6 +378,7 @@ $String* FunctionCall::getClassNameFromUri($String* uri) {
 }
 
 $1Type* FunctionCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_type != nullptr) {
 		return this->_type;
 	}
@@ -442,6 +444,7 @@ $1Type* FunctionCall::typeCheck($SymbolTable* stable) {
 }
 
 $1Type* FunctionCall::typeCheckStandard($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_fname)->clearNamespace();
 	int32_t n = $nc(this->_arguments)->size();
 	$var($List, argsType, typeCheckArgs(stable));
@@ -468,6 +471,7 @@ $1Type* FunctionCall::typeCheckStandard($SymbolTable* stable) {
 }
 
 $1Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, constructors, findConstructors());
 	if (constructors == nullptr) {
 		$init($ErrorMsg);
@@ -523,6 +527,7 @@ $1Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
 }
 
 $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nArgs = $nc(this->_arguments)->size();
 	$var($String, name, $nc(this->_fname)->getLocalPart());
 	if ($nc($($nc(this->_fname)->getLocalPart()))->equals("new"_s)) {
@@ -632,6 +637,7 @@ $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 }
 
 $List* FunctionCall::typeCheckArgs($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, result, $new($ArrayList));
 	{
 		$var($Iterator, i$, $nc(this->_arguments)->iterator());
@@ -662,6 +668,7 @@ void FunctionCall::setArgument(int32_t i, $Expression* exp) {
 }
 
 void FunctionCall::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	$var($1Type, type, $1Type::Boolean);
 	if (this->_chosenMethodType != nullptr) {
@@ -675,6 +682,7 @@ void FunctionCall::translateDesynthesized($ClassGenerator* classGen, $MethodGene
 }
 
 void FunctionCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = argumentCount();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
@@ -783,6 +791,7 @@ void FunctionCall::translate($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void FunctionCall::generateAddReads($ClassGenerator* classGen, $MethodGenerator* methodGen, $String* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	methodGen->markChunkStart();
@@ -818,6 +827,7 @@ bool FunctionCall::isExtension() {
 }
 
 $List* FunctionCall::findMethods() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($List, result, nullptr);
 	$var($String, namespace$, $nc(this->_fname)->getNamespace());
@@ -870,6 +880,7 @@ $List* FunctionCall::findMethods() {
 }
 
 $List* FunctionCall::findConstructors() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($List, result, nullptr);
 	int32_t nArgs = $nc(this->_arguments)->size();
@@ -912,6 +923,7 @@ $List* FunctionCall::findConstructors() {
 
 $String* FunctionCall::getSignature($Class* clazz) {
 	$init(FunctionCall);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(clazz)->isArray()) {
 		$var($StringBuffer, sb, $new($StringBuffer));
 		$Class* cl = clazz;
@@ -978,6 +990,7 @@ $String* FunctionCall::getSignature($Class* clazz) {
 
 $String* FunctionCall::getSignature($Method* meth) {
 	$init(FunctionCall);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, sb, $new($StringBuffer));
 	sb->append(u'(');
 	$var($ClassArray, params, $nc(meth)->getParameterTypes());
@@ -989,6 +1002,7 @@ $String* FunctionCall::getSignature($Method* meth) {
 
 $String* FunctionCall::getSignature($Constructor* cons) {
 	$init(FunctionCall);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, sb, $new($StringBuffer));
 	sb->append(u'(');
 	$var($ClassArray, params, $nc(cons)->getParameterTypes());
@@ -999,6 +1013,7 @@ $String* FunctionCall::getSignature($Constructor* cons) {
 }
 
 $String* FunctionCall::getMethodSignature($List* argsType) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buf, $new($StringBuffer, this->_className));
 	buf->append(u'.')->append($($nc(this->_fname)->getLocalPart()))->append(u'(');
 	int32_t nArgs = $nc(argsType)->size();
@@ -1028,6 +1043,7 @@ $String* FunctionCall::replaceDash($String* name) {
 }
 
 void FunctionCall::translateUnallowedExtension($ConstantPoolGen* cpg, $InstructionList* il) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	int32_t index = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "unallowed_extension_functionF"_s, "(Ljava/lang/String;)V"_s);
 	$nc(il)->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, $($nc(this->_fname)->toString()))));
@@ -1035,6 +1051,7 @@ void FunctionCall::translateUnallowedExtension($ConstantPoolGen* cpg, $Instructi
 }
 
 void clinit$FunctionCall($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$assignStatic(FunctionCall::EXT_XSLTC, $Constants::TRANSLET_URI);
 	$assignStatic(FunctionCall::JAVA_EXT_XSLTC, $str({FunctionCall::EXT_XSLTC, "/java"_s}));

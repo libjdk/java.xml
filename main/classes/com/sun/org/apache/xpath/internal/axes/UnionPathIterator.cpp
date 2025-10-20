@@ -151,6 +151,7 @@ void UnionPathIterator::init$() {
 }
 
 void UnionPathIterator::setRoot(int32_t context, Object$* environment) {
+	$useLocalCurrentObjectStackCache();
 	$LocPathIterator::setRoot(context, environment);
 	try {
 		if (nullptr != this->m_exprs) {
@@ -204,6 +205,7 @@ void UnionPathIterator::init$($Compiler* compiler, int32_t opPos) {
 
 $LocPathIterator* UnionPathIterator::createUnionIterator($Compiler* compiler, int32_t opPos) {
 	$init(UnionPathIterator);
+	$useLocalCurrentObjectStackCache();
 	$var(UnionPathIterator, upi, $new(UnionPathIterator, compiler, opPos));
 	int32_t nPaths = $nc(upi->m_exprs)->length;
 	bool isAllChildIterators = true;
@@ -247,6 +249,7 @@ void UnionPathIterator::readObject($ObjectInputStream* stream) {
 }
 
 $Object* UnionPathIterator::clone() {
+	$useLocalCurrentObjectStackCache();
 	$var(UnionPathIterator, clone, $cast(UnionPathIterator, $LocPathIterator::clone()));
 	if (this->m_iterators != nullptr) {
 		int32_t n = $nc(this->m_iterators)->length;
@@ -264,6 +267,7 @@ $LocPathIterator* UnionPathIterator::createDTMIterator($Compiler* compiler, int3
 }
 
 void UnionPathIterator::loadLocationPaths($Compiler* compiler, int32_t opPos, int32_t count) {
+	$useLocalCurrentObjectStackCache();
 	int32_t steptype = $nc(compiler)->getOp(opPos);
 	if (steptype == $OpCodes::OP_LOCATIONPATH) {
 		loadLocationPaths(compiler, compiler->getNextOpPos(opPos), count + 1);
@@ -302,6 +306,7 @@ void UnionPathIterator::loadLocationPaths($Compiler* compiler, int32_t opPos, in
 }
 
 int32_t UnionPathIterator::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_foundLast) {
 		return $DTM::NULL;
 	}
@@ -348,6 +353,7 @@ int32_t UnionPathIterator::getAxis() {
 }
 
 void UnionPathIterator::callVisitors($ExpressionOwner* owner, $XPathVisitor* visitor) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(visitor)->visitUnionPath(owner, this)) {
 		if (nullptr != this->m_exprs) {
 			int32_t n = $nc(this->m_exprs)->length;

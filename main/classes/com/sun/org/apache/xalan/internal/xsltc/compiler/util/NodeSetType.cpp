@@ -187,6 +187,7 @@ $Type* NodeSetType::toJCType() {
 }
 
 void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
@@ -220,6 +221,7 @@ void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void NodeSetType::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	if ($nc($($nc(clazz)->getName()))->equals("org.w3c.dom.NodeList"_s)) {
@@ -244,6 +246,7 @@ void NodeSetType::translateFrom($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($FlowList, falsel, translateToDesynthesized(classGen, methodGen, type));
 	$init($Constants);
@@ -254,6 +257,7 @@ void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	getFirstNode(classGen, methodGen);
 	$init($Constants);
@@ -283,6 +287,7 @@ void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 $FlowList* NodeSetType::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	getFirstNode(classGen, methodGen);
 	return $new($FlowList, $(static_cast<$InstructionHandle*>($nc(il)->append(static_cast<$BranchInstruction*>($$new($IFLT, nullptr))))));
@@ -294,6 +299,7 @@ void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($String, className, $nc(clazz)->getName());
@@ -322,6 +328,7 @@ void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void NodeSetType::getFirstNode($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

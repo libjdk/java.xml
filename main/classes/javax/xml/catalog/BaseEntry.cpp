@@ -144,6 +144,7 @@ $String* BaseEntry::match($String* id, int32_t currentMatch) {
 }
 
 $URL* BaseEntry::verifyURI($String* arg, $URL* base, $String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, uri$renamed);
 	$CatalogMessages::reportNPEOnNull(arg, uri);
 	$var($URL, url, nullptr);

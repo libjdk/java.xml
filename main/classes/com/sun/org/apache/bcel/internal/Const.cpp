@@ -992,6 +992,7 @@ void Const::init$() {
 }
 
 void clinit$Const($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(Const::STATIC_INITIALIZER_NAME, "<clinit>"_s);
 	$assignStatic(Const::CONSTRUCTOR_NAME, "<init>"_s);
 	$assignStatic(Const::ILLEGAL_OPCODE, "<illegal opcode>"_s);

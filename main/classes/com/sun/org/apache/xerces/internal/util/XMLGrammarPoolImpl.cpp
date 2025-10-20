@@ -103,6 +103,7 @@ void XMLGrammarPoolImpl::init$(int32_t initialCapacity) {
 }
 
 $GrammarArray* XMLGrammarPoolImpl::retrieveInitialGrammarSet($String* grammarType) {
+	$useLocalCurrentObjectStackCache();
 	$synchronized(this->fGrammars) {
 		int32_t grammarSize = $nc(this->fGrammars)->length;
 		$var($GrammarArray, tempGrammars, $new($GrammarArray, this->fGrammarCount));
@@ -136,6 +137,7 @@ $Grammar* XMLGrammarPoolImpl::retrieveGrammar($XMLGrammarDescription* desc) {
 }
 
 void XMLGrammarPoolImpl::putGrammar($Grammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fPoolIsLocked) {
 		$synchronized(this->fGrammars) {
 			$var($XMLGrammarDescription, desc, $nc(grammar)->getGrammarDescription());
@@ -174,6 +176,7 @@ $Grammar* XMLGrammarPoolImpl::getGrammar($XMLGrammarDescription* desc) {
 }
 
 $Grammar* XMLGrammarPoolImpl::removeGrammar($XMLGrammarDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$synchronized(this->fGrammars) {
 		int32_t hash = hashCode(desc);
 		int32_t index = $mod(((int32_t)(hash & (uint32_t)0x7FFFFFFF)), $nc(this->fGrammars)->length);

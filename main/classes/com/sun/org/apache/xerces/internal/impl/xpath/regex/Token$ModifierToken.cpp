@@ -98,6 +98,7 @@ int32_t Token$ModifierToken::getOptionsMask() {
 }
 
 $String* Token$ModifierToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$3, $$str({"(?"_s, (this->add == 0 ? ""_s : $($REUtil::createOptionString(this->add)))}));
 	$var($String, var$2, $$concat(var$3, (this->mask == 0 ? ""_s : $($REUtil::createOptionString(this->mask)))));
 	$var($String, var$1, $$concat(var$2, ":"));

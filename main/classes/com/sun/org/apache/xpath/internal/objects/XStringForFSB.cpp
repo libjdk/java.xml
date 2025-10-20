@@ -219,6 +219,7 @@ bool XStringForFSB::equals($XMLString* obj2) {
 }
 
 bool XStringForFSB::equals($XObject* obj2) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(this, obj2)) {
 		return true;
 	}
@@ -394,6 +395,7 @@ $XMLString* XStringForFSB::substring(int32_t beginIndex, int32_t endIndex) {
 }
 
 $XMLString* XStringForFSB::concat($String* str) {
+	$useLocalCurrentObjectStackCache();
 	return $new($XString, $($nc($(this->str()))->concat(str)));
 }
 
@@ -407,6 +409,7 @@ bool XStringForFSB::isSpace(char16_t ch) {
 }
 
 $XMLString* XStringForFSB::fixWhiteSpace(bool trimHead, bool trimTail, bool doublePunctuationSpaces) {
+	$useLocalCurrentObjectStackCache();
 	int32_t end = this->m_length + this->m_start;
 	$var($chars, buf, $new($chars, this->m_length));
 	$var($FastStringBuffer, fsb, this->fsb());
@@ -452,6 +455,7 @@ $XMLString* XStringForFSB::fixWhiteSpace(bool trimHead, bool trimTail, bool doub
 }
 
 double XStringForFSB::toDouble() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_length == 0) {
 		$init($Double);
 		return $Double::NaN;

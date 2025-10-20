@@ -152,6 +152,7 @@ void XSDocumentInfo::init$($Element* schemaRoot, $XSAttributeChecker* attrChecke
 }
 
 void XSDocumentInfo::initNamespaceSupport($Element* schemaRoot) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fNamespaceSupport, $new($SchemaNamespaceSupport));
 	$nc(this->fNamespaceSupport)->reset();
 	$var($Node, parent, $nc(schemaRoot)->getParentNode());

@@ -113,6 +113,7 @@ void DocumentCache$CachedDocument::init$($DocumentCache* this$0, $String* uri) {
 }
 
 void DocumentCache$CachedDocument::loadDocument($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		int64_t stamp = $System::currentTimeMillis();
 		$set(this, _dom, $cast($DOMEnhancedForDTM, $nc(this->this$0->_dtmManager)->getDTM($$new($SAXSource, this->this$0->_reader, $$new($InputSource, uri)), false, nullptr, true, false)));

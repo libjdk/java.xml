@@ -143,6 +143,7 @@ void DFAContentModel::init$($CMNode* syntaxTree, int32_t leafCount, bool mixed) 
 }
 
 int32_t DFAContentModel::validate($QNameArray* children, int32_t offset, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (length == 0) {
 		return this->fEmptyContentIsValid ? -1 : 0;
 	}
@@ -189,6 +190,7 @@ int32_t DFAContentModel::validate($QNameArray* children, int32_t offset, int32_t
 }
 
 void DFAContentModel::buildDFA($CMNode* syntaxTree) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fQName)->setValues(nullptr, DFAContentModel::fEOCString, DFAContentModel::fEOCString, nullptr);
 	$var($CMLeaf, nodeEOC, $new($CMLeaf, this->fQName));
 	$set(this, fHeadNode, $new($CMBinOp, $XMLContentSpec::CONTENTSPECNODE_SEQ, syntaxTree, nodeEOC));
@@ -297,6 +299,7 @@ void DFAContentModel::buildDFA($CMNode* syntaxTree) {
 }
 
 void DFAContentModel::calcFollowList($CMNode* nodeCur) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(nodeCur)->type() == $XMLContentSpec::CONTENTSPECNODE_CHOICE) {
 		calcFollowList($($nc(($cast($CMBinOp, nodeCur)))->getLeft()));
 		calcFollowList($($nc(($cast($CMBinOp, nodeCur)))->getRight()));
@@ -328,6 +331,7 @@ void DFAContentModel::calcFollowList($CMNode* nodeCur) {
 }
 
 void DFAContentModel::dumpTree($CMNode* nodeCur, int32_t level) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t index = 0; index < level; ++index) {
 		$init($System);
 		$nc($System::out)->print("   "_s);
@@ -391,6 +395,7 @@ $ints* DFAContentModel::makeDefStateList() {
 }
 
 int32_t DFAContentModel::postTreeBuildInit($CMNode* nodeCur, int32_t curIndex) {
+	$useLocalCurrentObjectStackCache();
 	$nc(nodeCur)->setMaxStates(this->fLeafCount);
 	bool var$1 = ((int32_t)(nodeCur->type() & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY;
 	bool var$0 = var$1 || ((int32_t)(nodeCur->type() & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_LOCAL;

@@ -103,6 +103,7 @@ void TrAXFilter::createParent() {
 }
 
 void TrAXFilter::parse($InputSource* input) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLReader, managedReader, nullptr);
 	{
 		$var($Throwable, var$0, nullptr);
@@ -135,6 +136,7 @@ void TrAXFilter::parse($String* systemId) {
 }
 
 void TrAXFilter::setContentHandler($ContentHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_transformerHandler)->setResult($$new($SAXResult, handler));
 	if (getParent() == nullptr) {
 		try {

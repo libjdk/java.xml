@@ -92,6 +92,7 @@ void EncodingInfo::init$($String* name, $String* javaName) {
 }
 
 bool EncodingInfo::inEncoding(char16_t ch, $String* encoding) {
+	$useLocalCurrentObjectStackCache();
 	bool isInEncoding = false;
 	try {
 		$var($chars, cArray, $new($chars, 1));
@@ -110,6 +111,7 @@ bool EncodingInfo::inEncoding(char16_t ch, $String* encoding) {
 }
 
 bool EncodingInfo::inEncoding(char16_t high, char16_t low, $String* encoding) {
+	$useLocalCurrentObjectStackCache();
 	bool isInEncoding = false;
 	try {
 		$var($chars, cArray, $new($chars, 2));

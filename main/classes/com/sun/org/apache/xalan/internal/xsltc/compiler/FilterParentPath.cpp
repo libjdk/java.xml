@@ -159,6 +159,7 @@ void FilterParentPath::setDescendantAxis() {
 }
 
 $1Type* FilterParentPath::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($1Type, ftype, $nc(this->_filterExpr)->typeCheck(stable));
 	if ($instanceOf($NodeSetType, ftype) == false) {
 		if ($instanceOf($ReferenceType, ftype)) {
@@ -181,6 +182,7 @@ $1Type* FilterParentPath::typeCheck($SymbolTable* stable) {
 }
 
 void FilterParentPath::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

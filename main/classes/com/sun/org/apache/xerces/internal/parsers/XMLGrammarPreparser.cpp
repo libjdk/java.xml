@@ -163,6 +163,7 @@ void XMLGrammarPreparser::init$($SymbolTable* symbolTable) {
 }
 
 bool XMLGrammarPreparser::registerPreparser($String* grammarType, $XMLGrammarLoader* loader) {
+	$useLocalCurrentObjectStackCache();
 	if (loader == nullptr) {
 		if ($nc(XMLGrammarPreparser::KNOWN_LOADERS)->containsKey(grammarType)) {
 			$var($String, loaderName, $cast($String, $nc(XMLGrammarPreparser::KNOWN_LOADERS)->get(grammarType)));
@@ -237,6 +238,7 @@ $XMLGrammarLoader* XMLGrammarPreparser::getLoader($String* type) {
 }
 
 void XMLGrammarPreparser::setFeature($String* featureId, bool value) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc($($nc(this->fLoaders)->entrySet()))->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -257,6 +259,7 @@ void XMLGrammarPreparser::setFeature($String* featureId, bool value) {
 }
 
 void XMLGrammarPreparser::setProperty($String* propId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc($($nc(this->fLoaders)->entrySet()))->iterator());
 		for (; $nc(i$)->hasNext();) {

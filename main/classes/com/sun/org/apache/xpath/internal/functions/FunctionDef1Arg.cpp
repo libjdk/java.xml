@@ -90,6 +90,7 @@ bool FunctionDef1Arg::Arg0IsNodesetExpr() {
 }
 
 $XMLString* FunctionDef1Arg::getArg0AsString($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr == this->m_arg0) {
 		int32_t currentNode = $nc(xctxt)->getCurrentNode();
 		if ($DTM::NULL == currentNode) {
@@ -105,6 +106,7 @@ $XMLString* FunctionDef1Arg::getArg0AsString($XPathContext* xctxt) {
 }
 
 double FunctionDef1Arg::getArg0AsNumber($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr == this->m_arg0) {
 		int32_t currentNode = $nc(xctxt)->getCurrentNode();
 		if ($DTM::NULL == currentNode) {

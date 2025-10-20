@@ -91,6 +91,7 @@ $Object* allocate$UTF8Reader($Class* clazz) {
 }
 
 void UTF8Reader::init$($InputStream* inputStream) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputStream, var$0, inputStream);
 	int32_t var$1 = UTF8Reader::DEFAULT_BUFFER_SIZE;
 	$var($MessageFormatter, var$2, static_cast<$MessageFormatter*>($new($XMLMessageFormatter)));
@@ -455,6 +456,7 @@ bool UTF8Reader::markSupported() {
 }
 
 void UTF8Reader::mark(int32_t readAheadLimit) {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($IOException, $($nc(this->fFormatter)->formatMessage(this->fLocale, "OperationNotSupported"_s, $$new($ObjectArray, {
 		$of("mark()"_s),
 		$of("UTF-8"_s)
@@ -474,6 +476,7 @@ void UTF8Reader::close() {
 }
 
 void UTF8Reader::expectedByte(int32_t position, int32_t count) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLMessageFormatter);
 	$throwNew($MalformedByteSequenceException, this->fFormatter, this->fLocale, $XMLMessageFormatter::XML_DOMAIN, "ExpectedByte"_s, $$new($ObjectArray, {
 		$($of($Integer::toString(position))),
@@ -482,6 +485,7 @@ void UTF8Reader::expectedByte(int32_t position, int32_t count) {
 }
 
 void UTF8Reader::invalidByte(int32_t position, int32_t count, int32_t c) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLMessageFormatter);
 	$throwNew($MalformedByteSequenceException, this->fFormatter, this->fLocale, $XMLMessageFormatter::XML_DOMAIN, "InvalidByte"_s, $$new($ObjectArray, {
 		$($of($Integer::toString(position))),
@@ -490,6 +494,7 @@ void UTF8Reader::invalidByte(int32_t position, int32_t count, int32_t c) {
 }
 
 void UTF8Reader::invalidSurrogate(int32_t uuuuu) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLMessageFormatter);
 	$throwNew($MalformedByteSequenceException, this->fFormatter, this->fLocale, $XMLMessageFormatter::XML_DOMAIN, "InvalidHighSurrogate"_s, $$new($ObjectArray, {$($of($Integer::toHexString(uuuuu)))}));
 }

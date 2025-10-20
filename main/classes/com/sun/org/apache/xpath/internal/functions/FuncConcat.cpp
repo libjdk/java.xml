@@ -77,6 +77,7 @@ void FuncConcat::init$() {
 }
 
 $XObject* FuncConcat::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, sb, $new($StringBuffer));
 	sb->append($($nc($($nc(this->m_arg0)->execute(xctxt)))->str()));
 	sb->append($($nc($($nc(this->m_arg1)->execute(xctxt)))->str()));

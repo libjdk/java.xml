@@ -133,6 +133,7 @@ void UnionPathExpr::init$($Expression* pathExpr, $Expression* rest) {
 }
 
 void UnionPathExpr::setParser($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$Expression::setParser(parser);
 	$var($List, components, $new($ArrayList));
 	flatten(components);
@@ -160,6 +161,7 @@ void UnionPathExpr::setParser($Parser* parser) {
 }
 
 $Type* UnionPathExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(this->_components)->length;
 	for (int32_t i = 0; i < length; ++i) {
 		$init($Type);
@@ -187,6 +189,7 @@ void UnionPathExpr::flatten($List* components) {
 }
 
 void UnionPathExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

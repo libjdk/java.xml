@@ -68,6 +68,7 @@ $Object* allocate$XMLSecurityPropertyManager($Class* clazz) {
 }
 
 void XMLSecurityPropertyManager::init$() {
+	$useLocalCurrentObjectStackCache();
 	$FeaturePropertyBase::init$();
 	$set(this, values, $new($StringArray, $($XMLSecurityPropertyManager$Property::values())->length));
 	{

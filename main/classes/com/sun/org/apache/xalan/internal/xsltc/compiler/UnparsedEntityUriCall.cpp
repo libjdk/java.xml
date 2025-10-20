@@ -107,6 +107,7 @@ $Type* UnparsedEntityUriCall::typeCheck($SymbolTable* stable) {
 }
 
 void UnparsedEntityUriCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(il)->append($(methodGen->loadDOM()));

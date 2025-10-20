@@ -138,6 +138,7 @@ void ExpandedNameTable::init$() {
 }
 
 void ExpandedNameTable::initExtendedTypes() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_extendedTypes, $new($ExtendedTypeArray, ExpandedNameTable::m_initialSize));
 	for (int32_t i = 0; i < $DTM::NTYPES; ++i) {
 		$nc(this->m_extendedTypes)->set(i, $nc(ExpandedNameTable::m_defaultExtendedTypes)->get(i));
@@ -151,6 +152,7 @@ int32_t ExpandedNameTable::getExpandedTypeID($String* namespace$, $String* local
 }
 
 int32_t ExpandedNameTable::getExpandedTypeID($String* namespace$$renamed, $String* localName$renamed, int32_t type, bool searchOnly) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localName, localName$renamed);
 	$var($String, namespace$, namespace$$renamed);
 	if (nullptr == namespace$) {
@@ -197,6 +199,7 @@ int32_t ExpandedNameTable::getExpandedTypeID($String* namespace$$renamed, $Strin
 }
 
 void ExpandedNameTable::rehash() {
+	$useLocalCurrentObjectStackCache();
 	int32_t oldCapacity = this->m_capacity;
 	$var($ExpandedNameTable$HashEntryArray, oldTable, this->m_table);
 	int32_t newCapacity = 2 * oldCapacity + 1;
@@ -262,6 +265,7 @@ $ExtendedTypeArray* ExpandedNameTable::getExtendedTypes() {
 }
 
 void clinit$ExpandedNameTable($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	ExpandedNameTable::m_initialSize = 128;
 	ExpandedNameTable::m_loadFactor = 0.75f;
 	ExpandedNameTable::m_initialCapacity = 203;

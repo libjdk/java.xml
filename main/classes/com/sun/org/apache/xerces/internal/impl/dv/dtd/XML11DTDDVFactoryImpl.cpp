@@ -96,6 +96,7 @@ $Map* XML11DTDDVFactoryImpl::getBuiltInTypes() {
 }
 
 void clinit$XML11DTDDVFactoryImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Map, xml11BuiltInTypes, $new($HashMap));
 		xml11BuiltInTypes->put("XML11ID"_s, $$new($XML11IDDatatypeValidator));

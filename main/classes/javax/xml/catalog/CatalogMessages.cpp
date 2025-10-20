@@ -145,6 +145,7 @@ void CatalogMessages::reportRunTimeError($String* key, $ObjectArray* arguments, 
 
 void CatalogMessages::reportIAEOnNull($String* name, $String* value) {
 	$init(CatalogMessages);
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		$throwNew($IllegalArgumentException, $(formatMessage(CatalogMessages::ERR_INVALID_ARGUMENT, $$new($ObjectArray, {
 			($Object*)nullptr,
@@ -155,6 +156,7 @@ void CatalogMessages::reportIAEOnNull($String* name, $String* value) {
 
 void CatalogMessages::reportNPEOnNull($String* name, Object$* value) {
 	$init(CatalogMessages);
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		$throwNew($NullPointerException, $(formatMessage(CatalogMessages::ERR_NULL_ARGUMENT, $$new($ObjectArray, {$of(name)}))));
 	}

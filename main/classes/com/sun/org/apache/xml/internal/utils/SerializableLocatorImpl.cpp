@@ -89,6 +89,7 @@ void SerializableLocatorImpl::init$() {
 }
 
 void SerializableLocatorImpl::init$($Locator* locator) {
+	$useLocalCurrentObjectStackCache();
 	setPublicId($($nc(locator)->getPublicId()));
 	setSystemId($($nc(locator)->getSystemId()));
 	setLineNumber($nc(locator)->getLineNumber());

@@ -68,6 +68,7 @@ void ClassSet::init$() {
 }
 
 bool ClassSet::add($JavaClass* clazz) {
+	$useLocalCurrentObjectStackCache();
 	bool result = false;
 	if (!$nc(this->map)->containsKey($($nc(clazz)->getClassName()))) {
 		result = true;
@@ -85,6 +86,7 @@ bool ClassSet::empty() {
 }
 
 $JavaClassArray* ClassSet::toArray() {
+	$useLocalCurrentObjectStackCache();
 	$var($Collection, values, $nc(this->map)->values());
 	$var($JavaClassArray, classes, $new($JavaClassArray, $nc(values)->size()));
 	values->toArray(classes);
@@ -92,6 +94,7 @@ $JavaClassArray* ClassSet::toArray() {
 }
 
 $StringArray* ClassSet::getClassNames() {
+	$useLocalCurrentObjectStackCache();
 	return $fcast($StringArray, $nc($($nc(this->map)->keySet()))->toArray($$new($StringArray, $nc(this->map)->size())));
 }
 

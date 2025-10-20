@@ -126,6 +126,7 @@ $Object* allocate$CastExpr($Class* clazz) {
 $MultiHashtable* CastExpr::InternalTypeMap = nullptr;
 
 void CastExpr::init$($Expression* left, $Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$Expression::init$();
 	this->_typeTest = false;
 	$set(this, _left, left);
@@ -161,6 +162,7 @@ $String* CastExpr::toString() {
 }
 
 $Type* CastExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, tleft, $nc(this->_left)->getType());
 	if (tleft == nullptr) {
 		$assign(tleft, $nc(this->_left)->typeCheck(stable));
@@ -182,6 +184,7 @@ $Type* CastExpr::typeCheck($SymbolTable* stable) {
 }
 
 void CastExpr::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($FlowList, fl, nullptr);
 	$var($Type, ltype, $nc(this->_left)->getType());
 	if (this->_typeTest) {

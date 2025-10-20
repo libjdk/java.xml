@@ -185,6 +185,7 @@ void CatalogReader::init$($Catalog* catalog, $SAXParser* parser) {
 }
 
 void CatalogReader::startElement($String* namespaceURI, $String* localName, $String* qName, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ignoreTheCatalog) {
 		return;
 	}
@@ -361,6 +362,7 @@ $InputSource* CatalogReader::resolveEntity($String* publicId, $String* systemId)
 }
 
 $Source* CatalogReader::resolve($String* href, $String* base) {
+	$useLocalCurrentObjectStackCache();
 	return $new($SAXSource, $$new($InputSource, static_cast<$Reader*>($$new($StringReader, ""_s))));
 }
 

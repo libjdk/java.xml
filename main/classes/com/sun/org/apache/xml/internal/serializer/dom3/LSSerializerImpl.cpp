@@ -347,6 +347,7 @@ void LSSerializerImpl::init$() {
 }
 
 void LSSerializerImpl::initializeSerializerProps() {
+	$useLocalCurrentObjectStackCache();
 	$init($DOMConstants);
 	$nc(this->fDOMConfigProperties)->setProperty($$str({$DOMConstants::S_DOM3_PROPERTIES_NS, $DOMConstants::DOM_CANONICAL_FORM}), $DOMConstants::DOM3_DEFAULT_FALSE);
 	$nc(this->fDOMConfigProperties)->setProperty($$str({$DOMConstants::S_DOM3_PROPERTIES_NS, $DOMConstants::DOM_CDATA_SECTIONS}), $DOMConstants::DOM3_DEFAULT_TRUE);
@@ -433,6 +434,7 @@ bool LSSerializerImpl::canSetParameter($String* name, Object$* value) {
 }
 
 $Object* LSSerializerImpl::getParameter($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$init($DOMConstants);
 	if ($nc(name)->equalsIgnoreCase($DOMConstants::DOM_NORMALIZE_CHARACTERS)) {
 		return $of(nullptr);
@@ -542,6 +544,7 @@ $DOMStringList* LSSerializerImpl::getParameterNames() {
 }
 
 void LSSerializerImpl::setParameter($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Boolean, value)) {
 		bool bValue = $nc(($cast($Boolean, value)))->booleanValue();
 		$init($DOMConstants);
@@ -778,6 +781,7 @@ void LSSerializerImpl::setNewLine($String* newLine) {
 }
 
 bool LSSerializerImpl::write($Node* nodeArg, $LSOutput* destination) {
+	$useLocalCurrentObjectStackCache();
 	if (destination == nullptr) {
 		$init($Utils);
 		$init($MsgKey);
@@ -906,6 +910,7 @@ bool LSSerializerImpl::write($Node* nodeArg, $LSOutput* destination) {
 }
 
 $String* LSSerializerImpl::writeToString($Node* nodeArg) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeArg == nullptr) {
 		return nullptr;
 	}
@@ -958,6 +963,7 @@ $String* LSSerializerImpl::writeToString($Node* nodeArg) {
 }
 
 bool LSSerializerImpl::writeToURI($Node* nodeArg, $String* uri) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeArg == nullptr) {
 		return false;
 	}
@@ -1047,6 +1053,7 @@ bool LSSerializerImpl::writeToURI($Node* nodeArg, $String* uri) {
 }
 
 $String* LSSerializerImpl::getXMLVersion($Node* nodeArg) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, nullptr);
 	if (nodeArg != nullptr) {
 		if (nodeArg->getNodeType() == $Node::DOCUMENT_NODE) {
@@ -1066,6 +1073,7 @@ $String* LSSerializerImpl::getXMLVersion($Node* nodeArg) {
 }
 
 $String* LSSerializerImpl::getXMLEncoding($Node* nodeArg) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, nullptr);
 	if (nodeArg != nullptr) {
 		if (nodeArg->getNodeType() == $Node::DOCUMENT_NODE) {
@@ -1081,6 +1089,7 @@ $String* LSSerializerImpl::getXMLEncoding($Node* nodeArg) {
 }
 
 $String* LSSerializerImpl::getInputEncoding($Node* nodeArg) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, nullptr);
 	if (nodeArg != nullptr) {
 		if (nodeArg->getNodeType() == $Node::DOCUMENT_NODE) {

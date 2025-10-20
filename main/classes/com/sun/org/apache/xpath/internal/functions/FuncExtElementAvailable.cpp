@@ -71,6 +71,7 @@ void FuncExtElementAvailable::init$() {
 }
 
 $XObject* FuncExtElementAvailable::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	$var($String, namespace$, nullptr);
 	$var($String, methName, nullptr);

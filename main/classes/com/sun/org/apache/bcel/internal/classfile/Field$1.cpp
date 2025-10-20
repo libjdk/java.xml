@@ -74,6 +74,7 @@ void Field$1::init$() {
 }
 
 bool Field$1::equals(Object$* o1, Object$* o2) {
+	$useLocalCurrentObjectStackCache();
 	$var($Field, THIS, $cast($Field, o1));
 	$var($Field, THAT, $cast($Field, o2));
 	$var($Object, var$1, $of($nc(THIS)->getName()));
@@ -86,6 +87,7 @@ bool Field$1::equals(Object$* o1, Object$* o2) {
 }
 
 int32_t Field$1::hashCode(Object$* o) {
+	$useLocalCurrentObjectStackCache();
 	$var($Field, THIS, $cast($Field, o));
 	int32_t var$0 = $nc($($nc(THIS)->getSignature()))->hashCode();
 	return var$0 ^ $nc($(THIS->getName()))->hashCode();

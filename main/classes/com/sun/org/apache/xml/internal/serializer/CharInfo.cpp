@@ -168,6 +168,7 @@ void CharInfo::init$($String* entitiesResource, $String* method) {
 }
 
 void CharInfo::init$($String* entitiesResource, $String* method, bool internal) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$set(this, m_charToString, $new($HashMap));
 	$set(this, isSpecialAttrASCII, $new($booleans, CharInfo::ASCII_MAX));
@@ -321,6 +322,7 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 }
 
 void CharInfo::defineEntity($String* name, char16_t value) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder, "&"_s));
 	sb->append(name);
 	sb->append(u';');
@@ -365,6 +367,7 @@ CharInfo* CharInfo::getCharInfoInternal($String* entitiesFileName, $String* meth
 
 CharInfo* CharInfo::getCharInfo($String* entitiesFileName, $String* method) {
 	$init(CharInfo);
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $new(CharInfo, entitiesFileName, method, false);
 	} catch ($Exception&) {

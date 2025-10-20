@@ -84,6 +84,7 @@ void NamedEvent::setName($QName* qname) {
 }
 
 $String* NamedEvent::nameAsString() {
+	$useLocalCurrentObjectStackCache();
 	if (""_s->equals($($nc(this->name)->getNamespaceURI()))) {
 		return $nc(this->name)->getLocalPart();
 	}

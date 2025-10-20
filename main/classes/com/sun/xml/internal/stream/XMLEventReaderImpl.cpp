@@ -145,6 +145,7 @@ void XMLEventReaderImpl::close() {
 }
 
 $String* XMLEventReaderImpl::getElementText() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fLastEvent)->getEventType() != $XMLEvent::START_ELEMENT) {
 		$throwNew($XMLStreamException, "parser must be on START_ELEMENT to read next text"_s, $($nc(this->fLastEvent)->getLocation()));
 	}
@@ -199,6 +200,7 @@ $Object* XMLEventReaderImpl::getProperty($String* name) {
 }
 
 $XMLEvent* XMLEventReaderImpl::nextTag() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fPeekedEvent != nullptr) {
 		$var($XMLEvent, event, this->fPeekedEvent);
 		$set(this, fPeekedEvent, nullptr);
@@ -228,6 +230,7 @@ $XMLEvent* XMLEventReaderImpl::nextTag() {
 }
 
 $Object* XMLEventReaderImpl::next() {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, object, nullptr);
 	try {
 		$assign(object, nextEvent());

@@ -663,6 +663,7 @@ void SecuritySupport::init$() {
 
 $String* SecuritySupport::getErrorMessage($Locale* locale, $String* bundle, $String* key, $ObjectArray* arguments) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ResourceBundle, rb, nullptr);
 	if (locale != nullptr) {
@@ -694,6 +695,7 @@ $String* SecuritySupport::getSystemProperty($String* propName, $String* defValue
 
 $Object* SecuritySupport::getSystemProperty($Class* type, $String* propName, $String* defValue) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$var($String, value, getSystemProperty(propName));
 	if (value == nullptr) {
 		$assign(value, defValue);
@@ -712,6 +714,7 @@ $Object* SecuritySupport::getSystemProperty($Class* type, $String* propName, $St
 
 $Object* SecuritySupport::getJAXPSystemProperty($Class* type, $String* propName, $String* defValue) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$var($String, value, getJAXPSystemProperty(propName));
 	if (value == nullptr) {
 		$assign(value, defValue);
@@ -739,6 +742,7 @@ $String* SecuritySupport::getJAXPSystemProperty($String* propName) {
 
 $String* SecuritySupport::readJAXPProperty($String* propName) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$var($String, value, nullptr);
 	$var($InputStream, is, nullptr);
 	{
@@ -783,18 +787,21 @@ $String* SecuritySupport::readJAXPProperty($String* propName) {
 
 bool SecuritySupport::isDirectory($File* f) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	return $nc(($cast($Boolean, $($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new(SecuritySupport$$Lambda$lambda$isDirectory$1$1, f)))))))->booleanValue();
 }
 
 bool SecuritySupport::isFileExists($File* f) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	return $nc(($cast($Boolean, $($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new(SecuritySupport$$Lambda$lambda$isFileExists$2$2, f)))))))->booleanValue();
 }
 
 $FileInputStream* SecuritySupport::getFileInputStream($File* file) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		return $cast($FileInputStream, $AccessController::doPrivileged(static_cast<$PrivilegedExceptionAction*>($$new(SecuritySupport$$Lambda$lambda$getFileInputStream$3$3, file))));
@@ -824,12 +831,14 @@ $ResourceBundle* SecuritySupport::getResourceBundle($String* bundle, $Locale* lo
 
 bool SecuritySupport::doesFileExist($File* f) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	return $nc(($cast($Boolean, $($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new(SecuritySupport$$Lambda$lambda$isFileExists$2$2, f)))))))->booleanValue();
 }
 
 int64_t SecuritySupport::getLastModified($File* f) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	return $nc(($cast($Long, $($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new(SecuritySupport$$Lambda$lambda$getLastModified$7$6, f)))))))->longValue();
 }
@@ -848,6 +857,7 @@ $String* SecuritySupport::sanitizePath($String* uri) {
 
 $String* SecuritySupport::checkAccess($String* systemId, $String* allowedProtocols, $String* accessAny) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	if (systemId == nullptr || (allowedProtocols != nullptr && allowedProtocols->equalsIgnoreCase(accessAny))) {
 		return nullptr;
 	}
@@ -873,6 +883,7 @@ $String* SecuritySupport::checkAccess($String* systemId, $String* allowedProtoco
 
 bool SecuritySupport::isProtocolAllowed($String* protocol, $String* allowedProtocols) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	if (allowedProtocols == nullptr) {
 		return false;
 	}
@@ -944,6 +955,7 @@ $InputStream* SecuritySupport::lambda$getResourceAsStream$13($ClassLoader* cl, $
 
 $ClassLoader* SecuritySupport::lambda$getClassLoader$12() {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ClassLoader, cl, $($Thread::currentThread())->getContextClassLoader());
 	if (cl == nullptr) {
@@ -954,6 +966,7 @@ $ClassLoader* SecuritySupport::lambda$getClassLoader$12() {
 
 $String* SecuritySupport::lambda$getClassSource$11($Class* cls) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$var($CodeSource, cs, $nc($($nc(cls)->getProtectionDomain()))->getCodeSource());
 	if (cs != nullptr) {
 		$var($URL, loc, cs->getLocation());
@@ -989,6 +1002,7 @@ $ClassLoader* SecuritySupport::lambda$getSystemClassLoader$9() {
 
 $ClassLoader* SecuritySupport::lambda$getContextClassLoader$8() {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ClassLoader, cl, $($Thread::currentThread())->getContextClassLoader());
 	if (cl == nullptr) {
@@ -1004,6 +1018,7 @@ $Long* SecuritySupport::lambda$getLastModified$7($File* f) {
 
 $ResourceBundle* SecuritySupport::lambda$getResourceBundle$5($String* bundle, $Locale* locale) {
 	$init(SecuritySupport);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		return $ResourceBundle::getBundle(bundle, locale);

@@ -76,6 +76,7 @@ $ObjectArray* DatatypeException::getArgs() {
 }
 
 $String* DatatypeException::getMessage() {
+	$useLocalCurrentObjectStackCache();
 	$var($ResourceBundle, resourceBundle, nullptr);
 	$assign(resourceBundle, $SecuritySupport::getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.XMLSchemaMessages"_s));
 	if (resourceBundle == nullptr) {

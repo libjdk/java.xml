@@ -303,6 +303,7 @@ $AxesWalker* WalkerFactory::loadOneWalker($WalkingIterator* lpi, $Compiler* comp
 }
 
 $AxesWalker* WalkerFactory::loadWalkers($WalkingIterator* lpi, $Compiler* compiler, int32_t stepOpCodePos, int32_t stepIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = 0;
 	$var($AxesWalker, firstWalker, nullptr);
 	$var($AxesWalker, walker, nullptr);
@@ -332,6 +333,7 @@ bool WalkerFactory::isSet(int32_t analysis, int32_t bits) {
 }
 
 void WalkerFactory::diagnoseIterator($String* name, int32_t analysis, $Compiler* compiler) {
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$var($String, var$2, $$str({$($nc(compiler)->toString()), ", "_s, name, ", "_s}));
 	$var($String, var$1, $$concat(var$2, $($Integer::toBinaryString(analysis))));
@@ -382,6 +384,7 @@ $DTMIterator* WalkerFactory::newDTMIterator($Compiler* compiler, int32_t opPos, 
 }
 
 int32_t WalkerFactory::getAxisFromStep($Compiler* compiler, int32_t stepOpCodePos) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = $nc(compiler)->getOp(stepOpCodePos);
 	switch (stepType) {
 	case $OpCodes::FROM_FOLLOWING:
@@ -720,6 +723,7 @@ bool WalkerFactory::mightBeProximate($Compiler* compiler, int32_t opPos, int32_t
 }
 
 bool WalkerFactory::isOptimizableForDescendantIterator($Compiler* compiler, int32_t stepOpCodePos, int32_t stepIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = 0;
 	int32_t stepCount = 0;
 	bool foundDorDS = false;
@@ -829,6 +833,7 @@ bool WalkerFactory::isOptimizableForDescendantIterator($Compiler* compiler, int3
 }
 
 int32_t WalkerFactory::analyze($Compiler* compiler, int32_t stepOpCodePos, int32_t stepIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = 0;
 	int32_t stepCount = 0;
 	int32_t analysisResult = 0;
@@ -961,6 +966,7 @@ bool WalkerFactory::isDownwardAxisOfMany(int32_t axis) {
 }
 
 $StepPattern* WalkerFactory::loadSteps($MatchPatternIterator* mpi, $Compiler* compiler, int32_t stepOpCodePos, int32_t stepIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = 0;
 	$var($StepPattern, step, nullptr);
 	$var($StepPattern, firstStep, nullptr);
@@ -1030,6 +1036,7 @@ $StepPattern* WalkerFactory::loadSteps($MatchPatternIterator* mpi, $Compiler* co
 }
 
 $StepPattern* WalkerFactory::createDefaultStepPattern($Compiler* compiler, int32_t opPos, $MatchPatternIterator* mpi, int32_t analysis, $StepPattern* tail, $StepPattern* head) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = $nc(compiler)->getOp(opPos);
 	bool simpleInit = false;
 	bool prevIsOneStepDown = true;
@@ -1203,6 +1210,7 @@ bool WalkerFactory::analyzePredicate($Compiler* compiler, int32_t opPos, int32_t
 }
 
 $AxesWalker* WalkerFactory::createDefaultWalker($Compiler* compiler, int32_t opPos, $WalkingIterator* lpi, int32_t analysis) {
+	$useLocalCurrentObjectStackCache();
 	$var($AxesWalker, ai, nullptr);
 	int32_t stepType = $nc(compiler)->getOp(opPos);
 	bool simpleInit = false;
@@ -1591,6 +1599,7 @@ bool WalkerFactory::isNaturalDocOrder(int32_t analysis) {
 }
 
 bool WalkerFactory::isNaturalDocOrder($Compiler* compiler, int32_t stepOpCodePos, int32_t stepIndex, int32_t analysis) {
+	$useLocalCurrentObjectStackCache();
 	if (canCrissCross(analysis)) {
 		return false;
 	}

@@ -399,6 +399,7 @@ void JdkConstants::init$() {
 }
 
 void clinit$JdkConstants($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(JdkConstants::SECURITY_MANAGER, "http://apache.org/xml/properties/security-manager"_s);
 	$assignStatic(JdkConstants::ORACLE_JAXP_PROPERTY_PREFIX, "http://www.oracle.com/xml/jaxp/properties/"_s);
 	$assignStatic(JdkConstants::JDK_ENTITY_EXPANSION_LIMIT, $str({JdkConstants::ORACLE_JAXP_PROPERTY_PREFIX, "entityExpansionLimit"_s}));

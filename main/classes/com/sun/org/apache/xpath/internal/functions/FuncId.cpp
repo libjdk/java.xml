@@ -85,6 +85,7 @@ void FuncId::init$() {
 }
 
 $StringVector* FuncId::getNodesByID($XPathContext* xctxt, int32_t docContext, $String* refval, $StringVector* usedrefs$renamed, $NodeSetDTM* nodeSet, bool mayBeMore) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringVector, usedrefs, usedrefs$renamed);
 	if (nullptr != refval) {
 		$var($String, ref, nullptr);
@@ -114,6 +115,7 @@ $StringVector* FuncId::getNodesByID($XPathContext* xctxt, int32_t docContext, $S
 }
 
 $XObject* FuncId::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t context = $nc(xctxt)->getCurrentNode();
 	$var($DTM, dtm, xctxt->getDTM(context));
 	int32_t docContext = $nc(dtm)->getDocument();

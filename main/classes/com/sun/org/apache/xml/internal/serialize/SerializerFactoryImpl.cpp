@@ -96,6 +96,7 @@ $Object* allocate$SerializerFactoryImpl($Class* clazz) {
 }
 
 void SerializerFactoryImpl::init$($String* method) {
+	$useLocalCurrentObjectStackCache();
 	$SerializerFactory::init$();
 	$set(this, _method, method);
 	$init($Method);
@@ -131,6 +132,7 @@ $Serializer* SerializerFactoryImpl::makeSerializer($OutputStream* output, $Outpu
 }
 
 $Serializer* SerializerFactoryImpl::getSerializer($OutputFormat* format) {
+	$useLocalCurrentObjectStackCache();
 	$init($Method);
 	if ($nc(this->_method)->equals($Method::XML)) {
 		return $new($XMLSerializer, format);

@@ -143,6 +143,7 @@ $Type* NEWARRAY::getType() {
 }
 
 $String* NEWARRAY::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $$str({$($Instruction::toString(verbose)), " "_s}));
 	return $concat(var$0, $($Const::getTypeName(this->type)));
 }

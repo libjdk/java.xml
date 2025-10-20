@@ -78,6 +78,7 @@ void CeilingCall::init$($QName* fname, $List* arguments) {
 }
 
 void CeilingCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc($(argument(0)))->translate(classGen, methodGen);

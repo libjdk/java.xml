@@ -84,6 +84,7 @@ void FuncPosition::postCompileStep($Compiler* compiler) {
 }
 
 int32_t FuncPosition::getPositionInContextNodeList($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($SubContextList, iter, this->m_isTopLevel ? ($SubContextList*)nullptr : $nc(xctxt)->getSubContextList());
 	if (nullptr != iter) {
 		int32_t prox = iter->getProximityPosition(xctxt);

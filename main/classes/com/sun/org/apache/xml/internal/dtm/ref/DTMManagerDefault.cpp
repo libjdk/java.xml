@@ -198,6 +198,7 @@ void DTMManagerDefault::addDTM($DTM* dtm, int32_t id) {
 
 void DTMManagerDefault::addDTM($DTM* dtm, int32_t id, int32_t offset) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (id >= $DTMManager::IDENT_MAX_DTMS) {
 			$init($XMLErrorResources);
 			$throwNew($DTMException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_NO_DTMIDS_AVAIL, nullptr)));
@@ -241,6 +242,7 @@ void DTMManagerDefault::init$() {
 
 $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whiteSpaceFilter, bool incremental, bool doIndexing) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$var($XMLStringFactory, xstringFactory, this->m_xsf);
 		int32_t dtmPos = getFirstFreeDTMID();
 		int32_t documentID = $sl(dtmPos, $DTMManager::IDENT_DTM_NODE_BITS);
@@ -394,6 +396,7 @@ $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whit
 
 int32_t DTMManagerDefault::getDTMHandleFromNode($Node* node) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (nullptr == node) {
 			$init($XMLErrorResources);
 			$throwNew($IllegalArgumentException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_NODE_NON_NULL, nullptr)));
@@ -437,6 +440,7 @@ int32_t DTMManagerDefault::getDTMHandleFromNode($Node* node) {
 
 $XMLReader* DTMManagerDefault::getXMLReader($Source* inputSource) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		try {
 			$var($XMLReader, reader, ($instanceOf($SAXSource, inputSource)) ? $nc(($cast($SAXSource, inputSource)))->getXMLReader() : ($XMLReader*)nullptr);
 			if (nullptr == reader) {
@@ -480,6 +484,7 @@ $DTM* DTMManagerDefault::getDTM(int32_t nodeHandle) {
 
 int32_t DTMManagerDefault::getDTMIdentity($DTM* dtm) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if ($instanceOf($DTMDefaultBase, dtm)) {
 			$var($DTMDefaultBase, dtmdb, $cast($DTMDefaultBase, dtm));
 			if ($equals($nc(dtmdb)->getManager(), this)) {
@@ -522,6 +527,7 @@ bool DTMManagerDefault::release($DTM* dtm, bool shouldHardDelete) {
 
 $DTM* DTMManagerDefault::createDocumentFragment() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		try {
 			$var($DocumentBuilderFactory, dbf, $JdkXmlUtils::getDOMFactory($DTMManager::overrideDefaultParser()));
 			$var($DocumentBuilder, db, $nc(dbf)->newDocumentBuilder());

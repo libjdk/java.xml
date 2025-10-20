@@ -114,6 +114,7 @@ void UseAttributeSets::init$($String* setNames, $Parser* parser) {
 }
 
 void UseAttributeSets::addAttributeSets($String* setNames) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if ((setNames != nullptr) && (!setNames->equals($Constants::EMPTYSTRING))) {
 		$var($StringTokenizer, tokens, $new($StringTokenizer, setNames));
@@ -130,6 +131,7 @@ $Type* UseAttributeSets::typeCheck($SymbolTable* stable) {
 }
 
 void UseAttributeSets::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($SymbolTable, symbolTable, $nc($(getParser()))->getSymbolTable());

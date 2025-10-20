@@ -65,6 +65,7 @@ void FuncContains::init$() {
 }
 
 $XObject* FuncContains::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, s1, $nc($($nc(this->m_arg0)->execute(xctxt)))->str());
 	$var($String, s2, $nc($($nc(this->m_arg1)->execute(xctxt)))->str());
 	bool var$0 = $nc(s1)->length() == 0;

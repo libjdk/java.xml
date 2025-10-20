@@ -149,6 +149,7 @@ $Object* FunctionAvailableCall::evaluateAtCompileTime() {
 }
 
 bool FunctionAvailableCall::hasMethods() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($String, className, getClassNameFromUri(this->_namespaceOfFunct));
 	$var($String, methodName, nullptr);
@@ -197,6 +198,7 @@ bool FunctionAvailableCall::hasMethods() {
 }
 
 bool FunctionAvailableCall::getResult() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_nameOfFunct == nullptr) {
 		return false;
 	}
@@ -214,6 +216,7 @@ bool FunctionAvailableCall::isInternalNamespace() {
 }
 
 void FunctionAvailableCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$nc($($nc(methodGen)->getInstructionList()))->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, getResult())));
 }

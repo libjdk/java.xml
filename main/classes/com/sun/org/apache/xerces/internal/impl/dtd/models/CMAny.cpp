@@ -90,6 +90,7 @@ bool CMAny::isNullable() {
 }
 
 $String* CMAny::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, strRet, $new($StringBuilder));
 	strRet->append("("_s);
 	strRet->append("##any:uri="_s);

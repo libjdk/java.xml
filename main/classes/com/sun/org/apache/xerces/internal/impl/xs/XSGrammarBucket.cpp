@@ -95,6 +95,7 @@ void XSGrammarBucket::putGrammar($SchemaGrammar* grammar) {
 }
 
 bool XSGrammarBucket::putGrammar($SchemaGrammar* grammar, bool deep) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, getGrammar($nc(grammar)->fTargetNamespace));
 	if (sg != nullptr) {
 		return sg == grammar;
@@ -138,6 +139,7 @@ bool XSGrammarBucket::putGrammar($SchemaGrammar* grammar, bool deep) {
 }
 
 bool XSGrammarBucket::putGrammar($SchemaGrammar* grammar, bool deep, bool ignoreConflict) {
+	$useLocalCurrentObjectStackCache();
 	if (!ignoreConflict) {
 		return putGrammar(grammar, deep);
 	}
@@ -181,6 +183,7 @@ bool XSGrammarBucket::putGrammar($SchemaGrammar* grammar, bool deep, bool ignore
 }
 
 $SchemaGrammarArray* XSGrammarBucket::getGrammars() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->fGrammarRegistry)->size() + (this->fNoNSGrammar == nullptr ? 0 : 1);
 	$var($SchemaGrammarArray, grammars, $new($SchemaGrammarArray, count));
 	int32_t i = 0;

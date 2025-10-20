@@ -186,6 +186,7 @@ $Node* TreeWalkerImpl::nextSibling() {
 }
 
 $Node* TreeWalkerImpl::previousNode() {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, result, nullptr);
 	if (this->fCurrentNode == nullptr) {
 		return nullptr;
@@ -218,6 +219,7 @@ $Node* TreeWalkerImpl::previousNode() {
 }
 
 $Node* TreeWalkerImpl::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentNode == nullptr) {
 		return nullptr;
 	}
@@ -265,6 +267,7 @@ $Node* TreeWalkerImpl::getNextSibling($Node* node) {
 }
 
 $Node* TreeWalkerImpl::getNextSibling($Node* node, $Node* root) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr || node == root) {
 		return nullptr;
 	}
@@ -299,6 +302,7 @@ $Node* TreeWalkerImpl::getPreviousSibling($Node* node) {
 }
 
 $Node* TreeWalkerImpl::getPreviousSibling($Node* node, $Node* root) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr || node == root) {
 		return nullptr;
 	}
@@ -329,6 +333,7 @@ $Node* TreeWalkerImpl::getPreviousSibling($Node* node, $Node* root) {
 }
 
 $Node* TreeWalkerImpl::getFirstChild($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return nullptr;
 	}
@@ -354,6 +359,7 @@ $Node* TreeWalkerImpl::getFirstChild($Node* node) {
 }
 
 $Node* TreeWalkerImpl::getLastChild($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return nullptr;
 	}

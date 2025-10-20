@@ -255,6 +255,7 @@ void RegexParser::init$($Locale* locale) {
 }
 
 void RegexParser::setLocale($Locale* locale) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (locale != nullptr) {
 			$set(this, resources, $SecuritySupport::getResourceBundle("com.sun.org.apache.xerces.internal.impl.xpath.regex.message"_s, locale));
@@ -276,6 +277,7 @@ bool RegexParser::isSet(int32_t flag) {
 }
 
 $Token* RegexParser::parse($String* regex, int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	this->options = options;
 	this->offset = 0;
 	this->setContext(RegexParser::S_NORMAL);
@@ -316,6 +318,7 @@ int32_t RegexParser::read() {
 }
 
 void RegexParser::next() {
+	$useLocalCurrentObjectStackCache();
 	if (this->offset >= this->regexlen) {
 		this->chardata = -1;
 		this->nexttoken = RegexParser::T_EOF;
@@ -525,6 +528,7 @@ void RegexParser::next() {
 }
 
 $Token* RegexParser::parseRegex() {
+	$useLocalCurrentObjectStackCache();
 	$var($Token, tok, this->parseTerm());
 	$var($Token, parent, nullptr);
 	while (this->read() == RegexParser::T_OR) {
@@ -540,6 +544,7 @@ $Token* RegexParser::parseRegex() {
 }
 
 $Token* RegexParser::parseTerm() {
+	$useLocalCurrentObjectStackCache();
 	int32_t ch = this->read();
 	if (ch == RegexParser::T_OR || ch == RegexParser::T_RPAREN || ch == RegexParser::T_EOF) {
 		return $Token::createEmpty();
@@ -578,6 +583,7 @@ $Token* RegexParser::processDollar() {
 }
 
 $Token* RegexParser::processLookahead() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, tok, $Token::createLook($Token::LOOKAHEAD, $(this->parseRegex())));
 	if (this->read() != RegexParser::T_RPAREN) {
@@ -588,6 +594,7 @@ $Token* RegexParser::processLookahead() {
 }
 
 $Token* RegexParser::processNegativelookahead() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, tok, $Token::createLook($Token::NEGATIVELOOKAHEAD, $(this->parseRegex())));
 	if (this->read() != RegexParser::T_RPAREN) {
@@ -598,6 +605,7 @@ $Token* RegexParser::processNegativelookahead() {
 }
 
 $Token* RegexParser::processLookbehind() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, tok, $Token::createLook($Token::LOOKBEHIND, $(this->parseRegex())));
 	if (this->read() != RegexParser::T_RPAREN) {
@@ -608,6 +616,7 @@ $Token* RegexParser::processLookbehind() {
 }
 
 $Token* RegexParser::processNegativelookbehind() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, tok, $Token::createLook($Token::NEGATIVELOOKBEHIND, $(this->parseRegex())));
 	if (this->read() != RegexParser::T_RPAREN) {
@@ -670,6 +679,7 @@ $Token* RegexParser::processStar($Token* tok) {
 }
 
 $Token* RegexParser::processPlus($Token* tok) {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	if (this->read() == RegexParser::T_QUESTION) {
 		this->next();
@@ -680,6 +690,7 @@ $Token* RegexParser::processPlus($Token* tok) {
 }
 
 $Token* RegexParser::processQuestion($Token* tok) {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, par, $Token::createUnion());
 	if (this->read() == RegexParser::T_QUESTION) {
@@ -698,6 +709,7 @@ bool RegexParser::checkQuestion(int32_t off) {
 }
 
 $Token* RegexParser::processParen() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	int32_t p = this->parenOpened++;
 	$var($Token, tok, $Token::createParen($(this->parseRegex()), p));
@@ -710,6 +722,7 @@ $Token* RegexParser::processParen() {
 }
 
 $Token* RegexParser::processParen2() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, tok, $Token::createParen($(this->parseRegex()), 0));
 	if (this->read() != RegexParser::T_RPAREN) {
@@ -720,6 +733,7 @@ $Token* RegexParser::processParen2() {
 }
 
 $Token* RegexParser::processCondition() {
+	$useLocalCurrentObjectStackCache();
 	if (this->offset + 1 >= this->regexlen) {
 		$throw($(ex("parser.factor.4"_s, this->offset)));
 	}
@@ -804,6 +818,7 @@ $Token* RegexParser::processCondition() {
 }
 
 $Token* RegexParser::processModifiers() {
+	$useLocalCurrentObjectStackCache();
 	int32_t add = 0;
 	int32_t mask = 0;
 	int32_t ch = -1;
@@ -854,6 +869,7 @@ $Token* RegexParser::processModifiers() {
 }
 
 $Token* RegexParser::processIndependent() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, tok, $Token::createLook($Token::INDEPENDENT, $(this->parseRegex())));
 	if (this->read() != RegexParser::T_RPAREN) {
@@ -900,6 +916,7 @@ $Token* RegexParser::processBacksolidus_X() {
 }
 
 $Token* RegexParser::processBackreference() {
+	$useLocalCurrentObjectStackCache();
 	int32_t refnum = this->chardata - u'0';
 	int32_t finalRefnum = refnum;
 	if (this->parennumber <= refnum) {
@@ -931,6 +948,7 @@ $Token* RegexParser::processBackreference() {
 }
 
 $Token* RegexParser::parseFactor() {
+	$useLocalCurrentObjectStackCache();
 	int32_t ch = this->read();
 	$var($Token, tok, nullptr);
 	switch (ch) {
@@ -1080,6 +1098,7 @@ $Token* RegexParser::parseFactor() {
 }
 
 $Token* RegexParser::parseAtom() {
+	$useLocalCurrentObjectStackCache();
 	int32_t ch = this->read();
 	$var($Token, tok, nullptr);
 	{
@@ -1260,6 +1279,7 @@ $Token* RegexParser::parseAtom() {
 }
 
 $RangeToken* RegexParser::processBacksolidus_pP(int32_t c) {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	if (this->read() != RegexParser::T_CHAR || this->chardata != u'{') {
 		$throw($(this->ex("parser.atom.2"_s, this->offset - 1)));
@@ -1280,6 +1300,7 @@ int32_t RegexParser::processCIinCharacterClass($RangeToken* tok, int32_t c) {
 }
 
 $RangeToken* RegexParser::parseCharacterClass(bool useNrange) {
+	$useLocalCurrentObjectStackCache();
 	this->setContext(RegexParser::S_INBRACKETS);
 	this->next();
 	bool nrange = false;
@@ -1458,6 +1479,7 @@ $RangeToken* RegexParser::parseCharacterClass(bool useNrange) {
 }
 
 $RangeToken* RegexParser::parseSetOperations() {
+	$useLocalCurrentObjectStackCache();
 	$var($RangeToken, tok, this->parseCharacterClass(false));
 	int32_t type = 0;
 	while ((type = this->read()) != RegexParser::T_RPAREN) {
@@ -1486,6 +1508,7 @@ $RangeToken* RegexParser::parseSetOperations() {
 }
 
 $Token* RegexParser::getTokenForShorthand(int32_t ch) {
+	$useLocalCurrentObjectStackCache();
 	$var($Token, tok, nullptr);
 	switch (ch) {
 	case u'd':
@@ -1533,6 +1556,7 @@ $Token* RegexParser::getTokenForShorthand(int32_t ch) {
 }
 
 int32_t RegexParser::decodeEscaped() {
+	$useLocalCurrentObjectStackCache();
 	if (this->read() != RegexParser::T_BACKSOLIDUS) {
 		$throw($(ex("parser.next.1"_s, this->offset - 1)));
 	}

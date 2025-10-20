@@ -187,6 +187,7 @@ double XString::num() {
 }
 
 double XString::toDouble() {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLString, s, trim());
 	$init($Double);
 	double result = $Double::NaN;
@@ -217,18 +218,21 @@ $String* XString::str() {
 }
 
 int32_t XString::rtf($XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTM, frag, $nc(support)->createDocumentFragment());
 	$nc(frag)->appendTextChild($(str()));
 	return frag->getDocument();
 }
 
 void XString::dispatchCharactersEvents($ContentHandler* ch) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, this->str());
 	$var($chars, var$0, $nc(str)->toCharArray());
 	$nc(ch)->characters(var$0, 0, str->length());
 }
 
 void XString::dispatchAsComment($LexicalHandler* lh) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, this->str());
 	$var($chars, var$0, $nc(str)->toCharArray());
 	$nc(lh)->comment(var$0, 0, str->length());
@@ -247,6 +251,7 @@ void XString::getChars(int32_t srcBegin, int32_t srcEnd, $chars* dst, int32_t ds
 }
 
 bool XString::equals($XObject* obj2) {
+	$useLocalCurrentObjectStackCache();
 	int32_t t = $nc(obj2)->getType();
 	try {
 		if ($XObject::CLASS_NODESET == t) {
@@ -270,6 +275,7 @@ bool XString::equals($String* obj2) {
 }
 
 bool XString::equals($XMLString* obj2) {
+	$useLocalCurrentObjectStackCache();
 	if (obj2 != nullptr) {
 		if (!obj2->hasString()) {
 			return obj2->equals($(str()));
@@ -281,6 +287,7 @@ bool XString::equals($XMLString* obj2) {
 }
 
 bool XString::equals(Object$* obj2) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr == obj2) {
 		return false;
 	} else if ($instanceOf($XNodeSet, obj2)) {
@@ -379,6 +386,7 @@ int32_t XString::indexOf($String* str) {
 }
 
 int32_t XString::indexOf($XMLString* str) {
+	$useLocalCurrentObjectStackCache();
 	return $nc($(this->str()))->indexOf($($nc(str)->toString()));
 }
 
@@ -395,34 +403,42 @@ int32_t XString::lastIndexOf($String* str, int32_t fromIndex) {
 }
 
 $XMLString* XString::substring(int32_t beginIndex) {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(str()))->substring(beginIndex)));
 }
 
 $XMLString* XString::substring(int32_t beginIndex, int32_t endIndex) {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(str()))->substring(beginIndex, endIndex)));
 }
 
 $XMLString* XString::concat($String* str) {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(this->str()))->concat(str)));
 }
 
 $XMLString* XString::toLowerCase($Locale* locale) {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(str()))->toLowerCase(locale)));
 }
 
 $XMLString* XString::toLowerCase() {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(str()))->toLowerCase()));
 }
 
 $XMLString* XString::toUpperCase($Locale* locale) {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(str()))->toUpperCase(locale)));
 }
 
 $XMLString* XString::toUpperCase() {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(str()))->toUpperCase()));
 }
 
 $XMLString* XString::trim() {
+	$useLocalCurrentObjectStackCache();
 	return $new(XString, $($nc($(str()))->trim()));
 }
 
@@ -432,6 +448,7 @@ bool XString::isSpace(char16_t ch) {
 }
 
 $XMLString* XString::fixWhiteSpace(bool trimHead, bool trimTail, bool doublePunctuationSpaces) {
+	$useLocalCurrentObjectStackCache();
 	int32_t len = this->length();
 	$var($chars, buf, $new($chars, len));
 	this->getChars(0, len, buf, 0);

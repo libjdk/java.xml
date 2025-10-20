@@ -66,6 +66,7 @@ $Object* allocate$ParameterAnnotations($Class* clazz) {
 }
 
 void ParameterAnnotations::init$(int8_t parameter_annotation_type, int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	ParameterAnnotations::init$(parameter_annotation_type, name_index, length, ($ParameterAnnotationEntryArray*)nullptr, constant_pool);
 	int32_t num_parameters = $nc(input)->readUnsignedByte();
 	$set(this, parameterAnnotationTable, $new($ParameterAnnotationEntryArray, num_parameters));
@@ -96,6 +97,7 @@ $ParameterAnnotationEntryArray* ParameterAnnotations::getParameterAnnotationEntr
 }
 
 void ParameterAnnotations::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(dos);
 	$nc(dos)->writeByte($nc(this->parameterAnnotationTable)->length);
 	{

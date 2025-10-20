@@ -281,6 +281,7 @@ void ToHTMLSAXHandler::init$($ContentHandler* handler, $LexicalHandler* lex, $St
 }
 
 void ToHTMLSAXHandler::startElement($String* elementNamespaceURI, $String* elementLocalName, $String* elementName) {
+	$useLocalCurrentObjectStackCache();
 	$ToSAXHandler::startElement(elementNamespaceURI, elementLocalName, elementName);
 	flushPending();
 	if (!this->m_dtdHandled) {

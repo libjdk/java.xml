@@ -331,6 +331,7 @@ $String* DOMParserImpl::SYMBOL_TABLE = nullptr;
 $String* DOMParserImpl::PSVI_AUGMENT = nullptr;
 
 void DOMParserImpl::init$($XMLParserConfiguration* config, $String* schemaType) {
+	$useLocalCurrentObjectStackCache();
 	DOMParserImpl::init$(config);
 	if (schemaType != nullptr) {
 		$init($Constants);
@@ -391,12 +392,14 @@ void DOMParserImpl::init$($XMLParserConfiguration* config) {
 }
 
 void DOMParserImpl::init$($SymbolTable* symbolTable) {
+	$useLocalCurrentObjectStackCache();
 	DOMParserImpl::init$(static_cast<$XMLParserConfiguration*>($$new($XIncludeAwareParserConfiguration)));
 	$init($Constants);
 	$nc(this->fConfiguration)->setProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::SYMBOL_TABLE_PROPERTY}), symbolTable);
 }
 
 void DOMParserImpl::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool) {
+	$useLocalCurrentObjectStackCache();
 	DOMParserImpl::init$(static_cast<$XMLParserConfiguration*>($$new($XIncludeAwareParserConfiguration)));
 	$init($Constants);
 	$nc(this->fConfiguration)->setProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::SYMBOL_TABLE_PROPERTY}), symbolTable);
@@ -431,6 +434,7 @@ void DOMParserImpl::setFilter($LSParserFilter* filter) {
 }
 
 void DOMParserImpl::setParameter($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Boolean, value)) {
 		bool state = $nc(($cast($Boolean, value)))->booleanValue();
 		try {
@@ -670,6 +674,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 }
 
 $Object* DOMParserImpl::getParameter($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if ($nc(name)->equalsIgnoreCase($Constants::DOM_COMMENTS)) {
 		$init($AbstractDOMParser);
@@ -812,6 +817,7 @@ $Object* DOMParserImpl::getParameter($String* name) {
 }
 
 bool DOMParserImpl::canSetParameter($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return true;
 	}
@@ -937,6 +943,7 @@ $DOMStringList* DOMParserImpl::getParameterNames() {
 }
 
 $Document* DOMParserImpl::parseURI($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fBusy) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INVALID_STATE_ERR"_s, nullptr));
@@ -981,6 +988,7 @@ $Document* DOMParserImpl::parseURI($String* uri) {
 }
 
 $Document* DOMParserImpl::parse($LSInput* is) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLInputSource, xmlInputSource, dom2xmlInputSource(is));
 	if (this->fBusy) {
 		$init($DOMMessageFormatter);
@@ -1036,6 +1044,7 @@ $Node* DOMParserImpl::parseWithContext($LSInput* is, $Node* cnode, int16_t actio
 }
 
 $XMLInputSource* DOMParserImpl::dom2xmlInputSource($LSInput* is) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLInputSource, xis, nullptr);
 	if ($nc(is)->getCharacterStream() != nullptr) {
 		$var($String, var$0, is->getPublicId());
@@ -1126,6 +1135,7 @@ void DOMParserImpl::startElement($QName* element, $XMLAttributes* attributes, $A
 
 $DOMException* DOMParserImpl::newFeatureNotFoundError($String* name) {
 	$init(DOMParserImpl);
+	$useLocalCurrentObjectStackCache();
 	$init($DOMMessageFormatter);
 	$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "FEATURE_NOT_FOUND"_s, $$new($ObjectArray, {$of(name)})));
 	return $new($DOMException, $DOMException::NOT_FOUND_ERR, msg);
@@ -1133,6 +1143,7 @@ $DOMException* DOMParserImpl::newFeatureNotFoundError($String* name) {
 
 $DOMException* DOMParserImpl::newTypeMismatchError($String* name) {
 	$init(DOMParserImpl);
+	$useLocalCurrentObjectStackCache();
 	$init($DOMMessageFormatter);
 	$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "TYPE_MISMATCH_ERR"_s, $$new($ObjectArray, {$of(name)})));
 	return $new($DOMException, $DOMException::TYPE_MISMATCH_ERR, msg);

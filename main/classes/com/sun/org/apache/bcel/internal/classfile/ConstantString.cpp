@@ -119,6 +119,7 @@ void ConstantString::setStringIndex(int32_t stringIndex) {
 }
 
 $String* ConstantString::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(stringIndex = "_s, $$str(this->stringIndex), ")"_s});
 }
 

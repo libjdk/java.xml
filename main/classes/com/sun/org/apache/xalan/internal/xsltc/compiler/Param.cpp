@@ -173,6 +173,7 @@ $Instruction* Param::setStoreInstruction($Instruction* instruction) {
 }
 
 void Param::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
 	$init($System);
 	$nc($System::out)->println($$str({"param "_s, this->_name}));
@@ -184,6 +185,7 @@ void Param::display(int32_t indent) {
 }
 
 void Param::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$VariableBase::parseContents(parser);
 	$var($SyntaxTreeNode, parent, getParent());
 	if ($instanceOf($Stylesheet, parent)) {
@@ -233,6 +235,7 @@ $1Type* Param::typeCheck($SymbolTable* stable) {
 }
 
 void Param::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_ignore) {

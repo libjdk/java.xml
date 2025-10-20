@@ -320,6 +320,7 @@ int32_t SAX2DTM2::getIdForNamespace($String* uri) {
 }
 
 void SAX2DTM2::startElement($String* uri, $String* localName$renamed, $String* qName, $Attributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localName, localName$renamed);
 	charactersFlush();
 	bool var$0 = (uri == nullptr || $nc(uri)->isEmpty());
@@ -622,6 +623,7 @@ $String* SAX2DTM2::getLocalName(int32_t nodeHandle) {
 }
 
 $String* SAX2DTM2::getNodeNameX(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nodeID = makeNodeIdentity(nodeHandle);
 	int32_t eType = _exptype2(nodeID);
 	if (eType == $DTM::PROCESSING_INSTRUCTION_NODE) {
@@ -646,6 +648,7 @@ $String* SAX2DTM2::getNodeNameX(int32_t nodeHandle) {
 }
 
 $String* SAX2DTM2::getNodeName(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nodeID = makeNodeIdentity(nodeHandle);
 	int32_t eType = _exptype2(nodeID);
 	$var($ExtendedType, extType, $nc(this->m_extendedTypes)->get(eType));
@@ -681,6 +684,7 @@ $String* SAX2DTM2::getNodeName(int32_t nodeHandle) {
 }
 
 $XMLString* SAX2DTM2::getStringValue(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t identity = makeNodeIdentity(nodeHandle);
 	if (identity == $DTM::NULL) {
 		return SAX2DTM2::EMPTY_XML_STR;
@@ -828,6 +832,7 @@ $String* SAX2DTM2::getStringValue() {
 }
 
 void SAX2DTM2::dispatchCharactersEvents(int32_t nodeHandle, $ContentHandler* ch, bool normalize) {
+	$useLocalCurrentObjectStackCache();
 	int32_t identity = makeNodeIdentity(nodeHandle);
 	if (identity == $DTM::NULL) {
 		return;
@@ -936,6 +941,7 @@ void SAX2DTM2::copyTextNode(int32_t nodeID, $SerializationHandler* handler) {
 }
 
 $String* SAX2DTM2::copyElement(int32_t nodeID, int32_t exptype, $SerializationHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	$var($ExtendedType, extType, $nc(this->m_extendedTypes)->get(exptype));
 	$var($String, uri, $nc(extType)->getNamespace());
 	$var($String, name, extType->getLocalName());
@@ -968,6 +974,7 @@ $String* SAX2DTM2::copyElement(int32_t nodeID, int32_t exptype, $SerializationHa
 }
 
 void SAX2DTM2::copyNS(int32_t nodeID, $SerializationHandler* handler, bool inScope) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = this->m_namespaceDeclSetElements != nullptr && $nc(this->m_namespaceDeclSetElements)->size() == 1 && this->m_namespaceDeclSets != nullptr;
 	if (var$0 && $nc(($cast($SuballocatedIntVector, $($nc(this->m_namespaceDeclSets)->get(0)))))->size() == 1) {
 		return;
@@ -1027,6 +1034,7 @@ void SAX2DTM2::copyAttributes(int32_t nodeID, $SerializationHandler* handler) {
 }
 
 void SAX2DTM2::copyAttribute(int32_t nodeID, int32_t exptype, $SerializationHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	$var($ExtendedType, extType, $nc(this->m_extendedTypes)->get(exptype));
 	$var($String, uri, $nc(extType)->getNamespace());
 	$var($String, localName, extType->getLocalName());

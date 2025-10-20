@@ -125,6 +125,7 @@ void FilterExprIterator::init$($Expression* expr) {
 }
 
 void FilterExprIterator::setRoot(int32_t context, Object$* environment) {
+	$useLocalCurrentObjectStackCache();
 	$BasicTestIterator::setRoot(context, environment);
 	int32_t var$0 = context;
 	$var($XPathContext, var$1, this->m_execContext);

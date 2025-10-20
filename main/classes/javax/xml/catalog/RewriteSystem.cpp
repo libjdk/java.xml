@@ -85,6 +85,7 @@ $URL* RewriteSystem::getRewritePrefix() {
 }
 
 $String* RewriteSystem::match($String* systemId, int32_t currentMatch) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$1 = $nc(this->systemIdStartString)->length();
 	bool var$0 = var$1 < $nc(systemId)->length();
 	if (var$0 && $nc(this->systemIdStartString)->equals($(systemId->substring(0, $nc(this->systemIdStartString)->length())))) {

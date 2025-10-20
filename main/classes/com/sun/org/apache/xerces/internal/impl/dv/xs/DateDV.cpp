@@ -71,6 +71,7 @@ void DateDV::init$() {
 }
 
 $Object* DateDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content));
 	} catch ($Exception&) {

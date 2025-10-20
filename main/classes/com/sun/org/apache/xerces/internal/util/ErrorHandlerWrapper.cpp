@@ -101,6 +101,7 @@ $ErrorHandler* ErrorHandlerWrapper::getErrorHandler() {
 }
 
 void ErrorHandlerWrapper::warning($String* domain, $String* key, $XMLParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fErrorHandler != nullptr) {
 		$var($SAXParseException, saxException, createSAXParseException(exception));
 		try {
@@ -116,6 +117,7 @@ void ErrorHandlerWrapper::warning($String* domain, $String* key, $XMLParseExcept
 }
 
 void ErrorHandlerWrapper::error($String* domain, $String* key, $XMLParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fErrorHandler != nullptr) {
 		$var($SAXParseException, saxException, createSAXParseException(exception));
 		try {
@@ -131,6 +133,7 @@ void ErrorHandlerWrapper::error($String* domain, $String* key, $XMLParseExceptio
 }
 
 void ErrorHandlerWrapper::fatalError($String* domain, $String* key, $XMLParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fErrorHandler != nullptr) {
 		$var($SAXParseException, saxException, createSAXParseException(exception));
 		try {
@@ -147,6 +150,7 @@ void ErrorHandlerWrapper::fatalError($String* domain, $String* key, $XMLParseExc
 
 $SAXParseException* ErrorHandlerWrapper::createSAXParseException($XMLParseException* exception) {
 	$init(ErrorHandlerWrapper);
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(exception)->getMessage());
 	$var($String, var$1, exception->getPublicId());
 	$var($String, var$2, exception->getExpandedSystemId());
@@ -157,6 +161,7 @@ $SAXParseException* ErrorHandlerWrapper::createSAXParseException($XMLParseExcept
 
 $XMLParseException* ErrorHandlerWrapper::createXMLParseException($SAXParseException* exception) {
 	$init(ErrorHandlerWrapper);
+	$useLocalCurrentObjectStackCache();
 	$var($String, fPublicId, $nc(exception)->getPublicId());
 	$var($String, fExpandedSystemId, exception->getSystemId());
 	int32_t fLineNumber = exception->getLineNumber();

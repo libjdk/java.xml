@@ -121,6 +121,7 @@ void WriterUtility::init$() {
 }
 
 void WriterUtility::init$($Writer* writer) {
+	$useLocalCurrentObjectStackCache();
 	this->fEscapeCharacters = true;
 	$set(this, fWriter, nullptr);
 	$set(this, fWriter, writer);
@@ -156,6 +157,7 @@ void WriterUtility::writeXMLContent($chars* content, int32_t start, int32_t leng
 }
 
 void WriterUtility::writeXMLContent($chars* content, int32_t start, int32_t length, bool escapeCharacter) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	char16_t ch = 0;
 	int32_t sc = 0;
@@ -223,6 +225,7 @@ void WriterUtility::writeXMLAttributeValue($String* value) {
 }
 
 $CharsetEncoder* WriterUtility::getDefaultEncoder() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, encoding, $SecuritySupport::getSystemProperty("file.encoding"_s));
 		if (encoding != nullptr) {

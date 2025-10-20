@@ -141,6 +141,7 @@ void KeyCall::init$($QName* fname, $List* arguments) {
 }
 
 void KeyCall::addParentDependency() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_resolvedQName == nullptr) {
 		return;
 	}
@@ -155,6 +156,7 @@ void KeyCall::addParentDependency() {
 }
 
 $Type* KeyCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, returnType, $FunctionCall::typeCheck(stable));
 	if (this->_name != nullptr) {
 		$var($Type, nameType, $nc(this->_name)->typeCheck(stable));
@@ -177,6 +179,7 @@ $Type* KeyCall::typeCheck($SymbolTable* stable) {
 }
 
 void KeyCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

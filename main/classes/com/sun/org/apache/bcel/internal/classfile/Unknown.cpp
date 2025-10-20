@@ -91,6 +91,7 @@ $Map* Unknown::unknownAttributes = nullptr;
 
 $UnknownArray* Unknown::getUnknownAttributes() {
 	$init(Unknown);
+	$useLocalCurrentObjectStackCache();
 	$var($UnknownArray, unknowns, $new($UnknownArray, $nc(Unknown::unknownAttributes)->size()));
 	$nc($($nc(Unknown::unknownAttributes)->values()))->toArray(unknowns);
 	$nc(Unknown::unknownAttributes)->clear();
@@ -98,6 +99,7 @@ $UnknownArray* Unknown::getUnknownAttributes() {
 }
 
 void Unknown::init$(Unknown* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($bytes, var$2, c->getBytes());
@@ -143,6 +145,7 @@ void Unknown::setBytes($bytes* bytes) {
 }
 
 $String* Unknown::toString() {
+	$useLocalCurrentObjectStackCache();
 	if ($Attribute::getLength() == 0 || this->bytes == nullptr) {
 		return $str({"(Unknown attribute "_s, this->name, ")"_s});
 	}

@@ -75,6 +75,7 @@ $Object* allocate$StAXSource($Class* clazz) {
 $String* StAXSource::FEATURE = nullptr;
 
 void StAXSource::init$($XMLEventReader* xmlEventReader) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, xmlEventReader, nullptr);
 	$set(this, xmlStreamReader, nullptr);
 	$set(this, systemId, nullptr);

@@ -64,18 +64,21 @@ void NameSignatureInstruction::init$(int16_t opcode, int32_t index) {
 }
 
 $ConstantNameAndType* NameSignatureInstruction::getNameAndType($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantCP, cmr, $cast($ConstantCP, $nc(cp)->getConstant($CPInstruction::getIndex())));
 	return $cast($ConstantNameAndType, cp->getConstant($nc(cmr)->getNameAndTypeIndex()));
 }
 
 $String* NameSignatureInstruction::getSignature($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantNameAndType, cnat, getNameAndType(cpg));
 	return $nc(($cast($ConstantUtf8, $($nc(cp)->getConstant($nc(cnat)->getSignatureIndex())))))->getBytes();
 }
 
 $String* NameSignatureInstruction::getName($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantNameAndType, cnat, getNameAndType(cpg));
 	return $nc(($cast($ConstantUtf8, $($nc(cp)->getConstant($nc(cnat)->getNameIndex())))))->getBytes();

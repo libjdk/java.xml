@@ -145,6 +145,7 @@ void AttributeSet::ignore() {
 }
 
 void AttributeSet::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	if (!$XML11Char::isXML11ValidQName(name)) {
 		$init($ErrorMsg);
@@ -185,6 +186,7 @@ void AttributeSet::parseContents($Parser* parser) {
 }
 
 $Type* AttributeSet::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_ignore) {
 		$init($Type);
 		return ($Type::Void);
@@ -200,6 +202,7 @@ $Type* AttributeSet::typeCheck($SymbolTable* stable) {
 }
 
 void AttributeSet::translate($ClassGenerator* classGen, $MethodGenerator* methodGen$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodGenerator, methodGen, methodGen$renamed);
 	if (this->_ignore) {
 		return;
@@ -236,6 +239,7 @@ void AttributeSet::translate($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 $String* AttributeSet::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buf, $new($StringBuffer, "attribute-set: "_s));
 	$var($Iterator, attributes, elements());
 	while ($nc(attributes)->hasNext()) {

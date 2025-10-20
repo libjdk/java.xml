@@ -94,6 +94,7 @@ bool CMBinOp::isNullable() {
 }
 
 void CMBinOp::calcFirstPos($CMStateSet* toSet) {
+	$useLocalCurrentObjectStackCache();
 	if (type() == $XMLContentSpec::CONTENTSPECNODE_CHOICE) {
 		$nc(toSet)->setTo($($nc(this->fLeftChild)->firstPos()));
 		toSet->union$($($nc(this->fRightChild)->firstPos()));
@@ -108,6 +109,7 @@ void CMBinOp::calcFirstPos($CMStateSet* toSet) {
 }
 
 void CMBinOp::calcLastPos($CMStateSet* toSet) {
+	$useLocalCurrentObjectStackCache();
 	if (type() == $XMLContentSpec::CONTENTSPECNODE_CHOICE) {
 		$nc(toSet)->setTo($($nc(this->fLeftChild)->lastPos()));
 		toSet->union$($($nc(this->fRightChild)->lastPos()));

@@ -172,6 +172,7 @@ void DTMDefaultBaseTraversers::init$($DTMManager* mgr, $Source* source, int32_t 
 }
 
 $DTMAxisTraverser* DTMDefaultBaseTraversers::getAxisTraverser(int32_t axis) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMAxisTraverser, traverser, nullptr);
 	if (nullptr == this->m_traversers) {
 		$set(this, m_traversers, $new($DTMAxisTraverserArray, $Axis::getNamesLength()));

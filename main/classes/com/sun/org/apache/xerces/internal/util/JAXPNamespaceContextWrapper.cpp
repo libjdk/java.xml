@@ -136,6 +136,7 @@ $String* JAXPNamespaceContextWrapper::getURI($String* prefix) {
 }
 
 $String* JAXPNamespaceContextWrapper::getPrefix($String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, uri$renamed);
 	if (this->fNamespaceContext != nullptr) {
 		if (uri == nullptr) {

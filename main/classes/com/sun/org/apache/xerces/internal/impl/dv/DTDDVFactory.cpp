@@ -77,6 +77,7 @@ DTDDVFactory* DTDDVFactory::getInstance() {
 
 DTDDVFactory* DTDDVFactory::getInstance($String* factoryClass) {
 	$init(DTDDVFactory);
+	$useLocalCurrentObjectStackCache();
 	try {
 		if ($nc(DTDDVFactory::DEFAULT_FACTORY_CLASS)->equals(factoryClass)) {
 			return $new($DTDDVFactoryImpl);

@@ -147,6 +147,7 @@ void SimpleElementValueGen::init$(int32_t type, $ConstantPoolGen* cpGen, char16_
 }
 
 void SimpleElementValueGen::init$(int32_t type, $ConstantPoolGen* cpGen, bool value) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValueGen::init$(type, cpGen);
 	if (value) {
 		this->idx = $nc($(getConstantPool()))->addInteger(1);
@@ -161,6 +162,7 @@ void SimpleElementValueGen::init$(int32_t type, $ConstantPoolGen* cpGen, $String
 }
 
 void SimpleElementValueGen::init$($SimpleElementValue* value, $ConstantPoolGen* cpool, bool copyPoolEntries) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValueGen::init$($nc(value)->getElementValueType(), cpool);
 	if (!copyPoolEntries) {
 		this->idx = $nc(value)->getIndex();
@@ -224,6 +226,7 @@ void SimpleElementValueGen::init$($SimpleElementValue* value, $ConstantPoolGen* 
 }
 
 $ElementValue* SimpleElementValueGen::getElementValue() {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $ElementValueGen::getElementValueType();
 	int32_t var$1 = this->idx;
 	return $new($SimpleElementValue, var$0, var$1, $($nc($(getConstantPool()))->getConstantPool()));
@@ -234,6 +237,7 @@ int32_t SimpleElementValueGen::getIndex() {
 }
 
 $String* SimpleElementValueGen::getValueString() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValueGen::getElementValueType() != $ElementValueGen::STRING) {
 		$throwNew($IllegalStateException, "Dont call getValueString() on a non STRING ElementValue"_s);
 	}
@@ -242,6 +246,7 @@ $String* SimpleElementValueGen::getValueString() {
 }
 
 int32_t SimpleElementValueGen::getValueInt() {
+	$useLocalCurrentObjectStackCache();
 	if ($ElementValueGen::getElementValueType() != $ElementValueGen::PRIMITIVE_INT) {
 		$throwNew($IllegalStateException, "Dont call getValueString() on a non STRING ElementValue"_s);
 	}
@@ -250,6 +255,7 @@ int32_t SimpleElementValueGen::getValueInt() {
 }
 
 $String* SimpleElementValueGen::stringifyValue() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($ConstantInteger, c, nullptr)
 		$var($ConstantLong, j, nullptr)
@@ -318,6 +324,7 @@ $String* SimpleElementValueGen::stringifyValue() {
 }
 
 void SimpleElementValueGen::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	$nc(dos)->writeByte($ElementValueGen::getElementValueType());
 	switch ($ElementValueGen::getElementValueType()) {
 	case $ElementValueGen::PRIMITIVE_INT:

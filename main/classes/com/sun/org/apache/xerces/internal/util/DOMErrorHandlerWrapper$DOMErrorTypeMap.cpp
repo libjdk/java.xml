@@ -87,6 +87,7 @@ void DOMErrorHandlerWrapper$DOMErrorTypeMap::init$() {
 }
 
 void clinit$DOMErrorHandlerWrapper$DOMErrorTypeMap($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Map, aDOMErrorTypeTable, $new($HashMap));
 		$init($XMLMessageFormatter);

@@ -170,6 +170,7 @@ void ValidatorImpl::init$($XSGrammarPoolContainer* grammarContainer) {
 }
 
 void ValidatorImpl::validate($Source* source, $Result* result) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($SAXSource, source)) {
 		if (this->fSAXValidatorHelper == nullptr) {
 			$set(this, fSAXValidatorHelper, $new($ValidatorHandlerImpl, this->fComponentManager));
@@ -218,6 +219,7 @@ $LSResourceResolver* ValidatorImpl::getResourceResolver() {
 }
 
 bool ValidatorImpl::getFeature($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -234,6 +236,7 @@ bool ValidatorImpl::getFeature($String* name) {
 }
 
 void ValidatorImpl::setFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -259,6 +262,7 @@ void ValidatorImpl::setFeature($String* name, bool value) {
 }
 
 $Object* ValidatorImpl::getProperty($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -278,6 +282,7 @@ $Object* ValidatorImpl::getProperty($String* name) {
 }
 
 void ValidatorImpl::setProperty($String* name, Object$* object) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}

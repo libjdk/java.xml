@@ -216,6 +216,7 @@ $Writer* DOMBuilder::getWriter() {
 }
 
 void DOMBuilder::append($Node* newNode) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, currentNode, this->m_currentNode);
 	if (nullptr != currentNode) {
 		if (currentNode == this->m_root && this->m_nextSibling != nullptr) {
@@ -266,6 +267,7 @@ void DOMBuilder::endDocument() {
 }
 
 void DOMBuilder::startElement($String* ns, $String* localName, $String* name, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, elem, nullptr);
 	if ((nullptr == ns) || ($nc(ns)->length() == 0)) {
 		$assign(elem, $nc(this->m_doc)->createElementNS(nullptr, name));
@@ -309,6 +311,7 @@ void DOMBuilder::setIDAttribute($String* id, $Element* elem) {
 }
 
 void DOMBuilder::characters($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isOutsideDocElem();
 	if (var$0 && $XMLCharacterRecognizer::isWhiteSpace(ch, start, length)) {
 		return;
@@ -329,6 +332,7 @@ void DOMBuilder::characters($chars* ch, int32_t start, int32_t length) {
 }
 
 void DOMBuilder::charactersRaw($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isOutsideDocElem();
 	if (var$0 && $XMLCharacterRecognizer::isWhiteSpace(ch, start, length)) {
 		return;
@@ -349,6 +353,7 @@ void DOMBuilder::entityReference($String* name) {
 }
 
 void DOMBuilder::ignorableWhitespace($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (isOutsideDocElem()) {
 		return;
 	}
@@ -366,6 +371,7 @@ void DOMBuilder::processingInstruction($String* target, $String* data) {
 }
 
 void DOMBuilder::comment($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	append($($nc(this->m_doc)->createComment($$new($String, ch, start, length))));
 }
 
@@ -379,6 +385,7 @@ void DOMBuilder::endCDATA() {
 }
 
 void DOMBuilder::cdata($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isOutsideDocElem();
 	if (var$0 && $XMLCharacterRecognizer::isWhiteSpace(ch, start, length)) {
 		return;

@@ -202,6 +202,7 @@ $String* ElementImpl::getTagName() {
 }
 
 $String* ElementImpl::getAttribute($String* name) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		if ($nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(name)) {
 			return $nc($nc(this->attrs)->get(i))->getValue();
@@ -211,6 +212,7 @@ $String* ElementImpl::getAttribute($String* name) {
 }
 
 $Attr* ElementImpl::getAttributeNode($String* name) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		if ($nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(name)) {
 			return $nc(this->attrs)->get(i);
@@ -220,6 +222,7 @@ $Attr* ElementImpl::getAttributeNode($String* name) {
 }
 
 $String* ElementImpl::getAttributeNS($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		bool var$0 = $nc($($nc($nc(this->attrs)->get(i))->getLocalName()))->equals(localName);
 		if (var$0 && nsEquals($($nc($nc(this->attrs)->get(i))->getNamespaceURI()), namespaceURI)) {
@@ -230,6 +233,7 @@ $String* ElementImpl::getAttributeNS($String* namespaceURI, $String* localName) 
 }
 
 $Attr* ElementImpl::getAttributeNodeNS($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		bool var$0 = $nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(localName);
 		if (var$0 && nsEquals($($nc($nc(this->attrs)->get(i))->getNamespaceURI()), namespaceURI)) {
@@ -240,6 +244,7 @@ $Attr* ElementImpl::getAttributeNodeNS($String* namespaceURI, $String* localName
 }
 
 bool ElementImpl::hasAttribute($String* name) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		if ($nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(name)) {
 			return true;
@@ -249,6 +254,7 @@ bool ElementImpl::hasAttribute($String* name) {
 }
 
 bool ElementImpl::hasAttributeNS($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		bool var$0 = $nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(localName);
 		if (var$0 && nsEquals($($nc($nc(this->attrs)->get(i))->getNamespaceURI()), namespaceURI)) {
@@ -259,6 +265,7 @@ bool ElementImpl::hasAttributeNS($String* namespaceURI, $String* localName) {
 }
 
 void ElementImpl::setAttribute($String* name, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->attrs)->length; ++i) {
 		if ($nc($($nc($nc(this->attrs)->get(i))->getName()))->equals(name)) {
 			$nc($nc(this->attrs)->get(i))->setValue(value);

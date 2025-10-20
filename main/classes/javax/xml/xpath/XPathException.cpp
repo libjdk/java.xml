@@ -96,12 +96,14 @@ $Throwable* XPathException::getCause() {
 }
 
 void XPathException::writeObject($ObjectOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectOutputStream$PutField, fields, $nc(out)->putFields());
 	$nc(fields)->put("cause"_s, $($of($Exception::getCause())));
 	out->writeFields();
 }
 
 void XPathException::readObject($ObjectInputStream* in) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectInputStream$GetField, fields, $nc(in)->readFields());
 	$var($Throwable, scause, $cast($Throwable, $nc(fields)->get("cause"_s, ($Object*)nullptr)));
 	if ($Exception::getCause() == nullptr && scause != nullptr) {

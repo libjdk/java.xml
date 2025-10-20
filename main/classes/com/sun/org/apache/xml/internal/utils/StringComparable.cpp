@@ -155,6 +155,7 @@ int32_t StringComparable::getCaseDiff($String* text, $String* pattern) {
 }
 
 $ints* StringComparable::getFirstCaseDiff($String* text, $String* pattern, $Locale* locale) {
+	$useLocalCurrentObjectStackCache();
 	$var($CollationElementIterator, targIter, $nc(this->m_collator)->getCollationElementIterator(text));
 	$var($CollationElementIterator, patIter, $nc(this->m_collator)->getCollationElementIterator(pattern));
 	int32_t startTarg = -1;

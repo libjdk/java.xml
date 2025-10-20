@@ -61,6 +61,7 @@ void NodeInfo::init$() {
 }
 
 $String* NodeInfo::systemId($ExpressionContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, contextNode, $nc(context)->getContextNode());
 	int32_t nodeHandler = $nc(($cast($DTMNodeProxy, contextNode)))->getDTMNodeNumber();
 	$var($SourceLocator, locator, $nc($($nc(($cast($DTMNodeProxy, contextNode)))->getDTM()))->getSourceLocatorFor(nodeHandler));
@@ -72,6 +73,7 @@ $String* NodeInfo::systemId($ExpressionContext* context) {
 }
 
 $String* NodeInfo::systemId($NodeList* nodeList) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeList == nullptr || $nc(nodeList)->getLength() == 0) {
 		return nullptr;
 	}
@@ -86,6 +88,7 @@ $String* NodeInfo::systemId($NodeList* nodeList) {
 }
 
 $String* NodeInfo::publicId($ExpressionContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, contextNode, $nc(context)->getContextNode());
 	int32_t nodeHandler = $nc(($cast($DTMNodeProxy, contextNode)))->getDTMNodeNumber();
 	$var($SourceLocator, locator, $nc($($nc(($cast($DTMNodeProxy, contextNode)))->getDTM()))->getSourceLocatorFor(nodeHandler));
@@ -97,6 +100,7 @@ $String* NodeInfo::publicId($ExpressionContext* context) {
 }
 
 $String* NodeInfo::publicId($NodeList* nodeList) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeList == nullptr || $nc(nodeList)->getLength() == 0) {
 		return nullptr;
 	}
@@ -111,6 +115,7 @@ $String* NodeInfo::publicId($NodeList* nodeList) {
 }
 
 int32_t NodeInfo::lineNumber($ExpressionContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, contextNode, $nc(context)->getContextNode());
 	int32_t nodeHandler = $nc(($cast($DTMNodeProxy, contextNode)))->getDTMNodeNumber();
 	$var($SourceLocator, locator, $nc($($nc(($cast($DTMNodeProxy, contextNode)))->getDTM()))->getSourceLocatorFor(nodeHandler));
@@ -122,6 +127,7 @@ int32_t NodeInfo::lineNumber($ExpressionContext* context) {
 }
 
 int32_t NodeInfo::lineNumber($NodeList* nodeList) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeList == nullptr || $nc(nodeList)->getLength() == 0) {
 		return -1;
 	}
@@ -136,6 +142,7 @@ int32_t NodeInfo::lineNumber($NodeList* nodeList) {
 }
 
 int32_t NodeInfo::columnNumber($ExpressionContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, contextNode, $nc(context)->getContextNode());
 	int32_t nodeHandler = $nc(($cast($DTMNodeProxy, contextNode)))->getDTMNodeNumber();
 	$var($SourceLocator, locator, $nc($($nc(($cast($DTMNodeProxy, contextNode)))->getDTM()))->getSourceLocatorFor(nodeHandler));
@@ -147,6 +154,7 @@ int32_t NodeInfo::columnNumber($ExpressionContext* context) {
 }
 
 int32_t NodeInfo::columnNumber($NodeList* nodeList) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeList == nullptr || $nc(nodeList)->getLength() == 0) {
 		return -1;
 	}

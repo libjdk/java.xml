@@ -123,6 +123,7 @@ bool DOMImplementationImpl::hasFeature($String* feature$renamed, $String* versio
 }
 
 $Document* DOMImplementationImpl::createDocument($String* namespaceURI, $String* qualifiedName, $DocumentType* doctype) {
+	$useLocalCurrentObjectStackCache();
 	if (namespaceURI == nullptr && qualifiedName == nullptr && doctype == nullptr) {
 		return $new($DocumentImpl);
 	} else if (doctype != nullptr && doctype->getOwnerDocument() != nullptr) {

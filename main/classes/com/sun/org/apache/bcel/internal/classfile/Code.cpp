@@ -97,6 +97,7 @@ $Object* allocate$Code($Class* clazz) {
 }
 
 void Code::init$(Code* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	int32_t var$2 = c->getMaxStack();
@@ -108,6 +109,7 @@ void Code::init$(Code* c) {
 }
 
 void Code::init$(int32_t name_index, int32_t length, $DataInput* file, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = name_index;
 	int32_t var$1 = length;
 	int32_t var$2 = $nc(file)->readUnsignedShort();
@@ -143,6 +145,7 @@ void Code::accept($Visitor* v) {
 }
 
 void Code::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort(this->maxStack);
 	file->writeShort(this->maxLocals);
@@ -179,6 +182,7 @@ $AttributeArray* Code::getAttributes() {
 }
 
 $LineNumberTable* Code::getLineNumberTable() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($AttributeArray, arr$, this->attributes);
 		int32_t len$ = $nc(arr$)->length;
@@ -196,6 +200,7 @@ $LineNumberTable* Code::getLineNumberTable() {
 }
 
 $LocalVariableTable* Code::getLocalVariableTable() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($AttributeArray, arr$, this->attributes);
 		int32_t len$ = $nc(arr$)->length;
@@ -233,6 +238,7 @@ int32_t Code::getInternalLength() {
 }
 
 int32_t Code::calculateLength() {
+	$useLocalCurrentObjectStackCache();
 	int32_t len = 0;
 	if (this->attributes != nullptr) {
 		{
@@ -274,6 +280,7 @@ void Code::setMaxStack(int32_t maxStack) {
 }
 
 $String* Code::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, 100));
 	buf->append("Code(maxStack = "_s)->append(this->maxStack)->append(", maxLocals = "_s)->append(this->maxLocals)->append(", code_length = "_s)->append($nc(this->code)->length)->append(")\n"_s)->append($($Utility::codeToString(this->code, $($Attribute::getConstantPool()), 0, -1, verbose)));
 	if ($nc(this->exceptionTable)->length > 0) {
@@ -313,6 +320,7 @@ $String* Code::toString() {
 }
 
 $Attribute* Code::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(Code, c, $cast(Code, clone()));
 	if (this->code != nullptr) {
 		$set($nc(c), code, $new($bytes, $nc(this->code)->length));

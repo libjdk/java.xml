@@ -568,6 +568,7 @@ void SAXImpl::setDocumentURI($String* uri) {
 }
 
 $String* SAXImpl::getDocumentURI() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, baseURI, getDocumentBaseURI());
 	$var($String, var$0, nullptr);
 	if (baseURI != nullptr) {
@@ -587,6 +588,7 @@ void SAXImpl::setupMapping($StringArray* names, $StringArray* urisArray, $ints* 
 }
 
 $String* SAXImpl::lookupNamespace(int32_t node, $String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	int32_t anode = 0;
 	int32_t nsnode = 0;
 	$var($SAX2DTM2$AncestorIterator, ancestors, $new($SAX2DTM2$AncestorIterator, this));
@@ -652,6 +654,7 @@ $Node* SAXImpl::makeNode($DTMAxisIterator* iter) {
 }
 
 $NodeList* SAXImpl::makeNodeList(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_nodeLists == nullptr) {
 		$set(this, _nodeLists, $new($NodeListArray, this->_namesSize));
 	}
@@ -682,6 +685,7 @@ $DTMAxisIterator* SAXImpl::getIterator() {
 }
 
 int32_t SAXImpl::getNSType(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, s, getNamespaceURI(node));
 	if (s == nullptr) {
 		return 0;
@@ -699,6 +703,7 @@ int32_t SAXImpl::getGeneralizedType($String* name) {
 }
 
 int32_t SAXImpl::getGeneralizedType($String* name, bool searchOnly) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, lName, nullptr);
 	$var($String, ns, nullptr);
 	int32_t index = -1;
@@ -754,6 +759,7 @@ $ints* SAXImpl::getReverseMapping($StringArray* names, $StringArray* uris, $ints
 }
 
 $shorts* SAXImpl::getMapping2($StringArray* names, $StringArray* uris, $ints* types) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	int32_t namesLength = $nc(names)->length;
 	int32_t exLength = $nc(this->m_expandedNameTable)->getSize();
@@ -785,6 +791,7 @@ $shorts* SAXImpl::getMapping2($StringArray* names, $StringArray* uris, $ints* ty
 }
 
 $shorts* SAXImpl::getNamespaceMapping($StringArray* namespaces) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	int32_t nsLength = $nc(namespaces)->length;
 	int32_t mappingLength = this->_uriCount;
@@ -803,6 +810,7 @@ $shorts* SAXImpl::getNamespaceMapping($StringArray* namespaces) {
 }
 
 $shorts* SAXImpl::getReverseNamespaceMapping($StringArray* namespaces) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	int32_t length = $nc(namespaces)->length;
 	$var($shorts, result, $new($shorts, length));
@@ -819,6 +827,7 @@ void SAXImpl::init$($XSLTCDTMManager* mgr, $Source* source, int32_t dtmIdentity,
 }
 
 void SAXImpl::init$($XSLTCDTMManager* mgr, $Source* source, int32_t dtmIdentity, $DTMWSFilter* whiteSpaceFilter, $XMLStringFactory* xstringfactory, bool doIndexing, int32_t blocksize, bool buildIdIndex, bool newNameTable) {
+	$useLocalCurrentObjectStackCache();
 	$SAX2DTM2::init$(mgr, source, dtmIdentity, whiteSpaceFilter, xstringfactory, doIndexing, blocksize, false, buildIdIndex, newNameTable);
 	this->_uriCount = 0;
 	this->_idx = 1;
@@ -857,6 +866,7 @@ void SAXImpl::migrateTo($DTMManager* manager) {
 }
 
 int32_t SAXImpl::getElementById($String* idString) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, $nc(this->_document)->getElementById(idString));
 	if (node != nullptr) {
 		$var($Integer, id, $cast($Integer, $nc(this->_node2Ids)->get(node)));
@@ -910,6 +920,7 @@ void SAXImpl::characters($chars* ch, int32_t start, int32_t length) {
 }
 
 void SAXImpl::startDocument() {
+	$useLocalCurrentObjectStackCache();
 	$SAX2DTM2::startDocument();
 	$var($Object, var$0, $of($Integer::valueOf(0)));
 	$nc(this->_nsIndex)->put(var$0, $($Integer::valueOf(this->_uriCount++)));
@@ -966,6 +977,7 @@ void SAXImpl::startPrefixMapping($String* prefix, $String* uri) {
 }
 
 void SAXImpl::definePrefixAndUri($String* prefix, $String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($Integer, eType, $Integer::valueOf(getIdForNamespace(uri)));
 	if ($nc(this->_nsIndex)->get(eType) == nullptr) {
 		$nc(this->_nsIndex)->put(eType, $($Integer::valueOf(this->_uriCount++)));
@@ -984,6 +996,7 @@ bool SAXImpl::setEscaping(bool value) {
 }
 
 void SAXImpl::print(int32_t node, int32_t level) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($String, name, nullptr)
 		switch (getNodeType(node)) {
@@ -1088,6 +1101,7 @@ $DTMAxisIterator* SAXImpl::getTypedChildren(int32_t type) {
 }
 
 $DTMAxisIterator* SAXImpl::getAxisIterator(int32_t axis) {
+	$useLocalCurrentObjectStackCache();
 	switch (axis) {
 	case $Axis::SELF:
 		{
@@ -1155,6 +1169,7 @@ $DTMAxisIterator* SAXImpl::getAxisIterator(int32_t axis) {
 }
 
 $DTMAxisIterator* SAXImpl::getTypedAxisIterator(int32_t axis, int32_t type) {
+	$useLocalCurrentObjectStackCache();
 	if (axis == $Axis::CHILD) {
 		return $new($SAX2DTM2$TypedChildrenIterator, this, type);
 	}
@@ -1283,6 +1298,7 @@ void SAXImpl::copy(int32_t node, $SerializationHandler* handler) {
 }
 
 void SAXImpl::copy(int32_t node, $SerializationHandler* handler, bool isChild) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nodeID = makeNodeIdentity(node);
 	int32_t eType = _exptype2(nodeID);
 	int32_t type = _exptype2Type(eType);
@@ -1367,6 +1383,7 @@ void SAXImpl::copy(int32_t node, $SerializationHandler* handler, bool isChild) {
 }
 
 void SAXImpl::copyPI(int32_t node, $SerializationHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, target, getNodeName(node));
 	$var($String, value, getStringValueX(node));
 	try {
@@ -1378,6 +1395,7 @@ void SAXImpl::copyPI(int32_t node, $SerializationHandler* handler) {
 }
 
 $String* SAXImpl::shallowCopy(int32_t node, $SerializationHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nodeID = makeNodeIdentity(node);
 	int32_t exptype = _exptype2(nodeID);
 	int32_t type = _exptype2Type(exptype);
@@ -1471,6 +1489,7 @@ $DOM* SAXImpl::getResultTreeFrag(int32_t initSize, int32_t rtfType) {
 }
 
 $DOM* SAXImpl::getResultTreeFrag(int32_t initSize, int32_t rtfType, bool addToManager) {
+	$useLocalCurrentObjectStackCache();
 	if (rtfType == $DOM::SIMPLE_RTF) {
 		if (addToManager) {
 			int32_t dtmPos = $nc(this->_dtmManager)->getFirstFreeDTMID();
@@ -1499,6 +1518,7 @@ $Map* SAXImpl::getElementsWithIDs() {
 }
 
 $String* SAXImpl::getUnparsedEntityURI($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_document != nullptr) {
 		$var($String, uri, ""_s);
 		$var($DocumentType, doctype, $nc(this->_document)->getDoctype());

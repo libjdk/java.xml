@@ -153,6 +153,7 @@ $Object* allocate$SchemaGrammar$BuiltinSchemaGrammar($Class* clazz) {
 $String* SchemaGrammar$BuiltinSchemaGrammar::EXTENDED_SCHEMA_FACTORY_CLASS = nullptr;
 
 void SchemaGrammar$BuiltinSchemaGrammar::init$(int32_t grammar, int16_t schemaVersion) {
+	$useLocalCurrentObjectStackCache();
 	$SchemaGrammar::init$();
 	$var($SchemaDVFactory, schemaFactory, nullptr);
 	if (schemaVersion == $Constants::SCHEMA_VERSION_1_0) {

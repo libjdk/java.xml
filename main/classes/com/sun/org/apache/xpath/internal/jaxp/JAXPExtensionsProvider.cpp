@@ -116,6 +116,7 @@ void JAXPExtensionsProvider::init$($XPathFunctionResolver* resolver, bool featur
 }
 
 bool JAXPExtensionsProvider::functionAvailable($String* ns, $String* funcName) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (funcName == nullptr) {
 			$init($XPATHErrorResources);
@@ -140,6 +141,7 @@ bool JAXPExtensionsProvider::elementAvailable($String* ns, $String* elemName) {
 }
 
 $Object* JAXPExtensionsProvider::extFunction($String* ns, $String* funcName, $List* argVec, Object$* methodKey) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (funcName == nullptr) {
 			$init($XPATHErrorResources);
@@ -178,6 +180,7 @@ $Object* JAXPExtensionsProvider::extFunction($String* ns, $String* funcName, $Li
 }
 
 $Object* JAXPExtensionsProvider::extFunction($FuncExtFunction* extFunction, $List* argVec) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, namespace$, $nc(extFunction)->getNamespace());
 		$var($String, functionName, extFunction->getFunctionName());

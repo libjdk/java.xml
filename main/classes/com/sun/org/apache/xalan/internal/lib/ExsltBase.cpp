@@ -55,6 +55,7 @@ void ExsltBase::init$() {
 }
 
 $String* ExsltBase::toString($Node* n) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($DTMNodeProxy, n)) {
 		return $nc(($cast($DTMNodeProxy, n)))->getStringValue();
 	} else {
@@ -74,6 +75,7 @@ $String* ExsltBase::toString($Node* n) {
 }
 
 double ExsltBase::toNumber($Node* n) {
+	$useLocalCurrentObjectStackCache();
 	double d = 0.0;
 	$var($String, str, toString(n));
 	try {

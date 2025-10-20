@@ -156,6 +156,7 @@ $String* ShortHandPointer::getDTDDeterminedID($XMLAttributes* attributes, int32_
 }
 
 $String* ShortHandPointer::getSchemaDeterminedID($XMLAttributes* attributes, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($Augmentations, augs, $nc(attributes)->getAugmentations(index));
 	$init($Constants);
 	$var($AttributePSVI, attrPSVI, $cast($AttributePSVI, $nc(augs)->getItem($Constants::ATTRIBUTE_PSVI)));

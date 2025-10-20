@@ -252,31 +252,37 @@ int32_t Op::size() {
 }
 
 Op* Op::elementAt(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($RuntimeException, $$str({"Internal Error: type="_s, $$str(this->type)}));
 	$shouldNotReachHere();
 }
 
 Op* Op::getChild() {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($RuntimeException, $$str({"Internal Error: type="_s, $$str(this->type)}));
 	$shouldNotReachHere();
 }
 
 int32_t Op::getData() {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($RuntimeException, $$str({"Internal Error: type="_s, $$str(this->type)}));
 	$shouldNotReachHere();
 }
 
 int32_t Op::getData2() {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($RuntimeException, $$str({"Internal Error: type="_s, $$str(this->type)}));
 	$shouldNotReachHere();
 }
 
 $RangeToken* Op::getToken() {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($RuntimeException, $$str({"Internal Error: type="_s, $$str(this->type)}));
 	$shouldNotReachHere();
 }
 
 $String* Op::getString() {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($RuntimeException, $$str({"Internal Error: type="_s, $$str(this->type)}));
 	$shouldNotReachHere();
 }

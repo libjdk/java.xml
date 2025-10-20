@@ -94,6 +94,7 @@ void VariableRef::init$($Variable* variable) {
 }
 
 void VariableRef::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if ($nc(this->_type)->implementedAsMethod()) {

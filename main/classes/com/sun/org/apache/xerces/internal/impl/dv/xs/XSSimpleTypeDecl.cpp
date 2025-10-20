@@ -998,6 +998,7 @@ void XSSimpleTypeDecl::applyFacets1($XSFacets* facets, int16_t presentFacet, int
 }
 
 void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int16_t fixedFacet, int16_t patternType, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fIsImmutable) {
 		return;
 	}
@@ -1754,6 +1755,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 }
 
 $Object* XSSimpleTypeDecl::validate($String* content, $ValidationContext* context$renamed, $ValidatedInfo* validatedInfo$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($ValidatedInfo, validatedInfo, validatedInfo$renamed);
 	$var($ValidationContext, context, context$renamed);
 	if (context == nullptr) {
@@ -1775,6 +1777,7 @@ $ValidatedInfo* XSSimpleTypeDecl::getActualEnumValue($String* lexical, $Validati
 }
 
 $ValidatedInfo* XSSimpleTypeDecl::validateWithInfo($String* content, $ValidationContext* context$renamed, $ValidatedInfo* validatedInfo$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($ValidatedInfo, validatedInfo, validatedInfo$renamed);
 	$var($ValidationContext, context, context$renamed);
 	if (context == nullptr) {
@@ -1792,6 +1795,7 @@ $ValidatedInfo* XSSimpleTypeDecl::validateWithInfo($String* content, $Validation
 }
 
 $Object* XSSimpleTypeDecl::validate(Object$* content, $ValidationContext* context$renamed, $ValidatedInfo* validatedInfo$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($ValidatedInfo, validatedInfo, validatedInfo$renamed);
 	$var($ValidationContext, context, context$renamed);
 	if (context == nullptr) {
@@ -1822,6 +1826,7 @@ void XSSimpleTypeDecl::validate($ValidationContext* context$renamed, $ValidatedI
 }
 
 void XSSimpleTypeDecl::checkFacets($ValidatedInfo* validatedInfo) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, ob, $nc(validatedInfo)->actualValue);
 	$var($String, content, validatedInfo->normalizedValue);
 	int16_t type = validatedInfo->actualValueType;
@@ -1966,6 +1971,7 @@ void XSSimpleTypeDecl::checkFacets($ValidatedInfo* validatedInfo) {
 }
 
 void XSSimpleTypeDecl::checkExtraRules($ValidationContext* context, $ValidatedInfo* validatedInfo) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, ob, $nc(validatedInfo)->actualValue);
 	if (this->fVariety == $XSSimpleTypeDefinition::VARIETY_ATOMIC) {
 		$nc($nc(this->fDVs)->get(this->fValidationDV))->checkExtraRules(ob, context);
@@ -2005,6 +2011,7 @@ void XSSimpleTypeDecl::checkExtraRules($ValidationContext* context, $ValidatedIn
 }
 
 $Object* XSSimpleTypeDecl::getActualValue(Object$* content, $ValidationContext* context, $ValidatedInfo* validatedInfo, bool needNormalize) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, nvalue, nullptr);
 	if (needNormalize) {
 		$assign(nvalue, normalize(content, this->fWhiteSpace));
@@ -2175,6 +2182,7 @@ $String* XSSimpleTypeDecl::normalize($String* content, int16_t ws) {
 }
 
 $String* XSSimpleTypeDecl::normalize(Object$* content, int16_t ws) {
+	$useLocalCurrentObjectStackCache();
 	if (content == nullptr) {
 		return nullptr;
 	}
@@ -2404,6 +2412,7 @@ $ShortList* XSSimpleTypeDecl::getEnumerationTypeList() {
 }
 
 $StringList* XSSimpleTypeDecl::getLexicalPattern() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fPatternType == XSSimpleTypeDecl::SPECIAL_PATTERN_NONE && this->fValidationDV != XSSimpleTypeDecl::DV_INTEGER && this->fPatternStr == nullptr) {
 		$init($StringListImpl);
 		return $StringListImpl::EMPTY_LIST;
@@ -2577,6 +2586,7 @@ int16_t XSSimpleTypeDecl::getPrimitiveDV(int16_t validationDV) {
 }
 
 bool XSSimpleTypeDecl::derivedFromType($XSTypeDefinition* ancestor$renamed, int16_t derivation) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSTypeDefinition, ancestor, ancestor$renamed);
 	if (ancestor == nullptr) {
 		return false;
@@ -2595,6 +2605,7 @@ bool XSSimpleTypeDecl::derivedFromType($XSTypeDefinition* ancestor$renamed, int1
 }
 
 bool XSSimpleTypeDecl::derivedFrom($String* ancestorNS, $String* ancestorName, int16_t derivation) {
+	$useLocalCurrentObjectStackCache();
 	if (ancestorName == nullptr) {
 		return false;
 	}
@@ -2653,6 +2664,7 @@ bool XSSimpleTypeDecl::isDOMDerivedFrom($String* ancestorNS, $String* ancestorNa
 }
 
 bool XSSimpleTypeDecl::isDerivedByAny($String* ancestorNS, $String* ancestorName, $XSTypeDefinition* type$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSTypeDefinition, type, type$renamed);
 	bool derivedFrom = false;
 	$var($XSTypeDefinition, oldType, nullptr);
@@ -2689,6 +2701,7 @@ bool XSSimpleTypeDecl::isDerivedByAny($String* ancestorNS, $String* ancestorName
 }
 
 bool XSSimpleTypeDecl::isDerivedByRestriction($String* ancestorNS, $String* ancestorName, $XSTypeDefinition* type$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSTypeDefinition, type, type$renamed);
 	$var($XSTypeDefinition, oldType, nullptr);
 	while (type != nullptr && type != oldType) {
@@ -2719,6 +2732,7 @@ bool XSSimpleTypeDecl::isDerivedByList($String* ancestorNS, $String* ancestorNam
 }
 
 bool XSSimpleTypeDecl::isDerivedByUnion($String* ancestorNS, $String* ancestorName, $XSTypeDefinition* type) {
+	$useLocalCurrentObjectStackCache();
 	if (type != nullptr && $nc(($cast($XSSimpleTypeDefinition, type)))->getVariety() == $XSSimpleTypeDefinition::VARIETY_UNION) {
 		$var($XSObjectList, memberTypes, ($cast($XSSimpleTypeDefinition, type))->getMemberTypes());
 		for (int32_t i = 0; i < $nc(memberTypes)->getLength(); ++i) {
@@ -2794,6 +2808,7 @@ $String* XSSimpleTypeDecl::toString() {
 }
 
 $XSObjectList* XSSimpleTypeDecl::getFacets() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fFacets == nullptr && (this->fFacetsDefined != 0 || this->fValidationDV == XSSimpleTypeDecl::DV_INTEGER)) {
 		$var($XSSimpleTypeDecl$XSFacetImplArray, facets, $new($XSSimpleTypeDecl$XSFacetImplArray, 10));
 		int32_t count = 0;
@@ -2848,6 +2863,7 @@ $XSObjectList* XSSimpleTypeDecl::getFacets() {
 }
 
 $XSObject* XSSimpleTypeDecl::getFacet(int32_t facetType) {
+	$useLocalCurrentObjectStackCache();
 	if (facetType == $XSSimpleTypeDefinition::FACET_ENUMERATION || facetType == $XSSimpleTypeDefinition::FACET_PATTERN) {
 		$var($XSObjectList, list, getMultiValueFacets());
 		for (int32_t i = 0; i < $nc(list)->getLength(); ++i) {
@@ -2869,6 +2885,7 @@ $XSObject* XSSimpleTypeDecl::getFacet(int32_t facetType) {
 }
 
 $XSObjectList* XSSimpleTypeDecl::getMultiValueFacets() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fMultiValueFacets == nullptr && (((int32_t)(this->fFacetsDefined & (uint32_t)(int32_t)$XSSimpleTypeDefinition::FACET_ENUMERATION)) != 0 || ((int32_t)(this->fFacetsDefined & (uint32_t)(int32_t)$XSSimpleTypeDefinition::FACET_PATTERN)) != 0 || this->fPatternType != XSSimpleTypeDecl::SPECIAL_PATTERN_NONE || this->fValidationDV == XSSimpleTypeDecl::DV_INTEGER)) {
 		$var($XSSimpleTypeDecl$XSMVFacetImplArray, facets, $new($XSSimpleTypeDecl$XSMVFacetImplArray, 2));
 		int32_t count = 0;
@@ -2941,6 +2958,7 @@ void XSSimpleTypeDecl::appendEnumString($StringBuffer* sb) {
 }
 
 void clinit$XSSimpleTypeDecl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XSSimpleTypeDecl::URI_SCHEMAFORSCHEMA, "http://www.w3.org/2001/XMLSchema"_s);
 	$assignStatic(XSSimpleTypeDecl::ANY_TYPE, "anyType"_s);
 	$assignStatic(XSSimpleTypeDecl::gDVs, $new($TypeValidatorArray, {

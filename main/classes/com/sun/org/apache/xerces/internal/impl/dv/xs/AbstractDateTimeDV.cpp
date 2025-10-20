@@ -159,6 +159,7 @@ int16_t AbstractDateTimeDV::getAllowedFacets() {
 }
 
 bool AbstractDateTimeDV::isIdentical(Object$* value1, Object$* value2) {
+	$useLocalCurrentObjectStackCache();
 	if (!($instanceOf($AbstractDateTimeDV$DateTimeData, value1)) || !($instanceOf($AbstractDateTimeDV$DateTimeData, value2))) {
 		return false;
 	}
@@ -438,6 +439,7 @@ bool AbstractDateTimeDV::isNextCharUTCSign($String* buffer, int32_t start, int32
 }
 
 int32_t AbstractDateTimeDV::parseInt($String* buffer, int32_t start, int32_t end) {
+	$useLocalCurrentObjectStackCache();
 	int32_t radix = 10;
 	int32_t result = 0;
 	int32_t digit = 0;
@@ -462,6 +464,7 @@ int32_t AbstractDateTimeDV::parseInt($String* buffer, int32_t start, int32_t end
 }
 
 int32_t AbstractDateTimeDV::parseIntYear($String* buffer, int32_t end) {
+	$useLocalCurrentObjectStackCache();
 	int32_t radix = 10;
 	int32_t result = 0;
 	bool negative = false;
@@ -654,6 +657,7 @@ void AbstractDateTimeDV::append2($StringBuffer* message, double value) {
 }
 
 void AbstractDateTimeDV::append3($StringBuffer* message, double value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, d, $String::valueOf(value));
 	int32_t eIndex = d->indexOf((int32_t)u'E');
 	if (eIndex == -1) {
@@ -712,6 +716,7 @@ void AbstractDateTimeDV::append3($StringBuffer* message, double value) {
 }
 
 double AbstractDateTimeDV::parseSecond($String* buffer, int32_t start, int32_t end) {
+	$useLocalCurrentObjectStackCache();
 	int32_t dot = -1;
 	for (int32_t i = start; i < end; ++i) {
 		char16_t ch = $nc(buffer)->charAt(i);
@@ -752,6 +757,7 @@ $Duration* AbstractDateTimeDV::getDuration($AbstractDateTimeDV$DateTimeData* dat
 }
 
 $BigDecimal* AbstractDateTimeDV::getFractionalSecondsAsBigDecimal($AbstractDateTimeDV$DateTimeData* data) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buf, $new($StringBuffer));
 	append3(buf, $nc(data)->unNormSecond);
 	$var($String, value, buf->toString());

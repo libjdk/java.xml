@@ -117,6 +117,7 @@ bool ContainsCall::isBoolean() {
 }
 
 $Type* ContainsCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (argumentCount() != 2) {
 		$init($ErrorMsg);
 		$throwNew($TypeCheckError, $ErrorMsg::ILLEGAL_ARG_ERR, $(getName()), this);
@@ -141,6 +142,7 @@ void ContainsCall::translate($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void ContainsCall::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_base)->translate(classGen, methodGen);

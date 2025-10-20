@@ -161,6 +161,7 @@ void XPathImplUtil::init$() {
 }
 
 $XObject* XPathImplUtil::eval(Object$* contextItem, $XPath* xpath) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xpathSupport, nullptr);
 	if (contextItem == nullptr && $instanceOf($LocPathIterator, $($nc(xpath)->getExpression()))) {
 		$init($XPATHErrorResources);
@@ -184,6 +185,7 @@ $XObject* XPathImplUtil::eval(Object$* contextItem, $XPath* xpath) {
 }
 
 $Document* XPathImplUtil::getDocument($InputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	requireNonNull(source, "Source"_s);
 	try {
 		$var($DocumentBuilderFactory, dbf, $JdkXmlUtils::getDOMFactory(this->overrideDefaultParser));
@@ -202,6 +204,7 @@ $Document* XPathImplUtil::getDocument($InputSource* source) {
 }
 
 $Object* XPathImplUtil::getResultAsType($XObject* resultObject, $QName* returnType) {
+	$useLocalCurrentObjectStackCache();
 	$init($XPathConstants);
 	if ($nc(returnType)->equals($XPathConstants::STRING)) {
 		return $of($nc(resultObject)->str());
@@ -225,6 +228,7 @@ $Object* XPathImplUtil::getResultAsType($XObject* resultObject, $QName* returnTy
 }
 
 $Object* XPathImplUtil::getXPathResult($XObject* resultObject, $Class* type) {
+	$useLocalCurrentObjectStackCache();
 	int32_t resultType = $nc(resultObject)->getType();
 	switch (resultType) {
 	case $XObject::CLASS_BOOLEAN:
@@ -257,6 +261,7 @@ $Object* XPathImplUtil::getXPathResult($XObject* resultObject, $Class* type) {
 }
 
 void XPathImplUtil::isSupportedClassType($Class* type) {
+	$useLocalCurrentObjectStackCache();
 	requireNonNull(type, "The class type"_s);
 	$load($Boolean);
 	bool var$6 = $nc(type)->isAssignableFrom($Boolean::class$);
@@ -282,6 +287,7 @@ void XPathImplUtil::isSupportedClassType($Class* type) {
 }
 
 void XPathImplUtil::isSupported($QName* returnType) {
+	$useLocalCurrentObjectStackCache();
 	requireNonNull(returnType, "returnType"_s);
 	$init($XPathConstants);
 	bool var$3 = $nc(returnType)->equals($XPathConstants::STRING);
@@ -297,6 +303,7 @@ void XPathImplUtil::isSupported($QName* returnType) {
 }
 
 void XPathImplUtil::requireNonNull(Object$* param, $String* paramName) {
+	$useLocalCurrentObjectStackCache();
 	if (param == nullptr) {
 		$init($XPATHErrorResources);
 		$var($String, fmsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_ARG_CANNOT_BE_NULL, $$new($ObjectArray, {$of(paramName)})));

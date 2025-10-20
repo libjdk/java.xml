@@ -152,6 +152,7 @@ void lr_parser::report_fatal_error($String* message, Object$* info) {
 }
 
 void lr_parser::report_error($String* message, Object$* info) {
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$nc($System::err)->print(message);
 	if ($instanceOf($Symbol, info)) {
@@ -220,6 +221,7 @@ int16_t lr_parser::get_reduce(int32_t state, int32_t sym) {
 }
 
 $Symbol* lr_parser::parse() {
+	$useLocalCurrentObjectStackCache();
 	int32_t act = 0;
 	$var($Symbol, lhs_sym, nullptr);
 	int16_t handle_size = 0;
@@ -276,6 +278,7 @@ void lr_parser::debug_message($String* mess) {
 }
 
 void lr_parser::dump_stack() {
+	$useLocalCurrentObjectStackCache();
 	if (this->stack == nullptr) {
 		debug_message("# Stack dump requested, but stack is null"_s);
 		return;
@@ -289,14 +292,17 @@ void lr_parser::dump_stack() {
 }
 
 void lr_parser::debug_reduce(int32_t prod_num, int32_t nt_num, int32_t rhs_size) {
+	$useLocalCurrentObjectStackCache();
 	debug_message($$str({"# Reduce with prod #"_s, $$str(prod_num), " [NT="_s, $$str(nt_num), ", SZ="_s, $$str(rhs_size), "]"_s}));
 }
 
 void lr_parser::debug_shift($Symbol* shift_tkn) {
+	$useLocalCurrentObjectStackCache();
 	debug_message($$str({"# Shift under term #"_s, $$str($nc(shift_tkn)->sym), " to state #"_s, $$str(shift_tkn->parse_state)}));
 }
 
 void lr_parser::debug_stack() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder, "## STACK:"_s));
 	for (int32_t i = 0; i < $nc(this->stack)->size(); ++i) {
 		$var($Symbol, s, $cast($Symbol, $nc(this->stack)->get(i)));
@@ -309,6 +315,7 @@ void lr_parser::debug_stack() {
 }
 
 $Symbol* lr_parser::debug_parse() {
+	$useLocalCurrentObjectStackCache();
 	int32_t act = 0;
 	$var($Symbol, lhs_sym, nullptr);
 	int16_t handle_size = 0;
@@ -367,6 +374,7 @@ $Symbol* lr_parser::debug_parse() {
 }
 
 bool lr_parser::error_recovery(bool debug) {
+	$useLocalCurrentObjectStackCache();
 	if (debug) {
 		debug_message("# Attempting error recovery"_s);
 	}
@@ -408,6 +416,7 @@ bool lr_parser::shift_under_error() {
 }
 
 bool lr_parser::find_recovery_config(bool debug) {
+	$useLocalCurrentObjectStackCache();
 	$var($Symbol, error_token, nullptr);
 	int32_t act = 0;
 	if (debug) {
@@ -470,6 +479,7 @@ void lr_parser::restart_lookahead() {
 }
 
 bool lr_parser::try_parse_ahead(bool debug) {
+	$useLocalCurrentObjectStackCache();
 	int32_t act = 0;
 	int16_t lhs = 0;
 	int16_t rhs_size = 0;
@@ -512,6 +522,7 @@ bool lr_parser::try_parse_ahead(bool debug) {
 }
 
 void lr_parser::parse_lookahead(bool debug) {
+	$useLocalCurrentObjectStackCache();
 	int32_t act = 0;
 	$var($Symbol, lhs_sym, nullptr);
 	int16_t handle_size = 0;
@@ -569,6 +580,7 @@ void lr_parser::parse_lookahead(bool debug) {
 }
 
 $shortArray2* lr_parser::unpackFromStrings($StringArray* sa) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder, $nc(sa)->get(0)));
 	for (int32_t i = 1; i < $nc(sa)->length; ++i) {
 		sb->append(sa->get(i));

@@ -63,6 +63,7 @@ void FuncLocalPart::init$() {
 }
 
 $XObject* FuncLocalPart::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t context = getArg0AsNode(xctxt);
 	if ($DTM::NULL == context) {
 		$init($XString);

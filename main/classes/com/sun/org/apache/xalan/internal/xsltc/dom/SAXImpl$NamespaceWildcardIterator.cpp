@@ -145,6 +145,7 @@ int32_t SAXImpl$NamespaceWildcardIterator::next() {
 }
 
 $DTMAxisIterator* SAXImpl$NamespaceWildcardIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DTMAxisIterator, nestedClone, $nc(this->m_baseIterator)->cloneIterator());
 		$var(SAXImpl$NamespaceWildcardIterator, clone, $cast(SAXImpl$NamespaceWildcardIterator, $DTMDefaultBaseIterators$InternalAxisIteratorBase::clone()));

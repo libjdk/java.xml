@@ -78,6 +78,7 @@ void FloorCall::init$($QName* fname, $List* arguments) {
 }
 
 void FloorCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$nc($(argument()))->translate(classGen, methodGen);
 	$init($Constants);
 	$nc($($nc(methodGen)->getInstructionList()))->append(static_cast<$Instruction*>($$new($INVOKESTATIC, $nc($($nc(classGen)->getConstantPool()))->addMethodref($Constants::MATH_CLASS, "floor"_s, "(D)D"_s))));

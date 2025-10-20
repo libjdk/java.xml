@@ -142,6 +142,7 @@ void DefaultErrorHandler::init$(bool throwExceptionOnError) {
 }
 
 void DefaultErrorHandler::warning($SAXParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	printLocation(this->m_pw, static_cast<$Throwable*>(exception));
 	$nc(this->m_pw)->println($$str({"Parser warning: "_s, $($nc(exception)->getMessage())}));
 }
@@ -179,6 +180,7 @@ void DefaultErrorHandler::fatalError($TransformerException* exception) {
 
 void DefaultErrorHandler::ensureLocationSet($TransformerException* exception) {
 	$init(DefaultErrorHandler);
+	$useLocalCurrentObjectStackCache();
 	$var($SourceLocator, locator, nullptr);
 	$var($Throwable, cause, exception);
 	do {
@@ -213,6 +215,7 @@ void DefaultErrorHandler::printLocation($PrintStream* pw, $SAXParseException* ex
 
 void DefaultErrorHandler::printLocation($PrintWriter* pw, $Throwable* exception) {
 	$init(DefaultErrorHandler);
+	$useLocalCurrentObjectStackCache();
 	$var($SourceLocator, locator, nullptr);
 	$var($Throwable, cause, exception);
 	do {

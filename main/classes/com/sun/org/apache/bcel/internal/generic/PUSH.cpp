@@ -206,6 +206,7 @@ void PUSH::init$($ConstantPoolGen* cp, $ObjectType* value) {
 }
 
 void PUSH::init$($ConstantPoolGen* cp, $Number* value) {
+	$useLocalCurrentObjectStackCache();
 	if (($instanceOf($Integer, value)) || ($instanceOf($Short, value)) || ($instanceOf($Byte, value))) {
 		$set(this, instruction, $$new(PUSH, cp, $nc(value)->intValue())->instruction);
 	} else if ($instanceOf($Double, value)) {

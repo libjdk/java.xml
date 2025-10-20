@@ -205,6 +205,7 @@ int32_t LocalVariable::getStartPC() {
 }
 
 $String* LocalVariable::toStringShared(bool typeTable) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getName());
 	$var($String, signature, $Utility::signatureToString($(getSignature()), false));
 	$var($String, label, $str({"LocalVariable"_s, (typeTable ? "Types"_s : ""_s)}));

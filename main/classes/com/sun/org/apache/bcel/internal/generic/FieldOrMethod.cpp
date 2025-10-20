@@ -122,6 +122,7 @@ void FieldOrMethod::init$(int16_t opcode, int32_t index) {
 }
 
 $String* FieldOrMethod::getSignature($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantCP, cmr, $cast($ConstantCP, $nc(cp)->getConstant($CPInstruction::getIndex())));
 	$var($ConstantNameAndType, cnat, $cast($ConstantNameAndType, cp->getConstant($nc(cmr)->getNameAndTypeIndex())));
@@ -129,6 +130,7 @@ $String* FieldOrMethod::getSignature($ConstantPoolGen* cpg) {
 }
 
 $String* FieldOrMethod::getName($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantCP, cmr, $cast($ConstantCP, $nc(cp)->getConstant($CPInstruction::getIndex())));
 	$var($ConstantNameAndType, cnat, $cast($ConstantNameAndType, cp->getConstant($nc(cmr)->getNameAndTypeIndex())));
@@ -136,6 +138,7 @@ $String* FieldOrMethod::getName($ConstantPoolGen* cpg) {
 }
 
 $String* FieldOrMethod::getClassName($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantCP, cmr, $cast($ConstantCP, $nc(cp)->getConstant($CPInstruction::getIndex())));
 	$var($String, className, cp->getConstantString($nc(cmr)->getClassIndex(), $Const::CONSTANT_Class));
@@ -150,6 +153,7 @@ $ObjectType* FieldOrMethod::getClassType($ConstantPoolGen* cpg) {
 }
 
 $ReferenceType* FieldOrMethod::getReferenceType($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantCP, cmr, $cast($ConstantCP, $nc(cp)->getConstant($CPInstruction::getIndex())));
 	$var($String, className, cp->getConstantString($nc(cmr)->getClassIndex(), $Const::CONSTANT_Class));
@@ -161,6 +165,7 @@ $ReferenceType* FieldOrMethod::getReferenceType($ConstantPoolGen* cpg) {
 }
 
 $ObjectType* FieldOrMethod::getLoadClassType($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ReferenceType, rt, getReferenceType(cpg));
 	if ($instanceOf($ObjectType, rt)) {
 		return $cast($ObjectType, rt);

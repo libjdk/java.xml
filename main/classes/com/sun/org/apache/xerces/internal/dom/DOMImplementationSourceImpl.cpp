@@ -75,6 +75,7 @@ $DOMImplementation* DOMImplementationSourceImpl::getDOMImplementation($String* f
 }
 
 $DOMImplementationList* DOMImplementationSourceImpl::getDOMImplementationList($String* features) {
+	$useLocalCurrentObjectStackCache();
 	$var($DOMImplementation, impl, $CoreDOMImplementationImpl::getDOMImplementation());
 	$var($List, implementations, $new($ArrayList));
 	if (testImpl(impl, features)) {
@@ -88,6 +89,7 @@ $DOMImplementationList* DOMImplementationSourceImpl::getDOMImplementationList($S
 }
 
 bool DOMImplementationSourceImpl::testImpl($DOMImplementation* impl, $String* features) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringTokenizer, st, $new($StringTokenizer, features));
 	$var($String, feature, nullptr);
 	$var($String, version, nullptr);

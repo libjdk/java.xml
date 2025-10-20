@@ -531,6 +531,7 @@ $String* ErrorMsg::getFileName($SyntaxTreeNode* node) {
 }
 
 $String* ErrorMsg::formatLine() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, result, $new($StringBuffer));
 	if (this->_url != nullptr) {
 		result->append(this->_url);
@@ -545,11 +546,13 @@ $String* ErrorMsg::formatLine() {
 }
 
 $String* ErrorMsg::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, suffix, (this->_params == nullptr) ? (nullptr != this->_code ? getErrorMessage() : this->_message) : $MessageFormat::format($(getErrorMessage()), this->_params));
 	return $str({$(formatLine()), suffix});
 }
 
 $String* ErrorMsg::toString(Object$* obj) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, params, $new($ObjectArray, 1));
 	params->set(0, $($nc($of(obj))->toString()));
 	$var($String, suffix, $MessageFormat::format($(getErrorMessage()), params));
@@ -557,6 +560,7 @@ $String* ErrorMsg::toString(Object$* obj) {
 }
 
 $String* ErrorMsg::toString(Object$* obj0, Object$* obj1) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, params, $new($ObjectArray, 2));
 	params->set(0, $($nc($of(obj0))->toString()));
 	params->set(1, $($nc($of(obj1))->toString()));

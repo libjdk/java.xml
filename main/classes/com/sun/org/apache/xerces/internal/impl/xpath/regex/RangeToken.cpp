@@ -183,6 +183,7 @@ void RangeToken::sortRanges() {
 }
 
 void RangeToken::compactRanges() {
+	$useLocalCurrentObjectStackCache();
 	bool DEBUG = false;
 	if (this->ranges == nullptr || $nc(this->ranges)->length <= 2) {
 		return;
@@ -241,6 +242,7 @@ void RangeToken::compactRanges() {
 }
 
 void RangeToken::mergeRanges($Token* token) {
+	$useLocalCurrentObjectStackCache();
 	$var(RangeToken, tok, $cast(RangeToken, token));
 	this->sortRanges();
 	$nc(tok)->sortRanges();
@@ -279,6 +281,7 @@ void RangeToken::mergeRanges($Token* token) {
 }
 
 void RangeToken::subtractRanges($Token* token) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(token)->type == $Token::NRANGE) {
 		this->intersectRanges(token);
 		return;
@@ -335,6 +338,7 @@ void RangeToken::subtractRanges($Token* token) {
 }
 
 void RangeToken::intersectRanges($Token* token) {
+	$useLocalCurrentObjectStackCache();
 	$var(RangeToken, tok, $cast(RangeToken, token));
 	if ($nc(tok)->ranges == nullptr || this->ranges == nullptr) {
 		return;
@@ -387,6 +391,7 @@ void RangeToken::intersectRanges($Token* token) {
 
 $Token* RangeToken::complementRanges($Token* token) {
 	$init(RangeToken);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(token)->type != $Token::RANGE && token->type != $Token::NRANGE) {
 		$throwNew($IllegalArgumentException, $$str({"Token#complementRanges(): must be RANGE: "_s, $$str(token->type)}));
 	}
@@ -422,6 +427,7 @@ $Token* RangeToken::complementRanges($Token* token) {
 
 RangeToken* RangeToken::getCaseInsensitiveToken() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (this->icaseCache != nullptr) {
 			return this->icaseCache;
 		}
@@ -456,6 +462,7 @@ RangeToken* RangeToken::getCaseInsensitiveToken() {
 }
 
 void RangeToken::dumpRanges() {
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$nc($System::err)->print("RANGE: "_s);
 	if (this->ranges == nullptr) {
@@ -525,6 +532,7 @@ void RangeToken::createMap() {
 }
 
 $String* RangeToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	if (this->type == $Token::RANGE) {
 		$init($Token);
@@ -596,6 +604,7 @@ $String* RangeToken::toString(int32_t options) {
 
 $String* RangeToken::escapeCharInCharClass(int32_t ch) {
 	$init(RangeToken);
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	switch (ch) {
 	case u'[':

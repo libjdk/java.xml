@@ -293,6 +293,7 @@ int32_t DeferredElementImpl::getNodeIndex() {
 }
 
 void DeferredElementImpl::synchronizeData() {
+	$useLocalCurrentObjectStackCache();
 	needsSyncData(false);
 	$var($DeferredDocumentImpl, ownerDocument, $cast($DeferredDocumentImpl, this->ownerDocument$));
 	bool orig = $nc(ownerDocument)->mutationEvents;

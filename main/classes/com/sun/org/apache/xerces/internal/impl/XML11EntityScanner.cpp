@@ -128,6 +128,7 @@ int32_t XML11EntityScanner::scanChar($XMLScanner$NameType* nt) {
 }
 
 $String* XML11EntityScanner::scanNmtoken() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fCurrentEntity)->position == $nc(this->fCurrentEntity)->count) {
 		load(0, true, true);
 	}
@@ -206,6 +207,7 @@ $String* XML11EntityScanner::scanNmtoken() {
 }
 
 $String* XML11EntityScanner::scanName($XMLScanner$NameType* nt) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fCurrentEntity)->position == $nc(this->fCurrentEntity)->count) {
 		load(0, true, true);
 	}
@@ -304,6 +306,7 @@ $String* XML11EntityScanner::scanName($XMLScanner$NameType* nt) {
 }
 
 $String* XML11EntityScanner::scanNCName() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fCurrentEntity)->position == $nc(this->fCurrentEntity)->count) {
 		load(0, true, true);
 	}
@@ -428,6 +431,7 @@ $String* XML11EntityScanner::scanNCName() {
 }
 
 bool XML11EntityScanner::scanQName($QName* qname, $XMLScanner$NameType* nt) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fCurrentEntity)->position == $nc(this->fCurrentEntity)->count) {
 		load(0, true, true);
 	}

@@ -79,6 +79,7 @@ void MatchingIterator::setRestartable(bool isRestartable) {
 }
 
 $DTMAxisIterator* MatchingIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(MatchingIterator, clone, $cast(MatchingIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _source, $nc(this->_source)->cloneIterator());

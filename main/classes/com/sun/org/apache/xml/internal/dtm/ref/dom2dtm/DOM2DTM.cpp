@@ -217,6 +217,7 @@ $Object* allocate$DOM2DTM($Class* clazz) {
 $String* DOM2DTM::NAMESPACE_DECL_NS = nullptr;
 
 void DOM2DTM::init$($DTMManager* mgr, $DOMSource* domSource, int32_t dtmIdentity, $DTMWSFilter* whiteSpaceFilter, $XMLStringFactory* xstringfactory, bool doIndexing) {
+	$useLocalCurrentObjectStackCache();
 	$DTMDefaultBaseIterators::init$(mgr, domSource, dtmIdentity, whiteSpaceFilter, xstringfactory, doIndexing);
 	this->m_last_parent = 0;
 	this->m_last_kid = $DTM::NULL;
@@ -242,6 +243,7 @@ void DOM2DTM::init$($DTMManager* mgr, $DOMSource* domSource, int32_t dtmIdentity
 }
 
 int32_t DOM2DTM::addNode($Node* node, int32_t parentIndex, int32_t previousSibling, int32_t forceNodeType) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nodeIndex = $nc(this->m_nodes)->size();
 	if ($nc(this->m_dtmIdent)->size() == ($usr(nodeIndex, $DTMManager::IDENT_DTM_NODE_BITS))) {
 		try {
@@ -307,6 +309,7 @@ int32_t DOM2DTM::getNumberOfNodes() {
 }
 
 bool DOM2DTM::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_nodesAreProcessed) {
 		return false;
 	}
@@ -490,6 +493,7 @@ int32_t DOM2DTM::getHandleOfNode($Node* node) {
 }
 
 int32_t DOM2DTM::getAttributeNode(int32_t nodeHandle, $String* namespaceURI$renamed, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespaceURI, namespaceURI$renamed);
 	if (nullptr == namespaceURI) {
 		$assign(namespaceURI, ""_s);
@@ -519,6 +523,7 @@ int32_t DOM2DTM::getAttributeNode(int32_t nodeHandle, $String* namespaceURI$rena
 }
 
 $XMLString* DOM2DTM::getStringValue(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t type = getNodeType(nodeHandle);
 	$var($Node, node, getNode(nodeHandle));
 	if ($DTM::ELEMENT_NODE == type || $DTM::DOCUMENT_NODE == type || $DTM::DOCUMENT_FRAGMENT_NODE == type) {
@@ -554,6 +559,7 @@ $XMLString* DOM2DTM::getStringValue(int32_t nodeHandle) {
 }
 
 bool DOM2DTM::isWhitespace(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t type = getNodeType(nodeHandle);
 	$var($Node, node, getNode(nodeHandle));
 	if ($DTM::TEXT_NODE == type || $DTM::CDATA_SECTION_NODE == type) {
@@ -571,6 +577,7 @@ bool DOM2DTM::isWhitespace(int32_t nodeHandle) {
 
 void DOM2DTM::getNodeData($Node* node, $FastStringBuffer* buf) {
 	$init(DOM2DTM);
+	$useLocalCurrentObjectStackCache();
 	switch ($nc(node)->getNodeType()) {
 	case $Node::DOCUMENT_FRAGMENT_NODE:
 		{}
@@ -614,6 +621,7 @@ $String* DOM2DTM::getNodeName(int32_t nodeHandle) {
 }
 
 $String* DOM2DTM::getNodeNameX(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, nullptr);
 	int16_t type = getNodeType(nodeHandle);
 	switch (type) {
@@ -653,6 +661,7 @@ $String* DOM2DTM::getNodeNameX(int32_t nodeHandle) {
 }
 
 $String* DOM2DTM::getLocalName(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	{
 		int32_t id = makeNodeIdentity(nodeHandle);
 		if ($DTM::NULL == id) {
@@ -674,6 +683,7 @@ $String* DOM2DTM::getLocalName(int32_t nodeHandle) {
 }
 
 $String* DOM2DTM::getPrefix(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	int16_t type = getNodeType(nodeHandle);
 	switch (type) {
@@ -719,6 +729,7 @@ $String* DOM2DTM::getNamespaceURI(int32_t nodeHandle) {
 }
 
 $Node* DOM2DTM::logicalNextDOMTextNode($Node* n$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, n, n$renamed);
 	$var($Node, p, $nc(n)->getNextSibling());
 	if (p == nullptr) {
@@ -747,6 +758,7 @@ $Node* DOM2DTM::logicalNextDOMTextNode($Node* n$renamed) {
 }
 
 $String* DOM2DTM::getNodeValue(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t type = _exptype(makeNodeIdentity(nodeHandle));
 	type = ($DTM::NULL != type) ? getNodeType(nodeHandle) : (int16_t)$DTM::NULL;
 	if ($DTM::TEXT_NODE != type && $DTM::CDATA_SECTION_NODE != type) {
@@ -769,6 +781,7 @@ $String* DOM2DTM::getNodeValue(int32_t nodeHandle) {
 }
 
 $String* DOM2DTM::getDocumentTypeDeclarationSystemIdentifier() {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, nullptr);
 	if ($nc(this->m_root)->getNodeType() == $Node::DOCUMENT_NODE) {
 		$assign(doc, $cast($Document, this->m_root));
@@ -785,6 +798,7 @@ $String* DOM2DTM::getDocumentTypeDeclarationSystemIdentifier() {
 }
 
 $String* DOM2DTM::getDocumentTypeDeclarationPublicIdentifier() {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, nullptr);
 	if ($nc(this->m_root)->getNodeType() == $Node::DOCUMENT_NODE) {
 		$assign(doc, $cast($Document, this->m_root));
@@ -801,6 +815,7 @@ $String* DOM2DTM::getDocumentTypeDeclarationPublicIdentifier() {
 }
 
 int32_t DOM2DTM::getElementById($String* elementId) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, ($nc(this->m_root)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, this->m_root) : $nc(this->m_root)->getOwnerDocument());
 	if (nullptr != doc) {
 		$var($Node, elem, doc->getElementById(elementId));
@@ -823,6 +838,7 @@ int32_t DOM2DTM::getElementById($String* elementId) {
 }
 
 $String* DOM2DTM::getUnparsedEntityURI($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, url, ""_s);
 	$var($Document, doc, ($nc(this->m_root)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, this->m_root) : $nc(this->m_root)->getOwnerDocument());
 	if (nullptr != doc) {
@@ -895,6 +911,7 @@ bool DOM2DTM::isSpace(char16_t ch) {
 }
 
 void DOM2DTM::dispatchCharactersEvents(int32_t nodeHandle, $ContentHandler* ch, bool normalize) {
+	$useLocalCurrentObjectStackCache();
 	if (normalize) {
 		$var($XMLString, str, getStringValue(nodeHandle));
 		$assign(str, $nc(str)->fixWhiteSpace(true, true, false));
@@ -913,6 +930,7 @@ void DOM2DTM::dispatchCharactersEvents(int32_t nodeHandle, $ContentHandler* ch, 
 
 void DOM2DTM::dispatchNodeData($Node* node, $ContentHandler* ch, int32_t depth) {
 	$init(DOM2DTM);
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($String, str, nullptr)
 		switch ($nc(node)->getNodeType()) {
@@ -964,6 +982,7 @@ void DOM2DTM::dispatchNodeData($Node* node, $ContentHandler* ch, int32_t depth) 
 }
 
 void DOM2DTM::dispatchToEvents(int32_t nodeHandle, $ContentHandler* ch) {
+	$useLocalCurrentObjectStackCache();
 	$var($TreeWalker, treeWalker, this->m_walker);
 	$var($ContentHandler, prevCH, $nc(treeWalker)->getContentHandler());
 	if (nullptr != prevCH) {

@@ -309,6 +309,7 @@ $NodeIterator* DocumentImpl::createNodeIterator($Node* root, int16_t whatToShow,
 }
 
 $NodeIterator* DocumentImpl::createNodeIterator($Node* root, int32_t whatToShow, $NodeFilter* filter, bool entityReferenceExpansion) {
+	$useLocalCurrentObjectStackCache();
 	if (root == nullptr) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NOT_SUPPORTED_ERR"_s, nullptr));
@@ -365,6 +366,7 @@ void DocumentImpl::removeRange($Range* range) {
 }
 
 void DocumentImpl::replacedText($NodeImpl* node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ranges != nullptr) {
 		int32_t size = $nc(this->ranges)->size();
 		for (int32_t i = 0; i != size; ++i) {
@@ -374,6 +376,7 @@ void DocumentImpl::replacedText($NodeImpl* node) {
 }
 
 void DocumentImpl::deletedText($NodeImpl* node, int32_t offset, int32_t count) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ranges != nullptr) {
 		int32_t size = $nc(this->ranges)->size();
 		for (int32_t i = 0; i != size; ++i) {
@@ -383,6 +386,7 @@ void DocumentImpl::deletedText($NodeImpl* node, int32_t offset, int32_t count) {
 }
 
 void DocumentImpl::insertedText($NodeImpl* node, int32_t offset, int32_t count) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ranges != nullptr) {
 		int32_t size = $nc(this->ranges)->size();
 		for (int32_t i = 0; i != size; ++i) {
@@ -392,6 +396,7 @@ void DocumentImpl::insertedText($NodeImpl* node, int32_t offset, int32_t count) 
 }
 
 void DocumentImpl::splitData($Node* node, $Node* newNode, int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	if (this->ranges != nullptr) {
 		int32_t size = $nc(this->ranges)->size();
 		for (int32_t i = 0; i != size; ++i) {
@@ -446,6 +451,7 @@ $List* DocumentImpl::getEventListeners($NodeImpl* n) {
 }
 
 void DocumentImpl::addEventListener($NodeImpl* node, $String* type, $EventListener* listener, bool useCapture) {
+	$useLocalCurrentObjectStackCache();
 	if (type == nullptr || $nc(type)->equals(""_s) || listener == nullptr) {
 		return;
 	}
@@ -467,6 +473,7 @@ void DocumentImpl::addEventListener($NodeImpl* node, $String* type, $EventListen
 }
 
 void DocumentImpl::removeEventListener($NodeImpl* node, $String* type, $EventListener* listener, bool useCapture) {
+	$useLocalCurrentObjectStackCache();
 	if (type == nullptr || $nc(type)->equals(""_s) || listener == nullptr) {
 		return;
 	}
@@ -495,6 +502,7 @@ void DocumentImpl::removeEventListener($NodeImpl* node, $String* type, $EventLis
 }
 
 void DocumentImpl::copyEventListeners($NodeImpl* src, $NodeImpl* tgt) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, nodeListeners, getEventListeners(src));
 	if (nodeListeners == nullptr) {
 		return;
@@ -503,6 +511,7 @@ void DocumentImpl::copyEventListeners($NodeImpl* src, $NodeImpl* tgt) {
 }
 
 bool DocumentImpl::dispatchEvent($NodeImpl* node, $Event* event) {
+	$useLocalCurrentObjectStackCache();
 	if (event == nullptr) {
 		return false;
 	}
@@ -606,6 +615,7 @@ bool DocumentImpl::dispatchEvent($NodeImpl* node, $Event* event) {
 }
 
 void DocumentImpl::dispatchEventToSubtree($Node* n, $Event* e) {
+	$useLocalCurrentObjectStackCache();
 	$nc(($cast($NodeImpl, n)))->dispatchEvent(e);
 	if ($nc(n)->getNodeType() == $Node::ELEMENT_NODE) {
 		$var($NamedNodeMap, a, n->getAttributes());
@@ -617,6 +627,7 @@ void DocumentImpl::dispatchEventToSubtree($Node* n, $Event* e) {
 }
 
 void DocumentImpl::dispatchingEventToSubtree($Node* n, $Event* e) {
+	$useLocalCurrentObjectStackCache();
 	if (n == nullptr) {
 		return;
 	}
@@ -640,6 +651,7 @@ void DocumentImpl::dispatchAggregateEvents($NodeImpl* node, $DocumentImpl$Enclos
 }
 
 void DocumentImpl::dispatchAggregateEvents($NodeImpl* node, $AttrImpl* enclosingAttr, $String* oldvalue, int16_t change) {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeImpl, owner, nullptr);
 	if (enclosingAttr != nullptr) {
 		$init($MutationEventImpl);
@@ -674,6 +686,7 @@ void DocumentImpl::dispatchAggregateEvents($NodeImpl* node, $AttrImpl* enclosing
 }
 
 void DocumentImpl::saveEnclosingAttr($NodeImpl* node) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, savedEnclosingAttr, nullptr);
 	$init($MutationEventImpl);
 	$var($LCount, lc, $LCount::lookup($MutationEventImpl::DOM_ATTR_MODIFIED));
@@ -710,6 +723,7 @@ void DocumentImpl::modifyingCharacterData($NodeImpl* node, bool replace) {
 }
 
 void DocumentImpl::modifiedCharacterData($NodeImpl* node, $String* oldvalue, $String* value, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	if (this->mutationEvents) {
 		if (!replace) {
 			$init($MutationEventImpl);
@@ -737,6 +751,7 @@ void DocumentImpl::insertingNode($NodeImpl* node, bool replace) {
 }
 
 void DocumentImpl::insertedNode($NodeImpl* node, $NodeImpl* newInternal, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	if (this->mutationEvents) {
 		$init($MutationEventImpl);
 		$var($LCount, lc, $LCount::lookup($MutationEventImpl::DOM_NODE_INSERTED));
@@ -781,6 +796,7 @@ void DocumentImpl::insertedNode($NodeImpl* node, $NodeImpl* newInternal, bool re
 }
 
 void DocumentImpl::removingNode($NodeImpl* node, $NodeImpl* oldChild, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	if (this->iterators != nullptr) {
 		int32_t size = $nc(this->iterators)->size();
 		for (int32_t i = 0; i != size; ++i) {
@@ -870,6 +886,7 @@ void DocumentImpl::setAttrNode($AttrImpl* attr, $AttrImpl* previous) {
 }
 
 void DocumentImpl::removedAttrNode($AttrImpl* attr, $NodeImpl* oldOwner, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (this->mutationEvents) {
 		$init($MutationEventImpl);
 		$var($LCount, lc, $LCount::lookup($MutationEventImpl::DOM_ATTR_MODIFIED));
@@ -889,6 +906,7 @@ void DocumentImpl::renamedElement($Element* oldEl, $Element* newEl) {
 }
 
 void DocumentImpl::writeObject($ObjectOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$var($Vector, it, (this->iterators == nullptr) ? ($Vector*)nullptr : $new($Vector, static_cast<$Collection*>(this->iterators)));
 	$var($Vector, r, (this->ranges == nullptr) ? ($Vector*)nullptr : $new($Vector, static_cast<$Collection*>(this->ranges)));
 	$var($Hashtable, el, nullptr);
@@ -914,6 +932,7 @@ void DocumentImpl::writeObject($ObjectOutputStream* out) {
 }
 
 void DocumentImpl::readObject($ObjectInputStream* in) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectInputStream$GetField, gf, $nc(in)->readFields());
 	$var($Vector, it, $cast($Vector, $nc(gf)->get("iterators"_s, ($Object*)nullptr)));
 	$var($Vector, r, $cast($Vector, gf->get("ranges"_s, ($Object*)nullptr)));
@@ -941,6 +960,7 @@ void DocumentImpl::readObject($ObjectInputStream* in) {
 }
 
 void clinit$DocumentImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 		$load($Vector);
 		$load($Hashtable);
 		$init($Boolean);

@@ -167,6 +167,7 @@ $Object* AxesWalker::clone() {
 }
 
 AxesWalker* AxesWalker::cloneDeep($WalkingIterator* cloneOwner, $List* cloneList) {
+	$useLocalCurrentObjectStackCache();
 	$var(AxesWalker, clone, findClone(this, cloneList));
 	if (nullptr != clone) {
 		return clone;
@@ -225,6 +226,7 @@ int32_t AxesWalker::getAnalysisBits() {
 }
 
 void AxesWalker::setRoot(int32_t root) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, $nc($(wi()))->getXPathContext());
 	$set(this, m_dtm, $nc(xctxt)->getDTM(root));
 	$set(this, m_traverser, $nc(this->m_dtm)->getAxisTraverser(this->m_axis));
@@ -280,6 +282,7 @@ int32_t AxesWalker::getNextNode() {
 }
 
 int32_t AxesWalker::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	int32_t nextNode = $DTM::NULL;
 	$var(AxesWalker, walker, $nc($(wi()))->getLastUsedWalker());
 	while (true) {
@@ -309,6 +312,7 @@ int32_t AxesWalker::nextNode() {
 }
 
 int32_t AxesWalker::getLastPos($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t pos = getProximityPosition();
 	$var(AxesWalker, walker, nullptr);
 	try {
@@ -347,6 +351,7 @@ void AxesWalker::setDefaultDTM($DTM* dtm) {
 }
 
 $DTM* AxesWalker::getDTM(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	return $nc($($nc($(wi()))->getXPathContext()))->getDTM(node);
 }
 

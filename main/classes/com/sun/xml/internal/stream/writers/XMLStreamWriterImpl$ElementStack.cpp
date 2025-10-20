@@ -75,6 +75,7 @@ $Object* allocate$XMLStreamWriterImpl$ElementStack($Class* clazz) {
 }
 
 void XMLStreamWriterImpl$ElementStack::init$($XMLStreamWriterImpl* this$0) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, this$0, this$0);
 	$set(this, fElements, $new($XMLStreamWriterImpl$ElementStateArray, 10));
 	for (int32_t i = 0; i < $nc(this->fElements)->length; ++i) {
@@ -83,6 +84,7 @@ void XMLStreamWriterImpl$ElementStack::init$($XMLStreamWriterImpl* this$0) {
 }
 
 $XMLStreamWriterImpl$ElementState* XMLStreamWriterImpl$ElementStack::push($XMLStreamWriterImpl$ElementState* element) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDepth == $nc(this->fElements)->length) {
 		$var($XMLStreamWriterImpl$ElementStateArray, array, $new($XMLStreamWriterImpl$ElementStateArray, $nc(this->fElements)->length * 2));
 		$System::arraycopy(this->fElements, 0, array, 0, this->fDepth);
@@ -96,6 +98,7 @@ $XMLStreamWriterImpl$ElementState* XMLStreamWriterImpl$ElementStack::push($XMLSt
 }
 
 $XMLStreamWriterImpl$ElementState* XMLStreamWriterImpl$ElementStack::push($String* prefix, $String* localpart, $String* rawname, $String* uri, bool isEmpty) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDepth == $nc(this->fElements)->length) {
 		$var($XMLStreamWriterImpl$ElementStateArray, array, $new($XMLStreamWriterImpl$ElementStateArray, $nc(this->fElements)->length * 2));
 		$System::arraycopy(this->fElements, 0, array, 0, this->fDepth);

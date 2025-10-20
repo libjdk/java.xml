@@ -121,6 +121,7 @@ bool DTMAxisIteratorBase::isReverse() {
 }
 
 $DTMAxisIterator* DTMAxisIteratorBase::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(DTMAxisIteratorBase, clone, $cast(DTMAxisIteratorBase, $DTMAxisIterator::clone()));
 		$nc(clone)->_isRestartable = false;

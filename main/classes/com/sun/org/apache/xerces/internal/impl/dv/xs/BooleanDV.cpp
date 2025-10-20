@@ -75,6 +75,7 @@ int16_t BooleanDV::getAllowedFacets() {
 }
 
 $Object* BooleanDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($Boolean, ret, nullptr);
 	bool var$0 = $nc(content)->equals($nc(BooleanDV::fValueSpace)->get(0));
 	if (var$0 || $nc(content)->equals($nc(BooleanDV::fValueSpace)->get(2))) {

@@ -82,6 +82,7 @@ void DOMWSFilter::init$($AbstractTranslet* translet) {
 }
 
 int16_t DOMWSFilter::getShouldStripSpace(int32_t node, $DTM* dtm) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_filter != nullptr && $instanceOf($DOM, dtm)) {
 		$var($DOM, dom, $cast($DOM, dtm));
 		int32_t type = 0;

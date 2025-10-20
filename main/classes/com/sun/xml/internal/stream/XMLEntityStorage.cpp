@@ -183,6 +183,7 @@ $Map* XMLEntityStorage::getEntities() {
 }
 
 void XMLEntityStorage::addInternalEntity($String* name, $String* text) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc(this->fEntities)->containsKey(name)) {
 		$var($Entity, entity, $new($Entity$InternalEntity, name, text, this->fInExternalSubset));
 		$nc(this->fEntities)->put(name, entity);
@@ -193,6 +194,7 @@ void XMLEntityStorage::addInternalEntity($String* name, $String* text) {
 }
 
 void XMLEntityStorage::addExternalEntity($String* name, $String* publicId, $String* literalSystemId, $String* baseSystemId$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, baseSystemId, baseSystemId$renamed);
 	if (!$nc(this->fEntities)->containsKey(name)) {
 		if (baseSystemId == nullptr) {
@@ -226,6 +228,7 @@ bool XMLEntityStorage::isEntityDeclInExternalSubset($String* entityName) {
 }
 
 void XMLEntityStorage::addUnparsedEntity($String* name, $String* publicId, $String* systemId, $String* baseSystemId, $String* notation) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fCurrentEntity, $nc(this->fEntityManager)->getCurrentEntity());
 	if (!$nc(this->fEntities)->containsKey(name)) {
 		$var($Entity, entity, $new($Entity$ExternalEntity, name, $$new($XMLResourceIdentifierImpl, publicId, systemId, baseSystemId, nullptr), notation, this->fInExternalSubset));
@@ -258,6 +261,7 @@ $String* XMLEntityStorage::getUserDir() {
 	$load(XMLEntityStorage);
 	$synchronized(class$) {
 		$init(XMLEntityStorage);
+		$useLocalCurrentObjectStackCache();
 		$var($String, userDir, ""_s);
 		try {
 			$assign(userDir, $SecuritySupport::getSystemProperty("user.dir"_s));
@@ -335,6 +339,7 @@ $String* XMLEntityStorage::getUserDir() {
 
 $String* XMLEntityStorage::expandSystemId($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityStorage);
+	$useLocalCurrentObjectStackCache();
 	if (systemId == nullptr || $nc(systemId)->length() == 0) {
 		return systemId;
 	}

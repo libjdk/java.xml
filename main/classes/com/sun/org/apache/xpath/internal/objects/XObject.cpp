@@ -235,10 +235,12 @@ int32_t XObject::getType() {
 }
 
 $String* XObject::getTypeString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"#UNKNOWN ("_s, $($nc($of($(object())))->getClass()->getName()), ")"_s});
 }
 
 double XObject::num() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	error($XPATHErrorResources::ER_CANT_CONVERT_TO_NUMBER, $$new($ObjectArray, {$($of(getTypeString()))}));
 	return 0.0;
@@ -249,6 +251,7 @@ double XObject::numWithSideEffects() {
 }
 
 bool XObject::bool$() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	error($XPATHErrorResources::ER_CANT_CONVERT_TO_NUMBER, $$new($ObjectArray, {$($of(getTypeString()))}));
 	return false;
@@ -259,6 +262,7 @@ bool XObject::boolWithSideEffects() {
 }
 
 $XMLString* XObject::xstr() {
+	$useLocalCurrentObjectStackCache();
 	return $nc($($XMLStringFactoryImpl::getFactory()))->newstr($(str()));
 }
 
@@ -271,6 +275,7 @@ $String* XObject::toString() {
 }
 
 int32_t XObject::rtf($XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	int32_t result = rtf();
 	if ($DTM::NULL == result) {
 		$var($DTM, frag, $nc(support)->createDocumentFragment());
@@ -281,6 +286,7 @@ int32_t XObject::rtf($XPathContext* support) {
 }
 
 $DocumentFragment* XObject::rtree($XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	$var($DocumentFragment, docFrag, nullptr);
 	int32_t result = rtf();
 	if ($DTM::NULL == result) {
@@ -307,6 +313,7 @@ $Object* XObject::object() {
 }
 
 $DTMIterator* XObject::iter() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	error($XPATHErrorResources::ER_CANT_CONVERT_TO_NODELIST, $$new($ObjectArray, {$($of(getTypeString()))}));
 	return nullptr;
@@ -317,24 +324,28 @@ XObject* XObject::getFresh() {
 }
 
 $NodeIterator* XObject::nodeset() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	error($XPATHErrorResources::ER_CANT_CONVERT_TO_NODELIST, $$new($ObjectArray, {$($of(getTypeString()))}));
 	return nullptr;
 }
 
 $NodeList* XObject::nodelist() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	error($XPATHErrorResources::ER_CANT_CONVERT_TO_NODELIST, $$new($ObjectArray, {$($of(getTypeString()))}));
 	return nullptr;
 }
 
 $NodeSetDTM* XObject::mutableNodeset() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	error($XPATHErrorResources::ER_CANT_CONVERT_TO_MUTABLENODELIST, $$new($ObjectArray, {$($of(getTypeString()))}));
 	return $cast($NodeSetDTM, this->m_obj);
 }
 
 $Object* XObject::castToType(int32_t t, $XPathContext* support) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, result, nullptr);
 	switch (t) {
 	case XObject::CLASS_STRING:

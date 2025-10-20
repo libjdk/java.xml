@@ -195,6 +195,7 @@ $XObject* XPathImpl::eval($String* expression, Object$* contextItem) {
 }
 
 $Object* XPathImpl::evaluate($String* expression, Object$* item, $QName* returnType) {
+	$useLocalCurrentObjectStackCache();
 	requireNonNull(expression, "XPath expression"_s);
 	isSupported(returnType);
 	try {
@@ -221,6 +222,7 @@ $String* XPathImpl::evaluate($String* expression, Object$* item) {
 }
 
 $XPathExpression* XPathImpl::compile($String* expression) {
+	$useLocalCurrentObjectStackCache();
 	requireNonNull(expression, "XPath expression"_s);
 	try {
 		$var($1XPath, xpath, $new($1XPath, expression, nullptr, this->prefixResolver, $1XPath::SELECT));
@@ -234,6 +236,7 @@ $XPathExpression* XPathImpl::compile($String* expression) {
 }
 
 $Object* XPathImpl::evaluate($String* expression, $InputSource* source, $QName* returnType) {
+	$useLocalCurrentObjectStackCache();
 	isSupported(returnType);
 	try {
 		$var($Document, document, getDocument(source));
@@ -263,6 +266,7 @@ void XPathImpl::reset() {
 }
 
 $Object* XPathImpl::evaluateExpression($String* expression, Object$* item, $Class* type) {
+	$useLocalCurrentObjectStackCache();
 	isSupportedClassType(type);
 	try {
 		$var($XObject, resultObject, eval(expression, item));

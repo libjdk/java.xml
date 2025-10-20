@@ -73,6 +73,7 @@ void Constant$1::init$() {
 }
 
 bool Constant$1::equals(Object$* o1, Object$* o2) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, THIS, $cast($Constant, o1));
 	$var($Constant, THAT, $cast($Constant, o2));
 	$var($Object, var$0, $of($nc(THIS)->toString()));
@@ -80,6 +81,7 @@ bool Constant$1::equals(Object$* o1, Object$* o2) {
 }
 
 int32_t Constant$1::hashCode(Object$* o) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, THIS, $cast($Constant, o));
 	return $nc($($nc(THIS)->toString()))->hashCode();
 }

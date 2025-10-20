@@ -64,6 +64,7 @@ $Object* allocate$XMLGrammarParser($Class* clazz) {
 }
 
 void XMLGrammarParser::init$($SymbolTable* symbolTable) {
+	$useLocalCurrentObjectStackCache();
 	$XMLParser::init$($$new($XIncludeAwareParserConfiguration));
 	$init($Constants);
 	$nc(this->fConfiguration)->setProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::SYMBOL_TABLE_PROPERTY}), symbolTable);

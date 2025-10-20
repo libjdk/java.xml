@@ -93,6 +93,7 @@ void XMLGregorianCalendarImpl$Parser::init$($XMLGregorianCalendarImpl* this$0, $
 }
 
 void XMLGregorianCalendarImpl$Parser::parse() {
+	$useLocalCurrentObjectStackCache();
 	while (this->fidx < this->flen) {
 		char16_t fch = $nc(this->format)->charAt(this->fidx++);
 		if (fch != u'%') {
@@ -198,6 +199,7 @@ int32_t XMLGregorianCalendarImpl$Parser::parseInt(int32_t minDigits, int32_t max
 }
 
 void XMLGregorianCalendarImpl$Parser::parseYear() {
+	$useLocalCurrentObjectStackCache();
 	int32_t vstart = this->vidx;
 	int32_t sign = 0;
 	if (peek() == u'-') {

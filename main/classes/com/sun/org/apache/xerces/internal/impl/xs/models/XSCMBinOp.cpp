@@ -94,6 +94,7 @@ bool XSCMBinOp::isNullable() {
 }
 
 void XSCMBinOp::calcFirstPos($CMStateSet* toSet) {
+	$useLocalCurrentObjectStackCache();
 	if (type() == $XSModelGroupImpl::MODELGROUP_CHOICE) {
 		$nc(toSet)->setTo($($nc(this->fLeftChild)->firstPos()));
 		toSet->union$($($nc(this->fRightChild)->firstPos()));
@@ -108,6 +109,7 @@ void XSCMBinOp::calcFirstPos($CMStateSet* toSet) {
 }
 
 void XSCMBinOp::calcLastPos($CMStateSet* toSet) {
+	$useLocalCurrentObjectStackCache();
 	if (type() == $XSModelGroupImpl::MODELGROUP_CHOICE) {
 		$nc(toSet)->setTo($($nc(this->fLeftChild)->lastPos()));
 		toSet->union$($($nc(this->fRightChild)->lastPos()));

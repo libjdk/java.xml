@@ -125,6 +125,7 @@ void Choose::display(int32_t indent) {
 }
 
 void Choose::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, whenElements, $new($ArrayList));
 	$var($Otherwise, otherwise, nullptr);
 	$var($Iterator, elements, this->elements());

@@ -76,6 +76,7 @@ void StringCall::init$($QName* fname, $List* arguments) {
 }
 
 $Type* StringCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	int32_t argc = argumentCount();
 	if (argc > 1) {
 		$init($ErrorMsg);
@@ -90,6 +91,7 @@ $Type* StringCall::typeCheck($SymbolTable* stable) {
 }
 
 void StringCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($Type, targ, nullptr);
 	if (argumentCount() == 0) {

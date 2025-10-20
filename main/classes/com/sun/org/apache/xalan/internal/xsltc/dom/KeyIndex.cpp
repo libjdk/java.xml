@@ -206,6 +206,7 @@ void KeyIndex::setRestartable(bool flag) {
 }
 
 void KeyIndex::add($String* value, int32_t node, int32_t rootNode) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_currentDocumentNode != rootNode) {
 		this->_currentDocumentNode = rootNode;
 		$set(this, _index, $new($HashMap));
@@ -235,6 +236,7 @@ void KeyIndex::merge(KeyIndex* other) {
 }
 
 void KeyIndex::lookupId(Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _nodes, nullptr);
 	$var($StringTokenizer, values, $new($StringTokenizer, $cast($String, value), " \n\t"_s));
 	while (values->hasMoreElements()) {
@@ -256,6 +258,7 @@ void KeyIndex::lookupId(Object$* value) {
 }
 
 $IntegerArray* KeyIndex::getDOMNodeById($String* id) {
+	$useLocalCurrentObjectStackCache();
 	$var($IntegerArray, nodes, nullptr);
 	if (this->_enhancedDOM != nullptr) {
 		int32_t ident = $nc(this->_enhancedDOM)->getElementById(id);
@@ -292,6 +295,7 @@ int32_t KeyIndex::next() {
 }
 
 int32_t KeyIndex::containsID(int32_t node, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, string, $cast($String, value));
 	int32_t rootHandle = $nc($($nc($($nc(this->_dom)->getAxisIterator($Axis::ROOT)))->setStartNode(node)))->next();
 	$var($Map, index, $cast($Map, $nc(this->_rootToIndexMap)->get($($Integer::valueOf(rootHandle)))));
@@ -313,6 +317,7 @@ int32_t KeyIndex::containsID(int32_t node, Object$* value) {
 }
 
 int32_t KeyIndex::containsKey(int32_t node, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	int32_t rootHandle = $nc($($nc($($nc(this->_dom)->getAxisIterator($Axis::ROOT)))->setStartNode(node)))->next();
 	$var($Map, index, $cast($Map, $nc(this->_rootToIndexMap)->get($($Integer::valueOf(rootHandle)))));
 	if (index != nullptr) {
@@ -370,6 +375,7 @@ $DTMAxisIterator* KeyIndex::cloneIterator() {
 }
 
 void KeyIndex::setDom($DOM* dom$renamed, int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	$var($DOM, dom, dom$renamed);
 	$set(this, _dom, dom);
 	if ($instanceOf($MultiDOM, dom)) {

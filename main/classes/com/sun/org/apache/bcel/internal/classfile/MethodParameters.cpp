@@ -68,6 +68,7 @@ $Object* allocate$MethodParameters($Class* clazz) {
 }
 
 void MethodParameters::init$(int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::init$($Const::ATTR_METHOD_PARAMETERS, name_index, length, constant_pool);
 	$set(this, parameters, $new($MethodParameterArray, 0));
 	int32_t parameters_count = $nc(input)->readUnsignedByte();
@@ -90,6 +91,7 @@ void MethodParameters::accept($Visitor* v) {
 }
 
 $Attribute* MethodParameters::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(MethodParameters, c, $cast(MethodParameters, clone()));
 	$set($nc(c), parameters, $new($MethodParameterArray, $nc(this->parameters)->length));
 	for (int32_t i = 0; i < $nc(this->parameters)->length; ++i) {
@@ -100,6 +102,7 @@ $Attribute* MethodParameters::copy($ConstantPool* _constant_pool) {
 }
 
 void MethodParameters::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeByte($nc(this->parameters)->length);
 	{

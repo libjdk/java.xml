@@ -342,6 +342,7 @@ void ElementImpl::init$() {
 }
 
 void ElementImpl::rename($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -392,6 +393,7 @@ $Node* ElementImpl::cloneNode(bool deep) {
 }
 
 $String* ElementImpl::getBaseURI() {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -471,6 +473,7 @@ $String* ElementImpl::getTagName() {
 }
 
 void ElementImpl::normalize() {
+	$useLocalCurrentObjectStackCache();
 	if (isNormalized()) {
 		return;
 	}
@@ -521,6 +524,7 @@ void ElementImpl::removeAttribute($String* name) {
 }
 
 $Attr* ElementImpl::removeAttributeNode($Attr* oldAttr) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->ownerDocument$)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr));
@@ -538,6 +542,7 @@ $Attr* ElementImpl::removeAttributeNode($Attr* oldAttr) {
 }
 
 void ElementImpl::setAttribute($String* name, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->ownerDocument$)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr));
@@ -560,6 +565,7 @@ void ElementImpl::setAttribute($String* name, $String* value) {
 }
 
 $Attr* ElementImpl::setAttributeNode($Attr* newAttr) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -593,6 +599,7 @@ $String* ElementImpl::getAttributeNS($String* namespaceURI, $String* localName) 
 }
 
 void ElementImpl::setAttributeNS($String* namespaceURI, $String* qualifiedName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->ownerDocument$)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr));
@@ -662,6 +669,7 @@ $Attr* ElementImpl::getAttributeNodeNS($String* namespaceURI, $String* localName
 }
 
 $Attr* ElementImpl::setAttributeNodeNS($Attr* newAttr) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -723,6 +731,7 @@ $NodeList* ElementImpl::getElementsByTagNameNS($String* namespaceURI, $String* l
 }
 
 bool ElementImpl::isEqualNode($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	if (!$ParentNode::isEqualNode(arg)) {
 		return false;
 	}
@@ -757,6 +766,7 @@ bool ElementImpl::isEqualNode($Node* arg) {
 }
 
 void ElementImpl::setIdAttributeNode($Attr* at, bool makeId) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -781,6 +791,7 @@ void ElementImpl::setIdAttributeNode($Attr* at, bool makeId) {
 }
 
 void ElementImpl::setIdAttribute($String* name, bool makeId) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -811,6 +822,7 @@ void ElementImpl::setIdAttribute($String* name, bool makeId) {
 }
 
 void ElementImpl::setIdAttributeNS($String* namespaceURI$renamed, $String* localName, bool makeId) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespaceURI, namespaceURI$renamed);
 	if (needsSyncData()) {
 		synchronizeData();
@@ -905,6 +917,7 @@ void ElementImpl::reconcileDefaultAttributes() {
 }
 
 $NamedNodeMapImpl* ElementImpl::getDefaultAttributes() {
+	$useLocalCurrentObjectStackCache();
 	$var($DocumentTypeImpl, doctype, $cast($DocumentTypeImpl, $nc(this->ownerDocument$)->getDoctype()));
 	if (doctype == nullptr) {
 		return nullptr;
@@ -927,6 +940,7 @@ int32_t ElementImpl::getChildElementCount() {
 }
 
 $Element* ElementImpl::getFirstElementChild() {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, n, getFirstChild());
 	while (n != nullptr) {
 		{
@@ -952,6 +966,7 @@ $Element* ElementImpl::getFirstElementChild() {
 }
 
 $Element* ElementImpl::getLastElementChild() {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, n, getLastChild());
 	while (n != nullptr) {
 		{
@@ -977,6 +992,7 @@ $Element* ElementImpl::getLastElementChild() {
 }
 
 $Element* ElementImpl::getNextElementSibling() {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, n, getNextLogicalSibling(static_cast<$Node*>(static_cast<$NodeImpl*>(static_cast<$ChildNode*>(static_cast<$ParentNode*>(this))))));
 	while (n != nullptr) {
 		{
@@ -1002,6 +1018,7 @@ $Element* ElementImpl::getNextElementSibling() {
 }
 
 $Element* ElementImpl::getPreviousElementSibling() {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, n, getPreviousLogicalSibling(static_cast<$Node*>(static_cast<$NodeImpl*>(static_cast<$ChildNode*>(static_cast<$ParentNode*>(this))))));
 	while (n != nullptr) {
 		{
@@ -1027,6 +1044,7 @@ $Element* ElementImpl::getPreviousElementSibling() {
 }
 
 $Element* ElementImpl::getFirstElementChild($Node* n$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, n, n$renamed);
 	$var($Node, top, n);
 	while (n != nullptr) {
@@ -1052,6 +1070,7 @@ $Element* ElementImpl::getFirstElementChild($Node* n$renamed) {
 }
 
 $Element* ElementImpl::getLastElementChild($Node* n$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, n, n$renamed);
 	$var($Node, top, n);
 	while (n != nullptr) {
@@ -1077,6 +1096,7 @@ $Element* ElementImpl::getLastElementChild($Node* n$renamed) {
 }
 
 $Node* ElementImpl::getNextLogicalSibling($Node* n) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, next, $nc(n)->getNextSibling());
 	if (next == nullptr) {
 		$var($Node, parent, n->getParentNode());
@@ -1092,6 +1112,7 @@ $Node* ElementImpl::getNextLogicalSibling($Node* n) {
 }
 
 $Node* ElementImpl::getPreviousLogicalSibling($Node* n) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, prev, $nc(n)->getPreviousSibling());
 	if (prev == nullptr) {
 		$var($Node, parent, n->getParentNode());

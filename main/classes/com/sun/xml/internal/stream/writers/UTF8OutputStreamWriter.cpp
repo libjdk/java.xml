@@ -74,6 +74,7 @@ $String* UTF8OutputStreamWriter::getEncoding() {
 }
 
 void UTF8OutputStreamWriter::write(int32_t c) {
+	$useLocalCurrentObjectStackCache();
 	if (this->lastUTF16CodePoint != 0) {
 		int32_t uc = ((((int32_t)(this->lastUTF16CodePoint & (uint32_t)1023)) << 10) | ((int32_t)(c & (uint32_t)1023))) + 0x00010000;
 		if (uc < 0 || uc >= 0x00200000) {

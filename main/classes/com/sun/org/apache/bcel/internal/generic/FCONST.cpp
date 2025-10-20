@@ -117,6 +117,7 @@ void FCONST::init$() {
 }
 
 void FCONST::init$(float f) {
+	$useLocalCurrentObjectStackCache();
 	$Instruction::init$($Const::FCONST_0, (int16_t)1);
 	if (f == 0.0) {
 		$Instruction::setOpcode($Const::FCONST_0);

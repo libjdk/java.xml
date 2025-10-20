@@ -529,6 +529,7 @@ void DTDGrammar::endExternalSubset($Augmentations* augs) {
 }
 
 void DTDGrammar::elementDecl($String* name, $String* contentModel, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLElementDecl, tmpElementDecl, $cast($XMLElementDecl, $nc(this->fElementDeclTab)->get(name)));
 	if (tmpElementDecl != nullptr) {
 		if (tmpElementDecl->type == -1) {
@@ -566,6 +567,7 @@ void DTDGrammar::elementDecl($String* name, $String* contentModel, $Augmentation
 }
 
 void DTDGrammar::attributeDecl($String* elementName, $String* attributeName, $String* type, $StringArray* enumeration, $String* defaultType, $XMLString* defaultValue, $XMLString* nonNormalizedDefaultValue, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fElementDeclTab)->containsKey(elementName)) {
 	} else {
 		this->fCurrentElementIndex = createElementDecl();
@@ -630,6 +632,7 @@ void DTDGrammar::attributeDecl($String* elementName, $String* attributeName, $St
 }
 
 void DTDGrammar::internalEntityDecl($String* name, $XMLString* text, $XMLString* nonNormalizedText, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	int32_t entityIndex = getEntityDeclIndex(name);
 	if (entityIndex == -1) {
 		entityIndex = createEntityDecl();
@@ -642,6 +645,7 @@ void DTDGrammar::internalEntityDecl($String* name, $XMLString* text, $XMLString*
 }
 
 void DTDGrammar::externalEntityDecl($String* name, $XMLResourceIdentifier* identifier, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	int32_t entityIndex = getEntityDeclIndex(name);
 	if (entityIndex == -1) {
 		entityIndex = createEntityDecl();
@@ -657,6 +661,7 @@ void DTDGrammar::externalEntityDecl($String* name, $XMLResourceIdentifier* ident
 }
 
 void DTDGrammar::unparsedEntityDecl($String* name, $XMLResourceIdentifier* identifier, $String* notation, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLEntityDecl, entityDecl, $new($XMLEntityDecl));
 	bool isPE = $nc(name)->startsWith("%"_s);
 	bool inExternal = (this->fReadingExternalDTD || this->fPEDepth > 0);
@@ -672,6 +677,7 @@ void DTDGrammar::unparsedEntityDecl($String* name, $XMLResourceIdentifier* ident
 }
 
 void DTDGrammar::notationDecl($String* name, $XMLResourceIdentifier* identifier, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLNotationDecl, notationDecl, $new($XMLNotationDecl));
 	$var($String, var$0, name);
 	$var($String, var$1, $nc(identifier)->getPublicId());
@@ -685,6 +691,7 @@ void DTDGrammar::notationDecl($String* name, $XMLResourceIdentifier* identifier,
 }
 
 void DTDGrammar::endDTD($Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	this->fIsImmutable = true;
 	if ($nc(this->fGrammarDescription)->getRootName() == nullptr) {
 		int32_t chunk = 0;
@@ -991,6 +998,7 @@ int32_t DTDGrammar::getContentSpecIndex(int32_t elementDeclIndex) {
 }
 
 $String* DTDGrammar::getContentSpecAsString(int32_t elementDeclIndex) {
+	$useLocalCurrentObjectStackCache();
 	if (elementDeclIndex < 0 || elementDeclIndex >= this->fElementDeclCount) {
 		return nullptr;
 	}
@@ -1140,6 +1148,7 @@ $String* DTDGrammar::getContentSpecAsString(int32_t elementDeclIndex) {
 }
 
 void DTDGrammar::printElements() {
+	$useLocalCurrentObjectStackCache();
 	int32_t elementDeclIndex = 0;
 	$var($XMLElementDecl, elementDecl, $new($XMLElementDecl));
 	while (getElementDecl(elementDeclIndex++, elementDecl)) {
@@ -1180,6 +1189,7 @@ void DTDGrammar::addContentSpecToElement($XMLElementDecl* elementDecl) {
 }
 
 $ContentModelValidator* DTDGrammar::getElementContentModelValidator(int32_t elementDeclIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t chunk = $sr(elementDeclIndex, DTDGrammar::CHUNK_SHIFT);
 	int32_t index = (int32_t)(elementDeclIndex & (uint32_t)DTDGrammar::CHUNK_MASK);
 	$var($ContentModelValidator, contentModel, $nc($nc(this->fElementDeclContentModelValidator)->get(chunk))->get(index));
@@ -1378,6 +1388,7 @@ int32_t DTDGrammar::addUniqueLeafNode($String* elementName) {
 }
 
 int32_t DTDGrammar::addContentSpecNode(int16_t nodeType, int32_t leftNodeIndex, int32_t rightNodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t contentSpecIndex = createContentSpec();
 	$var($ints, leftIntArray, $new($ints, 1));
 	$var($ints, rightIntArray, $new($ints, 1));
@@ -1389,6 +1400,7 @@ int32_t DTDGrammar::addContentSpecNode(int16_t nodeType, int32_t leftNodeIndex, 
 }
 
 void DTDGrammar::initializeContentModelStack() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fOpStack == nullptr) {
 		$set(this, fOpStack, $new($shorts, 8));
 		$set(this, fNodeIndexStack, $new($ints, 8));
@@ -1552,6 +1564,7 @@ void DTDGrammar::printAttribute(int32_t attributeDeclIndex) {
 
 $ContentModelValidator* DTDGrammar::createChildModel(int32_t contentSpecIndex) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$var($XMLContentSpec, contentSpec, $new($XMLContentSpec));
 		getContentSpec(contentSpecIndex, contentSpec);
 		if (((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY || ((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_OTHER || ((int32_t)(contentSpec->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_LOCAL) {
@@ -1589,6 +1602,7 @@ $ContentModelValidator* DTDGrammar::createChildModel(int32_t contentSpecIndex) {
 }
 
 $CMNode* DTDGrammar::buildSyntaxTree(int32_t startNode, $XMLContentSpec* contentSpec) {
+	$useLocalCurrentObjectStackCache();
 	$var($CMNode, nodeRet, nullptr);
 	getContentSpec(startNode, contentSpec);
 	if (((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY) {
@@ -1619,6 +1633,7 @@ $CMNode* DTDGrammar::buildSyntaxTree(int32_t startNode, $XMLContentSpec* content
 }
 
 void DTDGrammar::contentSpecTree(int32_t contentSpecIndex, $XMLContentSpec* contentSpec, $DTDGrammar$ChildrenList* children) {
+	$useLocalCurrentObjectStackCache();
 	getContentSpec(contentSpecIndex, contentSpec);
 	if ($nc(contentSpec)->type == $XMLContentSpec::CONTENTSPECNODE_LEAF || ((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY || ((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_LOCAL || ((int32_t)($nc(contentSpec)->type & (uint32_t)15)) == $XMLContentSpec::CONTENTSPECNODE_ANY_OTHER) {
 		if ($nc(children)->length == $nc(children->qname)->length) {
@@ -1654,6 +1669,7 @@ void DTDGrammar::contentSpecTree(int32_t contentSpecIndex, $XMLContentSpec* cont
 }
 
 void DTDGrammar::ensureElementDeclCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (chunk >= $nc(this->fElementDeclName)->length) {
 		$set(this, fElementDeclIsExternal, resize(this->fElementDeclIsExternal, $nc(this->fElementDeclIsExternal)->length * 2));
 		$set(this, fElementDeclName, resize(this->fElementDeclName, $nc(this->fElementDeclName)->length * 2));
@@ -1676,6 +1692,7 @@ void DTDGrammar::ensureElementDeclCapacity(int32_t chunk) {
 }
 
 void DTDGrammar::ensureAttributeDeclCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (chunk >= $nc(this->fAttributeDeclName)->length) {
 		$set(this, fAttributeDeclIsExternal, resize(this->fAttributeDeclIsExternal, $nc(this->fAttributeDeclIsExternal)->length * 2));
 		$set(this, fAttributeDeclName, resize(this->fAttributeDeclName, $nc(this->fAttributeDeclName)->length * 2));
@@ -1702,6 +1719,7 @@ void DTDGrammar::ensureAttributeDeclCapacity(int32_t chunk) {
 }
 
 void DTDGrammar::ensureEntityDeclCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (chunk >= $nc(this->fEntityName)->length) {
 		$set(this, fEntityName, resize(this->fEntityName, $nc(this->fEntityName)->length * 2));
 		$set(this, fEntityValue, resize(this->fEntityValue, $nc(this->fEntityValue)->length * 2));
@@ -1726,6 +1744,7 @@ void DTDGrammar::ensureEntityDeclCapacity(int32_t chunk) {
 }
 
 void DTDGrammar::ensureNotationDeclCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (chunk >= $nc(this->fNotationName)->length) {
 		$set(this, fNotationName, resize(this->fNotationName, $nc(this->fNotationName)->length * 2));
 		$set(this, fNotationPublicId, resize(this->fNotationPublicId, $nc(this->fNotationPublicId)->length * 2));
@@ -1742,6 +1761,7 @@ void DTDGrammar::ensureNotationDeclCapacity(int32_t chunk) {
 }
 
 void DTDGrammar::ensureContentSpecCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (chunk >= $nc(this->fContentSpecType)->length) {
 		$set(this, fContentSpecType, resize(this->fContentSpecType, $nc(this->fContentSpecType)->length * 2));
 		$set(this, fContentSpecValue, resize(this->fContentSpecValue, $nc(this->fContentSpecValue)->length * 2));

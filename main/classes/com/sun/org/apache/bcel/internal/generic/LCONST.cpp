@@ -114,6 +114,7 @@ void LCONST::init$() {
 }
 
 void LCONST::init$(int64_t l) {
+	$useLocalCurrentObjectStackCache();
 	$Instruction::init$($Const::LCONST_0, (int16_t)1);
 	if (l == 0) {
 		$Instruction::setOpcode($Const::LCONST_0);

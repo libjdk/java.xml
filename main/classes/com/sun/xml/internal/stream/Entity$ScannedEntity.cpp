@@ -193,6 +193,7 @@ bool Entity$ScannedEntity::isUnparsed() {
 }
 
 $String* Entity$ScannedEntity::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, str, $new($StringBuffer));
 	str->append($$str({"name=\""_s, this->name, $$str(u'\"')}));
 	str->append($$str({",ch="_s, $$new($String, this->ch)}));

@@ -148,6 +148,7 @@ void StackMapEntry::finalize() {
 }
 
 void StackMapEntry::init$($DataInput* input, $ConstantPool* constantPool) {
+	$useLocalCurrentObjectStackCache();
 	StackMapEntry::init$((int32_t)($nc(input)->readByte() & (uint32_t)255), -1, nullptr, nullptr, constantPool);
 	if (this->frameType >= $Const::SAME_FRAME && this->frameType <= $Const::SAME_FRAME_MAX) {
 		this->byteCodeOffset = this->frameType - $Const::SAME_FRAME;
@@ -203,6 +204,7 @@ void StackMapEntry::init$(int32_t tag, int32_t byteCodeOffset, $StackMapTypeArra
 }
 
 void StackMapEntry::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$nc(file)->write(this->frameType);
 	if (this->frameType >= $Const::SAME_FRAME && this->frameType <= $Const::SAME_FRAME_MAX) {
 	} else if (this->frameType >= $Const::SAME_LOCALS_1_STACK_ITEM_FRAME && this->frameType <= $Const::SAME_LOCALS_1_STACK_ITEM_FRAME_MAX) {
@@ -259,6 +261,7 @@ void StackMapEntry::dump($DataOutputStream* file) {
 }
 
 $String* StackMapEntry::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, 64));
 	buf->append("("_s);
 	if (this->frameType >= $Const::SAME_FRAME && this->frameType <= $Const::SAME_FRAME_MAX) {
@@ -304,6 +307,7 @@ $String* StackMapEntry::toString() {
 }
 
 int32_t StackMapEntry::getMapEntrySize() {
+	$useLocalCurrentObjectStackCache();
 	if (this->frameType >= $Const::SAME_FRAME && this->frameType <= $Const::SAME_FRAME_MAX) {
 		return 1;
 	} else if (this->frameType >= $Const::SAME_LOCALS_1_STACK_ITEM_FRAME && this->frameType <= $Const::SAME_LOCALS_1_STACK_ITEM_FRAME_MAX) {
@@ -379,6 +383,7 @@ int32_t StackMapEntry::getFrameType() {
 }
 
 void StackMapEntry::setByteCodeOffset(int32_t new_offset) {
+	$useLocalCurrentObjectStackCache();
 	if (new_offset < 0 || new_offset > 32767) {
 		$throwNew($IllegalArgumentException, $$str({"Invalid StackMap offset: "_s, $$str(new_offset)}));
 	}
@@ -444,6 +449,7 @@ $StackMapTypeArray* StackMapEntry::getTypesOfStackItems() {
 }
 
 StackMapEntry* StackMapEntry::copy() {
+	$useLocalCurrentObjectStackCache();
 	$var(StackMapEntry, e, nullptr);
 	try {
 		$assign(e, $cast(StackMapEntry, clone()));

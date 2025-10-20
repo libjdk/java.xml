@@ -396,6 +396,7 @@ void XPathContext::init(bool overrideDefaultParser) {
 }
 
 void XPathContext::reset() {
+	$useLocalCurrentObjectStackCache();
 	releaseDTMXRTreeFrags();
 	if (this->m_rtfdtm_stack != nullptr) {
 		{
@@ -463,6 +464,7 @@ void XPathContext::setVarStack($VariableStack* varStack) {
 }
 
 $ErrorListener* XPathContext::getErrorListener() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (nullptr != this->m_errorListener) {
 		return this->m_errorListener;
@@ -684,6 +686,7 @@ int32_t XPathContext::getContextNode() {
 }
 
 $DTMIterator* XPathContext::getContextNodes() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DTMIterator, cnl, getContextNodeList());
 		if (nullptr != cnl) {
@@ -740,6 +743,7 @@ void XPathContext::pushRTFContext() {
 }
 
 void XPathContext::popRTFContext() {
+	$useLocalCurrentObjectStackCache();
 	int32_t previous = $nc(this->m_last_pushed_rtfdtm)->pop();
 	if (nullptr == this->m_rtfdtm_stack) {
 		return;
@@ -757,6 +761,7 @@ void XPathContext::popRTFContext() {
 }
 
 $DTMXRTreeFrag* XPathContext::getDTMXRTreeFrag(int32_t dtmIdentity) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_DTMXRTreeFrags == nullptr) {
 		$set(this, m_DTMXRTreeFrags, $new($HashMap));
 	}
@@ -770,6 +775,7 @@ $DTMXRTreeFrag* XPathContext::getDTMXRTreeFrag(int32_t dtmIdentity) {
 }
 
 void XPathContext::releaseDTMXRTreeFrags() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_DTMXRTreeFrags == nullptr) {
 		return;
 	}

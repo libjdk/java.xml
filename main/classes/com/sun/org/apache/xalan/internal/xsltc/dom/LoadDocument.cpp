@@ -128,6 +128,7 @@ void LoadDocument::init$() {
 
 $DTMAxisIterator* LoadDocument::documentF(Object$* arg1, $DTMAxisIterator* arg2, $String* xslURI, $AbstractTranslet* translet, $DOM* dom) {
 	$init(LoadDocument);
+	$useLocalCurrentObjectStackCache();
 	$var($String, baseURI, nullptr);
 	int32_t arg2FirstNode = $nc(arg2)->next();
 	if (arg2FirstNode == $DTMAxisIterator::END) {
@@ -160,6 +161,7 @@ $DTMAxisIterator* LoadDocument::documentF(Object$* arg1, $DTMAxisIterator* arg2,
 
 $DTMAxisIterator* LoadDocument::documentF(Object$* arg, $String* xslURI$renamed, $AbstractTranslet* translet, $DOM* dom) {
 	$init(LoadDocument);
+	$useLocalCurrentObjectStackCache();
 	$var($String, xslURI, xslURI$renamed);
 	try {
 		if ($instanceOf($String, arg)) {
@@ -206,6 +208,7 @@ $DTMAxisIterator* LoadDocument::document($String* uri, $String* base, $AbstractT
 
 $DTMAxisIterator* LoadDocument::document($String* uri$renamed, $String* base, $AbstractTranslet* translet, $DOM* dom, bool cacheDOM) {
 	$init(LoadDocument);
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, uri$renamed);
 	try {
 		$var($String, originalUri, uri);
@@ -266,6 +269,7 @@ $DTMAxisIterator* LoadDocument::document($String* uri$renamed, $String* base, $A
 
 $DTMAxisIterator* LoadDocument::document($DTMAxisIterator* arg1, $String* baseURI$renamed, $AbstractTranslet* translet, $DOM* dom) {
 	$init(LoadDocument);
+	$useLocalCurrentObjectStackCache();
 	$var($String, baseURI, baseURI$renamed);
 	$var($UnionIterator, union$, $new($UnionIterator, dom));
 	int32_t node = $DTM::NULL;
@@ -284,6 +288,7 @@ $DTMAxisIterator* LoadDocument::document($DTMAxisIterator* arg1, $String* baseUR
 
 $DTMAxisIterator* LoadDocument::document($DOM* newdom, $AbstractTranslet* translet, $DOM* dom) {
 	$init(LoadDocument);
+	$useLocalCurrentObjectStackCache();
 	$var($DTMManager, dtmManager, $nc(($cast($MultiDOM, dom)))->getDTMManager());
 	if (dtmManager != nullptr && $instanceOf($DTM, newdom)) {
 		$nc(($cast($DTM, newdom)))->migrateTo(dtmManager);

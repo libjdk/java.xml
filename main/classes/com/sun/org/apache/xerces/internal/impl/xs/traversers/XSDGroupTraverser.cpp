@@ -121,6 +121,7 @@ void XSDGroupTraverser::init$($XSDHandler* handler, $XSAttributeChecker* gAttrCh
 }
 
 $XSParticleDecl* XSDGroupTraverser::traverseLocal($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, false, schemaDoc));
 	$var($QName, refAttr, $cast($QName, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_REF)));
 	$var($XInt, minAttr, $cast($XInt, attrValues->get($XSAttributeChecker::ATTIDX_MINOCCURS)));
@@ -193,6 +194,7 @@ $XSParticleDecl* XSDGroupTraverser::traverseLocal($Element* elmNode, $XSDocument
 }
 
 $XSGroupDecl* XSDGroupTraverser::traverseGlobal($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, true, schemaDoc));
 	$var($String, strNameAttr, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	if (strNameAttr == nullptr) {

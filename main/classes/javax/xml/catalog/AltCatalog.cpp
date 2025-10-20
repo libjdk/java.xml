@@ -66,6 +66,7 @@ void AltCatalog::init$($BaseEntry$CatalogEntryType* type, $String* base) {
 }
 
 void AltCatalog::setCatalog($String* catalog) {
+	$useLocalCurrentObjectStackCache();
 	$var($URL, url, verifyURI("catalog"_s, this->baseURI, catalog));
 	try {
 		$set(this, catalogURI, $nc(url)->toURI());

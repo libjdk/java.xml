@@ -93,6 +93,7 @@ $ints* CaseInsensitiveMap::getMapping(int32_t codePoint) {
 
 void CaseInsensitiveMap::buildCaseInsensitiveMap() {
 	$init(CaseInsensitiveMap);
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(CaseInsensitiveMap::caseInsensitiveMap, $new($intArray3, CaseInsensitiveMap::INITIAL_CHUNK_COUNT, CaseInsensitiveMap::CHUNK_SIZE));
 	int32_t lc = 0;
 	int32_t uc = 0;
@@ -143,6 +144,7 @@ void CaseInsensitiveMap::set(int32_t codePoint, $ints* map) {
 
 $ints* CaseInsensitiveMap::updateMap(int32_t codePoint, $ints* codePointMap$renamed, int32_t ciCodePoint, $ints* ciCodePointMap$renamed, int32_t matchType) {
 	$init(CaseInsensitiveMap);
+	$useLocalCurrentObjectStackCache();
 	$var($ints, ciCodePointMap, ciCodePointMap$renamed);
 	$var($ints, codePointMap, codePointMap$renamed);
 	for (int32_t i = 0; i < $nc(ciCodePointMap)->length; i += 2) {

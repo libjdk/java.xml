@@ -114,6 +114,7 @@ bool XNumber::bool$() {
 }
 
 $String* XNumber::str() {
+	$useLocalCurrentObjectStackCache();
 	if ($Double::isNaN(this->m_val)) {
 		return "NaN"_s;
 	} else if ($Double::isInfinite(this->m_val)) {

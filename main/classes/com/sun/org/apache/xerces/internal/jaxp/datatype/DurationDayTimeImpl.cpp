@@ -69,6 +69,7 @@ void DurationDayTimeImpl::init$(bool isPositive, $BigInteger* days, $BigInteger*
 }
 
 void DurationDayTimeImpl::init$(bool isPositive, int32_t days, int32_t hours, int32_t minutes, int32_t seconds) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isPositive;
 	$var($BigInteger, var$1, wrap(days));
 	$var($BigInteger, var$2, wrap(hours));
@@ -100,6 +101,7 @@ float DurationDayTimeImpl::getValue() {
 }
 
 void DurationDayTimeImpl::convertToCanonicalDayTime() {
+	$useLocalCurrentObjectStackCache();
 	while (getSeconds() >= 60) {
 		$set(this, seconds, $nc(this->seconds)->subtract($($BigDecimal::valueOf((int64_t)60))));
 		$init($BigInteger);

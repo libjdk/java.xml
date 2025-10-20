@@ -374,6 +374,7 @@ void ToStream::closeCDATA() {
 }
 
 void ToStream::serialize($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($TreeWalker, walker, $new($TreeWalker, this));
 		walker->traverse(node);
@@ -389,6 +390,7 @@ bool ToStream::isUTF16Surrogate(char16_t c) {
 }
 
 void ToStream::flushWriter() {
+	$useLocalCurrentObjectStackCache();
 	$var($Writer, writer, this->m_writer);
 	if (nullptr != writer) {
 		try {
@@ -418,6 +420,7 @@ $OutputStream* ToStream::getOutputStream() {
 }
 
 void ToStream::elementDecl($String* name, $String* model) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_inExternalDTD) {
 		return;
 	}
@@ -464,6 +467,7 @@ void ToStream::outputLineSep() {
 }
 
 void ToStream::setProp($String* name, $String* val$renamed, bool defaultVal) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, val, val$renamed);
 	if (val != nullptr) {
 		char16_t first = getFirstCharLocName(name);
@@ -620,6 +624,7 @@ void ToStream::setProp($String* name, $String* val$renamed, bool defaultVal) {
 }
 
 void ToStream::setOutputFormat($Properties* format) {
+	$useLocalCurrentObjectStackCache();
 	bool shouldFlush = this->m_shouldFlush;
 	if (format != nullptr) {
 		$var($Enumeration, propNames, nullptr);
@@ -647,6 +652,7 @@ void ToStream::setOutputFormat($Properties* format) {
 }
 
 $Properties* ToStream::getOutputFormat() {
+	$useLocalCurrentObjectStackCache();
 	$var($Properties, def, $new($Properties));
 	{
 		$var($Set, s, getOutputPropDefaultKeys());
@@ -714,6 +720,7 @@ void ToStream::setOutputStream($OutputStream* output) {
 }
 
 void ToStream::setOutputStreamInternal($OutputStream* output, bool setByUser) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_outputStream, output);
 	$init($OutputKeys);
 	$var($String, encoding, getOutputProperty($OutputKeys::ENCODING));
@@ -783,6 +790,7 @@ void ToStream::printSpace(int32_t n) {
 }
 
 void ToStream::attributeDecl($String* eName, $String* aName, $String* type, $String* valueDefault, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_inExternalDTD) {
 		return;
 	}
@@ -846,6 +854,7 @@ bool ToStream::escapingNotNeeded(char16_t ch) {
 }
 
 int32_t ToStream::writeUTF16Surrogate(char16_t c, $chars* ch, int32_t i, int32_t end) {
+	$useLocalCurrentObjectStackCache();
 	int32_t status = -1;
 	if (i + 1 >= end) {
 		this->m_highSurrogate = c;
@@ -953,6 +962,7 @@ void ToStream::startNonEscaping() {
 }
 
 void ToStream::cdata($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t old_start = start;
 		if ($nc(this->m_elemContext)->m_startTagOpen) {
@@ -1063,6 +1073,7 @@ bool ToStream::getIndent() {
 }
 
 void ToStream::outputCharacters($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t i = 0;
 		char16_t ch1 = 0;
@@ -1134,6 +1145,7 @@ void ToStream::outputCharacters($chars* chars, int32_t start, int32_t length) {
 }
 
 void ToStream::flushCharactersBuffer(bool isText) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		bool return$1 = false;
@@ -1292,6 +1304,7 @@ int32_t ToStream::writeCharRef($Writer* writer, char16_t high, char16_t low) {
 }
 
 void ToStream::throwIOE(char16_t ch, char16_t next) {
+	$useLocalCurrentObjectStackCache();
 	$init($Utils);
 	$init($MsgKey);
 	$var($String, var$0, $$str({$($Integer::toHexString(ch)), " "_s}));
@@ -1299,6 +1312,7 @@ void ToStream::throwIOE(char16_t ch, char16_t next) {
 }
 
 void ToStream::startElement($String* namespaceURI, $String* localName, $String* name, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	if (isInEntityRef()) {
 		return;
 	}
@@ -1360,6 +1374,7 @@ void ToStream::startElement($String* elementName) {
 }
 
 void ToStream::outputDocTypeDecl($String* name, bool closeDecl) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_cdataTagOpen) {
 		closeCDATA();
 	}
@@ -1403,6 +1418,7 @@ void ToStream::outputDocTypeDecl($String* name, bool closeDecl) {
 }
 
 void ToStream::processAttributes($Writer* writer, int32_t nAttrs) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, getEncoding());
 	for (int32_t i = 0; i < nAttrs; ++i) {
 		$var($String, name, $nc(this->m_attributes)->getQName(i));
@@ -1435,6 +1451,7 @@ void ToStream::writeAttrString($Writer* writer, $String* string, $String* encodi
 }
 
 void ToStream::endElement($String* namespaceURI, $String* localName, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (isInEntityRef()) {
 		return;
 	}
@@ -1520,6 +1537,7 @@ bool ToStream::startPrefixMapping($String* prefix, $String* uri, bool shouldFlus
 }
 
 void ToStream::comment($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	int32_t start_old = start;
 	if (isInEntityRef()) {
 		return;
@@ -1585,6 +1603,7 @@ void ToStream::endCDATA() {
 }
 
 void ToStream::endDTD() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->m_needToCallStartDocument) {
 			return;
@@ -1643,6 +1662,7 @@ void ToStream::startEntity($String* name) {
 }
 
 void ToStream::outputEntityReference($String* name) {
+	$useLocalCurrentObjectStackCache();
 	startNonEscaping();
 	characters($$str({"&"_s, name, $$str(u';')}));
 	endNonEscaping();
@@ -1691,6 +1711,7 @@ bool ToStream::shouldIndent() {
 }
 
 void ToStream::setCdataSectionElements($String* key, $Properties* props) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, s, $nc(props)->getProperty(key));
 	if (nullptr != s) {
 		$var($List, al, $new($ArrayList));
@@ -1723,6 +1744,7 @@ void ToStream::setCdataSectionElements($String* key, $Properties* props) {
 }
 
 void ToStream::addCdataSectionElement($String* URI_and_localName, $List* al) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringTokenizer, tokenizer, $new($StringTokenizer, URI_and_localName, "{}"_s, false));
 	$var($String, s1, tokenizer->nextToken());
 	$var($String, s2, tokenizer->hasMoreTokens() ? tokenizer->nextToken() : ($String*)nullptr);
@@ -1736,6 +1758,7 @@ void ToStream::addCdataSectionElement($String* URI_and_localName, $List* al) {
 }
 
 void ToStream::setCdataSectionElements($List* URI_and_localNames) {
+	$useLocalCurrentObjectStackCache();
 	if (URI_and_localNames != nullptr) {
 		int32_t len = URI_and_localNames->size() - 1;
 		if (len > 0) {
@@ -1760,6 +1783,7 @@ void ToStream::setCdataSectionElements($List* URI_and_localNames) {
 }
 
 $String* ToStream::ensureAttributesNamespaceIsDeclared($String* ns, $String* localName, $String* rawName) {
+	$useLocalCurrentObjectStackCache();
 	if (ns != nullptr && ns->length() > 0) {
 		int32_t index = 0;
 		$var($String, prefixFromRawName, (index = $nc(rawName)->indexOf(":"_s)) < 0 ? ""_s : $nc(rawName)->substring(0, index));
@@ -1786,6 +1810,7 @@ $String* ToStream::ensureAttributesNamespaceIsDeclared($String* ns, $String* loc
 }
 
 void ToStream::ensurePrefixIsDeclared($String* ns, $String* rawName) {
+	$useLocalCurrentObjectStackCache();
 	if (ns != nullptr && ns->length() > 0) {
 		int32_t index = 0;
 		bool no_prefix = ((index = $nc(rawName)->indexOf(":"_s)) < 0);
@@ -1827,6 +1852,7 @@ bool ToStream::addAttributeAlways($String* uri, $String* localName, $String* raw
 }
 
 bool ToStream::doAddAttributeAlways($String* uri, $String* localName, $String* rawName$renamed, $String* type, $String* value, bool xslAttribute) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rawName, rawName$renamed);
 	bool was_added = false;
 	int32_t index = 0;
@@ -1888,6 +1914,7 @@ bool ToStream::doAddAttributeAlways($String* uri, $String* localName, $String* r
 }
 
 void ToStream::firePseudoAttributes() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_tracer != nullptr) {
 		try {
 			$nc(this->m_writer)->flush();

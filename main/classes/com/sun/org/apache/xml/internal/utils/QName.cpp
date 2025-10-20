@@ -119,6 +119,7 @@ void QName::init$($String* namespaceURI, $String* localName) {
 }
 
 void QName::init$($String* namespaceURI, $String* localName, bool validate) {
+	$useLocalCurrentObjectStackCache();
 	if (localName == nullptr) {
 		$init($XMLErrorResources);
 		$throwNew($IllegalArgumentException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_ARG_LOCALNAME_NULL, nullptr)));
@@ -139,6 +140,7 @@ void QName::init$($String* namespaceURI, $String* prefix, $String* localName) {
 }
 
 void QName::init$($String* namespaceURI, $String* prefix, $String* localName, bool validate) {
+	$useLocalCurrentObjectStackCache();
 	if (localName == nullptr) {
 		$init($XMLErrorResources);
 		$throwNew($IllegalArgumentException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_ARG_LOCALNAME_NULL, nullptr)));
@@ -164,6 +166,7 @@ void QName::init$($String* localName) {
 }
 
 void QName::init$($String* localName, bool validate) {
+	$useLocalCurrentObjectStackCache();
 	if (localName == nullptr) {
 		$init($XMLErrorResources);
 		$throwNew($IllegalArgumentException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_ARG_LOCALNAME_NULL, nullptr)));
@@ -184,6 +187,7 @@ void QName::init$($String* qname, $Stack* namespaces) {
 }
 
 void QName::init$($String* qname, $Stack* namespaces, bool validate) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespace$, nullptr);
 	$var($String, prefix, nullptr);
 	int32_t indexOfNSSep = $nc(qname)->indexOf((int32_t)u':');
@@ -229,6 +233,7 @@ void QName::init$($String* qname, $Element* namespaceContext, $PrefixResolver* r
 }
 
 void QName::init$($String* qname, $Element* namespaceContext, $PrefixResolver* resolver, bool validate) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _namespaceURI, nullptr);
 	int32_t indexOfNSSep = $nc(qname)->indexOf((int32_t)u':');
 	if (indexOfNSSep > 0) {
@@ -264,6 +269,7 @@ void QName::init$($String* qname, $PrefixResolver* resolver) {
 }
 
 void QName::init$($String* qname, $PrefixResolver* resolver, bool validate) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	$set(this, _namespaceURI, nullptr);
 	int32_t indexOfNSSep = $nc(qname)->indexOf((int32_t)u':');
@@ -328,12 +334,14 @@ int32_t QName::hashCode() {
 }
 
 bool QName::equals($String* ns, $String* localPart) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, thisnamespace, getNamespaceURI());
 	bool var$0 = $nc($(getLocalName()))->equals(localPart);
 	return var$0 && (((nullptr != thisnamespace) && (nullptr != ns)) ? $nc(thisnamespace)->equals(ns) : ((nullptr == thisnamespace) && (nullptr == ns)));
 }
 
 bool QName::equals(Object$* object) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(object, this)) {
 		return true;
 	}
@@ -350,6 +358,7 @@ bool QName::equals(Object$* object) {
 
 QName* QName::getQNameFromString($String* name) {
 	$init(QName);
+	$useLocalCurrentObjectStackCache();
 	$var($StringTokenizer, tokenizer, $new($StringTokenizer, name, "{}"_s, false));
 	$var(QName, qname, nullptr);
 	$var($String, s1, tokenizer->nextToken());

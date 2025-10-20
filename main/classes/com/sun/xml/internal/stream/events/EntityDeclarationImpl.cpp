@@ -267,6 +267,7 @@ void EntityDeclarationImpl::init() {
 }
 
 void EntityDeclarationImpl::writeAsEncodedUnicodeEx($Writer* writer) {
+	$useLocalCurrentObjectStackCache();
 	$nc(writer)->write("<!ENTITY "_s);
 	writer->write(this->fEntityName);
 	if (this->fReplacementText != nullptr) {

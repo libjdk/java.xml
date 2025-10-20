@@ -109,6 +109,7 @@ bool XML11NSDocumentScannerImpl$NS11ContentDriver::scanRootElementHook() {
 }
 
 void XML11NSDocumentScannerImpl$NS11ContentDriver::reconfigurePipeline() {
+	$useLocalCurrentObjectStackCache();
 	if (this->this$0->fDTDValidator == nullptr) {
 		this->this$0->fBindNamespaces = true;
 	} else if (!$nc(this->this$0->fDTDValidator)->hasGrammar()) {

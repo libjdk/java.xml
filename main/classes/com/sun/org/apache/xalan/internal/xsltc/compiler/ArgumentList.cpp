@@ -55,6 +55,7 @@ void ArgumentList::init$($Expression* arg, ArgumentList* rest) {
 }
 
 $String* ArgumentList::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, nullptr);
 	if (this->_rest == nullptr) {
 		$assign(var$0, $nc(this->_arg)->toString());

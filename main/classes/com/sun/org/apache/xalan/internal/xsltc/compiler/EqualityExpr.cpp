@@ -168,6 +168,7 @@ void EqualityExpr::setParser($Parser* parser) {
 }
 
 $String* EqualityExpr::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Operators::getOpNames(this->_op)), $$str(u'('), this->_left, ", "_s, this->_right, $$str(u')')});
 }
 
@@ -210,6 +211,7 @@ void EqualityExpr::swapArguments() {
 }
 
 $Type* EqualityExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, tleft, $nc(this->_left)->typeCheck(stable));
 	$var($Type, tright, $nc(this->_right)->typeCheck(stable));
 	bool var$0 = $nc(tleft)->isSimple();
@@ -263,6 +265,7 @@ $Type* EqualityExpr::typeCheck($SymbolTable* stable) {
 }
 
 void EqualityExpr::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, tleft, $nc(this->_left)->getType());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if ($instanceOf($BooleanType, tleft)) {
@@ -286,6 +289,7 @@ void EqualityExpr::translateDesynthesized($ClassGenerator* classGen, $MethodGene
 }
 
 void EqualityExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($Type, tleft, $nc(this->_left)->getType());

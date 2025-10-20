@@ -86,6 +86,7 @@ void ElementSchemePointer$1::init$($ElementSchemePointer* this$0, $SymbolTable* 
 }
 
 void ElementSchemePointer$1::addToken($ElementSchemePointer$Tokens* tokens, int32_t token) {
+	$useLocalCurrentObjectStackCache();
 	if (token == $ElementSchemePointer$Tokens::XPTRTOKEN_ELEM_CHILD || token == $ElementSchemePointer$Tokens::XPTRTOKEN_ELEM_NCNAME) {
 		$ElementSchemePointer$Scanner::addToken(tokens, token);
 		return;

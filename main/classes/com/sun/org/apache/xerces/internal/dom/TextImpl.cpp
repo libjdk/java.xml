@@ -377,6 +377,7 @@ bool TextImpl::isElementContentWhitespace() {
 }
 
 $String* TextImpl::getWholeText() {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -403,6 +404,7 @@ void TextImpl::insertTextContent($StringBuilder* buf) {
 }
 
 bool TextImpl::getWholeTextForward($Node* node$renamed, $StringBuilder* buffer, $Node* parent) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, node$renamed);
 	bool inEntRef = false;
 	if (parent != nullptr) {
@@ -431,6 +433,7 @@ bool TextImpl::getWholeTextForward($Node* node$renamed, $StringBuilder* buffer, 
 }
 
 bool TextImpl::getWholeTextBackward($Node* node$renamed, $StringBuilder* buffer, $Node* parent) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, node$renamed);
 	bool inEntRef = false;
 	if (parent != nullptr) {
@@ -459,6 +462,7 @@ bool TextImpl::getWholeTextBackward($Node* node$renamed, $StringBuilder* buffer,
 }
 
 $Text* TextImpl::replaceWholeText($String* content) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -529,6 +533,7 @@ $Text* TextImpl::replaceWholeText($String* content) {
 }
 
 bool TextImpl::canModifyPrev($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	bool textLastChild = false;
 	$var($Node, prev, $nc(node)->getPreviousSibling());
 	while (prev != nullptr) {
@@ -565,6 +570,7 @@ bool TextImpl::canModifyPrev($Node* node) {
 }
 
 bool TextImpl::canModifyNext($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	bool textFirstChild = false;
 	$var($Node, next, $nc(node)->getNextSibling());
 	while (next != nullptr) {
@@ -626,6 +632,7 @@ bool TextImpl::isIgnorableWhitespace() {
 }
 
 $Text* TextImpl::splitText(int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	if (isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$throwNew($DOMException, $DOMException::NO_MODIFICATION_ALLOWED_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr)));

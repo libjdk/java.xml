@@ -69,6 +69,7 @@ $Object* allocate$Deprecated($Class* clazz) {
 }
 
 void Deprecated::init$(Deprecated* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($bytes, var$2, c->getBytes());

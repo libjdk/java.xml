@@ -87,6 +87,7 @@ void XPointerErrorHandler::fatalError($String* domain, $String* key, $XMLParseEx
 }
 
 void XPointerErrorHandler::printError($String* type, $XMLParseException* ex) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fOut)->print("["_s);
 	$nc(this->fOut)->print(type);
 	$nc(this->fOut)->print("] "_s);

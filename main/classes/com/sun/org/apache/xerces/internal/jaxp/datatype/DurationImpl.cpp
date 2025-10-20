@@ -266,6 +266,7 @@ void DurationImpl::init$(bool isPositive, $BigInteger* years, $BigInteger* month
 
 void DurationImpl::testNonNegative($BigInteger* n, $DatatypeConstants$Field* f) {
 	$init(DurationImpl);
+	$useLocalCurrentObjectStackCache();
 	if (n != nullptr && n->signum() < 0) {
 		$throwNew($IllegalArgumentException, $($DatatypeMessageFormatter::formatMessage(nullptr, "NegativeField"_s, $$new($ObjectArray, {$($of($nc(f)->toString()))}))));
 	}
@@ -273,12 +274,14 @@ void DurationImpl::testNonNegative($BigInteger* n, $DatatypeConstants$Field* f) 
 
 void DurationImpl::testNonNegative($BigDecimal* n, $DatatypeConstants$Field* f) {
 	$init(DurationImpl);
+	$useLocalCurrentObjectStackCache();
 	if (n != nullptr && n->signum() < 0) {
 		$throwNew($IllegalArgumentException, $($DatatypeMessageFormatter::formatMessage(nullptr, "NegativeField"_s, $$new($ObjectArray, {$($of($nc(f)->toString()))}))));
 	}
 }
 
 void DurationImpl::init$(bool isPositive, int32_t years, int32_t months, int32_t days, int32_t hours, int32_t minutes, int32_t seconds) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isPositive;
 	$var($BigInteger, var$1, wrap(years));
 	$var($BigInteger, var$2, wrap(months));
@@ -331,6 +334,7 @@ void DurationImpl::init$(int64_t durationInMilliSeconds) {
 }
 
 void DurationImpl::init$($String* lexicalRepresentation) {
+	$useLocalCurrentObjectStackCache();
 	$Duration::init$();
 	if (lexicalRepresentation == nullptr) {
 		$throwNew($NullPointerException);
@@ -464,6 +468,7 @@ $BigDecimal* DurationImpl::parseBigDecimal($String* whole, $String* part$renamed
 }
 
 int32_t DurationImpl::compare($Duration* rhs) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($DatatypeConstants$FieldArray, arr$, DurationImpl::FIELDS);
 		int32_t len$ = $nc(arr$)->length;
@@ -480,6 +485,7 @@ int32_t DurationImpl::compare($Duration* rhs) {
 }
 
 void DurationImpl::checkMaxValue($Number* field, $DatatypeConstants$Field* fieldType) {
+	$useLocalCurrentObjectStackCache();
 	$var($BigInteger, fieldValue, nullptr);
 	$init($DatatypeConstants);
 	if (fieldType != $DatatypeConstants::SECONDS) {
@@ -499,6 +505,7 @@ void DurationImpl::checkMaxValue($Number* field, $DatatypeConstants$Field* field
 }
 
 int32_t DurationImpl::compareDates($Duration* duration1, $Duration* duration2) {
+	$useLocalCurrentObjectStackCache();
 	int32_t resultA = $DatatypeConstants::INDETERMINATE;
 	int32_t resultB = $DatatypeConstants::INDETERMINATE;
 	$var($XMLGregorianCalendar, tempA, $cast($XMLGregorianCalendar, $nc($nc(DurationImpl::TEST_POINTS)->get(0))->clone()));
@@ -552,6 +559,7 @@ int32_t DurationImpl::hashCode() {
 }
 
 $String* DurationImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buf, $new($StringBuffer));
 	if (this->signum$ < 0) {
 		buf->append(u'-');
@@ -582,6 +590,7 @@ $String* DurationImpl::toString() {
 }
 
 $String* DurationImpl::toString($BigDecimal* bd) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, intString, $nc($($nc(bd)->unscaledValue()))->toString());
 	int32_t scale = bd->scale();
 	if (scale == 0) {
@@ -606,6 +615,7 @@ $String* DurationImpl::toString($BigDecimal* bd) {
 }
 
 bool DurationImpl::isSet($DatatypeConstants$Field* field) {
+	$useLocalCurrentObjectStackCache();
 	if (field == nullptr) {
 		$var($String, methodName, "javax.xml.datatype.Duration#isSet(DatatypeConstants.Field field)"_s);
 		$throwNew($NullPointerException, $($DatatypeMessageFormatter::formatMessage(nullptr, "FieldCannotBeNull"_s, $$new($ObjectArray, {$of(methodName)}))));
@@ -637,6 +647,7 @@ bool DurationImpl::isSet($DatatypeConstants$Field* field) {
 }
 
 $Number* DurationImpl::getField($DatatypeConstants$Field* field) {
+	$useLocalCurrentObjectStackCache();
 	if (field == nullptr) {
 		$var($String, methodName, "javax.xml.datatype.Duration#isSet(DatatypeConstants.Field field) "_s);
 		$throwNew($NullPointerException, $($DatatypeMessageFormatter::formatMessage(nullptr, "FieldCannotBeNull"_s, $$new($ObjectArray, {$of(methodName)}))));
@@ -722,6 +733,7 @@ int64_t DurationImpl::getTimeInMillis($Date* startInstant) {
 }
 
 $Duration* DurationImpl::normalizeWith($Calendar* startTimeInstant) {
+	$useLocalCurrentObjectStackCache();
 	$var($Calendar, c, $cast($Calendar, $nc(startTimeInstant)->clone()));
 	$nc(c)->add($Calendar::YEAR, getYears() * this->signum$);
 	c->add($Calendar::MONTH, getMonths() * this->signum$);
@@ -742,6 +754,7 @@ $Duration* DurationImpl::multiply(int32_t factor) {
 }
 
 $Duration* DurationImpl::multiply($BigDecimal* factor$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($BigDecimal, factor, factor$renamed);
 	$var($BigDecimal, carry, DurationImpl::ZERO);
 	int32_t factorSign = $nc(factor)->signum();
@@ -805,6 +818,7 @@ $BigInteger* DurationImpl::toBigInteger($BigDecimal* value, bool canBeNull) {
 }
 
 $Duration* DurationImpl::add($Duration* rhs) {
+	$useLocalCurrentObjectStackCache();
 	$var($Duration, lhs, this);
 	$var($BigDecimalArray, buf, $new($BigDecimalArray, 6));
 	$init($DatatypeConstants);
@@ -860,6 +874,7 @@ $Duration* DurationImpl::add($Duration* rhs) {
 
 void DurationImpl::alignSigns($BigDecimalArray* buf, int32_t start, int32_t end) {
 	$init(DurationImpl);
+	$useLocalCurrentObjectStackCache();
 	bool touched = false;
 	do {
 		touched = false;
@@ -917,6 +932,7 @@ int32_t DurationImpl::signum() {
 }
 
 void DurationImpl::addTo($Calendar* calendar) {
+	$useLocalCurrentObjectStackCache();
 	$nc(calendar)->add($Calendar::YEAR, getYears() * this->signum$);
 	calendar->add($Calendar::MONTH, getMonths() * this->signum$);
 	calendar->add($Calendar::DAY_OF_MONTH, getDays() * this->signum$);
@@ -948,6 +964,7 @@ $Object* DurationImpl::writeReplace() {
 }
 
 void clinit$DurationImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 		$init($DatatypeConstants);
 	$assignStatic(DurationImpl::FIELDS, $new($DatatypeConstants$FieldArray, {
 		$DatatypeConstants::YEARS,

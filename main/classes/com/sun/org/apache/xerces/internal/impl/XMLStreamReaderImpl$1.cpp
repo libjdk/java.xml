@@ -118,6 +118,7 @@ $String* XMLStreamReaderImpl$1::getSystemId() {
 }
 
 $String* XMLStreamReaderImpl$1::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sbuffer, $new($StringBuilder));
 	sbuffer->append($$str({"Line number = "_s, $$str(getLineNumber())}));
 	sbuffer->append("\n"_s);

@@ -241,6 +241,7 @@ $String* CharacterEvent::toString() {
 }
 
 void CharacterEvent::writeAsEncodedUnicodeEx($Writer* writer) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fIsCData) {
 		$nc(writer)->write($$str({"<![CDATA["_s, $(getData()), "]]>"_s}));
 	} else {

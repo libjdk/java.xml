@@ -78,6 +78,7 @@ void XMLMessageFormatter_pt_BR::init$() {
 }
 
 $String* XMLMessageFormatter_pt_BR::formatMessage($Locale* locale, $String* key, $ObjectArray* arguments) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fResourceBundle == nullptr || locale != this->fLocale) {
 		if (locale != nullptr) {
 			$set(this, fResourceBundle, $SecuritySupport::getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.XMLMessages"_s, locale));

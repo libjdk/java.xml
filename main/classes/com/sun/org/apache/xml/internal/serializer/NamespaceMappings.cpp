@@ -100,6 +100,7 @@ void NamespaceMappings::init$() {
 }
 
 void NamespaceMappings::initNamespaces() {
+	$useLocalCurrentObjectStackCache();
 	$var($Stack, stack, nullptr);
 	$nc(this->m_namespaces)->put(NamespaceMappings::EMPTYSTRING, $assign(stack, $new($Stack)));
 	$nc(stack)->push($$new($NamespaceMappings$MappingRecord, this, NamespaceMappings::EMPTYSTRING, NamespaceMappings::EMPTYSTRING, 0));
@@ -109,6 +110,7 @@ void NamespaceMappings::initNamespaces() {
 }
 
 $String* NamespaceMappings::lookupNamespace($String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	$var($Stack, stack, $cast($Stack, $nc(this->m_namespaces)->get(prefix)));
 	return stack != nullptr && !stack->isEmpty() ? $nc(($cast($NamespaceMappings$MappingRecord, $($nc(stack)->peek()))))->m_uri : ($String*)nullptr;
 }
@@ -119,6 +121,7 @@ $NamespaceMappings$MappingRecord* NamespaceMappings::getMappingFromPrefix($Strin
 }
 
 $String* NamespaceMappings::lookupPrefix($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, foundPrefix, nullptr);
 	$var($Iterator, itr, $nc($($nc(this->m_namespaces)->keySet()))->iterator());
 	while ($nc(itr)->hasNext()) {
@@ -133,6 +136,7 @@ $String* NamespaceMappings::lookupPrefix($String* uri) {
 }
 
 $NamespaceMappings$MappingRecord* NamespaceMappings::getMappingFromURI($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($NamespaceMappings$MappingRecord, foundMap, nullptr);
 	$var($Iterator, itr, $nc($($nc(this->m_namespaces)->keySet()))->iterator());
 	while ($nc(itr)->hasNext()) {
@@ -159,6 +163,7 @@ bool NamespaceMappings::popNamespace($String* prefix) {
 }
 
 bool NamespaceMappings::pushNamespace($String* prefix, $String* uri, int32_t elemDepth) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(prefix)->startsWith(NamespaceMappings::XML_PREFIX)) {
 		return false;
 	}
@@ -177,6 +182,7 @@ bool NamespaceMappings::pushNamespace($String* prefix, $String* uri, int32_t ele
 }
 
 void NamespaceMappings::popNamespaces(int32_t elemDepth, $ContentHandler* saxHandler) {
+	$useLocalCurrentObjectStackCache();
 	while (true) {
 		if ($nc(this->m_nodeStack)->isEmpty()) {
 			return;
@@ -200,6 +206,7 @@ void NamespaceMappings::popNamespaces(int32_t elemDepth, $ContentHandler* saxHan
 }
 
 $String* NamespaceMappings::generateNextPrefix() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, "ns"_s);
 	return $concat(var$0, $$str((this->count++)));
 }

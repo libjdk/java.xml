@@ -199,6 +199,7 @@ void StreamValidatorHelper::init$($XMLSchemaValidatorComponentManager* component
 }
 
 void StreamValidatorHelper::validate($Source* source, $Result* result) {
+	$useLocalCurrentObjectStackCache();
 	if (result == nullptr || $instanceOf($StreamResult, result)) {
 		$var($StreamSource, streamSource, $cast($StreamSource, source));
 		$var($TransformerHandler, identityTransformerHandler, nullptr);
@@ -248,6 +249,7 @@ void StreamValidatorHelper::validate($Source* source, $Result* result) {
 }
 
 $XMLParserConfiguration* StreamValidatorHelper::initialize() {
+	$useLocalCurrentObjectStackCache();
 	$var($XML11Configuration, config, $new($XML11Configuration));
 	$init($XMLConstants);
 	if ($nc(this->fComponentManager)->getFeature($XMLConstants::FEATURE_SECURE_PROCESSING)) {

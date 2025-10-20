@@ -108,6 +108,7 @@ void NamespaceSupport::init$() {
 }
 
 void NamespaceSupport::init$($NamespaceContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fNamespace, $new($StringArray, 16 * 2));
 	$set(this, fContext, $new($ints, 8));
 	$set(this, fPrefixes, $new($StringArray, 16));
@@ -195,6 +196,7 @@ $String* NamespaceSupport::getDeclaredPrefixAt(int32_t index) {
 }
 
 $Iterator* NamespaceSupport::getPrefixes() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = 0;
 	if ($nc(this->fPrefixes)->length < ($nc(this->fNamespace)->length / 2)) {
 		$var($StringArray, prefixes, $new($StringArray, this->fNamespaceSize));
@@ -219,6 +221,7 @@ $Iterator* NamespaceSupport::getPrefixes() {
 }
 
 $Enumeration* NamespaceSupport::getAllPrefixes() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = 0;
 	if ($nc(this->fPrefixes)->length < ($nc(this->fNamespace)->length / 2)) {
 		$var($StringArray, prefixes, $new($StringArray, this->fNamespaceSize));
@@ -243,6 +246,7 @@ $Enumeration* NamespaceSupport::getAllPrefixes() {
 }
 
 $List* NamespaceSupport::getPrefixes($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = 0;
 	$var($String, prefix, nullptr);
 	bool unique = true;

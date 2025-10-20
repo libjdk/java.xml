@@ -116,6 +116,7 @@ void ReturnInstruction::init$(int16_t opcode) {
 }
 
 $Type* ReturnInstruction::getType() {
+	$useLocalCurrentObjectStackCache();
 	int16_t _opcode = $Instruction::getOpcode();
 	switch (_opcode) {
 	case $Const::IRETURN:

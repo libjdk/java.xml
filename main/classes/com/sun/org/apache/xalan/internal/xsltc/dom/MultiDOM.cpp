@@ -179,6 +179,7 @@ $Object* allocate$MultiDOM($Class* clazz) {
 }
 
 void MultiDOM::init$($DOM* main) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _documents, $new($HashMap));
 	this->_size = MultiDOM::INITIAL_SIZE;
 	this->_free = 1;
@@ -205,6 +206,7 @@ int32_t MultiDOM::addDOMAdapter($DOMAdapter* adapter) {
 }
 
 int32_t MultiDOM::addDOMAdapter($DOMAdapter* adapter, bool indexByURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($DOM, dom, $nc(adapter)->getDOMImpl());
 	int32_t domNo = 1;
 	int32_t dtmSize = 1;
@@ -557,6 +559,7 @@ bool MultiDOM::isMatchingAdapterEntry($DOM* entry, $DOMAdapter* adapter) {
 }
 
 void MultiDOM::removeDOMAdapter($DOMAdapter* adapter) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_documents)->remove($($nc(adapter)->getDocumentURI(0)));
 	$var($DOM, dom, $nc(adapter)->getDOMImpl());
 	if ($instanceOf($DTMDefaultBase, dom)) {

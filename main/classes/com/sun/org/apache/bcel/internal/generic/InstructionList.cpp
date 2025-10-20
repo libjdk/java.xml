@@ -254,6 +254,7 @@ $InstructionHandle* InstructionList::findHandle($InstructionHandleArray* ihs, $i
 }
 
 $InstructionHandle* InstructionList::findHandle(int32_t pos) {
+	$useLocalCurrentObjectStackCache();
 	$var($ints, positions, this->bytePositions);
 	$var($InstructionHandle, ih, this->start);
 	for (int32_t i = 0; i < this->length; ++i) {
@@ -266,6 +267,7 @@ $InstructionHandle* InstructionList::findHandle(int32_t pos) {
 }
 
 void InstructionList::init$($bytes* code) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, start, nullptr);
 	$set(this, end, nullptr);
 	this->length = 0;
@@ -346,6 +348,7 @@ void InstructionList::init$($bytes* code) {
 }
 
 $InstructionHandle* InstructionList::append($InstructionHandle* ih, InstructionList* il) {
+	$useLocalCurrentObjectStackCache();
 	if (il == nullptr) {
 		$throwNew($ClassGenException, "Appending null InstructionList"_s);
 	}
@@ -368,6 +371,7 @@ $InstructionHandle* InstructionList::append($InstructionHandle* ih, InstructionL
 }
 
 $InstructionHandle* InstructionList::append($Instruction* i, InstructionList* il) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, ih, nullptr);
 	if (($assign(ih, findInstruction2(i))) == nullptr) {
 		$throwNew($ClassGenException, $$str({"Instruction "_s, i, " is not contained in this list."_s}));
@@ -438,6 +442,7 @@ $InstructionHandle* InstructionList::append($InstructionHandle* ih, $Instruction
 }
 
 $BranchHandle* InstructionList::append($InstructionHandle* ih, $BranchInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	$var($BranchHandle, bh, $BranchHandle::getBranchHandle(i));
 	$var(InstructionList, il, $new(InstructionList));
 	il->append(static_cast<$InstructionHandle*>(bh));
@@ -446,6 +451,7 @@ $BranchHandle* InstructionList::append($InstructionHandle* ih, $BranchInstructio
 }
 
 $InstructionHandle* InstructionList::insert($InstructionHandle* ih, InstructionList* il) {
+	$useLocalCurrentObjectStackCache();
 	if (il == nullptr) {
 		$throwNew($ClassGenException, "Inserting null InstructionList"_s);
 	}
@@ -489,6 +495,7 @@ void InstructionList::insert($InstructionHandle* ih) {
 }
 
 $InstructionHandle* InstructionList::insert($Instruction* i, InstructionList* il) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, ih, nullptr);
 	if (($assign(ih, findInstruction1(i))) == nullptr) {
 		$throwNew($ClassGenException, $$str({"Instruction "_s, i, " is not contained in this list."_s}));
@@ -529,6 +536,7 @@ $InstructionHandle* InstructionList::insert($InstructionHandle* ih, $CompoundIns
 }
 
 $BranchHandle* InstructionList::insert($InstructionHandle* ih, $BranchInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	$var($BranchHandle, bh, $BranchHandle::getBranchHandle(i));
 	$var(InstructionList, il, $new(InstructionList));
 	il->append(static_cast<$InstructionHandle*>(bh));
@@ -537,6 +545,7 @@ $BranchHandle* InstructionList::insert($InstructionHandle* ih, $BranchInstructio
 }
 
 void InstructionList::move($InstructionHandle* start, $InstructionHandle* end, $InstructionHandle* target) {
+	$useLocalCurrentObjectStackCache();
 	if ((start == nullptr) || (end == nullptr)) {
 		$throwNew($ClassGenException, $$str({"Invalid null handle: From "_s, start, " to "_s, end}));
 	}
@@ -590,6 +599,7 @@ void InstructionList::move($InstructionHandle* ih, $InstructionHandle* target) {
 }
 
 void InstructionList::remove($InstructionHandle* prev, $InstructionHandle* next$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, next, next$renamed);
 	$var($InstructionHandle, first, nullptr);
 	$var($InstructionHandle, last, nullptr);
@@ -646,11 +656,13 @@ void InstructionList::remove($InstructionHandle* prev, $InstructionHandle* next$
 }
 
 void InstructionList::delete$($InstructionHandle* ih) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, var$0, $nc(ih)->getPrev());
 	remove(var$0, $(ih->getNext()));
 }
 
 void InstructionList::delete$($Instruction* i) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, ih, nullptr);
 	if (($assign(ih, findInstruction1(i))) == nullptr) {
 		$throwNew($ClassGenException, $$str({"Instruction "_s, i, " is not contained in this list."_s}));
@@ -659,11 +671,13 @@ void InstructionList::delete$($Instruction* i) {
 }
 
 void InstructionList::delete$($InstructionHandle* from, $InstructionHandle* to) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, var$0, $nc(from)->getPrev());
 	remove(var$0, $($nc(to)->getNext()));
 }
 
 void InstructionList::delete$($Instruction* from, $Instruction* to) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, from_ih, nullptr);
 	$var($InstructionHandle, to_ih, nullptr);
 	if (($assign(from_ih, findInstruction1(from))) == nullptr) {
@@ -723,6 +737,7 @@ void InstructionList::setPositions() {
 }
 
 void InstructionList::setPositions(bool check) {
+	$useLocalCurrentObjectStackCache();
 	int32_t max_additional_bytes = 0;
 	int32_t additional_bytes = 0;
 	int32_t index = 0;
@@ -808,6 +823,7 @@ void InstructionList::setPositions(bool check) {
 }
 
 $bytes* InstructionList::getByteCode() {
+	$useLocalCurrentObjectStackCache();
 	setPositions();
 	$var($ByteArrayOutputStream, b, $new($ByteArrayOutputStream));
 	$var($DataOutputStream, out, $new($DataOutputStream, b));
@@ -830,6 +846,7 @@ $bytes* InstructionList::getByteCode() {
 }
 
 $InstructionArray* InstructionList::getInstructions() {
+	$useLocalCurrentObjectStackCache();
 	$var($List, instructions, $new($ArrayList));
 	try {
 		$var($ByteSequence, bytes, $new($ByteSequence, $(getByteCode())));
@@ -871,6 +888,7 @@ $String* InstructionList::toString() {
 }
 
 $String* InstructionList::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	{
 		$var($InstructionHandle, ih, this->start);
@@ -886,6 +904,7 @@ $Iterator* InstructionList::iterator() {
 }
 
 $InstructionHandleArray* InstructionList::getInstructionHandles() {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandleArray, ihs, $new($InstructionHandleArray, this->length));
 	$var($InstructionHandle, ih, this->start);
 	for (int32_t i = 0; i < this->length; ++i) {
@@ -900,6 +919,7 @@ $ints* InstructionList::getInstructionPositions() {
 }
 
 InstructionList* InstructionList::copy() {
+	$useLocalCurrentObjectStackCache();
 	$var($Map, map, $new($HashMap));
 	$var(InstructionList, il, $new(InstructionList));
 	{
@@ -939,6 +959,7 @@ InstructionList* InstructionList::copy() {
 }
 
 void InstructionList::replaceConstantPool($ConstantPoolGen* old_cp, $ConstantPoolGen* new_cp) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($InstructionHandle, ih, this->start);
 		for (; ih != nullptr; $assign(ih, $nc(ih)->getNext())) {
@@ -984,6 +1005,7 @@ int32_t InstructionList::size() {
 }
 
 void InstructionList::redirectBranches($InstructionHandle* old_target, $InstructionHandle* new_target) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($InstructionHandle, ih, this->start);
 		for (; ih != nullptr; $assign(ih, $nc(ih)->getNext())) {
@@ -1008,6 +1030,7 @@ void InstructionList::redirectBranches($InstructionHandle* old_target, $Instruct
 }
 
 void InstructionList::redirectLocalVariables($LocalVariableGenArray* lg, $InstructionHandle* old_target, $InstructionHandle* new_target) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($LocalVariableGenArray, arr$, lg);
 		int32_t len$ = $nc(arr$)->length;
@@ -1029,6 +1052,7 @@ void InstructionList::redirectLocalVariables($LocalVariableGenArray* lg, $Instru
 }
 
 void InstructionList::redirectExceptionHandlers($CodeExceptionGenArray* exceptions, $InstructionHandle* old_target, $InstructionHandle* new_target) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($CodeExceptionGenArray, arr$, exceptions);
 		int32_t len$ = $nc(arr$)->length;
@@ -1064,6 +1088,7 @@ void InstructionList::removeObserver($InstructionListObserver* o) {
 }
 
 void InstructionList::update() {
+	$useLocalCurrentObjectStackCache();
 	if (this->observers != nullptr) {
 		{
 			$var($Iterator, i$, $nc(this->observers)->iterator());

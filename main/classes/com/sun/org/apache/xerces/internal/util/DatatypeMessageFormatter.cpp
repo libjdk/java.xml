@@ -69,6 +69,7 @@ void DatatypeMessageFormatter::init$() {
 
 $String* DatatypeMessageFormatter::formatMessage($Locale* locale, $String* key, $ObjectArray* arguments) {
 	$init(DatatypeMessageFormatter);
+	$useLocalCurrentObjectStackCache();
 	$var($ResourceBundle, resourceBundle, nullptr);
 	if (locale != nullptr) {
 		$assign(resourceBundle, $SecuritySupport::getResourceBundle(DatatypeMessageFormatter::BASE_NAME, locale));

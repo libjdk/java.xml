@@ -441,6 +441,7 @@ void NonValidatingConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPoo
 }
 
 void NonValidatingConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$BasicParserConfiguration::init$(symbolTable, parentSettings);
 	this->fConfigUpdated = false;
 	this->fParseInProgress = false;
@@ -574,6 +575,7 @@ void NonValidatingConfiguration::setInputSource($XMLInputSource* inputSource) {
 }
 
 bool NonValidatingConfiguration::parse(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			reset();
@@ -616,6 +618,7 @@ void NonValidatingConfiguration::cleanup() {
 }
 
 void NonValidatingConfiguration::parse($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}

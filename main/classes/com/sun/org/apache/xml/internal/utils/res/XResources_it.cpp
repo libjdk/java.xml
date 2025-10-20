@@ -63,6 +63,7 @@ $ObjectArray2* XResources_it::getContents() {
 }
 
 void clinit$XResources_it($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XResources_it::_contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of("ui_language"_s),

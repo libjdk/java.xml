@@ -277,6 +277,7 @@ $DocumentType* CoreDOMImplementationImpl::createDocumentType($String* qualifiedN
 }
 
 void CoreDOMImplementationImpl::checkQName($String* qname) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = $nc(qname)->indexOf((int32_t)u':');
 	int32_t lastIndex = qname->lastIndexOf((int32_t)u':');
 	int32_t length = qname->length();
@@ -316,6 +317,7 @@ void CoreDOMImplementationImpl::checkQName($String* qname) {
 }
 
 $Document* CoreDOMImplementationImpl::createDocument($String* namespaceURI, $String* qualifiedName, $DocumentType* doctype) {
+	$useLocalCurrentObjectStackCache();
 	if (doctype != nullptr && doctype->getOwnerDocument() != nullptr) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "WRONG_DOCUMENT_ERR"_s, nullptr));
@@ -341,6 +343,7 @@ $Object* CoreDOMImplementationImpl::getFeature($String* feature, $String* versio
 }
 
 $LSParser* CoreDOMImplementationImpl::createLSParser(int16_t mode, $String* schemaType) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = mode != $DOMImplementationLS::MODE_SYNCHRONOUS;
 	if (!var$0) {
 		bool var$1 = schemaType != nullptr && !"http://www.w3.org/2001/XMLSchema"_s->equals(schemaType);
@@ -368,6 +371,7 @@ $LSInput* CoreDOMImplementationImpl::createLSInput() {
 
 $RevalidationHandler* CoreDOMImplementationImpl::getValidator($String* schemaType, $String* xmlVersion) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$init($XMLGrammarDescription);
 		if (schemaType == $XMLGrammarDescription::XML_SCHEMA) {
 			while (this->freeSchemaValidatorIndex >= 0) {
@@ -419,6 +423,7 @@ $RevalidationHandler* CoreDOMImplementationImpl::getValidator($String* schemaTyp
 
 void CoreDOMImplementationImpl::releaseValidator($String* schemaType, $String* xmlVersion, $RevalidationHandler* validator) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$init($XMLGrammarDescription);
 		if (schemaType == $XMLGrammarDescription::XML_SCHEMA) {
 			++this->freeSchemaValidatorIndex;
@@ -481,6 +486,7 @@ void CoreDOMImplementationImpl::releaseValidator($String* schemaType, $String* x
 
 $XMLDTDLoader* CoreDOMImplementationImpl::getDTDLoader($String* xmlVersion) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if ("1.1"_s->equals(xmlVersion)) {
 			while (this->freeXML11DTDLoaderIndex >= 0) {
 				$var($SoftReference, ref, $nc(this->xml11DTDLoaders)->get(this->freeXML11DTDLoaderIndex));
@@ -513,6 +519,7 @@ $XMLDTDLoader* CoreDOMImplementationImpl::getDTDLoader($String* xmlVersion) {
 
 void CoreDOMImplementationImpl::releaseDTDLoader($String* xmlVersion, $XMLDTDLoader* loader) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if ("1.1"_s->equals(xmlVersion)) {
 			++this->freeXML11DTDLoaderIndex;
 			if ($nc(this->xml11DTDLoaders)->length == this->freeXML11DTDLoaderIndex) {

@@ -95,6 +95,7 @@ void StringToStringTableVector::addElement($StringToStringTable* value) {
 }
 
 $String* StringToStringTableVector::get($String* key) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = this->m_firstFree - 1; i >= 0; --i) {
 		$var($String, nsuri, $nc($nc(this->m_map)->get(i))->get(key));
 		if (nsuri != nullptr) {

@@ -116,6 +116,7 @@ $String* SAXSource::getSystemId() {
 
 $InputSource* SAXSource::sourceToInputSource($Source* source) {
 	$init(SAXSource);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf(SAXSource, source)) {
 		return $nc(($cast(SAXSource, source)))->getInputSource();
 	} else if ($instanceOf($StreamSource, source)) {

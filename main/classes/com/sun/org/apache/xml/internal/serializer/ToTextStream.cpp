@@ -163,6 +163,7 @@ void ToTextStream::charactersRaw($chars* ch, int32_t start, int32_t length) {
 }
 
 void ToTextStream::writeNormalizedChars($chars* ch, int32_t start, int32_t length, bool useLineSep) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, getEncoding());
 	$var($Writer, writer, this->m_writer);
 	int32_t end = start + length;

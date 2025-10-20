@@ -96,6 +96,7 @@ XPathFactory* XPathFactory::newDefaultInstance() {
 
 XPathFactory* XPathFactory::newInstance() {
 	$init(XPathFactory);
+	$useLocalCurrentObjectStackCache();
 	try {
 		return newInstance(XPathFactory::DEFAULT_OBJECT_MODEL_URI);
 	} catch ($XPathFactoryConfigurationException&) {
@@ -107,6 +108,7 @@ XPathFactory* XPathFactory::newInstance() {
 
 XPathFactory* XPathFactory::newInstance($String* uri) {
 	$init(XPathFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (uri == nullptr) {
 		$throwNew($NullPointerException, "XPathFactory#newInstance(String uri) cannot be called with uri == null"_s);
@@ -127,6 +129,7 @@ XPathFactory* XPathFactory::newInstance($String* uri) {
 
 XPathFactory* XPathFactory::newInstance($String* uri, $String* factoryClassName, $ClassLoader* classLoader) {
 	$init(XPathFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, cl, classLoader);
 	if (uri == nullptr) {
 		$throwNew($NullPointerException, "XPathFactory#newInstance(String uri) cannot be called with uri == null"_s);

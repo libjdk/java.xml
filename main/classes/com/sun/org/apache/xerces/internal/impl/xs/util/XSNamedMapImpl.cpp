@@ -288,6 +288,7 @@ int32_t XSNamedMapImpl::getLength() {
 }
 
 $XSObject* XSNamedMapImpl::itemByName($String* namespace$, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fNSNum; ++i) {
 		if (isEqual(namespace$, $nc(this->fNamespaces)->get(i))) {
 			if (this->fMaps != nullptr) {
@@ -333,6 +334,7 @@ bool XSNamedMapImpl::containsKey(Object$* key) {
 }
 
 $Object* XSNamedMapImpl::get(Object$* key) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($QName, key)) {
 		$var($QName, name, $cast($QName, key));
 		$var($String, namespaceURI, $nc(name)->getNamespaceURI());
@@ -352,6 +354,7 @@ int32_t XSNamedMapImpl::size() {
 
 $Set* XSNamedMapImpl::entrySet() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (this->fEntrySet == nullptr) {
 			int32_t length = getLength();
 			$var($XSNamedMapImpl$XSNamedMapEntryArray, entries, $new($XSNamedMapImpl$XSNamedMapEntryArray, length));

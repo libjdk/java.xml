@@ -188,6 +188,7 @@ $String* EntityReferenceEvent::getName() {
 }
 
 $String* EntityReferenceEvent::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, text, $nc(this->fEntityDeclaration)->getReplacementText());
 	if (text == nullptr) {
 		$assign(text, ""_s);

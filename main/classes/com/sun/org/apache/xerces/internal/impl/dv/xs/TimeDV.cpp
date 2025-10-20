@@ -75,6 +75,7 @@ void TimeDV::init$() {
 }
 
 $Object* TimeDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content));
 	} catch ($Exception&) {

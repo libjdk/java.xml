@@ -114,6 +114,7 @@ void Duration::init$() {
 }
 
 $QName* Duration::getXMLSchemaType() {
+	$useLocalCurrentObjectStackCache();
 	$init($DatatypeConstants);
 	bool yearSet = isSet($DatatypeConstants::YEARS);
 	bool monthSet = isSet($DatatypeConstants::MONTHS);
@@ -179,6 +180,7 @@ int64_t Duration::getTimeInMillis($Date* startInstant) {
 }
 
 void Duration::addTo($Date* date) {
+	$useLocalCurrentObjectStackCache();
 	if (date == nullptr) {
 		$throwNew($NullPointerException, $$str({"Cannot call "_s, $($of(this)->getClass()->getName()), "#addTo(Date date) with date == null."_s}));
 	}
@@ -193,6 +195,7 @@ Duration* Duration::subtract(Duration* rhs) {
 }
 
 Duration* Duration::multiply(int32_t factor) {
+	$useLocalCurrentObjectStackCache();
 	return multiply($$new($BigDecimal, $($String::valueOf(factor))));
 }
 
@@ -212,6 +215,7 @@ bool Duration::equals(Object$* duration) {
 }
 
 $String* Duration::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buf, $new($StringBuffer));
 	if (getSign() < 0) {
 		buf->append(u'-');
@@ -249,6 +253,7 @@ $String* Duration::toString() {
 }
 
 $String* Duration::toString($BigDecimal* bd) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, intString, $nc($($nc(bd)->unscaledValue()))->toString());
 	int32_t scale = bd->scale();
 	if (scale == 0) {

@@ -198,6 +198,7 @@ bool XSDFACM::isFinalState(int32_t state) {
 }
 
 $Object* XSDFACM::oneTransition($QName* curElem, $ints* state, $SubstitutionGroupHandler* subGroupHandler) {
+	$useLocalCurrentObjectStackCache();
 	int32_t curState = $nc(state)->get(0);
 	if (curState == $XSCMValidator::FIRST_ERROR || curState == $XSCMValidator::SUBSEQUENT_ERROR) {
 		if (curState == $XSCMValidator::FIRST_ERROR) {
@@ -284,6 +285,7 @@ $Object* XSDFACM::findMatchingDecl($QName* curElem, $SubstitutionGroupHandler* s
 }
 
 $Object* XSDFACM::findMatchingDecl($QName* curElem, $ints* state, $SubstitutionGroupHandler* subGroupHandler, int32_t elemIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t curState = $nc(state)->get(0);
 	int32_t nextState = 0;
 	$var($Object, matchingDecl, nullptr);
@@ -342,6 +344,7 @@ bool XSDFACM::endContentModel($ints* state) {
 }
 
 void XSDFACM::buildDFA($CMNode* syntaxTree) {
+	$useLocalCurrentObjectStackCache();
 	int32_t EOCPos = this->fLeafCount;
 	$var($XSCMLeaf, nodeEOC, $new($XSCMLeaf, $XSParticleDecl::PARTICLE_ELEMENT, nullptr, -1, this->fLeafCount++));
 	$set(this, fHeadNode, $new($XSCMBinOp, $XSModelGroupImpl::MODELGROUP_SEQUENCE, syntaxTree, nodeEOC));
@@ -484,6 +487,7 @@ void XSDFACM::buildDFA($CMNode* syntaxTree) {
 }
 
 void XSDFACM::calcFollowList($CMNode* nodeCur) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(nodeCur)->type() == $XSModelGroupImpl::MODELGROUP_CHOICE) {
 		calcFollowList($($nc(($cast($XSCMBinOp, nodeCur)))->getLeft()));
 		calcFollowList($($nc(($cast($XSCMBinOp, nodeCur)))->getRight()));
@@ -515,6 +519,7 @@ void XSDFACM::calcFollowList($CMNode* nodeCur) {
 }
 
 void XSDFACM::dumpTree($CMNode* nodeCur, int32_t level) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t index = 0; index < level; ++index) {
 		$init($System);
 		$nc($System::out)->print("   "_s);
@@ -616,6 +621,7 @@ $ints* XSDFACM::makeDefStateList() {
 }
 
 void XSDFACM::postTreeBuildInit($CMNode* nodeCur) {
+	$useLocalCurrentObjectStackCache();
 	$nc(nodeCur)->setMaxStates(this->fLeafCount);
 	$var($XSCMLeaf, leaf, nullptr);
 	int32_t pos = 0;
@@ -647,6 +653,7 @@ void XSDFACM::postTreeBuildInit($CMNode* nodeCur) {
 }
 
 bool XSDFACM::checkUniqueParticleAttribution($SubstitutionGroupHandler* subGroupHandler) {
+	$useLocalCurrentObjectStackCache();
 	$var($byteArray2, conflictTable, $new($byteArray2, this->fElemMapSize, this->fElemMapSize));
 	for (int32_t i = 0; i < $nc(this->fTransTable)->length && $nc(this->fTransTable)->get(i) != nullptr; ++i) {
 		for (int32_t j = 0; j < this->fElemMapSize; ++j) {
@@ -692,6 +699,7 @@ bool XSDFACM::checkUniqueParticleAttribution($SubstitutionGroupHandler* subGroup
 }
 
 $List* XSDFACM::whatCanGoHere($ints* state) {
+	$useLocalCurrentObjectStackCache();
 	int32_t curState = $nc(state)->get(0);
 	if (curState < 0) {
 		curState = state->get(1);
@@ -718,6 +726,7 @@ $List* XSDFACM::whatCanGoHere($ints* state) {
 }
 
 $List* XSDFACM::checkMinMaxBounds() {
+	$useLocalCurrentObjectStackCache();
 	$var($List, result, nullptr);
 	for (int32_t elemIndex = 0; elemIndex < this->fElemMapSize; ++elemIndex) {
 		int32_t count = $nc(this->fElemMapCounter)->get(elemIndex);
@@ -745,6 +754,7 @@ $List* XSDFACM::checkMinMaxBounds() {
 }
 
 $ints* XSDFACM::occurenceInfo($ints* state) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCountingStates != nullptr) {
 		int32_t curState = $nc(state)->get(0);
 		if (curState < 0) {

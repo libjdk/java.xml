@@ -151,6 +151,7 @@ void ParentNode::init$() {
 }
 
 $Node* ParentNode::cloneNode(bool deep) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncChildren()) {
 		synchronizeChildren();
 	}
@@ -234,6 +235,7 @@ $Node* ParentNode::insertBefore($Node* newChild, $Node* refChild) {
 }
 
 $Node* ParentNode::internalInsertBefore($Node* newChild, $Node* refChild$renamed, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, refChild, refChild$renamed);
 	bool errorChecking = $nc(this->ownerDocument$)->errorChecking;
 	if ($nc(newChild)->getNodeType() == $Node::DOCUMENT_FRAGMENT_NODE) {
@@ -346,6 +348,7 @@ $Node* ParentNode::removeChild($Node* oldChild) {
 }
 
 $Node* ParentNode::internalRemoveChild($Node* oldChild, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking) {
 		if (isReadOnly()) {
@@ -411,6 +414,7 @@ $Node* ParentNode::replaceChild($Node* newChild, $Node* oldChild) {
 }
 
 $String* ParentNode::getTextContent() {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, getFirstChild());
 	if (child != nullptr) {
 		$var($Node, next, child->getNextSibling());
@@ -445,6 +449,7 @@ bool ParentNode::hasTextContent($Node* child) {
 }
 
 void ParentNode::setTextContent($String* textContent) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, nullptr);
 	while (($assign(child, getFirstChild())) != nullptr) {
 		removeChild(child);
@@ -562,6 +567,7 @@ void ParentNode::normalize() {
 }
 
 bool ParentNode::isEqualNode($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	if (!$ChildNode::isEqualNode(arg)) {
 		return false;
 	}
@@ -602,6 +608,7 @@ void ParentNode::synchronizeChildren() {
 }
 
 void ParentNode::checkNormalizationAfterInsert($ChildNode* insertedChild) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(insertedChild)->getNodeType() == $Node::TEXT_NODE) {
 		$var($ChildNode, prev, insertedChild->previousSibling());
 		$var($ChildNode, next, insertedChild->nextSibling);

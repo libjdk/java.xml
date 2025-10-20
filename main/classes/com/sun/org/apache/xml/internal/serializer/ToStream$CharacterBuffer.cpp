@@ -112,6 +112,7 @@ bool ToStream$CharacterBuffer::isAnyCharactersBuffered() {
 }
 
 void ToStream$CharacterBuffer::flush(bool skipBeginningNewlines) {
+	$useLocalCurrentObjectStackCache();
 	$var($Iterator, itr, $nc(this->bufferedCharacters)->iterator());
 	bool continueSkipBeginningNewlines = skipBeginningNewlines;
 	while ($nc(itr)->hasNext()) {
@@ -122,6 +123,7 @@ void ToStream$CharacterBuffer::flush(bool skipBeginningNewlines) {
 }
 
 $chars* ToStream$CharacterBuffer::toChars() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder));
 	{
 		$var($Iterator, i$, $nc(this->bufferedCharacters)->iterator());

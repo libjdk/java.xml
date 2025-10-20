@@ -78,6 +78,7 @@ void ArrayType::init$($String* class_name, int32_t dimensions) {
 }
 
 void ArrayType::init$($Type* type, int32_t dimensions) {
+	$useLocalCurrentObjectStackCache();
 	$ReferenceType::init$($Const::T_ARRAY, "<dummy>"_s);
 	if ((dimensions < 1) || (dimensions > $Const::MAX_BYTE)) {
 		$throwNew($ClassGenException, $$str({"Invalid number of dimensions: "_s, $$str(dimensions)}));

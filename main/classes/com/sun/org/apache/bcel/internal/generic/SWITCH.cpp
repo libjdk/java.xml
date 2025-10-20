@@ -94,6 +94,7 @@ void SWITCH::init$($ints* match, $InstructionHandleArray* targets, $InstructionH
 }
 
 void SWITCH::fillup(int32_t max_gap, $InstructionHandle* target) {
+	$useLocalCurrentObjectStackCache();
 	int32_t max_size = this->matchLength + this->matchLength * max_gap;
 	$var($ints, m_vec, $new($ints, max_size));
 	$var($InstructionHandleArray, t_vec, $new($InstructionHandleArray, max_size));

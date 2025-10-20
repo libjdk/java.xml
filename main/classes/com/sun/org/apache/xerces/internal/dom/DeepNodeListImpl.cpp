@@ -116,6 +116,7 @@ $Node* DeepNodeListImpl::item(int32_t index) {
 }
 
 $Node* DeepNodeListImpl::nextMatchingElementAfter($Node* current$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, current, current$renamed);
 	$var($Node, next, nullptr);
 	while (current != nullptr) {

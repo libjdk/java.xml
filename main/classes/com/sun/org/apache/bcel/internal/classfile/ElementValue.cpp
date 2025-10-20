@@ -116,6 +116,7 @@ int32_t ElementValue::getElementValueType() {
 }
 
 ElementValue* ElementValue::readElementValue($DataInput* input, $ConstantPool* cpool) {
+	$useLocalCurrentObjectStackCache();
 	int8_t type = $nc(input)->readByte();
 	{
 		int32_t numArrayVals = 0;

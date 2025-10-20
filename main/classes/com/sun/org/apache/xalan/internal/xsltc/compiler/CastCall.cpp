@@ -97,6 +97,7 @@ void CastCall::init$($QName* fname, $List* arguments) {
 }
 
 $Type* CastCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (argumentCount() != 2) {
 		$init($ErrorMsg);
 		$throwNew($TypeCheckError, $$new($ErrorMsg, $ErrorMsg::ILLEGAL_ARG_ERR, $($of(getName())), static_cast<$SyntaxTreeNode*>(this)));
@@ -120,6 +121,7 @@ $Type* CastCall::typeCheck($SymbolTable* stable) {
 }
 
 void CastCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_right)->translate(classGen, methodGen);

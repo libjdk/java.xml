@@ -205,6 +205,7 @@ void NamespaceImpl::init$($String* prefix, $String* namespaceURI) {
 }
 
 bool NamespaceImpl::isDefaultNamespaceDeclaration() {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, name, this->getName());
 	$init($XMLConstants);
 	if (name != nullptr && ($nc($(name->getLocalPart()))->equals($XMLConstants::DEFAULT_NS_PREFIX))) {
@@ -214,6 +215,7 @@ bool NamespaceImpl::isDefaultNamespaceDeclaration() {
 }
 
 void NamespaceImpl::setPrefix($String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	if (prefix == nullptr) {
 		$init($XMLConstants);
 		setName($$new($QName, $XMLConstants::XMLNS_ATTRIBUTE_NS_URI, $XMLConstants::DEFAULT_NS_PREFIX, $XMLConstants::XMLNS_ATTRIBUTE));

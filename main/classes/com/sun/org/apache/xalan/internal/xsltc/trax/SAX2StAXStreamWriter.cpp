@@ -112,6 +112,7 @@ void SAX2StAXStreamWriter::endDocument() {
 }
 
 void SAX2StAXStreamWriter::startElement($String* uri, $String* localName, $String* qName, $Attributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	if (this->needToCallStartDocument) {
 		writeStartDocument();
 	}
@@ -166,6 +167,7 @@ void SAX2StAXStreamWriter::startElement($String* uri, $String* localName, $Strin
 }
 
 void SAX2StAXStreamWriter::endElement($String* uri, $String* localName, $String* qName) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		try {
@@ -187,6 +189,7 @@ void SAX2StAXStreamWriter::endElement($String* uri, $String* localName, $String*
 }
 
 void SAX2StAXStreamWriter::comment($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (this->needToCallStartDocument) {
 		writeStartDocument();
 	}
@@ -212,6 +215,7 @@ void SAX2StAXStreamWriter::characters($chars* ch, int32_t start, int32_t length)
 }
 
 void SAX2StAXStreamWriter::endCDATA() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->writer)->writeCData($($nc(this->CDATABuffer)->toString()));
 	} catch ($XMLStreamException&) {

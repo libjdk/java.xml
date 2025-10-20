@@ -118,6 +118,7 @@ void StAXValidatorHelper::init$($XMLSchemaValidatorComponentManager* componentMa
 }
 
 void StAXValidatorHelper::validate($Source* source, $Result* result) {
+	$useLocalCurrentObjectStackCache();
 	if (result == nullptr || $instanceOf($StAXResult, result)) {
 		if (this->identityTransformer1 == nullptr) {
 			try {

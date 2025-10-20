@@ -480,6 +480,7 @@ $Map* TransformerFactoryImpl::getExternalExtensionsMap() {
 }
 
 void TransformerFactoryImpl::setErrorListener($ErrorListener* listener) {
+	$useLocalCurrentObjectStackCache();
 	if (listener == nullptr) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::ERROR_LISTENER_NULL_ERR, $of("TransformerFactory"_s)));
@@ -498,6 +499,7 @@ $String* TransformerFactoryImpl::getPackageName() {
 }
 
 $Object* TransformerFactoryImpl::getAttribute($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(name)->equals(TransformerFactoryImpl::TRANSLET_NAME)) {
 		return $of(this->_transletName);
 	} else if (name->equals(TransformerFactoryImpl::GENERATE_TRANSLET)) {
@@ -564,6 +566,7 @@ $Object* TransformerFactoryImpl::getAttribute($String* name) {
 }
 
 void TransformerFactoryImpl::setAttribute($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(name)->equals(TransformerFactoryImpl::TRANSLET_NAME) && $instanceOf($String, value)) {
 		$set(this, _transletName, $cast($String, value));
 		return;
@@ -693,6 +696,7 @@ void TransformerFactoryImpl::setAttribute($String* name, Object$* value) {
 }
 
 void TransformerFactoryImpl::setFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::JAXP_SET_FEATURE_NULL_NAME));
@@ -745,6 +749,7 @@ void TransformerFactoryImpl::setFeature($String* name, bool value) {
 }
 
 bool TransformerFactoryImpl::getFeature($String* name) {
+	$useLocalCurrentObjectStackCache();
 		$init($DOMSource);
 		$init($DOMResult);
 		$init($SAXSource);
@@ -806,6 +811,7 @@ void TransformerFactoryImpl::setURIResolver($URIResolver* resolver) {
 }
 
 $Source* TransformerFactoryImpl::getAssociatedStylesheet($Source* source, $String* media, $String* title, $String* charset) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, baseId, nullptr);
 	$var($XMLReader, reader, nullptr);
 	$var($InputSource, isource, nullptr);
@@ -848,6 +854,7 @@ $Source* TransformerFactoryImpl::getAssociatedStylesheet($Source* source, $Strin
 }
 
 $Transformer* TransformerFactoryImpl::newTransformer() {
+	$useLocalCurrentObjectStackCache();
 	buildCatalogFeatures();
 	$var($TransformerImpl, result, $new($TransformerImpl, $$new($Properties), this->_indentNumber, this));
 	if (this->_uriResolver != nullptr) {
@@ -860,6 +867,7 @@ $Transformer* TransformerFactoryImpl::newTransformer() {
 }
 
 $Transformer* TransformerFactoryImpl::newTransformer($Source* source) {
+	$useLocalCurrentObjectStackCache();
 	$var($Templates, templates, newTemplates(source));
 	$var($Transformer, transformer, $nc(templates)->newTransformer());
 	if (this->_uriResolver != nullptr) {
@@ -869,6 +877,7 @@ $Transformer* TransformerFactoryImpl::newTransformer($Source* source) {
 }
 
 void TransformerFactoryImpl::passWarningsToListener($List* messages) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_errorListener == nullptr || messages == nullptr) {
 		return;
 	}
@@ -884,6 +893,7 @@ void TransformerFactoryImpl::passWarningsToListener($List* messages) {
 }
 
 void TransformerFactoryImpl::passErrorsToListener($List* messages) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->_errorListener == nullptr || messages == nullptr) {
 			return;
@@ -899,6 +909,7 @@ void TransformerFactoryImpl::passErrorsToListener($List* messages) {
 }
 
 $Templates* TransformerFactoryImpl::newTemplates($Source* source) {
+	$useLocalCurrentObjectStackCache();
 	$var($TemplatesImpl, templates, nullptr);
 	if (this->_useClasspath) {
 		$var($String, transletName, getTransletBaseName(source));
@@ -1099,6 +1110,7 @@ $TransformerHandler* TransformerFactoryImpl::newTransformerHandler($Source* src)
 }
 
 $TransformerHandler* TransformerFactoryImpl::newTransformerHandler($Templates* templates) {
+	$useLocalCurrentObjectStackCache();
 	$var($Transformer, transformer, $nc(templates)->newTransformer());
 	$var($TransformerImpl, internal, $cast($TransformerImpl, transformer));
 	return $new($TransformerHandlerImpl, internal);
@@ -1113,6 +1125,7 @@ $XMLFilter* TransformerFactoryImpl::newXMLFilter($Source* src) {
 }
 
 $XMLFilter* TransformerFactoryImpl::newXMLFilter($Templates* templates) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $new($TrAXFilter, templates);
 	} catch ($TransformerConfigurationException&) {
@@ -1132,6 +1145,7 @@ $XMLFilter* TransformerFactoryImpl::newXMLFilter($Templates* templates) {
 }
 
 $InputSource* TransformerFactoryImpl::loadSource($String* href, $String* context, $XSLTC* xsltc) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Source, source, nullptr);
 		if (this->_uriResolver != nullptr) {
@@ -1181,6 +1195,7 @@ void TransformerFactoryImpl::resetTransientAttributes() {
 }
 
 $byteArray2* TransformerFactoryImpl::getBytecodesFromClasses($Source* source, $String* fullClassName) {
+	$useLocalCurrentObjectStackCache();
 	if (fullClassName == nullptr) {
 		return nullptr;
 	}
@@ -1279,6 +1294,7 @@ $byteArray2* TransformerFactoryImpl::getBytecodesFromClasses($Source* source, $S
 }
 
 $byteArray2* TransformerFactoryImpl::getBytecodesFromJar($Source* source, $String* fullClassName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, xslFileName, getStylesheetFileName(source));
 	$var($File, xslFile, nullptr);
 	if (xslFileName != nullptr) {
@@ -1364,6 +1380,7 @@ void TransformerFactoryImpl::readFromInputStream($bytes* bytes, $InputStream* in
 }
 
 $String* TransformerFactoryImpl::getTransletBaseName($Source* source) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, transletBaseName, nullptr);
 	if (!$nc(this->_transletName)->equals(TransformerFactoryImpl::DEFAULT_TRANSLET_NAME)) {
 		return this->_transletName;
@@ -1381,6 +1398,7 @@ $String* TransformerFactoryImpl::getTransletBaseName($Source* source) {
 }
 
 $String* TransformerFactoryImpl::getStylesheetFileName($Source* source) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, systemId, $nc(source)->getSystemId());
 	if (systemId != nullptr) {
 		$var($File, file, $new($File, systemId));

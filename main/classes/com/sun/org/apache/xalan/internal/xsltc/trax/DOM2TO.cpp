@@ -187,6 +187,7 @@ void DOM2TO::parse() {
 }
 
 void DOM2TO::parse($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return;
 	}
@@ -375,6 +376,7 @@ $String* DOM2TO::getSystemId() {
 }
 
 void DOM2TO::setDocumentInfo($Document* document) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc(document)->getXmlStandalone()) {
 		$nc(this->_handler)->setStandalone($($Boolean::toString(document->getXmlStandalone())));
 	}

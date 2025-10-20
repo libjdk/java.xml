@@ -106,6 +106,7 @@ $Object* AugmentationsImpl$SmallContainer::getItem(Object$* key) {
 }
 
 $Object* AugmentationsImpl$SmallContainer::putItem(Object$* key, Object$* item) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fNumEntries * 2; i = i + 2) {
 		if ($nc($of($nc(this->fAugmentations)->get(i)))->equals(key)) {
 			$var($Object0, oldValue, $nc(this->fAugmentations)->get(i + 1));
@@ -120,6 +121,7 @@ $Object* AugmentationsImpl$SmallContainer::putItem(Object$* key, Object$* item) 
 }
 
 $Object* AugmentationsImpl$SmallContainer::removeItem(Object$* key) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fNumEntries * 2; i = i + 2) {
 		if ($nc($of($nc(this->fAugmentations)->get(i)))->equals(key)) {
 			$var($Object0, oldValue, $nc(this->fAugmentations)->get(i + 1));

@@ -124,6 +124,7 @@ void TransletOutput::display(int32_t indent) {
 }
 
 void TransletOutput::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, filename, getAttribute("file"_s));
 	$var($String, append, getAttribute("append"_s));
 	$init($Constants);
@@ -157,6 +158,7 @@ $Type* TransletOutput::typeCheck($SymbolTable* stable) {
 }
 
 void TransletOutput::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	bool isSecureProcessing = $nc($($nc($(classGen->getParser()))->getXSLTC()))->isSecureProcessing();

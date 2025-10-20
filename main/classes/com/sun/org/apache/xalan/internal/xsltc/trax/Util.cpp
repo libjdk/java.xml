@@ -159,6 +159,7 @@ $String* Util::toJavaName($String* name) {
 
 $InputSource* Util::getInputSource($XSLTC* xsltc, $Source* source) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	$var($InputSource, input, nullptr);
 	$var($String, systemId, $nc(source)->getSystemId());
 	try {

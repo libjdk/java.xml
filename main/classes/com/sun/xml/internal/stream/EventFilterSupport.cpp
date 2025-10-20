@@ -86,6 +86,7 @@ bool EventFilterSupport::hasNext() {
 }
 
 $XMLEvent* EventFilterSupport::nextEvent() {
+	$useLocalCurrentObjectStackCache();
 	while ($EventReaderDelegate::hasNext()) {
 		$var($XMLEvent, event, $EventReaderDelegate::nextEvent());
 		if ($nc(this->fEventFilter)->accept(event)) {
@@ -96,6 +97,7 @@ $XMLEvent* EventFilterSupport::nextEvent() {
 }
 
 $XMLEvent* EventFilterSupport::nextTag() {
+	$useLocalCurrentObjectStackCache();
 	while ($EventReaderDelegate::hasNext()) {
 		$var($XMLEvent, event, $EventReaderDelegate::nextTag());
 		if ($nc(this->fEventFilter)->accept(event)) {
@@ -106,6 +108,7 @@ $XMLEvent* EventFilterSupport::nextTag() {
 }
 
 $XMLEvent* EventFilterSupport::peek() {
+	$useLocalCurrentObjectStackCache();
 	while (true) {
 		$var($XMLEvent, event, $EventReaderDelegate::peek());
 		if (event == nullptr) {

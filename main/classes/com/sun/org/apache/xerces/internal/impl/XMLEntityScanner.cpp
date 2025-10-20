@@ -493,6 +493,7 @@ int32_t XMLEntityScanner::scanChar($XMLScanner$NameType* nt) {
 }
 
 $String* XMLEntityScanner::scanNmtoken() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fCurrentEntity)->position == $nc(this->fCurrentEntity)->count) {
 		load(0, true, true);
 	}
@@ -537,6 +538,7 @@ $String* XMLEntityScanner::scanNmtoken() {
 }
 
 $String* XMLEntityScanner::scanName($XMLScanner$NameType* nt) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fCurrentEntity)->position == $nc(this->fCurrentEntity)->count) {
 		load(0, true, true);
 	}
@@ -588,6 +590,7 @@ $String* XMLEntityScanner::scanName($XMLScanner$NameType* nt) {
 }
 
 bool XMLEntityScanner::scanQName($QName* qname, $XMLScanner$NameType* nt) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fCurrentEntity)->position == $nc(this->fCurrentEntity)->count) {
 		load(0, true, true);
 	}
@@ -718,6 +721,7 @@ void XMLEntityScanner::checkNodeCount($Entity$ScannedEntity* entity) {
 }
 
 void XMLEntityScanner::checkLimit($XMLSecurityManager$Limit* limit, $Entity$ScannedEntity* entity, int32_t offset, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fLimitAnalyzer)->addValue(limit, $nc(entity)->name, length);
 	if ($nc(this->fSecurityManager)->isOverLimit(limit, this->fLimitAnalyzer)) {
 		$nc(this->fSecurityManager)->debugPrint(this->fLimitAnalyzer);
@@ -1261,6 +1265,7 @@ bool XMLEntityScanner::load(int32_t offset, bool changeEntity, bool notify) {
 }
 
 $Reader* XMLEntityScanner::createReader($InputStream* inputStream, $String* encoding$renamed, $Boolean* isBigEndian) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, encoding$renamed);
 	if (encoding == nullptr) {
 		$assign(encoding, "UTF-8"_s);
@@ -1334,6 +1339,7 @@ $Reader* XMLEntityScanner::createReader($InputStream* inputStream, $String* enco
 }
 
 $ObjectArray* XMLEntityScanner::getEncodingName($bytes* b4, int32_t count) {
+	$useLocalCurrentObjectStackCache();
 	if (count < 2) {
 		return $new($ObjectArray, {
 			$of("UTF-8"_s),
@@ -1432,6 +1438,7 @@ void XMLEntityScanner::registerListener($XMLBufferListener* listener) {
 }
 
 void XMLEntityScanner::invokeListeners(int32_t loadPos) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->listeners)->size(); ++i) {
 		$nc(($cast($XMLBufferListener, $($nc(this->listeners)->get(i)))))->refresh(loadPos);
 	}

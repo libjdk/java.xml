@@ -93,6 +93,7 @@ void XML11DTDScannerImpl::init$($SymbolTable* symbolTable, $XMLErrorReporter* er
 }
 
 bool XML11DTDScannerImpl::scanPubidLiteral($XMLString* literal) {
+	$useLocalCurrentObjectStackCache();
 	int32_t quote = $nc(this->fEntityScanner)->scanChar(nullptr);
 	if (quote != u'\'' && quote != u'\"') {
 		reportFatalError("QuoteRequiredInPublicID"_s, nullptr);

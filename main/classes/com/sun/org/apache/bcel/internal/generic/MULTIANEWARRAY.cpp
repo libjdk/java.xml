@@ -132,6 +132,7 @@ void MULTIANEWARRAY::init$() {
 }
 
 void MULTIANEWARRAY::init$(int32_t index, int16_t dimensions) {
+	$useLocalCurrentObjectStackCache();
 	$CPInstruction::init$($Const::MULTIANEWARRAY, index);
 	if (dimensions < 1) {
 		$throwNew($ClassGenException, $$str({"Invalid dimensions value: "_s, $$str(dimensions)}));
@@ -157,6 +158,7 @@ int16_t MULTIANEWARRAY::getDimensions() {
 }
 
 $String* MULTIANEWARRAY::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$2, $$str({$($CPInstruction::toString(verbose)), " "_s}));
 	$var($String, var$1, $$concat(var$2, $$str($CPInstruction::getIndex())));
 	$var($String, var$0, $$concat(var$1, " "));
@@ -164,6 +166,7 @@ $String* MULTIANEWARRAY::toString(bool verbose) {
 }
 
 $String* MULTIANEWARRAY::toString($ConstantPool* cp) {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($CPInstruction::toString(cp)), " "_s, $$str(this->dimensions)});
 }
 

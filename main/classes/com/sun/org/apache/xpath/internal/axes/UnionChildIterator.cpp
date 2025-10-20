@@ -115,6 +115,7 @@ void UnionChildIterator::fixupVariables($List* vars, int32_t globalsSize) {
 }
 
 int16_t UnionChildIterator::acceptNode(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, getXPathContext());
 	{
 		$var($Throwable, var$0, nullptr);

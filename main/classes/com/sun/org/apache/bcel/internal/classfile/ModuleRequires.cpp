@@ -109,10 +109,12 @@ void ModuleRequires::dump($DataOutputStream* file) {
 }
 
 $String* ModuleRequires::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"requires("_s, $$str(this->requiresIndex), ", "_s, $($String::format("%04x"_s, $$new($ObjectArray, {$($of($Integer::valueOf(this->requiresFlags)))}))), ", "_s, $$str(this->requiresVersionIndex), ")"_s});
 }
 
 $String* ModuleRequires::toString($ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($String, module_name, $nc(constant_pool)->constantToString(this->requiresIndex, $Const::CONSTANT_Module));
 	buf->append($($Utility::compactClassName(module_name, false)));

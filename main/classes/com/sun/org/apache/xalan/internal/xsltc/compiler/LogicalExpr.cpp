@@ -131,6 +131,7 @@ bool LogicalExpr::hasLastCall() {
 }
 
 $Object* LogicalExpr::evaluateAtCompileTime() {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, leftb, $nc(this->_left)->evaluateAtCompileTime());
 	$var($Object, rightb, $nc(this->_right)->evaluateAtCompileTime());
 	if (leftb == nullptr || rightb == nullptr) {
@@ -156,10 +157,12 @@ void LogicalExpr::setParser($Parser* parser) {
 }
 
 $String* LogicalExpr::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$nc(LogicalExpr::Ops)->get(this->_op), $$str(u'('), this->_left, ", "_s, this->_right, $$str(u')')});
 }
 
 $Type* LogicalExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, tleft, $nc(this->_left)->typeCheck(stable));
 	$var($Type, tright, $nc(this->_right)->typeCheck(stable));
 	$init($Type);
@@ -185,6 +188,7 @@ void LogicalExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodG
 }
 
 void LogicalExpr::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($SyntaxTreeNode, parent, getParent());
 	if (this->_op == LogicalExpr::AND) {

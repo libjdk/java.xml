@@ -80,6 +80,7 @@ void StringLengthCall::init$($QName* fname, $List* arguments) {
 }
 
 void StringLengthCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (argumentCount() > 0) {

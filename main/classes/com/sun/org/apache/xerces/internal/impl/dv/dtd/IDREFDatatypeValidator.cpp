@@ -52,6 +52,7 @@ void IDREFDatatypeValidator::init$() {
 }
 
 void IDREFDatatypeValidator::validate($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(context)->useNamespaces()) {
 		if (!$XMLChar::isValidNCName(content)) {
 			$throwNew($InvalidDatatypeValueException, "IDREFInvalidWithNamespaces"_s, $$new($ObjectArray, {$of(content)}));

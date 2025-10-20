@@ -85,6 +85,7 @@ int16_t Base64BinaryDV::getAllowedFacets() {
 }
 
 $Object* Base64BinaryDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($bytes, decoded, $Base64::decode(content));
 	if (decoded == nullptr) {
 		$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.1"_s, $$new($ObjectArray, {

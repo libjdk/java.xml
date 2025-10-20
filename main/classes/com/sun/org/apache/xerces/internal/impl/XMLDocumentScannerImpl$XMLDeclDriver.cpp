@@ -102,6 +102,7 @@ void XMLDocumentScannerImpl$XMLDeclDriver::init$($XMLDocumentScannerImpl* this$0
 }
 
 int32_t XMLDocumentScannerImpl$XMLDeclDriver::next() {
+	$useLocalCurrentObjectStackCache();
 	this->this$0->setScannerState(43);
 	this->this$0->setDriver(this->this$0->fPrologDriver);
 	try {

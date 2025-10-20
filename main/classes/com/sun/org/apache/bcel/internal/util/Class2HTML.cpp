@@ -108,6 +108,7 @@ $ConstantPool* Class2HTML::constant_pool = nullptr;
 $Set* Class2HTML::basic_types = nullptr;
 
 void Class2HTML::init$($JavaClass* java_class, $String* dir) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodArray, methods, $nc(java_class)->getMethods());
 	$set(this, java_class, java_class);
 	$set(this, dir, dir);
@@ -129,6 +130,7 @@ void Class2HTML::init$($JavaClass* java_class, $String* dir) {
 
 void Class2HTML::main($StringArray* argv) {
 	$init(Class2HTML);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, file_name, $new($StringArray, $nc(argv)->length));
 	int32_t files = 0;
 	$var($ClassParser, parser, nullptr);
@@ -185,6 +187,7 @@ void Class2HTML::main($StringArray* argv) {
 
 $String* Class2HTML::referenceClass(int32_t index) {
 	$init(Class2HTML);
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, $nc(Class2HTML::constant_pool)->getConstantString(index, $Const::CONSTANT_Class));
 	$assign(str, $Utility::compactClassName(str));
 	$assign(str, $Utility::compactClassName(str, $$str({Class2HTML::class_package, "."_s}), true));
@@ -193,6 +196,7 @@ $String* Class2HTML::referenceClass(int32_t index) {
 
 $String* Class2HTML::referenceType($String* type) {
 	$init(Class2HTML);
+	$useLocalCurrentObjectStackCache();
 	$var($String, short_type, $Utility::compactClassName(type));
 	$assign(short_type, $Utility::compactClassName(short_type, $$str({Class2HTML::class_package, "."_s}), true));
 	int32_t index = $nc(type)->indexOf((int32_t)u'[');
@@ -242,6 +246,7 @@ $String* Class2HTML::toHTML($String* str) {
 }
 
 void Class2HTML::writeMainHTML($AttributeHTML* attribute_html) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($PrintWriter, file, $new($PrintWriter, static_cast<$OutputStream*>($$new($FileOutputStream, $$str({this->dir, Class2HTML::class_name, ".html"_s})))));
 		{

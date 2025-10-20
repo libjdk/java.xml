@@ -108,6 +108,7 @@ void XMLDocumentScannerImpl$TrailingMiscDriver::init$($XMLDocumentScannerImpl* t
 }
 
 int32_t XMLDocumentScannerImpl$TrailingMiscDriver::next() {
+	$useLocalCurrentObjectStackCache();
 	if (this->this$0->fEmptyElement) {
 		this->this$0->fEmptyElement = false;
 		return $XMLEvent::END_ELEMENT;

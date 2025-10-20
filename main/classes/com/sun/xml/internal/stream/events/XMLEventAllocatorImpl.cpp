@@ -150,6 +150,7 @@ $XMLEventAllocator* XMLEventAllocatorImpl::newInstance() {
 }
 
 $XMLEvent* XMLEventAllocatorImpl::getXMLEvent($XMLStreamReader* streamReader) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLEvent, event, nullptr);
 	int32_t eventType = $nc(streamReader)->getEventType();
 	switch (eventType) {
@@ -300,6 +301,7 @@ $XMLEvent* XMLEventAllocatorImpl::getNextEvent($XMLStreamReader* streamReader) {
 }
 
 void XMLEventAllocatorImpl::fillAttributes($StartElementEvent* event, $XMLStreamReader* xmlr) {
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(xmlr)->getAttributeCount();
 	$var($QName, qname, nullptr);
 	$var($AttributeImpl, attr, nullptr);
@@ -316,6 +318,7 @@ void XMLEventAllocatorImpl::fillAttributes($StartElementEvent* event, $XMLStream
 }
 
 void XMLEventAllocatorImpl::fillNamespaceAttributes($StartElementEvent* event, $XMLStreamReader* xmlr) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(xmlr)->getNamespaceCount();
 	$var($String, uri, nullptr);
 	$var($String, prefix, nullptr);
@@ -333,6 +336,7 @@ void XMLEventAllocatorImpl::fillNamespaceAttributes($StartElementEvent* event, $
 }
 
 void XMLEventAllocatorImpl::fillNamespaceAttributes($EndElementEvent* event, $XMLStreamReader* xmlr) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(xmlr)->getNamespaceCount();
 	$var($String, uri, nullptr);
 	$var($String, prefix, nullptr);
@@ -350,12 +354,14 @@ void XMLEventAllocatorImpl::fillNamespaceAttributes($EndElementEvent* event, $XM
 }
 
 void XMLEventAllocatorImpl::setNamespaceContext($StartElementEvent* event, $XMLStreamReader* xmlr) {
+	$useLocalCurrentObjectStackCache();
 	$var($NamespaceContextWrapper, contextWrapper, $cast($NamespaceContextWrapper, $nc(xmlr)->getNamespaceContext()));
 	$var($NamespaceSupport, ns, $new($NamespaceSupport, $($nc(contextWrapper)->getNamespaceContext())));
 	$nc(event)->setNamespaceContext($$new($NamespaceContextWrapper, ns));
 }
 
 $QName* XMLEventAllocatorImpl::getQName($XMLStreamReader* xmlr) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(xmlr)->getNamespaceURI());
 	$var($String, var$1, xmlr->getLocalName());
 	return $new($QName, var$0, var$1, $(xmlr->getPrefix()));

@@ -271,6 +271,7 @@ void DocumentBuilderImpl::init$($DocumentBuilderFactoryImpl* dbf, $Map* dbfAttrs
 }
 
 void DocumentBuilderImpl::init$($DocumentBuilderFactoryImpl* dbf, $Map* dbfAttrs, $Map* features, bool secureProcessing) {
+	$useLocalCurrentObjectStackCache();
 	$DocumentBuilder::init$();
 	$set(this, domParser, $new($DOMParser));
 	if ($nc(dbf)->isValidating()) {
@@ -342,6 +343,7 @@ void DocumentBuilderImpl::init$($DocumentBuilderFactoryImpl* dbf, $Map* dbfAttrs
 }
 
 void DocumentBuilderImpl::setFeatures($Map* features) {
+	$useLocalCurrentObjectStackCache();
 	if (features != nullptr) {
 		{
 			$var($Iterator, i$, $nc($(features->entrySet()))->iterator());
@@ -357,6 +359,7 @@ void DocumentBuilderImpl::setFeatures($Map* features) {
 }
 
 void DocumentBuilderImpl::setDocumentBuilderFactoryAttributes($Map* dbfAttrs) {
+	$useLocalCurrentObjectStackCache();
 	if (dbfAttrs == nullptr) {
 		return;
 	}
@@ -417,6 +420,7 @@ $DOMImplementation* DocumentBuilderImpl::getDOMImplementation() {
 }
 
 $Document* DocumentBuilderImpl::parse($InputSource* is) {
+	$useLocalCurrentObjectStackCache();
 	if (is == nullptr) {
 		$init($DOMMessageFormatter);
 		$throwNew($IllegalArgumentException, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "jaxp-null-input-source"_s, nullptr)));
@@ -435,6 +439,7 @@ $Document* DocumentBuilderImpl::parse($InputSource* is) {
 }
 
 bool DocumentBuilderImpl::isNamespaceAware() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->domParser)->getFeature(DocumentBuilderImpl::NAMESPACES_FEATURE);
 	} catch ($SAXException&) {
@@ -445,6 +450,7 @@ bool DocumentBuilderImpl::isNamespaceAware() {
 }
 
 bool DocumentBuilderImpl::isValidating() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->domParser)->getFeature(DocumentBuilderImpl::VALIDATION_FEATURE);
 	} catch ($SAXException&) {

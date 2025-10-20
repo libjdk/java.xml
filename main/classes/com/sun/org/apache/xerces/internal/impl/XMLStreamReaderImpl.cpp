@@ -318,6 +318,7 @@ $String* XMLStreamReaderImpl::SYMBOL_TABLE = nullptr;
 $String* XMLStreamReaderImpl::READER_IN_DEFINED_STATE = nullptr;
 
 void XMLStreamReaderImpl::init$($InputStream* inputStream, $PropertyManager* props) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fSymbolTable, $new($SymbolTable));
 	$set(this, fScanner, $new($XMLNSDocumentScannerImpl));
 	$set(this, fNamespaceContextWrapper, $new($NamespaceContextWrapper, $cast($NamespaceSupport, $($nc(this->fScanner)->getNamespaceContext()))));
@@ -342,6 +343,7 @@ $XMLDocumentScannerImpl* XMLStreamReaderImpl::getScanner() {
 }
 
 void XMLStreamReaderImpl::init$($String* systemid, $PropertyManager* props) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fSymbolTable, $new($SymbolTable));
 	$set(this, fScanner, $new($XMLNSDocumentScannerImpl));
 	$set(this, fNamespaceContextWrapper, $new($NamespaceContextWrapper, $cast($NamespaceSupport, $($nc(this->fScanner)->getNamespaceContext()))));
@@ -360,6 +362,7 @@ void XMLStreamReaderImpl::init$($String* systemid, $PropertyManager* props) {
 }
 
 void XMLStreamReaderImpl::init$($InputStream* inputStream, $String* encoding, $PropertyManager* props) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fSymbolTable, $new($SymbolTable));
 	$set(this, fScanner, $new($XMLNSDocumentScannerImpl));
 	$set(this, fNamespaceContextWrapper, $new($NamespaceContextWrapper, $cast($NamespaceSupport, $($nc(this->fScanner)->getNamespaceContext()))));
@@ -378,6 +381,7 @@ void XMLStreamReaderImpl::init$($InputStream* inputStream, $String* encoding, $P
 }
 
 void XMLStreamReaderImpl::init$($Reader* reader, $PropertyManager* props) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fSymbolTable, $new($SymbolTable));
 	$set(this, fScanner, $new($XMLNSDocumentScannerImpl));
 	$set(this, fNamespaceContextWrapper, $new($NamespaceContextWrapper, $cast($NamespaceSupport, $($nc(this->fScanner)->getNamespaceContext()))));
@@ -413,6 +417,7 @@ void XMLStreamReaderImpl::init$($XMLInputSource* inputSource, $PropertyManager* 
 }
 
 void XMLStreamReaderImpl::setInputSource($XMLInputSource* inputSource) {
+	$useLocalCurrentObjectStackCache();
 	this->fReuse = false;
 	try {
 		$nc(this->fScanner)->setInputSource(inputSource);
@@ -484,6 +489,7 @@ int32_t XMLStreamReaderImpl::getLineNumber() {
 }
 
 $String* XMLStreamReaderImpl::getLocalName() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::END_ELEMENT) {
 		return $nc($($nc(this->fScanner)->getElementQName()))->localpart;
 	} else if (this->fEventType == $XMLEvent::ENTITY_REFERENCE) {
@@ -500,6 +506,7 @@ $String* XMLStreamReaderImpl::getNamespaceURI() {
 }
 
 $String* XMLStreamReaderImpl::getPIData() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::PROCESSING_INSTRUCTION) {
 		return $nc($($nc(this->fScanner)->getPIData()))->toString();
 	} else {
@@ -508,6 +515,7 @@ $String* XMLStreamReaderImpl::getPIData() {
 }
 
 $String* XMLStreamReaderImpl::getPITarget() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::PROCESSING_INSTRUCTION) {
 		return $nc(this->fScanner)->getPITarget();
 	} else {
@@ -516,6 +524,7 @@ $String* XMLStreamReaderImpl::getPITarget() {
 }
 
 $String* XMLStreamReaderImpl::getPrefix() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::END_ELEMENT) {
 		$var($String, prefix, $nc($($nc(this->fScanner)->getElementQName()))->prefix);
 		$init($XMLConstants);
@@ -525,6 +534,7 @@ $String* XMLStreamReaderImpl::getPrefix() {
 }
 
 $chars* XMLStreamReaderImpl::getTextCharacters() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::CHARACTERS || this->fEventType == $XMLEvent::COMMENT || this->fEventType == $XMLEvent::CDATA || this->fEventType == $XMLEvent::SPACE) {
 		return $nc($($nc(this->fScanner)->getCharacterData()))->ch;
 	} else {
@@ -541,6 +551,7 @@ $chars* XMLStreamReaderImpl::getTextCharacters() {
 }
 
 int32_t XMLStreamReaderImpl::getTextLength() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::CHARACTERS || this->fEventType == $XMLEvent::COMMENT || this->fEventType == $XMLEvent::CDATA || this->fEventType == $XMLEvent::SPACE) {
 		return $nc($($nc(this->fScanner)->getCharacterData()))->length;
 	} else {
@@ -557,6 +568,7 @@ int32_t XMLStreamReaderImpl::getTextLength() {
 }
 
 int32_t XMLStreamReaderImpl::getTextStart() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::CHARACTERS || this->fEventType == $XMLEvent::COMMENT || this->fEventType == $XMLEvent::CDATA || this->fEventType == $XMLEvent::SPACE) {
 		return $nc($($nc(this->fScanner)->getCharacterData()))->offset;
 	} else {
@@ -573,6 +585,7 @@ int32_t XMLStreamReaderImpl::getTextStart() {
 }
 
 $String* XMLStreamReaderImpl::getValue() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::PROCESSING_INSTRUCTION) {
 		return $nc($($nc(this->fScanner)->getPIData()))->toString();
 	} else if (this->fEventType == $XMLEvent::COMMENT) {
@@ -645,6 +658,7 @@ bool XMLStreamReaderImpl::isWhiteSpace() {
 }
 
 int32_t XMLStreamReaderImpl::next() {
+	$useLocalCurrentObjectStackCache();
 	if (!hasNext()) {
 		if (this->fEventType != -1) {
 			$throwNew($NoSuchElementException, "END_DOCUMENT reached: no more elements on the stream."_s);
@@ -761,6 +775,7 @@ $String* XMLStreamReaderImpl::getEventTypeString(int32_t eventType) {
 }
 
 int32_t XMLStreamReaderImpl::getAttributeCount() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		return $nc($($nc(this->fScanner)->getAttributeIterator()))->getLength();
 	} else {
@@ -771,6 +786,7 @@ int32_t XMLStreamReaderImpl::getAttributeCount() {
 }
 
 $QName* XMLStreamReaderImpl::getAttributeName(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		return convertXNIQNametoJavaxQName($($nc($($nc(this->fScanner)->getAttributeIterator()))->getQualifiedName(index)));
 	} else {
@@ -789,6 +805,7 @@ $String* XMLStreamReaderImpl::getAttributeLocalName(int32_t index) {
 }
 
 $String* XMLStreamReaderImpl::getAttributeNamespace(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		return $nc($($nc(this->fScanner)->getAttributeIterator()))->getURI(index);
 	} else {
@@ -799,6 +816,7 @@ $String* XMLStreamReaderImpl::getAttributeNamespace(int32_t index) {
 }
 
 $String* XMLStreamReaderImpl::getAttributePrefix(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		return $nc($($nc(this->fScanner)->getAttributeIterator()))->getPrefix(index);
 	} else {
@@ -809,6 +827,7 @@ $String* XMLStreamReaderImpl::getAttributePrefix(int32_t index) {
 }
 
 $QName* XMLStreamReaderImpl::getAttributeQName(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		$var($String, localName, $nc($($nc(this->fScanner)->getAttributeIterator()))->getLocalName(index));
 		$var($String, uri, $nc($($nc(this->fScanner)->getAttributeIterator()))->getURI(index));
@@ -821,6 +840,7 @@ $QName* XMLStreamReaderImpl::getAttributeQName(int32_t index) {
 }
 
 $String* XMLStreamReaderImpl::getAttributeType(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		return $nc($($nc(this->fScanner)->getAttributeIterator()))->getType(index);
 	} else {
@@ -831,6 +851,7 @@ $String* XMLStreamReaderImpl::getAttributeType(int32_t index) {
 }
 
 $String* XMLStreamReaderImpl::getAttributeValue(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		return $nc($($nc(this->fScanner)->getAttributeIterator()))->getValue(index);
 	} else {
@@ -841,6 +862,7 @@ $String* XMLStreamReaderImpl::getAttributeValue(int32_t index) {
 }
 
 $String* XMLStreamReaderImpl::getAttributeValue($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::ATTRIBUTE) {
 		$var($XMLAttributesImpl, attributes, $nc(this->fScanner)->getAttributeIterator());
 		if (namespaceURI == nullptr) {
@@ -856,6 +878,7 @@ $String* XMLStreamReaderImpl::getAttributeValue($String* namespaceURI, $String* 
 }
 
 $String* XMLStreamReaderImpl::getElementText() {
+	$useLocalCurrentObjectStackCache();
 	if (getEventType() != $XMLStreamConstants::START_ELEMENT) {
 		$throwNew($XMLStreamException, "parser must be on START_ELEMENT to read next text"_s, $(getLocation()));
 	}
@@ -882,6 +905,7 @@ $Location* XMLStreamReaderImpl::getLocation() {
 }
 
 $QName* XMLStreamReaderImpl::getName() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::END_ELEMENT) {
 		return convertXNIQNametoJavaxQName($($nc(this->fScanner)->getElementQName()));
 	} else {
@@ -897,6 +921,7 @@ $NamespaceContext* XMLStreamReaderImpl::getNamespaceContext() {
 }
 
 int32_t XMLStreamReaderImpl::getNamespaceCount() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::END_ELEMENT || this->fEventType == $XMLEvent::NAMESPACE) {
 		return $nc($($nc(this->fScanner)->getNamespaceContext()))->getDeclaredPrefixCount();
 	} else {
@@ -911,6 +936,7 @@ int32_t XMLStreamReaderImpl::getNamespaceCount() {
 }
 
 $String* XMLStreamReaderImpl::getNamespacePrefix(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::END_ELEMENT || this->fEventType == $XMLEvent::NAMESPACE) {
 		$var($String, prefix, $nc($($nc(this->fScanner)->getNamespaceContext()))->getDeclaredPrefixAt(index));
 		return $nc(prefix)->equals(""_s) ? ($String*)nullptr : prefix;
@@ -926,6 +952,7 @@ $String* XMLStreamReaderImpl::getNamespacePrefix(int32_t index) {
 }
 
 $String* XMLStreamReaderImpl::getNamespaceURI(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::START_ELEMENT || this->fEventType == $XMLEvent::END_ELEMENT || this->fEventType == $XMLEvent::NAMESPACE) {
 		return $nc($($nc(this->fScanner)->getNamespaceContext()))->getURI($($nc($($nc(this->fScanner)->getNamespaceContext()))->getDeclaredPrefixAt(index)));
 	} else {
@@ -959,6 +986,7 @@ $Object* XMLStreamReaderImpl::getProperty($String* name) {
 }
 
 $String* XMLStreamReaderImpl::getText() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::CHARACTERS || this->fEventType == $XMLEvent::COMMENT || this->fEventType == $XMLEvent::CDATA || this->fEventType == $XMLEvent::SPACE) {
 		return $nc($($nc(this->fScanner)->getCharacterData()))->toString();
 	} else if (this->fEventType == $XMLEvent::ENTITY_REFERENCE) {
@@ -1005,6 +1033,7 @@ $String* XMLStreamReaderImpl::getText() {
 }
 
 void XMLStreamReaderImpl::require(int32_t type, $String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	if (type != this->fEventType) {
 		$var($String, var$0, $$str({"Event type "_s, $(getEventTypeString(type)), " specified did not match with current parser event "_s}));
 		$throwNew($XMLStreamException, $$concat(var$0, $(getEventTypeString(this->fEventType))));
@@ -1041,6 +1070,7 @@ int32_t XMLStreamReaderImpl::getTextCharacters(int32_t sourceStart, $chars* targ
 }
 
 bool XMLStreamReaderImpl::hasText() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLEvent::CHARACTERS || this->fEventType == $XMLEvent::COMMENT || this->fEventType == $XMLEvent::CDATA) {
 		return $nc($($nc(this->fScanner)->getCharacterData()))->length > 0;
 	} else if (this->fEventType == $XMLEvent::ENTITY_REFERENCE) {
@@ -1069,6 +1099,7 @@ bool XMLStreamReaderImpl::hasText() {
 }
 
 bool XMLStreamReaderImpl::isAttributeSpecified(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if ((this->fEventType == $XMLEvent::START_ELEMENT) || (this->fEventType == $XMLEvent::ATTRIBUTE)) {
 		return $nc($($nc(this->fScanner)->getAttributeIterator()))->isSpecified(index);
 	} else {
@@ -1083,6 +1114,7 @@ bool XMLStreamReaderImpl::isCharacters() {
 }
 
 int32_t XMLStreamReaderImpl::nextTag() {
+	$useLocalCurrentObjectStackCache();
 	int32_t eventType = next();
 	while (true) {
 		bool var$0 = (eventType == $XMLStreamConstants::CHARACTERS && isWhiteSpace());
@@ -1119,6 +1151,7 @@ $QName* XMLStreamReaderImpl::convertXNIQNametoJavaxQName($1QName* qname) {
 }
 
 $String* XMLStreamReaderImpl::getNamespaceURI($String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	if (prefix == nullptr) {
 		$throwNew($IllegalArgumentException, "prefix cannot be null."_s);
 	}
@@ -1142,6 +1175,7 @@ void XMLStreamReaderImpl::pr($String* str) {
 }
 
 $List* XMLStreamReaderImpl::getEntityDecls() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLStreamConstants::DTD) {
 		$var($XMLEntityStorage, entityStore, $nc(this->fEntityManager)->getEntityStore());
 		$var($ArrayList, list, nullptr);
@@ -1175,6 +1209,7 @@ $List* XMLStreamReaderImpl::getEntityDecls() {
 }
 
 $List* XMLStreamReaderImpl::getNotationDecls() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEventType == $XMLStreamConstants::DTD) {
 		if ($nc(this->fScanner)->fDTDScanner == nullptr) {
 			return nullptr;

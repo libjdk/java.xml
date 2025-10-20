@@ -75,6 +75,7 @@ void Trie::init$() {
 }
 
 $Object* Trie::put($String* key, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(key)->length();
 	if (len > $nc(this->m_charBuffer)->length) {
 		$set(this, m_charBuffer, $new($chars, len));

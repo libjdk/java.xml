@@ -382,6 +382,7 @@ void XSModelImpl::init$($SchemaGrammarArray* grammars) {
 }
 
 void XSModelImpl::init$($SchemaGrammarArray* grammars, int16_t s4sVersion) {
+	$useLocalCurrentObjectStackCache();
 	$AbstractList::init$();
 	$set(this, fAnnotations, nullptr);
 	int32_t len = $nc(grammars)->length;
@@ -454,6 +455,7 @@ void XSModelImpl::init$($SchemaGrammarArray* grammars, int16_t s4sVersion) {
 }
 
 $SymbolHash* XSModelImpl::buildSubGroups_Org() {
+	$useLocalCurrentObjectStackCache();
 	$var($SubstitutionGroupHandler, sgHandler, $new($SubstitutionGroupHandler, nullptr));
 	for (int32_t i = 0; i < this->fGrammarCount; ++i) {
 		sgHandler->addSubstitutionGroup($($nc($nc(this->fGrammarList)->get(i))->getSubstitutionGroups()));
@@ -473,6 +475,7 @@ $SymbolHash* XSModelImpl::buildSubGroups_Org() {
 }
 
 $SymbolHash* XSModelImpl::buildSubGroups() {
+	$useLocalCurrentObjectStackCache();
 	$var($SubstitutionGroupHandler, sgHandler, $new($SubstitutionGroupHandler, nullptr));
 	for (int32_t i = 0; i < this->fGrammarCount; ++i) {
 		sgHandler->addSubstitutionGroup($($nc($nc(this->fGrammarList)->get(i))->getSubstitutionGroups()));
@@ -491,6 +494,7 @@ $SymbolHash* XSModelImpl::buildSubGroups() {
 }
 
 $XSObjectListImpl* XSModelImpl::getGlobalElements() {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolHashArray, tables, $new($SymbolHashArray, this->fGrammarCount));
 	int32_t length = 0;
 	for (int32_t i = 0; i < this->fGrammarCount; ++i) {
@@ -520,6 +524,7 @@ $XSNamespaceItemList* XSModelImpl::getNamespaceItems() {
 
 $XSNamedMap* XSModelImpl::getComponents(int16_t objectType) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (objectType <= 0 || objectType > XSModelImpl::MAX_COMP_IDX || !$nc(XSModelImpl::GLOBAL_COMP)->get(objectType)) {
 			$init($XSNamedMapImpl);
 			return $XSNamedMapImpl::EMPTY_MAP;
@@ -581,6 +586,7 @@ $XSNamedMap* XSModelImpl::getComponents(int16_t objectType) {
 
 $XSNamedMap* XSModelImpl::getComponentsByNamespace(int16_t objectType, $String* namespace$) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (objectType <= 0 || objectType > XSModelImpl::MAX_COMP_IDX || !$nc(XSModelImpl::GLOBAL_COMP)->get(objectType)) {
 			$init($XSNamedMapImpl);
 			return $XSNamedMapImpl::EMPTY_MAP;
@@ -657,6 +663,7 @@ $XSNamedMap* XSModelImpl::getComponentsByNamespace(int16_t objectType, $String* 
 }
 
 $XSTypeDefinition* XSModelImpl::getTypeDefinition($String* name, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -665,6 +672,7 @@ $XSTypeDefinition* XSModelImpl::getTypeDefinition($String* name, $String* namesp
 }
 
 $XSTypeDefinition* XSModelImpl::getTypeDefinition($String* name, $String* namespace$, $String* loc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -673,6 +681,7 @@ $XSTypeDefinition* XSModelImpl::getTypeDefinition($String* name, $String* namesp
 }
 
 $XSAttributeDeclaration* XSModelImpl::getAttributeDeclaration($String* name, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -681,6 +690,7 @@ $XSAttributeDeclaration* XSModelImpl::getAttributeDeclaration($String* name, $St
 }
 
 $XSAttributeDeclaration* XSModelImpl::getAttributeDeclaration($String* name, $String* namespace$, $String* loc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -689,6 +699,7 @@ $XSAttributeDeclaration* XSModelImpl::getAttributeDeclaration($String* name, $St
 }
 
 $XSElementDeclaration* XSModelImpl::getElementDeclaration($String* name, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -697,6 +708,7 @@ $XSElementDeclaration* XSModelImpl::getElementDeclaration($String* name, $String
 }
 
 $XSElementDeclaration* XSModelImpl::getElementDeclaration($String* name, $String* namespace$, $String* loc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -705,6 +717,7 @@ $XSElementDeclaration* XSModelImpl::getElementDeclaration($String* name, $String
 }
 
 $XSAttributeGroupDefinition* XSModelImpl::getAttributeGroup($String* name, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -713,6 +726,7 @@ $XSAttributeGroupDefinition* XSModelImpl::getAttributeGroup($String* name, $Stri
 }
 
 $XSAttributeGroupDefinition* XSModelImpl::getAttributeGroup($String* name, $String* namespace$, $String* loc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -721,6 +735,7 @@ $XSAttributeGroupDefinition* XSModelImpl::getAttributeGroup($String* name, $Stri
 }
 
 $XSModelGroupDefinition* XSModelImpl::getModelGroupDefinition($String* name, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -729,6 +744,7 @@ $XSModelGroupDefinition* XSModelImpl::getModelGroupDefinition($String* name, $St
 }
 
 $XSModelGroupDefinition* XSModelImpl::getModelGroupDefinition($String* name, $String* namespace$, $String* loc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -737,6 +753,7 @@ $XSModelGroupDefinition* XSModelImpl::getModelGroupDefinition($String* name, $St
 }
 
 $XSIDCDefinition* XSModelImpl::getIDCDefinition($String* name, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -745,6 +762,7 @@ $XSIDCDefinition* XSModelImpl::getIDCDefinition($String* name, $String* namespac
 }
 
 $XSIDCDefinition* XSModelImpl::getIDCDefinition($String* name, $String* namespace$, $String* loc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -753,6 +771,7 @@ $XSIDCDefinition* XSModelImpl::getIDCDefinition($String* name, $String* namespac
 }
 
 $XSNotationDeclaration* XSModelImpl::getNotationDeclaration($String* name, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -761,6 +780,7 @@ $XSNotationDeclaration* XSModelImpl::getNotationDeclaration($String* name, $Stri
 }
 
 $XSNotationDeclaration* XSModelImpl::getNotationDeclaration($String* name, $String* namespace$, $String* loc) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammar, sg, $cast($SchemaGrammar, $nc(this->fGrammarMap)->get($(null2EmptyString(namespace$)))));
 	if (sg == nullptr) {
 		return nullptr;
@@ -770,6 +790,7 @@ $XSNotationDeclaration* XSModelImpl::getNotationDeclaration($String* name, $Stri
 
 $XSObjectList* XSModelImpl::getAnnotations() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (this->fAnnotations != nullptr) {
 			return this->fAnnotations;
 		}
@@ -822,6 +843,7 @@ $XSNamespaceItem* XSModelImpl::item(int32_t index) {
 }
 
 $Object* XSModelImpl::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fGrammarCount) {
 		return $of($nc(this->fGrammarList)->get(index));
 	}
@@ -841,6 +863,7 @@ $ListIterator* XSModelImpl::listIterator() {
 }
 
 $ListIterator* XSModelImpl::listIterator(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fGrammarCount) {
 		return listIterator0(index);
 	}

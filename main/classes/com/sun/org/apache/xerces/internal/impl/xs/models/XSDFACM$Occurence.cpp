@@ -80,6 +80,7 @@ void XSDFACM$Occurence::init$($XSCMRepeatingLeaf* leaf, int32_t elemIndex) {
 }
 
 $String* XSDFACM$Occurence::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"minOccurs="_s, $$str(this->minOccurs), ";maxOccurs="_s, ((this->maxOccurs != $SchemaSymbols::OCCURRENCE_UNBOUNDED) ? $($Integer::toString(this->maxOccurs)) : "unbounded"_s)});
 }
 

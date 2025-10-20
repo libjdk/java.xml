@@ -73,6 +73,7 @@ $ObjectArray2* XResources_ja_JP_HA::getContents() {
 }
 
 void clinit$XResources_ja_JP_HA($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XResources_ja_JP_HA::_contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of("ui_language"_s),

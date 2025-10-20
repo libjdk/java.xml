@@ -114,6 +114,7 @@ void DCONST::init$() {
 }
 
 void DCONST::init$(double f) {
+	$useLocalCurrentObjectStackCache();
 	$Instruction::init$($Const::DCONST_0, (int16_t)1);
 	if (f == 0.0) {
 		$Instruction::setOpcode($Const::DCONST_0);

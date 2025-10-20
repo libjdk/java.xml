@@ -232,6 +232,7 @@ $Token* ParserForXMLSchema::processPlus($Token* tok) {
 }
 
 $Token* ParserForXMLSchema::processQuestion($Token* tok) {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, par, $Token::createUnion());
 	$nc(par)->addChild(tok);
@@ -244,6 +245,7 @@ bool ParserForXMLSchema::checkQuestion(int32_t off) {
 }
 
 $Token* ParserForXMLSchema::processParen() {
+	$useLocalCurrentObjectStackCache();
 	this->next();
 	$var($Token, tok, $Token::createParen($(this->parseRegex()), 0));
 	if (this->read() != $RegexParser::T_RPAREN) {
@@ -314,6 +316,7 @@ int32_t ParserForXMLSchema::processCIinCharacterClass($RangeToken* tok, int32_t 
 }
 
 $RangeToken* ParserForXMLSchema::parseCharacterClass(bool useNrange) {
+	$useLocalCurrentObjectStackCache();
 	this->setContext($RegexParser::S_INBRACKETS);
 	this->next();
 	bool nrange = false;
@@ -492,6 +495,7 @@ $RangeToken* ParserForXMLSchema::parseSetOperations() {
 }
 
 $Token* ParserForXMLSchema::getTokenForShorthand(int32_t ch) {
+	$useLocalCurrentObjectStackCache();
 	switch (ch) {
 	case u'd':
 		{
@@ -541,6 +545,7 @@ $Token* ParserForXMLSchema::getTokenForShorthand(int32_t ch) {
 }
 
 int32_t ParserForXMLSchema::decodeEscaped() {
+	$useLocalCurrentObjectStackCache();
 	if (this->read() != $RegexParser::T_BACKSOLIDUS) {
 		$throw($(ex("parser.next.1"_s, this->offset - 1)));
 	}
@@ -603,6 +608,7 @@ $RangeToken* ParserForXMLSchema::getRange($String* name, bool positive) {
 	$load(ParserForXMLSchema);
 	$synchronized(class$) {
 		$init(ParserForXMLSchema);
+		$useLocalCurrentObjectStackCache();
 		if (ParserForXMLSchema::ranges == nullptr) {
 			$assignStatic(ParserForXMLSchema::ranges, $new($HashMap));
 			$assignStatic(ParserForXMLSchema::ranges2, $new($HashMap));

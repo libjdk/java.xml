@@ -83,6 +83,7 @@ $Document* DTMNodeProxy$DTMNodeProxyImplementation::createDocument($String* name
 }
 
 bool DTMNodeProxy$DTMNodeProxyImplementation::hasFeature($String* feature, $String* version) {
+	$useLocalCurrentObjectStackCache();
 	bool var$1 = "CORE"_s->equals($($nc(feature)->toUpperCase()));
 	bool var$0 = (var$1 || "XML"_s->equals($($nc(feature)->toUpperCase())));
 	if (var$0) {

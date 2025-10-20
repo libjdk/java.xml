@@ -236,6 +236,7 @@ bool RangeImpl::getCollapsed() {
 }
 
 $Node* RangeImpl::getCommonAncestorContainer() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDetach) {
 		$init($DOMMessageFormatter);
 		$throwNew($DOMException, $DOMException::INVALID_STATE_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INVALID_STATE_ERR"_s, nullptr)));
@@ -265,6 +266,7 @@ $Node* RangeImpl::getCommonAncestorContainer() {
 }
 
 void RangeImpl::setStart($Node* refNode, int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -288,6 +290,7 @@ void RangeImpl::setStart($Node* refNode, int32_t offset) {
 }
 
 void RangeImpl::setEnd($Node* refNode, int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -311,6 +314,7 @@ void RangeImpl::setEnd($Node* refNode, int32_t offset) {
 }
 
 void RangeImpl::setStartBefore($Node* refNode) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -341,6 +345,7 @@ void RangeImpl::setStartBefore($Node* refNode) {
 }
 
 void RangeImpl::setStartAfter($Node* refNode) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -371,6 +376,7 @@ void RangeImpl::setStartAfter($Node* refNode) {
 }
 
 void RangeImpl::setEndBefore($Node* refNode) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -401,6 +407,7 @@ void RangeImpl::setEndBefore($Node* refNode) {
 }
 
 void RangeImpl::setEndAfter($Node* refNode) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -445,6 +452,7 @@ void RangeImpl::collapse(bool toStart) {
 }
 
 void RangeImpl::selectNode($Node* refNode) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -477,6 +485,7 @@ void RangeImpl::selectNode($Node* refNode) {
 }
 
 void RangeImpl::selectNodeContents($Node* refNode) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -510,6 +519,7 @@ void RangeImpl::selectNodeContents($Node* refNode) {
 }
 
 int16_t RangeImpl::compareBoundaryPoints(int16_t how, $Range* sourceRange) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fDocument)->errorChecking) {
 		if (this->fDetach) {
 			$init($DOMMessageFormatter);
@@ -641,6 +651,7 @@ $DocumentFragment* RangeImpl::cloneContents() {
 }
 
 void RangeImpl::insertNode($Node* newNode) {
+	$useLocalCurrentObjectStackCache();
 	if (newNode == nullptr) {
 		return;
 	}
@@ -708,6 +719,7 @@ void RangeImpl::insertNode($Node* newNode) {
 }
 
 void RangeImpl::surroundContents($Node* newParent) {
+	$useLocalCurrentObjectStackCache();
 	if (newParent == nullptr) {
 		return;
 	}
@@ -741,6 +753,7 @@ void RangeImpl::surroundContents($Node* newParent) {
 }
 
 $Range* RangeImpl::cloneRange() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDetach) {
 		$init($DOMMessageFormatter);
 		$throwNew($DOMException, $DOMException::INVALID_STATE_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INVALID_STATE_ERR"_s, nullptr)));
@@ -752,6 +765,7 @@ $Range* RangeImpl::cloneRange() {
 }
 
 $String* RangeImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDetach) {
 		$init($DOMMessageFormatter);
 		$throwNew($DOMException, $DOMException::INVALID_STATE_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INVALID_STATE_ERR"_s, nullptr)));
@@ -976,6 +990,7 @@ void RangeImpl::removeNode($Node* node) {
 }
 
 $DocumentFragment* RangeImpl::traverseContents(int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fStartContainer == nullptr || this->fEndContainer == nullptr) {
 		return nullptr;
 	}
@@ -1031,6 +1046,7 @@ $DocumentFragment* RangeImpl::traverseContents(int32_t how) {
 }
 
 $DocumentFragment* RangeImpl::traverseSameContainer(int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	$var($DocumentFragment, frag, nullptr);
 	if (how != RangeImpl::DELETE_CONTENTS) {
 		$assign(frag, $nc(this->fDocument)->createDocumentFragment());
@@ -1069,6 +1085,7 @@ $DocumentFragment* RangeImpl::traverseSameContainer(int32_t how) {
 }
 
 $DocumentFragment* RangeImpl::traverseCommonStartContainer($Node* endAncestor, int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	$var($DocumentFragment, frag, nullptr);
 	if (how != RangeImpl::DELETE_CONTENTS) {
 		$assign(frag, $nc(this->fDocument)->createDocumentFragment());
@@ -1104,6 +1121,7 @@ $DocumentFragment* RangeImpl::traverseCommonStartContainer($Node* endAncestor, i
 }
 
 $DocumentFragment* RangeImpl::traverseCommonEndContainer($Node* startAncestor, int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	$var($DocumentFragment, frag, nullptr);
 	if (how != RangeImpl::DELETE_CONTENTS) {
 		$assign(frag, $nc(this->fDocument)->createDocumentFragment());
@@ -1133,6 +1151,7 @@ $DocumentFragment* RangeImpl::traverseCommonEndContainer($Node* startAncestor, i
 }
 
 $DocumentFragment* RangeImpl::traverseCommonAncestors($Node* startAncestor, $Node* endAncestor, int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	$var($DocumentFragment, frag, nullptr);
 	if (how != RangeImpl::DELETE_CONTENTS) {
 		$assign(frag, $nc(this->fDocument)->createDocumentFragment());
@@ -1168,6 +1187,7 @@ $DocumentFragment* RangeImpl::traverseCommonAncestors($Node* startAncestor, $Nod
 }
 
 $Node* RangeImpl::traverseRightBoundary($Node* root, int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, next, getSelectedNode(this->fEndContainer, this->fEndOffset - 1));
 	bool isFullySelected = (next != this->fEndContainer);
 	if (next == root) {
@@ -1200,6 +1220,7 @@ $Node* RangeImpl::traverseRightBoundary($Node* root, int32_t how) {
 }
 
 $Node* RangeImpl::traverseLeftBoundary($Node* root, int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, var$0, getStartContainer());
 	$var($Node, next, getSelectedNode(var$0, getStartOffset()));
 	bool isFullySelected = (next != getStartContainer());
@@ -1243,6 +1264,7 @@ $Node* RangeImpl::traverseNode($Node* n, bool isFullySelected, bool isLeft, int3
 }
 
 $Node* RangeImpl::traverseFullySelected($Node* n, int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	switch (how) {
 	case RangeImpl::CLONE_CONTENTS:
 		{
@@ -1282,6 +1304,7 @@ $Node* RangeImpl::traversePartiallySelected($Node* n, int32_t how) {
 }
 
 $Node* RangeImpl::traverseTextNode($Node* n, bool isLeft, int32_t how) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, txtValue, $nc(n)->getNodeValue());
 	$var($String, newNodeValue, nullptr);
 	$var($String, oldNodeValue, nullptr);
@@ -1306,6 +1329,7 @@ $Node* RangeImpl::traverseTextNode($Node* n, bool isLeft, int32_t how) {
 }
 
 void RangeImpl::checkIndex($Node* refNode, int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	if (offset < 0) {
 		$init($DOMMessageFormatter);
 		$throwNew($DOMException, $DOMException::INDEX_SIZE_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INDEX_SIZE_ERR"_s, nullptr)));
@@ -1394,6 +1418,7 @@ bool RangeImpl::isLegalContainedNode($Node* node) {
 }
 
 $Node* RangeImpl::nextNode($Node* node, bool visitChildren) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return nullptr;
 	}

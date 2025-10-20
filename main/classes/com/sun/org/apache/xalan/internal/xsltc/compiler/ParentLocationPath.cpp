@@ -239,6 +239,7 @@ void ParentLocationPath::translate($ClassGenerator* classGen, $MethodGenerator* 
 }
 
 void ParentLocationPath::translateStep($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

@@ -75,6 +75,7 @@ void FactoryFinder$1::init$($Class* val$type) {
 }
 
 $Object* FactoryFinder$1::run() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ServiceLoader, serviceLoader, $ServiceLoader::load(this->val$type));
 	$var($Iterator, iterator, $nc(serviceLoader)->iterator());

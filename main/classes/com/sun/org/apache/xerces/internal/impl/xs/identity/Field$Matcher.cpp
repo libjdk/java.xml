@@ -106,6 +106,7 @@ void Field$Matcher::init$($Field* this$0, $Field$XPath* xpath, $ValueStore* stor
 }
 
 void Field$Matcher::matched(Object$* actualValue, int16_t valueType, $ShortList* itemValueType, bool isNil) {
+	$useLocalCurrentObjectStackCache();
 	$XPathMatcher::matched(actualValue, valueType, itemValueType, isNil);
 	if (isNil && ($nc(this->this$0->fIdentityConstraint)->getCategory() == $IdentityConstraint::IC_KEY)) {
 		$var($String, code, "KeyMatchesNillable"_s);
@@ -160,6 +161,7 @@ $ShortList* Field$Matcher::convertToPrimitiveKind($ShortList* itemValueType) {
 }
 
 void Field$Matcher::handleContent($XSTypeDefinition* type, bool nillable, Object$* actualValue, int16_t valueType, $ShortList* itemValueType) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = type == nullptr;
 	if (!var$0) {
 		bool var$1 = $nc(type)->getTypeCategory() == $XSTypeDefinition::COMPLEX_TYPE;

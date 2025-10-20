@@ -137,6 +137,7 @@ void AttributeValueTemplate::init$($String* value, $Parser* parser, $SyntaxTreeN
 }
 
 void AttributeValueTemplate::parseAVTemplate($String* text, $Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringTokenizer, tokenizer, $new($StringTokenizer, text, "{}\"\'"_s, true));
 	$var($String, t, nullptr);
 	$var($String, lookahead, nullptr);
@@ -283,6 +284,7 @@ void AttributeValueTemplate::parseAVTemplate($String* text, $Parser* parser) {
 }
 
 $Type* AttributeValueTemplate::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, contents, getContents());
 	int32_t n = $nc(contents)->size();
 	for (int32_t i = 0; i < n; ++i) {
@@ -297,6 +299,7 @@ $Type* AttributeValueTemplate::typeCheck($SymbolTable* stable) {
 }
 
 $String* AttributeValueTemplate::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buffer, $new($StringBuilder, "AVT:["_s));
 	int32_t count = elementCount();
 	for (int32_t i = 0; i < count; ++i) {
@@ -309,6 +312,7 @@ $String* AttributeValueTemplate::toString() {
 }
 
 void AttributeValueTemplate::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (elementCount() == 1) {
 		$var($Expression, exp, $cast($Expression, elementAt(0)));
 		$nc(exp)->translate(classGen, methodGen);

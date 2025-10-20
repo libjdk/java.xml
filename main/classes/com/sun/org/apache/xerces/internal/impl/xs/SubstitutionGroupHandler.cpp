@@ -170,6 +170,7 @@ bool SubstitutionGroupHandler::substitutionGroupOK($XSElementDecl* element, $XSE
 }
 
 bool SubstitutionGroupHandler::typeDerivationOK($XSTypeDefinition* derived, $XSTypeDefinition* base, int16_t blockingConstraint) {
+	$useLocalCurrentObjectStackCache();
 	int16_t devMethod = (int16_t)0;
 	int16_t blockConstraint = blockingConstraint;
 	$var($XSTypeDefinition, type, derived);
@@ -219,6 +220,7 @@ void SubstitutionGroupHandler::reset() {
 }
 
 void SubstitutionGroupHandler::addSubstitutionGroup($XSElementDeclArray* elements) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSElementDecl, subHead, nullptr);
 	$var($XSElementDecl, element, nullptr);
 	$var($List, subGroup, nullptr);
@@ -235,6 +237,7 @@ void SubstitutionGroupHandler::addSubstitutionGroup($XSElementDeclArray* element
 }
 
 $XSElementDeclArray* SubstitutionGroupHandler::getSubstitutionGroup($XSElementDecl* element) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSElementDeclArray, subGroup, $cast($XSElementDeclArray, $nc(this->fSubGroups)->get(element)));
 	if (subGroup != nullptr) {
 		return subGroup;
@@ -262,6 +265,7 @@ $XSElementDeclArray* SubstitutionGroupHandler::getSubstitutionGroup($XSElementDe
 }
 
 $SubstitutionGroupHandler$OneSubGroupArray* SubstitutionGroupHandler::getSubGroupB($XSElementDecl* element, $SubstitutionGroupHandler$OneSubGroup* methods) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, subGroup, $nc(this->fSubGroupsB)->get(element));
 	if (subGroup == nullptr) {
 		$nc(this->fSubGroupsB)->put(element, SubstitutionGroupHandler::EMPTY_VECTOR);

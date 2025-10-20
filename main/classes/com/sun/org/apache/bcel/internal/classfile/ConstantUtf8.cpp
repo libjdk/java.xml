@@ -169,6 +169,7 @@ void ConstantUtf8::setBytes($String* bytes) {
 }
 
 $String* ConstantUtf8::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({$($Constant::toString()), "(\""_s}));
 	$var($String, var$0, $$concat(var$1, $($Utility::replace(this->value, "\n"_s, "\\n"_s))));
 	return $concat(var$0, "\")");

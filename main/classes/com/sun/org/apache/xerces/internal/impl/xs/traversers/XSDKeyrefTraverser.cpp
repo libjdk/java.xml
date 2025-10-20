@@ -81,6 +81,7 @@ void XSDKeyrefTraverser::init$($XSDHandler* handler, $XSAttributeChecker* gAttrC
 }
 
 void XSDKeyrefTraverser::traverse($Element* krElem, $XSElementDecl* element, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(krElem, false, schemaDoc));
 	$var($String, krName, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	if (krName == nullptr) {

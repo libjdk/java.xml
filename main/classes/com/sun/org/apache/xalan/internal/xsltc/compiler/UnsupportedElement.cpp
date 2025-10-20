@@ -119,6 +119,7 @@ void UnsupportedElement::setErrorMessage($ErrorMsg* message) {
 }
 
 void UnsupportedElement::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
 	$var($String, var$0, $$str({"Unsupported element = "_s, $($nc(this->_qname)->getNamespace()), ":"_s}));
 	$Util::println($$concat(var$0, $($nc(this->_qname)->getLocalPart())));
@@ -126,6 +127,7 @@ void UnsupportedElement::display(int32_t indent) {
 }
 
 void UnsupportedElement::processFallbacks($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, children, getContents());
 	if (children != nullptr) {
 		int32_t count = children->size();
@@ -149,6 +151,7 @@ void UnsupportedElement::parseContents($Parser* parser) {
 }
 
 $Type* UnsupportedElement::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_fallbacks != nullptr) {
 		int32_t count = $nc(this->_fallbacks)->size();
 		for (int32_t i = 0; i < count; ++i) {
@@ -161,6 +164,7 @@ $Type* UnsupportedElement::typeCheck($SymbolTable* stable) {
 }
 
 void UnsupportedElement::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_fallbacks != nullptr) {
 		int32_t count = $nc(this->_fallbacks)->size();
 		for (int32_t i = 0; i < count; ++i) {

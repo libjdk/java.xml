@@ -139,10 +139,12 @@ void IINC::initFromFile($ByteSequence* bytes, bool wide) {
 }
 
 $String* IINC::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($LocalVariableInstruction::toString(verbose)), " "_s, $$str(this->c)});
 }
 
 void IINC::setIndex(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	if (n < 0) {
 		$throwNew($ClassGenException, $$str({"Negative index value: "_s, $$str(n)}));
 	}

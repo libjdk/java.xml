@@ -103,6 +103,7 @@ void XPath$NodeTest::init$(XPath$NodeTest* nodeTest) {
 }
 
 $String* XPath$NodeTest::toString() {
+	$useLocalCurrentObjectStackCache();
 	switch (this->type) {
 	case XPath$NodeTest::QNAME:
 		{

@@ -182,6 +182,7 @@ void FilterExprWalker::detach() {
 }
 
 void FilterExprWalker::setRoot(int32_t root) {
+	$useLocalCurrentObjectStackCache();
 	$AxesWalker::setRoot(root);
 	int32_t var$0 = root;
 	$var($XPathContext, var$1, $nc(this->m_lpi)->getXPathContext());
@@ -198,6 +199,7 @@ $Object* FilterExprWalker::clone() {
 }
 
 int16_t FilterExprWalker::acceptNode(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (getPredicateCount() > 0) {
 			countProximityPosition(0);

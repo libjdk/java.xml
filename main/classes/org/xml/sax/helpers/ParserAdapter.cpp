@@ -202,6 +202,7 @@ $String* ParserAdapter::NAMESPACE_PREFIXES = nullptr;
 $String* ParserAdapter::XMLNS_URIs = nullptr;
 
 void ParserAdapter::init$() {
+	$useLocalCurrentObjectStackCache();
 	this->parsing = false;
 	$set(this, nameParts, $new($StringArray, 3));
 	$set(this, parser, nullptr);
@@ -379,6 +380,7 @@ void ParserAdapter::endDocument() {
 }
 
 void ParserAdapter::startElement($String* qName, $AttributeList* qAtts) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, exceptions, nullptr);
 	if (!this->namespaces) {
 		if (this->contentHandler != nullptr) {
@@ -462,6 +464,7 @@ void ParserAdapter::startElement($String* qName, $AttributeList* qAtts) {
 }
 
 void ParserAdapter::endElement($String* qName) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->namespaces) {
 		if (this->contentHandler != nullptr) {
 			$nc(this->contentHandler)->endElement(""_s, ""_s, $($nc(qName)->intern()));
@@ -520,6 +523,7 @@ void ParserAdapter::setupParser() {
 }
 
 $StringArray* ParserAdapter::processName($String* qName, bool isAttribute, bool useException) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, parts, $nc(this->nsSupport)->processName(qName, this->nameParts, isAttribute));
 	if (parts == nullptr) {
 		if (useException) {
@@ -548,6 +552,7 @@ $SAXParseException* ParserAdapter::makeException($String* message) {
 }
 
 void ParserAdapter::checkNotParsing($String* type, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (this->parsing) {
 		$throwNew($SAXNotSupportedException, $$str({"Cannot change "_s, type, $$str(u' '), name, " while parsing"_s}));
 	}

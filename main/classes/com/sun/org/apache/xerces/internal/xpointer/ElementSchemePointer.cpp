@@ -168,6 +168,7 @@ void ElementSchemePointer::init$($SymbolTable* symbolTable, $XMLErrorReporter* e
 }
 
 void ElementSchemePointer::parseXPointer($String* xpointer) {
+	$useLocalCurrentObjectStackCache();
 	init();
 	$var($ElementSchemePointer$Tokens, tokens, $new($ElementSchemePointer$Tokens, this, this->fSymbolTable));
 	$var($ElementSchemePointer$Scanner, scanner, $new($ElementSchemePointer$1, this, this->fSymbolTable));
@@ -338,6 +339,7 @@ bool ElementSchemePointer::isChildFragmentResolved() {
 }
 
 void ElementSchemePointer::reportError($String* key, $ObjectArray* arguments) {
+	$useLocalCurrentObjectStackCache();
 	$init($XPointerMessageFormatter);
 	$throwNew($XNIException, $($nc(($($nc(this->fErrorReporter)->getMessageFormatter($XPointerMessageFormatter::XPOINTER_DOMAIN))))->formatMessage($($nc(this->fErrorReporter)->getLocale()), key, arguments)));
 }

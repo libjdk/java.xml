@@ -461,6 +461,7 @@ void DTDConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammar
 }
 
 void DTDConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$BasicParserConfiguration::init$(symbolTable, parentSettings);
 	this->fParseInProgress = false;
 		$init($XMLConstants);
@@ -598,6 +599,7 @@ void DTDConfiguration::setInputSource($XMLInputSource* inputSource) {
 }
 
 bool DTDConfiguration::parse(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			reset();
@@ -640,6 +642,7 @@ void DTDConfiguration::cleanup() {
 }
 
 void DTDConfiguration::parse($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}

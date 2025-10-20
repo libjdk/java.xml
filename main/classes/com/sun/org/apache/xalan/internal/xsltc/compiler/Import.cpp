@@ -111,6 +111,7 @@ $Stylesheet* Import::getImportedStylesheet() {
 }
 
 void Import::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTC, xsltc, $nc(parser)->getXSLTC());
 	$var($Stylesheet, context, parser->getCurrentStylesheet());
 	{

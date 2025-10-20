@@ -321,6 +321,7 @@ bool XSObjectListImpl::contains(Object$* value) {
 }
 
 $Object* XSObjectListImpl::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fLength) {
 		return $of($nc(this->fArray)->get(index));
 	}
@@ -340,6 +341,7 @@ $ListIterator* XSObjectListImpl::listIterator() {
 }
 
 $ListIterator* XSObjectListImpl::listIterator(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fLength) {
 		return listIterator0(index);
 	}

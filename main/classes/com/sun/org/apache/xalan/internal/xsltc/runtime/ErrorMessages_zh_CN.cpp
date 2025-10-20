@@ -75,6 +75,7 @@ void ErrorMessages_zh_CN::init$() {
 }
 
 $ObjectArray2* ErrorMessages_zh_CN::getContents() {
+	$useLocalCurrentObjectStackCache();
 			$init($BasisLibrary);
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {

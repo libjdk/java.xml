@@ -360,6 +360,7 @@ bool GroupEntry::isPreferPublic() {
 }
 
 $String* GroupEntry::matchSystem($String* systemId) {
+	$useLocalCurrentObjectStackCache();
 	this->systemEntrySearched = true;
 	$var($String, match, nullptr);
 	{
@@ -428,6 +429,7 @@ $String* GroupEntry::matchSystem($String* systemId) {
 }
 
 $String* GroupEntry::matchPublic($String* publicId) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->isPreferPublic$ && this->systemEntrySearched) {
 		return nullptr;
 	}
@@ -466,6 +468,7 @@ $String* GroupEntry::matchPublic($String* publicId) {
 }
 
 $String* GroupEntry::matchURI($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, match, nullptr);
 	{
 		$var($Iterator, i$, $nc(this->entries)->iterator());
@@ -533,6 +536,7 @@ $String* GroupEntry::matchURI($String* uri) {
 }
 
 $String* GroupEntry::matchDelegate($BaseEntry$CatalogEntryType* type, $String* id) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, match, nullptr);
 	int32_t longestMatch = 0;
 	$var($URI, catalogId, nullptr);
@@ -580,10 +584,12 @@ $String* GroupEntry::matchDelegate($BaseEntry$CatalogEntryType* type, $String* i
 }
 
 void GroupEntry::loadDelegateCatalogs($CatalogImpl* parent) {
+	$useLocalCurrentObjectStackCache();
 	$nc($($nc($($nc($($nc(this->entries)->stream()))->filter(static_cast<$Predicate*>($$new(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$0)))))->map(static_cast<$Function*>($$new(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$1$1)))))->forEach(static_cast<$Consumer*>($$new(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2, this, parent)));
 }
 
 $Catalog* GroupEntry::loadDelegateCatalog($CatalogImpl* parent, $URI* catalogURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($CatalogImpl, delegateCatalog, nullptr);
 	if (catalogURI != nullptr) {
 		$var($String, catalogId, catalogURI->toASCIIString());
@@ -609,6 +615,7 @@ $CatalogImpl* GroupEntry::getLoadedCatalog($String* catalogId) {
 }
 
 bool GroupEntry::verifyCatalogFile($CatalogImpl* parent, $URI* catalogURI) {
+	$useLocalCurrentObjectStackCache();
 	if (catalogURI == nullptr) {
 		return false;
 	}

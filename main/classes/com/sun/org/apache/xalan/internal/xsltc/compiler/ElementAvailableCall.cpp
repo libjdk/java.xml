@@ -93,6 +93,7 @@ void ElementAvailableCall::init$($QName* fname, $List* arguments) {
 }
 
 $Type* ElementAvailableCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($LiteralExpr, $(argument()))) {
 		$init($Type);
 		return $assignField(this, _type, $Type::Boolean);
@@ -108,6 +109,7 @@ $Object* ElementAvailableCall::evaluateAtCompileTime() {
 }
 
 bool ElementAvailableCall::getResult() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($LiteralExpr, arg, $cast($LiteralExpr, argument()));
 		$var($String, qname, $nc(arg)->getValue());
@@ -122,6 +124,7 @@ bool ElementAvailableCall::getResult() {
 }
 
 void ElementAvailableCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	bool result = getResult();
 	$nc($($nc(methodGen)->getInstructionList()))->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, result)));

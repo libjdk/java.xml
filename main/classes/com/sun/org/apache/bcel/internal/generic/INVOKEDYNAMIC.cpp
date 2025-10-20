@@ -155,6 +155,7 @@ void INVOKEDYNAMIC::accept($Visitor* v) {
 }
 
 $String* INVOKEDYNAMIC::getClassName($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantInvokeDynamic, cid, $cast($ConstantInvokeDynamic, $nc(cp)->getConstant($InvokeInstruction::getIndex(), $Const::CONSTANT_InvokeDynamic)));
 	return $nc(($cast($ConstantNameAndType, $(cp->getConstant($nc(cid)->getNameAndTypeIndex())))))->getName(cp);

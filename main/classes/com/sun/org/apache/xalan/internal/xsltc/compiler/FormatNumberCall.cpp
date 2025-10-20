@@ -118,6 +118,7 @@ void FormatNumberCall::init$($QName* fname, $List* arguments) {
 }
 
 $Type* FormatNumberCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$nc($(getStylesheet()))->numberFormattingUsed();
 	$var($Type, tvalue, $nc(this->_value)->typeCheck(stable));
 	if ($instanceOf($RealType, tvalue) == false) {
@@ -144,6 +145,7 @@ $Type* FormatNumberCall::typeCheck($SymbolTable* stable) {
 }
 
 void FormatNumberCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_value)->translate(classGen, methodGen);

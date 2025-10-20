@@ -331,6 +331,7 @@ $DTMAxisIterator* SimpleResultTreeImpl::getTypedChildren(int32_t type) {
 }
 
 $DTMAxisIterator* SimpleResultTreeImpl::getAxisIterator(int32_t axis) {
+	$useLocalCurrentObjectStackCache();
 	switch (axis) {
 	case $Axis::CHILD:
 		{}
@@ -364,6 +365,7 @@ $DTMAxisIterator* SimpleResultTreeImpl::getAxisIterator(int32_t axis) {
 }
 
 $DTMAxisIterator* SimpleResultTreeImpl::getTypedAxisIterator(int32_t axis, int32_t type) {
+	$useLocalCurrentObjectStackCache();
 	switch (axis) {
 	case $Axis::CHILD:
 		{}
@@ -537,6 +539,7 @@ int32_t SimpleResultTreeImpl::getSize() {
 }
 
 $String* SimpleResultTreeImpl::getDocumentURI(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, "simple_rtf"_s);
 	return $concat(var$0, $$str(SimpleResultTreeImpl::_documentURIIndex++));
 }
@@ -625,6 +628,7 @@ void SimpleResultTreeImpl::characters($String* str) {
 }
 
 void SimpleResultTreeImpl::characters($chars* ch, int32_t offset, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_size >= $nc(this->_textArray)->length) {
 		$var($StringArray, newTextArray, $new($StringArray, $nc(this->_textArray)->length * 2));
 		$System::arraycopy(this->_textArray, 0, newTextArray, 0, $nc(this->_textArray)->length);

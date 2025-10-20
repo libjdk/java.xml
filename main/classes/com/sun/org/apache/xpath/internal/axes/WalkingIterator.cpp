@@ -237,6 +237,7 @@ void WalkingIterator::setExpression($Expression* exp) {
 }
 
 bool WalkingIterator::deepEquals($Expression* expr) {
+	$useLocalCurrentObjectStackCache();
 	if (!$LocPathIterator::deepEquals(expr)) {
 		return false;
 	}

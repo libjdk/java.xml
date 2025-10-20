@@ -77,6 +77,7 @@ $String* DOM2Helper::getNamespaceOfNode($Node* n) {
 }
 
 bool DOM2Helper::isNodeAfter($Node* node1, $Node* node2) {
+	$useLocalCurrentObjectStackCache();
 	if (node1 == node2 || isNodeTheSame(node1, node2)) {
 		return true;
 	}
@@ -149,6 +150,7 @@ $Node* DOM2Helper::getParentOfNode($Node* node) {
 }
 
 bool DOM2Helper::isNodeAfterSibling($Node* parent, $Node* child1, $Node* child2) {
+	$useLocalCurrentObjectStackCache();
 	bool isNodeAfterSibling = false;
 	int16_t child1type = $nc(child1)->getNodeType();
 	int16_t child2type = $nc(child2)->getNodeType();

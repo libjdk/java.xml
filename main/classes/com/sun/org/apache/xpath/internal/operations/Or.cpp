@@ -64,6 +64,7 @@ void Or::init$() {
 }
 
 $XObject* Or::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, expr1, $nc(this->m_left)->execute(xctxt));
 	if (!$nc(expr1)->bool$()) {
 		$var($XObject, expr2, $nc(this->m_right)->execute(xctxt));

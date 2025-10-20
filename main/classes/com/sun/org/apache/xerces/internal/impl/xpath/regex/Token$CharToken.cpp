@@ -83,6 +83,7 @@ int32_t Token$CharToken::getChar() {
 }
 
 $String* Token$CharToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	switch (this->type) {
 	case $Token::CHAR:
@@ -169,6 +170,7 @@ $String* Token$CharToken::toString(int32_t options) {
 }
 
 bool Token$CharToken::match(int32_t ch) {
+	$useLocalCurrentObjectStackCache();
 	if (this->type == $Token::CHAR) {
 		return ch == this->chardata;
 	} else {

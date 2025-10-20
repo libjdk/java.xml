@@ -91,6 +91,7 @@ int32_t AttributesImplSerializer::getIndex($String* qname) {
 }
 
 void AttributesImplSerializer::addAttribute($String* uri, $String* local, $String* qname, $String* type, $String* val) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = $AttributesImpl::getLength();
 	$AttributesImpl::addAttribute(uri, local, qname, type, val);
 	if (index < AttributesImplSerializer::MAXMinus1) {
@@ -108,6 +109,7 @@ void AttributesImplSerializer::addAttribute($String* uri, $String* local, $Strin
 }
 
 void AttributesImplSerializer::switchOverToHash(int32_t numAtts) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t index = 0; index < numAtts; ++index) {
 		$var($String, qName, $AttributesImpl::getQName(index));
 		$var($Integer, i, $Integer::valueOf(index));
@@ -138,6 +140,7 @@ void AttributesImplSerializer::setAttributes($Attributes* atts) {
 }
 
 int32_t AttributesImplSerializer::getIndex($String* uri, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	if ($AttributesImpl::getLength() < AttributesImplSerializer::MAX) {
 		index = $AttributesImpl::getIndex(uri, localName);

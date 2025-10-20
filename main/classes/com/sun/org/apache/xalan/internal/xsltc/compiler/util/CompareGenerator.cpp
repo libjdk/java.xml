@@ -118,6 +118,7 @@ int32_t CompareGenerator::TRANSLET_INDEX = 0;
 int32_t CompareGenerator::LAST_INDEX = 0;
 
 void CompareGenerator::init$(int32_t access_flags, $Type* return_type, $TypeArray* arg_types, $StringArray* arg_names, $String* method_name, $String* class_name, $InstructionList* il, $ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$MethodGenerator::init$(access_flags, return_type, arg_types, arg_names, method_name, class_name, il, cp);
 	this->ITERATOR_INDEX = 6;
 	$set(this, _iloadCurrent, $new($ILOAD, CompareGenerator::CURRENT_INDEX));

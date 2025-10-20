@@ -66,6 +66,7 @@ $Object* allocate$BasicType($Class* clazz) {
 }
 
 void BasicType::init$(int8_t type) {
+	$useLocalCurrentObjectStackCache();
 	$Type::init$(type, $($Const::getShortTypeName(type)));
 	if ((type < $Const::T_BOOLEAN) || (type > $Const::T_VOID)) {
 		$throwNew($ClassGenException, $$str({"Invalid type: "_s, $$str(type)}));
@@ -74,6 +75,7 @@ void BasicType::init$(int8_t type) {
 
 BasicType* BasicType::getType(int8_t type) {
 	$init(BasicType);
+	$useLocalCurrentObjectStackCache();
 	switch (type) {
 	case $Const::T_VOID:
 		{

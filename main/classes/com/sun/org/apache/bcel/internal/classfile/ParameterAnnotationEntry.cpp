@@ -78,6 +78,7 @@ $Object* allocate$ParameterAnnotationEntry($Class* clazz) {
 }
 
 void ParameterAnnotationEntry::init$($DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	int32_t annotation_table_length = $nc(input)->readUnsignedShort();
 	$set(this, annotationTable, $new($AnnotationEntryArray, annotation_table_length));
 	for (int32_t i = 0; i < annotation_table_length; ++i) {
@@ -94,6 +95,7 @@ $AnnotationEntryArray* ParameterAnnotationEntry::getAnnotationEntries() {
 }
 
 void ParameterAnnotationEntry::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	$nc(dos)->writeShort($nc(this->annotationTable)->length);
 	{
 		$var($AnnotationEntryArray, arr$, this->annotationTable);
@@ -110,6 +112,7 @@ void ParameterAnnotationEntry::dump($DataOutputStream* dos) {
 
 $ParameterAnnotationEntryArray* ParameterAnnotationEntry::createParameterAnnotationEntries($AttributeArray* attrs) {
 	$init(ParameterAnnotationEntry);
+	$useLocalCurrentObjectStackCache();
 	$var($List, accumulatedAnnotations, $new($ArrayList, $nc(attrs)->length));
 	{
 		$var($AttributeArray, arr$, attrs);

@@ -133,6 +133,7 @@ void DOMNormalizer$XMLAttributesProxy::init$($DOMNormalizer* this$0) {
 }
 
 void DOMNormalizer$XMLAttributesProxy::setAttributes($AttributeMap* attributes, $CoreDocumentImpl* doc, $ElementImpl* elem) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fDocument, doc);
 	$set(this, fAttributes, attributes);
 	$set(this, fElement, elem);
@@ -150,6 +151,7 @@ void DOMNormalizer$XMLAttributesProxy::setAttributes($AttributeMap* attributes, 
 }
 
 int32_t DOMNormalizer$XMLAttributesProxy::addAttribute($QName* qname, $String* attrType, $String* attrValue) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = $nc(this->fElement)->getXercesAttribute($nc(qname)->uri, qname->localpart);
 	if (index < 0) {
 		$var($AttrImpl, attr, $cast($AttrImpl, $nc(($cast($CoreDocumentImpl, $($nc(this->fElement)->getOwnerDocument()))))->createAttributeNS($nc(qname)->uri, qname->rawname, qname->localpart)));
@@ -191,6 +193,7 @@ void DOMNormalizer$XMLAttributesProxy::getName(int32_t attrIndex, $QName* attrNa
 }
 
 $String* DOMNormalizer$XMLAttributesProxy::getPrefix(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAttributes != nullptr) {
 		$var($Node, node, $cast($Node, $nc(this->fAttributes)->getItem(index)));
 		$var($String, prefix, $nc(node)->getPrefix());
@@ -201,6 +204,7 @@ $String* DOMNormalizer$XMLAttributesProxy::getPrefix(int32_t index) {
 }
 
 $String* DOMNormalizer$XMLAttributesProxy::getURI(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAttributes != nullptr) {
 		$var($Node, node, $cast($Node, $nc(this->fAttributes)->getItem(index)));
 		$var($String, namespace$, $nc(node)->getNamespaceURI());
@@ -211,6 +215,7 @@ $String* DOMNormalizer$XMLAttributesProxy::getURI(int32_t index) {
 }
 
 $String* DOMNormalizer$XMLAttributesProxy::getLocalName(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAttributes != nullptr) {
 		$var($Node, node, $cast($Node, $nc(this->fAttributes)->getItem(index)));
 		$var($String, localName, $nc(node)->getLocalName());
@@ -221,6 +226,7 @@ $String* DOMNormalizer$XMLAttributesProxy::getLocalName(int32_t index) {
 }
 
 $String* DOMNormalizer$XMLAttributesProxy::getQName(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAttributes != nullptr) {
 		$var($Node, node, $cast($Node, $nc(this->fAttributes)->getItem(index)));
 		$var($String, rawname, $nc(this->this$0->fSymbolTable)->addSymbol($($nc(node)->getNodeName())));

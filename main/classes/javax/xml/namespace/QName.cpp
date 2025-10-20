@@ -127,6 +127,7 @@ $String* QName::toString() {
 
 QName* QName::valueOf($String* qNameAsString) {
 	$init(QName);
+	$useLocalCurrentObjectStackCache();
 	if (qNameAsString == nullptr) {
 		$throwNew($IllegalArgumentException, "cannot create QName from \"null\" or \"\" String"_s);
 	}

@@ -110,6 +110,7 @@ bool EncodingInfo::isPrintable(char16_t ch) {
 }
 
 bool EncodingInfo::isPrintable0(char16_t ch) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCharsetEncoder == nullptr && !this->fHaveTriedCharsetEncoder) {
 		try {
 			$var($Charset, charset, $Charset::forName(this->javaName));
@@ -136,6 +137,7 @@ bool EncodingInfo::isPrintable0(char16_t ch) {
 }
 
 void EncodingInfo::testJavaEncodingName($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($bytes, bTest, $new($bytes, {
 		(int8_t)u'v',
 		(int8_t)u'a',

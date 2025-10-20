@@ -182,6 +182,7 @@ void XMLAttributesImpl::init$() {
 }
 
 void XMLAttributesImpl::init$(int32_t tableSize) {
+	$useLocalCurrentObjectStackCache();
 	this->fNamespaces = true;
 	this->fLargeCount = 1;
 	$set(this, fAttributes, $new($XMLAttributesImpl$AttributeArray, 4));
@@ -200,6 +201,7 @@ int32_t XMLAttributesImpl::addAttribute($QName* name, $String* type, $String* va
 }
 
 int32_t XMLAttributesImpl::addAttribute($QName* name, $String* type, $String* value, $XMLString* valueCache) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	if (this->fLength < XMLAttributesImpl::SIZE_LIMIT) {
 		index = $nc(name)->uri != nullptr && $nc(name->uri)->length() != 0 ? getIndexFast($nc(name)->uri, name->localpart) : getIndexFast($nc(name)->rawname);
@@ -384,6 +386,7 @@ $String* XMLAttributesImpl::getName(int32_t index) {
 }
 
 int32_t XMLAttributesImpl::getIndex($String* qName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fLength; ++i) {
 		$var($XMLAttributesImpl$Attribute, attribute, $nc(this->fAttributes)->get(i));
 		if ($nc($nc(attribute)->name)->rawname != nullptr && $nc($nc(attribute->name)->rawname)->equals(qName)) {
@@ -394,6 +397,7 @@ int32_t XMLAttributesImpl::getIndex($String* qName) {
 }
 
 int32_t XMLAttributesImpl::getIndex($String* uri, $String* localPart) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fLength; ++i) {
 		$var($XMLAttributesImpl$Attribute, attribute, $nc(this->fAttributes)->get(i));
 		bool var$0 = $nc($nc(attribute)->name)->localpart != nullptr && $nc($nc(attribute->name)->localpart)->equals(localPart);
@@ -405,6 +409,7 @@ int32_t XMLAttributesImpl::getIndex($String* uri, $String* localPart) {
 }
 
 int32_t XMLAttributesImpl::getIndexByLocalName($String* localPart) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fLength; ++i) {
 		$var($XMLAttributesImpl$Attribute, attribute, $nc(this->fAttributes)->get(i));
 		if ($nc($nc(attribute)->name)->localpart != nullptr && $nc($nc(attribute->name)->localpart)->equals(localPart)) {
@@ -448,6 +453,7 @@ $String* XMLAttributesImpl::getType($String* uri, $String* localName) {
 }
 
 int32_t XMLAttributesImpl::getIndexFast($String* qName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fLength; ++i) {
 		$var($XMLAttributesImpl$Attribute, attribute, $nc(this->fAttributes)->get(i));
 		if ($nc($nc(attribute)->name)->rawname == qName) {
@@ -458,6 +464,7 @@ int32_t XMLAttributesImpl::getIndexFast($String* qName) {
 }
 
 void XMLAttributesImpl::addAttributeNS($QName* name, $String* type, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = this->fLength;
 	if (this->fLength++ == $nc(this->fAttributes)->length) {
 		$var($XMLAttributesImpl$AttributeArray, attributes, nullptr);
@@ -482,6 +489,7 @@ void XMLAttributesImpl::addAttributeNS($QName* name, $String* type, $String* val
 }
 
 $QName* XMLAttributesImpl::checkDuplicatesNS() {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = this->fLength;
 	if (length <= XMLAttributesImpl::SIZE_LIMIT) {
 		$var($XMLAttributesImpl$AttributeArray, attributes, this->fAttributes);
@@ -501,6 +509,7 @@ $QName* XMLAttributesImpl::checkDuplicatesNS() {
 }
 
 $QName* XMLAttributesImpl::checkManyDuplicatesNS() {
+	$useLocalCurrentObjectStackCache();
 	this->fIsTableViewConsistent = false;
 	prepareTableView();
 	$var($XMLAttributesImpl$Attribute, attr, nullptr);
@@ -540,6 +549,7 @@ $QName* XMLAttributesImpl::checkManyDuplicatesNS() {
 }
 
 int32_t XMLAttributesImpl::getIndexFast($String* uri, $String* localPart) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fLength; ++i) {
 		$var($XMLAttributesImpl$Attribute, attribute, $nc(this->fAttributes)->get(i));
 		if ($nc($nc(attribute)->name)->localpart == localPart && $nc(attribute->name)->uri == uri) {

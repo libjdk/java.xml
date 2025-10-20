@@ -136,6 +136,7 @@ void ConstantPool::init$($ConstantArray* constantPool) {
 }
 
 void ConstantPool::init$($DataInput* input) {
+	$useLocalCurrentObjectStackCache();
 	int8_t tag = 0;
 	int32_t constant_pool_count = $nc(input)->readUnsignedShort();
 	$set(this, constantPool, $new($ConstantArray, constant_pool_count));
@@ -153,6 +154,7 @@ void ConstantPool::accept($Visitor* v) {
 }
 
 $String* ConstantPool::constantToString($Constant* c$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, c$renamed);
 	$var($String, str, nullptr);
 	int32_t i = 0;
@@ -263,6 +265,7 @@ $String* ConstantPool::constantToString($Constant* c$renamed) {
 
 $String* ConstantPool::escape($String* str) {
 	$init(ConstantPool);
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(str)->length();
 	$var($StringBuilder, buf, $new($StringBuilder, len + 5));
 	$var($chars, ch, str->toCharArray());
@@ -317,6 +320,7 @@ void ConstantPool::dump($DataOutputStream* file) {
 }
 
 $Constant* ConstantPool::getConstant(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= $nc(this->constantPool)->length || index < 0) {
 		$throwNew($ClassFormatException, $$str({"Invalid constant pool reference: "_s, $$str(index), ". Constant pool size is: "_s, $$str($nc(this->constantPool)->length)}));
 	}
@@ -324,6 +328,7 @@ $Constant* ConstantPool::getConstant(int32_t index) {
 }
 
 $Constant* ConstantPool::getConstant(int32_t index, int8_t tag) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, nullptr);
 	$assign(c, getConstant(index));
 	if (c == nullptr) {
@@ -340,6 +345,7 @@ $ConstantArray* ConstantPool::getConstantPool() {
 }
 
 $String* ConstantPool::getConstantString(int32_t index, int8_t tag) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, nullptr);
 	int32_t i = 0;
 	$assign(c, getConstant(index, tag));
@@ -394,6 +400,7 @@ $String* ConstantPool::toString() {
 }
 
 ConstantPool* ConstantPool::copy() {
+	$useLocalCurrentObjectStackCache();
 	$var(ConstantPool, c, nullptr);
 	try {
 		$assign(c, $cast(ConstantPool, clone()));

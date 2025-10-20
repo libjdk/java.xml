@@ -165,10 +165,12 @@ void CodeException::setStartPC(int32_t startPc) {
 }
 
 $String* CodeException::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"CodeException(startPc = "_s, $$str(this->startPc), ", endPc = "_s, $$str(this->endPc), ", handlerPc = "_s, $$str(this->handlerPc), ", catchType = "_s, $$str(this->catchType), ")"_s});
 }
 
 $String* CodeException::toString($ConstantPool* cp, bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, nullptr);
 	if (this->catchType == 0) {
 		$assign(str, "<Any exception>(0)"_s);

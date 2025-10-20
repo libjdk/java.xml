@@ -366,6 +366,7 @@ $StringArray* XMLDTDValidator::RECOGNIZED_PROPERTIES = nullptr;
 $ObjectArray* XMLDTDValidator::PROPERTY_DEFAULTS = nullptr;
 
 void XMLDTDValidator::init$() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fValidationManager, nullptr);
 	$set(this, fValidationState, $new($ValidationState));
 	$set(this, fNamespaceContext, nullptr);
@@ -400,6 +401,7 @@ $DTDGrammarBucket* XMLDTDValidator::getGrammarBucket() {
 }
 
 void XMLDTDValidator::reset($XMLComponentManager* componentManager) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fDTDGrammar, nullptr);
 	this->fSeenDoctypeDecl = false;
 	this->fInCDATASection = false;
@@ -507,6 +509,7 @@ void XMLDTDValidator::xmlDecl($String* version, $String* encoding, $String* stan
 }
 
 void XMLDTDValidator::doctypeDecl($String* rootElement, $String* publicId, $String* systemId, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	this->fSeenDoctypeDecl = true;
 	$nc(this->fRootElement)->setValues(nullptr, rootElement, rootElement, nullptr);
 	$var($String, eid, nullptr);
@@ -555,6 +558,7 @@ void XMLDTDValidator::emptyElement($QName* element, $XMLAttributes* attributes, 
 }
 
 void XMLDTDValidator::characters($XMLString* text, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	bool callNextCharacters = true;
 	bool allWhiteSpace = true;
 	for (int32_t i = $nc(text)->offset; i < text->offset + text->length; ++i) {
@@ -710,6 +714,7 @@ bool XMLDTDValidator::validate() {
 }
 
 void XMLDTDValidator::addDTDDefaultAttrsAndValidate($QName* elementName, int32_t elementIndex, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	if (elementIndex == -1 || this->fDTDGrammar == nullptr) {
 		return;
 	}
@@ -855,6 +860,7 @@ void XMLDTDValidator::addDTDDefaultAttrsAndValidate($QName* elementName, int32_t
 }
 
 $String* XMLDTDValidator::getExternalEntityRefInAttrValue($String* nonNormalizedValue) {
+	$useLocalCurrentObjectStackCache();
 	int32_t valLength = $nc(nonNormalizedValue)->length();
 	int32_t ampIndex = nonNormalizedValue->indexOf((int32_t)u'&');
 	while (ampIndex != -1) {
@@ -876,6 +882,7 @@ $String* XMLDTDValidator::getExternalEntityRefInAttrValue($String* nonNormalized
 }
 
 void XMLDTDValidator::validateDTDattribute($QName* element, $String* attValue, $XMLAttributeDecl* attributeDecl) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc($nc(attributeDecl)->simpleType)->type) {
 	case $XMLSimpleType::TYPE_ENTITY:
 		{
@@ -1003,6 +1010,7 @@ bool XMLDTDValidator::invalidStandaloneAttDef($QName* element, $QName* attribute
 }
 
 bool XMLDTDValidator::normalizeAttrValue($XMLAttributes* attributes, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	bool leadingSpace = true;
 	bool spaceStart = false;
 	bool readingNonSpace = false;
@@ -1039,6 +1047,7 @@ bool XMLDTDValidator::normalizeAttrValue($XMLAttributes* attributes, int32_t ind
 }
 
 void XMLDTDValidator::rootElementSpecified($QName* rootElement) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fPerformValidation) {
 		$var($String, root1, $nc(this->fRootElement)->rawname);
 		$var($String, root2, $nc(rootElement)->rawname);
@@ -1073,6 +1082,7 @@ int32_t XMLDTDValidator::checkContent(int32_t elementIndex, $QNameArray* childre
 }
 
 void XMLDTDValidator::charDataInContent() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fElementChildren)->length <= this->fElementChildrenLength) {
 		$var($QNameArray, newarray, $new($QNameArray, $nc(this->fElementChildren)->length * 2));
 		$System::arraycopy(this->fElementChildren, 0, newarray, 0, $nc(this->fElementChildren)->length);
@@ -1090,6 +1100,7 @@ void XMLDTDValidator::charDataInContent() {
 }
 
 $String* XMLDTDValidator::getAttributeTypeName($XMLAttributeDecl* attrDecl) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc($nc(attrDecl)->simpleType)->type) {
 	case $XMLSimpleType::TYPE_ENTITY:
 		{
@@ -1171,6 +1182,7 @@ void XMLDTDValidator::init() {
 }
 
 void XMLDTDValidator::ensureStackCapacity(int32_t newElementDepth) {
+	$useLocalCurrentObjectStackCache();
 	if (newElementDepth == $nc(this->fElementQNamePartsStack)->length) {
 		$var($QNameArray, newStackOfQueue, $new($QNameArray, newElementDepth * 2));
 		$System::arraycopy(this->fElementQNamePartsStack, 0, newStackOfQueue, 0, newElementDepth);
@@ -1191,6 +1203,7 @@ void XMLDTDValidator::ensureStackCapacity(int32_t newElementDepth) {
 }
 
 bool XMLDTDValidator::handleStartElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fSeenRootElement) {
 		this->fPerformValidation = validate();
 		this->fSeenRootElement = true;
@@ -1261,6 +1274,7 @@ void XMLDTDValidator::startNamespaceScope($QName* element, $XMLAttributes* attri
 }
 
 void XMLDTDValidator::handleEndElement($QName* element, $Augmentations* augs, bool isEmpty) {
+	$useLocalCurrentObjectStackCache();
 	--this->fElementDepth;
 	if (this->fPerformValidation) {
 		int32_t elementIndex = this->fCurrentElementIndex;
@@ -1326,6 +1340,7 @@ bool XMLDTDValidator::isSpace(int32_t c) {
 }
 
 bool XMLDTDValidator::characterData($String* data, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($chars, var$0, $nc(data)->toCharArray());
 	characters($$new($XMLString, var$0, 0, data->length()), augs);
 	return true;

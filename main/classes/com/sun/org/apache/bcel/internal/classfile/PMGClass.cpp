@@ -123,16 +123,19 @@ void PMGClass::setPMGIndex(int32_t pmgIndex) {
 }
 
 $String* PMGClass::getPMGName() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, c, $cast($ConstantUtf8, $nc($($Attribute::getConstantPool()))->getConstant(this->pmgIndex, $Const::CONSTANT_Utf8)));
 	return $nc(c)->getBytes();
 }
 
 $String* PMGClass::getPMGClassName() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, c, $cast($ConstantUtf8, $nc($($Attribute::getConstantPool()))->getConstant(this->pmgClassIndex, $Const::CONSTANT_Utf8)));
 	return $nc(c)->getBytes();
 }
 
 $String* PMGClass::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"PMGClass("_s, $(getPMGName()), ", "_s}));
 	$var($String, var$0, $$concat(var$1, $(getPMGClassName())));
 	return $concat(var$0, ")");

@@ -73,6 +73,7 @@ void XSConstraints$1::init$() {
 }
 
 int32_t XSConstraints$1::compare($XSParticleDecl* o1, $XSParticleDecl* o2) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSParticleDecl, pDecl1, o1);
 	$var($XSParticleDecl, pDecl2, o2);
 	$var($XSElementDecl, decl1, $cast($XSElementDecl, $nc(pDecl1)->fValue));

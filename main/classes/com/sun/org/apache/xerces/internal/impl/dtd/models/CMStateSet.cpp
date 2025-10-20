@@ -82,6 +82,7 @@ void CMStateSet::init$(int32_t bitCount) {
 }
 
 $String* CMStateSet::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, strRet, $new($StringBuffer));
 	try {
 		strRet->append("{"_s);

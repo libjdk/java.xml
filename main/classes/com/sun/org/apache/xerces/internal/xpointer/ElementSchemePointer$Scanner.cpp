@@ -231,6 +231,7 @@ void ElementSchemePointer$Scanner::init$($ElementSchemePointer* this$0, $SymbolT
 }
 
 bool ElementSchemePointer$Scanner::scanExpr($SymbolTable* symbolTable, $ElementSchemePointer$Tokens* tokens, $String* data, int32_t currentOffset, int32_t endOffset) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ch = 0;
 	int32_t nameOffset = 0;
 	$var($String, nameHandle, nullptr);

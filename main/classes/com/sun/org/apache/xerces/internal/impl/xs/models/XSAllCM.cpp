@@ -160,6 +160,7 @@ bool XSAllCM::endContentModel($ints* currentState) {
 }
 
 bool XSAllCM::checkUniqueParticleAttribution($SubstitutionGroupHandler* subGroupHandler) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fNumElements; ++i) {
 		for (int32_t j = i + 1; j < this->fNumElements; ++j) {
 			if ($XSConstraints::overlapUPA($nc(this->fAllElements)->get(i), $nc(this->fAllElements)->get(j), subGroupHandler)) {

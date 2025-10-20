@@ -98,6 +98,7 @@ bool CMLeaf::isNullable() {
 }
 
 $String* CMLeaf::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, strRet, $new($StringBuilder, $($nc(this->fElement)->toString())));
 	strRet->append(" ("_s);
 	strRet->append($nc(this->fElement)->uri);

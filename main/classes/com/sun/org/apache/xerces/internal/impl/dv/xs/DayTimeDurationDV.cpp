@@ -72,6 +72,7 @@ void DayTimeDurationDV::init$() {
 }
 
 $Object* DayTimeDurationDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content, $DurationDV::DAYTIMEDURATION_TYPE));
 	} catch ($Exception&) {
@@ -85,6 +86,7 @@ $Object* DayTimeDurationDV::getActualValue($String* content, $ValidationContext*
 }
 
 $Duration* DayTimeDurationDV::getDuration($AbstractDateTimeDV$DateTimeData* date) {
+	$useLocalCurrentObjectStackCache();
 	int32_t sign = 1;
 	if ($nc(date)->day < 0 || $nc(date)->hour < 0 || $nc(date)->minute < 0 || $nc(date)->second < 0) {
 		sign = -1;

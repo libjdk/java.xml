@@ -90,6 +90,7 @@ void FilterIterator::setRestartable(bool isRestartable) {
 }
 
 $DTMAxisIterator* FilterIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(FilterIterator, clone, $cast(FilterIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _source, $nc(this->_source)->cloneIterator());

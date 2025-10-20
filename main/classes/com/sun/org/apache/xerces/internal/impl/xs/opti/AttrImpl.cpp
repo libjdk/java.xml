@@ -320,6 +320,7 @@ $TypeInfo* AttrImpl::getSchemaTypeInfo() {
 }
 
 $String* AttrImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({$(getName()), "=\""_s}));
 	$var($String, var$0, $$concat(var$1, $(getValue())));
 	return $concat(var$0, "\"");

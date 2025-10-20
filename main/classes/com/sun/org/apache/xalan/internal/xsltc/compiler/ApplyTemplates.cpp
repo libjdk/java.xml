@@ -146,6 +146,7 @@ void ApplyTemplates::init$() {
 }
 
 void ApplyTemplates::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
 	$Util::println("ApplyTemplates"_s);
 	this->indent(indent + $SyntaxTreeNode::IndentIncrement);
@@ -161,6 +162,7 @@ bool ApplyTemplates::hasWithParams() {
 }
 
 void ApplyTemplates::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, select, getAttribute("select"_s));
 	$var($String, mode, getAttribute("mode"_s));
 	if ($nc(select)->length() > 0) {
@@ -200,6 +202,7 @@ $Type* ApplyTemplates::typeCheck($SymbolTable* stable) {
 }
 
 void ApplyTemplates::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	bool setStartNodeCalled = false;
 	$var($Stylesheet, stylesheet, $nc(classGen)->getStylesheet());
 	$var($ConstantPoolGen, cpg, classGen->getConstantPool());

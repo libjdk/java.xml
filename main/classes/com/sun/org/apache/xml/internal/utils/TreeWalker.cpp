@@ -134,6 +134,7 @@ void TreeWalker::traverse($Node* pos) {
 }
 
 void TreeWalker::traverseFragment($Node* pos$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, pos, pos$renamed);
 	$var($Node, top, pos);
 	while (nullptr != pos) {
@@ -161,6 +162,7 @@ void TreeWalker::traverseFragment($Node* pos$renamed) {
 }
 
 void TreeWalker::traverse($Node* pos$renamed, $Node* top) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, pos, pos$renamed);
 	$nc(this->m_contentHandler)->startDocument();
 	while (nullptr != pos) {
@@ -186,6 +188,7 @@ void TreeWalker::traverse($Node* pos$renamed, $Node* top) {
 }
 
 void TreeWalker::dispatachChars($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($DOM2DTM$CharacterNodeHandler, this->m_contentHandler)) {
 		$nc(($cast($DOM2DTM$CharacterNodeHandler, this->m_contentHandler)))->characters(node);
 	} else {
@@ -196,6 +199,7 @@ void TreeWalker::dispatachChars($Node* node) {
 }
 
 void TreeWalker::startNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($NodeConsumer, this->m_contentHandler)) {
 		$nc(($cast($NodeConsumer, this->m_contentHandler)))->setOriginatingNode(node);
 	}
@@ -322,6 +326,7 @@ void TreeWalker::startNode($Node* node) {
 }
 
 void TreeWalker::endNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($String, ns, nullptr)
 		$var($NamedNodeMap, atts, nullptr)

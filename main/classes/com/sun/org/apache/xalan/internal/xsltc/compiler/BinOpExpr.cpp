@@ -132,6 +132,7 @@ void BinOpExpr::setParser($Parser* parser) {
 }
 
 $Type* BinOpExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, tleft, $nc(this->_left)->typeCheck(stable));
 	$var($Type, tright, $nc(this->_right)->typeCheck(stable));
 	$init($Type);
@@ -151,6 +152,7 @@ $Type* BinOpExpr::typeCheck($SymbolTable* stable) {
 }
 
 void BinOpExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_left)->translate(classGen, methodGen);
 	$nc(this->_right)->translate(classGen, methodGen);
@@ -193,6 +195,7 @@ void BinOpExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 $String* BinOpExpr::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$nc(BinOpExpr::Ops)->get(this->_op), $$str(u'('), this->_left, ", "_s, this->_right, $$str(u')')});
 }
 

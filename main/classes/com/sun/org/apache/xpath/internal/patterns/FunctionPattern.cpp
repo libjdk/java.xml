@@ -112,6 +112,7 @@ void FunctionPattern::fixupVariables($List* vars, int32_t globalsSize) {
 }
 
 $XObject* FunctionPattern::execute($XPathContext* xctxt, int32_t context) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMIterator, nl, $nc(this->m_functionExpr)->asIterator(xctxt, context));
 	$init($NodeTest);
 	$var($XNumber, score, $NodeTest::SCORE_NONE);
@@ -130,6 +131,7 @@ $XObject* FunctionPattern::execute($XPathContext* xctxt, int32_t context) {
 }
 
 $XObject* FunctionPattern::execute($XPathContext* xctxt, int32_t context, $DTM* dtm, int32_t expType) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMIterator, nl, $nc(this->m_functionExpr)->asIterator(xctxt, context));
 	$init($NodeTest);
 	$var($XNumber, score, $NodeTest::SCORE_NONE);
@@ -148,6 +150,7 @@ $XObject* FunctionPattern::execute($XPathContext* xctxt, int32_t context, $DTM* 
 }
 
 $XObject* FunctionPattern::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t context = $nc(xctxt)->getCurrentNode();
 	$var($DTMIterator, nl, $nc(this->m_functionExpr)->asIterator(xctxt, context));
 	$init($NodeTest);

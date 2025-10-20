@@ -62,6 +62,7 @@ void XMLInputSourceAdaptor::setSystemId($String* systemId) {
 }
 
 $String* XMLInputSourceAdaptor::getSystemId() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, var$0, $nc(this->fSource)->getSystemId());
 		return $XMLEntityManager::expandSystemId(var$0, $($nc(this->fSource)->getBaseSystemId()), false);

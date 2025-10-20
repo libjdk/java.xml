@@ -287,6 +287,7 @@ $String* PSVIErrorList::item(int32_t index) {
 }
 
 $Object* PSVIErrorList::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < this->fLength) {
 		return $of($nc(this->fArray)->get((index << 1) + this->fOffset));
 	}

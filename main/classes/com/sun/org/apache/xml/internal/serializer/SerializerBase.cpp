@@ -325,6 +325,7 @@ void SerializerBase::comment($String* data) {
 }
 
 $String* SerializerBase::patchName($String* qname) {
+	$useLocalCurrentObjectStackCache();
 	int32_t lastColon = $nc(qname)->lastIndexOf((int32_t)u':');
 	if (lastColon > 0) {
 		int32_t firstColon = qname->indexOf((int32_t)u':');
@@ -375,6 +376,7 @@ bool SerializerBase::addAttributeAlways($String* uri, $String* localName, $Strin
 }
 
 void SerializerBase::addAttribute($String* name, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_elemContext)->m_startTagOpen) {
 		$var($String, patchedName, patchName(name));
 		$var($String, localName, getLocalName(patchedName));
@@ -384,6 +386,7 @@ void SerializerBase::addAttribute($String* name, $String* value) {
 }
 
 void SerializerBase::addXSLAttribute($String* name, $String* value, $String* uri) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_elemContext)->m_startTagOpen) {
 		$var($String, patchedName, patchName(name));
 		$var($String, localName, getLocalName(patchedName));
@@ -392,6 +395,7 @@ void SerializerBase::addXSLAttribute($String* name, $String* value, $String* uri
 }
 
 void SerializerBase::addAttributes($Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nAtts = $nc(atts)->getLength();
 	for (int32_t i = 0; i < nAtts; ++i) {
 		$var($String, uri, atts->getURI(i));
@@ -561,6 +565,7 @@ $String* SerializerBase::getPrefix($String* namespaceURI) {
 }
 
 $String* SerializerBase::getNamespaceURI($String* qname, bool isElement) {
+	$useLocalCurrentObjectStackCache();
 	$init($SerializerConstants);
 	$var($String, uri, $SerializerConstants::EMPTYSTRING);
 	int32_t col = $nc(qname)->lastIndexOf((int32_t)u':');
@@ -787,6 +792,7 @@ void SerializerBase::setDTDEntityExpansion(bool expand) {
 }
 
 void SerializerBase::initCdataElems($String* s) {
+	$useLocalCurrentObjectStackCache();
 	if (s != nullptr) {
 		int32_t max = s->length();
 		bool inCurly = false;
@@ -849,6 +855,7 @@ bool SerializerBase::documentIsEmpty() {
 }
 
 bool SerializerBase::isCdataSection() {
+	$useLocalCurrentObjectStackCache();
 	bool b = false;
 	if (nullptr != this->m_StringOfCDATASections) {
 		if ($nc(this->m_elemContext)->m_elementLocalName == nullptr) {
@@ -882,6 +889,7 @@ bool SerializerBase::isCdataSection() {
 }
 
 $String* SerializerBase::getElementURI() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, nullptr);
 	$var($String, prefix, getPrefixPart($nc(this->m_elemContext)->m_elementName));
 	if (prefix == nullptr) {
@@ -947,6 +955,7 @@ $String* SerializerBase::getProp($String* name, bool defaultVal) {
 }
 
 void SerializerBase::setProp($String* name, $String* val, bool defaultVal) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_OutputProps == nullptr) {
 		$set(this, m_OutputProps, $new($HashMap));
 		$set(this, m_OutputPropsDefault, $new($HashMap));

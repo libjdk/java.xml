@@ -110,6 +110,7 @@ $XObject* XPathAPI::eval($Node* contextNode, $String* str) {
 }
 
 $XObject* XPathAPI::eval($Node* contextNode, $String* str, $Node* namespaceNode) {
+	$useLocalCurrentObjectStackCache();
 	$init($JdkConstants);
 	$var($XPathContext, xpathSupport, $new($XPathContext, $JdkConstants::OVERRIDE_PARSER_DEFAULT));
 	$var($PrefixResolverDefault, prefixResolver, $new($PrefixResolverDefault, ($nc(namespaceNode)->getNodeType() == $Node::DOCUMENT_NODE) ? $(static_cast<$Node*>($nc(($cast($Document, namespaceNode)))->getDocumentElement())) : namespaceNode));
@@ -119,6 +120,7 @@ $XObject* XPathAPI::eval($Node* contextNode, $String* str, $Node* namespaceNode)
 }
 
 $XObject* XPathAPI::eval($Node* contextNode, $String* str, $PrefixResolver* prefixResolver) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPath, xpath, $new($XPath, str, nullptr, prefixResolver, $XPath::SELECT, nullptr));
 	$init($JdkConstants);
 	$var($XPathContext, xpathSupport, $new($XPathContext, $JdkConstants::OVERRIDE_PARSER_DEFAULT));

@@ -86,6 +86,7 @@ int16_t FloatDV::getAllowedFacets() {
 }
 
 $Object* FloatDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of($new($FloatDV$XFloat, content));
 	} catch ($NumberFormatException&) {

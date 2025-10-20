@@ -843,6 +843,7 @@ $Class* XPathFactoryFinder::SERVICE_CLASS = nullptr;
 
 void XPathFactoryFinder::debugPrintln($Supplier* msgGen) {
 	$init(XPathFactoryFinder);
+	$useLocalCurrentObjectStackCache();
 	if (XPathFactoryFinder::debug) {
 		$init($System);
 		$nc($System::err)->println($$str({"JAXP: "_s, $cast($String, $($nc(msgGen)->get()))}));
@@ -857,6 +858,7 @@ void XPathFactoryFinder::init$($ClassLoader* loader) {
 }
 
 void XPathFactoryFinder::debugDisplayClassLoader() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		if (this->classLoader == $SecuritySupport::getContextClassLoader()) {
@@ -874,6 +876,7 @@ void XPathFactoryFinder::debugDisplayClassLoader() {
 }
 
 $XPathFactory* XPathFactoryFinder::newFactory($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	if (uri == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -887,6 +890,7 @@ $XPathFactory* XPathFactoryFinder::newFactory($String* uri) {
 }
 
 $XPathFactory* XPathFactoryFinder::_newFactory($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPathFactory, xpathFactory, nullptr);
 	$var($String, propertyName, $str({$($nc(XPathFactoryFinder::SERVICE_CLASS)->getName()), ":"_s, uri}));
 	try {
@@ -980,6 +984,7 @@ $Class* XPathFactoryFinder::createClass($String* className) {
 }
 
 $XPathFactory* XPathFactoryFinder::createInstance($String* className) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($XPathFactory, xPathFactory, nullptr);
 	debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$13$13, className)));
@@ -1045,11 +1050,13 @@ $XPathFactory* XPathFactoryFinder::createInstance($String* className) {
 }
 
 bool XPathFactoryFinder::isObjectModelSupportedBy($XPathFactory* factory, $String* objectModel, $AccessControlContext* acc) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	return $nc(($cast($Boolean, $($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new($XPathFactoryFinder$1, this, factory, objectModel)), acc)))))->booleanValue();
 }
 
 $XPathFactory* XPathFactoryFinder::findServiceProvider($String* objectModel) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (!XPathFactoryFinder::$assertionsDisabled && !(objectModel != nullptr)) {
 		$throwNew($AssertionError);

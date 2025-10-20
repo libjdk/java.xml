@@ -93,6 +93,7 @@ void XRTreeFragSelectWrapper::fixupVariables($List* vars, int32_t globalsSize) {
 }
 
 $XObject* XRTreeFragSelectWrapper::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, m_selected, nullptr);
 	$assign(m_selected, $nc(($cast($Expression, this->m_obj)))->execute(xctxt));
 	$nc(m_selected)->allowDetachToRelease(this->m_allowRelease);

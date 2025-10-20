@@ -118,6 +118,7 @@ void TextSerializer::endElement($String* namespaceURI, $String* localName, $Stri
 }
 
 void TextSerializer::startElement($String* tagName, $AttributeList* attrs) {
+	$useLocalCurrentObjectStackCache();
 	bool preserveSpace = false;
 	$var($ElementState, state, nullptr);
 	try {
@@ -165,6 +166,7 @@ void TextSerializer::comment($chars* chars, int32_t start, int32_t length) {
 }
 
 void TextSerializer::characters($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	try {
 		$assign(state, content());
@@ -190,6 +192,7 @@ void TextSerializer::startDocument($String* rootTagName) {
 }
 
 void TextSerializer::serializeElement($Element* elem) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, nullptr);
 	$var($ElementState, state, nullptr);
 	bool preserveSpace = false;
@@ -217,6 +220,7 @@ void TextSerializer::serializeElement($Element* elem) {
 }
 
 void TextSerializer::serializeNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc(node)->getNodeType()) {
 	case $Node::TEXT_NODE:
 		{

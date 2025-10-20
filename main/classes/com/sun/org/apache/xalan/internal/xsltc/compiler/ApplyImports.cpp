@@ -129,6 +129,7 @@ int32_t ApplyImports::getMinPrecedence(int32_t max) {
 }
 
 void ApplyImports::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($Stylesheet, stylesheet, getStylesheet());
 	$nc(stylesheet)->setTemplateInlining(false);
 	$var($Template, template$, getTemplate());
@@ -145,6 +146,7 @@ $Type* ApplyImports::typeCheck($SymbolTable* stable) {
 }
 
 void ApplyImports::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($Stylesheet, stylesheet, $nc(classGen)->getStylesheet());
 	$var($ConstantPoolGen, cpg, classGen->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());

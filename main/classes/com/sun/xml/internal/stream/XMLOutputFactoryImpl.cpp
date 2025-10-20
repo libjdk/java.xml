@@ -133,6 +133,7 @@ $XMLEventWriter* XMLOutputFactoryImpl::createXMLEventWriter($Writer* writer) {
 }
 
 $XMLStreamWriter* XMLOutputFactoryImpl::createXMLStreamWriter($Result* result) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($StreamResult, result)) {
 		return createXMLStreamWriter($cast($StreamResult, result), ($String*)nullptr);
 	} else if ($instanceOf($DOMResult, result)) {
@@ -181,6 +182,7 @@ bool XMLOutputFactoryImpl::isPropertySupported($String* name) {
 }
 
 void XMLOutputFactoryImpl::setProperty($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr || value == nullptr || !$nc(this->fPropertyManager)->containsProperty(name)) {
 		$throwNew($IllegalArgumentException, $$str({"Property "_s, name, "is not supported"_s}));
 	}
@@ -205,6 +207,7 @@ $StreamResult* XMLOutputFactoryImpl::toStreamResult($OutputStream* os, $Writer* 
 }
 
 $XMLStreamWriter* XMLOutputFactoryImpl::createXMLStreamWriter($StreamResult* sr, $String* encoding) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->fReuseInstance && this->fStreamWriter != nullptr && $nc(this->fStreamWriter)->canReuse() && !this->fPropertyChanged) {
 			$nc(this->fStreamWriter)->reset();

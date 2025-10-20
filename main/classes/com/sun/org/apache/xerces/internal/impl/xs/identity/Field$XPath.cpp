@@ -81,6 +81,7 @@ $Object* allocate$Field$XPath($Class* clazz) {
 }
 
 void Field$XPath::init$($String* xpath, $SymbolTable* symbolTable, $NamespaceContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$XPath::init$($(fixupXPath(xpath)), symbolTable, context);
 	for (int32_t i = 0; i < $nc(this->fLocationPaths)->length; ++i) {
 		for (int32_t j = 0; j < $nc($nc($nc(this->fLocationPaths)->get(i))->steps)->length; ++j) {

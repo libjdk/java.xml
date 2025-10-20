@@ -219,6 +219,7 @@ void SAX2DOM::characters($chars* ch, int32_t start, int32_t length) {
 }
 
 void SAX2DOM::appendTextNode() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->_textBuffer)->length() > 0) {
 		$var($Node, last, $cast($Node, $nc(this->_nodeStk)->peek()));
 		if (last == this->_root && this->_nextSiblingCache != nullptr) {
@@ -250,6 +251,7 @@ void SAX2DOM::setDocumentInfo() {
 }
 
 void SAX2DOM::startElement($String* namespace$, $String* localName, $String* qName, $Attributes* attrs) {
+	$useLocalCurrentObjectStackCache();
 	appendTextNode();
 	if (this->needToSetDocumentInfo) {
 		setDocumentInfo();
@@ -318,6 +320,7 @@ void SAX2DOM::ignorableWhitespace($chars* ch, int32_t start, int32_t length) {
 }
 
 void SAX2DOM::processingInstruction($String* target, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	appendTextNode();
 	$var($Node, last, $cast($Node, $nc(this->_nodeStk)->peek()));
 	$var($ProcessingInstruction, pi, $nc(this->_document)->createProcessingInstruction(target, data));
@@ -339,6 +342,7 @@ void SAX2DOM::skippedEntity($String* name) {
 }
 
 void SAX2DOM::comment($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	appendTextNode();
 	$var($Node, last, $cast($Node, $nc(this->_nodeStk)->peek()));
 	$var($Comment, comment, $nc(this->_document)->createComment($$new($String, ch, start, length)));
@@ -371,6 +375,7 @@ void SAX2DOM::startDTD($String* name, $String* publicId, $String* systemId) {
 }
 
 $Document* SAX2DOM::createDocument(bool overrideDefaultParser) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_factory == nullptr) {
 		$set(this, _factory, $JdkXmlUtils::getDOMFactory(overrideDefaultParser));
 		this->_internal = true;

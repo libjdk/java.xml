@@ -229,6 +229,7 @@ void XMLDTDLoader::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool
 }
 
 void XMLDTDLoader::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLErrorReporter* errorReporter$renamed, $XMLEntityResolver* entityResolver) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLErrorReporter, errorReporter, errorReporter$renamed);
 	$XMLDTDProcessor::init$();
 	this->fStrictURI = false;
@@ -408,6 +409,7 @@ $XMLEntityResolver* XMLDTDLoader::getEntityResolver() {
 }
 
 $Grammar* XMLDTDLoader::loadGrammar($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	reset();
 	$var($String, var$0, $nc(source)->getSystemId());
 	$var($String, eid, $XMLEntityManager::expandSystemId(var$0, $(source->getBaseSystemId()), this->fStrictURI));
@@ -448,6 +450,7 @@ $Grammar* XMLDTDLoader::loadGrammar($XMLInputSource* source) {
 }
 
 void XMLDTDLoader::loadGrammarWithContext($XMLDTDValidator* validator, $String* rootName, $String* publicId, $String* systemId, $String* baseSystemId, $String* internalSubset) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTDGrammarBucket, grammarBucket, $nc(validator)->getGrammarBucket());
 	$var($DTDGrammar, activeGrammar, $nc(grammarBucket)->getActiveGrammar());
 	if (activeGrammar != nullptr && !activeGrammar->isImmutable()) {

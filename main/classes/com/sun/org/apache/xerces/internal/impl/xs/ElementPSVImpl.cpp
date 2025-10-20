@@ -154,6 +154,7 @@ void ElementPSVImpl::init$() {
 }
 
 void ElementPSVImpl::init$(bool isConstant, $ElementPSVI* elementPSVI) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fDeclaration, nullptr);
 	$set(this, fTypeDecl, nullptr);
 	this->fNil = false;

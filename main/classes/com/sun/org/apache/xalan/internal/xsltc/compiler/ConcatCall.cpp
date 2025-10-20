@@ -99,6 +99,7 @@ void ConcatCall::init$($QName* fname, $List* arguments) {
 }
 
 $Type* ConcatCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < argumentCount(); ++i) {
 		$var($Expression, exp, argument(i));
 		$init($Type);
@@ -111,6 +112,7 @@ $Type* ConcatCall::typeCheck($SymbolTable* stable) {
 }
 
 void ConcatCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	int32_t nArgs = argumentCount();

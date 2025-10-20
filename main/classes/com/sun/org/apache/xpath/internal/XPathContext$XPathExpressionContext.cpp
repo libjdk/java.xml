@@ -128,6 +128,7 @@ void XPathContext$XPathExpressionContext::setOverrideDefaultParser(bool flag) {
 }
 
 double XPathContext$XPathExpressionContext::toNumber($Node* n) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nodeHandle = this->this$0->getDTMHandleFromNode(n);
 	$var($DTM, dtm, this->this$0->getDTM(nodeHandle));
 	$var($XString, xobj, $cast($XString, $nc(dtm)->getStringValue(nodeHandle)));
@@ -135,6 +136,7 @@ double XPathContext$XPathExpressionContext::toNumber($Node* n) {
 }
 
 $String* XPathContext$XPathExpressionContext::toString($Node* n) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nodeHandle = this->this$0->getDTMHandleFromNode(n);
 	$var($DTM, dtm, this->this$0->getDTM(nodeHandle));
 	$var($XMLString, strVal, $nc(dtm)->getStringValue(nodeHandle));

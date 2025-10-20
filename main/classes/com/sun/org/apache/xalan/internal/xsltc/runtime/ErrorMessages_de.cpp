@@ -75,6 +75,7 @@ void ErrorMessages_de::init$() {
 }
 
 $ObjectArray2* ErrorMessages_de::getContents() {
+	$useLocalCurrentObjectStackCache();
 			$init($BasisLibrary);
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {

@@ -156,6 +156,7 @@ void DOMValidatorHelper$DOMNamespaceContext::reset() {
 }
 
 void DOMValidatorHelper$DOMNamespaceContext::fillNamespaceContext() {
+	$useLocalCurrentObjectStackCache();
 	if (this->this$0->fRoot != nullptr) {
 		$var($Node, currentNode, $nc(this->this$0->fRoot)->getParentNode());
 		while (currentNode != nullptr) {

@@ -105,6 +105,7 @@ void Selector$Matcher::startDocumentFragment() {
 }
 
 void Selector$Matcher::startElement($QName* element, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$XPathMatcher::startElement(element, attributes);
 	++this->fElementDepth;
 	if (isMatched()) {

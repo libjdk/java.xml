@@ -127,6 +127,7 @@ $String* AlternativePattern::toString() {
 }
 
 void AlternativePattern::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(this->_left)->translate(classGen, methodGen);
 	$var($InstructionHandle, gotot, $nc(il)->append(static_cast<$BranchInstruction*>($$new($GOTO, nullptr))));

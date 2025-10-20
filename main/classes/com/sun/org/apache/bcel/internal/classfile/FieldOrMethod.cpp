@@ -137,6 +137,7 @@ void FieldOrMethod::init$() {
 }
 
 void FieldOrMethod::init$(FieldOrMethod* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getAccessFlags();
 	int32_t var$1 = c->getNameIndex();
 	int32_t var$2 = c->getSignatureIndex();
@@ -149,6 +150,7 @@ void FieldOrMethod::init$($DataInputStream* file, $ConstantPool* constant_pool) 
 }
 
 void FieldOrMethod::init$($DataInput* file, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(file)->readUnsignedShort();
 	int32_t var$1 = file->readUnsignedShort();
 	FieldOrMethod::init$(var$0, var$1, file->readUnsignedShort(), nullptr, constant_pool);
@@ -171,6 +173,7 @@ void FieldOrMethod::init$(int32_t access_flags, int32_t name_index, int32_t sign
 }
 
 void FieldOrMethod::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$nc(file)->writeShort($AccessFlags::getAccessFlags());
 	file->writeShort(this->name_index);
 	file->writeShort(this->signature_index);
@@ -236,6 +239,7 @@ $String* FieldOrMethod::getSignature() {
 }
 
 FieldOrMethod* FieldOrMethod::copy_($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(FieldOrMethod, c, nullptr);
 	try {
 		$assign(c, $cast(FieldOrMethod, clone()));

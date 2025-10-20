@@ -85,6 +85,7 @@ void XPathFactoryFinder$2::init$($XPathFactoryFinder* this$0, $String* val$objec
 }
 
 $Object* XPathFactoryFinder$2::run() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$init($XPathFactoryFinder);
 	$var($ServiceLoader, loader, $ServiceLoader::load($XPathFactoryFinder::SERVICE_CLASS));

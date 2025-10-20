@@ -121,6 +121,7 @@ void Lexer::tokenize($String* pat) {
 }
 
 void Lexer::tokenize($String* pat, $List* targetStrings) {
+	$useLocalCurrentObjectStackCache();
 	$set($nc(this->m_compiler), m_currentPattern, pat);
 	this->m_patternMapSize = 0;
 	$set($nc(this->m_compiler), m_opMap, $new($OpMapVector, $OpMap::MAXTOKENQUEUESIZE * 5, $OpMap::BLOCKTOKENQUEUESIZE * 5, $OpMap::MAPINDEX_LENGTH));
@@ -367,6 +368,7 @@ void Lexer::resetTokenMark(int32_t mark) {
 }
 
 int32_t Lexer::getKeywordToken($String* key) {
+	$useLocalCurrentObjectStackCache();
 	int32_t tok = 0;
 	try {
 		$var($Integer, itok, $Keywords::getKeyWord(key));
@@ -382,6 +384,7 @@ int32_t Lexer::getKeywordToken($String* key) {
 }
 
 void Lexer::recordTokenString($List* targetStrings) {
+	$useLocalCurrentObjectStackCache();
 	int32_t tokPos = getTokenQueuePosFromMap(this->m_patternMapSize - 1);
 	resetTokenMark(tokPos + 1);
 	if ($nc(this->m_processor)->lookahead(u'(', 1)) {
@@ -446,6 +449,7 @@ void Lexer::addToTokenQueue($String* s) {
 }
 
 int32_t Lexer::mapNSTokens($String* pat, int32_t startSubstring, int32_t posOfNSSep, int32_t posOfScan) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, ""_s);
 	if ((startSubstring >= 0) && (posOfNSSep >= 0)) {
 		$assign(prefix, $nc(pat)->substring(startSubstring, posOfNSSep));

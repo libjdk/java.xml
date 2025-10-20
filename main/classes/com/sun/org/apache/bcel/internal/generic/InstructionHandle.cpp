@@ -210,6 +210,7 @@ $InstructionTargeterArray* InstructionHandle::getTargeters() {
 }
 
 $String* InstructionHandle::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $$str({$($Utility::format(this->i_position, 4, false, u' ')), ": "_s}));
 	return $concat(var$0, $($nc(this->instruction)->toString(verbose)));
 }

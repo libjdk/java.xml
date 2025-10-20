@@ -166,6 +166,7 @@ int32_t BalancedDTDGrammar::addContentSpecNodes(int32_t begin, int32_t end) {
 }
 
 void BalancedDTDGrammar::initializeContentModelStacks() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fOpStack == nullptr) {
 		$set(this, fOpStack, $new($shorts, 8));
 		$set(this, fGroupIndexStack, $new($intArray2, 8));
@@ -186,6 +187,7 @@ void BalancedDTDGrammar::initializeContentModelStacks() {
 }
 
 void BalancedDTDGrammar::addToCurrentGroup(int32_t contentSpec) {
+	$useLocalCurrentObjectStackCache();
 	$var($ints, currentGroup, $nc(this->fGroupIndexStack)->get(this->fDepth));
 	int32_t length = (*$nc(this->fGroupIndexStackSizes))[this->fDepth]++;
 	if (currentGroup == nullptr) {

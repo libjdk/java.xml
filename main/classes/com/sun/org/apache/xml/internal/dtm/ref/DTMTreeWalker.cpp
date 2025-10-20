@@ -161,6 +161,7 @@ void DTMTreeWalker::dispatachChars(int32_t node) {
 }
 
 void DTMTreeWalker::startNode(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($NodeConsumer, this->m_contentHandler)) {
 	}
 	{
@@ -273,6 +274,7 @@ void DTMTreeWalker::startNode(int32_t node) {
 }
 
 void DTMTreeWalker::endNode(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($String, ns, nullptr)
 		switch ($nc(this->m_dtm)->getNodeType(node)) {

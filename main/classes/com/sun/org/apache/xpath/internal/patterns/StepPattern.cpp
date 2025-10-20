@@ -312,6 +312,7 @@ $ExpressionArray* StepPattern::getPredicates() {
 }
 
 bool StepPattern::canTraverseOutsideSubtree() {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = getPredicateCount();
 	for (int32_t i = 0; i < n; ++i) {
 		if ($nc($(getPredicate(i)))->canTraverseOutsideSubtree()) {
@@ -391,6 +392,7 @@ $XObject* StepPattern::execute($XPathContext* xctxt, int32_t currentNode, $DTM* 
 }
 
 bool StepPattern::checkProximityPosition($XPathContext* xctxt, int32_t predPos, $DTM* dtm, int32_t context, int32_t pos) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DTMAxisTraverser, traverser, $nc(dtm)->getAxisTraverser($Axis::PRECEDINGSIBLING));
 		for (int32_t child = $nc(traverser)->first(context); $DTM::NULL != child; child = traverser->next(context, child)) {
@@ -490,6 +492,7 @@ bool StepPattern::checkProximityPosition($XPathContext* xctxt, int32_t predPos, 
 }
 
 int32_t StepPattern::getProximityPosition($XPathContext* xctxt, int32_t predPos, bool findLast) {
+	$useLocalCurrentObjectStackCache();
 	int32_t pos = 0;
 	int32_t context = $nc(xctxt)->getCurrentNode();
 	$var($DTM, dtm, xctxt->getDTM(context));
@@ -614,6 +617,7 @@ int32_t StepPattern::getLastPos($XPathContext* xctxt) {
 }
 
 $XObject* StepPattern::executeRelativePathPattern($XPathContext* xctxt, $DTM* dtm, int32_t currentNode) {
+	$useLocalCurrentObjectStackCache();
 	$init($NodeTest);
 	$var($XObject, score, $NodeTest::SCORE_NONE);
 	int32_t context = currentNode;
@@ -648,6 +652,7 @@ $XObject* StepPattern::executeRelativePathPattern($XPathContext* xctxt, $DTM* dt
 }
 
 bool StepPattern::executePredicates($XPathContext* xctxt, $DTM* dtm, int32_t currentNode) {
+	$useLocalCurrentObjectStackCache();
 	bool result = true;
 	bool positionAlreadySeen = false;
 	int32_t n = getPredicateCount();
@@ -742,6 +747,7 @@ bool StepPattern::executePredicates($XPathContext* xctxt, $DTM* dtm, int32_t cur
 }
 
 $String* StepPattern::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buf, $new($StringBuffer));
 	{
 		$var(StepPattern, pat, this);
@@ -797,6 +803,7 @@ $String* StepPattern::toString() {
 }
 
 double StepPattern::getMatchScore($XPathContext* xctxt, int32_t context) {
+	$useLocalCurrentObjectStackCache();
 	$nc(xctxt)->pushCurrentNode(context);
 	xctxt->pushCurrentExpressionNode(context);
 	{
@@ -839,6 +846,7 @@ void StepPattern::callVisitors($ExpressionOwner* owner, $XPathVisitor* visitor) 
 }
 
 void StepPattern::callSubtreeVisitors($XPathVisitor* visitor) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr != this->m_predicates) {
 		int32_t n = $nc(this->m_predicates)->length;
 		for (int32_t i = 0; i < n; ++i) {

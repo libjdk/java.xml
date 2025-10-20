@@ -112,6 +112,7 @@ void Util::init$() {
 
 $String* Util::resolve($CatalogImpl* catalog, $String* publicId, $String* systemId) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	$var($String, resolvedSystemId, nullptr);
 	$nc(catalog)->reset();
 	if (systemId != nullptr) {
@@ -138,6 +139,7 @@ $String* Util::resolve($CatalogImpl* catalog, $String* publicId, $String* system
 
 void Util::validateUrisSyntax($URIArray* uris) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($URIArray, arr$, uris);
 		int32_t len$ = $nc(arr$)->length;
@@ -153,6 +155,7 @@ void Util::validateUrisSyntax($URIArray* uris) {
 
 void Util::validateUrisSyntax($StringArray* uris) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($StringArray, arr$, uris);
 		int32_t len$ = $nc(arr$)->length;
@@ -168,6 +171,7 @@ void Util::validateUrisSyntax($StringArray* uris) {
 
 void Util::validateUriSyntax($URI* uri) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	$CatalogMessages::reportNPEOnNull("URI input"_s, uri);
 	if (!$nc(uri)->isAbsolute()) {
 		$CatalogMessages::reportIAE($CatalogMessages::ERR_URI_NOTABSOLUTE, $$new($ObjectArray, {$of(uri)}), nullptr);
@@ -182,6 +186,7 @@ void Util::validateUriSyntax($URI* uri) {
 
 bool Util::isFileUri($URI* uri) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = $nc(Util::SCHEME_FILE)->equals($($nc(uri)->getScheme()));
 	if (var$0 || $nc(Util::SCHEME_JAR)->equals($($nc(uri)->getScheme()))) {
 		return true;
@@ -191,6 +196,7 @@ bool Util::isFileUri($URI* uri) {
 
 bool Util::isFileUriExist($URI* uri, bool openJarFile) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	if (uri != nullptr && uri->isAbsolute()) {
 		if (nullptr != uri->getScheme()) {
 			{
@@ -285,6 +291,7 @@ $String* Util::getNotNullOrEmpty($String* test) {
 
 void Util::validateFeatureInput($CatalogFeatures$Feature* f, $String* value) {
 	$init(Util);
+	$useLocalCurrentObjectStackCache();
 	$CatalogMessages::reportNPEOnNull($($nc(f)->name()), value);
 	if ($nc(value)->length() == 0) {
 		$CatalogMessages::reportIAE($CatalogMessages::ERR_INVALID_ARGUMENT, $$new($ObjectArray, {

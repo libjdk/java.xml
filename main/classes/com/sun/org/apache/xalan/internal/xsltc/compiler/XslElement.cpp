@@ -153,6 +153,7 @@ void XslElement::display(int32_t indent) {
 }
 
 void XslElement::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, stable, $nc(parser)->getSymbolTable());
 	$var($String, name, getAttribute("name"_s));
 	$init($Constants);
@@ -239,6 +240,7 @@ $1Type* XslElement::typeCheck($SymbolTable* stable) {
 }
 
 void XslElement::translateLiteral($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (!this->_ignore) {
@@ -261,6 +263,7 @@ void XslElement::translateLiteral($ClassGenerator* classGen, $MethodGenerator* m
 }
 
 void XslElement::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_isLiteralName) {
@@ -294,6 +297,7 @@ void XslElement::translate($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void XslElement::translateContents($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = elementCount();
 	for (int32_t i = 0; i < n; ++i) {
 		$var($SyntaxTreeNode, item, $cast($SyntaxTreeNode, $nc($(getContents()))->get(i)));

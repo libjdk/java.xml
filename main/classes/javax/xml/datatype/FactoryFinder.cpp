@@ -388,6 +388,7 @@ void FactoryFinder::init$() {
 
 void FactoryFinder::dPrint($Supplier* msgGen) {
 	$init(FactoryFinder);
+	$useLocalCurrentObjectStackCache();
 	if (FactoryFinder::debug) {
 		$init($System);
 		$nc($System::err)->println($$str({"JAXP: "_s, $cast($String, $($nc(msgGen)->get()))}));
@@ -396,6 +397,7 @@ void FactoryFinder::dPrint($Supplier* msgGen) {
 
 $Class* FactoryFinder::getProviderClass($String* className, $ClassLoader* cl$renamed, bool doFallback, bool useBSClsLoader) {
 	$init(FactoryFinder);
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, cl, cl$renamed);
 	$beforeCallerSensitive();
 	try {
@@ -431,6 +433,7 @@ $Object* FactoryFinder::newInstance($Class* type, $String* className, $ClassLoad
 
 $Object* FactoryFinder::newInstance($Class* type, $String* className, $ClassLoader* cl$renamed, bool doFallback, bool useBSClsLoader) {
 	$init(FactoryFinder);
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, cl, cl$renamed);
 	$beforeCallerSensitive();
 	if (!FactoryFinder::$assertionsDisabled && !(type != nullptr)) {
@@ -463,6 +466,7 @@ $Object* FactoryFinder::newInstance($Class* type, $String* className, $ClassLoad
 
 $Object* FactoryFinder::find($Class* type, $String* fallbackClassName) {
 	$init(FactoryFinder);
+	$useLocalCurrentObjectStackCache();
 	$var($String, factoryId, $nc(type)->getName());
 	dPrint(static_cast<$Supplier*>($$new(FactoryFinder$$Lambda$lambda$find$1$1, factoryId)));
 	try {
@@ -516,6 +520,7 @@ $Object* FactoryFinder::find($Class* type, $String* fallbackClassName) {
 
 $Object* FactoryFinder::findServiceProvider($Class* type) {
 	$init(FactoryFinder);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		return $of($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new($FactoryFinder$1, type))));
@@ -558,6 +563,7 @@ $String* FactoryFinder::lambda$newInstance$0($Class* providerClass, $ClassLoader
 }
 
 void clinit$FactoryFinder($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(FactoryFinder::DEFAULT_PACKAGE, "com.sun.org.apache.xerces.internal"_s);
 	FactoryFinder::$assertionsDisabled = !FactoryFinder::class$->desiredAssertionStatus();
 	FactoryFinder::debug = false;

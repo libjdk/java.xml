@@ -139,6 +139,7 @@ void Method::accept($Visitor* v) {
 }
 
 $Code* Method::getCode() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($AttributeArray, arr$, $FieldOrMethod::getAttributes());
 		int32_t len$ = $nc(arr$)->length;
@@ -156,6 +157,7 @@ $Code* Method::getCode() {
 }
 
 $ExceptionTable* Method::getExceptionTable() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($AttributeArray, arr$, $FieldOrMethod::getAttributes());
 		int32_t len$ = $nc(arr$)->length;
@@ -189,6 +191,7 @@ $LineNumberTable* Method::getLineNumberTable() {
 }
 
 $String* Method::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, access, $Utility::accessToString($FieldOrMethod::getAccessFlags()));
 	$var($ConstantUtf8, c, $cast($ConstantUtf8, $nc($($FieldOrMethod::getConstantPool()))->getConstant($FieldOrMethod::getSignatureIndex(), $Const::CONSTANT_Utf8)));
 	$var($String, signature, $nc(c)->getBytes());

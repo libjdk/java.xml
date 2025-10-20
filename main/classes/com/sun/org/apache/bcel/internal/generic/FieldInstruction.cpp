@@ -66,6 +66,7 @@ void FieldInstruction::init$(int16_t opcode, int32_t index) {
 }
 
 $String* FieldInstruction::toString($ConstantPool* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $$str({$($Const::getOpcodeName($FieldOrMethod::getOpcode())), " "_s}));
 	return $concat(var$0, $($nc(cp)->constantToString($FieldOrMethod::getIndex(), $Const::CONSTANT_Fieldref)));
 }

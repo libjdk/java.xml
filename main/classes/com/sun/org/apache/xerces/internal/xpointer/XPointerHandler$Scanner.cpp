@@ -250,6 +250,7 @@ void XPointerHandler$Scanner::init$($XPointerHandler* this$0, $SymbolTable* symb
 }
 
 bool XPointerHandler$Scanner::scanExpr($SymbolTable* symbolTable, $XPointerHandler$Tokens* tokens, $String* data, int32_t currentOffset, int32_t endOffset) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ch = 0;
 	int32_t openParen = 0;
 	int32_t closeParen = 0;

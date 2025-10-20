@@ -140,6 +140,7 @@ void Operation::setLeftRight($Expression* l, $Expression* r) {
 }
 
 $XObject* Operation::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, left, $nc(this->m_left)->execute(xctxt, true));
 	$var($XObject, right, $nc(this->m_right)->execute(xctxt, true));
 	$var($XObject, result, operate(left, right));

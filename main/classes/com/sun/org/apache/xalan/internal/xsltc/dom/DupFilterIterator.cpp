@@ -124,6 +124,7 @@ int32_t DupFilterIterator::next() {
 }
 
 $DTMAxisIterator* DupFilterIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(DupFilterIterator, clone, $cast(DupFilterIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _nodes, $cast($IntegerArray, $nc(this->_nodes)->clone()));

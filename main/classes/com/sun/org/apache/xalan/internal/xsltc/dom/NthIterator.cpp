@@ -80,6 +80,7 @@ void NthIterator::setRestartable(bool isRestartable) {
 }
 
 $DTMAxisIterator* NthIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(NthIterator, clone, $cast(NthIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _source, $nc(this->_source)->cloneIterator());

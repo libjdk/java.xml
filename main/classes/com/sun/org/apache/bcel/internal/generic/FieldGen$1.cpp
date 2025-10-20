@@ -74,6 +74,7 @@ void FieldGen$1::init$() {
 }
 
 bool FieldGen$1::equals(Object$* o1, Object$* o2) {
+	$useLocalCurrentObjectStackCache();
 	$var($FieldGen, THIS, $cast($FieldGen, o1));
 	$var($FieldGen, THAT, $cast($FieldGen, o2));
 	$var($Object, var$1, $of($nc(THIS)->getName()));
@@ -86,6 +87,7 @@ bool FieldGen$1::equals(Object$* o1, Object$* o2) {
 }
 
 int32_t FieldGen$1::hashCode(Object$* o) {
+	$useLocalCurrentObjectStackCache();
 	$var($FieldGen, THIS, $cast($FieldGen, o));
 	int32_t var$0 = $nc($($nc(THIS)->getSignature()))->hashCode();
 	return var$0 ^ $nc($(THIS->getName()))->hashCode();

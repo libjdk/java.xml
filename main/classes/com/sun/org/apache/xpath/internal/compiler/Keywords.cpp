@@ -339,6 +339,7 @@ $Integer* Keywords::getNodeType($String* key) {
 }
 
 void clinit$Keywords($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(Keywords::FROM_ANCESTORS_STRING, "ancestor"_s);
 	$assignStatic(Keywords::FROM_ANCESTORS_OR_SELF_STRING, "ancestor-or-self"_s);
 	$assignStatic(Keywords::FROM_ATTRIBUTES_STRING, "attribute"_s);

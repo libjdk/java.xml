@@ -440,6 +440,7 @@ void SchemaGrammar::init$($String* targetNamespace, $XSDDescription* grammarDesc
 }
 
 void SchemaGrammar::init$(SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fGrammarDescription, nullptr);
 	$set(this, fAnnotations, nullptr);
 	$set(this, fSymbolTable, nullptr);
@@ -617,6 +618,7 @@ void SchemaGrammar::addGlobalTypeDecl($XSTypeDefinition* decl) {
 }
 
 void SchemaGrammar::addGlobalTypeDecl($XSTypeDefinition* decl, $String* location) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fGlobalTypeDeclsExt)->put($$str({((location != nullptr) ? location : ""_s), ","_s, $($nc(decl)->getName())}), decl);
 	if ($nc(decl)->getNamespaceItem() == nullptr) {
 		if ($instanceOf($XSComplexTypeDecl, decl)) {
@@ -633,6 +635,7 @@ void SchemaGrammar::addGlobalComplexTypeDecl($XSComplexTypeDecl* decl) {
 }
 
 void SchemaGrammar::addGlobalComplexTypeDecl($XSComplexTypeDecl* decl, $String* location) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fGlobalTypeDeclsExt)->put($$str({((location != nullptr) ? location : ""_s), ","_s, $($nc(decl)->getName())}), decl);
 	if ($nc(decl)->getNamespaceItem() == nullptr) {
 		decl->setNamespaceItem(this);
@@ -647,6 +650,7 @@ void SchemaGrammar::addGlobalSimpleTypeDecl($XSSimpleType* decl) {
 }
 
 void SchemaGrammar::addGlobalSimpleTypeDecl($XSSimpleType* decl, $String* location) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fGlobalTypeDeclsExt)->put($$str({((location != nullptr) ? location : ""_s), ","_s, $($nc(decl)->getName())}), decl);
 	if ($nc(decl)->getNamespaceItem() == nullptr && $instanceOf($XSSimpleTypeDecl, decl)) {
 		$nc(($cast($XSSimpleTypeDecl, decl)))->setNamespaceItem(this);
@@ -659,6 +663,7 @@ void SchemaGrammar::addIDConstraintDecl($XSElementDecl* elmDecl, $IdentityConstr
 }
 
 void SchemaGrammar::addIDConstraintDecl($XSElementDecl* elmDecl, $IdentityConstraint* decl, $String* location) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fGlobalIDConstraintDeclsExt)->put($$str({((location != nullptr) ? location : ""_s), ","_s, $($nc(decl)->getIdentityConstraintName())}), decl);
 }
 
@@ -849,6 +854,7 @@ $String* SchemaGrammar::getSchemaNamespace() {
 
 $DOMParser* SchemaGrammar::getDOMParser() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (this->fDOMParser != nullptr) {
 			$var($DOMParser, parser, $cast($DOMParser, $nc(this->fDOMParser)->get()));
 			if (parser != nullptr) {
@@ -872,6 +878,7 @@ $DOMParser* SchemaGrammar::getDOMParser() {
 
 $SAXParser* SchemaGrammar::getSAXParser() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (this->fSAXParser != nullptr) {
 			$var($SAXParser, parser, $cast($SAXParser, $nc(this->fSAXParser)->get()));
 			if (parser != nullptr) {
@@ -890,6 +897,7 @@ $SAXParser* SchemaGrammar::getSAXParser() {
 
 $XSNamedMap* SchemaGrammar::getComponents(int16_t objectType) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (objectType <= 0 || objectType > SchemaGrammar::MAX_COMP_IDX || !$nc(SchemaGrammar::GLOBAL_COMP)->get(objectType)) {
 			$init($XSNamedMapImpl);
 			return $XSNamedMapImpl::EMPTY_MAP;
@@ -952,6 +960,7 @@ $XSNamedMap* SchemaGrammar::getComponents(int16_t objectType) {
 
 $ObjectList* SchemaGrammar::getComponentsExt(int16_t objectType) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (objectType <= 0 || objectType > SchemaGrammar::MAX_COMP_IDX || !$nc(SchemaGrammar::GLOBAL_COMP)->get(objectType)) {
 			$init($ObjectListImpl);
 			return $ObjectListImpl::EMPTY_LIST;

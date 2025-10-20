@@ -103,6 +103,7 @@ $Object* allocate$AnnotationEntry($Class* clazz) {
 
 AnnotationEntry* AnnotationEntry::read($DataInput* input, $ConstantPool* constant_pool, bool isRuntimeVisible) {
 	$init(AnnotationEntry);
+	$useLocalCurrentObjectStackCache();
 	$var(AnnotationEntry, annotationEntry, $new(AnnotationEntry, $nc(input)->readUnsignedShort(), constant_pool, isRuntimeVisible));
 	int32_t num_element_value_pairs = $nc(input)->readUnsignedShort();
 	$set(annotationEntry, elementValuePairs, $new($ArrayList));
@@ -153,6 +154,7 @@ $ElementValuePairArray* AnnotationEntry::getElementValuePairs() {
 }
 
 void AnnotationEntry::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	$nc(dos)->writeShort(this->typeIndex);
 	dos->writeShort($nc(this->elementValuePairs)->size());
 	{
@@ -171,6 +173,7 @@ void AnnotationEntry::addElementNameValuePair($ElementValuePair* elementNameValu
 }
 
 $String* AnnotationEntry::toShortString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, result, $new($StringBuilder));
 	result->append("@"_s);
 	result->append($(getAnnotationType()));
@@ -199,6 +202,7 @@ $String* AnnotationEntry::toString() {
 
 $AnnotationEntryArray* AnnotationEntry::createAnnotationEntries($AttributeArray* attrs) {
 	$init(AnnotationEntry);
+	$useLocalCurrentObjectStackCache();
 	$var($List, accumulatedAnnotations, $new($ArrayList, $nc(attrs)->length));
 	{
 		$var($AttributeArray, arr$, attrs);

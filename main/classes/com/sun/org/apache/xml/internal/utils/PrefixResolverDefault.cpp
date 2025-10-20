@@ -68,6 +68,7 @@ $String* PrefixResolverDefault::getNamespaceForPrefix($String* prefix) {
 }
 
 $String* PrefixResolverDefault::getNamespaceForPrefix($String* prefix, $Node* namespaceContext) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, parent, namespaceContext);
 	$var($String, namespace$, nullptr);
 	if ($nc(prefix)->equals("xml"_s)) {

@@ -249,6 +249,7 @@ bool XMLStringDefault::hasString() {
 }
 
 double XMLStringDefault::toDouble() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc($($Double::valueOf(this->m_str)))->doubleValue();
 	} catch ($NumberFormatException&) {

@@ -106,6 +106,7 @@ $Object* allocate$DescendantIterator($Class* clazz) {
 }
 
 void DescendantIterator::init$($Compiler* compiler, int32_t opPos, int32_t analysis) {
+	$useLocalCurrentObjectStackCache();
 	$LocPathIterator::init$(compiler, opPos, analysis, false);
 	int32_t firstStepPos = $OpMap::getFirstChildPos(opPos);
 	int32_t stepType = $nc(compiler)->getOp(firstStepPos);
@@ -174,6 +175,7 @@ $DTMIterator* DescendantIterator::cloneWithReset() {
 }
 
 int32_t DescendantIterator::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_foundLast) {
 		return $DTM::NULL;
 	}
@@ -241,6 +243,7 @@ int32_t DescendantIterator::nextNode() {
 }
 
 void DescendantIterator::setRoot(int32_t context, Object$* environment) {
+	$useLocalCurrentObjectStackCache();
 	$LocPathIterator::setRoot(context, environment);
 	$set(this, m_traverser, $nc(this->m_cdtm)->getAxisTraverser(this->m_axis));
 	$var($String, localName, getLocalName());
@@ -257,6 +260,7 @@ void DescendantIterator::setRoot(int32_t context, Object$* environment) {
 }
 
 int32_t DescendantIterator::asNode($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	if (getPredicateCount() > 0) {
 		return $LocPathIterator::asNode(xctxt);
 	}

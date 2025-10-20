@@ -68,6 +68,7 @@ $Object* allocate$EnumElementValue($Class* clazz) {
 }
 
 void EnumElementValue::init$(int32_t type, int32_t typeIdx, int32_t valueIdx, $ConstantPool* cpool) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValue::init$(type, cpool);
 	if (type != $ElementValue::ENUM_CONSTANT) {
 		$throwNew($IllegalArgumentException, $$str({"Only element values of type enum can be built with this ctor - type specified: "_s, $$str(type)}));
@@ -83,16 +84,19 @@ void EnumElementValue::dump($DataOutputStream* dos) {
 }
 
 $String* EnumElementValue::stringifyValue() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, cu8, $cast($ConstantUtf8, $nc($($ElementValue::getConstantPool()))->getConstant(this->valueIdx, $Const::CONSTANT_Utf8)));
 	return $nc(cu8)->getBytes();
 }
 
 $String* EnumElementValue::getEnumTypeString() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, cu8, $cast($ConstantUtf8, $nc($($ElementValue::getConstantPool()))->getConstant(this->typeIdx, $Const::CONSTANT_Utf8)));
 	return $nc(cu8)->getBytes();
 }
 
 $String* EnumElementValue::getEnumValueString() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, cu8, $cast($ConstantUtf8, $nc($($ElementValue::getConstantPool()))->getConstant(this->valueIdx, $Const::CONSTANT_Utf8)));
 	return $nc(cu8)->getBytes();
 }

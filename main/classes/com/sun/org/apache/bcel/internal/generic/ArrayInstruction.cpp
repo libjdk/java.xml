@@ -128,6 +128,7 @@ $ClassArray* ArrayInstruction::getExceptions() {
 }
 
 $Type* ArrayInstruction::getType($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int16_t _opcode = $Instruction::getOpcode();
 	switch (_opcode) {
 	case $Const::IALOAD:

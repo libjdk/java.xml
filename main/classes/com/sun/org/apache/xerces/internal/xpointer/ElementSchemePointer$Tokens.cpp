@@ -93,6 +93,7 @@ $Object* allocate$ElementSchemePointer$Tokens($Class* clazz) {
 }
 
 void ElementSchemePointer$Tokens::init$($ElementSchemePointer* this$0, $SymbolTable* symbolTable) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, this$0, this$0);
 	$set(this, fgTokenNames, $new($StringArray, {
 		"XPTRTOKEN_ELEM_NCNAME"_s,
@@ -111,6 +112,7 @@ $String* ElementSchemePointer$Tokens::getTokenString(int32_t token) {
 }
 
 void ElementSchemePointer$Tokens::addToken($String* tokenStr) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, $cast($String, $nc(this->fTokenNames)->get(tokenStr)));
 	$var($Integer, tokenInt, str == nullptr ? ($Integer*)nullptr : $Integer::valueOf($Integer::parseInt(str)));
 	if (tokenInt == nullptr) {
@@ -121,6 +123,7 @@ void ElementSchemePointer$Tokens::addToken($String* tokenStr) {
 }
 
 void ElementSchemePointer$Tokens::addToken(int32_t token) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTokens)->set(this->fTokenCount, token);
 	} catch ($ArrayIndexOutOfBoundsException&) {

@@ -130,6 +130,7 @@ void XResourceBundle::init$() {
 }
 
 $ObjectArray2* XResourceBundle::getContents() {
+	$useLocalCurrentObjectStackCache();
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of("ui_language"_s),

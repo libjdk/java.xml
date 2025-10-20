@@ -206,6 +206,7 @@ void BaseSchemaDVFactory::init$() {
 
 void BaseSchemaDVFactory::createBuiltInTypes($SymbolHash* builtInTypes, $XSSimpleTypeDecl* baseAtomicType) {
 	$init(BaseSchemaDVFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($String, ANYSIMPLETYPE, "anySimpleType"_s);
 	$var($String, ANYURI, "anyURI"_s);
 	$var($String, BASE64BINARY, "base64Binary"_s);
@@ -394,6 +395,7 @@ $XSSimpleType* BaseSchemaDVFactory::createTypeList($String* name, $String* targe
 }
 
 $XSSimpleType* BaseSchemaDVFactory::createTypeUnion($String* name, $String* targetNamespace, int16_t finalSet, $XSSimpleTypeArray* memberTypes, $XSObjectList* annotations) {
+	$useLocalCurrentObjectStackCache();
 	int32_t typeNum = $nc(memberTypes)->length;
 	$var($XSSimpleTypeDeclArray, mtypes, $new($XSSimpleTypeDeclArray, typeNum));
 	$System::arraycopy(memberTypes, 0, mtypes, 0, typeNum);

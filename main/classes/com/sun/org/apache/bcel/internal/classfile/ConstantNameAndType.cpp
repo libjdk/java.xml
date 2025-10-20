@@ -119,6 +119,7 @@ void ConstantNameAndType::setSignatureIndex(int32_t signatureIndex) {
 }
 
 $String* ConstantNameAndType::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(nameIndex = "_s, $$str(this->nameIndex), ", signatureIndex = "_s, $$str(this->signatureIndex), ")"_s});
 }
 

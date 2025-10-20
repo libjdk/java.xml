@@ -93,6 +93,7 @@ $VariableBase* VariableRefBase::getVariable() {
 }
 
 void VariableRefBase::addParentDependency() {
+	$useLocalCurrentObjectStackCache();
 	$var($SyntaxTreeNode, node, this);
 	while (node != nullptr && $instanceOf($TopLevelElement, node) == false) {
 		$assign(node, node->getParent());
@@ -120,6 +121,7 @@ int32_t VariableRefBase::hashCode() {
 }
 
 $String* VariableRefBase::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"variable-ref("_s, $($nc(this->_variable)->getName()), $$str(u'/')}));
 	$var($String, var$0, $$concat(var$1, $($nc(this->_variable)->getType())));
 	return $concat(var$0, $$str(u')'));

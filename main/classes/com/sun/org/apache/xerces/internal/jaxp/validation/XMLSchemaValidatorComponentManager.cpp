@@ -290,6 +290,7 @@ $String* XMLSchemaValidatorComponentManager::XMLGRAMMAR_POOL = nullptr;
 $String* XMLSchemaValidatorComponentManager::LOCALE = nullptr;
 
 void XMLSchemaValidatorComponentManager::init$($XSGrammarPoolContainer* grammarContainer) {
+	$useLocalCurrentObjectStackCache();
 	$ParserConfigurationSettings::init$();
 	this->_isSecureMode = false;
 	this->fConfigUpdated = true;
@@ -442,6 +443,7 @@ void XMLSchemaValidatorComponentManager::setFeature($String* featureId, bool val
 }
 
 $PropertyState* XMLSchemaValidatorComponentManager::getPropertyState($String* propertyId) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(XMLSchemaValidatorComponentManager::LOCALE)->equals(propertyId)) {
 		return $PropertyState::is($(getLocale()));
 	}
@@ -492,6 +494,7 @@ void XMLSchemaValidatorComponentManager::setProperty($String* propertyId, Object
 }
 
 void XMLSchemaValidatorComponentManager::addRecognizedParamsAndSetDefaults($XMLComponent* component, $XSGrammarPoolContainer* grammarContainer) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, recognizedFeatures, $nc(component)->getRecognizedFeatures());
 	addRecognizedFeatures(recognizedFeatures);
 	$var($StringArray, recognizedProperties, component->getRecognizedProperties());
@@ -510,6 +513,7 @@ void XMLSchemaValidatorComponentManager::reset() {
 }
 
 void XMLSchemaValidatorComponentManager::setErrorHandler($ErrorHandler* errorHandler) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fErrorHandler, errorHandler);
 	setProperty(XMLSchemaValidatorComponentManager::ERROR_HANDLER, (errorHandler != nullptr) ? $of($$new($ErrorHandlerWrapper, errorHandler)) : $of($$new($ErrorHandlerWrapper, $($DraconianErrorHandler::getInstance()))));
 }
@@ -537,6 +541,7 @@ $Locale* XMLSchemaValidatorComponentManager::getLocale() {
 }
 
 void XMLSchemaValidatorComponentManager::restoreInitialState() {
+	$useLocalCurrentObjectStackCache();
 	this->fConfigUpdated = true;
 	$nc(this->fComponents)->put(XMLSchemaValidatorComponentManager::ENTITY_RESOLVER, nullptr);
 	$nc(this->fComponents)->put(XMLSchemaValidatorComponentManager::ERROR_HANDLER, nullptr);
@@ -577,6 +582,7 @@ void XMLSchemaValidatorComponentManager::restoreInitialState() {
 }
 
 void XMLSchemaValidatorComponentManager::setFeatureDefaults($XMLComponent* component, $StringArray* recognizedFeatures, $XSGrammarPoolContainer* grammarContainer) {
+	$useLocalCurrentObjectStackCache();
 	if (recognizedFeatures != nullptr) {
 		for (int32_t i = 0; i < recognizedFeatures->length; ++i) {
 			$var($String, featureId, recognizedFeatures->get(i));
@@ -595,6 +601,7 @@ void XMLSchemaValidatorComponentManager::setFeatureDefaults($XMLComponent* compo
 }
 
 void XMLSchemaValidatorComponentManager::setPropertyDefaults($XMLComponent* component, $StringArray* recognizedProperties) {
+	$useLocalCurrentObjectStackCache();
 	if (recognizedProperties != nullptr) {
 		for (int32_t i = 0; i < recognizedProperties->length; ++i) {
 			$var($String, propertyId, recognizedProperties->get(i));

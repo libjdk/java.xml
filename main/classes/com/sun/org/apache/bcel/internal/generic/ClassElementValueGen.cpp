@@ -84,6 +84,7 @@ void ClassElementValueGen::init$($ObjectType* t, $ConstantPoolGen* cpool) {
 }
 
 $ElementValue* ClassElementValueGen::getElementValue() {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $ElementValueGen::getElementValueType();
 	int32_t var$1 = this->idx;
 	return $new($ClassElementValue, var$0, var$1, $($nc($(getConstantPool()))->getConstantPool()));
@@ -103,6 +104,7 @@ int32_t ClassElementValueGen::getIndex() {
 }
 
 $String* ClassElementValueGen::getClassString() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, cu8, $cast($ConstantUtf8, $nc($(getConstantPool()))->getConstant(this->idx)));
 	return $nc(cu8)->getBytes();
 }

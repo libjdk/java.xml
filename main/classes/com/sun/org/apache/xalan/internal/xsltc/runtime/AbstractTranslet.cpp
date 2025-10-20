@@ -277,6 +277,7 @@ void AbstractTranslet::init$() {
 }
 
 void AbstractTranslet::printInternalState() {
+	$useLocalCurrentObjectStackCache();
 	$init($System);
 	$nc($System::out)->println("-------------------------------------"_s);
 	$nc($System::out)->println($$str({"AbstractTranslet this = "_s, this}));
@@ -317,6 +318,7 @@ $Object* AbstractTranslet::addParameter($String* name$renamed, Object$* value) {
 }
 
 $Object* AbstractTranslet::addParameter($String* name, Object$* value, bool isDefault) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = this->pframe - 1; i >= this->pbase; --i) {
 		$var($Parameter, param, $cast($Parameter, $nc(this->paramsStack)->get(i)));
 		if ($nc($nc(param)->_name)->equals(name)) {
@@ -338,6 +340,7 @@ void AbstractTranslet::clearParameters() {
 }
 
 $Object* AbstractTranslet::getParameter($String* name$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, name$renamed);
 	$assign(name, $BasisLibrary::mapQNameToJavaName(name));
 	for (int32_t i = this->pframe - 1; i >= this->pbase; --i) {
@@ -363,6 +366,7 @@ void AbstractTranslet::displayMessage($String* msg) {
 }
 
 void AbstractTranslet::addDecimalFormat($String* name$renamed, $DecimalFormatSymbols* symbols) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, name$renamed);
 	if (this->_formatSymbols == nullptr) {
 		$set(this, _formatSymbols, $new($HashMap));
@@ -378,6 +382,7 @@ void AbstractTranslet::addDecimalFormat($String* name$renamed, $DecimalFormatSym
 }
 
 $DecimalFormat* AbstractTranslet::getDecimalFormat($String* name$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, name$renamed);
 	if (this->_formatSymbols != nullptr) {
 		if (name == nullptr) {
@@ -398,6 +403,7 @@ void AbstractTranslet::prepassDocument($DOM* document) {
 }
 
 void AbstractTranslet::buildIDIndex($DOM* document) {
+	$useLocalCurrentObjectStackCache();
 	setRootForKeys($nc(document)->getDocument());
 	if ($instanceOf($DOMEnhancedForDTM, document)) {
 		$var($DOMEnhancedForDTM, enhancedDOM, $cast($DOMEnhancedForDTM, document));
@@ -429,6 +435,7 @@ void AbstractTranslet::buildIDIndex($DOM* document) {
 }
 
 void AbstractTranslet::postInitialization() {
+	$useLocalCurrentObjectStackCache();
 	if (this->transletVersion < AbstractTranslet::VER_SPLIT_NAMES_ARRAY) {
 		int32_t arraySize = $nc(this->namesArray)->length;
 		$var($StringArray, newURIsArray, $new($StringArray, arraySize));
@@ -524,6 +531,7 @@ $DOMCache* AbstractTranslet::getDOMCache() {
 }
 
 $SerializationHandler* AbstractTranslet::openOutputHandler($String* filename, bool append) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($TransletOutputHandlerFactory, factory, $TransletOutputHandlerFactory::newInstance(this->_overrideDefaultParser, $($nc(this->_msgHandler)->getErrorListener())));
 		$var($String, dirStr, $$new($File, filename)->getParent());
@@ -564,6 +572,7 @@ void AbstractTranslet::closeOutputHandler($SerializationHandler* handler) {
 }
 
 void AbstractTranslet::transform($DOM* document, $SerializationHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		try {
@@ -591,6 +600,7 @@ void AbstractTranslet::characters($String* string, $SerializationHandler* handle
 }
 
 void AbstractTranslet::addCdataElement($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_cdata == nullptr) {
 		$set(this, _cdata, $new($ArrayList));
 	}
@@ -714,6 +724,7 @@ void AbstractTranslet::setAllowedProtocols($String* protocols) {
 }
 
 $Document* AbstractTranslet::newDocument($String* uri, $String* qname) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_domImplementation == nullptr) {
 		$var($DocumentBuilderFactory, dbf, $JdkXmlUtils::getDOMFactory(this->_overrideDefaultParser));
 		$set(this, _domImplementation, $nc($($nc(dbf)->newDocumentBuilder()))->getDOMImplementation());

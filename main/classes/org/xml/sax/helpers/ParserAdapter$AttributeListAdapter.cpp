@@ -113,6 +113,7 @@ int32_t ParserAdapter$AttributeListAdapter::getIndex($String* uri, $String* loca
 }
 
 int32_t ParserAdapter$AttributeListAdapter::getIndex($String* qName) {
+	$useLocalCurrentObjectStackCache();
 	int32_t max = $nc(this->this$0->atts)->getLength();
 	for (int32_t i = 0; i < max; ++i) {
 		if ($nc($($nc(this->qAtts)->getName(i)))->equals(qName)) {

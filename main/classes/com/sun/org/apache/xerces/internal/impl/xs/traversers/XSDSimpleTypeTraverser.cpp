@@ -157,6 +157,7 @@ void XSDSimpleTypeTraverser::init$($XSDHandler* handler, $XSAttributeChecker* gA
 }
 
 $XSSimpleType* XSDSimpleTypeTraverser::traverseGlobal($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, true, schemaDoc));
 	$var($String, nameAtt, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	if (nameAtt == nullptr) {
@@ -195,6 +196,7 @@ $XSSimpleType* XSDSimpleTypeTraverser::traverseGlobal($Element* elmNode, $XSDocu
 }
 
 $XSSimpleType* XSDSimpleTypeTraverser::traverseLocal($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, false, schemaDoc));
 	$var($String, name, genAnonTypeName(elmNode));
 	$var($XSSimpleType, type, getSimpleType(name, elmNode, attrValues, schemaDoc, grammar));
@@ -212,6 +214,7 @@ $XSSimpleType* XSDSimpleTypeTraverser::traverseSimpleTypeDecl($Element* simpleTy
 }
 
 $String* XSDSimpleTypeTraverser::genAnonTypeName($Element* simpleTypeDecl) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, typeName, $new($StringBuffer, "#AnonType_"_s));
 	$var($Element, node, $DOMUtil::getParent(simpleTypeDecl));
 	while (node != nullptr && (node != $DOMUtil::getRoot($($DOMUtil::getDocument(node))))) {
@@ -223,6 +226,7 @@ $String* XSDSimpleTypeTraverser::genAnonTypeName($Element* simpleTypeDecl) {
 }
 
 $XSSimpleType* XSDSimpleTypeTraverser::getSimpleType($String* name, $Element* simpleTypeDecl, $ObjectArray* attrValues, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$init($XSAttributeChecker);
 	$var($XInt, finalAttr, $cast($XInt, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_FINAL)));
 	int32_t finalProperty = finalAttr == nullptr ? (int32_t)$nc(schemaDoc)->fFinalDefault : $nc(finalAttr)->intValue();
@@ -439,6 +443,7 @@ $XSSimpleType* XSDSimpleTypeTraverser::getSimpleType($String* name, $Element* si
 }
 
 $XSSimpleType* XSDSimpleTypeTraverser::findDTValidator($Element* elm, $String* refName, $QName* baseTypeStr, int16_t baseRefContext, $XSDocumentInfo* schemaDoc) {
+	$useLocalCurrentObjectStackCache();
 	if (baseTypeStr == nullptr) {
 		return nullptr;
 	}
@@ -499,6 +504,7 @@ bool XSDSimpleTypeTraverser::checkBuiltIn($String* name, $String* namespace$) {
 }
 
 bool XSDSimpleTypeTraverser::isListDatatype($XSSimpleType* validator) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(validator)->getVariety() == $XSSimpleType::VARIETY_LIST) {
 		return true;
 	}
@@ -514,6 +520,7 @@ bool XSDSimpleTypeTraverser::isListDatatype($XSSimpleType* validator) {
 }
 
 $XSSimpleType* XSDSimpleTypeTraverser::errorType($String* name, $String* namespace$, int16_t refType) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaGrammar);
 	$var($XSSimpleType, stringType, $cast($XSSimpleType, $nc($SchemaGrammar::SG_SchemaNS)->getTypeDefinition("string"_s)));
 	switch (refType) {

@@ -139,6 +139,7 @@ void ArithmeticInstruction::init$(int16_t opcode) {
 }
 
 $Type* ArithmeticInstruction::getType($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int16_t _opcode = $Instruction::getOpcode();
 	switch (_opcode) {
 	case $Const::DADD:

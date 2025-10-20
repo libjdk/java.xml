@@ -96,6 +96,7 @@ void AttributeListImpl::init$($AttributeList* atts) {
 }
 
 void AttributeListImpl::setAttributeList($AttributeList* atts) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(atts)->getLength();
 	clear();
 	for (int32_t i = 0; i < count; ++i) {

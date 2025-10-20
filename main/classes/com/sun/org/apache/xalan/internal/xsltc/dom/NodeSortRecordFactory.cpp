@@ -113,6 +113,7 @@ void NodeSortRecordFactory::init$($DOM* dom, $String* className, $Translet* tran
 }
 
 void NodeSortRecordFactory::init$($DOM* dom, $String* className, $Translet* translet, $StringArray* order, $StringArray* type, $StringArray* lang$renamed, $StringArray* caseOrder$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, caseOrder, caseOrder$renamed);
 	$var($StringArray, lang, lang$renamed);
 	try {
@@ -162,6 +163,7 @@ void NodeSortRecordFactory::init$($DOM* dom, $String* className, $Translet* tran
 }
 
 $NodeSortRecord* NodeSortRecordFactory::makeNodeSortRecord(int32_t node, int32_t last) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		$var($NodeSortRecord, sortRecord, nullptr);

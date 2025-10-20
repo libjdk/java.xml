@@ -136,6 +136,7 @@ $SymbolHash* FullDVFactory::getBuiltInTypes() {
 
 void FullDVFactory::createBuiltInTypes($SymbolHash* types) {
 	$init(FullDVFactory);
+	$useLocalCurrentObjectStackCache();
 	$BaseDVFactory::createBuiltInTypes(types);
 	$var($String, DOUBLE, "double"_s);
 	$var($String, DURATION, "duration"_s);

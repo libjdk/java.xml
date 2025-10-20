@@ -118,6 +118,7 @@ $String* ValidatedInfo::stringValue() {
 
 bool ValidatedInfo::isComparable(ValidatedInfo* info1, ValidatedInfo* info2) {
 	$init(ValidatedInfo);
+	$useLocalCurrentObjectStackCache();
 	int16_t primitiveType1 = convertToPrimitiveKind($nc(info1)->actualValueType);
 	int16_t primitiveType2 = convertToPrimitiveKind($nc(info2)->actualValueType);
 	if (primitiveType1 != primitiveType2) {
@@ -192,6 +193,7 @@ $XSSimpleTypeDefinition* ValidatedInfo::getMemberTypeDefinition() {
 }
 
 void ValidatedInfo::copyFrom($XSValue* o) {
+	$useLocalCurrentObjectStackCache();
 	if (o == nullptr) {
 		reset();
 	} else if ($instanceOf(ValidatedInfo, o)) {

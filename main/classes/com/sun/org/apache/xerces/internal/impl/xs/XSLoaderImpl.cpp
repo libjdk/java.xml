@@ -136,6 +136,7 @@ $DOMConfiguration* XSLoaderImpl::getConfig() {
 }
 
 $XSModel* XSLoaderImpl::loadURIList($StringList* uriList) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(uriList)->getLength();
 	try {
 		$nc(this->fGrammarPool)->clear();
@@ -152,6 +153,7 @@ $XSModel* XSLoaderImpl::loadURIList($StringList* uriList) {
 }
 
 $XSModel* XSLoaderImpl::loadInputList($LSInputList* is) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(is)->getLength();
 	try {
 		$nc(this->fGrammarPool)->clear();
@@ -168,6 +170,7 @@ $XSModel* XSLoaderImpl::loadInputList($LSInputList* is) {
 }
 
 $XSModel* XSLoaderImpl::loadURI($String* uri) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fGrammarPool)->clear();
 		return $nc(($cast($XSGrammar, $($nc(this->fSchemaLoader)->loadGrammar($$new($XMLInputSource, nullptr, uri, nullptr, false))))))->toXSModel();
@@ -180,6 +183,7 @@ $XSModel* XSLoaderImpl::loadURI($String* uri) {
 }
 
 $XSModel* XSLoaderImpl::load($LSInput* is) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fGrammarPool)->clear();
 		return $nc(($cast($XSGrammar, $($nc(this->fSchemaLoader)->loadGrammar($($nc(this->fSchemaLoader)->dom2xmlInputSource(is)))))))->toXSModel();

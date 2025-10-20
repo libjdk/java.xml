@@ -73,6 +73,7 @@ void SlotAllocator::init$() {
 }
 
 void SlotAllocator::initialize($LocalVariableGenArray* vars) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(vars)->length;
 	int32_t slot = 0;
 	int32_t size = 0;
@@ -115,6 +116,7 @@ int32_t SlotAllocator::allocateSlot($Type* type) {
 }
 
 void SlotAllocator::releaseSlot($LocalVariableGen* lvg) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc($($nc(lvg)->getType()))->getSize();
 	int32_t slot = lvg->getIndex();
 	int32_t limit = this->_free;

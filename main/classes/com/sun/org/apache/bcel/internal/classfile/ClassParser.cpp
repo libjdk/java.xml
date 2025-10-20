@@ -116,6 +116,7 @@ $Object* allocate$ClassParser($Class* clazz) {
 }
 
 void ClassParser::init$($InputStream* inputStream, $String* fileName) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fileName, fileName);
 	this->fileOwned = false;
 	$var($String, clazz, $nc($of(inputStream))->getClass()->getName());
@@ -142,6 +143,7 @@ void ClassParser::init$($String* zipFile, $String* fileName) {
 }
 
 $JavaClass* ClassParser::parse() {
+	$useLocalCurrentObjectStackCache();
 	$var($ZipFile, zip, nullptr);
 	{
 		$var($Throwable, var$0, nullptr);
@@ -194,6 +196,7 @@ $JavaClass* ClassParser::parse() {
 }
 
 void ClassParser::readAttributes() {
+	$useLocalCurrentObjectStackCache();
 	int32_t attributes_count = $nc(this->dataInputStream)->readUnsignedShort();
 	$set(this, attributes, $new($AttributeArray, attributes_count));
 	for (int32_t i = 0; i < attributes_count; ++i) {
@@ -218,6 +221,7 @@ void ClassParser::readConstantPool() {
 }
 
 void ClassParser::readFields() {
+	$useLocalCurrentObjectStackCache();
 	int32_t fields_count = $nc(this->dataInputStream)->readUnsignedShort();
 	$set(this, fields, $new($FieldArray, fields_count));
 	for (int32_t i = 0; i < fields_count; ++i) {
@@ -240,6 +244,7 @@ void ClassParser::readInterfaces() {
 }
 
 void ClassParser::readMethods() {
+	$useLocalCurrentObjectStackCache();
 	int32_t methods_count = $nc(this->dataInputStream)->readUnsignedShort();
 	$set(this, methods, $new($MethodArray, methods_count));
 	for (int32_t i = 0; i < methods_count; ++i) {

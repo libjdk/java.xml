@@ -53,6 +53,7 @@ void DOMErrorHandlerImpl::init$() {
 }
 
 bool DOMErrorHandlerImpl::handleError($DOMError* error) {
+	$useLocalCurrentObjectStackCache();
 	bool fail = true;
 	$var($String, severity, nullptr);
 	if ($nc(error)->getSeverity() == $DOMError::SEVERITY_WARNING) {

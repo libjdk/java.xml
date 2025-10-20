@@ -90,6 +90,7 @@ int32_t AbsoluteIterator::next() {
 }
 
 $DTMAxisIterator* AbsoluteIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(AbsoluteIterator, clone, $cast(AbsoluteIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _source, $nc(this->_source)->cloneIterator());

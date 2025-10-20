@@ -83,6 +83,7 @@ $String* HexBin::encode($bytes* binaryData) {
 
 $bytes* HexBin::decode($String* encoded) {
 	$init(HexBin);
+	$useLocalCurrentObjectStackCache();
 	if (encoded == nullptr) {
 		return nullptr;
 	}

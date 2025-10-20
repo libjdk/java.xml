@@ -148,6 +148,7 @@ int32_t XMLDocumentScannerImpl$DTDDriver::next() {
 }
 
 bool XMLDocumentScannerImpl$DTDDriver::dispatch(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->this$0->fEntityManager)->setEntityHandler(nullptr);
 	{
 		$var($Throwable, var$0, nullptr);

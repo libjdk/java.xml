@@ -108,6 +108,7 @@ int32_t Token$ClosureToken::getMax() {
 }
 
 $String* Token$ClosureToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	if (this->type == $Token::CLOSURE) {
 		bool var$0 = this->getMin() < 0;

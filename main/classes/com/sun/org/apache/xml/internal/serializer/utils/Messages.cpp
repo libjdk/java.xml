@@ -89,6 +89,7 @@ $String* Messages::createMessage($String* msgKey, $ObjectArray* args) {
 }
 
 $String* Messages::createMsg($ResourceBundle* fResourceBundle, $String* msgKey$renamed, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, msgKey, msgKey$renamed);
 	$var($String, fmsg, nullptr);
 	bool throwex = false;

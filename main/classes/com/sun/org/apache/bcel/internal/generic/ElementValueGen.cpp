@@ -129,6 +129,7 @@ int32_t ElementValueGen::getElementValueType() {
 }
 
 ElementValueGen* ElementValueGen::readElementValue($DataInput* dis, $ConstantPoolGen* cpGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t type = $nc(dis)->readUnsignedByte();
 	{
 		int32_t numArrayVals = 0;
@@ -205,6 +206,7 @@ $ConstantPoolGen* ElementValueGen::getConstantPool() {
 }
 
 ElementValueGen* ElementValueGen::copy($ElementValue* value, $ConstantPoolGen* cpool, bool copyPoolEntries) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc(value)->getElementValueType()) {
 	case u'B':
 		{}

@@ -324,6 +324,7 @@ void Predicate::addVariable($VariableRefBase* variableRef) {
 }
 
 int32_t Predicate::getPosType() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_ptype == -1) {
 		$var($SyntaxTreeNode, parent, getParent());
 		if ($instanceOf($StepPattern, parent)) {
@@ -361,6 +362,7 @@ $String* Predicate::toString() {
 }
 
 $1Type* Predicate::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($1Type, texp, $nc(this->_exp)->typeCheck(stable));
 	if ($instanceOf($ReferenceType, texp)) {
 		$init($1Type);
@@ -409,6 +411,7 @@ $1Type* Predicate::typeCheck($SymbolTable* stable) {
 }
 
 void Predicate::compileFilter($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($TestGenerator, testGen, nullptr);
 	$var($LocalVariableGen, local, nullptr);
 	$var($FilterGenerator, filterGen, nullptr);
@@ -473,6 +476,7 @@ bool Predicate::isNodeValueTest() {
 }
 
 $Step* Predicate::getStep() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_step != nullptr) {
 		return this->_step;
 	}
@@ -500,6 +504,7 @@ $Step* Predicate::getStep() {
 }
 
 $Expression* Predicate::getCompareValue() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_value != nullptr) {
 		return this->_value;
 	}
@@ -532,6 +537,7 @@ $Expression* Predicate::getCompareValue() {
 }
 
 void Predicate::translateFilter($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	compileFilter(classGen, methodGen);
@@ -567,6 +573,7 @@ void Predicate::translateFilter($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void Predicate::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_nthPositionFilter || this->_nthDescendant) {

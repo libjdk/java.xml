@@ -285,6 +285,7 @@ int8_t ByteListImpl::item(int32_t index) {
 }
 
 $Object* ByteListImpl::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < $nc(this->data)->length) {
 		return $of($Byte::valueOf($nc(this->data)->get(index)));
 	}

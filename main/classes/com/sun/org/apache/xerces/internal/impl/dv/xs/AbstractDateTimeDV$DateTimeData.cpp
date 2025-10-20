@@ -135,6 +135,7 @@ bool AbstractDateTimeDV$DateTimeData::equals(Object$* obj) {
 }
 
 int32_t AbstractDateTimeDV$DateTimeData::hashCode() {
+	$useLocalCurrentObjectStackCache();
 	$var(AbstractDateTimeDV$DateTimeData, tempDate, $new(AbstractDateTimeDV$DateTimeData, nullptr, this->type));
 	$nc(this->type)->cloneDate(this, tempDate);
 	$nc(this->type)->normalize(tempDate);

@@ -155,6 +155,7 @@ void ExsltDatetime::init$() {
 
 $String* ExsltDatetime::dateTime() {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($Calendar, cal, $Calendar::getInstance());
 	$var($Date, datetime, $nc(cal)->getTime());
 	$var($SimpleDateFormat, dateFormat, $new($SimpleDateFormat, ExsltDatetime::dt));
@@ -174,12 +175,14 @@ $String* ExsltDatetime::dateTime() {
 
 $String* ExsltDatetime::formatDigits(int32_t q) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($String, dd, $String::valueOf($Math::abs(q)));
 	return dd->length() == 1 ? $str({$$str(u'0'), dd}) : dd;
 }
 
 $String* ExsltDatetime::date($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, leader, $nc(edz)->get(0));
 	$var($String, datetime, edz->get(1));
@@ -208,6 +211,7 @@ $String* ExsltDatetime::date($String* datetimeIn) {
 
 $String* ExsltDatetime::date() {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($String, datetime, $nc($(dateTime()))->toString());
 	$var($String, date, datetime->substring(0, datetime->indexOf("T"_s)));
 	$var($String, zone, datetime->substring(getZoneStart(datetime)));
@@ -216,6 +220,7 @@ $String* ExsltDatetime::date() {
 
 $String* ExsltDatetime::time($String* timeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(timeIn));
 	$var($String, time, $nc(edz)->get(1));
 	$var($String, zone, edz->get(2));
@@ -239,6 +244,7 @@ $String* ExsltDatetime::time($String* timeIn) {
 
 $String* ExsltDatetime::time() {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($String, datetime, $nc($(dateTime()))->toString());
 	$var($String, time, datetime->substring(datetime->indexOf("T"_s) + 1));
 	return (time);
@@ -246,6 +252,7 @@ $String* ExsltDatetime::time() {
 
 double ExsltDatetime::year($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	bool ad = $nc($nc(edz)->get(0))->length() == 0;
 	$var($String, datetime, edz->get(1));
@@ -276,6 +283,7 @@ double ExsltDatetime::year() {
 
 double ExsltDatetime::monthInYear($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -300,6 +308,7 @@ double ExsltDatetime::monthInYear() {
 
 double ExsltDatetime::weekInYear($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -321,6 +330,7 @@ double ExsltDatetime::weekInYear() {
 
 double ExsltDatetime::dayInYear($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -342,6 +352,7 @@ double ExsltDatetime::dayInYear() {
 
 double ExsltDatetime::dayInMonth($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	$var($StringArray, formats, $new($StringArray, {
@@ -362,6 +373,7 @@ double ExsltDatetime::dayInMonth() {
 
 double ExsltDatetime::dayOfWeekInMonth($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -383,6 +395,7 @@ double ExsltDatetime::dayOfWeekInMonth() {
 
 double ExsltDatetime::dayInWeek($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -404,6 +417,7 @@ double ExsltDatetime::dayInWeek() {
 
 double ExsltDatetime::hourInDay($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -425,6 +439,7 @@ double ExsltDatetime::hourInDay() {
 
 double ExsltDatetime::minuteInHour($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -446,6 +461,7 @@ double ExsltDatetime::minuteInHour() {
 
 double ExsltDatetime::secondInMinute($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -467,6 +483,7 @@ double ExsltDatetime::secondInMinute() {
 
 $XObject* ExsltDatetime::leapYear($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -497,6 +514,7 @@ bool ExsltDatetime::leapYear() {
 
 $String* ExsltDatetime::monthName($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -514,6 +532,7 @@ $String* ExsltDatetime::monthName($String* datetimeIn) {
 
 $String* ExsltDatetime::monthName() {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($Calendar, cal, $Calendar::getInstance());
 	$var($String, format, "MMMM"_s);
 	return getNameOrAbbrev(format);
@@ -521,6 +540,7 @@ $String* ExsltDatetime::monthName() {
 
 $String* ExsltDatetime::monthAbbreviation($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -544,6 +564,7 @@ $String* ExsltDatetime::monthAbbreviation() {
 
 $String* ExsltDatetime::dayName($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -565,6 +586,7 @@ $String* ExsltDatetime::dayName() {
 
 $String* ExsltDatetime::dayAbbreviation($String* datetimeIn) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, edz, getEraDatetimeZone(datetimeIn));
 	$var($String, datetime, $nc(edz)->get(1));
 	if (datetime == nullptr) {
@@ -586,6 +608,7 @@ $String* ExsltDatetime::dayAbbreviation() {
 
 $StringArray* ExsltDatetime::getEraDatetimeZone($String* in) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($String, leader, ""_s);
 	$var($String, datetime, in);
 	$var($String, zone, ""_s);
@@ -610,6 +633,7 @@ $StringArray* ExsltDatetime::getEraDatetimeZone($String* in) {
 
 int32_t ExsltDatetime::getZoneStart($String* datetime) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(datetime)->indexOf("Z"_s);
 	if (var$0 == datetime->length() - 1) {
 		return datetime->length() - 1;
@@ -639,6 +663,7 @@ int32_t ExsltDatetime::getZoneStart($String* datetime) {
 
 $Date* ExsltDatetime::testFormats($String* in, $StringArray* formats) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(formats)->length; ++i) {
 		try {
 			$var($SimpleDateFormat, dateFormat, $new($SimpleDateFormat, formats->get(i)));
@@ -653,6 +678,7 @@ $Date* ExsltDatetime::testFormats($String* in, $StringArray* formats) {
 
 double ExsltDatetime::getNumber($String* in, $StringArray* formats, int32_t calField) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($Calendar, cal, $Calendar::getInstance());
 	$nc(cal)->setLenient(false);
 	$var($Date, date, testFormats(in, formats));
@@ -666,6 +692,7 @@ double ExsltDatetime::getNumber($String* in, $StringArray* formats, int32_t calF
 
 $String* ExsltDatetime::getNameOrAbbrev($String* in, $StringArray* formatsIn, $String* formatOut) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(formatsIn)->length; ++i) {
 		try {
 			$init($Locale);
@@ -683,6 +710,7 @@ $String* ExsltDatetime::getNameOrAbbrev($String* in, $StringArray* formatsIn, $S
 
 $String* ExsltDatetime::getNameOrAbbrev($String* format) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($Calendar, cal, $Calendar::getInstance());
 	$init($Locale);
 	$var($SimpleDateFormat, dateFormat, $new($SimpleDateFormat, format, $Locale::ENGLISH));
@@ -691,6 +719,7 @@ $String* ExsltDatetime::getNameOrAbbrev($String* format) {
 
 $String* ExsltDatetime::formatDate($String* dateTime$renamed, $String* pattern) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	$var($String, dateTime, dateTime$renamed);
 	$var($String, yearSymbols, "Gy"_s);
 	$var($String, monthSymbols, "M"_s);
@@ -787,6 +816,7 @@ $String* ExsltDatetime::formatDate($String* dateTime$renamed, $String* pattern) 
 
 $String* ExsltDatetime::strip($String* symbols, $String* pattern) {
 	$init(ExsltDatetime);
+	$useLocalCurrentObjectStackCache();
 	int32_t quoteSemaphore = 0;
 	int32_t i = 0;
 	$var($StringBuffer, result, $new($StringBuffer, $nc(pattern)->length()));

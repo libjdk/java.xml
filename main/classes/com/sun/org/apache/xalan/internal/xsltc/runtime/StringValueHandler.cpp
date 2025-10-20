@@ -85,6 +85,7 @@ void StringValueHandler::characters($chars* ch, int32_t off, int32_t len) {
 }
 
 $String* StringValueHandler::getValue() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->_buffer)->length() != 0) {
 		$var($String, result, $nc(this->_buffer)->toString());
 		$nc(this->_buffer)->setLength(0);
@@ -126,6 +127,7 @@ bool StringValueHandler::setEscaping(bool bool$) {
 }
 
 $String* StringValueHandler::getValueOfPI() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, value, getValue());
 	if ($nc(value)->indexOf("?>"_s) > 0) {
 		int32_t n = value->length();

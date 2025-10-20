@@ -321,6 +321,7 @@ void XMLDTDProcessor::init$() {
 }
 
 void XMLDTDProcessor::reset($XMLComponentManager* componentManager) {
+	$useLocalCurrentObjectStackCache();
 	bool parser_settings = $nc(componentManager)->getFeature(XMLDTDProcessor::PARSER_SETTINGS, true);
 	if (!parser_settings) {
 		reset();
@@ -538,6 +539,7 @@ void XMLDTDProcessor::startAttlist($String* elementName, $Augmentations* augs) {
 }
 
 void XMLDTDProcessor::attributeDecl($String* elementName, $String* attributeName, $String* type, $StringArray* enumeration, $String* defaultType, $XMLString* defaultValue, $XMLString* nonNormalizedDefaultValue, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLSymbols);
 	if (type != $XMLSymbols::fCDATASymbol && defaultValue != nullptr) {
 		normalizeDefaultAttrValue(defaultValue);
@@ -723,6 +725,7 @@ void XMLDTDProcessor::unparsedEntityDecl($String* name, $XMLResourceIdentifier* 
 }
 
 void XMLDTDProcessor::notationDecl($String* name, $XMLResourceIdentifier* identifier, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fValidation) {
 		$var($DTDGrammar, grammar, this->fDTDGrammar != nullptr ? this->fDTDGrammar : $nc(this->fGrammarBucket)->getActiveGrammar());
 		if ($nc(grammar)->getNotationDeclIndex(name) != -1) {
@@ -759,6 +762,7 @@ void XMLDTDProcessor::endConditional($Augmentations* augs) {
 }
 
 void XMLDTDProcessor::endDTD($Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDTDGrammar != nullptr) {
 		$nc(this->fDTDGrammar)->endDTD(augs);
 		if (this->fGrammarPool != nullptr) {
@@ -1004,6 +1008,7 @@ void XMLDTDProcessor::checkDeclaredElements($DTDGrammar* grammar) {
 }
 
 void XMLDTDProcessor::checkDeclaredElements($DTDGrammar* grammar, int32_t elementIndex, int32_t contentSpecIndex, $XMLContentSpec* contentSpec) {
+	$useLocalCurrentObjectStackCache();
 	$nc(grammar)->getContentSpec(contentSpecIndex, contentSpec);
 	if ($nc(contentSpec)->type == $XMLContentSpec::CONTENTSPECNODE_LEAF) {
 		$var($String, value, $cast($String, contentSpec->value));

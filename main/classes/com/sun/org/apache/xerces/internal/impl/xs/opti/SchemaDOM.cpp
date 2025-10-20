@@ -165,6 +165,7 @@ $ElementImpl* SchemaDOM::emptyElement($QName* element, $XMLAttributes* attribute
 }
 
 void SchemaDOM::processElement($QName* element, $XMLAttributes* attributes, $ElementImpl* node) {
+	$useLocalCurrentObjectStackCache();
 	$set($nc(node), prefix, $nc(element)->prefix);
 	$set(node, localpart, element->localpart);
 	$set(node, rawname, element->rawname);
@@ -290,6 +291,7 @@ void SchemaDOM::endAnnotationCDATA() {
 }
 
 void SchemaDOM::resizeRelations() {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeImplArray2, temp, $new($NodeImplArray2, $nc(this->relations)->length + SchemaDOM::relationsRowResizeFactor));
 	$System::arraycopy(this->relations, 0, temp, 0, $nc(this->relations)->length);
 	for (int32_t i = $nc(this->relations)->length; i < temp->length; ++i) {
@@ -305,6 +307,7 @@ void SchemaDOM::resizeRelations(int32_t i) {
 }
 
 void SchemaDOM::reset() {
+	$useLocalCurrentObjectStackCache();
 	if (this->relations != nullptr) {
 		for (int32_t i = 0; i < $nc(this->relations)->length; ++i) {
 			for (int32_t j = 0; j < $nc($nc(this->relations)->get(i))->length; ++j) {
@@ -329,6 +332,7 @@ void SchemaDOM::printDOM() {
 
 void SchemaDOM::traverse($Node* node, int32_t depth) {
 	$init(SchemaDOM);
+	$useLocalCurrentObjectStackCache();
 	indent(depth);
 	$init($System);
 	$nc($System::out)->print($$str({"<"_s, $($nc(node)->getNodeName())}));
@@ -378,6 +382,7 @@ void SchemaDOM::startAnnotation($QName* elemName, $XMLAttributes* attributes, $N
 }
 
 void SchemaDOM::startAnnotation($String* elemRawName, $XMLAttributes* attributes, $NamespaceContext* namespaceContext) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAnnotationBuffer == nullptr) {
 		$set(this, fAnnotationBuffer, $new($StringBuffer, 256));
 	}
@@ -418,6 +423,7 @@ void SchemaDOM::startAnnotationElement($QName* elemName, $XMLAttributes* attribu
 }
 
 void SchemaDOM::startAnnotationElement($String* elemRawName, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fAnnotationBuffer)->append("<"_s)->append(elemRawName);
 	for (int32_t i = 0; i < $nc(attributes)->getLength(); ++i) {
 		$var($String, aValue, attributes->getValue(i));
@@ -440,6 +446,7 @@ $String* SchemaDOM::processAttValue($String* original) {
 
 $String* SchemaDOM::escapeAttValue($String* original, int32_t from) {
 	$init(SchemaDOM);
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	int32_t length = $nc(original)->length();
 	$var($StringBuffer, newVal, $new($StringBuffer, length));

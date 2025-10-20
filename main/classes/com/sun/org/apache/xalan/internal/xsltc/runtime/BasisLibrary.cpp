@@ -418,6 +418,7 @@ int32_t BasisLibrary::positionF($DTMAxisIterator* iterator) {
 
 double BasisLibrary::sumF($DTMAxisIterator* iterator, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	try {
 		double result = 0.0;
 		int32_t node = 0;
@@ -453,6 +454,7 @@ $String* BasisLibrary::stringF(Object$* obj, $DOM* dom) {
 
 $String* BasisLibrary::stringF(Object$* obj, int32_t node, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($DTMAxisIterator, obj)) {
 		return $nc(dom)->getStringValueX($nc($($nc(($cast($DTMAxisIterator, obj)))->reset()))->next());
 	} else if ($instanceOf($Node, obj)) {
@@ -481,6 +483,7 @@ double BasisLibrary::numberF(int32_t node, $DOM* dom) {
 
 double BasisLibrary::numberF(Object$* obj, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Double, obj)) {
 		return $nc(($cast($Double, obj)))->doubleValue();
 	} else if ($instanceOf($Integer, obj)) {
@@ -511,6 +514,7 @@ double BasisLibrary::roundF(double d) {
 
 bool BasisLibrary::booleanF(Object$* obj) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Double, obj)) {
 		double temp = $nc(($cast($Double, obj)))->doubleValue();
 		return temp != 0.0 && !$Double::isNaN(temp);
@@ -774,6 +778,7 @@ $String* BasisLibrary::objectTypeF(Object$* obj) {
 
 $DTMAxisIterator* BasisLibrary::nodesetF(Object$* obj) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($DOM, obj)) {
 		$var($DOM, dom, $cast($DOM, obj));
 		return $new($SingletonIterator, $nc(dom)->getDocument(), true);
@@ -832,6 +837,7 @@ bool BasisLibrary::compareStrings($String* lstring, $String* rstring, int32_t op
 
 bool BasisLibrary::compare($DTMAxisIterator* left, $DTMAxisIterator* right, int32_t op, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	int32_t lnode = 0;
 	$nc(left)->reset();
 	while ((lnode = left->next()) != $DTMAxisIterator::END) {
@@ -856,6 +862,7 @@ bool BasisLibrary::compare($DTMAxisIterator* left, $DTMAxisIterator* right, int3
 
 bool BasisLibrary::compare(int32_t node, $DTMAxisIterator* iterator, int32_t op, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	int32_t rnode = 0;
 	$var($String, value, nullptr);
 	switch (op) {
@@ -909,6 +916,7 @@ bool BasisLibrary::compare(int32_t node, $DTMAxisIterator* iterator, int32_t op,
 
 bool BasisLibrary::compare($DTMAxisIterator* left, double rnumber, int32_t op, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	int32_t node = 0;
 	switch (op) {
 	case $Operators::EQ:
@@ -975,6 +983,7 @@ bool BasisLibrary::compare($DTMAxisIterator* left, double rnumber, int32_t op, $
 
 bool BasisLibrary::compare($DTMAxisIterator* left, $String* rstring, int32_t op, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	int32_t node = 0;
 	while ((node = $nc(left)->next()) != $DTMAxisIterator::END) {
 		if (compareStrings($($nc(dom)->getStringValueX(node)), rstring, op, dom)) {
@@ -986,6 +995,7 @@ bool BasisLibrary::compare($DTMAxisIterator* left, $String* rstring, int32_t op,
 
 bool BasisLibrary::compare(Object$* left$renamed, Object$* right$renamed, int32_t op, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($Object, left, left$renamed);
 	$var($Object, right, right$renamed);
 	bool result = false;
@@ -1101,6 +1111,7 @@ bool BasisLibrary::compare(Object$* left$renamed, Object$* right$renamed, int32_
 
 bool BasisLibrary::testLanguage($String* testLang$renamed, $DOM* dom, int32_t node) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($String, testLang, testLang$renamed);
 	$var($String, nodeLang, $nc(dom)->getLanguage(node));
 	if (nodeLang == nullptr) {
@@ -1123,6 +1134,7 @@ bool BasisLibrary::hasSimpleType(Object$* obj) {
 
 double BasisLibrary::stringToReal($String* s) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc($($Double::valueOf(s)))->doubleValue();
 	} catch ($NumberFormatException&) {
@@ -1146,6 +1158,7 @@ int32_t BasisLibrary::stringToInt($String* s) {
 
 $String* BasisLibrary::realToString(double d) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	double m = $Math::abs(d);
 	if ((m >= BasisLibrary::lowerBounds) && (m < BasisLibrary::upperBounds)) {
 		$var($String, result, $Double::toString(d));
@@ -1176,6 +1189,7 @@ int32_t BasisLibrary::realToInt(double d) {
 
 $String* BasisLibrary::formatNumber(double number, $String* pattern, $DecimalFormat* formatter$renamed) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($DecimalFormat, formatter, formatter$renamed);
 	if (formatter == nullptr) {
 		$assign(formatter, BasisLibrary::defaultFormatter);
@@ -1198,6 +1212,7 @@ $String* BasisLibrary::formatNumber(double number, $String* pattern, $DecimalFor
 
 $DTMAxisIterator* BasisLibrary::referenceToNodeSet(Object$* obj) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Node, obj)) {
 		return ($new($SingletonIterator, $nc(($cast($Node, obj)))->node));
 	} else if ($instanceOf($DTMAxisIterator, obj)) {
@@ -1211,6 +1226,7 @@ $DTMAxisIterator* BasisLibrary::referenceToNodeSet(Object$* obj) {
 
 $NodeList* BasisLibrary::referenceToNodeList(Object$* obj, $DOM* dom$renamed) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($DOM, dom, dom$renamed);
 	if ($instanceOf($Node, obj) || $instanceOf($DTMAxisIterator, obj)) {
 		$var($DTMAxisIterator, iter, referenceToNodeSet(obj));
@@ -1227,6 +1243,7 @@ $NodeList* BasisLibrary::referenceToNodeList(Object$* obj, $DOM* dom$renamed) {
 
 $1Node* BasisLibrary::referenceToNode(Object$* obj, $DOM* dom$renamed) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($DOM, dom, dom$renamed);
 	if ($instanceOf($Node, obj) || $instanceOf($DTMAxisIterator, obj)) {
 		$var($DTMAxisIterator, iter, referenceToNodeSet(obj));
@@ -1280,6 +1297,7 @@ bool BasisLibrary::referenceToBoolean(Object$* obj) {
 
 $String* BasisLibrary::referenceToString(Object$* obj, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($String, obj)) {
 		return $cast($String, obj);
 	} else if ($instanceOf($DTMAxisIterator, obj)) {
@@ -1298,6 +1316,7 @@ $String* BasisLibrary::referenceToString(Object$* obj, $DOM* dom) {
 
 $DTMAxisIterator* BasisLibrary::node2Iterator($1Node* node, $Translet* translet, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($1Node, inNode, node);
 	$var($NodeList, nodelist, $new($BasisLibrary$3, inNode));
 	return nodeList2Iterator(nodelist, translet, dom);
@@ -1305,6 +1324,7 @@ $DTMAxisIterator* BasisLibrary::node2Iterator($1Node* node, $Translet* translet,
 
 $DTMAxisIterator* BasisLibrary::nodeList2IteratorUsingHandleFromNode($NodeList* nodeList, $Translet* translet, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	int32_t n = $nc(nodeList)->getLength();
 	$var($ints, dtmHandles, $new($ints, n));
 	$var($DTMManager, dtmManager, nullptr);
@@ -1331,6 +1351,7 @@ $DTMAxisIterator* BasisLibrary::nodeList2IteratorUsingHandleFromNode($NodeList* 
 
 $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet* translet, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	int32_t n = 0;
 	$var($Document, doc, nullptr);
 	$var($DTMManager, dtmManager, nullptr);
@@ -1483,6 +1504,7 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 
 $DOM* BasisLibrary::referenceToResultTree(Object$* obj) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	try {
 		return ($cast($DOM, obj));
 	} catch ($IllegalArgumentException&) {
@@ -1502,6 +1524,7 @@ $DTMAxisIterator* BasisLibrary::getSingleNode($DTMAxisIterator* iterator) {
 
 void BasisLibrary::copy(Object$* obj, $SerializationHandler* handler, int32_t node, $DOM* dom) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	try {
 		if ($instanceOf($DTMAxisIterator, obj)) {
 			$var($DTMAxisIterator, iter, $cast($DTMAxisIterator, obj));
@@ -1528,6 +1551,7 @@ void BasisLibrary::copy(Object$* obj, $SerializationHandler* handler, int32_t no
 
 void BasisLibrary::checkAttribQName($String* name) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	int32_t firstOccur = $nc(name)->indexOf((int32_t)u':');
 	int32_t lastOccur = name->lastIndexOf((int32_t)u':');
 	$var($String, localName, name->substring(lastOccur + 1));
@@ -1566,6 +1590,7 @@ void BasisLibrary::checkQName($String* name) {
 
 $String* BasisLibrary::startXslElement($String* qname$renamed, $String* namespace$$renamed, $SerializationHandler* handler, $DOM* dom, int32_t node) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($String, qname, qname$renamed);
 	$var($String, namespace$, namespace$$renamed);
 	try {
@@ -1611,6 +1636,7 @@ $String* BasisLibrary::getPrefix($String* qname) {
 
 $String* BasisLibrary::generatePrefix() {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	return ($str({"ns"_s, $$str($nc(($cast($AtomicInteger, $($nc(BasisLibrary::threadLocalPrefixIndex)->get()))))->getAndIncrement())}));
 }
 
@@ -1626,6 +1652,7 @@ void BasisLibrary::runTimeError($String* code) {
 
 void BasisLibrary::runTimeError($String* code, $ObjectArray* args) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	$var($String, message, $MessageFormat::format($($nc(BasisLibrary::m_bundle)->getString(code)), args));
 	$throwNew($RuntimeException, message);
 }
@@ -1651,6 +1678,7 @@ void BasisLibrary::consoleOutput($String* msg) {
 
 $String* BasisLibrary::replace($String* base, char16_t ch, $String* str) {
 	$init(BasisLibrary);
+	$useLocalCurrentObjectStackCache();
 	return ($nc(base)->indexOf((int32_t)ch) < 0) ? base : replace(base, $($String::valueOf(ch)), $$new($StringArray, {str}));
 }
 
@@ -1693,6 +1721,7 @@ int32_t BasisLibrary::getStringLength($String* str) {
 }
 
 void clinit$BasisLibrary($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(BasisLibrary::EMPTYSTRING, ""_s);
 	BasisLibrary::lowerBounds = 0.001;
 	BasisLibrary::upperBounds = (double)0x00989680;

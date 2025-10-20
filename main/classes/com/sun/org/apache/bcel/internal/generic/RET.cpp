@@ -151,6 +151,7 @@ int32_t RET::getIndex() {
 }
 
 void RET::setIndex(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	if (n < 0) {
 		$throwNew($ClassGenException, $$str({"Negative index value: "_s, $$str(n)}));
 	}
@@ -159,6 +160,7 @@ void RET::setIndex(int32_t n) {
 }
 
 $String* RET::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Instruction::toString(verbose)), " "_s, $$str(this->index)});
 }
 

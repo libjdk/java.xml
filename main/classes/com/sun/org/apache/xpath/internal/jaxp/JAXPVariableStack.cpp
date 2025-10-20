@@ -76,6 +76,7 @@ void JAXPVariableStack::init$($XPathVariableResolver* resolver) {
 }
 
 $XObject* JAXPVariableStack::getVariableOrParam($XPathContext* xctxt, $QName* qname) {
+	$useLocalCurrentObjectStackCache();
 	if (qname == nullptr) {
 		$init($XPATHErrorResources);
 		$var($String, fmsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_ARG_CANNOT_BE_NULL, $$new($ObjectArray, {$of("Variable qname"_s)})));

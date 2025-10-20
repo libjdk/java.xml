@@ -113,6 +113,7 @@ bool SAXImpl$NodeValueIterator::isReverse() {
 }
 
 $DTMAxisIterator* SAXImpl$NodeValueIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(SAXImpl$NodeValueIterator, clone, $cast(SAXImpl$NodeValueIterator, $DTMDefaultBaseIterators$InternalAxisIteratorBase::clone()));
 		$nc(clone)->_isRestartable = false;
@@ -140,6 +141,7 @@ $DTMAxisIterator* SAXImpl$NodeValueIterator::reset() {
 }
 
 int32_t SAXImpl$NodeValueIterator::next() {
+	$useLocalCurrentObjectStackCache();
 	int32_t node = 0;
 	while ((node = $nc(this->_source)->next()) != $DTMAxisIterator::END) {
 		$var($String, val, this->this$0->getStringValueX(node));

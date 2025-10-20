@@ -215,6 +215,7 @@ void EndElementEvent::setName($QName* qname) {
 }
 
 void EndElementEvent::writeAsEncodedUnicodeEx($Writer* writer) {
+	$useLocalCurrentObjectStackCache();
 	$nc(writer)->write("</"_s);
 	$var($String, prefix, $nc(this->fQName)->getPrefix());
 	if (prefix != nullptr && prefix->length() > 0) {
@@ -239,12 +240,14 @@ void EndElementEvent::addNamespace($Namespace* ns) {
 }
 
 $String* EndElementEvent::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, s, $str({"</"_s, $(nameAsString())}));
 	$assign(s, $str({s, ">"_s}));
 	return s;
 }
 
 $String* EndElementEvent::nameAsString() {
+	$useLocalCurrentObjectStackCache();
 	if (""_s->equals($($nc(this->fQName)->getNamespaceURI()))) {
 		return $nc(this->fQName)->getLocalPart();
 	}

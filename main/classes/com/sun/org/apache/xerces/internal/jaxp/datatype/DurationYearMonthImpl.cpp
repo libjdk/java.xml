@@ -66,6 +66,7 @@ void DurationYearMonthImpl::init$(bool isPositive, $BigInteger* years, $BigInteg
 }
 
 void DurationYearMonthImpl::init$(bool isPositive, int32_t years, int32_t months) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isPositive;
 	$var($BigInteger, var$1, wrap(years));
 	DurationYearMonthImpl::init$(var$0, var$1, $(wrap(months)));
@@ -98,6 +99,7 @@ int32_t DurationYearMonthImpl::getValue() {
 }
 
 void DurationYearMonthImpl::convertToCanonicalYearMonth() {
+	$useLocalCurrentObjectStackCache();
 	while (getMonths() >= 12) {
 		$set(this, months, $nc(this->months)->subtract($($BigInteger::valueOf((int64_t)12))));
 		$set(this, years, $nc($($BigInteger::valueOf((int64_t)getYears())))->add($BigInteger::ONE));

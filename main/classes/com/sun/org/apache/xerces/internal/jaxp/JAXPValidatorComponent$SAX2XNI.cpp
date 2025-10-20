@@ -107,6 +107,7 @@ void JAXPValidatorComponent$SAX2XNI::init$($JAXPValidatorComponent* this$0) {
 }
 
 void JAXPValidatorComponent$SAX2XNI::characters($chars* ch, int32_t start, int32_t len) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($XMLString, var$0, $new($XMLString, ch, start, len));
 		$nc($(handler()))->characters(var$0, $(aug()));
@@ -117,6 +118,7 @@ void JAXPValidatorComponent$SAX2XNI::characters($chars* ch, int32_t start, int32
 }
 
 void JAXPValidatorComponent$SAX2XNI::ignorableWhitespace($chars* ch, int32_t start, int32_t len) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($XMLString, var$0, $new($XMLString, ch, start, len));
 		$nc($(handler()))->ignorableWhitespace(var$0, $(aug()));
@@ -127,6 +129,7 @@ void JAXPValidatorComponent$SAX2XNI::ignorableWhitespace($chars* ch, int32_t sta
 }
 
 void JAXPValidatorComponent$SAX2XNI::startElement($String* uri, $String* localName, $String* qname, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		this->this$0->updateAttributes(atts);
 		$var($QName, var$0, toQName(uri, localName, qname));
@@ -139,6 +142,7 @@ void JAXPValidatorComponent$SAX2XNI::startElement($String* uri, $String* localNa
 }
 
 void JAXPValidatorComponent$SAX2XNI::endElement($String* uri, $String* localName, $String* qname) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($QName, var$0, toQName(uri, localName, qname));
 		$nc($(handler()))->endElement(var$0, $(aug()));
@@ -179,6 +183,7 @@ $SAXException* JAXPValidatorComponent$SAX2XNI::toSAXException($XNIException* xe)
 }
 
 $QName* JAXPValidatorComponent$SAX2XNI::toQName($String* uri$renamed, $String* localName$renamed, $String* qname$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localName, localName$renamed);
 	$var($String, qname, qname$renamed);
 	$var($String, uri, uri$renamed);

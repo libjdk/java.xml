@@ -127,6 +127,7 @@ $StepPatternArray* UnionPattern::getPatterns() {
 }
 
 $XObject* UnionPattern::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, bestScore, nullptr);
 	int32_t n = $nc(this->m_patterns)->length;
 	for (int32_t i = 0; i < n; ++i) {
@@ -151,6 +152,7 @@ $XObject* UnionPattern::execute($XPathContext* xctxt) {
 }
 
 void UnionPattern::callVisitors($ExpressionOwner* owner, $XPathVisitor* visitor) {
+	$useLocalCurrentObjectStackCache();
 	$nc(visitor)->visitUnionPattern(owner, this);
 	if (nullptr != this->m_patterns) {
 		int32_t n = $nc(this->m_patterns)->length;

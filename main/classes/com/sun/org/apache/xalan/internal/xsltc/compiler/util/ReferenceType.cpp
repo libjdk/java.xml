@@ -202,6 +202,7 @@ $Type* ReferenceType::toJCType() {
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
@@ -240,6 +241,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	int32_t current = $nc(methodGen)->getLocalIndex("current"_s);
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, methodGen->getInstructionList());
@@ -255,6 +257,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $RealType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(il)->append($(methodGen->loadDOM()));
@@ -264,6 +267,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -272,6 +276,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $NodeSetType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -288,6 +293,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $ResultTreeType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -301,6 +307,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -390,6 +397,7 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateFrom($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc($($nc(clazz)->getName()))->equals("java.lang.Object"_s)) {
 		$init($Constants);
 		$nc($($nc(methodGen)->getInstructionList()))->append($Constants::NOP);
@@ -403,6 +411,7 @@ void ReferenceType::translateFrom($ClassGenerator* classGen, $MethodGenerator* m
 }
 
 $FlowList* ReferenceType::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	translateTo(classGen, methodGen, type);
 	return $new($FlowList, $(static_cast<$InstructionHandle*>($nc(il)->append(static_cast<$BranchInstruction*>($$new($IFEQ, nullptr))))));

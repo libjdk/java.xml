@@ -80,6 +80,7 @@ bool JAXPPrefixResolver::handlesNullPrefixes() {
 }
 
 $String* JAXPPrefixResolver::getNamespaceForPrefix($String* prefix, $Node* namespaceContext) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, parent, namespaceContext);
 	$var($String, namespace$, nullptr);
 	if ($nc(prefix)->equals("xml"_s)) {

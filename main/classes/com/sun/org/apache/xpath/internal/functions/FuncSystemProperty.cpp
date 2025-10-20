@@ -95,6 +95,7 @@ void FuncSystemProperty::init$() {
 }
 
 $XObject* FuncSystemProperty::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fullName, $nc($($nc(this->m_arg0)->execute(xctxt)))->str());
 	int32_t indexOfNSSep = $nc(fullName)->indexOf((int32_t)u':');
 	$var($String, result, nullptr);
@@ -163,6 +164,7 @@ $XObject* FuncSystemProperty::execute($XPathContext* xctxt) {
 }
 
 void FuncSystemProperty::loadPropertyFile($Properties* target) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($InputStream, is, $SecuritySupport::getResourceAsStream(FuncSystemProperty::XSLT_PROPERTIES));
 		{

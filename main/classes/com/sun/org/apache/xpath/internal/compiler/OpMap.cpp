@@ -158,6 +158,7 @@ int32_t OpMap::getNextOpPos(int32_t opPos) {
 }
 
 int32_t OpMap::getNextStepPos(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = getOp(opPos);
 	if ((stepType >= $OpCodes::AXES_START_TYPES) && (stepType <= $OpCodes::AXES_END_TYPES)) {
 		return getNextOpPos(opPos);
@@ -182,6 +183,7 @@ int32_t OpMap::getNextOpPos($ints* opMap, int32_t opPos) {
 }
 
 int32_t OpMap::getFirstPredicateOpPos(int32_t opPos) {
+	$useLocalCurrentObjectStackCache();
 	int32_t stepType = $nc(this->m_opMap)->elementAt(opPos);
 	if ((stepType >= $OpCodes::AXES_START_TYPES) && (stepType <= $OpCodes::AXES_END_TYPES)) {
 		return opPos + $nc(this->m_opMap)->elementAt(opPos + 2);

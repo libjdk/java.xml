@@ -83,6 +83,7 @@ $Object* allocate$LineNumberTable($Class* clazz) {
 }
 
 void LineNumberTable::init$(LineNumberTable* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($LineNumberArray, var$2, c->getLineNumberTable());
@@ -95,6 +96,7 @@ void LineNumberTable::init$(int32_t name_index, int32_t length, $LineNumberArray
 }
 
 void LineNumberTable::init$(int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	LineNumberTable::init$(name_index, length, ($LineNumberArray*)nullptr, constant_pool);
 	int32_t line_number_table_length = $nc(input)->readUnsignedShort();
 	$set(this, lineNumberTable, $new($LineNumberArray, line_number_table_length));
@@ -108,6 +110,7 @@ void LineNumberTable::accept($Visitor* v) {
 }
 
 void LineNumberTable::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort($nc(this->lineNumberTable)->length);
 	{
@@ -132,6 +135,7 @@ void LineNumberTable::setLineNumberTable($LineNumberArray* lineNumberTable) {
 }
 
 $String* LineNumberTable::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($StringBuilder, line, $new($StringBuilder));
 	for (int32_t i = 0; i < $nc(this->lineNumberTable)->length; ++i) {
@@ -180,6 +184,7 @@ int32_t LineNumberTable::getSourceLine(int32_t pos) {
 }
 
 $Attribute* LineNumberTable::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(LineNumberTable, c, $cast(LineNumberTable, clone()));
 	$set($nc(c), lineNumberTable, $new($LineNumberArray, $nc(this->lineNumberTable)->length));
 	for (int32_t i = 0; i < $nc(this->lineNumberTable)->length; ++i) {

@@ -194,6 +194,7 @@ void Step::init$(int32_t axis, int32_t nodeType, $List* predicates) {
 }
 
 void Step::setParser($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$RelativeLocationPath::setParser(parser);
 	if (this->_predicates != nullptr) {
 		int32_t n = $nc(this->_predicates)->size();
@@ -262,6 +263,7 @@ bool Step::isAbbreviatedDDot() {
 }
 
 $1Type* Step::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	this->_hadPredicates = hasPredicates();
 	if (isAbbreviatedDot()) {
 		bool var$1 = hasParentPattern();
@@ -291,6 +293,7 @@ void Step::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 }
 
 void Step::translateStep($ClassGenerator* classGen, $MethodGenerator* methodGen, int32_t predicateIndex) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (predicateIndex >= 0) {
@@ -391,6 +394,7 @@ void Step::translateStep($ClassGenerator* classGen, $MethodGenerator* methodGen,
 }
 
 void Step::translatePredicates($ClassGenerator* classGen, $MethodGenerator* methodGen, int32_t predicateIndex) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	int32_t idx = 0;
@@ -467,6 +471,7 @@ void Step::translatePredicates($ClassGenerator* classGen, $MethodGenerator* meth
 }
 
 $String* Step::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, buffer, $new($StringBuffer, "step(\""_s));
 	buffer->append($($Axis::getNames(this->_axis)))->append("\", "_s)->append(this->_nodeType);
 	if (this->_predicates != nullptr) {

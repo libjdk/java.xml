@@ -159,6 +159,7 @@ void BCELifier::start() {
 }
 
 void BCELifier::visitJavaClass($JavaClass* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, class_name, $nc(clazz)->getClassName());
 	$var($String, super_name, clazz->getSuperclassName());
 	$var($String, package_name, clazz->getPackageName());
@@ -225,6 +226,7 @@ void BCELifier::visitJavaClass($JavaClass* clazz) {
 }
 
 void BCELifier::printCreate() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_out)->println("  public void create(OutputStream out) throws IOException {"_s);
 	$var($FieldArray, fields, $nc(this->_clazz)->getFields());
 	if ($nc(fields)->length > 0) {
@@ -240,6 +242,7 @@ void BCELifier::printCreate() {
 }
 
 void BCELifier::printMain() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, class_name, $nc(this->_clazz)->getClassName());
 	$nc(this->_out)->println("  public static void main(String[] args) throws Exception {"_s);
 	$nc(this->_out)->println($$str({"    "_s, class_name, "Creator creator = new "_s, class_name, "Creator();"_s}));
@@ -248,6 +251,7 @@ void BCELifier::printMain() {
 }
 
 void BCELifier::visitField($Field* field) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_out)->println();
 	$var($String, var$3, $$str({"    field = new FieldGen("_s, $(printFlags($nc(field)->getAccessFlags())), ", "_s}));
 	$var($String, var$2, $$concat(var$3, $(printType($($nc(field)->getSignature())))));
@@ -263,6 +267,7 @@ void BCELifier::visitField($Field* field) {
 }
 
 void BCELifier::visitMethod($Method* method) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodGen, mg, $new($MethodGen, method, $($nc(this->_clazz)->getClassName()), this->_cp));
 	$nc(this->_out)->println("    InstructionList il = new InstructionList();"_s);
 	$init($BCELifier$FLAGS);
@@ -294,6 +299,7 @@ $String* BCELifier::printFlags(int32_t flags) {
 
 $String* BCELifier::printFlags(int32_t flags, $BCELifier$FLAGS* location) {
 	$init(BCELifier);
+	$useLocalCurrentObjectStackCache();
 	if (flags == 0) {
 		return "0"_s;
 	}
@@ -333,6 +339,7 @@ $String* BCELifier::printFlags(int32_t flags, $BCELifier$FLAGS* location) {
 
 $String* BCELifier::printArgumentTypes($TypeArray* arg_types) {
 	$init(BCELifier);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(arg_types)->length == 0) {
 		return "Type.NO_ARGS"_s;
 	}
@@ -353,6 +360,7 @@ $String* BCELifier::printType($Type* type) {
 
 $String* BCELifier::printType($String* signature) {
 	$init(BCELifier);
+	$useLocalCurrentObjectStackCache();
 	$var($Type, type, $Type::getType(signature));
 	int8_t t = $nc(type)->getType();
 	if (t <= $Const::T_VOID) {
@@ -376,6 +384,7 @@ $String* BCELifier::printType($String* signature) {
 
 void BCELifier::main($StringArray* argv) {
 	$init(BCELifier);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(argv)->length != 1) {
 		$init($System);
 		$nc($System::out)->println("Usage: BCELifier classname"_s);
@@ -390,6 +399,7 @@ void BCELifier::main($StringArray* argv) {
 
 $JavaClass* BCELifier::getJavaClass($String* name) {
 	$init(BCELifier);
+	$useLocalCurrentObjectStackCache();
 	$var($JavaClass, java_class, nullptr);
 	if (($assign(java_class, $Repository::lookupClass(name))) == nullptr) {
 		$assign(java_class, $$new($ClassParser, name)->parse());
@@ -398,6 +408,7 @@ $JavaClass* BCELifier::getJavaClass($String* name) {
 }
 
 void clinit$BCELifier($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$load($Const);
 	$assignStatic(BCELifier::BASE_PACKAGE, $nc($($Const::class$->getPackage()))->getName());
 	$assignStatic(BCELifier::CONSTANT_PREFIX, $str({$($Const::class$->getSimpleName()), "."_s}));

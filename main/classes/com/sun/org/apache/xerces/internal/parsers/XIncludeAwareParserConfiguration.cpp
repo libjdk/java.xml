@@ -162,6 +162,7 @@ void XIncludeAwareParserConfiguration::init$($SymbolTable* symbolTable, $XMLGram
 }
 
 void XIncludeAwareParserConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$XML11Configuration::init$(symbolTable, grammarPool, parentSettings);
 	this->fXIncludeEnabled = false;
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
@@ -184,6 +185,7 @@ void XIncludeAwareParserConfiguration::init$($SymbolTable* symbolTable, $XMLGram
 }
 
 void XIncludeAwareParserConfiguration::configurePipeline() {
+	$useLocalCurrentObjectStackCache();
 	$XML11Configuration::configurePipeline();
 	if (this->fXIncludeEnabled) {
 		if (this->fXIncludeHandler == nullptr) {
@@ -229,6 +231,7 @@ void XIncludeAwareParserConfiguration::configurePipeline() {
 }
 
 void XIncludeAwareParserConfiguration::configureXML11Pipeline() {
+	$useLocalCurrentObjectStackCache();
 	$XML11Configuration::configureXML11Pipeline();
 	if (this->fXIncludeEnabled) {
 		if (this->fXIncludeHandler == nullptr) {

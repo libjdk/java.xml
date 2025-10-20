@@ -474,6 +474,7 @@ void XSLTC::setPIParameters($String* media, $String* title, $String* charset) {
 }
 
 bool XSLTC::compile($URL* url) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($InputStream, stream, $nc(url)->openStream());
 		$var($InputSource, input, $new($InputSource, stream));
@@ -489,6 +490,7 @@ bool XSLTC::compile($URL* url) {
 }
 
 bool XSLTC::compile($URL* url, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($InputStream, stream, $nc(url)->openStream());
 		$var($InputSource, input, $new($InputSource, stream));
@@ -510,6 +512,7 @@ bool XSLTC::compile($InputStream* stream, $String* name) {
 }
 
 bool XSLTC::compile($InputSource* input, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		try {
@@ -578,6 +581,7 @@ bool XSLTC::compile($InputSource* input, $String* name) {
 }
 
 bool XSLTC::compile($List* stylesheets) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(stylesheets)->size();
 	if (count == 0) {
 		return true;
@@ -602,6 +606,7 @@ bool XSLTC::compile($List* stylesheets) {
 }
 
 $byteArray2* XSLTC::getBytecodes() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->_classes)->size();
 	$var($byteArray2, result, $new($byteArray2, count, 1));
 	for (int32_t i = 0; i < count; ++i) {
@@ -675,6 +680,7 @@ bool XSLTC::hasIdCall() {
 }
 
 void XSLTC::setClassName($String* className) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, base, $Util::baseName(className));
 	$var($String, noext, $Util::noExtName(base));
 	$var($String, name, $Util::toJavaName(noext));
@@ -695,6 +701,7 @@ $String* XSLTC::classFileName($String* className) {
 }
 
 $File* XSLTC::getOutputFile($String* className) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_destDir != nullptr) {
 		return $new($File, this->_destDir, $(classFileName(className)));
 	} else {
@@ -746,6 +753,7 @@ $Stylesheet* XSLTC::getStylesheet() {
 }
 
 int32_t XSLTC::registerAttribute($QName* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($Integer, code, $cast($Integer, $nc(this->_attributes)->get($($nc(name)->toString()))));
 	if (code == nullptr) {
 		$assign(code, $Integer::valueOf(this->_nextGType++));
@@ -765,6 +773,7 @@ int32_t XSLTC::registerAttribute($QName* name) {
 }
 
 int32_t XSLTC::registerElement($QName* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($Integer, code, $cast($Integer, $nc(this->_elements)->get($($nc(name)->toString()))));
 	if (code == nullptr) {
 		$var($Object, var$0, $of($nc(name)->toString()));
@@ -778,6 +787,7 @@ int32_t XSLTC::registerElement($QName* name) {
 }
 
 int32_t XSLTC::registerNamespacePrefix($QName* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($Integer, code, $cast($Integer, $nc(this->_namespacePrefixes)->get($($nc(name)->toString()))));
 	if (code == nullptr) {
 		$assign(code, $Integer::valueOf(this->_nextGType++));
@@ -835,11 +845,13 @@ $List* XSLTC::getNamespaceIndex() {
 }
 
 $String* XSLTC::getHelperClassName() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $$str({$(getClassName()), $$str(u'$')}));
 	return $concat(var$0, $$str(this->_helperClassSerial++));
 }
 
 void XSLTC::dumpClass($JavaClass* clazz) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_outputType == XSLTC::BYTEARRAY_AND_FILE_OUTPUT) {
 		$var($File, outFile, getOutputFile($($nc(clazz)->getClassName())));
 		$var($String, parentDir, $nc(outFile)->getParent());
@@ -891,6 +903,7 @@ $String* XSLTC::entryName($File* f) {
 }
 
 void XSLTC::outputToJar() {
+	$useLocalCurrentObjectStackCache();
 	$var($Manifest, manifest, $new($Manifest));
 	$var($Attributes, atrs, manifest->getMainAttributes());
 	$init($Attributes$Name);

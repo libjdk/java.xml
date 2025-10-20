@@ -453,6 +453,7 @@ void SchemaParsingConfig::init$($SymbolTable* symbolTable, $XMLGrammarPool* gram
 }
 
 void SchemaParsingConfig::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$BasicParserConfiguration::init$(symbolTable, parentSettings);
 	$set(this, fXML11DatatypeFactory, nullptr);
 	$set(this, fXML11NSDocScanner, nullptr);
@@ -616,6 +617,7 @@ void SchemaParsingConfig::setInputSource($XMLInputSource* inputSource) {
 }
 
 bool SchemaParsingConfig::parse(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			$nc(this->fValidationManager)->reset();
@@ -672,6 +674,7 @@ void SchemaParsingConfig::cleanup() {
 }
 
 void SchemaParsingConfig::parse($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -830,6 +833,7 @@ $PropertyState* SchemaParsingConfig::checkProperty($String* propertyId) {
 }
 
 void SchemaParsingConfig::addRecognizedParamsAndSetDefaults($XMLComponent* component) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, recognizedFeatures, $nc(component)->getRecognizedFeatures());
 	addRecognizedFeatures(recognizedFeatures);
 	$var($StringArray, recognizedProperties, component->getRecognizedProperties());

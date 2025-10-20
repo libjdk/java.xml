@@ -204,6 +204,7 @@ void Output::transferAttribute(Output* previous, $String* qname) {
 }
 
 void Output::mergeOutput(Output* previous) {
+	$useLocalCurrentObjectStackCache();
 	transferAttribute(previous, "version"_s);
 	transferAttribute(previous, "method"_s);
 	transferAttribute(previous, "encoding"_s);
@@ -228,6 +229,7 @@ void Output::mergeOutput(Output* previous) {
 }
 
 void Output::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($Properties, outputProperties, $new($Properties));
 	$nc(parser)->setOutput(this);
 	if (this->_disabled) {
@@ -371,6 +373,7 @@ void Output::parseContents($Parser* parser) {
 }
 
 void Output::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_disabled) {
 		return;
 	}

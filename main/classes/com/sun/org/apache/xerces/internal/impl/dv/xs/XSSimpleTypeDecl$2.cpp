@@ -90,6 +90,7 @@ int32_t XSSimpleTypeDecl$2::getLength() {
 }
 
 bool XSSimpleTypeDecl$2::contains(Object$* item) {
+	$useLocalCurrentObjectStackCache();
 	if (this->this$0->fEnumeration == nullptr) {
 		return false;
 	}

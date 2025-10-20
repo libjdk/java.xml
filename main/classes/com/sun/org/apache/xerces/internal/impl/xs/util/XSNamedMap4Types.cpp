@@ -73,6 +73,7 @@ void XSNamedMap4Types::init$($StringArray* namespaces, $SymbolHashArray* maps, i
 
 int32_t XSNamedMap4Types::getLength() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (this->fLength == -1) {
 			int32_t length = 0;
 			for (int32_t i = 0; i < this->fNSNum; ++i) {
@@ -98,6 +99,7 @@ int32_t XSNamedMap4Types::getLength() {
 }
 
 $XSObject* XSNamedMap4Types::itemByName($String* namespace$, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < this->fNSNum; ++i) {
 		if (isEqual(namespace$, $nc(this->fNamespaces)->get(i))) {
 			$var($XSTypeDefinition, type, $cast($XSTypeDefinition, $nc($nc(this->fMaps)->get(i))->get(localName)));

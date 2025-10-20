@@ -207,6 +207,7 @@ bool XSDDescription::isExternal() {
 }
 
 bool XSDDescription::equals(Object$* descObj) {
+	$useLocalCurrentObjectStackCache();
 	if (!($instanceOf($XMLSchemaDescription, descObj))) {
 		return false;
 	}

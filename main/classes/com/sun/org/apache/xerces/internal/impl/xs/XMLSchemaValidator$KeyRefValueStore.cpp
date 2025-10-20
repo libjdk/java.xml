@@ -89,6 +89,7 @@ void XMLSchemaValidator$KeyRefValueStore::init$($XMLSchemaValidator* this$0, $Ke
 }
 
 void XMLSchemaValidator$KeyRefValueStore::endDocumentFragment() {
+	$useLocalCurrentObjectStackCache();
 	$XMLSchemaValidator$ValueStoreBase::endDocumentFragment();
 	$set(this, fKeyValueStore, $cast($XMLSchemaValidator$ValueStoreBase, $nc($nc(this->this$0->fValueStoreCache)->fGlobalIDConstraintMap)->get($($nc(($cast($KeyRef, this->fIdentityConstraint)))->getKey()))));
 	if (this->fKeyValueStore == nullptr) {

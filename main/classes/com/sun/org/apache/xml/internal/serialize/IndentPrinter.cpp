@@ -136,6 +136,7 @@ void IndentPrinter::printText($chars* chars, int32_t start, int32_t length) {
 }
 
 void IndentPrinter::printSpace() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->_text)->length() > 0) {
 		bool var$0 = $nc(this->_format)->getLineWidth() > 0;
 		if (var$0) {
@@ -169,6 +170,7 @@ void IndentPrinter::breakLine() {
 }
 
 void IndentPrinter::breakLine(bool preserveSpace) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->_text)->length() > 0) {
 		while (this->_spaces > 0) {
 			$nc(this->_line)->append(u' ');
@@ -189,6 +191,7 @@ void IndentPrinter::breakLine(bool preserveSpace) {
 }
 
 void IndentPrinter::flushLine(bool preserveSpace) {
+	$useLocalCurrentObjectStackCache();
 	int32_t indent = 0;
 	if ($nc(this->_line)->length() > 0) {
 		try {

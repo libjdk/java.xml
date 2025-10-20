@@ -59,6 +59,7 @@ void LocatorImpl::init$() {
 }
 
 void LocatorImpl::init$($Locator* locator) {
+	$useLocalCurrentObjectStackCache();
 	setPublicId($($nc(locator)->getPublicId()));
 	setSystemId($($nc(locator)->getSystemId()));
 	setLineNumber($nc(locator)->getLineNumber());

@@ -72,6 +72,7 @@ int32_t DTMSafeStringPool::stringToIndex($String* s) {
 
 void DTMSafeStringPool::_main($StringArray* args) {
 	$init(DTMSafeStringPool);
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, word, $new($StringArray, {
 		"Zero"_s,
 		"One"_s,

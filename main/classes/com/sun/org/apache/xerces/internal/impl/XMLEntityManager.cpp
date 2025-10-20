@@ -596,6 +596,7 @@ void XMLEntityManager::init$($PropertyManager* propertyManager) {
 }
 
 void XMLEntityManager::addInternalEntity($String* name, $String* text) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc(this->fEntities)->containsKey(name)) {
 		$var($Entity, entity, $new($Entity$InternalEntity, name, text, this->fInExternalSubset));
 		$nc(this->fEntities)->put(name, entity);
@@ -606,6 +607,7 @@ void XMLEntityManager::addInternalEntity($String* name, $String* text) {
 }
 
 void XMLEntityManager::addExternalEntity($String* name, $String* publicId, $String* literalSystemId, $String* baseSystemId$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, baseSystemId, baseSystemId$renamed);
 	if (!$nc(this->fEntities)->containsKey(name)) {
 		if (baseSystemId == nullptr) {
@@ -630,6 +632,7 @@ void XMLEntityManager::addExternalEntity($String* name, $String* publicId, $Stri
 }
 
 void XMLEntityManager::addUnparsedEntity($String* name, $String* publicId, $String* systemId, $String* baseSystemId, $String* notation) {
+	$useLocalCurrentObjectStackCache();
 	if (!$nc(this->fEntities)->containsKey(name)) {
 		$var($Entity$ExternalEntity, entity, $new($Entity$ExternalEntity, name, static_cast<$XMLResourceIdentifier*>(static_cast<$XMLResourceIdentifierImpl*>($$new($XMLEntityDescriptionImpl, name, publicId, systemId, baseSystemId, nullptr))), notation, this->fInExternalSubset));
 		$nc(this->fEntities)->put(name, entity);
@@ -673,6 +676,7 @@ void XMLEntityManager::setScannerVersion(int16_t version) {
 }
 
 $String* XMLEntityManager::setupCurrentEntity(bool reference, $String* name, $XMLInputSource* xmlInputSource, bool literal, bool isExternal) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, $nc(xmlInputSource)->getPublicId());
 	$var($String, literalSystemId, xmlInputSource->getSystemId());
 	$var($String, baseSystemId, xmlInputSource->getBaseSystemId());
@@ -908,6 +912,7 @@ void XMLEntityManager::setEntityHandler($XMLEntityHandler* entityHandler) {
 }
 
 $StaxXMLInputSource* XMLEntityManager::resolveEntityAsPerStax($XMLResourceIdentifier* resourceIdentifier) {
+	$useLocalCurrentObjectStackCache();
 	if (resourceIdentifier == nullptr) {
 		return nullptr;
 	}
@@ -981,6 +986,7 @@ $StaxXMLInputSource* XMLEntityManager::resolveEntityAsPerStax($XMLResourceIdenti
 }
 
 $XMLInputSource* XMLEntityManager::resolveEntity($XMLResourceIdentifier* resourceIdentifier) {
+	$useLocalCurrentObjectStackCache();
 	if (resourceIdentifier == nullptr) {
 		return nullptr;
 	}
@@ -1049,6 +1055,7 @@ $XMLInputSource* XMLEntityManager::resolveEntity($XMLResourceIdentifier* resourc
 }
 
 void XMLEntityManager::startEntity(bool isGE, $String* entityName, bool literal) {
+	$useLocalCurrentObjectStackCache();
 	$var($Entity, entity, $nc(this->fEntityStorage)->getEntity(entityName));
 	if (entity == nullptr) {
 		if (this->fEntityHandler != nullptr) {
@@ -1175,6 +1182,7 @@ void XMLEntityManager::endExternalSubset() {
 }
 
 void XMLEntityManager::startEntity(bool isGE, $String* name, $XMLInputSource* xmlInputSource, bool literal, bool isExternal) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, setupCurrentEntity(isGE, name, xmlInputSource, literal, isExternal));
 	++this->fEntityExpansionCount;
 	if (this->fLimitAnalyzer != nullptr) {
@@ -1200,6 +1208,7 @@ $Entity$ScannedEntity* XMLEntityManager::getTopLevelEntity() {
 }
 
 void XMLEntityManager::closeReaders() {
+	$useLocalCurrentObjectStackCache();
 	while (!$nc(this->fReaderStack)->isEmpty()) {
 		try {
 			$nc(($cast($Reader, $($nc(this->fReaderStack)->pop()))))->close();
@@ -1210,6 +1219,7 @@ void XMLEntityManager::closeReaders() {
 }
 
 void XMLEntityManager::endEntity() {
+	$useLocalCurrentObjectStackCache();
 	$var($Entity$ScannedEntity, entity, $nc(this->fEntityStack)->size() > 0 ? $cast($Entity$ScannedEntity, $nc(this->fEntityStack)->pop()) : ($Entity$ScannedEntity*)nullptr);
 	if (this->fCurrentEntity != nullptr) {
 		try {
@@ -1250,6 +1260,7 @@ void XMLEntityManager::endEntity() {
 }
 
 void XMLEntityManager::reset($PropertyManager* propertyManager) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$set(this, fSymbolTable, $cast($SymbolTable, $nc(propertyManager)->getProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::SYMBOL_TABLE_PROPERTY}))));
 	$set(this, fErrorReporter, $cast($XMLErrorReporter, propertyManager->getProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::ERROR_REPORTER_PROPERTY}))));
@@ -1378,6 +1389,7 @@ void XMLEntityManager::setFeature($String* featureId, bool state) {
 }
 
 void XMLEntityManager::setProperty($String* propertyId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	if ($nc(propertyId)->startsWith($Constants::XERCES_PROPERTY_PREFIX)) {
 		int32_t var$0 = propertyId->length();
@@ -1469,6 +1481,7 @@ $1URI* XMLEntityManager::getUserDir() {
 	$load(XMLEntityManager);
 	$synchronized(class$) {
 		$init(XMLEntityManager);
+		$useLocalCurrentObjectStackCache();
 		$var($String, userDir, ""_s);
 		try {
 			$assign(userDir, $SecuritySupport::getSystemProperty("user.dir"_s));
@@ -1546,6 +1559,7 @@ $1URI* XMLEntityManager::getUserDir() {
 
 $OutputStream* XMLEntityManager::createOutputStream($String* uri) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	$var($String, expanded, XMLEntityManager::expandSystemId(uri, nullptr, true));
 	$var($URL, url, $new($URL, expanded != nullptr ? expanded : uri));
 	$var($OutputStream, out, nullptr);
@@ -1581,6 +1595,7 @@ $OutputStream* XMLEntityManager::createOutputStream($String* uri) {
 
 $String* XMLEntityManager::getPathWithoutEscapes($String* origPath) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = origPath != nullptr && origPath->length() != 0;
 	if (var$0 && origPath->indexOf((int32_t)u'%') != -1) {
 		$var($StringTokenizer, tokenizer, $new($StringTokenizer, origPath, "%"_s));
@@ -1604,6 +1619,7 @@ void XMLEntityManager::absolutizeAgainstUserDir($1URI* uri) {
 
 $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	if (systemId == nullptr || $nc(systemId)->length() == 0) {
 		return systemId;
 	}
@@ -1649,6 +1665,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 
 $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystemId, bool strict) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	if (systemId == nullptr) {
 		return nullptr;
 	}
@@ -1720,6 +1737,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 
 $String* XMLEntityManager::expandSystemIdStrictOn($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	$var($1URI, systemURI, $new($1URI, systemId, true));
 	if (systemURI->isAbsoluteURI()) {
 		return systemId;
@@ -1739,6 +1757,7 @@ $String* XMLEntityManager::expandSystemIdStrictOn($String* systemId, $String* ba
 
 $String* XMLEntityManager::expandSystemIdStrictOff($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	$var($1URI, systemURI, $new($1URI, systemId, true));
 	if (systemURI->isAbsoluteURI()) {
 		if ($nc($(systemURI->getScheme()))->length() > 1) {
@@ -1761,6 +1780,7 @@ $String* XMLEntityManager::expandSystemIdStrictOff($String* systemId, $String* b
 
 $String* XMLEntityManager::expandSystemIdStrictOff1($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	$var($URI, systemURI, $new($URI, systemId));
 	if (systemURI->isAbsolute()) {
 		if ($nc($(systemURI->getScheme()))->length() > 1) {
@@ -1843,6 +1863,7 @@ $XMLEntityManager$EncodingInfo* XMLEntityManager::getEncodingInfo($bytes* b4, in
 }
 
 $Reader* XMLEntityManager::createReader($InputStream* inputStream, $String* encoding$renamed, $Boolean* isBigEndian) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, encoding$renamed);
 	$init($XMLEntityManager$EncodingInfo);
 	$var($String, enc, (encoding != nullptr) ? encoding : $XMLEntityManager$EncodingInfo::STR_UTF8);
@@ -1969,6 +1990,7 @@ $String* XMLEntityManager::getPublicId() {
 }
 
 $String* XMLEntityManager::getExpandedSystemId() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentEntity != nullptr) {
 		if ($nc(this->fCurrentEntity)->entityLocation != nullptr && $nc($nc(this->fCurrentEntity)->entityLocation)->getExpandedSystemId() != nullptr) {
 			return $nc($nc(this->fCurrentEntity)->entityLocation)->getExpandedSystemId();
@@ -1986,6 +2008,7 @@ $String* XMLEntityManager::getExpandedSystemId() {
 }
 
 $String* XMLEntityManager::getLiteralSystemId() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentEntity != nullptr) {
 		if ($nc(this->fCurrentEntity)->entityLocation != nullptr && $nc($nc(this->fCurrentEntity)->entityLocation)->getLiteralSystemId() != nullptr) {
 			return $nc($nc(this->fCurrentEntity)->entityLocation)->getLiteralSystemId();
@@ -2003,6 +2026,7 @@ $String* XMLEntityManager::getLiteralSystemId() {
 }
 
 int32_t XMLEntityManager::getLineNumber() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentEntity != nullptr) {
 		if ($nc(this->fCurrentEntity)->isExternal()) {
 			return $nc(this->fCurrentEntity)->lineNumber;
@@ -2020,6 +2044,7 @@ int32_t XMLEntityManager::getLineNumber() {
 }
 
 int32_t XMLEntityManager::getColumnNumber() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentEntity != nullptr) {
 		if ($nc(this->fCurrentEntity)->isExternal()) {
 			return $nc(this->fCurrentEntity)->columnNumber;
@@ -2038,6 +2063,7 @@ int32_t XMLEntityManager::getColumnNumber() {
 
 $String* XMLEntityManager::fixURI($String* str$renamed) {
 	$init(XMLEntityManager);
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, str$renamed);
 	$init($File);
 	$assign(str, $nc(str)->replace($File::separatorChar, u'/'));
@@ -2093,6 +2119,7 @@ void XMLEntityManager::test() {
 }
 
 void clinit$XMLEntityManager($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$assignStatic(XMLEntityManager::VALIDATION, $str({$Constants::SAX_FEATURE_PREFIX, $Constants::VALIDATION_FEATURE}));
 	$assignStatic(XMLEntityManager::EXTERNAL_GENERAL_ENTITIES, $str({$Constants::SAX_FEATURE_PREFIX, $Constants::EXTERNAL_GENERAL_ENTITIES_FEATURE}));

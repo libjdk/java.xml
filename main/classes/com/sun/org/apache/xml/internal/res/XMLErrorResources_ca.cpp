@@ -288,6 +288,7 @@ $ObjectArray2* XMLErrorResources_ca::getContents() {
 }
 
 void clinit$XMLErrorResources_ca($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XMLErrorResources_ca::ER_FUNCTION_NOT_SUPPORTED, "ER_FUNCTION_NOT_SUPPORTED"_s);
 	$assignStatic(XMLErrorResources_ca::ER_CANNOT_OVERWRITE_CAUSE, "ER_CANNOT_OVERWRITE_CAUSE"_s);
 	$assignStatic(XMLErrorResources_ca::ER_NO_DEFAULT_IMPL, "ER_NO_DEFAULT_IMPL"_s);

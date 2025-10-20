@@ -96,6 +96,7 @@ int32_t DTMNamedNodeMap::getLength() {
 }
 
 $Node* DTMNamedNodeMap::getNamedItem($String* name) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t n = $nc(this->dtm)->getFirstAttribute(this->element); n != $DTM::NULL; n = $nc(this->dtm)->getNextAttribute(n)) {
 		if ($nc($($nc(this->dtm)->getNodeName(n)))->equals(name)) {
 			return $nc(this->dtm)->getNode(n);
@@ -127,6 +128,7 @@ $Node* DTMNamedNodeMap::removeNamedItem($String* name) {
 }
 
 $Node* DTMNamedNodeMap::getNamedItemNS($String* namespaceURI, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, retNode, nullptr);
 	for (int32_t n = $nc(this->dtm)->getFirstAttribute(this->element); n != $DTM::NULL; n = $nc(this->dtm)->getNextAttribute(n)) {
 		if ($nc(localName)->equals($($nc(this->dtm)->getLocalName(n)))) {

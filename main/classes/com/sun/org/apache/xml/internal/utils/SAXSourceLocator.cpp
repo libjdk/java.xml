@@ -91,6 +91,7 @@ void SAXSourceLocator::init$() {
 }
 
 void SAXSourceLocator::init$($Locator* locator) {
+	$useLocalCurrentObjectStackCache();
 	$LocatorImpl::init$();
 	$set(this, m_locator, locator);
 	this->setColumnNumber($nc(locator)->getColumnNumber());
@@ -100,6 +101,7 @@ void SAXSourceLocator::init$($Locator* locator) {
 }
 
 void SAXSourceLocator::init$($SourceLocator* locator) {
+	$useLocalCurrentObjectStackCache();
 	$LocatorImpl::init$();
 	$set(this, m_locator, nullptr);
 	this->setColumnNumber($nc(locator)->getColumnNumber());
@@ -109,6 +111,7 @@ void SAXSourceLocator::init$($SourceLocator* locator) {
 }
 
 void SAXSourceLocator::init$($SAXParseException* spe) {
+	$useLocalCurrentObjectStackCache();
 	$LocatorImpl::init$();
 	this->setLineNumber($nc(spe)->getLineNumber());
 	this->setColumnNumber($nc(spe)->getColumnNumber());

@@ -65,6 +65,7 @@ $Object* allocate$XPath($Class* clazz) {
 }
 
 $Object* XPath::evaluateExpression($String* expression, Object$* item, $Class* type) {
+	$useLocalCurrentObjectStackCache();
 	return $of($nc(type)->cast($(evaluate(expression, item, $($XPathEvaluationResult$XPathResultType::getQNameType(type))))));
 }
 
@@ -74,6 +75,7 @@ $XPathEvaluationResult* XPath::evaluateExpression($String* expression, Object$* 
 }
 
 $Object* XPath::evaluateExpression($String* expression, $InputSource* source, $Class* type) {
+	$useLocalCurrentObjectStackCache();
 	return $of($nc(type)->cast($(evaluate(expression, source, $($XPathEvaluationResult$XPathResultType::getQNameType(type))))));
 }
 

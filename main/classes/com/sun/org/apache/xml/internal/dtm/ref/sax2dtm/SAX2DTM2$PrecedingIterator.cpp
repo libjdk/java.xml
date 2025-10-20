@@ -116,6 +116,7 @@ bool SAX2DTM2$PrecedingIterator::isReverse() {
 }
 
 $DTMAxisIterator* SAX2DTM2$PrecedingIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	this->_isRestartable = false;
 	try {
 		$var(SAX2DTM2$PrecedingIterator, clone, $cast(SAX2DTM2$PrecedingIterator, $DTMDefaultBaseIterators$InternalAxisIteratorBase::clone()));
@@ -132,6 +133,7 @@ $DTMAxisIterator* SAX2DTM2$PrecedingIterator::cloneIterator() {
 }
 
 $DTMAxisIterator* SAX2DTM2$PrecedingIterator::setStartNode(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == $DTMDefaultBase::ROOTNODE) {
 		node = this->this$0->getDocument();
 	}

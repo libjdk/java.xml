@@ -98,6 +98,7 @@ $Object* allocate$XPointerHandler$Tokens($Class* clazz) {
 }
 
 void XPointerHandler$Tokens::init$($XPointerHandler* this$0, $SymbolTable* symbolTable) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, this$0, this$0);
 	$set(this, fgTokenNames, $new($StringArray, {
 		"XPTRTOKEN_OPEN_PAREN"_s,
@@ -122,6 +123,7 @@ $String* XPointerHandler$Tokens::getTokenString(int32_t token) {
 }
 
 void XPointerHandler$Tokens::addToken($String* tokenStr) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, $cast($String, $nc(this->fTokenNames)->get(tokenStr)));
 	$var($Integer, tokenInt, str == nullptr ? ($Integer*)nullptr : $Integer::valueOf($Integer::parseInt(str)));
 	if (tokenInt == nullptr) {
@@ -132,6 +134,7 @@ void XPointerHandler$Tokens::addToken($String* tokenStr) {
 }
 
 void XPointerHandler$Tokens::addToken(int32_t token) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTokens)->set(this->fTokenCount, token);
 	} catch ($ArrayIndexOutOfBoundsException&) {

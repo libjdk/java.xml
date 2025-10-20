@@ -85,6 +85,7 @@ void StreamResult::init$($String* systemId) {
 }
 
 void StreamResult::init$($File* f) {
+	$useLocalCurrentObjectStackCache();
 	setSystemId($($nc($($nc(f)->toURI()))->toASCIIString()));
 }
 

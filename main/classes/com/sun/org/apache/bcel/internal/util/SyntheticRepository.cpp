@@ -89,6 +89,7 @@ SyntheticRepository* SyntheticRepository::getInstance() {
 }
 
 void SyntheticRepository::storeClass($JavaClass* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, var$0, $of($nc(clazz)->getClassName()));
 	$nc(this->loadedClasses)->put(var$0, $$new($SoftReference, clazz));
 	$nc(clazz)->setRepository(this);
@@ -107,6 +108,7 @@ $JavaClass* SyntheticRepository::findClass($String* className) {
 }
 
 $JavaClass* SyntheticRepository::loadClass($String* className$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, className, className$renamed);
 	if ((className == nullptr) || $nc(className)->isEmpty()) {
 		$throwNew($IllegalArgumentException, $$str({"Invalid class name "_s, className}));
@@ -121,6 +123,7 @@ $JavaClass* SyntheticRepository::loadClass($String* className$renamed) {
 }
 
 $JavaClass* SyntheticRepository::loadClass($Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($String, className, $nc(clazz)->getName());
 	$var($JavaClass, repositoryClass, findClass(className));
@@ -178,6 +181,7 @@ $JavaClass* SyntheticRepository::loadClass($Class* clazz) {
 }
 
 $JavaClass* SyntheticRepository::loadClass($InputStream* is, $String* className) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		$var($JavaClass, var$2, nullptr);

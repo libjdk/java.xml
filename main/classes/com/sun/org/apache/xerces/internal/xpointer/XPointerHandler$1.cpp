@@ -89,6 +89,7 @@ void XPointerHandler$1::init$($XPointerHandler* this$0, $SymbolTable* symbolTabl
 }
 
 void XPointerHandler$1::addToken($XPointerHandler$Tokens* tokens, int32_t token) {
+	$useLocalCurrentObjectStackCache();
 	if (token == $XPointerHandler$Tokens::XPTRTOKEN_OPEN_PAREN || token == $XPointerHandler$Tokens::XPTRTOKEN_CLOSE_PAREN || token == $XPointerHandler$Tokens::XPTRTOKEN_SCHEMENAME || token == $XPointerHandler$Tokens::XPTRTOKEN_SCHEMEDATA || token == $XPointerHandler$Tokens::XPTRTOKEN_SHORTHAND) {
 		$XPointerHandler$Scanner::addToken(tokens, token);
 		return;

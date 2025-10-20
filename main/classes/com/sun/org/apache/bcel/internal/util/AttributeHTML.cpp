@@ -111,6 +111,7 @@ $Object* allocate$AttributeHTML($Class* clazz) {
 }
 
 void AttributeHTML::init$($String* dir, $String* class_name, $ConstantPool* constant_pool, $ConstantHTML* constant_html) {
+	$useLocalCurrentObjectStackCache();
 	this->attr_count = 0;
 	$set(this, class_name, class_name);
 	$set(this, constant_pool, constant_pool);
@@ -120,6 +121,7 @@ void AttributeHTML::init$($String* dir, $String* class_name, $ConstantPool* cons
 }
 
 $String* AttributeHTML::codeLink(int32_t link, int32_t method_number) {
+	$useLocalCurrentObjectStackCache();
 	return $str({"<A HREF=\""_s, this->class_name, "_code.html#code"_s, $$str(method_number), "@"_s, $$str(link), "\" TARGET=Code>"_s, $$str(link), "</A>"_s});
 }
 
@@ -133,6 +135,7 @@ void AttributeHTML::writeAttribute($Attribute* attribute, $String* anchor) {
 }
 
 void AttributeHTML::writeAttribute($Attribute* attribute, $String* anchor, int32_t method_number) {
+	$useLocalCurrentObjectStackCache();
 	int8_t tag = $nc(attribute)->getTag();
 	int32_t index = 0;
 	if (tag == $Const::ATTR_UNKNOWN) {

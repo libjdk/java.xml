@@ -97,6 +97,7 @@ void ToStream$CharacterBuffer$2::init$($ToStream$CharacterBuffer* this$1, $Strin
 }
 
 bool ToStream$CharacterBuffer$2::flush(bool skipBeginningNewlines) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc($nc(this->this$1->this$0)->m_elemContext)->m_startTagOpen) {
 		$nc(this->this$1->this$0)->closeStartTag();
 		$nc($nc(this->this$1->this$0)->m_elemContext)->m_startTagOpen = false;

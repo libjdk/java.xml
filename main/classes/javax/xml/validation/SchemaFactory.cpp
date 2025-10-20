@@ -89,6 +89,7 @@ SchemaFactory* SchemaFactory::newDefaultInstance() {
 
 SchemaFactory* SchemaFactory::newInstance($String* schemaLanguage) {
 	$load(SchemaFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ClassLoader, cl, nullptr);
 	$assign(cl, $SecuritySupport::getContextClassLoader());
@@ -103,6 +104,7 @@ SchemaFactory* SchemaFactory::newInstance($String* schemaLanguage) {
 }
 
 SchemaFactory* SchemaFactory::newInstance($String* schemaLanguage, $String* factoryClassName, $ClassLoader* classLoader) {
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, cl, classLoader);
 	if (cl == nullptr) {
 		$assign(cl, $SecuritySupport::getContextClassLoader());
@@ -157,6 +159,7 @@ $Schema* SchemaFactory::newSchema($File* schema) {
 }
 
 $Schema* SchemaFactory::newSchema($URL* schema) {
+	$useLocalCurrentObjectStackCache();
 	return newSchema(static_cast<$Source*>($$new($StreamSource, $($nc(schema)->toExternalForm()))));
 }
 

@@ -74,6 +74,7 @@ void DefaultValidationErrorHandler::init$($Locale* locale) {
 }
 
 void DefaultValidationErrorHandler::error($SAXParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	if (this->errorCount >= DefaultValidationErrorHandler::ERROR_COUNT_LIMIT) {
 		return;
 	} else if (this->errorCount == 0) {

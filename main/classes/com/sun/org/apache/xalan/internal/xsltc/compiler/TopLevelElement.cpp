@@ -91,12 +91,14 @@ $Type* TopLevelElement::typeCheck($SymbolTable* stable) {
 }
 
 void TopLevelElement::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::NOT_IMPLEMENTED_ERR, $of($of(this)->getClass()), static_cast<$SyntaxTreeNode*>(this)));
 	$nc($(getParser()))->reportError($Constants::FATAL, msg);
 }
 
 $InstructionList* TopLevelElement::compile($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, result, nullptr);
 	$var($InstructionList, save, $nc(methodGen)->getInstructionList());
 	methodGen->setInstructionList($assign(result, $new($InstructionList)));

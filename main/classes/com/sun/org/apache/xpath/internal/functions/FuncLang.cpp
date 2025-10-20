@@ -67,6 +67,7 @@ void FuncLang::init$() {
 }
 
 $XObject* FuncLang::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, lang, $nc($($nc(this->m_arg0)->execute(xctxt)))->str());
 	int32_t parent = $nc(xctxt)->getCurrentNode();
 	bool isLang = false;

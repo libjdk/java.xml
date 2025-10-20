@@ -76,6 +76,7 @@ void XMLSchemaValidator$KeyValueStore::init$($XMLSchemaValidator* this$0, $Uniqu
 }
 
 void XMLSchemaValidator$KeyValueStore::checkDuplicateValues() {
+	$useLocalCurrentObjectStackCache();
 	if (contains()) {
 		$var($String, code, "DuplicateKey"_s);
 		$var($String, value, toString(this->fLocalValues));

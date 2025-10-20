@@ -363,6 +363,7 @@ $String* ValidatorHandlerImpl::VALIDATION_MANAGER = nullptr;
 $String* ValidatorHandlerImpl::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 
 void ValidatorHandlerImpl::init$($XSGrammarPoolContainer* grammarContainer) {
+	$useLocalCurrentObjectStackCache();
 	ValidatorHandlerImpl::init$($$new($XMLSchemaValidatorComponentManager, grammarContainer));
 	$nc(this->fComponentManager)->addRecognizedFeatures($$new($StringArray, {ValidatorHandlerImpl::NAMESPACE_PREFIXES}));
 	$nc(this->fComponentManager)->setFeature(ValidatorHandlerImpl::NAMESPACE_PREFIXES, false);
@@ -421,6 +422,7 @@ $TypeInfoProvider* ValidatorHandlerImpl::getTypeInfoProvider() {
 }
 
 bool ValidatorHandlerImpl::getFeature($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -437,6 +439,7 @@ bool ValidatorHandlerImpl::getFeature($String* name) {
 }
 
 void ValidatorHandlerImpl::setFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -461,6 +464,7 @@ void ValidatorHandlerImpl::setFeature($String* name, bool value) {
 }
 
 $Object* ValidatorHandlerImpl::getProperty($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -477,6 +481,7 @@ $Object* ValidatorHandlerImpl::getProperty($String* name) {
 }
 
 void ValidatorHandlerImpl::setProperty($String* name, Object$* object) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -523,6 +528,7 @@ void ValidatorHandlerImpl::comment($XMLString* text, $Augmentations* augs) {
 }
 
 void ValidatorHandlerImpl::processingInstruction($String* target, $XMLString* data, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fContentHandler != nullptr) {
 		try {
 			$nc(this->fContentHandler)->processingInstruction(target, $($nc(data)->toString()));
@@ -534,6 +540,7 @@ void ValidatorHandlerImpl::processingInstruction($String* target, $XMLString* da
 }
 
 void ValidatorHandlerImpl::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fContentHandler != nullptr) {
 		{
 			$var($Throwable, var$0, nullptr);
@@ -598,6 +605,7 @@ void ValidatorHandlerImpl::ignorableWhitespace($XMLString* text, $Augmentations*
 }
 
 void ValidatorHandlerImpl::endElement($QName* element, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fContentHandler != nullptr) {
 		{
 			$var($Throwable, var$0, nullptr);
@@ -654,6 +662,7 @@ void ValidatorHandlerImpl::setDocumentLocator($Locator* locator) {
 }
 
 void ValidatorHandlerImpl::startDocument() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fComponentManager)->reset();
 	$nc(this->fSchemaValidator)->setDocumentHandler(this);
 	$nc(this->fValidationManager)->setEntityState(this);
@@ -675,6 +684,7 @@ void ValidatorHandlerImpl::startDocument() {
 }
 
 void ValidatorHandlerImpl::endDocument() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fSAXLocatorWrapper)->setLocator(nullptr);
 	try {
 		$nc(this->fSchemaValidator)->endDocument(nullptr);
@@ -688,6 +698,7 @@ void ValidatorHandlerImpl::endDocument() {
 }
 
 void ValidatorHandlerImpl::startPrefixMapping($String* prefix, $String* uri) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefixSymbol, nullptr);
 	$var($String, uriSymbol, nullptr);
 	if (!this->fStringsInternalized) {
@@ -716,6 +727,7 @@ void ValidatorHandlerImpl::endPrefixMapping($String* prefix) {
 }
 
 void ValidatorHandlerImpl::startElement($String* uri, $String* localName, $String* qName, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNeedPushNSContext) {
 		$nc(this->fNamespaceContext)->pushContext();
 	}
@@ -738,6 +750,7 @@ void ValidatorHandlerImpl::startElement($String* uri, $String* localName, $Strin
 }
 
 void ValidatorHandlerImpl::endElement($String* uri, $String* localName, $String* qName) {
+	$useLocalCurrentObjectStackCache();
 	fillQName(this->fElementQName, uri, localName, qName);
 	{
 		$var($Throwable, var$0, nullptr);
@@ -763,6 +776,7 @@ void ValidatorHandlerImpl::endElement($String* uri, $String* localName, $String*
 }
 
 void ValidatorHandlerImpl::characters($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaValidator)->characters(this->fTempString, nullptr);
@@ -776,6 +790,7 @@ void ValidatorHandlerImpl::characters($chars* ch, int32_t start, int32_t length)
 }
 
 void ValidatorHandlerImpl::ignorableWhitespace($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaValidator)->ignorableWhitespace(this->fTempString, nullptr);
@@ -811,6 +826,7 @@ void ValidatorHandlerImpl::unparsedEntityDecl($String* name, $String* publicId, 
 }
 
 void ValidatorHandlerImpl::validate($Source* source, $Result* result) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($SAXResult, result) || result == nullptr) {
 		$var($SAXSource, saxSource, $cast($SAXSource, source));
 		$var($SAXResult, saxResult, $cast($SAXResult, result));
@@ -897,6 +913,7 @@ $AttributePSVI* ValidatorHandlerImpl::getAttributePSVIByName($String* uri, $Stri
 }
 
 void ValidatorHandlerImpl::fillQName($QName* toFill, $String* uri$renamed, $String* localpart$renamed, $String* raw$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localpart, localpart$renamed);
 	$var($String, raw, raw$renamed);
 	$var($String, uri, uri$renamed);
@@ -937,6 +954,7 @@ void ValidatorHandlerImpl::fillXMLAttributes($Attributes* att) {
 }
 
 void ValidatorHandlerImpl::fillXMLAttributes2($Attributes2* att) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fAttributes)->removeAllAttributes();
 	int32_t len = $nc(att)->getLength();
 	for (int32_t i = 0; i < len; ++i) {
@@ -951,6 +969,7 @@ void ValidatorHandlerImpl::fillXMLAttributes2($Attributes2* att) {
 }
 
 void ValidatorHandlerImpl::fillXMLAttribute($Attributes* att, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, var$0, this->fAttributeQName);
 	$var($String, var$1, $nc(att)->getURI(index));
 	$var($String, var$2, att->getLocalName(index));

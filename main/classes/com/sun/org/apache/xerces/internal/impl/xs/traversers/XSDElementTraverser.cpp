@@ -194,6 +194,7 @@ void XSDElementTraverser::init$($XSDHandler* handler, $XSAttributeChecker* gAttr
 }
 
 $XSParticleDecl* XSDElementTraverser::traverseLocal($Element* elmDecl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, int32_t allContextFlags, $XSObject* parent) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSParticleDecl, particle, nullptr);
 	if ($nc(this->fSchemaHandler)->fDeclPool != nullptr) {
 		$assign(particle, $nc($nc(this->fSchemaHandler)->fDeclPool)->getParticleDecl());
@@ -226,6 +227,7 @@ $XSParticleDecl* XSDElementTraverser::traverseLocal($Element* elmDecl, $XSDocume
 }
 
 void XSDElementTraverser::traverseLocal($XSParticleDecl* particle, $Element* elmDecl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, int32_t allContextFlags, $XSObject* parent, $StringArray* localNSDecls) {
+	$useLocalCurrentObjectStackCache();
 	if (localNSDecls != nullptr) {
 		$nc($nc(schemaDoc)->fNamespaceSupport)->setEffectiveContext(localNSDecls);
 	}
@@ -293,6 +295,7 @@ void XSDElementTraverser::traverseLocal($XSParticleDecl* particle, $Element* elm
 }
 
 $XSElementDecl* XSDElementTraverser::traverseGlobal($Element* elmDecl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmDecl, true, schemaDoc));
 	$var($XSElementDecl, element, traverseNamedElement(elmDecl, attrValues, schemaDoc, grammar, true, nullptr));
 	$nc(this->fAttrChecker)->returnAttrArray(attrValues, schemaDoc);
@@ -300,6 +303,7 @@ $XSElementDecl* XSDElementTraverser::traverseGlobal($Element* elmDecl, $XSDocume
 }
 
 $XSElementDecl* XSDElementTraverser::traverseNamedElement($Element* elmDecl, $ObjectArray* attrValues, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, bool isGlobal, $XSObject* parent) {
+	$useLocalCurrentObjectStackCache();
 	$init($XSAttributeChecker);
 	$var($Boolean, abstractAtt, $cast($Boolean, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_ABSTRACT)));
 	$var($XInt, blockAtt, $cast($XInt, attrValues->get($XSAttributeChecker::ATTIDX_BLOCK)));

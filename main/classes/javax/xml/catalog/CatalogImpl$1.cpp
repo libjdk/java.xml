@@ -110,6 +110,7 @@ $Object* CatalogImpl$1::next() {
 }
 
 $Catalog* CatalogImpl$1::nextCatalog() {
+	$useLocalCurrentObjectStackCache();
 	$var($Catalog, c, nullptr);
 	if (this->this$0->nextCatalogs != nullptr) {
 		while (c == nullptr && this->nextCatalogIndex < $nc(this->this$0->nextCatalogs)->size()) {

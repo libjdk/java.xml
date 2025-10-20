@@ -283,6 +283,7 @@ void DOMValidatorHelper::init$($XMLSchemaValidatorComponentManager* componentMan
 }
 
 void DOMValidatorHelper::validate($Source* source, $Result* result) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($DOMResult, result) || result == nullptr) {
 		$var($DOMSource, domSource, $cast($DOMSource, source));
 		$var($DOMResult, domResult, $cast($DOMResult, result));
@@ -351,6 +352,7 @@ bool DOMValidatorHelper::isEntityUnparsed($String* name) {
 }
 
 void DOMValidatorHelper::validate($Node* node$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, node$renamed);
 	$var($Node, top, node);
 	while (node != nullptr) {
@@ -378,6 +380,7 @@ void DOMValidatorHelper::validate($Node* node$renamed) {
 }
 
 void DOMValidatorHelper::beginNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc(node)->getNodeType()) {
 	case $Node::ELEMENT_NODE:
 		{
@@ -465,6 +468,7 @@ void DOMValidatorHelper::setupEntityMap($Document* doc) {
 }
 
 void DOMValidatorHelper::setupDOMResultHandler($DOMSource* source, $DOMResult* result) {
+	$useLocalCurrentObjectStackCache();
 	if (result == nullptr) {
 		$set(this, fDOMValidatorHandler, nullptr);
 		$nc(this->fSchemaValidator)->setDocumentHandler(nullptr);
@@ -494,6 +498,7 @@ void DOMValidatorHelper::setupDOMResultHandler($DOMSource* source, $DOMResult* r
 }
 
 void DOMValidatorHelper::fillQName($QName* toFill, $Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, $nc(node)->getPrefix());
 	$var($String, localName, node->getLocalName());
 	$var($String, rawName, node->getNodeName());
@@ -517,6 +522,7 @@ void DOMValidatorHelper::fillQName($QName* toFill, $Node* node) {
 }
 
 void DOMValidatorHelper::processAttributes($NamedNodeMap* attrMap) {
+	$useLocalCurrentObjectStackCache();
 	int32_t attrCount = $nc(attrMap)->getLength();
 	$nc(this->fAttributes)->removeAllAttributes();
 	for (int32_t i = 0; i < attrCount; ++i) {

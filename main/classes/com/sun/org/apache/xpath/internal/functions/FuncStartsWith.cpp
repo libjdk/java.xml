@@ -67,6 +67,7 @@ void FuncStartsWith::init$() {
 }
 
 $XObject* FuncStartsWith::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$init($XBoolean);
 	return $nc($($nc($($nc(this->m_arg0)->execute(xctxt)))->xstr()))->startsWith($($nc($($nc(this->m_arg1)->execute(xctxt)))->xstr())) ? static_cast<$XObject*>($XBoolean::S_TRUE) : static_cast<$XObject*>($XBoolean::S_FALSE);
 }

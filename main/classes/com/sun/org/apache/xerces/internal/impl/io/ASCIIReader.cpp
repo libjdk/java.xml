@@ -99,6 +99,7 @@ void ASCIIReader::init$($InputStream* inputStream, int32_t size, $MessageFormatt
 }
 
 int32_t ASCIIReader::read() {
+	$useLocalCurrentObjectStackCache();
 	int32_t b0 = $nc(this->fInputStream)->read();
 	if (b0 >= 128) {
 		$init($XMLMessageFormatter);
@@ -108,6 +109,7 @@ int32_t ASCIIReader::read() {
 }
 
 int32_t ASCIIReader::read($chars* ch, int32_t offset, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (length > $nc(this->fBuffer)->length) {
 		length = $nc(this->fBuffer)->length;
 	}

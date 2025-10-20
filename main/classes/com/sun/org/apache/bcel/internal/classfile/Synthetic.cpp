@@ -72,6 +72,7 @@ $Object* allocate$Synthetic($Class* clazz) {
 }
 
 void Synthetic::init$(Synthetic* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($bytes, var$2, c->getBytes());
@@ -112,6 +113,7 @@ void Synthetic::setBytes($bytes* bytes) {
 }
 
 $String* Synthetic::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, "Synthetic"_s));
 	if ($Attribute::getLength() > 0) {
 		buf->append(" "_s)->append($($Utility::toHexString(this->bytes)));

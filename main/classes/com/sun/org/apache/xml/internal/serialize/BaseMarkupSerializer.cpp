@@ -276,6 +276,7 @@ void BaseMarkupSerializer::finalize() {
 }
 
 void BaseMarkupSerializer::init$($OutputFormat* format) {
+	$useLocalCurrentObjectStackCache();
 	this->features = (int16_t)-1;
 	$set(this, fDOMError, $new($DOMErrorImpl));
 	$set(this, fStrBuffer, $new($StringBuffer, 40));
@@ -304,6 +305,7 @@ $DOMSerializer* BaseMarkupSerializer::asDOMSerializer() {
 }
 
 void BaseMarkupSerializer::setOutputByteStream($OutputStream* output) {
+	$useLocalCurrentObjectStackCache();
 	if (output == nullptr) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::SERIALIZER_DOMAIN, "ArgumentIsNull"_s, $$new($ObjectArray, {$of("output"_s)})));
@@ -315,6 +317,7 @@ void BaseMarkupSerializer::setOutputByteStream($OutputStream* output) {
 }
 
 void BaseMarkupSerializer::setOutputCharStream($Writer* writer) {
+	$useLocalCurrentObjectStackCache();
 	if (writer == nullptr) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::SERIALIZER_DOMAIN, "ArgumentIsNull"_s, $$new($ObjectArray, {$of("writer"_s)})));
@@ -326,6 +329,7 @@ void BaseMarkupSerializer::setOutputCharStream($Writer* writer) {
 }
 
 void BaseMarkupSerializer::setOutputFormat($OutputFormat* format) {
+	$useLocalCurrentObjectStackCache();
 	if (format == nullptr) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::SERIALIZER_DOMAIN, "ArgumentIsNull"_s, $$new($ObjectArray, {$of("format"_s)})));
@@ -352,6 +356,7 @@ void BaseMarkupSerializer::cleanup() {
 }
 
 void BaseMarkupSerializer::prepare() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_prepared) {
 		return;
 	}
@@ -435,6 +440,7 @@ void BaseMarkupSerializer::serialize($Document* doc) {
 }
 
 void BaseMarkupSerializer::startDocument() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		prepare();
 	} catch ($IOException&) {
@@ -444,6 +450,7 @@ void BaseMarkupSerializer::startDocument() {
 }
 
 void BaseMarkupSerializer::characters($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	try {
 		$assign(state, content());
@@ -524,6 +531,7 @@ void BaseMarkupSerializer::processingInstruction($String* target, $String* code)
 }
 
 void BaseMarkupSerializer::processingInstructionIO($String* target, $String* code) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$var($ElementState, state, nullptr);
 	$assign(state, content());
@@ -560,6 +568,7 @@ void BaseMarkupSerializer::processingInstructionIO($String* target, $String* cod
 }
 
 void BaseMarkupSerializer::comment($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		comment($$new($String, chars, start, length));
 	} catch ($IOException&) {
@@ -569,6 +578,7 @@ void BaseMarkupSerializer::comment($chars* chars, int32_t start, int32_t length)
 }
 
 void BaseMarkupSerializer::comment($String* text) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$var($ElementState, state, nullptr);
 	if ($nc(this->_format)->getOmitComments()) {
@@ -825,6 +835,7 @@ void BaseMarkupSerializer::notationDecl($String* name, $String* publicId, $Strin
 }
 
 void BaseMarkupSerializer::serializeNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fCurrentNode, node);
 	switch ($nc(node)->getNodeType()) {
 	case $Node::TEXT_NODE:
@@ -1083,6 +1094,7 @@ void BaseMarkupSerializer::serializeNode($Node* node) {
 }
 
 void BaseMarkupSerializer::serializeDocument() {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	$var($String, dtd, $nc(this->_printer)->leaveDTD());
 	if (!this->_started) {
@@ -1196,6 +1208,7 @@ void BaseMarkupSerializer::characters($String* text) {
 }
 
 void BaseMarkupSerializer::serializePreRoot() {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	if (this->_preRoot != nullptr) {
 		for (i = 0; i < $nc(this->_preRoot)->size(); ++i) {
@@ -1209,6 +1222,7 @@ void BaseMarkupSerializer::serializePreRoot() {
 }
 
 void BaseMarkupSerializer::printCDATAText($String* text) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(text)->length();
 	char16_t ch = 0;
 	for (int32_t index = 0; index < length; ++index) {
@@ -1258,6 +1272,7 @@ void BaseMarkupSerializer::printCDATAText($String* text) {
 }
 
 void BaseMarkupSerializer::surrogates(int32_t high, int32_t low, bool inContent) {
+	$useLocalCurrentObjectStackCache();
 	if ($XMLChar::isHighSurrogate(high)) {
 		if (!$XMLChar::isLowSurrogate(low)) {
 			fatalError($$str({"The character \'"_s, $$str((char16_t)low), "\' is an invalid XML character"_s}));
@@ -1331,6 +1346,7 @@ void BaseMarkupSerializer::printText($String* text, bool preserveSpace, bool une
 }
 
 void BaseMarkupSerializer::printDoctypeURL($String* url) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	$nc(this->_printer)->printText(u'\"');
 	for (i = 0; i < $nc(url)->length(); ++i) {
@@ -1390,6 +1406,7 @@ $ElementState* BaseMarkupSerializer::getElementState() {
 }
 
 $ElementState* BaseMarkupSerializer::enterElementState($String* namespaceURI, $String* localName, $String* rawName, bool preserveSpace) {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	if (this->_elementStateCount + 1 == $nc(this->_elementStates)->length) {
 		$var($ElementStateArray, newStates, nullptr);

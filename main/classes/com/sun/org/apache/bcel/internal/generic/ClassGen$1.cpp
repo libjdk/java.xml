@@ -73,6 +73,7 @@ void ClassGen$1::init$() {
 }
 
 bool ClassGen$1::equals(Object$* o1, Object$* o2) {
+	$useLocalCurrentObjectStackCache();
 	$var($ClassGen, THIS, $cast($ClassGen, o1));
 	$var($ClassGen, THAT, $cast($ClassGen, o2));
 	$var($Object, var$0, $of($nc(THIS)->getClassName()));
@@ -80,6 +81,7 @@ bool ClassGen$1::equals(Object$* o1, Object$* o2) {
 }
 
 int32_t ClassGen$1::hashCode(Object$* o) {
+	$useLocalCurrentObjectStackCache();
 	$var($ClassGen, THIS, $cast($ClassGen, o));
 	return $nc($($nc(THIS)->getClassName()))->hashCode();
 }

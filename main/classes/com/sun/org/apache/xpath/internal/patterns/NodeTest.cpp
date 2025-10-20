@@ -317,6 +317,7 @@ int32_t NodeTest::getNodeTypeTest(int32_t whatToShow) {
 
 void NodeTest::debugWhatToShow(int32_t whatToShow) {
 	$init(NodeTest);
+	$useLocalCurrentObjectStackCache();
 	$var($List, v, $new($ArrayList));
 	if (0 != ((int32_t)(whatToShow & (uint32_t)$DTMFilter::SHOW_ATTRIBUTE))) {
 		v->add("SHOW_ATTRIBUTE"_s);
@@ -385,6 +386,7 @@ bool NodeTest::subPartMatchNS($String* p, $String* t) {
 }
 
 $XObject* NodeTest::execute($XPathContext* xctxt, int32_t context) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTM, dtm, $nc(xctxt)->getDTM(context));
 	int16_t nodeType = $nc(dtm)->getNodeType(context);
 	if (this->m_whatToShow == $DTMFilter::SHOW_ALL) {
@@ -440,6 +442,7 @@ $XObject* NodeTest::execute($XPathContext* xctxt, int32_t context) {
 }
 
 $XObject* NodeTest::execute($XPathContext* xctxt, int32_t context, $DTM* dtm, int32_t expType) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_whatToShow == $DTMFilter::SHOW_ALL) {
 		return this->m_score;
 	}

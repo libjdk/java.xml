@@ -105,6 +105,7 @@ void SourceFile::setSourceFileIndex(int32_t sourceFileIndex) {
 }
 
 $String* SourceFile::getSourceFileName() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, c, $cast($ConstantUtf8, $nc($($Attribute::getConstantPool()))->getConstant(this->sourceFileIndex, $Const::CONSTANT_Utf8)));
 	return $nc(c)->getBytes();
 }

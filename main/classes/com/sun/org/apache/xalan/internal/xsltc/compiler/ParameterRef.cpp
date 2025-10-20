@@ -108,12 +108,14 @@ void ParameterRef::init$($Param* param) {
 }
 
 $String* ParameterRef::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"parameter-ref("_s, $($nc(this->_variable)->getName()), $$str(u'/')}));
 	$var($String, var$0, $$concat(var$1, $($nc(this->_variable)->getType())));
 	return $concat(var$0, $$str(u')'));
 }
 
 void ParameterRef::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($String, name, $BasisLibrary::mapQNameToJavaName($($nc(this->_name)->toString())));

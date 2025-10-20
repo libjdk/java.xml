@@ -207,6 +207,7 @@ $String* XPath::getPatternString() {
 }
 
 void XPath::init$($String* exprString, $SourceLocator* locator, $PrefixResolver* prefixResolver, int32_t type, $ErrorListener* errorListener$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($ErrorListener, errorListener, errorListener$renamed);
 	$set(this, m_funcTable, nullptr);
 	initFunctionTable();
@@ -232,6 +233,7 @@ void XPath::init$($String* exprString, $SourceLocator* locator, $PrefixResolver*
 }
 
 void XPath::init$($String* exprString, $SourceLocator* locator, $PrefixResolver* prefixResolver, int32_t type, $ErrorListener* errorListener$renamed, $FunctionTable* aTable) {
+	$useLocalCurrentObjectStackCache();
 	$var($ErrorListener, errorListener, errorListener$renamed);
 	$set(this, m_funcTable, nullptr);
 	$set(this, m_funcTable, aTable);
@@ -271,6 +273,7 @@ $XObject* XPath::execute($XPathContext* xctxt, $Node* contextNode, $PrefixResolv
 }
 
 $XObject* XPath::execute($XPathContext* xctxt, int32_t contextNode, $PrefixResolver* namespaceContext) {
+	$useLocalCurrentObjectStackCache();
 	$nc(xctxt)->pushNamespaceContext(namespaceContext);
 	xctxt->pushCurrentNodeAndExpression(contextNode, contextNode);
 	$var($XObject, xobj, nullptr);
@@ -320,6 +323,7 @@ $XObject* XPath::execute($XPathContext* xctxt, int32_t contextNode, $PrefixResol
 }
 
 bool XPath::bool$($XPathContext* xctxt, int32_t contextNode, $PrefixResolver* namespaceContext) {
+	$useLocalCurrentObjectStackCache();
 	$nc(xctxt)->pushNamespaceContext(namespaceContext);
 	xctxt->pushCurrentNodeAndExpression(contextNode, contextNode);
 	{
@@ -375,6 +379,7 @@ bool XPath::bool$($XPathContext* xctxt, int32_t contextNode, $PrefixResolver* na
 }
 
 double XPath::getMatchScore($XPathContext* xctxt, int32_t context) {
+	$useLocalCurrentObjectStackCache();
 	$nc(xctxt)->pushCurrentNode(context);
 	xctxt->pushCurrentExpressionNode(context);
 	{
@@ -403,6 +408,7 @@ double XPath::getMatchScore($XPathContext* xctxt, int32_t context) {
 }
 
 void XPath::warn($XPathContext* xctxt, int32_t sourceNode, $String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHWarning(msg, args));
 	$var($ErrorListener, ehandler, $nc(xctxt)->getErrorListener());
 	if (nullptr != ehandler) {
@@ -411,6 +417,7 @@ void XPath::warn($XPathContext* xctxt, int32_t sourceNode, $String* msg, $Object
 }
 
 void XPath::assertion(bool b, $String* msg) {
+	$useLocalCurrentObjectStackCache();
 	if (!b) {
 		$init($XPATHErrorResources);
 		$var($String, fMsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_INCORRECT_PROGRAMMER_ASSERTION, $$new($ObjectArray, {$of(msg)})));
@@ -419,6 +426,7 @@ void XPath::assertion(bool b, $String* msg) {
 }
 
 void XPath::error($XPathContext* xctxt, int32_t sourceNode, $String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHMessage(msg, args));
 	$var($ErrorListener, ehandler, $nc(xctxt)->getErrorListener());
 	if (nullptr != ehandler) {

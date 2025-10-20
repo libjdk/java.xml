@@ -169,6 +169,7 @@ $Node* NamedNodeMapImpl::getNamedItemNS($String* namespaceURI, $String* localNam
 }
 
 $Node* NamedNodeMapImpl::setNamedItem($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, $nc(this->ownerNode)->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking) {
 		if (isReadOnly()) {
@@ -198,6 +199,7 @@ $Node* NamedNodeMapImpl::setNamedItem($Node* arg) {
 }
 
 $Node* NamedNodeMapImpl::setNamedItemNS($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, $nc(this->ownerNode)->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking) {
 		if (isReadOnly()) {
@@ -234,6 +236,7 @@ $Node* NamedNodeMapImpl::setNamedItemNS($Node* arg) {
 }
 
 $Node* NamedNodeMapImpl::removeNamedItem($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr));
@@ -251,6 +254,7 @@ $Node* NamedNodeMapImpl::removeNamedItem($String* name) {
 }
 
 $Node* NamedNodeMapImpl::removeNamedItemNS($String* namespaceURI, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr));
@@ -274,6 +278,7 @@ NamedNodeMapImpl* NamedNodeMapImpl::cloneMap($NodeImpl* ownerNode) {
 }
 
 void NamedNodeMapImpl::cloneContent(NamedNodeMapImpl* srcmap) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, srcnodes, $nc(srcmap)->nodes);
 	if (srcnodes != nullptr) {
 		int32_t size = srcnodes->size();
@@ -294,6 +299,7 @@ void NamedNodeMapImpl::cloneContent(NamedNodeMapImpl* srcmap) {
 }
 
 void NamedNodeMapImpl::setReadOnly(bool readOnly, bool deep) {
+	$useLocalCurrentObjectStackCache();
 	isReadOnly(readOnly);
 	if (deep && this->nodes != nullptr) {
 		for (int32_t i = $nc(this->nodes)->size() - 1; i >= 0; --i) {
@@ -307,6 +313,7 @@ bool NamedNodeMapImpl::getReadOnly() {
 }
 
 void NamedNodeMapImpl::setOwnerDocument($CoreDocumentImpl* doc) {
+	$useLocalCurrentObjectStackCache();
 	if (this->nodes != nullptr) {
 		int32_t size = $nc(this->nodes)->size();
 		for (int32_t i = 0; i < size; ++i) {
@@ -340,6 +347,7 @@ void NamedNodeMapImpl::hasDefaults(bool value) {
 }
 
 int32_t NamedNodeMapImpl::findNamePoint($String* name, int32_t start) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	if (this->nodes != nullptr) {
 		int32_t first = start;
@@ -363,6 +371,7 @@ int32_t NamedNodeMapImpl::findNamePoint($String* name, int32_t start) {
 }
 
 int32_t NamedNodeMapImpl::findNamePoint($String* namespaceURI, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (this->nodes == nullptr) {
 		return -1;
 	}
@@ -394,6 +403,7 @@ int32_t NamedNodeMapImpl::findNamePoint($String* namespaceURI, $String* name) {
 }
 
 bool NamedNodeMapImpl::precedes($Node* a, $Node* b) {
+	$useLocalCurrentObjectStackCache();
 	if (this->nodes != nullptr) {
 		int32_t size = $nc(this->nodes)->size();
 		for (int32_t i = 0; i < size; ++i) {
@@ -423,6 +433,7 @@ $Object* NamedNodeMapImpl::getItem(int32_t index) {
 }
 
 int32_t NamedNodeMapImpl::addItem($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(arg)->getNamespaceURI());
 	int32_t i = findNamePoint(var$0, $(arg->getLocalName()));
 	if (i >= 0) {
@@ -468,6 +479,7 @@ void NamedNodeMapImpl::readObject($ObjectInputStream* in) {
 }
 
 void NamedNodeMapImpl::writeObject($ObjectOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, oldNodes, this->nodes);
 	{
 		$var($Throwable, var$0, nullptr);

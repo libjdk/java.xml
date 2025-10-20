@@ -57,6 +57,7 @@ void Version::init$() {
 }
 
 $String* Version::getVersion() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$6, $$str({$(getProduct()), " "_s}));
 	$var($String, var$5, $$concat(var$6, $(getImplementationLanguage())));
 	$var($String, var$4, $$concat(var$5, " "));
@@ -93,6 +94,7 @@ int32_t Version::getMaintenanceVersionNum() {
 }
 
 int32_t Version::getDevelopmentVersionNum() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (($$new($String, ""_s))->length() == 0) {
 			return 0;

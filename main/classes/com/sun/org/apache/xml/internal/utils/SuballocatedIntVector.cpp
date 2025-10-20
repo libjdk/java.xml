@@ -111,6 +111,7 @@ void SuballocatedIntVector::setSize(int32_t sz) {
 }
 
 void SuballocatedIntVector::addElement(int32_t value) {
+	$useLocalCurrentObjectStackCache();
 	int32_t indexRelativeToCache = this->m_firstFree - this->m_buildCacheStartIndex;
 	if (indexRelativeToCache >= 0 && indexRelativeToCache < this->m_blocksize) {
 		$nc(this->m_buildCache)->set(indexRelativeToCache, value);
@@ -136,6 +137,7 @@ void SuballocatedIntVector::addElement(int32_t value) {
 }
 
 void SuballocatedIntVector::addElements(int32_t value, int32_t numberOfElements) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_firstFree + numberOfElements < this->m_blocksize) {
 		for (int32_t i = 0; i < numberOfElements; ++i) {
 			$nc(this->m_map0)->set(this->m_firstFree++, value);
@@ -167,6 +169,7 @@ void SuballocatedIntVector::addElements(int32_t value, int32_t numberOfElements)
 }
 
 void SuballocatedIntVector::addElements(int32_t numberOfElements) {
+	$useLocalCurrentObjectStackCache();
 	int32_t newlen = this->m_firstFree + numberOfElements;
 	if (newlen > this->m_blocksize) {
 		int32_t index = $usr(this->m_firstFree, this->m_SHIFT);
@@ -179,6 +182,7 @@ void SuballocatedIntVector::addElements(int32_t numberOfElements) {
 }
 
 void SuballocatedIntVector::insertElementAt(int32_t value, int32_t at) {
+	$useLocalCurrentObjectStackCache();
 	if (at == this->m_firstFree) {
 		addElement(value);
 	} else if (at > this->m_firstFree) {
@@ -236,6 +240,7 @@ bool SuballocatedIntVector::removeElement(int32_t s) {
 }
 
 void SuballocatedIntVector::removeElementAt(int32_t at) {
+	$useLocalCurrentObjectStackCache();
 	if (at < this->m_firstFree) {
 		int32_t index = $usr(at, this->m_SHIFT);
 		int32_t maxindex = $usr(this->m_firstFree, this->m_SHIFT);
@@ -264,6 +269,7 @@ void SuballocatedIntVector::removeElementAt(int32_t at) {
 }
 
 void SuballocatedIntVector::setElementAt(int32_t value, int32_t at) {
+	$useLocalCurrentObjectStackCache();
 	if (at < this->m_blocksize) {
 		$nc(this->m_map0)->set(at, value);
 	} else {
@@ -331,6 +337,7 @@ int32_t SuballocatedIntVector::indexOf(int32_t elem) {
 }
 
 int32_t SuballocatedIntVector::lastIndexOf(int32_t elem) {
+	$useLocalCurrentObjectStackCache();
 	int32_t boffset = (int32_t)(this->m_firstFree & (uint32_t)this->m_MASK);
 	for (int32_t index = $usr(this->m_firstFree, this->m_SHIFT); index >= 0; --index) {
 		$var($ints, block, $nc(this->m_map)->get(index));

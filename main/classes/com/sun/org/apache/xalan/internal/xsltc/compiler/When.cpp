@@ -136,6 +136,7 @@ $Type* When::typeCheck($SymbolTable* stable) {
 }
 
 void When::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::STRAY_WHEN_ERR, static_cast<$SyntaxTreeNode*>(this)));
 	$nc($(getParser()))->reportError($Constants::ERROR, msg);

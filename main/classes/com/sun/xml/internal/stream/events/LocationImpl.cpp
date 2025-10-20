@@ -86,6 +86,7 @@ $String* LocationImpl::getSystemId() {
 }
 
 $String* LocationImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, sbuffer, $new($StringBuffer));
 	sbuffer->append($$str({"Line number = "_s, $$str(getLineNumber())}));
 	sbuffer->append("\n"_s);

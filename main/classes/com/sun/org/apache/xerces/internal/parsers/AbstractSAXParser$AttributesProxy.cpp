@@ -184,6 +184,7 @@ int32_t AbstractSAXParser$AttributesProxy::getIndex($String* uri, $String* local
 }
 
 bool AbstractSAXParser$AttributesProxy::isDeclared(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0 || index >= $nc(this->fAttributes)->getLength()) {
 		$throwNew($ArrayIndexOutOfBoundsException, index);
 	}
@@ -193,6 +194,7 @@ bool AbstractSAXParser$AttributesProxy::isDeclared(int32_t index) {
 }
 
 bool AbstractSAXParser$AttributesProxy::isDeclared($String* qName) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = getIndex(qName);
 	if (index == -1) {
 		$throwNew($IllegalArgumentException, qName);
@@ -203,6 +205,7 @@ bool AbstractSAXParser$AttributesProxy::isDeclared($String* qName) {
 }
 
 bool AbstractSAXParser$AttributesProxy::isDeclared($String* uri, $String* localName) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = getIndex(uri, localName);
 	if (index == -1) {
 		$throwNew($IllegalArgumentException, localName);

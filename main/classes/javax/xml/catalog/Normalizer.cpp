@@ -66,6 +66,7 @@ void Normalizer::init$() {
 }
 
 $String* Normalizer::normalizePublicId($String* publicId) {
+	$useLocalCurrentObjectStackCache();
 	if (publicId == nullptr) {
 		return nullptr;
 	}
@@ -100,6 +101,7 @@ $String* Normalizer::normalizePublicId($String* publicId) {
 }
 
 $String* Normalizer::encodeURN($String* publicId) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, urn, normalizePublicId(publicId));
 	try {
 		$assign(urn, $URLEncoder::encode(urn, "UTF-8"_s));
@@ -115,6 +117,7 @@ $String* Normalizer::encodeURN($String* publicId) {
 }
 
 $String* Normalizer::decodeURN($String* urn) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, nullptr);
 	$init($Util);
 	if (urn != nullptr && urn->startsWith($Util::URN)) {
@@ -135,6 +138,7 @@ $String* Normalizer::decodeURN($String* urn) {
 }
 
 $String* Normalizer::normalizeURI($String* uriref$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uriref, uriref$renamed);
 	if (uriref == nullptr) {
 		return nullptr;

@@ -116,6 +116,7 @@ void Field::accept($Visitor* v) {
 }
 
 $ConstantValue* Field::getConstantValue() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($AttributeArray, arr$, $FieldOrMethod::getAttributes());
 		int32_t len$ = $nc(arr$)->length;
@@ -133,6 +134,7 @@ $ConstantValue* Field::getConstantValue() {
 }
 
 $String* Field::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, nullptr);
 	$var($String, signature, nullptr);
 	$var($String, access, nullptr);

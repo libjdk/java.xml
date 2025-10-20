@@ -198,6 +198,7 @@ void WriterToUTF8Buffered::write($chars* chars, int32_t start, int32_t length) {
 }
 
 void WriterToUTF8Buffered::write($String* s) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(s)->length();
 	int32_t lengthx3 = 3 * length;
 	if (lengthx3 >= WriterToUTF8Buffered::BYTES_MAX - this->count) {

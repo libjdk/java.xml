@@ -111,6 +111,7 @@ void AttributeMap::init$($ElementImpl* ownerNode, $NamedNodeMapImpl* defaults) {
 }
 
 $Node* AttributeMap::setNamedItem($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	bool errCheck = $nc($($nc(this->ownerNode)->ownerDocument()))->errorChecking;
 	if (errCheck) {
 		if (isReadOnly()) {
@@ -163,6 +164,7 @@ $Node* AttributeMap::setNamedItem($Node* arg) {
 }
 
 $Node* AttributeMap::setNamedItemNS($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	bool errCheck = $nc($($nc(this->ownerNode)->ownerDocument()))->errorChecking;
 	if (errCheck) {
 		if (isReadOnly()) {
@@ -249,6 +251,7 @@ $Node* AttributeMap::removeItem($Node* item, bool addDefault) {
 }
 
 $Node* AttributeMap::internalRemoveNamedItem($String* name, bool raiseEx) {
+	$useLocalCurrentObjectStackCache();
 	if (isReadOnly()) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR"_s, nullptr));
@@ -268,6 +271,7 @@ $Node* AttributeMap::internalRemoveNamedItem($String* name, bool raiseEx) {
 }
 
 $Node* AttributeMap::remove($AttrImpl* attr, int32_t index, bool addDefault) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, $nc(this->ownerNode)->ownerDocument());
 	$var($String, name, $nc(attr)->getNodeName());
 	if (attr->isIdAttribute()) {
@@ -312,6 +316,7 @@ $Node* AttributeMap::safeRemoveNamedItemNS($String* namespaceURI, $String* name)
 }
 
 $Node* AttributeMap::internalRemoveNamedItemNS($String* namespaceURI, $String* name, bool raiseEx) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, $nc(this->ownerNode)->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);
@@ -375,6 +380,7 @@ $NamedNodeMapImpl* AttributeMap::cloneMap($NodeImpl* ownerNode) {
 }
 
 void AttributeMap::cloneContent($NamedNodeMapImpl* srcmap) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, srcnodes, $nc(srcmap)->nodes);
 	if (srcnodes != nullptr) {
 		int32_t size = srcnodes->size();
@@ -397,6 +403,7 @@ void AttributeMap::cloneContent($NamedNodeMapImpl* srcmap) {
 }
 
 void AttributeMap::moveSpecifiedAttributes(AttributeMap* srcmap) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nsize = ($nc(srcmap)->nodes != nullptr) ? $nc($nc(srcmap)->nodes)->size() : 0;
 	for (int32_t i = nsize - 1; i >= 0; --i) {
 		$var($AttrImpl, attr, $cast($AttrImpl, $nc(srcmap->nodes)->get(i)));
@@ -412,6 +419,7 @@ void AttributeMap::moveSpecifiedAttributes(AttributeMap* srcmap) {
 }
 
 void AttributeMap::reconcileDefaults($NamedNodeMapImpl* defaults) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nsize = (this->nodes != nullptr) ? $nc(this->nodes)->size() : 0;
 	for (int32_t i = nsize - 1; i >= 0; --i) {
 		$var($AttrImpl, attr, $cast($AttrImpl, $nc(this->nodes)->get(i)));
@@ -442,6 +450,7 @@ void AttributeMap::reconcileDefaults($NamedNodeMapImpl* defaults) {
 }
 
 int32_t AttributeMap::addItem($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	$var($AttrImpl, argn, $cast($AttrImpl, arg));
 	$set($nc(argn), ownerNode, this->ownerNode);
 	argn->isOwned(true);

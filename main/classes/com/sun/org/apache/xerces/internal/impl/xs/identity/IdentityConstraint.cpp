@@ -156,6 +156,7 @@ $String* IdentityConstraint::toString() {
 }
 
 bool IdentityConstraint::equals(IdentityConstraint* id) {
+	$useLocalCurrentObjectStackCache();
 	bool areEqual = $nc(this->fIdentityConstraintName)->equals($nc(id)->fIdentityConstraintName);
 	if (!areEqual) {
 		return false;
@@ -204,6 +205,7 @@ $String* IdentityConstraint::getSelectorStr() {
 }
 
 $StringList* IdentityConstraint::getFieldStrs() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, strs, $new($StringArray, this->fFieldCount));
 	for (int32_t i = 0; i < this->fFieldCount; ++i) {
 		strs->set(i, $($nc($nc(this->fFields)->get(i))->toString()));

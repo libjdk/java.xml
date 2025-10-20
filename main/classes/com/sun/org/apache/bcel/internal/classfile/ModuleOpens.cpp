@@ -126,10 +126,12 @@ void ModuleOpens::dump($DataOutputStream* file) {
 }
 
 $String* ModuleOpens::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"opens("_s, $$str(this->opensIndex), ", "_s, $$str(this->opensFlags), ", "_s, $$str(this->opensToCount), ", ...)"_s});
 }
 
 $String* ModuleOpens::toString($ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($String, package_name, $nc(constant_pool)->constantToString(this->opensIndex, $Const::CONSTANT_Package));
 	buf->append($($Utility::compactClassName(package_name, false)));

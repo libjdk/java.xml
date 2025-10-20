@@ -289,6 +289,7 @@ $String* FunctionTable::getFunctionName(int32_t funcID) {
 }
 
 $Function* FunctionTable::getFunction(int32_t which) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		if (which < FunctionTable::NUM_BUILT_IN_FUNCS) {
@@ -328,6 +329,7 @@ $Integer* FunctionTable::getFunctionID($String* key) {
 }
 
 int32_t FunctionTable::installFunction($String* name, $Class* func) {
+	$useLocalCurrentObjectStackCache();
 	int32_t funcIndex = 0;
 	$var($Integer, funcIndexObj, getFunctionID(name));
 	$load($Function);
@@ -361,6 +363,7 @@ bool FunctionTable::functionAvailable($String* methName) {
 }
 
 void clinit$FunctionTable($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(FunctionTable::m_functionID, $new($HashMap));
 	{
 		$assignStatic(FunctionTable::m_functions, $new($ClassArray, FunctionTable::NUM_BUILT_IN_FUNCS));

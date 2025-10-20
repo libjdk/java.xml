@@ -100,6 +100,7 @@ void MutableAttrListImpl::addAttribute($String* uri$renamed, $String* localName,
 }
 
 void MutableAttrListImpl::addAttributes($Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nAtts = $nc(atts)->getLength();
 	for (int32_t i = 0; i < nAtts; ++i) {
 		$var($String, uri, atts->getURI(i));

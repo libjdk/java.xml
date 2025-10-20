@@ -70,6 +70,7 @@ void Utility$JavaWriter::init$($Writer* out) {
 }
 
 void Utility$JavaWriter::write(int32_t b) {
+	$useLocalCurrentObjectStackCache();
 	if ($Utility::isJavaIdentifierPart((char16_t)b) && (b != u'$')) {
 		$nc(this->out)->write(b);
 	} else {

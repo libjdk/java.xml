@@ -260,6 +260,7 @@ void RegularExpression::compile($Token* tok) {
 }
 
 $Op* RegularExpression::compile($Token* tok, $Op* next$renamed, bool reverse) {
+	$useLocalCurrentObjectStackCache();
 	$var($Op, next, next$renamed);
 	$var($Op, ret, nullptr);
 	{
@@ -462,6 +463,7 @@ bool RegularExpression::matches($chars* target, $Match* match) {
 }
 
 bool RegularExpression::matches($chars* target, int32_t start, int32_t end, $Match* match$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Match, match, match$renamed);
 	$synchronized(this) {
 		if (this->operations == nullptr) {
@@ -586,6 +588,7 @@ bool RegularExpression::matches($String* target, $Match* match) {
 }
 
 bool RegularExpression::matches($String* target, int32_t start, int32_t end, $Match* match$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Match, match, match$renamed);
 	$synchronized(this) {
 		if (this->operations == nullptr) {
@@ -698,6 +701,7 @@ bool RegularExpression::matches($String* target, int32_t start, int32_t end, $Ma
 }
 
 int32_t RegularExpression::match($RegularExpression$Context* con, $Op* op$renamed, int32_t offset, int32_t dx, int32_t opts) {
+	$useLocalCurrentObjectStackCache();
 	$var($Op, op, op$renamed);
 	$var($RegularExpression$ExpressionTarget, target, $nc(con)->target);
 	$var($Stack, opStack, $new($Stack));
@@ -1258,6 +1262,7 @@ bool RegularExpression::matches($CharacterIterator* target) {
 }
 
 bool RegularExpression::matches($CharacterIterator* target, $Match* match$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Match, match, match$renamed);
 	int32_t start = $nc(target)->getBeginIndex();
 	int32_t end = target->getEndIndex();
@@ -1372,6 +1377,7 @@ bool RegularExpression::matches($CharacterIterator* target, $Match* match$rename
 }
 
 void RegularExpression::prepare() {
+	$useLocalCurrentObjectStackCache();
 	this->compile(this->tokentree);
 	this->minlength = $nc(this->tokentree)->getMinLength();
 	$set(this, firstChar, nullptr);
@@ -1515,6 +1521,7 @@ bool RegularExpression::equals($String* pattern, int32_t options) {
 }
 
 int32_t RegularExpression::hashCode() {
+	$useLocalCurrentObjectStackCache();
 	return $nc(($$str({this->regex, "/"_s, $(this->getOptions())})))->hashCode();
 }
 

@@ -100,6 +100,7 @@ $Type* JsrInstruction::getType($ConstantPoolGen* cp) {
 }
 
 $InstructionHandle* JsrInstruction::physicalSuccessor() {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, ih, $BranchInstruction::getTarget());
 	while ($nc(ih)->getPrev() != nullptr) {
 		$assign(ih, ih->getPrev());

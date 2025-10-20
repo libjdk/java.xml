@@ -102,6 +102,7 @@ $QName* UnresolvedRef::getName() {
 }
 
 $ErrorMsg* UnresolvedRef::reportError() {
+	$useLocalCurrentObjectStackCache();
 	$init($ErrorMsg);
 	$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::VARIABLE_UNDEF_ERR, $of(this->_variableName), static_cast<$SyntaxTreeNode*>(this)));
 	$nc($(getParser()))->reportError($Constants::ERROR, err);
@@ -128,6 +129,7 @@ $VariableRefBase* UnresolvedRef::resolve($Parser* parser, $SymbolTable* stable) 
 }
 
 $Type* UnresolvedRef::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_ref != nullptr) {
 		$var($String, name, $nc(this->_variableName)->toString());
 		$init($ErrorMsg);

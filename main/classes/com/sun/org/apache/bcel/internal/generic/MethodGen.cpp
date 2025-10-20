@@ -346,6 +346,7 @@ $Object* allocate$MethodGen($Class* clazz) {
 $BCELComparator* MethodGen::bcelComparator = nullptr;
 
 void MethodGen::init$(int32_t access_flags, $Type* return_type, $TypeArray* argTypes, $StringArray* argNames$renamed, $String* method_name, $String* className, $InstructionList* il, $ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, argNames, argNames$renamed);
 	$FieldGenOrMethodGen::init$(access_flags);
 	$set(this, localVariableTypeTable, nullptr);
@@ -409,6 +410,7 @@ void MethodGen::init$(int32_t access_flags, $Type* return_type, $TypeArray* argT
 }
 
 void MethodGen::init$($Method* method, $String* className, $ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(method)->getAccessFlags();
 	$var($Type, var$1, $Type::getReturnType($(method->getSignature())));
 	$var($TypeArray, var$2, $Type::getArgumentTypes($(method->getSignature())));
@@ -531,6 +533,7 @@ void MethodGen::init$($Method* method, $String* className, $ConstantPoolGen* cp)
 
 $bytes* MethodGen::getByteCodes($Method* method) {
 	$init(MethodGen);
+	$useLocalCurrentObjectStackCache();
 	$var($Code, code, $nc(method)->getCode());
 	if (code == nullptr) {
 		$throwNew($IllegalStateException, $($String::format("The method \'%s\' has no code."_s, $$new($ObjectArray, {$of(method)}))));
@@ -539,6 +542,7 @@ $bytes* MethodGen::getByteCodes($Method* method) {
 }
 
 $LocalVariableGen* MethodGen::addLocalVariable($String* name, $Type* type, int32_t slot, $InstructionHandle* start, $InstructionHandle* end, int32_t orig_index) {
+	$useLocalCurrentObjectStackCache();
 	int8_t t = $nc(type)->getType();
 	if (t != $Const::T_ADDRESS) {
 		int32_t add = type->getSize();
@@ -574,6 +578,7 @@ void MethodGen::removeLocalVariables() {
 }
 
 $LocalVariableGenArray* MethodGen::getLocalVariables() {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->variableList)->size();
 	$var($LocalVariableGenArray, lg, $new($LocalVariableGenArray, size));
 	$nc(this->variableList)->toArray(lg);
@@ -592,6 +597,7 @@ $LocalVariableGenArray* MethodGen::getLocalVariables() {
 }
 
 $LocalVariableTable* MethodGen::getLocalVariableTable($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableGenArray, lg, getLocalVariables());
 	int32_t size = $nc(lg)->length;
 	$var($LocalVariableArray, lv, $new($LocalVariableArray, size));
@@ -629,6 +635,7 @@ $LineNumberGenArray* MethodGen::getLineNumbers() {
 }
 
 $LineNumberTable* MethodGen::getLineNumberTable($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->lineNumberList)->size();
 	$var($LineNumberArray, ln, $new($LineNumberArray, size));
 	for (int32_t i = 0; i < size; ++i) {
@@ -664,6 +671,7 @@ $CodeExceptionGenArray* MethodGen::getExceptionHandlers() {
 }
 
 $CodeExceptionArray* MethodGen::getCodeExceptions() {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->exceptionList)->size();
 	$var($CodeExceptionArray, c_exc, $new($CodeExceptionArray, size));
 	for (int32_t i = 0; i < size; ++i) {
@@ -690,6 +698,7 @@ $StringArray* MethodGen::getExceptions() {
 }
 
 $ExceptionTable* MethodGen::getExceptionTable($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->throwsList)->size();
 	$var($ints, ex, $new($ints, size));
 	for (int32_t i = 0; i < size; ++i) {
@@ -723,6 +732,7 @@ $AttributeArray* MethodGen::getCodeAttributes() {
 }
 
 void MethodGen::addAnnotationsAsAttribute($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($AttributeArray, attrs, $AnnotationEntryGen::getAnnotationAttributes(cp, $($FieldGenOrMethodGen::getAnnotationEntries())));
 	{
 		$var($AttributeArray, arr$, attrs);
@@ -738,6 +748,7 @@ void MethodGen::addAnnotationsAsAttribute($ConstantPoolGen* cp) {
 }
 
 void MethodGen::addParameterAnnotationsAsAttribute($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->hasParameterAnnotations) {
 		return;
 	}
@@ -758,6 +769,7 @@ void MethodGen::addParameterAnnotationsAsAttribute($ConstantPoolGen* cp) {
 }
 
 $AttributeArray* MethodGen::addRuntimeAnnotationsAsAttribute($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($AttributeArray, attrs, $AnnotationEntryGen::getAnnotationAttributes(cp, $($FieldGenOrMethodGen::getAnnotationEntries())));
 	{
 		$var($AttributeArray, arr$, attrs);
@@ -774,6 +786,7 @@ $AttributeArray* MethodGen::addRuntimeAnnotationsAsAttribute($ConstantPoolGen* c
 }
 
 $AttributeArray* MethodGen::addRuntimeParameterAnnotationsAsAttribute($ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->hasParameterAnnotations) {
 		return $new($AttributeArray, 0);
 	}
@@ -793,6 +806,7 @@ $AttributeArray* MethodGen::addRuntimeParameterAnnotationsAsAttribute($ConstantP
 }
 
 void MethodGen::removeRuntimeAttributes($AttributeArray* attrs) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($AttributeArray, arr$, attrs);
 		int32_t len$ = $nc(arr$)->length;
@@ -807,6 +821,7 @@ void MethodGen::removeRuntimeAttributes($AttributeArray* attrs) {
 }
 
 $Method* MethodGen::getMethod() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, signature, getSignature());
 	$var($ConstantPoolGen, _cp, $FieldGenOrMethodGen::getConstantPool());
 	int32_t name_index = $nc(_cp)->addUtf8($($FieldGenOrMethodGen::getName()));
@@ -904,6 +919,7 @@ $Method* MethodGen::getMethod() {
 }
 
 void MethodGen::updateLocalVariableTable($LocalVariableTable* a) {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableArray, lv, $nc(a)->getLocalVariableTable());
 	removeLocalVariables();
 	{
@@ -931,6 +947,7 @@ void MethodGen::updateLocalVariableTable($LocalVariableTable* a) {
 }
 
 void MethodGen::adjustLocalVariableTypeTable($LocalVariableTable* lvt) {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableArray, lv, $nc(lvt)->getLocalVariableTable());
 	$var($LocalVariableArray, lvg, $nc(this->localVariableTypeTable)->getLocalVariableTypeTable());
 	{
@@ -967,6 +984,7 @@ void MethodGen::adjustLocalVariableTypeTable($LocalVariableTable* lvt) {
 }
 
 void MethodGen::removeNOPs() {
+	$useLocalCurrentObjectStackCache();
 	if (this->il != nullptr) {
 		$var($InstructionHandle, next, nullptr);
 		{
@@ -1083,6 +1101,7 @@ $String* MethodGen::getSignature() {
 }
 
 void MethodGen::setMaxStack() {
+	$useLocalCurrentObjectStackCache();
 	if (this->il != nullptr) {
 		$var($ConstantPoolGen, var$0, $FieldGenOrMethodGen::getConstantPool());
 		$var($InstructionList, var$1, this->il);
@@ -1093,6 +1112,7 @@ void MethodGen::setMaxStack() {
 }
 
 void MethodGen::setMaxLocals() {
+	$useLocalCurrentObjectStackCache();
 	if (this->il != nullptr) {
 		int32_t max = isStatic() ? 0 : 1;
 		if (this->argTypes != nullptr) {
@@ -1133,6 +1153,7 @@ void MethodGen::stripAttributes(bool flag) {
 
 int32_t MethodGen::getMaxStack($ConstantPoolGen* cp, $InstructionList* il, $CodeExceptionGenArray* et) {
 	$init(MethodGen);
+	$useLocalCurrentObjectStackCache();
 	$var($MethodGen$BranchStack, branchTargets, $new($MethodGen$BranchStack));
 	{
 		$var($CodeExceptionGenArray, arr$, et);
@@ -1215,6 +1236,7 @@ void MethodGen::removeObserver($MethodObserver* o) {
 }
 
 void MethodGen::update() {
+	$useLocalCurrentObjectStackCache();
 	if (this->observers != nullptr) {
 		{
 			$var($Iterator, i$, $nc(this->observers)->iterator());
@@ -1229,6 +1251,7 @@ void MethodGen::update() {
 }
 
 $String* MethodGen::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, access, $Utility::accessToString($FieldGenOrMethodGen::getAccessFlags()));
 	$var($String, signature, $Type::getMethodSignature($($FieldGenOrMethodGen::getType()), this->argTypes));
 	$var($String, var$0, signature);
@@ -1264,6 +1287,7 @@ $String* MethodGen::toString() {
 }
 
 MethodGen* MethodGen::copy($String* className, $ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($Method, m, $nc(($cast(MethodGen, $(clone()))))->getMethod());
 	$var(MethodGen, mg, $new(MethodGen, m, className, $($FieldGenOrMethodGen::getConstantPool())));
 	if ($FieldGenOrMethodGen::getConstantPool() != cp) {
@@ -1282,6 +1306,7 @@ $List* MethodGen::getAnnotationsOnParameter(int32_t i) {
 }
 
 void MethodGen::ensureExistingParameterAnnotationsUnpacked() {
+	$useLocalCurrentObjectStackCache();
 	if (this->haveUnpackedParameterAnnotations) {
 		return;
 	}
@@ -1330,6 +1355,7 @@ void MethodGen::ensureExistingParameterAnnotationsUnpacked() {
 }
 
 $List* MethodGen::makeMutableVersion($AnnotationEntryArray* mutableArray) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, result, $new($ArrayList));
 	{
 		$var($AnnotationEntryArray, arr$, mutableArray);
@@ -1346,6 +1372,7 @@ $List* MethodGen::makeMutableVersion($AnnotationEntryArray* mutableArray) {
 }
 
 void MethodGen::addParameterAnnotation(int32_t parameterIndex, $AnnotationEntryGen* annotation) {
+	$useLocalCurrentObjectStackCache();
 	ensureExistingParameterAnnotationsUnpacked();
 	if (!this->hasParameterAnnotations) {
 		$var($ListArray, parmList, $new($ListArray, $nc(this->argTypes)->length));

@@ -149,6 +149,7 @@ void XSDAttributeTraverser::init$($XSDHandler* handler, $XSAttributeChecker* gAt
 }
 
 $XSAttributeUseImpl* XSDAttributeTraverser::traverseLocal($Element* attrDecl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, $XSComplexTypeDecl* enclosingCT) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(attrDecl, false, schemaDoc));
 	$var($String, defaultAtt, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_DEFAULT)));
 	$var($String, fixedAtt, $cast($String, attrValues->get($XSAttributeChecker::ATTIDX_FIXED)));
@@ -260,6 +261,7 @@ $XSAttributeUseImpl* XSDAttributeTraverser::traverseLocal($Element* attrDecl, $X
 }
 
 $XSAttributeDecl* XSDAttributeTraverser::traverseGlobal($Element* attrDecl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(attrDecl, true, schemaDoc));
 	$var($XSAttributeDecl, attribute, traverseNamedAttr(attrDecl, attrValues, schemaDoc, grammar, true, nullptr));
 	$nc(this->fAttrChecker)->returnAttrArray(attrValues, schemaDoc);
@@ -267,6 +269,7 @@ $XSAttributeDecl* XSDAttributeTraverser::traverseGlobal($Element* attrDecl, $XSD
 }
 
 $XSAttributeDecl* XSDAttributeTraverser::traverseNamedAttr($Element* attrDecl, $ObjectArray* attrValues, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, bool isGlobal, $XSComplexTypeDecl* enclosingCT) {
+	$useLocalCurrentObjectStackCache();
 	$init($XSAttributeChecker);
 	$var($String, defaultAtt, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_DEFAULT)));
 	$var($String, fixedAtt, $cast($String, attrValues->get($XSAttributeChecker::ATTIDX_FIXED)));
@@ -447,6 +450,7 @@ $XSAttributeDecl* XSDAttributeTraverser::traverseNamedAttr($Element* attrDecl, $
 }
 
 void XSDAttributeTraverser::checkDefaultValid($XSAttributeDecl* attribute) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc($(attribute->getValInfo()))->normalizedValue);
 	$var($ValidationContext, var$1, static_cast<$ValidationContext*>(this->fValidationState));
 	$nc(($cast($XSSimpleType, $($nc(attribute)->getTypeDefinition()))))->validate(var$0, var$1, $(attribute->getValInfo()));
@@ -456,6 +460,7 @@ void XSDAttributeTraverser::checkDefaultValid($XSAttributeDecl* attribute) {
 }
 
 void XSDAttributeTraverser::checkDefaultValid($XSAttributeUseImpl* attrUse) {
+	$useLocalCurrentObjectStackCache();
 	$nc(($cast($XSSimpleType, $($nc($nc(attrUse)->fAttrDecl)->getTypeDefinition()))))->validate($nc(attrUse->fDefault)->normalizedValue, static_cast<$ValidationContext*>(this->fValidationState), attrUse->fDefault);
 	$nc(($cast($XSSimpleType, $($nc(attrUse->fAttrDecl)->getTypeDefinition()))))->validate($($nc(attrUse->fDefault)->stringValue()), static_cast<$ValidationContext*>(this->fValidationState), attrUse->fDefault);
 }

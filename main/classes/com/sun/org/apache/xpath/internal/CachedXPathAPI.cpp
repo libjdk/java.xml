@@ -129,6 +129,7 @@ $XObject* CachedXPathAPI::eval($Node* contextNode, $String* str) {
 }
 
 $XObject* CachedXPathAPI::eval($Node* contextNode, $String* str, $Node* namespaceNode) {
+	$useLocalCurrentObjectStackCache();
 	$var($PrefixResolverDefault, prefixResolver, $new($PrefixResolverDefault, ($nc(namespaceNode)->getNodeType() == $Node::DOCUMENT_NODE) ? $(static_cast<$Node*>($nc(($cast($Document, namespaceNode)))->getDocumentElement())) : namespaceNode));
 	$var($XPath, xpath, $new($XPath, str, nullptr, prefixResolver, $XPath::SELECT, nullptr));
 	int32_t ctxtNode = $nc(this->xpathSupport)->getDTMHandleFromNode(contextNode);
@@ -136,6 +137,7 @@ $XObject* CachedXPathAPI::eval($Node* contextNode, $String* str, $Node* namespac
 }
 
 $XObject* CachedXPathAPI::eval($Node* contextNode, $String* str, $PrefixResolver* prefixResolver) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPath, xpath, $new($XPath, str, nullptr, prefixResolver, $XPath::SELECT, nullptr));
 	$init($JdkConstants);
 	$var($XPathContext, xpathSupport, $new($XPathContext, $JdkConstants::OVERRIDE_PARSER_DEFAULT));

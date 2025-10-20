@@ -74,6 +74,7 @@ void MethodGen$1::init$() {
 }
 
 bool MethodGen$1::equals(Object$* o1, Object$* o2) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodGen, THIS, $cast($MethodGen, o1));
 	$var($MethodGen, THAT, $cast($MethodGen, o2));
 	$var($Object, var$1, $of($nc(THIS)->getName()));
@@ -86,6 +87,7 @@ bool MethodGen$1::equals(Object$* o1, Object$* o2) {
 }
 
 int32_t MethodGen$1::hashCode(Object$* o) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodGen, THIS, $cast($MethodGen, o));
 	int32_t var$0 = $nc($($nc(THIS)->getSignature()))->hashCode();
 	return var$0 ^ $nc($(THIS->getName()))->hashCode();

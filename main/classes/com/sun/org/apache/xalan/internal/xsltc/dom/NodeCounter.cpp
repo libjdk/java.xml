@@ -218,6 +218,7 @@ int32_t NodeCounter::parseStringToAnInt($String* s) {
 }
 
 void NodeCounter::setTokens($String* format) {
+	$useLocalCurrentObjectStackCache();
 	if ((this->_format != nullptr) && ($nc(format)->equals(this->_format))) {
 		return;
 	}
@@ -307,6 +308,7 @@ $String* NodeCounter::formatNumbers(int32_t value) {
 }
 
 $String* NodeCounter::formatNumbers($ints* values) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nValues = $nc(values)->length;
 	bool isEmpty = true;
 	for (int32_t i = 0; i < nValues; ++i) {
@@ -350,6 +352,7 @@ $String* NodeCounter::formatNumbers($ints* values) {
 }
 
 void NodeCounter::formatValue(int32_t value, $String* format, $StringBuilder* buffer) {
+	$useLocalCurrentObjectStackCache();
 	char16_t c = $nc(format)->charAt(0);
 	if ($Character::isDigit(c)) {
 		char16_t zero = (char16_t)(c - $Character::getNumericValue(c));
@@ -405,6 +408,7 @@ void NodeCounter::formatValue(int32_t value, $String* format, $StringBuilder* bu
 }
 
 $String* NodeCounter::alphaValue(int32_t value, int32_t min, int32_t max) {
+	$useLocalCurrentObjectStackCache();
 	if (value <= 0) {
 		return $str({""_s, $$str(value)});
 	}

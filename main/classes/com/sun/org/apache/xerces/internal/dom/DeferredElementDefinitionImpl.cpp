@@ -304,6 +304,7 @@ void DeferredElementDefinitionImpl::synchronizeData() {
 }
 
 void DeferredElementDefinitionImpl::synchronizeChildren() {
+	$useLocalCurrentObjectStackCache();
 	bool orig = $nc(this->ownerDocument$)->getMutationEvents();
 	$nc(this->ownerDocument$)->setMutationEvents(false);
 	needsSyncChildren(false);

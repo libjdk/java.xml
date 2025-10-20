@@ -138,6 +138,7 @@ void XRTreeFrag::initDTM(int32_t root, $XPathContext* xctxt) {
 }
 
 $Object* XRTreeFrag::object() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_DTMXRTreeFrag)->getXPathContext() != nullptr) {
 		return $of($new($DTMNodeIterator, static_cast<$DTMIterator*>(($$new($NodeSetDTM, this->m_dtmRoot, $($nc($($nc(this->m_DTMXRTreeFrag)->getXPathContext()))->getDTMManager()))))));
 	} else {
@@ -193,6 +194,7 @@ void XRTreeFrag::appendToFsb($FastStringBuffer* fsb) {
 }
 
 $String* XRTreeFrag::str() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, $nc($($nc($($nc(this->m_DTMXRTreeFrag)->getDTM()))->getStringValue(this->m_dtmRoot)))->toString());
 	return (nullptr == str) ? ""_s : str;
 }
@@ -202,6 +204,7 @@ int32_t XRTreeFrag::rtf() {
 }
 
 $DTMIterator* XRTreeFrag::asNodeIterator() {
+	$useLocalCurrentObjectStackCache();
 	return $new($RTFIterator, this->m_dtmRoot, $($nc($($nc(this->m_DTMXRTreeFrag)->getXPathContext()))->getDTMManager()));
 }
 
@@ -214,6 +217,7 @@ $NodeList* XRTreeFrag::convertToNodeset() {
 }
 
 bool XRTreeFrag::equals($XObject* obj2) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if ($XObject::CLASS_NODESET == $nc(obj2)->getType()) {
 			return obj2->equals(static_cast<$XObject*>(this));

@@ -140,6 +140,7 @@ $Attribute* XMLEventFactoryImpl::createAttribute($String* localName, $String* va
 }
 
 $Attribute* XMLEventFactoryImpl::createAttribute($QName* name, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(name)->getPrefix());
 	$var($String, var$1, name->getNamespaceURI());
 	return createAttribute(var$0, var$1, $(name->getLocalPart()), value);
@@ -194,6 +195,7 @@ $EndDocument* XMLEventFactoryImpl::createEndDocument() {
 }
 
 $EndElement* XMLEventFactoryImpl::createEndElement($QName* name, $Iterator* namespaces) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(name)->getPrefix());
 	$var($String, var$1, name->getNamespaceURI());
 	return createEndElement(var$0, var$1, $(name->getLocalPart()));
@@ -208,6 +210,7 @@ $EndElement* XMLEventFactoryImpl::createEndElement($String* prefix, $String* nam
 }
 
 $EndElement* XMLEventFactoryImpl::createEndElement($String* prefix, $String* namespaceUri, $String* localName, $Iterator* namespaces) {
+	$useLocalCurrentObjectStackCache();
 	$var($EndElementEvent, event, $new($EndElementEvent, prefix, namespaceUri, localName));
 	if (namespaces != nullptr) {
 		while (namespaces->hasNext()) {
@@ -301,6 +304,7 @@ $StartDocument* XMLEventFactoryImpl::createStartDocument($String* encoding, $Str
 }
 
 $StartElement* XMLEventFactoryImpl::createStartElement($QName* name, $Iterator* attributes, $Iterator* namespaces) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(name)->getPrefix());
 	$var($String, var$1, name->getNamespaceURI());
 	return createStartElement(var$0, var$1, $(name->getLocalPart()), attributes, namespaces);

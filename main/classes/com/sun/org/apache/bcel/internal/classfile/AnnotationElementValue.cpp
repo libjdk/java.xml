@@ -61,6 +61,7 @@ $Object* allocate$AnnotationElementValue($Class* clazz) {
 }
 
 void AnnotationElementValue::init$(int32_t type, $AnnotationEntry* annotationEntry, $ConstantPool* cpool) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValue::init$(type, cpool);
 	if (type != $ElementValue::ANNOTATION) {
 		$throwNew($IllegalArgumentException, $$str({"Only element values of type annotation can be built with this ctor - type specified: "_s, $$str(type)}));

@@ -301,6 +301,7 @@ $Node* EntityReferenceImpl::cloneNode(bool deep) {
 }
 
 $String* EntityReferenceImpl::getBaseURI() {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -334,6 +335,7 @@ void EntityReferenceImpl::setBaseURI($String* uri) {
 }
 
 $String* EntityReferenceImpl::getEntityRefValue() {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncChildren()) {
 		synchronizeChildren();
 	}
@@ -369,6 +371,7 @@ $String* EntityReferenceImpl::getEntityRefValue() {
 }
 
 void EntityReferenceImpl::synchronizeChildren() {
+	$useLocalCurrentObjectStackCache();
 	needsSyncChildren(false);
 	$var($DocumentType, doctype, nullptr);
 	$var($NamedNodeMap, entities, nullptr);

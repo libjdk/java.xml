@@ -68,6 +68,7 @@ void FuncLoader::init$($String* funcName, int32_t funcID) {
 }
 
 $Function* FuncLoader::getFunction() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, className, this->m_funcName);
 		if ($nc(className)->indexOf("."_s) < 0) {

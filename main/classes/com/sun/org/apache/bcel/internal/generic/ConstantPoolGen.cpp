@@ -196,6 +196,7 @@ $String* ConstantPoolGen::FIELDREF_DELIM = nullptr;
 $String* ConstantPoolGen::NAT_DELIM = nullptr;
 
 void ConstantPoolGen::init$($ConstantArray* cs) {
+	$useLocalCurrentObjectStackCache();
 	this->index = 1;
 	$set(this, stringTable, $new($HashMap));
 	$set(this, classTable, $new($HashMap));
@@ -320,6 +321,7 @@ int32_t ConstantPoolGen::lookupString($String* str) {
 }
 
 int32_t ConstantPoolGen::addString($String* str) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = 0;
 	if ((ret = lookupString(str)) != -1) {
 		return ret;
@@ -336,11 +338,13 @@ int32_t ConstantPoolGen::addString($String* str) {
 }
 
 int32_t ConstantPoolGen::lookupClass($String* str) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen$Index, index, $cast($ConstantPoolGen$Index, $nc(this->classTable)->get($($nc(str)->replace(u'.', u'/')))));
 	return (index != nullptr) ? $nc(index)->index : -1;
 }
 
 int32_t ConstantPoolGen::addClass_($String* clazz) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = 0;
 	if ((ret = lookupClass(clazz)) != -1) {
 		return ret;
@@ -368,6 +372,7 @@ int32_t ConstantPoolGen::addArrayClass($ArrayType* type) {
 }
 
 int32_t ConstantPoolGen::lookupInteger(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 1; i < this->index; ++i) {
 		if ($instanceOf($ConstantInteger, $nc(this->constants)->get(i))) {
 			$var($ConstantInteger, c, $cast($ConstantInteger, $nc(this->constants)->get(i)));
@@ -391,6 +396,7 @@ int32_t ConstantPoolGen::addInteger(int32_t n) {
 }
 
 int32_t ConstantPoolGen::lookupFloat(float n) {
+	$useLocalCurrentObjectStackCache();
 	int32_t bits = $Float::floatToIntBits(n);
 	for (int32_t i = 1; i < this->index; ++i) {
 		if ($instanceOf($ConstantFloat, $nc(this->constants)->get(i))) {
@@ -420,6 +426,7 @@ int32_t ConstantPoolGen::lookupUtf8($String* n) {
 }
 
 int32_t ConstantPoolGen::addUtf8($String* n) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = 0;
 	if ((ret = lookupUtf8(n)) != -1) {
 		return ret;
@@ -434,6 +441,7 @@ int32_t ConstantPoolGen::addUtf8($String* n) {
 }
 
 int32_t ConstantPoolGen::lookupLong(int64_t n) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 1; i < this->index; ++i) {
 		if ($instanceOf($ConstantLong, $nc(this->constants)->get(i))) {
 			$var($ConstantLong, c, $cast($ConstantLong, $nc(this->constants)->get(i)));
@@ -458,6 +466,7 @@ int32_t ConstantPoolGen::addLong(int64_t n) {
 }
 
 int32_t ConstantPoolGen::lookupDouble(double n) {
+	$useLocalCurrentObjectStackCache();
 	int64_t bits = $Double::doubleToLongBits(n);
 	for (int32_t i = 1; i < this->index; ++i) {
 		if ($instanceOf($ConstantDouble, $nc(this->constants)->get(i))) {
@@ -483,11 +492,13 @@ int32_t ConstantPoolGen::addDouble(double n) {
 }
 
 int32_t ConstantPoolGen::lookupNameAndType($String* name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen$Index, _index, $cast($ConstantPoolGen$Index, $nc(this->natTable)->get($$str({name, ConstantPoolGen::NAT_DELIM, signature}))));
 	return (_index != nullptr) ? $nc(_index)->index : -1;
 }
 
 int32_t ConstantPoolGen::addNameAndType($String* name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = 0;
 	int32_t name_index = 0;
 	int32_t signature_index = 0;
@@ -507,17 +518,20 @@ int32_t ConstantPoolGen::addNameAndType($String* name, $String* signature) {
 }
 
 int32_t ConstantPoolGen::lookupMethodref($String* class_name, $String* method_name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen$Index, index, $cast($ConstantPoolGen$Index, $nc(this->cpTable)->get($$str({class_name, ConstantPoolGen::METHODREF_DELIM, method_name, ConstantPoolGen::METHODREF_DELIM, signature}))));
 	return (index != nullptr) ? $nc(index)->index : -1;
 }
 
 int32_t ConstantPoolGen::lookupMethodref($MethodGen* method) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(method)->getClassName());
 	$var($String, var$1, method->getName());
 	return lookupMethodref(var$0, var$1, $(method->getSignature()));
 }
 
 int32_t ConstantPoolGen::addMethodref($String* class_name, $String* method_name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = 0;
 	int32_t class_index = 0;
 	int32_t name_and_type_index = 0;
@@ -537,23 +551,27 @@ int32_t ConstantPoolGen::addMethodref($String* class_name, $String* method_name,
 }
 
 int32_t ConstantPoolGen::addMethodref($MethodGen* method) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(method)->getClassName());
 	$var($String, var$1, method->getName());
 	return addMethodref(var$0, var$1, $(method->getSignature()));
 }
 
 int32_t ConstantPoolGen::lookupInterfaceMethodref($String* class_name, $String* method_name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen$Index, index, $cast($ConstantPoolGen$Index, $nc(this->cpTable)->get($$str({class_name, ConstantPoolGen::IMETHODREF_DELIM, method_name, ConstantPoolGen::IMETHODREF_DELIM, signature}))));
 	return (index != nullptr) ? $nc(index)->index : -1;
 }
 
 int32_t ConstantPoolGen::lookupInterfaceMethodref($MethodGen* method) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(method)->getClassName());
 	$var($String, var$1, method->getName());
 	return lookupInterfaceMethodref(var$0, var$1, $(method->getSignature()));
 }
 
 int32_t ConstantPoolGen::addInterfaceMethodref($String* class_name, $String* method_name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = 0;
 	int32_t class_index = 0;
 	int32_t name_and_type_index = 0;
@@ -573,17 +591,20 @@ int32_t ConstantPoolGen::addInterfaceMethodref($String* class_name, $String* met
 }
 
 int32_t ConstantPoolGen::addInterfaceMethodref($MethodGen* method) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(method)->getClassName());
 	$var($String, var$1, method->getName());
 	return addInterfaceMethodref(var$0, var$1, $(method->getSignature()));
 }
 
 int32_t ConstantPoolGen::lookupFieldref($String* class_name, $String* field_name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen$Index, index, $cast($ConstantPoolGen$Index, $nc(this->cpTable)->get($$str({class_name, ConstantPoolGen::FIELDREF_DELIM, field_name, ConstantPoolGen::FIELDREF_DELIM, signature}))));
 	return (index != nullptr) ? $nc(index)->index : -1;
 }
 
 int32_t ConstantPoolGen::addFieldref($String* class_name, $String* field_name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ret = 0;
 	int32_t class_index = 0;
 	int32_t name_and_type_index = 0;
@@ -633,6 +654,7 @@ $String* ConstantPoolGen::toString() {
 }
 
 int32_t ConstantPoolGen::addConstant($Constant* c, ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantArray, constants, $nc($($nc(cp)->getConstantPool()))->getConstantPool());
 	switch ($nc(c)->getTag()) {
 	case $Const::CONSTANT_String:

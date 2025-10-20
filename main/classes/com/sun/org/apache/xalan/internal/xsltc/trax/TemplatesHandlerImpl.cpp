@@ -163,6 +163,7 @@ void TemplatesHandlerImpl::finalize() {
 }
 
 void TemplatesHandlerImpl::init$(int32_t indentNumber, $TransformerFactoryImpl* tfactory, bool hasUserErrListener) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _uriResolver, nullptr);
 	$set(this, _tfactory, nullptr);
 	$set(this, _parser, nullptr);
@@ -227,6 +228,7 @@ void TemplatesHandlerImpl::startDocument() {
 }
 
 void TemplatesHandlerImpl::endDocument() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_parser)->endDocument();
 	try {
 		$var($XSLTC, xsltc, $nc(this->_parser)->getXSLTC());

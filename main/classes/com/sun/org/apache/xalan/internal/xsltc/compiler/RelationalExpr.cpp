@@ -169,21 +169,25 @@ bool RelationalExpr::hasLastCall() {
 }
 
 bool RelationalExpr::hasReferenceArgs() {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = $instanceOf($ReferenceType, $($nc(this->_left)->getType()));
 	return var$0 || $instanceOf($ReferenceType, $($nc(this->_right)->getType()));
 }
 
 bool RelationalExpr::hasNodeArgs() {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = $instanceOf($NodeType, $($nc(this->_left)->getType()));
 	return var$0 || $instanceOf($NodeType, $($nc(this->_right)->getType()));
 }
 
 bool RelationalExpr::hasNodeSetArgs() {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = $instanceOf($NodeSetType, $($nc(this->_left)->getType()));
 	return var$0 || $instanceOf($NodeSetType, $($nc(this->_right)->getType()));
 }
 
 $Type* RelationalExpr::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, tleft, $nc(this->_left)->typeCheck(stable));
 	$var($Type, tright, $nc(this->_right)->typeCheck(stable));
 	if ($instanceOf($ResultTreeType, tleft) && $instanceOf($ResultTreeType, tright)) {
@@ -281,6 +285,7 @@ $Type* RelationalExpr::typeCheck($SymbolTable* stable) {
 }
 
 void RelationalExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = hasNodeSetArgs();
 	if (var$0 || hasReferenceArgs()) {
 		$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
@@ -305,6 +310,7 @@ void RelationalExpr::translate($ClassGenerator* classGen, $MethodGenerator* meth
 }
 
 void RelationalExpr::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = hasNodeSetArgs();
 	if (var$0 || hasReferenceArgs()) {
 		translate(classGen, methodGen);
@@ -357,6 +363,7 @@ void RelationalExpr::translateDesynthesized($ClassGenerator* classGen, $MethodGe
 }
 
 $String* RelationalExpr::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Operators::getOpNames(this->_op)), $$str(u'('), this->_left, ", "_s, this->_right, $$str(u')')});
 }
 

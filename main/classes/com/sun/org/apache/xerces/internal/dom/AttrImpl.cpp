@@ -313,6 +313,7 @@ void AttrImpl::rename($String* name) {
 }
 
 void AttrImpl::makeChildNode() {
+	$useLocalCurrentObjectStackCache();
 	if (hasStringValue()) {
 		if (this->value != nullptr) {
 			$var($TextImpl, text, $cast($TextImpl, $nc($(ownerDocument()))->createTextNode($cast($String, this->value))));
@@ -353,6 +354,7 @@ bool AttrImpl::isId() {
 }
 
 $Node* AttrImpl::cloneNode(bool deep) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncChildren()) {
 		synchronizeChildren();
 	}
@@ -412,6 +414,7 @@ $String* AttrImpl::getName() {
 }
 
 void AttrImpl::setValue($String* newvalue) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking && isReadOnly()) {
 		$init($DOMMessageFormatter);
@@ -483,6 +486,7 @@ void AttrImpl::setValue($String* newvalue) {
 }
 
 $String* AttrImpl::getValue() {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -538,6 +542,7 @@ $Element* AttrImpl::getOwnerElement() {
 }
 
 void AttrImpl::normalize() {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isNormalized();
 	if (var$0 || hasStringValue()) {
 		return;
@@ -575,6 +580,7 @@ void AttrImpl::setType(Object$* type) {
 }
 
 $String* AttrImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({$(getName()), "=\""_s}));
 	$var($String, var$0, $$concat(var$1, $(getValue())));
 	return $concat(var$0, "\"");
@@ -625,6 +631,7 @@ $Node* AttrImpl::insertBefore($Node* newChild, $Node* refChild) {
 }
 
 $Node* AttrImpl::internalInsertBefore($Node* newChild, $Node* refChild$renamed, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, refChild, refChild$renamed);
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	bool errorChecking = $nc(ownerDocument)->errorChecking;
@@ -739,6 +746,7 @@ $Node* AttrImpl::removeChild($Node* oldChild) {
 }
 
 $Node* AttrImpl::internalRemoveChild($Node* oldChild, bool replace) {
+	$useLocalCurrentObjectStackCache();
 	$var($CoreDocumentImpl, ownerDocument, this->ownerDocument());
 	if ($nc(ownerDocument)->errorChecking) {
 		if (isReadOnly()) {
@@ -860,6 +868,7 @@ void AttrImpl::synchronizeChildren() {
 }
 
 void AttrImpl::checkNormalizationAfterInsert($ChildNode* insertedChild) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(insertedChild)->getNodeType() == $Node::TEXT_NODE) {
 		$var($ChildNode, prev, insertedChild->previousSibling());
 		$var($ChildNode, next, insertedChild->nextSibling);

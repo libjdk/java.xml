@@ -75,6 +75,7 @@ void ExtendedSchemaDVFactoryImpl::init$() {
 
 void ExtendedSchemaDVFactoryImpl::createBuiltInTypes() {
 	$init(ExtendedSchemaDVFactoryImpl);
+	$useLocalCurrentObjectStackCache();
 	$var($String, ANYATOMICTYPE, "anyAtomicType"_s);
 	$var($String, DURATION, "duration"_s);
 	$var($String, YEARMONTHDURATION, "yearMonthDuration"_s);

@@ -198,6 +198,7 @@ void BCELFactory::init$($MethodGen* mg, $PrintWriter* out) {
 }
 
 void BCELFactory::start() {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = !$nc(this->_mg)->isAbstract();
 	if (var$0 && !$nc(this->_mg)->isNative()) {
 		{
@@ -227,6 +228,7 @@ void BCELFactory::start() {
 }
 
 bool BCELFactory::visitInstruction($Instruction* i) {
+	$useLocalCurrentObjectStackCache();
 	int16_t opcode = $nc(i)->getOpcode();
 	if (($InstructionConst::getInstruction(opcode) != nullptr) && !($instanceOf($ConstantPushInstruction, i)) && !($instanceOf($ReturnInstruction, i))) {
 		$init($Locale);
@@ -237,6 +239,7 @@ bool BCELFactory::visitInstruction($Instruction* i) {
 }
 
 void BCELFactory::visitLocalVariableInstruction($LocalVariableInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	int16_t opcode = $nc(i)->getOpcode();
 	$var($Type, type, i->getType(this->_cp));
 	if (opcode == $Const::IINC) {
@@ -252,6 +255,7 @@ void BCELFactory::visitLocalVariableInstruction($LocalVariableInstruction* i) {
 }
 
 void BCELFactory::visitArrayInstruction($ArrayInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	int16_t opcode = $nc(i)->getOpcode();
 	$var($Type, type, i->getType(this->_cp));
 	$var($String, kind, (opcode < $Const::IASTORE) ? "Load"_s : "Store"_s);
@@ -259,6 +263,7 @@ void BCELFactory::visitArrayInstruction($ArrayInstruction* i) {
 }
 
 void BCELFactory::visitFieldInstruction($FieldInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	int16_t opcode = $nc(i)->getOpcode();
 	$var($String, class_name, $nc($(i->getReferenceType(this->_cp)))->getSignature());
 	$var($String, field_name, i->getFieldName(this->_cp));
@@ -270,6 +275,7 @@ void BCELFactory::visitFieldInstruction($FieldInstruction* i) {
 }
 
 void BCELFactory::visitInvokeInstruction($InvokeInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	int16_t opcode = $nc(i)->getOpcode();
 	$var($String, class_name, $nc($(i->getReferenceType(this->_cp)))->getSignature());
 	$var($String, method_name, i->getMethodName(this->_cp));
@@ -285,6 +291,7 @@ void BCELFactory::visitInvokeInstruction($InvokeInstruction* i) {
 }
 
 void BCELFactory::visitAllocationInstruction($AllocationInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, type, nullptr);
 	if ($instanceOf($CPInstruction, i)) {
 		$assign(type, $nc(($cast($CPInstruction, i)))->getType(this->_cp));
@@ -321,6 +328,7 @@ void BCELFactory::visitAllocationInstruction($AllocationInstruction* i) {
 }
 
 void BCELFactory::createConstant(Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, embed, $nc($of(value))->toString());
 	if ($instanceOf($String, value)) {
 		$assign(embed, $str({$$str(u'\"'), $($Utility::convertString(embed)), $$str(u'\"')}));
@@ -350,21 +358,25 @@ void BCELFactory::visitConstantPushInstruction($ConstantPushInstruction* i) {
 }
 
 void BCELFactory::visitINSTANCEOF($INSTANCEOF* i) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, type, $nc(i)->getType(this->_cp));
 	$nc(this->_out)->println($$str({"il.append(new INSTANCEOF(_cp.addClass("_s, $($BCELifier::printType(type)), ")));"_s}));
 }
 
 void BCELFactory::visitCHECKCAST($CHECKCAST* i) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, type, $nc(i)->getType(this->_cp));
 	$nc(this->_out)->println($$str({"il.append(_factory.createCheckCast("_s, $($BCELifier::printType(type)), "));"_s}));
 }
 
 void BCELFactory::visitReturnInstruction($ReturnInstruction* i) {
+	$useLocalCurrentObjectStackCache();
 	$var($Type, type, $nc(i)->getType(this->_cp));
 	$nc(this->_out)->println($$str({"il.append(_factory.createReturn("_s, $($BCELifier::printType(type)), "));"_s}));
 }
 
 void BCELFactory::visitBranchInstruction($BranchInstruction* bi) {
+	$useLocalCurrentObjectStackCache();
 	$var($BranchHandle, bh, $cast($BranchHandle, $nc(this->branch_map)->get(bi)));
 	int32_t pos = $nc(bh)->getPosition();
 	$var($String, name, $str({$($nc(bi)->getName()), "_"_s, $$str(pos)}));
@@ -409,10 +421,12 @@ void BCELFactory::visitBranchInstruction($BranchInstruction* bi) {
 }
 
 void BCELFactory::visitRET($RET* i) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_out)->println($$str({"il.append(new RET("_s, $$str($nc(i)->getIndex()), ")));"_s}));
 }
 
 void BCELFactory::updateBranchTargets() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->branches)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -436,6 +450,7 @@ void BCELFactory::updateBranchTargets() {
 }
 
 void BCELFactory::updateExceptionHandlers() {
+	$useLocalCurrentObjectStackCache();
 	$var($CodeExceptionGenArray, handlers, $nc(this->_mg)->getExceptionHandlers());
 	{
 		$var($CodeExceptionGenArray, arr$, handlers);

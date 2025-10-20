@@ -74,6 +74,7 @@ void WriterOutputBuffer::init$($Writer* writer) {
 }
 
 $String* WriterOutputBuffer::close() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->_writer)->flush();
 	} catch ($IOException&) {
@@ -84,6 +85,7 @@ $String* WriterOutputBuffer::close() {
 }
 
 $OutputBuffer* WriterOutputBuffer::append($String* s) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->_writer)->write(s);
 	} catch ($IOException&) {
@@ -94,6 +96,7 @@ $OutputBuffer* WriterOutputBuffer::append($String* s) {
 }
 
 $OutputBuffer* WriterOutputBuffer::append($chars* s, int32_t from, int32_t to) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->_writer)->write(s, from, to);
 	} catch ($IOException&) {
@@ -104,6 +107,7 @@ $OutputBuffer* WriterOutputBuffer::append($chars* s, int32_t from, int32_t to) {
 }
 
 $OutputBuffer* WriterOutputBuffer::append(char16_t ch) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->_writer)->write((int32_t)ch);
 	} catch ($IOException&) {

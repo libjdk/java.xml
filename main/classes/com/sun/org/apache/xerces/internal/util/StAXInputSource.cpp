@@ -75,6 +75,7 @@ void StAXInputSource::init$($XMLStreamReader* source) {
 }
 
 void StAXInputSource::init$($XMLStreamReader* source, bool consumeRemainingContent) {
+	$useLocalCurrentObjectStackCache();
 	$XMLInputSource::init$(nullptr, $($nc($($nc(source)->getLocation()))->getSystemId()), nullptr, false);
 	if (source == nullptr) {
 		$throwNew($IllegalArgumentException, "XMLStreamReader parameter cannot be null."_s);
@@ -116,6 +117,7 @@ void StAXInputSource::setSystemId($String* systemId) {
 
 $String* StAXInputSource::getEventReaderSystemId($XMLEventReader* reader) {
 	$init(StAXInputSource);
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (reader != nullptr) {
 			return $nc($($nc($(reader->peek()))->getLocation()))->getSystemId();

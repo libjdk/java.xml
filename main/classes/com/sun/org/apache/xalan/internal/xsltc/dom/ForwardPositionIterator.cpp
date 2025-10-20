@@ -79,6 +79,7 @@ void ForwardPositionIterator::init$($DTMAxisIterator* source) {
 }
 
 $DTMAxisIterator* ForwardPositionIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(ForwardPositionIterator, clone, $cast(ForwardPositionIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _source, $nc(this->_source)->cloneIterator());

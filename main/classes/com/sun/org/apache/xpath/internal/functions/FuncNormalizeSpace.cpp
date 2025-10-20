@@ -72,6 +72,7 @@ $XObject* FuncNormalizeSpace::execute($XPathContext* xctxt) {
 }
 
 void FuncNormalizeSpace::executeCharsToContentHandler($XPathContext* xctxt, $ContentHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	if (Arg0IsNodesetExpr()) {
 		int32_t node = getArg0AsNode(xctxt);
 		if ($DTM::NULL != node) {

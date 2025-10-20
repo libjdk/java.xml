@@ -123,6 +123,7 @@ void MultiHashtable::init$() {
 }
 
 $Set* MultiHashtable::put(Object$* key, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if (this->modifiable) {
 		$var($Set, set, $cast($Set, $nc(this->map)->computeIfAbsent(key, static_cast<$Function*>($$new(MultiHashtable$$Lambda$lambda$put$0)))));
 		$nc(set)->add(value);
@@ -132,6 +133,7 @@ $Set* MultiHashtable::put(Object$* key, Object$* value) {
 }
 
 $Object* MultiHashtable::maps(Object$* key, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	if (key == nullptr) {
 		return $of(nullptr);
 	}

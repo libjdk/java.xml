@@ -184,6 +184,7 @@ $HashMap* PropertyManager::getProperties() {
 }
 
 void PropertyManager::initConfigurableReaderProperties() {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLInputFactory);
 	$init($Boolean);
 	$nc(this->supportedProps)->put($XMLInputFactory::IS_NAMESPACE_AWARE, $Boolean::TRUE);
@@ -250,6 +251,7 @@ $Object* PropertyManager::getProperty($String* property) {
 }
 
 void PropertyManager::setProperty($String* property, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, equivalentProperty, nullptr);
 	$init($XMLInputFactory);
 	if ($nc(property)->equals($XMLInputFactory::IS_NAMESPACE_AWARE)) {

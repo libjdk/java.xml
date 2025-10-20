@@ -274,6 +274,7 @@ $String* LiteralElement::accessedNamespace($String* prefix) {
 }
 
 void LiteralElement::registerNamespace($String* prefix$renamed, $String* uri, $SymbolTable* stable, bool declared) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	if (this->_literalElemParent != nullptr) {
 		$var($String, parentUri, $nc(this->_literalElemParent)->accessedNamespace(prefix));
@@ -299,6 +300,7 @@ void LiteralElement::registerNamespace($String* prefix$renamed, $String* uri, $S
 }
 
 $String* LiteralElement::translateQName($QName* qname, $SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localname, $nc(qname)->getLocalPart());
 	$var($String, prefix, qname->getPrefix());
 	if (prefix == nullptr) {
@@ -343,6 +345,7 @@ void LiteralElement::setFirstAttribute($SyntaxTreeNode* attribute) {
 }
 
 $Type* LiteralElement::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_attributeElements != nullptr) {
 		{
 			$var($Iterator, i$, $nc(this->_attributeElements)->iterator());
@@ -360,6 +363,7 @@ $Type* LiteralElement::typeCheck($SymbolTable* stable) {
 }
 
 $Set* LiteralElement::getNamespaceScope($SyntaxTreeNode* node$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($SyntaxTreeNode, node, node$renamed);
 	$var($Map, all, $new($HashMap));
 	while (node != nullptr) {
@@ -373,6 +377,7 @@ $Set* LiteralElement::getNamespaceScope($SyntaxTreeNode* node$renamed) {
 }
 
 void LiteralElement::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, stable, $nc(parser)->getSymbolTable());
 	$nc(stable)->setCurrentNode(this);
 	$var($SyntaxTreeNode, parent, getParent());
@@ -444,6 +449,7 @@ bool LiteralElement::contextDependent() {
 }
 
 void LiteralElement::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	this->_allAttributesUnique = checkAttributesUnique();
@@ -510,6 +516,7 @@ bool LiteralElement::allAttributesUnique() {
 }
 
 bool LiteralElement::checkAttributesUnique() {
+	$useLocalCurrentObjectStackCache();
 	bool hasHiddenXslAttribute = canProduceAttributeNodes(this, true);
 	if (hasHiddenXslAttribute) {
 		return false;
@@ -552,6 +559,7 @@ bool LiteralElement::checkAttributesUnique() {
 }
 
 bool LiteralElement::canProduceAttributeNodes($SyntaxTreeNode* node, bool ignoreXslAttribute) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, contents, $nc(node)->getContents());
 	{
 		$var($Iterator, i$, $nc(contents)->iterator());
@@ -601,6 +609,7 @@ bool LiteralElement::canProduceAttributeNodes($SyntaxTreeNode* node, bool ignore
 
 void LiteralElement::lambda$getNamespaceScope$0($Map* all, $Map$Entry* entry) {
 	$init(LiteralElement);
+	$useLocalCurrentObjectStackCache();
 	$var($Object, var$0, $cast($String, $nc(entry)->getKey()));
 	$nc(all)->putIfAbsent(var$0, $cast($String, $(entry->getValue())));
 }

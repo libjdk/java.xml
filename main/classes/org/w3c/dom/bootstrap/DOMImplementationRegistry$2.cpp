@@ -69,6 +69,7 @@ void DOMImplementationRegistry$2::init$() {
 }
 
 $Object* DOMImplementationRegistry$2::run() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ClassLoader, classLoader, nullptr);
 	try {

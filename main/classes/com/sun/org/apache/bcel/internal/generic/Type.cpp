@@ -271,6 +271,7 @@ $String* Type::toString() {
 
 $String* Type::getMethodSignature(Type* return_type, $TypeArray* arg_types) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, "("_s));
 	if (arg_types != nullptr) {
 		{
@@ -302,6 +303,7 @@ void Type::wrap($ThreadLocal* tl, int32_t value) {
 
 Type* Type::getType($String* signature) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	int8_t type = $Utility::typeOfSignature(signature);
 	if (type <= $Const::T_VOID) {
 		wrap(Type::consumed_chars, 1);
@@ -324,6 +326,7 @@ Type* Type::getType($String* signature) {
 
 Type* Type::getReturnType($String* signature) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t index = $nc(signature)->lastIndexOf((int32_t)u')') + 1;
 		return getType($(signature->substring(index)));
@@ -336,6 +339,7 @@ Type* Type::getReturnType($String* signature) {
 
 $TypeArray* Type::getArgumentTypes($String* signature) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	$var($List, vec, $new($ArrayList));
 	int32_t index = 0;
 	$var($TypeArray, types, nullptr);
@@ -359,6 +363,7 @@ $TypeArray* Type::getArgumentTypes($String* signature) {
 
 Type* Type::getType($Class* cl) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	if (cl == nullptr) {
 		$throwNew($IllegalArgumentException, "Class must not be null"_s);
 	}
@@ -422,6 +427,7 @@ Type* Type::getType($Class* cl) {
 
 $TypeArray* Type::getTypes($ClassArray* classes) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	$var($TypeArray, ret, $new($TypeArray, $nc(classes)->length));
 	for (int32_t i = 0; i < ret->length; ++i) {
 		ret->set(i, $(getType(classes->get(i))));
@@ -431,6 +437,7 @@ $TypeArray* Type::getTypes($ClassArray* classes) {
 
 $String* Type::getSignature($Method* meth) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder, "("_s));
 	$var($ClassArray, params, $nc(meth)->getParameterTypes());
 	{
@@ -466,6 +473,7 @@ int32_t Type::encode(int32_t size, int32_t consumed) {
 
 int32_t Type::getArgumentTypesSize($String* signature) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	int32_t res = 0;
 	int32_t index = 0;
 	try {
@@ -487,6 +495,7 @@ int32_t Type::getArgumentTypesSize($String* signature) {
 
 int32_t Type::getTypeSize($String* signature) {
 	$init(Type);
+	$useLocalCurrentObjectStackCache();
 	int8_t type = $Utility::typeOfSignature(signature);
 	if (type <= $Const::T_VOID) {
 		return encode($nc($($BasicType::getType(type)))->getSize(), 1);

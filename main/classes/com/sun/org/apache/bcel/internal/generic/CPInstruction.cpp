@@ -115,10 +115,12 @@ void CPInstruction::dump($DataOutputStream* out) {
 }
 
 $String* CPInstruction::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Instruction::toString(verbose)), " "_s, $$str(this->index)});
 }
 
 $String* CPInstruction::toString($ConstantPool* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, $nc(cp)->getConstant(this->index));
 	$var($String, str, cp->constantToString(c));
 	if ($instanceOf($ConstantClass, c)) {
@@ -137,6 +139,7 @@ int32_t CPInstruction::getIndex() {
 }
 
 void CPInstruction::setIndex(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0) {
 		$throwNew($ClassGenException, $$str({"Negative index value: "_s, $$str(index)}));
 	}
@@ -144,6 +147,7 @@ void CPInstruction::setIndex(int32_t index) {
 }
 
 $Type* CPInstruction::getType($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($String, name, $nc(cp)->getConstantString(this->index, $Const::CONSTANT_Class));
 	if (!$nc(name)->startsWith("["_s)) {

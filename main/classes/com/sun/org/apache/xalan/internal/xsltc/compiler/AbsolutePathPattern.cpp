@@ -176,6 +176,7 @@ void AbsolutePathPattern::reduceKernelPattern() {
 }
 
 void AbsolutePathPattern::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_left != nullptr) {

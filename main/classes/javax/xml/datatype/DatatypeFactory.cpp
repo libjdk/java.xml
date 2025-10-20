@@ -135,6 +135,7 @@ DatatypeFactory* DatatypeFactory::newInstance($String* factoryClassName, $ClassL
 }
 
 $Duration* DatatypeFactory::newDuration(bool isPositive, int32_t years, int32_t months, int32_t days, int32_t hours, int32_t minutes, int32_t seconds) {
+	$useLocalCurrentObjectStackCache();
 	$var($BigInteger, realYears, (years != $DatatypeConstants::FIELD_UNDEFINED) ? $BigInteger::valueOf((int64_t)years) : ($BigInteger*)nullptr);
 	$var($BigInteger, realMonths, (months != $DatatypeConstants::FIELD_UNDEFINED) ? $BigInteger::valueOf((int64_t)months) : ($BigInteger*)nullptr);
 	$var($BigInteger, realDays, (days != $DatatypeConstants::FIELD_UNDEFINED) ? $BigInteger::valueOf((int64_t)days) : ($BigInteger*)nullptr);
@@ -145,6 +146,7 @@ $Duration* DatatypeFactory::newDuration(bool isPositive, int32_t years, int32_t 
 }
 
 $Duration* DatatypeFactory::newDurationDayTime($String* lexicalRepresentation) {
+	$useLocalCurrentObjectStackCache();
 	if (lexicalRepresentation == nullptr) {
 		$throwNew($NullPointerException, "Trying to create an xdt:dayTimeDuration with an invalid lexical representation of \"null\""_s);
 	}
@@ -164,6 +166,7 @@ $Duration* DatatypeFactory::newDurationDayTime(bool isPositive, $BigInteger* day
 }
 
 $Duration* DatatypeFactory::newDurationDayTime(bool isPositive, int32_t day, int32_t hour, int32_t minute, int32_t second) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isPositive;
 	$var($BigInteger, var$1, $BigInteger::valueOf((int64_t)day));
 	$var($BigInteger, var$2, $BigInteger::valueOf((int64_t)hour));
@@ -172,6 +175,7 @@ $Duration* DatatypeFactory::newDurationDayTime(bool isPositive, int32_t day, int
 }
 
 $Duration* DatatypeFactory::newDurationYearMonth($String* lexicalRepresentation) {
+	$useLocalCurrentObjectStackCache();
 	if (lexicalRepresentation == nullptr) {
 		$throwNew($NullPointerException, "Trying to create an xdt:yearMonthDuration with an invalid lexical representation of \"null\""_s);
 	}
@@ -183,6 +187,7 @@ $Duration* DatatypeFactory::newDurationYearMonth($String* lexicalRepresentation)
 }
 
 $Duration* DatatypeFactory::newDurationYearMonth(int64_t durationInMilliseconds) {
+	$useLocalCurrentObjectStackCache();
 	$var($Duration, fullDuration, newDuration(durationInMilliseconds));
 	bool isPositive = ($nc(fullDuration)->getSign() == -1) ? false : true;
 	$init($DatatypeConstants);
@@ -204,12 +209,14 @@ $Duration* DatatypeFactory::newDurationYearMonth(bool isPositive, $BigInteger* y
 }
 
 $Duration* DatatypeFactory::newDurationYearMonth(bool isPositive, int32_t year, int32_t month) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = isPositive;
 	$var($BigInteger, var$1, $BigInteger::valueOf((int64_t)year));
 	return newDurationYearMonth(var$0, var$1, $($BigInteger::valueOf((int64_t)month)));
 }
 
 $XMLGregorianCalendar* DatatypeFactory::newXMLGregorianCalendar(int32_t year, int32_t month, int32_t day, int32_t hour, int32_t minute, int32_t second, int32_t millisecond, int32_t timezone) {
+	$useLocalCurrentObjectStackCache();
 	$var($BigInteger, realYear, (year != $DatatypeConstants::FIELD_UNDEFINED) ? $BigInteger::valueOf((int64_t)year) : ($BigInteger*)nullptr);
 	$var($BigDecimal, realMillisecond, nullptr);
 	if (millisecond != $DatatypeConstants::FIELD_UNDEFINED) {
@@ -234,6 +241,7 @@ $XMLGregorianCalendar* DatatypeFactory::newXMLGregorianCalendarTime(int32_t hour
 }
 
 $XMLGregorianCalendar* DatatypeFactory::newXMLGregorianCalendarTime(int32_t hours, int32_t minutes, int32_t seconds, int32_t milliseconds, int32_t timezone) {
+	$useLocalCurrentObjectStackCache();
 	$var($BigDecimal, realMilliseconds, nullptr);
 	if (milliseconds != $DatatypeConstants::FIELD_UNDEFINED) {
 		if (milliseconds < 0 || milliseconds > 1000) {

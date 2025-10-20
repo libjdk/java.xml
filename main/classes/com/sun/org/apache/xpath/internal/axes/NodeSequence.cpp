@@ -242,6 +242,7 @@ void NodeSequence::init$() {
 }
 
 $DTM* NodeSequence::getDTM(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMManager, mgr, getDTMManager());
 	if (nullptr != mgr) {
 		return $nc($(getDTMManager()))->getDTM(nodeHandle);
@@ -300,6 +301,7 @@ bool NodeSequence::getExpandEntityReferences() {
 }
 
 int32_t NodeSequence::nextNode() {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeVector, vec, getVector());
 	if (nullptr != vec) {
 		if (this->m_next < vec->size()) {
@@ -409,6 +411,7 @@ int32_t NodeSequence::getCurrentPos() {
 }
 
 void NodeSequence::runTo(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = 0;
 	if (-1 == index) {
 		int32_t pos = this->m_next;
@@ -443,6 +446,7 @@ int32_t NodeSequence::item(int32_t index) {
 }
 
 void NodeSequence::setItem(int32_t node, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeVector, vec, getVector());
 	if (nullptr != vec) {
 		int32_t oldNode = vec->elementAt(index);
@@ -471,6 +475,7 @@ void NodeSequence::setItem(int32_t node, int32_t index) {
 }
 
 int32_t NodeSequence::getLength() {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSequence$IteratorCache, cache, getCache());
 	if (cache != nullptr) {
 		if (cache->isComplete()) {
@@ -541,6 +546,7 @@ void NodeSequence::fixupVariables($List* vars, int32_t globalsSize) {
 }
 
 int32_t NodeSequence::addNodeInDocOrder(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	assertion(hasCache(), "addNodeInDocOrder must be done on a mutable sequence!"_s);
 	int32_t insertIndex = -1;
 	$var($NodeVector, vec, getVector());
@@ -565,6 +571,7 @@ int32_t NodeSequence::addNodeInDocOrder(int32_t node) {
 }
 
 void NodeSequence::setObject(Object$* obj) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($NodeVector, obj)) {
 		$XObject::setObject(obj);
 		$var($NodeVector, v, $cast($NodeVector, obj));

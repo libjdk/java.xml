@@ -622,6 +622,7 @@ $ObjectArray* XSAttributeChecker::checkAttributes($Element* element, bool isGlob
 }
 
 $ObjectArray* XSAttributeChecker::checkAttributes($Element* element, bool isGlobal, $XSDocumentInfo* schemaDoc, bool enumAsQName) {
+	$useLocalCurrentObjectStackCache();
 	if (element == nullptr) {
 		return nullptr;
 	}
@@ -790,6 +791,7 @@ $ObjectArray* XSAttributeChecker::checkAttributes($Element* element, bool isGlob
 }
 
 $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $String* ivalue, int32_t dvIndex, $XSDocumentInfo* schemaDoc) {
+	$useLocalCurrentObjectStackCache();
 	if (ivalue == nullptr) {
 		return $of(nullptr);
 	}
@@ -1202,6 +1204,7 @@ void XSAttributeChecker::reportSchemaError($String* key, $ObjectArray* args, $El
 }
 
 void XSAttributeChecker::checkNonSchemaAttributes($XSGrammarBucket* grammarBucket) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSAttributeDecl, attrDecl, nullptr);
 	{
 		$var($Iterator, i$, $nc($($nc(this->fNonSchemaAttrs)->entrySet()))->iterator());
@@ -1288,6 +1291,7 @@ $String* XSAttributeChecker::normalize($String* content, int16_t ws) {
 }
 
 $ObjectArray* XSAttributeChecker::getAvailableArray() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->fArrayPool)->length == this->fPoolPos) {
 		$set(this, fArrayPool, $new($ObjectArray2, this->fPoolPos + XSAttributeChecker::INC_POOL_SIZE));
 		for (int32_t i = this->fPoolPos; i < $nc(this->fArrayPool)->length; ++i) {
@@ -1317,6 +1321,7 @@ void XSAttributeChecker::returnAttrArray($ObjectArray* attrArray, $XSDocumentInf
 }
 
 void XSAttributeChecker::resolveNamespace($Element* element, $AttrArray* attrs, $SchemaNamespaceSupport* nsSupport) {
+	$useLocalCurrentObjectStackCache();
 	$nc(nsSupport)->pushContext();
 	int32_t length = $nc(attrs)->length;
 	$var($Attr, sattr, nullptr);
@@ -1341,6 +1346,7 @@ void XSAttributeChecker::resolveNamespace($Element* element, $AttrArray* attrs, 
 }
 
 void clinit$XSAttributeChecker($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XSAttributeChecker::ELEMENT_N, "element_n"_s);
 	$assignStatic(XSAttributeChecker::ELEMENT_R, "element_r"_s);
 	$assignStatic(XSAttributeChecker::ATTRIBUTE_N, "attribute_n"_s);

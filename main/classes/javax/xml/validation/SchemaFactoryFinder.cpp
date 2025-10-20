@@ -842,6 +842,7 @@ $Class* SchemaFactoryFinder::SERVICE_CLASS = nullptr;
 
 void SchemaFactoryFinder::debugPrintln($Supplier* msgGen) {
 	$init(SchemaFactoryFinder);
+	$useLocalCurrentObjectStackCache();
 	if (SchemaFactoryFinder::debug) {
 		$init($System);
 		$nc($System::err)->println($$str({"JAXP: "_s, $cast($String, $($nc(msgGen)->get()))}));
@@ -856,6 +857,7 @@ void SchemaFactoryFinder::init$($ClassLoader* loader) {
 }
 
 void SchemaFactoryFinder::debugDisplayClassLoader() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		if (this->classLoader == $SecuritySupport::getContextClassLoader()) {
@@ -873,6 +875,7 @@ void SchemaFactoryFinder::debugDisplayClassLoader() {
 }
 
 $SchemaFactory* SchemaFactoryFinder::newFactory($String* schemaLanguage) {
+	$useLocalCurrentObjectStackCache();
 	if (schemaLanguage == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -886,6 +889,7 @@ $SchemaFactory* SchemaFactoryFinder::newFactory($String* schemaLanguage) {
 }
 
 $SchemaFactory* SchemaFactoryFinder::_newFactory($String* schemaLanguage) {
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaFactory, sf, nullptr);
 	$var($String, propertyName, $str({$($nc(SchemaFactoryFinder::SERVICE_CLASS)->getName()), ":"_s, schemaLanguage}));
 	try {
@@ -975,6 +979,7 @@ $Class* SchemaFactoryFinder::createClass($String* className) {
 }
 
 $SchemaFactory* SchemaFactoryFinder::createInstance($String* className) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($SchemaFactory, schemaFactory, nullptr);
 	debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13, className)));
@@ -1044,11 +1049,13 @@ $SchemaFactory* SchemaFactoryFinder::createInstance($String* className) {
 }
 
 bool SchemaFactoryFinder::isSchemaLanguageSupportedBy($SchemaFactory* factory, $String* schemaLanguage, $AccessControlContext* acc) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	return $nc(($cast($Boolean, $($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new($SchemaFactoryFinder$1, this, factory, schemaLanguage)), acc)))))->booleanValue();
 }
 
 $SchemaFactory* SchemaFactoryFinder::findServiceProvider($String* schemaLanguage) {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	if (!SchemaFactoryFinder::$assertionsDisabled && !(schemaLanguage != nullptr)) {
 		$throwNew($AssertionError);

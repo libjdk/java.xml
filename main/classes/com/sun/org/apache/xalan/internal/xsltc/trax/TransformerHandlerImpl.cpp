@@ -217,6 +217,7 @@ $Transformer* TransformerHandlerImpl::getTransformer() {
 }
 
 void TransformerHandlerImpl::setResult($Result* result) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _result, result);
 	if (nullptr == result) {
 		$init($ErrorMsg);
@@ -249,6 +250,7 @@ void TransformerHandlerImpl::characters($chars* ch, int32_t start, int32_t lengt
 }
 
 void TransformerHandlerImpl::startDocument() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_result == nullptr) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::JAXP_SET_RESULT_ERR));
@@ -283,6 +285,7 @@ void TransformerHandlerImpl::startDocument() {
 }
 
 void TransformerHandlerImpl::endDocument() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->_handler)->endDocument();
 	if (!this->_isIdentity) {
 		if (this->_result != nullptr) {

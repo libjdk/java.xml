@@ -127,6 +127,7 @@ $Object* allocate$XPathMatcher($Class* clazz) {
 }
 
 void XPathMatcher::init$($XPath* xpath) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fQName, $new($QName));
 	$set(this, fLocationPaths, $nc(xpath)->getLocationPaths());
 	$set(this, fStepIndexes, $new($IntStackArray, $nc(this->fLocationPaths)->length));
@@ -164,6 +165,7 @@ void XPathMatcher::startDocumentFragment() {
 }
 
 void XPathMatcher::startElement($QName* element, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->fLocationPaths)->length; ++i) {
 		int32_t startStep = $nc(this->fCurrentStep)->get(i);
 		$nc($nc(this->fStepIndexes)->get(i))->push(startStep);
@@ -274,6 +276,7 @@ void XPathMatcher::endElement($QName* element, $XSTypeDefinition* type, bool nil
 }
 
 $String* XPathMatcher::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, str, $new($StringBuffer));
 	$var($String, s, $Object::toString());
 	int32_t index2 = $nc(s)->lastIndexOf((int32_t)u'.');

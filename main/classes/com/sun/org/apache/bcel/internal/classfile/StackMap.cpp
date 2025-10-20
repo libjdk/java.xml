@@ -77,6 +77,7 @@ void StackMap::init$(int32_t name_index, int32_t length, $StackMapEntryArray* ma
 }
 
 void StackMap::init$(int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	StackMap::init$(name_index, length, ($StackMapEntryArray*)nullptr, constant_pool);
 	int32_t map_length = $nc(input)->readUnsignedShort();
 	$set(this, map, $new($StackMapEntryArray, map_length));
@@ -86,6 +87,7 @@ void StackMap::init$(int32_t name_index, int32_t length, $DataInput* input, $Con
 }
 
 void StackMap::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort($nc(this->map)->length);
 	{
@@ -106,6 +108,7 @@ $StackMapEntryArray* StackMap::getStackMap() {
 }
 
 void StackMap::setStackMap($StackMapEntryArray* map) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, map, map);
 	int32_t len = 2;
 	{
@@ -135,6 +138,7 @@ $String* StackMap::toString() {
 }
 
 $Attribute* StackMap::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(StackMap, c, $cast(StackMap, clone()));
 	$set($nc(c), map, $new($StackMapEntryArray, $nc(this->map)->length));
 	for (int32_t i = 0; i < $nc(this->map)->length; ++i) {

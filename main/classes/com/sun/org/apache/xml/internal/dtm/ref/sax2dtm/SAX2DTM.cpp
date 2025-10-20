@@ -427,6 +427,7 @@ bool SAX2DTM::needsTwoThreads() {
 }
 
 void SAX2DTM::dispatchCharactersEvents(int32_t nodeHandle, $ContentHandler* ch, bool normalize) {
+	$useLocalCurrentObjectStackCache();
 	int32_t identity = makeNodeIdentity(nodeHandle);
 	if (identity == $DTM::NULL) {
 		return;
@@ -552,6 +553,7 @@ int32_t SAX2DTM::getNextNodeIdentity(int32_t identity) {
 }
 
 void SAX2DTM::dispatchToEvents(int32_t nodeHandle, $ContentHandler* ch) {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMTreeWalker, treeWalker, this->m_walker);
 	$var($ContentHandler, prevCH, $nc(treeWalker)->getcontentHandler());
 	if (nullptr != prevCH) {
@@ -648,6 +650,7 @@ int32_t SAX2DTM::addNode(int32_t type, int32_t expandedTypeID, int32_t parentInd
 }
 
 void SAX2DTM::addNewDTMID(int32_t nodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->m_mgr == nullptr) {
 			$throwNew($ClassCastException);
@@ -677,6 +680,7 @@ void SAX2DTM::migrateTo($DTMManager* manager) {
 }
 
 void SAX2DTM::setSourceLocation() {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->m_sourceSystemId)->addElement($($nc(this->m_locator)->getSystemId()));
 	$nc(this->m_sourceLine)->addElement($nc(this->m_locator)->getLineNumber());
 	$nc(this->m_sourceColumn)->addElement($nc(this->m_locator)->getColumnNumber());
@@ -713,6 +717,7 @@ $String* SAX2DTM::getLocalName(int32_t nodeHandle) {
 }
 
 $String* SAX2DTM::getUnparsedEntityURI($String* name) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, url, ""_s);
 	if (nullptr == this->m_entities) {
 		return url;
@@ -735,6 +740,7 @@ $String* SAX2DTM::getUnparsedEntityURI($String* name) {
 }
 
 $String* SAX2DTM::getPrefix(int32_t nodeHandle) {
+	$useLocalCurrentObjectStackCache();
 	int32_t identity = makeNodeIdentity(nodeHandle);
 	int32_t type = _type(identity);
 	if ($DTM::ELEMENT_NODE == type) {
@@ -757,6 +763,7 @@ $String* SAX2DTM::getPrefix(int32_t nodeHandle) {
 }
 
 int32_t SAX2DTM::getAttributeNode(int32_t nodeHandle, $String* namespaceURI, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t attrH = getFirstAttribute(nodeHandle); $DTM::NULL != attrH; attrH = getNextAttribute(attrH)) {
 		$var($String, attrNS, getNamespaceURI(attrH));
 		$var($String, attrName, getLocalName(attrH));
@@ -902,6 +909,7 @@ int32_t SAX2DTM::getIdForNamespace($String* uri) {
 }
 
 $String* SAX2DTM::getNamespaceURI($String* prefix$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, uri, ""_s);
 	int32_t prefixIndex = $nc(this->m_contextIndexes)->peek() - 1;
@@ -950,6 +958,7 @@ void SAX2DTM::notationDecl($String* name, $String* publicId, $String* systemId) 
 }
 
 void SAX2DTM::unparsedEntityDecl($String* name, $String* publicId, $String* systemId$renamed, $String* notationName) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, systemId, systemId$renamed);
 	if (nullptr == this->m_entities) {
 		$set(this, m_entities, $new($ArrayList));
@@ -1019,6 +1028,7 @@ void SAX2DTM::endPrefixMapping($String* prefix$renamed) {
 }
 
 bool SAX2DTM::declAlreadyDeclared($String* prefix) {
+	$useLocalCurrentObjectStackCache();
 	int32_t startDecls = $nc(this->m_contextIndexes)->peek();
 	$var($Vector, prefixMappings, this->m_prefixMappings);
 	int32_t nDecls = $nc(prefixMappings)->size();
@@ -1035,6 +1045,7 @@ bool SAX2DTM::declAlreadyDeclared($String* prefix) {
 }
 
 void SAX2DTM::startElement($String* uri, $String* localName$renamed, $String* qName, $Attributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, localName, localName$renamed);
 	charactersFlush();
 	bool var$0 = (localName == nullptr || $nc(localName)->isEmpty());
@@ -1222,6 +1233,7 @@ void SAX2DTM::setProperty($String* property, Object$* value) {
 }
 
 $SourceLocator* SAX2DTM::getSourceLocatorFor(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_useSourceLocationProperty) {
 		node = makeNodeIdentity(node);
 		$var($String, var$0, $nc(this->m_sourceSystemId)->elementAt(node));

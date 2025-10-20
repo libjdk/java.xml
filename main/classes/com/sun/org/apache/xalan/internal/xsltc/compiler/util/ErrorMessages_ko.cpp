@@ -166,6 +166,7 @@ void ErrorMessages_ko::init$() {
 }
 
 $ObjectArray2* ErrorMessages_ko::getContents() {
+	$useLocalCurrentObjectStackCache();
 			$init($ErrorMsg);
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {

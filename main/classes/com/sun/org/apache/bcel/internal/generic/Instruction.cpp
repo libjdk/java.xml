@@ -373,6 +373,7 @@ $String* Instruction::getName() {
 }
 
 $String* Instruction::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	if (verbose) {
 		return $str({$(getName()), "["_s, $$str(this->opcode), "]("_s, $$str(this->length), ")"_s});
 	}
@@ -388,6 +389,7 @@ $String* Instruction::toString($ConstantPool* cp) {
 }
 
 Instruction* Instruction::copy() {
+	$useLocalCurrentObjectStackCache();
 	$var(Instruction, i, nullptr);
 	if ($InstructionConst::getInstruction(this->getOpcode()) != nullptr) {
 		$assign(i, this);
@@ -408,6 +410,7 @@ void Instruction::initFromFile($ByteSequence* bytes, bool wide) {
 
 Instruction* Instruction::readInstruction($ByteSequence* bytes) {
 	$init(Instruction);
+	$useLocalCurrentObjectStackCache();
 	bool wide = false;
 	int16_t opcode = (int16_t)$nc(bytes)->readUnsignedByte();
 	$var(Instruction, obj, nullptr);

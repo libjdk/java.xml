@@ -247,6 +247,7 @@ int32_t PredicatedNodeTest::getProximityPosition(int32_t predicateIndex) {
 }
 
 void PredicatedNodeTest::resetProximityPositions() {
+	$useLocalCurrentObjectStackCache();
 	int32_t nPredicates = getPredicateCount();
 	if (nPredicates > 0) {
 		if (nullptr == this->m_proximityPositions) {
@@ -283,6 +284,7 @@ int32_t PredicatedNodeTest::getPredicateIndex() {
 }
 
 bool PredicatedNodeTest::executePredicates(int32_t context, $XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	int32_t nPredicates = getPredicateCount();
 	if (nPredicates == 0) {
 		return true;
@@ -345,6 +347,7 @@ void PredicatedNodeTest::fixupVariables($List* vars, int32_t globalsSize) {
 }
 
 $String* PredicatedNodeTest::nodeToString(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	if ($DTM::NULL != n) {
 		$var($DTM, dtm, $nc($($nc(this->m_lpi)->getXPathContext()))->getDTM(n));
 		return $str({$($nc(dtm)->getNodeName(n)), "{"_s, $$str((n + 1)), "}"_s});
@@ -354,6 +357,7 @@ $String* PredicatedNodeTest::nodeToString(int32_t n) {
 }
 
 int16_t PredicatedNodeTest::acceptNode(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPathContext, xctxt, $nc(this->m_lpi)->getXPathContext());
 	{
 		$var($Throwable, var$0, nullptr);
@@ -408,6 +412,7 @@ void PredicatedNodeTest::setLocPathIterator($LocPathIterator* li) {
 }
 
 bool PredicatedNodeTest::canTraverseOutsideSubtree() {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = getPredicateCount();
 	for (int32_t i = 0; i < n; ++i) {
 		if ($nc($(getPredicate(i)))->canTraverseOutsideSubtree()) {
@@ -418,6 +423,7 @@ bool PredicatedNodeTest::canTraverseOutsideSubtree() {
 }
 
 void PredicatedNodeTest::callPredicateVisitors($XPathVisitor* visitor) {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr != this->m_predicates) {
 		int32_t n = $nc(this->m_predicates)->length;
 		for (int32_t i = 0; i < n; ++i) {

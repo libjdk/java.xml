@@ -104,6 +104,7 @@ void StreamSource::init$($String* systemId) {
 }
 
 void StreamSource::init$($File* f) {
+	$useLocalCurrentObjectStackCache();
 	setSystemId($($nc($($nc(f)->toURI()))->toASCIIString()));
 }
 

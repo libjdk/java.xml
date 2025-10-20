@@ -75,6 +75,7 @@ void ErrorMessages_pt_BR::init$() {
 }
 
 $ObjectArray2* ErrorMessages_pt_BR::getContents() {
+	$useLocalCurrentObjectStackCache();
 			$init($BasisLibrary);
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {

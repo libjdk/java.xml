@@ -309,6 +309,7 @@ void Sort::setInnerClassName($String* className) {
 }
 
 void Sort::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($SyntaxTreeNode, parent, getParent());
 	if (!($instanceOf($ApplyTemplates, parent)) && !($instanceOf($ForEach, parent))) {
 		$init($ErrorMsg);
@@ -381,6 +382,7 @@ void Sort::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 
 void Sort::translateSortIterator($ClassGenerator* classGen, $MethodGenerator* methodGen, $Expression* nodeSet, $List* sortObjects) {
 	$init(Sort);
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -407,6 +409,7 @@ void Sort::translateSortIterator($ClassGenerator* classGen, $MethodGenerator* me
 
 void Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* classGen, $MethodGenerator* methodGen) {
 	$init(Sort);
+	$useLocalCurrentObjectStackCache();
 	$var($String, sortRecordClass, compileSortRecord(sortObjects, classGen, methodGen));
 	bool needsSortRecordFactory = false;
 	int32_t nsorts = $nc(sortObjects)->size();
@@ -497,6 +500,7 @@ void Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* classGe
 
 $String* Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* classGen, $MethodGenerator* methodGen, $String* sortRecordClass) {
 	$init(Sort);
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTC, xsltc, $nc(($cast(Sort, $($nc(sortObjects)->get(0)))))->getXSLTC());
 	$var($String, className, $nc(xsltc)->getHelperClassName());
 	$init($Constants);
@@ -591,6 +595,7 @@ $String* Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* cla
 
 $String* Sort::compileSortRecord($List* sortObjects, $ClassGenerator* classGen, $MethodGenerator* methodGen) {
 	$init(Sort);
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTC, xsltc, $nc(($cast(Sort, $($nc(sortObjects)->get(0)))))->getXSLTC());
 	$var($String, className, $nc(xsltc)->getHelperClassName());
 	$init($Constants);
@@ -625,6 +630,7 @@ $String* Sort::compileSortRecord($List* sortObjects, $ClassGenerator* classGen, 
 
 $MethodGenerator* Sort::compileInit($NodeSortRecordGenerator* sortRecord, $ConstantPoolGen* cpg, $String* className) {
 	$init(Sort);
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $new($InstructionList));
 	$init($Type);
 	$var($MethodGenerator, init, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, nullptr, nullptr, "<init>"_s, className, il, cpg));
@@ -637,6 +643,7 @@ $MethodGenerator* Sort::compileInit($NodeSortRecordGenerator* sortRecord, $Const
 
 $MethodGenerator* Sort::compileExtract($List* sortObjects, $NodeSortRecordGenerator* sortRecord, $ConstantPoolGen* cpg, $String* className) {
 	$init(Sort);
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $new($InstructionList));
 	$init($Type);
 		$init($Constants);

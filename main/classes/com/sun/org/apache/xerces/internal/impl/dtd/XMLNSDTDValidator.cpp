@@ -82,6 +82,7 @@ void XMLNSDTDValidator::init$() {
 }
 
 void XMLNSDTDValidator::startNamespaceScope($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fNamespaceContext)->pushContext();
 	$init($XMLSymbols);
 	if ($nc(element)->prefix == $XMLSymbols::PREFIX_XMLNS) {

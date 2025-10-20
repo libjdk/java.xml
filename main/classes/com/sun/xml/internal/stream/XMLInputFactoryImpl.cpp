@@ -188,6 +188,7 @@ $XMLStreamReader* XMLInputFactoryImpl::createXMLStreamReader($String* systemId, 
 }
 
 $XMLStreamReader* XMLInputFactoryImpl::createXMLStreamReader($Source* source) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLInputSource, var$0, jaxpSourcetoXMLInputSource(source));
 	return $new($XMLStreamReaderImpl, var$0, $$new($PropertyManager, this->fPropertyManager));
 }
@@ -276,6 +277,7 @@ void XMLInputFactoryImpl::setProperty($String* name, Object$* value) {
 }
 
 $XMLStreamReader* XMLInputFactoryImpl::getXMLStreamReaderImpl($XMLInputSource* inputSource) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fTempReader == nullptr) {
 		this->fPropertyChanged = false;
 		return ($assignField(this, fTempReader, $new($XMLStreamReaderImpl, inputSource, $$new($PropertyManager, this->fPropertyManager))));
@@ -292,6 +294,7 @@ $XMLStreamReader* XMLInputFactoryImpl::getXMLStreamReaderImpl($XMLInputSource* i
 }
 
 $XMLInputSource* XMLInputFactoryImpl::jaxpSourcetoXMLInputSource($Source* source) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($StreamSource, source)) {
 		$var($StreamSource, stSource, $cast($StreamSource, source));
 		$var($String, systemId, $nc(stSource)->getSystemId());

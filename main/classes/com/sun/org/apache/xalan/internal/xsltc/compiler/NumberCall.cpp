@@ -76,6 +76,7 @@ $Type* NumberCall::typeCheck($SymbolTable* stable) {
 }
 
 void NumberCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($Type, targ, nullptr);
 	if (argumentCount() == 0) {

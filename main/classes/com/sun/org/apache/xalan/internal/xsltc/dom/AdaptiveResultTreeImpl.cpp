@@ -495,6 +495,7 @@ int32_t AdaptiveResultTreeImpl::getSize() {
 }
 
 $String* AdaptiveResultTreeImpl::getDocumentURI(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_dom != nullptr) {
 		return $nc(this->_dom)->getDocumentURI(node);
 	} else {
@@ -596,6 +597,7 @@ $Map* AdaptiveResultTreeImpl::getElementsWithIDs() {
 }
 
 void AdaptiveResultTreeImpl::maybeEmitStartElement() {
+	$useLocalCurrentObjectStackCache();
 	if (this->_openElementName != nullptr) {
 		int32_t index = 0;
 		if ((index = $nc(this->_openElementName)->indexOf((int32_t)u':')) < 0) {
@@ -609,6 +611,7 @@ void AdaptiveResultTreeImpl::maybeEmitStartElement() {
 }
 
 void AdaptiveResultTreeImpl::prepareNewDOM() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _dom, $cast($SAXImpl, $nc(this->_dtmManager)->getDTM(nullptr, true, this->_wsfilter, true, false, false, this->_initSize, this->_buildIdIndex)));
 	$nc(this->_dom)->startDocument();
 	for (int32_t i = 0; i < this->_size; ++i) {
@@ -683,6 +686,7 @@ void AdaptiveResultTreeImpl::endElement($String* uri, $String* localName, $Strin
 }
 
 void AdaptiveResultTreeImpl::addAttribute($String* qName, $String* value) {
+	$useLocalCurrentObjectStackCache();
 	int32_t colonpos = $nc(qName)->indexOf((int32_t)u':');
 	$var($String, uri, AdaptiveResultTreeImpl::EMPTY_STRING);
 	$var($String, localName, qName);

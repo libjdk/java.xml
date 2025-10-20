@@ -259,6 +259,7 @@ void XPathParser::init$($ErrorListener* errorListener, $SourceLocator* sourceLoc
 }
 
 void XPathParser::initXPath($Compiler* compiler, $String* expression, $PrefixResolver* namespaceContext) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_ops, compiler);
 	$set(this, m_namespaceContext, namespaceContext);
 	$set(this, m_functionTable, $nc(compiler)->getFunctionTable());
@@ -301,6 +302,7 @@ void XPathParser::initXPath($Compiler* compiler, $String* expression, $PrefixRes
 }
 
 void XPathParser::initMatchPattern($Compiler* compiler, $String* expression, $PrefixResolver* namespaceContext) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_ops, compiler);
 	$set(this, m_namespaceContext, namespaceContext);
 	$set(this, m_functionTable, $nc(compiler)->getFunctionTable());
@@ -452,6 +454,7 @@ void XPathParser::consumeExpected($String* expected) {
 }
 
 void XPathParser::consumeExpected(char16_t expected) {
+	$useLocalCurrentObjectStackCache();
 	if (tokenIs(expected)) {
 		nextToken();
 	} else {
@@ -465,6 +468,7 @@ void XPathParser::consumeExpected(char16_t expected) {
 }
 
 void XPathParser::warn($String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHWarning(msg, args));
 	$var($ErrorListener, ehandler, this->getErrorListener());
 	if (nullptr != ehandler) {
@@ -476,6 +480,7 @@ void XPathParser::warn($String* msg, $ObjectArray* args) {
 }
 
 void XPathParser::assertion(bool b, $String* msg) {
+	$useLocalCurrentObjectStackCache();
 	if (!b) {
 		$init($XPATHErrorResources);
 		$var($String, fMsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_INCORRECT_PROGRAMMER_ASSERTION, $$new($ObjectArray, {$of(msg)})));
@@ -484,6 +489,7 @@ void XPathParser::assertion(bool b, $String* msg) {
 }
 
 void XPathParser::error($String* msg, $ObjectArray* args) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, fmsg, $XSLMessages::createXPATHMessage(msg, args));
 	$var($ErrorListener, ehandler, this->getErrorListener());
 	$var($TransformerException, te, $new($TransformerException, fmsg, this->m_sourceLocator));
@@ -495,6 +501,7 @@ void XPathParser::error($String* msg, $ObjectArray* args) {
 }
 
 $String* XPathParser::dumpRemainingTokenQueue() {
+	$useLocalCurrentObjectStackCache();
 	int32_t q = this->m_queueMark;
 	$var($String, returnMsg, nullptr);
 	if (q < $nc(this->m_ops)->getTokenQueueSize()) {
@@ -511,6 +518,7 @@ $String* XPathParser::dumpRemainingTokenQueue() {
 }
 
 int32_t XPathParser::getFunctionToken($String* key) {
+	$useLocalCurrentObjectStackCache();
 	int32_t tok = 0;
 	$var($Integer, id, nullptr);
 	try {
@@ -1024,6 +1032,7 @@ void XPathParser::Basis() {
 }
 
 int32_t XPathParser::AxisName() {
+	$useLocalCurrentObjectStackCache();
 	$var($Object, val, $Keywords::getAxisName(this->m_token));
 	if (nullptr == val) {
 		$init($XPATHErrorResources);
@@ -1035,6 +1044,7 @@ int32_t XPathParser::AxisName() {
 }
 
 void XPathParser::NodeTest(int32_t axesType) {
+	$useLocalCurrentObjectStackCache();
 	if (lookahead(u'(', 1)) {
 		$var($Object, nodeTestOp, $Keywords::getNodeType(this->m_token));
 		if (nullptr == nodeTestOp) {
@@ -1129,6 +1139,7 @@ void XPathParser::NCName() {
 }
 
 void XPathParser::Literal() {
+	$useLocalCurrentObjectStackCache();
 	int32_t last = $nc(this->m_token)->length() - 1;
 	char16_t c0 = this->m_tokenChar;
 	char16_t cX = $nc(this->m_token)->charAt(last);
@@ -1147,6 +1158,7 @@ void XPathParser::Literal() {
 }
 
 void XPathParser::Number() {
+	$useLocalCurrentObjectStackCache();
 	if (nullptr != this->m_token) {
 		double num = 0.0;
 		try {

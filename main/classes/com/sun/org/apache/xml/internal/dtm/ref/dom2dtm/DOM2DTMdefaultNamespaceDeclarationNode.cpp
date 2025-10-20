@@ -321,6 +321,7 @@ $Object* DOM2DTMdefaultNamespaceDeclarationNode::getFeature($String* feature, $S
 }
 
 bool DOM2DTMdefaultNamespaceDeclarationNode::isEqualNode($Node* arg) {
+	$useLocalCurrentObjectStackCache();
 	if ($equals(arg, this)) {
 		return true;
 	}
@@ -367,6 +368,7 @@ bool DOM2DTMdefaultNamespaceDeclarationNode::isEqualNode($Node* arg) {
 }
 
 $String* DOM2DTMdefaultNamespaceDeclarationNode::lookupNamespaceURI($String* specifiedPrefix) {
+	$useLocalCurrentObjectStackCache();
 	int16_t type = this->getNodeType();
 	switch (type) {
 	case $Node::ELEMENT_NODE:
@@ -437,6 +439,7 @@ bool DOM2DTMdefaultNamespaceDeclarationNode::isDefaultNamespace($String* namespa
 }
 
 $String* DOM2DTMdefaultNamespaceDeclarationNode::lookupPrefix($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if (namespaceURI == nullptr) {
 		return nullptr;
 	}

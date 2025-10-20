@@ -148,6 +148,7 @@ void XMLSecurityManager::init$() {
 }
 
 void XMLSecurityManager::init$(bool secureProcessing) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, printEntityCountInfo$, ""_s);
 	$set(this, values, $new($ints, $($XMLSecurityManager$Limit::values())->length));
 	$set(this, states, $new($JdkProperty$StateArray, $($XMLSecurityManager$Limit::values())->length));
@@ -177,6 +178,7 @@ void XMLSecurityManager::init$(bool secureProcessing) {
 }
 
 void XMLSecurityManager::setSecureProcessing(bool secure) {
+	$useLocalCurrentObjectStackCache();
 	this->secureProcessing = secure;
 	{
 		$var($XMLSecurityManager$LimitArray, arr$, $XMLSecurityManager$Limit::values());
@@ -381,6 +383,7 @@ bool XMLSecurityManager::printEntityCountInfo() {
 }
 
 void XMLSecurityManager::readSystemProperties() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($XMLSecurityManager$LimitArray, arr$, $XMLSecurityManager$Limit::values());
 		int32_t len$ = $nc(arr$)->length;
@@ -411,6 +414,7 @@ void XMLSecurityManager::readSystemProperties() {
 
 void XMLSecurityManager::printWarning($String* parserClassName, $String* propertyName, $SAXException* exception) {
 	$init(XMLSecurityManager);
+	$useLocalCurrentObjectStackCache();
 	$var($String, key, $str({parserClassName, ":"_s, propertyName}));
 	if ($nc(XMLSecurityManager::printedWarnings)->addIfAbsent(key)) {
 		$init($System);
@@ -419,6 +423,7 @@ void XMLSecurityManager::printWarning($String* parserClassName, $String* propert
 }
 
 bool XMLSecurityManager::getSystemProperty($XMLSecurityManager$Limit* limit, $String* sysPropertyName) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, value, $SecuritySupport::getSystemProperty(sysPropertyName));
 		if (value != nullptr && !value->equals(""_s)) {
@@ -445,6 +450,7 @@ bool XMLSecurityManager::getSystemProperty($XMLSecurityManager$Limit* limit, $St
 
 XMLSecurityManager* XMLSecurityManager::convert(Object$* value, XMLSecurityManager* securityManager$renamed) {
 	$init(XMLSecurityManager);
+	$useLocalCurrentObjectStackCache();
 	$var(XMLSecurityManager, securityManager, securityManager$renamed);
 	if (value == nullptr) {
 		if (securityManager == nullptr) {

@@ -131,6 +131,7 @@ int32_t XML11DocumentScannerImpl::scanContent($XMLStringBuffer* content) {
 }
 
 bool XML11DocumentScannerImpl::scanAttributeValue($XMLString* value, $XMLString* nonNormalizedValue, $String* atName, bool checkEntities, $String* eleName, bool isNSURI) {
+	$useLocalCurrentObjectStackCache();
 	int32_t quote = $nc(this->fEntityScanner)->peekChar();
 	if (quote != u'\'' && quote != u'\"') {
 		reportFatalError("OpenQuoteExpected"_s, $$new($ObjectArray, {
@@ -266,6 +267,7 @@ bool XML11DocumentScannerImpl::scanAttributeValue($XMLString* value, $XMLString*
 }
 
 bool XML11DocumentScannerImpl::scanPubidLiteral($XMLString* literal) {
+	$useLocalCurrentObjectStackCache();
 	int32_t quote = $nc(this->fEntityScanner)->scanChar(nullptr);
 	if (quote != u'\'' && quote != u'\"') {
 		reportFatalError("QuoteRequiredInPublicID"_s, nullptr);

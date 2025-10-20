@@ -137,6 +137,7 @@ void FunctionMultiArgs::checkNumberArgs(int32_t argNum) {
 }
 
 void FunctionMultiArgs::reportWrongNumberArgs() {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	$var($String, fMsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_INCORRECT_PROGRAMMER_ASSERTION, $$new($ObjectArray, {$of("Programmer\'s assertion:  the method FunctionMultiArgs.reportWrongNumberArgs() should never be called."_s)})));
 	$throwNew($RuntimeException, fMsg);
@@ -157,6 +158,7 @@ bool FunctionMultiArgs::canTraverseOutsideSubtree() {
 }
 
 void FunctionMultiArgs::callArgVisitors($XPathVisitor* visitor) {
+	$useLocalCurrentObjectStackCache();
 	$Function3Args::callArgVisitors(visitor);
 	if (nullptr != this->m_args) {
 		int32_t n = $nc(this->m_args)->length;

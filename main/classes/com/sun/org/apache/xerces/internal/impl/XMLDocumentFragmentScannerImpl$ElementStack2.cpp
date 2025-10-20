@@ -78,6 +78,7 @@ $Object* allocate$XMLDocumentFragmentScannerImpl$ElementStack2($Class* clazz) {
 }
 
 void XMLDocumentFragmentScannerImpl$ElementStack2::init$($XMLDocumentFragmentScannerImpl* this$0) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, this$0, this$0);
 	$set(this, fQName, $new($QNameArray, 20));
 	for (int32_t i = 0; i < $nc(this->fQName)->length; ++i) {
@@ -87,6 +88,7 @@ void XMLDocumentFragmentScannerImpl$ElementStack2::init$($XMLDocumentFragmentSca
 }
 
 void XMLDocumentFragmentScannerImpl$ElementStack2::resize() {
+	$useLocalCurrentObjectStackCache();
 	int32_t oldLength = $nc(this->fQName)->length;
 	$var($QNameArray, tmp, $new($QNameArray, oldLength * 2));
 	$System::arraycopy(this->fQName, 0, tmp, 0, oldLength);

@@ -111,6 +111,7 @@ $Type* Comment::typeCheck($SymbolTable* stable) {
 }
 
 void Comment::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($Text, rawText, nullptr);

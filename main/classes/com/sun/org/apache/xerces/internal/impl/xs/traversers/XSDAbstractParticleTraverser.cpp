@@ -138,6 +138,7 @@ void XSDAbstractParticleTraverser::init$($XSDHandler* handler, $XSAttributeCheck
 }
 
 $XSParticleDecl* XSDAbstractParticleTraverser::traverseAll($Element* allDecl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, int32_t allContextFlags, $XSObject* parent) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(allDecl, false, schemaDoc));
 	$var($Element, child, $DOMUtil::getFirstChildElement(allDecl));
 	$var($XSAnnotationImpl, annotation, nullptr);
@@ -212,6 +213,7 @@ $XSParticleDecl* XSDAbstractParticleTraverser::traverseChoice($Element* choiceDe
 }
 
 $XSParticleDecl* XSDAbstractParticleTraverser::traverseSeqChoice($Element* decl, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, int32_t allContextFlags, bool choice, $XSObject* parent) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(decl, false, schemaDoc));
 	$var($Element, child, $DOMUtil::getFirstChildElement(decl));
 	$var($XSAnnotationImpl, annotation, nullptr);

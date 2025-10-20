@@ -260,6 +260,7 @@ void XSSimpleTypeDecl$AbstractObjectList::init$() {
 }
 
 $Object* XSSimpleTypeDecl$AbstractObjectList::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index >= 0 && index < getLength()) {
 		return $of(item(index));
 	}

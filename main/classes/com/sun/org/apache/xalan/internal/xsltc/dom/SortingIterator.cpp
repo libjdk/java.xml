@@ -93,6 +93,7 @@ int32_t SortingIterator::next() {
 }
 
 $DTMAxisIterator* SortingIterator::setStartNode(int32_t node) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->_source)->setStartNode(this->_startNode = node);
 		$set(this, _data, $new($NodeSortRecordArray, SortingIterator::INIT_DATA_SIZE));
@@ -129,6 +130,7 @@ void SortingIterator::gotoMark() {
 }
 
 $DTMAxisIterator* SortingIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(SortingIterator, clone, $cast(SortingIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _source, $nc(this->_source)->cloneIterator());
@@ -165,6 +167,7 @@ void SortingIterator::quicksort(int32_t p, int32_t r) {
 }
 
 int32_t SortingIterator::partition(int32_t p, int32_t r) {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSortRecord, x, $nc(this->_data)->get((int32_t)((uint32_t)(p + r) >> 1)));
 	int32_t i = p - 1;
 	int32_t j = r + 1;

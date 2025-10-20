@@ -102,6 +102,7 @@ bool MultiDOM$NodeValueIterator::isReverse() {
 }
 
 $DTMAxisIterator* MultiDOM$NodeValueIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(MultiDOM$NodeValueIterator, clone, $cast(MultiDOM$NodeValueIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _source, $nc(this->_source)->cloneIterator());
@@ -127,6 +128,7 @@ $DTMAxisIterator* MultiDOM$NodeValueIterator::reset() {
 }
 
 int32_t MultiDOM$NodeValueIterator::next() {
+	$useLocalCurrentObjectStackCache();
 	int32_t node = 0;
 	while ((node = $nc(this->_source)->next()) != $DTMAxisIterator::END) {
 		$var($String, val, this->this$0->getStringValueX(node));

@@ -373,6 +373,7 @@ void XMLNamespaceBinder::endGeneralEntity($String* name, $Augmentations* augs) {
 }
 
 void XMLNamespaceBinder::handleStartElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs, bool isEmpty) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fNamespaceContext)->pushContext();
 	$init($XMLSymbols);
 	if ($nc(element)->prefix == $XMLSymbols::PREFIX_XMLNS) {

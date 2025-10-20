@@ -128,6 +128,7 @@ $String* ConstantClass::getBytes($ConstantPool* cp) {
 }
 
 $String* ConstantClass::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(nameIndex = "_s, $$str(this->nameIndex), ")"_s});
 }
 

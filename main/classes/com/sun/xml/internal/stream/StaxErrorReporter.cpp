@@ -115,6 +115,7 @@ void StaxErrorReporter::reset($PropertyManager* propertyManager) {
 }
 
 $String* StaxErrorReporter::reportError($XMLLocator* location, $String* domain, $String* key, $ObjectArray* arguments, int16_t severity) {
+	$useLocalCurrentObjectStackCache();
 	$var($MessageFormatter, messageFormatter, getMessageFormatter(domain));
 	$var($String, message, nullptr);
 	if (messageFormatter != nullptr) {

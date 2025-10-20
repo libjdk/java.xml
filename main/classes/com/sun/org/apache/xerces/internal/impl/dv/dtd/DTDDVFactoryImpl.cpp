@@ -89,6 +89,7 @@ $Map* DTDDVFactoryImpl::getBuiltInTypes() {
 }
 
 void clinit$DTDDVFactoryImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Map, builtInTypes, $new($HashMap));
 		$var($DatatypeValidator, dvTemp, nullptr);

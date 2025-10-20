@@ -82,6 +82,7 @@ $Object* allocate$LocalVariableTable($Class* clazz) {
 }
 
 void LocalVariableTable::init$(LocalVariableTable* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($LocalVariableArray, var$2, c->getLocalVariableTable());
@@ -94,6 +95,7 @@ void LocalVariableTable::init$(int32_t nameIndex, int32_t length, $LocalVariable
 }
 
 void LocalVariableTable::init$(int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	LocalVariableTable::init$(name_index, length, ($LocalVariableArray*)nullptr, constant_pool);
 	int32_t local_variable_table_length = $nc(input)->readUnsignedShort();
 	$set(this, localVariableTable, $new($LocalVariableArray, local_variable_table_length));
@@ -107,6 +109,7 @@ void LocalVariableTable::accept($Visitor* v) {
 }
 
 void LocalVariableTable::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort($nc(this->localVariableTable)->length);
 	{
@@ -127,6 +130,7 @@ $LocalVariableArray* LocalVariableTable::getLocalVariableTable() {
 }
 
 $LocalVariable* LocalVariableTable::getLocalVariable(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($LocalVariableArray, arr$, this->localVariableTable);
 		int32_t len$ = $nc(arr$)->length;
@@ -144,6 +148,7 @@ $LocalVariable* LocalVariableTable::getLocalVariable(int32_t index) {
 }
 
 $LocalVariable* LocalVariableTable::getLocalVariable(int32_t index, int32_t pc) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($LocalVariableArray, arr$, this->localVariableTable);
 		int32_t len$ = $nc(arr$)->length;
@@ -180,6 +185,7 @@ $String* LocalVariableTable::toString() {
 }
 
 $Attribute* LocalVariableTable::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(LocalVariableTable, c, $cast(LocalVariableTable, clone()));
 	$set($nc(c), localVariableTable, $new($LocalVariableArray, $nc(this->localVariableTable)->length));
 	for (int32_t i = 0; i < $nc(this->localVariableTable)->length; ++i) {

@@ -80,6 +80,7 @@ $DTMIterator* IteratorPool::getInstanceOrThrow() {
 
 $DTMIterator* IteratorPool::getInstance() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if ($nc(this->m_freeStack)->isEmpty()) {
 			try {
 				return $cast($DTMIterator, $nc(this->m_orig)->clone());

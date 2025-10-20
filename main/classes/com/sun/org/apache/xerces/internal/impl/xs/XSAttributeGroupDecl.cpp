@@ -193,6 +193,7 @@ void XSAttributeGroupDecl::removeProhibitedAttrs() {
 }
 
 $ObjectArray* XSAttributeGroupDecl::validRestrictionOf($String* typeName, XSAttributeGroupDecl* baseGroup) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, errorArgs, nullptr);
 	$var($XSAttributeUseImpl, attrUse, nullptr);
 	$var($XSAttributeDecl, attrDecl, nullptr);

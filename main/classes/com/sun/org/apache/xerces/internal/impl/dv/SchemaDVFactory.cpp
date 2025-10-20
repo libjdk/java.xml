@@ -81,6 +81,7 @@ SchemaDVFactory* SchemaDVFactory::getInstance($String* factoryClass) {
 	$load(SchemaDVFactory);
 	$synchronized(class$) {
 		$init(SchemaDVFactory);
+		$useLocalCurrentObjectStackCache();
 		try {
 			return ($cast(SchemaDVFactory, $ObjectFactory::newInstance(factoryClass, true)));
 		} catch ($ClassCastException&) {

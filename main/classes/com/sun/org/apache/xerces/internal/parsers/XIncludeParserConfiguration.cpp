@@ -144,6 +144,7 @@ void XIncludeParserConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPo
 }
 
 void XIncludeParserConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$XML11Configuration::init$(symbolTable, grammarPool, parentSettings);
 	$set(this, fXIncludeHandler, $new($XIncludeHandler));
 	addCommonComponent(this->fXIncludeHandler);
@@ -166,6 +167,7 @@ void XIncludeParserConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPo
 }
 
 void XIncludeParserConfiguration::configurePipeline() {
+	$useLocalCurrentObjectStackCache();
 	$XML11Configuration::configurePipeline();
 	$nc(this->fDTDScanner)->setDTDHandler(this->fDTDProcessor);
 	$nc(this->fDTDProcessor)->setDTDSource(this->fDTDScanner);
@@ -197,6 +199,7 @@ void XIncludeParserConfiguration::configurePipeline() {
 }
 
 void XIncludeParserConfiguration::configureXML11Pipeline() {
+	$useLocalCurrentObjectStackCache();
 	$XML11Configuration::configureXML11Pipeline();
 	$nc(this->fXML11DTDScanner)->setDTDHandler(this->fXML11DTDProcessor);
 	$nc(this->fXML11DTDProcessor)->setDTDSource(this->fXML11DTDScanner);

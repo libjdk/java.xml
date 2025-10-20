@@ -99,6 +99,7 @@ $XSObject* XSNamedMapImpl$XSNamedMapEntry::setValue($XSObject* value) {
 }
 
 bool XSNamedMapImpl$XSNamedMapEntry::equals(XSNamedMapImpl$XSNamedMapEntry* o) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Map$Entry, o)) {
 		$var($Map$Entry, e, static_cast<$Map$Entry*>(o));
 		$var($QName, otherKey, $cast($QName, $nc(e)->getKey()));
@@ -115,6 +116,7 @@ int32_t XSNamedMapImpl$XSNamedMapEntry::hashCode() {
 }
 
 $String* XSNamedMapImpl$XSNamedMapEntry::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buffer, $new($StringBuilder));
 	buffer->append($($String::valueOf($of(this->key))));
 	buffer->append(u'=');

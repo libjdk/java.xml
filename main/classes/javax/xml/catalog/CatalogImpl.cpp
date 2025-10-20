@@ -378,6 +378,7 @@ void CatalogImpl::init$($CatalogFeatures* f, $URIArray* uris) {
 }
 
 void CatalogImpl::init$(CatalogImpl* parent, $CatalogFeatures* f, $URIArray* uris) {
+	$useLocalCurrentObjectStackCache();
 	$init($BaseEntry$CatalogEntryType);
 	$GroupEntry::init$($BaseEntry$CatalogEntryType::CATALOG, parent);
 	this->level = 0;
@@ -453,6 +454,7 @@ void CatalogImpl::load() {
 }
 
 void CatalogImpl::init($CatalogFeatures* f) {
+	$useLocalCurrentObjectStackCache();
 	if (this->parent == nullptr) {
 		this->level = 0;
 	} else {
@@ -472,6 +474,7 @@ void CatalogImpl::init($CatalogFeatures* f) {
 }
 
 void CatalogImpl::reset() {
+	$useLocalCurrentObjectStackCache();
 	$GroupEntry::reset();
 	this->current = 0;
 	if (this->level == 0) {
@@ -509,6 +512,7 @@ void CatalogImpl::markAsSearched() {
 }
 
 void CatalogImpl::parse($String* systemId) {
+	$useLocalCurrentObjectStackCache();
 	if (this->parser == nullptr) {
 		$set(this, parser, getParser());
 	}
@@ -527,6 +531,7 @@ void CatalogImpl::parse($String* systemId) {
 }
 
 $SAXParser* CatalogImpl::getParser() {
+	$useLocalCurrentObjectStackCache();
 	$var($SAXParser, p, nullptr);
 	try {
 		$var($SAXParserFactory, spf, $new($SAXParserFactoryImpl));
@@ -551,6 +556,7 @@ bool CatalogImpl::isEmpty() {
 }
 
 $Stream* CatalogImpl::catalogs() {
+	$useLocalCurrentObjectStackCache();
 	$var($Iterator, iter, $new($CatalogImpl$1, this));
 	return $StreamSupport::stream($($Spliterators::spliteratorUnknownSize(iter, $Spliterator::ORDERED | $Spliterator::NONNULL)), false);
 }
@@ -566,6 +572,7 @@ void CatalogImpl::addNextCatalog($NextCatalog* catalog) {
 }
 
 void CatalogImpl::loadNextCatalogs() {
+	$useLocalCurrentObjectStackCache();
 	if (this->nextCatalogs != nullptr) {
 		$nc($($nc(this->nextCatalogs)->stream()))->forEach(static_cast<$Consumer*>($$new(CatalogImpl$$Lambda$lambda$loadNextCatalogs$2$2, this)));
 	}
@@ -575,6 +582,7 @@ void CatalogImpl::loadNextCatalogs() {
 }
 
 $Catalog* CatalogImpl::getCatalog(CatalogImpl* parent, $URI* uri) {
+	$useLocalCurrentObjectStackCache();
 	if (uri == nullptr) {
 		return nullptr;
 	}

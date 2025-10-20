@@ -141,6 +141,7 @@ $Grammar* SoftReferenceGrammarPool::retrieveGrammar($XMLGrammarDescription* desc
 }
 
 void SoftReferenceGrammarPool::putGrammar($Grammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fPoolIsLocked) {
 		$synchronized(this->fGrammars) {
 			clean();
@@ -166,6 +167,7 @@ void SoftReferenceGrammarPool::putGrammar($Grammar* grammar) {
 }
 
 $Grammar* SoftReferenceGrammarPool::getGrammar($XMLGrammarDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$synchronized(this->fGrammars) {
 		clean();
 		int32_t hash = hashCode(desc);
@@ -203,6 +205,7 @@ $Grammar* SoftReferenceGrammarPool::removeGrammar($XMLGrammarDescription* desc) 
 }
 
 bool SoftReferenceGrammarPool::containsGrammar($XMLGrammarDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	$synchronized(this->fGrammars) {
 		clean();
 		int32_t hash = hashCode(desc);
@@ -241,6 +244,7 @@ void SoftReferenceGrammarPool::clear() {
 }
 
 bool SoftReferenceGrammarPool::equals($XMLGrammarDescription* desc1, $XMLGrammarDescription* desc2) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($XMLSchemaDescription, desc1)) {
 		if (!($instanceOf($XMLSchemaDescription, desc2))) {
 			return false;
@@ -269,6 +273,7 @@ bool SoftReferenceGrammarPool::equals($XMLGrammarDescription* desc1, $XMLGrammar
 }
 
 int32_t SoftReferenceGrammarPool::hashCode($XMLGrammarDescription* desc) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($XMLSchemaDescription, desc)) {
 		$var($XMLSchemaDescription, sd, $cast($XMLSchemaDescription, desc));
 		$var($String, targetNamespace, $nc(sd)->getTargetNamespace());
@@ -295,6 +300,7 @@ $Grammar* SoftReferenceGrammarPool::removeEntry($SoftReferenceGrammarPool$Entry*
 }
 
 void SoftReferenceGrammarPool::clean() {
+	$useLocalCurrentObjectStackCache();
 	$var($Reference, ref, $nc(this->fReferenceQueue)->poll());
 	while (ref != nullptr) {
 		$var($SoftReferenceGrammarPool$Entry, entry, $nc(($cast($SoftReferenceGrammarPool$SoftGrammarReference, ref)))->entry);

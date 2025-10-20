@@ -97,6 +97,7 @@ void XSDWildcardTraverser::init$($XSDHandler* handler, $XSAttributeChecker* gAtt
 }
 
 $XSParticleDecl* XSDWildcardTraverser::traverseAny($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, false, schemaDoc));
 	$var($XSWildcardDecl, wildcard, traverseWildcardDecl(elmNode, attrValues, schemaDoc, grammar));
 	$var($XSParticleDecl, particle, nullptr);
@@ -121,6 +122,7 @@ $XSParticleDecl* XSDWildcardTraverser::traverseAny($Element* elmNode, $XSDocumen
 }
 
 $XSWildcardDecl* XSDWildcardTraverser::traverseAnyAttribute($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, false, schemaDoc));
 	$var($XSWildcardDecl, wildcard, traverseWildcardDecl(elmNode, attrValues, schemaDoc, grammar));
 	$nc(this->fAttrChecker)->returnAttrArray(attrValues, schemaDoc);
@@ -128,6 +130,7 @@ $XSWildcardDecl* XSDWildcardTraverser::traverseAnyAttribute($Element* elmNode, $
 }
 
 $XSWildcardDecl* XSDWildcardTraverser::traverseWildcardDecl($Element* elmNode, $ObjectArray* attrValues, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSWildcardDecl, wildcard, $new($XSWildcardDecl));
 	$init($XSAttributeChecker);
 	$var($XInt, namespaceTypeAttr, $cast($XInt, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAMESPACE)));

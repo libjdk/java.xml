@@ -141,6 +141,7 @@ $Expression* FilteredAbsoluteLocationPath::getPath() {
 }
 
 $String* FilteredAbsoluteLocationPath::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"FilteredAbsoluteLocationPath("_s, (this->_path != nullptr ? $($nc(this->_path)->toString()) : "null"_s), $$str(u')')});
 }
 
@@ -157,6 +158,7 @@ $1Type* FilteredAbsoluteLocationPath::typeCheck($SymbolTable* stable) {
 }
 
 void FilteredAbsoluteLocationPath::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_path != nullptr) {

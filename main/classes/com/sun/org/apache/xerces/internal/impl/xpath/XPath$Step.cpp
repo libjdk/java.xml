@@ -86,6 +86,7 @@ void XPath$Step::init$(XPath$Step* step) {
 }
 
 $String* XPath$Step::toString() {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->axis)->type == $XPath$Axis::SELF) {
 		return "."_s;
 	}

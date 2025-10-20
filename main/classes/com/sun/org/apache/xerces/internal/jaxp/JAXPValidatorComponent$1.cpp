@@ -87,6 +87,7 @@ void JAXPValidatorComponent$1::init$($JAXPValidatorComponent* this$0) {
 }
 
 $XMLErrorHandler* JAXPValidatorComponent$1::getErrorHandler() {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLErrorHandler, handler, $nc(this->this$0->fErrorReporter)->getErrorHandler());
 	if (handler != nullptr) {
 		return handler;

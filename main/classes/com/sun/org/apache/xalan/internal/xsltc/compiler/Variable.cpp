@@ -126,6 +126,7 @@ int32_t Variable::getIndex() {
 }
 
 void Variable::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$VariableBase::parseContents(parser);
 	$var($SyntaxTreeNode, parent, getParent());
 	if ($instanceOf($Stylesheet, parent)) {
@@ -170,6 +171,7 @@ $1Type* Variable::typeCheck($SymbolTable* stable) {
 }
 
 void Variable::initialize($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	bool var$0 = isLocal();
@@ -190,6 +192,7 @@ void Variable::initialize($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 void Variable::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if ($nc(this->_refs)->isEmpty()) {

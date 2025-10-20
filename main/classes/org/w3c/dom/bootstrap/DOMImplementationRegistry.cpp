@@ -142,6 +142,7 @@ void DOMImplementationRegistry::init$($List* srcs) {
 
 DOMImplementationRegistry* DOMImplementationRegistry::newInstance() {
 	$init(DOMImplementationRegistry);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($List, sources, $new($ArrayList));
 	$var($ClassLoader, classLoader, getClassLoader());
@@ -184,6 +185,7 @@ DOMImplementationRegistry* DOMImplementationRegistry::newInstance() {
 }
 
 $DOMImplementation* DOMImplementationRegistry::getDOMImplementation($String* features) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->sources)->size();
 	$var($String, name, nullptr);
 	for (int32_t i = 0; i < size; ++i) {
@@ -197,6 +199,7 @@ $DOMImplementation* DOMImplementationRegistry::getDOMImplementation($String* fea
 }
 
 $DOMImplementationList* DOMImplementationRegistry::getDOMImplementationList($String* features) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, implementations, $new($ArrayList));
 	int32_t size = $nc(this->sources)->size();
 	for (int32_t i = 0; i < size; ++i) {
@@ -221,6 +224,7 @@ void DOMImplementationRegistry::addSource($DOMImplementationSource* s) {
 
 $ClassLoader* DOMImplementationRegistry::getClassLoader() {
 	$init(DOMImplementationRegistry);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		$var($ClassLoader, contextClassLoader, getContextClassLoader());
@@ -236,6 +240,7 @@ $ClassLoader* DOMImplementationRegistry::getClassLoader() {
 
 $String* DOMImplementationRegistry::getServiceValue($ClassLoader* classLoader) {
 	$init(DOMImplementationRegistry);
+	$useLocalCurrentObjectStackCache();
 	$var($String, serviceId, $str({"META-INF/services/"_s, DOMImplementationRegistry::PROPERTY}));
 	try {
 		$var($InputStream, is, getResourceAsStream(classLoader, serviceId));

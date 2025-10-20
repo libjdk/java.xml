@@ -778,6 +778,7 @@ void DeferredDocumentImpl::appendChild(int32_t parentIndex, int32_t childIndex) 
 }
 
 int32_t DeferredDocumentImpl::setAttributeNode(int32_t elemIndex, int32_t attrIndex) {
+	$useLocalCurrentObjectStackCache();
 	int32_t echunk = $sr(elemIndex, DeferredDocumentImpl::CHUNK_SHIFT);
 	int32_t eindex = (int32_t)(elemIndex & (uint32_t)DeferredDocumentImpl::CHUNK_MASK);
 	int32_t achunk = $sr(attrIndex, DeferredDocumentImpl::CHUNK_SHIFT);
@@ -961,6 +962,7 @@ int32_t DeferredDocumentImpl::lookupElementDefinition($String* elementName) {
 }
 
 $DeferredNode* DeferredDocumentImpl::getNodeObject(int32_t nodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeIndex == -1) {
 		return nullptr;
 	}
@@ -1111,6 +1113,7 @@ $String* DeferredDocumentImpl::getNodeValueString(int32_t nodeIndex) {
 }
 
 $String* DeferredDocumentImpl::getNodeValueString(int32_t nodeIndex, bool free) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeIndex == -1) {
 		return nullptr;
 	}
@@ -1172,6 +1175,7 @@ $String* DeferredDocumentImpl::getNodeValue(int32_t nodeIndex) {
 }
 
 $Object* DeferredDocumentImpl::getTypeInfo(int32_t nodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	if (nodeIndex == -1) {
 		return $of(nullptr);
 	}
@@ -1256,6 +1260,7 @@ $String* DeferredDocumentImpl::getNodeURI(int32_t nodeIndex, bool free) {
 }
 
 void DeferredDocumentImpl::putIdentifier($String* name, int32_t elementNodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fIdName == nullptr) {
 		$set(this, fIdName, $new($StringArray, 64));
 		$set(this, fIdElement, $new($ints, 64));
@@ -1281,6 +1286,7 @@ int32_t DeferredDocumentImpl::getNodeIndex() {
 }
 
 void DeferredDocumentImpl::synchronizeData() {
+	$useLocalCurrentObjectStackCache();
 	needsSyncData(false);
 	if (this->fIdElement != nullptr) {
 		$var($DeferredDocumentImpl$IntVector, path, $new($DeferredDocumentImpl$IntVector));
@@ -1328,6 +1334,7 @@ void DeferredDocumentImpl::synchronizeData() {
 }
 
 void DeferredDocumentImpl::synchronizeChildren() {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 		if (!needsSyncChildren()) {
@@ -1367,6 +1374,7 @@ void DeferredDocumentImpl::synchronizeChildren() {
 }
 
 void DeferredDocumentImpl::synchronizeChildren($AttrImpl* a, int32_t nodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	bool orig = getMutationEvents();
 	setMutationEvents(false);
 	$nc(a)->needsSyncChildren(false);
@@ -1401,6 +1409,7 @@ void DeferredDocumentImpl::synchronizeChildren($AttrImpl* a, int32_t nodeIndex) 
 }
 
 void DeferredDocumentImpl::synchronizeChildren($ParentNode* p, int32_t nodeIndex) {
+	$useLocalCurrentObjectStackCache();
 	bool orig = getMutationEvents();
 	setMutationEvents(false);
 	$nc(p)->needsSyncChildren(false);
@@ -1427,6 +1436,7 @@ void DeferredDocumentImpl::synchronizeChildren($ParentNode* p, int32_t nodeIndex
 }
 
 void DeferredDocumentImpl::ensureCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNodeType == nullptr) {
 		$set(this, fNodeType, $new($intArray2, DeferredDocumentImpl::INITIAL_CHUNK_COUNT));
 		$set(this, fNodeName, $new($ObjectArray2, DeferredDocumentImpl::INITIAL_CHUNK_COUNT));
@@ -1510,6 +1520,7 @@ void DeferredDocumentImpl::createChunk($intArray2* data, int32_t chunk) {
 }
 
 void DeferredDocumentImpl::createChunk($ObjectArray2* data, int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	$nc(data)->set(chunk, $$new($ObjectArray, DeferredDocumentImpl::CHUNK_SIZE + 1));
 	$nc(data->get(chunk))->set(DeferredDocumentImpl::CHUNK_SIZE, $$new($DeferredDocumentImpl$RefCount));
 }
@@ -1532,6 +1543,7 @@ int32_t DeferredDocumentImpl::setChunkIndex($intArray2* data, int32_t value, int
 }
 
 $String* DeferredDocumentImpl::setChunkValue($ObjectArray2* data, Object$* value, int32_t chunk, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return clearChunkValue(data, chunk, index);
 	}
@@ -1581,6 +1593,7 @@ int32_t DeferredDocumentImpl::clearChunkIndex($intArray2* data, int32_t chunk, i
 }
 
 $String* DeferredDocumentImpl::clearChunkValue($ObjectArray2* data, int32_t chunk, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, value, $nc(data)->get(chunk) != nullptr ? $cast($String, $nc($nc(data)->get(chunk))->get(index)) : ($String*)nullptr);
 	if (value != nullptr) {
 		$nc(data->get(chunk))->set(index, nullptr);

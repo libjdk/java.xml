@@ -148,6 +148,7 @@ int32_t FastStringBuffer::length() {
 }
 
 void FastStringBuffer::reset() {
+	$useLocalCurrentObjectStackCache();
 	this->m_lastChunk = 0;
 	this->m_firstFree = 0;
 	$var(FastStringBuffer, innermost, this);
@@ -193,11 +194,13 @@ void FastStringBuffer::setLength(int32_t l, FastStringBuffer* rootFSB) {
 }
 
 $String* FastStringBuffer::toString() {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = ($sl(this->m_lastChunk, this->m_chunkBits)) + this->m_firstFree;
 	return $nc($(getString($$new($StringBuffer, length), 0, 0, length)))->toString();
 }
 
 void FastStringBuffer::append(char16_t value) {
+	$useLocalCurrentObjectStackCache();
 	$var($chars, chunk, nullptr);
 	bool lastchunk = (this->m_lastChunk + 1 == $nc(this->m_array)->length);
 	if (this->m_firstFree < this->m_chunkSize) {
@@ -222,6 +225,7 @@ void FastStringBuffer::append(char16_t value) {
 }
 
 void FastStringBuffer::append($String* value) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return;
 	}
@@ -261,6 +265,7 @@ void FastStringBuffer::append($String* value) {
 }
 
 void FastStringBuffer::append($StringBuffer* value) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return;
 	}
@@ -300,6 +305,7 @@ void FastStringBuffer::append($StringBuffer* value) {
 }
 
 void FastStringBuffer::append($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	int32_t strlen = length;
 	if (0 == strlen) {
 		return;
@@ -336,6 +342,7 @@ void FastStringBuffer::append($chars* chars, int32_t start, int32_t length) {
 }
 
 void FastStringBuffer::append(FastStringBuffer* value) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return;
 	}
@@ -407,6 +414,7 @@ bool FastStringBuffer::isWhitespace(int32_t start, int32_t length) {
 }
 
 $String* FastStringBuffer::getString(int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	int32_t startColumn = (int32_t)(start & (uint32_t)this->m_chunkMask);
 	int32_t startChunk = $usr(start, this->m_chunkBits);
 	if (startColumn + length < this->m_chunkMask && this->m_innerFSB == nullptr) {
@@ -541,6 +549,7 @@ void FastStringBuffer::sendNormalizedSAXcharacters($chars* ch, int32_t start, in
 }
 
 void FastStringBuffer::sendSAXComment($LexicalHandler* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, comment, getString(start, length));
 	$nc(ch)->comment($($nc(comment)->toCharArray()), 0, length);
 }

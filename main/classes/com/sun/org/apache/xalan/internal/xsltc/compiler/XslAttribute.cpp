@@ -184,6 +184,7 @@ void XslAttribute::display(int32_t indent) {
 }
 
 void XslAttribute::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	bool generated = false;
 	$var($SymbolTable, stable, $nc(parser)->getSymbolTable());
 	$var($String, name, getAttribute("name"_s));
@@ -287,6 +288,7 @@ $1Type* XslAttribute::typeCheck($SymbolTable* stable) {
 }
 
 void XslAttribute::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_ignore) {

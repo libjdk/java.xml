@@ -299,6 +299,7 @@ $String* XSComplexTypeDecl::toString() {
 }
 
 void XSComplexTypeDecl::appendTypeInfo($StringBuilder* str) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, contentType, $new($StringArray, {
 		"EMPTY"_s,
 		"SIMPLE"_s,
@@ -341,6 +342,7 @@ bool XSComplexTypeDecl::derivedFromType($XSTypeDefinition* ancestor, int16_t der
 }
 
 bool XSComplexTypeDecl::derivedFrom($String* ancestorNS, $String* ancestorName, int16_t derivationMethod) {
+	$useLocalCurrentObjectStackCache();
 	if (ancestorName == nullptr) {
 		return false;
 	}
@@ -409,6 +411,7 @@ bool XSComplexTypeDecl::isDOMDerivedFrom($String* ancestorNS, $String* ancestorN
 }
 
 bool XSComplexTypeDecl::isDerivedByAny($String* ancestorNS, $String* ancestorName, int32_t derivationMethod, $XSTypeDefinition* type$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSTypeDefinition, type, type$renamed);
 	$var($XSTypeDefinition, oldType, nullptr);
 	bool derivedFrom = false;
@@ -434,6 +437,7 @@ bool XSComplexTypeDecl::isDerivedByAny($String* ancestorNS, $String* ancestorNam
 }
 
 bool XSComplexTypeDecl::isDerivedByRestriction($String* ancestorNS, $String* ancestorName$renamed, int32_t derivationMethod, $XSTypeDefinition* type$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ancestorName, ancestorName$renamed);
 	$var($XSTypeDefinition, type, type$renamed);
 	$var($XSTypeDefinition, oldType, nullptr);
@@ -464,6 +468,7 @@ bool XSComplexTypeDecl::isDerivedByRestriction($String* ancestorNS, $String* anc
 }
 
 bool XSComplexTypeDecl::isDerivedByExtension($String* ancestorNS, $String* ancestorName$renamed, int32_t derivationMethod, $XSTypeDefinition* type$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ancestorName, ancestorName$renamed);
 	$var($XSTypeDefinition, type, type$renamed);
 	bool extension = false;

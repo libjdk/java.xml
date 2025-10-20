@@ -59,6 +59,7 @@ void ThreadLocalBufferAllocator::init$() {
 
 $BufferAllocator* ThreadLocalBufferAllocator::getBufferAllocator() {
 	$init(ThreadLocalBufferAllocator);
+	$useLocalCurrentObjectStackCache();
 	$var($BufferAllocator, ba, nullptr);
 	$var($SoftReference, sr, $cast($SoftReference, $nc(ThreadLocalBufferAllocator::TL)->get()));
 	if (sr != nullptr) {

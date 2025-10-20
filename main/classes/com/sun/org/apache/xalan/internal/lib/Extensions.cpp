@@ -85,6 +85,7 @@ void Extensions::init$() {
 }
 
 $NodeSet* Extensions::nodeset($ExpressionContext* myProcessor, Object$* rtf) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, textNodeValue, nullptr);
 	if ($instanceOf($NodeIterator, rtf)) {
 		return $new($NodeSet, $cast($NodeIterator, rtf));
@@ -119,6 +120,7 @@ $NodeList* Extensions::distinct($NodeList* nl) {
 }
 
 bool Extensions::hasSameNodes($NodeList* nl1, $NodeList* nl2) {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSet, ns1, $new($NodeSet, nl1));
 	$var($NodeSet, ns2, $new($NodeSet, nl2));
 	int32_t var$0 = ns1->getLength();
@@ -139,6 +141,7 @@ $XObject* Extensions::evaluate($ExpressionContext* myContext, $String* xpathExpr
 }
 
 $NodeList* Extensions::tokenize($String* toTokenize, $String* delims) {
+	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, $JdkXmlUtils::getDOMDocument());
 	$var($StringTokenizer, lTokenizer, $new($StringTokenizer, toTokenize, delims));
 	$var($NodeSet, resultSet, $new($NodeSet));

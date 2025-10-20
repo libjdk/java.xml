@@ -71,6 +71,7 @@ $Object* allocate$ElementValuePairGen($Class* clazz) {
 }
 
 void ElementValuePairGen::init$($ElementValuePair* nvp, $ConstantPoolGen* cpool, bool copyPoolEntries) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, constantPoolGen, cpool);
 	if (copyPoolEntries) {
 		this->nameIdx = $nc(cpool)->addUtf8($($nc(nvp)->getNameString()));
@@ -81,6 +82,7 @@ void ElementValuePairGen::init$($ElementValuePair* nvp, $ConstantPoolGen* cpool,
 }
 
 $ElementValuePair* ElementValuePairGen::getElementNameValuePair() {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementValue, immutableValue, $nc(this->value)->getElementValue());
 	return $new($ElementValuePair, this->nameIdx, immutableValue, $($nc(this->constantPoolGen)->getConstantPool()));
 }
@@ -115,6 +117,7 @@ $ElementValueGen* ElementValuePairGen::getValue() {
 }
 
 $String* ElementValuePairGen::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"ElementValuePair:["_s, $(getNameString()), "="_s}));
 	$var($String, var$0, $$concat(var$1, $($nc(this->value)->stringifyValue())));
 	return $concat(var$0, "]");

@@ -310,6 +310,7 @@ void Number::addVariable($VariableRefBase* variableRef) {
 }
 
 void Number::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->_attributes)->getLength();
 	for (int32_t i = 0; i < count; ++i) {
 		$var($String, name, $nc(this->_attributes)->getQName(i));
@@ -389,6 +390,7 @@ bool Number::isDefault() {
 }
 
 void Number::compileDefault($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
@@ -422,6 +424,7 @@ void Number::compileDefault($ClassGenerator* classGen, $MethodGenerator* methodG
 }
 
 void Number::compileConstructor($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodGenerator, cons, nullptr);
 	$var($InstructionList, il, $new($InstructionList));
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
@@ -450,6 +453,7 @@ void Number::compileConstructor($ClassGenerator* classGen) {
 }
 
 void Number::compileLocals($NodeCounterGenerator* nodeCounterGen, $MatchGenerator* matchGen, $InstructionList* il) {
+	$useLocalCurrentObjectStackCache();
 	int32_t field = 0;
 	$var($LocalVariableGen, local, nullptr);
 	$var($ConstantPoolGen, cpg, $nc(nodeCounterGen)->getConstantPool());
@@ -476,6 +480,7 @@ void Number::compileLocals($NodeCounterGenerator* nodeCounterGen, $MatchGenerato
 }
 
 void Number::compilePatterns($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t current = 0;
 	int32_t field = 0;
 	$var($LocalVariableGen, local, nullptr);
@@ -547,6 +552,7 @@ void Number::compilePatterns($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void Number::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());

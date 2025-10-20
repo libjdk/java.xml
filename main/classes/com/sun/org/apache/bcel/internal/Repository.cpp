@@ -103,6 +103,7 @@ void Repository::clearCache() {
 
 $JavaClass* Repository::addClass($JavaClass* clazz) {
 	$init(Repository);
+	$useLocalCurrentObjectStackCache();
 	$var($JavaClass, old, $nc(Repository::repository)->findClass($($nc(clazz)->getClassName())));
 	$nc(Repository::repository)->storeClass(clazz);
 	return old;
@@ -146,6 +147,7 @@ bool Repository::instanceOf($JavaClass* clazz, $JavaClass* super_class) {
 
 bool Repository::instanceOf($String* clazz, $String* super_class) {
 	$init(Repository);
+	$useLocalCurrentObjectStackCache();
 	$var($JavaClass, var$0, lookupClass(clazz));
 	return instanceOf(var$0, $(lookupClass(super_class)));
 }
@@ -167,6 +169,7 @@ bool Repository::implementationOf($JavaClass* clazz, $JavaClass* inter) {
 
 bool Repository::implementationOf($String* clazz, $String* inter) {
 	$init(Repository);
+	$useLocalCurrentObjectStackCache();
 	$var($JavaClass, var$0, lookupClass(clazz));
 	return implementationOf(var$0, $(lookupClass(inter)));
 }

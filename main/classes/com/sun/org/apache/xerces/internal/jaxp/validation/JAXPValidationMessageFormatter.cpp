@@ -58,6 +58,7 @@ void JAXPValidationMessageFormatter::init$() {
 }
 
 $String* JAXPValidationMessageFormatter::formatMessage($Locale* locale, $String* key, $ObjectArray* arguments) {
+	$useLocalCurrentObjectStackCache();
 	$var($ResourceBundle, resourceBundle, nullptr);
 	if (locale != nullptr) {
 		$assign(resourceBundle, $SecuritySupport::getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.JAXPValidationMessages"_s, locale));

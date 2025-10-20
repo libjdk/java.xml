@@ -89,6 +89,7 @@ int16_t DecimalDV::getAllowedFacets() {
 }
 
 $Object* DecimalDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of($new($DecimalDV$XDecimal, content));
 	} catch ($NumberFormatException&) {

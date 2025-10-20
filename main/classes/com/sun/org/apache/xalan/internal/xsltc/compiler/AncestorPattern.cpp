@@ -188,6 +188,7 @@ $1Type* AncestorPattern::typeCheck($SymbolTable* stable) {
 }
 
 void AncestorPattern::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, parent, nullptr);
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());

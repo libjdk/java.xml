@@ -93,6 +93,7 @@ $Object* allocate$XMLSecurityPropertyManager($Class* clazz) {
 }
 
 void XMLSecurityPropertyManager::init$() {
+	$useLocalCurrentObjectStackCache();
 		$init($XMLSecurityPropertyManager$State);
 	$set(this, states, $new($XMLSecurityPropertyManager$StateArray, {
 		$XMLSecurityPropertyManager$State::DEFAULT,

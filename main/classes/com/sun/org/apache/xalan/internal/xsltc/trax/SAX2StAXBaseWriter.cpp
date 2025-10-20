@@ -278,6 +278,7 @@ void SAX2StAXBaseWriter::startEntity($String* name) {
 }
 
 void SAX2StAXBaseWriter::reportException($String* type, $SAXException* e) {
+	$useLocalCurrentObjectStackCache();
 	if (this->reporter != nullptr) {
 		try {
 			$var($String, var$0, $nc(e)->getMessage());
@@ -293,6 +294,7 @@ void SAX2StAXBaseWriter::reportException($String* type, $SAXException* e) {
 
 void SAX2StAXBaseWriter::parseQName($String* qName, $StringArray* results) {
 	$init(SAX2StAXBaseWriter);
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	$var($String, local, nullptr);
 	int32_t idx = $nc(qName)->indexOf((int32_t)u':');

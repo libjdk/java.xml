@@ -164,6 +164,7 @@ void ListingErrorHandler::init$() {
 }
 
 void ListingErrorHandler::warning($SAXParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	logExceptionLocation(this->m_pw, exception);
 	$nc(this->m_pw)->println($$str({"warning: "_s, $($nc(exception)->getMessage())}));
 	$nc(this->m_pw)->flush();
@@ -173,6 +174,7 @@ void ListingErrorHandler::warning($SAXParseException* exception) {
 }
 
 void ListingErrorHandler::error($SAXParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	logExceptionLocation(this->m_pw, exception);
 	$nc(this->m_pw)->println($$str({"error: "_s, $($nc(exception)->getMessage())}));
 	$nc(this->m_pw)->flush();
@@ -182,6 +184,7 @@ void ListingErrorHandler::error($SAXParseException* exception) {
 }
 
 void ListingErrorHandler::fatalError($SAXParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	logExceptionLocation(this->m_pw, exception);
 	$nc(this->m_pw)->println($$str({"fatalError: "_s, $($nc(exception)->getMessage())}));
 	$nc(this->m_pw)->flush();
@@ -191,6 +194,7 @@ void ListingErrorHandler::fatalError($SAXParseException* exception) {
 }
 
 void ListingErrorHandler::warning($TransformerException* exception) {
+	$useLocalCurrentObjectStackCache();
 	logExceptionLocation(this->m_pw, exception);
 	$nc(this->m_pw)->println($$str({"warning: "_s, $($nc(exception)->getMessage())}));
 	$nc(this->m_pw)->flush();
@@ -200,6 +204,7 @@ void ListingErrorHandler::warning($TransformerException* exception) {
 }
 
 void ListingErrorHandler::error($TransformerException* exception) {
+	$useLocalCurrentObjectStackCache();
 	logExceptionLocation(this->m_pw, exception);
 	$nc(this->m_pw)->println($$str({"error: "_s, $($nc(exception)->getMessage())}));
 	$nc(this->m_pw)->flush();
@@ -209,6 +214,7 @@ void ListingErrorHandler::error($TransformerException* exception) {
 }
 
 void ListingErrorHandler::fatalError($TransformerException* exception) {
+	$useLocalCurrentObjectStackCache();
 	logExceptionLocation(this->m_pw, exception);
 	$nc(this->m_pw)->println($$str({"error: "_s, $($nc(exception)->getMessage())}));
 	$nc(this->m_pw)->flush();
@@ -219,6 +225,7 @@ void ListingErrorHandler::fatalError($TransformerException* exception) {
 
 void ListingErrorHandler::logExceptionLocation($PrintWriter* pw$renamed, $Throwable* exception) {
 	$init(ListingErrorHandler);
+	$useLocalCurrentObjectStackCache();
 	$var($PrintWriter, pw, pw$renamed);
 	if (nullptr == pw) {
 		$init($System);
@@ -262,6 +269,7 @@ void ListingErrorHandler::logExceptionLocation($PrintWriter* pw$renamed, $Throwa
 
 void ListingErrorHandler::logSourceLine($PrintWriter* pw$renamed, $SourceLocator* locator) {
 	$init(ListingErrorHandler);
+	$useLocalCurrentObjectStackCache();
 	$var($PrintWriter, pw, pw$renamed);
 	if (nullptr == locator) {
 		return;
@@ -295,6 +303,7 @@ void ListingErrorHandler::logSourceLine($PrintWriter* pw$renamed, $SourceLocator
 
 $String* ListingErrorHandler::getSourceLine($String* sourceUrl, int32_t lineNum) {
 	$init(ListingErrorHandler);
+	$useLocalCurrentObjectStackCache();
 	$var($URL, url, nullptr);
 	try {
 		$assign(url, $new($URL, sourceUrl));

@@ -112,6 +112,7 @@ void BranchInstruction::init$(int16_t opcode, $InstructionHandle* target) {
 }
 
 void BranchInstruction::dump($DataOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$nc(out)->writeByte($Instruction::getOpcode());
 	this->index = getTargetOffset();
 	if (!isValidShort(this->index)) {
@@ -121,6 +122,7 @@ void BranchInstruction::dump($DataOutputStream* out) {
 }
 
 int32_t BranchInstruction::getTargetOffset($InstructionHandle* _target) {
+	$useLocalCurrentObjectStackCache();
 	if (_target == nullptr) {
 		$throwNew($ClassGenException, $$str({"Target of "_s, $($Instruction::toString(true)), " is invalid null handle"_s}));
 	}
@@ -141,6 +143,7 @@ int32_t BranchInstruction::updatePosition(int32_t offset, int32_t max_offset) {
 }
 
 $String* BranchInstruction::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, s, $Instruction::toString(verbose));
 	$var($String, t, "null"_s);
 	if (verbose) {

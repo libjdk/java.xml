@@ -130,6 +130,7 @@ int32_t XMLParseException::getCharacterOffset() {
 }
 
 $String* XMLParseException::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, str, $new($StringBuffer));
 	if (this->fPublicId != nullptr) {
 		str->append(this->fPublicId);

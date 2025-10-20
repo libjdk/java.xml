@@ -181,6 +181,7 @@ $Stylesheet* SymbolTable::lookupStylesheet($QName* name) {
 }
 
 $Template* SymbolTable::addTemplate($Template* template$) {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, name, $nc(template$)->getName());
 	if (this->_templates == nullptr) {
 		$set(this, _templates, $new($HashMap));
@@ -196,6 +197,7 @@ $Template* SymbolTable::lookupTemplate($QName* name) {
 }
 
 $Variable* SymbolTable::addVariable($Variable* variable) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_variables == nullptr) {
 		$set(this, _variables, $new($HashMap));
 	}
@@ -204,6 +206,7 @@ $Variable* SymbolTable::addVariable($Variable* variable) {
 }
 
 $Param* SymbolTable::addParam($Param* parameter) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_variables == nullptr) {
 		$set(this, _variables, $new($HashMap));
 	}
@@ -212,6 +215,7 @@ $Param* SymbolTable::addParam($Param* parameter) {
 }
 
 $Variable* SymbolTable::lookupVariable($QName* qname) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_variables == nullptr) {
 		return nullptr;
 	}
@@ -221,6 +225,7 @@ $Variable* SymbolTable::lookupVariable($QName* qname) {
 }
 
 $Param* SymbolTable::lookupParam($QName* qname) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_variables == nullptr) {
 		return nullptr;
 	}
@@ -238,6 +243,7 @@ $SyntaxTreeNode* SymbolTable::lookupName($QName* qname) {
 }
 
 $AttributeSet* SymbolTable::addAttributeSet($AttributeSet* atts) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_attributeSets == nullptr) {
 		$set(this, _attributeSets, $new($HashMap));
 	}
@@ -264,6 +270,7 @@ $List* SymbolTable::lookupPrimop($String* name) {
 }
 
 $String* SymbolTable::generateNamespacePrefix() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, "ns"_s);
 	return ($concat(var$0, $$str((this->_nsCounter++))));
 }
@@ -311,6 +318,7 @@ void SymbolTable::excludeURI($String* uri) {
 }
 
 void SymbolTable::excludeNamespaces($String* prefixes) {
+	$useLocalCurrentObjectStackCache();
 	if (prefixes != nullptr) {
 		$var($StringTokenizer, tokens, $new($StringTokenizer, prefixes));
 		while (tokens->hasMoreTokens()) {
@@ -338,6 +346,7 @@ bool SymbolTable::isExcludedNamespace($String* uri) {
 }
 
 void SymbolTable::unExcludeNamespaces($String* prefixes) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_excludedURI == nullptr) {
 		return;
 	}

@@ -137,6 +137,7 @@ int32_t VariableStack::getStackFrame() {
 }
 
 int32_t VariableStack::link(int32_t size) {
+	$useLocalCurrentObjectStackCache();
 	this->_currentFrameBottom = this->_frameTop;
 	this->_frameTop += size;
 	if (this->_frameTop >= $nc(this->_stackFrames)->length) {
@@ -172,6 +173,7 @@ void VariableStack::setLocalVariable(int32_t index, $XObject* val, int32_t stack
 }
 
 $XObject* VariableStack::getLocalVariable($XPathContext* xctxt, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	index += this->_currentFrameBottom;
 	$var($XObject, val, $nc(this->_stackFrames)->get(index));
 	if (nullptr == val) {
@@ -192,6 +194,7 @@ $XObject* VariableStack::getLocalVariable(int32_t index, int32_t frame) {
 }
 
 $XObject* VariableStack::getLocalVariable($XPathContext* xctxt, int32_t index, bool destructiveOK) {
+	$useLocalCurrentObjectStackCache();
 	index += this->_currentFrameBottom;
 	$var($XObject, val, $nc(this->_stackFrames)->get(index));
 	if (nullptr == val) {
@@ -219,6 +222,7 @@ void VariableStack::setGlobalVariable(int32_t index, $XObject* val) {
 }
 
 $XObject* VariableStack::getGlobalVariable($XPathContext* xctxt, int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, val, $nc(this->_stackFrames)->get(index));
 	if ($nc(val)->getType() == $XObject::CLASS_UNRESOLVEDVARIABLE) {
 		return ($nc(this->_stackFrames)->set(index, $(val->execute(xctxt))));
@@ -227,6 +231,7 @@ $XObject* VariableStack::getGlobalVariable($XPathContext* xctxt, int32_t index) 
 }
 
 $XObject* VariableStack::getGlobalVariable($XPathContext* xctxt, int32_t index, bool destructiveOK) {
+	$useLocalCurrentObjectStackCache();
 	$var($XObject, val, $nc(this->_stackFrames)->get(index));
 	if ($nc(val)->getType() == $XObject::CLASS_UNRESOLVEDVARIABLE) {
 		return ($nc(this->_stackFrames)->set(index, $(val->execute(xctxt))));
@@ -235,6 +240,7 @@ $XObject* VariableStack::getGlobalVariable($XPathContext* xctxt, int32_t index, 
 }
 
 $XObject* VariableStack::getVariableOrParam($XPathContext* xctxt, $QName* qname) {
+	$useLocalCurrentObjectStackCache();
 	$init($XPATHErrorResources);
 	$throwNew($TransformerException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_VAR_NOT_RESOLVABLE, $$new($ObjectArray, {$($of($nc(qname)->toString()))}))));
 	$shouldNotReachHere();

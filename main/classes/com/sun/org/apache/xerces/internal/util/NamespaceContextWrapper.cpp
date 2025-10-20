@@ -78,6 +78,7 @@ $String* NamespaceContextWrapper::getPrefix($String* namespaceURI) {
 }
 
 $Iterator* NamespaceContextWrapper::getPrefixes($String* namespaceURI) {
+	$useLocalCurrentObjectStackCache();
 	if (namespaceURI == nullptr) {
 		$throwNew($IllegalArgumentException, "URI can\'t be null."_s);
 	} else {

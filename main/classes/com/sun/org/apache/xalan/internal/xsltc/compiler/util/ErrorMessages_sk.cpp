@@ -149,6 +149,7 @@ void ErrorMessages_sk::init$() {
 }
 
 $ObjectArray2* ErrorMessages_sk::getContents() {
+	$useLocalCurrentObjectStackCache();
 			$init($ErrorMsg);
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {

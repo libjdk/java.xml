@@ -126,6 +126,7 @@ void XPathFactoryImpl::init$() {
 }
 
 bool XPathFactoryImpl::isObjectModelSupported($String* objectModel) {
+	$useLocalCurrentObjectStackCache();
 	if (objectModel == nullptr) {
 		$init($XPATHErrorResources);
 		$var($String, fmsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_OBJECT_MODEL_NULL, $$new($ObjectArray, {$($of($of(this)->getClass()->getName()))})));
@@ -148,6 +149,7 @@ $XPath* XPathFactoryImpl::newXPath() {
 }
 
 void XPathFactoryImpl::setFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$init($XPATHErrorResources);
 		$var($String, fmsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_FEATURE_NAME_NULL, $$new($ObjectArray, {
@@ -195,6 +197,7 @@ void XPathFactoryImpl::setFeature($String* name, bool value) {
 }
 
 bool XPathFactoryImpl::getFeature($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$init($XPATHErrorResources);
 		$var($String, fmsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_GETTING_NULL_FEATURE, $$new($ObjectArray, {$of(XPathFactoryImpl::CLASS_NAME)})));
@@ -217,6 +220,7 @@ bool XPathFactoryImpl::getFeature($String* name) {
 }
 
 void XPathFactoryImpl::setXPathFunctionResolver($XPathFunctionResolver* resolver) {
+	$useLocalCurrentObjectStackCache();
 	if (resolver == nullptr) {
 		$init($XPATHErrorResources);
 		$var($String, fmsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NULL_XPATH_FUNCTION_RESOLVER, $$new($ObjectArray, {$of(XPathFactoryImpl::CLASS_NAME)})));
@@ -226,6 +230,7 @@ void XPathFactoryImpl::setXPathFunctionResolver($XPathFunctionResolver* resolver
 }
 
 void XPathFactoryImpl::setXPathVariableResolver($XPathVariableResolver* resolver) {
+	$useLocalCurrentObjectStackCache();
 	if (resolver == nullptr) {
 		$init($XPATHErrorResources);
 		$var($String, fmsg, $XSLMessages::createXPATHMessage($XPATHErrorResources::ER_NULL_XPATH_VARIABLE_RESOLVER, $$new($ObjectArray, {$of(XPathFactoryImpl::CLASS_NAME)})));

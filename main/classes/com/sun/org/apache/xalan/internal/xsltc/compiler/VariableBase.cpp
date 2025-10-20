@@ -178,6 +178,7 @@ void VariableBase::addReference($VariableRefBase* vref) {
 }
 
 void VariableBase::copyReferences(VariableBase* var) {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->_refs)->size();
 	for (int32_t i = 0; i < size; ++i) {
 		$nc(var)->addReference($cast($VariableRefBase, $($nc(this->_refs)->get(i))));
@@ -185,6 +186,7 @@ void VariableBase::copyReferences(VariableBase* var) {
 }
 
 void VariableBase::mapRegister($MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_local == nullptr) {
 		$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 		$var($String, name, getEscapedName());
@@ -194,6 +196,7 @@ void VariableBase::mapRegister($MethodGenerator* methodGen) {
 }
 
 void VariableBase::unmapRegister($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_local != nullptr) {
 		if ($instanceOf($ResultTreeType, this->_type)) {
 			$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
@@ -242,6 +245,7 @@ $String* VariableBase::toString() {
 }
 
 void VariableBase::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
 	$init($System);
 	$nc($System::out)->println($$str({"Variable "_s, this->_name}));
@@ -274,6 +278,7 @@ bool VariableBase::isLocal() {
 }
 
 void VariableBase::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	if ($nc(name)->length() > 0) {
 		if (!$XML11Char::isXML11ValidQName(name)) {
@@ -308,6 +313,7 @@ void VariableBase::parseContents($Parser* parser) {
 }
 
 void VariableBase::translateValue($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_select != nullptr) {
 		$nc(this->_select)->translate(classGen, methodGen);
 		if ($instanceOf($NodeSetType, $($nc(this->_select)->getType()))) {

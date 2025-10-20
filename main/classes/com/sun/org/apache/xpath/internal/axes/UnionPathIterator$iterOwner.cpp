@@ -94,6 +94,7 @@ $Expression* UnionPathIterator$iterOwner::getExpression() {
 }
 
 void UnionPathIterator$iterOwner::setExpression($Expression* exp$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Expression, exp, exp$renamed);
 	if (!($instanceOf($LocPathIterator, exp))) {
 		$var($WalkingIterator, wi, $new($WalkingIterator, $(this->this$0->getPrefixResolver())));

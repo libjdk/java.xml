@@ -118,6 +118,7 @@ void ConstantValue::setConstantValueIndex(int32_t constantValueIndex) {
 }
 
 $String* ConstantValue::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, $nc($($Attribute::getConstantPool()))->getConstant(this->constantValueIndex));
 	$var($String, buf, nullptr);
 	int32_t i = 0;

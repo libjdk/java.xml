@@ -110,6 +110,7 @@ bool CurrentNodeListIterator::isReverse() {
 }
 
 $DTMAxisIterator* CurrentNodeListIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var(CurrentNodeListIterator, clone, $cast(CurrentNodeListIterator, $DTMAxisIteratorBase::clone()));
 		$set($nc(clone), _nodes, $cast($IntegerArray, $nc(this->_nodes)->clone()));

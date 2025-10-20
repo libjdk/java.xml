@@ -173,6 +173,7 @@ $DTM* XSLTCDTMManager::getDTM($Source* source, bool unique, $DTMWSFilter* whiteS
 }
 
 $DTM* XSLTCDTMManager::getDTM($Source* source, bool unique, $DTMWSFilter* whiteSpaceFilter, bool incremental, bool doIndexing, bool hasUserReader, int32_t size, bool buildIdIndex, bool newNameTable) {
+	$useLocalCurrentObjectStackCache();
 	int32_t dtmPos = getFirstFreeDTMID();
 	int32_t documentID = $sl(dtmPos, $DTMManager::IDENT_DTM_NODE_BITS);
 	if ((nullptr != source) && $instanceOf($StAXSource, source)) {

@@ -90,6 +90,7 @@ $Object* allocate$ConstantHTML($Class* clazz) {
 }
 
 void ConstantHTML::init$($String* dir, $String* class_name, $String* class_package, $MethodArray* methods, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, className, class_name);
 	$set(this, classPackage, class_package);
 	$set(this, constantPool, constant_pool);
@@ -119,6 +120,7 @@ $String* ConstantHTML::referenceConstant(int32_t index) {
 }
 
 void ConstantHTML::writeConstant(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	int8_t tag = $nc($nc(this->constants)->get(index))->getTag();
 	int32_t class_index = 0;
 	int32_t name_index = 0;
@@ -244,6 +246,7 @@ void ConstantHTML::writeConstant(int32_t index) {
 }
 
 int32_t ConstantHTML::getMethodNumber($String* str) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(this->methods)->length; ++i) {
 		$var($String, var$0, $($nc($nc(this->methods)->get(i))->getName()));
 		$var($String, cmp, $concat(var$0, $($nc($nc(this->methods)->get(i))->getSignature())));

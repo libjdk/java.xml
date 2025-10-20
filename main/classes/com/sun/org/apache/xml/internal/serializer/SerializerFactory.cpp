@@ -79,6 +79,7 @@ void SerializerFactory::init$() {
 
 $Serializer* SerializerFactory::getSerializer($Properties* format) {
 	$load(SerializerFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($Serializer, ser, nullptr);
 	try {

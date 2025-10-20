@@ -146,6 +146,7 @@ void ToXMLStream::init$($ErrorListener* l) {
 }
 
 void ToXMLStream::CopyFrom(ToXMLStream* xmlListener) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, m_writer, $nc(xmlListener)->m_writer);
 	$var($String, encoding, xmlListener->getEncoding());
 	setEncoding(encoding);
@@ -172,6 +173,7 @@ void ToXMLStream::CopyFrom(ToXMLStream* xmlListener) {
 }
 
 void ToXMLStream::startDocumentInternal() {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_needToCallStartDocument) {
 		$ToStream::startDocumentInternal();
 		this->m_needToCallStartDocument = false;
@@ -241,6 +243,7 @@ void ToXMLStream::endPreserving() {
 }
 
 void ToXMLStream::processingInstruction($String* target, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	if (isInEntityRef()) {
 		return;
 	}
@@ -303,6 +306,7 @@ void ToXMLStream::processingInstruction($String* target, $String* data) {
 }
 
 void ToXMLStream::entityReference($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_elemContext)->m_startTagOpen) {
 		closeStartTag();
 		$nc(this->m_elemContext)->m_startTagOpen = false;
@@ -325,6 +329,7 @@ void ToXMLStream::entityReference($String* name) {
 }
 
 void ToXMLStream::addUniqueAttribute($String* name, $String* value, int32_t flags) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_elemContext)->m_startTagOpen) {
 		try {
 			$var($String, patchedName, patchName(name));
@@ -350,6 +355,7 @@ void ToXMLStream::addUniqueAttribute($String* name, $String* value, int32_t flag
 }
 
 void ToXMLStream::addAttribute($String* uri, $String* localName, $String* rawName$renamed, $String* type, $String* value, bool xslAttribute) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, rawName, rawName$renamed);
 	if ($nc(this->m_elemContext)->m_startTagOpen) {
 		bool was_added = addAttributeAlways(uri, localName, rawName, type, value, xslAttribute);
@@ -421,6 +427,7 @@ void ToXMLStream::resetToXMLStream() {
 }
 
 $String* ToXMLStream::getXMLVersion() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, xmlVersion, getVersion());
 	$init($SerializerConstants);
 	if (xmlVersion == nullptr || $nc(xmlVersion)->equals($SerializerConstants::XMLVERSION10)) {

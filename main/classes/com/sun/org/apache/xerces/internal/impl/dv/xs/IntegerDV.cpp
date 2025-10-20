@@ -56,6 +56,7 @@ void IntegerDV::init$() {
 }
 
 $Object* IntegerDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of($new($DecimalDV$XDecimal, content, true));
 	} catch ($NumberFormatException&) {

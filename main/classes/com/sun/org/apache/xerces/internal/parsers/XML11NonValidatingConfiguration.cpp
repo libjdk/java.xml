@@ -402,6 +402,7 @@ void XML11NonValidatingConfiguration::init$($SymbolTable* symbolTable, $XMLGramm
 }
 
 void XML11NonValidatingConfiguration::init$($SymbolTable* symbolTable$renamed, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, symbolTable, symbolTable$renamed);
 	$ParserConfigurationSettings::init$(parentSettings);
 	$set(this, fXML11Components, nullptr);
@@ -552,6 +553,7 @@ void XML11NonValidatingConfiguration::cleanup() {
 }
 
 void XML11NonValidatingConfiguration::parse($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -588,6 +590,7 @@ void XML11NonValidatingConfiguration::parse($XMLInputSource* source) {
 }
 
 bool XML11NonValidatingConfiguration::parse(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			$nc(this->fValidationManager)->reset();
@@ -646,6 +649,7 @@ $FeatureState* XML11NonValidatingConfiguration::getFeatureState($String* feature
 }
 
 void XML11NonValidatingConfiguration::setFeature($String* featureId, bool state) {
+	$useLocalCurrentObjectStackCache();
 	this->fConfigUpdated = true;
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
@@ -682,6 +686,7 @@ void XML11NonValidatingConfiguration::setFeature($String* featureId, bool state)
 }
 
 void XML11NonValidatingConfiguration::setProperty($String* propertyId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	this->fConfigUpdated = true;
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
@@ -722,6 +727,7 @@ $Locale* XML11NonValidatingConfiguration::getLocale() {
 }
 
 void XML11NonValidatingConfiguration::reset() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -734,6 +740,7 @@ void XML11NonValidatingConfiguration::reset() {
 }
 
 void XML11NonValidatingConfiguration::resetCommon() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fCommonComponents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -746,6 +753,7 @@ void XML11NonValidatingConfiguration::resetCommon() {
 }
 
 void XML11NonValidatingConfiguration::resetXML11() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fXML11Components)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -938,6 +946,7 @@ void XML11NonValidatingConfiguration::addXML11Component($XMLComponent* component
 }
 
 void XML11NonValidatingConfiguration::addRecognizedParamsAndSetDefaults($XMLComponent* component) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, recognizedFeatures, $nc(component)->getRecognizedFeatures());
 	addRecognizedFeatures(recognizedFeatures);
 	$var($StringArray, recognizedProperties, component->getRecognizedProperties());

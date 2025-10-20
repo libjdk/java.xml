@@ -107,6 +107,7 @@ void ConstantMethodHandle::setReferenceIndex(int32_t reference_index) {
 }
 
 $String* ConstantMethodHandle::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Constant::toString()), "(referenceKind = "_s, $$str(this->referenceKind), ", referenceIndex = "_s, $$str(this->referenceIndex), ")"_s});
 }
 

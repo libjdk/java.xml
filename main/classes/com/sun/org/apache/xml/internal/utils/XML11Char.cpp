@@ -246,6 +246,7 @@ bool XML11Char::isXML11ValidNmtoken($String* nmtoken) {
 
 bool XML11Char::isXML11ValidQName($String* str) {
 	$init(XML11Char);
+	$useLocalCurrentObjectStackCache();
 	int32_t colon = $nc(str)->indexOf((int32_t)u':');
 	if (colon == 0 || colon == str->length() - 1) {
 		return false;

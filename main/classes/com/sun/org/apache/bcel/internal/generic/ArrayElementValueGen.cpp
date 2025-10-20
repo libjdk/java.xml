@@ -85,6 +85,7 @@ void ArrayElementValueGen::init$($ConstantPoolGen* cp) {
 }
 
 void ArrayElementValueGen::init$(int32_t type, $ElementValueArray* datums, $ConstantPoolGen* cpool) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValueGen::init$(type, cpool);
 	if (type != $ElementValueGen::ARRAY) {
 		$throwNew($IllegalArgumentException, $$str({"Only element values of type array can be built with this ctor - type specified: "_s, $$str(type)}));
@@ -104,6 +105,7 @@ void ArrayElementValueGen::init$(int32_t type, $ElementValueArray* datums, $Cons
 }
 
 $ElementValue* ArrayElementValueGen::getElementValue() {
+	$useLocalCurrentObjectStackCache();
 	$var($ElementValueArray, immutableData, $new($ElementValueArray, $nc(this->evalues)->size()));
 	int32_t i = 0;
 	{
@@ -121,6 +123,7 @@ $ElementValue* ArrayElementValueGen::getElementValue() {
 }
 
 void ArrayElementValueGen::init$($ArrayElementValue* value, $ConstantPoolGen* cpool, bool copyPoolEntries) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValueGen::init$($ElementValueGen::ARRAY, cpool);
 	$set(this, evalues, $new($ArrayList));
 	$var($ElementValueArray, in, $nc(value)->getElementValuesArray());
@@ -138,6 +141,7 @@ void ArrayElementValueGen::init$($ArrayElementValue* value, $ConstantPoolGen* cp
 }
 
 void ArrayElementValueGen::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	$nc(dos)->writeByte($ElementValueGen::getElementValueType());
 	dos->writeShort($nc(this->evalues)->size());
 	{
@@ -152,6 +156,7 @@ void ArrayElementValueGen::dump($DataOutputStream* dos) {
 }
 
 $String* ArrayElementValueGen::stringifyValue() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder));
 	sb->append("["_s);
 	$var($String, comma, ""_s);

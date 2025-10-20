@@ -74,6 +74,7 @@ void FuncLast::postCompileStep($Compiler* compiler) {
 }
 
 int32_t FuncLast::getCountOfContextNodeList($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($SubContextList, iter, this->m_isTopLevel ? ($SubContextList*)nullptr : $nc(xctxt)->getSubContextList());
 	if (nullptr != iter) {
 		return iter->getLastPos(xctxt);

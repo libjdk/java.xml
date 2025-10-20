@@ -128,6 +128,7 @@ void BIPUSH::dump($DataOutputStream* out) {
 }
 
 $String* BIPUSH::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	return $str({$($Instruction::toString(verbose)), " "_s, $$str(this->b)});
 }
 

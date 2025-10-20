@@ -195,6 +195,7 @@ void DOMErrorHandlerWrapper::error($String* domain, $String* key, $XMLParseExcep
 }
 
 void DOMErrorHandlerWrapper::fatalError($String* domain, $String* key, $XMLParseException* exception) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fDOMError)->fSeverity = $DOMError::SEVERITY_FATAL_ERROR;
 	$set($nc(this->fDOMError), fException, exception);
 	$nc(this->fErrorCode)->setValues(domain, key);
@@ -220,6 +221,7 @@ bool DOMErrorHandlerWrapper::handleError($DOMError* error) {
 }
 
 void DOMErrorHandlerWrapper::printError($DOMError* error) {
+	$useLocalCurrentObjectStackCache();
 	int32_t severity = $nc(error)->getSeverity();
 	$nc(this->fOut)->print("["_s);
 	if (severity == $DOMError::SEVERITY_WARNING) {

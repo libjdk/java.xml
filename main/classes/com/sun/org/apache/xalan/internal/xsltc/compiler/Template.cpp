@@ -237,6 +237,7 @@ int32_t Template::compareTo(Object$* template$) {
 }
 
 void Template::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	$Util::println(u'\n');
 	this->indent(indent);
 	if (this->_name != nullptr) {
@@ -277,6 +278,7 @@ $Stylesheet* Template::getStylesheet() {
 }
 
 void Template::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	$var($String, mode, getAttribute("mode"_s));
 	$var($String, match, getAttribute("match"_s));
@@ -330,6 +332,7 @@ void Template::parseContents($Parser* parser) {
 }
 
 void Template::parseSimplified($Stylesheet* stylesheet, $Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _stylesheet, stylesheet);
 	setParent(stylesheet);
 	$set(this, _name, nullptr);
@@ -357,6 +360,7 @@ $Type* Template::typeCheck($SymbolTable* stable) {
 }
 
 void Template::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_disabled) {

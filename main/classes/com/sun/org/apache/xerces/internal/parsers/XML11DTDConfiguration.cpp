@@ -448,6 +448,7 @@ void XML11DTDConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* gr
 }
 
 void XML11DTDConfiguration::init$($SymbolTable* symbolTable$renamed, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$var($SymbolTable, symbolTable, symbolTable$renamed);
 	$ParserConfigurationSettings::init$(parentSettings);
 	$set(this, fXML11Components, nullptr);
@@ -611,6 +612,7 @@ void XML11DTDConfiguration::cleanup() {
 }
 
 void XML11DTDConfiguration::parse($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -647,6 +649,7 @@ void XML11DTDConfiguration::parse($XMLInputSource* source) {
 }
 
 bool XML11DTDConfiguration::parse(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			$nc(this->fValidationManager)->reset();
@@ -705,6 +708,7 @@ $FeatureState* XML11DTDConfiguration::getFeatureState($String* featureId) {
 }
 
 void XML11DTDConfiguration::setFeature($String* featureId, bool state) {
+	$useLocalCurrentObjectStackCache();
 	this->fConfigUpdated = true;
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
@@ -741,6 +745,7 @@ void XML11DTDConfiguration::setFeature($String* featureId, bool state) {
 }
 
 void XML11DTDConfiguration::setProperty($String* propertyId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	this->fConfigUpdated = true;
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
@@ -781,6 +786,7 @@ $Locale* XML11DTDConfiguration::getLocale() {
 }
 
 void XML11DTDConfiguration::reset() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -793,6 +799,7 @@ void XML11DTDConfiguration::reset() {
 }
 
 void XML11DTDConfiguration::resetCommon() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fCommonComponents)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -805,6 +812,7 @@ void XML11DTDConfiguration::resetCommon() {
 }
 
 void XML11DTDConfiguration::resetXML11() {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fXML11Components)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -1026,6 +1034,7 @@ void XML11DTDConfiguration::addXML11Component($XMLComponent* component) {
 }
 
 void XML11DTDConfiguration::addRecognizedParamsAndSetDefaults($XMLComponent* component) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, recognizedFeatures, $nc(component)->getRecognizedFeatures());
 	addRecognizedFeatures(recognizedFeatures);
 	$var($StringArray, recognizedProperties, component->getRecognizedProperties());

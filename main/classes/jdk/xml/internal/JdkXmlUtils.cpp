@@ -177,6 +177,7 @@ void JdkXmlUtils::init$() {
 
 int32_t JdkXmlUtils::getValue(Object$* value, int32_t defValue) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return defValue;
 	}
@@ -191,6 +192,7 @@ int32_t JdkXmlUtils::getValue(Object$* value, int32_t defValue) {
 
 void JdkXmlUtils::setXMLReaderPropertyIfSupport($XMLReader* reader, $String* property, Object$* value, bool warn) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(reader)->setProperty(property, value);
 	} catch ($SAXNotRecognizedException&) {
@@ -208,6 +210,7 @@ void JdkXmlUtils::setXMLReaderPropertyIfSupport($XMLReader* reader, $String* pro
 
 $String* JdkXmlUtils::getCatalogFeature($CatalogFeatures* features, $String* name) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($CatalogFeatures$FeatureArray, arr$, $CatalogFeatures$Feature::values());
 		int32_t len$ = $nc(arr$)->length;
@@ -248,6 +251,7 @@ $CatalogFeatures* JdkXmlUtils::getCatalogFeatures($String* defer, $String* file,
 
 void JdkXmlUtils::catalogFeaturesConfig2Config($XMLComponentManager* config1, $ParserConfigurationSettings* config2) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	bool supportCatalog = true;
 	$init($XMLConstants);
 	bool useCatalog = $nc(config1)->getFeature($XMLConstants::USE_CATALOG);
@@ -279,6 +283,7 @@ void JdkXmlUtils::catalogFeaturesConfig2Config($XMLComponentManager* config1, $P
 
 void JdkXmlUtils::catalogFeaturesConfig2Reader($XMLComponentManager* config, $XMLReader* reader) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	bool supportCatalog = true;
 	$init($XMLConstants);
 	bool useCatalog = $nc(config)->getFeature($XMLConstants::USE_CATALOG);
@@ -315,6 +320,7 @@ void JdkXmlUtils::catalogFeaturesConfig2Reader($XMLComponentManager* config, $XM
 
 $XMLReader* JdkXmlUtils::getXMLReader(bool overrideDefaultParser, bool secureProcessing) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	$var($SAXParserFactory, saxFactory, nullptr);
 	$var($XMLReader, reader, nullptr);
 	$var($String, spSAXDriver, $SecuritySupport::getSystemProperty(JdkXmlUtils::SAX_DRIVER));
@@ -355,6 +361,7 @@ $XMLReader* JdkXmlUtils::getXMLReader(bool overrideDefaultParser, bool securePro
 
 $Document* JdkXmlUtils::getDOMDocument() {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DocumentBuilderFactory, dbf, JdkXmlUtils::getDOMFactory(false));
 		return $nc($($nc(dbf)->newDocumentBuilder()))->newDocument();
@@ -366,6 +373,7 @@ $Document* JdkXmlUtils::getDOMDocument() {
 
 $DocumentBuilderFactory* JdkXmlUtils::getDOMFactory(bool overrideDefaultParser) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	bool override$ = overrideDefaultParser;
 	$var($String, spDOMFactory, $SecuritySupport::getJAXPSystemProperty(JdkXmlUtils::DOM_FACTORY_ID));
 	if (spDOMFactory != nullptr && $System::getSecurityManager() == nullptr) {
@@ -379,6 +387,7 @@ $DocumentBuilderFactory* JdkXmlUtils::getDOMFactory(bool overrideDefaultParser) 
 
 $SAXParserFactory* JdkXmlUtils::getSAXFactory(bool overrideDefaultParser) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	bool override$ = overrideDefaultParser;
 	$var($String, spSAXFactory, $SecuritySupport::getJAXPSystemProperty(JdkXmlUtils::SAX_FACTORY_ID));
 	if (spSAXFactory != nullptr && $System::getSecurityManager() == nullptr) {
@@ -411,6 +420,7 @@ char16_t JdkXmlUtils::getQuoteChar($String* s) {
 
 $XMLReader* JdkXmlUtils::getXMLReaderWSAXFactory(bool overrideDefaultParser) {
 	$init(JdkXmlUtils);
+	$useLocalCurrentObjectStackCache();
 	$var($SAXParserFactory, saxFactory, getSAXFactory(overrideDefaultParser));
 	try {
 		return $nc($($nc(saxFactory)->newSAXParser()))->getXMLReader();

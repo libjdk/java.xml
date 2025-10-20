@@ -124,6 +124,7 @@ void Encodings$EncodingInfos::init$() {
 }
 
 $InputStream* Encodings$EncodingInfos::openEncodingsFileStream() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, urlString, nullptr);
 	$var($InputStream, is, nullptr);
 	try {
@@ -142,6 +143,7 @@ $InputStream* Encodings$EncodingInfos::openEncodingsFileStream() {
 }
 
 $Properties* Encodings$EncodingInfos::loadProperties() {
+	$useLocalCurrentObjectStackCache();
 	$var($Properties, props, $new($Properties));
 	{
 		$var($InputStream, is, openEncodingsFileStream());
@@ -181,6 +183,7 @@ $Properties* Encodings$EncodingInfos::loadProperties() {
 }
 
 $StringArray* Encodings$EncodingInfos::parseMimeTypes($String* val) {
+	$useLocalCurrentObjectStackCache();
 	int32_t pos = $nc(val)->indexOf((int32_t)u' ');
 	if (pos < 0) {
 		return $new($StringArray, {val});
@@ -194,6 +197,7 @@ $StringArray* Encodings$EncodingInfos::parseMimeTypes($String* val) {
 }
 
 $String* Encodings$EncodingInfos::findCharsetNameFor($String* name) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc($($Charset::forName(name)))->name();
 	} catch ($Exception&) {
@@ -204,6 +208,7 @@ $String* Encodings$EncodingInfos::findCharsetNameFor($String* name) {
 }
 
 $String* Encodings$EncodingInfos::findCharsetNameFor($String* javaName, $StringArray* mimes) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, cs, findCharsetNameFor(javaName));
 	if (cs != nullptr) {
 		return javaName;
@@ -226,6 +231,7 @@ $String* Encodings$EncodingInfos::findCharsetNameFor($String* javaName, $StringA
 }
 
 void Encodings$EncodingInfos::loadEncodingInfo() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Properties, props, loadProperties());
 		$var($Enumeration, keys, $nc(props)->keys());

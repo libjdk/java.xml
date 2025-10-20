@@ -133,6 +133,7 @@ $XSNamespaceItem* XSAnnotationImpl::getNamespaceItem() {
 
 void XSAnnotationImpl::writeToSAX($ContentHandler* handler) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$var($SAXParser, parser, $nc(this->fGrammar)->getSAXParser());
 		$var($StringReader, aReader, $new($StringReader, this->fData));
 		$var($InputSource, aSource, $new($InputSource, static_cast<$Reader*>(aReader)));
@@ -150,6 +151,7 @@ void XSAnnotationImpl::writeToSAX($ContentHandler* handler) {
 
 void XSAnnotationImpl::writeToDOM($Node* target, int16_t type) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$var($Document, futureOwner, (type == $XSAnnotation::W3C_DOM_ELEMENT) ? $nc(target)->getOwnerDocument() : $cast($Document, target));
 		$var($DOMParser, parser, $nc(this->fGrammar)->getDOMParser());
 		$var($StringReader, aReader, $new($StringReader, this->fData));

@@ -133,6 +133,7 @@ void ForEach::init$() {
 }
 
 void ForEach::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
 	$Util::println("ForEach"_s);
 	this->indent(indent + $SyntaxTreeNode::IndentIncrement);
@@ -166,6 +167,7 @@ $Type* ForEach::typeCheck($SymbolTable* stable) {
 }
 
 void ForEach::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(il)->append($(methodGen->loadCurrentNode()));
@@ -221,6 +223,7 @@ void ForEach::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) 
 }
 
 void ForEach::initializeVariables($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = elementCount();
 	for (int32_t i = 0; i < n; ++i) {
 		$var($Object, child, $nc($(getContents()))->get(i));

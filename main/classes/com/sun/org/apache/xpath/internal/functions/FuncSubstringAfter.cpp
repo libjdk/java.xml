@@ -66,6 +66,7 @@ void FuncSubstringAfter::init$() {
 }
 
 $XObject* FuncSubstringAfter::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLString, s1, $nc($($nc(this->m_arg0)->execute(xctxt)))->xstr());
 	$var($XMLString, s2, $nc($($nc(this->m_arg1)->execute(xctxt)))->xstr());
 	int32_t index = $nc(s1)->indexOf(s2);

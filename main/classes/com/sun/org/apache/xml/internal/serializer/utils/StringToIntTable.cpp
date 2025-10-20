@@ -82,6 +82,7 @@ int32_t StringToIntTable::getLength() {
 }
 
 void StringToIntTable::put($String* key, int32_t value) {
+	$useLocalCurrentObjectStackCache();
 	if ((this->m_firstFree + 1) >= this->m_mapSize) {
 		this->m_mapSize += this->m_blocksize;
 		$var($StringArray, newMap, $new($StringArray, this->m_mapSize));

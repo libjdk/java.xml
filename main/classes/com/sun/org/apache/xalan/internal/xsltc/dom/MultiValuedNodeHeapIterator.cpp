@@ -101,6 +101,7 @@ void MultiValuedNodeHeapIterator::init$() {
 }
 
 $DTMAxisIterator* MultiValuedNodeHeapIterator::cloneIterator() {
+	$useLocalCurrentObjectStackCache();
 	this->_isRestartable = false;
 	$var($MultiValuedNodeHeapIterator$HeapNodeArray, heapCopy, $new($MultiValuedNodeHeapIterator$HeapNodeArray, $nc(this->_heap)->length));
 	try {
@@ -131,6 +132,7 @@ void MultiValuedNodeHeapIterator::addHeapNode($MultiValuedNodeHeapIterator$HeapN
 }
 
 int32_t MultiValuedNodeHeapIterator::next() {
+	$useLocalCurrentObjectStackCache();
 	while (this->_heapSize > 0) {
 		int32_t smallest = $nc($nc(this->_heap)->get(0))->_node;
 		if (smallest == $DTMAxisIterator::END) {
@@ -181,6 +183,7 @@ void MultiValuedNodeHeapIterator::init() {
 }
 
 void MultiValuedNodeHeapIterator::heapify(int32_t i) {
+	$useLocalCurrentObjectStackCache();
 	{
 		int32_t r = 0;
 		int32_t l = 0;

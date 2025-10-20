@@ -224,6 +224,7 @@ void AttributeImpl::init$($QName* qname, $String* value, $String* nonNormalizedv
 }
 
 $String* AttributeImpl::toString() {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = $nc(this->fQName)->getPrefix() != nullptr;
 	if (var$0 && $nc($($nc(this->fQName)->getPrefix()))->length() > 0) {
 		$var($String, var$4, $$str({$($nc(this->fQName)->getPrefix()), ":"_s}));

@@ -277,6 +277,7 @@ void XSDAbstractTraverser::reset($SymbolTable* symbolTable, bool validateAnnotat
 }
 
 $XSAnnotationImpl* XSDAbstractTraverser::traverseAnnotationDecl($Element* annotationDecl, $ObjectArray* parentAttrs, bool isGlobal, $XSDocumentInfo* schemaDoc) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(annotationDecl, isGlobal, schemaDoc));
 	$nc(this->fAttrChecker)->returnAttrArray(attrValues, schemaDoc);
 	$var($String, contents, $DOMUtil::getAnnotation(annotationDecl));
@@ -351,6 +352,7 @@ $XSAnnotationImpl* XSDAbstractTraverser::traverseAnnotationDecl($Element* annota
 }
 
 $XSAnnotationImpl* XSDAbstractTraverser::traverseSyntheticAnnotation($Element* annotationParent, $String* initialContent, $ObjectArray* parentAttrs, bool isGlobal, $XSDocumentInfo* schemaDoc) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, contents, initialContent);
 	$var($SchemaGrammar, grammar, $nc(this->fSchemaHandler)->getGrammar($nc(schemaDoc)->fTargetNamespace));
 	$init($XSAttributeChecker);
@@ -402,6 +404,7 @@ $XSAnnotationImpl* XSDAbstractTraverser::traverseSyntheticAnnotation($Element* a
 }
 
 $XSDAbstractTraverser$FacetInfo* XSDAbstractTraverser::traverseFacets($Element* content$renamed, $XSTypeDefinition* typeDef, $XSSimpleType* baseValidator, $XSDocumentInfo* schemaDoc) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, content, content$renamed);
 	int16_t facetsPresent = (int16_t)0;
 	int16_t facetsFixed = (int16_t)0;
@@ -757,6 +760,7 @@ $String* XSDAbstractTraverser::getSchemaTypeName($XSTypeDefinition* typeDefn) {
 }
 
 void XSDAbstractTraverser::checkEnumerationAndMaxLengthInconsistency($XSSimpleType* baseValidator, $List* enumData, $Element* contextNode, $String* typeName) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaSymbols);
 	bool var$0 = $nc($SchemaSymbols::URI_SCHEMAFORSCHEMA)->equals($($nc(baseValidator)->getNamespace()));
 	if (var$0 && $nc($SchemaSymbols::ATTVAL_HEXBINARY)->equals($($nc(baseValidator)->getName()))) {
@@ -800,6 +804,7 @@ void XSDAbstractTraverser::checkEnumerationAndMaxLengthInconsistency($XSSimpleTy
 }
 
 void XSDAbstractTraverser::checkEnumerationAndMinLengthInconsistency($XSSimpleType* baseValidator, $List* enumData, $Element* contextNode, $String* typeName) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaSymbols);
 	bool var$0 = $nc($SchemaSymbols::URI_SCHEMAFORSCHEMA)->equals($($nc(baseValidator)->getNamespace()));
 	if (var$0 && $nc($SchemaSymbols::ATTVAL_HEXBINARY)->equals($($nc(baseValidator)->getName()))) {
@@ -843,6 +848,7 @@ void XSDAbstractTraverser::checkEnumerationAndMinLengthInconsistency($XSSimpleTy
 }
 
 void XSDAbstractTraverser::checkEnumerationAndLengthInconsistency($XSSimpleType* baseValidator, $List* enumData, $Element* contextNode, $String* typeName) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaSymbols);
 	bool var$0 = $nc($SchemaSymbols::URI_SCHEMAFORSCHEMA)->equals($($nc(baseValidator)->getNamespace()));
 	if (var$0 && $nc($SchemaSymbols::ATTVAL_HEXBINARY)->equals($($nc(baseValidator)->getName()))) {
@@ -886,6 +892,7 @@ void XSDAbstractTraverser::checkEnumerationAndLengthInconsistency($XSSimpleType*
 }
 
 bool XSDAbstractTraverser::containsQName($XSSimpleType* type) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(type)->getVariety() == $XSSimpleType::VARIETY_ATOMIC) {
 		int16_t primitive = type->getPrimitiveKind();
 		return (primitive == $XSSimpleType::PRIMITIVE_QNAME || primitive == $XSSimpleType::PRIMITIVE_NOTATION);
@@ -903,6 +910,7 @@ bool XSDAbstractTraverser::containsQName($XSSimpleType* type) {
 }
 
 $Element* XSDAbstractTraverser::traverseAttrsAndAttrGrps($Element* firstAttr, $XSAttributeGroupDecl* attrGrp, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar, $XSComplexTypeDecl* enclosingCT) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, child, nullptr);
 	$var($XSAttributeGroupDecl, tempAttrGrp, nullptr);
 	$var($XSAttributeUseImpl, tempAttrUse, nullptr);
@@ -1025,6 +1033,7 @@ void XSDAbstractTraverser::reportSchemaWarning($String* key, $ObjectArray* args,
 }
 
 void XSDAbstractTraverser::checkNotationType($String* refName, $XSTypeDefinition* typeDecl, $Element* elem) {
+	$useLocalCurrentObjectStackCache();
 	bool var$1 = $nc(typeDecl)->getTypeCategory() == $XSTypeDefinition::SIMPLE_TYPE;
 	bool var$0 = var$1 && $nc(($cast($XSSimpleType, typeDecl)))->getVariety() == $XSSimpleType::VARIETY_ATOMIC;
 	if (var$0 && ($cast($XSSimpleType, typeDecl))->getPrimitiveKind() == $XSSimpleType::PRIMITIVE_NOTATION) {
@@ -1039,6 +1048,7 @@ void XSDAbstractTraverser::checkNotationType($String* refName, $XSTypeDefinition
 }
 
 $XSParticleDecl* XSDAbstractTraverser::checkOccurrences($XSParticleDecl* particle, $String* particleName, $Element* parent, int32_t allContextFlags, int64_t defaultVals) {
+	$useLocalCurrentObjectStackCache();
 	int32_t min = $nc(particle)->fMinOccurs;
 	int32_t max = particle->fMaxOccurs;
 	$init($XSAttributeChecker);
@@ -1110,6 +1120,7 @@ $String* XSDAbstractTraverser::processAttValue($String* original) {
 
 $String* XSDAbstractTraverser::escapeAttValue($String* original, int32_t from) {
 	$init(XSDAbstractTraverser);
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	int32_t length = $nc(original)->length();
 	$var($StringBuilder, newVal, $new($StringBuilder, length));

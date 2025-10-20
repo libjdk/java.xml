@@ -148,6 +148,7 @@ int32_t Match::getNumberOfGroups() {
 }
 
 int32_t Match::getBeginning(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->beginpos == nullptr) {
 		$throwNew($IllegalStateException, "A result is not set."_s);
 	}
@@ -158,6 +159,7 @@ int32_t Match::getBeginning(int32_t index) {
 }
 
 int32_t Match::getEnd(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->endpos == nullptr) {
 		$throwNew($IllegalStateException, "A result is not set."_s);
 	}
@@ -168,6 +170,7 @@ int32_t Match::getEnd(int32_t index) {
 }
 
 $String* Match::getCapturedText(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (this->beginpos == nullptr) {
 		$throwNew($IllegalStateException, "match() has never been called."_s);
 	}

@@ -256,6 +256,7 @@ $XSWildcardDecl* XSDComplexTypeTraverser::fErrorWildcard = nullptr;
 
 $XSParticleDecl* XSDComplexTypeTraverser::getErrorContent() {
 	$init(XSDComplexTypeTraverser);
+	$useLocalCurrentObjectStackCache();
 	if (XSDComplexTypeTraverser::fErrorContent == nullptr) {
 		$var($XSParticleDecl, particle, $new($XSParticleDecl));
 		particle->fType = $XSParticleDecl::PARTICLE_WILDCARD;
@@ -305,6 +306,7 @@ void XSDComplexTypeTraverser::init$($XSDHandler* handler, $XSAttributeChecker* g
 }
 
 $XSComplexTypeDecl* XSDComplexTypeTraverser::traverseLocal($Element* complexTypeNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(complexTypeNode, false, schemaDoc));
 	$var($String, complexTypeName, genAnonTypeName(complexTypeNode));
 	contentBackup();
@@ -317,6 +319,7 @@ $XSComplexTypeDecl* XSDComplexTypeTraverser::traverseLocal($Element* complexType
 }
 
 $XSComplexTypeDecl* XSDComplexTypeTraverser::traverseGlobal($Element* complexTypeNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(complexTypeNode, true, schemaDoc));
 	$var($String, complexTypeName, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	contentBackup();
@@ -353,6 +356,7 @@ $XSComplexTypeDecl* XSDComplexTypeTraverser::traverseGlobal($Element* complexTyp
 }
 
 $XSComplexTypeDecl* XSDComplexTypeTraverser::traverseComplexTypeDecl($Element* complexTypeDecl, $String* complexTypeName, $ObjectArray* attrValues, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fComplexTypeDecl, $new($XSComplexTypeDecl));
 	$set(this, fAttrGrp, $new($XSAttributeGroupDecl));
 	$init($XSAttributeChecker);
@@ -440,6 +444,7 @@ $XSComplexTypeDecl* XSDComplexTypeTraverser::traverseComplexTypeDecl($Element* c
 }
 
 void XSDComplexTypeTraverser::traverseSimpleContent($Element* simpleContentElement, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, simpleContentAttrValues, $nc(this->fAttrChecker)->checkAttributes(simpleContentElement, false, schemaDoc));
 	this->fContentType = $XSComplexTypeDecl::CONTENTTYPE_SIMPLE;
 	$set(this, fParticle, nullptr);
@@ -691,6 +696,7 @@ void XSDComplexTypeTraverser::traverseSimpleContent($Element* simpleContentEleme
 }
 
 void XSDComplexTypeTraverser::traverseComplexContent($Element* complexContentElement, bool mixedOnType, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, complexContentAttrValues, $nc(this->fAttrChecker)->checkAttributes(complexContentElement, false, schemaDoc));
 	bool mixedContent = mixedOnType;
 	$var($Boolean, mixedAtt, $cast($Boolean, $nc(complexContentAttrValues)->get($XSAttributeChecker::ATTIDX_MIXED)));
@@ -890,6 +896,7 @@ void XSDComplexTypeTraverser::traverseComplexContent($Element* complexContentEle
 }
 
 void XSDComplexTypeTraverser::mergeAttributes($XSAttributeGroupDecl* fromAttrGrp, $XSAttributeGroupDecl* toAttrGrp, $String* typeName, bool extension, $Element* elem) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSObjectList, attrUseS, $nc(fromAttrGrp)->getAttributeUses());
 	$var($XSAttributeUseImpl, oneAttrUse, nullptr);
 	int32_t attrCount = $nc(attrUseS)->getLength();
@@ -929,6 +936,7 @@ void XSDComplexTypeTraverser::mergeAttributes($XSAttributeGroupDecl* fromAttrGrp
 }
 
 void XSDComplexTypeTraverser::processComplexContent($Element* complexContentChild, bool isMixed, bool isDerivation, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, attrNode, nullptr);
 	$var($XSParticleDecl, particle, nullptr);
 	bool emptyParticle = false;
@@ -1037,6 +1045,7 @@ void XSDComplexTypeTraverser::traverseComplexContentDecl($Element* complexConten
 }
 
 $String* XSDComplexTypeTraverser::genAnonTypeName($Element* complexTypeDecl) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, typeName, $new($StringBuffer, "#AnonType_"_s));
 	$var($Element, node, $DOMUtil::getParent(complexTypeDecl));
 	while (node != nullptr && (node != $DOMUtil::getRoot($($DOMUtil::getDocument(node))))) {
@@ -1060,6 +1069,7 @@ void XSDComplexTypeTraverser::handleComplexTypeError($String* messageId, $Object
 }
 
 void XSDComplexTypeTraverser::contentBackup() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fGlobalStore == nullptr) {
 		$set(this, fGlobalStore, $new($ObjectArray, XSDComplexTypeTraverser::GLOBAL_NUM));
 		this->fGlobalStorePos = 0;

@@ -92,6 +92,7 @@ $XObject* ContextMatchStepPattern::execute($XPathContext* xctxt) {
 }
 
 $XObject* ContextMatchStepPattern::executeRelativePathPattern($XPathContext* xctxt, $StepPattern* prevStep) {
+	$useLocalCurrentObjectStackCache();
 	$init($NodeTest);
 	$var($XObject, score, $NodeTest::SCORE_NONE);
 	int32_t context = $nc(xctxt)->getCurrentNode();

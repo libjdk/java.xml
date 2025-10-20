@@ -87,6 +87,7 @@ int32_t Token$ConditionToken::size() {
 }
 
 $Token* Token$ConditionToken::getChild(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index == 0) {
 		return this->yes;
 	}
@@ -97,6 +98,7 @@ $Token* Token$ConditionToken::getChild(int32_t index) {
 }
 
 $String* Token$ConditionToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	if (this->refNumber > 0) {
 		$assign(ret, $str({"(?("_s, $$str(this->refNumber), ")"_s}));

@@ -92,6 +92,7 @@ bool ReferenceType::isCastableTo($Type* t) {
 }
 
 bool ReferenceType::isAssignmentCompatibleWith($Type* t) {
+	$useLocalCurrentObjectStackCache();
 	if (!($instanceOf(ReferenceType, t))) {
 		return false;
 	}
@@ -167,6 +168,7 @@ bool ReferenceType::isAssignmentCompatibleWith($Type* t) {
 }
 
 ReferenceType* ReferenceType::getFirstCommonSuperclass(ReferenceType* t) {
+	$useLocalCurrentObjectStackCache();
 	$init($Type);
 	if (this->equals($Type::NULL)) {
 		return t;
@@ -235,6 +237,7 @@ ReferenceType* ReferenceType::getFirstCommonSuperclass(ReferenceType* t) {
 }
 
 ReferenceType* ReferenceType::firstCommonSuperclass(ReferenceType* t) {
+	$useLocalCurrentObjectStackCache();
 	$init($Type);
 	if (this->equals($Type::NULL)) {
 		return t;

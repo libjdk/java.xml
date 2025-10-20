@@ -299,6 +299,7 @@ $String* Utility::accessToString(int32_t access_flags) {
 
 $String* Utility::accessToString(int32_t access_flags, bool for_class) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	int32_t p = 0;
 	for (int32_t i = 0; p < $Const::MAX_ACC_FLAG_I; ++i) {
@@ -320,6 +321,7 @@ $String* Utility::classOrInterface(int32_t access_flags) {
 
 $String* Utility::codeToString($bytes* code, $ConstantPool* constant_pool, int32_t index, int32_t length, bool verbose) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, $nc(code)->length * 20));
 	try {
 		$var($ByteSequence, stream, $new($ByteSequence, code));
@@ -369,6 +371,7 @@ $String* Utility::codeToString($bytes* code, $ConstantPool* constant_pool, int32
 
 $String* Utility::codeToString($ByteSequence* bytes, $ConstantPool* constant_pool, bool verbose) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	int16_t opcode = (int16_t)$nc(bytes)->readUnsignedByte();
 	int32_t default_offset = 0;
 	int32_t low = 0;
@@ -672,6 +675,7 @@ $String* Utility::compactClassName($String* str, bool chopit) {
 
 $String* Utility::compactClassName($String* str$renamed, $String* prefix, bool chopit) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, str$renamed);
 	int32_t len = $nc(prefix)->length();
 	$assign(str, $nc(str)->replace(u'/', u'.'));
@@ -702,6 +706,7 @@ bool Utility::isSet(int32_t flag, int32_t i) {
 
 $String* Utility::methodTypeToSignature($String* ret, $StringArray* argv) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, "("_s));
 	$var($String, str, nullptr);
 	if (argv != nullptr) {
@@ -733,6 +738,7 @@ $StringArray* Utility::methodSignatureArgumentTypes($String* signature) {
 
 $StringArray* Utility::methodSignatureArgumentTypes($String* signature, bool chopit) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($List, vec, $new($ArrayList));
 	int32_t index = 0;
 	try {
@@ -758,6 +764,7 @@ $String* Utility::methodSignatureReturnType($String* signature) {
 
 $String* Utility::methodSignatureReturnType($String* signature, bool chopit) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	$var($String, type, nullptr);
 	try {
@@ -785,6 +792,7 @@ $String* Utility::methodSignatureToString($String* signature, $String* name, $St
 
 $String* Utility::methodSignatureToString($String* signature, $String* name, $String* access, bool chopit, $LocalVariableTable* vars) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, "("_s));
 	$var($String, type, nullptr);
 	int32_t index = 0;
@@ -835,6 +843,7 @@ int32_t Utility::pow2(int32_t n) {
 
 $String* Utility::replace($String* str$renamed, $String* old, $String* new_) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, str$renamed);
 	int32_t index = 0;
 	int32_t old_index = 0;
@@ -865,6 +874,7 @@ $String* Utility::signatureToString($String* signature) {
 
 $String* Utility::signatureToString($String* signature, bool chopit) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($String, type, ""_s);
 	$var($String, typeParams, ""_s);
 	int32_t index = 0;
@@ -903,6 +913,7 @@ $String* Utility::signatureToString($String* signature, bool chopit) {
 
 $String* Utility::typeParamTypesToString($String* signature, bool chopit) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, typeParams, $new($StringBuilder, "<"_s));
 	int32_t index = 1;
 	typeParams->append($(typeParamTypeToString($($nc(signature)->substring(index)), chopit)));
@@ -918,6 +929,7 @@ $String* Utility::typeParamTypesToString($String* signature, bool chopit) {
 
 $String* Utility::typeParamTypeToString($String* signature, bool chopit) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	int32_t index = $nc(signature)->indexOf((int32_t)u':');
 	if (index <= 0) {
 		$throwNew($ClassFormatException, $$str({"Invalid type parameter signature: "_s, signature}));
@@ -941,6 +953,7 @@ $String* Utility::typeParamTypeToString($String* signature, bool chopit) {
 
 $String* Utility::typeSignaturesToString($String* signature, bool chopit, char16_t term) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, typeList, $new($StringBuilder, $($nc(signature)->substring(0, 1))));
 	int32_t index = 1;
 	if ($nc(signature)->charAt(index) != term) {
@@ -958,6 +971,7 @@ $String* Utility::typeSignaturesToString($String* signature, bool chopit, char16
 
 $String* Utility::typeSignatureToString($String* signature, bool chopit) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	wrap(Utility::consumed_chars, 1);
 	try {
 		switch ($nc(signature)->charAt(0)) {
@@ -1120,6 +1134,7 @@ $String* Utility::typeSignatureToString($String* signature, bool chopit) {
 
 $String* Utility::getSignature($String* type$renamed) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($String, type, type$renamed);
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($chars, chars, $nc(type)->toCharArray());
@@ -1189,6 +1204,7 @@ $String* Utility::getSignature($String* type$renamed) {
 
 int32_t Utility::countBrackets($String* brackets) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($chars, chars, $nc(brackets)->toCharArray());
 	int32_t count = 0;
 	bool open = false;
@@ -1233,6 +1249,7 @@ int32_t Utility::countBrackets($String* brackets) {
 
 int8_t Utility::typeOfMethodSignature($String* signature) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	int32_t index = 0;
 	try {
 		if ($nc(signature)->charAt(0) != u'(') {
@@ -1249,6 +1266,7 @@ int8_t Utility::typeOfMethodSignature($String* signature) {
 
 int8_t Utility::typeOfSignature($String* signature) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	try {
 		switch ($nc(signature)->charAt(0)) {
 		case u'B':
@@ -1319,6 +1337,7 @@ int8_t Utility::typeOfSignature($String* signature) {
 
 int16_t Utility::searchOpcode($String* name$renamed) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, name$renamed);
 	$init($Locale);
 	$assign(name, $nc(name)->toLowerCase($Locale::ENGLISH));
@@ -1338,6 +1357,7 @@ int16_t Utility::byteToShort(int8_t b) {
 
 $String* Utility::toHexString($bytes* bytes) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	for (int32_t i = 0; i < $nc(bytes)->length; ++i) {
 		int16_t b = byteToShort(bytes->get(i));
@@ -1360,6 +1380,7 @@ $String* Utility::format(int32_t i, int32_t length, bool left_justify, char16_t 
 
 $String* Utility::fillup($String* str, int32_t length, bool left_justify, char16_t fill) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	int32_t len = length - $nc(str)->length();
 	$var($chars, buf, $new($chars, (len < 0) ? 0 : len));
 	for (int32_t j = 0; j < buf->length; ++j) {
@@ -1437,6 +1458,7 @@ bool Utility::isJavaIdentifierPart(char16_t ch) {
 
 $String* Utility::encode($bytes* bytes$renamed, bool compress) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($bytes, bytes, bytes$renamed);
 	if (compress) {
 		{
@@ -1537,6 +1559,7 @@ $String* Utility::encode($bytes* bytes$renamed, bool compress) {
 
 $bytes* Utility::decode($String* s, bool uncompress) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($bytes, bytes, nullptr);
 	{
 		$var($Utility$JavaReader, jr, $new($Utility$JavaReader, $$new($CharArrayReader, $($nc(s)->toCharArray()))));
@@ -1609,6 +1632,7 @@ $bytes* Utility::decode($String* s, bool uncompress) {
 
 $String* Utility::convertString($String* label) {
 	$init(Utility);
+	$useLocalCurrentObjectStackCache();
 	$var($chars, ch, $nc(label)->toCharArray());
 	$var($StringBuilder, buf, $new($StringBuilder));
 	{

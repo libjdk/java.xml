@@ -187,6 +187,7 @@ void DOM2SAX::setContentHandler($ContentHandler* handler) {
 }
 
 bool DOM2SAX::startPrefixMapping($String* prefix, $String* uri) {
+	$useLocalCurrentObjectStackCache();
 	bool pushed = true;
 	$var($Stack, uriStack, $cast($Stack, $nc(this->_nsPrefixes)->get(prefix)));
 	if (uriStack != nullptr) {
@@ -236,6 +237,7 @@ void DOM2SAX::parse() {
 }
 
 void DOM2SAX::parse($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return;
 	}

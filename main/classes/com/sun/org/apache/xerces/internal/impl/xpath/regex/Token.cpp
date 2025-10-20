@@ -506,6 +506,7 @@ $String* Token::toString(int32_t options) {
 }
 
 int32_t Token::getMinLength() {
+	$useLocalCurrentObjectStackCache();
 	{
 		int32_t sum = 0;
 		int32_t ret = 0;
@@ -595,6 +596,7 @@ int32_t Token::getMinLength() {
 }
 
 int32_t Token::getMaxLength() {
+	$useLocalCurrentObjectStackCache();
 	{
 		int32_t sum = 0;
 		int32_t ret = 0;
@@ -699,6 +701,7 @@ bool Token::isSet(int32_t options, int32_t flag) {
 }
 
 int32_t Token::analyzeFirstCharacter($RangeToken* result, int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	{
 		int32_t ret = 0;
 		int32_t ret2 = 0;
@@ -843,6 +846,7 @@ int32_t Token::analyzeFirstCharacter($RangeToken* result, int32_t options) {
 }
 
 bool Token::isShorterThan(Token* tok) {
+	$useLocalCurrentObjectStackCache();
 	if (tok == nullptr) {
 		return false;
 	}
@@ -862,6 +866,7 @@ bool Token::isShorterThan(Token* tok) {
 }
 
 void Token::findFixedString($Token$FixedStringContainer* container, int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var(Token, prevToken, nullptr)
 		int32_t prevOptions = 0;
@@ -946,12 +951,14 @@ void Token::findFixedString($Token$FixedStringContainer* container, int32_t opti
 }
 
 bool Token::match(int32_t ch) {
+	$useLocalCurrentObjectStackCache();
 	$throwNew($RuntimeException, $$str({"NFAArrow#match(): Internal error: "_s, $$str(this->type)}));
 	$shouldNotReachHere();
 }
 
 $RangeToken* Token::getRange($String* name, bool positive) {
 	$init(Token);
+	$useLocalCurrentObjectStackCache();
 	$var($Map, localCat, Token::categories);
 	if (localCat == nullptr) {
 		$synchronized(Token::lock) {
@@ -1229,6 +1236,7 @@ bool Token::isRegisterNonXS($String* name) {
 
 void Token::setAlias($Map* tmpCat, $Map* tmpCat2, $String* newName, $String* name, bool positive) {
 	$init(Token);
+	$useLocalCurrentObjectStackCache();
 	$var(Token, t1, $cast(Token, $nc(tmpCat)->get(name)));
 	$var(Token, t2, $cast(Token, $nc(tmpCat2)->get(name)));
 	if (positive) {
@@ -1244,6 +1252,7 @@ Token* Token::getGraphemePattern() {
 	$load(Token);
 	$synchronized(class$) {
 		$init(Token);
+		$useLocalCurrentObjectStackCache();
 		if (Token::token_grapheme != nullptr) {
 			return Token::token_grapheme;
 		}
@@ -1276,6 +1285,7 @@ Token* Token::getCombiningCharacterSequence() {
 	$load(Token);
 	$synchronized(class$) {
 		$init(Token);
+		$useLocalCurrentObjectStackCache();
 		if (Token::token_ccs != nullptr) {
 			return Token::token_ccs;
 		}

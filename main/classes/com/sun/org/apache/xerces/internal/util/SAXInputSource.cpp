@@ -75,6 +75,7 @@ void SAXInputSource::init$($InputSource* inputSource) {
 }
 
 void SAXInputSource::init$($XMLReader* reader, $InputSource* inputSource) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, inputSource != nullptr ? $nc(inputSource)->getPublicId() : ($String*)nullptr);
 	$XMLInputSource::init$(var$0, inputSource != nullptr ? $(inputSource->getSystemId()) : ($String*)nullptr, nullptr, false);
 	if (inputSource != nullptr) {
@@ -95,6 +96,7 @@ $XMLReader* SAXInputSource::getXMLReader() {
 }
 
 void SAXInputSource::setInputSource($InputSource* inputSource) {
+	$useLocalCurrentObjectStackCache();
 	if (inputSource != nullptr) {
 		setPublicId($(inputSource->getPublicId()));
 		setSystemId($(inputSource->getSystemId()));

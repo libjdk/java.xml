@@ -134,6 +134,7 @@ void Select::init$() {
 }
 
 void Select::init$(int16_t opcode, $ints* match, $InstructionHandleArray* targets, $InstructionHandle* defaultTarget) {
+	$useLocalCurrentObjectStackCache();
 	$BranchInstruction::init$(opcode, nullptr);
 	this->padding = 0;
 	$set(this, match, match);
@@ -182,6 +183,7 @@ void Select::initFromFile($ByteSequence* bytes, bool wide) {
 }
 
 $String* Select::toString(bool verbose) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder, $($BranchInstruction::toString(verbose))));
 	if (verbose) {
 		for (int32_t i = 0; i < this->match_length; ++i) {
@@ -220,6 +222,7 @@ void Select::updateTarget($InstructionHandle* old_ih, $InstructionHandle* new_ih
 }
 
 bool Select::containsTarget($InstructionHandle* ih) {
+	$useLocalCurrentObjectStackCache();
 	if ($BranchInstruction::getTarget() == ih) {
 		return true;
 	}
@@ -248,6 +251,7 @@ $Object* Select::clone() {
 }
 
 void Select::dispose() {
+	$useLocalCurrentObjectStackCache();
 	$BranchInstruction::dispose();
 	{
 		$var($InstructionHandleArray, arr$, this->targets);

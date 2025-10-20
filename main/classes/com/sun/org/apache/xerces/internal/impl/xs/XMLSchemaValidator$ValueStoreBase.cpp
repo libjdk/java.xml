@@ -125,6 +125,7 @@ $Object* allocate$XMLSchemaValidator$ValueStoreBase($Class* clazz) {
 }
 
 void XMLSchemaValidator$ValueStoreBase::init$($XMLSchemaValidator* this$0, $IdentityConstraint* identityConstraint) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, this$0, this$0);
 	this->fFieldCount = 0;
 	$set(this, fFields, nullptr);
@@ -171,6 +172,7 @@ void XMLSchemaValidator$ValueStoreBase::clear() {
 }
 
 void XMLSchemaValidator$ValueStoreBase::append(XMLSchemaValidator$ValueStoreBase* newVal) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc($nc(newVal)->fValues)->size(); ++i) {
 		$nc(this->fValues)->add($($nc(newVal->fValues)->get(i)));
 	}
@@ -186,6 +188,7 @@ void XMLSchemaValidator$ValueStoreBase::startValueScope() {
 }
 
 void XMLSchemaValidator$ValueStoreBase::endValueScope() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fValuesCount == 0) {
 		if ($nc(this->fIdentityConstraint)->getCategory() == $IdentityConstraint::IC_KEY) {
 			$var($String, code, "AbsentKeyValue"_s);
@@ -224,6 +227,7 @@ void XMLSchemaValidator$ValueStoreBase::reportError($String* key, $ObjectArray* 
 }
 
 void XMLSchemaValidator$ValueStoreBase::addValue($Field* field, bool mayMatch, Object$* actualValue, int16_t valueType, $ShortList* itemValueType) {
+	$useLocalCurrentObjectStackCache();
 	int32_t i = 0;
 	for (i = this->fFieldCount - 1; i > -1; --i) {
 		if ($nc(this->fFields)->get(i) == field) {
@@ -266,6 +270,7 @@ void XMLSchemaValidator$ValueStoreBase::addValue($Field* field, bool mayMatch, O
 }
 
 bool XMLSchemaValidator$ValueStoreBase::contains() {
+	$useLocalCurrentObjectStackCache();
 	int32_t next = 0;
 	int32_t size = $nc(this->fValues)->size();
 	bool LOOP$continue = false;
@@ -299,6 +304,7 @@ bool XMLSchemaValidator$ValueStoreBase::contains() {
 }
 
 int32_t XMLSchemaValidator$ValueStoreBase::contains(XMLSchemaValidator$ValueStoreBase* vsb) {
+	$useLocalCurrentObjectStackCache();
 	$var($Vector, values, $nc(vsb)->fValues);
 	int32_t size1 = $nc(values)->size();
 	if (this->fFieldCount <= 1) {
@@ -373,6 +379,7 @@ $String* XMLSchemaValidator$ValueStoreBase::toString($ObjectArray* values) {
 }
 
 $String* XMLSchemaValidator$ValueStoreBase::toString($Vector* values, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if (length == 0) {
 		return ""_s;
 	}
@@ -390,6 +397,7 @@ $String* XMLSchemaValidator$ValueStoreBase::toString($Vector* values, int32_t st
 }
 
 $String* XMLSchemaValidator$ValueStoreBase::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, s, $ValueStore::toString());
 	int32_t index1 = $nc(s)->lastIndexOf((int32_t)u'$');
 	if (index1 != -1) {

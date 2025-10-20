@@ -179,6 +179,7 @@ void XNodeSet::init$() {
 }
 
 void XNodeSet::init$($DTMIterator* val) {
+	$useLocalCurrentObjectStackCache();
 	$NodeSequence::init$();
 	if ($instanceOf(XNodeSet, val)) {
 		$var(XNodeSet, nodeSet, $cast(XNodeSet, val));
@@ -229,6 +230,7 @@ $String* XNodeSet::getTypeString() {
 }
 
 double XNodeSet::getNumberFromNode(int32_t n) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLString, xstr, $nc($($nc(this->m_dtmMgr)->getDTM(n)))->getStringValue(n));
 	return $nc(xstr)->toDouble();
 }
@@ -298,6 +300,7 @@ $NodeIterator* XNodeSet::nodeset() {
 }
 
 $NodeList* XNodeSet::nodelist() {
+	$useLocalCurrentObjectStackCache();
 	$var($DTMNodeList, nodelist, $new($DTMNodeList, this));
 	$var(XNodeSet, clone, $cast(XNodeSet, nodelist->getDTMIterator()));
 	SetVector($($nc(clone)->getVector()));
@@ -312,6 +315,7 @@ void XNodeSet::release($DTMIterator* iter) {
 }
 
 $DTMIterator* XNodeSet::iter() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (hasCache()) {
 			return cloneWithReset();
@@ -326,6 +330,7 @@ $DTMIterator* XNodeSet::iter() {
 }
 
 $XObject* XNodeSet::getFresh() {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if (hasCache()) {
 			return $cast($XObject, cloneWithReset());
@@ -340,6 +345,7 @@ $XObject* XNodeSet::getFresh() {
 }
 
 $NodeSetDTM* XNodeSet::mutableNodeset() {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSetDTM, mnl, nullptr);
 	if ($instanceOf($NodeSetDTM, this->m_obj)) {
 		$assign(mnl, $cast($NodeSetDTM, this->m_obj));
@@ -352,6 +358,7 @@ $NodeSetDTM* XNodeSet::mutableNodeset() {
 }
 
 bool XNodeSet::compare($XObject* obj2, $Comparator* comparator) {
+	$useLocalCurrentObjectStackCache();
 	bool result = false;
 	int32_t type = $nc(obj2)->getType();
 	if ($XObject::CLASS_NODESET == type) {

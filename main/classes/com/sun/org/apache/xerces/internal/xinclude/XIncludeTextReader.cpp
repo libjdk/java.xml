@@ -135,6 +135,7 @@ void XIncludeTextReader::setErrorReporter($XMLErrorReporter* errorReporter) {
 }
 
 $Reader* XIncludeTextReader::getReader($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(source)->getCharacterStream() != nullptr) {
 		return source->getCharacterStream();
 	} else {
@@ -238,6 +239,7 @@ $Reader* XIncludeTextReader::getReader($XMLInputSource* source) {
 }
 
 $Reader* XIncludeTextReader::createUTF8Reader($InputStream* stream) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputStream, var$0, stream);
 	int32_t var$1 = $nc($nc(this->fTempString)->ch)->length;
 	$init($XMLMessageFormatter);
@@ -246,6 +248,7 @@ $Reader* XIncludeTextReader::createUTF8Reader($InputStream* stream) {
 }
 
 $Reader* XIncludeTextReader::createUTF16Reader($InputStream* stream, bool isBigEndian) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputStream, var$0, stream);
 	int32_t var$1 = ($nc($nc(this->fTempString)->ch)->length << 1);
 	bool var$2 = isBigEndian;
@@ -255,6 +258,7 @@ $Reader* XIncludeTextReader::createUTF16Reader($InputStream* stream, bool isBigE
 }
 
 $Reader* XIncludeTextReader::createASCIIReader($InputStream* stream) {
+	$useLocalCurrentObjectStackCache();
 	$var($InputStream, var$0, stream);
 	int32_t var$1 = $nc($nc(this->fTempString)->ch)->length;
 	$init($XMLMessageFormatter);
@@ -267,6 +271,7 @@ $Reader* XIncludeTextReader::createLatin1Reader($InputStream* stream) {
 }
 
 $String* XIncludeTextReader::getEncodingName($InputStream* stream) {
+	$useLocalCurrentObjectStackCache();
 	$var($bytes, b4, $new($bytes, 4));
 	$var($String, encoding, nullptr);
 	$nc(stream)->mark(4);
@@ -349,6 +354,7 @@ $String* XIncludeTextReader::getEncodingName($bytes* b4) {
 }
 
 void XIncludeTextReader::parse() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fReader, getReader(this->fSource));
 	$set(this, fSource, nullptr);
 	int32_t readSize = $nc(this->fReader)->read($nc(this->fTempString)->ch, 0, $nc($nc(this->fTempString)->ch)->length - 1);

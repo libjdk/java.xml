@@ -190,6 +190,7 @@ void Whitespace::init$() {
 }
 
 void Whitespace::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	this->_action = $nc($($nc(this->_qname)->getLocalPart()))->endsWith("strip-space"_s) ? Whitespace::STRIP_SPACE : Whitespace::PRESERVE_SPACE;
 	this->_importPrecedence = $nc(parser)->getCurrentImportPrecedence();
 	$set(this, _elementList, getAttribute("elements"_s));
@@ -225,6 +226,7 @@ void Whitespace::parseContents($Parser* parser) {
 }
 
 $List* Whitespace::getRules() {
+	$useLocalCurrentObjectStackCache();
 	$var($List, rules, $new($ArrayList));
 	$var($StringTokenizer, list, $new($StringTokenizer, this->_elementList));
 	while (list->hasMoreElements()) {
@@ -235,6 +237,7 @@ $List* Whitespace::getRules() {
 
 $Whitespace$WhitespaceRule* Whitespace::findContradictingRule($List* rules, $Whitespace$WhitespaceRule* rule) {
 	$init(Whitespace);
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(rules)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -334,6 +337,7 @@ void Whitespace::compilePreserveSpace($BranchHandleArray* preserve, int32_t pCou
 
 void Whitespace::compilePredicate($List* rules, int32_t defaultAction, $ClassGenerator* classGen) {
 	$init(Whitespace);
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
 	$var($XSLTC, xsltc, $nc($(classGen->getParser()))->getXSLTC());
@@ -408,6 +412,7 @@ void Whitespace::compilePredicate($List* rules, int32_t defaultAction, $ClassGen
 
 void Whitespace::compileDefault(int32_t defaultAction, $ClassGenerator* classGen) {
 	$init(Whitespace);
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
 	$var($XSLTC, xsltc, $nc($(classGen->getParser()))->getXSLTC());
@@ -459,6 +464,7 @@ void Whitespace::quicksort($List* rules, int32_t p, int32_t r) {
 
 int32_t Whitespace::partition($List* rules, int32_t p, int32_t r) {
 	$init(Whitespace);
+	$useLocalCurrentObjectStackCache();
 	$var($Whitespace$WhitespaceRule, x, $cast($Whitespace$WhitespaceRule, $nc(rules)->get((int32_t)((uint32_t)(p + r) >> 1))));
 	int32_t i = p - 1;
 	int32_t j = r + 1;

@@ -153,6 +153,7 @@ void WithParam::init$() {
 }
 
 void WithParam::display(int32_t indent) {
+	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
 	$Util::println($$str({"with-param "_s, this->_name}));
 	if (this->_select != nullptr) {
@@ -180,6 +181,7 @@ void WithParam::setDoParameterOptimization(bool flag) {
 }
 
 void WithParam::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, getAttribute("name"_s));
 	if ($nc(name)->length() > 0) {
 		if (!$XML11Char::isXML11ValidQName(name)) {
@@ -214,6 +216,7 @@ $1Type* WithParam::typeCheck($SymbolTable* stable) {
 }
 
 void WithParam::translateValue($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_select != nullptr) {
 		$nc(this->_select)->translate(classGen, methodGen);
 		$nc(this->_select)->startIterator(classGen, methodGen);
@@ -236,6 +239,7 @@ void WithParam::translateValue($ClassGenerator* classGen, $MethodGenerator* meth
 }
 
 void WithParam::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (this->_doParameterOptimization) {
@@ -253,6 +257,7 @@ void WithParam::translate($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 void WithParam::releaseResultTree($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_domAdapter != nullptr) {
 		$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 		$var($InstructionList, il, $nc(methodGen)->getInstructionList());

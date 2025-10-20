@@ -161,6 +161,7 @@ bool Variable::getGlobal() {
 }
 
 void Variable::fixupVariables($List* vars, int32_t globalsSize) {
+	$useLocalCurrentObjectStackCache();
 	this->m_fixUpWasCalled = true;
 	int32_t sz = $nc(vars)->size();
 	for (int32_t i = vars->size() - 1; i >= 0; --i) {
@@ -194,6 +195,7 @@ $XObject* Variable::execute($XPathContext* xctxt) {
 }
 
 $XObject* Variable::execute($XPathContext* xctxt, bool destructiveOK) {
+	$useLocalCurrentObjectStackCache();
 	$var($PrefixResolver, xprefixResolver, $nc(xctxt)->getNamespaceContext());
 	$var($XObject, result, nullptr);
 	if (this->m_fixUpWasCalled) {
@@ -236,6 +238,7 @@ bool Variable::deepEquals($Expression* expr) {
 }
 
 bool Variable::isPsuedoVarRef() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ns, $nc(this->m_qname)->getNamespaceURI());
 	if ((nullptr != ns) && ns->equals(Variable::PSUEDOVARNAMESPACE)) {
 		if ($nc($($nc(this->m_qname)->getLocalName()))->startsWith("#"_s)) {

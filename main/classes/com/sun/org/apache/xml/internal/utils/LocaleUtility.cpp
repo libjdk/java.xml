@@ -58,6 +58,7 @@ void LocaleUtility::init$() {
 
 $Locale* LocaleUtility::langToLocale($String* lang) {
 	$init(LocaleUtility);
+	$useLocalCurrentObjectStackCache();
 	if ((lang == nullptr) || $nc(lang)->equals(LocaleUtility::EMPTY_STRING)) {
 		return $Locale::getDefault();
 	}

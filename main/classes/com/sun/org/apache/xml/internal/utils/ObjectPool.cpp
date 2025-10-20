@@ -128,6 +128,7 @@ $Object* ObjectPool::getInstanceIfFree() {
 
 $Object* ObjectPool::getInstance() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		$beforeCallerSensitive();
 		if ($nc(this->freeStack)->isEmpty()) {
 			try {

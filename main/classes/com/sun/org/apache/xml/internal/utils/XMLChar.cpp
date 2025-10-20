@@ -260,6 +260,7 @@ bool XMLChar::isValidJavaEncoding($String* javaEncoding) {
 
 bool XMLChar::isValidQName($String* str) {
 	$init(XMLChar);
+	$useLocalCurrentObjectStackCache();
 	int32_t colon = $nc(str)->indexOf((int32_t)u':');
 	if (colon == 0 || colon == str->length() - 1) {
 		return false;
@@ -275,6 +276,7 @@ bool XMLChar::isValidQName($String* str) {
 }
 
 void clinit$XMLChar($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XMLChar::CHARS, $new($bytes, 1 << 16));
 	{
 		$var($ints, charRange, $new($ints, {

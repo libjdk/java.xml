@@ -230,6 +230,7 @@ void DTDGrammar::startDTD($XMLLocator* locator, $Augmentations* augs) {
 }
 
 void DTDGrammar::elementDecl($String* name, $String* contentModel, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLElementDecl, tmpElementDecl, $cast($XMLElementDecl, $nc(this->fElementDeclTab)->get(name)));
 	if (tmpElementDecl != nullptr) {
 		if (tmpElementDecl->type == -1) {
@@ -263,6 +264,7 @@ void DTDGrammar::elementDecl($String* name, $String* contentModel, $Augmentation
 }
 
 void DTDGrammar::attributeDecl($String* elementName, $String* attributeName, $String* type, $StringArray* enumeration, $String* defaultType, $XMLString* defaultValue, $XMLString* nonNormalizedDefaultValue, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLSymbols);
 	if (type != $XMLSymbols::fCDATASymbol && defaultValue != nullptr) {
 		normalizeDefaultAttrValue(defaultValue);
@@ -425,6 +427,7 @@ bool DTDGrammar::isCDATAAttribute($QName* elName, $QName* atName) {
 }
 
 void DTDGrammar::printElements() {
+	$useLocalCurrentObjectStackCache();
 	int32_t elementDeclIndex = 0;
 	$var($XMLElementDecl, elementDecl, $new($XMLElementDecl));
 	while (getElementDecl(elementDeclIndex++, elementDecl)) {
@@ -536,6 +539,7 @@ void DTDGrammar::setAttributeDecl(int32_t elementDeclIndex, int32_t attributeDec
 }
 
 void DTDGrammar::notationDecl($String* name, $XMLResourceIdentifier* identifier, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLNotationDecl, notationDecl, $new($XMLNotationDecl));
 	$var($String, var$0, name);
 	$var($String, var$1, $nc(identifier)->getPublicId());
@@ -559,6 +563,7 @@ void DTDGrammar::printAttribute(int32_t attributeDeclIndex) {
 }
 
 void DTDGrammar::ensureElementDeclCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (chunk >= $nc(this->fElementDeclName)->length) {
 		$set(this, fElementDeclName, resize(this->fElementDeclName, $nc(this->fElementDeclName)->length * 2));
 		$set(this, fElementDeclType, resize(this->fElementDeclType, $nc(this->fElementDeclType)->length * 2));
@@ -575,6 +580,7 @@ void DTDGrammar::ensureElementDeclCapacity(int32_t chunk) {
 }
 
 void DTDGrammar::ensureAttributeDeclCapacity(int32_t chunk) {
+	$useLocalCurrentObjectStackCache();
 	if (chunk >= $nc(this->fAttributeDeclName)->length) {
 		$set(this, fAttributeDeclName, resize(this->fAttributeDeclName, $nc(this->fAttributeDeclName)->length * 2));
 		$set(this, fAttributeDeclType, resize(this->fAttributeDeclType, $nc(this->fAttributeDeclType)->length * 2));

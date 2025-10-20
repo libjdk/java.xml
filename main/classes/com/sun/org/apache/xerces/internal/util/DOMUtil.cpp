@@ -143,6 +143,7 @@ void DOMUtil::init$() {
 }
 
 void DOMUtil::copyInto($Node* src, $Node* dest$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, dest, dest$renamed);
 	$var($Document, factory, $nc(dest)->getOwnerDocument());
 	bool domimpl = $instanceOf($DocumentImpl, factory);
@@ -386,6 +387,7 @@ bool DOMUtil::isHidden($Node* node, $Map* hiddenNodes) {
 }
 
 $Element* DOMUtil::getFirstChildElement($Node* parent, $String* elemName) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getFirstChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -399,6 +401,7 @@ $Element* DOMUtil::getFirstChildElement($Node* parent, $String* elemName) {
 }
 
 $Element* DOMUtil::getLastChildElement($Node* parent, $String* elemName) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getLastChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -412,6 +415,7 @@ $Element* DOMUtil::getLastChildElement($Node* parent, $String* elemName) {
 }
 
 $Element* DOMUtil::getNextSiblingElement($Node* node, $String* elemName) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, sibling, $nc(node)->getNextSibling());
 	while (sibling != nullptr) {
 		if (sibling->getNodeType() == $Node::ELEMENT_NODE) {
@@ -425,6 +429,7 @@ $Element* DOMUtil::getNextSiblingElement($Node* node, $String* elemName) {
 }
 
 $Element* DOMUtil::getFirstChildElementNS($Node* parent, $String* uri, $String* localpart) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getFirstChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -440,6 +445,7 @@ $Element* DOMUtil::getFirstChildElementNS($Node* parent, $String* uri, $String* 
 }
 
 $Element* DOMUtil::getLastChildElementNS($Node* parent, $String* uri, $String* localpart) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getLastChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -455,6 +461,7 @@ $Element* DOMUtil::getLastChildElementNS($Node* parent, $String* uri, $String* l
 }
 
 $Element* DOMUtil::getNextSiblingElementNS($Node* node, $String* uri, $String* localpart) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, sibling, $nc(node)->getNextSibling());
 	while (sibling != nullptr) {
 		if (sibling->getNodeType() == $Node::ELEMENT_NODE) {
@@ -470,6 +477,7 @@ $Element* DOMUtil::getNextSiblingElementNS($Node* node, $String* uri, $String* l
 }
 
 $Element* DOMUtil::getFirstChildElement($Node* parent, $StringArray* elemNames) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getFirstChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -485,6 +493,7 @@ $Element* DOMUtil::getFirstChildElement($Node* parent, $StringArray* elemNames) 
 }
 
 $Element* DOMUtil::getLastChildElement($Node* parent, $StringArray* elemNames) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getLastChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -500,6 +509,7 @@ $Element* DOMUtil::getLastChildElement($Node* parent, $StringArray* elemNames) {
 }
 
 $Element* DOMUtil::getNextSiblingElement($Node* node, $StringArray* elemNames) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, sibling, $nc(node)->getNextSibling());
 	while (sibling != nullptr) {
 		if (sibling->getNodeType() == $Node::ELEMENT_NODE) {
@@ -515,6 +525,7 @@ $Element* DOMUtil::getNextSiblingElement($Node* node, $StringArray* elemNames) {
 }
 
 $Element* DOMUtil::getFirstChildElementNS($Node* parent, $StringArray2* elemNames) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getFirstChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -532,6 +543,7 @@ $Element* DOMUtil::getFirstChildElementNS($Node* parent, $StringArray2* elemName
 }
 
 $Element* DOMUtil::getLastChildElementNS($Node* parent, $StringArray2* elemNames) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getLastChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -549,6 +561,7 @@ $Element* DOMUtil::getLastChildElementNS($Node* parent, $StringArray2* elemNames
 }
 
 $Element* DOMUtil::getNextSiblingElementNS($Node* node, $StringArray2* elemNames) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, sibling, $nc(node)->getNextSibling());
 	while (sibling != nullptr) {
 		if (sibling->getNodeType() == $Node::ELEMENT_NODE) {
@@ -566,6 +579,7 @@ $Element* DOMUtil::getNextSiblingElementNS($Node* node, $StringArray2* elemNames
 }
 
 $Element* DOMUtil::getFirstChildElement($Node* parent, $String* elemName, $String* attrName, $String* attrValue) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getFirstChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -581,6 +595,7 @@ $Element* DOMUtil::getFirstChildElement($Node* parent, $String* elemName, $Strin
 }
 
 $Element* DOMUtil::getLastChildElement($Node* parent, $String* elemName, $String* attrName, $String* attrValue) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, $nc(parent)->getLastChild());
 	while (child != nullptr) {
 		if (child->getNodeType() == $Node::ELEMENT_NODE) {
@@ -596,6 +611,7 @@ $Element* DOMUtil::getLastChildElement($Node* parent, $String* elemName, $String
 }
 
 $Element* DOMUtil::getNextSiblingElement($Node* node, $String* elemName, $String* attrName, $String* attrValue) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, sibling, $nc(node)->getNextSibling());
 	while (sibling != nullptr) {
 		if (sibling->getNodeType() == $Node::ELEMENT_NODE) {
@@ -611,6 +627,7 @@ $Element* DOMUtil::getNextSiblingElement($Node* node, $String* elemName, $String
 }
 
 $String* DOMUtil::getChildText($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (node == nullptr) {
 		return nullptr;
 	}
@@ -662,6 +679,7 @@ $Attr* DOMUtil::getAttrNS($Element* elem, $String* nsUri, $String* localName) {
 }
 
 $AttrArray* DOMUtil::getAttrs($Element* elem) {
+	$useLocalCurrentObjectStackCache();
 	$var($NamedNodeMap, attrMap, $nc(elem)->getAttributes());
 	$var($AttrArray, attrArray, $new($AttrArray, $nc(attrMap)->getLength()));
 	for (int32_t i = 0; i < attrMap->getLength(); ++i) {
@@ -705,6 +723,7 @@ $String* DOMUtil::getSyntheticAnnotation($Node* node) {
 }
 
 $DOMException* DOMUtil::createDOMException(int16_t code, $Throwable* cause) {
+	$useLocalCurrentObjectStackCache();
 	$var($DOMException, de, $new($DOMException, code, cause != nullptr ? $($nc(cause)->getMessage()) : ($String*)nullptr));
 	if (cause != nullptr) {
 		de->initCause(cause);
@@ -713,6 +732,7 @@ $DOMException* DOMUtil::createDOMException(int16_t code, $Throwable* cause) {
 }
 
 $LSException* DOMUtil::createLSException(int16_t code, $Throwable* cause) {
+	$useLocalCurrentObjectStackCache();
 	$var($LSException, lse, $new($LSException, code, cause != nullptr ? $($nc(cause)->getMessage()) : ($String*)nullptr));
 	if (cause != nullptr) {
 		lse->initCause(cause);

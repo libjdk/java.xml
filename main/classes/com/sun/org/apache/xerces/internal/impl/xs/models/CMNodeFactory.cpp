@@ -147,6 +147,7 @@ $CMNode* CMNodeFactory::getCMBinOpNode(int32_t type, $CMNode* leftNode, $CMNode*
 }
 
 void CMNodeFactory::nodeCountCheck() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fSecurityManager != nullptr && !$nc(this->fSecurityManager)->isNoLimit(this->maxNodeLimit) && this->nodeCount++ > this->maxNodeLimit) {
 		$init($XSMessageFormatter);
 		$nc(this->fErrorReporter)->reportError($XSMessageFormatter::SCHEMA_DOMAIN, "MaxOccurLimit"_s, $$new($ObjectArray, {$($of($Integer::valueOf(this->maxNodeLimit)))}), $XMLErrorReporter::SEVERITY_FATAL_ERROR);

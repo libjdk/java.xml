@@ -162,6 +162,7 @@ void SAXParserImpl$JAXPSAXParser::init$() {
 }
 
 void SAXParserImpl$JAXPSAXParser::init$($SAXParserImpl* saxParser, $XMLSecurityPropertyManager* securityPropertyMgr, $XMLSecurityManager* securityManager) {
+	$useLocalCurrentObjectStackCache();
 	$SAXParser::init$();
 	$set(this, fInitFeatures, $new($HashMap));
 	$set(this, fInitProperties, $new($HashMap));
@@ -190,6 +191,7 @@ void SAXParserImpl$JAXPSAXParser::init$($SAXParserImpl* saxParser, $XMLSecurityP
 
 void SAXParserImpl$JAXPSAXParser::setFeature($String* name, bool value) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (name == nullptr) {
 			$throwNew($NullPointerException);
 		}
@@ -238,6 +240,7 @@ bool SAXParserImpl$JAXPSAXParser::getFeature($String* name) {
 
 void SAXParserImpl$JAXPSAXParser::setProperty($String* name, Object$* value) {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (name == nullptr) {
 			$throwNew($NullPointerException);
 		}
@@ -320,6 +323,7 @@ $Object* SAXParserImpl$JAXPSAXParser::getProperty($String* name) {
 
 void SAXParserImpl$JAXPSAXParser::restoreInitState() {
 	$synchronized(this) {
+		$useLocalCurrentObjectStackCache();
 		if (!$nc(this->fInitFeatures)->isEmpty()) {
 			{
 				$var($Iterator, i$, $nc($($nc(this->fInitFeatures)->entrySet()))->iterator());
@@ -398,6 +402,7 @@ $Locale* SAXParserImpl$JAXPSAXParser::getLocale() {
 }
 
 void SAXParserImpl$JAXPSAXParser::setSchemaValidatorFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc($nc(this->fSAXParser)->fSchemaValidator)->setFeature(name, value);
 	} catch ($XMLConfigurationException&) {
@@ -413,6 +418,7 @@ void SAXParserImpl$JAXPSAXParser::setSchemaValidatorFeature($String* name, bool 
 }
 
 void SAXParserImpl$JAXPSAXParser::setSchemaValidatorProperty($String* name, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc($nc(this->fSAXParser)->fSchemaValidator)->setProperty(name, value);
 	} catch ($XMLConfigurationException&) {

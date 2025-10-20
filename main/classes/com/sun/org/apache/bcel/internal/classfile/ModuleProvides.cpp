@@ -121,10 +121,12 @@ void ModuleProvides::dump($DataOutputStream* file) {
 }
 
 $String* ModuleProvides::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"provides("_s, $$str(this->providesIndex), ", "_s, $$str(this->providesWithCount), ", ...)"_s});
 }
 
 $String* ModuleProvides::toString($ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($String, interface_name, $nc(constant_pool)->constantToString(this->providesIndex, $Const::CONSTANT_Class));
 	buf->append($($Utility::compactClassName(interface_name, false)));

@@ -66,6 +66,7 @@ void FuncTranslate::init$() {
 }
 
 $XObject* FuncTranslate::execute($XPathContext* xctxt) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, theFirstString, $nc($($nc(this->m_arg0)->execute(xctxt)))->str());
 	$var($String, theSecondString, $nc($($nc(this->m_arg1)->execute(xctxt)))->str());
 	$var($String, theThirdString, $nc($($nc(this->m_arg2)->execute(xctxt)))->str());

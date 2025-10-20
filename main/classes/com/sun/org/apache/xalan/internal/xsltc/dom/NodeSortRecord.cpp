@@ -147,6 +147,7 @@ int32_t NodeSortRecord::compareDocOrder(NodeSortRecord* other) {
 }
 
 $Comparable* NodeSortRecord::stringValue(int32_t level) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_scanned <= level) {
 		$var($AbstractTranslet, translet, $nc(this->_settings)->getTranslet());
 		$var($LocaleArray, locales, $nc(this->_settings)->getLocales());
@@ -160,6 +161,7 @@ $Comparable* NodeSortRecord::stringValue(int32_t level) {
 }
 
 $Double* NodeSortRecord::numericValue(int32_t level) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_scanned <= level) {
 		$var($AbstractTranslet, translet, $nc(this->_settings)->getTranslet());
 		$var($String, str, extractValueFromDOM(this->_dom, this->_node, level, translet, this->_last));
@@ -178,6 +180,7 @@ $Double* NodeSortRecord::numericValue(int32_t level) {
 }
 
 int32_t NodeSortRecord::compareTo(NodeSortRecord* other) {
+	$useLocalCurrentObjectStackCache();
 	int32_t cmp = 0;
 	int32_t level = 0;
 	$var($ints, sortOrder, $nc(this->_settings)->getSortOrders());

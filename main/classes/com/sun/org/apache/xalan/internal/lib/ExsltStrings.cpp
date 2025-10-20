@@ -74,6 +74,7 @@ void ExsltStrings::init$() {
 
 $String* ExsltStrings::align($String* targetStr, $String* paddingStr, $String* type) {
 	$init(ExsltStrings);
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(targetStr)->length();
 	if (var$0 >= $nc(paddingStr)->length()) {
 		return targetStr->substring(0, paddingStr->length());
@@ -99,6 +100,7 @@ $String* ExsltStrings::align($String* targetStr, $String* paddingStr) {
 
 $String* ExsltStrings::concat($NodeList* nl) {
 	$init(ExsltStrings);
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, sb, $new($StringBuffer));
 	for (int32_t i = 0; i < $nc(nl)->getLength(); ++i) {
 		$var($Node, node, nl->item(i));
@@ -137,6 +139,7 @@ $String* ExsltStrings::padding(double length) {
 
 $NodeList* ExsltStrings::split($String* str, $String* pattern) {
 	$init(ExsltStrings);
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSet, resultSet, $new($NodeSet));
 	resultSet->setShouldCacheNodes(true);
 	bool done = false;
@@ -170,6 +173,7 @@ $NodeList* ExsltStrings::split($String* str) {
 
 $NodeList* ExsltStrings::tokenize($String* toTokenize, $String* delims) {
 	$init(ExsltStrings);
+	$useLocalCurrentObjectStackCache();
 	$var($NodeSet, resultSet, $new($NodeSet));
 	if (delims != nullptr && delims->length() > 0) {
 		$var($StringTokenizer, lTokenizer, $new($StringTokenizer, toTokenize, delims));

@@ -172,6 +172,7 @@ void InstructionFinder::init$($InstructionList* il) {
 }
 
 void InstructionFinder::reread() {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->il)->getLength();
 	$var($chars, buf, $new($chars, size));
 	$set(this, handles, $nc(this->il)->getInstructionHandles());
@@ -183,6 +184,7 @@ void InstructionFinder::reread() {
 
 $String* InstructionFinder::mapName($String* pattern) {
 	$init(InstructionFinder);
+	$useLocalCurrentObjectStackCache();
 	$var($String, result, $cast($String, $nc(InstructionFinder::map)->get(pattern)));
 	if (result != nullptr) {
 		return result;
@@ -197,6 +199,7 @@ $String* InstructionFinder::mapName($String* pattern) {
 
 $String* InstructionFinder::compilePattern($String* pattern) {
 	$init(InstructionFinder);
+	$useLocalCurrentObjectStackCache();
 	$init($Locale);
 	$var($String, lower, $nc(pattern)->toLowerCase($Locale::ENGLISH));
 	$var($StringBuilder, buf, $new($StringBuilder));
@@ -229,6 +232,7 @@ $InstructionHandleArray* InstructionFinder::getMatch(int32_t matched_from, int32
 }
 
 $Iterator* InstructionFinder::search($String* pattern, $InstructionHandle* from, $InstructionFinder$CodeConstraint* constraint) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, search, compilePattern(pattern));
 	int32_t start = -1;
 	for (int32_t i = 0; i < $nc(this->handles)->length; ++i) {
@@ -296,6 +300,7 @@ $String* InstructionFinder::precompile(int16_t from, int16_t to, int16_t extra) 
 }
 
 void clinit$InstructionFinder($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(InstructionFinder::map, $new($HashMap));
 	{
 		$nc(InstructionFinder::map)->put("arithmeticinstruction"_s, "(irem|lrem|iand|ior|ineg|isub|lneg|fneg|fmul|ldiv|fadd|lxor|frem|idiv|land|ixor|ishr|fsub|lshl|fdiv|iadd|lor|dmul|lsub|ishl|imul|lmul|lushr|dneg|iushr|lshr|ddiv|drem|dadd|ladd|dsub)"_s);

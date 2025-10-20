@@ -94,6 +94,7 @@ int32_t Token$ParenToken::getParenNumber() {
 }
 
 $String* Token$ParenToken::toString(int32_t options) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, ret, nullptr);
 	switch (this->type) {
 	case $Token::PAREN:

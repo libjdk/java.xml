@@ -180,6 +180,7 @@ void LDC::initFromFile($ByteSequence* bytes, bool wide) {
 }
 
 $Object* LDC::getValue($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, $nc($($nc(cpg)->getConstantPool()))->getConstant($CPInstruction::getIndex()));
 	{
 		int32_t i = 0;
@@ -214,6 +215,7 @@ $Object* LDC::getValue($ConstantPoolGen* cpg) {
 }
 
 $Type* LDC::getType($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	switch ($nc($($nc($($nc(cpg)->getConstantPool()))->getConstant($CPInstruction::getIndex())))->getTag()) {
 	case $Const::CONSTANT_String:
 		{

@@ -187,6 +187,7 @@ $String* JAXPValidatorComponent::SYMBOL_TABLE = nullptr;
 $TypeInfoProvider* JAXPValidatorComponent::noInfoProvider = nullptr;
 
 void JAXPValidatorComponent::init$($ValidatorHandler* validatorHandler) {
+	$useLocalCurrentObjectStackCache();
 	$TeeXMLDocumentFilterImpl::init$();
 	$set(this, xni2sax, $new($JAXPValidatorComponent$XNI2SAX, this));
 	$set(this, sax2xni, $new($JAXPValidatorComponent$SAX2XNI, this));
@@ -242,6 +243,7 @@ void JAXPValidatorComponent::reset($XMLComponentManager* componentManager) {
 }
 
 void JAXPValidatorComponent::updateAttributes($Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	int32_t len = $nc(atts)->getLength();
 	for (int32_t i = 0; i < len; ++i) {
 		$var($String, aqn, atts->getQName(i));

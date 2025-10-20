@@ -151,6 +151,7 @@ void Text::display(int32_t indent) {
 }
 
 void Text::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, str, getAttribute("disable-output-escaping"_s));
 	if ((str != nullptr) && (str->equals("yes"_s))) {
 		this->_escaping = false;
@@ -220,6 +221,7 @@ bool Text::isWhitespace(char16_t c) {
 }
 
 void Text::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (!this->_ignore) {
@@ -255,6 +257,7 @@ bool Text::canLoadAsArrayOffsetLength() {
 }
 
 void Text::loadAsArrayOffsetLength($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($XSLTC, xsltc, $nc($(classGen->getParser()))->getXSLTC());

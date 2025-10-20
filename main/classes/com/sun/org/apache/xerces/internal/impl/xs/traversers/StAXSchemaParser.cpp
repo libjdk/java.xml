@@ -181,6 +181,7 @@ $Document* StAXSchemaParser::getDocument() {
 }
 
 void StAXSchemaParser::parse($XMLEventReader* input) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLEvent, currentEvent, $nc(input)->peek());
 	if (currentEvent != nullptr) {
 		int32_t eventType = currentEvent->getEventType();
@@ -286,6 +287,7 @@ void StAXSchemaParser::parse($XMLEventReader* input) {
 }
 
 void StAXSchemaParser::parse($XMLStreamReader* input) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(input)->hasNext()) {
 		int32_t eventType = input->getEventType();
 		if (eventType != $XMLStreamConstants::START_DOCUMENT && eventType != $XMLStreamConstants::START_ELEMENT) {
@@ -439,6 +441,7 @@ void StAXSchemaParser::fillProcessingInstruction($String* data) {
 }
 
 void StAXSchemaParser::fillXMLAttributes($StartElement* event) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fAttributes)->removeAllAttributes();
 	$var($Iterator, attrs, $nc(event)->getAttributes());
 	while ($nc(attrs)->hasNext()) {
@@ -453,6 +456,7 @@ void StAXSchemaParser::fillXMLAttributes($StartElement* event) {
 }
 
 void StAXSchemaParser::fillXMLAttributes($XMLStreamReader* input) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fAttributes)->removeAllAttributes();
 	int32_t len = $nc(input)->getAttributeCount();
 	for (int32_t i = 0; i < len; ++i) {
@@ -468,6 +472,7 @@ void StAXSchemaParser::fillXMLAttributes($XMLStreamReader* input) {
 }
 
 void StAXSchemaParser::addNamespaceDeclarations() {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, nullptr);
 	$var($String, localpart, nullptr);
 	$var($String, rawname, nullptr);
@@ -508,6 +513,7 @@ void StAXSchemaParser::fillDeclaredPrefixes($EndElement* event) {
 }
 
 void StAXSchemaParser::fillDeclaredPrefixes($Iterator* namespaces) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fDeclaredPrefixes)->clear();
 	while ($nc(namespaces)->hasNext()) {
 		$var($Namespace, ns, $cast($Namespace, namespaces->next()));
@@ -517,6 +523,7 @@ void StAXSchemaParser::fillDeclaredPrefixes($Iterator* namespaces) {
 }
 
 void StAXSchemaParser::fillDeclaredPrefixes($XMLStreamReader* reader) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fDeclaredPrefixes)->clear();
 	int32_t len = $nc(reader)->getNamespaceCount();
 	for (int32_t i = 0; i < len; ++i) {
@@ -526,6 +533,7 @@ void StAXSchemaParser::fillDeclaredPrefixes($XMLStreamReader* reader) {
 }
 
 void StAXSchemaParser::fillQName($1QName* toFill, $QName* toCopy) {
+	$useLocalCurrentObjectStackCache();
 	$var($1QName, var$0, toFill);
 	$var($String, var$1, $nc(toCopy)->getNamespaceURI());
 	$var($String, var$2, toCopy->getLocalPart());
@@ -533,6 +541,7 @@ void StAXSchemaParser::fillQName($1QName* toFill, $QName* toCopy) {
 }
 
 void StAXSchemaParser::fillQName($1QName* toFill, $String* uri$renamed, $String* localpart$renamed, $String* prefix$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, localpart, localpart$renamed);
 	$var($String, uri, uri$renamed);

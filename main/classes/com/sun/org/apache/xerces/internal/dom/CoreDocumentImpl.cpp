@@ -631,6 +631,7 @@ void CoreDocumentImpl::init$() {
 }
 
 void CoreDocumentImpl::init$(bool grammarAccess) {
+	$useLocalCurrentObjectStackCache();
 	$ParentNode::init$(nullptr);
 	$set(this, domNormalizer, nullptr);
 	$set(this, fConfiguration, nullptr);
@@ -658,6 +659,7 @@ void CoreDocumentImpl::init$($DocumentType* doctype) {
 }
 
 void CoreDocumentImpl::init$($DocumentType* doctype, bool grammarAccess) {
+	$useLocalCurrentObjectStackCache();
 	CoreDocumentImpl::init$(grammarAccess);
 	if (doctype != nullptr) {
 		$var($DocumentTypeImpl, doctypeImpl, nullptr);
@@ -694,6 +696,7 @@ $Node* CoreDocumentImpl::cloneNode(bool deep) {
 }
 
 void CoreDocumentImpl::cloneNode(CoreDocumentImpl* newdoc, bool deep) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncChildren()) {
 		synchronizeChildren();
 	}
@@ -908,6 +911,7 @@ $String* CoreDocumentImpl::getEncoding() {
 }
 
 void CoreDocumentImpl::setXmlVersion($String* value) {
+	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return;
 	}
@@ -963,6 +967,7 @@ $String* CoreDocumentImpl::getDocumentURI() {
 }
 
 $Node* CoreDocumentImpl::renameNode($Node* n, $String* namespaceURI, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (this->errorChecking && !$equals($nc(n)->getOwnerDocument(), this) && !$equals(n, this)) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "WRONG_DOCUMENT_ERR"_s, nullptr));
@@ -1100,6 +1105,7 @@ $DOMConfiguration* CoreDocumentImpl::getDomConfig() {
 }
 
 $String* CoreDocumentImpl::getBaseURI() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDocumentURI != nullptr && $nc(this->fDocumentURI)->length() != 0) {
 		try {
 			return $$new($URI, this->fDocumentURI)->toString();
@@ -1139,6 +1145,7 @@ bool CoreDocumentImpl::loadXML($String* source) {
 }
 
 $String* CoreDocumentImpl::saveXML($Node* node$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, node$renamed);
 	if (this->errorChecking && node != nullptr && !$equals(this, node->getOwnerDocument())) {
 		$init($DOMMessageFormatter);
@@ -1200,6 +1207,7 @@ int32_t CoreDocumentImpl::getNodeNumber() {
 }
 
 int32_t CoreDocumentImpl::getNodeNumber($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	int32_t num = 0;
 	if (this->nodeTable == nullptr) {
 		$set(this, nodeTable, $new($HashMap));
@@ -1222,6 +1230,7 @@ $Node* CoreDocumentImpl::importNode($Node* source, bool deep) {
 }
 
 $Node* CoreDocumentImpl::importNode($Node* source, bool deep, bool cloningDoc, $Map* reversedIdentifiers) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, newnode, nullptr);
 	$var($Map, userData, nullptr);
 	if ($instanceOf($NodeImpl, source)) {
@@ -1426,6 +1435,7 @@ $Node* CoreDocumentImpl::importNode($Node* source, bool deep, bool cloningDoc, $
 }
 
 $Node* CoreDocumentImpl::adoptNode($Node* source) {
+	$useLocalCurrentObjectStackCache();
 	$var($NodeImpl, node, nullptr);
 	$var($Map, userData, nullptr);
 	try {
@@ -1556,6 +1566,7 @@ $Node* CoreDocumentImpl::adoptNode($Node* source) {
 }
 
 void CoreDocumentImpl::undeferChildren($Node* node$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, node, node$renamed);
 	$var($Node, top, node);
 	while (nullptr != node) {
@@ -1613,6 +1624,7 @@ void CoreDocumentImpl::putIdentifier($String* idName, $Element* element) {
 }
 
 $Element* CoreDocumentImpl::getIdentifier($String* idName) {
+	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
@@ -1737,6 +1749,7 @@ void CoreDocumentImpl::freeNodeListCache($NodeListCache* c) {
 }
 
 $Object* CoreDocumentImpl::setUserData($Node* n, $String* key, Object$* data, $UserDataHandler* handler) {
+	$useLocalCurrentObjectStackCache();
 	if (data == nullptr) {
 		if (this->nodeUserData != nullptr) {
 			$var($Map, t, $cast($Map, $nc(this->nodeUserData)->get(n)));
@@ -1770,6 +1783,7 @@ $Object* CoreDocumentImpl::setUserData($Node* n, $String* key, Object$* data, $U
 }
 
 $Object* CoreDocumentImpl::getUserData($Node* n, $String* key) {
+	$useLocalCurrentObjectStackCache();
 	if (this->nodeUserData == nullptr) {
 		return $of(nullptr);
 	}
@@ -1825,6 +1839,7 @@ void CoreDocumentImpl::callUserDataHandlers($Node* n, $Node* c, int16_t operatio
 }
 
 void CoreDocumentImpl::callUserDataHandlers($Node* n, $Node* c, int16_t operation, $Map* userData) {
+	$useLocalCurrentObjectStackCache();
 	if (userData == nullptr || $nc(userData)->isEmpty()) {
 		return;
 	}
@@ -1843,6 +1858,7 @@ void CoreDocumentImpl::checkNamespaceWF($String* qname, int32_t colon1, int32_t 
 }
 
 void CoreDocumentImpl::checkDOMNSErr($String* prefix, $String* namespace$) {
+	$useLocalCurrentObjectStackCache();
 	if (this->errorChecking) {
 		if (namespace$ == nullptr) {
 			$init($DOMMessageFormatter);
@@ -1979,6 +1995,7 @@ void CoreDocumentImpl::renamedElement($Element* oldEl, $Element* newEl) {
 }
 
 void CoreDocumentImpl::writeObject($ObjectOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$var($Hashtable, nud, nullptr);
 	if (this->nodeUserData != nullptr) {
 		$assign(nud, $new($Hashtable));
@@ -2019,6 +2036,7 @@ void CoreDocumentImpl::writeObject($ObjectOutputStream* out) {
 }
 
 void CoreDocumentImpl::readObject($ObjectInputStream* in) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectInputStream$GetField, gf, $nc(in)->readFields());
 	$set(this, docType, $cast($DocumentTypeImpl, $nc(gf)->get("docType"_s, ($Object*)nullptr)));
 	$set(this, docElement, $cast($ElementImpl, gf->get("docElement"_s, ($Object*)nullptr)));
@@ -2069,6 +2087,7 @@ void CoreDocumentImpl::lambda$callUserDataHandlers$0($Map* userData, int16_t ope
 }
 
 void clinit$CoreDocumentImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$assignStatic(CoreDocumentImpl::kidOK, $new($ints, 13));
 		$nc(CoreDocumentImpl::kidOK)->set($Node::DOCUMENT_NODE, (($sl(1, $Node::ELEMENT_NODE) | $sl(1, $Node::PROCESSING_INSTRUCTION_NODE)) | $sl(1, $Node::COMMENT_NODE)) | $sl(1, $Node::DOCUMENT_TYPE_NODE));

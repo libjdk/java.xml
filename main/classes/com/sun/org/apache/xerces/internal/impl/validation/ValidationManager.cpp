@@ -75,6 +75,7 @@ void ValidationManager::addValidationState($ValidationState* vs) {
 }
 
 void ValidationManager::setEntityState($EntityState* state) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = $nc(this->fVSs)->size() - 1; i >= 0; --i) {
 		$nc(($cast($ValidationState, $($nc(this->fVSs)->get(i)))))->setEntityState(state);
 	}

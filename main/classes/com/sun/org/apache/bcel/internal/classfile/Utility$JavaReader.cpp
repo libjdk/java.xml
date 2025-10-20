@@ -69,6 +69,7 @@ void Utility$JavaReader::init$($Reader* in) {
 }
 
 int32_t Utility$JavaReader::read() {
+	$useLocalCurrentObjectStackCache();
 	int32_t b = $nc(this->in)->read();
 	if (b != u'$') {
 		return b;

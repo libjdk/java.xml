@@ -94,6 +94,7 @@ $Object* allocate$Module($Class* clazz) {
 }
 
 void Module::init$(int32_t name_index, int32_t length, $DataInput* input, $ConstantPool* constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::init$($Const::ATTR_MODULE, name_index, length, constant_pool);
 	this->moduleNameIndex = $nc(input)->readUnsignedShort();
 	this->moduleFlags = input->readUnsignedShort();
@@ -146,6 +147,7 @@ $ModuleProvidesArray* Module::getProvidesTable() {
 }
 
 void Module::dump($DataOutputStream* file) {
+	$useLocalCurrentObjectStackCache();
 	$Attribute::dump(file);
 	$nc(file)->writeShort(this->moduleNameIndex);
 	file->writeShort(this->moduleFlags);
@@ -213,6 +215,7 @@ void Module::dump($DataOutputStream* file) {
 }
 
 $String* Module::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $Attribute::getConstantPool());
 	$var($StringBuilder, buf, $new($StringBuilder));
 	buf->append("Module:\n"_s);
@@ -285,6 +288,7 @@ $String* Module::toString() {
 }
 
 $Attribute* Module::copy($ConstantPool* _constant_pool) {
+	$useLocalCurrentObjectStackCache();
 	$var(Module, c, $cast(Module, clone()));
 	$set($nc(c), requiresTable, $new($ModuleRequiresArray, $nc(this->requiresTable)->length));
 	for (int32_t i = 0; i < $nc(this->requiresTable)->length; ++i) {

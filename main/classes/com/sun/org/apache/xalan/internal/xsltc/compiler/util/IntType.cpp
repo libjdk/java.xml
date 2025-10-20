@@ -253,6 +253,7 @@ int32_t IntType::distanceTo($1Type* type) {
 }
 
 void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::Real) {
 		translateTo(classGen, methodGen, $cast($RealType, type));
@@ -283,6 +284,7 @@ void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -290,6 +292,7 @@ void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($BranchHandle, falsec, $nc(il)->append(static_cast<$BranchInstruction*>($$new($IFEQ, nullptr))));
 	$init($Constants);
@@ -300,11 +303,13 @@ void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 $FlowList* IntType::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	return $new($FlowList, $(static_cast<$InstructionHandle*>($nc(il)->append(static_cast<$BranchInstruction*>($$new($IFEQ, nullptr))))));
 }
 
 void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $ReferenceType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -315,6 +320,7 @@ void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen
 }
 
 void IntType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Character);
 	if (clazz == $Character::TYPE) {
@@ -378,6 +384,7 @@ void IntType::translateBox($ClassGenerator* classGen, $MethodGenerator* methodGe
 }
 
 void IntType::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

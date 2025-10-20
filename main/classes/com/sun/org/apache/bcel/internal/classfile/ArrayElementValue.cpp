@@ -76,6 +76,7 @@ $String* ArrayElementValue::toString() {
 }
 
 void ArrayElementValue::init$(int32_t type, $ElementValueArray* datums, $ConstantPool* cpool) {
+	$useLocalCurrentObjectStackCache();
 	$ElementValue::init$(type, cpool);
 	if (type != $ElementValue::ARRAY) {
 		$throwNew($IllegalArgumentException, $$str({"Only element values of type array can be built with this ctor - type specified: "_s, $$str(type)}));
@@ -84,6 +85,7 @@ void ArrayElementValue::init$(int32_t type, $ElementValueArray* datums, $Constan
 }
 
 void ArrayElementValue::dump($DataOutputStream* dos) {
+	$useLocalCurrentObjectStackCache();
 	$nc(dos)->writeByte($ElementValue::getType());
 	dos->writeShort($nc(this->elementValues)->length);
 	{
@@ -100,6 +102,7 @@ void ArrayElementValue::dump($DataOutputStream* dos) {
 }
 
 $String* ArrayElementValue::stringifyValue() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, sb, $new($StringBuilder));
 	sb->append("["_s);
 	for (int32_t i = 0; i < $nc(this->elementValues)->length; ++i) {

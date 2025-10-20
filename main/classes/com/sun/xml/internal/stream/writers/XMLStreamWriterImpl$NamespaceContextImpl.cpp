@@ -83,6 +83,7 @@ void XMLStreamWriterImpl$NamespaceContextImpl::init$($XMLStreamWriterImpl* this$
 }
 
 $String* XMLStreamWriterImpl$NamespaceContextImpl::getNamespaceURI($String* prefix$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, uri, nullptr);
 	if (prefix != nullptr) {
@@ -102,6 +103,7 @@ $String* XMLStreamWriterImpl$NamespaceContextImpl::getNamespaceURI($String* pref
 }
 
 $String* XMLStreamWriterImpl$NamespaceContextImpl::getPrefix($String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, uri$renamed);
 	$var($String, prefix, nullptr);
 	if (uri != nullptr) {
@@ -120,6 +122,7 @@ $String* XMLStreamWriterImpl$NamespaceContextImpl::getPrefix($String* uri$rename
 }
 
 $Iterator* XMLStreamWriterImpl$NamespaceContextImpl::getPrefixes($String* uri$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, uri, uri$renamed);
 	$var($List, prefixes, nullptr);
 	$var($Iterator, itr, nullptr);

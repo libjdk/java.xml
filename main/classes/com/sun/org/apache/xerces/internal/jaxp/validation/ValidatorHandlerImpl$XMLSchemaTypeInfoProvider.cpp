@@ -150,6 +150,7 @@ void ValidatorHandlerImpl$XMLSchemaTypeInfoProvider::finishEndElement() {
 }
 
 void ValidatorHandlerImpl$XMLSchemaTypeInfoProvider::checkState(bool forElementInfo) {
+	$useLocalCurrentObjectStackCache();
 	if (!(this->fInStartElement || (this->fInEndElement && forElementInfo))) {
 		$throwNew($IllegalStateException, $($JAXPValidationMessageFormatter::formatMessage($($nc(this->this$0->fComponentManager)->getLocale()), "TypeInfoProviderIllegalState"_s, nullptr)));
 	}
@@ -161,6 +162,7 @@ $TypeInfo* ValidatorHandlerImpl$XMLSchemaTypeInfoProvider::getAttributeTypeInfo(
 }
 
 $TypeInfo* ValidatorHandlerImpl$XMLSchemaTypeInfoProvider::getAttributeType(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	checkState(false);
 	if (index < 0 || $nc(this->fAttributes)->getLength() <= index) {
 		$throwNew($IndexOutOfBoundsException, $($Integer::toString(index)));
@@ -195,6 +197,7 @@ $TypeInfo* ValidatorHandlerImpl$XMLSchemaTypeInfoProvider::getElementTypeInfo() 
 }
 
 $TypeInfo* ValidatorHandlerImpl$XMLSchemaTypeInfoProvider::getTypeInfoFromPSVI($ItemPSVI* psvi) {
+	$useLocalCurrentObjectStackCache();
 	if (psvi == nullptr) {
 		return nullptr;
 	}

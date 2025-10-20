@@ -55,6 +55,7 @@ void ErrorHandlerProxy::init$() {
 }
 
 void ErrorHandlerProxy::error($SAXParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLErrorHandler, eh, getErrorHandler());
 	if ($instanceOf($ErrorHandlerWrapper, eh)) {
 		$nc($nc(($cast($ErrorHandlerWrapper, eh)))->fErrorHandler)->error(e);
@@ -64,6 +65,7 @@ void ErrorHandlerProxy::error($SAXParseException* e) {
 }
 
 void ErrorHandlerProxy::fatalError($SAXParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLErrorHandler, eh, getErrorHandler());
 	if ($instanceOf($ErrorHandlerWrapper, eh)) {
 		$nc($nc(($cast($ErrorHandlerWrapper, eh)))->fErrorHandler)->fatalError(e);
@@ -73,6 +75,7 @@ void ErrorHandlerProxy::fatalError($SAXParseException* e) {
 }
 
 void ErrorHandlerProxy::warning($SAXParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLErrorHandler, eh, getErrorHandler());
 	if ($instanceOf($ErrorHandlerWrapper, eh)) {
 		$nc($nc(($cast($ErrorHandlerWrapper, eh)))->fErrorHandler)->warning(e);

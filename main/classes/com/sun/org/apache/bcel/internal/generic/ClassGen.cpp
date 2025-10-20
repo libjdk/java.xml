@@ -226,6 +226,7 @@ void ClassGen::finalize() {
 $BCELComparator* ClassGen::bcelComparator = nullptr;
 
 void ClassGen::init$($String* className, $String* superClassName, $String* fileName, int32_t accessFlags, $StringArray* interfaces, $ConstantPoolGen* cp) {
+	$useLocalCurrentObjectStackCache();
 	$AccessFlags::init$(accessFlags);
 	this->classNameIndex = -1;
 	this->superclass_name_index = -1;
@@ -267,6 +268,7 @@ void ClassGen::init$($String* className, $String* superClassName, $String* fileN
 }
 
 void ClassGen::init$($JavaClass* clazz) {
+	$useLocalCurrentObjectStackCache();
 	$AccessFlags::init$($nc(clazz)->getAccessFlags());
 	this->classNameIndex = -1;
 	this->superclass_name_index = -1;
@@ -350,6 +352,7 @@ void ClassGen::init$($JavaClass* clazz) {
 }
 
 $AnnotationEntryGenArray* ClassGen::unpackAnnotations($AttributeArray* attrs) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, annotationGenObjs, $new($ArrayList));
 	{
 		$var($AttributeArray, arr$, attrs);
@@ -394,6 +397,7 @@ $AnnotationEntryGenArray* ClassGen::unpackAnnotations($AttributeArray* attrs) {
 }
 
 $JavaClass* ClassGen::getJavaClass() {
+	$useLocalCurrentObjectStackCache();
 	$var($ints, interfaces, getInterfaces());
 	$var($FieldArray, fields, getFields());
 	$var($MethodArray, methods, getMethods());
@@ -447,6 +451,7 @@ void ClassGen::addMethod($Method* m) {
 }
 
 void ClassGen::addEmptyConstructor(int32_t access_flags) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $new($InstructionList));
 	$init($InstructionConst);
 	il->append(static_cast<$Instruction*>($InstructionConst::THIS));
@@ -467,6 +472,7 @@ bool ClassGen::containsField($Field* f) {
 }
 
 $Field* ClassGen::containsField($String* name) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->fieldList)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -482,6 +488,7 @@ $Field* ClassGen::containsField($String* name) {
 }
 
 $Method* ClassGen::containsMethod($String* name, $String* signature) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc(this->methodList)->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -560,6 +567,7 @@ $MethodArray* ClassGen::getMethods() {
 }
 
 void ClassGen::setMethods($MethodArray* methods) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->methodList)->clear();
 	{
 		$var($MethodArray, arr$, methods);
@@ -590,6 +598,7 @@ $StringArray* ClassGen::getInterfaceNames() {
 }
 
 $ints* ClassGen::getInterfaces() {
+	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->interfaceList)->size();
 	$var($ints, interfaces, $new($ints, size));
 	for (int32_t i = 0; i < size; ++i) {
@@ -619,11 +628,13 @@ void ClassGen::setConstantPool($ConstantPoolGen* constant_pool) {
 }
 
 void ClassGen::setClassNameIndex(int32_t class_name_index) {
+	$useLocalCurrentObjectStackCache();
 	this->classNameIndex = class_name_index;
 	$set(this, className, $nc($($nc($($nc(this->cp)->getConstantPool()))->getConstantString(class_name_index, $Const::CONSTANT_Class)))->replace(u'/', u'.'));
 }
 
 void ClassGen::setSuperclassNameIndex(int32_t superclass_name_index) {
+	$useLocalCurrentObjectStackCache();
 	this->superclass_name_index = superclass_name_index;
 	$set(this, superClassName, $nc($($nc($($nc(this->cp)->getConstantPool()))->getConstantString(superclass_name_index, $Const::CONSTANT_Class)))->replace(u'/', u'.'));
 }
@@ -650,6 +661,7 @@ void ClassGen::removeObserver($ClassObserver* o) {
 }
 
 void ClassGen::update() {
+	$useLocalCurrentObjectStackCache();
 	if (this->observers != nullptr) {
 		{
 			$var($Iterator, i$, $nc(this->observers)->iterator());

@@ -530,6 +530,7 @@ void XMLDocumentFragmentScannerImpl::setInputSource($XMLInputSource* inputSource
 }
 
 bool XMLDocumentFragmentScannerImpl::scanDocument(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	$nc(this->fEntityManager)->setEntityHandler(this);
 	int32_t event = next();
 	do {
@@ -635,6 +636,7 @@ int32_t XMLDocumentFragmentScannerImpl::next() {
 }
 
 void XMLDocumentFragmentScannerImpl::reset($XMLComponentManager* componentManager) {
+	$useLocalCurrentObjectStackCache();
 	$XMLScanner::reset(componentManager);
 	$init($Constants);
 	this->fReportCdataEvent = $nc(componentManager)->getFeature($Constants::STAX_REPORT_CDATA_EVENT, true);
@@ -659,6 +661,7 @@ void XMLDocumentFragmentScannerImpl::reset($XMLComponentManager* componentManage
 }
 
 void XMLDocumentFragmentScannerImpl::reset($PropertyManager* propertyManager) {
+	$useLocalCurrentObjectStackCache();
 	$XMLScanner::reset(propertyManager);
 	$init($XMLInputFactory);
 	this->fNamespaces = $nc(($cast($Boolean, $($nc(propertyManager)->getProperty($XMLInputFactory::IS_NAMESPACE_AWARE)))))->booleanValue();
@@ -732,6 +735,7 @@ $StringArray* XMLDocumentFragmentScannerImpl::getRecognizedProperties() {
 }
 
 void XMLDocumentFragmentScannerImpl::setProperty($String* propertyId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	$XMLScanner::setProperty(propertyId, value);
 	$init($Constants);
 	if ($nc(propertyId)->startsWith($Constants::XERCES_PROPERTY_PREFIX)) {
@@ -789,6 +793,7 @@ $XMLDocumentHandler* XMLDocumentFragmentScannerImpl::getDocumentHandler() {
 }
 
 void XMLDocumentFragmentScannerImpl::startEntity($String* name, $XMLResourceIdentifier* identifier, $String* encoding, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fEntityDepth == $nc(this->fEntityStack)->length) {
 		$var($ints, entityarray, $new($ints, $nc(this->fEntityStack)->length * 2));
 		$System::arraycopy(this->fEntityStack, 0, entityarray, 0, $nc(this->fEntityStack)->length);
@@ -823,6 +828,7 @@ $XMLDocumentFragmentScannerImpl$Driver* XMLDocumentFragmentScannerImpl::createCo
 }
 
 void XMLDocumentFragmentScannerImpl::scanXMLDeclOrTextDecl(bool scanningTextDecl) {
+	$useLocalCurrentObjectStackCache();
 	$XMLScanner::scanXMLDeclOrTextDecl(scanningTextDecl, this->fStrings);
 	--this->fMarkupDepth;
 	$var($String, version, $nc(this->fStrings)->get(0));
@@ -984,6 +990,7 @@ bool XMLDocumentFragmentScannerImpl::skipElement(int16_t column) {
 }
 
 bool XMLDocumentFragmentScannerImpl::scanStartElement() {
+	$useLocalCurrentObjectStackCache();
 	if (this->fSkip && !this->fAdd) {
 		$var($QName, name, $nc(this->fElementStack)->getNext());
 		this->fSkip = $nc(this->fEntityScanner)->skipString($nc(name)->rawname);
@@ -1052,6 +1059,7 @@ bool XMLDocumentFragmentScannerImpl::scanStartElement() {
 }
 
 bool XMLDocumentFragmentScannerImpl::seekCloseOfStartTag() {
+	$useLocalCurrentObjectStackCache();
 	bool sawSpace = $nc(this->fEntityScanner)->skipSpaces();
 	int32_t c = $nc(this->fEntityScanner)->peekChar();
 	if (c == u'>') {
@@ -1094,6 +1102,7 @@ bool XMLDocumentFragmentScannerImpl::isStandAlone() {
 }
 
 void XMLDocumentFragmentScannerImpl::scanAttribute($XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNamespaces) {
 		$init($XMLScanner$NameType);
 		$nc(this->fEntityScanner)->scanQName(this->fAttributeQName, $XMLScanner$NameType::ATTRIBUTENAME);
@@ -1158,6 +1167,7 @@ int32_t XMLDocumentFragmentScannerImpl::scanContent($XMLStringBuffer* content) {
 }
 
 bool XMLDocumentFragmentScannerImpl::scanCDATASection($XMLStringBuffer* contentBuffer, bool complete) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDocumentHandler != nullptr) {
 	}
 	while (true) {
@@ -1188,6 +1198,7 @@ bool XMLDocumentFragmentScannerImpl::scanCDATASection($XMLStringBuffer* contentB
 }
 
 int32_t XMLDocumentFragmentScannerImpl::scanEndElement() {
+	$useLocalCurrentObjectStackCache();
 	$var($QName, endElementName, $nc(this->fElementStack)->popElement());
 	$var($String, rawname, $nc(endElementName)->rawname);
 	if (!$nc(this->fEntityScanner)->skipString(endElementName->rawname)) {
@@ -1241,6 +1252,7 @@ void XMLDocumentFragmentScannerImpl::scanCharReference() {
 }
 
 void XMLDocumentFragmentScannerImpl::scanEntityReference($XMLStringBuffer* content) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLScanner$NameType);
 	$var($String, name, $nc(this->fEntityScanner)->scanName($XMLScanner$NameType::REFERENCE));
 	if (name == nullptr) {
@@ -1312,6 +1324,7 @@ void XMLDocumentFragmentScannerImpl::scanEntityReference($XMLStringBuffer* conte
 }
 
 void XMLDocumentFragmentScannerImpl::checkDepth($String* elementName) {
+	$useLocalCurrentObjectStackCache();
 	$init($XMLSecurityManager$Limit);
 	$nc(this->fLimitAnalyzer)->addValue($XMLSecurityManager$Limit::MAX_ELEMENT_DEPTH_LIMIT, elementName, $nc(this->fElementStack)->fDepth);
 	if ($nc(this->fSecurityManager)->isOverLimit($XMLSecurityManager$Limit::MAX_ELEMENT_DEPTH_LIMIT, this->fLimitAnalyzer)) {
@@ -1354,6 +1367,7 @@ void XMLDocumentFragmentScannerImpl::setDriver($XMLDocumentFragmentScannerImpl$D
 }
 
 $String* XMLDocumentFragmentScannerImpl::getScannerStateName(int32_t state) {
+	$useLocalCurrentObjectStackCache();
 	switch (state) {
 	case XMLDocumentFragmentScannerImpl::SCANNER_STATE_DOCTYPE:
 		{
@@ -1432,6 +1446,7 @@ $String* XMLDocumentFragmentScannerImpl::getDriverName($XMLDocumentFragmentScann
 }
 
 $String* XMLDocumentFragmentScannerImpl::checkAccess($String* systemId, $String* allowedProtocols) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, baseSystemId, $nc(this->fEntityScanner)->getBaseSystemId());
 	$var($String, expandedSystemId, $XMLEntityManager::expandSystemId(systemId, baseSystemId, this->fStrictURI));
 	$init($JdkConstants);
@@ -1475,6 +1490,7 @@ void XMLDocumentFragmentScannerImpl::bufferContent() {
 }
 
 void clinit$XMLDocumentFragmentScannerImpl($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$init($Constants);
 	$assignStatic(XMLDocumentFragmentScannerImpl::NOTIFY_BUILTIN_REFS, $str({$Constants::XERCES_FEATURE_PREFIX, $Constants::NOTIFY_BUILTIN_REFS_FEATURE}));
 	$assignStatic(XMLDocumentFragmentScannerImpl::ENTITY_RESOLVER, $str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::ENTITY_RESOLVER_PROPERTY}));

@@ -80,6 +80,7 @@ $Object* allocate$Selector$XPath($Class* clazz) {
 }
 
 void Selector$XPath::init$($String* xpath, $SymbolTable* symbolTable, $NamespaceContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$XPath::init$($(normalize(xpath)), symbolTable, context);
 	for (int32_t i = 0; i < $nc(this->fLocationPaths)->length; ++i) {
 		$var($XPath$Axis, axis, $nc($nc($nc($nc(this->fLocationPaths)->get(i))->steps)->get($nc($nc($nc(this->fLocationPaths)->get(i))->steps)->length - 1))->axis);
@@ -91,6 +92,7 @@ void Selector$XPath::init$($String* xpath, $SymbolTable* symbolTable, $Namespace
 
 $String* Selector$XPath::normalize($String* xpath$renamed) {
 	$init(Selector$XPath);
+	$useLocalCurrentObjectStackCache();
 	$var($String, xpath, xpath$renamed);
 	$var($StringBuffer, modifiedXPath, $new($StringBuffer, $nc(xpath)->length() + 5));
 	int32_t unionIndex = -1;

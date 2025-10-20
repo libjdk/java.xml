@@ -178,6 +178,7 @@ void XPathResultImpl::getResult($XObject* resultObject) {
 
 $Object* XPathResultImpl::getValue($XObject* resultObject, $Class* type) {
 	$init(XPathResultImpl);
+	$useLocalCurrentObjectStackCache();
 	$Objects::requireNonNull(type);
 	$load($XPathEvaluationResult);
 	if (type->isAssignableFrom($XPathEvaluationResult::class$)) {

@@ -87,6 +87,7 @@ FlowList* FlowList::add($InstructionHandle* bh) {
 }
 
 FlowList* FlowList::append(FlowList* right) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_elements == nullptr) {
 		$set(this, _elements, $nc(right)->_elements);
 	} else {
@@ -102,6 +103,7 @@ FlowList* FlowList::append(FlowList* right) {
 }
 
 void FlowList::backPatch($InstructionHandle* target) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_elements != nullptr) {
 		int32_t n = $nc(this->_elements)->size();
 		for (int32_t i = 0; i < n; ++i) {
@@ -113,6 +115,7 @@ void FlowList::backPatch($InstructionHandle* target) {
 }
 
 FlowList* FlowList::copyAndRedirect($InstructionList* oldList, $InstructionList* newList) {
+	$useLocalCurrentObjectStackCache();
 	$var(FlowList, result, $new(FlowList));
 	if (this->_elements == nullptr) {
 		return result;

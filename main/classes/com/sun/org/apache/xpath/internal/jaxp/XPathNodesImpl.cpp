@@ -90,6 +90,7 @@ int32_t XPathNodesImpl::size() {
 }
 
 $Node* XPathNodesImpl::get(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0 || index >= size()) {
 		$throwNew($IndexOutOfBoundsException, $$str({"Index "_s, $$str(index), " is out of bounds"_s}));
 	}

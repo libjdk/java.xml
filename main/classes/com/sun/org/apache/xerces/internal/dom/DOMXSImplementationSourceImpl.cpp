@@ -78,6 +78,7 @@ $DOMImplementation* DOMXSImplementationSourceImpl::getDOMImplementation($String*
 }
 
 $DOMImplementationList* DOMXSImplementationSourceImpl::getDOMImplementationList($String* features) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, implementations, $new($ArrayList));
 	$var($DOMImplementationList, list, $DOMImplementationSourceImpl::getDOMImplementationList(features));
 	for (int32_t i = 0; i < $nc(list)->getLength(); ++i) {

@@ -116,6 +116,7 @@ void InvokeInstruction::init$(int16_t opcode, int32_t index) {
 }
 
 $String* InvokeInstruction::toString($ConstantPool* cp) {
+	$useLocalCurrentObjectStackCache();
 	$var($Constant, c, $nc(cp)->getConstant($FieldOrMethod::getIndex()));
 	$var($StringTokenizer, tok, $new($StringTokenizer, $(cp->constantToString(c))));
 	$var($String, opcodeName, $Const::getOpcodeName($FieldOrMethod::getOpcode()));
@@ -149,6 +150,7 @@ int32_t InvokeInstruction::produceStack($ConstantPoolGen* cpg) {
 }
 
 $String* InvokeInstruction::getClassName($ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPool, cp, $nc(cpg)->getConstantPool());
 	$var($ConstantCP, cmr, $cast($ConstantCP, $nc(cp)->getConstant($FieldOrMethod::getIndex())));
 	$var($String, className, cp->getConstantString($nc(cmr)->getClassIndex(), $Const::CONSTANT_Class));

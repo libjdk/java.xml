@@ -79,6 +79,7 @@ void GenerateIdCall::init$($QName* fname, $List* arguments) {
 }
 
 void GenerateIdCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if (argumentCount() == 0) {
 		$nc(il)->append($(methodGen->loadContextNode()));

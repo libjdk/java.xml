@@ -200,6 +200,7 @@ void XPath::init$($String* xpath, $SymbolTable* symbolTable, $NamespaceContext* 
 }
 
 $XPath$LocationPathArray* XPath::getLocationPaths() {
+	$useLocalCurrentObjectStackCache();
 	$var($XPath$LocationPathArray, ret, $new($XPath$LocationPathArray, $nc(this->fLocationPaths)->length));
 	for (int32_t i = 0; i < $nc(this->fLocationPaths)->length; ++i) {
 		ret->set(i, $cast($XPath$LocationPath, $($nc($nc(this->fLocationPaths)->get(i))->clone())));
@@ -212,6 +213,7 @@ $XPath$LocationPath* XPath::getLocationPath() {
 }
 
 $String* XPath::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($List, l, $Arrays::asList(this->fLocationPaths));
 	$var($String, s, $cast($String, $nc($($nc($($nc(l)->stream()))->map(static_cast<$Function*>($$new(XPath$$Lambda$lambda$toString$0)))))->collect($($Collectors::joining("|"_s)))));
 	return s;
@@ -233,6 +235,7 @@ $XPath$LocationPath* XPath::buildLocationPath($ArrayList* stepsVector) {
 }
 
 $XPath$LocationPathArray* XPath::parseExpression($NamespaceContext* context) {
+	$useLocalCurrentObjectStackCache();
 	$var($XPath$Tokens, xtokens, $new($XPath$Tokens, this->fSymbolTable));
 	$var($XPath$Scanner, scanner, $new($XPath$1, this, this->fSymbolTable));
 	int32_t length = $nc(this->fExpression)->length();
@@ -364,6 +367,7 @@ $XPath$LocationPathArray* XPath::parseExpression($NamespaceContext* context) {
 }
 
 $XPath$NodeTest* XPath::parseNodeTest(int32_t typeToken, $XPath$Tokens* xtokens, $NamespaceContext* context) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($String, prefix, nullptr)
 		$var($String, uri, nullptr)
@@ -405,6 +409,7 @@ $XPath$NodeTest* XPath::parseNodeTest(int32_t typeToken, $XPath$Tokens* xtokens,
 }
 
 void XPath::main($StringArray* argv) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(argv)->length; ++i) {
 		$var($String, expression, argv->get(i));
 		$init($System);

@@ -368,6 +368,7 @@ $String* Mode::functionName() {
 }
 
 $String* Mode::functionName(int32_t min, int32_t max) {
+	$useLocalCurrentObjectStackCache();
 	if (this->_importLevels == nullptr) {
 		$set(this, _importLevels, $new($HashMap));
 	}
@@ -398,6 +399,7 @@ $List* Mode::quicksort($List* templates, int32_t p, int32_t r) {
 }
 
 int32_t Mode::partition($List* templates, int32_t p, int32_t r) {
+	$useLocalCurrentObjectStackCache();
 	$var($Template, x, $cast($Template, $nc(templates)->get(p)));
 	int32_t i = p - 1;
 	int32_t j = r + 1;
@@ -415,6 +417,7 @@ int32_t Mode::partition($List* templates, int32_t p, int32_t r) {
 }
 
 void Mode::processPatterns($Map* keys) {
+	$useLocalCurrentObjectStackCache();
 	$set(this, _keys, keys);
 	$set(this, _templates, quicksort(this->_templates, 0, $nc(this->_templates)->size() - 1));
 	{
@@ -437,6 +440,7 @@ void Mode::processPatterns($Map* keys) {
 }
 
 void Mode::flattenAlternative($Pattern* pattern, $Template* template$, $Map* keys) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($IdKeyPattern, pattern)) {
 		$var($IdKeyPattern, idkey, $cast($IdKeyPattern, pattern));
 		$nc(idkey)->setTemplate(template$);
@@ -469,6 +473,7 @@ void Mode::addPatternToGroup($LocationPathPattern* lpp) {
 }
 
 void Mode::addPattern(int32_t kernelType, $LocationPathPattern* pattern) {
+	$useLocalCurrentObjectStackCache();
 	int32_t oldLength = $nc(this->_patternGroups)->length;
 	if (kernelType >= oldLength) {
 		$var($ListArray, newGroups, $fcast($ListArray, $new($ArrayListArray, kernelType * 2)));
@@ -504,6 +509,7 @@ void Mode::addPattern(int32_t kernelType, $LocationPathPattern* pattern) {
 }
 
 void Mode::completeTestSequences(int32_t nodeType, $List* patterns) {
+	$useLocalCurrentObjectStackCache();
 	if (patterns != nullptr) {
 		if ($nc(this->_patternGroups)->get(nodeType) == nullptr) {
 			$nc(this->_patternGroups)->set(nodeType, patterns);
@@ -517,6 +523,7 @@ void Mode::completeTestSequences(int32_t nodeType, $List* patterns) {
 }
 
 void Mode::prepareTestSequences() {
+	$useLocalCurrentObjectStackCache();
 	$var($List, starGroup, $nc(this->_patternGroups)->get($DTM::ELEMENT_NODE));
 	$var($List, atStarGroup, $nc(this->_patternGroups)->get($DTM::ATTRIBUTE_NODE));
 	completeTestSequences($DTM::TEXT_NODE, this->_childNodeGroup);
@@ -568,6 +575,7 @@ void Mode::prepareTestSequences() {
 }
 
 void Mode::compileNamedTemplate($Template* template$, $ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
 	$var($String, methodName, $Util::escape($($nc($($nc(template$)->getName()))->toString())));
@@ -599,6 +607,7 @@ void Mode::compileNamedTemplate($Template* template$, $ClassGenerator* classGen)
 }
 
 void Mode::compileTemplates($ClassGenerator* classGen, $MethodGenerator* methodGen, $InstructionHandle* next) {
+	$useLocalCurrentObjectStackCache();
 	$var($Set, templates, $nc(this->_namedTemplates)->keySet());
 	{
 		$var($Iterator, i$, $nc(templates)->iterator());
@@ -629,6 +638,7 @@ void Mode::compileTemplates($ClassGenerator* classGen, $MethodGenerator* methodG
 }
 
 void Mode::appendTemplateCode($InstructionList* body) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc($($nc(this->_neededTemplates)->keySet()))->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -644,6 +654,7 @@ void Mode::appendTemplateCode($InstructionList* body) {
 }
 
 void Mode::appendTestSequences($InstructionList* body) {
+	$useLocalCurrentObjectStackCache();
 	int32_t n = $nc(this->_testSeq)->length;
 	for (int32_t i = 0; i < n; ++i) {
 		$var($TestSeq, testSeq, $nc(this->_testSeq)->get(i));
@@ -658,6 +669,7 @@ void Mode::appendTestSequences($InstructionList* body) {
 
 void Mode::compileGetChildren($ClassGenerator* classGen, $MethodGenerator* methodGen, int32_t node) {
 	$init(Mode);
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -668,6 +680,7 @@ void Mode::compileGetChildren($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 $InstructionList* Mode::compileDefaultRecursion($ClassGenerator* classGen, $MethodGenerator* methodGen, $InstructionHandle* next) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
 	$var($String, applyTemplatesSig, classGen->getApplyTemplatesSig());
@@ -687,6 +700,7 @@ $InstructionList* Mode::compileDefaultRecursion($ClassGenerator* classGen, $Meth
 }
 
 $InstructionList* Mode::compileDefaultText($ClassGenerator* classGen, $MethodGenerator* methodGen, $InstructionHandle* next) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
 	$init($Constants);
@@ -700,6 +714,7 @@ $InstructionList* Mode::compileDefaultText($ClassGenerator* classGen, $MethodGen
 }
 
 $InstructionList* Mode::compileNamespaces($ClassGenerator* classGen, $MethodGenerator* methodGen, $booleans* isNamespace, $booleans* isAttribute, bool attrFlag, $InstructionHandle* defaultTarget) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTC, xsltc, $nc($($nc(classGen)->getParser()))->getXSLTC());
 	$var($ConstantPoolGen, cpg, classGen->getConstantPool());
 	$var($List, namespaces, $nc(xsltc)->getNamespaceIndex());
@@ -742,6 +757,7 @@ $InstructionList* Mode::compileNamespaces($ClassGenerator* classGen, $MethodGene
 }
 
 void Mode::compileApplyTemplates($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTC, xsltc, $nc($($nc(classGen)->getParser()))->getXSLTC());
 	$var($ConstantPoolGen, cpg, classGen->getConstantPool());
 	$var($List, names, $nc(xsltc)->getNamesIndex());
@@ -947,10 +963,12 @@ void Mode::compileApplyTemplates($ClassGenerator* classGen) {
 }
 
 void Mode::compileTemplateCalls($ClassGenerator* classGen, $MethodGenerator* methodGen, $InstructionHandle* next, int32_t min, int32_t max) {
+	$useLocalCurrentObjectStackCache();
 	$nc($($nc($($nc(this->_neededTemplates)->keySet()))->stream()))->forEach(static_cast<$Consumer*>($$new(Mode$$Lambda$lambda$compileTemplateCalls$0, this, min, max, classGen, methodGen, next)));
 }
 
 void Mode::compileApplyImports($ClassGenerator* classGen, int32_t min, int32_t max) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSLTC, xsltc, $nc($($nc(classGen)->getParser()))->getXSLTC());
 	$var($ConstantPoolGen, cpg, classGen->getConstantPool());
 	$var($List, names, $nc(xsltc)->getNamesIndex());
@@ -1158,6 +1176,7 @@ void Mode::compileApplyImports($ClassGenerator* classGen, int32_t min, int32_t m
 }
 
 void Mode::peepHoleOptimization($MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($InstructionFinder, find, $new($InstructionFinder, il));
 	$var($InstructionHandle, ih, nullptr);
@@ -1263,6 +1282,7 @@ bool Mode::isNamespaceName($String* qname) {
 }
 
 void Mode::lambda$compileTemplateCalls$0(int32_t min, int32_t max, $ClassGenerator* classGen, $MethodGenerator* methodGen, $InstructionHandle* next, $Template* template$) {
+	$useLocalCurrentObjectStackCache();
 	int32_t prec = $nc(template$)->getImportPrecedence();
 	if ((prec >= min) && (prec < max)) {
 		if (template$->hasContents()) {

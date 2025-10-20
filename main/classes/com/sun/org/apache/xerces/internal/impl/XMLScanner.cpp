@@ -359,6 +359,7 @@ void XMLScanner::reset() {
 }
 
 void XMLScanner::reset($PropertyManager* propertyManager) {
+	$useLocalCurrentObjectStackCache();
 	init();
 	$init($Constants);
 	$set(this, fSymbolTable, $cast($SymbolTable, $nc(propertyManager)->getProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::SYMBOL_TABLE_PROPERTY}))));
@@ -372,6 +373,7 @@ void XMLScanner::reset($PropertyManager* propertyManager) {
 }
 
 void XMLScanner::scanXMLDeclOrTextDecl(bool scanningTextDecl, $StringArray* pseudoAttributeValues) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, version, nullptr);
 	$var($String, encoding, nullptr);
 	$var($String, standalone, nullptr);
@@ -517,6 +519,7 @@ case$3:
 }
 
 $String* XMLScanner::scanPseudoAttribute(bool scanningTextDecl, $XMLString* value) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, scanPseudoAttributeName());
 	if (name == nullptr) {
 		reportFatalError("PseudoAttrNameExpected"_s, nullptr);
@@ -599,6 +602,7 @@ void XMLScanner::scanPI($XMLStringBuffer* data) {
 }
 
 void XMLScanner::scanPIData($String* target, $XMLStringBuffer* data) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(target)->length() == 3) {
 		char16_t c0 = $Character::toLowerCase(target->charAt(0));
 		char16_t c1 = $Character::toLowerCase(target->charAt(1));
@@ -630,6 +634,7 @@ void XMLScanner::scanPIData($String* target, $XMLStringBuffer* data) {
 }
 
 void XMLScanner::scanComment($XMLStringBuffer* text) {
+	$useLocalCurrentObjectStackCache();
 	$nc(text)->clear();
 	while ($nc(this->fEntityScanner)->scanData("--"_s, text, 0)) {
 		int32_t c = $nc(this->fEntityScanner)->peekChar();
@@ -650,6 +655,7 @@ void XMLScanner::scanComment($XMLStringBuffer* text) {
 }
 
 void XMLScanner::scanAttributeValue($XMLString* value, $XMLString* nonNormalizedValue, $String* atName, $XMLAttributes* attributes, int32_t attrIndex, bool checkEntities, $String* eleName, bool isNSURI) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLStringBuffer, stringBuffer, nullptr);
 	int32_t quote = $nc(this->fEntityScanner)->peekChar();
 	if (quote != u'\'' && quote != u'\"') {
@@ -809,6 +815,7 @@ bool XMLScanner::resolveCharacter($String* entityName, $XMLStringBuffer* stringB
 }
 
 void XMLScanner::scanExternalID($StringArray* identifiers, bool optionalSystemId) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, systemId, nullptr);
 	$var($String, publicId, nullptr);
 	if ($nc(this->fEntityScanner)->skipString("PUBLIC"_s)) {
@@ -860,6 +867,7 @@ void XMLScanner::scanExternalID($StringArray* identifiers, bool optionalSystemId
 }
 
 bool XMLScanner::scanPubidLiteral($XMLString* literal) {
+	$useLocalCurrentObjectStackCache();
 	int32_t quote = $nc(this->fEntityScanner)->scanChar(nullptr);
 	if (quote != u'\'' && quote != u'\"') {
 		reportFatalError("QuoteRequiredInPublicID"_s, nullptr);
@@ -923,6 +931,7 @@ void XMLScanner::endEntity($String* name, $Augmentations* augs) {
 }
 
 int32_t XMLScanner::scanCharReferenceValue($XMLStringBuffer* buf, $XMLStringBuffer* buf2) {
+	$useLocalCurrentObjectStackCache();
 	int32_t initLen = $nc(buf)->length;
 	bool hex = false;
 	$init($XMLScanner$NameType);
@@ -1055,6 +1064,7 @@ bool XMLScanner::versionSupported($String* version) {
 }
 
 bool XMLScanner::scanSurrogates($XMLStringBuffer* buf) {
+	$useLocalCurrentObjectStackCache();
 	int32_t high = $nc(this->fEntityScanner)->scanChar(nullptr);
 	int32_t low = $nc(this->fEntityScanner)->peekChar();
 	if (!$XMLChar::isLowSurrogate(low)) {
@@ -1078,6 +1088,7 @@ void XMLScanner::reportFatalError($String* msgId, $ObjectArray* args) {
 }
 
 void XMLScanner::init() {
+	$useLocalCurrentObjectStackCache();
 	$set(this, fEntityScanner, nullptr);
 	this->fEntityDepth = 0;
 	this->fReportEntity = true;
@@ -1109,6 +1120,7 @@ void XMLScanner::checkEntityLimit(bool isPEDecl, $String* entityName, $XMLString
 }
 
 void XMLScanner::checkEntityLimit(bool isPEDecl, $String* entityName, int32_t len) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fLimitAnalyzer == nullptr) {
 		$set(this, fLimitAnalyzer, $nc(this->fEntityManager)->fLimitAnalyzer);
 	}

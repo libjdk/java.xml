@@ -84,6 +84,7 @@ int32_t ElementValuePair::getNameIndex() {
 }
 
 $String* ElementValuePair::toShortString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, result, $new($StringBuilder));
 	result->append($(getNameString()))->append("="_s)->append($($nc($(getValue()))->toShortString()));
 	return result->toString();

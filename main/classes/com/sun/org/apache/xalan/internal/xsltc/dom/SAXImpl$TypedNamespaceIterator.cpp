@@ -89,6 +89,7 @@ void SAXImpl$TypedNamespaceIterator::init$($SAXImpl* this$0, int32_t nodeType) {
 }
 
 int32_t SAXImpl$TypedNamespaceIterator::next() {
+	$useLocalCurrentObjectStackCache();
 	if ((this->_nsPrefix == nullptr) || ($nc(this->_nsPrefix)->length() == 0)) {
 		return ($DTMAxisIterator::END);
 	}

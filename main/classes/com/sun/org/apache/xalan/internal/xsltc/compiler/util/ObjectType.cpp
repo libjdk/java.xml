@@ -190,6 +190,7 @@ bool ObjectType::identicalTo($1Type* other) {
 }
 
 $String* ObjectType::toSignature() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuffer, result, $new($StringBuffer, "L"_s));
 	result->append($($nc(this->_javaClassName)->replace(u'.', u'/')))->append(u';');
 	return result->toString();
@@ -200,6 +201,7 @@ $Type* ObjectType::toJCType() {
 }
 
 void ObjectType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+	$useLocalCurrentObjectStackCache();
 	$init($1Type);
 	if (type == $1Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
@@ -213,6 +215,7 @@ void ObjectType::translateTo($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void ObjectType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $StringType* type) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
@@ -226,6 +229,7 @@ void ObjectType::translateTo($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void ObjectType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Class* clazz) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(clazz)->isAssignableFrom(this->_clazz)) {
 		$init($Constants);
 		$nc($($nc(methodGen)->getInstructionList()))->append($Constants::NOP);

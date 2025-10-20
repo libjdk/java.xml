@@ -217,6 +217,7 @@ void XSConstraints::init$() {
 
 $XSParticleDecl* XSConstraints::getEmptySequence() {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (XSConstraints::fEmptyParticle == nullptr) {
 		$var($XSModelGroupImpl, group, $new($XSModelGroupImpl));
 		group->fCompositor = $XSModelGroupImpl::MODELGROUP_SEQUENCE;
@@ -285,6 +286,7 @@ bool XSConstraints::checkComplexDerivationOk($XSComplexTypeDecl* derived, $XSTyp
 
 bool XSConstraints::checkSimpleDerivation($XSSimpleType* derived, $XSSimpleType* base$renamed, int16_t block) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	$var($XSSimpleType, base, base$renamed);
 	if (derived == base) {
 		return true;
@@ -319,6 +321,7 @@ bool XSConstraints::checkSimpleDerivation($XSSimpleType* derived, $XSSimpleType*
 
 bool XSConstraints::checkComplexDerivation($XSComplexTypeDecl* derived, $XSTypeDefinition* base$renamed, int16_t block) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	$var($XSTypeDefinition, base, base$renamed);
 	if ($equals(derived, base)) {
 		return true;
@@ -352,6 +355,7 @@ bool XSConstraints::checkComplexDerivation($XSComplexTypeDecl* derived, $XSTypeD
 
 $Object* XSConstraints::ElementDefaultValidImmediate($XSTypeDefinition* type, $String* value, $ValidationContext* context, $ValidatedInfo* vinfo) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	$var($XSSimpleType, dv, nullptr);
 	if ($nc(type)->getTypeCategory() == $XSTypeDefinition::SIMPLE_TYPE) {
 		$assign(dv, $cast($XSSimpleType, type));
@@ -396,6 +400,7 @@ void XSConstraints::reportSchemaError($XMLErrorReporter* errorReporter, $SimpleL
 
 void XSConstraints::fullSchemaChecking($XSGrammarBucket* grammarBucket, $SubstitutionGroupHandler* SGHandler, $CMBuilder* cmBuilder, $XMLErrorReporter* errorReporter) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	$var($SchemaGrammarArray, grammars, $nc(grammarBucket)->getGrammars());
 	for (int32_t i = $nc(grammars)->length - 1; i >= 0; --i) {
 		$nc(SGHandler)->addSubstitutionGroup($($nc(grammars->get(i))->getSubstitutionGroups()));
@@ -524,6 +529,7 @@ void XSConstraints::fullSchemaChecking($XSGrammarBucket* grammarBucket, $Substit
 
 void XSConstraints::checkElementDeclsConsistent($XSComplexTypeDecl* type, $XSParticleDecl* particle, $SymbolHash* elemDeclHash, $SubstitutionGroupHandler* sgHandler) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	int32_t pType = $nc(particle)->fType;
 	if (pType == $XSParticleDecl::PARTICLE_WILDCARD) {
 		return;
@@ -547,6 +553,7 @@ void XSConstraints::checkElementDeclsConsistent($XSComplexTypeDecl* type, $XSPar
 
 void XSConstraints::findElemInTable($XSComplexTypeDecl* type, $XSElementDecl* elem, $SymbolHash* elemDeclHash) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	$var($String, name, $str({$nc(elem)->fName, ","_s, elem->fTargetNamespace}));
 	$var($XSElementDecl, existingElem, nullptr);
 	if (($assign(existingElem, ($cast($XSElementDecl, $nc(elemDeclHash)->get(name))))) == nullptr) {
@@ -571,6 +578,7 @@ bool XSConstraints::particleValidRestriction($XSParticleDecl* dParticle, $Substi
 
 bool XSConstraints::particleValidRestriction($XSParticleDecl* dParticle$renamed, $SubstitutionGroupHandler* dSGHandler$renamed, $XSParticleDecl* bParticle$renamed, $SubstitutionGroupHandler* bSGHandler$renamed, bool checkWCOccurrence) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	$var($SubstitutionGroupHandler, bSGHandler, bSGHandler$renamed);
 	$var($XSParticleDecl, bParticle, bParticle$renamed);
 	$var($SubstitutionGroupHandler, dSGHandler, dSGHandler$renamed);
@@ -901,6 +909,7 @@ $XSParticleDecl* XSConstraints::getNonUnaryGroup($XSParticleDecl* p) {
 
 $List* XSConstraints::removePointlessChildren($XSParticleDecl* p) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(p)->fType == $XSParticleDecl::PARTICLE_ELEMENT || $nc(p)->fType == $XSParticleDecl::PARTICLE_WILDCARD) {
 		return nullptr;
 	}
@@ -938,6 +947,7 @@ void XSConstraints::gatherChildren(int32_t parentType, $XSParticleDecl* p, $List
 
 void XSConstraints::checkNameAndTypeOK($XSElementDecl* dElement, int32_t dMin, int32_t dMax, $XSElementDecl* bElement, int32_t bMin, int32_t bMax) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if ($nc(dElement)->fName != $nc(bElement)->fName || $nc(dElement)->fTargetNamespace != $nc(bElement)->fTargetNamespace) {
 		$throwNew($XMLSchemaException, "rcase-NameAndTypeOK.1"_s, $$new($ObjectArray, {
 			$of(dElement->fName),
@@ -1009,6 +1019,7 @@ bool XSConstraints::checkOccurrenceRange(int32_t min1, int32_t max1, int32_t min
 
 void XSConstraints::checkNSCompat($XSElementDecl* elem, int32_t min1, int32_t max1, $XSWildcardDecl* wildcard, int32_t min2, int32_t max2, bool checkWCOccurrence) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (checkWCOccurrence && !checkOccurrenceRange(min1, max1, min2, max2)) {
 		$throwNew($XMLSchemaException, "rcase-NSCompat.2"_s, $$new($ObjectArray, {
 			$of($nc(elem)->fName),
@@ -1028,6 +1039,7 @@ void XSConstraints::checkNSCompat($XSElementDecl* elem, int32_t min1, int32_t ma
 
 void XSConstraints::checkNSSubset($XSWildcardDecl* dWildcard, int32_t min1, int32_t max1, $XSWildcardDecl* bWildcard, int32_t min2, int32_t max2) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (!checkOccurrenceRange(min1, max1, min2, max2)) {
 		$throwNew($XMLSchemaException, "rcase-NSSubset.2"_s, $$new($ObjectArray, {
 			$($of($Integer::toString(min1))),
@@ -1049,6 +1061,7 @@ void XSConstraints::checkNSSubset($XSWildcardDecl* dWildcard, int32_t min1, int3
 
 void XSConstraints::checkNSRecurseCheckCardinality($List* children, int32_t min1, int32_t max1, $SubstitutionGroupHandler* dSGHandler, $XSParticleDecl* wildcard, int32_t min2, int32_t max2, bool checkWCOccurrence) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (checkWCOccurrence && !checkOccurrenceRange(min1, max1, min2, max2)) {
 		$throwNew($XMLSchemaException, "rcase-NSRecurseCheckCardinality.2"_s, $$new($ObjectArray, {
 			$($of($Integer::toString(min1))),
@@ -1071,6 +1084,7 @@ void XSConstraints::checkNSRecurseCheckCardinality($List* children, int32_t min1
 
 void XSConstraints::checkRecurse($List* dChildren, int32_t min1, int32_t max1, $SubstitutionGroupHandler* dSGHandler, $List* bChildren, int32_t min2, int32_t max2, $SubstitutionGroupHandler* bSGHandler) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (!checkOccurrenceRange(min1, max1, min2, max2)) {
 		$throwNew($XMLSchemaException, "rcase-Recurse.1"_s, $$new($ObjectArray, {
 			$($of($Integer::toString(min1))),
@@ -1115,6 +1129,7 @@ void XSConstraints::checkRecurse($List* dChildren, int32_t min1, int32_t max1, $
 
 void XSConstraints::checkRecurseUnordered($List* dChildren, int32_t min1, int32_t max1, $SubstitutionGroupHandler* dSGHandler, $List* bChildren, int32_t min2, int32_t max2, $SubstitutionGroupHandler* bSGHandler) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (!checkOccurrenceRange(min1, max1, min2, max2)) {
 		$throwNew($XMLSchemaException, "rcase-RecurseUnordered.1"_s, $$new($ObjectArray, {
 			$($of($Integer::toString(min1))),
@@ -1160,6 +1175,7 @@ void XSConstraints::checkRecurseUnordered($List* dChildren, int32_t min1, int32_
 
 void XSConstraints::checkRecurseLax($List* dChildren, int32_t min1, int32_t max1, $SubstitutionGroupHandler* dSGHandler, $List* bChildren, int32_t min2, int32_t max2, $SubstitutionGroupHandler* bSGHandler) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (!checkOccurrenceRange(min1, max1, min2, max2)) {
 		$throwNew($XMLSchemaException, "rcase-RecurseLax.1"_s, $$new($ObjectArray, {
 			$($of($Integer::toString(min1))),
@@ -1197,6 +1213,7 @@ void XSConstraints::checkRecurseLax($List* dChildren, int32_t min1, int32_t max1
 
 void XSConstraints::checkMapAndSum($List* dChildren, int32_t min1, int32_t max1, $SubstitutionGroupHandler* dSGHandler, $List* bChildren, int32_t min2, int32_t max2, $SubstitutionGroupHandler* bSGHandler) {
 	$init(XSConstraints);
+	$useLocalCurrentObjectStackCache();
 	if (!checkOccurrenceRange(min1, max1, min2, max2)) {
 		$throwNew($XMLSchemaException, "rcase-MapAndSum.2"_s, $$new($ObjectArray, {
 			$($of($Integer::toString(min1))),

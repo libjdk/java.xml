@@ -405,6 +405,7 @@ $String* MethodGenerator::START_ELEMENT_SIG = nullptr;
 $String* MethodGenerator::END_ELEMENT_SIG = nullptr;
 
 void MethodGenerator::init$(int32_t access_flags, $Type* return_type, $TypeArray* arg_types, $StringArray* arg_names, $String* method_name, $String* class_name, $InstructionList* il, $ConstantPoolGen* cpg) {
+	$useLocalCurrentObjectStackCache();
 	$MethodGen::init$(access_flags, return_type, arg_types, arg_names, method_name, class_name, il, cpg);
 	this->_allocatorInit = false;
 	$set(this, _preCompiled, $new($HashMap));
@@ -443,6 +444,7 @@ void MethodGenerator::init$(int32_t access_flags, $Type* return_type, $TypeArray
 }
 
 $LocalVariableGen* MethodGenerator::addLocalVariable($String* name, $Type* type, $InstructionHandle* start, $InstructionHandle* end) {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableGen, lvg, nullptr);
 	if (this->_allocatorInit) {
 		$assign(lvg, addLocalVariable2(name, type, start));
@@ -454,6 +456,7 @@ $LocalVariableGen* MethodGenerator::addLocalVariable($String* name, $Type* type,
 }
 
 $LocalVariableGen* MethodGenerator::addLocalVariable2($String* name, $Type* type, $InstructionHandle* start) {
+	$useLocalCurrentObjectStackCache();
 	$var($LocalVariableGen, lvg, $MethodGen::addLocalVariable(name, type, $nc(this->_slotAllocator)->allocateSlot(type), start, nullptr));
 	$nc($(getLocalVariableRegistry()))->registerLocalVariable(lvg);
 	return lvg;
@@ -467,6 +470,7 @@ $MethodGenerator$LocalVariableRegistry* MethodGenerator::getLocalVariableRegistr
 }
 
 bool MethodGenerator::offsetInLocalVariableGenRange($LocalVariableGen* lvg, int32_t offset) {
+	$useLocalCurrentObjectStackCache();
 	$var($InstructionHandle, lvgStart, $nc(lvg)->getStart());
 	$var($InstructionHandle, lvgEnd, lvg->getEnd());
 	if (lvgStart == nullptr) {
@@ -609,6 +613,7 @@ $InstructionList* MethodGenerator::getInstructionList($Pattern* pattern) {
 }
 
 $List* MethodGenerator::getCandidateChunks($ClassGenerator* classGen, int32_t totalMethodSize) {
+	$useLocalCurrentObjectStackCache();
 	$var($Iterator, instructions, $nc($(getInstructionList()))->iterator());
 	$var($List, candidateChunks, $new($ArrayList));
 	$var($List, currLevelChunks, $new($ArrayList));
@@ -681,6 +686,7 @@ $List* MethodGenerator::getCandidateChunks($ClassGenerator* classGen, int32_t to
 }
 
 $List* MethodGenerator::mergeAdjacentChunks($MethodGenerator$ChunkArray* chunks) {
+	$useLocalCurrentObjectStackCache();
 	$var($ints, adjacencyRunStart, $new($ints, $nc(chunks)->length));
 	$var($ints, adjacencyRunLength, $new($ints, chunks->length));
 	$var($booleans, chunkWasMerged, $new($booleans, chunks->length));
@@ -750,6 +756,7 @@ $List* MethodGenerator::mergeAdjacentChunks($MethodGenerator$ChunkArray* chunks)
 }
 
 $MethodArray* MethodGenerator::outlineChunks($ClassGenerator* classGen, int32_t originalMethodSize) {
+	$useLocalCurrentObjectStackCache();
 	$var($List, methodsOutlined, $new($ArrayList));
 	int32_t currentMethodSize = originalMethodSize;
 	int32_t outlinedCount = 0;
@@ -790,6 +797,7 @@ $MethodArray* MethodGenerator::outlineChunks($ClassGenerator* classGen, int32_t 
 }
 
 $Method* MethodGenerator::outline($InstructionHandle* first, $InstructionHandle* last, $String* outlinedMethodName, $ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc($(getExceptionHandlers()))->length != 0) {
 		$init($ErrorMsg);
 		$var($String, msg, ($$new($ErrorMsg, $ErrorMsg::OUTLINE_ERR_TRY_CATCH))->toString());
@@ -1124,6 +1132,7 @@ void MethodGenerator::markChunkStart() {
 }
 
 void MethodGenerator::markChunkEnd() {
+	$useLocalCurrentObjectStackCache();
 	$init($OutlineableChunkEnd);
 	$nc($(getInstructionList()))->append($OutlineableChunkEnd::OUTLINEABLECHUNKEND);
 	--this->m_openChunks;
@@ -1135,6 +1144,7 @@ void MethodGenerator::markChunkEnd() {
 }
 
 $MethodArray* MethodGenerator::getGeneratedMethods($ClassGenerator* classGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($MethodArray, generatedMethods, nullptr);
 	$var($InstructionList, il, getInstructionList());
 	$var($InstructionHandle, last, $nc(il)->getEnd());
@@ -1167,6 +1177,7 @@ $Method* MethodGenerator::getThisMethod() {
 }
 
 bool MethodGenerator::widenConditionalBranchTargetOffsets() {
+	$useLocalCurrentObjectStackCache();
 	bool ilChanged = false;
 	int32_t maxOffsetChange = 0;
 	$var($InstructionList, il, getInstructionList());

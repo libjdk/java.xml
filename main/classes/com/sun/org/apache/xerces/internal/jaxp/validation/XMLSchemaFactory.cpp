@@ -280,6 +280,7 @@ $String* XMLSchemaFactory::SECURITY_MANAGER = nullptr;
 $String* XMLSchemaFactory::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 
 void XMLSchemaFactory::init$() {
+	$useLocalCurrentObjectStackCache();
 	$SchemaFactory::init$();
 	$set(this, fXMLSchemaLoader, $new($XMLSchemaLoader));
 	$set(this, fErrorHandlerWrapper, $new($ErrorHandlerWrapper, $($DraconianErrorHandler::getInstance())));
@@ -317,6 +318,7 @@ void XMLSchemaFactory::init$() {
 }
 
 bool XMLSchemaFactory::isSchemaLanguageSupported($String* schemaLanguage) {
+	$useLocalCurrentObjectStackCache();
 	if (schemaLanguage == nullptr) {
 		$throwNew($NullPointerException, $($JAXPValidationMessageFormatter::formatMessage($($nc(this->fXMLSchemaLoader)->getLocale()), "SchemaLanguageNull"_s, nullptr)));
 	}
@@ -350,6 +352,7 @@ void XMLSchemaFactory::setErrorHandler($ErrorHandler* errorHandler) {
 }
 
 $Schema* XMLSchemaFactory::newSchema($SourceArray* schemas) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLSchemaFactory$XMLGrammarPoolImplExtension, pool, $new($XMLSchemaFactory$XMLGrammarPoolImplExtension));
 	$nc(this->fXMLGrammarPoolWrapper)->setGrammarPool(pool);
 	$var($XMLInputSourceArray, xmlInputSources, $new($XMLInputSourceArray, $nc(schemas)->length));
@@ -437,12 +440,14 @@ $Schema* XMLSchemaFactory::newSchema() {
 }
 
 $Schema* XMLSchemaFactory::newSchema($XMLGrammarPool* pool) {
+	$useLocalCurrentObjectStackCache();
 	$var($AbstractXMLSchema, schema, (this->fUseGrammarPoolOnly) ? static_cast<$AbstractXMLSchema*>($new($XMLSchema, $$new($ReadOnlyGrammarPool, pool))) : static_cast<$AbstractXMLSchema*>($new($XMLSchema, pool, false)));
 	propagateFeatures(schema);
 	return schema;
 }
 
 bool XMLSchemaFactory::getFeature($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException, $($JAXPValidationMessageFormatter::formatMessage($($nc(this->fXMLSchemaLoader)->getLocale()), "FeatureNameNull"_s, nullptr)));
 	}
@@ -484,6 +489,7 @@ bool XMLSchemaFactory::getFeature($String* name) {
 }
 
 $Object* XMLSchemaFactory::getProperty($String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException, $($JAXPValidationMessageFormatter::formatMessage($($nc(this->fXMLSchemaLoader)->getLocale()), "ProperyNameNull"_s, nullptr)));
 	}
@@ -509,6 +515,7 @@ $Object* XMLSchemaFactory::getProperty($String* name) {
 }
 
 void XMLSchemaFactory::setFeature($String* name, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException, $($JAXPValidationMessageFormatter::formatMessage($($nc(this->fXMLSchemaLoader)->getLocale()), "FeatureNameNull"_s, nullptr)));
 	}
@@ -575,6 +582,7 @@ void XMLSchemaFactory::setFeature($String* name, bool value) {
 }
 
 void XMLSchemaFactory::setProperty($String* name, Object$* object) {
+	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException, $($JAXPValidationMessageFormatter::formatMessage($($nc(this->fXMLSchemaLoader)->getLocale()), "ProperyNameNull"_s, nullptr)));
 	}
@@ -629,6 +637,7 @@ void XMLSchemaFactory::propagateFeatures($AbstractXMLSchema* schema) {
 }
 
 void XMLSchemaFactory::propagateProperties($AbstractXMLSchema* schema) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, properties, $nc(this->fXMLSchemaLoader)->getRecognizedProperties());
 	for (int32_t i = 0; i < $nc(properties)->length; ++i) {
 		$var($Object, state, $nc(this->fXMLSchemaLoader)->getProperty(properties->get(i)));

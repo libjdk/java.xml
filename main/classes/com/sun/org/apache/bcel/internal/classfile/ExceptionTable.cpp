@@ -74,6 +74,7 @@ $Object* allocate$ExceptionTable($Class* clazz) {
 }
 
 void ExceptionTable::init$(ExceptionTable* c) {
+	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $nc(c)->getNameIndex();
 	int32_t var$1 = c->getLength();
 	$var($ints, var$2, c->getExceptionIndexTable());
@@ -123,6 +124,7 @@ int32_t ExceptionTable::getNumberOfExceptions() {
 }
 
 $StringArray* ExceptionTable::getExceptionNames() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, names, $new($StringArray, $nc(this->exceptionIndexTable)->length));
 	for (int32_t i = 0; i < $nc(this->exceptionIndexTable)->length; ++i) {
 		names->set(i, $($nc($($nc($($Attribute::getConstantPool()))->getConstantString($nc(this->exceptionIndexTable)->get(i), $Const::CONSTANT_Class)))->replace(u'/', u'.')));
@@ -135,6 +137,7 @@ void ExceptionTable::setExceptionIndexTable($ints* exceptionIndexTable) {
 }
 
 $String* ExceptionTable::toString() {
+	$useLocalCurrentObjectStackCache();
 	$var($StringBuilder, buf, $new($StringBuilder));
 	$var($String, str, nullptr);
 	buf->append("Exceptions: "_s);

@@ -620,6 +620,7 @@ void XML11Configuration::init$($SymbolTable* symbolTable, $XMLGrammarPool* gramm
 }
 
 void XML11Configuration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool, $XMLComponentManager* parentSettings) {
+	$useLocalCurrentObjectStackCache();
 	$ParserConfigurationSettings::init$(parentSettings);
 	$set(this, fXML11Components, nullptr);
 	$set(this, fCommonComponents, nullptr);
@@ -849,6 +850,7 @@ void XML11Configuration::cleanup() {
 }
 
 void XML11Configuration::parse($XMLInputSource* source) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -885,6 +887,7 @@ void XML11Configuration::parse($XMLInputSource* source) {
 }
 
 bool XML11Configuration::parse(bool complete) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			$nc(this->fValidationManager)->reset();
@@ -939,6 +942,7 @@ $FeatureState* XML11Configuration::getFeatureState($String* featureId) {
 }
 
 void XML11Configuration::setFeature($String* featureId, bool state) {
+	$useLocalCurrentObjectStackCache();
 	this->fConfigUpdated = true;
 	{
 		$var($Iterator, i$, $nc(this->fComponents)->iterator());
@@ -982,6 +986,7 @@ $PropertyState* XML11Configuration::getPropertyState($String* propertyId) {
 }
 
 void XML11Configuration::setProperty($String* propertyId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	this->fConfigUpdated = true;
 	if ($nc(XML11Configuration::LOCALE)->equals(propertyId)) {
 		setLocale($cast($Locale, value));
@@ -1025,6 +1030,7 @@ $Locale* XML11Configuration::getLocale() {
 }
 
 void XML11Configuration::reset() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->fComponents)->size();
 	for (int32_t i = 0; i < count; ++i) {
 		$var($XMLComponent, c, $cast($XMLComponent, $nc(this->fComponents)->get(i)));
@@ -1033,6 +1039,7 @@ void XML11Configuration::reset() {
 }
 
 void XML11Configuration::resetCommon() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->fCommonComponents)->size();
 	for (int32_t i = 0; i < count; ++i) {
 		$var($XMLComponent, c, $cast($XMLComponent, $nc(this->fCommonComponents)->get(i)));
@@ -1041,6 +1048,7 @@ void XML11Configuration::resetCommon() {
 }
 
 void XML11Configuration::resetXML11() {
+	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->fXML11Components)->size();
 	for (int32_t i = 0; i < count; ++i) {
 		$var($XMLComponent, c, $cast($XMLComponent, $nc(this->fXML11Components)->get(i)));
@@ -1337,6 +1345,7 @@ void XML11Configuration::addXML11Component($XMLComponent* component) {
 }
 
 void XML11Configuration::addRecognizedParamsAndSetDefaults($XMLComponent* component) {
+	$useLocalCurrentObjectStackCache();
 	$var($StringArray, recognizedFeatures, $nc(component)->getRecognizedFeatures());
 	addRecognizedFeatures(recognizedFeatures);
 	$var($StringArray, recognizedProperties, component->getRecognizedProperties());

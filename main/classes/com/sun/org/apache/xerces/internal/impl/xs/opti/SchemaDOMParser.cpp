@@ -213,6 +213,7 @@ void SchemaDOMParser::processingInstruction($String* target, $XMLString* data, $
 }
 
 void SchemaDOMParser::characters($XMLString* text, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fInnerAnnotationDepth == -1) {
 		for (int32_t i = $nc(text)->offset; i < text->offset + text->length; ++i) {
 			if (!$XMLChar::isSpace($nc(text->ch)->get(i))) {
@@ -228,6 +229,7 @@ void SchemaDOMParser::characters($XMLString* text, $Augmentations* augs) {
 }
 
 void SchemaDOMParser::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	++this->fDepth;
 	if (this->fAnnotationDepth == -1) {
 		$init($SchemaSymbols);
@@ -267,6 +269,7 @@ void SchemaDOMParser::startElement($QName* element, $XMLAttributes* attributes, 
 }
 
 void SchemaDOMParser::emptyElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$init($SchemaSymbols);
 	if (this->fGenerateSyntheticAnnotation && this->fAnnotationDepth == -1 && $nc(element)->uri == $SchemaSymbols::URI_SCHEMAFORSCHEMA && element->localpart != $SchemaSymbols::ELT_ANNOTATION && hasNonSchemaAttributes(element, attributes)) {
 		$var($QName, var$0, element);
@@ -308,6 +311,7 @@ void SchemaDOMParser::emptyElement($QName* element, $XMLAttributes* attributes, 
 }
 
 void SchemaDOMParser::endElement($QName* element, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fAnnotationDepth > -1) {
 		if (this->fInnerAnnotationDepth == this->fDepth) {
 			this->fInnerAnnotationDepth = -1;
@@ -342,6 +346,7 @@ void SchemaDOMParser::endElement($QName* element, $Augmentations* augs) {
 }
 
 bool SchemaDOMParser::hasNonSchemaAttributes($QName* element, $XMLAttributes* attributes) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(attributes)->getLength();
 	for (int32_t i = 0; i < length; ++i) {
 		$var($String, uri, attributes->getURI(i));

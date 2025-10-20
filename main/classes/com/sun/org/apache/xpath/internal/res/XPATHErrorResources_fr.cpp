@@ -559,6 +559,7 @@ $ObjectArray2* XPATHErrorResources_fr::getContents() {
 }
 
 void clinit$XPATHErrorResources_fr($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(XPATHErrorResources_fr::ERROR0000, "ERROR0000"_s);
 	$assignStatic(XPATHErrorResources_fr::ER_CURRENT_NOT_ALLOWED_IN_MATCH, "ER_CURRENT_NOT_ALLOWED_IN_MATCH"_s);
 	$assignStatic(XPATHErrorResources_fr::ER_CURRENT_TAKES_NO_ARGS, "ER_CURRENT_TAKES_NO_ARGS"_s);

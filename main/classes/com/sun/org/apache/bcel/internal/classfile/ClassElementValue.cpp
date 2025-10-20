@@ -70,11 +70,13 @@ int32_t ClassElementValue::getIndex() {
 }
 
 $String* ClassElementValue::getClassString() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, c, $cast($ConstantUtf8, $nc($($ElementValue::getConstantPool()))->getConstant(this->idx, $Const::CONSTANT_Utf8)));
 	return $nc(c)->getBytes();
 }
 
 $String* ClassElementValue::stringifyValue() {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantUtf8, cu8, $cast($ConstantUtf8, $nc($($ElementValue::getConstantPool()))->getConstant(this->idx, $Const::CONSTANT_Utf8)));
 	return $nc(cu8)->getBytes();
 }

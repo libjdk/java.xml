@@ -90,6 +90,7 @@ int16_t PrecisionDecimalDV::getAllowedFacets() {
 }
 
 $Object* PrecisionDecimalDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of($new($PrecisionDecimalDV$XPrecisionDecimal, content));
 	} catch ($NumberFormatException&) {

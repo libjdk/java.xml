@@ -106,6 +106,7 @@ void DurationDV::init$() {
 }
 
 $Object* DurationDV::getActualValue($String* content, $ValidationContext* context) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content, DurationDV::DURATION_TYPE));
 	} catch ($Exception&) {
@@ -202,6 +203,7 @@ $AbstractDateTimeDV$DateTimeData* DurationDV::parse($String* str, int32_t durati
 }
 
 int16_t DurationDV::compareDates($AbstractDateTimeDV$DateTimeData* date1, $AbstractDateTimeDV$DateTimeData* date2, bool strict) {
+	$useLocalCurrentObjectStackCache();
 	int16_t resultA = 0;
 	int16_t resultB = $TypeValidator::INDETERMINATE;
 	resultA = compareOrder(date1, date2);
@@ -289,6 +291,7 @@ $AbstractDateTimeDV$DateTimeData* DurationDV::addDuration($AbstractDateTimeDV$Da
 }
 
 double DurationDV::parseSecond($String* buffer, int32_t start, int32_t end) {
+	$useLocalCurrentObjectStackCache();
 	int32_t dot = -1;
 	for (int32_t i = start; i < end; ++i) {
 		char16_t ch = $nc(buffer)->charAt(i);
@@ -331,6 +334,7 @@ $String* DurationDV::dateToString($AbstractDateTimeDV$DateTimeData* date) {
 }
 
 $Duration* DurationDV::getDuration($AbstractDateTimeDV$DateTimeData* date) {
+	$useLocalCurrentObjectStackCache();
 	int32_t sign = 1;
 	if ($nc(date)->year < 0 || $nc(date)->month < 0 || $nc(date)->day < 0 || $nc(date)->hour < 0 || $nc(date)->minute < 0 || $nc(date)->second < 0) {
 		sign = -1;
@@ -346,6 +350,7 @@ $Duration* DurationDV::getDuration($AbstractDateTimeDV$DateTimeData* date) {
 }
 
 void clinit$DurationDV($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(DurationDV::DATETIMES, $new($AbstractDateTimeDV$DateTimeDataArray, {
 		$$new($AbstractDateTimeDV$DateTimeData, 1696, 9, 1, 0, 0, (double)0, u'Z', nullptr, true, nullptr),
 		$$new($AbstractDateTimeDV$DateTimeData, 1697, 2, 1, 0, 0, (double)0, u'Z', nullptr, true, nullptr),

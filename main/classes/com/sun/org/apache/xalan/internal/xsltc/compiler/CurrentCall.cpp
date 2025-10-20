@@ -59,6 +59,7 @@ void CurrentCall::init$($QName* fname) {
 }
 
 void CurrentCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$nc($($nc(methodGen)->getInstructionList()))->append($(methodGen->loadCurrentNode()));
 }
 

@@ -164,6 +164,7 @@ $String* Base64::encode($bytes* binaryData) {
 
 $bytes* Base64::decode($String* encoded) {
 	$init(Base64);
+	$useLocalCurrentObjectStackCache();
 	if (encoded == nullptr) {
 		return nullptr;
 	}

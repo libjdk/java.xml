@@ -138,6 +138,7 @@ void Copy::init$() {
 }
 
 void Copy::parseContents($Parser* parser) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, useSets, getAttribute("use-attribute-sets"_s));
 	if ($nc(useSets)->length() > 0) {
 		if (!$Util::isValidQNames(useSets)) {
@@ -167,6 +168,7 @@ $1Type* Copy::typeCheck($SymbolTable* stable) {
 }
 
 void Copy::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);

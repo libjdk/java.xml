@@ -117,6 +117,7 @@ void Encodings::init$() {
 
 $Writer* Encodings::getWriter($OutputStream* output, $String* encoding) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	$var($EncodingInfo, ei, $nc(Encodings::_encodingInfos)->findEncoding($(toUpperCaseFast(encoding))));
 	if (ei != nullptr) {
 		try {
@@ -135,6 +136,7 @@ int32_t Encodings::getLastPrintable() {
 
 $EncodingInfo* Encodings::getEncodingInfo($String* encoding) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	$var($EncodingInfo, ei, nullptr);
 	$var($String, normalizedEncoding, toUpperCaseFast(encoding));
 	$assign(ei, $nc(Encodings::_encodingInfos)->findEncoding(normalizedEncoding));
@@ -157,6 +159,7 @@ $EncodingInfo* Encodings::getEncodingInfo($String* encoding) {
 
 bool Encodings::isRecognizedEncoding($String* encoding) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	$var($EncodingInfo, ei, nullptr);
 	$var($String, normalizedEncoding, toUpperCaseFast(encoding));
 	$assign(ei, $nc(Encodings::_encodingInfos)->findEncoding(normalizedEncoding));
@@ -168,6 +171,7 @@ bool Encodings::isRecognizedEncoding($String* encoding) {
 
 $String* Encodings::toUpperCaseFast($String* s) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	bool different = false;
 	int32_t mx = $nc(s)->length();
 	$var($chars, chars, $new($chars, mx));
@@ -190,6 +194,7 @@ $String* Encodings::toUpperCaseFast($String* s) {
 
 $String* Encodings::getMimeEncoding($String* encoding$renamed) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	$var($String, encoding, encoding$renamed);
 	if (nullptr == encoding) {
 		try {
@@ -215,6 +220,7 @@ $String* Encodings::getMimeEncoding($String* encoding$renamed) {
 
 $String* Encodings::convertJava2MimeEncoding($String* encoding) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	$var($EncodingInfo, enc, $nc(Encodings::_encodingInfos)->getEncodingFromJavaKey($(toUpperCaseFast(encoding))));
 	if (nullptr != enc) {
 		return enc->name;
@@ -224,6 +230,7 @@ $String* Encodings::convertJava2MimeEncoding($String* encoding) {
 
 $String* Encodings::convertMime2JavaEncoding($String* encoding) {
 	$init(Encodings);
+	$useLocalCurrentObjectStackCache();
 	$var($EncodingInfo, info, $nc(Encodings::_encodingInfos)->findEncoding($(toUpperCaseFast(encoding))));
 	return info != nullptr ? $nc(info)->javaName : encoding;
 }

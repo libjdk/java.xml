@@ -206,6 +206,7 @@ $ElemDesc* ToHTMLStream::m_dummy = nullptr;
 
 void ToHTMLStream::initTagReference($ToHTMLStream$Trie* m_elementFlags) {
 	$init(ToHTMLStream);
+	$useLocalCurrentObjectStackCache();
 	$nc(m_elementFlags)->put("BASEFONT"_s, $$new($ElemDesc, 0 | $ElemDesc::EMPTY));
 	m_elementFlags->put("FRAME"_s, $$new($ElemDesc, (0 | $ElemDesc::EMPTY) | $ElemDesc::BLOCK));
 	m_elementFlags->put("FRAMESET"_s, $$new($ElemDesc, 0 | $ElemDesc::BLOCK));
@@ -451,6 +452,7 @@ void ToHTMLStream::init$($ErrorListener* l) {
 }
 
 void ToHTMLStream::startDocumentInternal() {
+	$useLocalCurrentObjectStackCache();
 	$ToStream::startDocumentInternal();
 	this->m_needToCallStartDocument = false;
 	this->m_needToOutputDocTypeDecl = true;
@@ -516,6 +518,7 @@ bool ToHTMLStream::shouldFormatOutput() {
 }
 
 void ToHTMLStream::startElement($String* namespaceURI, $String* localName, $String* name, $Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_doIndent) {
 		++this->m_childNodeNum;
 		flushCharactersBuffer(false);
@@ -598,6 +601,7 @@ void ToHTMLStream::startElement($String* namespaceURI, $String* localName, $Stri
 }
 
 void ToHTMLStream::endElement($String* namespaceURI, $String* localName, $String* name) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_doIndent) {
 		flushCharactersBuffer(false);
 	}
@@ -689,6 +693,7 @@ bool ToHTMLStream::isASCIIDigit(char16_t c) {
 
 $String* ToHTMLStream::makeHHString(int32_t i) {
 	$init(ToHTMLStream);
+	$useLocalCurrentObjectStackCache();
 	$var($String, s, $nc($($Integer::toHexString(i)))->toUpperCase());
 	if (s->length() == 1) {
 		$assign(s, $str({"0"_s, s}));
@@ -708,6 +713,7 @@ bool ToHTMLStream::isHHSign($String* str) {
 }
 
 void ToHTMLStream::writeAttrURI($Writer* writer, $String* string, bool doURLEscaping) {
+	$useLocalCurrentObjectStackCache();
 	int32_t end = $nc(string)->length();
 	if (end > $nc(this->m_attrBuff)->length) {
 		$set(this, m_attrBuff, $new($chars, end * 2 + 1));
@@ -810,6 +816,7 @@ void ToHTMLStream::writeAttrURI($Writer* writer, $String* string, bool doURLEsca
 }
 
 void ToHTMLStream::writeAttrString($Writer* writer, $String* string, $String* encoding) {
+	$useLocalCurrentObjectStackCache();
 	int32_t end = $nc(string)->length();
 	if (end > $nc(this->m_attrBuff)->length) {
 		$set(this, m_attrBuff, $new($chars, end * 2 + 1));
@@ -871,6 +878,7 @@ void ToHTMLStream::writeAttrString($Writer* writer, $String* string, $String* en
 }
 
 void ToHTMLStream::characters($chars* chars, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_elemContext)->m_isRaw) {
 		try {
 			if ($nc(this->m_elemContext)->m_startTagOpen) {
@@ -895,6 +903,7 @@ void ToHTMLStream::characters($chars* chars, int32_t start, int32_t length) {
 }
 
 void ToHTMLStream::cdata($chars* ch, int32_t start, int32_t length) {
+	$useLocalCurrentObjectStackCache();
 	bool var$0 = (nullptr != $nc(this->m_elemContext)->m_elementName);
 	if (var$0) {
 		bool var$1 = $nc($nc(this->m_elemContext)->m_elementName)->equalsIgnoreCase("SCRIPT"_s);
@@ -922,6 +931,7 @@ void ToHTMLStream::cdata($chars* ch, int32_t start, int32_t length) {
 }
 
 void ToHTMLStream::processingInstruction($String* target, $String* data) {
+	$useLocalCurrentObjectStackCache();
 	if (this->m_doIndent) {
 		++this->m_childNodeNum;
 		flushCharactersBuffer(false);
@@ -969,6 +979,7 @@ void ToHTMLStream::processingInstruction($String* target, $String* data) {
 }
 
 void ToHTMLStream::entityReference($String* name) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Writer, writer, this->m_writer);
 		$nc(writer)->write((int32_t)u'&');
@@ -985,6 +996,7 @@ void ToHTMLStream::endElement($String* elemName) {
 }
 
 void ToHTMLStream::processAttributes($Writer* writer, int32_t nAttrs) {
+	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < nAttrs; ++i) {
 		$var($Writer, var$0, writer);
 		$var($String, var$1, $nc(this->m_attributes)->getQName(i));
@@ -1045,6 +1057,7 @@ void ToHTMLStream::externalEntityDecl($String* name, $String* publicId, $String*
 }
 
 void ToHTMLStream::addUniqueAttribute($String* name, $String* value, int32_t flags) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Writer, writer, this->m_writer);
 		if (((int32_t)(flags & (uint32_t)$ExtendedContentHandler::NO_BAD_CHARS)) > 0 && $nc(ToHTMLStream::m_htmlcharInfo)->onlyQuotAmpLtGt) {

@@ -337,6 +337,7 @@ void DOM3TreeWalker::init$($SerializationHandler* serialHandler, $DOMErrorHandle
 }
 
 void DOM3TreeWalker::traverse($Node* pos$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, pos, pos$renamed);
 	$nc(this->fSerializer)->startDocument();
 	if ($nc(pos)->getNodeType() != $Node::DOCUMENT_NODE) {
@@ -381,6 +382,7 @@ void DOM3TreeWalker::traverse($Node* pos$renamed) {
 }
 
 void DOM3TreeWalker::traverse($Node* pos$renamed, $Node* top) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, pos, pos$renamed);
 	$nc(this->fSerializer)->startDocument();
 	if ($nc(pos)->getNodeType() != $Node::DOCUMENT_NODE) {
@@ -421,6 +423,7 @@ void DOM3TreeWalker::traverse($Node* pos$renamed, $Node* top) {
 }
 
 void DOM3TreeWalker::dispatachChars($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fSerializer != nullptr) {
 		$var($String, data, $nc(($cast($Text, node)))->getData());
 		$var($chars, var$0, $nc(data)->toCharArray());
@@ -429,6 +432,7 @@ void DOM3TreeWalker::dispatachChars($Node* node) {
 }
 
 void DOM3TreeWalker::startNode($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($Locator, node)) {
 		$var($Locator, loc, $cast($Locator, node));
 		$nc(this->fLocator)->setColumnNumber($nc(loc)->getColumnNumber());
@@ -536,6 +540,7 @@ bool DOM3TreeWalker::applyFilter($Node* node, int32_t nodeType) {
 }
 
 void DOM3TreeWalker::serializeDocType($DocumentType* node, bool bStart) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, docTypeName, $nc(node)->getNodeName());
 	$var($String, publicId, node->getPublicId());
 	$var($String, systemId, node->getSystemId());
@@ -586,6 +591,7 @@ void DOM3TreeWalker::serializeDocType($DocumentType* node, bool bStart) {
 }
 
 void DOM3TreeWalker::serializeComment($Comment* node) {
+	$useLocalCurrentObjectStackCache();
 	if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::COMMENTS)) != 0) {
 		$var($String, data, $nc(node)->getData());
 		if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::WELLFORMED)) != 0) {
@@ -602,6 +608,7 @@ void DOM3TreeWalker::serializeComment($Comment* node) {
 }
 
 void DOM3TreeWalker::serializeElement($Element* node, bool bStart) {
+	$useLocalCurrentObjectStackCache();
 	if (bStart) {
 		++this->fElementDepth;
 		if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::WELLFORMED)) != 0) {
@@ -635,6 +642,7 @@ void DOM3TreeWalker::serializeElement($Element* node, bool bStart) {
 }
 
 void DOM3TreeWalker::serializeAttList($Element* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($NamedNodeMap, atts, $nc(node)->getAttributes());
 	int32_t nAttrs = $nc(atts)->getLength();
 	for (int32_t i = 0; i < nAttrs; ++i) {
@@ -753,6 +761,7 @@ void DOM3TreeWalker::serializeAttList($Element* node) {
 }
 
 void DOM3TreeWalker::serializePI($ProcessingInstruction* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($ProcessingInstruction, pi, node);
 	$var($String, name, $nc(pi)->getNodeName());
 	if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::WELLFORMED)) != 0) {
@@ -769,6 +778,7 @@ void DOM3TreeWalker::serializePI($ProcessingInstruction* node) {
 }
 
 void DOM3TreeWalker::serializeCDATASection($CDATASection* node) {
+	$useLocalCurrentObjectStackCache();
 	if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::WELLFORMED)) != 0) {
 		isCDATASectionWellFormed(node);
 	}
@@ -811,6 +821,7 @@ void DOM3TreeWalker::serializeCDATASection($CDATASection* node) {
 }
 
 void DOM3TreeWalker::serializeText($Text* node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNextIsRaw) {
 		this->fNextIsRaw = false;
 		$init($Result);
@@ -848,6 +859,7 @@ void DOM3TreeWalker::serializeText($Text* node) {
 }
 
 void DOM3TreeWalker::serializeEntityReference($EntityReference* node, bool bStart) {
+	$useLocalCurrentObjectStackCache();
 	if (bStart) {
 		$var($EntityReference, eref, node);
 		if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::ENTITIES)) != 0) {
@@ -896,6 +908,7 @@ bool DOM3TreeWalker::isValidQName($String* prefix, $String* local, bool xml11Ver
 }
 
 bool DOM3TreeWalker::isWFXMLChar($String* chardata, $Character* refInvalidChar$renamed) {
+	$useLocalCurrentObjectStackCache();
 	$var($Character, refInvalidChar, refInvalidChar$renamed);
 	if (chardata == nullptr || ($nc(chardata)->length() == 0)) {
 		return true;
@@ -939,6 +952,7 @@ bool DOM3TreeWalker::isWFXMLChar($String* chardata, $Character* refInvalidChar$r
 }
 
 $Character* DOM3TreeWalker::isWFXMLChar($String* chardata) {
+	$useLocalCurrentObjectStackCache();
 	$var($Character, refInvalidChar, nullptr);
 	if (chardata == nullptr || ($nc(chardata)->length() == 0)) {
 		return nullptr;
@@ -982,6 +996,7 @@ $Character* DOM3TreeWalker::isWFXMLChar($String* chardata) {
 }
 
 void DOM3TreeWalker::isCommentWellFormed($String* data) {
+	$useLocalCurrentObjectStackCache();
 	if (data == nullptr || ($nc(data)->length() == 0)) {
 		return;
 	}
@@ -1046,6 +1061,7 @@ void DOM3TreeWalker::isCommentWellFormed($String* data) {
 }
 
 void DOM3TreeWalker::isElementWellFormed($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	bool isNameWF = false;
 	if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::NAMESPACES)) != 0) {
 		$var($String, var$0, $nc(node)->getPrefix());
@@ -1067,6 +1083,7 @@ void DOM3TreeWalker::isElementWellFormed($Node* node) {
 }
 
 void DOM3TreeWalker::isAttributeWellFormed($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	bool isNameWF = false;
 	if (((int32_t)(this->fFeatures & (uint32_t)DOM3TreeWalker::NAMESPACES)) != 0) {
 		$var($String, var$0, $nc(node)->getPrefix());
@@ -1121,6 +1138,7 @@ void DOM3TreeWalker::isAttributeWellFormed($Node* node) {
 }
 
 void DOM3TreeWalker::isPIWellFormed($ProcessingInstruction* node) {
+	$useLocalCurrentObjectStackCache();
 	if (!isXMLName($($nc(node)->getNodeName()), this->fIsXMLVersion11)) {
 		$init($Utils);
 		$init($MsgKey);
@@ -1144,6 +1162,7 @@ void DOM3TreeWalker::isPIWellFormed($ProcessingInstruction* node) {
 }
 
 void DOM3TreeWalker::isCDATASectionWellFormed($CDATASection* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($Character, invalidChar, isWFXMLChar($($nc(node)->getData())));
 	if (invalidChar != nullptr) {
 		$init($Utils);
@@ -1156,6 +1175,7 @@ void DOM3TreeWalker::isCDATASectionWellFormed($CDATASection* node) {
 }
 
 void DOM3TreeWalker::isTextWellFormed($Text* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($Character, invalidChar, isWFXMLChar($($nc(node)->getData())));
 	if (invalidChar != nullptr) {
 		$init($Utils);
@@ -1168,6 +1188,7 @@ void DOM3TreeWalker::isTextWellFormed($Text* node) {
 }
 
 void DOM3TreeWalker::isEntityReferneceWellFormed($EntityReference* node) {
+	$useLocalCurrentObjectStackCache();
 	if (!isXMLName($($nc(node)->getNodeName()), this->fIsXMLVersion11)) {
 		$init($Utils);
 		$init($MsgKey);
@@ -1222,6 +1243,7 @@ void DOM3TreeWalker::isEntityReferneceWellFormed($EntityReference* node) {
 }
 
 void DOM3TreeWalker::checkUnboundPrefixInEntRef($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($Node, child, nullptr);
 	$var($Node, next, nullptr);
 	for ($assign(child, $nc(node)->getFirstChild()); child != nullptr; $assign(child, next)) {
@@ -1264,6 +1286,7 @@ void DOM3TreeWalker::checkUnboundPrefixInEntRef($Node* node) {
 }
 
 void DOM3TreeWalker::recordLocalNSDecl($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($NamedNodeMap, atts, $nc(($cast($Element, node)))->getAttributes());
 	int32_t length = $nc(atts)->getLength();
 	for (int32_t i = 0; i < length; ++i) {
@@ -1300,6 +1323,7 @@ void DOM3TreeWalker::recordLocalNSDecl($Node* node) {
 }
 
 void DOM3TreeWalker::fixupElementNS($Node* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, namespaceURI, $nc(($cast($Element, node)))->getNamespaceURI());
 	$var($String, prefix, ($cast($Element, node))->getPrefix());
 	$var($String, localName, ($cast($Element, node))->getLocalName());
@@ -1337,6 +1361,7 @@ void DOM3TreeWalker::fixupElementNS($Node* node) {
 }
 
 void DOM3TreeWalker::initProperties($Properties* properties) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($Iterator, i$, $nc($($nc(properties)->stringPropertyNames()))->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -1403,6 +1428,7 @@ void DOM3TreeWalker::initProperties($Properties* properties) {
 }
 
 void clinit$DOM3TreeWalker($Class* class$) {
+	$useLocalCurrentObjectStackCache();
 	$assignStatic(DOM3TreeWalker::XMLNS_URI, "http://www.w3.org/2000/xmlns/"_s);
 	$assignStatic(DOM3TreeWalker::XMLNS_PREFIX, "xmlns"_s);
 	$assignStatic(DOM3TreeWalker::XML_URI, "http://www.w3.org/XML/1998/namespace"_s);

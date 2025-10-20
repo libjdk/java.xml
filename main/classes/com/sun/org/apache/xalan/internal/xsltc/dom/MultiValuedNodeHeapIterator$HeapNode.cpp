@@ -86,6 +86,7 @@ void MultiValuedNodeHeapIterator$HeapNode::init$($MultiValuedNodeHeapIterator* t
 }
 
 MultiValuedNodeHeapIterator$HeapNode* MultiValuedNodeHeapIterator$HeapNode::cloneHeapNode() {
+	$useLocalCurrentObjectStackCache();
 	$var(MultiValuedNodeHeapIterator$HeapNode, clone, nullptr);
 	try {
 		$assign(clone, $cast(MultiValuedNodeHeapIterator$HeapNode, $Cloneable::clone()));

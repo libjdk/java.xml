@@ -85,6 +85,7 @@ void SchemaFactoryFinder$2::init$($SchemaFactoryFinder* this$0, $String* val$sch
 }
 
 $Object* SchemaFactoryFinder$2::run() {
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$init($SchemaFactoryFinder);
 	$var($ServiceLoader, loader, $ServiceLoader::load($SchemaFactoryFinder::SERVICE_CLASS));

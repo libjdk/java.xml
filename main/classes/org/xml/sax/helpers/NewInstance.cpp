@@ -76,6 +76,7 @@ void NewInstance::init$() {
 
 $Object* NewInstance::newInstance($Class* type, $ClassLoader* loader, $String* clsName) {
 	$init(NewInstance);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ClassLoader, classLoader, $cast($ClassLoader, $Objects::requireNonNull(loader)));
 	$var($String, className, $cast($String, $Objects::requireNonNull(clsName)));

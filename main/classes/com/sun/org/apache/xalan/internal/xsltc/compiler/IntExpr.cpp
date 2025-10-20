@@ -81,10 +81,12 @@ $Type* IntExpr::typeCheck($SymbolTable* stable) {
 }
 
 $String* IntExpr::toString() {
+	$useLocalCurrentObjectStackCache();
 	return $str({"int-expr("_s, $$str(this->_value), $$str(u')')});
 }
 
 void IntExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$nc(il)->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, this->_value)));

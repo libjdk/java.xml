@@ -181,6 +181,7 @@ void XMLReaderFactory::init$() {
 
 $XMLReader* XMLReaderFactory::createXMLReader() {
 	$init(XMLReaderFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($String, className, nullptr);
 	$var($ClassLoader, cl, $SecuritySupport::getClassLoader());
 	try {
@@ -211,6 +212,7 @@ $XMLReader* XMLReaderFactory::createXMLReader($String* className) {
 
 $XMLReader* XMLReaderFactory::loadClass($ClassLoader* loader, $String* className) {
 	$init(XMLReaderFactory);
+	$useLocalCurrentObjectStackCache();
 	try {
 		$load($XMLReader);
 		return $cast($XMLReader, $NewInstance::newInstance($XMLReader::class$, loader, className));
@@ -232,6 +234,7 @@ $XMLReader* XMLReaderFactory::loadClass($ClassLoader* loader, $String* className
 
 $String* XMLReaderFactory::jarLookup($ClassLoader* loader) {
 	$init(XMLReaderFactory);
+	$useLocalCurrentObjectStackCache();
 	$var($ClassLoader, cl, $cast($ClassLoader, $Objects::requireNonNull(loader)));
 	$var($String, clsFromJar, nullptr);
 	$var($String, service, $str({"META-INF/services/"_s, XMLReaderFactory::property}));
@@ -255,6 +258,7 @@ $String* XMLReaderFactory::jarLookup($ClassLoader* loader) {
 
 $Object* XMLReaderFactory::findServiceProvider($Class* type, $ClassLoader* loader) {
 	$init(XMLReaderFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ClassLoader, cl, $cast($ClassLoader, $Objects::requireNonNull(loader)));
 	try {
@@ -269,6 +273,7 @@ $Object* XMLReaderFactory::findServiceProvider($Class* type, $ClassLoader* loade
 
 $Object* XMLReaderFactory::lambda$findServiceProvider$0($Class* type, $ClassLoader* cl) {
 	$init(XMLReaderFactory);
+	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	$var($ServiceLoader, serviceLoader, nullptr);
 	$assign(serviceLoader, $ServiceLoader::load(type, cl));

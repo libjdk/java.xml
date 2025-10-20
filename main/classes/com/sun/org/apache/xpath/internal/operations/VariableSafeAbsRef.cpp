@@ -68,6 +68,7 @@ void VariableSafeAbsRef::init$() {
 }
 
 $XObject* VariableSafeAbsRef::execute($XPathContext* xctxt, bool destructiveOK) {
+	$useLocalCurrentObjectStackCache();
 	$var($XNodeSet, xns, $cast($XNodeSet, $Variable::execute(xctxt, destructiveOK)));
 	$var($DTMManager, dtmMgr, $nc(xctxt)->getDTMManager());
 	int32_t context = xctxt->getContextNode();

@@ -123,6 +123,7 @@ void DocumentCall::init$($QName* fname, $List* arguments) {
 }
 
 $Type* DocumentCall::typeCheck($SymbolTable* stable) {
+	$useLocalCurrentObjectStackCache();
 	int32_t ac = argumentCount();
 	if ((ac < 1) || (ac > 2)) {
 		$init($ErrorMsg);
@@ -168,6 +169,7 @@ $Type* DocumentCall::typeCheck($SymbolTable* stable) {
 }
 
 void DocumentCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
+	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	int32_t ac = argumentCount();

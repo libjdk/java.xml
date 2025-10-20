@@ -162,6 +162,7 @@ void Attributes2Impl::init$($Attributes* atts) {
 }
 
 bool Attributes2Impl::isDeclared(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0 || index >= getLength()) {
 		$throwNew($ArrayIndexOutOfBoundsException, $$str({"No attribute at index: "_s, $$str(index)}));
 	}
@@ -185,6 +186,7 @@ bool Attributes2Impl::isDeclared($String* qName) {
 }
 
 bool Attributes2Impl::isSpecified(int32_t index) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0 || index >= getLength()) {
 		$throwNew($ArrayIndexOutOfBoundsException, $$str({"No attribute at index: "_s, $$str(index)}));
 	}
@@ -208,6 +210,7 @@ bool Attributes2Impl::isSpecified($String* qName) {
 }
 
 void Attributes2Impl::setAttributes($Attributes* atts) {
+	$useLocalCurrentObjectStackCache();
 	int32_t length = $nc(atts)->getLength();
 	$AttributesImpl::setAttributes(atts);
 	$set(this, declared, $new($booleans, length));
@@ -255,6 +258,7 @@ void Attributes2Impl::removeAttribute(int32_t index) {
 }
 
 void Attributes2Impl::setDeclared(int32_t index, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0 || index >= getLength()) {
 		$throwNew($ArrayIndexOutOfBoundsException, $$str({"No attribute at index: "_s, $$str(index)}));
 	}
@@ -262,6 +266,7 @@ void Attributes2Impl::setDeclared(int32_t index, bool value) {
 }
 
 void Attributes2Impl::setSpecified(int32_t index, bool value) {
+	$useLocalCurrentObjectStackCache();
 	if (index < 0 || index >= getLength()) {
 		$throwNew($ArrayIndexOutOfBoundsException, $$str({"No attribute at index: "_s, $$str(index)}));
 	}

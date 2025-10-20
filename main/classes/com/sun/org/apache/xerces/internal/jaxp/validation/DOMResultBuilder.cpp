@@ -223,6 +223,7 @@ void DOMResultBuilder::setDOMResult($DOMResult* result) {
 }
 
 void DOMResultBuilder::doctypeDecl($DocumentType* node) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fDocumentImpl != nullptr) {
 		$var($String, var$0, $nc(node)->getName());
 		$var($String, var$1, node->getPublicId());
@@ -257,18 +258,22 @@ void DOMResultBuilder::doctypeDecl($DocumentType* node) {
 }
 
 void DOMResultBuilder::characters($Text* node) {
+	$useLocalCurrentObjectStackCache();
 	append($($nc(this->fDocument)->createTextNode($($nc(node)->getNodeValue()))));
 }
 
 void DOMResultBuilder::cdata($CDATASection* node) {
+	$useLocalCurrentObjectStackCache();
 	append($($nc(this->fDocument)->createCDATASection($($nc(node)->getNodeValue()))));
 }
 
 void DOMResultBuilder::comment($Comment* node) {
+	$useLocalCurrentObjectStackCache();
 	append($($nc(this->fDocument)->createComment($($nc(node)->getNodeValue()))));
 }
 
 void DOMResultBuilder::processingInstruction($ProcessingInstruction* node) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, var$0, $nc(node)->getTarget());
 	append($($nc(this->fDocument)->createProcessingInstruction(var$0, $(node->getData()))));
 }
@@ -293,6 +298,7 @@ void DOMResultBuilder::processingInstruction($String* target, $XMLString* data, 
 }
 
 void DOMResultBuilder::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	$var($Element, elem, nullptr);
 	int32_t attrCount = $nc(attributes)->getLength();
 	if (this->fDocumentImpl == nullptr) {
@@ -355,6 +361,7 @@ void DOMResultBuilder::endGeneralEntity($String* name, $Augmentations* augs) {
 }
 
 void DOMResultBuilder::characters($XMLString* text, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (!this->fIgnoreChars) {
 		append($($nc(this->fDocument)->createTextNode($($nc(text)->toString()))));
 	}
@@ -365,6 +372,7 @@ void DOMResultBuilder::ignorableWhitespace($XMLString* text, $Augmentations* aug
 }
 
 void DOMResultBuilder::endElement($QName* element, $Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (augs != nullptr && this->fDocumentImpl != nullptr) {
 		$init($Constants);
 		$var($ElementPSVI, elementPSVI, $cast($ElementPSVI, augs->getItem($Constants::ELEMENT_PSVI)));
@@ -394,6 +402,7 @@ void DOMResultBuilder::endCDATA($Augmentations* augs) {
 }
 
 void DOMResultBuilder::endDocument($Augmentations* augs) {
+	$useLocalCurrentObjectStackCache();
 	if (this->fNextSibling == nullptr) {
 		{
 			$var($Iterator, i$, $nc(this->fTargetChildren)->iterator());

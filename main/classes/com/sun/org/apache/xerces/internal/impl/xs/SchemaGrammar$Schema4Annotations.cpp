@@ -193,6 +193,7 @@ $Object* allocate$SchemaGrammar$Schema4Annotations($Class* clazz) {
 SchemaGrammar$Schema4Annotations* SchemaGrammar$Schema4Annotations::INSTANCE = nullptr;
 
 void SchemaGrammar$Schema4Annotations::init$() {
+	$useLocalCurrentObjectStackCache();
 	$SchemaGrammar::init$();
 	$init($SchemaSymbols);
 	$set(this, fTargetNamespace, $SchemaSymbols::URI_SCHEMAFORSCHEMA);
@@ -407,6 +408,7 @@ $XSParticleDecl* SchemaGrammar$Schema4Annotations::createChoiceElementParticle($
 }
 
 $XSParticleDecl* SchemaGrammar$Schema4Annotations::createUnboundedAnyWildcardSequenceParticle() {
+	$useLocalCurrentObjectStackCache();
 	$var($XSParticleDecl, particle, createUnboundedModelGroupParticle());
 	$var($XSModelGroupImpl, sequence, $new($XSModelGroupImpl));
 	sequence->fCompositor = $XSModelGroupImpl::MODELGROUP_SEQUENCE;
@@ -418,6 +420,7 @@ $XSParticleDecl* SchemaGrammar$Schema4Annotations::createUnboundedAnyWildcardSeq
 }
 
 $XSParticleDecl* SchemaGrammar$Schema4Annotations::createAnyLaxWildcardParticle() {
+	$useLocalCurrentObjectStackCache();
 	$var($XSParticleDecl, particle, $new($XSParticleDecl));
 	particle->fMinOccurs = 1;
 	particle->fMaxOccurs = 1;

@@ -73,6 +73,7 @@ void JavaClass$1::init$() {
 }
 
 bool JavaClass$1::equals(Object$* o1, Object$* o2) {
+	$useLocalCurrentObjectStackCache();
 	$var($JavaClass, THIS, $cast($JavaClass, o1));
 	$var($JavaClass, THAT, $cast($JavaClass, o2));
 	$var($Object, var$0, $of($nc(THIS)->getClassName()));
@@ -80,6 +81,7 @@ bool JavaClass$1::equals(Object$* o1, Object$* o2) {
 }
 
 int32_t JavaClass$1::hashCode(Object$* o) {
+	$useLocalCurrentObjectStackCache();
 	$var($JavaClass, THIS, $cast($JavaClass, o));
 	return $nc($($nc(THIS)->getClassName()))->hashCode();
 }

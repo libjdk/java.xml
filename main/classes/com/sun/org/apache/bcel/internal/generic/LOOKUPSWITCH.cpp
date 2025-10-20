@@ -77,6 +77,7 @@ void LOOKUPSWITCH::init$($ints* match, $InstructionHandleArray* targets, $Instru
 }
 
 void LOOKUPSWITCH::dump($DataOutputStream* out) {
+	$useLocalCurrentObjectStackCache();
 	$Select::dump(out);
 	int32_t _match_length = getMatch_length();
 	$nc(out)->writeInt(_match_length);
@@ -87,6 +88,7 @@ void LOOKUPSWITCH::dump($DataOutputStream* out) {
 }
 
 void LOOKUPSWITCH::initFromFile($ByteSequence* bytes, bool wide) {
+	$useLocalCurrentObjectStackCache();
 	$Select::initFromFile(bytes, wide);
 	int32_t _match_length = $nc(bytes)->readInt();
 	setMatch_length(_match_length);

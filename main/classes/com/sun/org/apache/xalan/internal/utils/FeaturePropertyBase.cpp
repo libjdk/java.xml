@@ -160,6 +160,7 @@ $String* FeaturePropertyBase::getValueByIndex(int32_t index) {
 }
 
 int32_t FeaturePropertyBase::getIndex($Class* property, $String* propertyName) {
+	$useLocalCurrentObjectStackCache();
 	{
 		$var($EnumArray, arr$, $fcast($EnumArray, $nc(property)->getEnumConstants()));
 		int32_t len$ = $nc(arr$)->length;

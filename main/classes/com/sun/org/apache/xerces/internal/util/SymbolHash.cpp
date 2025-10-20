@@ -100,6 +100,7 @@ void SymbolHash::init$(int32_t size) {
 }
 
 void SymbolHash::put(Object$* key, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	int32_t collisionCount = 0;
 	int32_t hash = this->hash(key);
 	int32_t bucket = $mod(hash, this->fTableSize);
@@ -139,6 +140,7 @@ int32_t SymbolHash::getLength() {
 }
 
 int32_t SymbolHash::getValues($ObjectArray* elements, int32_t from) {
+	$useLocalCurrentObjectStackCache();
 	{
 		int32_t i = 0;
 		int32_t j = 0;
@@ -156,6 +158,7 @@ int32_t SymbolHash::getValues($ObjectArray* elements, int32_t from) {
 }
 
 $ObjectArray* SymbolHash::getEntries() {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, entries, $new($ObjectArray, this->fNum << 1));
 	{
 		int32_t i = 0;
@@ -175,6 +178,7 @@ $ObjectArray* SymbolHash::getEntries() {
 }
 
 SymbolHash* SymbolHash::makeClone() {
+	$useLocalCurrentObjectStackCache();
 	$var(SymbolHash, newTable, $new(SymbolHash, this->fTableSize));
 	newTable->fNum = this->fNum;
 	$set(newTable, fHashMultipliers, this->fHashMultipliers != nullptr ? $cast($ints, $nc(this->fHashMultipliers)->clone()) : ($ints*)nullptr);
@@ -236,6 +240,7 @@ void SymbolHash::rebalance() {
 }
 
 void SymbolHash::rehashCommon(int32_t newCapacity) {
+	$useLocalCurrentObjectStackCache();
 	int32_t oldCapacity = $nc(this->fBuckets)->length;
 	$var($SymbolHash$EntryArray, oldTable, this->fBuckets);
 	$var($SymbolHash$EntryArray, newTable, $new($SymbolHash$EntryArray, newCapacity));

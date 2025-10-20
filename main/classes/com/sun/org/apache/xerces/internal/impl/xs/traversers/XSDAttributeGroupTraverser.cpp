@@ -91,6 +91,7 @@ void XSDAttributeGroupTraverser::init$($XSDHandler* handler, $XSAttributeChecker
 }
 
 $XSAttributeGroupDecl* XSDAttributeGroupTraverser::traverseLocal($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, false, schemaDoc));
 	$var($QName, refAttr, $cast($QName, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_REF)));
 	$var($XSAttributeGroupDecl, attrGrp, nullptr);
@@ -130,6 +131,7 @@ $XSAttributeGroupDecl* XSDAttributeGroupTraverser::traverseLocal($Element* elmNo
 }
 
 $XSAttributeGroupDecl* XSDAttributeGroupTraverser::traverseGlobal($Element* elmNode, $XSDocumentInfo* schemaDoc, $SchemaGrammar* grammar) {
+	$useLocalCurrentObjectStackCache();
 	$var($XSAttributeGroupDecl, attrGrp, $new($XSAttributeGroupDecl));
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(elmNode, true, schemaDoc));
 	$var($String, nameAttr, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));

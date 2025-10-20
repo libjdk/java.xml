@@ -87,6 +87,7 @@ $EntityResolver* EntityResolverWrapper::getEntityResolver() {
 }
 
 $XMLInputSource* EntityResolverWrapper::resolveEntity($XMLResourceIdentifier* resourceIdentifier) {
+	$useLocalCurrentObjectStackCache();
 	$var($String, pubId, $nc(resourceIdentifier)->getPublicId());
 	$var($String, sysId, resourceIdentifier->getExpandedSystemId());
 	if (pubId == nullptr && sysId == nullptr) {

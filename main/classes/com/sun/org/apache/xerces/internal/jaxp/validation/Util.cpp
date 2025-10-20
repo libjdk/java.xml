@@ -63,6 +63,7 @@ void Util::init$() {
 }
 
 $XMLInputSource* Util::toXMLInputSource($StreamSource* in) {
+	$useLocalCurrentObjectStackCache();
 	if ($nc(in)->getReader() != nullptr) {
 		$var($String, var$0, in->getPublicId());
 		$var($String, var$1, in->getSystemId());
@@ -81,6 +82,7 @@ $XMLInputSource* Util::toXMLInputSource($StreamSource* in) {
 }
 
 $SAXException* Util::toSAXException($XNIException* e) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($XMLParseException, e)) {
 		return toSAXParseException($cast($XMLParseException, e));
 	}
@@ -92,6 +94,7 @@ $SAXException* Util::toSAXException($XNIException* e) {
 }
 
 $SAXParseException* Util::toSAXParseException($XMLParseException* e) {
+	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($SAXParseException, $($nc(e)->getException()))) {
 		return $cast($SAXParseException, e->getException());
 	}

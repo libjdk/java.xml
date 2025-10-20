@@ -216,6 +216,7 @@ void DOMParser::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammarPool) {
 }
 
 void DOMParser::parse($String* systemId) {
+	$useLocalCurrentObjectStackCache();
 	$var($XMLInputSource, source, $new($XMLInputSource, nullptr, systemId, nullptr, false));
 	try {
 		parse(source);
@@ -255,6 +256,7 @@ void DOMParser::parse($String* systemId) {
 }
 
 void DOMParser::parse($InputSource* inputSource) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$var($String, var$0, $nc(inputSource)->getPublicId());
 		$var($XMLInputSource, xmlInputSource, $new($XMLInputSource, var$0, $(inputSource->getSystemId()), nullptr, false));
@@ -297,6 +299,7 @@ void DOMParser::parse($InputSource* inputSource) {
 }
 
 void DOMParser::setEntityResolver($EntityResolver* resolver) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$init($XMLParser);
 		$var($XMLEntityResolver, xer, $cast($XMLEntityResolver, $nc(this->fConfiguration)->getProperty($XMLParser::ENTITY_RESOLVER)));
@@ -319,6 +322,7 @@ void DOMParser::setEntityResolver($EntityResolver* resolver) {
 }
 
 $EntityResolver* DOMParser::getEntityResolver() {
+	$useLocalCurrentObjectStackCache();
 	$var($EntityResolver, entityResolver, nullptr);
 	try {
 		$init($XMLParser);
@@ -337,6 +341,7 @@ $EntityResolver* DOMParser::getEntityResolver() {
 }
 
 void DOMParser::setErrorHandler($ErrorHandler* errorHandler) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$init($XMLParser);
 		$var($XMLErrorHandler, xeh, $cast($XMLErrorHandler, $nc(this->fConfiguration)->getProperty($XMLParser::ERROR_HANDLER)));
@@ -352,6 +357,7 @@ void DOMParser::setErrorHandler($ErrorHandler* errorHandler) {
 }
 
 $ErrorHandler* DOMParser::getErrorHandler() {
+	$useLocalCurrentObjectStackCache();
 	$var($ErrorHandler, errorHandler, nullptr);
 	try {
 		$init($XMLParser);
@@ -366,6 +372,7 @@ $ErrorHandler* DOMParser::getErrorHandler() {
 }
 
 void DOMParser::setFeature($String* featureId, bool state) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if ($nc(featureId)->equals(DOMParser::USE_ENTITY_RESOLVER2)) {
 			if (state != this->fUseEntityResolver2) {
@@ -388,6 +395,7 @@ void DOMParser::setFeature($String* featureId, bool state) {
 }
 
 bool DOMParser::getFeature($String* featureId) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		if ($nc(featureId)->equals(DOMParser::USE_ENTITY_RESOLVER2)) {
 			return this->fUseEntityResolver2;
@@ -444,6 +452,7 @@ void DOMParser::setProperty($String* propertyId, Object$* value) {
 }
 
 void DOMParser::setProperty0($String* propertyId, Object$* value) {
+	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fConfiguration)->setProperty(propertyId, value);
 	} catch ($XMLConfigurationException&) {
@@ -459,6 +468,7 @@ void DOMParser::setProperty0($String* propertyId, Object$* value) {
 }
 
 $Object* DOMParser::getProperty($String* propertyId) {
+	$useLocalCurrentObjectStackCache();
 	$init($AbstractDOMParser);
 	if ($nc(propertyId)->equals($AbstractDOMParser::CURRENT_ELEMENT_NODE)) {
 		bool deferred = false;
