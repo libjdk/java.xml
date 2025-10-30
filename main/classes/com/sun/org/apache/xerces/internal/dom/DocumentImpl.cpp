@@ -20,17 +20,6 @@
 #include <java/io/ObjectOutputStream$PutField.h>
 #include <java/io/ObjectOutputStream.h>
 #include <java/io/ObjectStreamField.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractCollection.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
@@ -268,7 +257,6 @@ bool DocumentImpl::equals(Object$* arg0) {
 void DocumentImpl::finalize() {
 	this->$CoreDocumentImpl::finalize();
 }
-
 
 $ObjectStreamFieldArray* DocumentImpl::serialPersistentFields = nullptr;
 
@@ -554,8 +542,7 @@ bool DocumentImpl::dispatchEvent($NodeImpl* node, $Event* event) {
 					if (var$0 && nodeListeners->contains(le)) {
 						try {
 							$nc(le->listener)->handleEvent(evt);
-						} catch ($Exception&) {
-							$catch();
+						} catch ($Exception& e) {
 						}
 					}
 				}
@@ -575,8 +562,7 @@ bool DocumentImpl::dispatchEvent($NodeImpl* node, $Event* event) {
 				if (var$1 && nodeListeners->contains(le)) {
 					try {
 						$nc(le->listener)->handleEvent(evt);
-					} catch ($Exception&) {
-						$catch();
+					} catch ($Exception& e) {
 					}
 				}
 			}
@@ -600,8 +586,7 @@ bool DocumentImpl::dispatchEvent($NodeImpl* node, $Event* event) {
 						if (var$2 && nodeListeners->contains(le)) {
 							try {
 								$nc(le->listener)->handleEvent(evt);
-							} catch ($Exception&) {
-								$catch();
+							} catch ($Exception& e) {
 							}
 						}
 					}
@@ -961,9 +946,9 @@ void DocumentImpl::readObject($ObjectInputStream* in) {
 
 void clinit$DocumentImpl($Class* class$) {
 	$useLocalCurrentObjectStackCache();
-		$load($Vector);
-		$load($Hashtable);
-		$init($Boolean);
+	$load($Vector);
+	$load($Hashtable);
+	$init($Boolean);
 	$assignStatic(DocumentImpl::serialPersistentFields, $new($ObjectStreamFieldArray, {
 		$$new($ObjectStreamField, "iterators"_s, $Vector::class$),
 		$$new($ObjectStreamField, "ranges"_s, $Vector::class$),

@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serialize/OutputFormat$Defaults.h>
 
 #include <com/sun/org/apache/xml/internal/serialize/OutputFormat.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
@@ -61,7 +53,6 @@ $ClassInfo _OutputFormat$Defaults_ClassInfo_ = {
 $Object* allocate$OutputFormat$Defaults($Class* clazz) {
 	return $of($alloc(OutputFormat$Defaults));
 }
-
 
 $String* OutputFormat$Defaults::Encoding = nullptr;
 

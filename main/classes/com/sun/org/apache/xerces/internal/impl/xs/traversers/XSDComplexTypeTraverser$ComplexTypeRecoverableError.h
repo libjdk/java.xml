@@ -34,8 +34,10 @@ public:
 	$ObjectArray* errorSubstText = nullptr;
 	::org::w3c::dom::Element* errorElem = nullptr;
 	XSDComplexTypeTraverser$ComplexTypeRecoverableError(const XSDComplexTypeTraverser$ComplexTypeRecoverableError& e);
-	XSDComplexTypeTraverser$ComplexTypeRecoverableError wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XSDComplexTypeTraverser$ComplexTypeRecoverableError* operator ->() {
+		return (XSDComplexTypeTraverser$ComplexTypeRecoverableError*)throwing$;
+	}
 };
 
 								} // traversers

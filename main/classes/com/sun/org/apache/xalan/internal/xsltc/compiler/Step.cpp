@@ -45,14 +45,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
 #include <com/sun/org/apache/xml/internal/dtm/Axis.h>
 #include <com/sun/org/apache/xml/internal/dtm/DTM.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Collection.h>
 #include <java/util/Iterator.h>
 #include <java/util/List.h>
@@ -410,11 +403,10 @@ void Step::translatePredicates($ClassGenerator* classGen, $MethodGenerator* meth
 				il->append(static_cast<$Instruction*>($$new($ICONST, $DOM::RETURN_CURRENT)));
 			} else {
 				$var($ParentLocationPath, path, $new($ParentLocationPath, this, step));
-				$set(this, _parent, ($assignField(step, _parent, path)));
+				$set(this, _parent, ($set(step, _parent, path)));
 				try {
 					path->typeCheck($($nc($(getParser()))->getSymbolTable()));
-				} catch ($TypeCheckError&) {
-					$catch();
+				} catch ($TypeCheckError& e) {
 				}
 				translateStep(classGen, methodGen, predicateIndex);
 				path->translateStep(classGen, methodGen);

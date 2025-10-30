@@ -1,16 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDComplexTypeTraverser$ComplexTypeRecoverableError.h>
 
 #include <com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDComplexTypeTraverser.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Element.h>
 #include <jcpp.h>
 
@@ -87,16 +77,10 @@ void XSDComplexTypeTraverser$ComplexTypeRecoverableError::init$($String* msgKey,
 XSDComplexTypeTraverser$ComplexTypeRecoverableError::XSDComplexTypeTraverser$ComplexTypeRecoverableError() {
 }
 
-XSDComplexTypeTraverser$ComplexTypeRecoverableError::XSDComplexTypeTraverser$ComplexTypeRecoverableError(const XSDComplexTypeTraverser$ComplexTypeRecoverableError& e) {
+XSDComplexTypeTraverser$ComplexTypeRecoverableError::XSDComplexTypeTraverser$ComplexTypeRecoverableError(const XSDComplexTypeTraverser$ComplexTypeRecoverableError& e) : $Exception(e) {
 }
 
-XSDComplexTypeTraverser$ComplexTypeRecoverableError XSDComplexTypeTraverser$ComplexTypeRecoverableError::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XSDComplexTypeTraverser$ComplexTypeRecoverableError::throwWrapper$() {
-	$pendingException(this);
+void XSDComplexTypeTraverser$ComplexTypeRecoverableError::throw$() {
 	throw *this;
 }
 

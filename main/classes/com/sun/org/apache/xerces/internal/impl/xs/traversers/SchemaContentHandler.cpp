@@ -15,17 +15,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Document.h>
 #include <org/xml/sax/Attributes.h>
 #include <org/xml/sax/Locator.h>
@@ -149,30 +138,24 @@ void SchemaContentHandler::setDocumentLocator($Locator* locator) {
 }
 
 void SchemaContentHandler::startDocument() {
-	$useLocalCurrentObjectStackCache();
 	this->fNeedPushNSContext = true;
 	$nc(this->fNamespaceContext)->reset();
 	try {
 		$nc(this->fSchemaDOMParser)->startDocument(this->fSAXLocatorWrapper, nullptr, this->fNamespaceContext, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		convertToSAXParseException(e);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		convertToSAXException(e);
 	}
 }
 
 void SchemaContentHandler::endDocument() {
-	$useLocalCurrentObjectStackCache();
 	$nc(this->fSAXLocatorWrapper)->setLocator(nullptr);
 	try {
 		$nc(this->fSchemaDOMParser)->endDocument(nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		convertToSAXParseException(e);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		convertToSAXException(e);
 	}
 }
@@ -205,7 +188,6 @@ void SchemaContentHandler::endPrefixMapping($String* prefix) {
 }
 
 void SchemaContentHandler::startElement($String* uri, $String* localName, $String* qName, $Attributes* atts) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fNeedPushNSContext) {
 		$nc(this->fNamespaceContext)->pushContext();
 	}
@@ -220,32 +202,27 @@ void SchemaContentHandler::startElement($String* uri, $String* localName, $Strin
 	}
 	try {
 		$nc(this->fSchemaDOMParser)->startElement(this->fElementQName, this->fAttributes, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		convertToSAXParseException(e);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		convertToSAXException(e);
 	}
 }
 
 void SchemaContentHandler::endElement($String* uri, $String* localName, $String* qName) {
-	$useLocalCurrentObjectStackCache();
 	fillQName(this->fElementQName, uri, localName, qName);
 	{
 		$var($Throwable, var$0, nullptr);
 		try {
 			try {
 				$nc(this->fSchemaDOMParser)->endElement(this->fElementQName, nullptr);
-			} catch ($XMLParseException&) {
-				$var($XMLParseException, e, $catch());
+			} catch ($XMLParseException& e) {
 				convertToSAXParseException(e);
-			} catch ($XNIException&) {
-				$var($XNIException, e, $catch());
+			} catch ($XNIException& e) {
 				convertToSAXException(e);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$nc(this->fNamespaceContext)->popContext();
 		}
@@ -256,44 +233,35 @@ void SchemaContentHandler::endElement($String* uri, $String* localName, $String*
 }
 
 void SchemaContentHandler::characters($chars* ch, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaDOMParser)->characters(this->fTempString, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		convertToSAXParseException(e);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		convertToSAXException(e);
 	}
 }
 
 void SchemaContentHandler::ignorableWhitespace($chars* ch, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaDOMParser)->ignorableWhitespace(this->fTempString, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		convertToSAXParseException(e);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		convertToSAXException(e);
 	}
 }
 
 void SchemaContentHandler::processingInstruction($String* target, $String* data) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var($chars, var$0, $nc(data)->toCharArray());
 		$nc(this->fTempString)->setValues(var$0, 0, data->length());
 		$nc(this->fSchemaDOMParser)->processingInstruction(target, this->fTempString, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		convertToSAXParseException(e);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		convertToSAXException(e);
 	}
 }

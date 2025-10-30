@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/InvalidDatatypeFacetException.h>
 
 #include <com/sun/org/apache/xerces/internal/impl/dv/DatatypeException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $DatatypeException = ::com::sun::org::apache::xerces::internal::impl::dv::DatatypeException;
@@ -55,16 +47,10 @@ void InvalidDatatypeFacetException::init$($String* key, $ObjectArray* args) {
 InvalidDatatypeFacetException::InvalidDatatypeFacetException() {
 }
 
-InvalidDatatypeFacetException::InvalidDatatypeFacetException(const InvalidDatatypeFacetException& e) {
+InvalidDatatypeFacetException::InvalidDatatypeFacetException(const InvalidDatatypeFacetException& e) : $DatatypeException(e) {
 }
 
-InvalidDatatypeFacetException InvalidDatatypeFacetException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void InvalidDatatypeFacetException::throwWrapper$() {
-	$pendingException(this);
+void InvalidDatatypeFacetException::throw$() {
 	throw *this;
 }
 

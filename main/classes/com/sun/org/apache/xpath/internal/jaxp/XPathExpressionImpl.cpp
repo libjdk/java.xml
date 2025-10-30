@@ -5,17 +5,6 @@
 #include <com/sun/org/apache/xpath/internal/jaxp/XPathImplUtil.h>
 #include <com/sun/org/apache/xpath/internal/jaxp/XPathResultImpl.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/namespace/QName.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <javax/xml/xpath/XPathConstants.h>
@@ -156,15 +145,12 @@ $Object* XPathExpressionImpl::eval(Object$* item, $QName* returnType) {
 }
 
 $Object* XPathExpressionImpl::evaluate(Object$* item, $QName* returnType) {
-	$useLocalCurrentObjectStackCache();
 	isSupported(returnType);
 	try {
 		return $of(eval(item, returnType));
-	} catch ($NullPointerException&) {
-		$var($NullPointerException, npe, $catch());
+	} catch ($NullPointerException& npe) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(npe));
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$var($Throwable, nestedException, te->getException());
 		if ($instanceOf($XPathFunctionException, nestedException)) {
 			$throw($cast($XPathFunctionException, nestedException));
@@ -181,13 +167,11 @@ $String* XPathExpressionImpl::evaluate(Object$* item) {
 }
 
 $Object* XPathExpressionImpl::evaluate($InputSource* source, $QName* returnType) {
-	$useLocalCurrentObjectStackCache();
 	isSupported(returnType);
 	try {
 		$var($Document, document, getDocument(source));
 		return $of(eval($of(document), returnType));
-	} catch ($TransformerException&) {
-		$var($TransformerException, e, $catch());
+	} catch ($TransformerException& e) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(e));
 	}
 	$shouldNotReachHere();
@@ -199,7 +183,6 @@ $String* XPathExpressionImpl::evaluate($InputSource* source) {
 }
 
 $Object* XPathExpressionImpl::evaluateExpression(Object$* item, $Class* type) {
-	$useLocalCurrentObjectStackCache();
 	isSupportedClassType(type);
 	try {
 		$var($XObject, resultObject, eval(item, this->xpath));
@@ -209,8 +192,7 @@ $Object* XPathExpressionImpl::evaluateExpression(Object$* item, $Class* type) {
 		} else {
 			return $of($XPathResultImpl::getValue(resultObject, type));
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(te));
 	}
 	$shouldNotReachHere();

@@ -9,14 +9,6 @@
 #include <com/sun/org/apache/xpath/internal/functions/FunctionOneArg.h>
 #include <com/sun/org/apache/xpath/internal/objects/XBoolean.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef S_FALSE
@@ -105,8 +97,7 @@ $XObject* FuncExtFunctionAvailable::execute($XPathContext* xctxt) {
 			}
 			$init($XBoolean);
 			return $nc(this->m_functionTable)->functionAvailable(methName) ? static_cast<$XObject*>($XBoolean::S_TRUE) : static_cast<$XObject*>($XBoolean::S_FALSE);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$init($XBoolean);
 			return $XBoolean::S_FALSE;
 		}

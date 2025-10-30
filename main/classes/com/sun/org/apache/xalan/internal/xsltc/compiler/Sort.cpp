@@ -67,14 +67,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
 #include <com/sun/org/apache/xml/internal/dtm/Axis.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -331,8 +323,7 @@ void Sort::parseContents($Parser* parser) {
 			} else {
 				$assign(val, "text"_s);
 			}
-		} catch ($TypeCheckError&) {
-			$var($TypeCheckError, e, $catch());
+		} catch ($TypeCheckError& e) {
 			$assign(val, "text"_s);
 		}
 	}
@@ -646,7 +637,7 @@ $MethodGenerator* Sort::compileExtract($List* sortObjects, $NodeSortRecordGenera
 	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $new($InstructionList));
 	$init($Type);
-		$init($Constants);
+	$init($Constants);
 	$var($CompareGenerator, extractMethod, $new($CompareGenerator, $Constants::ACC_PUBLIC | $Constants::ACC_FINAL, $Type::STRING, $$new($TypeArray, {
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),
 		static_cast<$Type*>($Type::INT),

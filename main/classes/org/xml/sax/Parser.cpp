@@ -1,13 +1,5 @@
 #include <org/xml/sax/Parser.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <org/xml/sax/DTDHandler.h>
 #include <org/xml/sax/DocumentHandler.h>
@@ -35,11 +27,11 @@ $NamedAttribute Parser_Attribute_var$0[] = {
 	{"since", 's', "1.5"},
 	{}
 };
+
 $CompoundAttribute _Parser_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", Parser_Attribute_var$0},
 	{}
 };
-
 
 $MethodInfo _Parser_MethodInfo_[] = {
 	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException,java.io.IOException"},

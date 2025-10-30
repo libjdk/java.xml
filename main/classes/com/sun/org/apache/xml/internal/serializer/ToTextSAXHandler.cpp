@@ -5,13 +5,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/ToSAXHandler.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Properties.h>
 #include <org/w3c/dom/Node.h>
 #include <org/xml/sax/Attributes.h>

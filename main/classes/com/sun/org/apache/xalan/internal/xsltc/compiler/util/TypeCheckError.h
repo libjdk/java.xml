@@ -67,8 +67,10 @@ public:
 	::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ErrorMsg* _error = nullptr;
 	::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode* _node = nullptr;
 	TypeCheckError(const TypeCheckError& e);
-	TypeCheckError wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline TypeCheckError* operator ->() {
+		return (TypeCheckError*)throwing$;
+	}
 };
 
 								} // util

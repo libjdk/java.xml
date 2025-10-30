@@ -18,16 +18,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/ExtendedContentHandler.h>
 #include <com/sun/org/apache/xml/internal/serializer/ExtendedLexicalHandler.h>
 #include <com/sun/org/apache/xml/internal/serializer/SerializationHandler.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/Result.h>
 #include <javax/xml/transform/Source.h>
 #include <javax/xml/transform/Transformer.h>
@@ -230,16 +220,14 @@ void TransformerHandlerImpl::setResult($Result* result) {
 			$nc(this->_transformer)->transferOutputProperties(outputHandler);
 			$set(this, _handler, outputHandler);
 			$set(this, _lexHandler, outputHandler);
-		} catch ($TransformerException&) {
-			$var($TransformerException, e, $catch());
+		} catch ($TransformerException& e) {
 			$set(this, _result, nullptr);
 		}
 	} else if (this->_done) {
 		try {
 			$nc(this->_transformer)->setDOM(this->_dom);
 			$nc(this->_transformer)->transform(nullptr, this->_result);
-		} catch ($TransformerException&) {
-			$var($TransformerException, e, $catch());
+		} catch ($TransformerException& e) {
 			$throwNew($IllegalArgumentException, $(e->getMessage()));
 		}
 	}
@@ -261,8 +249,7 @@ void TransformerHandlerImpl::startDocument() {
 		$var($XSLTCDTMManager, dtmManager, nullptr);
 		try {
 			$assign(dtmManager, $nc($($nc(this->_transformer)->getTransformerFactory()))->createNewDTMManagerInstance());
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$throwNew($SAXException, e);
 		}
 		$var($DTMWSFilter, wsFilter, nullptr);
@@ -292,8 +279,7 @@ void TransformerHandlerImpl::endDocument() {
 			try {
 				$nc(this->_transformer)->setDOM(this->_dom);
 				$nc(this->_transformer)->transform(nullptr, this->_result);
-			} catch ($TransformerException&) {
-				$var($TransformerException, e, $catch());
+			} catch ($TransformerException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
 		}

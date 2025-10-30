@@ -1,15 +1,7 @@
 #include <com/sun/org/apache/xml/internal/utils/ObjectStack.h>
 
 #include <com/sun/org/apache/xml/internal/utils/ObjectVector.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/EmptyStackException.h>
 #include <jcpp.h>
 
@@ -93,8 +85,7 @@ void ObjectStack::quickPop(int32_t n) {
 $Object* ObjectStack::peek() {
 	try {
 		return $of($nc(this->m_map)->get(this->m_firstFree - 1));
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($EmptyStackException);
 	}
 	$shouldNotReachHere();
@@ -103,8 +94,7 @@ $Object* ObjectStack::peek() {
 $Object* ObjectStack::peek(int32_t n) {
 	try {
 		return $of($nc(this->m_map)->get(this->m_firstFree - (1 + n)));
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($EmptyStackException);
 	}
 	$shouldNotReachHere();
@@ -113,8 +103,7 @@ $Object* ObjectStack::peek(int32_t n) {
 void ObjectStack::setTop(Object$* val) {
 	try {
 		$nc(this->m_map)->set(this->m_firstFree - 1, val);
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($EmptyStackException);
 	}
 }

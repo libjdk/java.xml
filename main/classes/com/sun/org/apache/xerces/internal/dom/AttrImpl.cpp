@@ -10,16 +10,7 @@
 #include <com/sun/org/apache/xerces/internal/dom/TextImpl.h>
 #include <java/io/ObjectInputStream.h>
 #include <java/io/ObjectOutputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/Element.h>
@@ -288,7 +279,6 @@ $Object* AttrImpl::clone() {
 void AttrImpl::finalize() {
 	this->$NodeImpl::finalize();
 }
-
 
 $String* AttrImpl::DTD_URI = nullptr;
 

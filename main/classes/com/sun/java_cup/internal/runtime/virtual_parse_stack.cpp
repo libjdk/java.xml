@@ -1,15 +1,6 @@
 #include <com/sun/java_cup/internal/runtime/virtual_parse_stack.h>
 
 #include <com/sun/java_cup/internal/runtime/Symbol.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Stack.h>
 #include <jcpp.h>
 

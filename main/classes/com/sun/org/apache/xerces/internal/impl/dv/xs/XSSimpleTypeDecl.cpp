@@ -68,20 +68,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/datatypes/ObjectList.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -544,7 +531,6 @@ $String* XSSimpleTypeDecl::ANY_TYPE = nullptr;
 $ValidationContext* XSSimpleTypeDecl::fEmptyContext = nullptr;
 XSSimpleTypeDecl* XSSimpleTypeDecl::fAnySimpleType = nullptr;
 XSSimpleTypeDecl* XSSimpleTypeDecl::fAnyAtomicType = nullptr;
-
 $ValidationContext* XSSimpleTypeDecl::fDummyContext = nullptr;
 
 $TypeValidatorArray* XSSimpleTypeDecl::getGDVs() {
@@ -980,8 +966,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 void XSSimpleTypeDecl::applyFacets1($XSFacets* facets, int16_t presentFacet, int16_t fixedFacet) {
 	try {
 		applyFacets(facets, presentFacet, fixedFacet, XSSimpleTypeDecl::SPECIAL_PATTERN_NONE, XSSimpleTypeDecl::fDummyContext);
-	} catch ($InvalidDatatypeFacetException&) {
-		$var($InvalidDatatypeFacetException, e, $catch());
+	} catch ($InvalidDatatypeFacetException& e) {
 		$throwNew($RuntimeException, "internal error"_s);
 	}
 	this->fIsImmutable = true;
@@ -990,8 +975,7 @@ void XSSimpleTypeDecl::applyFacets1($XSFacets* facets, int16_t presentFacet, int
 void XSSimpleTypeDecl::applyFacets1($XSFacets* facets, int16_t presentFacet, int16_t fixedFacet, int16_t patternType) {
 	try {
 		applyFacets(facets, presentFacet, fixedFacet, patternType, XSSimpleTypeDecl::fDummyContext);
-	} catch ($InvalidDatatypeFacetException&) {
-		$var($InvalidDatatypeFacetException, e, $catch());
+	} catch ($InvalidDatatypeFacetException& e) {
 		$throwNew($RuntimeException, "internal error"_s);
 	}
 	this->fIsImmutable = true;
@@ -1063,8 +1047,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 			$var($RegularExpression, regex, nullptr);
 			try {
 				$assign(regex, $new($RegularExpression, facets->pattern, "X"_s, $($nc(context)->getLocale())));
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				reportError("InvalidRegex"_s, $$new($ObjectArray, {
 					$of(facets->pattern),
 					$($of(e->getLocalizedMessage()))
@@ -1118,8 +1101,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 				try {
 					$var($ValidatedInfo, info, getActualEnumValue($cast($String, $(enumVals->get(i))), ctx, nullptr));
 					$nc(this->fEnumeration)->set(this->fEnumerationSize++, info);
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ide, $catch());
+				} catch ($InvalidDatatypeValueException& ide) {
 					reportError("enumeration-valid-restriction"_s, $$new($ObjectArray, {
 						$(enumVals->get(i)),
 						$($of($nc($(this->getBaseType()))->getName()))
@@ -1146,8 +1128,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 				if (((int32_t)(fixedFacet & (uint32_t)(int32_t)$XSSimpleTypeDefinition::FACET_MAXINCLUSIVE)) != 0) {
 					this->fFixedFacet |= $XSSimpleTypeDefinition::FACET_MAXINCLUSIVE;
 				}
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, ide, $catch());
+			} catch ($InvalidDatatypeValueException& ide) {
 				$var($String, var$0, ide->getKey());
 				reportError(var$0, $(ide->getArgs()));
 				reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1171,8 +1152,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 			}
 			try {
 				$nc(this->fBase)->validate(context, tempInfo);
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, ide, $catch());
+			} catch ($InvalidDatatypeValueException& ide) {
 				$var($String, var$1, ide->getKey());
 				reportError(var$1, $(ide->getArgs()));
 				reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1199,8 +1179,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 				if (((int32_t)(fixedFacet & (uint32_t)(int32_t)$XSSimpleTypeDefinition::FACET_MAXEXCLUSIVE)) != 0) {
 					this->fFixedFacet |= $XSSimpleTypeDefinition::FACET_MAXEXCLUSIVE;
 				}
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, ide, $catch());
+			} catch ($InvalidDatatypeValueException& ide) {
 				$var($String, var$2, ide->getKey());
 				reportError(var$2, $(ide->getArgs()));
 				reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1227,8 +1206,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 			if (needCheckBase) {
 				try {
 					$nc(this->fBase)->validate(context, tempInfo);
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ide, $catch());
+				} catch ($InvalidDatatypeValueException& ide) {
 					$var($String, var$3, ide->getKey());
 					reportError(var$3, $(ide->getArgs()));
 					reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1263,8 +1241,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 				if (((int32_t)(fixedFacet & (uint32_t)(int32_t)$XSSimpleTypeDefinition::FACET_MINEXCLUSIVE)) != 0) {
 					this->fFixedFacet |= $XSSimpleTypeDefinition::FACET_MINEXCLUSIVE;
 				}
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, ide, $catch());
+			} catch ($InvalidDatatypeValueException& ide) {
 				$var($String, var$4, ide->getKey());
 				reportError(var$4, $(ide->getArgs()));
 				reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1291,8 +1268,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 			if (needCheckBase) {
 				try {
 					$nc(this->fBase)->validate(context, tempInfo);
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ide, $catch());
+				} catch ($InvalidDatatypeValueException& ide) {
 					$var($String, var$5, ide->getKey());
 					reportError(var$5, $(ide->getArgs()));
 					reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1326,8 +1302,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 				if (((int32_t)(fixedFacet & (uint32_t)(int32_t)$XSSimpleTypeDefinition::FACET_MININCLUSIVE)) != 0) {
 					this->fFixedFacet |= $XSSimpleTypeDefinition::FACET_MININCLUSIVE;
 				}
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, ide, $catch());
+			} catch ($InvalidDatatypeValueException& ide) {
 				$var($String, var$6, ide->getKey());
 				reportError(var$6, $(ide->getArgs()));
 				reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1351,8 +1326,7 @@ void XSSimpleTypeDecl::applyFacets($XSFacets* facets, int16_t presentFacet, int1
 			}
 			try {
 				$nc(this->fBase)->validate(context, tempInfo);
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, ide, $catch());
+			} catch ($InvalidDatatypeValueException& ide) {
 				$var($String, var$7, ide->getKey());
 				reportError(var$7, $(ide->getArgs()));
 				reportError("FacetValueFromBase"_s, $$new($ObjectArray, {
@@ -1995,8 +1969,8 @@ void XSSimpleTypeDecl::checkExtraRules($ValidationContext* context, $ValidatedIn
 						$nc(this->fItemType)->checkExtraRules(context, validatedInfo);
 					}
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				$set(validatedInfo, actualValue, values);
 				$set(validatedInfo, memberType, memberType);
@@ -2094,8 +2068,7 @@ $Object* XSSimpleTypeDecl::getActualValue(Object$* content, $ValidationContext* 
 				$set($nc(validatedInfo), memberType, $nc(this->fMemberTypes)->get(i));
 				$set(validatedInfo, actualType, this);
 				return $of(aValue);
-			} catch ($InvalidDatatypeValueException&) {
-				$catch();
+			} catch ($InvalidDatatypeValueException& invalidValue) {
 			}
 		}
 		$var($StringBuffer, typesBuffer, $new($StringBuffer));

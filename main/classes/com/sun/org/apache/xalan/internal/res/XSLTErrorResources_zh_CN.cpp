@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xalan/internal/res/XSLTErrorResources_zh_CN.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -791,9 +783,7 @@ $String* XSLTErrorResources_zh_CN::WG_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML = n
 $String* XSLTErrorResources_zh_CN::WG_PROCESSINGINSTRUCTION_NOTVALID_NCNAME = nullptr;
 $String* XSLTErrorResources_zh_CN::WG_ILLEGAL_ATTRIBUTE_POSITION = nullptr;
 $String* XSLTErrorResources_zh_CN::NO_MODIFICATION_ALLOWED_ERR = nullptr;
-
 $String* XSLTErrorResources_zh_CN::BAD_CODE = nullptr;
-
 $String* XSLTErrorResources_zh_CN::FORMAT_FAILED = nullptr;
 
 void XSLTErrorResources_zh_CN::init$() {

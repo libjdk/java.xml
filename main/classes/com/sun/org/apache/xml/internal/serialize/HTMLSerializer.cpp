@@ -10,18 +10,8 @@
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <java/util/Locale.h>
 #include <java/util/Map$Entry.h>
@@ -77,11 +67,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _HTMLSerializer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _HTMLSerializer_FieldInfo_[] = {
 	{"_xhtml", "Z", nullptr, $PRIVATE, $field(HTMLSerializer, _xhtml)},
@@ -315,8 +305,7 @@ void HTMLSerializer::startElement($String* namespaceURI, $String* localName, $St
 				state->unescaped = true;
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -324,8 +313,7 @@ void HTMLSerializer::startElement($String* namespaceURI, $String* localName, $St
 void HTMLSerializer::endElement($String* namespaceURI, $String* localName, $String* rawName) {
 	try {
 		endElementIO(namespaceURI, localName, rawName);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -390,14 +378,12 @@ void HTMLSerializer::endElementIO($String* namespaceURI, $String* localName, $St
 }
 
 void HTMLSerializer::characters($chars* chars, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	try {
 		$assign(state, content());
 		$nc(state)->doCData = false;
 		$BaseMarkupSerializer::characters(chars, start, length);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -492,8 +478,7 @@ void HTMLSerializer::startElement($String* tagName, $AttributeList* attrs) {
 				state->unescaped = true;
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }

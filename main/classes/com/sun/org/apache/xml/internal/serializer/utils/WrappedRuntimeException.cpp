@@ -1,14 +1,5 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/WrappedRuntimeException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -69,16 +60,10 @@ $Exception* WrappedRuntimeException::getException() {
 WrappedRuntimeException::WrappedRuntimeException() {
 }
 
-WrappedRuntimeException::WrappedRuntimeException(const WrappedRuntimeException& e) {
+WrappedRuntimeException::WrappedRuntimeException(const WrappedRuntimeException& e) : $RuntimeException(e) {
 }
 
-WrappedRuntimeException WrappedRuntimeException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void WrappedRuntimeException::throwWrapper$() {
-	$pendingException(this);
+void WrappedRuntimeException::throw$() {
 	throw *this;
 }
 

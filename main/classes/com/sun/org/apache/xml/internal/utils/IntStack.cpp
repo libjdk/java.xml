@@ -1,15 +1,7 @@
 #include <com/sun/org/apache/xml/internal/utils/IntStack.h>
 
 #include <com/sun/org/apache/xml/internal/utils/IntVector.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/EmptyStackException.h>
 #include <jcpp.h>
 
@@ -91,8 +83,7 @@ void IntStack::quickPop(int32_t n) {
 int32_t IntStack::peek() {
 	try {
 		return $nc(this->m_map)->get(this->m_firstFree - 1);
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($EmptyStackException);
 	}
 	$shouldNotReachHere();
@@ -101,8 +92,7 @@ int32_t IntStack::peek() {
 int32_t IntStack::peek(int32_t n) {
 	try {
 		return $nc(this->m_map)->get(this->m_firstFree - (1 + n));
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($EmptyStackException);
 	}
 	$shouldNotReachHere();
@@ -111,8 +101,7 @@ int32_t IntStack::peek(int32_t n) {
 void IntStack::setTop(int32_t val) {
 	try {
 		$nc(this->m_map)->set(this->m_firstFree - 1, val);
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($EmptyStackException);
 	}
 }

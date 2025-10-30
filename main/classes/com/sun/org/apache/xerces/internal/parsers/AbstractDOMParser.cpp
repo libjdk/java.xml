@@ -39,22 +39,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/ElementPSVI.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
 #include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <java/util/Stack.h>
 #include <org/w3c/dom/Attr.h>
@@ -339,26 +325,16 @@ $Object* allocate$AbstractDOMParser($Class* clazz) {
 	return $of($alloc(AbstractDOMParser));
 }
 
-
 $String* AbstractDOMParser::NAMESPACES = nullptr;
-
 $String* AbstractDOMParser::CREATE_ENTITY_REF_NODES = nullptr;
-
 $String* AbstractDOMParser::INCLUDE_COMMENTS_FEATURE = nullptr;
-
 $String* AbstractDOMParser::CREATE_CDATA_NODES_FEATURE = nullptr;
-
 $String* AbstractDOMParser::INCLUDE_IGNORABLE_WHITESPACE = nullptr;
-
 $String* AbstractDOMParser::DEFER_NODE_EXPANSION = nullptr;
-
 $StringArray* AbstractDOMParser::RECOGNIZED_FEATURES = nullptr;
-
 $String* AbstractDOMParser::DOCUMENT_CLASS_NAME = nullptr;
 $String* AbstractDOMParser::CURRENT_ELEMENT_NODE = nullptr;
-
 $StringArray* AbstractDOMParser::RECOGNIZED_PROPERTIES = nullptr;
-
 $String* AbstractDOMParser::DEFAULT_DOCUMENT_CLASS_NAME = nullptr;
 $String* AbstractDOMParser::CORE_DOCUMENT_CLASS_NAME = nullptr;
 $String* AbstractDOMParser::PSVI_DOCUMENT_CLASS_NAME = nullptr;
@@ -404,8 +380,7 @@ void AbstractDOMParser::setDocumentClassName($String* documentClassName$renamed)
 				$init($DOMMessageFormatter);
 				$throwNew($IllegalArgumentException, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "InvalidDocumentClassName"_s, $$new($ObjectArray, {$of(documentClassName)}))));
 			}
-		} catch ($ClassNotFoundException&) {
-			$var($ClassNotFoundException, e, $catch());
+		} catch ($ClassNotFoundException& e) {
 			$init($DOMMessageFormatter);
 			$throwNew($IllegalArgumentException, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "MissingDocumentClassName"_s, $$new($ObjectArray, {$of(documentClassName)}))));
 		}
@@ -675,10 +650,8 @@ void AbstractDOMParser::startDocument($XMLLocator* locator, $String* encoding, $
 						$nc(this->fDocumentImpl)->setDocumentURI($(locator->getExpandedSystemId()));
 					}
 				}
-			} catch ($ClassNotFoundException&) {
-				$catch();
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($ClassNotFoundException& e) {
+			} catch ($Exception& e) {
 				$init($DOMMessageFormatter);
 				$throwNew($RuntimeException, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "CannotCreateDocumentClass"_s, $$new($ObjectArray, {$of(this->fDocumentClassName)}))));
 			}

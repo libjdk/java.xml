@@ -16,18 +16,7 @@
 #include <com/sun/xml/internal/stream/Entity.h>
 #include <java/io/File.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Map.h>
@@ -132,9 +121,7 @@ $Object* allocate$XMLEntityStorage($Class* clazz) {
 	return $of($alloc(XMLEntityStorage));
 }
 
-
 $String* XMLEntityStorage::ERROR_REPORTER = nullptr;
-
 $String* XMLEntityStorage::WARN_ON_DUPLICATE_ENTITYDEF = nullptr;
 $String* XMLEntityStorage::gUserDir = nullptr;
 $String* XMLEntityStorage::gEscapedUserDir = nullptr;
@@ -265,8 +252,7 @@ $String* XMLEntityStorage::getUserDir() {
 		$var($String, userDir, ""_s);
 		try {
 			$assign(userDir, $SecuritySupport::getSystemProperty("user.dir"_s));
-		} catch ($SecurityException&) {
-			$catch();
+		} catch ($SecurityException& se) {
 		}
 		if (userDir->length() == 0) {
 			return ""_s;
@@ -306,8 +292,7 @@ $String* XMLEntityStorage::getUserDir() {
 			int8_t b = 0;
 			try {
 				$assign(bytes, $(userDir->substring(i))->getBytes("UTF-8"_s));
-			} catch ($UnsupportedEncodingException&) {
-				$var($UnsupportedEncodingException, e, $catch());
+			} catch ($UnsupportedEncodingException& e) {
 				return userDir;
 			}
 			len = $nc(bytes)->length;
@@ -346,8 +331,7 @@ $String* XMLEntityStorage::expandSystemId($String* systemId, $String* baseSystem
 	try {
 		$new($URI, systemId);
 		return systemId;
-	} catch ($URI$MalformedURIException&) {
-		$catch();
+	} catch ($URI$MalformedURIException& e) {
 	}
 	$var($String, id, fixURI(systemId));
 	$var($URI, base, nullptr);
@@ -360,8 +344,7 @@ $String* XMLEntityStorage::expandSystemId($String* systemId, $String* baseSystem
 		} else {
 			try {
 				$assign(base, $new($URI, $(fixURI(baseSystemId))));
-			} catch ($URI$MalformedURIException&) {
-				$var($URI$MalformedURIException, e, $catch());
+			} catch ($URI$MalformedURIException& e) {
 				if (baseSystemId->indexOf((int32_t)u':') != -1) {
 					$assign(base, $new($URI, "file"_s, ""_s, $(fixURI(baseSystemId)), nullptr, nullptr));
 				} else {
@@ -372,8 +355,7 @@ $String* XMLEntityStorage::expandSystemId($String* systemId, $String* baseSystem
 			}
 		}
 		$assign(uri, $new($URI, base, id));
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	if (uri == nullptr) {
 		return systemId;

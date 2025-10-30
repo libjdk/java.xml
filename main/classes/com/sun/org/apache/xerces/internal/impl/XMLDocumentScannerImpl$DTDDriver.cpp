@@ -30,17 +30,6 @@
 #include <java/io/CharConversionException.h>
 #include <java/io/EOFException.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/events/XMLEvent.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
@@ -264,31 +253,28 @@ bool XMLDocumentScannerImpl$DTDDriver::dispatch(bool complete) {
 						}
 					}
 				} while (complete || again);
-			} catch ($MalformedByteSequenceException&) {
-				$var($MalformedByteSequenceException, e, $catch());
+			} catch ($MalformedByteSequenceException& e) {
 				$var($String, var$3, e->getDomain());
 				$var($String, var$4, e->getKey());
 				$nc(this->this$0->fErrorReporter)->reportError(var$3, var$4, $(e->getArguments()), $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
 				var$2 = false;
 				return$1 = true;
 				goto $finally;
-			} catch ($CharConversionException&) {
-				$var($CharConversionException, e, $catch());
+			} catch ($CharConversionException& e) {
 				$init($XMLMessageFormatter);
 				$nc(this->this$0->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "CharConversionFailure"_s, ($ObjectArray*)nullptr, $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
 				var$2 = false;
 				return$1 = true;
 				goto $finally;
-			} catch ($EOFException&) {
-				$var($EOFException, e, $catch());
+			} catch ($EOFException& e) {
 				e->printStackTrace();
 				this->this$0->reportFatalError("PrematureEOF"_s, nullptr);
 				var$2 = false;
 				return$1 = true;
 				goto $finally;
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$5) {
+			$assign(var$0, var$5);
 		} $finally: {
 			$nc(this->this$0->fEntityManager)->setEntityHandler(this->this$0);
 		}

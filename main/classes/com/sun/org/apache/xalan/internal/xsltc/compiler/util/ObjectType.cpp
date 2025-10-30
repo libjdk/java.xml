@@ -32,15 +32,8 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/StringType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DATA_CONVERSION_ERR
@@ -144,13 +137,11 @@ $Object* allocate$ObjectType($Class* clazz) {
 void ObjectType::init$($String* javaClassName) {
 	$1Type::init$();
 	$set(this, _javaClassName, "java.lang.Object"_s);
-	$load($Object);
 	$set(this, _clazz, $Object::class$);
 	$set(this, _javaClassName, javaClassName);
 	try {
 		$set(this, _clazz, $ObjectFactory::findProviderClass(javaClassName, true));
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e, $catch());
+	} catch ($ClassNotFoundException& e) {
 		$set(this, _clazz, nullptr);
 	}
 }
@@ -158,14 +149,12 @@ void ObjectType::init$($String* javaClassName) {
 void ObjectType::init$($Class* clazz) {
 	$1Type::init$();
 	$set(this, _javaClassName, "java.lang.Object"_s);
-	$load($Object);
 	$set(this, _clazz, $Object::class$);
 	$set(this, _clazz, clazz);
 	$set(this, _javaClassName, $nc(clazz)->getName());
 }
 
 int32_t ObjectType::hashCode() {
-	$load($Object);
 	return $of($Object::class$)->hashCode();
 }
 

@@ -2,27 +2,17 @@
 
 #include <com/sun/org/apache/xalan/internal/utils/ConfigurationError.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/ReflectiveOperationException.h>
 #include <java/lang/SecurityException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
 #include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/function/Supplier.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
@@ -187,11 +177,9 @@ $Object* ObjectFactory::newInstance($String* className, bool doFallback) {
 		$var($Object, instance, $nc($($nc(providerClass)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0)));
 		debugPrintln(static_cast<$Supplier*>($$new(ObjectFactory$$Lambda$lambda$newInstance$0, providerClass, cl)));
 		return $of(instance);
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, x, $catch());
+	} catch ($ClassNotFoundException& x) {
 		$throwNew($ConfigurationError, $$str({"Provider "_s, className, " not found"_s}), x);
-	} catch ($Exception&) {
-		$var($Exception, x, $catch());
+	} catch ($Exception& x) {
 		$throwNew($ConfigurationError, $$str({"Provider "_s, className, " could not be instantiated: "_s, x}), x);
 	}
 	$shouldNotReachHere();
@@ -222,8 +210,7 @@ $Class* ObjectFactory::findProviderClass($String* className, $ClassLoader* cl$re
 				security->checkPackageAccess(packageName);
 			}
 		}
-	} catch ($SecurityException&) {
-		$var($SecurityException, e, $catch());
+	} catch ($SecurityException& e) {
 		$throw(e);
 	}
 	$Class* providerClass = nullptr;
@@ -232,8 +219,7 @@ $Class* ObjectFactory::findProviderClass($String* className, $ClassLoader* cl$re
 	} else {
 		try {
 			providerClass = $nc(cl)->loadClass(className);
-		} catch ($ClassNotFoundException&) {
-			$var($ClassNotFoundException, x, $catch());
+		} catch ($ClassNotFoundException& x) {
 			if (doFallback) {
 				$var($ClassLoader, current, ObjectFactory::class$->getClassLoader());
 				if (current == nullptr) {

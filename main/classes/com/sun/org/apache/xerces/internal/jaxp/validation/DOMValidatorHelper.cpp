@@ -27,19 +27,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/parsers/DocumentBuilder.h>
 #include <javax/xml/parsers/DocumentBuilderFactory.h>
@@ -252,15 +239,10 @@ void DOMValidatorHelper::finalize() {
 	this->$ValidatorHelper::finalize();
 }
 
-
 $String* DOMValidatorHelper::ERROR_REPORTER = nullptr;
-
 $String* DOMValidatorHelper::NAMESPACE_CONTEXT = nullptr;
-
 $String* DOMValidatorHelper::SCHEMA_VALIDATOR = nullptr;
-
 $String* DOMValidatorHelper::SYMBOL_TABLE = nullptr;
-
 $String* DOMValidatorHelper::VALIDATION_MANAGER = nullptr;
 
 void DOMValidatorHelper::init$($XMLSchemaValidatorComponentManager* componentManager) {
@@ -306,15 +288,13 @@ void DOMValidatorHelper::validate($Source* source, $Result* result) {
 						$nc(this->fSchemaValidator)->startDocument(this->fXMLLocator, nullptr, this->fDOMNamespaceContext, nullptr);
 						validate(node);
 						$nc(this->fSchemaValidator)->endDocument(nullptr);
-					} catch ($XMLParseException&) {
-						$var($XMLParseException, e, $catch());
+					} catch ($XMLParseException& e) {
 						$throw($($Util::toSAXParseException(e)));
-					} catch ($XNIException&) {
-						$var($XNIException, e, $catch());
+					} catch ($XNIException& e) {
 						$throw($($Util::toSAXException(e)));
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$1) {
+					$assign(var$0, var$1);
 				} /*finally*/ {
 					$set(this, fRoot, nullptr);
 					$set(this, fEntities, nullptr);
@@ -329,9 +309,9 @@ void DOMValidatorHelper::validate($Source* source, $Result* result) {
 		}
 		return;
 	}
-	$var($Locale, var$1, $nc(this->fComponentManager)->getLocale());
-	$var($String, var$2, "SourceResultMismatch"_s);
-	$throwNew($IllegalArgumentException, $($JAXPValidationMessageFormatter::formatMessage(var$1, var$2, $$new($ObjectArray, {
+	$var($Locale, var$2, $nc(this->fComponentManager)->getLocale());
+	$var($String, var$3, "SourceResultMismatch"_s);
+	$throwNew($IllegalArgumentException, $($JAXPValidationMessageFormatter::formatMessage(var$2, var$3, $$new($ObjectArray, {
 		$($of($nc($of(source))->getClass()->getName())),
 		$($of($nc($of(result))->getClass()->getName()))
 	}))));
@@ -487,8 +467,7 @@ void DOMValidatorHelper::setupDOMResultHandler($DOMSource* source, $DOMResult* r
 			$var($DocumentBuilderFactory, factory, $JdkXmlUtils::getDOMFactory($nc(this->fComponentManager)->getFeature($JdkConstants::OVERRIDE_PARSER)));
 			$var($DocumentBuilder, builder, $nc(factory)->newDocumentBuilder());
 			result->setNode($($nc(builder)->newDocument()));
-		} catch ($ParserConfigurationException&) {
-			$var($ParserConfigurationException, e, $catch());
+		} catch ($ParserConfigurationException& e) {
 			$throwNew($SAXException, static_cast<$Exception*>(e));
 		}
 	}

@@ -5,23 +5,8 @@
 #include <java/io/BufferedReader.h>
 #include <java/io/InputStream.h>
 #include <java/io/InputStreamReader.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ANCESTOR
@@ -650,7 +635,6 @@ $chars* XPathLexer::yy_double($chars* buf) {
 }
 
 void XPathLexer::yy_error(int32_t code, bool fatal) {
-	$init($System);
 	$nc($System::out)->print($nc(this->yy_error_string)->get(code));
 	$nc($System::out)->flush();
 	if (fatal) {

@@ -4,15 +4,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/DefaultText.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/NodeImpl.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>
@@ -83,7 +75,7 @@ void TextImpl::init$($StringBuffer* str, $SchemaDOM* sDOM, int32_t row, int32_t 
 	$set(this, fSchemaDOM, sDOM);
 	this->fRow = row;
 	this->fCol = col;
-	$set(this, rawname, ($assignField(this, prefix, ($assignField(this, localpart, ($assignField(this, uri, nullptr)))))));
+	$set(this, rawname, ($set(this, prefix, ($set(this, localpart, ($set(this, uri, nullptr)))))));
 	this->nodeType = $Node::TEXT_NODE;
 }
 

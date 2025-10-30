@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xpath/internal/compiler/PsuedoNames.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef PSEUDONAME_ANY
@@ -56,17 +49,11 @@ $Object* allocate$PsuedoNames($Class* clazz) {
 	return $of($alloc(PsuedoNames));
 }
 
-
 $String* PsuedoNames::PSEUDONAME_ANY = nullptr;
-
 $String* PsuedoNames::PSEUDONAME_ROOT = nullptr;
-
 $String* PsuedoNames::PSEUDONAME_TEXT = nullptr;
-
 $String* PsuedoNames::PSEUDONAME_COMMENT = nullptr;
-
 $String* PsuedoNames::PSEUDONAME_PI = nullptr;
-
 $String* PsuedoNames::PSEUDONAME_OTHER = nullptr;
 
 void PsuedoNames::init$() {

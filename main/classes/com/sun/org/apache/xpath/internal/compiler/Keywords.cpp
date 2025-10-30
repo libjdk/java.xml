@@ -2,14 +2,6 @@
 
 #include <com/sun/org/apache/xpath/internal/compiler/FunctionTable.h>
 #include <com/sun/org/apache/xpath/internal/compiler/OpCodes.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Collections.h>
 #include <java/util/HashMap.h>
@@ -196,123 +188,64 @@ $Object* allocate$Keywords($Class* clazz) {
 	return $of($alloc(Keywords));
 }
 
-
 $Map* Keywords::m_keywords = nullptr;
-
 $Map* Keywords::m_axisnames = nullptr;
-
 $Map* Keywords::m_nodetests = nullptr;
-
 $Map* Keywords::m_nodetypes = nullptr;
-
 $String* Keywords::FROM_ANCESTORS_STRING = nullptr;
-
 $String* Keywords::FROM_ANCESTORS_OR_SELF_STRING = nullptr;
-
 $String* Keywords::FROM_ATTRIBUTES_STRING = nullptr;
-
 $String* Keywords::FROM_CHILDREN_STRING = nullptr;
-
 $String* Keywords::FROM_DESCENDANTS_STRING = nullptr;
-
 $String* Keywords::FROM_DESCENDANTS_OR_SELF_STRING = nullptr;
-
 $String* Keywords::FROM_FOLLOWING_STRING = nullptr;
-
 $String* Keywords::FROM_FOLLOWING_SIBLINGS_STRING = nullptr;
-
 $String* Keywords::FROM_PARENT_STRING = nullptr;
-
 $String* Keywords::FROM_PRECEDING_STRING = nullptr;
-
 $String* Keywords::FROM_PRECEDING_SIBLINGS_STRING = nullptr;
-
 $String* Keywords::FROM_SELF_STRING = nullptr;
-
 $String* Keywords::FROM_NAMESPACE_STRING = nullptr;
-
 $String* Keywords::FROM_SELF_ABBREVIATED_STRING = nullptr;
-
 $String* Keywords::NODETYPE_COMMENT_STRING = nullptr;
-
 $String* Keywords::NODETYPE_TEXT_STRING = nullptr;
-
 $String* Keywords::NODETYPE_PI_STRING = nullptr;
-
 $String* Keywords::NODETYPE_NODE_STRING = nullptr;
-
 $String* Keywords::NODETYPE_ANYELEMENT_STRING = nullptr;
-
 $String* Keywords::FUNC_CURRENT_STRING = nullptr;
-
 $String* Keywords::FUNC_LAST_STRING = nullptr;
-
 $String* Keywords::FUNC_POSITION_STRING = nullptr;
-
 $String* Keywords::FUNC_COUNT_STRING = nullptr;
-
 $String* Keywords::FUNC_ID_STRING = nullptr;
-
 $String* Keywords::FUNC_KEY_STRING = nullptr;
-
 $String* Keywords::FUNC_LOCAL_PART_STRING = nullptr;
-
 $String* Keywords::FUNC_NAMESPACE_STRING = nullptr;
-
 $String* Keywords::FUNC_NAME_STRING = nullptr;
-
 $String* Keywords::FUNC_GENERATE_ID_STRING = nullptr;
-
 $String* Keywords::FUNC_NOT_STRING = nullptr;
-
 $String* Keywords::FUNC_TRUE_STRING = nullptr;
-
 $String* Keywords::FUNC_FALSE_STRING = nullptr;
-
 $String* Keywords::FUNC_BOOLEAN_STRING = nullptr;
-
 $String* Keywords::FUNC_LANG_STRING = nullptr;
-
 $String* Keywords::FUNC_NUMBER_STRING = nullptr;
-
 $String* Keywords::FUNC_FLOOR_STRING = nullptr;
-
 $String* Keywords::FUNC_CEILING_STRING = nullptr;
-
 $String* Keywords::FUNC_ROUND_STRING = nullptr;
-
 $String* Keywords::FUNC_SUM_STRING = nullptr;
-
 $String* Keywords::FUNC_STRING_STRING = nullptr;
-
 $String* Keywords::FUNC_STARTS_WITH_STRING = nullptr;
-
 $String* Keywords::FUNC_CONTAINS_STRING = nullptr;
-
 $String* Keywords::FUNC_SUBSTRING_BEFORE_STRING = nullptr;
-
 $String* Keywords::FUNC_SUBSTRING_AFTER_STRING = nullptr;
-
 $String* Keywords::FUNC_NORMALIZE_SPACE_STRING = nullptr;
-
 $String* Keywords::FUNC_TRANSLATE_STRING = nullptr;
-
 $String* Keywords::FUNC_CONCAT_STRING = nullptr;
-
 $String* Keywords::FUNC_SYSTEM_PROPERTY_STRING = nullptr;
-
 $String* Keywords::FUNC_EXT_FUNCTION_AVAILABLE_STRING = nullptr;
-
 $String* Keywords::FUNC_EXT_ELEM_AVAILABLE_STRING = nullptr;
-
 $String* Keywords::FUNC_SUBSTRING_STRING = nullptr;
-
 $String* Keywords::FUNC_STRING_LENGTH_STRING = nullptr;
-
 $String* Keywords::FUNC_UNPARSED_ENTITY_URI_STRING = nullptr;
-
 $String* Keywords::FUNC_HERE_STRING = nullptr;
-
 $String* Keywords::FUNC_DOCLOCATION_STRING = nullptr;
 
 void Keywords::init$() {

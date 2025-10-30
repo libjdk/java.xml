@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/CoroutineParser.h>
 
 #include <com/sun/org/apache/xml/internal/dtm/ref/CoroutineManager.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/InputSource.h>
 #include <org/xml/sax/XMLReader.h>
@@ -31,11 +24,11 @@ namespace com {
 					namespace internal {
 						namespace dtm {
 							namespace ref {
+
 $CompoundAttribute _CoroutineParser_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $MethodInfo _CoroutineParser_MethodInfo_[] = {
 	{"doMore", "(ZI)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},

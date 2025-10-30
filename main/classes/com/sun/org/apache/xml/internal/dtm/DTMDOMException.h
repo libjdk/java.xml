@@ -21,8 +21,10 @@ public:
 	void init$(int16_t code);
 	static const int64_t serialVersionUID = (int64_t)0x1A4EB7830A6ED6DE;
 	DTMDOMException(const DTMDOMException& e);
-	DTMDOMException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline DTMDOMException* operator ->() {
+		return (DTMDOMException*)throwing$;
+	}
 };
 
 						} // dtm

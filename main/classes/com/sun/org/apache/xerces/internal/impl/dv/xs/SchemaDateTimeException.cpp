@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/SchemaDateTimeException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -60,16 +52,10 @@ void SchemaDateTimeException::init$($String* s) {
 SchemaDateTimeException::SchemaDateTimeException() {
 }
 
-SchemaDateTimeException::SchemaDateTimeException(const SchemaDateTimeException& e) {
+SchemaDateTimeException::SchemaDateTimeException(const SchemaDateTimeException& e) : $RuntimeException(e) {
 }
 
-SchemaDateTimeException SchemaDateTimeException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void SchemaDateTimeException::throwWrapper$() {
-	$pendingException(this);
+void SchemaDateTimeException::throw$() {
 	throw *this;
 }
 

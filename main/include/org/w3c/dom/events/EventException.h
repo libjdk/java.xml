@@ -22,8 +22,10 @@ public:
 	int16_t code = 0;
 	static const int16_t UNSPECIFIED_EVENT_TYPE_ERR = 0;
 	EventException(const EventException& e);
-	EventException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline EventException* operator ->() {
+		return (EventException*)throwing$;
+	}
 };
 
 			} // events

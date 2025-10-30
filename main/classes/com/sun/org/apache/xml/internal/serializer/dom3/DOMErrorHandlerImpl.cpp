@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xml/internal/serializer/dom3/DOMErrorHandlerImpl.h>
 
-#include <java/io/PrintStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMError.h>
 #include <jcpp.h>
 
@@ -64,7 +56,6 @@ bool DOMErrorHandlerImpl::handleError($DOMError* error) {
 	} else if (error->getSeverity() == $DOMError::SEVERITY_FATAL_ERROR) {
 		$assign(severity, "[Fatal Error]"_s);
 	}
-	$init($System);
 	$nc($System::err)->println($$str({severity, ": "_s, $($nc(error)->getMessage()), "\t"_s}));
 	$var($String, var$2, $$str({"Type : "_s, $($nc(error)->getType()), "\tRelated Data: "_s}));
 	$var($String, var$1, $$concat(var$2, $(error->getRelatedData())));

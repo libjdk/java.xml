@@ -1,13 +1,5 @@
 #include <org/w3c/dom/ranges/RangeException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef BAD_BOUNDARYPOINTS_ERR
@@ -57,16 +49,10 @@ void RangeException::init$(int16_t code, $String* message) {
 RangeException::RangeException() {
 }
 
-RangeException::RangeException(const RangeException& e) {
+RangeException::RangeException(const RangeException& e) : $RuntimeException(e) {
 }
 
-RangeException RangeException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void RangeException::throwWrapper$() {
-	$pendingException(this);
+void RangeException::throw$() {
 	throw *this;
 }
 

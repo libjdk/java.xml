@@ -6,21 +6,8 @@
 #include <java/io/ObjectOutputStream$PutField.h>
 #include <java/io/ObjectOutputStream.h>
 #include <java/io/ObjectStreamField.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ObjectStreamFieldArray = $Array<::java::io::ObjectStreamField>;
@@ -74,7 +61,6 @@ $Object* allocate$XPathException($Class* clazz) {
 	return $of($alloc(XPathException));
 }
 
-
 $ObjectStreamFieldArray* XPathException::serialPersistentFields = nullptr;
 
 void XPathException::init$($String* message) {
@@ -109,8 +95,7 @@ void XPathException::readObject($ObjectInputStream* in) {
 	if ($Exception::getCause() == nullptr && scause != nullptr) {
 		try {
 			$Exception::initCause(scause);
-		} catch ($IllegalStateException&) {
-			$var($IllegalStateException, e, $catch());
+		} catch ($IllegalStateException& e) {
 			$throwNew($InvalidClassException, "Inconsistent state: two causes"_s);
 		}
 	}
@@ -125,7 +110,6 @@ void XPathException::printStackTrace($PrintStream* s) {
 }
 
 void XPathException::printStackTrace() {
-	$init($System);
 	printStackTrace($System::err);
 }
 
@@ -138,23 +122,16 @@ void XPathException::printStackTrace($PrintWriter* s) {
 }
 
 void clinit$XPathException($Class* class$) {
-	$load($Throwable);
 	$assignStatic(XPathException::serialPersistentFields, $new($ObjectStreamFieldArray, {$$new($ObjectStreamField, "cause"_s, $Throwable::class$)}));
 }
 
 XPathException::XPathException() {
 }
 
-XPathException::XPathException(const XPathException& e) {
+XPathException::XPathException(const XPathException& e) : $Exception(e) {
 }
 
-XPathException XPathException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XPathException::throwWrapper$() {
-	$pendingException(this);
+void XPathException::throw$() {
 	throw *this;
 }
 

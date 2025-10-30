@@ -21,8 +21,10 @@ public:
 	void init$($String* p_msg);
 	static const int64_t serialVersionUID = (int64_t)0xA31663199F3A0406;
 	URI$MalformedURIException(const URI$MalformedURIException& e);
-	URI$MalformedURIException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline URI$MalformedURIException* operator ->() {
+		return (URI$MalformedURIException*)throwing$;
+	}
 };
 
 						} // util

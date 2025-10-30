@@ -32,13 +32,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Attr.h>
 #include <org/w3c/dom/Element.h>
 #include <org/w3c/dom/Node.h>
@@ -229,8 +222,7 @@ $XSAttributeUseImpl* XSDAttributeTraverser::traverseLocal($Element* attrDecl, $X
 		$nc(this->fValidationState)->setNamespaceSupport($nc(schemaDoc)->fNamespaceSupport);
 		try {
 			checkDefaultValid(attrUse);
-		} catch ($InvalidDatatypeValueException&) {
-			$var($InvalidDatatypeValueException, ide, $catch());
+		} catch ($InvalidDatatypeValueException& ide) {
 			$var($String, var$0, ide->getKey());
 			reportSchemaError(var$0, $(ide->getArgs()), attrDecl);
 			reportSchemaError("a-props-correct.2"_s, $$new($ObjectArray, {
@@ -396,8 +388,7 @@ $XSAttributeDecl* XSDAttributeTraverser::traverseNamedAttr($Element* attrDecl, $
 		$nc(this->fValidationState)->setNamespaceSupport($nc(schemaDoc)->fNamespaceSupport);
 		try {
 			checkDefaultValid(attribute);
-		} catch ($InvalidDatatypeValueException&) {
-			$var($InvalidDatatypeValueException, ide, $catch());
+		} catch ($InvalidDatatypeValueException& ide) {
 			$var($String, var$0, ide->getKey());
 			reportSchemaError(var$0, $(ide->getArgs()), attrDecl);
 			reportSchemaError("a-props-correct.2"_s, $$new($ObjectArray, {

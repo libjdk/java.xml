@@ -6,18 +6,8 @@
 #include <com/sun/org/apache/bcel/internal/classfile/Visitor.h>
 #include <java/io/DataInput.h>
 #include <java/io/DataOutputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
 #include <java/lang/Cloneable.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
@@ -155,8 +145,7 @@ $String* ModuleExports::toString($ConstantPool* constant_pool) {
 ModuleExports* ModuleExports::copy() {
 	try {
 		return $cast(ModuleExports, clone());
-	} catch ($CloneNotSupportedException&) {
-		$catch();
+	} catch ($CloneNotSupportedException& e) {
 	}
 	return nullptr;
 }

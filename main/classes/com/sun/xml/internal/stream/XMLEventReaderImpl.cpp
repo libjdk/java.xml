@@ -1,17 +1,8 @@
 #include <com/sun/xml/internal/stream/XMLEventReaderImpl.h>
 
 #include <com/sun/xml/internal/stream/events/XMLEventAllocatorImpl.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/NoSuchElementException.h>
 #include <javax/xml/stream/Location.h>
 #include <javax/xml/stream/XMLInputFactory.h>
@@ -115,8 +106,7 @@ bool XMLEventReaderImpl::hasNext() {
 	bool next = false;
 	try {
 		next = $nc(this->fXMLReader)->hasNext();
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, ex, $catch());
+	} catch ($XMLStreamException& ex) {
 		return false;
 	}
 	return next;
@@ -129,7 +119,7 @@ $XMLEvent* XMLEventReaderImpl::nextEvent() {
 		return this->fLastEvent;
 	} else if ($nc(this->fXMLReader)->hasNext()) {
 		$nc(this->fXMLReader)->next();
-		return $assignField(this, fLastEvent, $nc(this->fXMLEventAllocator)->allocate(this->fXMLReader));
+		return $set(this, fLastEvent, $nc(this->fXMLEventAllocator)->allocate(this->fXMLReader));
 	} else {
 		$set(this, fLastEvent, nullptr);
 		$throwNew($NoSuchElementException);
@@ -226,7 +216,7 @@ $XMLEvent* XMLEventReaderImpl::nextTag() {
 		return event;
 	}
 	$nc(this->fXMLReader)->nextTag();
-	return ($assignField(this, fLastEvent, $nc(this->fXMLEventAllocator)->allocate(this->fXMLReader)));
+	return ($set(this, fLastEvent, $nc(this->fXMLEventAllocator)->allocate(this->fXMLReader)));
 }
 
 $Object* XMLEventReaderImpl::next() {
@@ -234,8 +224,7 @@ $Object* XMLEventReaderImpl::next() {
 	$var($Object, object, nullptr);
 	try {
 		$assign(object, nextEvent());
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, streamException, $catch());
+	} catch ($XMLStreamException& streamException) {
 		$set(this, fLastEvent, nullptr);
 		$var($NoSuchElementException, e, $new($NoSuchElementException, $(streamException->getMessage())));
 		e->initCause($(streamException->getCause()));

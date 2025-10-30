@@ -6,14 +6,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/NamedNodeMapImpl.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/NodeImpl.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Attr.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/NamedNodeMap.h>

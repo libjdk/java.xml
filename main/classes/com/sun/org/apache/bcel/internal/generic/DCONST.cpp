@@ -11,15 +11,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <com/sun/org/apache/bcel/internal/generic/TypedInstruction.h>
 #include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DCONST

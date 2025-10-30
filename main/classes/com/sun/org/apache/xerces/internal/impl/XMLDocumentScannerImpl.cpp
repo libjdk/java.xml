@@ -34,17 +34,6 @@
 #include <com/sun/xml/internal/stream/Entity.h>
 #include <com/sun/xml/internal/stream/XMLBufferListener.h>
 #include <java/io/EOFException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/XMLInputFactory.h>
 #include <javax/xml/stream/events/XMLEvent.h>
 #include <jcpp.h>
@@ -237,24 +226,15 @@ $Object* allocate$XMLDocumentScannerImpl($Class* clazz) {
 	return $of($alloc(XMLDocumentScannerImpl));
 }
 
-
 $String* XMLDocumentScannerImpl::DOCUMENT_SCANNER = nullptr;
-
 $String* XMLDocumentScannerImpl::LOAD_EXTERNAL_DTD = nullptr;
-
 $String* XMLDocumentScannerImpl::DISALLOW_DOCTYPE_DECL_FEATURE = nullptr;
-
 $String* XMLDocumentScannerImpl::DTD_SCANNER = nullptr;
 $String* XMLDocumentScannerImpl::VALIDATION_MANAGER = nullptr;
-
 $String* XMLDocumentScannerImpl::NAMESPACE_CONTEXT = nullptr;
-
 $StringArray* XMLDocumentScannerImpl::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLDocumentScannerImpl::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLDocumentScannerImpl::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLDocumentScannerImpl::PROPERTY_DEFAULTS = nullptr;
 $chars* XMLDocumentScannerImpl::DOCTYPE = nullptr;
 $chars* XMLDocumentScannerImpl::COMMENTSTRING = nullptr;
@@ -330,8 +310,7 @@ void XMLDocumentScannerImpl::reset($XMLComponentManager* componentManager) {
 	$set(this, fValidationManager, $cast($ValidationManager, componentManager->getProperty(XMLDocumentScannerImpl::VALIDATION_MANAGER, nullptr)));
 	try {
 		$set(this, fNamespaceContext, $cast($NamespaceContext, componentManager->getProperty(XMLDocumentScannerImpl::NAMESPACE_CONTEXT)));
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	if (this->fNamespaceContext == nullptr) {
 		$set(this, fNamespaceContext, $new($NamespaceSupport));
@@ -584,7 +563,7 @@ void clinit$XMLDocumentScannerImpl($Class* class$) {
 		XMLDocumentScannerImpl::LOAD_EXTERNAL_DTD,
 		XMLDocumentScannerImpl::DISALLOW_DOCTYPE_DECL_FEATURE
 	}));
-		$init($Boolean);
+	$init($Boolean);
 	$assignStatic(XMLDocumentScannerImpl::FEATURE_DEFAULTS, $new($BooleanArray, {
 		$Boolean::TRUE,
 		$Boolean::FALSE

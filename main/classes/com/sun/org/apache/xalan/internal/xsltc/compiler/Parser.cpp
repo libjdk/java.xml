@@ -33,22 +33,11 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/SystemIDResolver.h>
 #include <java/io/File.h>
 #include <java/io/IOException.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
 #include <java/util/HashMap.h>
@@ -678,8 +667,7 @@ $Stylesheet* Parser::makeStylesheet($SyntaxTreeNode* element) {
 		}
 		$nc(stylesheet)->setParser(this);
 		return stylesheet;
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e, $catch());
+	} catch ($ClassCastException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::NOT_STYLESHEET_ERR, element));
 		$throwNew($CompilerException, $(err->toString()));
@@ -706,8 +694,7 @@ void Parser::createAST($Stylesheet* stylesheet) {
 				stylesheet->typeCheck(this->_symbolTable);
 			}
 		}
-	} catch ($TypeCheckError&) {
-		$var($TypeCheckError, e, $catch());
+	} catch ($TypeCheckError& e) {
 		$init($ErrorMsg);
 		reportError($Constants::ERROR, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
 	}
@@ -722,15 +709,13 @@ $SyntaxTreeNode* Parser::parse($XMLReader* reader, $InputSource* input) {
 		}
 		reader->parse(input);
 		return getStylesheet(this->_root);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		if ($nc(this->_xsltc)->debug()) {
 			e->printStackTrace();
 		}
 		$init($ErrorMsg);
 		reportError($Constants::ERROR, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$var($Throwable, ex, e->getException());
 		if ($nc(this->_xsltc)->debug()) {
 			e->printStackTrace();
@@ -740,15 +725,13 @@ $SyntaxTreeNode* Parser::parse($XMLReader* reader, $InputSource* input) {
 		}
 		$init($ErrorMsg);
 		reportError($Constants::ERROR, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
-	} catch ($CompilerException&) {
-		$var($CompilerException, e, $catch());
+	} catch ($CompilerException& e) {
 		if ($nc(this->_xsltc)->debug()) {
 			e->printStackTrace();
 		}
 		$init($ErrorMsg);
 		reportError($Constants::ERROR, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		if ($nc(this->_xsltc)->debug()) {
 			e->printStackTrace();
 		}
@@ -769,11 +752,9 @@ $SyntaxTreeNode* Parser::parse($InputSource* input) {
 		bool useCatalog = $nc(this->_xsltc)->getFeature($JdkXmlFeatures$XmlFeature::USE_CATALOG);
 		try {
 			$nc(reader)->setFeature($JdkXmlUtils::USE_CATALOG, useCatalog);
-		} catch ($SAXNotRecognizedException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXNotRecognizedException& e) {
 			supportCatalog = false;
-		} catch ($SAXNotSupportedException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXNotSupportedException& e) {
 			supportCatalog = false;
 		}
 		if (supportCatalog && useCatalog) {
@@ -794,8 +775,7 @@ $SyntaxTreeNode* Parser::parse($InputSource* input) {
 						}
 					}
 				}
-			} catch ($SAXNotRecognizedException&) {
-				$catch();
+			} catch ($SAXNotRecognizedException& e) {
 			}
 		}
 		$var($String, lastProperty, ""_s);
@@ -818,15 +798,13 @@ $SyntaxTreeNode* Parser::parse($InputSource* input) {
 				$assign(lastProperty, $JdkConstants::JDK_DEBUG_LIMIT);
 				$nc(reader)->setProperty(lastProperty, $JdkConstants::JDK_YES);
 			}
-		} catch ($SAXException&) {
-			$var($SAXException, se, $catch());
+		} catch ($SAXException& se) {
 			$XMLSecurityManager::printWarning($($nc($of(reader))->getClass()->getName()), lastProperty, se);
 		}
 		$init($JdkConstants);
 		$JdkXmlUtils::setXMLReaderPropertyIfSupport(reader, $JdkConstants::CDATA_CHUNK_SIZE, $($nc(this->_xsltc)->getProperty($JdkConstants::CDATA_CHUNK_SIZE)), false);
 		return (parse(reader, input));
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		reportError($Constants::ERROR, $$new($ErrorMsg, $(e->getMessage())));
 	}
 	return nullptr;
@@ -875,8 +853,7 @@ $SyntaxTreeNode* Parser::getStylesheet($SyntaxTreeNode* root) {
 				$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::ACCESSING_XSLT_TARGET_ERR, $($SecuritySupport::sanitizePath(this->_target)), accessError, root));
 				$throwNew($CompilerException, $(msg->toString()));
 			}
-		} catch ($IOException&) {
-			$var($IOException, ex, $catch());
+		} catch ($IOException& ex) {
 			$throwNew($CompilerException, static_cast<$Exception*>(ex));
 		}
 		return (loadExternalStylesheet(this->_target));
@@ -1278,13 +1255,11 @@ $SyntaxTreeNode* Parser::makeInstance($String* uri, $String* prefix, $String* lo
 				$nc(this->_xsltc)->setStylesheet($cast($Stylesheet, node));
 			}
 			checkForSuperfluousAttributes(node, attributes);
-		} catch ($ClassNotFoundException&) {
-			$var($ClassNotFoundException, e, $catch());
+		} catch ($ClassNotFoundException& e) {
 			$init($ErrorMsg);
 			$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::CLASS_NOT_FOUND_ERR, node));
 			reportError($Constants::ERROR, err);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$init($ErrorMsg);
 			$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::INTERNAL_ERR, $($of(e->getMessage())), node));
 			reportError($Constants::FATAL, err);
@@ -1408,8 +1383,7 @@ $SyntaxTreeNode* Parser::parseTopLevel($SyntaxTreeNode* parent, $String* text, $
 		}
 		$init($ErrorMsg);
 		reportError($Constants::ERROR, $$new($ErrorMsg, $ErrorMsg::XPATH_PARSER_ERR, $of(expression), parent));
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		if ($nc(this->_xsltc)->debug()) {
 			e->printStackTrace();
 		}
@@ -1429,7 +1403,6 @@ void Parser::printErrors() {
 	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->_errors)->size();
 	if (size > 0) {
-		$init($System);
 		$init($ErrorMsg);
 		$nc($System::err)->println($of($$new($ErrorMsg, $ErrorMsg::COMPILER_ERROR_KEY)));
 		for (int32_t i = 0; i < size; ++i) {
@@ -1442,7 +1415,6 @@ void Parser::printWarnings() {
 	$useLocalCurrentObjectStackCache();
 	int32_t size = $nc(this->_warnings)->size();
 	if (size > 0) {
-		$init($System);
 		$init($ErrorMsg);
 		$nc($System::err)->println($of($$new($ErrorMsg, $ErrorMsg::COMPILER_WARNING_KEY)));
 		for (int32_t i = 0; i < size; ++i) {

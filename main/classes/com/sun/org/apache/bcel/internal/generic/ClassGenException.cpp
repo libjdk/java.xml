@@ -1,14 +1,5 @@
 #include <com/sun/org/apache/bcel/internal/generic/ClassGenException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -64,16 +55,10 @@ void ClassGenException::init$($String* s, $Throwable* initCause) {
 ClassGenException::ClassGenException() {
 }
 
-ClassGenException::ClassGenException(const ClassGenException& e) {
+ClassGenException::ClassGenException(const ClassGenException& e) : $RuntimeException(e) {
 }
 
-ClassGenException ClassGenException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void ClassGenException::throwWrapper$() {
-	$pendingException(this);
+void ClassGenException::throw$() {
 	throw *this;
 }
 

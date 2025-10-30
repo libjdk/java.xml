@@ -6,17 +6,8 @@
 #include <com/sun/org/apache/bcel/internal/generic/AnnotationEntryGen.h>
 #include <com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.h>
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
 #include <java/lang/Error.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -190,8 +181,7 @@ $AnnotationEntryGenArray* FieldGenOrMethodGen::getAnnotationEntries() {
 $Object* FieldGenOrMethodGen::clone() {
 	try {
 		return $of($AccessFlags::clone());
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$throwNew($Error, "Clone Not Supported"_s);
 	}
 	$shouldNotReachHere();

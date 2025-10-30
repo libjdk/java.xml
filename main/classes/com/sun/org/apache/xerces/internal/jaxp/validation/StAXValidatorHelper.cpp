@@ -6,18 +6,6 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/validation/XMLSchemaValidatorComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit.h>
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityManager.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/transform/Result.h>
 #include <javax/xml/transform/Source.h>
@@ -147,8 +135,7 @@ void StAXValidatorHelper::validate($Source* source, $Result* result) {
 				}
 				$set(this, identityTransformer1, $nc(tf)->newTransformer());
 				$set(this, identityTransformer2, tf->newTransformerHandler());
-			} catch ($TransformerConfigurationException&) {
-				$var($TransformerConfigurationException, e, $catch());
+			} catch ($TransformerConfigurationException& e) {
 				$throwNew($TransformerFactoryConfigurationError, static_cast<$Exception*>(e));
 			}
 		}
@@ -162,15 +149,14 @@ void StAXValidatorHelper::validate($Source* source, $Result* result) {
 			try {
 				try {
 					$nc(this->identityTransformer1)->transform(source, $$new($SAXResult, this->handler));
-				} catch ($TransformerException&) {
-					$var($TransformerException, e, $catch());
+				} catch ($TransformerException& e) {
 					if ($instanceOf($SAXException, $(e->getException()))) {
 						$throw($cast($SAXException, $(e->getException())));
 					}
 					$throwNew($SAXException, static_cast<$Exception*>(e));
 				}
-			} catch ($Throwable&) {
-				$assign(var$1, $catch());
+			} catch ($Throwable& var$2) {
+				$assign(var$1, var$2);
 			} /*finally*/ {
 				$nc(this->handler)->setContentHandler(nullptr);
 			}
@@ -180,9 +166,9 @@ void StAXValidatorHelper::validate($Source* source, $Result* result) {
 		}
 		return;
 	}
-	$var($Locale, var$2, $nc(this->fComponentManager)->getLocale());
-	$var($String, var$3, "SourceResultMismatch"_s);
-	$throwNew($IllegalArgumentException, $($JAXPValidationMessageFormatter::formatMessage(var$2, var$3, $$new($ObjectArray, {
+	$var($Locale, var$3, $nc(this->fComponentManager)->getLocale());
+	$var($String, var$4, "SourceResultMismatch"_s);
+	$throwNew($IllegalArgumentException, $($JAXPValidationMessageFormatter::formatMessage(var$3, var$4, $$new($ObjectArray, {
 		$($of($nc($of(source))->getClass()->getName())),
 		$($of($nc($of(result))->getClass()->getName()))
 	}))));

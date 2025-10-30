@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMNamedNodeMap$DTMException.h>
 
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMNamedNodeMap.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <jcpp.h>
 
@@ -78,16 +70,10 @@ void DTMNamedNodeMap$DTMException::init$($DTMNamedNodeMap* this$0, int16_t code)
 DTMNamedNodeMap$DTMException::DTMNamedNodeMap$DTMException() {
 }
 
-DTMNamedNodeMap$DTMException::DTMNamedNodeMap$DTMException(const DTMNamedNodeMap$DTMException& e) {
+DTMNamedNodeMap$DTMException::DTMNamedNodeMap$DTMException(const DTMNamedNodeMap$DTMException& e) : $DOMException(e) {
 }
 
-DTMNamedNodeMap$DTMException DTMNamedNodeMap$DTMException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void DTMNamedNodeMap$DTMException::throwWrapper$() {
-	$pendingException(this);
+void DTMNamedNodeMap$DTMException::throw$() {
 	throw *this;
 }
 

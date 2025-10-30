@@ -34,16 +34,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTerm.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Collections.h>
@@ -380,8 +370,7 @@ $Object* XSConstraints::ElementDefaultValidImmediate($XSTypeDefinition* type, $S
 		if (vinfo != nullptr) {
 			$assign(actualValue, dv->validate($(vinfo->stringValue()), context, vinfo));
 		}
-	} catch ($InvalidDatatypeValueException&) {
-		$var($InvalidDatatypeValueException, ide, $catch());
+	} catch ($InvalidDatatypeValueException& ide) {
 		return $of(nullptr);
 	}
 	return $of(actualValue);
@@ -436,8 +425,7 @@ void XSConstraints::fullSchemaChecking($XSGrammarBucket* grammarBucket, $Substit
 			} else {
 				try {
 					particleValidRestriction(fakeDerived, SGHandler, fakeBase, SGHandler);
-				} catch ($XMLSchemaException&) {
-					$var($XMLSchemaException, e, $catch());
+				} catch ($XMLSchemaException& e) {
 					$var($String, key, e->getKey());
 					reportSchemaError(errorReporter, $nc(rgLocators)->get(i / 2 - 1), key, $(e->getArgs()));
 					reportSchemaError(errorReporter, $nc(rgLocators)->get(i / 2 - 1), "src-redefine.6.2.2"_s, $$new($ObjectArray, {
@@ -468,8 +456,7 @@ void XSConstraints::fullSchemaChecking($XSGrammarBucket* grammarBucket, $Substit
 						elemTable->clear();
 						try {
 							checkElementDeclsConsistent(types->get(j), $nc(types->get(j))->fParticle, elemTable, SGHandler);
-						} catch ($XMLSchemaException&) {
-							$var($XMLSchemaException, e, $catch());
+						} catch ($XMLSchemaException& e) {
 							$var($XMLErrorReporter, var$0, errorReporter);
 							$var($SimpleLocator, var$1, $nc(ctLocators)->get(j));
 							$var($String, var$2, e->getKey());
@@ -490,8 +477,7 @@ void XSConstraints::fullSchemaChecking($XSGrammarBucket* grammarBucket, $Substit
 					} else if (baseParticle != nullptr) {
 						try {
 							particleValidRestriction($nc(types->get(j))->fParticle, SGHandler, $nc((($cast($XSComplexTypeDecl, $nc(types->get(j))->fBaseType))))->fParticle, SGHandler);
-						} catch ($XMLSchemaException&) {
-							$var($XMLSchemaException, e, $catch());
+						} catch ($XMLSchemaException& e) {
 							$var($XMLErrorReporter, var$3, errorReporter);
 							$var($SimpleLocator, var$4, $nc(ctLocators)->get(j));
 							$var($String, var$5, e->getKey());
@@ -507,8 +493,7 @@ void XSConstraints::fullSchemaChecking($XSGrammarBucket* grammarBucket, $Substit
 				if (cm != nullptr) {
 					try {
 						further = cm->checkUniqueParticleAttribution(SGHandler);
-					} catch ($XMLSchemaException&) {
-						$var($XMLSchemaException, e, $catch());
+					} catch ($XMLSchemaException& e) {
 						$var($XMLErrorReporter, var$6, errorReporter);
 						$var($SimpleLocator, var$7, $nc(ctLocators)->get(j));
 						$var($String, var$8, e->getKey());
@@ -1076,8 +1061,7 @@ void XSConstraints::checkNSRecurseCheckCardinality($List* children, int32_t min1
 			$var($XSParticleDecl, particle1, $cast($XSParticleDecl, children->get(i)));
 			particleValidRestriction(particle1, dSGHandler, wildcard, nullptr, false);
 		}
-	} catch ($XMLSchemaException&) {
-		$var($XMLSchemaException, e, $catch());
+	} catch ($XMLSchemaException& e) {
 		$throwNew($XMLSchemaException, "rcase-NSRecurseCheckCardinality.1"_s, nullptr);
 	}
 }
@@ -1106,8 +1090,7 @@ void XSConstraints::checkRecurse($List* dChildren, int32_t min1, int32_t max1, $
 				particleValidRestriction(particle1, dSGHandler, particle2, bSGHandler);
 				label$continue = true;
 				break;
-			} catch ($XMLSchemaException&) {
-				$var($XMLSchemaException, e, $catch());
+			} catch ($XMLSchemaException& e) {
 				if (!$nc(particle2)->emptiable()) {
 					$throwNew($XMLSchemaException, "rcase-Recurse.2"_s, nullptr);
 				}
@@ -1155,8 +1138,7 @@ void XSConstraints::checkRecurseUnordered($List* dChildren, int32_t min1, int32_
 				}
 				label$continue = true;
 				break;
-			} catch ($XMLSchemaException&) {
-				$catch();
+			} catch ($XMLSchemaException& e) {
 			}
 		}
 		if (label$continue) {
@@ -1199,8 +1181,7 @@ void XSConstraints::checkRecurseLax($List* dChildren, int32_t min1, int32_t max1
 				}
 				label$continue = true;
 				break;
-			} catch ($XMLSchemaException&) {
-				$catch();
+			} catch ($XMLSchemaException& e) {
 			}
 		}
 		if (label$continue) {
@@ -1233,8 +1214,7 @@ void XSConstraints::checkMapAndSum($List* dChildren, int32_t min1, int32_t max1,
 				particleValidRestriction(particle1, dSGHandler, particle2, bSGHandler);
 				label$continue = true;
 				break;
-			} catch ($XMLSchemaException&) {
-				$catch();
+			} catch ($XMLSchemaException& e) {
 			}
 		}
 		if (label$continue) {

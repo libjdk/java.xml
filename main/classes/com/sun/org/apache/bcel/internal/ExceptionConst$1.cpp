@@ -2,16 +2,7 @@
 
 #include <com/sun/org/apache/bcel/internal/ExceptionConst$EXCS.h>
 #include <com/sun/org/apache/bcel/internal/ExceptionConst.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/EnclosingMethodInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/NoSuchFieldError.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef EXCS_ARRAY_EXCEPTION
@@ -80,28 +71,23 @@ void clinit$ExceptionConst$1($Class* class$) {
 	{
 		try {
 			$nc(ExceptionConst$1::$SwitchMap$com$sun$org$apache$bcel$internal$ExceptionConst$EXCS)->set($ExceptionConst$EXCS::EXCS_CLASS_AND_INTERFACE_RESOLUTION->ordinal(), 1);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(ExceptionConst$1::$SwitchMap$com$sun$org$apache$bcel$internal$ExceptionConst$EXCS)->set($ExceptionConst$EXCS::EXCS_ARRAY_EXCEPTION->ordinal(), 2);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(ExceptionConst$1::$SwitchMap$com$sun$org$apache$bcel$internal$ExceptionConst$EXCS)->set($ExceptionConst$EXCS::EXCS_FIELD_AND_METHOD_RESOLUTION->ordinal(), 3);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(ExceptionConst$1::$SwitchMap$com$sun$org$apache$bcel$internal$ExceptionConst$EXCS)->set($ExceptionConst$EXCS::EXCS_INTERFACE_METHOD_RESOLUTION->ordinal(), 4);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(ExceptionConst$1::$SwitchMap$com$sun$org$apache$bcel$internal$ExceptionConst$EXCS)->set($ExceptionConst$EXCS::EXCS_STRING_RESOLUTION->ordinal(), 5);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 	}
 }

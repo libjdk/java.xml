@@ -41,8 +41,10 @@ public:
 	::com::sun::org::apache::xml::internal::dtm::ref::DTMNamedNodeMap* this$0 = nullptr;
 	static const int64_t serialVersionUID = (int64_t)0x8CF3285B232133D2;
 	DTMNamedNodeMap$DTMException(const DTMNamedNodeMap$DTMException& e);
-	DTMNamedNodeMap$DTMException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline DTMNamedNodeMap$DTMException* operator ->() {
+		return (DTMNamedNodeMap$DTMException*)throwing$;
+	}
 };
 
 							} // ref

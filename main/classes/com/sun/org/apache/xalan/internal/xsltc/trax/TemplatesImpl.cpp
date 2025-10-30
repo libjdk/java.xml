@@ -18,33 +18,21 @@
 #include <java/io/ObjectOutputStream.h>
 #include <java/io/ObjectStreamField.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
 #include <java/lang/AssertionError.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassFormatError.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/Integer.h>
 #include <java/lang/LinkageError.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Module.h>
 #include <java/lang/ModuleLayer.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/ReflectiveOperationException.h>
 #include <java/lang/RuntimePermission.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
 #include <java/lang/ThreadLocal.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/Void.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
@@ -58,7 +46,6 @@
 #include <java/lang/module/ModuleReference.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <java/net/URL.h>
 #include <java/nio/file/Path.h>
@@ -438,9 +425,7 @@ void TemplatesImpl::finalize() {
 
 bool TemplatesImpl::$assertionsDisabled = false;
 $String* TemplatesImpl::DESERIALIZE_TRANSLET = nullptr;
-
 $String* TemplatesImpl::ABSTRACT_TRANSLET = nullptr;
-
 $ObjectStreamFieldArray* TemplatesImpl::serialPersistentFields = nullptr;
 
 void TemplatesImpl::init$($byteArray2* bytecodes, $String* transletName, $Properties* outputProperties, int32_t indentNumber, $TransformerFactoryImpl* tfactory) {
@@ -574,8 +559,7 @@ $ClassArray* TemplatesImpl::getTransletClasses() {
 			if (this->_class == nullptr) {
 				defineTransletClasses();
 			}
-		} catch ($TransformerConfigurationException&) {
-			$catch();
+		} catch ($TransformerConfigurationException& e) {
 		}
 		return this->_class;
 	}
@@ -587,8 +571,7 @@ int32_t TemplatesImpl::getTransletIndex() {
 			if (this->_class == nullptr) {
 				defineTransletClasses();
 			}
-		} catch ($TransformerConfigurationException&) {
-			$catch();
+		} catch ($TransformerConfigurationException& e) {
 		}
 		return this->_transletIndex;
 	}
@@ -669,13 +652,11 @@ void TemplatesImpl::defineTransletClasses() {
 			$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::NO_MAIN_TRANSLET_ERR, $of(this->_name)));
 			$throwNew($TransformerConfigurationException, $(err->toString()));
 		}
-	} catch ($ClassFormatError&) {
-		$var($ClassFormatError, e, $catch());
+	} catch ($ClassFormatError& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::TRANSLET_CLASS_ERR, $of(this->_name)));
 		$throwNew($TransformerConfigurationException, $(err->toString()), static_cast<$Throwable*>(e));
-	} catch ($LinkageError&) {
-		$var($LinkageError, e, $catch());
+	} catch ($LinkageError& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::TRANSLET_OBJECT_ERR, $of(this->_name)));
 		$throwNew($TransformerConfigurationException, $(err->toString()), static_cast<$Throwable*>(e));
@@ -701,23 +682,19 @@ $Translet* TemplatesImpl::getTransletInstance() {
 			translet->setAuxiliaryClasses(this->_auxClasses);
 		}
 		return translet;
-	} catch ($InstantiationException&) {
-		$var($ReflectiveOperationException, e, $catch());
+	} catch ($InstantiationException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::TRANSLET_OBJECT_ERR, $of(this->_name)));
 		$throwNew($TransformerConfigurationException, $(err->toString()), static_cast<$Throwable*>(e));
-	} catch ($IllegalAccessException&) {
-		$var($ReflectiveOperationException, e, $catch());
+	} catch ($IllegalAccessException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::TRANSLET_OBJECT_ERR, $of(this->_name)));
 		$throwNew($TransformerConfigurationException, $(err->toString()), static_cast<$Throwable*>(e));
-	} catch ($NoSuchMethodException&) {
-		$var($ReflectiveOperationException, e, $catch());
+	} catch ($NoSuchMethodException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::TRANSLET_OBJECT_ERR, $of(this->_name)));
 		$throwNew($TransformerConfigurationException, $(err->toString()), static_cast<$Throwable*>(e));
-	} catch ($InvocationTargetException&) {
-		$var($ReflectiveOperationException, e, $catch());
+	} catch ($InvocationTargetException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::TRANSLET_OBJECT_ERR, $of(this->_name)));
 		$throwNew($TransformerConfigurationException, $(err->toString()), static_cast<$Throwable*>(e));
@@ -743,11 +720,9 @@ $Transformer* TemplatesImpl::newTransformer() {
 
 $Properties* TemplatesImpl::getOutputProperties() {
 	$synchronized(this) {
-		$useLocalCurrentObjectStackCache();
 		try {
 			return $nc($(newTransformer()))->getOutputProperties();
-		} catch ($TransformerConfigurationException&) {
-			$var($TransformerConfigurationException, e, $catch());
+		} catch ($TransformerConfigurationException& e) {
 			return nullptr;
 		}
 	}
@@ -785,11 +760,10 @@ void clinit$TemplatesImpl($Class* class$) {
 	$assignStatic(TemplatesImpl::DESERIALIZE_TRANSLET, "jdk.xml.enableTemplatesImplDeserialization"_s);
 	TemplatesImpl::$assertionsDisabled = !TemplatesImpl::class$->desiredAssertionStatus();
 	$assignStatic(TemplatesImpl::ABSTRACT_TRANSLET, "com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet"_s);
-		$load($String);
-		$load($byteArray2);
-		$load($ClassArray);
-		$init($Integer);
-		$load($Properties);
+	$load($byteArray2);
+	$load($ClassArray);
+	$init($Integer);
+	$load($Properties);
 	$assignStatic(TemplatesImpl::serialPersistentFields, $new($ObjectStreamFieldArray, {
 		$$new($ObjectStreamField, "_name"_s, $String::class$),
 		$$new($ObjectStreamField, "_bytecodes"_s, $getClass($byteArray2)),

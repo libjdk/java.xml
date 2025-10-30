@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/InternalRuntimeError.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Error.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -54,16 +47,10 @@ void InternalRuntimeError::init$($String* message) {
 InternalRuntimeError::InternalRuntimeError() {
 }
 
-InternalRuntimeError::InternalRuntimeError(const InternalRuntimeError& e) {
+InternalRuntimeError::InternalRuntimeError(const InternalRuntimeError& e) : $Error(e) {
 }
 
-InternalRuntimeError InternalRuntimeError::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void InternalRuntimeError::throwWrapper$() {
-	$pendingException(this);
+void InternalRuntimeError::throw$() {
 	throw *this;
 }
 

@@ -1,15 +1,6 @@
 #include <org/xml/sax/helpers/ParserFactory.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <org/xml/sax/Parser.h>
 #include <org/xml/sax/helpers/NewInstance.h>
@@ -34,11 +25,11 @@ $NamedAttribute ParserFactory_Attribute_var$0[] = {
 	{"since", 's', "1.5"},
 	{}
 };
+
 $CompoundAttribute _ParserFactory_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", ParserFactory_Attribute_var$0},
 	{}
 };
-
 
 $MethodInfo _ParserFactory_MethodInfo_[] = {
 	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(ParserFactory::*)()>(&ParserFactory::init$))},

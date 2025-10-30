@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xml/internal/utils/WrongParserException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -53,16 +45,10 @@ void WrongParserException::init$($String* message) {
 WrongParserException::WrongParserException() {
 }
 
-WrongParserException::WrongParserException(const WrongParserException& e) {
+WrongParserException::WrongParserException(const WrongParserException& e) : $RuntimeException(e) {
 }
 
-WrongParserException WrongParserException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void WrongParserException::throwWrapper$() {
-	$pendingException(this);
+void WrongParserException::throw$() {
 	throw *this;
 }
 

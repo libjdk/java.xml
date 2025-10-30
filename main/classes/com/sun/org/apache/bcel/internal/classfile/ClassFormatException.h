@@ -28,8 +28,10 @@ public:
 	void init$($String* message, $Throwable* cause);
 	static const int64_t serialVersionUID = (int64_t)0xCE7804E054263F3F;
 	ClassFormatException(const ClassFormatException& e);
-	ClassFormatException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline ClassFormatException* operator ->() {
+		return (ClassFormatException*)throwing$;
+	}
 };
 
 						} // classfile

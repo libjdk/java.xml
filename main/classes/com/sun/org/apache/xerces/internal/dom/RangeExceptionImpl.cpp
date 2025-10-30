@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/dom/RangeExceptionImpl.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/ranges/RangeException.h>
 #include <jcpp.h>
 
@@ -53,16 +46,10 @@ void RangeExceptionImpl::init$(int16_t code, $String* message) {
 RangeExceptionImpl::RangeExceptionImpl() {
 }
 
-RangeExceptionImpl::RangeExceptionImpl(const RangeExceptionImpl& e) {
+RangeExceptionImpl::RangeExceptionImpl(const RangeExceptionImpl& e) : $RangeException(e) {
 }
 
-RangeExceptionImpl RangeExceptionImpl::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void RangeExceptionImpl::throwWrapper$() {
-	$pendingException(this);
+void RangeExceptionImpl::throw$() {
 	throw *this;
 }
 

@@ -50,24 +50,12 @@
 #include <com/sun/org/apache/bcel/internal/generic/TypedInstruction.h>
 #include <com/sun/org/apache/bcel/internal/util/BCELComparator.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Arrays.h>
@@ -994,8 +982,7 @@ void MethodGen::removeNOPs() {
 				if ((next != nullptr) && ($instanceOf($NOP, $(ih->getInstruction())))) {
 					try {
 						$nc(this->il)->delete$(ih);
-					} catch ($TargetLostException&) {
-						$var($TargetLostException, e, $catch());
+					} catch ($TargetLostException& e) {
 						{
 							$var($InstructionHandleArray, arr$, e->getTargets());
 							int32_t len$ = $nc(arr$)->length;

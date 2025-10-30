@@ -13,13 +13,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/StackConsumer.h>
 #include <com/sun/org/apache/bcel/internal/generic/TypedInstruction.h>
 #include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef EXCS_FIELD_AND_METHOD_RESOLUTION
@@ -112,7 +105,7 @@ int32_t PUTFIELD::consumeStack($ConstantPoolGen* cpg) {
 
 $ClassArray* PUTFIELD::getExceptions() {
 	$init($ExceptionConst$EXCS);
-		$init($ExceptionConst);
+	$init($ExceptionConst);
 	return $ExceptionConst::createExceptions($ExceptionConst$EXCS::EXCS_FIELD_AND_METHOD_RESOLUTION, $$new($ClassArray, {
 		$ExceptionConst::NULL_POINTER_EXCEPTION,
 		$ExceptionConst::INCOMPATIBLE_CLASS_CHANGE_ERROR

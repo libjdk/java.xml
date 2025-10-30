@@ -26,17 +26,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
 #include <com/sun/org/apache/xml/internal/utils/XML11Char.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -142,7 +132,6 @@ void CallTemplate::init$() {
 
 void CallTemplate::display(int32_t indent) {
 	this->indent(indent);
-	$init($System);
 	$nc($System::out)->print("CallTemplate"_s);
 	$Util::println($$str({" name "_s, this->_name}));
 	displayContents(indent + $SyntaxTreeNode::IndentIncrement);

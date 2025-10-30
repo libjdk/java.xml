@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/MsgKey.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef BAD_MSGFORMAT
@@ -167,9 +160,7 @@ $Object* allocate$MsgKey($Class* clazz) {
 	return $of($alloc(MsgKey));
 }
 
-
 $String* MsgKey::BAD_MSGKEY = nullptr;
-
 $String* MsgKey::BAD_MSGFORMAT = nullptr;
 $String* MsgKey::ER_RESOURCE_COULD_NOT_FIND = nullptr;
 $String* MsgKey::ER_RESOURCE_COULD_NOT_LOAD = nullptr;

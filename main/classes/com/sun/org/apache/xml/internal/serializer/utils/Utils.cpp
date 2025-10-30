@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/Utils.h>
 
 #include <com/sun/org/apache/xml/internal/serializer/utils/Messages.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $Messages = ::com::sun::org::apache::xml::internal::serializer::utils::Messages;
@@ -46,7 +39,6 @@ $ClassInfo _Utils_ClassInfo_ = {
 $Object* allocate$Utils($Class* clazz) {
 	return $of($alloc(Utils));
 }
-
 
 $Messages* Utils::messages = nullptr;
 

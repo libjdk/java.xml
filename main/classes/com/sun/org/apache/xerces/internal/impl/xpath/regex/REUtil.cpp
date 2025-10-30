@@ -3,19 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Match.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/ParseException.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/CharacterIterator.h>
 #include <jcpp.h>
 
@@ -312,7 +299,6 @@ void REUtil::main($StringArray* argv) {
 		$var($String, options, ""_s);
 		$var($String, target, nullptr);
 		if ($nc(argv)->length == 0) {
-			$init($System);
 			$nc($System::out)->println("Error:Usage: java REUtil -i|-m|-s|-u|-w|-X regularExpression String"_s);
 			$System::exit(0);
 		}
@@ -324,7 +310,6 @@ void REUtil::main($StringArray* argv) {
 				} else if (target == nullptr) {
 					$assign(target, argv->get(i));
 				} else {
-					$init($System);
 					$nc($System::err)->println($$str({"Unnecessary: "_s, argv->get(i)}));
 				}
 			} else if ($nc(argv->get(i))->equals("-i"_s)) {
@@ -340,12 +325,10 @@ void REUtil::main($StringArray* argv) {
 			} else if ($nc(argv->get(i))->equals("-X"_s)) {
 				$plusAssign(options, "X"_s);
 			} else {
-				$init($System);
 				$nc($System::err)->println($$str({"Unknown option: "_s, argv->get(i)}));
 			}
 		}
 		$var($RegularExpression, reg, $new($RegularExpression, pattern, options));
-		$init($System);
 		$nc($System::out)->println($$str({"RegularExpression: "_s, reg}));
 		$var($Match, match, $new($Match));
 		reg->matches(target, match);
@@ -364,12 +347,10 @@ void REUtil::main($StringArray* argv) {
 				$nc($System::out)->println($$str({"\""_s, $(match->getCapturedText(i)), "\""_s}));
 			}
 		}
-	} catch ($ParseException&) {
-		$var($ParseException, pe, $catch());
+	} catch ($ParseException& pe) {
 		if (pattern == nullptr) {
 			pe->printStackTrace();
 		} else {
-			$init($System);
 			$nc($System::err)->println($$str({"com.sun.org.apache.xerces.internal.utils.regex.ParseException: "_s, $(pe->getMessage())}));
 			$var($String, indent, "        "_s);
 			$nc($System::err)->println($$str({indent, pattern}));
@@ -382,8 +363,7 @@ void REUtil::main($StringArray* argv) {
 				$nc($System::err)->println("^"_s);
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		e->printStackTrace();
 	}
 }
@@ -457,11 +437,9 @@ void REUtil::dumpString($String* v) {
 	$init(REUtil);
 	$useLocalCurrentObjectStackCache();
 	for (int32_t i = 0; i < $nc(v)->length(); ++i) {
-		$init($System);
 		$nc($System::out)->print($($Integer::toHexString(v->charAt(i))));
 		$nc($System::out)->print(" "_s);
 	}
-	$init($System);
 	$nc($System::out)->println();
 }
 

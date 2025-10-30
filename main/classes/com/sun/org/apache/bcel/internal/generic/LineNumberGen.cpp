@@ -5,15 +5,8 @@
 #include <com/sun/org/apache/bcel/internal/generic/ClassGenException.h>
 #include <com/sun/org/apache/bcel/internal/generic/InstructionHandle.h>
 #include <com/sun/org/apache/bcel/internal/generic/InstructionTargeter.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
 #include <java/lang/Error.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Objects.h>
 #include <jcpp.h>
 
@@ -119,8 +112,7 @@ void LineNumberGen::setInstruction($InstructionHandle* instructionHandle) {
 $Object* LineNumberGen::clone() {
 	try {
 		return $of($InstructionTargeter::clone());
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$throwNew($Error, "Clone Not Supported"_s);
 	}
 	$shouldNotReachHere();

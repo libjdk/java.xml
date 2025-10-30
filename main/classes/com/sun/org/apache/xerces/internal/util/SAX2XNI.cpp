@@ -13,15 +13,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLDocumentHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/Attributes.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/Locator.h>
@@ -146,7 +137,6 @@ $XMLDocumentHandler* SAX2XNI::getDocumentHandler() {
 }
 
 void SAX2XNI::startDocument() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->nsContext)->reset();
 		$var($XMLLocator, xmlLocator, nullptr);
@@ -156,8 +146,7 @@ void SAX2XNI::startDocument() {
 			$assign(xmlLocator, $new($LocatorWrapper, this->locator));
 		}
 		$nc(this->fCore)->startDocument(xmlLocator, nullptr, this->nsContext, nullptr);
-	} catch ($WrappedSAXException&) {
-		$var($WrappedSAXException, e, $catch());
+	} catch ($WrappedSAXException& e) {
 		$throw(e->exception);
 	}
 }
@@ -165,8 +154,7 @@ void SAX2XNI::startDocument() {
 void SAX2XNI::endDocument() {
 	try {
 		$nc(this->fCore)->endDocument(nullptr);
-	} catch ($WrappedSAXException&) {
-		$var($WrappedSAXException, e, $catch());
+	} catch ($WrappedSAXException& e) {
 		$throw(e->exception);
 	}
 }
@@ -176,38 +164,31 @@ void SAX2XNI::startElement($String* uri, $String* local, $String* qname, $Attrib
 	try {
 		$var($QName, var$0, createQName(uri, local, qname));
 		$nc(this->fCore)->startElement(var$0, $(createAttributes(att)), nullptr);
-	} catch ($WrappedSAXException&) {
-		$var($WrappedSAXException, e, $catch());
+	} catch ($WrappedSAXException& e) {
 		$throw(e->exception);
 	}
 }
 
 void SAX2XNI::endElement($String* uri, $String* local, $String* qname) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fCore)->endElement($(createQName(uri, local, qname)), nullptr);
-	} catch ($WrappedSAXException&) {
-		$var($WrappedSAXException, e, $catch());
+	} catch ($WrappedSAXException& e) {
 		$throw(e->exception);
 	}
 }
 
 void SAX2XNI::characters($chars* buf, int32_t offset, int32_t len) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fCore)->characters($$new($XMLString, buf, offset, len), nullptr);
-	} catch ($WrappedSAXException&) {
-		$var($WrappedSAXException, e, $catch());
+	} catch ($WrappedSAXException& e) {
 		$throw(e->exception);
 	}
 }
 
 void SAX2XNI::ignorableWhitespace($chars* buf, int32_t offset, int32_t len) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fCore)->ignorableWhitespace($$new($XMLString, buf, offset, len), nullptr);
-	} catch ($WrappedSAXException&) {
-		$var($WrappedSAXException, e, $catch());
+	} catch ($WrappedSAXException& e) {
 		$throw(e->exception);
 	}
 }
@@ -226,8 +207,7 @@ void SAX2XNI::processingInstruction($String* target, $String* data) {
 	try {
 		$var($String, var$0, symbolize(target));
 		$nc(this->fCore)->processingInstruction(var$0, $(createXMLString(data)), nullptr);
-	} catch ($WrappedSAXException&) {
-		$var($WrappedSAXException, e, $catch());
+	} catch ($WrappedSAXException& e) {
 		$throw(e->exception);
 	}
 }

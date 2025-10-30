@@ -28,18 +28,8 @@
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
 #include <java/io/OutputStreamWriter.h>
-#include <java/io/PrintStream.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Properties.h>
 #include <java/util/StringTokenizer.h>
 #include <javax/xml/transform/OutputKeys.h>
@@ -272,10 +262,8 @@ void Output::parseContents($Parser* parser) {
 		try {
 			$var($String, canonicalEncoding, nullptr);
 			$assign(canonicalEncoding, $Encodings::convertMime2JavaEncoding(this->_encoding));
-			$init($System);
 			$var($OutputStreamWriter, writer, $new($OutputStreamWriter, static_cast<$OutputStream*>($System::out), canonicalEncoding));
-		} catch ($UnsupportedEncodingException&) {
-			$var($UnsupportedEncodingException, e, $catch());
+		} catch ($UnsupportedEncodingException& e) {
 			$init($ErrorMsg);
 			$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::UNSUPPORTED_ENCODING, $of(this->_encoding), static_cast<$SyntaxTreeNode*>(this)));
 			parser->reportError($Constants::WARNING, msg);

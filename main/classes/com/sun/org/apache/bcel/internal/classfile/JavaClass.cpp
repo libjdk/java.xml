@@ -24,21 +24,7 @@
 #include <java/io/FileOutputStream.h>
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractSet.h>
@@ -350,18 +336,16 @@ void JavaClass::dump($File* file) {
 			try {
 				try {
 					dump(dos);
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					try {
 						dos->close();
-					} catch ($Throwable&) {
-						$var($Throwable, x2, $catch());
+					} catch ($Throwable& x2) {
 						t$->addSuppressed(x2);
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				dos->close();
 			}
@@ -385,19 +369,15 @@ $bytes* JavaClass::getBytes() {
 		try {
 			try {
 				dump(ds);
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
-				$init($System);
+			} catch ($IOException& e) {
 				$nc($System::err)->println($$str({"Error dumping class: "_s, $(e->getMessage())}));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			try {
 				ds->close();
-			} catch ($IOException&) {
-				$var($IOException, e2, $catch());
-				$init($System);
+			} catch ($IOException& e2) {
 				$nc($System::err)->println($$str({"Error dumping class: "_s, $(e2->getMessage())}));
 			}
 		}
@@ -737,8 +717,7 @@ JavaClass* JavaClass::copy() {
 		for (int32_t i = 0; i < $nc(this->attributes)->length; ++i) {
 			$nc(c->attributes)->set(i, $($nc($nc(this->attributes)->get(i))->copy(c->constantPool)));
 		}
-	} catch ($CloneNotSupportedException&) {
-		$catch();
+	} catch ($CloneNotSupportedException& e) {
 	}
 	return c;
 }

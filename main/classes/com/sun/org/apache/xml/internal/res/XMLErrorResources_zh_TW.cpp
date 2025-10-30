@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xml/internal/res/XMLErrorResources_zh_TW.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -283,7 +275,6 @@ $String* XMLErrorResources_zh_TW::ER_COULD_NOT_LOAD_METHOD_PROPERTY = nullptr;
 $String* XMLErrorResources_zh_TW::ER_SERIALIZER_NOT_CONTENTHANDLER = nullptr;
 $String* XMLErrorResources_zh_TW::ER_ILLEGAL_ATTRIBUTE_POSITION = nullptr;
 $String* XMLErrorResources_zh_TW::ER_ILLEGAL_CHARACTER = nullptr;
-
 $ObjectArray2* XMLErrorResources_zh_TW::contents = nullptr;
 
 void XMLErrorResources_zh_TW::init$() {

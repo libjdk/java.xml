@@ -30,8 +30,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0xF485850916997145;
 	::java::lang::Exception* exception = nullptr;
 	FactoryConfigurationError(const FactoryConfigurationError& e);
-	FactoryConfigurationError wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline FactoryConfigurationError* operator ->() {
+		return (FactoryConfigurationError*)throwing$;
+	}
 };
 
 		} // parsers

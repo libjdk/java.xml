@@ -1,12 +1,5 @@
 #include <javax/xml/transform/sax/SAXResult.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/ext/LexicalHandler.h>
 #include <jcpp.h>
@@ -57,7 +50,6 @@ $ClassInfo _SAXResult_ClassInfo_ = {
 $Object* allocate$SAXResult($Class* clazz) {
 	return $of($alloc(SAXResult));
 }
-
 
 $String* SAXResult::FEATURE = nullptr;
 

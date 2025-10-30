@@ -1,17 +1,8 @@
 #include <com/sun/org/apache/xalan/internal/utils/FeaturePropertyBase.h>
 
 #include <com/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/JdkConstants.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
@@ -90,7 +81,7 @@ $Object* allocate$FeaturePropertyBase($Class* clazz) {
 
 void FeaturePropertyBase::init$() {
 	$set(this, values, nullptr);
-		$init($FeaturePropertyBase$State);
+	$init($FeaturePropertyBase$State);
 	$set(this, states, $new($FeaturePropertyBase$StateArray, {
 		$FeaturePropertyBase$State::DEFAULT,
 		$FeaturePropertyBase$State::DEFAULT
@@ -192,8 +183,7 @@ void FeaturePropertyBase::getSystemProperty($Enum* property, $String* systemProp
 			$init($FeaturePropertyBase$State);
 			$nc(this->states)->set(property->ordinal(), $FeaturePropertyBase$State::JAXPDOTPROPERTIES);
 		}
-	} catch ($NumberFormatException&) {
-		$catch();
+	} catch ($NumberFormatException& e) {
 	}
 }
 

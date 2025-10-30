@@ -6,15 +6,6 @@
 #include <com/sun/org/apache/xml/internal/serialize/OutputFormat.h>
 #include <com/sun/org/apache/xml/internal/serialize/Printer.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Element.h>
 #include <org/w3c/dom/Node.h>
 #include <org/xml/sax/AttributeList.h>
@@ -55,11 +46,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _TextSerializer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $MethodInfo _TextSerializer_MethodInfo_[] = {
 	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(TextSerializer::*)()>(&TextSerializer::init$))},
@@ -118,7 +109,6 @@ void TextSerializer::endElement($String* namespaceURI, $String* localName, $Stri
 }
 
 void TextSerializer::startElement($String* tagName, $AttributeList* attrs) {
-	$useLocalCurrentObjectStackCache();
 	bool preserveSpace = false;
 	$var($ElementState, state, nullptr);
 	try {
@@ -130,8 +120,7 @@ void TextSerializer::startElement($String* tagName, $AttributeList* attrs) {
 		}
 		preserveSpace = $nc(state)->preserveSpace;
 		$assign(state, enterElementState(nullptr, nullptr, tagName, preserveSpace));
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -139,8 +128,7 @@ void TextSerializer::startElement($String* tagName, $AttributeList* attrs) {
 void TextSerializer::endElement($String* tagName) {
 	try {
 		endElementIO(tagName);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -166,14 +154,12 @@ void TextSerializer::comment($chars* chars, int32_t start, int32_t length) {
 }
 
 void TextSerializer::characters($chars* chars, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	$var($ElementState, state, nullptr);
 	try {
 		$assign(state, content());
 		$nc(state)->doCData = (state->inCData = false);
 		printText(chars, start, length, true, true);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }

@@ -10,13 +10,6 @@
 #include <java/io/IOException.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/Element.h>
 #include <org/w3c/dom/Node.h>
@@ -140,10 +133,8 @@ void XSAnnotationImpl::writeToSAX($ContentHandler* handler) {
 		$nc(parser)->setContentHandler(handler);
 		try {
 			parser->parse(aSource);
-		} catch ($SAXException&) {
-			$catch();
-		} catch ($IOException&) {
-			$catch();
+		} catch ($SAXException& e) {
+		} catch ($IOException& i) {
 		}
 		parser->setContentHandler(nullptr);
 	}
@@ -158,10 +149,8 @@ void XSAnnotationImpl::writeToDOM($Node* target, int16_t type) {
 		$var($InputSource, aSource, $new($InputSource, static_cast<$Reader*>(aReader)));
 		try {
 			$nc(parser)->parse(aSource);
-		} catch ($SAXException&) {
-			$catch();
-		} catch ($IOException&) {
-			$catch();
+		} catch ($SAXException& e) {
+		} catch ($IOException& i) {
 		}
 		$var($Document, aDocument, $nc(parser)->getDocument());
 		parser->dropDocumentReferences();

@@ -4,13 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/DurationImpl.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/DurationYearMonthImpl.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/math/BigDecimal.h>
 #include <java/math/BigInteger.h>
 #include <java/util/GregorianCalendar.h>

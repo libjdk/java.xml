@@ -8,15 +8,7 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy$DTMNodeProxyImplementation.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <com/sun/org/apache/xpath/internal/NodeSet.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -282,9 +274,7 @@ void DTMNodeProxy::finalize() {
 	this->$Document::finalize();
 }
 
-
 $String* DTMNodeProxy::EMPTYSTRING = nullptr;
-
 $DOMImplementation* DTMNodeProxy::implementation = nullptr;
 
 void DTMNodeProxy::init$($DTM* dtm, int32_t node) {
@@ -301,12 +291,10 @@ int32_t DTMNodeProxy::getDTMNodeNumber() {
 }
 
 bool DTMNodeProxy::equals($Node* node) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var(DTMNodeProxy, dtmp, $cast(DTMNodeProxy, node));
 		return ($nc(dtmp)->node == this->node) && (dtmp->dtm == this->dtm);
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, cce, $catch());
+	} catch ($ClassCastException& cce) {
 		return false;
 	}
 	$shouldNotReachHere();

@@ -56,21 +56,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
@@ -558,47 +543,29 @@ $String* XIncludeHandler::XINCLUDE_ATTR_ENCODING = nullptr;
 $String* XIncludeHandler::XINCLUDE_ATTR_ACCEPT = nullptr;
 $String* XIncludeHandler::XINCLUDE_ATTR_ACCEPT_LANGUAGE = nullptr;
 $String* XIncludeHandler::XINCLUDE_INCLUDED = nullptr;
-
 $String* XIncludeHandler::CURRENT_BASE_URI = nullptr;
 $String* XIncludeHandler::XINCLUDE_BASE = nullptr;
 $QName* XIncludeHandler::XML_BASE_QNAME = nullptr;
 $String* XIncludeHandler::XINCLUDE_LANG = nullptr;
 $QName* XIncludeHandler::XML_LANG_QNAME = nullptr;
 $QName* XIncludeHandler::NEW_NS_ATTR_QNAME = nullptr;
-
 $String* XIncludeHandler::VALIDATION = nullptr;
-
 $String* XIncludeHandler::SCHEMA_VALIDATION = nullptr;
-
 $String* XIncludeHandler::DYNAMIC_VALIDATION = nullptr;
-
 $String* XIncludeHandler::ALLOW_UE_AND_NOTATION_EVENTS = nullptr;
-
 $String* XIncludeHandler::XINCLUDE_FIXUP_BASE_URIS = nullptr;
-
 $String* XIncludeHandler::XINCLUDE_FIXUP_LANGUAGE = nullptr;
-
 $String* XIncludeHandler::JAXP_SCHEMA_LANGUAGE = nullptr;
-
 $String* XIncludeHandler::SYMBOL_TABLE = nullptr;
-
 $String* XIncludeHandler::ERROR_REPORTER = nullptr;
-
 $String* XIncludeHandler::ENTITY_RESOLVER = nullptr;
-
 $String* XIncludeHandler::SECURITY_MANAGER = nullptr;
-
 $String* XIncludeHandler::BUFFER_SIZE = nullptr;
 $String* XIncludeHandler::PARSER_SETTINGS = nullptr;
-
 $String* XIncludeHandler::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $StringArray* XIncludeHandler::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XIncludeHandler::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XIncludeHandler::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XIncludeHandler::PROPERTY_DEFAULTS = nullptr;
 $booleans* XIncludeHandler::gNeedEscaping = nullptr;
 $chars* XIncludeHandler::gAfterEscaping1 = nullptr;
@@ -663,8 +630,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 		if (!$nc(componentManager)->getFeature(XIncludeHandler::PARSER_SETTINGS)) {
 			return;
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	this->fNeedCopyFeatures = true;
 	try {
@@ -672,16 +638,14 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 		if (this->fChildConfig != nullptr) {
 			$nc(this->fChildConfig)->setFeature(XIncludeHandler::ALLOW_UE_AND_NOTATION_EVENTS, this->fSendUEAndNotationEvents);
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	try {
 		this->fFixupBaseURIs = $nc(componentManager)->getFeature(XIncludeHandler::XINCLUDE_FIXUP_BASE_URIS);
 		if (this->fChildConfig != nullptr) {
 			$nc(this->fChildConfig)->setFeature(XIncludeHandler::XINCLUDE_FIXUP_BASE_URIS, this->fFixupBaseURIs);
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		this->fFixupBaseURIs = true;
 	}
 	try {
@@ -689,8 +653,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 		if (this->fChildConfig != nullptr) {
 			$nc(this->fChildConfig)->setFeature(XIncludeHandler::XINCLUDE_FIXUP_LANGUAGE, this->fFixupLanguage);
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		this->fFixupLanguage = true;
 	}
 	try {
@@ -701,8 +664,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 				$nc(this->fChildConfig)->setProperty(XIncludeHandler::SYMBOL_TABLE, value);
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fSymbolTable, nullptr);
 	}
 	try {
@@ -713,8 +675,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 				$nc(this->fChildConfig)->setProperty(XIncludeHandler::ERROR_REPORTER, value);
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fErrorReporter, nullptr);
 	}
 	try {
@@ -725,8 +686,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 				$nc(this->fChildConfig)->setProperty(XIncludeHandler::ENTITY_RESOLVER, value);
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fEntityResolver, nullptr);
 	}
 	try {
@@ -737,8 +697,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 				$nc(this->fChildConfig)->setProperty(XIncludeHandler::SECURITY_MANAGER, value);
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fSecurityManager, nullptr);
 	}
 	$init($JdkConstants);
@@ -760,8 +719,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 		} else {
 			this->fBufferSize = $nc(($cast($Integer, $(getPropertyDefault(XIncludeHandler::BUFFER_SIZE)))))->intValue();
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		this->fBufferSize = $nc(($cast($Integer, $(getPropertyDefault(XIncludeHandler::BUFFER_SIZE)))))->intValue();
 	}
 	if (this->fXInclude10TextReader != nullptr) {
@@ -782,8 +740,7 @@ void XIncludeHandler::reset($XMLComponentManager* componentManager) {
 				$nc(this->fSettings)->setFeature(XIncludeHandler::DYNAMIC_VALIDATION, true);
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 }
 
@@ -1378,8 +1335,7 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 		if (hrefURI->getFragment() != nullptr) {
 			reportFatalError("HrefFragmentIdentifierIllegal"_s, $$new($ObjectArray, {$of(href)}));
 		}
-	} catch ($URI$MalformedURIException&) {
-		$var($URI$MalformedURIException, exc, $catch());
+	} catch ($URI$MalformedURIException& exc) {
 		$var($String, newHref, escapeHref(href));
 		if (href != newHref) {
 			$assign(href, newHref);
@@ -1388,8 +1344,7 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 				if (hrefURI->getFragment() != nullptr) {
 					reportFatalError("HrefFragmentIdentifierIllegal"_s, $$new($ObjectArray, {$of(href)}));
 				}
-			} catch ($URI$MalformedURIException&) {
-				$var($URI$MalformedURIException, exc2, $catch());
+			} catch ($URI$MalformedURIException& exc2) {
 				reportFatalError("HrefSyntacticallyInvalid"_s, $$new($ObjectArray, {$of(href)}));
 			}
 		} else {
@@ -1424,8 +1379,7 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 							$set(this, fCatalogResolver, $CatalogManager::catalogResolver(this->fCatalogFeatures, $$new($URIArray, 0)));
 						}
 						$assign(source, $nc(this->fCatalogResolver)->resolve(href, $($nc(this->fCurrentBaseURI)->getExpandedSystemId())));
-					} catch ($CatalogException&) {
-						$catch();
+					} catch ($CatalogException& e) {
 					}
 					if (source != nullptr && !source->isEmpty()) {
 						$var($String, var$3, source->getSystemId());
@@ -1447,15 +1401,13 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 				$var($String, var$6, includedSource->getSystemId());
 				$assign(includedSource, createInputSource(var$5, var$6, $(includedSource->getBaseSystemId()), accept, acceptLanguage));
 			}
-		} catch ($IOException&) {
-			$var($Exception, e, $catch());
+		} catch ($IOException& e) {
 			reportResourceError("XMLResourceError"_s, $$new($ObjectArray, {
 				$of(href),
 				$($of(e->getMessage()))
 			}), e);
 			return false;
-		} catch ($CatalogException&) {
-			$var($Exception, e, $catch());
+		} catch ($CatalogException& e) {
 			reportResourceError("XMLResourceError"_s, $$new($ObjectArray, {
 				$of(href),
 				$($of(e->getMessage()))
@@ -1520,8 +1472,7 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 			$set(this, fChildConfig, this->fXPointerChildConfig);
 			try {
 				$nc(this->fXPtrProcessor)->parseXPointer(xpointer);
-			} catch ($XNIException&) {
-				$var($XNIException, ex, $catch());
+			} catch ($XNIException& ex) {
 				reportResourceError("XMLResourceError"_s, $$new($ObjectArray, {
 					$of(href),
 					$($of(ex->getMessage()))
@@ -1561,8 +1512,7 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 							goto $finally;
 						}
 					}
-				} catch ($XNIException&) {
-					$var($XNIException, e, $catch());
+				} catch ($XNIException& e) {
 					$nc(this->fXIncludeLocator)->setLocator(this->fDocLocation);
 					if (this->fErrorReporter != nullptr) {
 						$nc(this->fErrorReporter)->setDocumentLocator(this->fDocLocation);
@@ -1571,8 +1521,7 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 						$of(href),
 						$($of(e->getMessage()))
 					}));
-				} catch ($IOException&) {
-					$var($IOException, e, $catch());
+				} catch ($IOException& e) {
 					$nc(this->fXIncludeLocator)->setLocator(this->fDocLocation);
 					if (this->fErrorReporter != nullptr) {
 						$nc(this->fErrorReporter)->setDocumentLocator(this->fDocLocation);
@@ -1588,8 +1537,8 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 					return$8 = true;
 					goto $finally;
 				}
-			} catch ($Throwable&) {
-				$assign(var$7, $catch());
+			} catch ($Throwable& var$10) {
+				$assign(var$7, var$10);
 			} $finally: {
 				$nc(this->fNamespaceContext)->popScope();
 			}
@@ -1605,9 +1554,9 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 		$nc(includedSource)->setEncoding(encoding);
 		$var($XIncludeTextReader, textReader, nullptr);
 		{
-			$var($Throwable, var$10, nullptr);
-			bool var$12 = false;
-			bool return$11 = false;
+			$var($Throwable, var$11, nullptr);
+			bool var$13 = false;
+			bool return$12 = false;
 			try {
 				try {
 					this->fHasIncludeReportedContent = false;
@@ -1628,17 +1577,14 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 					}
 					$nc(textReader)->setErrorReporter(this->fErrorReporter);
 					textReader->parse();
-				} catch ($MalformedByteSequenceException&) {
-					$var($MalformedByteSequenceException, ex, $catch());
-					$var($String, var$13, ex->getDomain());
-					$var($String, var$14, ex->getKey());
-					$nc(this->fErrorReporter)->reportError(var$13, var$14, $(ex->getArguments()), $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(ex));
-				} catch ($CharConversionException&) {
-					$var($CharConversionException, e, $catch());
+				} catch ($MalformedByteSequenceException& ex) {
+					$var($String, var$14, ex->getDomain());
+					$var($String, var$15, ex->getKey());
+					$nc(this->fErrorReporter)->reportError(var$14, var$15, $(ex->getArguments()), $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(ex));
+				} catch ($CharConversionException& e) {
 					$init($XMLMessageFormatter);
 					$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "CharConversionFailure"_s, ($ObjectArray*)nullptr, $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
-				} catch ($IOException&) {
-					$var($IOException, e, $catch());
+				} catch ($IOException& e) {
 					if (this->fHasIncludeReportedContent) {
 						$throwNew($XNIException, static_cast<$Exception*>(e));
 					}
@@ -1646,18 +1592,17 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 						$of(href),
 						$($of(e->getMessage()))
 					}), e);
-					var$12 = false;
-					return$11 = true;
+					var$13 = false;
+					return$12 = true;
 					goto $finally1;
 				}
-			} catch ($Throwable&) {
-				$assign(var$10, $catch());
+			} catch ($Throwable& var$16) {
+				$assign(var$11, var$16);
 			} $finally1: {
 				if (textReader != nullptr) {
 					try {
 						textReader->close();
-					} catch ($IOException&) {
-						$var($IOException, e, $catch());
+					} catch ($IOException& e) {
 						reportResourceError("TextResourceError"_s, $$new($ObjectArray, {
 							$of(href),
 							$($of(e->getMessage()))
@@ -1666,11 +1611,11 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 					}
 				}
 			}
-			if (var$10 != nullptr) {
-				$throw(var$10);
+			if (var$11 != nullptr) {
+				$throw(var$11);
 			}
-			if (return$11) {
-				return var$12;
+			if (return$12) {
+				return var$13;
 			}
 		}
 	} else {
@@ -1721,8 +1666,7 @@ void XIncludeHandler::setupCurrentBaseURI($XMLLocator* locator) {
 			if (expandedSystemId == nullptr) {
 				$assign(expandedSystemId, $nc(this->fCurrentBaseURI)->getLiteralSystemId());
 			}
-		} catch ($URI$MalformedURIException&) {
-			$var($URI$MalformedURIException, e, $catch());
+		} catch ($URI$MalformedURIException& e) {
 			reportFatalError("ExpandedSystemId"_s);
 		}
 	}
@@ -1763,8 +1707,7 @@ $XMLAttributes* XIncludeHandler::processAttributes($XMLAttributes* attributes$re
 			$var($String, uri, nullptr);
 			try {
 				$assign(uri, this->getRelativeBaseURI());
-			} catch ($URI$MalformedURIException&) {
-				$var($URI$MalformedURIException, e, $catch());
+			} catch ($URI$MalformedURIException& e) {
 				$assign(uri, $nc(this->fCurrentBaseURI)->getExpandedSystemId());
 			}
 			$init($XMLSymbols);
@@ -2177,8 +2120,7 @@ void XIncludeHandler::copyFeatures1($Enumeration* features, $String* featurePref
 		$nc(to)->addRecognizedFeatures($$new($StringArray, {featureId}));
 		try {
 			to->setFeature(featureId, $nc(from)->getFeature(featureId));
-		} catch ($XMLConfigurationException&) {
-			$catch();
+		} catch ($XMLConfigurationException& e) {
 		}
 	}
 }
@@ -2190,8 +2132,7 @@ void XIncludeHandler::copyFeatures1($Enumeration* features, $String* featurePref
 		bool value = $nc(from)->getFeature(featureId);
 		try {
 			$nc(to)->setFeature(featureId, value);
-		} catch ($XMLConfigurationException&) {
-			$catch();
+		} catch ($XMLConfigurationException& e) {
 		}
 	}
 }
@@ -2278,8 +2219,7 @@ void XIncludeHandler::processXMLBaseAttributes($XMLAttributes* attributes) {
 			$nc(this->fCurrentBaseURI)->setBaseSystemId($($nc(this->fCurrentBaseURI)->getExpandedSystemId()));
 			$nc(this->fCurrentBaseURI)->setExpandedSystemId(expandedValue);
 			saveBaseURI();
-		} catch ($URI$MalformedURIException&) {
-			$catch();
+		} catch ($URI$MalformedURIException& e) {
 		}
 	}
 }
@@ -2358,8 +2298,7 @@ $String* XIncludeHandler::escapeHref($String* href) {
 		int8_t b = 0;
 		try {
 			$assign(bytes, $(href->substring(i))->getBytes("UTF-8"_s));
-		} catch ($UnsupportedEncodingException&) {
-			$var($UnsupportedEncodingException, e, $catch());
+		} catch ($UnsupportedEncodingException& e) {
 			return href;
 		}
 		len = $nc(bytes)->length;
@@ -2431,7 +2370,7 @@ void clinit$XIncludeHandler($Class* class$) {
 		XIncludeHandler::XINCLUDE_FIXUP_BASE_URIS,
 		XIncludeHandler::XINCLUDE_FIXUP_LANGUAGE
 	}));
-		$init($Boolean);
+	$init($Boolean);
 	$assignStatic(XIncludeHandler::FEATURE_DEFAULTS, $new($BooleanArray, {
 		$Boolean::TRUE,
 		$Boolean::TRUE,

@@ -12,15 +12,6 @@
 #include <java/io/ObjectOutputStream$PutField.h>
 #include <java/io/ObjectOutputStream.h>
 #include <java/io/ObjectStreamField.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Hashtable.h>
@@ -298,7 +289,6 @@ $Object* DocumentTypeImpl::clone() {
 void DocumentTypeImpl::finalize() {
 	this->$ParentNode::finalize();
 }
-
 
 $ObjectStreamFieldArray* DocumentTypeImpl::serialPersistentFields = nullptr;
 
@@ -590,10 +580,9 @@ void DocumentTypeImpl::readObject($ObjectInputStream* in) {
 
 void clinit$DocumentTypeImpl($Class* class$) {
 	$useLocalCurrentObjectStackCache();
-		$load($String);
-		$load($NamedNodeMapImpl);
-		$init($Integer);
-		$load($Hashtable);
+	$load($NamedNodeMapImpl);
+	$init($Integer);
+	$load($Hashtable);
 	$assignStatic(DocumentTypeImpl::serialPersistentFields, $new($ObjectStreamFieldArray, {
 		$$new($ObjectStreamField, "name"_s, $String::class$),
 		$$new($ObjectStreamField, "entities"_s, $NamedNodeMapImpl::class$),

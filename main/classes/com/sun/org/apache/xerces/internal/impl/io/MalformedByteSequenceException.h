@@ -53,8 +53,10 @@ public:
 	$ObjectArray* fArguments = nullptr;
 	$String* fMessage = nullptr;
 	MalformedByteSequenceException(const MalformedByteSequenceException& e);
-	MalformedByteSequenceException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline MalformedByteSequenceException* operator ->() {
+		return (MalformedByteSequenceException*)throwing$;
+	}
 };
 
 							} // io

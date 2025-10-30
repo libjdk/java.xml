@@ -41,20 +41,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <java/util/Map.h>
 #include <javax/xml/XMLConstants.h>
@@ -398,46 +384,26 @@ void SchemaParsingConfig::finalize() {
 }
 
 $String* SchemaParsingConfig::XML11_DATATYPE_VALIDATOR_FACTORY = nullptr;
-
 $String* SchemaParsingConfig::WARN_ON_DUPLICATE_ATTDEF = nullptr;
-
 $String* SchemaParsingConfig::WARN_ON_UNDECLARED_ELEMDEF = nullptr;
-
 $String* SchemaParsingConfig::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* SchemaParsingConfig::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* SchemaParsingConfig::LOAD_EXTERNAL_DTD = nullptr;
-
 $String* SchemaParsingConfig::NOTIFY_BUILTIN_REFS = nullptr;
-
 $String* SchemaParsingConfig::NOTIFY_CHAR_REFS = nullptr;
-
 $String* SchemaParsingConfig::NORMALIZE_DATA = nullptr;
-
 $String* SchemaParsingConfig::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* SchemaParsingConfig::GENERATE_SYNTHETIC_ANNOTATIONS = nullptr;
-
 $String* SchemaParsingConfig::ERROR_REPORTER = nullptr;
-
 $String* SchemaParsingConfig::ENTITY_MANAGER = nullptr;
-
 $String* SchemaParsingConfig::DOCUMENT_SCANNER = nullptr;
-
 $String* SchemaParsingConfig::DTD_SCANNER = nullptr;
-
 $String* SchemaParsingConfig::XMLGRAMMAR_POOL = nullptr;
-
 $String* SchemaParsingConfig::DTD_VALIDATOR = nullptr;
-
 $String* SchemaParsingConfig::NAMESPACE_BINDER = nullptr;
-
 $String* SchemaParsingConfig::DATATYPE_VALIDATOR_FACTORY = nullptr;
 $String* SchemaParsingConfig::VALIDATION_MANAGER = nullptr;
-
 $String* SchemaParsingConfig::SCHEMA_VALIDATOR = nullptr;
-
 $String* SchemaParsingConfig::LOCALE = nullptr;
 
 void SchemaParsingConfig::init$() {
@@ -461,9 +427,9 @@ void SchemaParsingConfig::init$($SymbolTable* symbolTable, $XMLGrammarPool* gram
 	this->fParseInProgress = false;
 	this->fConfigUpdated = false;
 	this->f11Initialized = false;
-		$init($ParserConfigurationSettings);
-		$init($XMLConstants);
-		$init($JdkConstants);
+	$init($ParserConfigurationSettings);
+	$init($XMLConstants);
+	$init($JdkConstants);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		$ParserConfigurationSettings::PARSER_SETTINGS,
 		SchemaParsingConfig::WARN_ON_DUPLICATE_ATTDEF,
@@ -546,8 +512,7 @@ void SchemaParsingConfig::init$($SymbolTable* symbolTable, $XMLGrammarPool* gram
 	}
 	try {
 		setLocale($($Locale::getDefault()));
-	} catch ($XNIException&) {
-		$catch();
+	} catch ($XNIException& e) {
 	}
 }
 
@@ -566,13 +531,11 @@ void SchemaParsingConfig::setFeature($String* featureId, bool state) {
 	if (this->f11Initialized) {
 		try {
 			$nc(this->fXML11DTDScanner)->setFeature(featureId, state);
-		} catch ($Exception&) {
-			$catch();
+		} catch ($Exception& e) {
 		}
 		try {
 			$nc(this->fXML11NSDocScanner)->setFeature(featureId, state);
-		} catch ($Exception&) {
-			$catch();
+		} catch ($Exception& e) {
 		}
 	}
 	$BasicParserConfiguration::setFeature(featureId, state);
@@ -595,13 +558,11 @@ void SchemaParsingConfig::setProperty($String* propertyId, Object$* value) {
 	if (this->f11Initialized) {
 		try {
 			$nc(this->fXML11DTDScanner)->setProperty(propertyId, value);
-		} catch ($Exception&) {
-			$catch();
+		} catch ($Exception& e) {
 		}
 		try {
 			$nc(this->fXML11NSDocScanner)->setProperty(propertyId, value);
-		} catch ($Exception&) {
-			$catch();
+		} catch ($Exception& e) {
 		}
 	}
 	$BasicParserConfiguration::setProperty(propertyId, value);
@@ -617,7 +578,6 @@ void SchemaParsingConfig::setInputSource($XMLInputSource* inputSource) {
 }
 
 bool SchemaParsingConfig::parse(bool complete) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			$nc(this->fValidationManager)->reset();
@@ -637,33 +597,25 @@ bool SchemaParsingConfig::parse(bool complete) {
 			this->fConfigUpdated = false;
 			$nc(this->fVersionDetector)->startDocumentParsing($cast($XMLEntityHandler, this->fCurrentScanner), version);
 			$set(this, fInputSource, nullptr);
-		} catch ($XNIException&) {
-			$var($XNIException, ex, $catch());
+		} catch ($XNIException& ex) {
 			$throw(ex);
-		} catch ($IOException&) {
-			$var($IOException, ex, $catch());
+		} catch ($IOException& ex) {
 			$throw(ex);
-		} catch ($RuntimeException&) {
-			$var($RuntimeException, ex, $catch());
+		} catch ($RuntimeException& ex) {
 			$throw(ex);
-		} catch ($Exception&) {
-			$var($Exception, ex, $catch());
+		} catch ($Exception& ex) {
 			$throwNew($XNIException, ex);
 		}
 	}
 	try {
 		return $nc(this->fCurrentScanner)->scanDocument(complete);
-	} catch ($XNIException&) {
-		$var($XNIException, ex, $catch());
+	} catch ($XNIException& ex) {
 		$throw(ex);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throw(ex);
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, ex, $catch());
+	} catch ($RuntimeException& ex) {
 		$throw(ex);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($XNIException, ex);
 	}
 	$shouldNotReachHere();
@@ -674,7 +626,6 @@ void SchemaParsingConfig::cleanup() {
 }
 
 void SchemaParsingConfig::parse($XMLInputSource* source) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -685,21 +636,17 @@ void SchemaParsingConfig::parse($XMLInputSource* source) {
 			try {
 				setInputSource(source);
 				parse(true);
-			} catch ($XNIException&) {
-				$var($XNIException, ex, $catch());
+			} catch ($XNIException& ex) {
 				$throw(ex);
-			} catch ($IOException&) {
-				$var($IOException, ex, $catch());
+			} catch ($IOException& ex) {
 				$throw(ex);
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, ex, $catch());
+			} catch ($RuntimeException& ex) {
 				$throw(ex);
-			} catch ($Exception&) {
-				$var($Exception, ex, $catch());
+			} catch ($Exception& ex) {
 				$throwNew($XNIException, ex);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			this->fParseInProgress = false;
 			this->cleanup();

@@ -36,20 +36,8 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/XMLConstants.h>
 #include <org/xml/sax/AttributeList.h>
@@ -336,25 +324,15 @@ void AbstractSAXParser::finalize() {
 	this->$AbstractXMLDocumentParser::finalize();
 }
 
-
 $String* AbstractSAXParser::NAMESPACES = nullptr;
-
 $String* AbstractSAXParser::NAMESPACE_PREFIXES = nullptr;
-
 $String* AbstractSAXParser::STRING_INTERNING = nullptr;
-
 $String* AbstractSAXParser::ALLOW_UE_AND_NOTATION_EVENTS = nullptr;
-
 $StringArray* AbstractSAXParser::RECOGNIZED_FEATURES = nullptr;
-
 $String* AbstractSAXParser::LEXICAL_HANDLER = nullptr;
-
 $String* AbstractSAXParser::DECLARATION_HANDLER = nullptr;
-
 $String* AbstractSAXParser::DOM_NODE = nullptr;
-
 $String* AbstractSAXParser::SECURITY_MANAGER = nullptr;
-
 $StringArray* AbstractSAXParser::RECOGNIZED_PROPERTIES = nullptr;
 
 void AbstractSAXParser::init$($XMLParserConfiguration* config) {
@@ -374,8 +352,7 @@ void AbstractSAXParser::init$($XMLParserConfiguration* config) {
 	config->addRecognizedProperties(AbstractSAXParser::RECOGNIZED_PROPERTIES);
 	try {
 		config->setFeature(AbstractSAXParser::ALLOW_UE_AND_NOTATION_EVENTS, false);
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 }
 
@@ -395,8 +372,7 @@ void AbstractSAXParser::startDocument($XMLLocator* locator, $String* encoding, $
 			}
 			$nc(this->fContentHandler)->startDocument();
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -407,8 +383,7 @@ void AbstractSAXParser::xmlDecl($String* version, $String* encoding, $String* st
 	if (this->fContentHandler != nullptr) {
 		try {
 			$nc(this->fContentHandler)->declaration(version, encoding, standalone);
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($XNIException, static_cast<$Exception*>(e));
 		}
 	}
@@ -420,8 +395,7 @@ void AbstractSAXParser::doctypeDecl($String* rootElement, $String* publicId, $St
 		if (this->fLexicalHandler != nullptr) {
 			$nc(this->fLexicalHandler)->startDTD(rootElement, publicId, systemId);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 	if (this->fDeclHandler != nullptr) {
@@ -430,7 +404,6 @@ void AbstractSAXParser::doctypeDecl($String* rootElement, $String* publicId, $St
 }
 
 void AbstractSAXParser::startGeneralEntity($String* name, $XMLResourceIdentifier* identifier, $String* encoding, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$init($Boolean);
 		$init($Constants);
@@ -441,14 +414,12 @@ void AbstractSAXParser::startGeneralEntity($String* name, $XMLResourceIdentifier
 		} else if (this->fLexicalHandler != nullptr) {
 			$nc(this->fLexicalHandler)->startEntity(name);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
 
 void AbstractSAXParser::endGeneralEntity($String* name, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$init($Boolean);
 		$init($Constants);
@@ -457,8 +428,7 @@ void AbstractSAXParser::endGeneralEntity($String* name, $Augmentations* augs) {
 				$nc(this->fLexicalHandler)->endEntity(name);
 			}
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -501,8 +471,7 @@ void AbstractSAXParser::startElement($QName* element, $XMLAttributes* attributes
 			$nc(this->fAttributesProxy)->setAttributes(attributes);
 			$nc(this->fContentHandler)->startElement(uri, localpart, element->rawname, this->fAttributesProxy);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -518,8 +487,7 @@ void AbstractSAXParser::characters($XMLString* text, $Augmentations* augs) {
 		if (this->fContentHandler != nullptr) {
 			$nc(this->fContentHandler)->characters($nc(text)->ch, text->offset, text->length);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -532,8 +500,7 @@ void AbstractSAXParser::ignorableWhitespace($XMLString* text, $Augmentations* au
 		if (this->fContentHandler != nullptr) {
 			$nc(this->fContentHandler)->ignorableWhitespace($nc(text)->ch, text->offset, text->length);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -553,8 +520,7 @@ void AbstractSAXParser::endElement($QName* element, $Augmentations* augs) {
 				endNamespaceMapping();
 			}
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -564,8 +530,7 @@ void AbstractSAXParser::startCDATA($Augmentations* augs) {
 		if (this->fLexicalHandler != nullptr) {
 			$nc(this->fLexicalHandler)->startCDATA();
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -575,8 +540,7 @@ void AbstractSAXParser::endCDATA($Augmentations* augs) {
 		if (this->fLexicalHandler != nullptr) {
 			$nc(this->fLexicalHandler)->endCDATA();
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -586,8 +550,7 @@ void AbstractSAXParser::comment($XMLString* text, $Augmentations* augs) {
 		if (this->fLexicalHandler != nullptr) {
 			$nc(this->fLexicalHandler)->comment($nc(text)->ch, 0, text->length);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -601,8 +564,7 @@ void AbstractSAXParser::processingInstruction($String* target, $XMLString* data,
 		if (this->fContentHandler != nullptr) {
 			$nc(this->fContentHandler)->processingInstruction(target, $($nc(data)->toString()));
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -615,8 +577,7 @@ void AbstractSAXParser::endDocument($Augmentations* augs) {
 		if (this->fContentHandler != nullptr) {
 			$nc(this->fContentHandler)->endDocument();
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -630,7 +591,6 @@ void AbstractSAXParser::endExternalSubset($Augmentations* augs) {
 }
 
 void AbstractSAXParser::startParameterEntity($String* name, $XMLResourceIdentifier* identifier, $String* encoding, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$init($Boolean);
 		$init($Constants);
@@ -641,14 +601,12 @@ void AbstractSAXParser::startParameterEntity($String* name, $XMLResourceIdentifi
 		} else if (this->fLexicalHandler != nullptr && this->fLexicalHandlerParameterEntities) {
 			$nc(this->fLexicalHandler)->startEntity(name);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
 
 void AbstractSAXParser::endParameterEntity($String* name, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$init($Boolean);
 		$init($Constants);
@@ -657,8 +615,7 @@ void AbstractSAXParser::endParameterEntity($String* name, $Augmentations* augs) 
 				$nc(this->fLexicalHandler)->endEntity(name);
 			}
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -668,8 +625,7 @@ void AbstractSAXParser::elementDecl($String* name, $String* contentModel, $Augme
 		if (this->fDeclHandler != nullptr) {
 			$nc(this->fDeclHandler)->elementDecl(name, contentModel);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -706,20 +662,17 @@ void AbstractSAXParser::attributeDecl($String* elementName, $String* attributeNa
 			$var($String, value, (defaultValue == nullptr) ? ($String*)nullptr : $nc(defaultValue)->toString());
 			$nc(this->fDeclHandler)->attributeDecl(elementName, attributeName, type, defaultType, value);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
 
 void AbstractSAXParser::internalEntityDecl($String* name, $XMLString* text, $XMLString* nonNormalizedText, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->fDeclHandler != nullptr) {
 			$nc(this->fDeclHandler)->internalEntityDecl(name, $($nc(text)->toString()));
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -732,8 +685,7 @@ void AbstractSAXParser::externalEntityDecl($String* name, $XMLResourceIdentifier
 			$var($String, systemId, this->fResolveDTDURIs ? identifier->getExpandedSystemId() : identifier->getLiteralSystemId());
 			$nc(this->fDeclHandler)->externalEntityDecl(name, publicId, systemId);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -746,8 +698,7 @@ void AbstractSAXParser::unparsedEntityDecl($String* name, $XMLResourceIdentifier
 			$var($String, systemId, this->fResolveDTDURIs ? identifier->getExpandedSystemId() : identifier->getLiteralSystemId());
 			$nc(this->fDTDHandler)->unparsedEntityDecl(name, publicId, systemId, notation);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -760,8 +711,7 @@ void AbstractSAXParser::notationDecl($String* name, $XMLResourceIdentifier* iden
 			$var($String, systemId, this->fResolveDTDURIs ? identifier->getExpandedSystemId() : identifier->getLiteralSystemId());
 			$nc(this->fDTDHandler)->notationDecl(name, publicId, systemId);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -772,8 +722,7 @@ void AbstractSAXParser::endDTD($Augmentations* augs) {
 		if (this->fLexicalHandler != nullptr) {
 			$nc(this->fLexicalHandler)->endDTD();
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 	if (this->fDeclaredAttrs != nullptr) {
@@ -786,8 +735,7 @@ void AbstractSAXParser::parse($String* systemId) {
 	$var($XMLInputSource, source, $new($XMLInputSource, nullptr, systemId, nullptr, false));
 	try {
 		parse(source);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr || $instanceOf($CharConversionException, ex)) {
 			$var($LocatorImpl, locatorImpl, $new($AbstractSAXParser$1, this));
@@ -804,8 +752,7 @@ void AbstractSAXParser::parse($String* systemId) {
 			$throw($cast($IOException, ex));
 		}
 		$throwNew($SAXException, ex);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr) {
 			$throwNew($SAXException, $(e->getMessage()));
@@ -829,8 +776,7 @@ void AbstractSAXParser::parse($InputSource* inputSource) {
 		xmlInputSource->setCharacterStream($($nc(inputSource)->getCharacterStream()));
 		xmlInputSource->setEncoding($($nc(inputSource)->getEncoding()));
 		parse(xmlInputSource);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr || $instanceOf($CharConversionException, ex)) {
 			$var($LocatorImpl, locatorImpl, $new($AbstractSAXParser$2, this));
@@ -847,8 +793,7 @@ void AbstractSAXParser::parse($InputSource* inputSource) {
 			$throw($cast($IOException, ex));
 		}
 		$throwNew($SAXException, ex);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr) {
 			$throwNew($SAXException, $(e->getMessage()));
@@ -881,8 +826,7 @@ void AbstractSAXParser::setEntityResolver($EntityResolver* resolver) {
 		} else {
 			$nc(this->fConfiguration)->setProperty($XMLParser::ENTITY_RESOLVER, $$new($EntityResolverWrapper, resolver));
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 }
 
@@ -899,8 +843,7 @@ $EntityResolver* AbstractSAXParser::getEntityResolver() {
 				$assign(entityResolver, $nc(($cast($EntityResolver2Wrapper, xmlEntityResolver)))->getEntityResolver());
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	return entityResolver;
 }
@@ -916,8 +859,7 @@ void AbstractSAXParser::setErrorHandler($ErrorHandler* errorHandler) {
 		} else {
 			$nc(this->fConfiguration)->setProperty($XMLParser::ERROR_HANDLER, $$new($ErrorHandlerWrapper, errorHandler));
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 }
 
@@ -930,8 +872,7 @@ $ErrorHandler* AbstractSAXParser::getErrorHandler() {
 		if (xmlErrorHandler != nullptr && $instanceOf($ErrorHandlerWrapper, xmlErrorHandler)) {
 			$assign(errorHandler, $nc(($cast($ErrorHandlerWrapper, xmlErrorHandler)))->getErrorHandler());
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	return errorHandler;
 }
@@ -1046,8 +987,7 @@ void AbstractSAXParser::setFeature($String* featureId, bool state) {
 			}
 		}
 		$nc(this->fConfiguration)->setFeature(featureId, state);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -1113,8 +1053,7 @@ bool AbstractSAXParser::getFeature($String* featureId) {
 			}
 		}
 		return $nc(this->fConfiguration)->getFeature(featureId);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -1137,8 +1076,7 @@ void AbstractSAXParser::setProperty($String* propertyId, Object$* value) {
 			if (var$1 && propertyId->endsWith($Constants::LEXICAL_HANDLER_PROPERTY)) {
 				try {
 					setLexicalHandler($cast($LexicalHandler, value));
-				} catch ($ClassCastException&) {
-					$var($ClassCastException, e, $catch());
+				} catch ($ClassCastException& e) {
 					$throwNew($SAXNotSupportedException, $($SAXMessageFormatter::formatMessage($($nc(this->fConfiguration)->getLocale()), "incompatible-class"_s, $$new($ObjectArray, {
 						$of(propertyId),
 						$of("org.xml.sax.ext.LexicalHandler"_s)
@@ -1150,8 +1088,7 @@ void AbstractSAXParser::setProperty($String* propertyId, Object$* value) {
 			if (var$2 && propertyId->endsWith($Constants::DECLARATION_HANDLER_PROPERTY)) {
 				try {
 					setDeclHandler($cast($DeclHandler, value));
-				} catch ($ClassCastException&) {
-					$var($ClassCastException, e, $catch());
+				} catch ($ClassCastException& e) {
 					$throwNew($SAXNotSupportedException, $($SAXMessageFormatter::formatMessage($($nc(this->fConfiguration)->getLocale()), "incompatible-class"_s, $$new($ObjectArray, {
 						$of(propertyId),
 						$of("org.xml.sax.ext.DeclHandler"_s)
@@ -1170,8 +1107,7 @@ void AbstractSAXParser::setProperty($String* propertyId, Object$* value) {
 			}
 		}
 		$nc(this->fConfiguration)->setProperty(propertyId, value);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -1207,8 +1143,7 @@ $Object* AbstractSAXParser::getProperty($String* propertyId) {
 			}
 		}
 		return $of($nc(this->fConfiguration)->getProperty(propertyId));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {

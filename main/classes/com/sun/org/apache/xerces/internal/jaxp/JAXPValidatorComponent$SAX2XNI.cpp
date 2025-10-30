@@ -8,18 +8,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLDocumentHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/Attributes.h>
 #include <org/xml/sax/SAXException.h>
 #include <org/xml/sax/helpers/DefaultHandler.h>
@@ -111,8 +99,7 @@ void JAXPValidatorComponent$SAX2XNI::characters($chars* ch, int32_t start, int32
 	try {
 		$var($XMLString, var$0, $new($XMLString, ch, start, len));
 		$nc($(handler()))->characters(var$0, $(aug()));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($(toSAXException(e)));
 	}
 }
@@ -122,8 +109,7 @@ void JAXPValidatorComponent$SAX2XNI::ignorableWhitespace($chars* ch, int32_t sta
 	try {
 		$var($XMLString, var$0, $new($XMLString, ch, start, len));
 		$nc($(handler()))->ignorableWhitespace(var$0, $(aug()));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($(toSAXException(e)));
 	}
 }
@@ -135,8 +121,7 @@ void JAXPValidatorComponent$SAX2XNI::startElement($String* uri, $String* localNa
 		$var($QName, var$0, toQName(uri, localName, qname));
 		$var($XMLAttributes, var$1, this->this$0->fCurrentAttributes);
 		$nc($(handler()))->startElement(var$0, var$1, $(elementAug()));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($(toSAXException(e)));
 	}
 }
@@ -146,8 +131,7 @@ void JAXPValidatorComponent$SAX2XNI::endElement($String* uri, $String* localName
 	try {
 		$var($QName, var$0, toQName(uri, localName, qname));
 		$nc($(handler()))->endElement(var$0, $(aug()));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($(toSAXException(e)));
 	}
 }

@@ -30,8 +30,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0x6317D91DE98A8119;
 	::java::lang::Exception* m_exception = nullptr;
 	WrappedRuntimeException(const WrappedRuntimeException& e);
-	WrappedRuntimeException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline WrappedRuntimeException* operator ->() {
+		return (WrappedRuntimeException*)throwing$;
+	}
 };
 
 							} // utils

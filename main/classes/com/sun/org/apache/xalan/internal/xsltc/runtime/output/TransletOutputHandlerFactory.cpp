@@ -17,16 +17,7 @@
 #include <com/sun/org/apache/xml/internal/serializer/ToXMLStream.h>
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/XMLEventWriter.h>
 #include <javax/xml/stream/XMLStreamWriter.h>
 #include <javax/xml/transform/ErrorListener.h>
@@ -148,7 +139,6 @@ void TransletOutputHandlerFactory::init$(bool overrideDefaultParser, $ErrorListe
 	$set(this, _encoding, "utf-8"_s);
 	$set(this, _method, nullptr);
 	this->_outputType = TransletOutputHandlerFactory::STREAM;
-	$init($System);
 	$set(this, _ostream, $System::out);
 	$set(this, _writer, nullptr);
 	$set(this, _node, nullptr);

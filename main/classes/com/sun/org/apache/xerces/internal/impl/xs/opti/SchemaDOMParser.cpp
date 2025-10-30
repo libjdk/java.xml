@@ -24,15 +24,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLEntityResolver.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Document.h>
 #include <jcpp.h>
 
@@ -161,9 +152,7 @@ $Object* allocate$SchemaDOMParser($Class* clazz) {
 	return $of($alloc(SchemaDOMParser));
 }
 
-
 $String* SchemaDOMParser::ERROR_REPORTER = nullptr;
-
 $String* SchemaDOMParser::GENERATE_SYNTHETIC_ANNOTATION = nullptr;
 
 void SchemaDOMParser::init$($XMLParserConfiguration* config) {

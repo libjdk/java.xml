@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -427,70 +419,38 @@ $String* XPATHErrorResources::ER_FUNCTION_TOKEN_NOT_FOUND = nullptr;
 $String* XPATHErrorResources::ER_CANNOT_DEAL_XPATH_TYPE = nullptr;
 $String* XPATHErrorResources::ER_NODESET_NOT_MUTABLE = nullptr;
 $String* XPATHErrorResources::ER_NODESETDTM_NOT_MUTABLE = nullptr;
-
 $String* XPATHErrorResources::ER_VAR_NOT_RESOLVABLE = nullptr;
-
 $String* XPATHErrorResources::ER_NULL_ERROR_HANDLER = nullptr;
-
 $String* XPATHErrorResources::ER_PROG_ASSERT_UNKNOWN_OPCODE = nullptr;
-
 $String* XPATHErrorResources::ER_ZERO_OR_ONE = nullptr;
-
 $String* XPATHErrorResources::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources::ER_ASNODEITERATOR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources::ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS = nullptr;
-
 $String* XPATHErrorResources::ER_COULD_NOT_FIND_VAR = nullptr;
-
 $String* XPATHErrorResources::ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING = nullptr;
-
 $String* XPATHErrorResources::ER_FASTSTRINGBUFFER_CANNOT_BE_NULL = nullptr;
-
 $String* XPATHErrorResources::ER_TWO_OR_THREE = nullptr;
-
 $String* XPATHErrorResources::ER_VARIABLE_ACCESSED_BEFORE_BIND = nullptr;
-
 $String* XPATHErrorResources::ER_FSB_CANNOT_TAKE_STRING = nullptr;
-
 $String* XPATHErrorResources::ER_SETTING_WALKER_ROOT_TO_NULL = nullptr;
-
 $String* XPATHErrorResources::ER_NODESETDTM_CANNOT_ITERATE = nullptr;
-
 $String* XPATHErrorResources::ER_NODESET_CANNOT_ITERATE = nullptr;
-
 $String* XPATHErrorResources::ER_NODESETDTM_CANNOT_INDEX = nullptr;
-
 $String* XPATHErrorResources::ER_NODESET_CANNOT_INDEX = nullptr;
-
 $String* XPATHErrorResources::ER_CANNOT_CALL_SETSHOULDCACHENODE = nullptr;
-
 $String* XPATHErrorResources::ER_ONLY_ALLOWS = nullptr;
-
 $String* XPATHErrorResources::ER_UNKNOWN_STEP = nullptr;
-
 $String* XPATHErrorResources::ER_EXPECTED_REL_LOC_PATH = nullptr;
-
 $String* XPATHErrorResources::ER_EXPECTED_LOC_PATH = nullptr;
 $String* XPATHErrorResources::ER_EXPECTED_LOC_PATH_AT_END_EXPR = nullptr;
-
 $String* XPATHErrorResources::ER_EXPECTED_LOC_STEP = nullptr;
-
 $String* XPATHErrorResources::ER_EXPECTED_NODE_TEST = nullptr;
-
 $String* XPATHErrorResources::ER_EXPECTED_STEP_PATTERN = nullptr;
-
 $String* XPATHErrorResources::ER_EXPECTED_REL_PATH_PATTERN = nullptr;
-
 $String* XPATHErrorResources::ER_CANT_CONVERT_TO_BOOLEAN = nullptr;
-
 $String* XPATHErrorResources::ER_CANT_CONVERT_TO_SINGLENODE = nullptr;
-
 $String* XPATHErrorResources::ER_CANT_GET_SNAPSHOT_LENGTH = nullptr;
-
 $String* XPATHErrorResources::ER_NON_ITERATOR_TYPE = nullptr;
-
 $String* XPATHErrorResources::ER_DOC_MUTATED = nullptr;
 $String* XPATHErrorResources::ER_INVALID_XPATH_TYPE = nullptr;
 $String* XPATHErrorResources::ER_EMPTY_XPATH_RESULT = nullptr;
@@ -499,7 +459,6 @@ $String* XPATHErrorResources::ER_NULL_RESOLVER = nullptr;
 $String* XPATHErrorResources::ER_CANT_CONVERT_TO_STRING = nullptr;
 $String* XPATHErrorResources::ER_NON_SNAPSHOT_TYPE = nullptr;
 $String* XPATHErrorResources::ER_WRONG_DOCUMENT = nullptr;
-
 $String* XPATHErrorResources::ER_WRONG_NODETYPE = nullptr;
 $String* XPATHErrorResources::ER_XPATH_ERROR = nullptr;
 $String* XPATHErrorResources::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED = nullptr;
@@ -528,32 +487,19 @@ $String* XPATHErrorResources::WG_CANNOT_MAKE_URL_FROM = nullptr;
 $String* XPATHErrorResources::WG_EXPAND_ENTITIES_NOT_SUPPORTED = nullptr;
 $String* XPATHErrorResources::WG_ILLEGAL_VARIABLE_REFERENCE = nullptr;
 $String* XPATHErrorResources::WG_UNSUPPORTED_ENCODING = nullptr;
-
 $String* XPATHErrorResources::ER_DETACH_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources::ER_NUM_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources::ER_XSTR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources::ER_STR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
 $ObjectArray2* XPATHErrorResources::_contents = nullptr;
-
 $String* XPATHErrorResources::BAD_CODE = nullptr;
-
 $String* XPATHErrorResources::FORMAT_FAILED = nullptr;
-
 $String* XPATHErrorResources::ERROR_RESOURCES = nullptr;
-
 $String* XPATHErrorResources::ERROR_STRING = nullptr;
-
 $String* XPATHErrorResources::ERROR_HEADER = nullptr;
-
 $String* XPATHErrorResources::WARNING_HEADER = nullptr;
-
 $String* XPATHErrorResources::XSL_HEADER = nullptr;
-
 $String* XPATHErrorResources::XML_HEADER = nullptr;
-
 $String* XPATHErrorResources::QUERY_HEADER = nullptr;
 
 void XPATHErrorResources::init$() {

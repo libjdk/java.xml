@@ -3,12 +3,6 @@
 #include <com/sun/org/apache/xalan/internal/lib/ExsltBase.h>
 #include <com/sun/org/apache/xml/internal/utils/DOM2Helper.h>
 #include <com/sun/org/apache/xpath/internal/NodeSet.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Map.h>

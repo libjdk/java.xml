@@ -3,15 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/util/EncodingMap.h>
 #include <com/sun/org/apache/xml/internal/serialize/EncodingInfo.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Locale.h>
 #include <java/util/Map.h>
@@ -44,11 +35,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _Encodings_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _Encodings_FieldInfo_[] = {
 	{"DEFAULT_LAST_PRINTABLE", "I", nullptr, $STATIC | $FINAL, $constField(Encodings, DEFAULT_LAST_PRINTABLE)},

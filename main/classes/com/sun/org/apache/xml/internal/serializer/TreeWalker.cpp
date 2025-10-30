@@ -3,14 +3,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/SerializationHandler.h>
 #include <com/sun/org/apache/xml/internal/utils/AttList.h>
 #include <com/sun/org/apache/xml/internal/utils/DOM2Helper.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/Result.h>
 #include <org/w3c/dom/Comment.h>
 #include <org/w3c/dom/Element.h>

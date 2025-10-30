@@ -22,17 +22,7 @@
 #include <com/sun/org/apache/xpath/internal/objects/NotEqualComparator.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/objects/XString.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -161,17 +151,11 @@ $Object* allocate$XNodeSet($Class* clazz) {
 	return $of($alloc(XNodeSet));
 }
 
-
 $LessThanComparator* XNodeSet::S_LT = nullptr;
-
 $LessThanOrEqualComparator* XNodeSet::S_LTE = nullptr;
-
 $GreaterThanComparator* XNodeSet::S_GT = nullptr;
-
 $GreaterThanOrEqualComparator* XNodeSet::S_GTE = nullptr;
-
 $EqualComparator* XNodeSet::S_EQ = nullptr;
-
 $NotEqualComparator* XNodeSet::S_NEQ = nullptr;
 
 void XNodeSet::init$() {
@@ -315,30 +299,26 @@ void XNodeSet::release($DTMIterator* iter) {
 }
 
 $DTMIterator* XNodeSet::iter() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		if (hasCache()) {
 			return cloneWithReset();
 		} else {
 			return this;
 		}
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, cnse, $catch());
+	} catch ($CloneNotSupportedException& cnse) {
 		$throwNew($RuntimeException, $(cnse->getMessage()));
 	}
 	$shouldNotReachHere();
 }
 
 $XObject* XNodeSet::getFresh() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		if (hasCache()) {
 			return $cast($XObject, cloneWithReset());
 		} else {
 			return this;
 		}
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, cnse, $catch());
+	} catch ($CloneNotSupportedException& cnse) {
 		$throwNew($RuntimeException, $(cnse->getMessage()));
 	}
 	$shouldNotReachHere();
@@ -459,8 +439,7 @@ bool XNodeSet::greaterThanOrEqual($XObject* obj2) {
 bool XNodeSet::equals($XObject* obj2) {
 	try {
 		return compare(obj2, XNodeSet::S_EQ);
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($WrappedRuntimeException, te);
 	}
 	$shouldNotReachHere();

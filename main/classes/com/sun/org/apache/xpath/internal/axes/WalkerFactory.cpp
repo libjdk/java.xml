@@ -32,19 +32,7 @@
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <com/sun/org/apache/xpath/internal/patterns/StepPattern.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ALL
@@ -334,7 +322,6 @@ bool WalkerFactory::isSet(int32_t analysis, int32_t bits) {
 
 void WalkerFactory::diagnoseIterator($String* name, int32_t analysis, $Compiler* compiler) {
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$var($String, var$2, $$str({$($nc(compiler)->toString()), ", "_s, name, ", "_s}));
 	$var($String, var$1, $$concat(var$2, $($Integer::toBinaryString(analysis))));
 	$var($String, var$0, $$concat(var$1, ", "));

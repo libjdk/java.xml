@@ -4,24 +4,14 @@
 #include <com/sun/org/apache/xml/internal/res/XMLErrorResources.h>
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
 #include <com/sun/org/apache/xml/internal/utils/WrappedRuntimeException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/ReflectiveOperationException.h>
-#include <java/lang/RuntimeException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -99,8 +89,7 @@ void ObjectPool::init$($Class* type) {
 void ObjectPool::init$($String* className) {
 	try {
 		$set(this, objectType, $ObjectFactory::findProviderClass(className, true));
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, cnfe, $catch());
+	} catch ($ClassNotFoundException& cnfe) {
 		$throwNew($WrappedRuntimeException, cnfe);
 	}
 	$set(this, freeStack, $new($ArrayList));
@@ -133,18 +122,12 @@ $Object* ObjectPool::getInstance() {
 		if ($nc(this->freeStack)->isEmpty()) {
 			try {
 				return $of($nc($($nc(this->objectType)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0)));
-			} catch ($InstantiationException&) {
-				$var($Exception, ex, $catch());
-			} catch ($IllegalAccessException&) {
-				$var($Exception, ex, $catch());
-			} catch ($SecurityException&) {
-				$var($Exception, ex, $catch());
-			} catch ($IllegalArgumentException&) {
-				$var($Exception, ex, $catch());
-			} catch ($InvocationTargetException&) {
-				$var($Exception, ex, $catch());
-			} catch ($NoSuchMethodException&) {
-				$var($Exception, ex, $catch());
+			} catch ($InstantiationException& ex) {
+			} catch ($IllegalAccessException& ex) {
+			} catch ($SecurityException& ex) {
+			} catch ($IllegalArgumentException& ex) {
+			} catch ($InvocationTargetException& ex) {
+			} catch ($NoSuchMethodException& ex) {
 			}
 			$init($XMLErrorResources);
 			$throwNew($RuntimeException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_EXCEPTION_CREATING_POOL, nullptr)));

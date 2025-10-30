@@ -29,24 +29,9 @@
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
 #include <java/io/OutputStreamWriter.h>
-#include <java/io/PrintStream.h>
 #include <java/io/UnsupportedEncodingException.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
@@ -367,19 +352,16 @@ void ToStream::closeCDATA() {
 		$init($SerializerConstants);
 		$nc(this->m_writer)->write($SerializerConstants::CDATA_DELIMITER_CLOSE);
 		this->m_cdataTagOpen = false;
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
 
 void ToStream::serialize($Node* node) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var($TreeWalker, walker, $new($TreeWalker, this));
 		walker->traverse(node);
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($WrappedRuntimeException, se);
 	}
 }
@@ -390,7 +372,6 @@ bool ToStream::isUTF16Surrogate(char16_t c) {
 }
 
 void ToStream::flushWriter() {
-	$useLocalCurrentObjectStackCache();
 	$var($Writer, writer, this->m_writer);
 	if (nullptr != writer) {
 		try {
@@ -408,8 +389,7 @@ void ToStream::flushWriter() {
 			} else {
 				writer->flush();
 			}
-		} catch ($IOException&) {
-			$var($IOException, ioe, $catch());
+		} catch ($IOException& ioe) {
 			$throwNew($SAXException, static_cast<$Exception*>(ioe));
 		}
 	}
@@ -420,7 +400,6 @@ $OutputStream* ToStream::getOutputStream() {
 }
 
 void ToStream::elementDecl($String* name, $String* model) {
-	$useLocalCurrentObjectStackCache();
 	if (this->m_inExternalDTD) {
 		return;
 	}
@@ -433,8 +412,7 @@ void ToStream::elementDecl($String* name, $String* model) {
 		writer->write(model);
 		writer->write((int32_t)u'>');
 		writer->write(this->m_lineSep, 0, this->m_lineSepLen);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -446,8 +424,7 @@ void ToStream::internalEntityDecl($String* name, $String* value) {
 	try {
 		DTDprolog();
 		outputEntityDecl(name, value);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -521,8 +498,7 @@ void ToStream::setProp($String* name, $String* val$renamed, bool defaultVal) {
 										$nc(this->m_errListener)->warning($$new($TransformerException, msg, this->m_sourceLocator));
 										$nc(this->m_errListener)->warning($$new($TransformerException, msg2, this->m_sourceLocator));
 									}
-								} catch ($Exception&) {
-									$catch();
+								} catch ($Exception& e) {
 								}
 								$assign(newEncoding, $Encodings::DEFAULT_MIME_ENCODING);
 								$assign(val, $Encodings::DEFAULT_MIME_ENCODING);
@@ -728,8 +704,7 @@ void ToStream::setOutputStreamInternal($OutputStream* output, bool setByUser) {
 	if ($nc($Encodings::DEFAULT_MIME_ENCODING)->equalsIgnoreCase(encoding)) {
 		try {
 			setWriterInternal($$new($WriterToUTF8Buffered, output), false);
-		} catch ($UnsupportedEncodingException&) {
-			$var($UnsupportedEncodingException, e, $catch());
+		} catch ($UnsupportedEncodingException& e) {
 			e->printStackTrace();
 		}
 	} else {
@@ -741,19 +716,16 @@ void ToStream::setOutputStreamInternal($OutputStream* output, bool setByUser) {
 			$var($Writer, osw, nullptr);
 			try {
 				$assign(osw, $Encodings::getWriter(output, encoding));
-			} catch ($UnsupportedEncodingException&) {
-				$var($UnsupportedEncodingException, uee, $catch());
+			} catch ($UnsupportedEncodingException& uee) {
 				$assign(osw, nullptr);
 			}
 			if (osw == nullptr) {
-				$init($System);
 				$nc($System::out)->println($$str({"Warning: encoding \""_s, encoding, "\" not supported, using "_s, $Encodings::DEFAULT_MIME_ENCODING}));
 				$assign(encoding, $Encodings::DEFAULT_MIME_ENCODING);
 				setEncoding(encoding);
 				try {
 					$assign(osw, $Encodings::getWriter(output, encoding));
-				} catch ($UnsupportedEncodingException&) {
-					$var($UnsupportedEncodingException, e, $catch());
+				} catch ($UnsupportedEncodingException& e) {
 					e->printStackTrace();
 				}
 			}
@@ -790,7 +762,6 @@ void ToStream::printSpace(int32_t n) {
 }
 
 void ToStream::attributeDecl($String* eName, $String* aName, $String* type, $String* valueDefault, $String* value) {
-	$useLocalCurrentObjectStackCache();
 	if (this->m_inExternalDTD) {
 		return;
 	}
@@ -809,8 +780,7 @@ void ToStream::attributeDecl($String* eName, $String* aName, $String* type, $Str
 		}
 		writer->write((int32_t)u'>');
 		writer->write(this->m_lineSep, 0, this->m_lineSepLen);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -833,8 +803,7 @@ void ToStream::externalEntityDecl($String* name, $String* publicId, $String* sys
 		}
 		$nc(this->m_writer)->write("\" >"_s);
 		$nc(this->m_writer)->write(this->m_lineSep, 0, this->m_lineSepLen);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		e->printStackTrace();
 	}
 }
@@ -962,7 +931,6 @@ void ToStream::startNonEscaping() {
 }
 
 void ToStream::cdata($chars* ch, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t old_start = start;
 		if ($nc(this->m_elemContext)->m_startTagOpen) {
@@ -992,8 +960,7 @@ void ToStream::cdata($chars* ch, int32_t start, int32_t length) {
 		if (this->m_tracer != nullptr) {
 			$SerializerBase::fireCDATAEvent(ch, old_start, length);
 		}
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$init($Utils);
 		$init($MsgKey);
 		$throwNew($SAXException, $($nc($Utils::messages)->createMessage($MsgKey::ER_OIERROR, nullptr)), ioe);
@@ -1014,8 +981,7 @@ void ToStream::charactersRaw($chars* ch, int32_t start, int32_t length) {
 			$nc(this->m_elemContext)->m_startTagOpen = false;
 		}
 		$nc(this->m_writer)->write(ch, start, length);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -1073,7 +1039,6 @@ bool ToStream::getIndent() {
 }
 
 void ToStream::outputCharacters($chars* chars, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		int32_t i = 0;
 		char16_t ch1 = 0;
@@ -1138,8 +1103,7 @@ void ToStream::outputCharacters($chars* chars, int32_t start, int32_t length) {
 			$nc(this->m_writer)->write(chars, startClean, lengthClean);
 		}
 		this->m_isprevtext = true;
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -1170,12 +1134,11 @@ void ToStream::flushCharactersBuffer(bool isText) {
 					}
 					$nc(this->m_charactersBuffer)->flush(skipBeginningNewlines);
 				}
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			$nc(this->m_charactersBuffer)->clear();
 		}
@@ -1345,8 +1308,7 @@ void ToStream::startElement($String* namespaceURI, $String* localName, $String* 
 		$var($Writer, writer, this->m_writer);
 		$nc(writer)->write((int32_t)u'<');
 		writer->write(name);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	if (this->m_doIndent) {
@@ -1411,8 +1373,7 @@ void ToStream::outputDocTypeDecl($String* name, bool closeDecl) {
 				writer->write(this->m_lineSep, 0, this->m_lineSepLen);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -1487,8 +1448,7 @@ void ToStream::endElement($String* namespaceURI, $String* localName, $String* na
 			writer->write(name);
 			writer->write((int32_t)u'>');
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	if (this->m_doIndent) {
@@ -1537,7 +1497,6 @@ bool ToStream::startPrefixMapping($String* prefix, $String* uri, bool shouldFlus
 }
 
 void ToStream::comment($chars* ch, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	int32_t start_old = start;
 	if (isInEntityRef()) {
 		return;
@@ -1585,8 +1544,7 @@ void ToStream::comment($chars* ch, int32_t start, int32_t length) {
 			}
 		}
 		writer->write(ToStream::COMMENT_END);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	this->m_startNewLine = true;
@@ -1603,7 +1561,6 @@ void ToStream::endCDATA() {
 }
 
 void ToStream::endDTD() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		if (this->m_needToCallStartDocument) {
 			return;
@@ -1619,8 +1576,7 @@ void ToStream::endDTD() {
 			$nc(writer)->write((int32_t)u'>');
 		}
 		$nc(writer)->write(this->m_lineSep, 0, this->m_lineSepLen);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -1681,8 +1637,7 @@ void ToStream::closeStartTag() {
 				$nc(this->m_attributes)->clear();
 			}
 			$nc(this->m_writer)->write((int32_t)u'>');
-		} catch ($IOException&) {
-			$var($IOException, e, $catch());
+		} catch ($IOException& e) {
 			$throwNew($SAXException, static_cast<$Exception*>(e));
 		}
 		if (this->m_StringOfCDATASections != nullptr) {
@@ -1886,8 +1841,7 @@ bool ToStream::doAddAttributeAlways($String* uri, $String* localName, $String* r
 			}
 			try {
 				$var($String, prefixUsed, ensureAttributesNamespaceIsDeclared(uri, localName, rawName));
-			} catch ($SAXException&) {
-				$var($SAXException, e, $catch());
+			} catch ($SAXException& e) {
 				e->printStackTrace();
 			}
 		}
@@ -1927,10 +1881,8 @@ void ToStream::firePseudoAttributes() {
 			sb->append(u'>');
 			$var($chars, ch, $nc($(sb->toString()))->toCharArray());
 			$nc(this->m_tracer)->fireGenerateEvent($SerializerTrace::EVENTTYPE_OUTPUT_PSEUDO_CHARACTERS, ch, 0, ch->length);
-		} catch ($IOException&) {
-			$catch();
-		} catch ($SAXException&) {
-			$catch();
+		} catch ($IOException& ioe) {
+		} catch ($SAXException& se) {
 		}
 	}
 }
@@ -1989,8 +1941,7 @@ void ToStream::notationDecl($String* name, $String* pubID, $String* sysID) {
 		}
 		$nc(this->m_writer)->write("\" >"_s);
 		$nc(this->m_writer)->write(this->m_lineSep, 0, this->m_lineSepLen);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		e->printStackTrace();
 	}
 }
@@ -2011,8 +1962,7 @@ void ToStream::unparsedEntityDecl($String* name, $String* pubID, $String* sysID,
 		$nc(this->m_writer)->write(notationName);
 		$nc(this->m_writer)->write(" >"_s);
 		$nc(this->m_writer)->write(this->m_lineSep, 0, this->m_lineSepLen);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		e->printStackTrace();
 	}
 }

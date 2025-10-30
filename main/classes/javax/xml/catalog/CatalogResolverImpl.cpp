@@ -5,17 +5,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/MalformedURLException.h>
 #include <java/net/URL.h>
 #include <javax/xml/catalog/Catalog.h>
@@ -218,8 +207,7 @@ $Source* CatalogResolverImpl::resolve($String* href$renamed, $String* base$renam
 				$assign(url, $nc(href)->length() == 0 ? baseURL : $new($URL, baseURL, uri));
 				$assign(result, $nc(url)->toString());
 			}
-		} catch ($MalformedURLException&) {
-			$var($MalformedURLException, mue, $catch());
+		} catch ($MalformedURLException& mue) {
 			$CatalogMessages::reportError($CatalogMessages::ERR_CREATING_URI, $$new($ObjectArray, {
 				$of(href),
 				$of(base)
@@ -240,12 +228,10 @@ void CatalogResolverImpl::setEntityResolver($SAXSource* source) {
 		spFactory->setNamespaceAware(true);
 		try {
 			$assign(reader, $nc($(spFactory->newSAXParser()))->getXMLReader());
-		} catch ($ParserConfigurationException&) {
-			$var($Exception, ex, $catch());
+		} catch ($ParserConfigurationException& ex) {
 			$init($CatalogMessages);
 			$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_PARSER_CONF, static_cast<$Throwable*>(ex));
-		} catch ($SAXException&) {
-			$var($Exception, ex, $catch());
+		} catch ($SAXException& ex) {
 			$init($CatalogMessages);
 			$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_PARSER_CONF, static_cast<$Throwable*>(ex));
 		}
@@ -263,8 +249,7 @@ $Object* CatalogResolverImpl::resolveEntity($String* publicId, $String* systemId
 	if (is != nullptr && !is->isEmpty()) {
 		try {
 			return $of($$new($URL, $(is->getSystemId()))->openStream());
-		} catch ($IOException&) {
-			$catch();
+		} catch ($IOException& ex) {
 		}
 	}
 	$GroupEntry$ResolveType* resolveType = $nc(($cast($CatalogImpl, this->catalog)))->getResolve();

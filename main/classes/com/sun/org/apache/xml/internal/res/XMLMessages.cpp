@@ -1,15 +1,5 @@
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/MessageFormat.h>
 #include <java/util/Locale.h>
 #include <java/util/ResourceBundle.h>
@@ -69,13 +59,9 @@ $Object* allocate$XMLMessages($Class* clazz) {
 	return $of($alloc(XMLMessages));
 }
 
-
 $ResourceBundle* XMLMessages::XMLBundle = nullptr;
-
 $String* XMLMessages::XML_ERROR_RESOURCES = nullptr;
-
 $String* XMLMessages::BAD_CODE = nullptr;
-
 $String* XMLMessages::FORMAT_FAILED = nullptr;
 
 void XMLMessages::init$() {
@@ -124,8 +110,7 @@ $String* XMLMessages::createMsg($ResourceBundle* fResourceBundle, $String* msgKe
 				}
 			}
 			$assign(fmsg, $MessageFormat::format(msg, args));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$assign(fmsg, $nc(fResourceBundle)->getString(XMLMessages::FORMAT_FAILED));
 			$plusAssign(fmsg, $$str({" "_s, msg}));
 		}

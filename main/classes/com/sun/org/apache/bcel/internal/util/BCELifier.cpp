@@ -19,21 +19,8 @@
 #include <com/sun/org/apache/bcel/internal/util/BCELifier$FLAGS.h>
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Package.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <jcpp.h>
 
@@ -386,13 +373,11 @@ void BCELifier::main($StringArray* argv) {
 	$init(BCELifier);
 	$useLocalCurrentObjectStackCache();
 	if ($nc(argv)->length != 1) {
-		$init($System);
 		$nc($System::out)->println("Usage: BCELifier classname"_s);
 		$nc($System::out)->println("\tThe class must exist on the classpath"_s);
 		return;
 	}
 	$var($JavaClass, java_class, getJavaClass($nc(argv)->get(0)));
-	$init($System);
 	$var(BCELifier, bcelifier, $new(BCELifier, java_class, $System::out));
 	bcelifier->start();
 }

@@ -28,28 +28,11 @@
 #include <java/io/FilenameFilter.h>
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/ClassNotFoundException.h>
 #include <java/lang/Enum.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/NumberFormatException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/MalformedURLException.h>
 #include <java/net/URI.h>
 #include <java/net/URL.h>
@@ -424,9 +407,7 @@ $String* TransformerFactoryImpl::USE_CLASSPATH = nullptr;
 $String* TransformerFactoryImpl::DEBUG = nullptr;
 $String* TransformerFactoryImpl::ENABLE_INLINING = nullptr;
 $String* TransformerFactoryImpl::INDENT_NUMBER = nullptr;
-
 $String* TransformerFactoryImpl::DEFAULT_TRANSLET_NAME = nullptr;
-
 $String* TransformerFactoryImpl::DEFAULT_TRANSLATE_PACKAGE = nullptr;
 
 void TransformerFactoryImpl::init$() {
@@ -624,8 +605,7 @@ void TransformerFactoryImpl::setAttribute($String* name, Object$* value) {
 			try {
 				this->_indentNumber = $Integer::parseInt($cast($String, value));
 				return;
-			} catch ($NumberFormatException&) {
-				$catch();
+			} catch ($NumberFormatException& e) {
 			}
 		} else if ($instanceOf($Integer, value)) {
 			this->_indentNumber = $nc(($cast($Integer, value)))->intValue();
@@ -750,16 +730,16 @@ void TransformerFactoryImpl::setFeature($String* name, bool value) {
 
 bool TransformerFactoryImpl::getFeature($String* name) {
 	$useLocalCurrentObjectStackCache();
-		$init($DOMSource);
-		$init($DOMResult);
-		$init($SAXSource);
-		$init($SAXResult);
-		$init($StAXSource);
-		$init($StAXResult);
-		$init($StreamSource);
-		$init($StreamResult);
-		$init($SAXTransformerFactory);
-		$init($JdkConstants);
+	$init($DOMSource);
+	$init($DOMResult);
+	$init($SAXSource);
+	$init($SAXResult);
+	$init($StAXSource);
+	$init($StAXResult);
+	$init($StreamSource);
+	$init($StreamResult);
+	$init($SAXTransformerFactory);
+	$init($JdkConstants);
 	$var($StringArray, features, $new($StringArray, {
 		$DOMSource::FEATURE,
 		$DOMResult::FEATURE,
@@ -841,13 +821,10 @@ $Source* TransformerFactoryImpl::getAssociatedStylesheet($Source* source, $Strin
 		if (this->_uriResolver != nullptr) {
 			_stylesheetPIHandler->setURIResolver(this->_uriResolver);
 		}
-	} catch ($StopParseException&) {
-		$catch();
-	} catch ($SAXException&) {
-		$var($Exception, e, $catch());
+	} catch ($StopParseException& e) {
+	} catch ($SAXException& e) {
 		$throwNew($TransformerConfigurationException, "getAssociatedStylesheets failed"_s, static_cast<$Throwable*>(e));
-	} catch ($IOException&) {
-		$var($Exception, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($TransformerConfigurationException, "getAssociatedStylesheets failed"_s, static_cast<$Throwable*>(e));
 	}
 	return _stylesheetPIHandler->getAssociatedStylesheet();
@@ -903,8 +880,7 @@ void TransformerFactoryImpl::passErrorsToListener($List* messages) {
 			$var($String, message, $nc(($cast($ErrorMsg, $(messages->get(pos)))))->toString());
 			$nc(this->_errorListener)->error($$new($TransformerException, message));
 		}
-	} catch ($TransformerException&) {
-		$catch();
+	} catch ($TransformerException& e) {
 	}
 }
 
@@ -924,13 +900,11 @@ $Templates* TransformerFactoryImpl::newTemplates($Source* source) {
 				templates->setURIResolver(this->_uriResolver);
 			}
 			return templates;
-		} catch ($ClassNotFoundException&) {
-			$var($ClassNotFoundException, cnfe, $catch());
+		} catch ($ClassNotFoundException& cnfe) {
 			$init($ErrorMsg);
 			$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::CLASS_NOT_FOUND_ERR, $of(transletName)));
 			$throwNew($TransformerConfigurationException, $(err->toString()));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$init($ErrorMsg);
 			$var($String, var$0, $str($new($ErrorMsg, $ErrorMsg::RUNTIME_ERROR_KEY)));
 			$var($ErrorMsg, err, $new($ErrorMsg, $$concat(var$0, $(e->getMessage()))));
@@ -951,11 +925,9 @@ $Templates* TransformerFactoryImpl::newTemplates($Source* source) {
 		if (bytecodes != nullptr) {
 			if (this->_debug) {
 				if (this->_jarFileName != nullptr) {
-					$init($System);
 					$init($ErrorMsg);
 					$nc($System::err)->println($of($$new($ErrorMsg, $ErrorMsg::TRANSFORM_WITH_JAR_STR, $of(transletClassName), $of(this->_jarFileName))));
 				} else {
-					$init($System);
 					$init($ErrorMsg);
 					$nc($System::err)->println($of($$new($ErrorMsg, $ErrorMsg::TRANSFORM_WITH_TRANSLET_STR, $of(transletClassName))));
 				}
@@ -1034,16 +1006,14 @@ $Templates* TransformerFactoryImpl::newTemplates($Source* source) {
 	if ((this->_generateTranslet || this->_autoTranslet) && bytecodes != nullptr && this->_jarFileName != nullptr) {
 		try {
 			xsltc->outputToJar();
-		} catch ($IOException&) {
-			$catch();
+		} catch ($IOException& e) {
 		}
 	}
 	resetTransientAttributes();
 	if (!$equals(this->_errorListener, this)) {
 		try {
 			passWarningsToListener($(xsltc->getWarnings()));
-		} catch ($TransformerException&) {
-			$var($TransformerException, e, $catch());
+		} catch ($TransformerException& e) {
 			$throwNew($TransformerConfigurationException, static_cast<$Throwable*>(e));
 		}
 	} else {
@@ -1069,8 +1039,7 @@ $Templates* TransformerFactoryImpl::newTemplates($Source* source) {
 			passErrorsToListener($(xsltc->getErrors()));
 			try {
 				$nc(this->_errorListener)->fatalError(exc);
-			} catch ($TransformerException&) {
-				$catch();
+			} catch ($TransformerException& te) {
 			}
 		} else {
 			xsltc->printErrors();
@@ -1125,17 +1094,14 @@ $XMLFilter* TransformerFactoryImpl::newXMLFilter($Source* src) {
 }
 
 $XMLFilter* TransformerFactoryImpl::newXMLFilter($Templates* templates) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $new($TrAXFilter, templates);
-	} catch ($TransformerConfigurationException&) {
-		$var($TransformerConfigurationException, e1, $catch());
+	} catch ($TransformerConfigurationException& e1) {
 		if (this->_errorListener != nullptr) {
 			try {
 				$nc(this->_errorListener)->fatalError(e1);
 				return nullptr;
-			} catch ($TransformerException&) {
-				$var($TransformerException, e2, $catch());
+			} catch ($TransformerException& e2) {
 				$throwNew($TransformerConfigurationException, static_cast<$Throwable*>(e2));
 			}
 		}
@@ -1161,13 +1127,11 @@ $InputSource* TransformerFactoryImpl::loadSource($String* href, $String* context
 		if (source != nullptr) {
 			return $Util::getInputSource(xsltc, source);
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, e, $catch());
+	} catch ($TransformerException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::INVALID_URI_ERR, $of($$str({href, "\n"_s, $(e->getMessage())})), $of(this)));
 		$nc($($nc(xsltc)->getParser()))->reportError($Constants::FATAL, msg);
-	} catch ($CatalogException&) {
-		$var($CatalogException, e, $catch());
+	} catch ($CatalogException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::CATALOG_EXCEPTION, $of($$str({href, "\n"_s, $(e->getMessage())})), $of(this)));
 		$nc($($nc(xsltc)->getParser()))->reportError($Constants::FATAL, msg);
@@ -1236,16 +1200,14 @@ $byteArray2* TransformerFactoryImpl::getBytecodesFromClasses($Source* source, $S
 		$var($FileInputStream, input, nullptr);
 		try {
 			$assign(input, $new($FileInputStream, transletFile));
-		} catch ($FileNotFoundException&) {
-			$var($FileNotFoundException, e, $catch());
+		} catch ($FileNotFoundException& e) {
 			return nullptr;
 		}
 		$var($bytes, bytes, $new($bytes, fileLength));
 		try {
 			readFromInputStream(bytes, input, fileLength);
 			$nc(input)->close();
-		} catch ($IOException&) {
-			$var($IOException, e, $catch());
+		} catch ($IOException& e) {
 			return nullptr;
 		}
 		bytecodes->add(bytes);
@@ -1266,16 +1228,14 @@ $byteArray2* TransformerFactoryImpl::getBytecodesFromClasses($Source* source, $S
 			$var($FileInputStream, auxinput, nullptr);
 			try {
 				$assign(auxinput, $new($FileInputStream, auxfile));
-			} catch ($FileNotFoundException&) {
-				$var($FileNotFoundException, e, $catch());
+			} catch ($FileNotFoundException& e) {
 				continue;
 			}
 			$var($bytes, bytes, $new($bytes, auxlength));
 			try {
 				readFromInputStream(bytes, auxinput, auxlength);
 				$nc(auxinput)->close();
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				continue;
 			}
 			bytecodes->add(bytes);
@@ -1322,8 +1282,7 @@ $byteArray2* TransformerFactoryImpl::getBytecodesFromJar($Source* source, $Strin
 	$var($ZipFile, jarFile, nullptr);
 	try {
 		$assign(jarFile, $new($ZipFile, file));
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		return nullptr;
 	}
 	$var($String, transletPath, $nc(fullClassName)->replace(u'.', u'/'));
@@ -1351,8 +1310,7 @@ $byteArray2* TransformerFactoryImpl::getBytecodesFromJar($Source* source, $Strin
 				readFromInputStream(bytes, input, size);
 				$nc(input)->close();
 				bytecodes->add(bytes);
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				return nullptr;
 			}
 		}
@@ -1408,8 +1366,7 @@ $String* TransformerFactoryImpl::getStylesheetFileName($Source* source) {
 			$var($URL, url, nullptr);
 			try {
 				$assign(url, $new($URL, systemId));
-			} catch ($MalformedURLException&) {
-				$var($MalformedURLException, e, $catch());
+			} catch ($MalformedURLException& e) {
 				return nullptr;
 			}
 			if ("file"_s->equals($($nc(url)->getProtocol()))) {

@@ -16,21 +16,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLConfigurationException.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Iterator.h>
@@ -173,8 +159,7 @@ void SAXParserImpl$JAXPSAXParser::init$($SAXParserImpl* saxParser, $XMLSecurityP
 		$set(this, fSecurityManager, $new($XMLSecurityManager, true));
 		try {
 			$SAXParser::setProperty("http://apache.org/xml/properties/security-manager"_s, this->fSecurityManager);
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($UnsupportedOperationException, $($SAXMessageFormatter::formatMessage($($nc(this->fConfiguration)->getLocale()), "property-not-recognized"_s, $$new($ObjectArray, {$of("http://apache.org/xml/properties/security-manager"_s)}))), e);
 		}
 	}
@@ -182,8 +167,7 @@ void SAXParserImpl$JAXPSAXParser::init$($SAXParserImpl* saxParser, $XMLSecurityP
 		$set(this, fSecurityPropertyMgr, $new($XMLSecurityPropertyManager));
 		try {
 			$SAXParser::setProperty("jdk.xml.xmlSecurityPropertyManager"_s, this->fSecurityPropertyMgr);
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($UnsupportedOperationException, $($SAXMessageFormatter::formatMessage($($nc(this->fConfiguration)->getLocale()), "property-not-recognized"_s, $$new($ObjectArray, {$of("http://apache.org/xml/properties/security-manager"_s)}))), e);
 		}
 	}
@@ -191,7 +175,6 @@ void SAXParserImpl$JAXPSAXParser::init$($SAXParserImpl* saxParser, $XMLSecurityP
 
 void SAXParserImpl$JAXPSAXParser::setFeature($String* name, bool value) {
 	$synchronized(this) {
-		$useLocalCurrentObjectStackCache();
 		if (name == nullptr) {
 			$throwNew($NullPointerException);
 		}
@@ -200,13 +183,11 @@ void SAXParserImpl$JAXPSAXParser::setFeature($String* name, bool value) {
 			try {
 				$nc(this->fSecurityManager)->setSecureProcessing(value);
 				setProperty("http://apache.org/xml/properties/security-manager"_s, this->fSecurityManager);
-			} catch ($SAXNotRecognizedException&) {
-				$var($SAXNotRecognizedException, exc, $catch());
+			} catch ($SAXNotRecognizedException& exc) {
 				if (value) {
 					$throw(exc);
 				}
-			} catch ($SAXNotSupportedException&) {
-				$var($SAXNotSupportedException, exc, $catch());
+			} catch ($SAXNotSupportedException& exc) {
 				if (value) {
 					$throw(exc);
 				}
@@ -405,8 +386,7 @@ void SAXParserImpl$JAXPSAXParser::setSchemaValidatorFeature($String* name, bool 
 	$useLocalCurrentObjectStackCache();
 	try {
 		$nc($nc(this->fSAXParser)->fSchemaValidator)->setFeature(name, value);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -421,8 +401,7 @@ void SAXParserImpl$JAXPSAXParser::setSchemaValidatorProperty($String* name, Obje
 	$useLocalCurrentObjectStackCache();
 	try {
 		$nc($nc(this->fSAXParser)->fSchemaValidator)->setProperty(name, value);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -436,8 +415,7 @@ void SAXParserImpl$JAXPSAXParser::setSchemaValidatorProperty($String* name, Obje
 void SAXParserImpl$JAXPSAXParser::resetSchemaValidator() {
 	try {
 		$nc($nc(this->fSAXParser)->fSchemaValidator)->reset($nc(this->fSAXParser)->fSchemaValidatorComponentManager);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }

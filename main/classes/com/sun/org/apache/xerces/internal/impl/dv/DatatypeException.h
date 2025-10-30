@@ -27,8 +27,10 @@ public:
 	$String* key = nullptr;
 	$ObjectArray* args = nullptr;
 	DatatypeException(const DatatypeException& e);
-	DatatypeException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline DatatypeException* operator ->() {
+		return (DatatypeException*)throwing$;
+	}
 };
 
 							} // dv

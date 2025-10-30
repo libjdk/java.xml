@@ -2,17 +2,8 @@
 
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$Property.h>
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/JdkConstants.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
@@ -94,7 +85,7 @@ $Object* allocate$XMLSecurityPropertyManager($Class* clazz) {
 
 void XMLSecurityPropertyManager::init$() {
 	$useLocalCurrentObjectStackCache();
-		$init($XMLSecurityPropertyManager$State);
+	$init($XMLSecurityPropertyManager$State);
 	$set(this, states, $new($XMLSecurityPropertyManager$StateArray, {
 		$XMLSecurityPropertyManager$State::DEFAULT,
 		$XMLSecurityPropertyManager$State::DEFAULT
@@ -210,8 +201,7 @@ void XMLSecurityPropertyManager::getSystemProperty($XMLSecurityPropertyManager$P
 			$init($XMLSecurityPropertyManager$State);
 			$nc(this->states)->set(property->ordinal(), $XMLSecurityPropertyManager$State::JAXPDOTPROPERTIES);
 		}
-	} catch ($NumberFormatException&) {
-		$catch();
+	} catch ($NumberFormatException& e) {
 	}
 }
 

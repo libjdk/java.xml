@@ -10,16 +10,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <javax/xml/transform/SourceLocator.h>
@@ -189,8 +179,8 @@ $DTMIterator* Expression::asIterator($XPathContext* xctxt, int32_t contextNode) 
 			$assign(var$2, $nc($(execute(xctxt)))->iter());
 			return$1 = true;
 			goto $finally;
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			$nc(xctxt)->popCurrentNodeAndExpression();
 		}
@@ -216,8 +206,8 @@ $DTMIterator* Expression::asIteratorRaw($XPathContext* xctxt, int32_t contextNod
 			$assign(var$2, $nc(nodeset)->iterRaw());
 			return$1 = true;
 			goto $finally;
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			$nc(xctxt)->popCurrentNodeAndExpression();
 		}

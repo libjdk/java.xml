@@ -26,13 +26,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xml/internal/utils/XML11Char.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/helpers/AttributesImpl.h>
 #include <jcpp.h>
 

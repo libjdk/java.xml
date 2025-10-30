@@ -3,14 +3,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/TransformerHandlerImpl.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLReaderManager.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <javax/xml/transform/Result.h>
 #include <javax/xml/transform/Templates.h>
@@ -112,14 +104,13 @@ void TrAXFilter::parse($InputSource* input) {
 				try {
 					$assign(managedReader, $nc($($XMLReaderManager::getInstance(this->_overrideDefaultParser)))->getXMLReader());
 					setParent(managedReader);
-				} catch ($SAXException&) {
-					$var($SAXException, e, $catch());
+				} catch ($SAXException& e) {
 					$throwNew($SAXException, $(e->toString()));
 				}
 			}
 			$nc($(getParent()))->parse(input);
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			if (managedReader != nullptr) {
 				$nc($($XMLReaderManager::getInstance(this->_overrideDefaultParser)))->releaseXMLReader(managedReader);
@@ -141,8 +132,7 @@ void TrAXFilter::setContentHandler($ContentHandler* handler) {
 	if (getParent() == nullptr) {
 		try {
 			createParent();
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			return;
 		}
 	}

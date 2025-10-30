@@ -30,13 +30,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
 #include <com/sun/org/apache/xml/internal/dtm/Axis.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Set.h>
 #include <jcpp.h>
 
@@ -121,7 +114,6 @@ $ClassInfo _CastExpr_ClassInfo_ = {
 $Object* allocate$CastExpr($Class* clazz) {
 	return $of($alloc(CastExpr));
 }
-
 
 $MultiHashtable* CastExpr::InternalTypeMap = nullptr;
 

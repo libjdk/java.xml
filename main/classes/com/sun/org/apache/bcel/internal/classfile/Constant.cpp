@@ -24,17 +24,9 @@
 #include <com/sun/org/apache/bcel/internal/util/BCELComparator.h>
 #include <java/io/DataInput.h>
 #include <java/io/DataOutputStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
 #include <java/lang/Cloneable.h>
 #include <java/lang/Error.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
@@ -147,8 +139,7 @@ $String* Constant::toString() {
 Constant* Constant::copy() {
 	try {
 		return $cast(Constant, $Cloneable::clone());
-	} catch ($CloneNotSupportedException&) {
-		$catch();
+	} catch ($CloneNotSupportedException& e) {
 	}
 	return nullptr;
 }
@@ -156,8 +147,7 @@ Constant* Constant::copy() {
 $Object* Constant::clone() {
 	try {
 		return $of($Cloneable::clone());
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$throwNew($Error, "Clone Not Supported"_s);
 	}
 	$shouldNotReachHere();

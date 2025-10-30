@@ -60,15 +60,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/RealType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -429,7 +420,7 @@ void Number::compileConstructor($ClassGenerator* classGen) {
 	$var($InstructionList, il, $new($InstructionList));
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$init($Type);
-		$init($Constants);
+	$init($Constants);
 	$assign(cons, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, $$new($TypeArray, {
 		$($Util::getJCRefType($Constants::TRANSLET_INTF_SIG)),
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),

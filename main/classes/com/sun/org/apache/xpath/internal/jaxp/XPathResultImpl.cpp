@@ -2,21 +2,7 @@
 
 #include <com/sun/org/apache/xpath/internal/jaxp/XPathNodesImpl.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Objects.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <javax/xml/xpath/XPathEvaluationResult$XPathResultType.h>
@@ -125,8 +111,7 @@ $Object* XPathResultImpl::value() {
 	$Objects::requireNonNull(this->type$);
 	try {
 		return $of(getValue(this->resultObject, this->type$));
-	} catch ($TransformerException&) {
-		$var($TransformerException, ex, $catch());
+	} catch ($TransformerException& ex) {
 		$throwNew($RuntimeException, static_cast<$Throwable*>(ex));
 	}
 	$shouldNotReachHere();
@@ -240,19 +225,16 @@ int32_t XPathResultImpl::classToInternalType($Class* type) {
 		$load($Number);
 		if ($Number::class$->isAssignableFrom(type)) {
 			return $XObject::CLASS_NUMBER;
+		} else if (type->isAssignableFrom($String::class$)) {
+			return $XObject::CLASS_STRING;
 		} else {
-			$load($String);
-			if (type->isAssignableFrom($String::class$)) {
-				return $XObject::CLASS_STRING;
+			$load($XPathNodes);
+			if (type->isAssignableFrom($XPathNodes::class$)) {
+				return $XObject::CLASS_NODESET;
 			} else {
-				$load($XPathNodes);
-				if (type->isAssignableFrom($XPathNodes::class$)) {
-					return $XObject::CLASS_NODESET;
-				} else {
-					$load($Node);
-					if (type->isAssignableFrom($Node::class$)) {
-						return $XObject::CLASS_RTREEFRAG;
-					}
+				$load($Node);
+				if (type->isAssignableFrom($Node::class$)) {
+					return $XObject::CLASS_RTREEFRAG;
 				}
 			}
 		}

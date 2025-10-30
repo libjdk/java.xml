@@ -7,13 +7,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -72,7 +65,7 @@ void BooleanCall::init$($QName* fname, $List* arguments) {
 $Type* BooleanCall::typeCheck($SymbolTable* stable) {
 	$nc(this->_arg)->typeCheck(stable);
 	$init($Type);
-	return $assignField(this, _type, $Type::Boolean);
+	return $set(this, _type, $Type::Boolean);
 }
 
 void BooleanCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {

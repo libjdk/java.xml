@@ -3,12 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/dom/CoreDOMImplementationImpl.h>
 #include <com/sun/org/apache/xerces/internal/dom/DOMImplementationImpl.h>
 #include <com/sun/org/apache/xerces/internal/dom/DOMImplementationListImpl.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>

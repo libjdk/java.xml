@@ -7,15 +7,6 @@
 #include <com/sun/org/apache/xml/internal/serialize/SerializerFactoryImpl.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Collections.h>
 #include <java/util/HashMap.h>
@@ -55,11 +46,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _SerializerFactory_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _SerializerFactory_FieldInfo_[] = {
 	{"FactoriesProperty", "Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticField(SerializerFactory, FactoriesProperty)},
@@ -143,8 +134,7 @@ void clinit$SerializerFactory($Class* class$) {
 					if ($nc(SerializerFactory::_factories)->containsKey($($nc(factory)->getSupportedMethod()))) {
 						$nc(SerializerFactory::_factories)->put($($nc(factory)->getSupportedMethod()), factory);
 					}
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& except) {
 				}
 			}
 		}

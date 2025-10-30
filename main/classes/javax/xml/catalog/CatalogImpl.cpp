@@ -3,25 +3,11 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/SAXParserFactoryImpl.h>
 #include <java/io/IOException.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/Void.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/MalformedURLException.h>
 #include <java/net/URI.h>
 #include <java/net/URL.h>
@@ -420,8 +406,7 @@ void CatalogImpl::init$(CatalogImpl* parent, $CatalogFeatures* f, $URIArray* uri
 						$set(this, systemId, temp);
 						try {
 							$set(this, baseURI, $new($URL, this->systemId));
-						} catch ($MalformedURLException&) {
-							$var($MalformedURLException, e, $catch());
+						} catch ($MalformedURLException& e) {
 							$init($CatalogMessages);
 							$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_INVALID_PATH, $$new($ObjectArray, {$of(temp)}), e);
 						}
@@ -512,19 +497,16 @@ void CatalogImpl::markAsSearched() {
 }
 
 void CatalogImpl::parse($String* systemId) {
-	$useLocalCurrentObjectStackCache();
 	if (this->parser == nullptr) {
 		$set(this, parser, getParser());
 	}
 	try {
 		$var($CatalogReader, reader, $new($CatalogReader, this, this->parser));
 		$nc(this->parser)->parse(systemId, static_cast<$DefaultHandler*>(reader));
-	} catch ($SAXException&) {
-		$var($Exception, ex, $catch());
+	} catch ($SAXException& ex) {
 		$init($CatalogMessages);
 		$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_PARSING_FAILED, static_cast<$Throwable*>(ex));
-	} catch ($IOException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IOException& ex) {
 		$init($CatalogMessages);
 		$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_PARSING_FAILED, static_cast<$Throwable*>(ex));
 	}
@@ -539,12 +521,10 @@ $SAXParser* CatalogImpl::getParser() {
 		spf->setValidating(false);
 		spf->setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"_s, false);
 		$assign(p, spf->newSAXParser());
-	} catch ($ParserConfigurationException&) {
-		$var($Exception, e, $catch());
+	} catch ($ParserConfigurationException& e) {
 		$init($CatalogMessages);
 		$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_PARSING_FAILED, static_cast<$Throwable*>(e));
-	} catch ($SAXException&) {
-		$var($Exception, e, $catch());
+	} catch ($SAXException& e) {
 		$init($CatalogMessages);
 		$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_PARSING_FAILED, static_cast<$Throwable*>(e));
 	}

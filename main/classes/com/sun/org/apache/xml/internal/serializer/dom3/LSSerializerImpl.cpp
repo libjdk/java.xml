@@ -24,19 +24,6 @@
 #include <java/io/UnsupportedEncodingException.h>
 #include <java/io/Writer.h>
 #include <java/lang/AbstractMethodError.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/HttpURLConnection.h>
 #include <java/net/URL.h>
 #include <java/net/URLConnection.h>
@@ -303,8 +290,8 @@ void LSSerializerImpl::init$() {
 	$set(this, fEndOfLine, "\n"_s);
 	$set(this, fDOMErrorHandler, nullptr);
 	$set(this, fDOMConfigProperties, nullptr);
-		$init($DOMConstants);
-		$init($JdkConstants);
+	$init($DOMConstants);
+	$init($JdkConstants);
 	$set(this, fRecognizedParameters, $new($StringArray, {
 		$DOMConstants::DOM_CANONICAL_FORM,
 		$DOMConstants::DOM_CDATA_SECTIONS,
@@ -882,8 +869,7 @@ bool LSSerializerImpl::write($Node* nodeArg, $LSOutput* destination) {
 		}
 		$nc(this->fDOMSerializer)->setNewLine(this->fEndOfLine);
 		$nc(this->fDOMSerializer)->serializeDOM3(nodeArg);
-	} catch ($UnsupportedEncodingException&) {
-		$var($UnsupportedEncodingException, ue, $catch());
+	} catch ($UnsupportedEncodingException& ue) {
 		$init($Utils);
 		$init($MsgKey);
 		$var($String, msg, $nc($Utils::messages)->createMessage($MsgKey::ER_UNSUPPORTED_ENCODING, nullptr));
@@ -891,15 +877,12 @@ bool LSSerializerImpl::write($Node* nodeArg, $LSOutput* destination) {
 			$nc(this->fDOMErrorHandler)->handleError($$new($DOMErrorImpl, $DOMError::SEVERITY_FATAL_ERROR, msg, $MsgKey::ER_UNSUPPORTED_ENCODING, ue));
 		}
 		$throwNew($LSException, $LSException::SERIALIZE_ERR, $(ue->getMessage()));
-	} catch ($LSException&) {
-		$var($LSException, lse, $catch());
+	} catch ($LSException& lse) {
 		$throw(lse);
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, e, $catch());
+	} catch ($RuntimeException& e) {
 		e->printStackTrace();
 		$throwNew($LSException, $LSException::SERIALIZE_ERR, e != nullptr ? $(e->getMessage()) : "NULL Exception"_s);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		if (this->fDOMErrorHandler != nullptr) {
 			$nc(this->fDOMErrorHandler)->handleError($$new($DOMErrorImpl, $DOMError::SEVERITY_FATAL_ERROR, $(e->getMessage()), nullptr, e));
 		}
@@ -944,15 +927,12 @@ $String* LSSerializerImpl::writeToString($Node* nodeArg) {
 		}
 		$nc(this->fDOMSerializer)->setNewLine(this->fEndOfLine);
 		$nc(this->fDOMSerializer)->serializeDOM3(nodeArg);
-	} catch ($LSException&) {
-		$var($LSException, lse, $catch());
+	} catch ($LSException& lse) {
 		$throw(lse);
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, e, $catch());
+	} catch ($RuntimeException& e) {
 		e->printStackTrace();
 		$throwNew($LSException, $LSException::SERIALIZE_ERR, $(e->toString()));
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		if (this->fDOMErrorHandler != nullptr) {
 			$nc(this->fDOMErrorHandler)->handleError($$new($DOMErrorImpl, $DOMError::SEVERITY_FATAL_ERROR, $(e->getMessage()), nullptr, e));
 		}
@@ -1034,15 +1014,12 @@ bool LSSerializerImpl::writeToURI($Node* nodeArg, $String* uri) {
 		}
 		$nc(this->fDOMSerializer)->setNewLine(this->fEndOfLine);
 		$nc(this->fDOMSerializer)->serializeDOM3(nodeArg);
-	} catch ($LSException&) {
-		$var($LSException, lse, $catch());
+	} catch ($LSException& lse) {
 		$throw(lse);
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, e, $catch());
+	} catch ($RuntimeException& e) {
 		e->printStackTrace();
 		$throwNew($LSException, $LSException::SERIALIZE_ERR, $(e->toString()));
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		if (this->fDOMErrorHandler != nullptr) {
 			$nc(this->fDOMErrorHandler)->handleError($$new($DOMErrorImpl, $DOMError::SEVERITY_FATAL_ERROR, $(e->getMessage()), nullptr, e));
 		}
@@ -1064,8 +1041,7 @@ $String* LSSerializerImpl::getXMLVersion($Node* nodeArg) {
 		if (doc != nullptr && $nc($(doc->getImplementation()))->hasFeature("Core"_s, "3.0"_s)) {
 			try {
 				return doc->getXmlVersion();
-			} catch ($AbstractMethodError&) {
-				$catch();
+			} catch ($AbstractMethodError& e) {
 			}
 		}
 	}

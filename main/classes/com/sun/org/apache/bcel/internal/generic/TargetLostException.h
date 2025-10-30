@@ -39,8 +39,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0xA0D612D715014400;
 	$Array<::com::sun::org::apache::bcel::internal::generic::InstructionHandle>* targets = nullptr;
 	TargetLostException(const TargetLostException& e);
-	TargetLostException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline TargetLostException* operator ->() {
+		return (TargetLostException*)throwing$;
+	}
 };
 
 						} // generic

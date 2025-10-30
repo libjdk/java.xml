@@ -22,8 +22,10 @@ public:
 	void init$($String* key, $ObjectArray* args);
 	static const int64_t serialVersionUID = (int64_t)0xC70B6DA39E9BC122;
 	InvalidDatatypeFacetException(const InvalidDatatypeFacetException& e);
-	InvalidDatatypeFacetException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline InvalidDatatypeFacetException* operator ->() {
+		return (InvalidDatatypeFacetException*)throwing$;
+	}
 };
 
 							} // dv

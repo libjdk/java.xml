@@ -28,8 +28,10 @@ public:
 	void init$($String* s, $Throwable* initCause);
 	static const int64_t serialVersionUID = (int64_t)0x6493D464DDBD3527;
 	ClassGenException(const ClassGenException& e);
-	ClassGenException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline ClassGenException* operator ->() {
+		return (ClassGenException*)throwing$;
+	}
 };
 
 						} // generic

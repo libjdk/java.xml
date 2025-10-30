@@ -1,16 +1,7 @@
 #include <com/sun/org/apache/xml/internal/utils/XMLStringDefault.h>
 
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/ext/LexicalHandler.h>
@@ -249,11 +240,9 @@ bool XMLStringDefault::hasString() {
 }
 
 double XMLStringDefault::toDouble() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc($($Double::valueOf(this->m_str)))->doubleValue();
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, nfe, $catch());
+	} catch ($NumberFormatException& nfe) {
 		$init($Double);
 		return $Double::NaN;
 	}

@@ -3,18 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/SAXParserImpl.h>
 #include <com/sun/org/apache/xerces/internal/util/SAXMessageFormatter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Locale.h>
@@ -113,11 +102,8 @@ $Object* allocate$SAXParserFactoryImpl($Class* clazz) {
 	return $of($alloc(SAXParserFactoryImpl));
 }
 
-
 $String* SAXParserFactoryImpl::VALIDATION_FEATURE = nullptr;
-
 $String* SAXParserFactoryImpl::NAMESPACES_FEATURE = nullptr;
-
 $String* SAXParserFactoryImpl::XINCLUDE_FEATURE = nullptr;
 
 void SAXParserFactoryImpl::init$() {
@@ -130,8 +116,7 @@ $SAXParser* SAXParserFactoryImpl::newSAXParser() {
 	$var($SAXParser, saxParserImpl, nullptr);
 	try {
 		$assign(saxParserImpl, $new($SAXParserImpl, this, this->features, this->fSecureProcess));
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($ParserConfigurationException, $(se->getMessage()));
 	}
 	return saxParserImpl;
@@ -142,21 +127,17 @@ $SAXParserImpl* SAXParserFactoryImpl::newSAXParserImpl() {
 	$var($SAXParserImpl, saxParserImpl, nullptr);
 	try {
 		$assign(saxParserImpl, $new($SAXParserImpl, this, this->features));
-	} catch ($SAXNotSupportedException&) {
-		$var($SAXNotSupportedException, e, $catch());
+	} catch ($SAXNotSupportedException& e) {
 		$throw(e);
-	} catch ($SAXNotRecognizedException&) {
-		$var($SAXNotRecognizedException, e, $catch());
+	} catch ($SAXNotRecognizedException& e) {
 		$throw(e);
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($ParserConfigurationException, $(se->getMessage()));
 	}
 	return saxParserImpl;
 }
 
 void SAXParserFactoryImpl::setFeature($String* name, bool value) {
-	$useLocalCurrentObjectStackCache();
 	if (name == nullptr) {
 		$throwNew($NullPointerException);
 	}
@@ -172,12 +153,10 @@ void SAXParserFactoryImpl::setFeature($String* name, bool value) {
 	putInFeatures(name, value);
 	try {
 		newSAXParserImpl();
-	} catch ($SAXNotSupportedException&) {
-		$var($SAXNotSupportedException, e, $catch());
+	} catch ($SAXNotSupportedException& e) {
 		$nc(this->features)->remove(name);
 		$throw(e);
-	} catch ($SAXNotRecognizedException&) {
-		$var($SAXNotRecognizedException, e, $catch());
+	} catch ($SAXNotRecognizedException& e) {
 		$nc(this->features)->remove(name);
 		$throw(e);
 	}

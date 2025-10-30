@@ -23,17 +23,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLPullParserConfiguration.h>
 #include <com/sun/org/apache/xml/internal/serializer/dom3/LSSerializerImpl.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
 #include <java/lang/ref/SoftReference.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <org/w3c/dom/DOMImplementation.h>
 #include <org/w3c/dom/Document.h>
@@ -199,7 +189,6 @@ $String* CoreDOMImplementationImpl::toString() {
 void CoreDOMImplementationImpl::finalize() {
 	this->$DOMImplementation::finalize();
 }
-
 
 CoreDOMImplementationImpl* CoreDOMImplementationImpl::singleton = nullptr;
 

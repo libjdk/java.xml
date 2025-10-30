@@ -20,8 +20,10 @@ public:
 	void init$();
 	static const int64_t serialVersionUID = (int64_t)0x02EA6F17783BB411;
 	StopParseException(const StopParseException& e);
-	StopParseException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline StopParseException* operator ->() {
+		return (StopParseException*)throwing$;
+	}
 };
 
 						} // utils

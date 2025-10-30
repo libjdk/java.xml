@@ -10,18 +10,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/StAXStream2SAX.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/catalog/CatalogFeatures$Feature.h>
 #include <javax/xml/catalog/CatalogFeatures.h>
@@ -202,8 +191,7 @@ $InputSource* Util::getInputSource($XSLTC* xsltc, $Source* source) {
 							$nc(reader)->setProperty(lastProperty, $JdkConstants::JDK_YES);
 						}
 					}
-				} catch ($SAXException&) {
-					$var($SAXException, se, $catch());
+				} catch ($SAXException& se) {
 					$XMLSecurityManager::printWarning($($nc($of(reader))->getClass()->getName()), lastProperty, se);
 				}
 				bool supportCatalog = true;
@@ -211,11 +199,9 @@ $InputSource* Util::getInputSource($XSLTC* xsltc, $Source* source) {
 				bool useCatalog = $nc(xsltc)->getFeature($JdkXmlFeatures$XmlFeature::USE_CATALOG);
 				try {
 					$nc(reader)->setFeature($JdkXmlUtils::USE_CATALOG, useCatalog);
-				} catch ($SAXNotRecognizedException&) {
-					$var($SAXException, e, $catch());
+				} catch ($SAXNotRecognizedException& e) {
 					supportCatalog = false;
-				} catch ($SAXNotSupportedException&) {
-					$var($SAXException, e, $catch());
+				} catch ($SAXNotSupportedException& e) {
 					supportCatalog = false;
 				}
 				if (supportCatalog & useCatalog) {
@@ -236,16 +222,13 @@ $InputSource* Util::getInputSource($XSLTC* xsltc, $Source* source) {
 								}
 							}
 						}
-					} catch ($SAXNotRecognizedException&) {
-						$catch();
+					} catch ($SAXNotRecognizedException& e) {
 					}
 				}
 				xsltc->setXMLReader(reader);
-			} catch ($SAXNotRecognizedException&) {
-				$var($SAXNotRecognizedException, snre, $catch());
+			} catch ($SAXNotRecognizedException& snre) {
 				$throwNew($TransformerConfigurationException, "SAXNotRecognizedException "_s, static_cast<$Throwable*>(snre));
-			} catch ($SAXNotSupportedException&) {
-				$var($SAXNotSupportedException, snse, $catch());
+			} catch ($SAXNotSupportedException& snse) {
 				$throwNew($TransformerConfigurationException, "SAXNotSupportedException "_s, static_cast<$Throwable*>(snse));
 			}
 		} else if ($instanceOf($DOMSource, source)) {
@@ -292,13 +275,11 @@ $InputSource* Util::getInputSource($XSLTC* xsltc, $Source* source) {
 			$throwNew($TransformerConfigurationException, $(err->toString()));
 		}
 		$nc(input)->setSystemId(systemId);
-	} catch ($NullPointerException&) {
-		$var($NullPointerException, e, $catch());
+	} catch ($NullPointerException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::JAXP_NO_SOURCE_ERR, $of("TransformerFactory.newTemplates()"_s)));
 		$throwNew($TransformerConfigurationException, $(err->toString()));
-	} catch ($SecurityException&) {
-		$var($SecurityException, e, $catch());
+	} catch ($SecurityException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::FILE_ACCESS_ERR, $of(systemId)));
 		$throwNew($TransformerConfigurationException, $(err->toString()));

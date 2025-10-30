@@ -8,22 +8,12 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/dom/SortSettings.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet.h>
 #include <com/sun/org/apache/xml/internal/utils/LocaleUtility.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/ReflectiveOperationException.h>
-#include <java/lang/String.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/Collator.h>
 #include <java/util/Locale.h>
 #include <jcpp.h>
@@ -156,8 +146,7 @@ void NodeSortRecordFactory::init$($DOM* dom, $String* className, $Translet* tran
 			collators->set(i, $($Collator::getInstance(locales->get(i))));
 		}
 		$set(this, _sortSettings, $new($SortSettings, $cast($AbstractTranslet, translet), iOrder, iType, locales, collators, caseOrder));
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e, $catch());
+	} catch ($ClassNotFoundException& e) {
 		$throwNew($TransletException, static_cast<$Exception*>(e));
 	}
 }
@@ -170,14 +159,11 @@ $NodeSortRecord* NodeSortRecordFactory::makeNodeSortRecord(int32_t node, int32_t
 		$assign(sortRecord, $cast($NodeSortRecord, $nc($($nc(this->_class)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0))));
 		$nc(sortRecord)->initialize(node, last, this->_dom, this->_sortSettings);
 		return sortRecord;
-	} catch ($NoSuchMethodException&) {
-		$var($Exception, ex, $catch());
+	} catch ($NoSuchMethodException& ex) {
 		$throwNew($InstantiationException, $(ex->getMessage()));
-	} catch ($IllegalArgumentException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IllegalArgumentException& ex) {
 		$throwNew($InstantiationException, $(ex->getMessage()));
-	} catch ($InvocationTargetException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InvocationTargetException& ex) {
 		$throwNew($InstantiationException, $(ex->getMessage()));
 	}
 	$shouldNotReachHere();

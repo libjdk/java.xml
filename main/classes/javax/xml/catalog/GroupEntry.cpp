@@ -1,22 +1,11 @@
 #include <javax/xml/catalog/GroupEntry.h>
 
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Void.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
@@ -368,7 +357,7 @@ $String* GroupEntry::matchSystem($String* systemId) {
 		for (; $nc(i$)->hasNext();) {
 			$var($BaseEntry, entry, $cast($BaseEntry, i$->next()));
 			{
-					$init($GroupEntry$1);
+				$init($GroupEntry$1);
 				{
 					$var(GroupEntry, grpEntry, nullptr)
 					switch ($nc($GroupEntry$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->get($nc(($nc(entry)->type))->ordinal())) {
@@ -475,7 +464,7 @@ $String* GroupEntry::matchURI($String* uri) {
 		for (; $nc(i$)->hasNext();) {
 			$var($BaseEntry, entry, $cast($BaseEntry, i$->next()));
 			{
-					$init($GroupEntry$1);
+				$init($GroupEntry$1);
 				{
 					$var(GroupEntry, grpEntry, nullptr)
 					switch ($nc($GroupEntry$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->get($nc(($nc(entry)->type))->ordinal())) {

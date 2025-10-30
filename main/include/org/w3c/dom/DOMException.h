@@ -69,8 +69,10 @@ public:
 	static const int16_t TYPE_MISMATCH_ERR = 17;
 	static const int64_t serialVersionUID = (int64_t)0x5BFA6F78ED3B957C;
 	DOMException(const DOMException& e);
-	DOMException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline DOMException* operator ->() {
+		return (DOMException*)throwing$;
+	}
 };
 
 		} // dom

@@ -46,13 +46,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/ElemDesc.h>
 #include <com/sun/org/apache/xml/internal/serializer/SerializationHandler.h>
 #include <com/sun/org/apache/xml/internal/utils/XML11Char.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 

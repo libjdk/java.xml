@@ -3,18 +3,7 @@
 #include <com/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit.h>
 #include <com/sun/org/apache/xalan/internal/utils/XMLSecurityManager.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLReaderManager$ReaderWrapper.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/ThreadLocal.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/HashMap.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/catalog/CatalogFeatures$Feature.h>
@@ -188,18 +177,15 @@ $XMLReader* XMLReaderManager::getXMLReader() {
 					$nc(reader)->setProperty(lastProperty, $JdkConstants::JDK_YES);
 				}
 			}
-		} catch ($SAXException&) {
-			$var($SAXException, se, $catch());
+		} catch ($SAXException& se) {
 			$XMLSecurityManager::printWarning($($nc($of(reader))->getClass()->getName()), lastProperty, se);
 		}
 		bool supportCatalog = true;
 		try {
 			$nc(reader)->setFeature($JdkXmlUtils::USE_CATALOG, this->_useCatalog);
-		} catch ($SAXNotRecognizedException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXNotRecognizedException& e) {
 			supportCatalog = false;
-		} catch ($SAXNotSupportedException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXNotSupportedException& e) {
 			supportCatalog = false;
 		}
 		if (supportCatalog && this->_useCatalog && this->_catalogFeatures != nullptr) {
@@ -216,8 +202,7 @@ $XMLReader* XMLReaderManager::getXMLReader() {
 						}
 					}
 				}
-			} catch ($SAXNotRecognizedException&) {
-				$catch();
+			} catch ($SAXNotRecognizedException& e) {
 			}
 		}
 		return reader;

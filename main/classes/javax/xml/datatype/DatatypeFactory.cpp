@@ -2,17 +2,8 @@
 
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.h>
 #include <java/lang/CharSequence.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/Number.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/math/BigDecimal.h>
 #include <java/math/BigInteger.h>
 #include <java/util/GregorianCalendar.h>
@@ -108,11 +99,8 @@ $Object* allocate$DatatypeFactory($Class* clazz) {
 	return $of($alloc(DatatypeFactory));
 }
 
-
 $String* DatatypeFactory::DATATYPEFACTORY_PROPERTY = nullptr;
-
 $String* DatatypeFactory::DATATYPEFACTORY_IMPLEMENTATION_CLASS = nullptr;
-
 $Pattern* DatatypeFactory::XDTSCHEMA_YMD = nullptr;
 $Pattern* DatatypeFactory::XDTSCHEMA_DTD = nullptr;
 

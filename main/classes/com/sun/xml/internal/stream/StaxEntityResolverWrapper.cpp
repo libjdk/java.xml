@@ -5,14 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <com/sun/xml/internal/stream/StaxXMLInputSource.h>
 #include <java/io/InputStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/catalog/CatalogException.h>
 #include <javax/xml/stream/XMLEventReader.h>
 #include <javax/xml/stream/XMLResolver.h>
@@ -88,11 +80,9 @@ $StaxXMLInputSource* StaxEntityResolverWrapper::resolveEntity($XMLResourceIdenti
 		$var($String, var$1, resourceIdentifier->getLiteralSystemId());
 		$assign(object, $nc(this->fStaxResolver)->resolveEntity(var$0, var$1, $(resourceIdentifier->getBaseSystemId()), nullptr));
 		return getStaxInputSource(object);
-	} catch ($XMLStreamException&) {
-		$var($Exception, streamException, $catch());
+	} catch ($XMLStreamException& streamException) {
 		$throwNew($XNIException, streamException);
-	} catch ($CatalogException&) {
-		$var($Exception, streamException, $catch());
+	} catch ($CatalogException& streamException) {
 		$throwNew($XNIException, streamException);
 	}
 	$shouldNotReachHere();

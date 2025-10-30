@@ -29,17 +29,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/Operators.h>
 #include <com/sun/org/apache/xml/internal/dtm/Axis.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -166,15 +155,10 @@ $Object* allocate$XPathParser($Class* clazz) {
 	return $of($alloc(XPathParser));
 }
 
-
 $shortArray2* XPathParser::_production_table = nullptr;
-
 $shortArray2* XPathParser::_action_table = nullptr;
-
 $shortArray2* XPathParser::_reduce_table = nullptr;
-
 $List* XPathParser::EmptyArgs = nullptr;
-
 $VariableRef* XPathParser::DummyVarRef = nullptr;
 
 void XPathParser::init$() {
@@ -332,8 +316,7 @@ $Symbol* XPathParser::parse($String* expression, int32_t lineNumber) {
 		$set(this, _expression, expression);
 		this->_lineNumber = lineNumber;
 		return $lr_parser::parse();
-	} catch ($IllegalCharException&) {
-		$var($IllegalCharException, e, $catch());
+	} catch ($IllegalCharException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::ILLEGAL_CHAR_ERR, lineNumber, $($of(e->getMessage()))));
 		$nc(this->_parser)->reportError($Constants::FATAL, err);

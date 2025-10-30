@@ -23,8 +23,10 @@ public:
 	void init$($String* message, $Throwable* cause);
 	static const int64_t serialVersionUID = (int64_t)0x0910BE9C9FF3E631;
 	CatalogException(const CatalogException& e);
-	CatalogException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline CatalogException* operator ->() {
+		return (CatalogException*)throwing$;
+	}
 };
 
 		} // catalog

@@ -21,8 +21,10 @@ public:
 	void init$($String* s);
 	static const int64_t serialVersionUID = (int64_t)0xF6BD7FC717D02FA6;
 	IllegalCharException(const IllegalCharException& e);
-	IllegalCharException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline IllegalCharException* operator ->() {
+		return (IllegalCharException*)throwing$;
+	}
 };
 
 							} // compiler

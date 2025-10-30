@@ -12,15 +12,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLEntityResolver.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Collections.h>
 #include <java/util/HashMap.h>
@@ -136,18 +127,12 @@ $Object* allocate$XMLGrammarPreparser($Class* clazz) {
 }
 
 $String* XMLGrammarPreparser::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* XMLGrammarPreparser::SYMBOL_TABLE = nullptr;
-
 $String* XMLGrammarPreparser::ERROR_REPORTER = nullptr;
-
 $String* XMLGrammarPreparser::ERROR_HANDLER = nullptr;
-
 $String* XMLGrammarPreparser::ENTITY_RESOLVER = nullptr;
-
 $String* XMLGrammarPreparser::GRAMMAR_POOL = nullptr;
 $Map* XMLGrammarPreparser::KNOWN_LOADERS = nullptr;
-
 $StringArray* XMLGrammarPreparser::RECOGNIZED_PROPERTIES = nullptr;
 
 void XMLGrammarPreparser::init$() {
@@ -170,8 +155,7 @@ bool XMLGrammarPreparser::registerPreparser($String* grammarType, $XMLGrammarLoa
 			try {
 				$var($XMLGrammarLoader, gl, ($cast($XMLGrammarLoader, $ObjectFactory::newInstance(loaderName, true))));
 				$nc(this->fLoaders)->put(grammarType, gl);
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				return false;
 			}
 			return true;
@@ -191,8 +175,7 @@ $Grammar* XMLGrammarPreparser::preparseGrammar($String* type, $XMLInputSource* i
 		if (this->fGrammarPool != nullptr) {
 			try {
 				gl->setProperty(XMLGrammarPreparser::GRAMMAR_POOL, this->fGrammarPool);
-			} catch ($Exception&) {
-				$catch();
+			} catch ($Exception& e) {
 			}
 		}
 		return gl->loadGrammar(is);
@@ -247,8 +230,7 @@ void XMLGrammarPreparser::setFeature($String* featureId, bool value) {
 				try {
 					$var($XMLGrammarLoader, gl, $cast($XMLGrammarLoader, $nc(entry)->getValue()));
 					$nc(gl)->setFeature(featureId, value);
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& e) {
 				}
 			}
 		}
@@ -268,8 +250,7 @@ void XMLGrammarPreparser::setProperty($String* propId, Object$* value) {
 				try {
 					$var($XMLGrammarLoader, gl, $cast($XMLGrammarLoader, $nc(entry)->getValue()));
 					$nc(gl)->setProperty(propId, value);
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& e) {
 				}
 			}
 		}

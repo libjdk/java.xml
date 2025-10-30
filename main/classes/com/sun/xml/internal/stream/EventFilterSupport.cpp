@@ -1,12 +1,5 @@
 #include <com/sun/xml/internal/stream/EventFilterSupport.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/NoSuchElementException.h>
 #include <javax/xml/stream/EventFilter.h>
 #include <javax/xml/stream/XMLEventReader.h>
@@ -68,8 +61,7 @@ void EventFilterSupport::init$($XMLEventReader* eventReader, $EventFilter* event
 $Object* EventFilterSupport::next() {
 	try {
 		return $of(nextEvent());
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, ex, $catch());
+	} catch ($XMLStreamException& ex) {
 		$throwNew($NoSuchElementException);
 	}
 	$shouldNotReachHere();
@@ -78,8 +70,7 @@ $Object* EventFilterSupport::next() {
 bool EventFilterSupport::hasNext() {
 	try {
 		return peek() != nullptr ? true : false;
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, ex, $catch());
+	} catch ($XMLStreamException& ex) {
 		return false;
 	}
 	$shouldNotReachHere();

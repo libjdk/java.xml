@@ -14,15 +14,6 @@
 #include <java/io/FilterInputStream.h>
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/zip/ZipEntry.h>
 #include <java/util/zip/ZipFile.h>
 #include <jcpp.h>
@@ -168,24 +159,22 @@ $JavaClass* ClassParser::parse() {
 			readFields();
 			readMethods();
 			readAttributes();
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			if (this->fileOwned) {
 				try {
 					if (this->dataInputStream != nullptr) {
 						$nc(this->dataInputStream)->close();
 					}
-				} catch ($IOException&) {
-					$catch();
+				} catch ($IOException& ioe) {
 				}
 			}
 			try {
 				if (zip != nullptr) {
 					zip->close();
 				}
-			} catch ($IOException&) {
-				$catch();
+			} catch ($IOException& ioe) {
 			}
 		}
 		if (var$0 != nullptr) {

@@ -21,20 +21,6 @@
 #include <com/sun/org/apache/xml/internal/utils/SystemIDResolver.h>
 #include <com/sun/org/apache/xml/internal/utils/WrappedRuntimeException.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringFactory.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/XMLEventReader.h>
 #include <javax/xml/stream/XMLStreamReader.h>
 #include <javax/xml/transform/Source.h>
@@ -203,11 +189,9 @@ $DTM* XSLTCDTMManager::getDTM($Source* source, bool unique, $DTMWSFilter* whiteS
 				staxStream2SAX->setContentHandler(static_cast<$ContentHandler*>(static_cast<$SAX2DTM*>(static_cast<$SAX2DTM2*>(dtm))));
 				staxStream2SAX->parse();
 			}
-		} catch ($RuntimeException&) {
-			$var($RuntimeException, re, $catch());
+		} catch ($RuntimeException& re) {
 			$throw(re);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$throwNew($WrappedRuntimeException, e);
 		}
 		return dtm;
@@ -226,11 +210,9 @@ $DTM* XSLTCDTMManager::getDTM($Source* source, bool unique, $DTMWSFilter* whiteS
 		dom2sax->setContentHandler(static_cast<$ContentHandler*>(static_cast<$SAX2DTM*>(static_cast<$SAX2DTM2*>(dtm))));
 		try {
 			dom2sax->parse();
-		} catch ($RuntimeException&) {
-			$var($RuntimeException, re, $catch());
+		} catch ($RuntimeException& re) {
 			$throw(re);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$throwNew($WrappedRuntimeException, e);
 		}
 		return dtm;
@@ -251,9 +233,7 @@ $DTM* XSLTCDTMManager::getDTM($Source* source, bool unique, $DTMWSFilter* whiteS
 				if (nullptr != urlOfSource) {
 					try {
 						$assign(urlOfSource, $SystemIDResolver::getAbsoluteURI(urlOfSource));
-					} catch ($Exception&) {
-						$var($Exception, e, $catch());
-						$init($System);
+					} catch ($Exception& e) {
 						$nc($System::err)->println($$str({"Can not absolutize URL: "_s, urlOfSource}));
 					}
 					xmlSource->setSystemId(urlOfSource);
@@ -278,25 +258,21 @@ $DTM* XSLTCDTMManager::getDTM($Source* source, bool unique, $DTMWSFilter* whiteS
 			}
 			try {
 				reader->setProperty("http://xml.org/sax/properties/lexical-handler"_s, dtm);
-			} catch ($SAXNotRecognizedException&) {
-				$catch();
-			} catch ($SAXNotSupportedException&) {
-				$catch();
+			} catch ($SAXNotRecognizedException& e) {
+			} catch ($SAXNotSupportedException& e) {
 			}
 			{
 				$var($Throwable, var$0, nullptr);
 				try {
 					try {
 						reader->parse(xmlSource);
-					} catch ($RuntimeException&) {
-						$var($RuntimeException, re, $catch());
+					} catch ($RuntimeException& re) {
 						$throw(re);
-					} catch ($Exception&) {
-						$var($Exception, e, $catch());
+					} catch ($Exception& e) {
 						$throwNew($WrappedRuntimeException, e);
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$1) {
+					$assign(var$0, var$1);
 				} /*finally*/ {
 					if (!hasUserReader) {
 						releaseXMLReader(reader);

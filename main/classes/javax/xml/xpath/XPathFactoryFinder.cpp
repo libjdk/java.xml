@@ -4,30 +4,16 @@
 #include <java/io/File.h>
 #include <java/io/FileInputStream.h>
 #include <java/io/InputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
 #include <java/lang/AssertionError.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
@@ -35,7 +21,6 @@
 #include <java/lang/invoke/MethodType.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/security/AccessControlContext.h>
 #include <java/security/AccessController.h>
 #include <java/security/PrivilegedAction.h>
@@ -833,11 +818,8 @@ $Object* allocate$XPathFactoryFinder($Class* clazz) {
 
 bool XPathFactoryFinder::$assertionsDisabled = false;
 $String* XPathFactoryFinder::DEFAULT_PACKAGE = nullptr;
-
 bool XPathFactoryFinder::debug = false;
-
 $Properties* XPathFactoryFinder::cacheProps = nullptr;
-
 $volatile(bool) XPathFactoryFinder::firstTime = false;
 $Class* XPathFactoryFinder::SERVICE_CLASS = nullptr;
 
@@ -845,7 +827,6 @@ void XPathFactoryFinder::debugPrintln($Supplier* msgGen) {
 	$init(XPathFactoryFinder);
 	$useLocalCurrentObjectStackCache();
 	if (XPathFactoryFinder::debug) {
-		$init($System);
 		$nc($System::err)->println($$str({"JAXP: "_s, $cast($String, $($nc(msgGen)->get()))}));
 	}
 }
@@ -865,8 +846,7 @@ void XPathFactoryFinder::debugDisplayClassLoader() {
 			debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0, this)));
 			return;
 		}
-	} catch ($Throwable&) {
-		$catch();
+	} catch ($Throwable& unused) {
 	}
 	if (this->classLoader == $ClassLoader::getSystemClassLoader()) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1, this)));
@@ -905,8 +885,7 @@ $XPathFactory* XPathFactoryFinder::_newFactory($String* uri) {
 		} else {
 			debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$_newFactory$7$7)));
 		}
-	} catch ($Throwable&) {
-		$var($Throwable, t, $catch());
+	} catch ($Throwable& t) {
 		if (XPathFactoryFinder::debug) {
 			debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8, propertyName)));
 			t->printStackTrace();
@@ -936,8 +915,7 @@ $XPathFactory* XPathFactoryFinder::_newFactory($String* uri) {
 				return xpathFactory;
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
@@ -973,8 +951,7 @@ $Class* XPathFactoryFinder::createClass($String* className) {
 		} else {
 			clazz = $Class::forName(className);
 		}
-	} catch ($Throwable&) {
-		$var($Throwable, t, $catch());
+	} catch ($Throwable& t) {
 		if (XPathFactoryFinder::debug) {
 			t->printStackTrace();
 		}
@@ -996,50 +973,43 @@ $XPathFactory* XPathFactoryFinder::createInstance($String* className) {
 	debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$15$15, className, clazz)));
 	try {
 		$assign(xPathFactory, $cast($XPathFactory, $nc($($nc(clazz)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0))));
-	} catch ($ClassCastException&) {
-		$var($Exception, ex, $catch());
+	} catch ($ClassCastException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($IllegalAccessException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IllegalAccessException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($IllegalArgumentException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IllegalArgumentException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($InstantiationException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InstantiationException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($InvocationTargetException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InvocationTargetException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($NoSuchMethodException&) {
-		$var($Exception, ex, $catch());
+	} catch ($NoSuchMethodException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($SecurityException&) {
-		$var($Exception, ex, $catch());
+	} catch ($SecurityException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (XPathFactoryFinder::debug) {
 			ex->printStackTrace();
@@ -1064,8 +1034,7 @@ $XPathFactory* XPathFactoryFinder::findServiceProvider($String* objectModel) {
 	$var($AccessControlContext, acc, $AccessController::getContext());
 	try {
 		return $cast($XPathFactory, $AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new($XPathFactoryFinder$2, this, objectModel, acc))));
-	} catch ($ServiceConfigurationError&) {
-		$var($ServiceConfigurationError, error, $catch());
+	} catch ($ServiceConfigurationError& error) {
 		$throwNew($XPathFactoryConfigurationException, static_cast<$Throwable*>(error));
 	}
 	$shouldNotReachHere();
@@ -1165,8 +1134,7 @@ void clinit$XPathFactoryFinder($Class* class$) {
 	{
 		try {
 			XPathFactoryFinder::debug = $SecuritySupport::getSystemProperty("jaxp.debug"_s) != nullptr;
-		} catch ($Exception&) {
-			$var($Exception, unused, $catch());
+		} catch ($Exception& unused) {
 			XPathFactoryFinder::debug = false;
 		}
 	}

@@ -19,20 +19,7 @@
 #include <java/io/FileOutputStream.h>
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Runtime.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/DecimalFormat.h>
 #include <java/text/DecimalFormatSymbols.h>
 #include <java/util/AbstractList.h>
@@ -278,7 +265,6 @@ void AbstractTranslet::init$() {
 
 void AbstractTranslet::printInternalState() {
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$nc($System::out)->println("-------------------------------------"_s);
 	$nc($System::out)->println($$str({"AbstractTranslet this = "_s, this}));
 	$nc($System::out)->println($$str({"pbase = "_s, $$str(this->pbase)}));
@@ -358,7 +344,6 @@ void AbstractTranslet::setMessageHandler($MessageHandler* handler) {
 
 void AbstractTranslet::displayMessage($String* msg) {
 	if (this->_msgHandler == nullptr) {
-		$init($System);
 		$nc($System::err)->println(msg);
 	} else {
 		$nc(this->_msgHandler)->displayMessage(msg);
@@ -502,11 +487,11 @@ $KeyIndex* AbstractTranslet::buildKeyIndexHelper($String* name) {
 
 $KeyIndex* AbstractTranslet::getKeyIndex($String* name) {
 	if (this->_keyIndexes == nullptr) {
-		return (this->_emptyKeyIndex != nullptr) ? this->_emptyKeyIndex : ($assignField(this, _emptyKeyIndex, $new($KeyIndex, 1)));
+		return (this->_emptyKeyIndex != nullptr) ? this->_emptyKeyIndex : ($set(this, _emptyKeyIndex, $new($KeyIndex, 1)));
 	}
 	$var($KeyIndex, index, $cast($KeyIndex, $nc(this->_keyIndexes)->get(name)));
 	if (index == nullptr) {
-		return (this->_emptyKeyIndex != nullptr) ? this->_emptyKeyIndex : ($assignField(this, _emptyKeyIndex, $new($KeyIndex, 1)));
+		return (this->_emptyKeyIndex != nullptr) ? this->_emptyKeyIndex : ($set(this, _emptyKeyIndex, $new($KeyIndex, 1)));
 	}
 	return (index);
 }
@@ -548,8 +533,7 @@ $SerializationHandler* AbstractTranslet::openOutputHandler($String* filename, bo
 		transferOutputSettings(handler);
 		$nc(handler)->startDocument();
 		return handler;
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransletException, e);
 	}
 	$shouldNotReachHere();
@@ -566,8 +550,7 @@ void AbstractTranslet::closeOutputHandler($SerializationHandler* handler) {
 		if (this->output != nullptr) {
 			$nc(this->output)->close();
 		}
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 }
 
@@ -577,8 +560,8 @@ void AbstractTranslet::transform($DOM* document, $SerializationHandler* handler)
 		$var($Throwable, var$0, nullptr);
 		try {
 			transform(document, $($nc(document)->getIterator()), handler);
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$set(this, _keyIndexes, nullptr);
 		}
@@ -592,8 +575,7 @@ void AbstractTranslet::characters($String* string, $SerializationHandler* handle
 	if (string != nullptr) {
 		try {
 			$nc(handler)->characters(string);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$throwNew($TransletException, e);
 		}
 	}

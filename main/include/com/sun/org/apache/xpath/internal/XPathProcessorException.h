@@ -27,8 +27,10 @@ public:
 	using ::com::sun::org::apache::xpath::internal::XPathException::printStackTrace;
 	static const int64_t serialVersionUID = (int64_t)0x10DE5B603C804FAB;
 	XPathProcessorException(const XPathProcessorException& e);
-	XPathProcessorException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XPathProcessorException* operator ->() {
+		return (XPathProcessorException*)throwing$;
+	}
 };
 
 					} // internal

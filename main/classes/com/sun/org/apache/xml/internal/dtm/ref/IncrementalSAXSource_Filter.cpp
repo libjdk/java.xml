@@ -7,24 +7,9 @@
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
 #include <com/sun/org/apache/xml/internal/utils/ThreadControllerWrapper.h>
 #include <java/io/IOException.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/ReflectiveOperationException.h>
 #include <java/lang/Runnable.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Thread.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/Attributes.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/DTDHandler.h>
@@ -259,10 +244,8 @@ void IncrementalSAXSource_Filter::setXMLReader($XMLReader* eventsource) {
 	eventsource->setErrorHandler(this);
 	try {
 		eventsource->setProperty("http://xml.org/sax/properties/lexical-handler"_s, this);
-	} catch ($SAXNotRecognizedException&) {
-		$catch();
-	} catch ($SAXNotSupportedException&) {
-		$catch();
+	} catch ($SAXNotRecognizedException& e) {
+	} catch ($SAXNotSupportedException& e) {
 	}
 }
 
@@ -494,7 +477,6 @@ void IncrementalSAXSource_Filter::count_and_yield(bool moreExpected) {
 }
 
 void IncrementalSAXSource_Filter::co_entry_pause() {
-	$useLocalCurrentObjectStackCache();
 	if (this->fCoroutineManager == nullptr) {
 		init(nullptr, -1, -1);
 	}
@@ -504,8 +486,7 @@ void IncrementalSAXSource_Filter::co_entry_pause() {
 		if ($equals(arg, $Boolean::FALSE)) {
 			co_yield$(false);
 		}
-	} catch ($NoSuchMethodException&) {
-		$var($NoSuchMethodException, e, $catch());
+	} catch ($NoSuchMethodException& e) {
 		if (this->DEBUG) {
 			e->printStackTrace();
 		}
@@ -514,7 +495,6 @@ void IncrementalSAXSource_Filter::co_entry_pause() {
 }
 
 void IncrementalSAXSource_Filter::co_yield$(bool moreRemains) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fNoMoreEvents) {
 		return;
 	}
@@ -531,8 +511,7 @@ void IncrementalSAXSource_Filter::co_yield$(bool moreRemains) {
 			}
 			$nc(this->fCoroutineManager)->co_exit_to($Boolean::FALSE, this->fSourceCoroutineID, this->fControllerCoroutineID);
 		}
-	} catch ($NoSuchMethodException&) {
-		$var($NoSuchMethodException, e, $catch());
+	} catch ($NoSuchMethodException& e) {
 		this->fNoMoreEvents = true;
 		$nc(this->fCoroutineManager)->co_exit(this->fSourceCoroutineID);
 		$throwNew($SAXException, static_cast<$Exception*>(e));
@@ -559,33 +538,26 @@ void IncrementalSAXSource_Filter::run() {
 		return;
 	}
 	if (this->DEBUG) {
-		$init($System);
 		$nc($System::out)->println("IncrementalSAXSource_Filter parse thread launched"_s);
 	}
 	$init($Boolean);
 	$var($Object, arg, $Boolean::FALSE);
 	try {
 		$nc(this->fXMLReader)->parse(this->fXMLReaderInputSource);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$assign(arg, ex);
-	} catch ($IncrementalSAXSource_Filter$StopException&) {
-		$var($IncrementalSAXSource_Filter$StopException, ex, $catch());
+	} catch ($IncrementalSAXSource_Filter$StopException& ex) {
 		if (this->DEBUG) {
-			$init($System);
 			$nc($System::out)->println("Active IncrementalSAXSource_Filter normal stop exception"_s);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, ex, $catch());
+	} catch ($SAXException& ex) {
 		$var($Exception, inner, ex->getException());
 		if ($instanceOf($IncrementalSAXSource_Filter$StopException, inner)) {
 			if (this->DEBUG) {
-				$init($System);
 				$nc($System::out)->println("Active IncrementalSAXSource_Filter normal stop exception"_s);
 			}
 		} else {
 			if (this->DEBUG) {
-				$init($System);
 				$nc($System::out)->println($$str({"Active IncrementalSAXSource_Filter UNEXPECTED SAX exception: "_s, inner}));
 				$nc(inner)->printStackTrace();
 			}
@@ -596,16 +568,13 @@ void IncrementalSAXSource_Filter::run() {
 	try {
 		this->fNoMoreEvents = true;
 		$nc(this->fCoroutineManager)->co_exit_to(arg, this->fSourceCoroutineID, this->fControllerCoroutineID);
-	} catch ($NoSuchMethodException&) {
-		$var($NoSuchMethodException, e, $catch());
-		$init($System);
+	} catch ($NoSuchMethodException& e) {
 		e->printStackTrace($System::err);
 		$nc(this->fCoroutineManager)->co_exit(this->fSourceCoroutineID);
 	}
 }
 
 $Object* IncrementalSAXSource_Filter::deliverMoreNodes(bool parsemore) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fNoMoreEvents) {
 		$init($Boolean);
 		return $of($Boolean::FALSE);
@@ -617,8 +586,7 @@ $Object* IncrementalSAXSource_Filter::deliverMoreNodes(bool parsemore) {
 			$nc(this->fCoroutineManager)->co_exit(this->fControllerCoroutineID);
 		}
 		return $of(result);
-	} catch ($NoSuchMethodException&) {
-		$var($NoSuchMethodException, e, $catch());
+	} catch ($NoSuchMethodException& e) {
 		return $of(e);
 	}
 	$shouldNotReachHere();

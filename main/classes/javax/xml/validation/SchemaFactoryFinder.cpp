@@ -4,30 +4,16 @@
 #include <java/io/File.h>
 #include <java/io/FileInputStream.h>
 #include <java/io/InputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
 #include <java/lang/AssertionError.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
@@ -35,7 +21,6 @@
 #include <java/lang/invoke/MethodType.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/security/AccessControlContext.h>
 #include <java/security/AccessController.h>
 #include <java/security/PrivilegedAction.h>
@@ -831,12 +816,9 @@ $Object* allocate$SchemaFactoryFinder($Class* clazz) {
 }
 
 bool SchemaFactoryFinder::$assertionsDisabled = false;
-
 bool SchemaFactoryFinder::debug = false;
 $String* SchemaFactoryFinder::DEFAULT_PACKAGE = nullptr;
-
 $Properties* SchemaFactoryFinder::cacheProps = nullptr;
-
 $volatile(bool) SchemaFactoryFinder::firstTime = false;
 $Class* SchemaFactoryFinder::SERVICE_CLASS = nullptr;
 
@@ -844,7 +826,6 @@ void SchemaFactoryFinder::debugPrintln($Supplier* msgGen) {
 	$init(SchemaFactoryFinder);
 	$useLocalCurrentObjectStackCache();
 	if (SchemaFactoryFinder::debug) {
-		$init($System);
 		$nc($System::err)->println($$str({"JAXP: "_s, $cast($String, $($nc(msgGen)->get()))}));
 	}
 }
@@ -864,8 +845,7 @@ void SchemaFactoryFinder::debugDisplayClassLoader() {
 			debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0, this)));
 			return;
 		}
-	} catch ($Throwable&) {
-		$catch();
+	} catch ($Throwable& unused) {
 	}
 	if (this->classLoader == $ClassLoader::getSystemClassLoader()) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1, this)));
@@ -904,8 +884,7 @@ $SchemaFactory* SchemaFactoryFinder::_newFactory($String* schemaLanguage) {
 		} else {
 			debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$_newFactory$7$7)));
 		}
-	} catch ($Throwable&) {
-		$var($Throwable, t, $catch());
+	} catch ($Throwable& t) {
 		if (SchemaFactoryFinder::debug) {
 			debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8, propertyName)));
 			t->printStackTrace();
@@ -935,8 +914,7 @@ $SchemaFactory* SchemaFactoryFinder::_newFactory($String* schemaLanguage) {
 				return sf;
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
@@ -968,8 +946,7 @@ $Class* SchemaFactoryFinder::createClass($String* className) {
 		} else {
 			clazz = $Class::forName(className);
 		}
-	} catch ($Throwable&) {
-		$var($Throwable, t, $catch());
+	} catch ($Throwable& t) {
 		if (SchemaFactoryFinder::debug) {
 			t->printStackTrace();
 		}
@@ -995,50 +972,43 @@ $SchemaFactory* SchemaFactoryFinder::createInstance($String* className) {
 			$throwNew($ClassCastException, $$str({$($nc(clazz)->getName()), " cannot be cast to "_s, $SchemaFactory::class$}));
 		}
 		$assign(schemaFactory, $cast($SchemaFactory, $nc($($nc(clazz)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0))));
-	} catch ($ClassCastException&) {
-		$var($Exception, ex, $catch());
+	} catch ($ClassCastException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($IllegalAccessException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IllegalAccessException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($IllegalArgumentException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IllegalArgumentException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($InstantiationException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InstantiationException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($InvocationTargetException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InvocationTargetException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($NoSuchMethodException&) {
-		$var($Exception, ex, $catch());
+	} catch ($NoSuchMethodException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
 		}
 		return nullptr;
-	} catch ($SecurityException&) {
-		$var($Exception, ex, $catch());
+	} catch ($SecurityException& ex) {
 		debugPrintln(static_cast<$Supplier*>($$new(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, clazz)));
 		if (SchemaFactoryFinder::debug) {
 			ex->printStackTrace();
@@ -1063,8 +1033,7 @@ $SchemaFactory* SchemaFactoryFinder::findServiceProvider($String* schemaLanguage
 	$var($AccessControlContext, acc, $AccessController::getContext());
 	try {
 		return $cast($SchemaFactory, $AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new($SchemaFactoryFinder$2, this, schemaLanguage, acc))));
-	} catch ($ServiceConfigurationError&) {
-		$var($ServiceConfigurationError, error, $catch());
+	} catch ($ServiceConfigurationError& error) {
 		$throwNew($SchemaFactoryConfigurationError, $$str({"Provider for "_s, SchemaFactoryFinder::SERVICE_CLASS, " cannot be created"_s}), error);
 	}
 	$shouldNotReachHere();
@@ -1166,8 +1135,7 @@ void clinit$SchemaFactoryFinder($Class* class$) {
 	{
 		try {
 			SchemaFactoryFinder::debug = $SecuritySupport::getSystemProperty("jaxp.debug"_s) != nullptr;
-		} catch ($Exception&) {
-			$var($Exception, unused, $catch());
+		} catch ($Exception& unused) {
 			SchemaFactoryFinder::debug = false;
 		}
 	}

@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/OutputPropertiesFactory.h>
 
 #include <com/sun/org/apache/xml/internal/serializer/Encodings.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Properties.h>
 #include <javax/xml/transform/OutputKeys.h>
 #include <jdk/xml/internal/SecuritySupport.h>
@@ -98,27 +90,16 @@ $Object* allocate$OutputPropertiesFactory($Class* clazz) {
 	return $of($alloc(OutputPropertiesFactory));
 }
 
-
 $String* OutputPropertiesFactory::S_BUILTIN_EXTENSIONS_URL = nullptr;
-
 $String* OutputPropertiesFactory::S_BUILTIN_OLD_EXTENSIONS_URL = nullptr;
-
 $String* OutputPropertiesFactory::S_BUILTIN_EXTENSIONS_UNIVERSAL = nullptr;
-
 $String* OutputPropertiesFactory::S_KEY_INDENT_AMOUNT = nullptr;
-
 $String* OutputPropertiesFactory::S_KEY_LINE_SEPARATOR = nullptr;
-
 $String* OutputPropertiesFactory::S_KEY_CONTENT_HANDLER = nullptr;
-
 $String* OutputPropertiesFactory::S_KEY_ENTITIES = nullptr;
-
 $String* OutputPropertiesFactory::S_USE_URL_ESCAPING = nullptr;
-
 $String* OutputPropertiesFactory::S_OMIT_META_TAG = nullptr;
-
 $String* OutputPropertiesFactory::S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL = nullptr;
-
 int32_t OutputPropertiesFactory::S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL_LEN = 0;
 $StringArray* OutputPropertiesFactory::PROP_XML = nullptr;
 $StringArray* OutputPropertiesFactory::PROP_XML_VALUE = nullptr;
@@ -128,13 +109,9 @@ $StringArray* OutputPropertiesFactory::PROP_TEXT = nullptr;
 $StringArray* OutputPropertiesFactory::PROP_TEXT_VALUE = nullptr;
 $StringArray* OutputPropertiesFactory::PROP_UNKNOWN = nullptr;
 $StringArray* OutputPropertiesFactory::PROP_UNKNOWN_VALUE = nullptr;
-
 $Properties* OutputPropertiesFactory::m_xml_properties = nullptr;
-
 $Properties* OutputPropertiesFactory::m_html_properties = nullptr;
-
 $Properties* OutputPropertiesFactory::m_text_properties = nullptr;
-
 $Properties* OutputPropertiesFactory::m_unknown_properties = nullptr;
 
 void OutputPropertiesFactory::init$() {

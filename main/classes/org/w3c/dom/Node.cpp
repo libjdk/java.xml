@@ -1,12 +1,5 @@
 #include <org/w3c/dom/Node.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/NamedNodeMap.h>
 #include <org/w3c/dom/NodeList.h>

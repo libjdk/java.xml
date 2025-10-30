@@ -10,14 +10,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <com/sun/org/apache/xpath/internal/patterns/StepPattern.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ATTRIBUTE
@@ -142,8 +134,8 @@ $XObject* ContextMatchStepPattern::executeRelativePathPattern($XPathContext* xct
 												goto $finally1;
 											}
 										}
-									} catch ($Throwable&) {
-										$assign(var$3, $catch());
+									} catch ($Throwable& var$6) {
+										$assign(var$3, var$6);
 									} $finally1: {
 										xctxt->popCurrentNode();
 									}
@@ -160,8 +152,8 @@ $XObject* ContextMatchStepPattern::executeRelativePathPattern($XPathContext* xct
 							xaxis = $Axis::NAMESPACE;
 						}
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$7) {
+					$assign(var$0, var$7);
 				} $finally: {
 					xctxt->popCurrentNode();
 				}

@@ -38,19 +38,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -353,39 +340,22 @@ void XML11NonValidatingConfiguration::finalize() {
 }
 
 $String* XML11NonValidatingConfiguration::XML11_DATATYPE_VALIDATOR_FACTORY = nullptr;
-
 $String* XML11NonValidatingConfiguration::VALIDATION = nullptr;
-
 $String* XML11NonValidatingConfiguration::NAMESPACES = nullptr;
-
 $String* XML11NonValidatingConfiguration::EXTERNAL_GENERAL_ENTITIES = nullptr;
-
 $String* XML11NonValidatingConfiguration::EXTERNAL_PARAMETER_ENTITIES = nullptr;
-
 $String* XML11NonValidatingConfiguration::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* XML11NonValidatingConfiguration::XML_STRING = nullptr;
-
 $String* XML11NonValidatingConfiguration::SYMBOL_TABLE = nullptr;
-
 $String* XML11NonValidatingConfiguration::ERROR_HANDLER = nullptr;
-
 $String* XML11NonValidatingConfiguration::ENTITY_RESOLVER = nullptr;
-
 $String* XML11NonValidatingConfiguration::ERROR_REPORTER = nullptr;
-
 $String* XML11NonValidatingConfiguration::ENTITY_MANAGER = nullptr;
-
 $String* XML11NonValidatingConfiguration::DOCUMENT_SCANNER = nullptr;
-
 $String* XML11NonValidatingConfiguration::DTD_SCANNER = nullptr;
-
 $String* XML11NonValidatingConfiguration::XMLGRAMMAR_POOL = nullptr;
-
 $String* XML11NonValidatingConfiguration::DTD_VALIDATOR = nullptr;
-
 $String* XML11NonValidatingConfiguration::NAMESPACE_BINDER = nullptr;
-
 $String* XML11NonValidatingConfiguration::DATATYPE_VALIDATOR_FACTORY = nullptr;
 $String* XML11NonValidatingConfiguration::VALIDATION_MANAGER = nullptr;
 
@@ -419,7 +389,7 @@ void XML11NonValidatingConfiguration::init$($SymbolTable* symbolTable$renamed, $
 	$set(this, fCommonComponents, $new($ArrayList));
 	$set(this, fFeatures, $new($HashMap));
 	$set(this, fProperties, $new($HashMap));
-		$init($ParserConfigurationSettings);
+	$init($ParserConfigurationSettings);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		XML11NonValidatingConfiguration::CONTINUE_AFTER_FATAL_ERROR,
 		XML11NonValidatingConfiguration::VALIDATION,
@@ -487,8 +457,7 @@ void XML11NonValidatingConfiguration::init$($SymbolTable* symbolTable$renamed, $
 	}
 	try {
 		setLocale($($Locale::getDefault()));
-	} catch ($XNIException&) {
-		$catch();
+	} catch ($XNIException& e) {
 	}
 	this->fConfigUpdated = false;
 }
@@ -553,7 +522,6 @@ void XML11NonValidatingConfiguration::cleanup() {
 }
 
 void XML11NonValidatingConfiguration::parse($XMLInputSource* source) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -564,21 +532,17 @@ void XML11NonValidatingConfiguration::parse($XMLInputSource* source) {
 			try {
 				setInputSource(source);
 				parse(true);
-			} catch ($XNIException&) {
-				$var($XNIException, ex, $catch());
+			} catch ($XNIException& ex) {
 				$throw(ex);
-			} catch ($IOException&) {
-				$var($IOException, ex, $catch());
+			} catch ($IOException& ex) {
 				$throw(ex);
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, ex, $catch());
+			} catch ($RuntimeException& ex) {
 				$throw(ex);
-			} catch ($Exception&) {
-				$var($Exception, ex, $catch());
+			} catch ($Exception& ex) {
 				$throwNew($XNIException, ex);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			this->fParseInProgress = false;
 			this->cleanup();
@@ -590,7 +554,6 @@ void XML11NonValidatingConfiguration::parse($XMLInputSource* source) {
 }
 
 bool XML11NonValidatingConfiguration::parse(bool complete) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			$nc(this->fValidationManager)->reset();
@@ -608,33 +571,25 @@ bool XML11NonValidatingConfiguration::parse(bool complete) {
 			this->fConfigUpdated = false;
 			$nc(this->fVersionDetector)->startDocumentParsing($cast($XMLEntityHandler, this->fCurrentScanner), version);
 			$set(this, fInputSource, nullptr);
-		} catch ($XNIException&) {
-			$var($XNIException, ex, $catch());
+		} catch ($XNIException& ex) {
 			$throw(ex);
-		} catch ($IOException&) {
-			$var($IOException, ex, $catch());
+		} catch ($IOException& ex) {
 			$throw(ex);
-		} catch ($RuntimeException&) {
-			$var($RuntimeException, ex, $catch());
+		} catch ($RuntimeException& ex) {
 			$throw(ex);
-		} catch ($Exception&) {
-			$var($Exception, ex, $catch());
+		} catch ($Exception& ex) {
 			$throwNew($XNIException, ex);
 		}
 	}
 	try {
 		return $nc(this->fCurrentScanner)->scanDocument(complete);
-	} catch ($XNIException&) {
-		$var($XNIException, ex, $catch());
+	} catch ($XNIException& ex) {
 		$throw(ex);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throw(ex);
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, ex, $catch());
+	} catch ($RuntimeException& ex) {
 		$throw(ex);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($XNIException, ex);
 	}
 	$shouldNotReachHere();
@@ -676,8 +631,7 @@ void XML11NonValidatingConfiguration::setFeature($String* featureId, bool state)
 			{
 				try {
 					$nc(c)->setFeature(featureId, state);
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& e) {
 				}
 			}
 		}
@@ -713,8 +667,7 @@ void XML11NonValidatingConfiguration::setProperty($String* propertyId, Object$* 
 			{
 				try {
 					$nc(c)->setProperty(propertyId, value);
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& e) {
 				}
 			}
 		}

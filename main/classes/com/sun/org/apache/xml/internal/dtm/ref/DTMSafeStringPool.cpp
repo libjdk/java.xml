@@ -1,15 +1,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMSafeStringPool.h>
 
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMStringPool.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $DTMStringPool = ::com::sun::org::apache::xml::internal::dtm::ref::DTMStringPool;
@@ -116,7 +107,6 @@ void DTMSafeStringPool::_main($StringArray* args) {
 		"Thirty-Nine"_s
 	}));
 	$var($DTMStringPool, pool, $new(DTMSafeStringPool));
-	$init($System);
 	$nc($System::out)->println("If no complaints are printed below, we passed initial test."_s);
 	for (int32_t pass = 0; pass <= 1; ++pass) {
 		int32_t i = 0;

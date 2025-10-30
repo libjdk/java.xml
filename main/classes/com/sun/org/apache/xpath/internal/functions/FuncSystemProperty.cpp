@@ -11,18 +11,7 @@
 #include <java/io/BufferedInputStream.h>
 #include <java/io/FilterInputStream.h>
 #include <java/io/InputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Properties.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
@@ -87,7 +76,6 @@ $Object* allocate$FuncSystemProperty($Class* clazz) {
 	return $of($alloc(FuncSystemProperty));
 }
 
-
 $String* FuncSystemProperty::XSLT_PROPERTIES = nullptr;
 
 void FuncSystemProperty::init$() {
@@ -128,8 +116,7 @@ $XObject* FuncSystemProperty::execute($XPathContext* xctxt) {
 					$init($XString);
 					return $XString::EMPTYSTRING;
 				}
-			} catch ($SecurityException&) {
-				$var($SecurityException, se, $catch());
+			} catch ($SecurityException& se) {
 				warn(xctxt, $XPATHErrorResources::WG_SECURITY_EXCEPTION, $$new($ObjectArray, {$of(fullName)}));
 				$init($XString);
 				return $XString::EMPTYSTRING;
@@ -142,8 +129,7 @@ $XObject* FuncSystemProperty::execute($XPathContext* xctxt) {
 				$init($XString);
 				return $XString::EMPTYSTRING;
 			}
-		} catch ($SecurityException&) {
-			$var($SecurityException, se, $catch());
+		} catch ($SecurityException& se) {
 			$init($XPATHErrorResources);
 			warn(xctxt, $XPATHErrorResources::WG_SECURITY_EXCEPTION, $$new($ObjectArray, {$of(fullName)}));
 			$init($XString);
@@ -154,8 +140,7 @@ $XObject* FuncSystemProperty::execute($XPathContext* xctxt) {
 	if (var$1 && $nc(result)->length() > 0) {
 		try {
 			return $new($XString, "1.0"_s);
-		} catch ($Exception&) {
-			$var($Exception, ex, $catch());
+		} catch ($Exception& ex) {
 			return $new($XString, result);
 		}
 	} else {
@@ -174,18 +159,16 @@ void FuncSystemProperty::loadPropertyFile($Properties* target) {
 				try {
 					try {
 						$nc(target)->load(static_cast<$InputStream*>(bis));
-					} catch ($Throwable&) {
-						$var($Throwable, t$, $catch());
+					} catch ($Throwable& t$) {
 						try {
 							bis->close();
-						} catch ($Throwable&) {
-							$var($Throwable, x2, $catch());
+						} catch ($Throwable& x2) {
 							t$->addSuppressed(x2);
 						}
 						$throw(t$);
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$1) {
+					$assign(var$0, var$1);
 				} /*finally*/ {
 					bis->close();
 				}
@@ -194,8 +177,7 @@ void FuncSystemProperty::loadPropertyFile($Properties* target) {
 				}
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($WrappedRuntimeException, ex);
 	}
 }

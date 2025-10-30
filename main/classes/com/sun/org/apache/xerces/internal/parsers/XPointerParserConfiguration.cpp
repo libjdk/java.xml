@@ -23,15 +23,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentFilter.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
 #include <com/sun/org/apache/xerces/internal/xpointer/XPointerHandler.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Map.h>
 #include <jcpp.h>
 
@@ -126,17 +117,11 @@ $Object* allocate$XPointerParserConfiguration($Class* clazz) {
 	return $of($alloc(XPointerParserConfiguration));
 }
 
-
 $String* XPointerParserConfiguration::ALLOW_UE_AND_NOTATION_EVENTS = nullptr;
-
 $String* XPointerParserConfiguration::XINCLUDE_FIXUP_BASE_URIS = nullptr;
-
 $String* XPointerParserConfiguration::XINCLUDE_FIXUP_LANGUAGE = nullptr;
-
 $String* XPointerParserConfiguration::XPOINTER_HANDLER = nullptr;
-
 $String* XPointerParserConfiguration::XINCLUDE_HANDLER = nullptr;
-
 $String* XPointerParserConfiguration::NAMESPACE_CONTEXT = nullptr;
 
 void XPointerParserConfiguration::init$() {

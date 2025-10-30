@@ -1,12 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/DefaultElement.h>
 
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/NodeImpl.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Attr.h>
 #include <org/w3c/dom/DOMException.h>
 #include <org/w3c/dom/Document.h>

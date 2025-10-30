@@ -2,13 +2,6 @@
 
 #include <com/sun/org/apache/xerces/internal/impl/dtd/XMLSimpleType.h>
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $XMLSimpleType = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLSimpleType;

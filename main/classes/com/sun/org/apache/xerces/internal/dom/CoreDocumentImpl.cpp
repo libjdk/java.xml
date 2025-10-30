@@ -38,25 +38,12 @@
 #include <java/io/ObjectOutputStream.h>
 #include <java/io/ObjectStreamField.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/Short.h>
-#include <java/lang/String.h>
-#include <java/lang/Void.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Hashtable.h>
@@ -621,9 +608,7 @@ void CoreDocumentImpl::finalize() {
 	this->$ParentNode::finalize();
 }
 
-
 $ints* CoreDocumentImpl::kidOK = nullptr;
-
 $ObjectStreamFieldArray* CoreDocumentImpl::serialPersistentFields = nullptr;
 
 void CoreDocumentImpl::init$() {
@@ -665,8 +650,7 @@ void CoreDocumentImpl::init$($DocumentType* doctype, bool grammarAccess) {
 		$var($DocumentTypeImpl, doctypeImpl, nullptr);
 		try {
 			$assign(doctypeImpl, $cast($DocumentTypeImpl, doctype));
-		} catch ($ClassCastException&) {
-			$var($ClassCastException, e, $catch());
+		} catch ($ClassCastException& e) {
 			$init($DOMMessageFormatter);
 			$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "WRONG_DOCUMENT_ERR"_s, nullptr));
 			$throwNew($DOMException, $DOMException::WRONG_DOCUMENT_ERR, msg);
@@ -1105,12 +1089,10 @@ $DOMConfiguration* CoreDocumentImpl::getDomConfig() {
 }
 
 $String* CoreDocumentImpl::getBaseURI() {
-	$useLocalCurrentObjectStackCache();
 	if (this->fDocumentURI != nullptr && $nc(this->fDocumentURI)->length() != 0) {
 		try {
 			return $$new($URI, this->fDocumentURI)->toString();
-		} catch ($URI$MalformedURIException&) {
-			$var($URI$MalformedURIException, e, $catch());
+		} catch ($URI$MalformedURIException& e) {
 			return nullptr;
 		}
 	}
@@ -1440,8 +1422,7 @@ $Node* CoreDocumentImpl::adoptNode($Node* source) {
 	$var($Map, userData, nullptr);
 	try {
 		$assign(node, $cast($NodeImpl, source));
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e, $catch());
+	} catch ($ClassCastException& e) {
 		return nullptr;
 	}
 	if (source == nullptr) {
@@ -2095,13 +2076,12 @@ void clinit$CoreDocumentImpl($Class* class$) {
 		$nc(CoreDocumentImpl::kidOK)->set($Node::ATTRIBUTE_NODE, $sl(1, $Node::TEXT_NODE) | $sl(1, $Node::ENTITY_REFERENCE_NODE));
 		$nc(CoreDocumentImpl::kidOK)->set($Node::DOCUMENT_TYPE_NODE, $nc(CoreDocumentImpl::kidOK)->set($Node::PROCESSING_INSTRUCTION_NODE, $nc(CoreDocumentImpl::kidOK)->set($Node::COMMENT_NODE, $nc(CoreDocumentImpl::kidOK)->set($Node::TEXT_NODE, $nc(CoreDocumentImpl::kidOK)->set($Node::CDATA_SECTION_NODE, $nc(CoreDocumentImpl::kidOK)->set($Node::NOTATION_NODE, 0))))));
 	}
-		$load($DocumentTypeImpl);
-		$load($ElementImpl);
-		$load($NodeListCache);
-		$load($String);
-		$init($Boolean);
-		$load($Hashtable);
-		$init($Integer);
+	$load($DocumentTypeImpl);
+	$load($ElementImpl);
+	$load($NodeListCache);
+	$init($Boolean);
+	$load($Hashtable);
+	$init($Integer);
 	$assignStatic(CoreDocumentImpl::serialPersistentFields, $new($ObjectStreamFieldArray, {
 		$$new($ObjectStreamField, "docType"_s, $DocumentTypeImpl::class$),
 		$$new($ObjectStreamField, "docElement"_s, $ElementImpl::class$),

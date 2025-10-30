@@ -11,13 +11,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo.h>
 #include <com/sun/org/apache/xerces/internal/util/DOMUtil.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Element.h>
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>
@@ -82,7 +75,7 @@ void XSDUniqueOrKeyTraverser::traverse($Element* uElem, $XSElementDecl* element,
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(uElem, false, schemaDoc));
 	$var($String, uName, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	if (uName == nullptr) {
-			$init($SchemaSymbols);
+		$init($SchemaSymbols);
 		reportSchemaError("s4s-att-must-appear"_s, $$new($ObjectArray, {
 			$($of($DOMUtil::getLocalName(uElem))),
 			$of($SchemaSymbols::ATT_NAME)

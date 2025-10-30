@@ -3,34 +3,21 @@
 #include <java/io/File.h>
 #include <java/io/FileInputStream.h>
 #include <java/io/InputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
 #include <java/lang/AssertionError.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/ClassNotFoundException.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/ReflectiveOperationException.h>
 #include <java/lang/SecurityException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
 #include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/security/AccessController.h>
 #include <java/security/PrivilegedAction.h>
 #include <java/util/Properties.h>
@@ -376,11 +363,8 @@ $Object* allocate$FactoryFinder($Class* clazz) {
 
 bool FactoryFinder::$assertionsDisabled = false;
 $String* FactoryFinder::DEFAULT_PACKAGE = nullptr;
-
 bool FactoryFinder::debug = false;
-
 $Properties* FactoryFinder::cacheProps = nullptr;
-
 $volatile(bool) FactoryFinder::firstTime = false;
 
 void FactoryFinder::init$() {
@@ -390,7 +374,6 @@ void FactoryFinder::dPrint($Supplier* msgGen) {
 	$init(FactoryFinder);
 	$useLocalCurrentObjectStackCache();
 	if (FactoryFinder::debug) {
-		$init($System);
 		$nc($System::err)->println($$str({"JAXP: "_s, $cast($String, $($nc(msgGen)->get()))}));
 	}
 }
@@ -415,8 +398,7 @@ $Class* FactoryFinder::getProviderClass($String* className, $ClassLoader* cl$ren
 		} else {
 			return $Class::forName(className, false, cl);
 		}
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e1, $catch());
+	} catch ($ClassNotFoundException& e1) {
 		if (doFallback) {
 			return $Class::forName(className, false, $(FactoryFinder::class$->getClassLoader()));
 		} else {
@@ -454,11 +436,9 @@ $Object* FactoryFinder::newInstance($Class* type, $String* className, $ClassLoad
 		$var($ClassLoader, clD, cl);
 		dPrint(static_cast<$Supplier*>($$new(FactoryFinder$$Lambda$lambda$newInstance$0, providerClass, clD)));
 		return $of($nc(type)->cast(instance));
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, x, $catch());
+	} catch ($ClassNotFoundException& x) {
 		$throwNew($DatatypeConfigurationException, $$str({"Provider "_s, className, " not found"_s}), x);
-	} catch ($Exception&) {
-		$var($Exception, x, $catch());
+	} catch ($Exception& x) {
 		$throwNew($DatatypeConfigurationException, $$str({"Provider "_s, className, " could not be instantiated: "_s, x}), x);
 	}
 	$shouldNotReachHere();
@@ -475,8 +455,7 @@ $Object* FactoryFinder::find($Class* type, $String* fallbackClassName) {
 			dPrint(static_cast<$Supplier*>($$new(FactoryFinder$$Lambda$lambda$find$2$2, systemProp)));
 			return $of(newInstance(type, systemProp, nullptr, true));
 		}
-	} catch ($SecurityException&) {
-		$var($SecurityException, se, $catch());
+	} catch ($SecurityException& se) {
 		if (FactoryFinder::debug) {
 			se->printStackTrace();
 		}
@@ -501,8 +480,7 @@ $Object* FactoryFinder::find($Class* type, $String* fallbackClassName) {
 			dPrint(static_cast<$Supplier*>($$new(FactoryFinder$$Lambda$lambda$find$4$4, factoryClassName)));
 			return $of(newInstance(type, factoryClassName, nullptr, true));
 		}
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		if (FactoryFinder::debug) {
 			ex->printStackTrace();
 		}
@@ -524,8 +502,7 @@ $Object* FactoryFinder::findServiceProvider($Class* type) {
 	$beforeCallerSensitive();
 	try {
 		return $of($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new($FactoryFinder$1, type))));
-	} catch ($ServiceConfigurationError&) {
-		$var($ServiceConfigurationError, e, $catch());
+	} catch ($ServiceConfigurationError& e) {
 		$var($DatatypeConfigurationException, error, $new($DatatypeConfigurationException, $$str({"Provider for "_s, type, " cannot be found"_s}), e));
 		$throw(error);
 	}
@@ -563,7 +540,6 @@ $String* FactoryFinder::lambda$newInstance$0($Class* providerClass, $ClassLoader
 }
 
 void clinit$FactoryFinder($Class* class$) {
-	$useLocalCurrentObjectStackCache();
 	$assignStatic(FactoryFinder::DEFAULT_PACKAGE, "com.sun.org.apache.xerces.internal"_s);
 	FactoryFinder::$assertionsDisabled = !FactoryFinder::class$->desiredAssertionStatus();
 	FactoryFinder::debug = false;
@@ -573,8 +549,7 @@ void clinit$FactoryFinder($Class* class$) {
 		try {
 			$var($String, val, $SecuritySupport::getSystemProperty("jaxp.debug"_s));
 			FactoryFinder::debug = val != nullptr && !"false"_s->equals(val);
-		} catch ($SecurityException&) {
-			$var($SecurityException, se, $catch());
+		} catch ($SecurityException& se) {
 			FactoryFinder::debug = false;
 		}
 	}

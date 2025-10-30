@@ -2,18 +2,7 @@
 
 #include <com/sun/org/apache/xerces/internal/util/SymbolTable.h>
 #include <com/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/HashMap.h>
 #include <jcpp.h>
 
@@ -123,11 +112,9 @@ void ElementSchemePointer$Tokens::addToken($String* tokenStr) {
 }
 
 void ElementSchemePointer$Tokens::addToken(int32_t token) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTokens)->set(this->fTokenCount, token);
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, ex, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& ex) {
 		$var($ints, oldList, this->fTokens);
 		$set(this, fTokens, $new($ints, this->fTokenCount << 1));
 		$System::arraycopy(oldList, 0, this->fTokens, 0, this->fTokenCount);

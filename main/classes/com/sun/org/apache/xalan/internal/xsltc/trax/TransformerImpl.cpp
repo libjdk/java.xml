@@ -32,24 +32,8 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Reader.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <java/net/URL.h>
 #include <java/net/URLConnection.h>
@@ -388,7 +372,6 @@ void TransformerImpl::finalize() {
 }
 
 $String* TransformerImpl::LEXICAL_HANDLER_PROPERTY = nullptr;
-
 $String* TransformerImpl::NAMESPACE_PREFIXES_FEATURE = nullptr;
 
 void TransformerImpl::init$($Properties* outputProperties, int32_t indentNumber, $TransformerFactoryImpl* tfactory) {
@@ -424,7 +407,6 @@ void TransformerImpl::init$($Translet* translet, $Properties* outputProperties, 
 		$nc(this->_translet)->setMessageHandler($$new($TransformerImpl$MessageHandler, this->_errorListener));
 	}
 	$set(this, _properties, createOutputProperties(outputProperties));
-	$load($String);
 	$var($String, isStandalone, $cast($String, $SecuritySupport::getJAXPSystemProperty($String::class$, "jdk.xml.xsltcIsStandalone"_s, "no"_s)));
 	$init($JdkProperty$ImplPropMap);
 	$init($JdkProperty$State);
@@ -525,9 +507,7 @@ void TransformerImpl::transform($Source* source, $Result* result) {
 				$nc(($($nc(this->_tohFactory)->getXMLStreamWriter())))->flush();
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
-		$init($System);
+	} catch ($Exception& e) {
 		$nc($System::out)->println("Result writing error"_s);
 	}
 }
@@ -595,28 +575,24 @@ $SerializationHandler* TransformerImpl::getOutputHandler($Result* result) {
 					$set(this, _ostream, $new($FileOutputStream, $($nc(p)->toFile())));
 					$nc(this->_tohFactory)->setOutputStream(this->_ostream);
 					return $nc(this->_tohFactory)->getSerializationHandler();
-				} catch ($Exception&) {
-					$var($Exception, e, $catch());
+				} catch ($Exception& e) {
 					$throwNew($TransformerException, static_cast<$Throwable*>(e));
 				}
 			} else if (systemId->startsWith("http:"_s)) {
 				$assign(url, $new($URL, systemId));
 				$var($URLConnection, connection, url->openConnection());
-				$nc(this->_tohFactory)->setOutputStream($assignField(this, _ostream, $nc(connection)->getOutputStream()));
+				$nc(this->_tohFactory)->setOutputStream($set(this, _ostream, $nc(connection)->getOutputStream()));
 				return $nc(this->_tohFactory)->getSerializationHandler();
 			} else {
-				$nc(this->_tohFactory)->setOutputStream($assignField(this, _ostream, $new($FileOutputStream, $$new($File, systemId))));
+				$nc(this->_tohFactory)->setOutputStream($set(this, _ostream, $new($FileOutputStream, $$new($File, systemId))));
 				return $nc(this->_tohFactory)->getSerializationHandler();
 			}
 		}
-	} catch ($UnknownServiceException&) {
-		$var($UnknownServiceException, e, $catch());
+	} catch ($UnknownServiceException& e) {
 		$throwNew($TransformerException, static_cast<$Throwable*>(e));
-	} catch ($ParserConfigurationException&) {
-		$var($ParserConfigurationException, e, $catch());
+	} catch ($ParserConfigurationException& e) {
 		$throwNew($TransformerException, static_cast<$Throwable*>(e));
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($TransformerException, static_cast<$Throwable*>(e));
 	}
 	return nullptr;
@@ -653,8 +629,7 @@ $DOM* TransformerImpl::getDOM($Source* source) {
 			$nc(this->_translet)->prepassDocument(dom);
 		}
 		return dom;
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		if (this->_errorListener != nullptr) {
 			postErrorToListener($(e->getMessage()));
 		}
@@ -687,8 +662,7 @@ void TransformerImpl::transformIdentity($Source* source, $SerializationHandler* 
 				try {
 					$nc(reader)->setProperty(TransformerImpl::LEXICAL_HANDLER_PROPERTY, handler);
 					reader->setFeature(TransformerImpl::NAMESPACE_PREFIXES_FEATURE, true);
-				} catch ($SAXException&) {
-					$catch();
+				} catch ($SAXException& e) {
 				}
 				$nc(reader)->setContentHandler(handler);
 				$var($InputSource, input, nullptr);
@@ -706,8 +680,8 @@ void TransformerImpl::transformIdentity($Source* source, $SerializationHandler* 
 					$throwNew($TransformerException, $(err->toString()));
 				}
 				reader->parse(input);
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				$nc(this->_readerManager)->releaseXMLReader(reader);
 			}
@@ -721,7 +695,7 @@ void TransformerImpl::transformIdentity($Source* source, $SerializationHandler* 
 		$var($InputSource, input, sax->getInputSource());
 		bool userReader = true;
 		{
-			$var($Throwable, var$1, nullptr);
+			$var($Throwable, var$2, nullptr);
 			try {
 				if (reader == nullptr) {
 					$assign(reader, $nc(this->_readerManager)->getXMLReader());
@@ -730,20 +704,19 @@ void TransformerImpl::transformIdentity($Source* source, $SerializationHandler* 
 				try {
 					$nc(reader)->setProperty(TransformerImpl::LEXICAL_HANDLER_PROPERTY, handler);
 					reader->setFeature(TransformerImpl::NAMESPACE_PREFIXES_FEATURE, true);
-				} catch ($SAXException&) {
-					$catch();
+				} catch ($SAXException& e) {
 				}
 				$nc(reader)->setContentHandler(handler);
 				reader->parse(input);
-			} catch ($Throwable&) {
-				$assign(var$1, $catch());
+			} catch ($Throwable& var$3) {
+				$assign(var$2, var$3);
 			} /*finally*/ {
 				if (!userReader) {
 					$nc(this->_readerManager)->releaseXMLReader(reader);
 				}
 			}
-			if (var$1 != nullptr) {
-				$throw(var$1);
+			if (var$2 != nullptr) {
+				$throw(var$2);
 			}
 		}
 	} else if ($instanceOf($StAXSource, source)) {
@@ -797,8 +770,7 @@ void TransformerImpl::transform($Source* source$renamed, $SerializationHandler* 
 					try {
 						$init($XMLConstants);
 						$nc(builderF)->setFeature($XMLConstants::USE_CATALOG, this->_useCatalog);
-					} catch ($ParserConfigurationException&) {
-						$var($ParserConfigurationException, e, $catch());
+					} catch ($ParserConfigurationException& e) {
 						supportCatalog = false;
 					}
 					if (supportCatalog && this->_useCatalog) {
@@ -831,27 +803,24 @@ void TransformerImpl::transform($Source* source$renamed, $SerializationHandler* 
 				} else {
 					$nc(this->_translet)->transform($(getDOM(source)), handler);
 				}
-			} catch ($TransletException&) {
-				$var($TransletException, e, $catch());
+			} catch ($TransletException& e) {
 				if (this->_errorListener != nullptr) {
 					postErrorToListener($(e->getMessage()));
 				}
 				$throwNew($TransformerException, static_cast<$Throwable*>(e));
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, e, $catch());
+			} catch ($RuntimeException& e) {
 				if (this->_errorListener != nullptr) {
 					postErrorToListener($(e->getMessage()));
 				}
 				$throwNew($TransformerException, static_cast<$Throwable*>(e));
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				if (this->_errorListener != nullptr) {
 					postErrorToListener($(e->getMessage()));
 				}
 				$throwNew($TransformerException, static_cast<$Throwable*>(e));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$7) {
+			$assign(var$0, var$7);
 		} /*finally*/ {
 			$set(this, _dtmManager, nullptr);
 		}
@@ -862,8 +831,7 @@ void TransformerImpl::transform($Source* source$renamed, $SerializationHandler* 
 	if (this->_ostream != nullptr) {
 		try {
 			$nc(this->_ostream)->close();
-		} catch ($IOException&) {
-			$catch();
+		} catch ($IOException& e) {
 		}
 		$set(this, _ostream, nullptr);
 	}
@@ -889,16 +857,14 @@ void TransformerImpl::setErrorListener($ErrorListener* listener) {
 void TransformerImpl::postErrorToListener($String* message) {
 	try {
 		$nc(this->_errorListener)->error($$new($TransformerException, message));
-	} catch ($TransformerException&) {
-		$catch();
+	} catch ($TransformerException& e) {
 	}
 }
 
 void TransformerImpl::postWarningToListener($String* message) {
 	try {
 		$nc(this->_errorListener)->warning($$new($TransformerException, message));
-	} catch ($TransformerException&) {
-		$catch();
+	} catch ($TransformerException& e) {
 	}
 }
 
@@ -1252,14 +1218,12 @@ $DOM* TransformerImpl::retrieveDocument($String* baseURI, $String* href$renamed,
 			return getDOM(streamSource);
 		}
 		return getDOM(resolvedSource);
-	} catch ($TransformerException&) {
-		$var($Exception, e, $catch());
+	} catch ($TransformerException& e) {
 		if (this->_errorListener != nullptr) {
 			postErrorToListener($$str({"File not found: "_s, $(e->getMessage())}));
 		}
 		return (nullptr);
-	} catch ($CatalogException&) {
-		$var($Exception, e, $catch());
+	} catch ($CatalogException& e) {
 		if (this->_errorListener != nullptr) {
 			postErrorToListener($$str({"File not found: "_s, $(e->getMessage())}));
 		}

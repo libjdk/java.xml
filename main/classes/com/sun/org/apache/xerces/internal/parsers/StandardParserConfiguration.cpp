@@ -19,14 +19,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentFilter.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Map.h>
 #include <jcpp.h>
 
@@ -154,45 +146,25 @@ $Object* allocate$StandardParserConfiguration($Class* clazz) {
 	return $of($alloc(StandardParserConfiguration));
 }
 
-
 $String* StandardParserConfiguration::NORMALIZE_DATA = nullptr;
-
 $String* StandardParserConfiguration::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* StandardParserConfiguration::SCHEMA_AUGMENT_PSVI = nullptr;
-
 $String* StandardParserConfiguration::XMLSCHEMA_VALIDATION = nullptr;
-
 $String* StandardParserConfiguration::XMLSCHEMA_FULL_CHECKING = nullptr;
-
 $String* StandardParserConfiguration::GENERATE_SYNTHETIC_ANNOTATIONS = nullptr;
-
 $String* StandardParserConfiguration::VALIDATE_ANNOTATIONS = nullptr;
-
 $String* StandardParserConfiguration::HONOUR_ALL_SCHEMALOCATIONS = nullptr;
-
 $String* StandardParserConfiguration::IGNORE_XSI_TYPE = nullptr;
-
 $String* StandardParserConfiguration::ID_IDREF_CHECKING = nullptr;
-
 $String* StandardParserConfiguration::UNPARSED_ENTITY_CHECKING = nullptr;
-
 $String* StandardParserConfiguration::IDENTITY_CONSTRAINT_CHECKING = nullptr;
-
 $String* StandardParserConfiguration::NAMESPACE_GROWTH = nullptr;
-
 $String* StandardParserConfiguration::TOLERATE_DUPLICATES = nullptr;
-
 $String* StandardParserConfiguration::SCHEMA_VALIDATOR = nullptr;
-
 $String* StandardParserConfiguration::SCHEMA_LOCATION = nullptr;
-
 $String* StandardParserConfiguration::SCHEMA_NONS_LOCATION = nullptr;
-
 $String* StandardParserConfiguration::SCHEMA_DV_FACTORY = nullptr;
-
 $String* StandardParserConfiguration::ROOT_TYPE_DEF = nullptr;
-
 $String* StandardParserConfiguration::ROOT_ELEMENT_DECL = nullptr;
 
 void StandardParserConfiguration::init$() {

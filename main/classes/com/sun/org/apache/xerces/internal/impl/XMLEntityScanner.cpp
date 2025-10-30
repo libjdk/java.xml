@@ -28,19 +28,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/InputStreamReader.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Locale.h>
 #include <jcpp.h>
@@ -239,13 +226,9 @@ $Object* allocate$XMLEntityScanner($Class* clazz) {
 }
 
 $booleans* XMLEntityScanner::VALID_NAMES = nullptr;
-
 $EOFException* XMLEntityScanner::END_OF_DOCUMENT_ENTITY = nullptr;
-
 $String* XMLEntityScanner::SYMBOL_TABLE = nullptr;
-
 $String* XMLEntityScanner::ERROR_REPORTER = nullptr;
-
 $String* XMLEntityScanner::ALLOW_JAVA_ENCODINGS = nullptr;
 
 void XMLEntityScanner::init$() {

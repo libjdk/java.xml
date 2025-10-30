@@ -1,17 +1,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/SAX2StAXEventWriter.h>
 
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/SAX2StAXBaseWriter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -180,12 +170,10 @@ void SAX2StAXEventWriter::startDocument() {
 }
 
 void SAX2StAXEventWriter::writeStartDocument() {
-	$useLocalCurrentObjectStackCache();
 	$SAX2StAXBaseWriter::writeStartDocument();
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createStartDocument(this->encoding, this->xmlVersion))));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	this->needToCallStartDocument = false;
@@ -196,8 +184,7 @@ void SAX2StAXEventWriter::endDocument() {
 	$nc(this->eventFactory)->setLocation($(getCurrentLocation()));
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createEndDocument())));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	$SAX2StAXBaseWriter::endDocument();
@@ -230,12 +217,11 @@ void SAX2StAXEventWriter::startElement($String* uri, $String* localName, $String
 				$var($String, var$3, qname->get(1));
 				$var($Iterator, var$4, $nc(events->get(1))->iterator());
 				$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createStartElement(var$1, var$2, var$3, var$4, $($nc(events->get(0))->iterator())))));
-			} catch ($XMLStreamException&) {
-				$var($XMLStreamException, e, $catch());
+			} catch ($XMLStreamException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$5) {
+			$assign(var$0, var$5);
 		} /*finally*/ {
 			$SAX2StAXBaseWriter::startElement(uri, localName, qName, attributes);
 		}
@@ -258,8 +244,7 @@ void SAX2StAXEventWriter::endElement($String* uri, $String* localName, $String* 
 	$var($Iterator, nsIter, $nc(nsList)->iterator());
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createEndElement(qname->get(0), uri, qname->get(1), nsIter))));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -273,8 +258,7 @@ void SAX2StAXEventWriter::comment($chars* ch, int32_t start, int32_t length) {
 	$nc(this->eventFactory)->setLocation($(getCurrentLocation()));
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createComment($$new($String, ch, start, length)))));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -287,8 +271,7 @@ void SAX2StAXEventWriter::characters($chars* ch, int32_t start, int32_t length) 
 			$nc(this->eventFactory)->setLocation($(getCurrentLocation()));
 			$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createCharacters($$new($String, ch, start, length)))));
 		}
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -299,15 +282,13 @@ void SAX2StAXEventWriter::ignorableWhitespace($chars* ch, int32_t start, int32_t
 }
 
 void SAX2StAXEventWriter::processingInstruction($String* target, $String* data) {
-	$useLocalCurrentObjectStackCache();
 	if (this->needToCallStartDocument) {
 		writeStartDocument();
 	}
 	$SAX2StAXBaseWriter::processingInstruction(target, data);
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createProcessingInstruction(target, data))));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -317,8 +298,7 @@ void SAX2StAXEventWriter::endCDATA() {
 	$nc(this->eventFactory)->setLocation($(getCurrentLocation()));
 	try {
 		$nc(this->writer)->add($(static_cast<$XMLEvent*>($nc(this->eventFactory)->createCData($($nc(this->CDATABuffer)->toString())))));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	$SAX2StAXBaseWriter::endCDATA();

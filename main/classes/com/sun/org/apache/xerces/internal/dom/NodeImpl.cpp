@@ -8,18 +8,7 @@
 #include <com/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl.h>
 #include <com/sun/org/apache/xerces/internal/dom/ParentNode.h>
 #include <java/io/ObjectOutputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Map.h>
 #include <org/w3c/dom/Attr.h>
 #include <org/w3c/dom/DOMException.h>
@@ -289,8 +278,7 @@ $Node* NodeImpl::cloneNode(bool deep) {
 	$var(NodeImpl, newnode, nullptr);
 	try {
 		$assign(newnode, $cast(NodeImpl, clone()));
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$throwNew($RuntimeException, $$str({"**Internal Error**"_s, e}));
 	}
 	$set($nc(newnode), ownerNode, ownerDocument());

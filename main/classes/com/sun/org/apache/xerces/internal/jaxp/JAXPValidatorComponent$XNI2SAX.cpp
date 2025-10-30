@@ -11,16 +11,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/Attributes.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/Locator.h>
@@ -129,13 +119,11 @@ void JAXPValidatorComponent$XNI2SAX::xmlDecl($String* version, $String* encoding
 }
 
 void JAXPValidatorComponent$XNI2SAX::startDocument($XMLLocator* locator, $String* encoding, $NamespaceContext* namespaceContext, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	$set(this, fNamespaceContext, namespaceContext);
 	$nc(this->fContentHandler)->setDocumentLocator($$new($LocatorProxy, locator));
 	try {
 		$nc(this->fContentHandler)->startDocument();
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -143,18 +131,15 @@ void JAXPValidatorComponent$XNI2SAX::startDocument($XMLLocator* locator, $String
 void JAXPValidatorComponent$XNI2SAX::endDocument($Augmentations* augs) {
 	try {
 		$nc(this->fContentHandler)->endDocument();
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
 
 void JAXPValidatorComponent$XNI2SAX::processingInstruction($String* target, $XMLString* data, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fContentHandler)->processingInstruction(target, $($nc(data)->toString()));
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -176,8 +161,7 @@ void JAXPValidatorComponent$XNI2SAX::startElement($QName* element, $XMLAttribute
 		$var($String, localpart, element->localpart);
 		$nc(this->fAttributesProxy)->setAttributes(attributes);
 		$nc(this->fContentHandler)->startElement(uri, localpart, element->rawname, this->fAttributesProxy);
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -194,8 +178,7 @@ void JAXPValidatorComponent$XNI2SAX::endElement($QName* element, $Augmentations*
 				$nc(this->fContentHandler)->endPrefixMapping($($nc(this->fNamespaceContext)->getDeclaredPrefixAt(i)));
 			}
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -208,8 +191,7 @@ void JAXPValidatorComponent$XNI2SAX::emptyElement($QName* element, $XMLAttribute
 void JAXPValidatorComponent$XNI2SAX::characters($XMLString* text, $Augmentations* augs) {
 	try {
 		$nc(this->fContentHandler)->characters($nc(text)->ch, text->offset, text->length);
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }
@@ -217,8 +199,7 @@ void JAXPValidatorComponent$XNI2SAX::characters($XMLString* text, $Augmentations
 void JAXPValidatorComponent$XNI2SAX::ignorableWhitespace($XMLString* text, $Augmentations* augs) {
 	try {
 		$nc(this->fContentHandler)->ignorableWhitespace($nc(text)->ch, text->offset, text->length);
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 }

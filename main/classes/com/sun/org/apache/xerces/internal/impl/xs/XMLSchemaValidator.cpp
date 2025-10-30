@@ -89,20 +89,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSValue.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Collections.h>
 #include <java/util/HashMap.h>
@@ -645,83 +631,47 @@ void XMLSchemaValidator::finalize() {
 	this->$XMLComponent::finalize();
 }
 
-
 $String* XMLSchemaValidator::VALIDATION = nullptr;
-
 $String* XMLSchemaValidator::SCHEMA_VALIDATION = nullptr;
-
 $String* XMLSchemaValidator::SCHEMA_FULL_CHECKING = nullptr;
-
 $String* XMLSchemaValidator::DYNAMIC_VALIDATION = nullptr;
-
 $String* XMLSchemaValidator::NORMALIZE_DATA = nullptr;
-
 $String* XMLSchemaValidator::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* XMLSchemaValidator::SCHEMA_AUGMENT_PSVI = nullptr;
-
 $String* XMLSchemaValidator::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* XMLSchemaValidator::STANDARD_URI_CONFORMANT_FEATURE = nullptr;
-
 $String* XMLSchemaValidator::GENERATE_SYNTHETIC_ANNOTATIONS = nullptr;
-
 $String* XMLSchemaValidator::VALIDATE_ANNOTATIONS = nullptr;
-
 $String* XMLSchemaValidator::HONOUR_ALL_SCHEMALOCATIONS = nullptr;
-
 $String* XMLSchemaValidator::USE_GRAMMAR_POOL_ONLY = nullptr;
-
 $String* XMLSchemaValidator::CONTINUE_AFTER_FATAL_ERROR = nullptr;
 $String* XMLSchemaValidator::PARSER_SETTINGS = nullptr;
-
 $String* XMLSchemaValidator::NAMESPACE_GROWTH = nullptr;
-
 $String* XMLSchemaValidator::TOLERATE_DUPLICATES = nullptr;
-
 $String* XMLSchemaValidator::IGNORE_XSI_TYPE = nullptr;
-
 $String* XMLSchemaValidator::ID_IDREF_CHECKING = nullptr;
-
 $String* XMLSchemaValidator::UNPARSED_ENTITY_CHECKING = nullptr;
-
 $String* XMLSchemaValidator::IDENTITY_CONSTRAINT_CHECKING = nullptr;
 $String* XMLSchemaValidator::REPORT_WHITESPACE = nullptr;
-
 $String* XMLSchemaValidator::SYMBOL_TABLE = nullptr;
-
 $String* XMLSchemaValidator::ERROR_REPORTER = nullptr;
-
 $String* XMLSchemaValidator::ENTITY_RESOLVER = nullptr;
-
 $String* XMLSchemaValidator::XMLGRAMMAR_POOL = nullptr;
 $String* XMLSchemaValidator::VALIDATION_MANAGER = nullptr;
 $String* XMLSchemaValidator::ENTITY_MANAGER = nullptr;
-
 $String* XMLSchemaValidator::SCHEMA_LOCATION = nullptr;
-
 $String* XMLSchemaValidator::SCHEMA_NONS_LOCATION = nullptr;
-
 $String* XMLSchemaValidator::JAXP_SCHEMA_SOURCE = nullptr;
-
 $String* XMLSchemaValidator::JAXP_SCHEMA_LANGUAGE = nullptr;
-
 $String* XMLSchemaValidator::ROOT_TYPE_DEF = nullptr;
-
 $String* XMLSchemaValidator::ROOT_ELEMENT_DECL = nullptr;
-
 $String* XMLSchemaValidator::SCHEMA_DV_FACTORY = nullptr;
-
 $String* XMLSchemaValidator::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 $String* XMLSchemaValidator::OVERRIDE_PARSER = nullptr;
 $String* XMLSchemaValidator::USE_CATALOG = nullptr;
-
 $StringArray* XMLSchemaValidator::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLSchemaValidator::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLSchemaValidator::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLSchemaValidator::PROPERTY_DEFAULTS = nullptr;
 $XSAttributeDecl* XMLSchemaValidator::XSI_TYPE = nullptr;
 $XSAttributeDecl* XMLSchemaValidator::XSI_NIL = nullptr;
@@ -788,8 +738,7 @@ void XMLSchemaValidator::setDocumentHandler($XMLDocumentHandler* documentHandler
 	if ($instanceOf($XMLParser, documentHandler)) {
 		try {
 			this->reportWhitespace = $nc(($cast($XMLParser, documentHandler)))->getFeature(XMLSchemaValidator::REPORT_WHITESPACE);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			this->reportWhitespace = false;
 		}
 	}
@@ -1109,8 +1058,7 @@ void XMLSchemaValidator::reset($XMLComponentManager* componentManager) {
 			$set(this, fRootTypeDefinition, $cast($XSTypeDefinition, rootType));
 			$set(this, fRootTypeQName, nullptr);
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fRootTypeQName, nullptr);
 		$set(this, fRootTypeDefinition, nullptr);
 	}
@@ -1126,8 +1074,7 @@ void XMLSchemaValidator::reset($XMLComponentManager* componentManager) {
 			$set(this, fRootElementDeclaration, $cast($XSElementDecl, rootDecl));
 			$set(this, fRootElementDeclQName, nullptr);
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fRootElementDeclQName, nullptr);
 		$set(this, fRootElementDeclaration, nullptr);
 	}
@@ -1135,27 +1082,23 @@ void XMLSchemaValidator::reset($XMLComponentManager* componentManager) {
 	this->fIgnoreXSITypeDepth = ignoreXSIType ? 0 : -1;
 	try {
 		this->fIDCChecking = componentManager->getFeature(XMLSchemaValidator::IDENTITY_CONSTRAINT_CHECKING);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		this->fIDCChecking = true;
 	}
 	try {
 		$nc(this->fValidationState)->setIdIdrefChecking(componentManager->getFeature(XMLSchemaValidator::ID_IDREF_CHECKING));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$nc(this->fValidationState)->setIdIdrefChecking(true);
 	}
 	try {
 		$nc(this->fValidationState)->setUnparsedEntityChecking(componentManager->getFeature(XMLSchemaValidator::UNPARSED_ENTITY_CHECKING));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$nc(this->fValidationState)->setUnparsedEntityChecking(true);
 	}
 	try {
 		$set(this, fExternalSchemas, $cast($String, componentManager->getProperty(XMLSchemaValidator::SCHEMA_LOCATION)));
 		$set(this, fExternalNoNamespaceSchema, $cast($String, componentManager->getProperty(XMLSchemaValidator::SCHEMA_NONS_LOCATION)));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fExternalSchemas, nullptr);
 		$set(this, fExternalNoNamespaceSchema, nullptr);
 	}
@@ -1610,8 +1553,7 @@ $Augmentations* XMLSchemaValidator::handleStartElement($1QName* element, $XMLAtt
 				} else {
 					try {
 						this->fWhiteSpace = $nc(ctype->fXSSimpleType)->getWhitespace();
-					} catch ($DatatypeException&) {
-						$catch();
+					} catch ($DatatypeException& e) {
 					}
 				}
 			}
@@ -1623,8 +1565,7 @@ $Augmentations* XMLSchemaValidator::handleStartElement($1QName* element, $XMLAtt
 		} else {
 			try {
 				this->fWhiteSpace = dv->getWhitespace();
-			} catch ($DatatypeException&) {
-				$catch();
+			} catch ($DatatypeException& e) {
 			}
 		}
 	}
@@ -1863,8 +1804,7 @@ void XMLSchemaValidator::storeLocations($String* sLocation, $String* nsLocation$
 		if (this->fLocator != nullptr) {
 			try {
 				$assign(nsLocation, $XMLEntityManager::expandSystemId(nsLocation, $($nc(this->fLocator)->getExpandedSystemId()), false));
-			} catch ($URI$MalformedURIException&) {
-				$catch();
+			} catch ($URI$MalformedURIException& e) {
 			}
 		}
 		$nc(la)->addLocation(nsLocation);
@@ -1920,15 +1860,13 @@ $SchemaGrammar* XMLSchemaValidator::findSchemaGrammar(int16_t contextType, $Stri
 						if ($nc($(grammar->getDocumentLocations()))->contains($($XMLEntityManager::expandSystemId(var$0, $(xis->getBaseSystemId()), false)))) {
 							toParseSchema = false;
 						}
-					} catch ($URI$MalformedURIException&) {
-						$catch();
+					} catch ($URI$MalformedURIException& e) {
 					}
 				}
 				if (toParseSchema) {
 					$assign(grammar, $nc(this->fSchemaLoader)->loadSchema(this->fXSDDescription, xis, this->fLocationPairs));
 				}
-			} catch ($IOException&) {
-				$var($IOException, ex, $catch());
+			} catch ($IOException& ex) {
 				$var($StringArray, locationHints, $nc(this->fXSDDescription)->getLocationHints());
 				$init($XSMessageFormatter);
 				$nc($nc(this->fXSIErrorReporter)->fErrorReporter)->reportError($XSMessageFormatter::SCHEMA_DOMAIN, "schema_reference.4"_s, $$new($ObjectArray, {locationHints != nullptr ? $of($nc(locationHints)->get(0)) : $of($XMLSymbols::EMPTY_STRING)}), $XMLErrorReporter::SEVERITY_WARNING, static_cast<$Exception*>(ex));
@@ -1995,11 +1933,10 @@ $XSTypeDefinition* XMLSchemaValidator::getAndCheckXsiType($1QName* element, $Str
 	$var($1QName, typeName, nullptr);
 	try {
 		$assign(typeName, $cast($1QName, $nc(this->fQNameDV)->validate(xsiType, static_cast<$ValidationContext*>(this->fValidationState), ($ValidatedInfo*)nullptr)));
-	} catch ($InvalidDatatypeValueException&) {
-		$var($InvalidDatatypeValueException, e, $catch());
+	} catch ($InvalidDatatypeValueException& e) {
 		$var($String, var$0, e->getKey());
 		reportSchemaError(var$0, $(e->getArgs()));
-			$init($SchemaSymbols);
+		$init($SchemaSymbols);
 		reportSchemaError("cvc-elt.4.1"_s, $$new($ObjectArray, {
 			$of($nc(element)->rawname),
 			$of($$str({$SchemaSymbols::URI_XSI, ","_s, $SchemaSymbols::XSI_TYPE})),
@@ -2048,7 +1985,7 @@ $XSTypeDefinition* XMLSchemaValidator::getAndCheckXsiType($1QName* element, $Str
 bool XMLSchemaValidator::getXsiNil($1QName* element, $String* xsiNil) {
 	$useLocalCurrentObjectStackCache();
 	if (this->fCurrentElemDecl != nullptr && !$nc(this->fCurrentElemDecl)->getNillable()) {
-			$init($SchemaSymbols);
+		$init($SchemaSymbols);
 		reportSchemaError("cvc-elt.3.1"_s, $$new($ObjectArray, {
 			$of($nc(element)->rawname),
 			$of($$str({$SchemaSymbols::URI_XSI, ","_s, $SchemaSymbols::XSI_NIL}))
@@ -2216,8 +2153,7 @@ void XMLSchemaValidator::processOneAttribute($1QName* element, $XMLAttributes* a
 				$set(this, fNotation, grammar->getGlobalNotationDecl($nc(qName)->localpart));
 			}
 		}
-	} catch ($InvalidDatatypeValueException&) {
-		$var($InvalidDatatypeValueException, idve, $catch());
+	} catch ($InvalidDatatypeValueException& idve) {
 		$var($String, var$1, idve->getKey());
 		reportSchemaError(var$1, $(idve->getArgs()));
 		reportSchemaError("cvc-attribute.3"_s, $$new($ObjectArray, {
@@ -2338,7 +2274,7 @@ void XMLSchemaValidator::processElementContent($1QName* element) {
 	$set($nc(this->fValidatedInfo), normalizedValue, nullptr);
 	if (this->fNil) {
 		if (this->fSubElement || this->fSawText) {
-				$init($SchemaSymbols);
+			$init($SchemaSymbols);
 			reportSchemaError("cvc-elt.3.2.1"_s, $$new($ObjectArray, {
 				$of($nc(element)->rawname),
 				$of($$str({$SchemaSymbols::URI_XSI, ","_s, $SchemaSymbols::XSI_NIL}))
@@ -2437,8 +2373,7 @@ $Object* XMLSchemaValidator::elementLocallyValidType($1QName* element, Object$* 
 					$nc(this->fValidationState)->setNormalizationRequired(true);
 				}
 				$assign(retValue, $nc(dv)->validate(textContent, static_cast<$ValidationContext*>(this->fValidationState), this->fValidatedInfo));
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, e, $catch());
+			} catch ($InvalidDatatypeValueException& e) {
 				$var($String, var$0, e->getKey());
 				reportSchemaError(var$0, $(e->getArgs()));
 				reportSchemaError("cvc-type.3.1.3"_s, $$new($ObjectArray, {
@@ -2470,8 +2405,7 @@ $Object* XMLSchemaValidator::elementLocallyValidComplexType($1QName* element, Ob
 					$nc(this->fValidationState)->setNormalizationRequired(true);
 				}
 				$assign(actualValue, $nc(dv)->validate(textContent, static_cast<$ValidationContext*>(this->fValidationState), this->fValidatedInfo));
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, e, $catch());
+			} catch ($InvalidDatatypeValueException& e) {
 				$var($String, var$0, e->getKey());
 				reportSchemaError(var$0, $(e->getArgs()));
 				reportSchemaError("cvc-complex-type.2.2"_s, $$new($ObjectArray, {$of($nc(element)->rawname)}));
@@ -2685,8 +2619,8 @@ void clinit$XMLSchemaValidator($Class* class$) {
 		XMLSchemaValidator::OVERRIDE_PARSER,
 		XMLSchemaValidator::USE_CATALOG
 	}));
-		$init($JdkConstants);
-		$init($JdkXmlUtils);
+	$init($JdkConstants);
+	$init($JdkXmlUtils);
 	$assignStatic(XMLSchemaValidator::FEATURE_DEFAULTS, $new($BooleanArray, {
 		($Boolean*)nullptr,
 		($Boolean*)nullptr,

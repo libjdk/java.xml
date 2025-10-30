@@ -32,8 +32,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0x7D2CD64B50FF589F;
 	::java::lang::Exception* fException = nullptr;
 	XNIException(const XNIException& e);
-	XNIException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XNIException* operator ->() {
+		return (XNIException*)throwing$;
+	}
 };
 
 						} // xni

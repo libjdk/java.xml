@@ -38,8 +38,10 @@ public:
 	$Throwable* nested = nullptr;
 	::javax::xml::stream::Location* location = nullptr;
 	XMLStreamException(const XMLStreamException& e);
-	XMLStreamException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XMLStreamException* operator ->() {
+		return (XMLStreamException*)throwing$;
+	}
 };
 
 		} // stream

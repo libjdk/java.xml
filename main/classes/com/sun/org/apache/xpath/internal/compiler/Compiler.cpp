@@ -48,21 +48,7 @@
 #include <com/sun/org/apache/xpath/internal/patterns/StepPattern.h>
 #include <com/sun/org/apache/xpath/internal/patterns/UnionPattern.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
 #include <java/lang/StackOverflowError.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <javax/xml/transform/SourceLocator.h>
 #include <javax/xml/transform/TransformerException.h>
@@ -314,8 +300,7 @@ $Expression* Compiler::compileExpression(int32_t opPos) {
 	try {
 		this->countOp = 0;
 		return compile(opPos);
-	} catch ($StackOverflowError&) {
-		$var($StackOverflowError, sof, $catch());
+	} catch ($StackOverflowError& sof) {
 		$init($XPATHErrorResources);
 		error($XPATHErrorResources::ER_COMPILATION_TOO_MANY_OPERATION, $$new($ObjectArray, {$($of($Integer::valueOf(this->countOp)))}));
 	}
@@ -617,8 +602,8 @@ $Expression* Compiler::union$(int32_t opPos) {
 			$assign(var$2, $UnionPathIterator::createUnionIterator(this, opPos));
 			return$1 = true;
 			goto $finally;
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			--this->locPathDepth;
 		}
@@ -652,8 +637,8 @@ $Expression* Compiler::locationPath(int32_t opPos) {
 			$assign(var$2, $cast($Expression, iter));
 			return$1 = true;
 			goto $finally;
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			--this->locPathDepth;
 		}
@@ -700,8 +685,8 @@ $Expression* Compiler::matchPattern(int32_t opPos) {
 			$assign(var$2, up);
 			return$1 = true;
 			goto $finally;
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			--this->locPathDepth;
 		}
@@ -928,8 +913,7 @@ $Expression* Compiler::compileFunction(int32_t opPos) {
 				func->setArg($(compile(p)), i);
 			}
 			func->checkNumberArgs(i);
-		} catch ($WrongNumberArgsException&) {
-			$var($WrongNumberArgsException, wnae, $catch());
+		} catch ($WrongNumberArgsException& wnae) {
 			$var($String, name, $nc(this->m_functionTable)->getFunctionName(funcID));
 			$init($XPATHErrorResources);
 			$nc(this->m_errorHandler)->fatalError($$new($TransformerException, $($XSLMessages::createXPATHMessage($XPATHErrorResources::ER_ONLY_ALLOWS, $$new($ObjectArray, {
@@ -971,8 +955,7 @@ $Expression* Compiler::compileExtension(int32_t opPos) {
 			opPos = nextOpPos;
 			++i;
 		}
-	} catch ($WrongNumberArgsException&) {
-		$var($WrongNumberArgsException, wnae, $catch());
+	} catch ($WrongNumberArgsException& wnae) {
 	}
 	return extension;
 }
@@ -983,7 +966,6 @@ void Compiler::warn($String* msg, $ObjectArray* args) {
 	if (nullptr != this->m_errorHandler) {
 		$nc(this->m_errorHandler)->warning($$new($TransformerException, fmsg, this->m_locator));
 	} else {
-		$init($System);
 		$var($String, var$2, $$str({fmsg, "; file "_s, $($nc(this->m_locator)->getSystemId()), "; line "_s}));
 		$var($String, var$1, $$concat(var$2, $$str($nc(this->m_locator)->getLineNumber())));
 		$var($String, var$0, $$concat(var$1, "; column "));

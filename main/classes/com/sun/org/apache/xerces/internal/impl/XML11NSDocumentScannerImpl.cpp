@@ -28,16 +28,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/xml/internal/stream/dtd/DTDGrammarUtil.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/events/XMLEvent.h>
 #include <jcpp.h>
 
@@ -456,7 +446,7 @@ void XML11NSDocumentScannerImpl::scanAttribute($XMLAttributesImpl* attributes) {
 		if (isNSDecl) {
 			if ($nc(value)->length() > this->fXMLNameLimit) {
 				$init($XMLMessageFormatter);
-					$init($XMLSecurityManager$Limit);
+				$init($XMLSecurityManager$Limit);
 				$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "MaxXMLNameLimit"_s, $$new($ObjectArray, {
 					$of(value),
 					$($of($Integer::valueOf(value->length()))),

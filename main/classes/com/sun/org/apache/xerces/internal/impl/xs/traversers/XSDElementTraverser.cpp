@@ -37,18 +37,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTerm.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <java/util/Map.h>
 #include <org/w3c/dom/Attr.h>
@@ -212,8 +201,7 @@ $XSParticleDecl* XSDElementTraverser::traverseLocal($Element* elmDecl, $XSDocume
 				if (m >= 0) {
 					particle->fMinOccurs = m;
 				}
-			} catch ($NumberFormatException&) {
-				$catch();
+			} catch ($NumberFormatException& ex) {
 			}
 		}
 		$nc(this->fSchemaHandler)->fillInLocalElemInfo(elmDecl, schemaDoc, allContextFlags, parent, particle);

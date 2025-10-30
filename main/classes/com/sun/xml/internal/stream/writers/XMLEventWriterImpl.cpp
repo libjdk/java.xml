@@ -1,13 +1,6 @@
 #include <com/sun/xml/internal/stream/writers/XMLEventWriterImpl.h>
 
 #include <com/sun/xml/internal/stream/writers/XMLStreamWriterBase.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <javax/xml/namespace/NamespaceContext.h>
 #include <javax/xml/namespace/QName.h>
@@ -143,8 +136,7 @@ void XMLEventWriterImpl::add($XMLEvent* xMLEvent) {
 						$var($String, var$3, startDocument->getCharacterEncodingScheme());
 						$nc(this->fStreamWriter)->writeStartDocument(var$3, $(startDocument->getVersion()));
 					}
-				} catch ($XMLStreamException&) {
-					$var($XMLStreamException, e, $catch());
+				} catch ($XMLStreamException& e) {
 					$nc(this->fStreamWriter)->writeStartDocument($(startDocument->getVersion()));
 				}
 				break;

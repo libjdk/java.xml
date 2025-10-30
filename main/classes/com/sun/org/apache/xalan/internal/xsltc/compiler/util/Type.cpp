@@ -22,15 +22,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ResultTreeType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/StringType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/VoidType.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/RuntimePermission.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/security/AccessControlContext.h>
 #include <java/security/AccessController.h>
 #include <java/security/BasicPermission.h>
@@ -219,16 +211,12 @@ Type* Type::newObjectType($String* javaClassName) {
 
 Type* Type::newObjectType($Class* clazz) {
 	$init(Type);
-	$load($Object);
 	if (clazz == $Object::class$) {
 		return Type::Object;
+	} else if (clazz == $String::class$) {
+		return Type::ObjectString;
 	} else {
-		$load($String);
-		if (clazz == $String::class$) {
-			return Type::ObjectString;
-		} else {
-			return $new($ObjectType, clazz);
-		}
+		return $new($ObjectType, clazz);
 	}
 }
 
@@ -389,9 +377,7 @@ void clinit$Type($Class* class$) {
 	$assignStatic(Type::ResultTree, $new($ResultTreeType));
 	$assignStatic(Type::Reference, $new($ReferenceType));
 	$assignStatic(Type::Void, $new($VoidType));
-	$load($Object);
 	$assignStatic(Type::Object, $new($ObjectType, $Object::class$));
-	$load($String);
 	$assignStatic(Type::ObjectString, $new($ObjectType, $String::class$));
 	$assignStatic(Type::Node, $new($NodeType, $NodeTest::ANODE));
 	$assignStatic(Type::Root, $new($NodeType, $NodeTest::ROOT));

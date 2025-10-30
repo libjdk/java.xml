@@ -3,18 +3,7 @@
 #include <com/sun/org/apache/xml/internal/res/XMLErrorResources.h>
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
 #include <com/sun/org/apache/xml/internal/utils/URI$MalformedURIException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Objects.h>
 #include <jcpp.h>
 
@@ -150,15 +139,10 @@ $Object* allocate$URI($Class* clazz) {
 	return $of($alloc(URI));
 }
 
-
 $String* URI::RESERVED_CHARACTERS = nullptr;
-
 $String* URI::MARK_CHARACTERS = nullptr;
-
 $String* URI::SCHEME_CHARACTERS = nullptr;
-
 $String* URI::USERINFO_CHARACTERS = nullptr;
-
 bool URI::DEBUG = false;
 
 void URI::init$() {
@@ -454,8 +438,7 @@ void URI::initializeAuthority($String* p_uriSpec) {
 				}
 				try {
 					port = $Integer::parseInt(portStr);
-				} catch ($NumberFormatException&) {
-					$catch();
+				} catch ($NumberFormatException& nfe) {
 				}
 			}
 		}

@@ -9,20 +9,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMError.h>
 #include <org/w3c/dom/DOMErrorHandler.h>
 #include <org/w3c/dom/DOMLocator.h>
@@ -139,7 +126,6 @@ void DOMErrorHandlerWrapper::init$() {
 	this->eStatus = true;
 	$set(this, fErrorCode, $new($XMLErrorCode, nullptr, nullptr));
 	$set(this, fDOMError, $new($DOMErrorImpl));
-	$init($System);
 	$set(this, fOut, $new($PrintWriter, static_cast<$OutputStream*>($System::err)));
 }
 
@@ -162,7 +148,7 @@ void DOMErrorHandlerWrapper::warning($String* domain, $String* key, $XMLParseExc
 	$nc(this->fDOMError)->fSeverity = $DOMError::SEVERITY_WARNING;
 	$set($nc(this->fDOMError), fException, exception);
 	$set($nc(this->fDOMError), fType, key);
-	$set($nc(this->fDOMError), fRelatedData, ($assignField($nc(this->fDOMError), fMessage, $nc(exception)->getMessage())));
+	$set($nc(this->fDOMError), fRelatedData, ($set($nc(this->fDOMError), fMessage, $nc(exception)->getMessage())));
 	$var($DOMLocatorImpl, locator, $nc(this->fDOMError)->fLocator);
 	if (locator != nullptr) {
 		locator->fColumnNumber = exception->getColumnNumber();
@@ -180,7 +166,7 @@ void DOMErrorHandlerWrapper::error($String* domain, $String* key, $XMLParseExcep
 	$nc(this->fDOMError)->fSeverity = $DOMError::SEVERITY_ERROR;
 	$set($nc(this->fDOMError), fException, exception);
 	$set($nc(this->fDOMError), fType, key);
-	$set($nc(this->fDOMError), fRelatedData, ($assignField($nc(this->fDOMError), fMessage, $nc(exception)->getMessage())));
+	$set($nc(this->fDOMError), fRelatedData, ($set($nc(this->fDOMError), fMessage, $nc(exception)->getMessage())));
 	$var($DOMLocatorImpl, locator, $nc(this->fDOMError)->fLocator);
 	if (locator != nullptr) {
 		locator->fColumnNumber = exception->getColumnNumber();
@@ -201,7 +187,7 @@ void DOMErrorHandlerWrapper::fatalError($String* domain, $String* key, $XMLParse
 	$nc(this->fErrorCode)->setValues(domain, key);
 	$var($String, domErrorType, $DOMErrorHandlerWrapper$DOMErrorTypeMap::getDOMErrorType(this->fErrorCode));
 	$set($nc(this->fDOMError), fType, (domErrorType != nullptr) ? domErrorType : key);
-	$set($nc(this->fDOMError), fRelatedData, ($assignField($nc(this->fDOMError), fMessage, $nc(exception)->getMessage())));
+	$set($nc(this->fDOMError), fRelatedData, ($set($nc(this->fDOMError), fMessage, $nc(exception)->getMessage())));
 	$var($DOMLocatorImpl, locator, $nc(this->fDOMError)->fLocator);
 	if (locator != nullptr) {
 		locator->fColumnNumber = exception->getColumnNumber();

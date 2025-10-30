@@ -13,13 +13,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <com/sun/org/apache/bcel/internal/generic/TypedInstruction.h>
 #include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef EXCS_CLASS_AND_INTERFACE_RESOLUTION
@@ -118,7 +111,7 @@ void NEW::init$(int32_t index) {
 
 $ClassArray* NEW::getExceptions() {
 	$init($ExceptionConst$EXCS);
-		$init($ExceptionConst);
+	$init($ExceptionConst);
 	return $ExceptionConst::createExceptions($ExceptionConst$EXCS::EXCS_CLASS_AND_INTERFACE_RESOLUTION, $$new($ClassArray, {
 		$ExceptionConst::ILLEGAL_ACCESS_ERROR,
 		$ExceptionConst::INSTANTIATION_ERROR

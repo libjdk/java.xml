@@ -2,15 +2,6 @@
 
 #include <java/io/File.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/MalformedURLException.h>
 #include <java/net/URI.h>
 #include <java/net/URL.h>
@@ -178,8 +169,7 @@ void Util::validateUriSyntax($URI* uri) {
 	}
 	try {
 		$nc(uri)->toURL();
-	} catch ($MalformedURLException&) {
-		$var($MalformedURLException, ex, $catch());
+	} catch ($MalformedURLException& ex) {
 		$CatalogMessages::reportIAE($CatalogMessages::ERR_URI_NOTVALIDURL, $$new($ObjectArray, {$of(uri)}), nullptr);
 	}
 }
@@ -249,8 +239,7 @@ bool Util::isFileUriExist($URI* uri, bool openJarFile) {
 									if (je != nullptr) {
 										return true;
 									}
-								} catch ($IOException&) {
-									$var($IOException, ex, $catch());
+								} catch ($IOException& ex) {
 									return false;
 								}
 							} else {

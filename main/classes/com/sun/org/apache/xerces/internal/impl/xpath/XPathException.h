@@ -24,8 +24,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0xF2D6505CC365236B;
 	$String* fKey = nullptr;
 	XPathException(const XPathException& e);
-	XPathException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XPathException* operator ->() {
+		return (XPathException*)throwing$;
+	}
 };
 
 							} // xpath

@@ -30,8 +30,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0xA568E268AC6C4354;
 	::java::lang::Exception* exception = nullptr;
 	TransformerFactoryConfigurationError(const TransformerFactoryConfigurationError& e);
-	TransformerFactoryConfigurationError wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline TransformerFactoryConfigurationError* operator ->() {
+		return (TransformerFactoryConfigurationError*)throwing$;
+	}
 };
 
 		} // transform

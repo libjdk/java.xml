@@ -1,17 +1,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/SAX2StAXBaseWriter.h>
 
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/SAX2StAXBaseWriter$SAXLocation.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -285,8 +275,7 @@ void SAX2StAXBaseWriter::reportException($String* type, $SAXException* e) {
 			$var($String, var$1, type);
 			$var($Object, var$2, $of(e));
 			$nc(this->reporter)->report(var$0, var$1, var$2, $(getCurrentLocation()));
-		} catch ($XMLStreamException&) {
-			$var($XMLStreamException, e1, $catch());
+		} catch ($XMLStreamException& e1) {
 			$throwNew($SAXException, static_cast<$Exception*>(e1));
 		}
 	}

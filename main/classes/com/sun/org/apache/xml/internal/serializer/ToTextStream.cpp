@@ -10,18 +10,7 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/MsgKey.h>
 #include <com/sun/org/apache/xml/internal/serializer/utils/Utils.h>
 #include <java/io/IOException.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <org/xml/sax/Attributes.h>
 #include <org/xml/sax/SAXException.h>
@@ -147,8 +136,7 @@ void ToTextStream::characters($chars* ch, int32_t start, int32_t length) {
 		if (this->m_tracer != nullptr) {
 			$ToStream::fireCharEvent(ch, start, length);
 		}
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$throwNew($SAXException, static_cast<$Exception*>(ioe));
 	}
 }
@@ -156,8 +144,7 @@ void ToTextStream::characters($chars* ch, int32_t start, int32_t length) {
 void ToTextStream::charactersRaw($chars* ch, int32_t start, int32_t length) {
 	try {
 		writeNormalizedChars(ch, start, length, this->m_lineSepUse);
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$throwNew($SAXException, static_cast<$Exception*>(ioe));
 	}
 }
@@ -190,7 +177,6 @@ void ToTextStream::writeNormalizedChars($chars* ch, int32_t start, int32_t lengt
 							$of(integralValue),
 							$of(encoding)
 						})));
-						$init($System);
 						$nc($System::err)->println(msg);
 					}
 				}
@@ -206,7 +192,6 @@ void ToTextStream::writeNormalizedChars($chars* ch, int32_t start, int32_t lengt
 					$of(integralValue),
 					$of(encoding)
 				})));
-				$init($System);
 				$nc($System::err)->println(msg);
 			} else {
 				$nc(writer)->write((int32_t)c);
@@ -221,8 +206,7 @@ void ToTextStream::cdata($chars* ch, int32_t start, int32_t length) {
 		if (this->m_tracer != nullptr) {
 			$ToStream::fireCDATAEvent(ch, start, length);
 		}
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$throwNew($SAXException, static_cast<$Exception*>(ioe));
 	}
 }
@@ -230,8 +214,7 @@ void ToTextStream::cdata($chars* ch, int32_t start, int32_t length) {
 void ToTextStream::ignorableWhitespace($chars* ch, int32_t start, int32_t length) {
 	try {
 		writeNormalizedChars(ch, start, length, this->m_lineSepUse);
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$throwNew($SAXException, static_cast<$Exception*>(ioe));
 	}
 }

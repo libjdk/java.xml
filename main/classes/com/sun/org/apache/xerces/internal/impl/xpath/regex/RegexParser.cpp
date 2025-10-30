@@ -15,19 +15,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token$StringToken.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token$UnionToken.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Locale.h>
 #include <java/util/MissingResourceException.h>
@@ -262,8 +249,7 @@ void RegexParser::setLocale($Locale* locale) {
 		} else {
 			$set(this, resources, $SecuritySupport::getResourceBundle("com.sun.org.apache.xerces.internal.impl.xpath.regex.message"_s));
 		}
-	} catch ($MissingResourceException&) {
-		$var($MissingResourceException, mre, $catch());
+	} catch ($MissingResourceException& mre) {
 		$throwNew($RuntimeException, $$str({"Installation Problem???  Couldn\'t load messages: "_s, $(mre->getMessage())}));
 	}
 }

@@ -17,19 +17,8 @@
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <java/util/Map$Entry.h>
 #include <java/util/Map.h>
@@ -113,11 +102,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _XMLSerializer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _XMLSerializer_FieldInfo_[] = {
 	{"DEBUG", "Z", nullptr, $PROTECTED | $STATIC | $FINAL, $constField(XMLSerializer, DEBUG)},
@@ -345,8 +334,7 @@ void XMLSerializer::startElement($String* namespaceURI, $String* localName, $Str
 		$assign(name, (localName == nullptr || $nc(localName)->length() == 0) ? rawName : $str({namespaceURI, "^"_s, localName}));
 		state->doCData = $nc(this->_format)->isCDataElement(name);
 		state->unescaped = $nc(this->_format)->isNonEscapingElement(name);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -354,8 +342,7 @@ void XMLSerializer::startElement($String* namespaceURI, $String* localName, $Str
 void XMLSerializer::endElement($String* namespaceURI, $String* localName, $String* rawName) {
 	try {
 		endElementIO(namespaceURI, localName, rawName);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -443,8 +430,7 @@ void XMLSerializer::startElement($String* tagName, $AttributeList* attrs) {
 		$assign(state, enterElementState(nullptr, nullptr, tagName, preserveSpace));
 		state->doCData = $nc(this->_format)->isCDataElement(tagName);
 		state->unescaped = $nc(this->_format)->isNonEscapingElement(tagName);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }

@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources_sv.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -421,70 +413,38 @@ $String* XPATHErrorResources_sv::ER_FUNCTION_TOKEN_NOT_FOUND = nullptr;
 $String* XPATHErrorResources_sv::ER_CANNOT_DEAL_XPATH_TYPE = nullptr;
 $String* XPATHErrorResources_sv::ER_NODESET_NOT_MUTABLE = nullptr;
 $String* XPATHErrorResources_sv::ER_NODESETDTM_NOT_MUTABLE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_VAR_NOT_RESOLVABLE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_NULL_ERROR_HANDLER = nullptr;
-
 $String* XPATHErrorResources_sv::ER_PROG_ASSERT_UNKNOWN_OPCODE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_ZERO_OR_ONE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources_sv::ER_ASNODEITERATOR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources_sv::ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS = nullptr;
-
 $String* XPATHErrorResources_sv::ER_COULD_NOT_FIND_VAR = nullptr;
-
 $String* XPATHErrorResources_sv::ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING = nullptr;
-
 $String* XPATHErrorResources_sv::ER_FASTSTRINGBUFFER_CANNOT_BE_NULL = nullptr;
-
 $String* XPATHErrorResources_sv::ER_TWO_OR_THREE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_VARIABLE_ACCESSED_BEFORE_BIND = nullptr;
-
 $String* XPATHErrorResources_sv::ER_FSB_CANNOT_TAKE_STRING = nullptr;
-
 $String* XPATHErrorResources_sv::ER_SETTING_WALKER_ROOT_TO_NULL = nullptr;
-
 $String* XPATHErrorResources_sv::ER_NODESETDTM_CANNOT_ITERATE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_NODESET_CANNOT_ITERATE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_NODESETDTM_CANNOT_INDEX = nullptr;
-
 $String* XPATHErrorResources_sv::ER_NODESET_CANNOT_INDEX = nullptr;
-
 $String* XPATHErrorResources_sv::ER_CANNOT_CALL_SETSHOULDCACHENODE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_ONLY_ALLOWS = nullptr;
-
 $String* XPATHErrorResources_sv::ER_UNKNOWN_STEP = nullptr;
-
 $String* XPATHErrorResources_sv::ER_EXPECTED_REL_LOC_PATH = nullptr;
-
 $String* XPATHErrorResources_sv::ER_EXPECTED_LOC_PATH = nullptr;
 $String* XPATHErrorResources_sv::ER_EXPECTED_LOC_PATH_AT_END_EXPR = nullptr;
-
 $String* XPATHErrorResources_sv::ER_EXPECTED_LOC_STEP = nullptr;
-
 $String* XPATHErrorResources_sv::ER_EXPECTED_NODE_TEST = nullptr;
-
 $String* XPATHErrorResources_sv::ER_EXPECTED_STEP_PATTERN = nullptr;
-
 $String* XPATHErrorResources_sv::ER_EXPECTED_REL_PATH_PATTERN = nullptr;
-
 $String* XPATHErrorResources_sv::ER_CANT_CONVERT_TO_BOOLEAN = nullptr;
-
 $String* XPATHErrorResources_sv::ER_CANT_CONVERT_TO_SINGLENODE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_CANT_GET_SNAPSHOT_LENGTH = nullptr;
-
 $String* XPATHErrorResources_sv::ER_NON_ITERATOR_TYPE = nullptr;
-
 $String* XPATHErrorResources_sv::ER_DOC_MUTATED = nullptr;
 $String* XPATHErrorResources_sv::ER_INVALID_XPATH_TYPE = nullptr;
 $String* XPATHErrorResources_sv::ER_EMPTY_XPATH_RESULT = nullptr;
@@ -493,7 +453,6 @@ $String* XPATHErrorResources_sv::ER_NULL_RESOLVER = nullptr;
 $String* XPATHErrorResources_sv::ER_CANT_CONVERT_TO_STRING = nullptr;
 $String* XPATHErrorResources_sv::ER_NON_SNAPSHOT_TYPE = nullptr;
 $String* XPATHErrorResources_sv::ER_WRONG_DOCUMENT = nullptr;
-
 $String* XPATHErrorResources_sv::ER_WRONG_NODETYPE = nullptr;
 $String* XPATHErrorResources_sv::ER_XPATH_ERROR = nullptr;
 $String* XPATHErrorResources_sv::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED = nullptr;
@@ -522,32 +481,19 @@ $String* XPATHErrorResources_sv::WG_CANNOT_MAKE_URL_FROM = nullptr;
 $String* XPATHErrorResources_sv::WG_EXPAND_ENTITIES_NOT_SUPPORTED = nullptr;
 $String* XPATHErrorResources_sv::WG_ILLEGAL_VARIABLE_REFERENCE = nullptr;
 $String* XPATHErrorResources_sv::WG_UNSUPPORTED_ENCODING = nullptr;
-
 $String* XPATHErrorResources_sv::ER_DETACH_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources_sv::ER_NUM_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources_sv::ER_XSTR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
-
 $String* XPATHErrorResources_sv::ER_STR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER = nullptr;
 $ObjectArray2* XPATHErrorResources_sv::_contents = nullptr;
-
 $String* XPATHErrorResources_sv::BAD_CODE = nullptr;
-
 $String* XPATHErrorResources_sv::FORMAT_FAILED = nullptr;
-
 $String* XPATHErrorResources_sv::ERROR_RESOURCES = nullptr;
-
 $String* XPATHErrorResources_sv::ERROR_STRING = nullptr;
-
 $String* XPATHErrorResources_sv::ERROR_HEADER = nullptr;
-
 $String* XPATHErrorResources_sv::WARNING_HEADER = nullptr;
-
 $String* XPATHErrorResources_sv::XSL_HEADER = nullptr;
-
 $String* XPATHErrorResources_sv::XML_HEADER = nullptr;
-
 $String* XPATHErrorResources_sv::QUERY_HEADER = nullptr;
 
 void XPATHErrorResources_sv::init$() {

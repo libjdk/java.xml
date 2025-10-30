@@ -10,16 +10,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/ObjectType.h>
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <java/io/DataOutputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ENUM_CONSTANT
@@ -93,7 +83,6 @@ void EnumElementValueGen::init$(int32_t typeIdx, int32_t valueIdx, $ConstantPool
 
 $ElementValue* EnumElementValueGen::getElementValue() {
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$var($String, var$0, $$str({"Duplicating value: "_s, $(getEnumTypeString()), ":"_s}));
 	$nc($System::err)->println($$concat(var$0, $(getEnumValueString())));
 	int32_t var$1 = $ElementValueGen::getElementValueType();

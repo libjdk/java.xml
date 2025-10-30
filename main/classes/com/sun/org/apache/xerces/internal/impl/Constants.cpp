@@ -1,17 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 
 #include <com/sun/org/apache/xerces/internal/impl/Constants$ArrayEnumeration.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Enumeration.h>
 #include <jcpp.h>
 
@@ -421,67 +410,37 @@ $String* Constants::ESCAPE_CHARACTERS = nullptr;
 $String* Constants::REUSE_INSTANCE = nullptr;
 $String* Constants::SUN_DOM_PROPERTY_PREFIX = nullptr;
 $String* Constants::SUN_DOM_ANCESTOR_CHECCK = nullptr;
-
 $String* Constants::IGNORE_EXTERNAL_DTD = nullptr;
-
 $String* Constants::SAX_FEATURE_PREFIX = nullptr;
 $String* Constants::NAMESPACES_FEATURE = nullptr;
-
 $String* Constants::NAMESPACE_PREFIXES_FEATURE = nullptr;
-
 $String* Constants::STRING_INTERNING_FEATURE = nullptr;
-
 $String* Constants::VALIDATION_FEATURE = nullptr;
-
 $String* Constants::EXTERNAL_GENERAL_ENTITIES_FEATURE = nullptr;
-
 $String* Constants::EXTERNAL_PARAMETER_ENTITIES_FEATURE = nullptr;
-
 $String* Constants::LEXICAL_HANDLER_PARAMETER_ENTITIES_FEATURE = nullptr;
-
 $String* Constants::IS_STANDALONE_FEATURE = nullptr;
-
 $String* Constants::RESOLVE_DTD_URIS_FEATURE = nullptr;
-
 $String* Constants::USE_ATTRIBUTES2_FEATURE = nullptr;
-
 $String* Constants::USE_LOCATOR2_FEATURE = nullptr;
-
 $String* Constants::USE_ENTITY_RESOLVER2_FEATURE = nullptr;
-
 $String* Constants::UNICODE_NORMALIZATION_CHECKING_FEATURE = nullptr;
-
 $String* Constants::XMLNS_URIS_FEATURE = nullptr;
-
 $String* Constants::XML_11_FEATURE = nullptr;
-
 $String* Constants::ALLOW_DTD_EVENTS_AFTER_ENDDTD_FEATURE = nullptr;
-
 $String* Constants::SAX_PROPERTY_PREFIX = nullptr;
-
 $String* Constants::DECLARATION_HANDLER_PROPERTY = nullptr;
-
 $String* Constants::LEXICAL_HANDLER_PROPERTY = nullptr;
-
 $String* Constants::DOM_NODE_PROPERTY = nullptr;
-
 $String* Constants::XML_STRING_PROPERTY = nullptr;
 $String* Constants::FEATURE_SECURE_PROCESSING = nullptr;
-
 $String* Constants::DOCUMENT_XML_VERSION_PROPERTY = nullptr;
-
 $String* Constants::JAXP_PROPERTY_PREFIX = nullptr;
-
 $String* Constants::SCHEMA_SOURCE = nullptr;
-
 $String* Constants::SCHEMA_LANGUAGE = nullptr;
-
 $String* Constants::JAXPAPI_PROPERTY_PREFIX = nullptr;
-
 $String* Constants::INCLUDE_COMMENTS_FEATURE = nullptr;
-
 $String* Constants::CREATE_CDATA_NODES_FEATURE = nullptr;
-
 $String* Constants::LOAD_AS_INFOSET = nullptr;
 $String* Constants::DOM_CANONICAL_FORM = nullptr;
 $String* Constants::DOM_CDATA_SECTIONS = nullptr;
@@ -513,177 +472,92 @@ $String* Constants::DOM_SCHEMA_TYPE = nullptr;
 $String* Constants::DOM_SCHEMA_LOCATION = nullptr;
 $String* Constants::DOM_ANCESTOR_CHECCK = nullptr;
 $String* Constants::DOM_PSVI = nullptr;
-
 $String* Constants::XERCES_FEATURE_PREFIX = nullptr;
-
 $String* Constants::SCHEMA_VALIDATION_FEATURE = nullptr;
-
 $String* Constants::SCHEMA_NORMALIZED_VALUE = nullptr;
-
 $String* Constants::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* Constants::SCHEMA_FULL_CHECKING = nullptr;
-
 $String* Constants::SCHEMA_AUGMENT_PSVI = nullptr;
-
 $String* Constants::DYNAMIC_VALIDATION_FEATURE = nullptr;
-
 $String* Constants::WARN_ON_DUPLICATE_ATTDEF_FEATURE = nullptr;
-
 $String* Constants::WARN_ON_UNDECLARED_ELEMDEF_FEATURE = nullptr;
-
 $String* Constants::WARN_ON_DUPLICATE_ENTITYDEF_FEATURE = nullptr;
-
 $String* Constants::ALLOW_JAVA_ENCODINGS_FEATURE = nullptr;
-
 $String* Constants::DISALLOW_DOCTYPE_DECL_FEATURE = nullptr;
-
 $String* Constants::CONTINUE_AFTER_FATAL_ERROR_FEATURE = nullptr;
-
 $String* Constants::LOAD_DTD_GRAMMAR_FEATURE = nullptr;
-
 $String* Constants::LOAD_EXTERNAL_DTD_FEATURE = nullptr;
-
 $String* Constants::DEFER_NODE_EXPANSION_FEATURE = nullptr;
-
 $String* Constants::CREATE_ENTITY_REF_NODES_FEATURE = nullptr;
-
 $String* Constants::INCLUDE_IGNORABLE_WHITESPACE = nullptr;
-
 $String* Constants::DEFAULT_ATTRIBUTE_VALUES_FEATURE = nullptr;
-
 $String* Constants::VALIDATE_CONTENT_MODELS_FEATURE = nullptr;
-
 $String* Constants::VALIDATE_DATATYPES_FEATURE = nullptr;
-
 $String* Constants::BALANCE_SYNTAX_TREES = nullptr;
-
 $String* Constants::NOTIFY_CHAR_REFS_FEATURE = nullptr;
-
 $String* Constants::NOTIFY_BUILTIN_REFS_FEATURE = nullptr;
-
 $String* Constants::STANDARD_URI_CONFORMANT_FEATURE = nullptr;
-
 $String* Constants::GENERATE_SYNTHETIC_ANNOTATIONS_FEATURE = nullptr;
-
 $String* Constants::VALIDATE_ANNOTATIONS_FEATURE = nullptr;
-
 $String* Constants::HONOUR_ALL_SCHEMALOCATIONS_FEATURE = nullptr;
-
 $String* Constants::NAMESPACE_GROWTH_FEATURE = nullptr;
-
 $String* Constants::TOLERATE_DUPLICATES_FEATURE = nullptr;
-
 $String* Constants::XINCLUDE_FEATURE = nullptr;
-
 $String* Constants::XINCLUDE_FIXUP_BASE_URIS_FEATURE = nullptr;
-
 $String* Constants::XINCLUDE_FIXUP_LANGUAGE_FEATURE = nullptr;
-
 $String* Constants::IGNORE_XSI_TYPE_FEATURE = nullptr;
-
 $String* Constants::ID_IDREF_CHECKING_FEATURE = nullptr;
-
 $String* Constants::IDC_CHECKING_FEATURE = nullptr;
-
 $String* Constants::UNPARSED_ENTITY_CHECKING_FEATURE = nullptr;
-
 $String* Constants::USE_GRAMMAR_POOL_ONLY_FEATURE = nullptr;
-
 $String* Constants::PARSER_SETTINGS = nullptr;
-
 $String* Constants::XINCLUDE_AWARE = nullptr;
-
 $String* Constants::IGNORE_SCHEMA_LOCATION_HINTS = nullptr;
-
 $String* Constants::CHANGE_IGNORABLE_CHARACTERS_INTO_IGNORABLE_WHITESPACES = nullptr;
-
 $String* Constants::XERCES_PROPERTY_PREFIX = nullptr;
-
 $String* Constants::CURRENT_ELEMENT_NODE_PROPERTY = nullptr;
-
 $String* Constants::DOCUMENT_CLASS_NAME_PROPERTY = nullptr;
-
 $String* Constants::SYMBOL_TABLE_PROPERTY = nullptr;
-
 $String* Constants::ERROR_REPORTER_PROPERTY = nullptr;
-
 $String* Constants::ERROR_HANDLER_PROPERTY = nullptr;
-
 $String* Constants::XINCLUDE_HANDLER_PROPERTY = nullptr;
-
 $String* Constants::XPOINTER_HANDLER_PROPERTY = nullptr;
-
 $String* Constants::ENTITY_MANAGER_PROPERTY = nullptr;
-
 $String* Constants::BUFFER_SIZE_PROPERTY = nullptr;
-
 $String* Constants::SECURITY_MANAGER_PROPERTY = nullptr;
-
 $String* Constants::LOCALE_PROPERTY = nullptr;
-
 $String* Constants::SECURITY_MANAGER = nullptr;
 $String* Constants::ENTITY_RESOLVER_PROPERTY = nullptr;
-
 $String* Constants::XMLGRAMMAR_POOL_PROPERTY = nullptr;
-
 $String* Constants::DATATYPE_VALIDATOR_FACTORY_PROPERTY = nullptr;
-
 $String* Constants::DOCUMENT_SCANNER_PROPERTY = nullptr;
-
 $String* Constants::DTD_SCANNER_PROPERTY = nullptr;
-
 $String* Constants::DTD_PROCESSOR_PROPERTY = nullptr;
-
 $String* Constants::VALIDATOR_PROPERTY = nullptr;
-
 $String* Constants::DTD_VALIDATOR_PROPERTY = nullptr;
-
 $String* Constants::SCHEMA_VALIDATOR_PROPERTY = nullptr;
-
 $String* Constants::SCHEMA_LOCATION = nullptr;
-
 $String* Constants::SCHEMA_NONS_LOCATION = nullptr;
-
 $String* Constants::NAMESPACE_BINDER_PROPERTY = nullptr;
-
 $String* Constants::NAMESPACE_CONTEXT_PROPERTY = nullptr;
-
 $String* Constants::VALIDATION_MANAGER_PROPERTY = nullptr;
-
 $String* Constants::ROOT_TYPE_DEFINITION_PROPERTY = nullptr;
-
 $String* Constants::ROOT_ELEMENT_DECLARATION_PROPERTY = nullptr;
-
 $String* Constants::XPOINTER_SCHEMA_PROPERTY = nullptr;
-
 $String* Constants::SCHEMA_DV_FACTORY_PROPERTY = nullptr;
-
 $String* Constants::ELEMENT_PSVI = nullptr;
-
 $String* Constants::ATTRIBUTE_PSVI = nullptr;
-
 $String* Constants::ATTRIBUTE_DECLARED = nullptr;
-
 $String* Constants::TYPEINFO = nullptr;
-
 $String* Constants::ID_ATTRIBUTE = nullptr;
-
 $String* Constants::ENTITY_SKIPPED = nullptr;
-
 $String* Constants::CHAR_REF_PROBABLE_WS = nullptr;
-
 $String* Constants::LAST_ENTITY = nullptr;
 $String* Constants::ANONYMOUS_TYPE_NAMESPACE = nullptr;
-
 $StringArray* Constants::fgSAXFeatures = nullptr;
-
 $StringArray* Constants::fgSAXProperties = nullptr;
-
 $StringArray* Constants::fgXercesFeatures = nullptr;
-
 $StringArray* Constants::fgXercesProperties = nullptr;
-
 $Enumeration* Constants::fgEmptyEnumeration = nullptr;
 
 void Constants::init$() {
@@ -719,7 +593,6 @@ void Constants::main($StringArray* argv) {
 
 void Constants::print($String* header, $String* prefix, $ObjectArray* array) {
 	$init(Constants);
-	$init($System);
 	$nc($System::out)->print(header);
 	if ($nc(array)->length > 0) {
 		$nc($System::out)->println();

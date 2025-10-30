@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/NamespaceMappings.h>
 
 #include <com/sun/org/apache/xml/internal/serializer/NamespaceMappings$MappingRecord.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/HashMap.h>
 #include <java/util/Iterator.h>
 #include <java/util/Set.h>
@@ -198,8 +190,7 @@ void NamespaceMappings::popNamespaces(int32_t elemDepth, $ContentHandler* saxHan
 		if (saxHandler != nullptr) {
 			try {
 				saxHandler->endPrefixMapping(prefix);
-			} catch ($SAXException&) {
-				$catch();
+			} catch ($SAXException& e) {
 			}
 		}
 	}

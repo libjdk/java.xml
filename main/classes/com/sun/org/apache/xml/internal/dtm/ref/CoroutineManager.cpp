@@ -2,17 +2,8 @@
 
 #include <com/sun/org/apache/xml/internal/res/XMLErrorResources.h>
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
 #include <java/lang/InterruptedException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/BitSet.h>
 #include <jcpp.h>
 
@@ -111,8 +102,7 @@ $Object* CoroutineManager::co_entry_pause(int32_t thisCoroutine) {
 		while (this->m_nextCoroutine != thisCoroutine) {
 			try {
 				$of(this)->wait();
-			} catch ($InterruptedException&) {
-				$catch();
+			} catch ($InterruptedException& e) {
 			}
 		}
 		return $of(this->m_yield);
@@ -132,8 +122,7 @@ $Object* CoroutineManager::co_resume(Object$* arg_object, int32_t thisCoroutine,
 		while (this->m_nextCoroutine != thisCoroutine || this->m_nextCoroutine == CoroutineManager::ANYBODY || this->m_nextCoroutine == CoroutineManager::NOBODY) {
 			try {
 				$of(this)->wait();
-			} catch ($InterruptedException&) {
-				$catch();
+			} catch ($InterruptedException& e) {
 			}
 		}
 		if (this->m_nextCoroutine == CoroutineManager::NOBODY) {

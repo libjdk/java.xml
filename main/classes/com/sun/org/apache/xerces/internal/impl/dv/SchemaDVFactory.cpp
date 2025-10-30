@@ -5,14 +5,7 @@
 #include <com/sun/org/apache/xerces/internal/util/SymbolHash.h>
 #include <com/sun/org/apache/xerces/internal/utils/ObjectFactory.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DEFAULT_FACTORY_CLASS
@@ -81,11 +74,9 @@ SchemaDVFactory* SchemaDVFactory::getInstance($String* factoryClass) {
 	$load(SchemaDVFactory);
 	$synchronized(class$) {
 		$init(SchemaDVFactory);
-		$useLocalCurrentObjectStackCache();
 		try {
 			return ($cast(SchemaDVFactory, $ObjectFactory::newInstance(factoryClass, true)));
-		} catch ($ClassCastException&) {
-			$var($ClassCastException, e4, $catch());
+		} catch ($ClassCastException& e4) {
 			$throwNew($DVFactoryException, $$str({"Schema factory class "_s, factoryClass, " does not extend from SchemaDVFactory."_s}));
 		}
 	}

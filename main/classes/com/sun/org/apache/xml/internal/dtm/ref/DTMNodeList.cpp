@@ -3,14 +3,7 @@
 #include <com/sun/org/apache/xml/internal/dtm/DTM.h>
 #include <com/sun/org/apache/xml/internal/dtm/DTMIterator.h>
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMNodeListBase.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>
 
@@ -71,8 +64,7 @@ void DTMNodeList::init$($DTMIterator* dtmIterator) {
 		int32_t pos = dtmIterator->getCurrentPos();
 		try {
 			$set(this, m_iter, dtmIterator->cloneWithReset());
-		} catch ($CloneNotSupportedException&) {
-			$var($CloneNotSupportedException, cnse, $catch());
+		} catch ($CloneNotSupportedException& cnse) {
 			$set(this, m_iter, dtmIterator);
 		}
 		$nc(this->m_iter)->setShouldCacheNodes(true);

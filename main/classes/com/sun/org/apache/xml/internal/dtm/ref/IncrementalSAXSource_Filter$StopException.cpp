@@ -1,15 +1,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource_Filter$StopException.h>
 
 #include <com/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource_Filter.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $IncrementalSAXSource_Filter = ::com::sun::org::apache::xml::internal::dtm::ref::IncrementalSAXSource_Filter;
@@ -72,16 +63,10 @@ void IncrementalSAXSource_Filter$StopException::init$($IncrementalSAXSource_Filt
 IncrementalSAXSource_Filter$StopException::IncrementalSAXSource_Filter$StopException() {
 }
 
-IncrementalSAXSource_Filter$StopException::IncrementalSAXSource_Filter$StopException(const IncrementalSAXSource_Filter$StopException& e) {
+IncrementalSAXSource_Filter$StopException::IncrementalSAXSource_Filter$StopException(const IncrementalSAXSource_Filter$StopException& e) : $RuntimeException(e) {
 }
 
-IncrementalSAXSource_Filter$StopException IncrementalSAXSource_Filter$StopException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void IncrementalSAXSource_Filter$StopException::throwWrapper$() {
-	$pendingException(this);
+void IncrementalSAXSource_Filter$StopException::throw$() {
 	throw *this;
 }
 

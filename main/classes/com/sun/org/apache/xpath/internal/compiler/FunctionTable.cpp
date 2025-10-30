@@ -37,24 +37,13 @@
 #include <com/sun/org/apache/xpath/internal/functions/FuncTrue.h>
 #include <com/sun/org/apache/xpath/internal/functions/FuncUnparsedEntityURI.h>
 #include <com/sun/org/apache/xpath/internal/functions/Function.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Map.h>
@@ -269,9 +258,7 @@ $Object* allocate$FunctionTable($Class* clazz) {
 	return $of($alloc(FunctionTable));
 }
 
-
 $ClassArray* FunctionTable::m_functions = nullptr;
-
 $Map* FunctionTable::m_functionID = nullptr;
 
 void FunctionTable::init$() {
@@ -298,23 +285,17 @@ $Function* FunctionTable::getFunction(int32_t which) {
 			$Class* c = $nc(this->m_functions_customer)->get(which - FunctionTable::NUM_BUILT_IN_FUNCS);
 			return $cast($Function, $nc($($nc(c)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0)));
 		}
-	} catch ($InstantiationException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InstantiationException& ex) {
 		$throwNew($TransformerException, $(ex->getMessage()));
-	} catch ($IllegalAccessException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IllegalAccessException& ex) {
 		$throwNew($TransformerException, $(ex->getMessage()));
-	} catch ($SecurityException&) {
-		$var($Exception, ex, $catch());
+	} catch ($SecurityException& ex) {
 		$throwNew($TransformerException, $(ex->getMessage()));
-	} catch ($IllegalArgumentException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IllegalArgumentException& ex) {
 		$throwNew($TransformerException, $(ex->getMessage()));
-	} catch ($InvocationTargetException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InvocationTargetException& ex) {
 		$throwNew($TransformerException, $(ex->getMessage()));
-	} catch ($NoSuchMethodException&) {
-		$var($Exception, ex, $catch());
+	} catch ($NoSuchMethodException& ex) {
 		$throwNew($TransformerException, $(ex->getMessage()));
 	}
 	$shouldNotReachHere();

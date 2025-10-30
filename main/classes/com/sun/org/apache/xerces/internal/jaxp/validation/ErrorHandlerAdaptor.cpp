@@ -3,13 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/validation/Util.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/validation/WrappedSAXException.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ErrorHandler.h>
 #include <org/xml/sax/SAXException.h>
 #include <org/xml/sax/SAXParseException.h>
@@ -81,8 +74,7 @@ void ErrorHandlerAdaptor::fatalError($String* domain, $String* key, $XMLParseExc
 	try {
 		this->hadError$ = true;
 		$nc($(getErrorHandler()))->fatalError($($Util::toSAXParseException(e)));
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($WrappedSAXException, se);
 	}
 }
@@ -92,8 +84,7 @@ void ErrorHandlerAdaptor::error($String* domain, $String* key, $XMLParseExceptio
 	try {
 		this->hadError$ = true;
 		$nc($(getErrorHandler()))->error($($Util::toSAXParseException(e)));
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($WrappedSAXException, se);
 	}
 }
@@ -102,8 +93,7 @@ void ErrorHandlerAdaptor::warning($String* domain, $String* key, $XMLParseExcept
 	$useLocalCurrentObjectStackCache();
 	try {
 		$nc($(getErrorHandler()))->warning($($Util::toSAXParseException(e)));
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($WrappedSAXException, se);
 	}
 }

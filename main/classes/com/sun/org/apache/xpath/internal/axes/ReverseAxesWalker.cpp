@@ -6,16 +6,7 @@
 #include <com/sun/org/apache/xpath/internal/axes/AxesWalker.h>
 #include <com/sun/org/apache/xpath/internal/axes/LocPathIterator.h>
 #include <com/sun/org/apache/xpath/internal/axes/WalkingIterator.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef NULL
@@ -129,11 +120,10 @@ int32_t ReverseAxesWalker::getProximityPosition(int32_t predicateIndex) {
 						++count;
 					}
 					$nc(this->m_proximityPositions)->set(predicateIndex, count);
-				} catch ($CloneNotSupportedException&) {
-					$catch();
+				} catch ($CloneNotSupportedException& cnse) {
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				$nc($(wi()))->setLastUsedWalker(savedWalker);
 			}
@@ -169,11 +159,10 @@ int32_t ReverseAxesWalker::getLastPos($XPathContext* xctxt) {
 				while ($DTM::NULL != (next = clone->nextNode())) {
 					++count;
 				}
-			} catch ($CloneNotSupportedException&) {
-				$catch();
+			} catch ($CloneNotSupportedException& cnse) {
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$nc($(wi()))->setLastUsedWalker(savedWalker);
 		}

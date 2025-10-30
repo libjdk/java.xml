@@ -41,20 +41,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <java/util/Map.h>
 #include <javax/xml/XMLConstants.h>
@@ -402,50 +388,28 @@ void DTDConfiguration::finalize() {
 	this->$BasicParserConfiguration::finalize();
 }
 
-
 $String* DTDConfiguration::WARN_ON_DUPLICATE_ATTDEF = nullptr;
-
 $String* DTDConfiguration::WARN_ON_DUPLICATE_ENTITYDEF = nullptr;
-
 $String* DTDConfiguration::WARN_ON_UNDECLARED_ELEMDEF = nullptr;
-
 $String* DTDConfiguration::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* DTDConfiguration::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* DTDConfiguration::LOAD_EXTERNAL_DTD = nullptr;
-
 $String* DTDConfiguration::NOTIFY_BUILTIN_REFS = nullptr;
-
 $String* DTDConfiguration::NOTIFY_CHAR_REFS = nullptr;
-
 $String* DTDConfiguration::ERROR_REPORTER = nullptr;
-
 $String* DTDConfiguration::ENTITY_MANAGER = nullptr;
-
 $String* DTDConfiguration::DOCUMENT_SCANNER = nullptr;
-
 $String* DTDConfiguration::DTD_SCANNER = nullptr;
-
 $String* DTDConfiguration::XMLGRAMMAR_POOL = nullptr;
-
 $String* DTDConfiguration::DTD_PROCESSOR = nullptr;
-
 $String* DTDConfiguration::DTD_VALIDATOR = nullptr;
-
 $String* DTDConfiguration::NAMESPACE_BINDER = nullptr;
-
 $String* DTDConfiguration::DATATYPE_VALIDATOR_FACTORY = nullptr;
 $String* DTDConfiguration::VALIDATION_MANAGER = nullptr;
-
 $String* DTDConfiguration::JAXP_SCHEMA_LANGUAGE = nullptr;
-
 $String* DTDConfiguration::JAXP_SCHEMA_SOURCE = nullptr;
-
 $String* DTDConfiguration::LOCALE = nullptr;
-
 $String* DTDConfiguration::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* DTDConfiguration::SECURITY_MANAGER = nullptr;
 
 void DTDConfiguration::init$() {
@@ -464,8 +428,8 @@ void DTDConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammar
 	$useLocalCurrentObjectStackCache();
 	$BasicParserConfiguration::init$(symbolTable, parentSettings);
 	this->fParseInProgress = false;
-		$init($XMLConstants);
-		$init($JdkConstants);
+	$init($XMLConstants);
+	$init($JdkConstants);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		DTDConfiguration::CONTINUE_AFTER_FATAL_ERROR,
 		DTDConfiguration::LOAD_EXTERNAL_DTD,
@@ -557,8 +521,7 @@ void DTDConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPool* grammar
 	}
 	try {
 		setLocale($($Locale::getDefault()));
-	} catch ($XNIException&) {
-		$catch();
+	} catch ($XNIException& e) {
 	}
 	setProperty(DTDConfiguration::XML_SECURITY_PROPERTY_MANAGER, $$new($XMLSecurityPropertyManager));
 	{
@@ -599,39 +562,30 @@ void DTDConfiguration::setInputSource($XMLInputSource* inputSource) {
 }
 
 bool DTDConfiguration::parse(bool complete) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			reset();
 			$nc(this->fScanner)->setInputSource(this->fInputSource);
 			$set(this, fInputSource, nullptr);
-		} catch ($XNIException&) {
-			$var($XNIException, ex, $catch());
+		} catch ($XNIException& ex) {
 			$throw(ex);
-		} catch ($IOException&) {
-			$var($IOException, ex, $catch());
+		} catch ($IOException& ex) {
 			$throw(ex);
-		} catch ($RuntimeException&) {
-			$var($RuntimeException, ex, $catch());
+		} catch ($RuntimeException& ex) {
 			$throw(ex);
-		} catch ($Exception&) {
-			$var($Exception, ex, $catch());
+		} catch ($Exception& ex) {
 			$throwNew($XNIException, ex);
 		}
 	}
 	try {
 		return $nc(this->fScanner)->scanDocument(complete);
-	} catch ($XNIException&) {
-		$var($XNIException, ex, $catch());
+	} catch ($XNIException& ex) {
 		$throw(ex);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throw(ex);
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, ex, $catch());
+	} catch ($RuntimeException& ex) {
 		$throw(ex);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($XNIException, ex);
 	}
 	$shouldNotReachHere();
@@ -642,7 +596,6 @@ void DTDConfiguration::cleanup() {
 }
 
 void DTDConfiguration::parse($XMLInputSource* source) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -653,21 +606,17 @@ void DTDConfiguration::parse($XMLInputSource* source) {
 			try {
 				setInputSource(source);
 				parse(true);
-			} catch ($XNIException&) {
-				$var($XNIException, ex, $catch());
+			} catch ($XNIException& ex) {
 				$throw(ex);
-			} catch ($IOException&) {
-				$var($IOException, ex, $catch());
+			} catch ($IOException& ex) {
 				$throw(ex);
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, ex, $catch());
+			} catch ($RuntimeException& ex) {
 				$throw(ex);
-			} catch ($Exception&) {
-				$var($Exception, ex, $catch());
+			} catch ($Exception& ex) {
 				$throwNew($XNIException, ex);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			this->fParseInProgress = false;
 			this->cleanup();

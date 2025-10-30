@@ -3,14 +3,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/SerializationHandler.h>
 #include <com/sun/org/apache/xml/internal/serializer/dom3/DOM3TreeWalker.h>
 #include <com/sun/org/apache/xml/internal/serializer/utils/WrappedRuntimeException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMErrorHandler.h>
 #include <org/w3c/dom/Node.h>
 #include <org/w3c/dom/ls/LSSerializerFilter.h>
@@ -85,12 +77,10 @@ $LSSerializerFilter* DOM3SerializerImpl::getNodeFilter() {
 }
 
 void DOM3SerializerImpl::serializeDOM3($Node* node) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DOM3TreeWalker, walker, $new($DOM3TreeWalker, this->fSerializationHandler, this->fErrorHandler, this->fSerializerFilter, this->fNewLine));
 		walker->traverse(node);
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($WrappedRuntimeException, se);
 	}
 }

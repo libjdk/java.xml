@@ -22,22 +22,9 @@
 #include <java/io/StringWriter.h>
 #include <java/io/UnsupportedEncodingException.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/ThreadDeath.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/VirtualMachineError.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
@@ -181,11 +168,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _DOMSerializerImpl_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _DOMSerializerImpl_FieldInfo_[] = {
 	{"serializer", "Lcom/sun/org/apache/xml/internal/serialize/XMLSerializer;", nullptr, $PRIVATE, $field(DOMSerializerImpl, serializer)},
@@ -627,25 +614,21 @@ $String* DOMSerializerImpl::writeToString($Node* wnode) {
 						$throwNew($LSException, $LSException::SERIALIZE_ERR, msg);
 					}
 				}
-			} catch ($LSException&) {
-				$var($LSException, lse, $catch());
+			} catch ($LSException& lse) {
 				$throw(lse);
-			} catch ($AbortException&) {
-				$var($AbortException, e, $catch());
+			} catch ($AbortException& e) {
 				$assign(var$2, nullptr);
 				return$1 = true;
 				goto $finally;
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, e, $catch());
+			} catch ($RuntimeException& e) {
 				$throw($cast($LSException, $($nc($($DOMUtil::createLSException($LSException::SERIALIZE_ERR, e)))->fillInStackTrace())));
-			} catch ($IOException&) {
-				$var($IOException, ioe, $catch());
+			} catch ($IOException& ioe) {
 				$init($DOMMessageFormatter);
 				$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "STRING_TOO_LONG"_s, $$new($ObjectArray, {$($of(ioe->getMessage()))})));
 				$throwNew($DOMException, $DOMException::DOMSTRING_SIZE_ERR, msg);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$11) {
+			$assign(var$0, var$11);
 		} $finally: {
 			$nc(ser)->clearDocumentState();
 		}
@@ -768,8 +751,7 @@ bool DOMSerializerImpl::write($Node* node, $LSOutput* destination) {
 						goto $finally;
 					}
 				}
-			} catch ($UnsupportedEncodingException&) {
-				$var($UnsupportedEncodingException, ue, $catch());
+			} catch ($UnsupportedEncodingException& ue) {
 				if ($nc(ser)->fDOMErrorHandler != nullptr) {
 					$var($DOMErrorImpl, error, $new($DOMErrorImpl));
 					$set(error, fException, ue);
@@ -780,19 +762,15 @@ bool DOMSerializerImpl::write($Node* node, $LSOutput* destination) {
 				}
 				$init($DOMMessageFormatter);
 				$throwNew($LSException, $LSException::SERIALIZE_ERR, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::SERIALIZER_DOMAIN, "unsupported-encoding"_s, nullptr)));
-			} catch ($LSException&) {
-				$var($LSException, lse, $catch());
+			} catch ($LSException& lse) {
 				$throw(lse);
-			} catch ($AbortException&) {
-				$var($AbortException, e, $catch());
+			} catch ($AbortException& e) {
 				var$2 = false;
 				return$1 = true;
 				goto $finally;
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, e, $catch());
+			} catch ($RuntimeException& e) {
 				$throw($cast($LSException, $($nc($($DOMUtil::createLSException($LSException::SERIALIZE_ERR, e)))->fillInStackTrace())));
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				if ($nc(ser)->fDOMErrorHandler != nullptr) {
 					$var($DOMErrorImpl, error, $new($DOMErrorImpl));
 					$set(error, fException, e);
@@ -802,8 +780,8 @@ bool DOMSerializerImpl::write($Node* node, $LSOutput* destination) {
 				}
 				$throw($cast($LSException, $($nc($($DOMUtil::createLSException($LSException::SERIALIZE_ERR, e)))->fillInStackTrace())));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$11) {
+			$assign(var$0, var$11);
 		} $finally: {
 			$nc(ser)->clearDocumentState();
 		}
@@ -869,19 +847,15 @@ bool DOMSerializerImpl::writeToURI($Node* node, $String* URI) {
 						goto $finally;
 					}
 				}
-			} catch ($LSException&) {
-				$var($LSException, lse, $catch());
+			} catch ($LSException& lse) {
 				$throw(lse);
-			} catch ($AbortException&) {
-				$var($AbortException, e, $catch());
+			} catch ($AbortException& e) {
 				var$2 = false;
 				return$1 = true;
 				goto $finally;
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, e, $catch());
+			} catch ($RuntimeException& e) {
 				$throw($cast($LSException, $($nc($($DOMUtil::createLSException($LSException::SERIALIZE_ERR, e)))->fillInStackTrace())));
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				if ($nc(ser)->fDOMErrorHandler != nullptr) {
 					$var($DOMErrorImpl, error, $new($DOMErrorImpl));
 					$set(error, fException, e);
@@ -891,8 +865,8 @@ bool DOMSerializerImpl::writeToURI($Node* node, $String* URI) {
 				}
 				$throw($cast($LSException, $($nc($($DOMUtil::createLSException($LSException::SERIALIZE_ERR, e)))->fillInStackTrace())));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$11) {
+			$assign(var$0, var$11);
 		} $finally: {
 			$nc(ser)->clearDocumentState();
 		}
@@ -930,8 +904,7 @@ void DOMSerializerImpl::prepareForSerialization($XMLSerializer* ser, $Node* node
 			if (versionChanged != nullptr) {
 				verifyNames = $nc(($cast($Boolean, $(versionChanged->invoke(document, ($ObjectArray*)nullptr)))))->booleanValue();
 			}
-		} catch ($Exception&) {
-			$catch();
+		} catch ($Exception& e) {
 		}
 		if (node->getFirstChild() != nullptr) {
 			while (node != nullptr) {
@@ -1078,57 +1051,45 @@ void DOMSerializerImpl::verify($Node* node, bool verifyNames, bool xml11Version)
 }
 
 $String* DOMSerializerImpl::_getXmlVersion($Node* node) {
-	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
 			return doc->getXmlVersion();
-		} catch ($VirtualMachineError&) {
-			$var($Error, vme, $catch());
+		} catch ($VirtualMachineError& vme) {
 			$throw(vme);
-		} catch ($ThreadDeath&) {
-			$var($Error, vme, $catch());
+		} catch ($ThreadDeath& vme) {
 			$throw(vme);
-		} catch ($Throwable&) {
-			$catch();
+		} catch ($Throwable& t) {
 		}
 	}
 	return nullptr;
 }
 
 $String* DOMSerializerImpl::_getInputEncoding($Node* node) {
-	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
 			return doc->getInputEncoding();
-		} catch ($VirtualMachineError&) {
-			$var($Error, vme, $catch());
+		} catch ($VirtualMachineError& vme) {
 			$throw(vme);
-		} catch ($ThreadDeath&) {
-			$var($Error, vme, $catch());
+		} catch ($ThreadDeath& vme) {
 			$throw(vme);
-		} catch ($Throwable&) {
-			$catch();
+		} catch ($Throwable& t) {
 		}
 	}
 	return nullptr;
 }
 
 $String* DOMSerializerImpl::_getXmlEncoding($Node* node) {
-	$useLocalCurrentObjectStackCache();
 	$var($Document, doc, ($nc(node)->getNodeType() == $Node::DOCUMENT_NODE) ? $cast($Document, node) : $nc(node)->getOwnerDocument());
 	if (doc != nullptr) {
 		try {
 			return doc->getXmlEncoding();
-		} catch ($VirtualMachineError&) {
-			$var($Error, vme, $catch());
+		} catch ($VirtualMachineError& vme) {
 			$throw(vme);
-		} catch ($ThreadDeath&) {
-			$var($Error, vme, $catch());
+		} catch ($ThreadDeath& vme) {
 			$throw(vme);
-		} catch ($Throwable&) {
-			$catch();
+		} catch ($Throwable& t) {
 		}
 	}
 	return nullptr;

@@ -11,19 +11,8 @@
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/objects/XString.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/ext/LexicalHandler.h>
 #include <jcpp.h>
@@ -492,8 +481,7 @@ double XStringForFSB::toDouble() {
 	}
 	try {
 		return $Double::parseDouble(valueString);
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, nfe, $catch());
+	} catch ($NumberFormatException& nfe) {
 		$init($Double);
 		return $Double::NaN;
 	}

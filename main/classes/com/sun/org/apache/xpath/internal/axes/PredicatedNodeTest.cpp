@@ -17,19 +17,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <java/io/ObjectInputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jcpp.h>
@@ -247,7 +234,6 @@ int32_t PredicatedNodeTest::getProximityPosition(int32_t predicateIndex) {
 }
 
 void PredicatedNodeTest::resetProximityPositions() {
-	$useLocalCurrentObjectStackCache();
 	int32_t nPredicates = getPredicateCount();
 	if (nPredicates > 0) {
 		if (nullptr == this->m_proximityPositions) {
@@ -256,8 +242,7 @@ void PredicatedNodeTest::resetProximityPositions() {
 		for (int32_t i = 0; i < nPredicates; ++i) {
 			try {
 				initProximityPosition(i);
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				$throwNew($WrappedRuntimeException, e);
 			}
 		}
@@ -320,8 +305,8 @@ bool PredicatedNodeTest::executePredicates(int32_t context, $XPathContext* xctxt
 				}
 				countProximityPosition(++this->m_predicateIndex);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			xctxt->popCurrentNode();
 			xctxt->popNamespaceContext();
@@ -381,12 +366,11 @@ int16_t PredicatedNodeTest::acceptNode(int32_t n) {
 					return$1 = true;
 					goto $finally;
 				}
-			} catch ($TransformerException&) {
-				$var($TransformerException, se, $catch());
+			} catch ($TransformerException& se) {
 				$throwNew($RuntimeException, $(se->getMessage()));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			$nc(xctxt)->popCurrentNode();
 		}

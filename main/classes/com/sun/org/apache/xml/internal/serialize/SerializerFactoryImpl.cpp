@@ -12,17 +12,7 @@
 #include <com/sun/org/apache/xml/internal/serialize/XMLSerializer.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef HTML
@@ -57,11 +47,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _SerializerFactoryImpl_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _SerializerFactoryImpl_FieldInfo_[] = {
 	{"_method", "Ljava/lang/String;", nullptr, $PRIVATE, $field(SerializerFactoryImpl, _method)},

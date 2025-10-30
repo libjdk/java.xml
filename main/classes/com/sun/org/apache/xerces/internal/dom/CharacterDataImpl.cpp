@@ -5,18 +5,9 @@
 #include <com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.h>
 #include <com/sun/org/apache/xerces/internal/dom/DOMMessageFormatter.h>
 #include <com/sun/org/apache/xerces/internal/dom/NodeImpl.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
 #include <java/lang/StringIndexOutOfBoundsException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <org/w3c/dom/NodeList.h>
 #include <jcpp.h>
@@ -99,7 +90,6 @@ $ClassInfo _CharacterDataImpl_ClassInfo_ = {
 $Object* allocate$CharacterDataImpl($Class* clazz) {
 	return $of($alloc(CharacterDataImpl));
 }
-
 
 $NodeList* CharacterDataImpl::singletonNodeList = nullptr;
 
@@ -207,8 +197,7 @@ void CharacterDataImpl::internalDeleteData(int32_t offset, int32_t count, bool r
 		$var($String, value, $concat(var$0, (tailLength > 0 ? $($nc(this->data)->substring(offset + count, offset + count + tailLength)) : ""_s)));
 		setNodeValueInternal(value, replace);
 		$nc(ownerDocument)->deletedText(this, offset, count);
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INDEX_SIZE_ERR"_s, nullptr));
 		$throwNew($DOMException, $DOMException::INDEX_SIZE_ERR, msg);
@@ -234,8 +223,7 @@ void CharacterDataImpl::internalInsertData(int32_t offset, $String* data, bool r
 		$var($String, value, $nc($$new($StringBuffer, this->data)->insert(offset, data))->toString());
 		setNodeValueInternal(value, replace);
 		$nc(ownerDocument)->insertedText(this, offset, $nc(data)->length());
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "INDEX_SIZE_ERR"_s, nullptr));
 		$throwNew($DOMException, $DOMException::INDEX_SIZE_ERR, msg);

@@ -5,24 +5,13 @@
 #include <java/io/InputStreamReader.h>
 #include <java/io/Reader.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/ReflectiveOperationException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/security/AccessController.h>
 #include <java/security/PrivilegedAction.h>
 #include <java/util/AbstractList.h>
@@ -130,9 +119,7 @@ $Object* allocate$DOMImplementationRegistry($Class* clazz) {
 	return $of($alloc(DOMImplementationRegistry));
 }
 
-
 $String* DOMImplementationRegistry::PROPERTY = nullptr;
-
 $String* DOMImplementationRegistry::FALLBACK_CLASS = nullptr;
 $String* DOMImplementationRegistry::DEFAULT_PACKAGE = nullptr;
 
@@ -172,11 +159,9 @@ DOMImplementationRegistry* DOMImplementationRegistry::newInstance() {
 			try {
 				$var($DOMImplementationSource, source, $cast($DOMImplementationSource, $nc($($nc(sourceClass)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0))));
 				sources->add(source);
-			} catch ($NoSuchMethodException&) {
-				$var($ReflectiveOperationException, e, $catch());
+			} catch ($NoSuchMethodException& e) {
 				$throwNew($InstantiationException, $(e->getMessage()));
-			} catch ($InvocationTargetException&) {
-				$var($ReflectiveOperationException, e, $catch());
+			} catch ($InvocationTargetException& e) {
 				$throwNew($InstantiationException, $(e->getMessage()));
 			}
 		}
@@ -224,15 +209,13 @@ void DOMImplementationRegistry::addSource($DOMImplementationSource* s) {
 
 $ClassLoader* DOMImplementationRegistry::getClassLoader() {
 	$init(DOMImplementationRegistry);
-	$useLocalCurrentObjectStackCache();
 	$beforeCallerSensitive();
 	try {
 		$var($ClassLoader, contextClassLoader, getContextClassLoader());
 		if (contextClassLoader != nullptr) {
 			return contextClassLoader;
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		return DOMImplementationRegistry::class$->getClassLoader();
 	}
 	return DOMImplementationRegistry::class$->getClassLoader();
@@ -248,8 +231,7 @@ $String* DOMImplementationRegistry::getServiceValue($ClassLoader* classLoader) {
 			$var($BufferedReader, rd, nullptr);
 			try {
 				$assign(rd, $new($BufferedReader, $$new($InputStreamReader, is, "UTF-8"_s), DOMImplementationRegistry::DEFAULT_LINE_LENGTH));
-			} catch ($UnsupportedEncodingException&) {
-				$var($UnsupportedEncodingException, e, $catch());
+			} catch ($UnsupportedEncodingException& e) {
 				$assign(rd, $new($BufferedReader, $$new($InputStreamReader, is), DOMImplementationRegistry::DEFAULT_LINE_LENGTH));
 			}
 			$var($String, serviceValue, $nc(rd)->readLine());
@@ -258,8 +240,7 @@ $String* DOMImplementationRegistry::getServiceValue($ClassLoader* classLoader) {
 				return serviceValue;
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		return nullptr;
 	}
 	return nullptr;

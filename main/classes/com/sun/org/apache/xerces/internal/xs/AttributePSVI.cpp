@@ -1,12 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/AttributePSVI.h>
 
 #include <com/sun/org/apache/xerces/internal/xs/XSAttributeDeclaration.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ItemPSVI = ::com::sun::org::apache::xerces::internal::xs::ItemPSVI;

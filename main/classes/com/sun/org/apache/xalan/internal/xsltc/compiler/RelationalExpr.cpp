@@ -35,13 +35,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/Operators.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -143,8 +136,8 @@ $Object* allocate$RelationalExpr($Class* clazz) {
 void RelationalExpr::init$(int32_t op, $Expression* left, $Expression* right) {
 	$Expression::init$();
 	this->_op = op;
-	$nc(($assignField(this, _left, left)))->setParent(this);
-	$nc(($assignField(this, _right, right)))->setParent(this);
+	$nc(($set(this, _left, left)))->setParent(this);
+	$nc(($set(this, _right, right)))->setParent(this);
 }
 
 void RelationalExpr::setParser($Parser* parser) {
@@ -194,7 +187,7 @@ $Type* RelationalExpr::typeCheck($SymbolTable* stable) {
 		$init($Type);
 		$set(this, _right, $new($CastExpr, this->_right, $Type::Real));
 		$set(this, _left, $new($CastExpr, this->_left, $Type::Real));
-		return $assignField(this, _type, $Type::Boolean);
+		return $set(this, _type, $Type::Boolean);
 	}
 	if (hasReferenceArgs()) {
 		$var($Type, type, nullptr);
@@ -229,7 +222,7 @@ $Type* RelationalExpr::typeCheck($SymbolTable* stable) {
 		$set(this, _right, $new($CastExpr, this->_right, type));
 		$set(this, _left, $new($CastExpr, this->_left, type));
 		$init($Type);
-		return $assignField(this, _type, $Type::Boolean);
+		return $set(this, _type, $Type::Boolean);
 	}
 	if (hasNodeSetArgs()) {
 		if ($instanceOf($NodeSetType, tright)) {
@@ -252,7 +245,7 @@ $Type* RelationalExpr::typeCheck($SymbolTable* stable) {
 			$set(this, _right, $new($CastExpr, this->_right, $Type::String));
 		}
 		$init($Type);
-		return $assignField(this, _type, $Type::Boolean);
+		return $set(this, _type, $Type::Boolean);
 	}
 	if (hasNodeArgs()) {
 		if ($instanceOf($BooleanType, tleft)) {
@@ -279,7 +272,7 @@ $Type* RelationalExpr::typeCheck($SymbolTable* stable) {
 		if (!$nc(arg2)->identicalTo(tright)) {
 			$set(this, _right, $new($CastExpr, this->_right, arg1));
 		}
-		return $assignField(this, _type, ptype->resultType());
+		return $set(this, _type, ptype->resultType());
 	}
 	$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 }

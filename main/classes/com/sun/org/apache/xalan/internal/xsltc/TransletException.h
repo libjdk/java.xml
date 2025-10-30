@@ -28,8 +28,10 @@ public:
 	void init$($String* message);
 	static const int64_t serialVersionUID = (int64_t)0xF3CD75CCDD4678F3;
 	TransletException(const TransletException& e);
-	TransletException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline TransletException* operator ->() {
+		return (TransletException*)throwing$;
+	}
 };
 
 						} // xsltc

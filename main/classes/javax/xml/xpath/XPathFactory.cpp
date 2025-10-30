@@ -1,19 +1,7 @@
 #include <javax/xml/xpath/XPathFactory.h>
 
 #include <com/sun/org/apache/xpath/internal/jaxp/XPathFactoryImpl.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/xpath/XPath.h>
 #include <javax/xml/xpath/XPathException.h>
 #include <javax/xml/xpath/XPathFactoryConfigurationException.h>
@@ -81,9 +69,7 @@ $Object* allocate$XPathFactory($Class* clazz) {
 	return $of($alloc(XPathFactory));
 }
 
-
 $String* XPathFactory::DEFAULT_PROPERTY_NAME = nullptr;
-
 $String* XPathFactory::DEFAULT_OBJECT_MODEL_URI = nullptr;
 
 void XPathFactory::init$() {
@@ -99,8 +85,7 @@ XPathFactory* XPathFactory::newInstance() {
 	$useLocalCurrentObjectStackCache();
 	try {
 		return newInstance(XPathFactory::DEFAULT_OBJECT_MODEL_URI);
-	} catch ($XPathFactoryConfigurationException&) {
-		$var($XPathFactoryConfigurationException, e, $catch());
+	} catch ($XPathFactoryConfigurationException& e) {
 		$throwNew($RuntimeException, $$str({"XPathFactory#newInstance() failed to create an XPathFactory for the default object model: "_s, XPathFactory::DEFAULT_OBJECT_MODEL_URI, " with the XPathFactoryConfigurationException: "_s, $(e->getMessage())}), e);
 	}
 	$shouldNotReachHere();

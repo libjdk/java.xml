@@ -35,20 +35,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <java/util/Map.h>
 #include <javax/xml/XMLConstants.h>
@@ -382,50 +368,28 @@ void NonValidatingConfiguration::finalize() {
 	this->$BasicParserConfiguration::finalize();
 }
 
-
 $String* NonValidatingConfiguration::WARN_ON_DUPLICATE_ATTDEF = nullptr;
-
 $String* NonValidatingConfiguration::WARN_ON_DUPLICATE_ENTITYDEF = nullptr;
-
 $String* NonValidatingConfiguration::WARN_ON_UNDECLARED_ELEMDEF = nullptr;
-
 $String* NonValidatingConfiguration::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* NonValidatingConfiguration::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* NonValidatingConfiguration::LOAD_EXTERNAL_DTD = nullptr;
-
 $String* NonValidatingConfiguration::NOTIFY_BUILTIN_REFS = nullptr;
-
 $String* NonValidatingConfiguration::NOTIFY_CHAR_REFS = nullptr;
-
 $String* NonValidatingConfiguration::NORMALIZE_DATA = nullptr;
-
 $String* NonValidatingConfiguration::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* NonValidatingConfiguration::ERROR_REPORTER = nullptr;
-
 $String* NonValidatingConfiguration::ENTITY_MANAGER = nullptr;
-
 $String* NonValidatingConfiguration::DOCUMENT_SCANNER = nullptr;
-
 $String* NonValidatingConfiguration::DTD_SCANNER = nullptr;
-
 $String* NonValidatingConfiguration::XMLGRAMMAR_POOL = nullptr;
-
 $String* NonValidatingConfiguration::DTD_VALIDATOR = nullptr;
-
 $String* NonValidatingConfiguration::NAMESPACE_BINDER = nullptr;
-
 $String* NonValidatingConfiguration::DATATYPE_VALIDATOR_FACTORY = nullptr;
 $String* NonValidatingConfiguration::VALIDATION_MANAGER = nullptr;
-
 $String* NonValidatingConfiguration::SCHEMA_VALIDATOR = nullptr;
-
 $String* NonValidatingConfiguration::LOCALE = nullptr;
-
 $String* NonValidatingConfiguration::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* NonValidatingConfiguration::SECURITY_MANAGER = nullptr;
 
 void NonValidatingConfiguration::init$() {
@@ -445,10 +409,10 @@ void NonValidatingConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPoo
 	$BasicParserConfiguration::init$(symbolTable, parentSettings);
 	this->fConfigUpdated = false;
 	this->fParseInProgress = false;
-		$init($ParserConfigurationSettings);
-		$init($BasicParserConfiguration);
-		$init($XMLConstants);
-		$init($JdkConstants);
+	$init($ParserConfigurationSettings);
+	$init($BasicParserConfiguration);
+	$init($XMLConstants);
+	$init($JdkConstants);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		$ParserConfigurationSettings::PARSER_SETTINGS,
 		$BasicParserConfiguration::NAMESPACES,
@@ -519,8 +483,7 @@ void NonValidatingConfiguration::init$($SymbolTable* symbolTable, $XMLGrammarPoo
 	this->fConfigUpdated = false;
 	try {
 		setLocale($($Locale::getDefault()));
-	} catch ($XNIException&) {
-		$catch();
+	} catch ($XNIException& e) {
 	}
 	setProperty(NonValidatingConfiguration::XML_SECURITY_PROPERTY_MANAGER, $$new($XMLSecurityPropertyManager));
 	{
@@ -575,39 +538,30 @@ void NonValidatingConfiguration::setInputSource($XMLInputSource* inputSource) {
 }
 
 bool NonValidatingConfiguration::parse(bool complete) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			reset();
 			$nc(this->fScanner)->setInputSource(this->fInputSource);
 			$set(this, fInputSource, nullptr);
-		} catch ($XNIException&) {
-			$var($XNIException, ex, $catch());
+		} catch ($XNIException& ex) {
 			$throw(ex);
-		} catch ($IOException&) {
-			$var($IOException, ex, $catch());
+		} catch ($IOException& ex) {
 			$throw(ex);
-		} catch ($RuntimeException&) {
-			$var($RuntimeException, ex, $catch());
+		} catch ($RuntimeException& ex) {
 			$throw(ex);
-		} catch ($Exception&) {
-			$var($Exception, ex, $catch());
+		} catch ($Exception& ex) {
 			$throwNew($XNIException, ex);
 		}
 	}
 	try {
 		return $nc(this->fScanner)->scanDocument(complete);
-	} catch ($XNIException&) {
-		$var($XNIException, ex, $catch());
+	} catch ($XNIException& ex) {
 		$throw(ex);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throw(ex);
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, ex, $catch());
+	} catch ($RuntimeException& ex) {
 		$throw(ex);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($XNIException, ex);
 	}
 	$shouldNotReachHere();
@@ -618,7 +572,6 @@ void NonValidatingConfiguration::cleanup() {
 }
 
 void NonValidatingConfiguration::parse($XMLInputSource* source) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -629,21 +582,17 @@ void NonValidatingConfiguration::parse($XMLInputSource* source) {
 			try {
 				setInputSource(source);
 				parse(true);
-			} catch ($XNIException&) {
-				$var($XNIException, ex, $catch());
+			} catch ($XNIException& ex) {
 				$throw(ex);
-			} catch ($IOException&) {
-				$var($IOException, ex, $catch());
+			} catch ($IOException& ex) {
 				$throw(ex);
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, ex, $catch());
+			} catch ($RuntimeException& ex) {
 				$throw(ex);
-			} catch ($Exception&) {
-				$var($Exception, ex, $catch());
+			} catch ($Exception& ex) {
 				$throwNew($XNIException, ex);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			this->fParseInProgress = false;
 			this->cleanup();

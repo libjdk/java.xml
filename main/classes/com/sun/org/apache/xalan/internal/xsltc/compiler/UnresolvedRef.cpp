@@ -17,13 +17,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef CIRCULAR_VARIABLE_ERR
@@ -135,8 +128,8 @@ $Type* UnresolvedRef::typeCheck($SymbolTable* stable) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::CIRCULAR_VARIABLE_ERR, $of(name), static_cast<$SyntaxTreeNode*>(this)));
 	}
-	if (($assignField(this, _ref, resolve($(getParser()), stable))) != nullptr) {
-		return ($assignField(this, _type, $nc(this->_ref)->typeCheck(stable)));
+	if (($set(this, _ref, resolve($(getParser()), stable))) != nullptr) {
+		return ($set(this, _type, $nc(this->_ref)->typeCheck(stable)));
 	}
 	$throwNew($TypeCheckError, $(reportError()));
 }

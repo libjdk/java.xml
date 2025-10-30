@@ -9,15 +9,7 @@
 #include <com/sun/org/apache/xpath/internal/functions/Function.h>
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -99,8 +91,7 @@ int32_t FuncPosition::getPositionInContextNodeList($XPathContext* xctxt) {
 			}
 			try {
 				$assign(cnl, cnl->cloneWithReset());
-			} catch ($CloneNotSupportedException&) {
-				$var($CloneNotSupportedException, cnse, $catch());
+			} catch ($CloneNotSupportedException& cnse) {
 				$throwNew($WrappedRuntimeException, cnse);
 			}
 			int32_t currentNode = xctxt->getContextNode();

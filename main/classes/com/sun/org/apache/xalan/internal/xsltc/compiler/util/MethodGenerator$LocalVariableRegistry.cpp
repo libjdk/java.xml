@@ -2,15 +2,6 @@
 
 #include <com/sun/org/apache/bcel/internal/generic/LocalVariableGen.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>

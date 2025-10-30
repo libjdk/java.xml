@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/IllegalCharException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -54,16 +46,10 @@ void IllegalCharException::init$($String* s) {
 IllegalCharException::IllegalCharException() {
 }
 
-IllegalCharException::IllegalCharException(const IllegalCharException& e) {
+IllegalCharException::IllegalCharException(const IllegalCharException& e) : $Exception(e) {
 }
 
-IllegalCharException IllegalCharException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void IllegalCharException::throwWrapper$() {
-	$pendingException(this);
+void IllegalCharException::throw$() {
 	throw *this;
 }
 

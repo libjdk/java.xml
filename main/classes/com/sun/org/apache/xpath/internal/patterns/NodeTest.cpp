@@ -9,15 +9,6 @@
 #include <com/sun/org/apache/xpath/internal/XPathVisitor.h>
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -149,19 +140,12 @@ $Object* allocate$NodeTest($Class* clazz) {
 	return $of($alloc(NodeTest));
 }
 
-
 $String* NodeTest::WILD = nullptr;
-
 $String* NodeTest::SUPPORTS_PRE_STRIPPING = nullptr;
-
 $XNumber* NodeTest::SCORE_NODETEST = nullptr;
-
 $XNumber* NodeTest::SCORE_NSWILD = nullptr;
-
 $XNumber* NodeTest::SCORE_QNAME = nullptr;
-
 $XNumber* NodeTest::SCORE_OTHER = nullptr;
-
 $XNumber* NodeTest::SCORE_NONE = nullptr;
 
 int32_t NodeTest::getWhatToShow() {
@@ -361,17 +345,13 @@ void NodeTest::debugWhatToShow(int32_t whatToShow) {
 	int32_t n = v->size();
 	for (int32_t i = 0; i < n; ++i) {
 		if (i > 0) {
-			$init($System);
 			$nc($System::out)->print(" | "_s);
 		}
-		$init($System);
 		$nc($System::out)->print($cast($String, $(v->get(i))));
 	}
 	if (0 == n) {
-		$init($System);
 		$nc($System::out)->print($$str({"empty whatToShow: "_s, $$str(whatToShow)}));
 	}
-	$init($System);
 	$nc($System::out)->println();
 }
 

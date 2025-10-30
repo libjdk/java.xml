@@ -1,16 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/Messages.h>
 
 #include <com/sun/org/apache/xml/internal/serializer/utils/MsgKey.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/MessageFormat.h>
 #include <java/util/Locale.h>
 #include <java/util/ResourceBundle.h>
@@ -107,8 +97,7 @@ $String* Messages::createMsg($ResourceBundle* fResourceBundle, $String* msgKey$r
 				$of(msgKey),
 				$of(this->m_resourceBundleName)
 			})));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$assign(msg, $str({"The message key \'"_s, msgKey, "\' is not in the message class \'"_s, this->m_resourceBundleName, "\'"_s}));
 		}
 	} else if (args != nullptr) {
@@ -120,8 +109,7 @@ $String* Messages::createMsg($ResourceBundle* fResourceBundle, $String* msgKey$r
 				}
 			}
 			$assign(fmsg, $MessageFormat::format(msg, args));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			throwex = true;
 			try {
 				$init($MsgKey);
@@ -130,8 +118,7 @@ $String* Messages::createMsg($ResourceBundle* fResourceBundle, $String* msgKey$r
 					$of(this->m_resourceBundleName)
 				})));
 				$plusAssign(fmsg, $$str({" "_s, msg}));
-			} catch ($Exception&) {
-				$var($Exception, formatfailed, $catch());
+			} catch ($Exception& formatfailed) {
 				$assign(fmsg, $str({"The format of message \'"_s, msgKey, "\' in message class \'"_s, this->m_resourceBundleName, "\' failed."_s}));
 			}
 		}

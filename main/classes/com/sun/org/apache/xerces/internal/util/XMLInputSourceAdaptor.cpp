@@ -3,13 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/XMLEntityManager.h>
 #include <com/sun/org/apache/xerces/internal/util/URI$MalformedURIException.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEntityManager;
@@ -66,8 +59,7 @@ $String* XMLInputSourceAdaptor::getSystemId() {
 	try {
 		$var($String, var$0, $nc(this->fSource)->getSystemId());
 		return $XMLEntityManager::expandSystemId(var$0, $($nc(this->fSource)->getBaseSystemId()), false);
-	} catch ($URI$MalformedURIException&) {
-		$var($URI$MalformedURIException, e, $catch());
+	} catch ($URI$MalformedURIException& e) {
 		return $nc(this->fSource)->getSystemId();
 	}
 	$shouldNotReachHere();

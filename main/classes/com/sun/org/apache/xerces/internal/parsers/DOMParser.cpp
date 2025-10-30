@@ -27,16 +27,6 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <jdk/xml/internal/JdkConstants.h>
 #include <jdk/xml/internal/JdkProperty$State.h>
@@ -176,17 +166,12 @@ $Object* allocate$DOMParser($Class* clazz) {
 	return $of($alloc(DOMParser));
 }
 
-
 $String* DOMParser::USE_ENTITY_RESOLVER2 = nullptr;
 $String* DOMParser::REPORT_WHITESPACE = nullptr;
-
 $String* DOMParser::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 $StringArray* DOMParser::RECOGNIZED_FEATURES = nullptr;
-
 $String* DOMParser::SYMBOL_TABLE = nullptr;
-
 $String* DOMParser::XMLGRAMMAR_POOL = nullptr;
-
 $StringArray* DOMParser::RECOGNIZED_PROPERTIES = nullptr;
 
 void DOMParser::init$($XMLParserConfiguration* config) {
@@ -220,8 +205,7 @@ void DOMParser::parse($String* systemId) {
 	$var($XMLInputSource, source, $new($XMLInputSource, nullptr, systemId, nullptr, false));
 	try {
 		parse(source);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr || $instanceOf($CharConversionException, ex)) {
 			$var($LocatorImpl, locatorImpl, $new($LocatorImpl));
@@ -238,8 +222,7 @@ void DOMParser::parse($String* systemId) {
 			$throw($cast($IOException, ex));
 		}
 		$throwNew($SAXException, ex);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		e->printStackTrace();
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr) {
@@ -264,8 +247,7 @@ void DOMParser::parse($InputSource* inputSource) {
 		xmlInputSource->setCharacterStream($($nc(inputSource)->getCharacterStream()));
 		xmlInputSource->setEncoding($($nc(inputSource)->getEncoding()));
 		parse(xmlInputSource);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr || $instanceOf($CharConversionException, ex)) {
 			$var($LocatorImpl, locatorImpl, $new($LocatorImpl));
@@ -282,8 +264,7 @@ void DOMParser::parse($InputSource* inputSource) {
 			$throw($cast($IOException, ex));
 		}
 		$throwNew($SAXException, ex);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$var($Exception, ex, e->getException());
 		if (ex == nullptr) {
 			$throwNew($SAXException, $(e->getMessage()));
@@ -316,8 +297,7 @@ void DOMParser::setEntityResolver($EntityResolver* resolver) {
 		} else {
 			$nc(this->fConfiguration)->setProperty($XMLParser::ENTITY_RESOLVER, $$new($EntityResolverWrapper, resolver));
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 }
 
@@ -334,8 +314,7 @@ $EntityResolver* DOMParser::getEntityResolver() {
 				$assign(entityResolver, $nc(($cast($EntityResolver2Wrapper, xmlEntityResolver)))->getEntityResolver());
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	return entityResolver;
 }
@@ -351,8 +330,7 @@ void DOMParser::setErrorHandler($ErrorHandler* errorHandler) {
 		} else {
 			$nc(this->fConfiguration)->setProperty($XMLParser::ERROR_HANDLER, $$new($ErrorHandlerWrapper, errorHandler));
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 }
 
@@ -365,8 +343,7 @@ $ErrorHandler* DOMParser::getErrorHandler() {
 		if (xmlErrorHandler != nullptr && $instanceOf($ErrorHandlerWrapper, xmlErrorHandler)) {
 			$assign(errorHandler, $nc(($cast($ErrorHandlerWrapper, xmlErrorHandler)))->getErrorHandler());
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	return errorHandler;
 }
@@ -382,8 +359,7 @@ void DOMParser::setFeature($String* featureId, bool state) {
 			return;
 		}
 		$nc(this->fConfiguration)->setFeature(featureId, state);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -401,8 +377,7 @@ bool DOMParser::getFeature($String* featureId) {
 			return this->fUseEntityResolver2;
 		}
 		return $nc(this->fConfiguration)->getFeature(featureId);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -455,8 +430,7 @@ void DOMParser::setProperty0($String* propertyId, Object$* value) {
 	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fConfiguration)->setProperty(propertyId, value);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -474,8 +448,7 @@ $Object* DOMParser::getProperty($String* propertyId) {
 		bool deferred = false;
 		try {
 			deferred = getFeature($AbstractDOMParser::DEFER_NODE_EXPANSION);
-		} catch ($XMLConfigurationException&) {
-			$catch();
+		} catch ($XMLConfigurationException& e) {
 		}
 		if (deferred) {
 			$throwNew($SAXNotSupportedException, "Current element node cannot be queried when node expansion is deferred."_s);
@@ -489,8 +462,7 @@ $Object* DOMParser::getProperty($String* propertyId) {
 			return $of(spm->getValueByIndex(index));
 		}
 		return $of($nc(this->fConfiguration)->getProperty(propertyId));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {

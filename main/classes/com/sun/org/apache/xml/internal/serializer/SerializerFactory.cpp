@@ -9,15 +9,7 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/MsgKey.h>
 #include <com/sun/org/apache/xml/internal/serializer/utils/Utils.h>
 #include <com/sun/org/apache/xml/internal/serializer/utils/WrappedRuntimeException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Properties.h>
 #include <javax/xml/transform/OutputKeys.h>
 #include <org/xml/sax/ContentHandler.h>
@@ -121,8 +113,7 @@ $Serializer* SerializerFactory::getSerializer($Properties* format) {
 			$init($MsgKey);
 			$throwNew($Exception, $($nc($Utils::messages)->createMessage($MsgKey::ER_SERIALIZER_NOT_CONTENTHANDLER, $$new($ObjectArray, {$of(className)}))));
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($WrappedRuntimeException, e);
 	}
 	return ser;

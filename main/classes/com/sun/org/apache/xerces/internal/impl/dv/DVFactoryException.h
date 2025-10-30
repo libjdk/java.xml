@@ -22,8 +22,10 @@ public:
 	void init$($String* msg);
 	static const int64_t serialVersionUID = (int64_t)0xCC1CEB7627291454;
 	DVFactoryException(const DVFactoryException& e);
-	DVFactoryException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline DVFactoryException* operator ->() {
+		return (DVFactoryException*)throwing$;
+	}
 };
 
 							} // dv

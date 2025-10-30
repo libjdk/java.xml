@@ -4,19 +4,8 @@
 #include <com/sun/org/apache/xpath/internal/ExpressionNode.h>
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/SourceLocator.h>
 #include <javax/xml/transform/TransformerException.h>
@@ -142,13 +131,11 @@ void XPathException::printStackTrace($PrintStream* s$renamed) {
 	$useLocalCurrentObjectStackCache();
 	$var($PrintStream, s, s$renamed);
 	if (s == nullptr) {
-		$init($System);
 		$assign(s, $System::err);
 	}
 	try {
 		$TransformerException::printStackTrace(s);
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	$var($Throwable, exception, this->m_exception);
 	for (int32_t i = 0; (i < 10) && (nullptr != exception); ++i) {
@@ -195,21 +182,17 @@ void XPathException::printStackTrace($PrintWriter* s$renamed) {
 	$var($PrintWriter, s, s$renamed);
 	$beforeCallerSensitive();
 	if (s == nullptr) {
-		$init($System);
 		$assign(s, $new($PrintWriter, static_cast<$OutputStream*>($System::err)));
 	}
 	try {
 		$TransformerException::printStackTrace(s);
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	bool isJdk14OrHigher = false;
 	try {
-		$load($Throwable);
 		$Throwable::class$->getMethod("getCause"_s, ($ClassArray*)nullptr);
 		isJdk14OrHigher = true;
-	} catch ($NoSuchMethodException&) {
-		$catch();
+	} catch ($NoSuchMethodException& nsme) {
 	}
 	if (!isJdk14OrHigher) {
 		$var($Throwable, exception, this->m_exception);
@@ -217,8 +200,7 @@ void XPathException::printStackTrace($PrintWriter* s$renamed) {
 			$nc(s)->println("---------"_s);
 			try {
 				exception->printStackTrace(s);
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				s->println("Could not print stack trace..."_s);
 			}
 			if ($instanceOf($TransformerException, exception)) {
@@ -243,16 +225,10 @@ $Throwable* XPathException::getException() {
 XPathException::XPathException() {
 }
 
-XPathException::XPathException(const XPathException& e) {
+XPathException::XPathException(const XPathException& e) : $TransformerException(e) {
 }
 
-XPathException XPathException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XPathException::throwWrapper$() {
-	$pendingException(this);
+void XPathException::throw$() {
 	throw *this;
 }
 

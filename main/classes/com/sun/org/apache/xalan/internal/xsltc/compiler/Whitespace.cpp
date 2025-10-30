@@ -35,16 +35,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Iterator.h>
@@ -344,7 +335,7 @@ void Whitespace::compilePredicate($List* rules, int32_t defaultAction, $ClassGen
 	int32_t var$0 = $Constants::ACC_PUBLIC | $Constants::ACC_FINAL;
 	$init($Type);
 	$var($Type, var$1, static_cast<$Type*>($Type::BOOLEAN));
-		$init($Constants);
+	$init($Constants);
 	$var($TypeArray, var$2, $new($TypeArray, {
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),
 		static_cast<$Type*>($Type::INT),
@@ -419,7 +410,7 @@ void Whitespace::compileDefault(int32_t defaultAction, $ClassGenerator* classGen
 	int32_t var$0 = $Constants::ACC_PUBLIC | $Constants::ACC_FINAL;
 	$init($Type);
 	$var($Type, var$1, static_cast<$Type*>($Type::BOOLEAN));
-		$init($Constants);
+	$init($Constants);
 	$var($TypeArray, var$2, $new($TypeArray, {
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),
 		static_cast<$Type*>($Type::INT),

@@ -47,18 +47,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/datatypes/ObjectList.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
 #include <java/lang/ref/SoftReference.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -868,8 +858,7 @@ $DOMParser* SchemaGrammar::getDOMParser() {
 		$var($DOMParser, parser, $new($DOMParser, static_cast<$XMLParserConfiguration*>(config)));
 		try {
 			parser->setFeature($$str({$Constants::XERCES_FEATURE_PREFIX, $Constants::DEFER_NODE_EXPANSION_FEATURE}), false);
-		} catch ($SAXException&) {
-			$catch();
+		} catch ($SAXException& exc) {
 		}
 		$set(this, fDOMParser, $new($SoftReference, parser));
 		return parser;

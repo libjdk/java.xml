@@ -42,8 +42,10 @@ public:
 	::com::sun::org::apache::xerces::internal::util::Status* fType = nullptr;
 	$String* fIdentifier = nullptr;
 	XMLConfigurationException(const XMLConfigurationException& e);
-	XMLConfigurationException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XMLConfigurationException* operator ->() {
+		return (XMLConfigurationException*)throwing$;
+	}
 };
 
 							} // parser

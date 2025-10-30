@@ -40,20 +40,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
 #include <java/io/IOException.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <jcpp.h>
 
@@ -336,33 +322,20 @@ void XMLDTDValidator::finalize() {
 	this->$XMLComponent::finalize();
 }
 
-
 $String* XMLDTDValidator::NAMESPACES = nullptr;
-
 $String* XMLDTDValidator::VALIDATION = nullptr;
-
 $String* XMLDTDValidator::DYNAMIC_VALIDATION = nullptr;
-
 $String* XMLDTDValidator::BALANCE_SYNTAX_TREES = nullptr;
-
 $String* XMLDTDValidator::WARN_ON_DUPLICATE_ATTDEF = nullptr;
 $String* XMLDTDValidator::PARSER_SETTINGS = nullptr;
-
 $String* XMLDTDValidator::SYMBOL_TABLE = nullptr;
-
 $String* XMLDTDValidator::ERROR_REPORTER = nullptr;
-
 $String* XMLDTDValidator::GRAMMAR_POOL = nullptr;
-
 $String* XMLDTDValidator::DATATYPE_VALIDATOR_FACTORY = nullptr;
 $String* XMLDTDValidator::VALIDATION_MANAGER = nullptr;
-
 $StringArray* XMLDTDValidator::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLDTDValidator::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLDTDValidator::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLDTDValidator::PROPERTY_DEFAULTS = nullptr;
 
 void XMLDTDValidator::init$() {
@@ -515,8 +488,7 @@ void XMLDTDValidator::doctypeDecl($String* rootElement, $String* publicId, $Stri
 	$var($String, eid, nullptr);
 	try {
 		$assign(eid, $XMLEntityManager::expandSystemId(systemId, $($nc(this->fDocLocation)->getExpandedSystemId()), false));
-	} catch ($IOException&) {
-		$catch();
+	} catch ($IOException& e) {
 	}
 	$var($XMLDTDDescription, grammarDesc, $new($XMLDTDDescription, publicId, systemId, $($nc(this->fDocLocation)->getExpandedSystemId()), eid, rootElement));
 	$set(this, fDTDGrammar, $nc(this->fGrammarBucket)->getGrammar(grammarDesc));
@@ -894,8 +866,7 @@ void XMLDTDValidator::validateDTDattribute($QName* element, $String* attValue, $
 					} else {
 						$nc(this->fValENTITY)->validate(attValue, this->fValidationState);
 					}
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ex, $catch());
+				} catch ($InvalidDatatypeValueException& ex) {
 					$init($XMLMessageFormatter);
 					$var($String, var$0, $XMLMessageFormatter::XML_DOMAIN);
 					$var($String, var$1, ex->getKey());
@@ -943,8 +914,7 @@ void XMLDTDValidator::validateDTDattribute($QName* element, $String* attValue, $
 			{
 				try {
 					$nc(this->fValID)->validate(attValue, this->fValidationState);
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ex, $catch());
+				} catch ($InvalidDatatypeValueException& ex) {
 					$init($XMLMessageFormatter);
 					$var($String, var$2, $XMLMessageFormatter::XML_DOMAIN);
 					$var($String, var$3, ex->getKey());
@@ -963,8 +933,7 @@ void XMLDTDValidator::validateDTDattribute($QName* element, $String* attValue, $
 					} else {
 						$nc(this->fValIDRef)->validate(attValue, this->fValidationState);
 					}
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ex, $catch());
+				} catch ($InvalidDatatypeValueException& ex) {
 					if (isAlistAttribute) {
 						$init($XMLMessageFormatter);
 						$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "IDREFSInvalid"_s, $$new($ObjectArray, {$of(attValue)}), $XMLErrorReporter::SEVERITY_ERROR);
@@ -988,8 +957,7 @@ void XMLDTDValidator::validateDTDattribute($QName* element, $String* attValue, $
 					} else {
 						$nc(this->fValNMTOKEN)->validate(attValue, this->fValidationState);
 					}
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ex, $catch());
+				} catch ($InvalidDatatypeValueException& ex) {
 					if (isAlistAttribute) {
 						$init($XMLMessageFormatter);
 						$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "NMTOKENSInvalid"_s, $$new($ObjectArray, {$of(attValue)}), $XMLErrorReporter::SEVERITY_ERROR);
@@ -1173,9 +1141,7 @@ void XMLDTDValidator::init() {
 			$set(this, fValNMTOKEN, $nc(this->fDatatypeValidatorFactory)->getBuiltInDV($XMLSymbols::fNMTOKENSymbol));
 			$set(this, fValNMTOKENS, $nc(this->fDatatypeValidatorFactory)->getBuiltInDV($XMLSymbols::fNMTOKENSSymbol));
 			$set(this, fValNOTATION, $nc(this->fDatatypeValidatorFactory)->getBuiltInDV($XMLSymbols::fNOTATIONSymbol));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
-			$init($System);
+		} catch ($Exception& e) {
 			e->printStackTrace($System::err);
 		}
 	}
@@ -1365,7 +1331,7 @@ void clinit$XMLDTDValidator($Class* class$) {
 		XMLDTDValidator::DYNAMIC_VALIDATION,
 		XMLDTDValidator::BALANCE_SYNTAX_TREES
 	}));
-		$init($Boolean);
+	$init($Boolean);
 	$assignStatic(XMLDTDValidator::FEATURE_DEFAULTS, $new($BooleanArray, {
 		($Boolean*)nullptr,
 		($Boolean*)nullptr,

@@ -1,15 +1,6 @@
 #include <javax/xml/catalog/CatalogFeatures$Feature.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/catalog/CatalogFeatures.h>
 #include <jcpp.h>
 
@@ -81,13 +72,9 @@ $Object* allocate$CatalogFeatures$Feature($Class* clazz) {
 	return $of($alloc(CatalogFeatures$Feature));
 }
 
-
 CatalogFeatures$Feature* CatalogFeatures$Feature::FILES = nullptr;
-
 CatalogFeatures$Feature* CatalogFeatures$Feature::PREFER = nullptr;
-
 CatalogFeatures$Feature* CatalogFeatures$Feature::DEFER = nullptr;
-
 CatalogFeatures$Feature* CatalogFeatures$Feature::RESOLVE = nullptr;
 $CatalogFeatures$FeatureArray* CatalogFeatures$Feature::$VALUES = nullptr;
 

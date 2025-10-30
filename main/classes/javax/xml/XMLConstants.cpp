@@ -1,12 +1,5 @@
 #include <javax/xml/XMLConstants.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ACCESS_EXTERNAL_DTD
@@ -71,37 +64,21 @@ $Object* allocate$XMLConstants($Class* clazz) {
 	return $of($alloc(XMLConstants));
 }
 
-
 $String* XMLConstants::NULL_NS_URI = nullptr;
-
 $String* XMLConstants::DEFAULT_NS_PREFIX = nullptr;
-
 $String* XMLConstants::XML_NS_URI = nullptr;
-
 $String* XMLConstants::XML_NS_PREFIX = nullptr;
-
 $String* XMLConstants::XMLNS_ATTRIBUTE_NS_URI = nullptr;
-
 $String* XMLConstants::XMLNS_ATTRIBUTE = nullptr;
-
 $String* XMLConstants::W3C_XML_SCHEMA_NS_URI = nullptr;
-
 $String* XMLConstants::W3C_XML_SCHEMA_INSTANCE_NS_URI = nullptr;
-
 $String* XMLConstants::W3C_XPATH_DATATYPE_NS_URI = nullptr;
-
 $String* XMLConstants::XML_DTD_NS_URI = nullptr;
-
 $String* XMLConstants::RELAXNG_NS_URI = nullptr;
-
 $String* XMLConstants::FEATURE_SECURE_PROCESSING = nullptr;
-
 $String* XMLConstants::ACCESS_EXTERNAL_DTD = nullptr;
-
 $String* XMLConstants::ACCESS_EXTERNAL_SCHEMA = nullptr;
-
 $String* XMLConstants::ACCESS_EXTERNAL_STYLESHEET = nullptr;
-
 $String* XMLConstants::USE_CATALOG = nullptr;
 
 void XMLConstants::init$() {

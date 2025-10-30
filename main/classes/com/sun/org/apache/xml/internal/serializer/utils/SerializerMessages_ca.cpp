@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/SerializerMessages_ca.h>
 
 #include <com/sun/org/apache/xml/internal/serializer/utils/MsgKey.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -110,7 +103,7 @@ void SerializerMessages_ca::init$() {
 
 $ObjectArray2* SerializerMessages_ca::getContents() {
 	$useLocalCurrentObjectStackCache();
-			$init($MsgKey);
+	$init($MsgKey);
 	$var($ObjectArray2, contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($MsgKey::BAD_MSGKEY),

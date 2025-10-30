@@ -1,14 +1,6 @@
 #include <javax/xml/validation/SchemaFactoryConfigurationError.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Error.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -65,16 +57,10 @@ void SchemaFactoryConfigurationError::init$($String* message, $Throwable* cause)
 SchemaFactoryConfigurationError::SchemaFactoryConfigurationError() {
 }
 
-SchemaFactoryConfigurationError::SchemaFactoryConfigurationError(const SchemaFactoryConfigurationError& e) {
+SchemaFactoryConfigurationError::SchemaFactoryConfigurationError(const SchemaFactoryConfigurationError& e) : $Error(e) {
 }
 
-SchemaFactoryConfigurationError SchemaFactoryConfigurationError::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void SchemaFactoryConfigurationError::throwWrapper$() {
-	$pendingException(this);
+void SchemaFactoryConfigurationError::throw$() {
 	throw *this;
 }
 

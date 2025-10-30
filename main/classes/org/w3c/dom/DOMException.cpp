@@ -1,13 +1,5 @@
 #include <org/w3c/dom/DOMException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DOMSTRING_SIZE_ERR
@@ -86,16 +78,10 @@ void DOMException::init$(int16_t code, $String* message) {
 DOMException::DOMException() {
 }
 
-DOMException::DOMException(const DOMException& e) {
+DOMException::DOMException(const DOMException& e) : $RuntimeException(e) {
 }
 
-DOMException DOMException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void DOMException::throwWrapper$() {
-	$pendingException(this);
+void DOMException::throw$() {
 	throw *this;
 }
 

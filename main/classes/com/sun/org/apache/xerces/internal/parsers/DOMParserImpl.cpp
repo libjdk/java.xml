@@ -32,20 +32,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Thread.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -309,23 +295,14 @@ void DOMParserImpl::finalize() {
 	this->$AbstractDOMParser::finalize();
 }
 
-
 $String* DOMParserImpl::NAMESPACES = nullptr;
-
 $String* DOMParserImpl::VALIDATION_FEATURE = nullptr;
-
 $String* DOMParserImpl::XMLSCHEMA = nullptr;
-
 $String* DOMParserImpl::XMLSCHEMA_FULL_CHECKING = nullptr;
-
 $String* DOMParserImpl::DYNAMIC_VALIDATION = nullptr;
-
 $String* DOMParserImpl::NORMALIZE_DATA = nullptr;
-
 $String* DOMParserImpl::DISALLOW_DOCTYPE_DECL_FEATURE = nullptr;
-
 $String* DOMParserImpl::NAMESPACE_GROWTH = nullptr;
-
 $String* DOMParserImpl::TOLERATE_DUPLICATES = nullptr;
 $String* DOMParserImpl::SYMBOL_TABLE = nullptr;
 $String* DOMParserImpl::PSVI_AUGMENT = nullptr;
@@ -354,7 +331,7 @@ void DOMParserImpl::init$($XMLParserConfiguration* config) {
 	this->abortNow = false;
 	$set(this, fSchemaLocation, nullptr);
 	$set(this, abortHandler, nullptr);
-		$init($Constants);
+	$init($Constants);
 	$var($StringArray, domRecognizedFeatures, $new($StringArray, {
 		$Constants::DOM_CANONICAL_FORM,
 		$Constants::DOM_CDATA_SECTIONS,
@@ -386,8 +363,7 @@ void DOMParserImpl::init$($XMLParserConfiguration* config) {
 	$nc(this->fConfiguration)->setFeature($Constants::DOM_CERTIFIED, true);
 	try {
 		$nc(this->fConfiguration)->setFeature(DOMParserImpl::NORMALIZE_DATA, false);
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& exc) {
 	}
 }
 
@@ -543,8 +519,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 					}
 				}
 			}
-		} catch ($XMLConfigurationException&) {
-			$var($XMLConfigurationException, e, $catch());
+		} catch ($XMLConfigurationException& e) {
 			$init($DOMMessageFormatter);
 			$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "FEATURE_NOT_FOUND"_s, $$new($ObjectArray, {$of(name)})));
 			$throwNew($DOMException, $DOMException::NOT_FOUND_ERR, msg);
@@ -557,8 +532,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 					$set(this, fErrorHandler, $new($DOMErrorHandlerWrapper, $cast($DOMErrorHandler, value)));
 					$init($XMLParser);
 					$nc(this->fConfiguration)->setProperty($XMLParser::ERROR_HANDLER, this->fErrorHandler);
-				} catch ($XMLConfigurationException&) {
-					$catch();
+				} catch ($XMLConfigurationException& e) {
 				}
 			} else {
 				$init($DOMMessageFormatter);
@@ -571,8 +545,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 					try {
 						$init($XMLParser);
 						$nc(this->fConfiguration)->setProperty($XMLParser::ENTITY_RESOLVER, $$new($DOMEntityResolverWrapper, $cast($LSResourceResolver, value)));
-					} catch ($XMLConfigurationException&) {
-						$catch();
+					} catch ($XMLConfigurationException& e) {
 					}
 				} else {
 					$init($DOMMessageFormatter);
@@ -600,8 +573,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 									$nc(this->fConfiguration)->setProperty($$str({$Constants::JAXP_PROPERTY_PREFIX, $Constants::SCHEMA_SOURCE}), value);
 								}
 							}
-						} catch ($XMLConfigurationException&) {
-							$catch();
+						} catch ($XMLConfigurationException& e) {
 						}
 					} else {
 						$init($DOMMessageFormatter);
@@ -632,8 +604,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 										}
 									}
 								}
-							} catch ($XMLConfigurationException&) {
-								$catch();
+							} catch ($XMLConfigurationException& e) {
 							}
 						} else {
 							$init($DOMMessageFormatter);
@@ -650,8 +621,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 							try {
 								$nc(this->fConfiguration)->setProperty(normalizedName, value);
 								return;
-							} catch ($XMLConfigurationException&) {
-								$catch();
+							} catch ($XMLConfigurationException& e) {
 							}
 							try {
 								if (name->equals(DOMParserImpl::NAMESPACE_GROWTH)) {
@@ -661,8 +631,7 @@ void DOMParserImpl::setParameter($String* name, Object$* value) {
 								}
 								$nc(this->fConfiguration)->getFeature(normalizedName);
 								$throw($(newTypeMismatchError(name)));
-							} catch ($XMLConfigurationException&) {
-								$catch();
+							} catch ($XMLConfigurationException& e) {
 							}
 							$throw($(newFeatureNotFoundError(name)));
 						}
@@ -759,8 +728,7 @@ $Object* DOMParserImpl::getParameter($String* name) {
 																	return $of($nc(($cast($DOMEntityResolverWrapper, entityResolver)))->getEntityResolver());
 																}
 																return $of(nullptr);
-															} catch ($XMLConfigurationException&) {
-																$catch();
+															} catch ($XMLConfigurationException& e) {
 															}
 														} else {
 															if (name->equalsIgnoreCase($Constants::DOM_SCHEMA_TYPE)) {
@@ -787,13 +755,11 @@ $Object* DOMParserImpl::getParameter($String* name) {
 																		try {
 																			$init($Boolean);
 																			return $of($nc(this->fConfiguration)->getFeature(normalizedName) ? $Boolean::TRUE : $Boolean::FALSE);
-																		} catch ($XMLConfigurationException&) {
-																			$catch();
+																		} catch ($XMLConfigurationException& e) {
 																		}
 																		try {
 																			return $of($nc(this->fConfiguration)->getProperty(normalizedName));
-																		} catch ($XMLConfigurationException&) {
-																			$catch();
+																		} catch ($XMLConfigurationException& e) {
 																		}
 																		$throw($(newFeatureNotFoundError(name)));
 																	}
@@ -817,7 +783,6 @@ $Object* DOMParserImpl::getParameter($String* name) {
 }
 
 bool DOMParserImpl::canSetParameter($String* name, Object$* value) {
-	$useLocalCurrentObjectStackCache();
 	if (value == nullptr) {
 		return true;
 	}
@@ -863,8 +828,7 @@ bool DOMParserImpl::canSetParameter($String* name, Object$* value) {
 			}
 			$nc(this->fConfiguration)->getFeature(normalizedName);
 			return true;
-		} catch ($XMLConfigurationException&) {
-			$var($XMLConfigurationException, e, $catch());
+		} catch ($XMLConfigurationException& e) {
 			return false;
 		}
 	} else {
@@ -959,8 +923,7 @@ $Document* DOMParserImpl::parseURI($String* uri) {
 			this->abortNow = false;
 			$Thread::interrupted();
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		this->fBusy = false;
 		if (this->abortNow && $nc(this->currentThread)->isInterrupted()) {
 			$Thread::interrupted();
@@ -1004,8 +967,7 @@ $Document* DOMParserImpl::parse($LSInput* is) {
 			this->abortNow = false;
 			$Thread::interrupted();
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		this->fBusy = false;
 		if (this->abortNow && $nc(this->currentThread)->isInterrupted()) {
 			$Thread::interrupted();

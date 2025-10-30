@@ -1,14 +1,5 @@
 #include <javax/xml/catalog/AltCatalog.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <java/net/URISyntaxException.h>
 #include <java/net/URL.h>
@@ -66,12 +57,10 @@ void AltCatalog::init$($BaseEntry$CatalogEntryType* type, $String* base) {
 }
 
 void AltCatalog::setCatalog($String* catalog) {
-	$useLocalCurrentObjectStackCache();
 	$var($URL, url, verifyURI("catalog"_s, this->baseURI, catalog));
 	try {
 		$set(this, catalogURI, $nc(url)->toURI());
-	} catch ($URISyntaxException&) {
-		$var($URISyntaxException, ex, $catch());
+	} catch ($URISyntaxException& ex) {
 		$init($CatalogMessages);
 		$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_OTHER, static_cast<$Throwable*>(ex));
 	}

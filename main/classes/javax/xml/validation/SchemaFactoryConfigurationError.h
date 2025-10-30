@@ -25,8 +25,10 @@ public:
 	void init$($String* message, $Throwable* cause);
 	static const int64_t serialVersionUID = (int64_t)0x310230CA473012EE;
 	SchemaFactoryConfigurationError(const SchemaFactoryConfigurationError& e);
-	SchemaFactoryConfigurationError wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline SchemaFactoryConfigurationError* operator ->() {
+		return (SchemaFactoryConfigurationError*)throwing$;
+	}
 };
 
 		} // validation

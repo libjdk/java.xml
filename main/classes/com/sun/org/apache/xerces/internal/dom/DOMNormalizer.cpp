@@ -53,20 +53,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSValue.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -310,9 +296,7 @@ $Object* allocate$DOMNormalizer($Class* clazz) {
 	return $of($alloc(DOMNormalizer));
 }
 
-
 $String* DOMNormalizer::PREFIX = nullptr;
-
 $XMLString* DOMNormalizer::EMPTY_STRING = nullptr;
 
 void DOMNormalizer::init$() {
@@ -408,8 +392,7 @@ void DOMNormalizer::normalizeDocument($CoreDocumentImpl* document, $DOMConfigura
 			$nc($CoreDOMImplementationImpl::singleton)->releaseValidator(schemaType, xmlVersion, this->fValidationHandler);
 			$set(this, fValidationHandler, nullptr);
 		}
-	} catch ($RuntimeException&) {
-		$var($RuntimeException, e, $catch());
+	} catch ($RuntimeException& e) {
 		if (this->fValidationHandler != nullptr) {
 			$nc(this->fValidationHandler)->setDocumentHandler(nullptr);
 			$init($CoreDOMImplementationImpl);
@@ -755,11 +738,10 @@ void DOMNormalizer::processDTD($String* xmlVersion, $String* schemaLocation) {
 				loader->setEntityResolver($($nc(this->fConfiguration)->getEntityResolver()));
 				loader->setErrorHandler($($nc(this->fConfiguration)->getErrorHandler()));
 				loader->loadGrammarWithContext($cast($XMLDTDValidator, this->fValidationHandler), rootName, publicId, systemId, baseSystemId, internalSubset);
-			} catch ($IOException&) {
-				$catch();
+			} catch ($IOException& e) {
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			if (loader != nullptr) {
 				$init($CoreDOMImplementationImpl);

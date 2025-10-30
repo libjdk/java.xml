@@ -1,16 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/Version.h>
 
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $PrintStream = ::java::io::PrintStream;
@@ -69,7 +59,6 @@ $String* Version::getVersion() {
 }
 
 void Version::_main($StringArray* argv) {
-	$init($System);
 	$nc($System::out)->println($(getVersion()));
 }
 
@@ -94,15 +83,13 @@ int32_t Version::getMaintenanceVersionNum() {
 }
 
 int32_t Version::getDevelopmentVersionNum() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		if (($$new($String, ""_s))->length() == 0) {
 			return 0;
 		} else {
 			return $Integer::parseInt(""_s);
 		}
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, nfe, $catch());
+	} catch ($NumberFormatException& nfe) {
 		return 0;
 	}
 	$shouldNotReachHere();

@@ -9,16 +9,7 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.h>
 #include <com/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM.h>
 #include <com/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef END
@@ -121,8 +112,7 @@ $DTMAxisIterator* SAXImpl$NodeValueIterator::cloneIterator() {
 		$set(clone, _value, this->_value);
 		clone->_op = this->_op;
 		return clone->reset();
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$init($BasisLibrary);
 		$BasisLibrary::runTimeError($BasisLibrary::ITERATOR_CLONE_ERR, $($of(e->toString())));
 		return nullptr;

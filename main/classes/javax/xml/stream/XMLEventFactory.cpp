@@ -1,16 +1,7 @@
 #include <javax/xml/stream/XMLEventFactory.h>
 
 #include <com/sun/xml/internal/stream/events/XMLEventFactoryImpl.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <javax/xml/namespace/NamespaceContext.h>
 #include <javax/xml/namespace/QName.h>

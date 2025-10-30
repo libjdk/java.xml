@@ -21,16 +21,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObject.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTerm.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Element.h>
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>

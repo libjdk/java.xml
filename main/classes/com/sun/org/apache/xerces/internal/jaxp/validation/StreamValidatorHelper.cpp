@@ -25,18 +25,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLPullParserConfiguration.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
 #include <java/lang/ref/SoftReference.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/transform/Result.h>
@@ -174,21 +163,13 @@ $Object* allocate$StreamValidatorHelper($Class* clazz) {
 	return $of($alloc(StreamValidatorHelper));
 }
 
-
 $String* StreamValidatorHelper::PARSER_SETTINGS = nullptr;
-
 $String* StreamValidatorHelper::ENTITY_RESOLVER = nullptr;
-
 $String* StreamValidatorHelper::ERROR_HANDLER = nullptr;
-
 $String* StreamValidatorHelper::ERROR_REPORTER = nullptr;
-
 $String* StreamValidatorHelper::SCHEMA_VALIDATOR = nullptr;
-
 $String* StreamValidatorHelper::SYMBOL_TABLE = nullptr;
-
 $String* StreamValidatorHelper::VALIDATION_MANAGER = nullptr;
-
 $String* StreamValidatorHelper::SECURITY_MANAGER = nullptr;
 
 void StreamValidatorHelper::init$($XMLSchemaValidatorComponentManager* componentManager) {
@@ -208,8 +189,7 @@ void StreamValidatorHelper::validate($Source* source, $Result* result) {
 				$init($JdkConstants);
 				$var($SAXTransformerFactory, tf, $JdkXmlUtils::getSAXTransformFactory($nc(this->fComponentManager)->getFeature($JdkConstants::OVERRIDE_PARSER)));
 				$assign(identityTransformerHandler, $nc(tf)->newTransformerHandler());
-			} catch ($TransformerConfigurationException&) {
-				$var($TransformerConfigurationException, e, $catch());
+			} catch ($TransformerConfigurationException& e) {
 				$throwNew($TransformerFactoryConfigurationError, static_cast<$Exception*>(e));
 			}
 			$set(this, handler, $new($ValidatorHandlerImpl, this->fComponentManager));
@@ -231,11 +211,9 @@ void StreamValidatorHelper::validate($Source* source, $Result* result) {
 		$nc(this->fSchemaValidator)->setDocumentHandler(this->handler);
 		try {
 			$nc(config)->parse(input);
-		} catch ($XMLParseException&) {
-			$var($XMLParseException, e, $catch());
+		} catch ($XMLParseException& e) {
 			$throw($($Util::toSAXParseException(e)));
-		} catch ($XNIException&) {
-			$var($XNIException, e, $catch());
+		} catch ($XNIException& e) {
 			$throw($($Util::toSAXException(e)));
 		}
 		return;

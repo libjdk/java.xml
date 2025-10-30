@@ -4,16 +4,6 @@
 #include <java/io/OutputStream.h>
 #include <java/io/OutputStreamWriter.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/nio/charset/Charset.h>
 #include <java/nio/charset/CharsetEncoder.h>
 #include <jcpp.h>
@@ -37,11 +27,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _EncodingInfo_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _EncodingInfo_FieldInfo_[] = {
 	{"ianaName", "Ljava/lang/String;", nullptr, 0, $field(EncodingInfo, ianaName)},
@@ -110,7 +100,6 @@ bool EncodingInfo::isPrintable(char16_t ch) {
 }
 
 bool EncodingInfo::isPrintable0(char16_t ch) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fCharsetEncoder == nullptr && !this->fHaveTriedCharsetEncoder) {
 		try {
 			$var($Charset, charset, $Charset::forName(this->javaName));
@@ -119,16 +108,14 @@ bool EncodingInfo::isPrintable0(char16_t ch) {
 			} else {
 				this->fHaveTriedCharsetEncoder = true;
 			}
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			this->fHaveTriedCharsetEncoder = true;
 		}
 	}
 	if (this->fCharsetEncoder != nullptr) {
 		try {
 			return $nc(this->fCharsetEncoder)->canEncode(ch);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$set(this, fCharsetEncoder, nullptr);
 			this->fHaveTriedCharsetEncoder = false;
 		}

@@ -7,17 +7,7 @@
 #include <java/io/OutputStreamWriter.h>
 #include <java/io/UnsupportedEncodingException.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/nio/charset/Charset.h>
 #include <java/nio/charset/IllegalCharsetNameException.h>
 #include <java/nio/charset/UnsupportedCharsetException.h>
@@ -104,11 +94,8 @@ $Object* allocate$Encodings($Class* clazz) {
 	return $of($alloc(Encodings));
 }
 
-
 $String* Encodings::ENCODINGS_FILE = nullptr;
-
 $String* Encodings::ENCODINGS_PROP = nullptr;
-
 $String* Encodings::DEFAULT_MIME_ENCODING = nullptr;
 $Encodings$EncodingInfos* Encodings::_encodingInfos = nullptr;
 
@@ -122,8 +109,7 @@ $Writer* Encodings::getWriter($OutputStream* output, $String* encoding) {
 	if (ei != nullptr) {
 		try {
 			return $new($BufferedWriter, $$new($OutputStreamWriter, output, ei->javaName));
-		} catch ($UnsupportedEncodingException&) {
-			$catch();
+		} catch ($UnsupportedEncodingException& usee) {
 		}
 	}
 	return $new($BufferedWriter, $$new($OutputStreamWriter, output, encoding));
@@ -146,11 +132,9 @@ $EncodingInfo* Encodings::getEncodingInfo($String* encoding) {
 			$var($String, name, $nc(c)->name());
 			$assign(ei, $new($EncodingInfo, name, name));
 			$nc(Encodings::_encodingInfos)->putEncoding(normalizedEncoding, ei);
-		} catch ($IllegalCharsetNameException&) {
-			$var($IllegalArgumentException, x, $catch());
+		} catch ($IllegalCharsetNameException& x) {
 			$assign(ei, $new($EncodingInfo, nullptr, nullptr));
-		} catch ($UnsupportedCharsetException&) {
-			$var($IllegalArgumentException, x, $catch());
+		} catch ($UnsupportedCharsetException& x) {
 			$assign(ei, $new($EncodingInfo, nullptr, nullptr));
 		}
 	}
@@ -208,8 +192,7 @@ $String* Encodings::getMimeEncoding($String* encoding$renamed) {
 			} else {
 				$assign(encoding, Encodings::DEFAULT_MIME_ENCODING);
 			}
-		} catch ($SecurityException&) {
-			$var($SecurityException, se, $catch());
+		} catch ($SecurityException& se) {
 			$assign(encoding, Encodings::DEFAULT_MIME_ENCODING);
 		}
 	} else {

@@ -4,13 +4,6 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <jcpp.h>
 
@@ -74,7 +67,6 @@ $ClassInfo _StreamSource_ClassInfo_ = {
 $Object* allocate$StreamSource($Class* clazz) {
 	return $of($alloc(StreamSource));
 }
-
 
 $String* StreamSource::FEATURE = nullptr;
 
@@ -166,8 +158,7 @@ bool StreamSource::isStreamEmpty() {
 				return false;
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		return false;
 	}
 	return empty;

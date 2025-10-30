@@ -2,15 +2,7 @@
 
 #include <com/sun/org/apache/xml/internal/dtm/DTMAxisIterator.h>
 #include <com/sun/org/apache/xml/internal/utils/WrappedRuntimeException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef END
@@ -121,13 +113,11 @@ bool DTMAxisIteratorBase::isReverse() {
 }
 
 $DTMAxisIterator* DTMAxisIteratorBase::cloneIterator() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var(DTMAxisIteratorBase, clone, $cast(DTMAxisIteratorBase, $DTMAxisIterator::clone()));
 		$nc(clone)->_isRestartable = false;
 		return clone;
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$throwNew($WrappedRuntimeException, e);
 	}
 	$shouldNotReachHere();

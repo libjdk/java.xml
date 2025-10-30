@@ -4,15 +4,6 @@
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLCharacterRecognizer.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Stack.h>
 #include <org/w3c/dom/CDATASection.h>
 #include <org/w3c/dom/CharacterData.h>
@@ -164,7 +155,7 @@ void DOMBuilder::init$($Document* doc, $Node* node) {
 	$set(this, m_elemStack, $new($Stack));
 	this->m_inCData = false;
 	$set(this, m_doc, doc);
-	$set(this, m_currentNode, ($assignField(this, m_root, node)));
+	$set(this, m_currentNode, ($set(this, m_root, node)));
 	if ($instanceOf($Element, node)) {
 		$nc(this->m_elemStack)->push(node);
 	}
@@ -296,8 +287,7 @@ void DOMBuilder::startElement($String* ns, $String* localName, $String* name, $A
 		}
 		$nc(this->m_elemStack)->push(elem);
 		$set(this, m_currentNode, elem);
-	} catch ($Exception&) {
-		$var($Exception, de, $catch());
+	} catch ($Exception& de) {
 		$throwNew($SAXException, de);
 	}
 }

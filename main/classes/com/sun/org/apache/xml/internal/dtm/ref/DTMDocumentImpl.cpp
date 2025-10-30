@@ -13,16 +13,6 @@
 #include <com/sun/org/apache/xml/internal/utils/FastStringBuffer.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringFactory.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/SourceLocator.h>
 #include <org/w3c/dom/Node.h>
 #include <org/xml/sax/Attributes.h>
@@ -267,7 +257,6 @@ void DTMDocumentImpl::finalize() {
 	this->$DTM::finalize();
 }
 
-
 $StringArray* DTMDocumentImpl::fixednames = nullptr;
 
 void DTMDocumentImpl::init$($DTMManager* mgr, int32_t documentNumber, $DTMWSFilter* whiteSpaceFilter, $XMLStringFactory* xstringfactory) {
@@ -430,7 +419,6 @@ void DTMDocumentImpl::startElement($String* namespaceURI, $String* localName$ren
 	if (colon > 0) {
 		$assign(prefix, qName->substring(0, colon));
 	}
-	$init($System);
 	$nc($System::out)->println($$str({"Prefix="_s, prefix, " index="_s, $$str($nc(this->m_prefixNames)->stringToIndex(prefix))}));
 	int32_t var$0 = $nc(this->m_nsNames)->stringToIndex(namespaceURI);
 	int32_t var$1 = $nc(this->m_localNames)->stringToIndex(localName);
@@ -789,7 +777,6 @@ $String* DTMDocumentImpl::getNodeName(int32_t nodeHandle) {
 	$var($String, name, $nc(DTMDocumentImpl::fixednames)->get(type));
 	if (nullptr == name) {
 		int32_t i = $nc(this->gotslot)->get(3);
-		$init($System);
 		$nc($System::out)->println($$str({"got i="_s, $$str(i), " "_s, $$str((i >> 16)), "/"_s, $$str(((int32_t)(i & (uint32_t)0x0000FFFF)))}));
 		$assign(name, $nc(this->m_localNames)->indexToString((int32_t)(i & (uint32_t)0x0000FFFF)));
 		$var($String, prefix, $nc(this->m_prefixNames)->indexToString(i >> 16));
@@ -993,7 +980,6 @@ void DTMDocumentImpl::appendStartElement(int32_t namespaceIndex, int32_t localNa
 	int32_t w1 = this->currentParent;
 	int32_t w2 = 0;
 	int32_t w3 = localNameIndex | (prefixIndex << 16);
-	$init($System);
 	$nc($System::out)->println($$str({"set w3="_s, $$str(w3), " "_s, $$str((w3 >> 16)), "/"_s, $$str(((int32_t)(w3 & (uint32_t)0x0000FFFF)))}));
 	int32_t ourslot = appendNode(w0, w1, w2, w3);
 	this->currentParent = ourslot;
@@ -1021,7 +1007,6 @@ void DTMDocumentImpl::appendAttribute(int32_t namespaceIndex, int32_t localNameI
 	int32_t w1 = this->currentParent;
 	int32_t w2 = 0;
 	int32_t w3 = localNameIndex | (prefixIndex << 16);
-	$init($System);
 	$nc($System::out)->println($$str({"set w3="_s, $$str(w3), " "_s, $$str((w3 >> 16)), "/"_s, $$str(((int32_t)(w3 & (uint32_t)0x0000FFFF)))}));
 	int32_t ourslot = appendNode(w0, w1, w2, w3);
 	this->previousSibling = ourslot;

@@ -18,13 +18,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/StringType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -103,7 +96,7 @@ $Type* UnparsedEntityUriCall::typeCheck($SymbolTable* stable) {
 		$set(this, _entity, $new($CastExpr, this->_entity, $Type::String));
 	}
 	$init($Type);
-	return $assignField(this, _type, $Type::String);
+	return $set(this, _type, $Type::String);
 }
 
 void UnparsedEntityUriCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {

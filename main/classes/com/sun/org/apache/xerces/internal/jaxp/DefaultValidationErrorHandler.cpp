@@ -1,17 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/DefaultValidationErrorHandler.h>
 
 #include <com/sun/org/apache/xerces/internal/util/SAXMessageFormatter.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <org/xml/sax/SAXParseException.h>
 #include <org/xml/sax/helpers/DefaultHandler.h>
@@ -78,7 +67,6 @@ void DefaultValidationErrorHandler::error($SAXParseException* e) {
 	if (this->errorCount >= DefaultValidationErrorHandler::ERROR_COUNT_LIMIT) {
 		return;
 	} else if (this->errorCount == 0) {
-		$init($System);
 		$nc($System::err)->println($($SAXMessageFormatter::formatMessage(this->locale, "errorHandlerNotSet"_s, $$new($ObjectArray, {$($of($Integer::valueOf(this->errorCount)))}))));
 	}
 	$var($String, systemId, $nc(e)->getSystemId());
@@ -87,7 +75,6 @@ void DefaultValidationErrorHandler::error($SAXParseException* e) {
 	}
 	$var($String, var$0, $$str({"Error: URI="_s, systemId, " Line="_s, $$str(e->getLineNumber()), ": "_s}));
 	$var($String, message, $concat(var$0, $(e->getMessage())));
-	$init($System);
 	$nc($System::err)->println(message);
 	++this->errorCount;
 }

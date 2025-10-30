@@ -1,15 +1,6 @@
 #include <org/w3c/dom/bootstrap/DOMImplementationRegistry$1.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/EnclosingMethodInfo.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <org/w3c/dom/DOMImplementation.h>
 #include <org/w3c/dom/bootstrap/DOMImplementationRegistry.h>
@@ -84,8 +75,7 @@ $DOMImplementation* DOMImplementationRegistry$1::item(int32_t index) {
 	if (index >= 0 && index < $nc(this->val$implementations)->size()) {
 		try {
 			return $cast($DOMImplementation, $nc(this->val$implementations)->get(index));
-		} catch ($IndexOutOfBoundsException&) {
-			$var($IndexOutOfBoundsException, e, $catch());
+		} catch ($IndexOutOfBoundsException& e) {
 			return nullptr;
 		}
 	}

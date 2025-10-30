@@ -13,24 +13,9 @@
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XString.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/RuntimeException.h>
 #include <java/lang/StackOverflowError.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <javax/xml/transform/SourceLocator.h>
 #include <javax/xml/transform/TransformerException.h>
@@ -282,15 +267,13 @@ void XPathParser::initXPath($Compiler* compiler, $String* expression, $PrefixRes
 			$init($XPATHErrorResources);
 			error($XPATHErrorResources::ER_EXTRA_ILLEGAL_TOKENS, $$new($ObjectArray, {$of(extraTokens)}));
 		}
-	} catch ($XPathProcessorException&) {
-		$var($XPathProcessorException, e, $catch());
+	} catch ($XPathProcessorException& e) {
 		if ($nc(XPathParser::CONTINUE_AFTER_FATAL_ERROR)->equals($(e->getMessage()))) {
 			initXPath(compiler, "/.."_s, namespaceContext);
 		} else {
 			$throw(e);
 		}
-	} catch ($StackOverflowError&) {
-		$var($StackOverflowError, sof, $catch());
+	} catch ($StackOverflowError& sof) {
 		$init($XPATHErrorResources);
 		error($XPATHErrorResources::ER_PREDICATE_TOO_MANY_OPEN, $$new($ObjectArray, {
 			$of(this->m_token),
@@ -313,8 +296,7 @@ void XPathParser::initMatchPattern($Compiler* compiler, $String* expression, $Pr
 	nextToken();
 	try {
 		Pattern();
-	} catch ($StackOverflowError&) {
-		$var($StackOverflowError, sof, $catch());
+	} catch ($StackOverflowError& sof) {
 		$init($XPATHErrorResources);
 		error($XPATHErrorResources::ER_PREDICATE_TOO_MANY_OPEN, $$new($ObjectArray, {
 			$of(this->m_token),
@@ -474,7 +456,6 @@ void XPathParser::warn($String* msg, $ObjectArray* args) {
 	if (nullptr != ehandler) {
 		ehandler->warning($$new($TransformerException, fmsg, this->m_sourceLocator));
 	} else {
-		$init($System);
 		$nc($System::err)->println(fmsg);
 	}
 }
@@ -518,7 +499,6 @@ $String* XPathParser::dumpRemainingTokenQueue() {
 }
 
 int32_t XPathParser::getFunctionToken($String* key) {
-	$useLocalCurrentObjectStackCache();
 	int32_t tok = 0;
 	$var($Integer, id, nullptr);
 	try {
@@ -527,11 +507,9 @@ int32_t XPathParser::getFunctionToken($String* key) {
 			$assign(id, $nc(this->m_functionTable)->getFunctionID(key));
 		}
 		tok = $nc(id)->intValue();
-	} catch ($NullPointerException&) {
-		$var($NullPointerException, npe, $catch());
+	} catch ($NullPointerException& npe) {
 		tok = -1;
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, cce, $catch());
+	} catch ($ClassCastException& cce) {
 		tok = -1;
 	}
 	return tok;
@@ -1167,8 +1145,7 @@ void XPathParser::Number() {
 				$throwNew($NumberFormatException);
 			}
 			num = $nc($($Double::valueOf(this->m_token)))->doubleValue();
-		} catch ($NumberFormatException&) {
-			$var($NumberFormatException, nfe, $catch());
+		} catch ($NumberFormatException& nfe) {
 			num = 0.0;
 			$init($XPATHErrorResources);
 			error($XPATHErrorResources::ER_COULDNOT_BE_FORMATTED_TO_NUMBER, $$new($ObjectArray, {$of(this->m_token)}));

@@ -51,23 +51,11 @@
 #include <com/sun/org/apache/xml/internal/dtm/Axis.h>
 #include <com/sun/org/apache/xml/internal/dtm/DTM.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Void.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -483,9 +471,9 @@ void Mode::addPattern(int32_t kernelType, $LocationPathPattern* pattern) {
 	$var($List, patterns, nullptr);
 	if (kernelType == $DOM::NO_TYPE) {
 		if ($nc(pattern)->getAxis() == $Axis::ATTRIBUTE) {
-			$assign(patterns, (this->_attribNodeGroup == nullptr) ? ($assignField(this, _attribNodeGroup, $new($ArrayList, 2))) : this->_attribNodeGroup);
+			$assign(patterns, (this->_attribNodeGroup == nullptr) ? ($set(this, _attribNodeGroup, $new($ArrayList, 2))) : this->_attribNodeGroup);
 		} else {
-			$assign(patterns, (this->_childNodeGroup == nullptr) ? ($assignField(this, _childNodeGroup, $new($ArrayList, 2))) : this->_childNodeGroup);
+			$assign(patterns, (this->_childNodeGroup == nullptr) ? ($set(this, _childNodeGroup, $new($ArrayList, 2))) : this->_childNodeGroup);
 		}
 	} else {
 		$assign(patterns, ($nc(this->_patternGroups)->get(kernelType) == nullptr) ? ($nc(this->_patternGroups)->set(kernelType, $$new($ArrayList, 2))) : $nc(this->_patternGroups)->get(kernelType));
@@ -1191,8 +1179,7 @@ void Mode::peepHoleOptimization($MethodGenerator* methodGen) {
 				if (var$0 && !$nc(match->get(1))->hasTargeters()) {
 					$nc(il)->delete$(match->get(0), match->get(1));
 				}
-			} catch ($TargetLostException&) {
-				$catch();
+			} catch ($TargetLostException& e) {
 			}
 		}
 	}
@@ -1220,8 +1207,7 @@ void Mode::peepHoleOptimization($MethodGenerator* methodGen) {
 				if (var$1) {
 					$nc(il)->delete$(match->get(1), match->get(3));
 				}
-			} catch ($TargetLostException&) {
-				$catch();
+			} catch ($TargetLostException& e) {
 			}
 		}
 	}
@@ -1238,8 +1224,7 @@ void Mode::peepHoleOptimization($MethodGenerator* methodGen) {
 					$nc(il)->insert(match->get(0), load_m);
 					il->delete$(match->get(1), match->get(2));
 				}
-			} catch ($TargetLostException&) {
-				$catch();
+			} catch ($TargetLostException& e) {
 			}
 		}
 	}
@@ -1258,8 +1243,7 @@ void Mode::peepHoleOptimization($MethodGenerator* methodGen) {
 						il->delete$(match->get(1));
 					}
 				}
-			} catch ($TargetLostException&) {
-				$catch();
+			} catch ($TargetLostException& e) {
 			}
 		}
 	}

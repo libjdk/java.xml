@@ -13,16 +13,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ERROR
@@ -96,7 +86,6 @@ void When::display(int32_t indent) {
 	this->indent(indent);
 	$Util::println("When"_s);
 	this->indent(indent + $SyntaxTreeNode::IndentIncrement);
-	$init($System);
 	$nc($System::out)->print("test "_s);
 	$Util::println($($nc(this->_test)->toString()));
 	displayContents(indent + $SyntaxTreeNode::IndentIncrement);

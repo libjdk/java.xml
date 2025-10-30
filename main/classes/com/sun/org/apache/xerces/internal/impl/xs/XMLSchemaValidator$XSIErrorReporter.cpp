@@ -3,16 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/XMLErrorReporter.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Vector.h>
 #include <jcpp.h>
 

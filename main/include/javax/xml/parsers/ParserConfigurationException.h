@@ -17,8 +17,10 @@ public:
 	void init$($String* msg);
 	static const int64_t serialVersionUID = (int64_t)0xCCCE932E900BFDA3;
 	ParserConfigurationException(const ParserConfigurationException& e);
-	ParserConfigurationException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline ParserConfigurationException* operator ->() {
+		return (ParserConfigurationException*)throwing$;
+	}
 };
 
 		} // parsers

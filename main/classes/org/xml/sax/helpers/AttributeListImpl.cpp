@@ -1,15 +1,6 @@
 #include <org/xml/sax/helpers/AttributeListImpl.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -36,11 +27,11 @@ $NamedAttribute AttributeListImpl_Attribute_var$0[] = {
 	{"since", 's', "1.5"},
 	{}
 };
+
 $CompoundAttribute _AttributeListImpl_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", AttributeListImpl_Attribute_var$0},
 	{}
 };
-
 
 $FieldInfo _AttributeListImpl_FieldInfo_[] = {
 	{"names", "Ljava/util/List;", "Ljava/util/List<Ljava/lang/String;>;", 0, $field(AttributeListImpl, names)},
@@ -137,8 +128,7 @@ $String* AttributeListImpl::getName(int32_t i) {
 	}
 	try {
 		return $cast($String, $nc(this->names)->get(i));
-	} catch ($IndexOutOfBoundsException&) {
-		$var($IndexOutOfBoundsException, e, $catch());
+	} catch ($IndexOutOfBoundsException& e) {
 		return nullptr;
 	}
 	$shouldNotReachHere();
@@ -150,8 +140,7 @@ $String* AttributeListImpl::getType(int32_t i) {
 	}
 	try {
 		return $cast($String, $nc(this->types)->get(i));
-	} catch ($IndexOutOfBoundsException&) {
-		$var($IndexOutOfBoundsException, e, $catch());
+	} catch ($IndexOutOfBoundsException& e) {
 		return nullptr;
 	}
 	$shouldNotReachHere();
@@ -163,8 +152,7 @@ $String* AttributeListImpl::getValue(int32_t i) {
 	}
 	try {
 		return $cast($String, $nc(this->values)->get(i));
-	} catch ($IndexOutOfBoundsException&) {
-		$var($IndexOutOfBoundsException, e, $catch());
+	} catch ($IndexOutOfBoundsException& e) {
 		return nullptr;
 	}
 	$shouldNotReachHere();

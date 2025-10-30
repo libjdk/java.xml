@@ -10,16 +10,6 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/EnclosingMethodInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/ls/LSInput.h>
 #include <jcpp.h>
 
@@ -114,8 +104,7 @@ $LSInput* JAXPValidatorComponent$2::resolveResource($String* type, $String* ns, 
 		di->setPublicId($($nc(is)->getPublicId()));
 		di->setSystemId($($nc(is)->getSystemId()));
 		return di;
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XNIException, static_cast<$Exception*>(e));
 	}
 	$shouldNotReachHere();

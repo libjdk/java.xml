@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef INDEX_SIZE_ERR
@@ -60,16 +52,10 @@ void XSException::init$(int16_t code, $String* message) {
 XSException::XSException() {
 }
 
-XSException::XSException(const XSException& e) {
+XSException::XSException(const XSException& e) : $RuntimeException(e) {
 }
 
-XSException XSException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XSException::throwWrapper$() {
-	$pendingException(this);
+void XSException::throw$() {
 	throw *this;
 }
 

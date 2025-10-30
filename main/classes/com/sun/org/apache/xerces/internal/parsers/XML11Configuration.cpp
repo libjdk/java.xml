@@ -53,20 +53,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Iterator.h>
@@ -503,108 +489,57 @@ void XML11Configuration::finalize() {
 }
 
 $String* XML11Configuration::XML11_DATATYPE_VALIDATOR_FACTORY = nullptr;
-
 $String* XML11Configuration::WARN_ON_DUPLICATE_ATTDEF = nullptr;
-
 $String* XML11Configuration::WARN_ON_DUPLICATE_ENTITYDEF = nullptr;
-
 $String* XML11Configuration::WARN_ON_UNDECLARED_ELEMDEF = nullptr;
-
 $String* XML11Configuration::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* XML11Configuration::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* XML11Configuration::LOAD_EXTERNAL_DTD = nullptr;
-
 $String* XML11Configuration::NOTIFY_BUILTIN_REFS = nullptr;
-
 $String* XML11Configuration::NOTIFY_CHAR_REFS = nullptr;
-
 $String* XML11Configuration::NORMALIZE_DATA = nullptr;
-
 $String* XML11Configuration::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* XML11Configuration::SCHEMA_AUGMENT_PSVI = nullptr;
-
 $String* XML11Configuration::XMLSCHEMA_VALIDATION = nullptr;
-
 $String* XML11Configuration::XMLSCHEMA_FULL_CHECKING = nullptr;
-
 $String* XML11Configuration::GENERATE_SYNTHETIC_ANNOTATIONS = nullptr;
-
 $String* XML11Configuration::VALIDATE_ANNOTATIONS = nullptr;
-
 $String* XML11Configuration::HONOUR_ALL_SCHEMALOCATIONS = nullptr;
-
 $String* XML11Configuration::NAMESPACE_GROWTH = nullptr;
-
 $String* XML11Configuration::TOLERATE_DUPLICATES = nullptr;
-
 $String* XML11Configuration::USE_GRAMMAR_POOL_ONLY = nullptr;
-
 $String* XML11Configuration::VALIDATION = nullptr;
-
 $String* XML11Configuration::NAMESPACES = nullptr;
-
 $String* XML11Configuration::EXTERNAL_GENERAL_ENTITIES = nullptr;
-
 $String* XML11Configuration::EXTERNAL_PARAMETER_ENTITIES = nullptr;
-
 $String* XML11Configuration::IGNORE_XSI_TYPE = nullptr;
-
 $String* XML11Configuration::ID_IDREF_CHECKING = nullptr;
-
 $String* XML11Configuration::UNPARSED_ENTITY_CHECKING = nullptr;
-
 $String* XML11Configuration::IDENTITY_CONSTRAINT_CHECKING = nullptr;
-
 $String* XML11Configuration::XML_STRING = nullptr;
-
 $String* XML11Configuration::SYMBOL_TABLE = nullptr;
-
 $String* XML11Configuration::ERROR_HANDLER = nullptr;
-
 $String* XML11Configuration::ENTITY_RESOLVER = nullptr;
-
 $String* XML11Configuration::SCHEMA_VALIDATOR = nullptr;
-
 $String* XML11Configuration::SCHEMA_LOCATION = nullptr;
-
 $String* XML11Configuration::SCHEMA_NONS_LOCATION = nullptr;
-
 $String* XML11Configuration::ERROR_REPORTER = nullptr;
-
 $String* XML11Configuration::ENTITY_MANAGER = nullptr;
-
 $String* XML11Configuration::DOCUMENT_SCANNER = nullptr;
-
 $String* XML11Configuration::DTD_SCANNER = nullptr;
-
 $String* XML11Configuration::XMLGRAMMAR_POOL = nullptr;
-
 $String* XML11Configuration::DTD_PROCESSOR = nullptr;
-
 $String* XML11Configuration::DTD_VALIDATOR = nullptr;
-
 $String* XML11Configuration::NAMESPACE_BINDER = nullptr;
-
 $String* XML11Configuration::DATATYPE_VALIDATOR_FACTORY = nullptr;
 $String* XML11Configuration::VALIDATION_MANAGER = nullptr;
-
 $String* XML11Configuration::JAXP_SCHEMA_LANGUAGE = nullptr;
-
 $String* XML11Configuration::JAXP_SCHEMA_SOURCE = nullptr;
-
 $String* XML11Configuration::ROOT_TYPE_DEF = nullptr;
-
 $String* XML11Configuration::ROOT_ELEMENT_DECL = nullptr;
-
 $String* XML11Configuration::LOCALE = nullptr;
-
 $String* XML11Configuration::SCHEMA_DV_FACTORY = nullptr;
-
 $String* XML11Configuration::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* XML11Configuration::SECURITY_MANAGER = nullptr;
 
 void XML11Configuration::init$() {
@@ -639,9 +574,9 @@ void XML11Configuration::init$($SymbolTable* symbolTable, $XMLGrammarPool* gramm
 	$set(this, fComponents, $new($ArrayList));
 	$set(this, fXML11Components, $new($ArrayList));
 	$set(this, fCommonComponents, $new($ArrayList));
-		$init($ParserConfigurationSettings);
-		$init($XMLConstants);
-		$init($JdkConstants);
+	$init($ParserConfigurationSettings);
+	$init($XMLConstants);
+	$init($JdkConstants);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		XML11Configuration::CONTINUE_AFTER_FATAL_ERROR,
 		XML11Configuration::LOAD_EXTERNAL_DTD,
@@ -772,8 +707,7 @@ void XML11Configuration::init$($SymbolTable* symbolTable, $XMLGrammarPool* gramm
 	}
 	try {
 		setLocale($($Locale::getDefault()));
-	} catch ($XNIException&) {
-		$catch();
+	} catch ($XNIException& e) {
 	}
 	{
 		$var($CatalogFeatures$FeatureArray, arr$, $CatalogFeatures$Feature::values());
@@ -850,7 +784,6 @@ void XML11Configuration::cleanup() {
 }
 
 void XML11Configuration::parse($XMLInputSource* source) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fParseInProgress) {
 		$throwNew($XNIException, "FWK005 parse may not be called while parsing."_s);
 	}
@@ -861,21 +794,17 @@ void XML11Configuration::parse($XMLInputSource* source) {
 			try {
 				setInputSource(source);
 				parse(true);
-			} catch ($XNIException&) {
-				$var($XNIException, ex, $catch());
+			} catch ($XNIException& ex) {
 				$throw(ex);
-			} catch ($IOException&) {
-				$var($IOException, ex, $catch());
+			} catch ($IOException& ex) {
 				$throw(ex);
-			} catch ($RuntimeException&) {
-				$var($RuntimeException, ex, $catch());
+			} catch ($RuntimeException& ex) {
 				$throw(ex);
-			} catch ($Exception&) {
-				$var($Exception, ex, $catch());
+			} catch ($Exception& ex) {
 				$throwNew($XNIException, ex);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			this->fParseInProgress = false;
 			this->cleanup();
@@ -887,7 +816,6 @@ void XML11Configuration::parse($XMLInputSource* source) {
 }
 
 bool XML11Configuration::parse(bool complete) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fInputSource != nullptr) {
 		try {
 			$nc(this->fValidationManager)->reset();
@@ -907,27 +835,21 @@ bool XML11Configuration::parse(bool complete) {
 			this->fConfigUpdated = false;
 			$nc(this->fVersionDetector)->startDocumentParsing($cast($XMLEntityHandler, this->fCurrentScanner), version);
 			$set(this, fInputSource, nullptr);
-		} catch ($IOException&) {
-			$var($Exception, ex, $catch());
+		} catch ($IOException& ex) {
 			$throw(ex);
-		} catch ($RuntimeException&) {
-			$var($Exception, ex, $catch());
+		} catch ($RuntimeException& ex) {
 			$throw(ex);
-		} catch ($Exception&) {
-			$var($Exception, ex, $catch());
+		} catch ($Exception& ex) {
 			$throwNew($XNIException, ex);
 		}
 	}
 	try {
 		return $nc(this->fCurrentScanner)->scanDocument(complete);
-	} catch ($IOException&) {
-		$var($Exception, ex, $catch());
+	} catch ($IOException& ex) {
 		$throw(ex);
-	} catch ($RuntimeException&) {
-		$var($Exception, ex, $catch());
+	} catch ($RuntimeException& ex) {
 		$throw(ex);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($XNIException, ex);
 	}
 	$shouldNotReachHere();
@@ -969,8 +891,7 @@ void XML11Configuration::setFeature($String* featureId, bool state) {
 			{
 				try {
 					$nc(c)->setFeature(featureId, state);
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& e) {
 				}
 			}
 		}
@@ -1016,8 +937,7 @@ void XML11Configuration::setProperty($String* propertyId, Object$* value) {
 			{
 				try {
 					$nc(c)->setProperty(propertyId, value);
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& e) {
 				}
 			}
 		}

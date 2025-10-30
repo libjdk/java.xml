@@ -42,26 +42,9 @@
 #include <java/io/FilterInputStream.h>
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Iterator.h>
@@ -309,11 +292,8 @@ $Object* allocate$XMLStreamReaderImpl($Class* clazz) {
 	return $of($alloc(XMLStreamReaderImpl));
 }
 
-
 $String* XMLStreamReaderImpl::ENTITY_MANAGER = nullptr;
-
 $String* XMLStreamReaderImpl::ERROR_REPORTER = nullptr;
-
 $String* XMLStreamReaderImpl::SYMBOL_TABLE = nullptr;
 $String* XMLStreamReaderImpl::READER_IN_DEFINED_STATE = nullptr;
 
@@ -337,7 +317,6 @@ void XMLStreamReaderImpl::init$($InputStream* inputStream, $PropertyManager* pro
 }
 
 $XMLDocumentScannerImpl* XMLStreamReaderImpl::getScanner() {
-	$init($System);
 	$nc($System::out)->println("returning scanner"_s);
 	return this->fScanner;
 }
@@ -430,11 +409,9 @@ void XMLStreamReaderImpl::setInputSource($XMLInputSource* inputSource) {
 				switchToXML11Scanner();
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(ex));
-	} catch ($XNIException&) {
-		$var($XNIException, ex, $catch());
+	} catch ($XNIException& ex) {
 		$var($String, var$0, ex->getMessage());
 		$var($Location, var$1, getLocation());
 		$throwNew($XMLStreamException, var$0, var$1, $(ex->getException()));
@@ -678,8 +655,7 @@ int32_t XMLStreamReaderImpl::next() {
 			$nc(this->fEntityScanner)->checkNodeCount($nc(this->fEntityScanner)->fCurrentEntity);
 		}
 		return this->fEventType;
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		if ($nc(this->fScanner)->fScannerState == $XMLDocumentScannerImpl::SCANNER_STATE_DTD_EXTERNAL) {
 			$init($XMLInputFactory);
 			$var($Boolean, isValidating, $cast($Boolean, $nc(this->fPropertyManager)->getProperty($XMLInputFactory::IS_VALIDATING)));
@@ -695,8 +671,7 @@ int32_t XMLStreamReaderImpl::next() {
 		}
 		$var($String, var$0, ex->getMessage());
 		$throwNew($XMLStreamException, var$0, $(getLocation()), ex);
-	} catch ($XNIException&) {
-		$var($XNIException, ex, $catch());
+	} catch ($XNIException& ex) {
 		$var($String, var$1, ex->getMessage());
 		$var($Location, var$2, getLocation());
 		$throwNew($XMLStreamException, var$1, var$2, $(ex->getException()));
@@ -1170,7 +1145,6 @@ $PropertyManager* XMLStreamReaderImpl::getPropertyManager() {
 
 void XMLStreamReaderImpl::pr($String* str) {
 	$init(XMLStreamReaderImpl);
-	$init($System);
 	$nc($System::out)->println(str);
 }
 

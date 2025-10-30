@@ -41,16 +41,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ReferenceType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -175,7 +165,6 @@ $Instruction* Param::setStoreInstruction($Instruction* instruction) {
 void Param::display(int32_t indent) {
 	$useLocalCurrentObjectStackCache();
 	this->indent(indent);
-	$init($System);
 	$nc($System::out)->println($$str({"param "_s, this->_name}));
 	if (this->_select != nullptr) {
 		this->indent(indent + $SyntaxTreeNode::IndentIncrement);

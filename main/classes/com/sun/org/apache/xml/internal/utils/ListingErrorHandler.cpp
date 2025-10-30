@@ -10,22 +10,9 @@
 #include <java/io/InputStream.h>
 #include <java/io/InputStreamReader.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/MalformedURLException.h>
 #include <java/net/URL.h>
 #include <java/net/URLConnection.h>
@@ -159,7 +146,6 @@ void ListingErrorHandler::init$() {
 	this->throwOnWarning = false;
 	this->throwOnError = true;
 	this->throwOnFatalError = true;
-	$init($System);
 	$set(this, m_pw, $new($PrintWriter, static_cast<$OutputStream*>($System::err), true));
 }
 
@@ -228,7 +214,6 @@ void ListingErrorHandler::logExceptionLocation($PrintWriter* pw$renamed, $Throwa
 	$useLocalCurrentObjectStackCache();
 	$var($PrintWriter, pw, pw$renamed);
 	if (nullptr == pw) {
-		$init($System);
 		$assign(pw, $new($PrintWriter, static_cast<$OutputStream*>($System::err), true));
 	}
 	$var($SourceLocator, locator, nullptr);
@@ -275,7 +260,6 @@ void ListingErrorHandler::logSourceLine($PrintWriter* pw$renamed, $SourceLocator
 		return;
 	}
 	if (nullptr == pw) {
-		$init($System);
 		$assign(pw, $new($PrintWriter, static_cast<$OutputStream*>($System::err), true));
 	}
 	$var($String, url, $nc(locator)->getSystemId());
@@ -294,8 +278,7 @@ void ListingErrorHandler::logSourceLine($PrintWriter* pw$renamed, $SourceLocator
 		}
 		buf->append(u'^');
 		pw->println($(buf->toString()));
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$nc(pw)->println($$str({"line: logSourceLine unavailable due to: "_s, $(e->getMessage())}));
 		pw->println();
 	}
@@ -307,8 +290,7 @@ $String* ListingErrorHandler::getSourceLine($String* sourceUrl, int32_t lineNum)
 	$var($URL, url, nullptr);
 	try {
 		$assign(url, $new($URL, sourceUrl));
-	} catch ($MalformedURLException&) {
-		$var($MalformedURLException, mue, $catch());
+	} catch ($MalformedURLException& mue) {
 		int32_t indexOfColon = $nc(sourceUrl)->indexOf((int32_t)u':');
 		int32_t indexOfSlash = sourceUrl->indexOf((int32_t)u'/');
 		if ((indexOfColon != -1) && (indexOfSlash != -1) && (indexOfColon < indexOfSlash)) {
@@ -329,8 +311,8 @@ $String* ListingErrorHandler::getSourceLine($String* sourceUrl, int32_t lineNum)
 			for (int32_t i = 1; i <= lineNum; ++i) {
 				$assign(line, br->readLine());
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$nc(br)->close();
 			$nc(is)->close();

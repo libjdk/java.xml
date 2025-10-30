@@ -5,19 +5,8 @@
 #include <com/sun/org/apache/bcel/internal/util/Repository.h>
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/ref/SoftReference.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Map.h>
@@ -147,20 +136,18 @@ $JavaClass* SyntheticRepository::loadClass($Class* clazz) {
 					$assign(var$2, $assign(cls, loadClass(clsStream, className)));
 					return$1 = true;
 					goto $finally;
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					if (clsStream != nullptr) {
 						try {
 							clsStream->close();
-						} catch ($Throwable&) {
-							$var($Throwable, x2, $catch());
+						} catch ($Throwable& x2) {
 							t$->addSuppressed(x2);
 						}
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$3) {
+				$assign(var$0, var$3);
 			} $finally: {
 				if (clsStream != nullptr) {
 					clsStream->close();
@@ -173,8 +160,7 @@ $JavaClass* SyntheticRepository::loadClass($Class* clazz) {
 				return var$2;
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		return cls;
 	}
 	$shouldNotReachHere();
@@ -196,18 +182,16 @@ $JavaClass* SyntheticRepository::loadClass($InputStream* is, $String* className)
 					return$1 = true;
 					goto $finally;
 				}
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				$throwNew($ClassNotFoundException, $$str({"Exception while looking for class "_s, className, ": "_s, e}), e);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			if (is != nullptr) {
 				try {
 					is->close();
-				} catch ($IOException&) {
-					$catch();
+				} catch ($IOException& e) {
 				}
 			}
 		}

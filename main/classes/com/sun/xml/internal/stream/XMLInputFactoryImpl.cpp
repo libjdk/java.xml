@@ -9,16 +9,7 @@
 #include <com/sun/xml/internal/stream/XMLEventReaderImpl.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/EventFilter.h>
 #include <javax/xml/stream/StreamFilter.h>
 #include <javax/xml/stream/XMLEventReader.h>
@@ -280,7 +271,7 @@ $XMLStreamReader* XMLInputFactoryImpl::getXMLStreamReaderImpl($XMLInputSource* i
 	$useLocalCurrentObjectStackCache();
 	if (this->fTempReader == nullptr) {
 		this->fPropertyChanged = false;
-		return ($assignField(this, fTempReader, $new($XMLStreamReaderImpl, inputSource, $$new($PropertyManager, this->fPropertyManager))));
+		return ($set(this, fTempReader, $new($XMLStreamReaderImpl, inputSource, $$new($PropertyManager, this->fPropertyManager))));
 	}
 	if (this->fReuseInstance && $nc(this->fTempReader)->canReuse() && !this->fPropertyChanged) {
 		$nc(this->fTempReader)->reset();
@@ -289,7 +280,7 @@ $XMLStreamReader* XMLInputFactoryImpl::getXMLStreamReaderImpl($XMLInputSource* i
 		return this->fTempReader;
 	} else {
 		this->fPropertyChanged = false;
-		return ($assignField(this, fTempReader, $new($XMLStreamReaderImpl, inputSource, $$new($PropertyManager, this->fPropertyManager))));
+		return ($set(this, fTempReader, $new($XMLStreamReaderImpl, inputSource, $$new($PropertyManager, this->fPropertyManager))));
 	}
 }
 

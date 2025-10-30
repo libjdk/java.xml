@@ -12,18 +12,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token$ParenToken.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token$StringToken.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token$UnionToken.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/AbstractSet.h>
 #include <java/util/Collections.h>
@@ -324,7 +312,6 @@ $ints* Token::nonBMPBlockRanges = nullptr;
 $Set* Token::nonxs = nullptr;
 $String* Token::viramaString = nullptr;
 Token* Token::token_grapheme = nullptr;
-
 Token* Token::token_ccs = nullptr;
 
 $Token$ParenToken* Token::createLook(int32_t type, Token* child) {

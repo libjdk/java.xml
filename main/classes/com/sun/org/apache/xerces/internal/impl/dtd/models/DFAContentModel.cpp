@@ -8,19 +8,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet.h>
 #include <com/sun/org/apache/xerces/internal/impl/dtd/models/CMUniOp.h>
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Map.h>
@@ -117,9 +104,7 @@ $Object* allocate$DFAContentModel($Class* clazz) {
 	return $of($alloc(DFAContentModel));
 }
 
-
 $String* DFAContentModel::fEpsilonString = nullptr;
-
 $String* DFAContentModel::fEOCString = nullptr;
 
 void DFAContentModel::init$($CMNode* syntaxTree, int32_t leafCount, bool mixed) {
@@ -333,23 +318,18 @@ void DFAContentModel::calcFollowList($CMNode* nodeCur) {
 void DFAContentModel::dumpTree($CMNode* nodeCur, int32_t level) {
 	$useLocalCurrentObjectStackCache();
 	for (int32_t index = 0; index < level; ++index) {
-		$init($System);
 		$nc($System::out)->print("   "_s);
 	}
 	int32_t type = $nc(nodeCur)->type();
 	if ((type == $XMLContentSpec::CONTENTSPECNODE_CHOICE) || (type == $XMLContentSpec::CONTENTSPECNODE_SEQ)) {
 		if (type == $XMLContentSpec::CONTENTSPECNODE_CHOICE) {
-			$init($System);
 			$nc($System::out)->print("Choice Node "_s);
 		} else {
-			$init($System);
 			$nc($System::out)->print("Seq Node "_s);
 		}
 		if (nodeCur->isNullable()) {
-			$init($System);
 			$nc($System::out)->print("Nullable "_s);
 		}
-		$init($System);
 		$nc($System::out)->print("firstPos="_s);
 		$nc($System::out)->print($($nc($(nodeCur->firstPos()))->toString()));
 		$nc($System::out)->print(" lastPos="_s);
@@ -357,7 +337,6 @@ void DFAContentModel::dumpTree($CMNode* nodeCur, int32_t level) {
 		dumpTree($($nc(($cast($CMBinOp, nodeCur)))->getLeft()), level + 1);
 		dumpTree($($nc(($cast($CMBinOp, nodeCur)))->getRight()), level + 1);
 	} else if (nodeCur->type() == $XMLContentSpec::CONTENTSPECNODE_ZERO_OR_MORE) {
-		$init($System);
 		$nc($System::out)->print("Rep Node "_s);
 		if (nodeCur->isNullable()) {
 			$nc($System::out)->print("Nullable "_s);
@@ -368,7 +347,6 @@ void DFAContentModel::dumpTree($CMNode* nodeCur, int32_t level) {
 		$nc($System::out)->println($($nc($(nodeCur->lastPos()))->toString()));
 		dumpTree($($nc(($cast($CMUniOp, nodeCur)))->getChild()), level + 1);
 	} else if (nodeCur->type() == $XMLContentSpec::CONTENTSPECNODE_LEAF) {
-		$init($System);
 		$var($String, var$3, $$str({"Leaf: (pos="_s, $$str($nc(($cast($CMLeaf, nodeCur)))->getPosition()), "), "_s}));
 		$var($String, var$2, $$concat(var$3, $(($cast($CMLeaf, nodeCur))->getElement())));
 		$var($String, var$1, $$concat(var$2, "(elemIndex="));

@@ -5,18 +5,7 @@
 #include <com/sun/org/apache/xpath/internal/XPathContext.h>
 #include <com/sun/org/apache/xpath/internal/XPathVisitor.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jcpp.h>
 
@@ -202,8 +191,7 @@ bool XNumber::equals($XObject* obj2) {
 		} else {
 			return this->m_val == obj2->num();
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($WrappedRuntimeException, te);
 	}
 	$shouldNotReachHere();

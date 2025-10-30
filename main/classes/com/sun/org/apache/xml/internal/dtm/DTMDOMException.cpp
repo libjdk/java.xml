@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xml/internal/dtm/DTMDOMException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <jcpp.h>
 
@@ -58,16 +51,10 @@ void DTMDOMException::init$(int16_t code) {
 DTMDOMException::DTMDOMException() {
 }
 
-DTMDOMException::DTMDOMException(const DTMDOMException& e) {
+DTMDOMException::DTMDOMException(const DTMDOMException& e) : $DOMException(e) {
 }
 
-DTMDOMException DTMDOMException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void DTMDOMException::throwWrapper$() {
-	$pendingException(this);
+void DTMDOMException::throw$() {
 	throw *this;
 }
 

@@ -23,8 +23,10 @@ public:
 	void init$($Throwable* cause);
 	static const int64_t serialVersionUID = (int64_t)0xE681613C88777F1C;
 	XPathExpressionException(const XPathExpressionException& e);
-	XPathExpressionException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XPathExpressionException* operator ->() {
+		return (XPathExpressionException*)throwing$;
+	}
 };
 
 		} // xpath

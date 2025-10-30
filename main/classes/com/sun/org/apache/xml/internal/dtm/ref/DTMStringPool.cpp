@@ -1,16 +1,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMStringPool.h>
 
 #include <com/sun/org/apache/xml/internal/utils/IntVector.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -170,7 +160,6 @@ void DTMStringPool::_main($StringArray* args) {
 		"Thirty-Nine"_s
 	}));
 	$var(DTMStringPool, pool, $new(DTMStringPool));
-	$init($System);
 	$nc($System::out)->println("If no complaints are printed below, we passed initial test."_s);
 	for (int32_t pass = 0; pass <= 1; ++pass) {
 		int32_t i = 0;

@@ -41,13 +41,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/StringType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/Operators.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef BASIS_LIBRARY_CLASS
@@ -157,8 +150,8 @@ $Object* allocate$EqualityExpr($Class* clazz) {
 void EqualityExpr::init$(int32_t op, $Expression* left, $Expression* right) {
 	$Expression::init$();
 	this->_op = op;
-	$nc(($assignField(this, _left, left)))->setParent(this);
-	$nc(($assignField(this, _right, right)))->setParent(this);
+	$nc(($set(this, _left, left)))->setParent(this);
+	$nc(($set(this, _right, right)))->setParent(this);
 }
 
 void EqualityExpr::setParser($Parser* parser) {
@@ -261,7 +254,7 @@ $Type* EqualityExpr::typeCheck($SymbolTable* stable) {
 			}
 		}
 	}
-	return $assignField(this, _type, $Type::Boolean);
+	return $set(this, _type, $Type::Boolean);
 }
 
 void EqualityExpr::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {

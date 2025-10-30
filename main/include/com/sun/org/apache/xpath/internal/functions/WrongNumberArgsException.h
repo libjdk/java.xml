@@ -20,8 +20,10 @@ public:
 	void init$($String* argsExpected);
 	static const int64_t serialVersionUID = (int64_t)0xC0D58CBEBB2A2300;
 	WrongNumberArgsException(const WrongNumberArgsException& e);
-	WrongNumberArgsException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline WrongNumberArgsException* operator ->() {
+		return (WrongNumberArgsException*)throwing$;
+	}
 };
 
 						} // functions

@@ -18,32 +18,14 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
 #include <java/io/Reader.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
 #include <java/lang/CharSequence.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
 #include <java/lang/StringIndexOutOfBoundsException.h>
-#include <java/lang/System.h>
 #include <java/lang/ThreadLocal.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -338,18 +320,16 @@ $String* Utility::codeToString($bytes* code, $ConstantPool* constant_pool, int32
 							buf->append(indices)->append($(codeToString(stream, constant_pool, verbose)))->append(u'\n');
 						}
 					}
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					try {
 						stream->close();
-					} catch ($Throwable&) {
-						$var($Throwable, x2, $catch());
+					} catch ($Throwable& x2) {
 						t$->addSuppressed(x2);
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				stream->close();
 			}
@@ -357,8 +337,7 @@ $String* Utility::codeToString($bytes* code, $ConstantPool* constant_pool, int32
 				$throw(var$0);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($ClassFormatException, $$str({"Byte code error: "_s, $(buf->toString())}), e);
 	}
 	return buf->toString();
@@ -391,7 +370,6 @@ $String* Utility::codeToString($ByteSequence* bytes, $ConstantPool* constant_poo
 		for (int32_t i = 0; i < no_pad_bytes; ++i) {
 			int8_t b = 0;
 			if ((b = bytes->readByte()) != 0) {
-				$init($System);
 				$nc($System::err)->println($$str({"Warning: Padding byte != 0 in "_s, $($Const::getOpcodeName(opcode)), ":"_s, $$str(b)}));
 			}
 		}
@@ -750,8 +728,7 @@ $StringArray* Utility::methodSignatureArgumentTypes($String* signature, bool cho
 			vec->add($(typeSignatureToString($(signature->substring(index)), chopit)));
 			index += unwrap(Utility::consumed_chars);
 		}
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	return $fcast($StringArray, vec->toArray($$new($StringArray, vec->size())));
@@ -773,8 +750,7 @@ $String* Utility::methodSignatureReturnType($String* signature, bool chopit) {
 			$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}));
 		}
 		$assign(type, typeSignatureToString($(signature->substring(index)), chopit));
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	return type;
@@ -824,8 +800,7 @@ $String* Utility::methodSignatureToString($String* signature, $String* name, $St
 		}
 		++index;
 		$assign(type, typeSignatureToString($(signature->substring(index)), chopit));
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	if (buf->length() > 1) {
@@ -859,9 +834,7 @@ $String* Utility::replace($String* str$renamed, $String* old, $String* new_) {
 			buf->append($(str->substring(old_index)));
 			$assign(str, buf->toString());
 		}
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
-		$init($System);
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$nc($System::err)->println($of(e));
 	}
 	return str;
@@ -1125,8 +1098,7 @@ $String* Utility::typeSignatureToString($String* signature, bool chopit) {
 				$throwNew($ClassFormatException, $$str({"Invalid signature: `"_s, signature, "\'"_s}));
 			}
 		}
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid signature: "_s, signature}), e);
 	}
 	$shouldNotReachHere();
@@ -1257,8 +1229,7 @@ int8_t Utility::typeOfMethodSignature($String* signature) {
 		}
 		index = $nc(signature)->lastIndexOf((int32_t)u')') + 1;
 		return typeOfSignature($(signature->substring(index)));
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	$shouldNotReachHere();
@@ -1328,8 +1299,7 @@ int8_t Utility::typeOfSignature($String* signature) {
 				$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}));
 			}
 		}
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	$shouldNotReachHere();
@@ -1475,18 +1445,16 @@ $String* Utility::encode($bytes* bytes$renamed, bool compress) {
 									gos->write(bytes, 0, $nc(bytes)->length);
 									gos->finish();
 									$assign(bytes, baos->toByteArray());
-								} catch ($Throwable&) {
-									$var($Throwable, t$, $catch());
+								} catch ($Throwable& t$) {
 									try {
 										gos->close();
-									} catch ($Throwable&) {
-										$var($Throwable, x2, $catch());
+									} catch ($Throwable& x2) {
 										t$->addSuppressed(x2);
 									}
 									$throw(t$);
 								}
-							} catch ($Throwable&) {
-								$assign(var$1, $catch());
+							} catch ($Throwable& var$2) {
+								$assign(var$1, var$2);
 							} /*finally*/ {
 								gos->close();
 							}
@@ -1494,18 +1462,16 @@ $String* Utility::encode($bytes* bytes$renamed, bool compress) {
 								$throw(var$1);
 							}
 						}
-					} catch ($Throwable&) {
-						$var($Throwable, t$, $catch());
+					} catch ($Throwable& t$) {
 						try {
 							baos->close();
-						} catch ($Throwable&) {
-							$var($Throwable, x2, $catch());
+						} catch ($Throwable& x2) {
 							t$->addSuppressed(x2);
 						}
 						$throw(t$);
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$3) {
+					$assign(var$0, var$3);
 				} /*finally*/ {
 					baos->close();
 				}
@@ -1519,7 +1485,7 @@ $String* Utility::encode($bytes* bytes$renamed, bool compress) {
 	{
 		$var($Utility$JavaWriter, jw, $new($Utility$JavaWriter, caw));
 		{
-			$var($Throwable, var$2, nullptr);
+			$var($Throwable, var$4, nullptr);
 			try {
 				try {
 					{
@@ -1534,23 +1500,21 @@ $String* Utility::encode($bytes* bytes$renamed, bool compress) {
 							}
 						}
 					}
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					try {
 						jw->close();
-					} catch ($Throwable&) {
-						$var($Throwable, x2, $catch());
+					} catch ($Throwable& x2) {
 						t$->addSuppressed(x2);
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$2, $catch());
+			} catch ($Throwable& var$5) {
+				$assign(var$4, var$5);
 			} /*finally*/ {
 				jw->close();
 			}
-			if (var$2 != nullptr) {
-				$throw(var$2);
+			if (var$4 != nullptr) {
+				$throw(var$4);
 			}
 		}
 	}
@@ -1577,18 +1541,16 @@ $bytes* Utility::decode($String* s, bool uncompress) {
 									bos->write(ch);
 								}
 								$assign(bytes, bos->toByteArray());
-							} catch ($Throwable&) {
-								$var($Throwable, t$, $catch());
+							} catch ($Throwable& t$) {
 								try {
 									bos->close();
-								} catch ($Throwable&) {
-									$var($Throwable, x2, $catch());
+								} catch ($Throwable& x2) {
 									t$->addSuppressed(x2);
 								}
 								$throw(t$);
 							}
-						} catch ($Throwable&) {
-							$assign(var$1, $catch());
+						} catch ($Throwable& var$2) {
+							$assign(var$1, var$2);
 						} /*finally*/ {
 							bos->close();
 						}
@@ -1596,18 +1558,16 @@ $bytes* Utility::decode($String* s, bool uncompress) {
 							$throw(var$1);
 						}
 					}
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					try {
 						jr->close();
-					} catch ($Throwable&) {
-						$var($Throwable, x2, $catch());
+					} catch ($Throwable& x2) {
 						t$->addSuppressed(x2);
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$3) {
+				$assign(var$0, var$3);
 			} /*finally*/ {
 				jr->close();
 			}

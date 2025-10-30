@@ -1,23 +1,13 @@
 #include <org/xml/sax/helpers/NewInstance.h>
 
 #include <com/sun/org/apache/xerces/internal/parsers/SAXParser.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/SecurityException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Objects.h>
 #include <jcpp.h>
 
@@ -97,14 +87,11 @@ $Object* NewInstance::newInstance($Class* type, $ClassLoader* loader, $String* c
 	}
 	try {
 		return $of($nc(type)->cast($($nc($($nc(driverClass)->getConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0)))));
-	} catch ($NoSuchMethodException&) {
-		$var($Exception, ex, $catch());
+	} catch ($NoSuchMethodException& ex) {
 		$throwNew($InstantiationException, $(ex->getMessage()));
-	} catch ($SecurityException&) {
-		$var($Exception, ex, $catch());
+	} catch ($SecurityException& ex) {
 		$throwNew($InstantiationException, $(ex->getMessage()));
-	} catch ($InvocationTargetException&) {
-		$var($Exception, ex, $catch());
+	} catch ($InvocationTargetException& ex) {
 		$throwNew($InstantiationException, $(ex->getMessage()));
 	}
 	$shouldNotReachHere();

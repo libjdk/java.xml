@@ -17,14 +17,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/DTMXRTreeFrag.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/objects/XString.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <org/w3c/dom/NodeList.h>
 #include <jcpp.h>
@@ -236,8 +228,7 @@ bool XRTreeFrag::equals($XObject* obj2) {
 		} else {
 			return $XObject::equals(obj2);
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($WrappedRuntimeException, te);
 	}
 	$shouldNotReachHere();

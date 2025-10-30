@@ -29,13 +29,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/NodeType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ABSOLUTE_ITERATOR
@@ -154,7 +147,7 @@ $1Type* AbsoluteLocationPath::typeCheck($SymbolTable* stable) {
 		}
 	}
 	$init($1Type);
-	return $assignField(this, _type, $1Type::NodeSet);
+	return $set(this, _type, $1Type::NodeSet);
 }
 
 void AbsoluteLocationPath::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {

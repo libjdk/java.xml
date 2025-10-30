@@ -9,15 +9,6 @@
 #include <com/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl.h>
 #include <com/sun/org/apache/xerces/internal/dom/NodeImpl.h>
 #include <com/sun/org/apache/xerces/internal/dom/ParentNode.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/NamedNodeMap.h>
 #include <org/w3c/dom/Node.h>
@@ -363,7 +354,6 @@ void DeferredDocumentTypeImpl::synchronizeChildren() {
 		default:
 			{
 				{
-					$init($System);
 					$var($String, var$0, $$str({"DeferredDocumentTypeImpl#synchronizeInfo: node.getNodeType() = "_s, $$str(node->getNodeType()), ", class = "_s}));
 					$nc($System::out)->println($$concat(var$0, $($of(node)->getClass()->getName())));
 				}

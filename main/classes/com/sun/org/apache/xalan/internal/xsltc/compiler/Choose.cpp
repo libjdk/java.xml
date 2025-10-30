@@ -26,12 +26,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Collection.h>
@@ -179,8 +173,7 @@ void Choose::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 				if (type != $Type::Boolean) {
 					$nc(test->_falseList)->add($(il->append(static_cast<$BranchInstruction*>($$new($IFEQ, nullptr)))));
 				}
-			} catch ($TypeCheckError&) {
-				$catch();
+			} catch ($TypeCheckError& e) {
 			}
 		}
 		$assign(truec, il->getEnd());

@@ -26,8 +26,10 @@ public:
 	$String* key = nullptr;
 	$ObjectArray* args = nullptr;
 	XMLSchemaException(const XMLSchemaException& e);
-	XMLSchemaException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XMLSchemaException* operator ->() {
+		return (XMLSchemaException*)throwing$;
+	}
 };
 
 							} // xs

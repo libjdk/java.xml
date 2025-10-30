@@ -2,13 +2,6 @@
 
 #include <com/sun/org/apache/bcel/internal/generic/Instruction.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MarkerInstruction.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef OUTLINEABLECHUNKEND
@@ -54,7 +47,6 @@ $ClassInfo _OutlineableChunkEnd_ClassInfo_ = {
 $Object* allocate$OutlineableChunkEnd($Class* clazz) {
 	return $of($alloc(OutlineableChunkEnd));
 }
-
 
 $Instruction* OutlineableChunkEnd::OUTLINEABLECHUNKEND = nullptr;
 

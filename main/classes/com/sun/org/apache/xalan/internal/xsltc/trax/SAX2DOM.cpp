@@ -3,16 +3,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/Constants.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/DocumentBuilderFactoryImpl.h>
 #include <com/sun/org/apache/xerces/internal/util/XMLSymbols.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -245,8 +236,7 @@ void SAX2DOM::setDocumentInfo() {
 	}
 	try {
 		$nc(this->_document)->setXmlVersion($($nc(($cast($Locator2, this->locator)))->getXMLVersion()));
-	} catch ($ClassCastException&) {
-		$catch();
+	} catch ($ClassCastException& e) {
 	}
 }
 

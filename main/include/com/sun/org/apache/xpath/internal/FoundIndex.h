@@ -19,8 +19,10 @@ public:
 	void init$();
 	static const int64_t serialVersionUID = (int64_t)0xBF8D490995292582;
 	FoundIndex(const FoundIndex& e);
-	FoundIndex wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline FoundIndex* operator ->() {
+		return (FoundIndex*)throwing$;
+	}
 };
 
 					} // internal

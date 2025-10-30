@@ -12,20 +12,10 @@
 #include <com/sun/org/apache/xpath/internal/objects/XNodeSet.h>
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/NumberFormatException.h>
 #include <java/lang/ReflectiveOperationException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <org/xml/sax/ContentHandler.h>
@@ -159,7 +149,6 @@ void XString::finalize() {
 	this->$XObject::finalize();
 }
 
-
 XString* XString::EMPTYSTRING = nullptr;
 
 void XString::init$(Object$* val) {
@@ -199,8 +188,7 @@ double XString::toDouble() {
 	}
 	try {
 		result = $Double::parseDouble($($nc(s)->toString()));
-	} catch ($NumberFormatException&) {
-		$catch();
+	} catch ($NumberFormatException& e) {
 	}
 	return result;
 }
@@ -263,8 +251,7 @@ bool XString::equals($XObject* obj2) {
 			double var$1 = obj2->num();
 			return var$1 == num();
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($WrappedRuntimeException, te);
 	}
 	return $nc($(xstr()))->equals($(obj2->xstr()));

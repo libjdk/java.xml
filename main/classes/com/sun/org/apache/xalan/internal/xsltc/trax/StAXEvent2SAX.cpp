@@ -3,19 +3,8 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/StAXEvent2SAX$1.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InternalError.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <javax/xml/namespace/QName.h>
 #include <javax/xml/stream/XMLEventReader.h>
@@ -230,8 +219,7 @@ void StAXEvent2SAX::setContentHandler($ContentHandler* handler) {
 void StAXEvent2SAX::parse($InputSource* unused) {
 	try {
 		bridge();
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -402,8 +390,7 @@ void StAXEvent2SAX::bridge() {
 			}
 		}
 		handleEndDocument();
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -422,8 +409,7 @@ void StAXEvent2SAX::handlePI($ProcessingInstruction* event) {
 	try {
 		$var($String, var$0, $nc(event)->getTarget());
 		$nc(this->_sax)->processingInstruction(var$0, $(event->getData()));
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -433,8 +419,7 @@ void StAXEvent2SAX::handleCharacters($Characters* event) {
 	try {
 		$var($chars, var$0, $nc($($nc(event)->getData()))->toCharArray());
 		$nc(this->_sax)->characters(var$0, 0, $nc($(event->getData()))->length());
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -461,8 +446,7 @@ void StAXEvent2SAX::handleEndElement($EndElement* event) {
 				$nc(this->_sax)->endPrefixMapping(prefix);
 			}
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -491,8 +475,7 @@ void StAXEvent2SAX::handleStartElement($StartElement* event) {
 		$var($Attributes, saxAttrs, getAttributes(event));
 		$var($String, var$0, qName->getNamespaceURI());
 		$nc(this->_sax)->startElement(var$0, $(qName->getLocalPart()), rawname, saxAttrs);
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }

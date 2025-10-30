@@ -6,19 +6,7 @@
 #include <com/sun/org/apache/xerces/internal/util/SAXMessageFormatter.h>
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityManager.h>
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Locale.h>
@@ -135,8 +123,7 @@ $DocumentBuilder* DocumentBuilderFactoryImpl::newDocumentBuilder() {
 	}
 	try {
 		return $new($DocumentBuilderImpl, this, this->attributes, this->features, this->fSecureProcess);
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throwNew($ParserConfigurationException, $(se->getMessage()));
 	}
 	$shouldNotReachHere();
@@ -166,8 +153,7 @@ void DocumentBuilderFactoryImpl::setAttribute($String* name, Object$* value) {
 	$nc(this->attributes)->put(name, value);
 	try {
 		$new($DocumentBuilderImpl, this, this->attributes, this->features);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$nc(this->attributes)->remove(name);
 		$throwNew($IllegalArgumentException, $(e->getMessage()));
 	}
@@ -191,14 +177,12 @@ $Object* DocumentBuilderFactoryImpl::getAttribute($String* name) {
 	try {
 		$assign(domParser, $$new($DocumentBuilderImpl, this, this->attributes, this->features)->getDOMParser());
 		return $of($nc(domParser)->getProperty(name));
-	} catch ($SAXException&) {
-		$var($SAXException, se1, $catch());
+	} catch ($SAXException& se1) {
 		try {
 			bool result = $nc(domParser)->getFeature(name);
 			$init($Boolean);
 			return $of(result ? $Boolean::TRUE : $Boolean::FALSE);
-		} catch ($SAXException&) {
-			$var($SAXException, se2, $catch());
+		} catch ($SAXException& se2) {
 			$throwNew($IllegalArgumentException, $(se1->getMessage()));
 		}
 	}
@@ -236,8 +220,7 @@ bool DocumentBuilderFactoryImpl::getFeature($String* name) {
 	try {
 		$var($DOMParser, domParser, $$new($DocumentBuilderImpl, this, this->attributes, this->features)->getDOMParser());
 		return $nc(domParser)->getFeature(name);
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($ParserConfigurationException, $(e->getMessage()));
 	}
 	$shouldNotReachHere();
@@ -262,12 +245,10 @@ void DocumentBuilderFactoryImpl::setFeature($String* name, bool value) {
 	$nc(this->features)->put(name, value ? $Boolean::TRUE : $Boolean::FALSE);
 	try {
 		$new($DocumentBuilderImpl, this, this->attributes, this->features);
-	} catch ($SAXNotSupportedException&) {
-		$var($SAXNotSupportedException, e, $catch());
+	} catch ($SAXNotSupportedException& e) {
 		$nc(this->features)->remove(name);
 		$throwNew($ParserConfigurationException, $(e->getMessage()));
-	} catch ($SAXNotRecognizedException&) {
-		$var($SAXNotRecognizedException, e, $catch());
+	} catch ($SAXNotRecognizedException& e) {
 		$nc(this->features)->remove(name);
 		$throwNew($ParserConfigurationException, $(e->getMessage()));
 	}

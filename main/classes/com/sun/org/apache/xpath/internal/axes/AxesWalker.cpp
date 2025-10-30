@@ -16,17 +16,7 @@
 #include <com/sun/org/apache/xpath/internal/compiler/Compiler.h>
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -317,8 +307,7 @@ int32_t AxesWalker::getLastPos($XPathContext* xctxt) {
 	$var(AxesWalker, walker, nullptr);
 	try {
 		$assign(walker, $cast(AxesWalker, clone()));
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, cnse, $catch());
+	} catch ($CloneNotSupportedException& cnse) {
 		return -1;
 	}
 	$nc(walker)->setPredicateCount(this->m_predicateIndex);
@@ -334,8 +323,8 @@ int32_t AxesWalker::getLastPos($XPathContext* xctxt) {
 			while ($DTM::NULL != (next = walker->nextNode())) {
 				++pos;
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			lpi->setLastUsedWalker(savedWalker);
 		}

@@ -6,14 +6,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/ls/LSInput.h>
 #include <org/w3c/dom/ls/LSResourceResolver.h>
 #include <org/xml/sax/InputSource.h>
@@ -88,7 +80,6 @@ $Object* allocate$ValidatorHandlerImpl$ResolutionForwarder($Class* clazz) {
 	return $of($alloc(ValidatorHandlerImpl$ResolutionForwarder));
 }
 
-
 $String* ValidatorHandlerImpl$ResolutionForwarder::XML_TYPE = nullptr;
 
 void ValidatorHandlerImpl$ResolutionForwarder::init$() {
@@ -146,8 +137,7 @@ $InputSource* ValidatorHandlerImpl$ResolutionForwarder::resolveEntity($String* p
 $String* ValidatorHandlerImpl$ResolutionForwarder::resolveSystemId($String* systemId, $String* baseURI) {
 	try {
 		return $XMLEntityManager::expandSystemId(systemId, baseURI, false);
-	} catch ($URI$MalformedURIException&) {
-		$var($URI$MalformedURIException, ex, $catch());
+	} catch ($URI$MalformedURIException& ex) {
 		return systemId;
 	}
 	$shouldNotReachHere();

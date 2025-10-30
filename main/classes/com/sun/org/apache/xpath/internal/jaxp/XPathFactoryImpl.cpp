@@ -3,19 +3,7 @@
 #include <com/sun/org/apache/xalan/internal/res/XSLMessages.h>
 #include <com/sun/org/apache/xpath/internal/jaxp/XPathImpl.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/xpath/XPath.h>
 #include <javax/xml/xpath/XPathFactory.h>
@@ -108,7 +96,6 @@ $ClassInfo _XPathFactoryImpl_ClassInfo_ = {
 $Object* allocate$XPathFactoryImpl($Class* clazz) {
 	return $of($alloc(XPathFactoryImpl));
 }
-
 
 $String* XPathFactoryImpl::CLASS_NAME = nullptr;
 

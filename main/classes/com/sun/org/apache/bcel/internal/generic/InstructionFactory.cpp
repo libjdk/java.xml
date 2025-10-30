@@ -76,22 +76,9 @@
 #include <com/sun/org/apache/bcel/internal/generic/StackInstruction.h>
 #include <com/sun/org/apache/bcel/internal/generic/StoreInstruction.h>
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef AALOAD
@@ -1068,8 +1055,7 @@ $Instruction* InstructionFactory::createCast($Type* src_type, $Type* dest_type) 
 		$var($Instruction, i, nullptr);
 		try {
 			$assign(i, $cast($Instruction, $nc($($Class::forName(name)->getDeclaredConstructor($$new($ClassArray, 0))))->newInstance($$new($ObjectArray, 0))));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$throwNew($IllegalArgumentException, $$str({"Could not find instruction: "_s, name}), e);
 		}
 		return i;
@@ -1308,7 +1294,7 @@ void clinit$InstructionFactory($Class* class$) {
 		"I"_s,
 		"L"_s
 	}));
-		$init($Type);
+	$init($Type);
 	$assignStatic(InstructionFactory::append_mos, $new($InstructionFactory$MethodObjectArray, {
 		$$new($InstructionFactory$MethodObject, "java.lang.StringBuffer"_s, "append"_s, $Type::STRINGBUFFER, $$new($TypeArray, {static_cast<$Type*>($Type::STRING)})),
 		$$new($InstructionFactory$MethodObject, "java.lang.StringBuffer"_s, "append"_s, $Type::STRINGBUFFER, $$new($TypeArray, {static_cast<$Type*>($Type::OBJECT)})),

@@ -2,22 +2,7 @@
 
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DEBUG
@@ -207,7 +192,6 @@ void RangeToken::compactRanges() {
 			}
 			if (baseend + 1 == $nc(this->ranges)->get(target)) {
 				if (DEBUG) {
-					$init($System);
 					$nc($System::err)->println($$str({"Token#compactRanges(): Compaction: ["_s, $$str($nc(this->ranges)->get(base)), ", "_s, $$str($nc(this->ranges)->get(base + 1)), "], ["_s, $$str($nc(this->ranges)->get(target)), ", "_s, $$str($nc(this->ranges)->get(target + 1)), "] -> ["_s, $$str($nc(this->ranges)->get(base)), ", "_s, $$str($nc(this->ranges)->get(target + 1)), "]"_s}));
 				}
 				$nc(this->ranges)->set(base + 1, $nc(this->ranges)->get(target + 1));
@@ -215,13 +199,11 @@ void RangeToken::compactRanges() {
 				target += 2;
 			} else if (baseend >= $nc(this->ranges)->get(target + 1)) {
 				if (DEBUG) {
-					$init($System);
 					$nc($System::err)->println($$str({"Token#compactRanges(): Compaction: ["_s, $$str($nc(this->ranges)->get(base)), ", "_s, $$str($nc(this->ranges)->get(base + 1)), "], ["_s, $$str($nc(this->ranges)->get(target)), ", "_s, $$str($nc(this->ranges)->get(target + 1)), "] -> ["_s, $$str($nc(this->ranges)->get(base)), ", "_s, $$str($nc(this->ranges)->get(base + 1)), "]"_s}));
 				}
 				target += 2;
 			} else if (baseend < $nc(this->ranges)->get(target + 1)) {
 				if (DEBUG) {
-					$init($System);
 					$nc($System::err)->println($$str({"Token#compactRanges(): Compaction: ["_s, $$str($nc(this->ranges)->get(base)), ", "_s, $$str($nc(this->ranges)->get(base + 1)), "], ["_s, $$str($nc(this->ranges)->get(target)), ", "_s, $$str($nc(this->ranges)->get(target + 1)), "] -> ["_s, $$str($nc(this->ranges)->get(base)), ", "_s, $$str($nc(this->ranges)->get(target + 1)), "]"_s}));
 				}
 				$nc(this->ranges)->set(base + 1, $nc(this->ranges)->get(target + 1));
@@ -463,7 +445,6 @@ RangeToken* RangeToken::getCaseInsensitiveToken() {
 
 void RangeToken::dumpRanges() {
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$nc($System::err)->print("RANGE: "_s);
 	if (this->ranges == nullptr) {
 		$nc($System::err)->println(" NULL"_s);

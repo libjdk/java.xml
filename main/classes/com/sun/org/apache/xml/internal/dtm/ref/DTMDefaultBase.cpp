@@ -18,20 +18,7 @@
 #include <java/io/FileOutputStream.h>
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Vector.h>
 #include <javax/xml/transform/Source.h>
 #include <org/w3c/dom/Document.h>
@@ -475,7 +462,6 @@ void DTMDefaultBase::dumpDTM($OutputStream* os$renamed) {
 	try {
 		if (os == nullptr) {
 			$var($File, f, $new($File, $$str({"DTMDump"_s, $$str($nc($of(($of(this))))->hashCode()), ".txt"_s})));
-			$init($System);
 			$nc($System::err)->println($$str({"Dumping... "_s, $(f->getAbsolutePath())}));
 			$assign(os, $new($FileOutputStream, f));
 		}
@@ -613,9 +599,7 @@ void DTMDefaultBase::dumpDTM($OutputStream* os$renamed) {
 			ps->println($$str({"Node Value: "_s, $(getNodeValue(i))}));
 			ps->println($$str({"String Value: "_s, $(getStringValue(i))}));
 		}
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
-		$init($System);
+	} catch ($IOException& ioe) {
 		ioe->printStackTrace($System::err);
 		$throwNew($RuntimeException, $(ioe->getMessage()));
 	}

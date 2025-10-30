@@ -4,13 +4,6 @@
 #include <com/sun/org/apache/xml/internal/serialize/OutputFormat.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <org/xml/sax/DocumentHandler.h>
 #include <jcpp.h>
@@ -32,11 +25,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _Serializer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $MethodInfo _Serializer_MethodInfo_[] = {
 	{"asContentHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},

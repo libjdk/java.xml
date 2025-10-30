@@ -17,13 +17,6 @@
 #include <com/sun/xml/internal/stream/events/ProcessingInstructionEvent.h>
 #include <com/sun/xml/internal/stream/events/StartDocumentEvent.h>
 #include <com/sun/xml/internal/stream/events/StartElementEvent.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/namespace/NamespaceContext.h>

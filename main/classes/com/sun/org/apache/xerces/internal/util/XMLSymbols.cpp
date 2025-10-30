@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/util/XMLSymbols.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef EMPTY_STRING
@@ -64,39 +57,22 @@ $Object* allocate$XMLSymbols($Class* clazz) {
 	return $of($alloc(XMLSymbols));
 }
 
-
 $String* XMLSymbols::EMPTY_STRING = nullptr;
-
 $String* XMLSymbols::PREFIX_XML = nullptr;
-
 $String* XMLSymbols::PREFIX_XMLNS = nullptr;
-
 $String* XMLSymbols::fANYSymbol = nullptr;
-
 $String* XMLSymbols::fCDATASymbol = nullptr;
-
 $String* XMLSymbols::fIDSymbol = nullptr;
-
 $String* XMLSymbols::fIDREFSymbol = nullptr;
-
 $String* XMLSymbols::fIDREFSSymbol = nullptr;
-
 $String* XMLSymbols::fENTITYSymbol = nullptr;
-
 $String* XMLSymbols::fENTITIESSymbol = nullptr;
-
 $String* XMLSymbols::fNMTOKENSymbol = nullptr;
-
 $String* XMLSymbols::fNMTOKENSSymbol = nullptr;
-
 $String* XMLSymbols::fNOTATIONSymbol = nullptr;
-
 $String* XMLSymbols::fENUMERATIONSymbol = nullptr;
-
 $String* XMLSymbols::fIMPLIEDSymbol = nullptr;
-
 $String* XMLSymbols::fREQUIREDSymbol = nullptr;
-
 $String* XMLSymbols::fFIXEDSymbol = nullptr;
 
 void XMLSymbols::init$() {

@@ -1,14 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaException.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -69,16 +60,10 @@ $ObjectArray* XMLSchemaException::getArgs() {
 XMLSchemaException::XMLSchemaException() {
 }
 
-XMLSchemaException::XMLSchemaException(const XMLSchemaException& e) {
+XMLSchemaException::XMLSchemaException(const XMLSchemaException& e) : $Exception(e) {
 }
 
-XMLSchemaException XMLSchemaException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XMLSchemaException::throwWrapper$() {
-	$pendingException(this);
+void XMLSchemaException::throw$() {
 	throw *this;
 }
 

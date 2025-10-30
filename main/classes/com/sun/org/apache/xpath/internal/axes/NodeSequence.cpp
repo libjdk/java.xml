@@ -11,18 +11,7 @@
 #include <com/sun/org/apache/xpath/internal/axes/NodeSequence$IteratorCache.h>
 #include <com/sun/org/apache/xpath/internal/axes/PathComponent.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -455,8 +444,7 @@ void NodeSequence::setItem(int32_t node, int32_t index) {
 			$var($NodeVector, nv, nullptr);
 			try {
 				$assign(nv, $cast($NodeVector, vec->clone()));
-			} catch ($CloneNotSupportedException&) {
-				$var($CloneNotSupportedException, e, $catch());
+			} catch ($CloneNotSupportedException& e) {
 				e->printStackTrace();
 				$var($RuntimeException, rte, $new($RuntimeException, $(e->getMessage())));
 				$throw(rte);

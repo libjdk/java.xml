@@ -5,19 +5,7 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/WrappedRuntimeException.h>
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/MalformedURLException.h>
 #include <java/net/URL.h>
 #include <java/nio/charset/Charset.h>
@@ -129,8 +117,7 @@ $InputStream* Encodings$EncodingInfos::openEncodingsFileStream() {
 	$var($InputStream, is, nullptr);
 	try {
 		$assign(urlString, $SecuritySupport::getSystemProperty("com.sun.org.apache.xalan.internal.serialize.encodings"_s, ""_s));
-	} catch ($SecurityException&) {
-		$catch();
+	} catch ($SecurityException& e) {
 	}
 	if (urlString != nullptr && urlString->length() > 0) {
 		$var($URL, url, $new($URL, urlString));
@@ -155,20 +142,18 @@ $Properties* Encodings$EncodingInfos::loadProperties() {
 						props->load(is);
 					} else {
 					}
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					if (is != nullptr) {
 						try {
 							is->close();
-						} catch ($Throwable&) {
-							$var($Throwable, x2, $catch());
+						} catch ($Throwable& x2) {
 							t$->addSuppressed(x2);
 						}
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				if (is != nullptr) {
 					is->close();
@@ -197,11 +182,9 @@ $StringArray* Encodings$EncodingInfos::parseMimeTypes($String* val) {
 }
 
 $String* Encodings$EncodingInfos::findCharsetNameFor($String* name) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc($($Charset::forName(name)))->name();
-	} catch ($Exception&) {
-		$var($Exception, x, $catch());
+	} catch ($Exception& x) {
 		return nullptr;
 	}
 	$shouldNotReachHere();
@@ -266,11 +249,9 @@ void Encodings$EncodingInfos::loadEncodingInfo() {
 				}
 			}
 		}
-	} catch ($MalformedURLException&) {
-		$var($MalformedURLException, mue, $catch());
+	} catch ($MalformedURLException& mue) {
 		$throwNew($WrappedRuntimeException, mue);
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$throwNew($WrappedRuntimeException, ioe);
 	}
 }

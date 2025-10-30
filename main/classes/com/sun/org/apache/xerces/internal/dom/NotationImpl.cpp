@@ -5,14 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/dom/NodeImpl.h>
 #include <com/sun/org/apache/xerces/internal/util/URI$MalformedURIException.h>
 #include <com/sun/org/apache/xerces/internal/util/URI.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/NamedNodeMap.h>
@@ -332,15 +324,13 @@ void NotationImpl::setSystemId($String* id) {
 }
 
 $String* NotationImpl::getBaseURI() {
-	$useLocalCurrentObjectStackCache();
 	if (needsSyncData()) {
 		synchronizeData();
 	}
 	if (this->baseURI != nullptr && $nc(this->baseURI)->length() != 0) {
 		try {
 			return $$new($URI, this->baseURI)->toString();
-		} catch ($URI$MalformedURIException&) {
-			$var($URI$MalformedURIException, e, $catch());
+		} catch ($URI$MalformedURIException& e) {
 			return nullptr;
 		}
 	}

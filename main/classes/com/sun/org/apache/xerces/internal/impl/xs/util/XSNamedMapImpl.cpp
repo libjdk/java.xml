@@ -4,15 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry.h>
 #include <com/sun/org/apache/xerces/internal/util/SymbolHash.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSObject.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/AbstractSet.h>
 #include <java/util/Collection.h>
@@ -231,7 +222,6 @@ $Object* XSNamedMapImpl::merge(Object$* arg0, Object$* arg1, $BiFunction* arg2) 
 void XSNamedMapImpl::finalize() {
 	this->$AbstractMap::finalize();
 }
-
 
 XSNamedMapImpl* XSNamedMapImpl::EMPTY_MAP = nullptr;
 

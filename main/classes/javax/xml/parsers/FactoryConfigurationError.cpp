@@ -1,15 +1,6 @@
 #include <javax/xml/parsers/FactoryConfigurationError.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -91,16 +82,10 @@ $Throwable* FactoryConfigurationError::getCause() {
 FactoryConfigurationError::FactoryConfigurationError() {
 }
 
-FactoryConfigurationError::FactoryConfigurationError(const FactoryConfigurationError& e) {
+FactoryConfigurationError::FactoryConfigurationError(const FactoryConfigurationError& e) : $Error(e) {
 }
 
-FactoryConfigurationError FactoryConfigurationError::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void FactoryConfigurationError::throwWrapper$() {
-	$pendingException(this);
+void FactoryConfigurationError::throw$() {
 	throw *this;
 }
 

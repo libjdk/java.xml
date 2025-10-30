@@ -3,18 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/Constants.h>
 #include <com/sun/org/apache/xml/internal/utils/XML11Char.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/StringTokenizer.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
@@ -153,31 +142,26 @@ $String* Util::internalName($String* cname) {
 
 void Util::println($String* s) {
 	$init(Util);
-	$init($System);
 	$nc($System::out)->println(s);
 }
 
 void Util::println(char16_t ch) {
 	$init(Util);
-	$init($System);
 	$nc($System::out)->println(ch);
 }
 
 void Util::TRACE1() {
 	$init(Util);
-	$init($System);
 	$nc($System::out)->println("TRACE1"_s);
 }
 
 void Util::TRACE2() {
 	$init(Util);
-	$init($System);
 	$nc($System::out)->println("TRACE2"_s);
 }
 
 void Util::TRACE3() {
 	$init(Util);
-	$init($System);
 	$nc($System::out)->println("TRACE3"_s);
 }
 

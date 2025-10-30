@@ -22,8 +22,10 @@ public:
 	void init$($String* msg);
 	static const int64_t serialVersionUID = (int64_t)0xA3254DF0BDD69EDE;
 	InternalError(const InternalError& e);
-	InternalError wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline InternalError* operator ->() {
+		return (InternalError*)throwing$;
+	}
 };
 
 								} // util

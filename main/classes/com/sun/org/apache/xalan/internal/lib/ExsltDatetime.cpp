@@ -3,19 +3,8 @@
 #include <com/sun/org/apache/xpath/internal/objects/XBoolean.h>
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/ParseException.h>
 #include <java/text/SimpleDateFormat.h>
 #include <java/util/Calendar.h>
@@ -650,9 +639,7 @@ int32_t ExsltDatetime::getZoneStart($String* datetime) {
 				dateFormat->setLenient(false);
 				$var($Date, d, dateFormat->parse($(datetime->substring(datetime->length() - 5))));
 				return datetime->length() - 6;
-			} catch ($ParseException&) {
-				$var($ParseException, pe, $catch());
-				$init($System);
+			} catch ($ParseException& pe) {
 				$nc($System::out)->println($$str({"ParseException "_s, $$str(pe->getErrorOffset())}));
 				return -2;
 			}
@@ -669,8 +656,7 @@ $Date* ExsltDatetime::testFormats($String* in, $StringArray* formats) {
 			$var($SimpleDateFormat, dateFormat, $new($SimpleDateFormat, formats->get(i)));
 			dateFormat->setLenient(false);
 			return dateFormat->parse(in);
-		} catch ($ParseException&) {
-			$catch();
+		} catch ($ParseException& pe) {
 		}
 	}
 	return nullptr;
@@ -701,8 +687,7 @@ $String* ExsltDatetime::getNameOrAbbrev($String* in, $StringArray* formatsIn, $S
 			$var($Date, dt, dateFormat->parse(in));
 			dateFormat->applyPattern(formatOut);
 			return dateFormat->format(dt);
-		} catch ($ParseException&) {
-			$catch();
+		} catch ($ParseException& pe) {
 		}
 	}
 	return ""_s;
@@ -766,8 +751,7 @@ $String* ExsltDatetime::formatDate($String* dateTime$renamed, $String* pattern) 
 		$var($SimpleDateFormat, outFormat, $new($SimpleDateFormat, $(strip($$str({yearSymbols, monthSymbols, daySymbols}), pattern))));
 		outFormat->setTimeZone(timeZone);
 		return outFormat->format(d);
-	} catch ($ParseException&) {
-		$catch();
+	} catch ($ParseException& pe) {
 	}
 	for (int32_t i = 0; i < formats->length; ++i) {
 		try {
@@ -777,8 +761,7 @@ $String* ExsltDatetime::formatDate($String* dateTime$renamed, $String* pattern) 
 			$var($SimpleDateFormat, outFormat, $new($SimpleDateFormat, pattern));
 			outFormat->setTimeZone(timeZone);
 			return outFormat->format(d);
-		} catch ($ParseException&) {
-			$catch();
+		} catch ($ParseException& pe) {
 		}
 	}
 	try {
@@ -788,8 +771,7 @@ $String* ExsltDatetime::formatDate($String* dateTime$renamed, $String* pattern) 
 		$var($SimpleDateFormat, outFormat, $new($SimpleDateFormat, $(strip(yearSymbols, pattern))));
 		outFormat->setTimeZone(timeZone);
 		return outFormat->format(d);
-	} catch ($ParseException&) {
-		$catch();
+	} catch ($ParseException& pe) {
 	}
 	try {
 		$var($SimpleDateFormat, inFormat, $new($SimpleDateFormat, ExsltDatetime::gm));
@@ -798,8 +780,7 @@ $String* ExsltDatetime::formatDate($String* dateTime$renamed, $String* pattern) 
 		$var($SimpleDateFormat, outFormat, $new($SimpleDateFormat, $(strip(yearSymbols, pattern))));
 		outFormat->setTimeZone(timeZone);
 		return outFormat->format(d);
-	} catch ($ParseException&) {
-		$catch();
+	} catch ($ParseException& pe) {
 	}
 	try {
 		$var($SimpleDateFormat, inFormat, $new($SimpleDateFormat, ExsltDatetime::gd));
@@ -808,8 +789,7 @@ $String* ExsltDatetime::formatDate($String* dateTime$renamed, $String* pattern) 
 		$var($SimpleDateFormat, outFormat, $new($SimpleDateFormat, $(strip($$str({yearSymbols, monthSymbols}), pattern))));
 		outFormat->setTimeZone(timeZone);
 		return outFormat->format(d);
-	} catch ($ParseException&) {
-		$catch();
+	} catch ($ParseException& pe) {
 	}
 	return ExsltDatetime::EMPTY_STR;
 }

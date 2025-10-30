@@ -23,8 +23,10 @@ public:
 	void init$($String* s);
 	static const int64_t serialVersionUID = (int64_t)0x89BFEC3A2DFE9FB0;
 	SchemaDateTimeException(const SchemaDateTimeException& e);
-	SchemaDateTimeException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline SchemaDateTimeException* operator ->() {
+		return (SchemaDateTimeException*)throwing$;
+	}
 };
 
 								} // xs

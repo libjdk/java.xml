@@ -20,8 +20,10 @@ public:
 	void init$();
 	static const int64_t serialVersionUID = (int64_t)0x24328D025C1C2F01;
 	AbortException(const AbortException& e);
-	AbortException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline AbortException* operator ->() {
+		return (AbortException*)throwing$;
+	}
 };
 
 						} // dom

@@ -2,18 +2,7 @@
 
 #include <java/io/IOException.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
 #include <java/lang/CharSequence.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URLDecoder.h>
 #include <java/net/URLEncoder.h>
 #include <javax/xml/catalog/CatalogMessages.h>
@@ -101,14 +90,12 @@ $String* Normalizer::normalizePublicId($String* publicId) {
 }
 
 $String* Normalizer::encodeURN($String* publicId) {
-	$useLocalCurrentObjectStackCache();
 	$var($String, urn, normalizePublicId(publicId));
 	try {
 		$assign(urn, $URLEncoder::encode(urn, "UTF-8"_s));
 		$assign(urn, $nc(urn)->replace(static_cast<$CharSequence*>("::"_s), static_cast<$CharSequence*>(";"_s)));
 		$assign(urn, urn->replace(static_cast<$CharSequence*>("//"_s), static_cast<$CharSequence*>(":"_s)));
-	} catch ($UnsupportedEncodingException&) {
-		$var($UnsupportedEncodingException, ex, $catch());
+	} catch ($UnsupportedEncodingException& ex) {
 		$init($CatalogMessages);
 		$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_OTHER, static_cast<$Throwable*>(ex));
 	}
@@ -117,7 +104,6 @@ $String* Normalizer::encodeURN($String* publicId) {
 }
 
 $String* Normalizer::decodeURN($String* urn) {
-	$useLocalCurrentObjectStackCache();
 	$var($String, publicId, nullptr);
 	$init($Util);
 	if (urn != nullptr && urn->startsWith($Util::URN)) {
@@ -129,8 +115,7 @@ $String* Normalizer::decodeURN($String* urn) {
 		$assign(publicId, $nc(publicId)->replace(static_cast<$CharSequence*>(":"_s), static_cast<$CharSequence*>("//"_s)));
 		$assign(publicId, publicId->replace(static_cast<$CharSequence*>(";"_s), static_cast<$CharSequence*>("::"_s)));
 		$assign(publicId, $URLDecoder::decode(publicId, "UTF-8"_s));
-	} catch ($UnsupportedEncodingException&) {
-		$var($UnsupportedEncodingException, ex, $catch());
+	} catch ($UnsupportedEncodingException& ex) {
 		$init($CatalogMessages);
 		$CatalogMessages::reportRunTimeError($CatalogMessages::ERR_OTHER, static_cast<$Throwable*>(ex));
 	}
@@ -147,8 +132,7 @@ $String* Normalizer::normalizeURI($String* uriref$renamed) {
 	$assign(uriref, $nc(uriref)->trim());
 	try {
 		$assign(bytes, uriref->getBytes("UTF-8"_s));
-	} catch ($UnsupportedEncodingException&) {
-		$var($UnsupportedEncodingException, uee, $catch());
+	} catch ($UnsupportedEncodingException& uee) {
 		return uriref;
 	}
 	$var($StringBuilder, newRef, $new($StringBuilder, $nc(bytes)->length));

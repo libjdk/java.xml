@@ -7,15 +7,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/Instruction.h>
 #include <com/sun/org/apache/bcel/internal/generic/InstructionTargeter.h>
 #include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/AbstractSet.h>
 #include <java/util/Collection.h>
@@ -169,7 +160,7 @@ void InstructionHandle::setPosition(int32_t pos) {
 }
 
 void InstructionHandle::dispose() {
-	$set(this, next, ($assignField(this, prev, nullptr)));
+	$set(this, next, ($set(this, prev, nullptr)));
 	$nc(this->instruction)->dispose();
 	$set(this, instruction, nullptr);
 	this->i_position = -1;

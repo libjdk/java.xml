@@ -16,19 +16,8 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ContentHandler.h>
@@ -176,7 +165,6 @@ void IncrementalSAXSource_Xerces::init$() {
 		$Class* fXniInputSourceClass = $ObjectFactory::findProviderClass("com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource"_s, true);
 		$var($ClassArray, args3, $new($ClassArray, {fXniInputSourceClass}));
 		$set(this, fConfigSetInput, xniStdConfigClass->getMethod("setInputSource"_s, args3));
-			$load($String);
 		$var($ClassArray, args4, $new($ClassArray, {
 			$String::class$,
 			$String::class$,
@@ -196,8 +184,7 @@ void IncrementalSAXSource_Xerces::init$() {
 		$set(this, fConfigParse, xniStdConfigClass->getMethod("parse"_s, argsb));
 		$var($ClassArray, noargs, $new($ClassArray, 0));
 		$set(this, fReset, $nc($of(this->fIncrementalParser))->getClass()->getMethod("reset"_s, noargs));
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$var(IncrementalSAXSource_Xerces, dummy, $new(IncrementalSAXSource_Xerces, $$new($SAXParser)));
 		$set(this, fParseSomeSetup, dummy->fParseSomeSetup);
 		$set(this, fParseSome, dummy->fParseSome);
@@ -233,8 +220,7 @@ $IncrementalSAXSource* IncrementalSAXSource_Xerces::createIncrementalSAXSource()
 	$useLocalCurrentObjectStackCache();
 	try {
 		return $new(IncrementalSAXSource_Xerces);
-	} catch ($NoSuchMethodException&) {
-		$var($NoSuchMethodException, e, $catch());
+	} catch ($NoSuchMethodException& e) {
 		$var($IncrementalSAXSource_Filter, iss, $new($IncrementalSAXSource_Filter));
 		iss->setXMLReader($$new($SAXParser));
 		return iss;
@@ -244,11 +230,9 @@ $IncrementalSAXSource* IncrementalSAXSource_Xerces::createIncrementalSAXSource()
 
 $IncrementalSAXSource* IncrementalSAXSource_Xerces::createIncrementalSAXSource($SAXParser* parser) {
 	$init(IncrementalSAXSource_Xerces);
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $new(IncrementalSAXSource_Xerces, parser);
-	} catch ($NoSuchMethodException&) {
-		$var($NoSuchMethodException, e, $catch());
+	} catch ($NoSuchMethodException& e) {
 		$var($IncrementalSAXSource_Filter, iss, $new($IncrementalSAXSource_Filter));
 		iss->setXMLReader(parser);
 		return iss;
@@ -263,10 +247,8 @@ void IncrementalSAXSource_Xerces::setContentHandler($ContentHandler* handler) {
 void IncrementalSAXSource_Xerces::setLexicalHandler($LexicalHandler* handler) {
 	try {
 		$nc((static_cast<$XMLReader*>(this->fIncrementalParser)))->setProperty("http://xml.org/sax/properties/lexical-handler"_s, handler);
-	} catch ($SAXNotRecognizedException&) {
-		$catch();
-	} catch ($SAXNotSupportedException&) {
-		$catch();
+	} catch ($SAXNotRecognizedException& e) {
+	} catch ($SAXNotSupportedException& e) {
 	}
 }
 
@@ -287,8 +269,7 @@ void IncrementalSAXSource_Xerces::startParse($InputSource* source) {
 	bool ok = false;
 	try {
 		ok = parseSomeSetup(source);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($SAXException, ex);
 	}
 	if (!ok) {
@@ -298,7 +279,6 @@ void IncrementalSAXSource_Xerces::startParse($InputSource* source) {
 }
 
 $Object* IncrementalSAXSource_Xerces::deliverMoreNodes(bool parsemore) {
-	$useLocalCurrentObjectStackCache();
 	if (!parsemore) {
 		this->fParseInProgress = false;
 		$init($Boolean);
@@ -309,14 +289,11 @@ $Object* IncrementalSAXSource_Xerces::deliverMoreNodes(bool parsemore) {
 		bool keepgoing = parseSome();
 		$init($Boolean);
 		$assign(arg, keepgoing ? $Boolean::TRUE : $Boolean::FALSE);
-	} catch ($SAXException&) {
-		$var($SAXException, ex, $catch());
+	} catch ($SAXException& ex) {
 		$assign(arg, ex);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$assign(arg, ex);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$assign(arg, $new($SAXException, ex));
 	}
 	return $of(arg);
@@ -365,7 +342,6 @@ bool IncrementalSAXSource_Xerces::parseSome() {
 void IncrementalSAXSource_Xerces::_main($StringArray* args) {
 	$init(IncrementalSAXSource_Xerces);
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$nc($System::out)->println("Starting..."_s);
 	$var($CoroutineManager, co, $new($CoroutineManager));
 	int32_t appCoroutineID = co->co_joinCoroutineSet(-1);
@@ -399,8 +375,7 @@ void IncrementalSAXSource_Xerces::_main($StringArray* args) {
 			} else if ($instanceOf($Exception, result)) {
 				$throwNew($WrappedRuntimeException, $cast($Exception, result));
 			}
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			e->printStackTrace();
 		}
 	}

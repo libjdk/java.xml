@@ -16,14 +16,6 @@
 #include <com/sun/org/apache/xpath/internal/compiler/OpCodes.h>
 #include <com/sun/org/apache/xpath/internal/compiler/OpMap.h>
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef BIT_CHILD
@@ -225,8 +217,8 @@ int32_t DescendantIterator::nextNode() {
 				return$1 = true;
 				goto $finally;
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			if (-1 != this->m_stackFrame) {
 				$nc(vars)->setStackFrame(savedStart);

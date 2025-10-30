@@ -6,19 +6,9 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV.h>
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/SchemaDateTimeException.h>
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/TypeValidator.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/math/BigDecimal.h>
 #include <java/math/BigInteger.h>
 #include <javax/xml/datatype/DatatypeConstants.h>
@@ -106,11 +96,9 @@ void DurationDV::init$() {
 }
 
 $Object* DurationDV::getActualValue($String* content, $ValidationContext* context) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $of(parse(content, DurationDV::DURATION_TYPE));
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.1"_s, $$new($ObjectArray, {
 			$of(content),
 			$of("duration"_s)

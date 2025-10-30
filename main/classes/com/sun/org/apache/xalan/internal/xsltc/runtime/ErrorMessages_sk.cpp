@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/ErrorMessages_sk.h>
 
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -69,7 +62,7 @@ void ErrorMessages_sk::init$() {
 
 $ObjectArray2* ErrorMessages_sk::getContents() {
 	$useLocalCurrentObjectStackCache();
-			$init($BasisLibrary);
+	$init($BasisLibrary);
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),

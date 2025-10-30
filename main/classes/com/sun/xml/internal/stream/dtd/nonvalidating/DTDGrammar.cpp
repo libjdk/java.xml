@@ -13,17 +13,6 @@
 #include <com/sun/xml/internal/stream/dtd/nonvalidating/XMLElementDecl.h>
 #include <com/sun/xml/internal/stream/dtd/nonvalidating/XMLNotationDecl.h>
 #include <com/sun/xml/internal/stream/dtd/nonvalidating/XMLSimpleType.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -320,7 +309,6 @@ void DTDGrammar::attributeDecl($String* elementName, $String* attributeName, $St
 	} else if (type->startsWith("ENUMERATION"_s)) {
 		$nc(this->fSimpleType)->type = $XMLSimpleType::TYPE_ENUMERATION;
 	} else {
-		$init($System);
 		$nc($System::err)->println($$str({"!!! unknown attribute type "_s, type}));
 	}
 	$nc(this->fQName)->setValues(nullptr, attributeName, attributeName, nullptr);
@@ -431,14 +419,12 @@ void DTDGrammar::printElements() {
 	int32_t elementDeclIndex = 0;
 	$var($XMLElementDecl, elementDecl, $new($XMLElementDecl));
 	while (getElementDecl(elementDeclIndex++, elementDecl)) {
-		$init($System);
 		$nc($System::out)->println($$str({"element decl: "_s, elementDecl->name, ", "_s, $nc(elementDecl->name)->rawname}));
 	}
 }
 
 void DTDGrammar::printAttributes(int32_t elementDeclIndex) {
 	int32_t attributeDeclIndex = getFirstAttributeDeclIndex(elementDeclIndex);
-	$init($System);
 	$nc($System::out)->print(elementDeclIndex);
 	$nc($System::out)->print(" ["_s);
 	while (attributeDeclIndex != -1) {
@@ -555,7 +541,6 @@ $List* DTDGrammar::getNotationDecls() {
 void DTDGrammar::printAttribute(int32_t attributeDeclIndex) {
 	$var($XMLAttributeDecl, attributeDecl, $new($XMLAttributeDecl));
 	if (getAttributeDecl(attributeDeclIndex, attributeDecl)) {
-		$init($System);
 		$nc($System::out)->print(" { "_s);
 		$nc($System::out)->print($nc(attributeDecl->name)->localpart);
 		$nc($System::out)->print(" }"_s);

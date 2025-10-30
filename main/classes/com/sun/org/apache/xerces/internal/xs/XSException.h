@@ -28,8 +28,10 @@ public:
 	static const int16_t NOT_SUPPORTED_ERR = 1;
 	static const int16_t INDEX_SIZE_ERR = 2;
 	XSException(const XSException& e);
-	XSException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XSException* operator ->() {
+		return (XSException*)throwing$;
+	}
 };
 
 						} // xs

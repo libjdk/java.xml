@@ -40,8 +40,10 @@ public:
 	::com::sun::org::apache::xml::internal::dtm::ref::IncrementalSAXSource_Filter* this$0 = nullptr;
 	static const int64_t serialVersionUID = (int64_t)0xF0541CEE6E3EB2B4;
 	IncrementalSAXSource_Filter$StopException(const IncrementalSAXSource_Filter$StopException& e);
-	IncrementalSAXSource_Filter$StopException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline IncrementalSAXSource_Filter$StopException* operator ->() {
+		return (IncrementalSAXSource_Filter$StopException*)throwing$;
+	}
 };
 
 							} // ref

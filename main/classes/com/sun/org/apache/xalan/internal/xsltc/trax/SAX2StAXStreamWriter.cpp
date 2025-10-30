@@ -1,17 +1,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/SAX2StAXStreamWriter.h>
 
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/SAX2StAXBaseWriter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/XMLStreamException.h>
 #include <javax/xml/stream/XMLStreamWriter.h>
 #include <org/xml/sax/Attributes.h>
@@ -104,8 +94,7 @@ void SAX2StAXStreamWriter::startDocument() {
 void SAX2StAXStreamWriter::endDocument() {
 	try {
 		$nc(this->writer)->writeEndDocument();
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	$SAX2StAXBaseWriter::endDocument();
@@ -151,12 +140,11 @@ void SAX2StAXStreamWriter::startElement($String* uri, $String* localName, $Strin
 						}
 					}
 				}
-			} catch ($XMLStreamException&) {
-				$var($XMLStreamException, e, $catch());
+			} catch ($XMLStreamException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$2) {
+			$assign(var$0, var$2);
 		} /*finally*/ {
 			$SAX2StAXBaseWriter::startElement(uri, localName, qName, attributes);
 		}
@@ -167,18 +155,16 @@ void SAX2StAXStreamWriter::startElement($String* uri, $String* localName, $Strin
 }
 
 void SAX2StAXStreamWriter::endElement($String* uri, $String* localName, $String* qName) {
-	$useLocalCurrentObjectStackCache();
 	{
 		$var($Throwable, var$0, nullptr);
 		try {
 			try {
 				$nc(this->writer)->writeEndElement();
-			} catch ($XMLStreamException&) {
-				$var($XMLStreamException, e, $catch());
+			} catch ($XMLStreamException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$SAX2StAXBaseWriter::endElement(uri, localName, qName);
 		}
@@ -189,15 +175,13 @@ void SAX2StAXStreamWriter::endElement($String* uri, $String* localName, $String*
 }
 
 void SAX2StAXStreamWriter::comment($chars* ch, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	if (this->needToCallStartDocument) {
 		writeStartDocument();
 	}
 	$SAX2StAXBaseWriter::comment(ch, start, length);
 	try {
 		$nc(this->writer)->writeComment($$new($String, ch, start, length));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -208,18 +192,15 @@ void SAX2StAXStreamWriter::characters($chars* ch, int32_t start, int32_t length)
 		if (!this->isCDATA) {
 			$nc(this->writer)->writeCharacters(ch, start, length);
 		}
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
 
 void SAX2StAXStreamWriter::endCDATA() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->writer)->writeCData($($nc(this->CDATABuffer)->toString()));
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	$SAX2StAXBaseWriter::endCDATA();
@@ -229,8 +210,7 @@ void SAX2StAXStreamWriter::ignorableWhitespace($chars* ch, int32_t start, int32_
 	$SAX2StAXBaseWriter::ignorableWhitespace(ch, start, length);
 	try {
 		$nc(this->writer)->writeCharacters(ch, start, length);
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -239,8 +219,7 @@ void SAX2StAXStreamWriter::processingInstruction($String* target, $String* data)
 	$SAX2StAXBaseWriter::processingInstruction(target, data);
 	try {
 		$nc(this->writer)->writeProcessingInstruction(target, data);
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -249,8 +228,7 @@ void SAX2StAXStreamWriter::writeStartDocument() {
 	$SAX2StAXBaseWriter::writeStartDocument();
 	try {
 		$nc(this->writer)->writeStartDocument(this->xmlVersion);
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	this->needToCallStartDocument = false;

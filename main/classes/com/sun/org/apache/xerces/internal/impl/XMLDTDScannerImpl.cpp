@@ -31,17 +31,6 @@
 #include <com/sun/xml/internal/stream/XMLEntityStorage.h>
 #include <com/sun/xml/internal/stream/dtd/nonvalidating/DTDGrammar.h>
 #include <java/io/EOFException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ATTRIBUTENAME
@@ -254,13 +243,9 @@ void XMLDTDScannerImpl::finalize() {
 	this->$XMLScanner::finalize();
 }
 
-
 $StringArray* XMLDTDScannerImpl::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLDTDScannerImpl::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLDTDScannerImpl::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLDTDScannerImpl::PROPERTY_DEFAULTS = nullptr;
 
 void XMLDTDScannerImpl::init$() {
@@ -1537,12 +1522,12 @@ $DTDGrammar* XMLDTDScannerImpl::getGrammar() {
 }
 
 void clinit$XMLDTDScannerImpl($Class* class$) {
-		$init($XMLScanner);
+	$init($XMLScanner);
 	$assignStatic(XMLDTDScannerImpl::RECOGNIZED_FEATURES, $new($StringArray, {
 		$XMLScanner::VALIDATION,
 		$XMLScanner::NOTIFY_CHAR_REFS
 	}));
-		$init($Boolean);
+	$init($Boolean);
 	$assignStatic(XMLDTDScannerImpl::FEATURE_DEFAULTS, $new($BooleanArray, {
 		($Boolean*)nullptr,
 		$Boolean::FALSE

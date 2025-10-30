@@ -34,8 +34,10 @@ public:
 	void init$($String* message, ::javax::xml::transform::SourceLocator* locator, $Throwable* e);
 	static const int64_t serialVersionUID = (int64_t)0x11D72E9C68A35261;
 	TransformerConfigurationException(const TransformerConfigurationException& e);
-	TransformerConfigurationException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline TransformerConfigurationException* operator ->() {
+		return (TransformerConfigurationException*)throwing$;
+	}
 };
 
 		} // transform

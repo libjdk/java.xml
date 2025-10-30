@@ -18,13 +18,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -131,7 +124,7 @@ $Type* NameBase::typeCheck($SymbolTable* stable) {
 	if ((this->_paramType != $Type::NodeSet) && (this->_paramType != $Type::Node) && (this->_paramType != $Type::Reference)) {
 		$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 	}
-	return ($assignField(this, _type, $Type::String));
+	return ($set(this, _type, $Type::String));
 }
 
 $Type* NameBase::getType() {

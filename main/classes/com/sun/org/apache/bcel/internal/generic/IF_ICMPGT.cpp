@@ -7,12 +7,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/InstructionHandle.h>
 #include <com/sun/org/apache/bcel/internal/generic/StackConsumer.h>
 #include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef IF_ICMPGT

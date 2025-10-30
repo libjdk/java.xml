@@ -18,16 +18,6 @@
 #include <java/io/CharConversionException.h>
 #include <java/io/EOFException.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/events/XMLEvent.h>
 #include <jcpp.h>
 
@@ -273,19 +263,16 @@ int32_t XMLDocumentScannerImpl$PrologDriver::next() {
 				}
 			}
 		}
-	} catch ($MalformedByteSequenceException&) {
-		$var($MalformedByteSequenceException, e, $catch());
+	} catch ($MalformedByteSequenceException& e) {
 		$var($String, var$1, e->getDomain());
 		$var($String, var$2, e->getKey());
 		$nc(this->this$0->fErrorReporter)->reportError(var$1, var$2, $(e->getArguments()), $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
 		return -1;
-	} catch ($CharConversionException&) {
-		$var($CharConversionException, e, $catch());
+	} catch ($CharConversionException& e) {
 		$init($XMLMessageFormatter);
 		$nc(this->this$0->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "CharConversionFailure"_s, ($ObjectArray*)nullptr, $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
 		return -1;
-	} catch ($EOFException&) {
-		$var($EOFException, e, $catch());
+	} catch ($EOFException& e) {
 		this->this$0->reportFatalError("PrematureEOF"_s, nullptr);
 		return -1;
 	}

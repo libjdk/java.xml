@@ -1,15 +1,6 @@
 #include <com/sun/org/apache/bcel/internal/Const.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/Iterable.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Arrays.h>
 #include <java/util/Collection.h>
 #include <java/util/Collections.h>
@@ -874,43 +865,25 @@ $Object* allocate$Const($Class* clazz) {
 	return $of($alloc(Const));
 }
 
-
 $StringArray* Const::ACCESS_NAMES = nullptr;
-
 int32_t Const::ACCESS_NAMES_LENGTH = 0;
-
 $StringArray* Const::CONSTANT_NAMES = nullptr;
-
 $String* Const::STATIC_INITIALIZER_NAME = nullptr;
-
 $String* Const::CONSTRUCTOR_NAME = nullptr;
-
 $StringArray* Const::INTERFACES_IMPLEMENTED_BY_ARRAYS = nullptr;
-
 $String* Const::ILLEGAL_OPCODE = nullptr;
-
 $String* Const::ILLEGAL_TYPE = nullptr;
-
 $StringArray* Const::TYPE_NAMES = nullptr;
-
 $StringArray* Const::CLASS_TYPE_NAMES = nullptr;
-
 $StringArray* Const::SHORT_TYPE_NAMES = nullptr;
-
 $shorts* Const::NO_OF_OPERANDS = nullptr;
-
 $shortArray2* Const::TYPE_OF_OPERANDS = nullptr;
-
 $StringArray* Const::OPCODE_NAMES = nullptr;
-
 int32_t Const::OPCODE_NAMES_LENGTH = 0;
-
 $ints* Const::CONSUME_STACK = nullptr;
-
 $ints* Const::PRODUCE_STACK = nullptr;
 $StringArray* Const::ATTRIBUTE_NAMES = nullptr;
 $StringArray* Const::ITEM_NAMES = nullptr;
-
 $StringArray* Const::METHODHANDLE_NAMES = nullptr;
 
 $String* Const::getAccessName(int32_t index) {

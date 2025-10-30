@@ -17,19 +17,7 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/MsgKey.h>
 #include <com/sun/org/apache/xml/internal/serializer/utils/Utils.h>
 #include <java/io/IOException.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <javax/xml/transform/Result.h>
@@ -130,7 +118,6 @@ $Object* allocate$ToXMLStream($Class* clazz) {
 	return $of($alloc(ToXMLStream));
 }
 
-
 $CharInfo* ToXMLStream::m_xmlcharInfo = nullptr;
 
 void ToXMLStream::init$() {
@@ -209,8 +196,7 @@ void ToXMLStream::startDocumentInternal() {
 						writer->write(this->m_lineSep, 0, this->m_lineSepLen);
 					}
 				}
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
 		}
@@ -225,8 +211,7 @@ void ToXMLStream::endDocument() {
 	if (this->m_doIndent && !this->m_isprevtext) {
 		try {
 			outputLineSep();
-		} catch ($IOException&) {
-			$var($IOException, e, $catch());
+		} catch ($IOException& e) {
 			$throwNew($SAXException, static_cast<$Exception*>(e));
 		}
 	}
@@ -294,8 +279,7 @@ void ToXMLStream::processingInstruction($String* target, $String* data) {
 					writer->write(this->m_lineSep, 0, this->m_lineSepLen);
 				}
 				this->m_startNewLine = true;
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
 		}
@@ -306,7 +290,6 @@ void ToXMLStream::processingInstruction($String* target, $String* data) {
 }
 
 void ToXMLStream::entityReference($String* name) {
-	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_elemContext)->m_startTagOpen) {
 		closeStartTag();
 		$nc(this->m_elemContext)->m_startTagOpen = false;
@@ -319,8 +302,7 @@ void ToXMLStream::entityReference($String* name) {
 		$nc(writer)->write((int32_t)u'&');
 		writer->write(name);
 		writer->write((int32_t)u';');
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	if (this->m_tracer != nullptr) {
@@ -347,8 +329,7 @@ void ToXMLStream::addUniqueAttribute($String* name, $String* value, int32_t flag
 				writeAttrString(writer, value, $(this->getEncoding()));
 				writer->write((int32_t)u'\"');
 			}
-		} catch ($IOException&) {
-			$var($IOException, e, $catch());
+		} catch ($IOException& e) {
 			$throwNew($SAXException, static_cast<$Exception*>(e));
 		}
 	}
@@ -376,11 +357,9 @@ void ToXMLStream::addAttribute($String* uri, $String* localName, $String* rawNam
 			if (nullptr != errHandler && this->m_sourceLocator != nullptr) {
 				errHandler->warning($$new($TransformerException, msg, this->m_sourceLocator));
 			} else {
-				$init($System);
 				$nc($System::out)->println(msg);
 			}
-		} catch ($Exception&) {
-			$catch();
+		} catch ($Exception& e) {
 		}
 	}
 }
@@ -407,8 +386,7 @@ bool ToXMLStream::pushNamespace($String* prefix, $String* uri) {
 			startPrefixMapping(prefix, uri);
 			return true;
 		}
-	} catch ($SAXException&) {
-		$catch();
+	} catch ($SAXException& e) {
 	}
 	return false;
 }
@@ -445,11 +423,9 @@ $String* ToXMLStream::getXMLVersion() {
 				if (nullptr != errHandler && this->m_sourceLocator != nullptr) {
 					errHandler->warning($$new($TransformerException, msg, this->m_sourceLocator));
 				} else {
-					$init($System);
 					$nc($System::out)->println(msg);
 				}
-			} catch ($Exception&) {
-				$catch();
+			} catch ($Exception& e) {
 			}
 			$assign(xmlVersion, $SerializerConstants::XMLVERSION10);
 		}

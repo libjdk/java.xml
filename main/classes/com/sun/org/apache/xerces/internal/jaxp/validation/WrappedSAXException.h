@@ -30,8 +30,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0xD3904282EC4DA316;
 	::org::xml::sax::SAXException* exception = nullptr;
 	WrappedSAXException(const WrappedSAXException& e);
-	WrappedSAXException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline WrappedSAXException* operator ->() {
+		return (WrappedSAXException*)throwing$;
+	}
 };
 
 							} // validation

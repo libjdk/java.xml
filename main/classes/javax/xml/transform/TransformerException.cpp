@@ -2,31 +2,18 @@
 
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
 #include <java/lang/ReflectiveOperationException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/InvocationTargetException.h>
 #include <java/lang/reflect/Method.h>
 #include <java/net/URL.h>
@@ -262,7 +249,6 @@ $String* TransformerException::getLocationString() {
 }
 
 void TransformerException::printStackTrace() {
-	$init($System);
 	printStackTrace($$new($PrintWriter, static_cast<$OutputStream*>($System::err), true));
 }
 
@@ -275,7 +261,6 @@ void TransformerException::printStackTrace($PrintWriter* s$renamed) {
 	$var($PrintWriter, s, s$renamed);
 	$beforeCallerSensitive();
 	if (s == nullptr) {
-		$init($System);
 		$assign(s, $new($PrintWriter, static_cast<$OutputStream*>($System::err), true));
 	}
 	{
@@ -287,8 +272,7 @@ void TransformerException::printStackTrace($PrintWriter* s$renamed) {
 					$nc(s)->println(locInfo);
 				}
 				$Exception::printStackTrace(s);
-			} catch ($Throwable&) {
-				$catch();
+			} catch ($Throwable& e) {
 			}
 			$var($Throwable, exception, getException());
 			for (int32_t i = 0; (i < 10) && (nullptr != exception); ++i) {
@@ -298,8 +282,7 @@ void TransformerException::printStackTrace($PrintWriter* s$renamed) {
 					if ($instanceOf(TransformerException, exception)) {
 						break;
 					}
-				} catch ($Throwable&) {
-					$var($Throwable, e, $catch());
+				} catch ($Throwable& e) {
 					s->println("Could not print stack trace..."_s);
 				}
 				try {
@@ -313,19 +296,16 @@ void TransformerException::printStackTrace($PrintWriter* s$renamed) {
 					} else {
 						$assign(exception, nullptr);
 					}
-				} catch ($InvocationTargetException&) {
-					$var($ReflectiveOperationException, e, $catch());
+				} catch ($InvocationTargetException& e) {
 					$assign(exception, nullptr);
-				} catch ($IllegalAccessException&) {
-					$var($ReflectiveOperationException, e, $catch());
+				} catch ($IllegalAccessException& e) {
 					$assign(exception, nullptr);
-				} catch ($NoSuchMethodException&) {
-					$var($ReflectiveOperationException, e, $catch());
+				} catch ($NoSuchMethodException& e) {
 					$assign(exception, nullptr);
 				}
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$nc(s)->flush();
 		}
@@ -349,16 +329,10 @@ $String* TransformerException::lambda$getLocationAsString$0() {
 TransformerException::TransformerException() {
 }
 
-TransformerException::TransformerException(const TransformerException& e) {
+TransformerException::TransformerException(const TransformerException& e) : $Exception(e) {
 }
 
-TransformerException TransformerException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void TransformerException::throwWrapper$() {
-	$pendingException(this);
+void TransformerException::throw$() {
 	throw *this;
 }
 

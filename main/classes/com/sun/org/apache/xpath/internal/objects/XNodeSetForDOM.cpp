@@ -6,13 +6,6 @@
 #include <com/sun/org/apache/xpath/internal/axes/NodeSequence.h>
 #include <com/sun/org/apache/xpath/internal/objects/XNodeSet.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Node.h>
 #include <org/w3c/dom/NodeList.h>
 #include <org/w3c/dom/traversal/NodeIterator.h>

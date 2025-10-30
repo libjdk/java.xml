@@ -5,15 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/dom/NodeImpl.h>
 #include <java/io/ObjectInputStream.h>
 #include <java/io/ObjectOutputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractCollection.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
@@ -488,8 +479,8 @@ void NamedNodeMapImpl::writeObject($ObjectOutputStream* out) {
 				$set(this, nodes, $new($Vector, static_cast<$Collection*>(oldNodes)));
 			}
 			$nc(out)->defaultWriteObject();
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$set(this, nodes, oldNodes);
 		}

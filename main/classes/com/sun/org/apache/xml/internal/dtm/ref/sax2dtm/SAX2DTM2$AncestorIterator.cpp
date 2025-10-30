@@ -11,17 +11,7 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2.h>
 #include <com/sun/org/apache/xml/internal/res/XMLErrorResources.h>
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef END
@@ -128,8 +118,7 @@ $DTMAxisIterator* SAX2DTM2$AncestorIterator::cloneIterator() {
 		$var(SAX2DTM2$AncestorIterator, clone, $cast(SAX2DTM2$AncestorIterator, $DTMDefaultBaseIterators$InternalAxisIteratorBase::clone()));
 		$nc(clone)->_startNode = this->_startNode;
 		return clone;
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$init($XMLErrorResources);
 		$throwNew($DTMException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_ITERATOR_CLONE_NOT_SUPPORTED, nullptr)));
 	}

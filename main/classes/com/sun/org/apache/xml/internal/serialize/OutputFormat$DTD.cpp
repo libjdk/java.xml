@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serialize/OutputFormat$DTD.h>
 
 #include <com/sun/org/apache/xml/internal/serialize/OutputFormat.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
@@ -63,13 +55,9 @@ $Object* allocate$OutputFormat$DTD($Class* clazz) {
 	return $of($alloc(OutputFormat$DTD));
 }
 
-
 $String* OutputFormat$DTD::HTMLPublicId = nullptr;
-
 $String* OutputFormat$DTD::HTMLSystemId = nullptr;
-
 $String* OutputFormat$DTD::XHTMLPublicId = nullptr;
-
 $String* OutputFormat$DTD::XHTMLSystemId = nullptr;
 
 void OutputFormat$DTD::init$() {

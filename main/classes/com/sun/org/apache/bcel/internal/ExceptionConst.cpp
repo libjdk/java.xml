@@ -3,37 +3,23 @@
 #include <com/sun/org/apache/bcel/internal/ExceptionConst$1.h>
 #include <com/sun/org/apache/bcel/internal/ExceptionConst$EXCS.h>
 #include <java/lang/AbstractMethodError.h>
-#include <java/lang/ArithmeticException.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
 #include <java/lang/AssertionError.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
 #include <java/lang/ClassCircularityError.h>
 #include <java/lang/ClassFormatError.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ExceptionInInitializerError.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessError.h>
 #include <java/lang/IllegalMonitorStateException.h>
 #include <java/lang/IncompatibleClassChangeError.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InstantiationError.h>
 #include <java/lang/LinkageError.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NegativeArraySizeException.h>
 #include <java/lang/NoClassDefFoundError.h>
 #include <java/lang/NoSuchFieldError.h>
 #include <java/lang/NoSuchMethodError.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/UnsatisfiedLinkError.h>
 #include <java/lang/VerifyError.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ABSTRACT_METHOD_ERROR
@@ -161,13 +147,9 @@ $Object* allocate$ExceptionConst($Class* clazz) {
 	return $of($alloc(ExceptionConst));
 }
 
-
 $Class* ExceptionConst::THROWABLE = nullptr;
-
 $Class* ExceptionConst::RUNTIME_EXCEPTION = nullptr;
-
 $Class* ExceptionConst::LINKING_EXCEPTION = nullptr;
-
 $Class* ExceptionConst::CLASS_CIRCULARITY_ERROR = nullptr;
 $Class* ExceptionConst::CLASS_FORMAT_ERROR = nullptr;
 $Class* ExceptionConst::EXCEPTION_IN_INITIALIZER_ERROR = nullptr;
@@ -180,14 +162,12 @@ $Class* ExceptionConst::NO_SUCH_METHOD_ERROR = nullptr;
 $Class* ExceptionConst::NO_CLASS_DEF_FOUND_ERROR = nullptr;
 $Class* ExceptionConst::UNSATISFIED_LINK_ERROR = nullptr;
 $Class* ExceptionConst::VERIFY_ERROR = nullptr;
-
 $Class* ExceptionConst::NULL_POINTER_EXCEPTION = nullptr;
 $Class* ExceptionConst::ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION = nullptr;
 $Class* ExceptionConst::ARITHMETIC_EXCEPTION = nullptr;
 $Class* ExceptionConst::NEGATIVE_ARRAY_SIZE_EXCEPTION = nullptr;
 $Class* ExceptionConst::CLASS_CAST_EXCEPTION = nullptr;
 $Class* ExceptionConst::ILLEGAL_MONITOR_STATE = nullptr;
-
 $ClassArray* ExceptionConst::EXCS_CLASS_AND_INTERFACE_RESOLUTION = nullptr;
 $ClassArray* ExceptionConst::EXCS_FIELD_AND_METHOD_RESOLUTION = nullptr;
 $ClassArray* ExceptionConst::EXCS_INTERFACE_METHOD_RESOLUTION = nullptr;
@@ -240,7 +220,6 @@ $ClassArray* ExceptionConst::createExceptions($ExceptionConst$EXCS* type, $Class
 }
 
 void clinit$ExceptionConst($Class* class$) {
-	$load($Throwable);
 	$assignStatic(ExceptionConst::THROWABLE, $Throwable::class$);
 	$load($RuntimeException);
 	$assignStatic(ExceptionConst::RUNTIME_EXCEPTION, $RuntimeException::class$);

@@ -1,15 +1,6 @@
 #include <javax/xml/catalog/CatalogResolverImpl$1.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/EnclosingMethodInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/NoSuchFieldError.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/catalog/CatalogResolverImpl.h>
 #include <javax/xml/catalog/GroupEntry$ResolveType.h>
 #include <javax/xml/catalog/GroupEntry.h>
@@ -76,13 +67,11 @@ void clinit$CatalogResolverImpl$1($Class* class$) {
 	{
 		try {
 			$nc(CatalogResolverImpl$1::$SwitchMap$javax$xml$catalog$GroupEntry$ResolveType)->set($GroupEntry$ResolveType::IGNORE->ordinal(), 1);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogResolverImpl$1::$SwitchMap$javax$xml$catalog$GroupEntry$ResolveType)->set($GroupEntry$ResolveType::STRICT->ordinal(), 2);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 	}
 }

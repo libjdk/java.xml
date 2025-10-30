@@ -28,33 +28,13 @@
 #include <com/sun/org/apache/xml/internal/serializer/NamespaceMappings.h>
 #include <com/sun/org/apache/xml/internal/serializer/SerializationHandler.h>
 #include <com/sun/org/apache/xml/internal/utils/XML11Char.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
 #include <java/lang/ThreadLocal.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/DecimalFormat.h>
 #include <java/text/DecimalFormatSymbols.h>
 #include <java/text/FieldPosition.h>
@@ -355,18 +335,14 @@ $Object* allocate$BasisLibrary($Class* clazz) {
 }
 
 $String* BasisLibrary::EMPTYSTRING = nullptr;
-
 $ThreadLocal* BasisLibrary::threadLocalStringBuilder = nullptr;
-
 $ThreadLocal* BasisLibrary::threadLocalStringBuffer = nullptr;
 double BasisLibrary::lowerBounds = 0.0;
 double BasisLibrary::upperBounds = 0.0;
 $DecimalFormat* BasisLibrary::defaultFormatter = nullptr;
 $DecimalFormat* BasisLibrary::xpathFormatter = nullptr;
 $String* BasisLibrary::defaultPattern = nullptr;
-
 $FieldPosition* BasisLibrary::_fieldPosition = nullptr;
-
 $chars* BasisLibrary::_characterArray = nullptr;
 $ThreadLocal* BasisLibrary::threadLocalPrefixIndex = nullptr;
 $String* BasisLibrary::RUN_TIME_INTERNAL_ERR = nullptr;
@@ -426,8 +402,7 @@ double BasisLibrary::sumF($DTMAxisIterator* iterator, $DOM* dom) {
 			result += $Double::parseDouble($($nc(dom)->getStringValueX(node)));
 		}
 		return result;
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		$init($Double);
 		return $Double::NaN;
 	}
@@ -555,8 +530,7 @@ $String* BasisLibrary::substringF($String* value, double start) {
 	try {
 		istart = $nc(value)->offsetByCodePoints(0, istart);
 		return value->substring(istart);
-	} catch ($IndexOutOfBoundsException&) {
-		$var($IndexOutOfBoundsException, e, $catch());
+	} catch ($IndexOutOfBoundsException& e) {
 		runTimeError(BasisLibrary::RUN_TIME_INTERNAL_ERR, $of("substring()"_s));
 		return nullptr;
 	}
@@ -594,8 +568,7 @@ $String* BasisLibrary::substringF($String* value, double start, double length) {
 			int32_t offset = value->offsetByCodePoints(istart, ilength);
 			return value->substring(istart, offset);
 		}
-	} catch ($IndexOutOfBoundsException&) {
-		$var($IndexOutOfBoundsException, e, $catch());
+	} catch ($IndexOutOfBoundsException& e) {
 		runTimeError(BasisLibrary::RUN_TIME_INTERNAL_ERR, $of("substring()"_s));
 		return nullptr;
 	}
@@ -1134,11 +1107,9 @@ bool BasisLibrary::hasSimpleType(Object$* obj) {
 
 double BasisLibrary::stringToReal($String* s) {
 	$init(BasisLibrary);
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc($($Double::valueOf(s)))->doubleValue();
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		$init($Double);
 		return $Double::NaN;
 	}
@@ -1149,8 +1120,7 @@ int32_t BasisLibrary::stringToInt($String* s) {
 	$init(BasisLibrary);
 	try {
 		return $Integer::parseInt(s);
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		return (-1);
 	}
 	$shouldNotReachHere();
@@ -1202,8 +1172,7 @@ $String* BasisLibrary::formatNumber(double number, $String* pattern, $DecimalFor
 		}
 		$nc(formatter)->format(number, result, BasisLibrary::_fieldPosition);
 		return result->toString();
-	} catch ($IllegalArgumentException&) {
-		$var($IllegalArgumentException, e, $catch());
+	} catch ($IllegalArgumentException& e) {
 		runTimeError(BasisLibrary::FORMAT_NUMBER_ERR, $($Double::toString(number)), pattern);
 		return (BasisLibrary::EMPTYSTRING);
 	}
@@ -1308,7 +1277,6 @@ $String* BasisLibrary::referenceToString(Object$* obj, $DOM* dom) {
 		return $nc(($cast($DOM, obj)))->getStringValue();
 	} else {
 		$var($String, className, $nc($of(obj))->getClass()->getName());
-		$load($String);
 		runTimeError(BasisLibrary::DATA_CONVERSION_ERR, className, $String::class$);
 		return nullptr;
 	}
@@ -1343,7 +1311,6 @@ $DTMAxisIterator* BasisLibrary::nodeList2IteratorUsingHandleFromNode($NodeList* 
 			return nullptr;
 		}
 		dtmHandles->set(i, handle);
-		$init($System);
 		$nc($System::out)->println($$str({"Node "_s, $$str(i), " has handle 0x"_s, $($Integer::toString(handle, 16))}));
 	}
 	return $new($ArrayNodeListIterator, dtmHandles);
@@ -1369,8 +1336,7 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 			if (!isOurDOM && dtmManager != nullptr) {
 				try {
 					isOurDOM = (nodeDTM == dtmManager->getDTM(handle));
-				} catch ($ArrayIndexOutOfBoundsException&) {
-					$catch();
+				} catch ($ArrayIndexOutOfBoundsException& e) {
 				}
 			}
 			if (isOurDOM) {
@@ -1389,8 +1355,7 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 			try {
 				$var($AbstractTranslet, at, $cast($AbstractTranslet, translet));
 				$assign(doc, $nc(at)->newDocument(""_s, "__top__"_s));
-			} catch ($ParserConfigurationException&) {
-				$var($ParserConfigurationException, e, $catch());
+			} catch ($ParserConfigurationException& e) {
 				runTimeError(BasisLibrary::RUN_TIME_INTERNAL_ERR, $($of(e->getMessage())));
 				return nullptr;
 			}
@@ -1504,11 +1469,9 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 
 $DOM* BasisLibrary::referenceToResultTree(Object$* obj) {
 	$init(BasisLibrary);
-	$useLocalCurrentObjectStackCache();
 	try {
 		return ($cast($DOM, obj));
-	} catch ($IllegalArgumentException&) {
-		$var($IllegalArgumentException, e, $catch());
+	} catch ($IllegalArgumentException& e) {
 		$var($String, className, $nc($of(obj))->getClass()->getName());
 		runTimeError(BasisLibrary::DATA_CONVERSION_ERR, "reference"_s, className);
 		return nullptr;
@@ -1543,8 +1506,7 @@ void BasisLibrary::copy(Object$* obj, $SerializationHandler* handler, int32_t no
 			string->getChars(0, length, BasisLibrary::_characterArray, 0);
 			$nc(handler)->characters(BasisLibrary::_characterArray, 0, length);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		runTimeError(BasisLibrary::RUN_TIME_COPY_ERR);
 	}
 }
@@ -1601,8 +1563,7 @@ $String* BasisLibrary::startXslElement($String* qname$renamed, $String* namespac
 			if (namespace$ == nullptr || $nc(namespace$)->length() == 0) {
 				try {
 					$assign(namespace$, $nc(dom)->lookupNamespace(node, prefix));
-				} catch ($RuntimeException&) {
-					$var($RuntimeException, e, $catch());
+				} catch ($RuntimeException& e) {
 					$nc(handler)->flushPending();
 					$var($NamespaceMappings, nm, handler->getNamespaceMappings());
 					$assign(namespace$, $nc(nm)->lookupNamespace(prefix));
@@ -1621,8 +1582,7 @@ $String* BasisLibrary::startXslElement($String* qname$renamed, $String* namespac
 		} else {
 			$nc(handler)->startElement(nullptr, nullptr, qname);
 		}
-	} catch ($SAXException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($RuntimeException, $(e->getMessage()));
 	}
 	return qname;
@@ -1672,7 +1632,6 @@ void BasisLibrary::runTimeError($String* code, Object$* arg0, Object$* arg1) {
 
 void BasisLibrary::consoleOutput($String* msg) {
 	$init(BasisLibrary);
-	$init($System);
 	$nc($System::out)->println(msg);
 }
 

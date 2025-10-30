@@ -17,16 +17,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XNodeSet.h>
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/SourceLocator.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jdk/xml/internal/JdkXmlUtils.h>
@@ -147,8 +137,7 @@ double ExsltDynamic::max($ExpressionContext* myContext, $NodeList* nl, $String* 
 			$var($SourceLocator, var$1, xctxt->getSAXLocator());
 			$var($XPath, dynamicXPath, $new($XPath, var$0, var$1, $(xctxt->getNamespaceContext()), $XPath::SELECT));
 			result = $nc($(dynamicXPath->execute(xctxt, contextNode, $(xctxt->getNamespaceContext()))))->num();
-		} catch ($TransformerException&) {
-			$var($TransformerException, e, $catch());
+		} catch ($TransformerException& e) {
 			xctxt->popCurrentNode();
 			xctxt->popContextNodeList();
 			return $Double::NaN;
@@ -189,8 +178,7 @@ double ExsltDynamic::min($ExpressionContext* myContext, $NodeList* nl, $String* 
 			$var($SourceLocator, var$1, xctxt->getSAXLocator());
 			$var($XPath, dynamicXPath, $new($XPath, var$0, var$1, $(xctxt->getNamespaceContext()), $XPath::SELECT));
 			result = $nc($(dynamicXPath->execute(xctxt, contextNode, $(xctxt->getNamespaceContext()))))->num();
-		} catch ($TransformerException&) {
-			$var($TransformerException, e, $catch());
+		} catch ($TransformerException& e) {
 			xctxt->popCurrentNode();
 			xctxt->popContextNodeList();
 			return $Double::NaN;
@@ -230,8 +218,7 @@ double ExsltDynamic::sum($ExpressionContext* myContext, $NodeList* nl, $String* 
 			$var($SourceLocator, var$1, xctxt->getSAXLocator());
 			$var($XPath, dynamicXPath, $new($XPath, var$0, var$1, $(xctxt->getNamespaceContext()), $XPath::SELECT));
 			result = $nc($(dynamicXPath->execute(xctxt, contextNode, $(xctxt->getNamespaceContext()))))->num();
-		} catch ($TransformerException&) {
-			$var($TransformerException, e, $catch());
+		} catch ($TransformerException& e) {
 			xctxt->popCurrentNode();
 			xctxt->popContextNodeList();
 			$init($Double);
@@ -296,8 +283,7 @@ $NodeList* ExsltDynamic::map($ExpressionContext* myContext, $NodeList* nl, $Stri
 				$nc(element)->appendChild(textNode);
 				resultSet->addNode(element);
 			}
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			xctxt->popCurrentNode();
 			xctxt->popContextNodeList();
 			return $new($NodeSet);
@@ -321,8 +307,7 @@ $XObject* ExsltDynamic::evaluate($ExpressionContext* myContext, $String* xpathEx
 			$var($XPathContext, var$2, xctxt);
 			$var($Node, var$3, $nc(myContext)->getContextNode());
 			return dynamicXPath->execute(var$2, var$3, $($nc(xctxt)->getNamespaceContext()));
-		} catch ($TransformerException&) {
-			$var($TransformerException, e, $catch());
+		} catch ($TransformerException& e) {
 			return $new($XNodeSet, $($nc(xctxt)->getDTMManager()));
 		}
 	} else {
@@ -375,8 +360,7 @@ $NodeList* ExsltDynamic::closure($ExpressionContext* myContext, $NodeList* nl, $
 					xctxt->popContextNodeList();
 					return $new($NodeSet);
 				}
-			} catch ($TransformerException&) {
-				$var($TransformerException, e, $catch());
+			} catch ($TransformerException& e) {
 				xctxt->popCurrentNode();
 				xctxt->popContextNodeList();
 				return $new($NodeSet);

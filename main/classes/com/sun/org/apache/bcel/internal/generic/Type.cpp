@@ -10,32 +10,10 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type$1.h>
 #include <com/sun/org/apache/bcel/internal/generic/Type$2.h>
 #include <com/sun/org/apache/bcel/internal/generic/Type$3.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Byte.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Float.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/Short.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
 #include <java/lang/StringIndexOutOfBoundsException.h>
 #include <java/lang/ThreadLocal.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/Void.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
@@ -194,7 +172,6 @@ $Object* allocate$Type($Class* clazz) {
 	return $of($alloc(Type));
 }
 
-
 $BasicType* Type::VOID = nullptr;
 $BasicType* Type::BOOLEAN = nullptr;
 $BasicType* Type::INT = nullptr;
@@ -330,8 +307,7 @@ Type* Type::getReturnType($String* signature) {
 	try {
 		int32_t index = $nc(signature)->lastIndexOf((int32_t)u')') + 1;
 		return getType($(signature->substring(index)));
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	$shouldNotReachHere();
@@ -352,8 +328,7 @@ $TypeArray* Type::getArgumentTypes($String* signature) {
 			vec->add($(getType($(signature->substring(index)))));
 			index += unwrap(Type::consumed_chars);
 		}
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	$assign(types, $new($TypeArray, vec->size()));
@@ -486,8 +461,7 @@ int32_t Type::getArgumentTypesSize($String* signature) {
 			res += size(coded);
 			index += consumed(coded);
 		}
-	} catch ($StringIndexOutOfBoundsException&) {
-		$var($StringIndexOutOfBoundsException, e, $catch());
+	} catch ($StringIndexOutOfBoundsException& e) {
 		$throwNew($ClassFormatException, $$str({"Invalid method signature: "_s, signature}), e);
 	}
 	return res;

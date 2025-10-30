@@ -28,8 +28,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0x705A6C30A8815C60;
 	::java::lang::Exception* exception = nullptr;
 	ConfigurationError(const ConfigurationError& e);
-	ConfigurationError wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline ConfigurationError* operator ->() {
+		return (ConfigurationError*)throwing$;
+	}
 };
 
 						} // utils

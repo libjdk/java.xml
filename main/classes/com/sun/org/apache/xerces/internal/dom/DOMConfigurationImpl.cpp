@@ -29,18 +29,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLEntityResolver.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -418,67 +406,39 @@ void DOMConfigurationImpl::finalize() {
 }
 
 $String* DOMConfigurationImpl::XML11_DATATYPE_VALIDATOR_FACTORY = nullptr;
-
 $String* DOMConfigurationImpl::XERCES_VALIDATION = nullptr;
-
 $String* DOMConfigurationImpl::XERCES_NAMESPACES = nullptr;
 $String* DOMConfigurationImpl::SCHEMA = nullptr;
 $String* DOMConfigurationImpl::SCHEMA_FULL_CHECKING = nullptr;
 $String* DOMConfigurationImpl::DYNAMIC_VALIDATION = nullptr;
 $String* DOMConfigurationImpl::NORMALIZE_DATA = nullptr;
-
 $String* DOMConfigurationImpl::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* DOMConfigurationImpl::SEND_PSVI = nullptr;
-
 $String* DOMConfigurationImpl::GENERATE_SYNTHETIC_ANNOTATIONS = nullptr;
-
 $String* DOMConfigurationImpl::VALIDATE_ANNOTATIONS = nullptr;
-
 $String* DOMConfigurationImpl::HONOUR_ALL_SCHEMALOCATIONS = nullptr;
-
 $String* DOMConfigurationImpl::USE_GRAMMAR_POOL_ONLY = nullptr;
-
 $String* DOMConfigurationImpl::DISALLOW_DOCTYPE_DECL_FEATURE = nullptr;
-
 $String* DOMConfigurationImpl::BALANCE_SYNTAX_TREES = nullptr;
-
 $String* DOMConfigurationImpl::WARN_ON_DUPLICATE_ATTDEF = nullptr;
-
 $String* DOMConfigurationImpl::NAMESPACE_GROWTH = nullptr;
 $String* DOMConfigurationImpl::TOLERATE_DUPLICATES = nullptr;
-
 $String* DOMConfigurationImpl::ENTITY_MANAGER = nullptr;
-
 $String* DOMConfigurationImpl::ERROR_REPORTER = nullptr;
-
 $String* DOMConfigurationImpl::XML_STRING = nullptr;
-
 $String* DOMConfigurationImpl::SYMBOL_TABLE = nullptr;
-
 $String* DOMConfigurationImpl::GRAMMAR_POOL = nullptr;
-
 $String* DOMConfigurationImpl::ERROR_HANDLER = nullptr;
-
 $String* DOMConfigurationImpl::ENTITY_RESOLVER = nullptr;
-
 $String* DOMConfigurationImpl::JAXP_SCHEMA_LANGUAGE = nullptr;
-
 $String* DOMConfigurationImpl::JAXP_SCHEMA_SOURCE = nullptr;
-
 $String* DOMConfigurationImpl::DTD_VALIDATOR_PROPERTY = nullptr;
-
 $String* DOMConfigurationImpl::DTD_VALIDATOR_FACTORY_PROPERTY = nullptr;
 $String* DOMConfigurationImpl::VALIDATION_MANAGER = nullptr;
-
 $String* DOMConfigurationImpl::SCHEMA_LOCATION = nullptr;
-
 $String* DOMConfigurationImpl::SCHEMA_NONS_LOCATION = nullptr;
-
 $String* DOMConfigurationImpl::SCHEMA_DV_FACTORY = nullptr;
-
 $String* DOMConfigurationImpl::SECURITY_MANAGER = nullptr;
-
 $String* DOMConfigurationImpl::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 
 void DOMConfigurationImpl::init$() {
@@ -498,9 +458,9 @@ void DOMConfigurationImpl::init$($SymbolTable* symbolTable$renamed, $XMLComponen
 	$set(this, fSchemaLocation, nullptr);
 	$set(this, fFeatures, $new($HashMap));
 	$set(this, fProperties, $new($HashMap));
-		$init($ParserConfigurationSettings);
-		$init($XMLConstants);
-		$init($JdkConstants);
+	$init($ParserConfigurationSettings);
+	$init($XMLConstants);
+	$init($JdkConstants);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		DOMConfigurationImpl::XERCES_VALIDATION,
 		DOMConfigurationImpl::XERCES_NAMESPACES,
@@ -607,8 +567,7 @@ void DOMConfigurationImpl::init$($SymbolTable* symbolTable$renamed, $XMLComponen
 		$var($MessageFormatter, xmft, nullptr);
 		try {
 			$assign(xmft, $new($XSMessageFormatter));
-		} catch ($Exception&) {
-			$catch();
+		} catch ($Exception& exception) {
 		}
 		if (xmft != nullptr) {
 			$nc(this->fErrorReporter)->putMessageFormatter("http://www.w3.org/TR/xml-schema-1"_s, xmft);
@@ -616,8 +575,7 @@ void DOMConfigurationImpl::init$($SymbolTable* symbolTable$renamed, $XMLComponen
 	}
 	try {
 		setLocale($($Locale::getDefault()));
-	} catch ($XNIException&) {
-		$catch();
+	} catch ($XNIException& e) {
 	}
 	{
 		$var($CatalogFeatures$FeatureArray, arr$, $CatalogFeatures$Feature::values());
@@ -795,8 +753,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 				if ($instanceOf($LSResourceResolver, value) || value == nullptr) {
 					try {
 						setEntityResolver($$new($DOMEntityResolverWrapper, $cast($LSResourceResolver, value)));
-					} catch ($XMLConfigurationException&) {
-						$catch();
+					} catch ($XMLConfigurationException& e) {
 					}
 				} else {
 					$throw($(newTypeMismatchError(name)));
@@ -822,8 +779,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 									setProperty($$str({$Constants::JAXP_PROPERTY_PREFIX, $Constants::SCHEMA_SOURCE}), $$new($StringArray, {$cast($String, value)}));
 								}
 							}
-						} catch ($XMLConfigurationException&) {
-							$catch();
+						} catch ($XMLConfigurationException& e) {
 						}
 					} else {
 						$throw($(newTypeMismatchError(name)));
@@ -843,8 +799,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 										}
 									}
 								}
-							} catch ($XMLConfigurationException&) {
-								$catch();
+							} catch ($XMLConfigurationException& e) {
 							}
 						} else {
 							$throw($(newTypeMismatchError(name)));
@@ -853,8 +808,7 @@ void DOMConfigurationImpl::setParameter($String* name, Object$* value) {
 						if ($instanceOf($XMLEntityResolver, value) || value == nullptr) {
 							try {
 								setEntityResolver($cast($XMLEntityResolver, value));
-							} catch ($XMLConfigurationException&) {
-								$catch();
+							} catch ($XMLConfigurationException& e) {
 							}
 						} else {
 							$throw($(newTypeMismatchError(name)));

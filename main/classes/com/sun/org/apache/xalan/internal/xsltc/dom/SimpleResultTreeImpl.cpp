@@ -19,18 +19,7 @@
 #include <com/sun/org/apache/xml/internal/serializer/SerializationHandler.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringDefault.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Map.h>
 #include <javax/xml/transform/SourceLocator.h>
 #include <org/w3c/dom/Node.h>
@@ -507,8 +496,7 @@ void SimpleResultTreeImpl::characters(int32_t node, $SerializationHandler* handl
 					handler->setEscaping(oldEscapeSetting);
 				}
 			}
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($TransletException, static_cast<$Exception*>(e));
 		}
 	}

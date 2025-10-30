@@ -42,18 +42,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTerm.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -445,8 +433,7 @@ $XSDAbstractTraverser$FacetInfo* XSDAbstractTraverser::traverseFacets($Element* 
 				try {
 					$var($QName, temp, $cast($QName, $nc(XSDAbstractTraverser::fQNameDV)->validate(enumVal, static_cast<$ValidationContext*>(schemaDoc->fValidationContext), ($ValidatedInfo*)nullptr)));
 					$assign(notation, $nc(this->fSchemaHandler)->getGlobalDecl(schemaDoc, $XSDHandler::NOTATION_TYPE, temp, content));
-				} catch ($InvalidDatatypeValueException&) {
-					$var($InvalidDatatypeValueException, ex, $catch());
+				} catch ($InvalidDatatypeValueException& ex) {
 					$var($String, var$1, ex->getKey());
 					reportSchemaError(var$1, $(ex->getArgs()), content);
 				}
@@ -1082,7 +1069,7 @@ $XSParticleDecl* XSDAbstractTraverser::checkOccurrences($XSParticleDecl* particl
 	}
 	if (processingAllEl) {
 		if (max != 1) {
-				$init($SchemaSymbols);
+			$init($SchemaSymbols);
 			reportSchemaError("cos-all-limited.2"_s, $$new($ObjectArray, {
 				(max == $SchemaSymbols::OCCURRENCE_UNBOUNDED) ? $of($SchemaSymbols::ATTVAL_UNBOUNDED) : $($of($Integer::toString(max))),
 				$($of($nc(($cast($XSElementDecl, particle->fValue)))->getName()))

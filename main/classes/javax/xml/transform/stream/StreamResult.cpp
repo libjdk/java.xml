@@ -3,13 +3,6 @@
 #include <java/io/File.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <jcpp.h>
 
@@ -65,7 +58,6 @@ $ClassInfo _StreamResult_ClassInfo_ = {
 $Object* allocate$StreamResult($Class* clazz) {
 	return $of($alloc(StreamResult));
 }
-
 
 $String* StreamResult::FEATURE = nullptr;
 

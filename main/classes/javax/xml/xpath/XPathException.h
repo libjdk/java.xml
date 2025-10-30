@@ -40,8 +40,10 @@ public:
 	static $Array<::java::io::ObjectStreamField>* serialPersistentFields;
 	static const int64_t serialVersionUID = (int64_t)0xE681613C88777F1C;
 	XPathException(const XPathException& e);
-	XPathException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XPathException* operator ->() {
+		return (XPathException*)throwing$;
+	}
 };
 
 		} // xpath

@@ -5,19 +5,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/InputStreamReader.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Locale.h>
@@ -63,11 +50,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _HTMLdtd_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _HTMLdtd_FieldInfo_[] = {
 	{"HTMLPublicId", "Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticField(HTMLdtd, HTMLPublicId)},
@@ -131,22 +118,14 @@ $Object* allocate$HTMLdtd($Class* clazz) {
 	return $of($alloc(HTMLdtd));
 }
 
-
 $String* HTMLdtd::HTMLPublicId = nullptr;
-
 $String* HTMLdtd::HTMLSystemId = nullptr;
-
 $String* HTMLdtd::XHTMLPublicId = nullptr;
-
 $String* HTMLdtd::XHTMLSystemId = nullptr;
-
 $Map* HTMLdtd::_byChar = nullptr;
-
 $Map* HTMLdtd::_byName = nullptr;
 $Map* HTMLdtd::_boolAttrs = nullptr;
-
 $Map* HTMLdtd::_elemDefs = nullptr;
-
 $String* HTMLdtd::ENTITIES_RESOURCE = nullptr;
 
 void HTMLdtd::init$() {
@@ -304,22 +283,20 @@ void HTMLdtd::initialize() {
 					$assign(line, reader->readLine());
 				}
 				$nc(is)->close();
-			} catch ($Exception&) {
-				$var($Exception, except, $catch());
+			} catch ($Exception& except) {
 				$init($DOMMessageFormatter);
 				$throwNew($RuntimeException, $($DOMMessageFormatter::formatMessage($DOMMessageFormatter::SERIALIZER_DOMAIN, "ResourceNotLoaded"_s, $$new($ObjectArray, {
 					$of(HTMLdtd::ENTITIES_RESOURCE),
 					$($of(except->toString()))
 				}))));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$2) {
+			$assign(var$0, var$2);
 		} /*finally*/ {
 			if (is != nullptr) {
 				try {
 					is->close();
-				} catch ($Exception&) {
-					$catch();
+				} catch ($Exception& except) {
 				}
 			}
 		}

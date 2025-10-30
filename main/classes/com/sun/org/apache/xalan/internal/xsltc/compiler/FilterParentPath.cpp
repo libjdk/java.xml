@@ -37,13 +37,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DOM_INTF
@@ -140,8 +133,8 @@ $Object* allocate$FilterParentPath($Class* clazz) {
 void FilterParentPath::init$($Expression* filterExpr, $Expression* path) {
 	$Expression::init$();
 	this->_hasDescendantAxis = false;
-	$nc(($assignField(this, _path, path)))->setParent(this);
-	$nc(($assignField(this, _filterExpr, filterExpr)))->setParent(this);
+	$nc(($set(this, _path, path)))->setParent(this);
+	$nc(($set(this, _filterExpr, filterExpr)))->setParent(this);
 }
 
 void FilterParentPath::setParser($Parser* parser) {
@@ -178,7 +171,7 @@ $1Type* FilterParentPath::typeCheck($SymbolTable* stable) {
 		$set(this, _path, $new($CastExpr, this->_path, $1Type::NodeSet));
 	}
 	$init($1Type);
-	return $assignField(this, _type, $1Type::NodeSet);
+	return $set(this, _type, $1Type::NodeSet);
 }
 
 void FilterParentPath::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {

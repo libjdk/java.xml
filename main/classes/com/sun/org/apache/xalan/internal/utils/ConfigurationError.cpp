@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xalan/internal/utils/ConfigurationError.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -62,16 +54,10 @@ $Exception* ConfigurationError::getException() {
 ConfigurationError::ConfigurationError() {
 }
 
-ConfigurationError::ConfigurationError(const ConfigurationError& e) {
+ConfigurationError::ConfigurationError(const ConfigurationError& e) : $Error(e) {
 }
 
-ConfigurationError ConfigurationError::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void ConfigurationError::throwWrapper$() {
-	$pendingException(this);
+void ConfigurationError::throw$() {
 	throw *this;
 }
 

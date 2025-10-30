@@ -2,15 +2,7 @@
 
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
@@ -170,16 +162,10 @@ $String* XMLParseException::toString() {
 XMLParseException::XMLParseException() {
 }
 
-XMLParseException::XMLParseException(const XMLParseException& e) {
+XMLParseException::XMLParseException(const XMLParseException& e) : $XNIException(e) {
 }
 
-XMLParseException XMLParseException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XMLParseException::throwWrapper$() {
-	$pendingException(this);
+void XMLParseException::throw$() {
 	throw *this;
 }
 

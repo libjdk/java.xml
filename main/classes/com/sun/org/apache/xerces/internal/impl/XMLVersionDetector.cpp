@@ -19,16 +19,6 @@
 #include <java/io/CharConversionException.h>
 #include <java/io/EOFException.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ENTITY_MANAGER
@@ -115,13 +105,9 @@ $Object* allocate$XMLVersionDetector($Class* clazz) {
 }
 
 $chars* XMLVersionDetector::XML11_VERSION = nullptr;
-
 $String* XMLVersionDetector::SYMBOL_TABLE = nullptr;
-
 $String* XMLVersionDetector::ERROR_REPORTER = nullptr;
-
 $String* XMLVersionDetector::ENTITY_MANAGER = nullptr;
-
 $String* XMLVersionDetector::fVersionSymbol = nullptr;
 $String* XMLVersionDetector::fXMLSymbol = nullptr;
 
@@ -219,21 +205,18 @@ int16_t XMLVersionDetector::determineDocVersion($XMLInputSource* inputSource) {
 			return $Constants::XML_VERSION_1_1;
 		}
 		return $Constants::XML_VERSION_1_0;
-	} catch ($MalformedByteSequenceException&) {
-		$var($MalformedByteSequenceException, e, $catch());
+	} catch ($MalformedByteSequenceException& e) {
 		$var($String, var$0, e->getDomain());
 		$var($String, var$1, e->getKey());
 		$nc(this->fErrorReporter)->reportError(var$0, var$1, $(e->getArguments()), $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
 		scanner->detectingVersion = false;
 		return $Constants::XML_VERSION_1_0;
-	} catch ($CharConversionException&) {
-		$var($CharConversionException, e, $catch());
+	} catch ($CharConversionException& e) {
 		$init($XMLMessageFormatter);
 		$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "CharConversionFailure"_s, ($ObjectArray*)nullptr, $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
 		scanner->detectingVersion = false;
 		return $Constants::XML_VERSION_1_0;
-	} catch ($EOFException&) {
-		$var($EOFException, e, $catch());
+	} catch ($EOFException& e) {
 		$init($XMLMessageFormatter);
 		$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "PrematureEOF"_s, nullptr, $XMLErrorReporter::SEVERITY_FATAL_ERROR);
 		scanner->detectingVersion = false;

@@ -3,18 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
 #include <java/io/FilterOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $XMLErrorHandler = ::com::sun::org::apache::xerces::internal::xni::parser::XMLErrorHandler;
@@ -65,7 +54,6 @@ $Object* allocate$XPointerErrorHandler($Class* clazz) {
 }
 
 void XPointerErrorHandler::init$() {
-	$init($System);
 	XPointerErrorHandler::init$($$new($PrintWriter, static_cast<$OutputStream*>($System::err)));
 }
 

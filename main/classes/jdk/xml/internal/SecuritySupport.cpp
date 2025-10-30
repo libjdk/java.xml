@@ -6,30 +6,14 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
 #include <java/lang/CharSequence.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Thread.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URL.h>
 #include <java/security/AccessController.h>
 #include <java/security/CodeSource.h>
@@ -653,9 +637,7 @@ $Object* allocate$SecuritySupport($Class* clazz) {
 }
 
 $String* SecuritySupport::NEWLINE = nullptr;
-
 $Properties* SecuritySupport::cacheProps = nullptr;
-
 $volatile(bool) SecuritySupport::firstTime = false;
 
 void SecuritySupport::init$() {
@@ -764,17 +746,15 @@ $String* SecuritySupport::readJAXPProperty($String* propName) {
 					}
 				}
 				$assign(value, $nc(SecuritySupport::cacheProps)->getProperty(propName));
-			} catch ($IOException&) {
-				$catch();
+			} catch ($IOException& ex) {
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			if (is != nullptr) {
 				try {
 					is->close();
-				} catch ($IOException&) {
-					$catch();
+				} catch ($IOException& ex) {
 				}
 			}
 		}
@@ -805,8 +785,7 @@ $FileInputStream* SecuritySupport::getFileInputStream($File* file) {
 	$beforeCallerSensitive();
 	try {
 		return $cast($FileInputStream, $AccessController::doPrivileged(static_cast<$PrivilegedExceptionAction*>($$new(SecuritySupport$$Lambda$lambda$getFileInputStream$3$3, file))));
-	} catch ($PrivilegedActionException&) {
-		$var($PrivilegedActionException, e, $catch());
+	} catch ($PrivilegedActionException& e) {
 		$throw($cast($FileNotFoundException, $(e->getException())));
 	}
 	$shouldNotReachHere();
@@ -982,8 +961,7 @@ $ClassLoader* SecuritySupport::lambda$getParentClassLoader$10($ClassLoader* cl) 
 	$var($ClassLoader, parent, nullptr);
 	try {
 		$assign(parent, $nc(cl)->getParent());
-	} catch ($SecurityException&) {
-		$catch();
+	} catch ($SecurityException& ex) {
 	}
 	return (parent == cl) ? ($ClassLoader*)nullptr : parent;
 }
@@ -994,8 +972,7 @@ $ClassLoader* SecuritySupport::lambda$getSystemClassLoader$9() {
 	$var($ClassLoader, cl, nullptr);
 	try {
 		$assign(cl, $ClassLoader::getSystemClassLoader());
-	} catch ($SecurityException&) {
-		$catch();
+	} catch ($SecurityException& ex) {
 	}
 	return cl;
 }
@@ -1022,12 +999,10 @@ $ResourceBundle* SecuritySupport::lambda$getResourceBundle$5($String* bundle, $L
 	$beforeCallerSensitive();
 	try {
 		return $ResourceBundle::getBundle(bundle, locale);
-	} catch ($MissingResourceException&) {
-		$var($MissingResourceException, e, $catch());
+	} catch ($MissingResourceException& e) {
 		try {
 			return $ResourceBundle::getBundle(bundle, $$new($Locale, "en"_s, "US"_s));
-		} catch ($MissingResourceException&) {
-			$var($MissingResourceException, e2, $catch());
+		} catch ($MissingResourceException& e2) {
 			$throwNew($MissingResourceException, $$str({"Could not load any resource bundle by "_s, bundle}), bundle, ""_s);
 		}
 	}

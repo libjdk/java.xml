@@ -1,12 +1,5 @@
 #include <javax/xml/transform/OutputKeys.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef CDATA_SECTION_ELEMENTS
@@ -60,25 +53,15 @@ $Object* allocate$OutputKeys($Class* clazz) {
 	return $of($alloc(OutputKeys));
 }
 
-
 $String* OutputKeys::METHOD = nullptr;
-
 $String* OutputKeys::VERSION = nullptr;
-
 $String* OutputKeys::ENCODING = nullptr;
-
 $String* OutputKeys::OMIT_XML_DECLARATION = nullptr;
-
 $String* OutputKeys::STANDALONE = nullptr;
-
 $String* OutputKeys::DOCTYPE_PUBLIC = nullptr;
-
 $String* OutputKeys::DOCTYPE_SYSTEM = nullptr;
-
 $String* OutputKeys::CDATA_SECTION_ELEMENTS = nullptr;
-
 $String* OutputKeys::INDENT = nullptr;
-
 $String* OutputKeys::MEDIA_TYPE = nullptr;
 
 void OutputKeys::init$() {

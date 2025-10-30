@@ -2,13 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/dtm/DTMDOMException.h>
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMException.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/DocumentType.h>

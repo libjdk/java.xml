@@ -29,21 +29,8 @@
 #include <com/sun/org/apache/xpath/internal/objects/DTMXRTreeFrag.h>
 #include <com/sun/org/apache/xpath/internal/objects/XMLStringFactoryImpl.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
@@ -380,8 +367,7 @@ void XPathContext::init$(Object$* owner) {
 	$set(this, m_owner, owner);
 	try {
 		$set(this, m_ownerGetErrorListener, $nc($of(this->m_owner))->getClass()->getMethod("getErrorListener"_s, $$new($ClassArray, 0)));
-	} catch ($NoSuchMethodException&) {
-		$catch();
+	} catch ($NoSuchMethodException& nsme) {
 	}
 	init(false);
 }
@@ -474,8 +460,7 @@ $ErrorListener* XPathContext::getErrorListener() {
 		if (nullptr != this->m_ownerGetErrorListener) {
 			$assign(retval, $cast($ErrorListener, $nc(this->m_ownerGetErrorListener)->invoke(this->m_owner, $$new($ObjectArray, 0))));
 		}
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	if (nullptr == retval) {
 		if (nullptr == this->m_defaultErrorListener) {
@@ -532,7 +517,6 @@ void XPathContext::pushContextNodeList($DTMIterator* nl) {
 
 void XPathContext::popContextNodeList() {
 	if ($nc(this->m_contextNodeLists)->isEmpty()) {
-		$init($System);
 		$nc($System::err)->println("Warning: popContextNodeList when stack is empty!"_s);
 	} else {
 		$nc(this->m_contextNodeLists)->pop();
@@ -686,7 +670,6 @@ int32_t XPathContext::getContextNode() {
 }
 
 $DTMIterator* XPathContext::getContextNodes() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var($DTMIterator, cnl, getContextNodeList());
 		if (nullptr != cnl) {
@@ -694,8 +677,7 @@ $DTMIterator* XPathContext::getContextNodes() {
 		} else {
 			return nullptr;
 		}
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, cnse, $catch());
+	} catch ($CloneNotSupportedException& cnse) {
 		return nullptr;
 	}
 	$shouldNotReachHere();

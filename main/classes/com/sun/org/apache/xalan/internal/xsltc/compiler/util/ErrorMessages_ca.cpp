@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMessages_ca.h>
 
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -150,7 +143,7 @@ void ErrorMessages_ca::init$() {
 
 $ObjectArray2* ErrorMessages_ca::getContents() {
 	$useLocalCurrentObjectStackCache();
-			$init($ErrorMsg);
+	$init($ErrorMsg);
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_STYLESHEET_ERR),

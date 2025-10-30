@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/SerializerMessages_cs.h>
 
 #include <com/sun/org/apache/xml/internal/serializer/utils/MsgKey.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -106,7 +99,7 @@ void SerializerMessages_cs::init$() {
 
 $ObjectArray2* SerializerMessages_cs::getContents() {
 	$useLocalCurrentObjectStackCache();
-			$init($MsgKey);
+	$init($MsgKey);
 	$var($ObjectArray2, contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SERIALIZER_NOT_CONTENTHANDLER),

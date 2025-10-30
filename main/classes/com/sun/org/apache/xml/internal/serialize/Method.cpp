@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xml/internal/serialize/Method.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef FOP
@@ -28,11 +20,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _Method_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _Method_FieldInfo_[] = {
 	{"XML", "Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticField(Method, XML)},
@@ -65,15 +57,10 @@ $Object* allocate$Method($Class* clazz) {
 	return $of($alloc(Method));
 }
 
-
 $String* Method::XML = nullptr;
-
 $String* Method::HTML = nullptr;
-
 $String* Method::XHTML = nullptr;
-
 $String* Method::TEXT = nullptr;
-
 $String* Method::FOP = nullptr;
 
 void Method::init$() {

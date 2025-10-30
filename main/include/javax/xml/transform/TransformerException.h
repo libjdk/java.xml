@@ -59,8 +59,10 @@ public:
 	::javax::xml::transform::SourceLocator* locator = nullptr;
 	$Throwable* containedException = nullptr;
 	TransformerException(const TransformerException& e);
-	TransformerException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline TransformerException* operator ->() {
+		return (TransformerException*)throwing$;
+	}
 };
 
 		} // transform

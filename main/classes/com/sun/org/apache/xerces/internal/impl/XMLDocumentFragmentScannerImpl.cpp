@@ -37,19 +37,6 @@
 #include <com/sun/xml/internal/stream/Entity$ScannedEntity.h>
 #include <com/sun/xml/internal/stream/XMLEntityStorage.h>
 #include <com/sun/xml/internal/stream/dtd/DTDGrammarUtil.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ArrayList.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/stream/XMLInputFactory.h>
@@ -450,25 +437,15 @@ void XMLDocumentFragmentScannerImpl::finalize() {
 	this->$XMLScanner::finalize();
 }
 
-
 $String* XMLDocumentFragmentScannerImpl::NOTIFY_BUILTIN_REFS = nullptr;
-
 $String* XMLDocumentFragmentScannerImpl::ENTITY_RESOLVER = nullptr;
-
 $String* XMLDocumentFragmentScannerImpl::STANDARD_URI_CONFORMANT = nullptr;
-
 $String* XMLDocumentFragmentScannerImpl::CREATE_ENTITY_REF_NODES = nullptr;
-
 $String* XMLDocumentFragmentScannerImpl::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* XMLDocumentFragmentScannerImpl::EXTERNAL_ACCESS_DEFAULT = nullptr;
-
 $StringArray* XMLDocumentFragmentScannerImpl::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLDocumentFragmentScannerImpl::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLDocumentFragmentScannerImpl::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLDocumentFragmentScannerImpl::PROPERTY_DEFAULTS = nullptr;
 $chars* XMLDocumentFragmentScannerImpl::CDATA = nullptr;
 $chars* XMLDocumentFragmentScannerImpl::XMLDECL = nullptr;
@@ -1455,7 +1432,6 @@ $String* XMLDocumentFragmentScannerImpl::checkAccess($String* systemId, $String*
 
 void XMLDocumentFragmentScannerImpl::pr($String* str) {
 	$init(XMLDocumentFragmentScannerImpl);
-	$init($System);
 	$nc($System::out)->println(str);
 }
 
@@ -1499,9 +1475,9 @@ void clinit$XMLDocumentFragmentScannerImpl($Class* class$) {
 	$init($JdkConstants);
 	$assignStatic(XMLDocumentFragmentScannerImpl::XML_SECURITY_PROPERTY_MANAGER, $JdkConstants::XML_SECURITY_PROPERTY_MANAGER);
 	$assignStatic(XMLDocumentFragmentScannerImpl::EXTERNAL_ACCESS_DEFAULT, $JdkConstants::EXTERNAL_ACCESS_DEFAULT);
-		$init($XMLScanner);
-		$init($Constants);
-		$init($XMLConstants);
+	$init($XMLScanner);
+	$init($Constants);
+	$init($XMLConstants);
 	$assignStatic(XMLDocumentFragmentScannerImpl::RECOGNIZED_FEATURES, $new($StringArray, {
 		$XMLScanner::NAMESPACES,
 		$XMLScanner::VALIDATION,
@@ -1510,8 +1486,8 @@ void clinit$XMLDocumentFragmentScannerImpl($Class* class$) {
 		$Constants::STAX_REPORT_CDATA_EVENT,
 		$XMLConstants::USE_CATALOG
 	}));
-		$init($Boolean);
-		$init($JdkXmlUtils);
+	$init($Boolean);
+	$init($JdkXmlUtils);
 	$assignStatic(XMLDocumentFragmentScannerImpl::FEATURE_DEFAULTS, $new($BooleanArray, {
 		$Boolean::TRUE,
 		($Boolean*)nullptr,
@@ -1520,7 +1496,7 @@ void clinit$XMLDocumentFragmentScannerImpl($Class* class$) {
 		$Boolean::TRUE,
 		$($Boolean::valueOf($JdkXmlUtils::USE_CATALOG_DEFAULT))
 	}));
-		$init($JdkConstants);
+	$init($JdkConstants);
 	$assignStatic(XMLDocumentFragmentScannerImpl::RECOGNIZED_PROPERTIES, $new($StringArray, {
 		$XMLScanner::SYMBOL_TABLE,
 		$XMLScanner::ERROR_REPORTER,

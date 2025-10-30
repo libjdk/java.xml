@@ -12,13 +12,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo.h>
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Element.h>
 #include <jcpp.h>
 
@@ -85,7 +78,7 @@ void XSDKeyrefTraverser::traverse($Element* krElem, $XSElementDecl* element, $XS
 	$var($ObjectArray, attrValues, $nc(this->fAttrChecker)->checkAttributes(krElem, false, schemaDoc));
 	$var($String, krName, $cast($String, $nc(attrValues)->get($XSAttributeChecker::ATTIDX_NAME)));
 	if (krName == nullptr) {
-			$init($SchemaSymbols);
+		$init($SchemaSymbols);
 		reportSchemaError("s4s-att-must-appear"_s, $$new($ObjectArray, {
 			$of($SchemaSymbols::ELT_KEYREF),
 			$of($SchemaSymbols::ATT_NAME)
@@ -95,7 +88,7 @@ void XSDKeyrefTraverser::traverse($Element* krElem, $XSElementDecl* element, $XS
 	}
 	$var($QName, kName, $cast($QName, attrValues->get($XSAttributeChecker::ATTIDX_REFER)));
 	if (kName == nullptr) {
-			$init($SchemaSymbols);
+		$init($SchemaSymbols);
 		reportSchemaError("s4s-att-must-appear"_s, $$new($ObjectArray, {
 			$of($SchemaSymbols::ELT_KEYREF),
 			$of($SchemaSymbols::ATT_REFER)

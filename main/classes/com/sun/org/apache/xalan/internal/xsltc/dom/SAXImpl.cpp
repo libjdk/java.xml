@@ -65,19 +65,6 @@
 #include <com/sun/org/apache/xml/internal/utils/IntStack.h>
 #include <com/sun/org/apache/xml/internal/utils/SystemIDResolver.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringFactory.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Map.h>
@@ -1013,27 +1000,22 @@ void SAXImpl::print(int32_t node, int32_t level) {
 			{}
 		case $DTM::PROCESSING_INSTRUCTION_NODE:
 			{
-				$init($System);
 				$nc($System::out)->print($(getStringValueX(node)));
 				break;
 			}
 		default:
 			{
 				$assign(name, getNodeName(node));
-				$init($System);
 				$nc($System::out)->print($$str({"<"_s, name}));
 				for (int32_t a = getFirstAttribute(node); a != $DTM::NULL; a = getNextAttribute(a)) {
-					$init($System);
 					$var($String, var$1, $$str({"\n"_s, $(getNodeName(a)), "=\""_s}));
 					$var($String, var$0, $$concat(var$1, $(getStringValueX(a))));
 					$nc($System::out)->print($$concat(var$0, "\""));
 				}
-				$init($System);
 				$nc($System::out)->print(u'>');
 				for (int32_t child = getFirstChild(node); child != $DTM::NULL; child = getNextSibling(child)) {
 					print(child, level + 1);
 				}
-				$init($System);
 				$nc($System::out)->println($$str({"</"_s, name, $$str(u'>')}));
 				break;
 			}
@@ -1275,8 +1257,7 @@ void SAXImpl::characters(int32_t node, $SerializationHandler* handler) {
 	if (node != $DTM::NULL) {
 		try {
 			dispatchCharactersEvents(node, handler, false);
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($TransletException, static_cast<$Exception*>(e));
 		}
 	}
@@ -1376,8 +1357,7 @@ void SAXImpl::copy(int32_t node, $SerializationHandler* handler, bool isChild) {
 				}
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransletException, e);
 	}
 }
@@ -1388,8 +1368,7 @@ void SAXImpl::copyPI(int32_t node, $SerializationHandler* handler) {
 	$var($String, value, getStringValueX(node));
 	try {
 		$nc(handler)->processingInstruction(target, value);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransletException, e);
 	}
 }
@@ -1455,8 +1434,7 @@ $String* SAXImpl::shallowCopy(int32_t node, $SerializationHandler* handler) {
 				}
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransletException, e);
 	}
 	$shouldNotReachHere();

@@ -7,15 +7,7 @@
 #include <com/sun/org/apache/xerces/internal/util/URI$MalformedURIException.h>
 #include <com/sun/org/apache/xerces/internal/util/URI.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef BASE_URI
@@ -99,8 +91,7 @@ $Object* AnyURIDV::getActualValue($String* content, $ValidationContext* context)
 			$var($String, encoded, encode(content));
 			$new($URI, AnyURIDV::BASE_URI, encoded);
 		}
-	} catch ($URI$MalformedURIException&) {
-		$var($URI$MalformedURIException, ex, $catch());
+	} catch ($URI$MalformedURIException& ex) {
 		$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.1"_s, $$new($ObjectArray, {
 			$of(content),
 			$of("anyURI"_s)
@@ -134,8 +125,7 @@ $String* AnyURIDV::encode($String* anyURI) {
 		int8_t b = 0;
 		try {
 			$assign(bytes, $(anyURI->substring(i))->getBytes("UTF-8"_s));
-		} catch ($UnsupportedEncodingException&) {
-			$var($UnsupportedEncodingException, e, $catch());
+		} catch ($UnsupportedEncodingException& e) {
 			return anyURI;
 		}
 		len = $nc(bytes)->length;
@@ -170,8 +160,7 @@ void clinit$AnyURIDV($Class* class$) {
 		$var($URI, uri, nullptr);
 		try {
 			$assign(uri, $new($URI, "abc://def.ghi.jkl"_s));
-		} catch ($URI$MalformedURIException&) {
-			$catch();
+		} catch ($URI$MalformedURIException& ex) {
 		}
 		$assignStatic(AnyURIDV::BASE_URI, uri);
 	}

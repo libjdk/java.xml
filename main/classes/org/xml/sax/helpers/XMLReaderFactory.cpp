@@ -8,31 +8,18 @@
 #include <java/io/InputStreamReader.h>
 #include <java/io/Reader.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/CompoundAttribute.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
 #include <java/lang/ReflectiveOperationException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/invoke/CallSite.h>
 #include <java/lang/invoke/LambdaMetafactory.h>
 #include <java/lang/invoke/MethodHandle.h>
 #include <java/lang/invoke/MethodHandles$Lookup.h>
 #include <java/lang/invoke/MethodType.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/security/AccessController.h>
 #include <java/security/PrivilegedAction.h>
 #include <java/util/Iterator.h>
@@ -135,11 +122,11 @@ $NamedAttribute XMLReaderFactory_Attribute_var$0[] = {
 	{"since", 's', "9"},
 	{}
 };
+
 $CompoundAttribute _XMLReaderFactory_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", XMLReaderFactory_Attribute_var$0},
 	{}
 };
-
 
 $FieldInfo _XMLReaderFactory_FieldInfo_[] = {
 	{"property", "Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $FINAL, $staticField(XMLReaderFactory, property)},
@@ -186,8 +173,7 @@ $XMLReader* XMLReaderFactory::createXMLReader() {
 	$var($ClassLoader, cl, $SecuritySupport::getClassLoader());
 	try {
 		$assign(className, $SecuritySupport::getSystemProperty(XMLReaderFactory::property));
-	} catch ($RuntimeException&) {
-		$catch();
+	} catch ($RuntimeException& e) {
 	}
 	if (className == nullptr) {
 		$load($XMLReader);
@@ -216,17 +202,13 @@ $XMLReader* XMLReaderFactory::loadClass($ClassLoader* loader, $String* className
 	try {
 		$load($XMLReader);
 		return $cast($XMLReader, $NewInstance::newInstance($XMLReader::class$, loader, className));
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e1, $catch());
+	} catch ($ClassNotFoundException& e1) {
 		$throwNew($SAXException, $$str({"SAX2 driver class "_s, className, " not found"_s}), e1);
-	} catch ($IllegalAccessException&) {
-		$var($IllegalAccessException, e2, $catch());
+	} catch ($IllegalAccessException& e2) {
 		$throwNew($SAXException, $$str({"SAX2 driver class "_s, className, " found but cannot be loaded"_s}), e2);
-	} catch ($InstantiationException&) {
-		$var($InstantiationException, e3, $catch());
+	} catch ($InstantiationException& e3) {
 		$throwNew($SAXException, $$str({"SAX2 driver class "_s, className, " loaded but cannot be instantiated (no empty public constructor?)"_s}), e3);
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e4, $catch());
+	} catch ($ClassCastException& e4) {
 		$throwNew($SAXException, $$str({"SAX2 driver class "_s, className, " does not implement XMLReader"_s}), e4);
 	}
 	$shouldNotReachHere();
@@ -250,8 +232,7 @@ $String* XMLReaderFactory::jarLookup($ClassLoader* loader) {
 			$assign(clsFromJar, reader->readLine());
 			in->close();
 		}
-	} catch ($IOException&) {
-		$catch();
+	} catch ($IOException& e) {
 	}
 	return clsFromJar;
 }
@@ -263,8 +244,7 @@ $Object* XMLReaderFactory::findServiceProvider($Class* type, $ClassLoader* loade
 	$var($ClassLoader, cl, $cast($ClassLoader, $Objects::requireNonNull(loader)));
 	try {
 		return $of($AccessController::doPrivileged(static_cast<$PrivilegedAction*>($$new(XMLReaderFactory$$Lambda$lambda$findServiceProvider$0, type, cl))));
-	} catch ($ServiceConfigurationError&) {
-		$var($ServiceConfigurationError, e, $catch());
+	} catch ($ServiceConfigurationError& e) {
 		$var($RuntimeException, x, $new($RuntimeException, $$str({"Provider for "_s, type, " cannot be created"_s}), e));
 		$throwNew($SAXException, $$str({"Provider for "_s, type, " cannot be created"_s}), x);
 	}

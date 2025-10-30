@@ -1,15 +1,6 @@
 #include <javax/xml/catalog/CatalogReader$1.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/EnclosingMethodInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/NoSuchFieldError.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/catalog/BaseEntry$CatalogEntryType.h>
 #include <javax/xml/catalog/CatalogReader.h>
 #include <jcpp.h>
@@ -83,58 +74,47 @@ void clinit$CatalogReader$1($Class* class$) {
 	{
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::PUBLIC->ordinal(), 1);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::SYSTEM->ordinal(), 2);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::REWRITESYSTEM->ordinal(), 3);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::SYSTEMSUFFIX->ordinal(), 4);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::DELEGATEPUBLIC->ordinal(), 5);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::DELEGATESYSTEM->ordinal(), 6);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::URI->ordinal(), 7);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::REWRITEURI->ordinal(), 8);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::URISUFFIX->ordinal(), 9);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::DELEGATEURI->ordinal(), 10);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 		try {
 			$nc(CatalogReader$1::$SwitchMap$javax$xml$catalog$BaseEntry$CatalogEntryType)->set($BaseEntry$CatalogEntryType::NEXTCATALOG->ordinal(), 11);
-		} catch ($NoSuchFieldError&) {
-			$catch();
+		} catch ($NoSuchFieldError& ex) {
 		}
 	}
 }

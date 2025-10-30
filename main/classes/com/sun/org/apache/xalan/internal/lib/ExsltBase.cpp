@@ -1,15 +1,8 @@
 #include <com/sun/org/apache/xalan/internal/lib/ExsltBase.h>
 
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Node.h>
 #include <org/w3c/dom/NodeList.h>
 #include <jcpp.h>
@@ -80,8 +73,7 @@ double ExsltBase::toNumber($Node* n) {
 	$var($String, str, toString(n));
 	try {
 		d = $nc($($Double::valueOf(str)))->doubleValue();
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		$init($Double);
 		d = $Double::NaN;
 	}

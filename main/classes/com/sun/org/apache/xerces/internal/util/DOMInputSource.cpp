@@ -1,15 +1,7 @@
 #include <com/sun/org/apache/xerces/internal/util/DOMInputSource.h>
 
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NoSuchMethodError.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>
 
@@ -81,15 +73,12 @@ void DOMInputSource::setNode($Node* node) {
 
 $String* DOMInputSource::getSystemIdFromNode($Node* node) {
 	$init(DOMInputSource);
-	$useLocalCurrentObjectStackCache();
 	if (node != nullptr) {
 		try {
 			return node->getBaseURI();
-		} catch ($NoSuchMethodError&) {
-			$var($NoSuchMethodError, e, $catch());
+		} catch ($NoSuchMethodError& e) {
 			return nullptr;
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			return nullptr;
 		}
 	}

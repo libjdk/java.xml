@@ -13,13 +13,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -82,7 +75,7 @@ $Object* allocate$UnaryOpExpr($Class* clazz) {
 
 void UnaryOpExpr::init$($Expression* left) {
 	$Expression::init$();
-	$nc(($assignField(this, _left, left)))->setParent(this);
+	$nc(($set(this, _left, left)))->setParent(this);
 }
 
 bool UnaryOpExpr::hasPositionCall() {
@@ -108,7 +101,7 @@ $Type* UnaryOpExpr::typeCheck($SymbolTable* stable) {
 		if (!$nc(arg1)->identicalTo(tleft)) {
 			$set(this, _left, $new($CastExpr, this->_left, arg1));
 		}
-		return $assignField(this, _type, ptype->resultType());
+		return $set(this, _type, ptype->resultType());
 	}
 	$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 }

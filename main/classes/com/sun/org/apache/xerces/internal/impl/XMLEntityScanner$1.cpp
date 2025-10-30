@@ -2,17 +2,6 @@
 
 #include <java/io/EOFException.h>
 #include <java/io/IOException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/EnclosingMethodInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $EOFException = ::java::io::EOFException;
@@ -85,16 +74,10 @@ $Throwable* XMLEntityScanner$1::fillInStackTrace() {
 XMLEntityScanner$1::XMLEntityScanner$1() {
 }
 
-XMLEntityScanner$1::XMLEntityScanner$1(const XMLEntityScanner$1& e) {
+XMLEntityScanner$1::XMLEntityScanner$1(const XMLEntityScanner$1& e) : $EOFException(e) {
 }
 
-XMLEntityScanner$1 XMLEntityScanner$1::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XMLEntityScanner$1::throwWrapper$() {
-	$pendingException(this);
+void XMLEntityScanner$1::throw$() {
 	throw *this;
 }
 

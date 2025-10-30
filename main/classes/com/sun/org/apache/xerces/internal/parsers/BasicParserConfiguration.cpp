@@ -13,15 +13,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLEntityResolver.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -215,21 +206,13 @@ void BasicParserConfiguration::finalize() {
 	this->$ParserConfigurationSettings::finalize();
 }
 
-
 $String* BasicParserConfiguration::VALIDATION = nullptr;
-
 $String* BasicParserConfiguration::NAMESPACES = nullptr;
-
 $String* BasicParserConfiguration::EXTERNAL_GENERAL_ENTITIES = nullptr;
-
 $String* BasicParserConfiguration::EXTERNAL_PARAMETER_ENTITIES = nullptr;
-
 $String* BasicParserConfiguration::XML_STRING = nullptr;
-
 $String* BasicParserConfiguration::SYMBOL_TABLE = nullptr;
-
 $String* BasicParserConfiguration::ERROR_HANDLER = nullptr;
-
 $String* BasicParserConfiguration::ENTITY_RESOLVER = nullptr;
 
 void BasicParserConfiguration::init$() {
@@ -247,7 +230,7 @@ void BasicParserConfiguration::init$($SymbolTable* symbolTable$renamed, $XMLComp
 	$set(this, fComponents, $new($ArrayList));
 	$set(this, fFeatures, $new($HashMap));
 	$set(this, fProperties, $new($HashMap));
-		$init($ParserConfigurationSettings);
+	$init($ParserConfigurationSettings);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		$ParserConfigurationSettings::PARSER_SETTINGS,
 		BasicParserConfiguration::VALIDATION,

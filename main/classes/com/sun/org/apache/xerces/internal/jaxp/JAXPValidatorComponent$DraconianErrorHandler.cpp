@@ -1,15 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent$DraconianErrorHandler.h>
 
 #include <com/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/SAXParseException.h>
 #include <jcpp.h>
 
@@ -70,7 +61,6 @@ $ClassInfo _JAXPValidatorComponent$DraconianErrorHandler_ClassInfo_ = {
 $Object* allocate$JAXPValidatorComponent$DraconianErrorHandler($Class* clazz) {
 	return $of($alloc(JAXPValidatorComponent$DraconianErrorHandler));
 }
-
 
 JAXPValidatorComponent$DraconianErrorHandler* JAXPValidatorComponent$DraconianErrorHandler::ERROR_HANDLER_INSTANCE = nullptr;
 

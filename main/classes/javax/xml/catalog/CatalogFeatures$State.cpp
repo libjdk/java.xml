@@ -1,15 +1,6 @@
 #include <javax/xml/catalog/CatalogFeatures$State.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/catalog/CatalogFeatures.h>
 #include <jcpp.h>
 
@@ -76,15 +67,10 @@ $Object* allocate$CatalogFeatures$State($Class* clazz) {
 	return $of($alloc(CatalogFeatures$State));
 }
 
-
 CatalogFeatures$State* CatalogFeatures$State::DEFAULT = nullptr;
-
 CatalogFeatures$State* CatalogFeatures$State::JAXPDOTPROPERTIES = nullptr;
-
 CatalogFeatures$State* CatalogFeatures$State::SYSTEMPROPERTY = nullptr;
-
 CatalogFeatures$State* CatalogFeatures$State::APIPROPERTY = nullptr;
-
 CatalogFeatures$State* CatalogFeatures$State::CATALOGATTRIBUTE = nullptr;
 $CatalogFeatures$StateArray* CatalogFeatures$State::$VALUES = nullptr;
 

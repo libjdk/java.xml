@@ -25,8 +25,10 @@ public:
 	static const int16_t PARSE_ERR = 81;
 	static const int16_t SERIALIZE_ERR = 82;
 	LSException(const LSException& e);
-	LSException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline LSException* operator ->() {
+		return (LSException*)throwing$;
+	}
 };
 
 			} // ls

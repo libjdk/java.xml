@@ -5,24 +5,11 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl$Parser.h>
 #include <com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.h>
 #include <java/io/ObjectInputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
 #include <java/lang/InternalError.h>
-#include <java/lang/Long.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/math/BigDecimal.h>
 #include <java/math/BigInteger.h>
 #include <java/math/RoundingMode.h>
@@ -311,13 +298,9 @@ void XMLGregorianCalendarImpl::finalize() {
 	this->$XMLGregorianCalendar::finalize();
 }
 
-
 $BigInteger* XMLGregorianCalendarImpl::BILLION_B = nullptr;
-
 $Date* XMLGregorianCalendarImpl::PURE_GREGORIAN_CHANGE = nullptr;
-
 $StringArray* XMLGregorianCalendarImpl::FIELD_NAME = nullptr;
-
 $XMLGregorianCalendar* XMLGregorianCalendarImpl::LEAP_YEAR_DEFAULT = nullptr;
 $BigInteger* XMLGregorianCalendarImpl::FOUR = nullptr;
 $BigInteger* XMLGregorianCalendarImpl::HUNDRED = nullptr;

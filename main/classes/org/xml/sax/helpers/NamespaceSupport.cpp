@@ -1,16 +1,6 @@
 #include <org/xml/sax/helpers/NamespaceSupport.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractCollection.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
@@ -99,11 +89,8 @@ $Object* allocate$NamespaceSupport($Class* clazz) {
 	return $of($alloc(NamespaceSupport));
 }
 
-
 $String* NamespaceSupport::XMLNS = nullptr;
-
 $String* NamespaceSupport::NSDECL = nullptr;
-
 $Enumeration* NamespaceSupport::EMPTY_ENUMERATION = nullptr;
 
 void NamespaceSupport::init$() {
@@ -114,7 +101,7 @@ void NamespaceSupport::reset() {
 	$set(this, contexts, $new($NamespaceSupport$ContextArray, 32));
 	this->namespaceDeclUris = false;
 	this->contextPos = 0;
-	$nc(this->contexts)->set(this->contextPos, $assignField(this, currentContext, $new($NamespaceSupport$Context, this)));
+	$nc(this->contexts)->set(this->contextPos, $set(this, currentContext, $new($NamespaceSupport$Context, this)));
 	$nc(this->currentContext)->declarePrefix("xml"_s, NamespaceSupport::XMLNS);
 }
 
@@ -129,7 +116,7 @@ void NamespaceSupport::pushContext() {
 	}
 	$set(this, currentContext, $nc(this->contexts)->get(this->contextPos));
 	if (this->currentContext == nullptr) {
-		$nc(this->contexts)->set(this->contextPos, $assignField(this, currentContext, $new($NamespaceSupport$Context, this)));
+		$nc(this->contexts)->set(this->contextPos, $set(this, currentContext, $new($NamespaceSupport$Context, this)));
 	}
 	if (this->contextPos > 0) {
 		$nc(this->currentContext)->setParent($nc(this->contexts)->get(this->contextPos - 1));
@@ -207,7 +194,7 @@ void NamespaceSupport::setNamespaceDeclUris(bool value) {
 	if (value) {
 		$nc(this->currentContext)->declarePrefix("xmlns"_s, NamespaceSupport::NSDECL);
 	} else {
-		$nc(this->contexts)->set(this->contextPos, $assignField(this, currentContext, $new($NamespaceSupport$Context, this)));
+		$nc(this->contexts)->set(this->contextPos, $set(this, currentContext, $new($NamespaceSupport$Context, this)));
 		$nc(this->currentContext)->declarePrefix("xml"_s, NamespaceSupport::XMLNS);
 	}
 }

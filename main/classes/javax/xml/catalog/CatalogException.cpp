@@ -1,14 +1,5 @@
 #include <javax/xml/catalog/CatalogException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -55,16 +46,10 @@ void CatalogException::init$($String* message, $Throwable* cause) {
 CatalogException::CatalogException() {
 }
 
-CatalogException::CatalogException(const CatalogException& e) {
+CatalogException::CatalogException(const CatalogException& e) : $RuntimeException(e) {
 }
 
-CatalogException CatalogException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void CatalogException::throwWrapper$() {
-	$pendingException(this);
+void CatalogException::throw$() {
 	throw *this;
 }
 

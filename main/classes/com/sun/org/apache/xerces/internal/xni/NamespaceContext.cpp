@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/xni/NamespaceContext.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Enumeration.h>
 #include <jcpp.h>
 
@@ -58,9 +51,7 @@ $Object* allocate$NamespaceContext($Class* clazz) {
 	return $of($alloc(NamespaceContext));
 }
 
-
 $String* NamespaceContext::XML_URI = nullptr;
-
 $String* NamespaceContext::XMLNS_URI = nullptr;
 
 void clinit$NamespaceContext($Class* class$) {

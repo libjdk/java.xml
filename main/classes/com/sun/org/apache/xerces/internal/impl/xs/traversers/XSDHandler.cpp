@@ -101,20 +101,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -729,51 +715,28 @@ $Object* allocate$XSDHandler($Class* clazz) {
 	return $of($alloc(XSDHandler));
 }
 
-
 $String* XSDHandler::VALIDATION = nullptr;
-
 $String* XSDHandler::XMLSCHEMA_VALIDATION = nullptr;
-
 $String* XSDHandler::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* XSDHandler::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* XSDHandler::STANDARD_URI_CONFORMANT_FEATURE = nullptr;
-
 $String* XSDHandler::DISALLOW_DOCTYPE = nullptr;
-
 $String* XSDHandler::GENERATE_SYNTHETIC_ANNOTATIONS = nullptr;
-
 $String* XSDHandler::VALIDATE_ANNOTATIONS = nullptr;
-
 $String* XSDHandler::HONOUR_ALL_SCHEMALOCATIONS = nullptr;
-
 $String* XSDHandler::NAMESPACE_GROWTH = nullptr;
-
 $String* XSDHandler::TOLERATE_DUPLICATES = nullptr;
-
 $String* XSDHandler::NAMESPACE_PREFIXES = nullptr;
-
 $String* XSDHandler::STRING_INTERNING = nullptr;
-
 $String* XSDHandler::ERROR_HANDLER = nullptr;
-
 $String* XSDHandler::JAXP_SCHEMA_SOURCE = nullptr;
-
 $String* XSDHandler::ENTITY_RESOLVER = nullptr;
-
 $String* XSDHandler::ENTITY_MANAGER = nullptr;
-
 $String* XSDHandler::ERROR_REPORTER = nullptr;
-
 $String* XSDHandler::XMLGRAMMAR_POOL = nullptr;
-
 $String* XSDHandler::SYMBOL_TABLE = nullptr;
-
 $String* XSDHandler::SECURITY_MANAGER = nullptr;
-
 $String* XSDHandler::LOCALE = nullptr;
-
 $String* XSDHandler::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 $String* XSDHandler::REDEF_IDENTIFIER = nullptr;
 $StringArray2* XSDHandler::NS_ERROR_CODES = nullptr;
@@ -900,8 +863,7 @@ $SchemaGrammar* XSDHandler::parseSchema($XMLInputSource* is, $XSDDescription* de
 					if ($nc($(grammar->getDocumentLocations()))->contains($($XMLEntityManager::expandSystemId(var$0, $(is->getBaseSystemId()), false)))) {
 						return grammar;
 					}
-				} catch ($URI$MalformedURIException&) {
-					$catch();
+				} catch ($URI$MalformedURIException& e) {
 				}
 			}
 		}
@@ -1011,8 +973,7 @@ void XSDHandler::validateAnnotations($List* annotationInfo) {
 			src->setCharacterStream($$new($StringReader, annotation->fAnnotation));
 			try {
 				$nc(this->fAnnotationValidator)->parse(src);
-			} catch ($IOException&) {
-				$catch();
+			} catch ($IOException& exc) {
 			}
 			$assign(annotation, annotation->next);
 		}
@@ -1070,8 +1031,7 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 	$var($XSDocumentInfo, currSchemaInfo, nullptr);
 	try {
 		$assign(currSchemaInfo, $new($XSDocumentInfo, schemaRoot, this->fAttributeChecker, this->fSymbolTable));
-	} catch ($XMLSchemaException&) {
-		$var($XMLSchemaException, se, $catch());
+	} catch ($XMLSchemaException& se) {
 		reportSchemaError($nc(XSDHandler::ELE_ERROR_CODES)->get(referType), $$new($ObjectArray, {$of(locationHint)}), schemaRoot);
 		return nullptr;
 	}
@@ -1223,8 +1183,7 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 								} else {
 									importCollision = true;
 								}
-							} catch ($URI$MalformedURIException&) {
-								$catch();
+							} catch ($URI$MalformedURIException& e) {
 							}
 						} else if (!this->fHonourAllSchemaLocations || isExistingGrammar(this->fSchemaGrammarDescription, false)) {
 							continue;
@@ -1310,8 +1269,7 @@ $XSDocumentInfo* XSDHandler::constructTrees($Element* schemaRoot, $String* locat
 								$var($String, var$2, $nc(schemaSource)->getSystemId());
 								$var($String, schemaId, $XMLEntityManager::expandSystemId(var$2, $(schemaSource->getBaseSystemId()), false));
 								alreadyTraversed = $nc($(sg->getDocumentLocations()))->contains(schemaId);
-							} catch ($URI$MalformedURIException&) {
-								$catch();
+							} catch ($URI$MalformedURIException& e) {
 							}
 						}
 						if (!alreadyTraversed) {
@@ -1360,8 +1318,7 @@ bool XSDHandler::isExistingGrammar($XSDDescription* desc, bool ignoreConflict) {
 		try {
 			$var($String, var$0, $nc(desc)->getLiteralSystemId());
 			return $nc($(sg->getDocumentLocations()))->contains($($XMLEntityManager::expandSystemId(var$0, $(desc->getBaseSystemId()), false)));
-		} catch ($URI$MalformedURIException&) {
-			$var($URI$MalformedURIException, e, $catch());
+		} catch ($URI$MalformedURIException& e) {
 			return false;
 		}
 	}
@@ -2160,8 +2117,7 @@ $Element* XSDHandler::resolveSchema($XSDDescription* desc, bool mustResolve, $El
 	try {
 		$var($Map, pairs, usePairs ? this->fLocationPairs : $Collections::emptyMap());
 		$assign(schemaSource, $XMLSchemaLoader::resolveDocument(desc, pairs, this->fEntityManager));
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		if (mustResolve) {
 			reportSchemaError("schema_reference.4"_s, $$new($ObjectArray, {$of($nc($($nc(desc)->getLocationHints()))->get(0))}), referElement);
 		} else {
@@ -2224,8 +2180,7 @@ $XMLInputSource* XSDHandler::resolveSchemaSource($XSDDescription* desc, bool mus
 	try {
 		$var($Map, pairs, usePairs ? this->fLocationPairs : $Collections::emptyMap());
 		$assign(schemaSource, $XMLSchemaLoader::resolveDocument(desc, pairs, this->fEntityManager));
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		if (mustResolve) {
 			reportSchemaError("schema_reference.4"_s, $$new($ObjectArray, {$of($nc($($nc(desc)->getLocationHints()))->get(0))}), referElement);
 		} else {
@@ -2276,8 +2231,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $XMLInputSourc
 		} else {
 			hasInput = false;
 		}
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$assign(exception, ex);
 	}
 	return getSchemaDocument1(mustResolve, hasInput, schemaSource, referElement, exception);
@@ -2313,8 +2267,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $SAXInputSourc
 			if (parser != nullptr) {
 				try {
 					namespacePrefixes = parser->getFeature(XSDHandler::NAMESPACE_PREFIXES);
-				} catch ($SAXException&) {
-					$catch();
+				} catch ($SAXException& se) {
 				}
 			} else {
 				$assign(parser, $JdkXmlUtils::getXMLReader(this->fOverrideDefaultParser, $nc(this->fSecurityManager)->isSecureProcessing()));
@@ -2326,14 +2279,12 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $SAXInputSourc
 							parser->setProperty(XSDHandler::SECURITY_MANAGER, this->fSecurityManager);
 						}
 					}
-				} catch ($SAXException&) {
-					$catch();
+				} catch ($SAXException& se) {
 				}
 				try {
 					$init($XMLConstants);
 					$nc(parser)->setProperty($XMLConstants::ACCESS_EXTERNAL_DTD, this->fAccessExternalDTD);
-				} catch ($SAXNotRecognizedException&) {
-					$var($SAXNotRecognizedException, exc, $catch());
+				} catch ($SAXNotRecognizedException& exc) {
 					$init($XMLConstants);
 					$XMLSecurityManager::printWarning($($nc($of(parser))->getClass()->getName()), $XMLConstants::ACCESS_EXTERNAL_DTD, exc);
 				}
@@ -2341,8 +2292,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $SAXInputSourc
 			bool stringsInternalized = false;
 			try {
 				stringsInternalized = $nc(parser)->getFeature(XSDHandler::STRING_INTERNING);
-			} catch ($SAXException&) {
-				$catch();
+			} catch ($SAXException& exc) {
 			}
 			if (this->fXSContentHandler == nullptr) {
 				$set(this, fXSContentHandler, $new($SchemaContentHandler));
@@ -2354,8 +2304,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $SAXInputSourc
 			try {
 				parser->setContentHandler(nullptr);
 				parser->setErrorHandler(nullptr);
-			} catch ($Exception&) {
-				$catch();
+			} catch ($Exception& e) {
 			}
 			$var($Document, schemaDocument, $nc(this->fXSContentHandler)->getDocument());
 			$assign(schemaElement, schemaDocument != nullptr ? $DOMUtil::getRoot(schemaDocument) : ($Element*)nullptr);
@@ -2363,14 +2312,11 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $SAXInputSourc
 		} else {
 			hasInput = false;
 		}
-	} catch ($SAXParseException&) {
-		$var($SAXParseException, spe, $catch());
+	} catch ($SAXParseException& spe) {
 		$throw($($XSDHandler$SAX2XNIUtil::createXMLParseException0(spe)));
-	} catch ($SAXException&) {
-		$var($SAXException, se, $catch());
+	} catch ($SAXException& se) {
 		$throw($($XSDHandler$SAX2XNIUtil::createXNIException0(se)));
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$assign(exception, ioe);
 	}
 	return getSchemaDocument1(mustResolve, hasInput, schemaSource, referElement, exception);
@@ -2419,8 +2365,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $DOMInputSourc
 		} else {
 			hasInput = false;
 		}
-	} catch ($IOException&) {
-		$var($IOException, ioe, $catch());
+	} catch ($IOException& ioe) {
 		$assign(exception, ioe);
 	}
 	return getSchemaDocument1(mustResolve, hasInput, schemaSource, referElement, exception);
@@ -2477,8 +2422,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $StAXInputSour
 		$var($Document, schemaDocument, $nc(this->fStAXSchemaParser)->getDocument());
 		$assign(schemaElement, schemaDocument != nullptr ? $DOMUtil::getRoot(schemaDocument) : ($Element*)nullptr);
 		return getSchemaDocument0(key, schemaId, schemaElement);
-	} catch ($XMLStreamException&) {
-		$var($XMLStreamException, e, $catch());
+	} catch ($XMLStreamException& e) {
 		$var($Throwable, t, e->getNestedException());
 		if ($instanceOf($IOException, t)) {
 			$assign(exception, $cast($IOException, t));
@@ -2487,8 +2431,7 @@ $Element* XSDHandler::getSchemaDocument($String* schemaNamespace, $StAXInputSour
 			slw->setLocation($(e->getLocation()));
 			$throwNew($XMLParseException, slw, $(e->getMessage()), e);
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$assign(exception, e);
 	}
 	return getSchemaDocument1(mustResolve, true, schemaSource, referElement, exception);
@@ -3505,47 +3448,40 @@ void XSDHandler::reset($XMLComponentManager* componentManager) {
 				$nc(this->fAnnotationValidator)->setProperty(XSDHandler::LOCALE, this->fLocale);
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	try {
 		$nc(this->fSchemaParser)->setFeature(XSDHandler::CONTINUE_AFTER_FATAL_ERROR, $nc(this->fErrorReporter)->getFeature(XSDHandler::CONTINUE_AFTER_FATAL_ERROR));
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	try {
 		if (componentManager->getFeature(XSDHandler::ALLOW_JAVA_ENCODINGS, false)) {
 			$nc(this->fSchemaParser)->setFeature(XSDHandler::ALLOW_JAVA_ENCODINGS, true);
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	try {
 		if (componentManager->getFeature(XSDHandler::STANDARD_URI_CONFORMANT_FEATURE, false)) {
 			$nc(this->fSchemaParser)->setFeature(XSDHandler::STANDARD_URI_CONFORMANT_FEATURE, true);
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	try {
 		$set(this, fGrammarPool, $cast($XMLGrammarPool, componentManager->getProperty(XSDHandler::XMLGRAMMAR_POOL)));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fGrammarPool, nullptr);
 	}
 	try {
 		if (componentManager->getFeature(XSDHandler::DISALLOW_DOCTYPE, false)) {
 			$nc(this->fSchemaParser)->setFeature(XSDHandler::DISALLOW_DOCTYPE, true);
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	try {
 		if (this->fSecurityManager != nullptr) {
 			$nc(this->fSchemaParser)->setProperty(XSDHandler::SECURITY_MANAGER, this->fSecurityManager);
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	$set(this, fSecurityPropertyMgr, $cast($XMLSecurityPropertyManager, componentManager->getProperty(XSDHandler::XML_SECURITY_PROPERTY_MANAGER)));
 	$nc(this->fSchemaParser)->setProperty(XSDHandler::XML_SECURITY_PROPERTY_MANAGER, this->fSecurityPropertyMgr);

@@ -25,14 +25,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xml/internal/dtm/Axis.h>
 #include <com/sun/org/apache/xml/internal/dtm/DTM.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -170,7 +162,7 @@ $Type* UnionPathExpr::typeCheck($SymbolTable* stable) {
 		}
 	}
 	$init($Type);
-	return $assignField(this, _type, $Type::NodeSet);
+	return $set(this, _type, $Type::NodeSet);
 }
 
 $String* UnionPathExpr::toString() {

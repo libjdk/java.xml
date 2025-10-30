@@ -23,14 +23,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <java/util/List.h>
 #include <java/util/NoSuchElementException.h>
@@ -129,8 +121,7 @@ void AttributeValueTemplate::init$($String* value, $Parser* parser, $SyntaxTreeN
 	setParser(parser);
 	try {
 		parseAVTemplate(value, parser);
-	} catch ($NoSuchElementException&) {
-		$var($NoSuchElementException, e, $catch());
+	} catch ($NoSuchElementException& e) {
 		$init($ErrorMsg);
 		reportError(parent, parser, $ErrorMsg::ATTR_VAL_TEMPLATE_ERR, value);
 	}
@@ -295,7 +286,7 @@ $Type* AttributeValueTemplate::typeCheck($SymbolTable* stable) {
 		}
 	}
 	$init($Type);
-	return $assignField(this, _type, $Type::String);
+	return $set(this, _type, $Type::String);
 }
 
 $String* AttributeValueTemplate::toString() {

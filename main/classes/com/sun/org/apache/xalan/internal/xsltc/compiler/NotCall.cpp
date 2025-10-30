@@ -15,12 +15,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/QName.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 

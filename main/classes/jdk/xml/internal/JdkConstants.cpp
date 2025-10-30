@@ -1,16 +1,5 @@
 #include <jdk/xml/internal/JdkConstants.h>
 
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
 
@@ -307,91 +296,56 @@ $Object* allocate$JdkConstants($Class* clazz) {
 }
 
 $String* JdkConstants::SECURITY_MANAGER = nullptr;
-
 $String* JdkConstants::ORACLE_JAXP_PROPERTY_PREFIX = nullptr;
-
 $String* JdkConstants::JDK_ENTITY_EXPANSION_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_ELEMENT_ATTRIBUTE_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_MAX_OCCUR_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_TOTAL_ENTITY_SIZE_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_GENERAL_ENTITY_SIZE_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_ENTITY_REPLACEMENT_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_PARAMETER_ENTITY_SIZE_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_XML_NAME_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_MAX_ELEMENT_DEPTH = nullptr;
-
 $String* JdkConstants::JDK_ENTITY_COUNT_INFO = nullptr;
 $String* JdkConstants::JDK_DEBUG_LIMIT = nullptr;
-
 $String* JdkConstants::SP_ENTITY_EXPANSION_LIMIT = nullptr;
-
 $String* JdkConstants::SP_ELEMENT_ATTRIBUTE_LIMIT = nullptr;
-
 $String* JdkConstants::SP_MAX_OCCUR_LIMIT = nullptr;
-
 $String* JdkConstants::SP_TOTAL_ENTITY_SIZE_LIMIT = nullptr;
-
 $String* JdkConstants::SP_GENERAL_ENTITY_SIZE_LIMIT = nullptr;
-
 $String* JdkConstants::SP_ENTITY_REPLACEMENT_LIMIT = nullptr;
-
 $String* JdkConstants::SP_PARAMETER_ENTITY_SIZE_LIMIT = nullptr;
-
 $String* JdkConstants::SP_XML_NAME_LIMIT = nullptr;
-
 $String* JdkConstants::SP_MAX_ELEMENT_DEPTH = nullptr;
-
 $String* JdkConstants::JDK_EXTENSION_CLASSLOADER = nullptr;
 $String* JdkConstants::JDK_EXT_CLASSLOADER = nullptr;
 $String* JdkConstants::ENTITY_EXPANSION_LIMIT = nullptr;
 $String* JdkConstants::ELEMENT_ATTRIBUTE_LIMIT = nullptr;
 $String* JdkConstants::MAX_OCCUR_LIMIT = nullptr;
-
 $String* JdkConstants::JDK_YES = nullptr;
-
 $String* JdkConstants::ORACLE_FEATURE_SERVICE_MECHANISM = nullptr;
 $String* JdkConstants::SP_ACCESS_EXTERNAL_STYLESHEET = nullptr;
 $String* JdkConstants::SP_ACCESS_EXTERNAL_DTD = nullptr;
 $String* JdkConstants::SP_ACCESS_EXTERNAL_SCHEMA = nullptr;
 $String* JdkConstants::ACCESS_EXTERNAL_ALL = nullptr;
-
 $String* JdkConstants::EXTERNAL_ACCESS_DEFAULT_FSP = nullptr;
-
 $String* JdkConstants::EXTERNAL_ACCESS_DEFAULT = nullptr;
 $String* JdkConstants::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* JdkConstants::FEATURE_TRUE = nullptr;
 $String* JdkConstants::FEATURE_FALSE = nullptr;
-
 $String* JdkConstants::S_IS_STANDALONE = nullptr;
-
 $String* JdkConstants::FQ_IS_STANDALONE = nullptr;
 $String* JdkConstants::SP_IS_STANDALONE = nullptr;
-
 $String* JdkConstants::ORACLE_IS_STANDALONE = nullptr;
-
 $String* JdkConstants::JDK_IS_STANDALONE = nullptr;
 $String* JdkConstants::SP_XSLTC_IS_STANDALONE = nullptr;
-
 $String* JdkConstants::ORACLE_ENABLE_EXTENSION_FUNCTION = nullptr;
 $String* JdkConstants::SP_ENABLE_EXTENSION_FUNCTION = nullptr;
 $String* JdkConstants::SP_ENABLE_EXTENSION_FUNCTION_SPEC = nullptr;
-
 $String* JdkConstants::RESET_SYMBOL_TABLE = nullptr;
-
 bool JdkConstants::RESET_SYMBOL_TABLE_DEFAULT = false;
-
 $String* JdkConstants::OVERRIDE_PARSER = nullptr;
 bool JdkConstants::OVERRIDE_PARSER_DEFAULT = false;
-
 $String* JdkConstants::CDATA_CHUNK_SIZE = nullptr;
 int32_t JdkConstants::CDATA_CHUNK_SIZE_DEFAULT = 0;
 

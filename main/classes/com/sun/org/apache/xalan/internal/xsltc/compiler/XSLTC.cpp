@@ -18,21 +18,9 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
 #include <java/lang/ClassNotFoundException.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URL.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
@@ -480,8 +468,7 @@ bool XSLTC::compile($URL* url) {
 		$var($InputSource, input, $new($InputSource, stream));
 		input->setSystemId($(url->toString()));
 		return compile(input, this->_className);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$init($ErrorMsg);
 		$nc(this->_parser)->reportError($Constants::FATAL, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
 		return false;
@@ -496,8 +483,7 @@ bool XSLTC::compile($URL* url, $String* name) {
 		$var($InputSource, input, $new($InputSource, stream));
 		input->setSystemId($(url->toString()));
 		return compile(input, name);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$init($ErrorMsg);
 		$nc(this->_parser)->reportError($Constants::FATAL, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
 		return false;
@@ -555,21 +541,19 @@ bool XSLTC::compile($InputSource* input, $String* name) {
 						$nc(this->_stylesheet)->translate();
 					}
 				}
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				e->printStackTrace();
 				$init($ErrorMsg);
 				$nc(this->_parser)->reportError($Constants::FATAL, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
-			} catch ($Error&) {
-				$var($Error, e, $catch());
+			} catch ($Error& e) {
 				if (this->_debug) {
 					e->printStackTrace();
 				}
 				$init($ErrorMsg);
 				$nc(this->_parser)->reportError($Constants::FATAL, $$new($ErrorMsg, $ErrorMsg::JAXP_COMPILE_ERR, static_cast<$Throwable*>(e)));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$set(this, _reader, nullptr);
 		}
@@ -891,8 +875,7 @@ void XSLTC::dumpClass($JavaClass* clazz) {
 				}
 			}
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		e->printStackTrace();
 	}
 }

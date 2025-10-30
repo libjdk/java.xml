@@ -6,16 +6,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/DTDDVFactory.h>
 #include <com/sun/org/apache/xerces/internal/impl/dv/DatatypeValidator.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DTD_VALIDATOR_PROPERTY
@@ -91,9 +81,7 @@ void XML11DTDValidator::init() {
 			$set(this, fValIDRefs, $nc(this->fDatatypeValidatorFactory)->getBuiltInDV("XML11IDREFS"_s));
 			$set(this, fValNMTOKEN, $nc(this->fDatatypeValidatorFactory)->getBuiltInDV("XML11NMTOKEN"_s));
 			$set(this, fValNMTOKENS, $nc(this->fDatatypeValidatorFactory)->getBuiltInDV("XML11NMTOKENS"_s));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
-			$init($System);
+		} catch ($Exception& e) {
 			e->printStackTrace($System::err);
 		}
 	}

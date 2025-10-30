@@ -10,19 +10,7 @@
 #include <com/sun/org/apache/xpath/internal/compiler/PsuedoNames.h>
 #include <com/sun/org/apache/xpath/internal/compiler/XPathParser.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -368,16 +356,13 @@ void Lexer::resetTokenMark(int32_t mark) {
 }
 
 int32_t Lexer::getKeywordToken($String* key) {
-	$useLocalCurrentObjectStackCache();
 	int32_t tok = 0;
 	try {
 		$var($Integer, itok, $Keywords::getKeyWord(key));
 		tok = (nullptr != itok) ? $nc(itok)->intValue() : 0;
-	} catch ($NullPointerException&) {
-		$var($NullPointerException, npe, $catch());
+	} catch ($NullPointerException& npe) {
 		tok = 0;
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, cce, $catch());
+	} catch ($ClassCastException& cce) {
 		tok = 0;
 	}
 	return tok;
@@ -465,8 +450,7 @@ int32_t Lexer::mapNSTokens($String* pat, int32_t startSubstring, int32_t posOfNS
 					$assign(uName, $nc(this->m_namespaceContext)->getNamespaceForPrefix(prefix));
 				}
 			}
-		} catch ($ClassCastException&) {
-			$var($ClassCastException, cce, $catch());
+		} catch ($ClassCastException& cce) {
 			$assign(uName, $nc(this->m_namespaceContext)->getNamespaceForPrefix(prefix));
 		}
 	} else {

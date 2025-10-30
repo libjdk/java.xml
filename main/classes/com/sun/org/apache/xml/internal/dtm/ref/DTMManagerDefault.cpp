@@ -26,23 +26,8 @@
 #include <com/sun/org/apache/xml/internal/utils/WrappedRuntimeException.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLReaderManager.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringFactory.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/parsers/DocumentBuilder.h>
 #include <javax/xml/parsers/DocumentBuilderFactory.h>
 #include <javax/xml/transform/Source.h>
@@ -271,9 +256,7 @@ $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whit
 							if (nullptr != urlOfSource) {
 								try {
 									$assign(urlOfSource, $SystemIDResolver::getAbsoluteURI(urlOfSource));
-								} catch ($Exception&) {
-									$var($Exception, e, $catch());
-									$init($System);
+								} catch ($Exception& e) {
 									$nc($System::err)->println($$str({"Can not absolutize URL: "_s, urlOfSource}));
 								}
 								xmlSource->setSystemId(urlOfSource);
@@ -294,8 +277,7 @@ $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whit
 							if (haveXercesParser) {
 								try {
 									$assign(coParser, $new($IncrementalSAXSource_Xerces));
-								} catch ($Exception&) {
-									$var($Exception, ex, $catch());
+								} catch ($Exception& ex) {
 									ex->printStackTrace();
 									$assign(coParser, nullptr);
 								}
@@ -321,12 +303,10 @@ $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whit
 							reader->setDTDHandler(dtm);
 							try {
 								$nc(coParser)->startParse(xmlSource);
-							} catch ($RuntimeException&) {
-								$var($RuntimeException, re, $catch());
+							} catch ($RuntimeException& re) {
 								dtm->clearCoRoutine();
 								$throw(re);
-							} catch ($Exception&) {
-								$var($Exception, e, $catch());
+							} catch ($Exception& e) {
 								dtm->clearCoRoutine();
 								$throwNew($WrappedRuntimeException, e);
 							}
@@ -343,19 +323,15 @@ $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whit
 							}
 							try {
 								reader->setProperty("http://xml.org/sax/properties/lexical-handler"_s, dtm);
-							} catch ($SAXNotRecognizedException&) {
-								$catch();
-							} catch ($SAXNotSupportedException&) {
-								$catch();
+							} catch ($SAXNotRecognizedException& e) {
+							} catch ($SAXNotSupportedException& e) {
 							}
 							try {
 								reader->parse(xmlSource);
-							} catch ($RuntimeException&) {
-								$var($RuntimeException, re, $catch());
+							} catch ($RuntimeException& re) {
 								$nc(dtm)->clearCoRoutine();
 								$throw(re);
-							} catch ($Exception&) {
-								$var($Exception, e, $catch());
+							} catch ($Exception& e) {
 								$nc(dtm)->clearCoRoutine();
 								$throwNew($WrappedRuntimeException, e);
 							}
@@ -363,8 +339,8 @@ $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whit
 						$assign(var$2, dtm);
 						return$1 = true;
 						goto $finally;
-					} catch ($Throwable&) {
-						$assign(var$0, $catch());
+					} catch ($Throwable& var$3) {
+						$assign(var$0, var$3);
 					} $finally: {
 						if (reader != nullptr && !(this->m_incremental && incremental)) {
 							reader->setContentHandler(this->m_defaultHandler);
@@ -372,8 +348,7 @@ $DTM* DTMManagerDefault::getDTM($Source* source, bool unique, $DTMWSFilter* whit
 							reader->setErrorHandler(this->m_defaultHandler);
 							try {
 								reader->setProperty("http://xml.org/sax/properties/lexical-handler"_s, nullptr);
-							} catch ($Exception&) {
-								$catch();
+							} catch ($Exception& e) {
 							}
 						}
 						releaseXMLReader(reader);
@@ -450,8 +425,7 @@ $XMLReader* DTMManagerDefault::getXMLReader($Source* inputSource) {
 				$assign(reader, $nc(this->m_readerManager)->getXMLReader());
 			}
 			return reader;
-		} catch ($SAXException&) {
-			$var($SAXException, se, $catch());
+		} catch ($SAXException& se) {
 			$throwNew($DTMException, $(se->getMessage()), se);
 		}
 	}
@@ -470,8 +444,7 @@ $DTM* DTMManagerDefault::getDTM(int32_t nodeHandle) {
 	$synchronized(this) {
 		try {
 			return $nc(this->m_dtms)->get($usr(nodeHandle, $DTMManager::IDENT_DTM_NODE_BITS));
-		} catch ($ArrayIndexOutOfBoundsException&) {
-			$var($ArrayIndexOutOfBoundsException, e, $catch());
+		} catch ($ArrayIndexOutOfBoundsException& e) {
 			if (nodeHandle == $DTM::NULL) {
 				return nullptr;
 			} else {
@@ -534,8 +507,7 @@ $DTM* DTMManagerDefault::createDocumentFragment() {
 			$var($Document, doc, $nc(db)->newDocument());
 			$var($Node, df, $nc(doc)->createDocumentFragment());
 			return getDTM($$new($DOMSource, df), true, nullptr, false, false);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$throwNew($DTMException, static_cast<$Throwable*>(e));
 		}
 	}

@@ -111,14 +111,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/SWAP.h>
 #include <com/sun/org/apache/bcel/internal/generic/StackInstruction.h>
 #include <com/sun/org/apache/bcel/internal/generic/StoreInstruction.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef AALOAD
@@ -511,7 +503,6 @@ $Object* allocate$InstructionConst($Class* clazz) {
 	return $of($alloc(InstructionConst));
 }
 
-
 $Instruction* InstructionConst::NOP = nullptr;
 $Instruction* InstructionConst::ACONST_NULL = nullptr;
 $Instruction* InstructionConst::ICONST_M1 = nullptr;
@@ -619,7 +610,6 @@ $Instruction* InstructionConst::ARRAYLENGTH = nullptr;
 $Instruction* InstructionConst::ATHROW = nullptr;
 $Instruction* InstructionConst::MONITORENTER = nullptr;
 $Instruction* InstructionConst::MONITOREXIT = nullptr;
-
 $LocalVariableInstruction* InstructionConst::THIS = nullptr;
 $LocalVariableInstruction* InstructionConst::ALOAD_0 = nullptr;
 $LocalVariableInstruction* InstructionConst::ALOAD_1 = nullptr;
@@ -633,7 +623,6 @@ $LocalVariableInstruction* InstructionConst::ASTORE_2 = nullptr;
 $LocalVariableInstruction* InstructionConst::ISTORE_0 = nullptr;
 $LocalVariableInstruction* InstructionConst::ISTORE_1 = nullptr;
 $LocalVariableInstruction* InstructionConst::ISTORE_2 = nullptr;
-
 $InstructionArray* InstructionConst::INSTRUCTIONS = nullptr;
 
 void InstructionConst::init$() {

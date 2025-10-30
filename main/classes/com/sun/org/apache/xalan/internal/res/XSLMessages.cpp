@@ -2,14 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHMessages.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ResourceBundle.h>
 #include <jdk/xml/internal/SecuritySupport.h>
 #include <jcpp.h>
@@ -58,9 +50,7 @@ $Object* allocate$XSLMessages($Class* clazz) {
 	return $of($alloc(XSLMessages));
 }
 
-
 $ResourceBundle* XSLMessages::XSLTBundle = nullptr;
-
 $String* XSLMessages::XSLT_ERROR_RESOURCES = nullptr;
 
 void XSLMessages::init$() {

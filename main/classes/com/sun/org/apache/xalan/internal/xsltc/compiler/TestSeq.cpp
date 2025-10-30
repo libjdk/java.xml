@@ -15,14 +15,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/Template.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Iterator.h>
@@ -199,7 +192,7 @@ $InstructionHandle* TestSeq::compile($ClassGenerator* classGen, $MethodGenerator
 	}
 	int32_t count = $nc(this->_patterns)->size();
 	if (count == 0) {
-		return ($assignField(this, _start, getTemplateHandle(this->_default)));
+		return ($set(this, _start, getTemplateHandle(this->_default)));
 	}
 	$var($InstructionHandle, fail, (this->_default == nullptr) ? continuation : getTemplateHandle(this->_default));
 	for (int32_t n = count - 1; n >= 0; --n) {
@@ -236,7 +229,7 @@ $InstructionHandle* TestSeq::compile($ClassGenerator* classGen, $MethodGenerator
 		}
 		$set(this, _instructionList, il);
 	}
-	return ($assignField(this, _start, fail));
+	return ($set(this, _start, fail));
 }
 
 TestSeq::TestSeq() {

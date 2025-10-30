@@ -3,23 +3,11 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/DurationImpl$DurationStream.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.h>
 #include <com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/Number.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/math/BigDecimal.h>
 #include <java/math/BigInteger.h>
 #include <java/math/RoundingMode.h>
@@ -210,17 +198,11 @@ void DurationImpl::finalize() {
 	this->$Duration::finalize();
 }
 
-
 $DatatypeConstants$FieldArray* DurationImpl::FIELDS = nullptr;
-
 $TimeZone* DurationImpl::GMT = nullptr;
-
 $BigDecimal* DurationImpl::ZERO = nullptr;
-
 $BigInteger* DurationImpl::MaxIntAsBigInt = nullptr;
-
 $XMLGregorianCalendarArray* DurationImpl::TEST_POINTS = nullptr;
-
 $BigDecimalArray* DurationImpl::FACTORS = nullptr;
 
 int32_t DurationImpl::getSign() {
@@ -965,7 +947,7 @@ $Object* DurationImpl::writeReplace() {
 
 void clinit$DurationImpl($Class* class$) {
 	$useLocalCurrentObjectStackCache();
-		$init($DatatypeConstants);
+	$init($DatatypeConstants);
 	$assignStatic(DurationImpl::FIELDS, $new($DatatypeConstants$FieldArray, {
 		$DatatypeConstants::YEARS,
 		$DatatypeConstants::MONTHS,

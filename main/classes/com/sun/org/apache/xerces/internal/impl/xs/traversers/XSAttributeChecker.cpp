@@ -28,20 +28,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSConstants.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -732,8 +719,7 @@ $ObjectArray* XSAttributeChecker::checkAttributes($Element* element, bool isGlob
 			} else {
 				$nc(attrValues)->set(oneAttr->valueIndex, $(validate(attrValues, attrName, attrVal, oneAttr->dvIndex, schemaDoc)));
 			}
-		} catch ($InvalidDatatypeValueException&) {
-			$var($InvalidDatatypeValueException, ide, $catch());
+		} catch ($InvalidDatatypeValueException& ide) {
 			reportSchemaError("s4s-att-invalid-value"_s, $$new($ObjectArray, {
 				$of(elName),
 				$of(attrName),
@@ -829,8 +815,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 					$assign(value, value->substring(1));
 				}
 				$assign(retValue, $nc(XSAttributeChecker::fXIntPool)->getXInt($Integer::parseInt(value)));
-			} catch ($NumberFormatException&) {
-				$var($NumberFormatException, e, $catch());
+			} catch ($NumberFormatException& e) {
 				$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.1"_s, $$new($ObjectArray, {
 					$of(value),
 					$of("nonNegativeInteger"_s)
@@ -852,8 +837,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 					$assign(value, value->substring(1));
 				}
 				$assign(retValue, $nc(XSAttributeChecker::fXIntPool)->getXInt($Integer::parseInt(value)));
-			} catch ($NumberFormatException&) {
-				$var($NumberFormatException, e, $catch());
+			} catch ($NumberFormatException& e) {
 				$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.1"_s, $$new($ObjectArray, {
 					$of(value),
 					$of("positiveInteger"_s)
@@ -1018,8 +1002,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 			} else {
 				try {
 					$assign(retValue, validate(attrValues, attr, value, XSAttributeChecker::DT_NONNEGINT, schemaDoc));
-				} catch ($NumberFormatException&) {
-					$var($NumberFormatException, e, $catch());
+				} catch ($NumberFormatException& e) {
 					$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.3"_s, $$new($ObjectArray, {
 						$of(value),
 						$of("(nonNegativeInteger | unbounded)"_s)
@@ -1055,8 +1038,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 					$nc(memberType)->add(qname);
 				}
 				$assign(retValue, memberType);
-			} catch ($InvalidDatatypeValueException&) {
-				$var($InvalidDatatypeValueException, ide, $catch());
+			} catch ($InvalidDatatypeValueException& ide) {
 				$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.2"_s, $$new($ObjectArray, {
 					$of(value),
 					$of("(List of QName)"_s)
@@ -1113,8 +1095,7 @@ $Object* XSAttributeChecker::validate($ObjectArray* attrValues, $String* attr, $
 								$nc(this->fNamespaceList)->add(tempNamespace);
 							}
 						}
-					} catch ($InvalidDatatypeValueException&) {
-						$var($InvalidDatatypeValueException, ide, $catch());
+					} catch ($InvalidDatatypeValueException& ide) {
 						$throwNew($InvalidDatatypeValueException, "cvc-datatype-valid.1.2.3"_s, $$new($ObjectArray, {
 							$of(value),
 							$of("((##any | ##other) | List of (anyURI | (##targetNamespace | ##local)) )"_s)
@@ -1234,8 +1215,7 @@ void XSAttributeChecker::checkNonSchemaAttributes($XSGrammarBucket* grammarBucke
 					$assign(elName, $cast($String, values->get(i)));
 					try {
 						$nc(dv)->validate($cast($String, $(values->get(i + 1))), ($ValidationContext*)nullptr, ($ValidatedInfo*)nullptr);
-					} catch ($InvalidDatatypeValueException&) {
-						$var($InvalidDatatypeValueException, ide, $catch());
+					} catch ($InvalidDatatypeValueException& ide) {
 						reportSchemaError("s4s-att-invalid-value"_s, $$new($ObjectArray, {
 							$of(elName),
 							$of(attrName),

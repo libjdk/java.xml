@@ -2,17 +2,8 @@
 
 #include <com/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
 #include <java/lang/Cloneable.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ITERATOR_CLONE_ERR
@@ -90,8 +81,7 @@ MultiValuedNodeHeapIterator$HeapNode* MultiValuedNodeHeapIterator$HeapNode::clon
 	$var(MultiValuedNodeHeapIterator$HeapNode, clone, nullptr);
 	try {
 		$assign(clone, $cast(MultiValuedNodeHeapIterator$HeapNode, $Cloneable::clone()));
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, e, $catch());
+	} catch ($CloneNotSupportedException& e) {
 		$init($BasisLibrary);
 		$BasisLibrary::runTimeError($BasisLibrary::ITERATOR_CLONE_ERR, $($of(e->toString())));
 		return nullptr;

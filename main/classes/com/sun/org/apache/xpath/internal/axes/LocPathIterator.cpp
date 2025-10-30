@@ -22,16 +22,7 @@
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
 #include <java/io/ObjectInputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ContentHandler.h>
 #include <jcpp.h>
 
@@ -370,7 +361,6 @@ void LocPathIterator::setItem(int32_t node, int32_t index) {
 }
 
 int32_t LocPathIterator::getLength() {
-	$useLocalCurrentObjectStackCache();
 	bool isPredicateTest = ($equals(this, $nc(this->m_execContext)->getSubContextList()));
 	int32_t predCount = getPredicateCount();
 	if (-1 != this->m_length && isPredicateTest && this->m_predicateIndex < 1) {
@@ -383,8 +373,7 @@ int32_t LocPathIterator::getLength() {
 	$var(LocPathIterator, clone, nullptr);
 	try {
 		$assign(clone, $cast(LocPathIterator, this->clone()));
-	} catch ($CloneNotSupportedException&) {
-		$var($CloneNotSupportedException, cnse, $catch());
+	} catch ($CloneNotSupportedException& cnse) {
 		return -1;
 	}
 	if (predCount > 0 && isPredicateTest) {

@@ -24,16 +24,6 @@
 #include <com/sun/org/apache/xml/internal/utils/SystemIDResolver.h>
 #include <java/io/FileNotFoundException.h>
 #include <java/io/IOException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/Source.h>
 #include <javax/xml/transform/Templates.h>
 #include <javax/xml/transform/stream/StreamSource.h>
@@ -152,8 +142,7 @@ $DTMAxisIterator* LoadDocument::documentF(Object$* arg1, $DTMAxisIterator* arg2,
 			$var($String, err, $str({"document("_s, $($nc($of(arg1))->toString()), ")"_s}));
 			$throwNew($IllegalArgumentException, err);
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransletException, e);
 	}
 	$shouldNotReachHere();
@@ -194,8 +183,7 @@ $DTMAxisIterator* LoadDocument::documentF(Object$* arg, $String* xslURI$renamed,
 			$var($String, err, $str({"document("_s, $($nc($of(arg))->toString()), ")"_s}));
 			$throwNew($IllegalArgumentException, err);
 		}
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransletException, e);
 	}
 	$shouldNotReachHere();
@@ -260,8 +248,7 @@ $DTMAxisIterator* LoadDocument::document($String* uri$renamed, $String* base, $A
 		multiplexer->addDOMAdapter(domAdapter);
 		translet->buildKeys(domAdapter, nullptr, nullptr, $nc(newdom)->getDocument());
 		return $new($SingletonIterator, $nc(newdom)->getDocument(), true);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throw(e);
 	}
 	$shouldNotReachHere();

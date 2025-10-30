@@ -1,16 +1,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/util/StringListImpl.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
 #include <java/lang/reflect/Array.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/Collection.h>
 #include <java/util/Comparator.h>
@@ -251,7 +242,6 @@ void StringListImpl::replaceAll($UnaryOperator* arg0) {
 void StringListImpl::sort($Comparator* arg0) {
 	this->$AbstractList::sort(arg0);
 }
-
 
 StringListImpl* StringListImpl::EMPTY_LIST = nullptr;
 

@@ -1,13 +1,5 @@
 #include <org/w3c/dom/ls/LSException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef PARSE_ERR
@@ -57,16 +49,10 @@ void LSException::init$(int16_t code, $String* message) {
 LSException::LSException() {
 }
 
-LSException::LSException(const LSException& e) {
+LSException::LSException(const LSException& e) : $RuntimeException(e) {
 }
 
-LSException LSException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void LSException::throwWrapper$() {
-	$pendingException(this);
+void LSException::throw$() {
 	throw *this;
 }
 

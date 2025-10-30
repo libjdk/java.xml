@@ -20,8 +20,10 @@ public:
 	void init$(int16_t code, $String* message);
 	static const int64_t serialVersionUID = (int64_t)0x824B55207F057A68;
 	RangeExceptionImpl(const RangeExceptionImpl& e);
-	RangeExceptionImpl wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline RangeExceptionImpl* operator ->() {
+		return (RangeExceptionImpl*)throwing$;
+	}
 };
 
 						} // dom

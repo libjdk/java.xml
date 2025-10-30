@@ -1,23 +1,11 @@
 #include <org/xml/sax/helpers/ParserAdapter.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalAccessException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
 #include <java/lang/InstantiationException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/ReflectiveOperationException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Enumeration.h>
@@ -217,20 +205,15 @@ void ParserAdapter::init$() {
 	$var($String, driver, $SecuritySupport::getSystemProperty("org.xml.sax.parser"_s));
 	try {
 		setup($($ParserFactory::makeParser()));
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e1, $catch());
+	} catch ($ClassNotFoundException& e1) {
 		$throwNew($SAXException, $$str({"Cannot find SAX1 driver class "_s, driver}), e1);
-	} catch ($IllegalAccessException&) {
-		$var($IllegalAccessException, e2, $catch());
+	} catch ($IllegalAccessException& e2) {
 		$throwNew($SAXException, $$str({"SAX1 driver class "_s, driver, " found but cannot be loaded"_s}), e2);
-	} catch ($InstantiationException&) {
-		$var($InstantiationException, e3, $catch());
+	} catch ($InstantiationException& e3) {
 		$throwNew($SAXException, $$str({"SAX1 driver class "_s, driver, " loaded but cannot be instantiated"_s}), e3);
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e4, $catch());
+	} catch ($ClassCastException& e4) {
 		$throwNew($SAXException, $$str({"SAX1 driver class "_s, driver, " does not implement org.xml.sax.Parser"_s}));
-	} catch ($NullPointerException&) {
-		$var($NullPointerException, e5, $catch());
+	} catch ($NullPointerException& e5) {
 		$throwNew($SAXException, "System property org.xml.sax.parser not specified"_s);
 	}
 }
@@ -348,8 +331,8 @@ void ParserAdapter::parse($InputSource* input) {
 		$var($Throwable, var$0, nullptr);
 		try {
 			$nc(this->parser)->parse(input);
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			this->parsing = false;
 		}
@@ -443,8 +426,7 @@ void ParserAdapter::startElement($String* qName, $AttributeList* qAtts) {
 		try {
 			$var($StringArray, attName, processName(attQName, true, true));
 			$nc(this->atts)->addAttribute($nc(attName)->get(0), attName->get(1), attName->get(2), type, value);
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			if (exceptions == nullptr) {
 				$assign(exceptions, $new($ArrayList));
 			}

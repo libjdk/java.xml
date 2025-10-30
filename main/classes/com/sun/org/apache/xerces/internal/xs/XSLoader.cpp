@@ -3,12 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/LSInputList.h>
 #include <com/sun/org/apache/xerces/internal/xs/StringList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSModel.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMConfiguration.h>
 #include <org/w3c/dom/ls/LSInput.h>
 #include <jcpp.h>

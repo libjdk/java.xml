@@ -45,26 +45,9 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ReferenceType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Byte.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/Double.h>
 #include <java/lang/Error.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Float.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/Short.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/Void.h>
 #include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <java/lang/reflect/Modifier.h>
@@ -408,8 +391,7 @@ $1Type* FunctionCall::typeCheck($SymbolTable* stable) {
 					try {
 						$set(this, _clazz, $ObjectFactory::findProviderClass(this->_className, true));
 						this->_namespace_format = FunctionCall::NAMESPACE_FORMAT_CLASS;
-					} catch ($ClassNotFoundException&) {
-						$var($ClassNotFoundException, e, $catch());
+					} catch ($ClassNotFoundException& e) {
 						this->_namespace_format = FunctionCall::NAMESPACE_FORMAT_PACKAGE;
 					}
 				} else {
@@ -427,8 +409,7 @@ $1Type* FunctionCall::typeCheck($SymbolTable* stable) {
 				}
 			}
 			return typeCheckExternal(stable);
-		} catch ($TypeCheckError&) {
-			$var($TypeCheckError, e, $catch());
+		} catch ($TypeCheckError& e) {
 			$var($ErrorMsg, errorMsg, e->getErrorMsg());
 			if (errorMsg == nullptr) {
 				$var($String, name, $nc(this->_fname)->getLocalPart());
@@ -437,7 +418,7 @@ $1Type* FunctionCall::typeCheck($SymbolTable* stable) {
 			}
 			$nc($(getParser()))->reportError($Constants::ERROR, errorMsg);
 			$init($1Type);
-			return $assignField(this, _type, $1Type::Void);
+			return $set(this, _type, $1Type::Void);
 		}
 	}
 	$shouldNotReachHere();
@@ -458,14 +439,13 @@ $1Type* FunctionCall::typeCheckStandard($SymbolTable* stable) {
 			if (!$nc(argType)->identicalTo($($nc(exp)->getType()))) {
 				try {
 					$nc(this->_arguments)->set(i, $$new($CastExpr, exp, argType));
-				} catch ($TypeCheckError&) {
-					$var($TypeCheckError, e, $catch());
+				} catch ($TypeCheckError& e) {
 					$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 				}
 			}
 		}
 		$set(this, _chosenMethodType, ptype);
-		return $assignField(this, _type, ptype->resultType());
+		return $set(this, _type, ptype->resultType());
 	}
 	$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 }
@@ -565,7 +545,7 @@ $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 			}
 			this->unresolvedExternal = true;
 			$init($1Type);
-			return $assignField(this, _type, $1Type::Int);
+			return $set(this, _type, $1Type::Int);
 		}
 	}
 	$var($List, methods, findMethods());
@@ -869,8 +849,7 @@ $List* FunctionCall::findMethods() {
 					$nc(result)->add(methods->get(i));
 				}
 			}
-		} catch ($ClassNotFoundException&) {
-			$var($ClassNotFoundException, e, $catch());
+		} catch ($ClassNotFoundException& e) {
 			$init($ErrorMsg);
 			$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::CLASS_NOT_FOUND_ERR, $of(this->_className)));
 			$nc($(getParser()))->reportError($Constants::ERROR, msg);
@@ -912,8 +891,7 @@ $List* FunctionCall::findConstructors() {
 				}
 			}
 		}
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e, $catch());
+	} catch ($ClassNotFoundException& e) {
 		$init($ErrorMsg);
 		$var($ErrorMsg, msg, $new($ErrorMsg, $ErrorMsg::CLASS_NOT_FOUND_ERR, $of(this->_className)));
 		$nc($(getParser()))->reportError($Constants::ERROR, msg);
@@ -1073,8 +1051,7 @@ void clinit$FunctionCall($Class* class$) {
 		try {
 			nodeClass = $Class::forName("org.w3c.dom.Node"_s);
 			nodeListClass = $Class::forName("org.w3c.dom.NodeList"_s);
-		} catch ($ClassNotFoundException&) {
-			$var($ClassNotFoundException, e, $catch());
+		} catch ($ClassNotFoundException& e) {
 			$init($ErrorMsg);
 			$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::CLASS_NOT_FOUND_ERR, $of("org.w3c.dom.Node or NodeList"_s)));
 			$throwNew($Error, $(err->toString()));
@@ -1083,7 +1060,6 @@ void clinit$FunctionCall($Class* class$) {
 		$init($Boolean);
 		$nc(FunctionCall::_internal2Java)->put($1Type::Boolean, $$new($FunctionCall$JavaType, $Boolean::TYPE, 0));
 		$nc(FunctionCall::_internal2Java)->put($1Type::Boolean, $$new($FunctionCall$JavaType, $Boolean::class$, 1));
-		$load($Object);
 		$nc(FunctionCall::_internal2Java)->put($1Type::Boolean, $$new($FunctionCall$JavaType, $Object::class$, 2));
 		$init($Double);
 		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Double::TYPE, 0));
@@ -1110,7 +1086,6 @@ void clinit$FunctionCall($Class* class$) {
 		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Byte::TYPE, 6));
 		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Character::TYPE, 7));
 		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Object::class$, 8));
-		$load($String);
 		$nc(FunctionCall::_internal2Java)->put($1Type::String, $$new($FunctionCall$JavaType, $String::class$, 0));
 		$nc(FunctionCall::_internal2Java)->put($1Type::String, $$new($FunctionCall$JavaType, $Object::class$, 1));
 		$nc(FunctionCall::_internal2Java)->put($1Type::NodeSet, $$new($FunctionCall$JavaType, nodeListClass, 0));

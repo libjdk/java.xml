@@ -1,15 +1,6 @@
 #include <jdk/xml/internal/JdkXmlFeatures$XmlFeature.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/JdkProperty$ImplPropMap.h>
 #include <jdk/xml/internal/JdkProperty$State.h>
 #include <jdk/xml/internal/JdkXmlFeatures.h>
@@ -99,13 +90,9 @@ $Object* allocate$JdkXmlFeatures$XmlFeature($Class* clazz) {
 	return $of($alloc(JdkXmlFeatures$XmlFeature));
 }
 
-
 JdkXmlFeatures$XmlFeature* JdkXmlFeatures$XmlFeature::ENABLE_EXTENSION_FUNCTION = nullptr;
-
 JdkXmlFeatures$XmlFeature* JdkXmlFeatures$XmlFeature::USE_CATALOG = nullptr;
-
 JdkXmlFeatures$XmlFeature* JdkXmlFeatures$XmlFeature::RESET_SYMBOL_TABLE_FEATURE = nullptr;
-
 JdkXmlFeatures$XmlFeature* JdkXmlFeatures$XmlFeature::JDK_OVERRIDE_PARSER = nullptr;
 $JdkXmlFeatures$XmlFeatureArray* JdkXmlFeatures$XmlFeature::$VALUES = nullptr;
 

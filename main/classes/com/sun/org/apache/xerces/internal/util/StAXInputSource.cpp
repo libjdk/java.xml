@@ -1,15 +1,7 @@
 #include <com/sun/org/apache/xerces/internal/util/StAXInputSource.h>
 
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/Location.h>
 #include <javax/xml/stream/XMLEventReader.h>
 #include <javax/xml/stream/XMLStreamException.h>
@@ -122,8 +114,7 @@ $String* StAXInputSource::getEventReaderSystemId($XMLEventReader* reader) {
 		if (reader != nullptr) {
 			return $nc($($nc($(reader->peek()))->getLocation()))->getSystemId();
 		}
-	} catch ($XMLStreamException&) {
-		$catch();
+	} catch ($XMLStreamException& e) {
 	}
 	return nullptr;
 }

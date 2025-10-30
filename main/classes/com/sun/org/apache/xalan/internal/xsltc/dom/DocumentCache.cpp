@@ -10,17 +10,6 @@
 #include <com/sun/org/apache/xml/internal/utils/SystemIDResolver.h>
 #include <java/io/File.h>
 #include <java/io/PrintWriter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <java/net/URL.h>
 #include <java/net/URLConnection.h>
@@ -136,14 +125,12 @@ void DocumentCache::init$(int32_t size) {
 	DocumentCache::init$(size, nullptr);
 	try {
 		$set(this, _dtmManager, $XSLTCDTMManager::createNewDTMManagerInstance());
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($SAXException, e);
 	}
 }
 
 void DocumentCache::init$(int32_t size, $XSLTCDTMManager* dtmManager) {
-	$useLocalCurrentObjectStackCache();
 	$set(this, _dtmManager, dtmManager);
 	this->_count = 0;
 	this->_current = 0;
@@ -155,14 +142,12 @@ void DocumentCache::init$(int32_t size, $XSLTCDTMManager* dtmManager) {
 		try {
 			$init($Constants);
 			$nc(factory)->setFeature($Constants::NAMESPACE_FEATURE, true);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$nc(factory)->setNamespaceAware(true);
 		}
 		$set(this, _parser, $nc(factory)->newSAXParser());
 		$set(this, _reader, $nc(this->_parser)->getXMLReader());
-	} catch ($ParserConfigurationException&) {
-		$var($ParserConfigurationException, e, $catch());
+	} catch ($ParserConfigurationException& e) {
 		$init($BasisLibrary);
 		$BasisLibrary::runTimeError($BasisLibrary::NAMESPACES_SUPPORT_ERR);
 	}
@@ -181,8 +166,7 @@ int64_t DocumentCache::getLastModified($String* uri) {
 			}
 		}
 		return (timestamp);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		return ($System::currentTimeMillis());
 	}
 	$shouldNotReachHere();
@@ -225,8 +209,7 @@ $DOM* DocumentCache::retrieveDocument($String* baseURI, $String* href, $Translet
 	if (baseURI != nullptr && !baseURI->equals(""_s)) {
 		try {
 			$assign(uri, $SystemIDResolver::getAbsoluteURI(uri, baseURI));
-		} catch ($TransformerException&) {
-			$catch();
+		} catch ($TransformerException& te) {
 		}
 	}
 	if (($assign(doc, lookupDocument(uri))) == nullptr) {

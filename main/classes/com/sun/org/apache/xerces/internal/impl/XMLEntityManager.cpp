@@ -55,22 +55,7 @@
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/HttpURLConnection.h>
 #include <java/net/URI.h>
 #include <java/net/URISyntaxException.h>
@@ -488,44 +473,26 @@ void XMLEntityManager::finalize() {
 	this->$XMLComponent::finalize();
 }
 
-
 $String* XMLEntityManager::VALIDATION = nullptr;
-
 $String* XMLEntityManager::EXTERNAL_GENERAL_ENTITIES = nullptr;
-
 $String* XMLEntityManager::EXTERNAL_PARAMETER_ENTITIES = nullptr;
-
 $String* XMLEntityManager::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* XMLEntityManager::WARN_ON_DUPLICATE_ENTITYDEF = nullptr;
-
 $String* XMLEntityManager::LOAD_EXTERNAL_DTD = nullptr;
-
 $String* XMLEntityManager::SYMBOL_TABLE = nullptr;
-
 $String* XMLEntityManager::ERROR_REPORTER = nullptr;
-
 $String* XMLEntityManager::STANDARD_URI_CONFORMANT = nullptr;
-
 $String* XMLEntityManager::ENTITY_RESOLVER = nullptr;
 $String* XMLEntityManager::STAX_ENTITY_RESOLVER = nullptr;
 $String* XMLEntityManager::VALIDATION_MANAGER = nullptr;
-
 $String* XMLEntityManager::BUFFER_SIZE = nullptr;
-
 $String* XMLEntityManager::SECURITY_MANAGER = nullptr;
 $String* XMLEntityManager::PARSER_SETTINGS = nullptr;
-
 $String* XMLEntityManager::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* XMLEntityManager::EXTERNAL_ACCESS_DEFAULT = nullptr;
-
 $StringArray* XMLEntityManager::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLEntityManager::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLEntityManager::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLEntityManager::PROPERTY_DEFAULTS = nullptr;
 $String* XMLEntityManager::XMLEntity = nullptr;
 $String* XMLEntityManager::DTDEntity = nullptr;
@@ -971,8 +938,7 @@ $StaxXMLInputSource* XMLEntityManager::resolveEntityAsPerStax($XMLResourceIdenti
 				if (is != nullptr && !is->isEmpty()) {
 					$assign(staxInputSource, $new($StaxXMLInputSource, $$new($XMLInputSource, is, true), true));
 				}
-			} catch ($CatalogException&) {
-				$var($CatalogException, e, $catch());
+			} catch ($CatalogException& e) {
 				$init($XMLMessageFormatter);
 				$nc(this->fErrorReporter)->reportError($XMLMessageFormatter::XML_DOMAIN, "CatalogException"_s, $$new($ObjectArray, {$($of($SecuritySupport::sanitizePath(this->fCatalogFile)))}), $XMLErrorReporter::SEVERITY_FATAL_ERROR, static_cast<$Exception*>(e));
 			}
@@ -1026,8 +992,7 @@ $XMLInputSource* XMLEntityManager::resolveEntity($XMLResourceIdentifier* resourc
 				if (pid != nullptr || literalSystemId != nullptr) {
 					$assign(is, $nc(this->fCatalogResolver)->resolveEntity(pid, literalSystemId));
 				}
-			} catch ($CatalogException&) {
-				$catch();
+			} catch ($CatalogException& e) {
 			}
 			if (is != nullptr && !is->isEmpty()) {
 				$assign(xmlInputSource, $new($XMLInputSource, is, true));
@@ -1038,8 +1003,7 @@ $XMLInputSource* XMLEntityManager::resolveEntity($XMLResourceIdentifier* resourc
 				$var($Source, source, nullptr);
 				try {
 					$assign(source, $nc(this->fCatalogResolver)->resolve(literalSystemId, baseSystemId));
-				} catch ($CatalogException&) {
-					$var($CatalogException, e, $catch());
+				} catch ($CatalogException& e) {
 					$throwNew($XNIException, static_cast<$Exception*>(e));
 				}
 				if (source != nullptr && !source->isEmpty()) {
@@ -1212,14 +1176,12 @@ void XMLEntityManager::closeReaders() {
 	while (!$nc(this->fReaderStack)->isEmpty()) {
 		try {
 			$nc(($cast($Reader, $($nc(this->fReaderStack)->pop()))))->close();
-		} catch ($IOException&) {
-			$catch();
+		} catch ($IOException& e) {
 		}
 	}
 }
 
 void XMLEntityManager::endEntity() {
-	$useLocalCurrentObjectStackCache();
 	$var($Entity$ScannedEntity, entity, $nc(this->fEntityStack)->size() > 0 ? $cast($Entity$ScannedEntity, $nc(this->fEntityStack)->pop()) : ($Entity$ScannedEntity*)nullptr);
 	if (this->fCurrentEntity != nullptr) {
 		try {
@@ -1231,8 +1193,7 @@ void XMLEntityManager::endEntity() {
 				}
 			}
 			$nc(this->fCurrentEntity)->close();
-		} catch ($IOException&) {
-			$var($IOException, ex, $catch());
+		} catch ($IOException& ex) {
 			$throwNew($XNIException, static_cast<$Exception*>(ex));
 		}
 	}
@@ -1266,8 +1227,7 @@ void XMLEntityManager::reset($PropertyManager* propertyManager) {
 	$set(this, fErrorReporter, $cast($XMLErrorReporter, propertyManager->getProperty($$str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::ERROR_REPORTER_PROPERTY}))));
 	try {
 		$set(this, fStaxEntityResolver, $cast($StaxEntityResolverWrapper, propertyManager->getProperty(XMLEntityManager::STAX_ENTITY_RESOLVER)));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fStaxEntityResolver, nullptr);
 	}
 	$init($XMLInputFactory);
@@ -1485,8 +1445,7 @@ $1URI* XMLEntityManager::getUserDir() {
 		$var($String, userDir, ""_s);
 		try {
 			$assign(userDir, $SecuritySupport::getSystemProperty("user.dir"_s));
-		} catch ($SecurityException&) {
-			$catch();
+		} catch ($SecurityException& se) {
 		}
 		if (userDir->length() == 0) {
 			return $new($1URI, "file"_s, ""_s, ""_s, nullptr, nullptr);
@@ -1526,8 +1485,7 @@ $1URI* XMLEntityManager::getUserDir() {
 			int8_t b = 0;
 			try {
 				$assign(bytes, $(userDir->substring(i))->getBytes("UTF-8"_s));
-			} catch ($UnsupportedEncodingException&) {
-				$var($UnsupportedEncodingException, e, $catch());
+			} catch ($UnsupportedEncodingException& e) {
 				return $new($1URI, "file"_s, ""_s, userDir, nullptr, nullptr);
 			}
 			len = $nc(bytes)->length;
@@ -1628,8 +1586,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 		if (uri != nullptr) {
 			return systemId;
 		}
-	} catch ($URI$MalformedURIException&) {
-		$catch();
+	} catch ($URI$MalformedURIException& e) {
 	}
 	$var($String, id, fixURI(systemId));
 	$var($1URI, base, nullptr);
@@ -1642,8 +1599,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 		} else {
 			try {
 				$assign(base, $new($1URI, $(fixURI(baseSystemId))));
-			} catch ($URI$MalformedURIException&) {
-				$var($URI$MalformedURIException, e, $catch());
+			} catch ($URI$MalformedURIException& e) {
 				if (baseSystemId->indexOf((int32_t)u':') != -1) {
 					$assign(base, $new($1URI, "file"_s, ""_s, $(fixURI(baseSystemId)), nullptr, nullptr));
 				} else {
@@ -1654,8 +1610,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 			}
 		}
 		$assign(uri, $new($1URI, base, id));
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	if (uri == nullptr) {
 		return systemId;
@@ -1673,8 +1628,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 		try {
 			$new($1URI, systemId);
 			return systemId;
-		} catch ($URI$MalformedURIException&) {
-			$catch();
+		} catch ($URI$MalformedURIException& ex) {
 		}
 		$var($1URI, base, nullptr);
 		if (baseSystemId == nullptr || $nc(baseSystemId)->length() == 0) {
@@ -1682,8 +1636,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 		} else {
 			try {
 				$assign(base, $new($1URI, baseSystemId));
-			} catch ($URI$MalformedURIException&) {
-				$var($URI$MalformedURIException, e, $catch());
+			} catch ($URI$MalformedURIException& e) {
 				$var($String, dir, $nc($(getUserDir()))->toString());
 				$assign(dir, $str({dir, baseSystemId}));
 				$assign(base, $new($1URI, "file"_s, ""_s, dir, nullptr, nullptr));
@@ -1694,12 +1647,10 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 	}
 	try {
 		return expandSystemIdStrictOff(systemId, baseSystemId);
-	} catch ($URI$MalformedURIException&) {
-		$var($URI$MalformedURIException, e, $catch());
+	} catch ($URI$MalformedURIException& e) {
 		try {
 			return expandSystemIdStrictOff1(systemId, baseSystemId);
-		} catch ($URISyntaxException&) {
-			$catch();
+		} catch ($URISyntaxException& ex) {
 		}
 	}
 	if ($nc(systemId)->length() == 0) {
@@ -1715,8 +1666,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 		} else {
 			try {
 				$assign(base, $new($1URI, $($nc($(fixURI(baseSystemId)))->trim())));
-			} catch ($URI$MalformedURIException&) {
-				$var($URI$MalformedURIException, e, $catch());
+			} catch ($URI$MalformedURIException& e) {
 				if (baseSystemId->indexOf((int32_t)u':') != -1) {
 					$assign(base, $new($1URI, "file"_s, ""_s, $($nc($(fixURI(baseSystemId)))->trim()), nullptr, nullptr));
 				} else {
@@ -1726,8 +1676,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 			}
 		}
 		$assign(uri, $new($1URI, base, $($nc(id)->trim())));
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	if (uri == nullptr) {
 		return systemId;
@@ -2139,7 +2088,7 @@ void clinit$XMLEntityManager($Class* class$) {
 	$init($JdkConstants);
 	$assignStatic(XMLEntityManager::XML_SECURITY_PROPERTY_MANAGER, $JdkConstants::XML_SECURITY_PROPERTY_MANAGER);
 	$assignStatic(XMLEntityManager::EXTERNAL_ACCESS_DEFAULT, $JdkConstants::EXTERNAL_ACCESS_DEFAULT);
-		$init($XMLConstants);
+	$init($XMLConstants);
 	$assignStatic(XMLEntityManager::RECOGNIZED_FEATURES, $new($StringArray, {
 		XMLEntityManager::VALIDATION,
 		XMLEntityManager::EXTERNAL_GENERAL_ENTITIES,
@@ -2149,8 +2098,8 @@ void clinit$XMLEntityManager($Class* class$) {
 		XMLEntityManager::STANDARD_URI_CONFORMANT,
 		$XMLConstants::USE_CATALOG
 	}));
-		$init($Boolean);
-		$init($JdkXmlUtils);
+	$init($Boolean);
+	$init($JdkXmlUtils);
 	$assignStatic(XMLEntityManager::FEATURE_DEFAULTS, $new($BooleanArray, {
 		($Boolean*)nullptr,
 		$Boolean::TRUE,
@@ -2160,7 +2109,7 @@ void clinit$XMLEntityManager($Class* class$) {
 		$Boolean::FALSE,
 		$($Boolean::valueOf($JdkXmlUtils::USE_CATALOG_DEFAULT))
 	}));
-		$init($JdkConstants);
+	$init($JdkConstants);
 	$assignStatic(XMLEntityManager::RECOGNIZED_PROPERTIES, $new($StringArray, {
 		XMLEntityManager::SYMBOL_TABLE,
 		XMLEntityManager::ERROR_REPORTER,

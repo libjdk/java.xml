@@ -3,16 +3,6 @@
 #include <com/sun/org/apache/xml/internal/utils/WrappedRuntimeException.h>
 #include <com/sun/org/apache/xpath/internal/objects/XBooleanStatic.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jcpp.h>
 
@@ -74,9 +64,7 @@ $Object* allocate$XBoolean($Class* clazz) {
 	return $of($alloc(XBoolean));
 }
 
-
 XBoolean* XBoolean::S_TRUE = nullptr;
-
 XBoolean* XBoolean::S_FALSE = nullptr;
 
 void XBoolean::init$(bool b) {
@@ -123,8 +111,7 @@ bool XBoolean::equals($XObject* obj2) {
 	}
 	try {
 		return this->m_val == $nc(obj2)->bool$();
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($WrappedRuntimeException, te);
 	}
 	$shouldNotReachHere();

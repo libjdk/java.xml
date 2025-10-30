@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/ExtendedType.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -96,8 +88,7 @@ bool ExtendedType::equals(ExtendedType* other) {
 	try {
 		bool var$0 = $nc(other)->nodetype == this->nodetype && $nc(other->localName)->equals(this->localName);
 		return var$0 && $nc(other->namespace$)->equals(this->namespace$);
-	} catch ($NullPointerException&) {
-		$var($NullPointerException, e, $catch());
+	} catch ($NullPointerException& e) {
 		return false;
 	}
 	$shouldNotReachHere();

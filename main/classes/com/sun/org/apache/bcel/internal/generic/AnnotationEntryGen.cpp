@@ -23,19 +23,6 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Iterator.h>
@@ -330,18 +317,16 @@ $AttributeArray* AnnotationEntryGen::getAnnotationAttributes($ConstantPoolGen* c
 											}
 										}
 									}
-								} catch ($Throwable&) {
-									$var($Throwable, t$, $catch());
+								} catch ($Throwable& t$) {
 									try {
 										riaDos->close();
-									} catch ($Throwable&) {
-										$var($Throwable, x2, $catch());
+									} catch ($Throwable& x2) {
 										t$->addSuppressed(x2);
 									}
 									$throw(t$);
 								}
-							} catch ($Throwable&) {
-								$assign(var$1, $catch());
+							} catch ($Throwable& var$2) {
+								$assign(var$1, var$2);
 							} /*finally*/ {
 								riaDos->close();
 							}
@@ -349,18 +334,16 @@ $AttributeArray* AnnotationEntryGen::getAnnotationAttributes($ConstantPoolGen* c
 								$throw(var$1);
 							}
 						}
-					} catch ($Throwable&) {
-						$var($Throwable, t$, $catch());
+					} catch ($Throwable& t$) {
 						try {
 							rvaDos->close();
-						} catch ($Throwable&) {
-							$var($Throwable, x2, $catch());
+						} catch ($Throwable& x2) {
 							t$->addSuppressed(x2);
 						}
 						$throw(t$);
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$3) {
+					$assign(var$0, var$3);
 				} /*finally*/ {
 					rvaDos->close();
 				}
@@ -381,21 +364,19 @@ $AttributeArray* AnnotationEntryGen::getAnnotationAttributes($ConstantPoolGen* c
 		}
 		$var($List, newAttributes, $new($ArrayList));
 		if ($nc(rvaData)->length > 2) {
-			int32_t var$2 = rvaIndex;
-			int32_t var$3 = rvaData->length;
-			$var($DataInput, var$4, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, rvaData))));
-			newAttributes->add($$new($RuntimeVisibleAnnotations, var$2, var$3, var$4, $($nc(cp)->getConstantPool())));
+			int32_t var$4 = rvaIndex;
+			int32_t var$5 = rvaData->length;
+			$var($DataInput, var$6, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, rvaData))));
+			newAttributes->add($$new($RuntimeVisibleAnnotations, var$4, var$5, var$6, $($nc(cp)->getConstantPool())));
 		}
 		if ($nc(riaData)->length > 2) {
-			int32_t var$5 = riaIndex;
-			int32_t var$6 = riaData->length;
-			$var($DataInput, var$7, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, riaData))));
-			newAttributes->add($$new($RuntimeInvisibleAnnotations, var$5, var$6, var$7, $($nc(cp)->getConstantPool())));
+			int32_t var$7 = riaIndex;
+			int32_t var$8 = riaData->length;
+			$var($DataInput, var$9, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, riaData))));
+			newAttributes->add($$new($RuntimeInvisibleAnnotations, var$7, var$8, var$9, $($nc(cp)->getConstantPool())));
 		}
 		return $fcast($AttributeArray, newAttributes->toArray($$new($AttributeArray, newAttributes->size())));
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
-		$init($System);
+	} catch ($IOException& e) {
 		$nc($System::err)->println("IOException whilst processing annotations"_s);
 		e->printStackTrace();
 	}
@@ -452,18 +433,16 @@ $AttributeArray* AnnotationEntryGen::getParameterAnnotationAttributes($ConstantP
 								}
 							}
 						}
-					} catch ($Throwable&) {
-						$var($Throwable, t$, $catch());
+					} catch ($Throwable& t$) {
 						try {
 							rvaDos->close();
-						} catch ($Throwable&) {
-							$var($Throwable, x2, $catch());
+						} catch ($Throwable& x2) {
 							t$->addSuppressed(x2);
 						}
 						$throw(t$);
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$1) {
+					$assign(var$0, var$1);
 				} /*finally*/ {
 					rvaDos->close();
 				}
@@ -476,7 +455,7 @@ $AttributeArray* AnnotationEntryGen::getParameterAnnotationAttributes($ConstantP
 		{
 			$var($DataOutputStream, riaDos, $new($DataOutputStream, riaBytes));
 			{
-				$var($Throwable, var$1, nullptr);
+				$var($Throwable, var$2, nullptr);
 				try {
 					try {
 						riaDos->writeByte(vec->length);
@@ -496,23 +475,21 @@ $AttributeArray* AnnotationEntryGen::getParameterAnnotationAttributes($ConstantP
 								}
 							}
 						}
-					} catch ($Throwable&) {
-						$var($Throwable, t$, $catch());
+					} catch ($Throwable& t$) {
 						try {
 							riaDos->close();
-						} catch ($Throwable&) {
-							$var($Throwable, x2, $catch());
+						} catch ($Throwable& x2) {
 							t$->addSuppressed(x2);
 						}
 						$throw(t$);
 					}
-				} catch ($Throwable&) {
-					$assign(var$1, $catch());
+				} catch ($Throwable& var$3) {
+					$assign(var$2, var$3);
 				} /*finally*/ {
 					riaDos->close();
 				}
-				if (var$1 != nullptr) {
-					$throw(var$1);
+				if (var$2 != nullptr) {
+					$throw(var$2);
 				}
 			}
 		}
@@ -528,21 +505,19 @@ $AttributeArray* AnnotationEntryGen::getParameterAnnotationAttributes($ConstantP
 		}
 		$var($List, newAttributes, $new($ArrayList));
 		if (totalVisCount > 0) {
-			int32_t var$2 = rvaIndex;
-			int32_t var$3 = $nc(rvaData)->length;
-			$var($DataInput, var$4, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, rvaData))));
-			newAttributes->add($$new($RuntimeVisibleParameterAnnotations, var$2, var$3, var$4, $($nc(cp)->getConstantPool())));
+			int32_t var$4 = rvaIndex;
+			int32_t var$5 = $nc(rvaData)->length;
+			$var($DataInput, var$6, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, rvaData))));
+			newAttributes->add($$new($RuntimeVisibleParameterAnnotations, var$4, var$5, var$6, $($nc(cp)->getConstantPool())));
 		}
 		if (totalInvisCount > 0) {
-			int32_t var$5 = riaIndex;
-			int32_t var$6 = $nc(riaData)->length;
-			$var($DataInput, var$7, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, riaData))));
-			newAttributes->add($$new($RuntimeInvisibleParameterAnnotations, var$5, var$6, var$7, $($nc(cp)->getConstantPool())));
+			int32_t var$7 = riaIndex;
+			int32_t var$8 = $nc(riaData)->length;
+			$var($DataInput, var$9, static_cast<$DataInput*>($new($DataInputStream, $$new($ByteArrayInputStream, riaData))));
+			newAttributes->add($$new($RuntimeInvisibleParameterAnnotations, var$7, var$8, var$9, $($nc(cp)->getConstantPool())));
 		}
 		return $fcast($AttributeArray, newAttributes->toArray($$new($AttributeArray, newAttributes->size())));
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
-		$init($System);
+	} catch ($IOException& e) {
 		$nc($System::err)->println($$str({"IOException whilst processing parameter annotations."_s, $(e->getMessage())}));
 	}
 	return nullptr;

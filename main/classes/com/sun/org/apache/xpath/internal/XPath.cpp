@@ -15,23 +15,7 @@
 #include <com/sun/org/apache/xpath/internal/compiler/XPathParser.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Serializable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <javax/xml/transform/SourceLocator.h>
@@ -168,15 +152,10 @@ void XPath::finalize() {
 	this->$Serializable::finalize();
 }
 
-
 double XPath::MATCH_SCORE_NONE = 0.0;
-
 double XPath::MATCH_SCORE_QNAME = 0.0;
-
 double XPath::MATCH_SCORE_NSWILD = 0.0;
-
 double XPath::MATCH_SCORE_NODETEST = 0.0;
-
 double XPath::MATCH_SCORE_OTHER = 0.0;
 
 void XPath::initFunctionTable() {
@@ -282,8 +261,7 @@ $XObject* XPath::execute($XPathContext* xctxt, int32_t contextNode, $PrefixResol
 		try {
 			try {
 				$assign(xobj, $nc(this->m_mainExp)->execute(xctxt));
-			} catch ($TransformerException&) {
-				$var($TransformerException, te, $catch());
+			} catch ($TransformerException& te) {
 				te->setLocator($(this->getLocator()));
 				$var($ErrorListener, el, xctxt->getErrorListener());
 				if (nullptr != el) {
@@ -291,8 +269,7 @@ $XObject* XPath::execute($XPathContext* xctxt, int32_t contextNode, $PrefixResol
 				} else {
 					$throw(te);
 				}
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				while ($instanceOf($WrappedRuntimeException, e)) {
 					$assign(e, $nc(($cast($WrappedRuntimeException, e)))->getException());
 				}
@@ -309,8 +286,8 @@ $XObject* XPath::execute($XPathContext* xctxt, int32_t contextNode, $PrefixResol
 					$throw(te);
 				}
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			xctxt->popNamespaceContext();
 			xctxt->popCurrentNodeAndExpression();
@@ -335,8 +312,7 @@ bool XPath::bool$($XPathContext* xctxt, int32_t contextNode, $PrefixResolver* na
 				var$2 = $nc(this->m_mainExp)->bool$(xctxt);
 				return$1 = true;
 				goto $finally;
-			} catch ($TransformerException&) {
-				$var($TransformerException, te, $catch());
+			} catch ($TransformerException& te) {
 				te->setLocator($(this->getLocator()));
 				$var($ErrorListener, el, xctxt->getErrorListener());
 				if (nullptr != el) {
@@ -344,8 +320,7 @@ bool XPath::bool$($XPathContext* xctxt, int32_t contextNode, $PrefixResolver* na
 				} else {
 					$throw(te);
 				}
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				while ($instanceOf($WrappedRuntimeException, e)) {
 					$assign(e, $nc(($cast($WrappedRuntimeException, e)))->getException());
 				}
@@ -362,8 +337,8 @@ bool XPath::bool$($XPathContext* xctxt, int32_t contextNode, $PrefixResolver* na
 					$throw(te);
 				}
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			xctxt->popNamespaceContext();
 			xctxt->popCurrentNodeAndExpression();
@@ -391,8 +366,8 @@ double XPath::getMatchScore($XPathContext* xctxt, int32_t context) {
 			var$2 = $nc(score)->num();
 			return$1 = true;
 			goto $finally;
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			xctxt->popCurrentNode();
 			xctxt->popCurrentExpressionNode();
@@ -433,7 +408,6 @@ void XPath::error($XPathContext* xctxt, int32_t sourceNode, $String* msg, $Objec
 		ehandler->fatalError($$new($TransformerException, fmsg, $cast($SAXSourceLocator, $(xctxt->getSAXLocator()))));
 	} else {
 		$var($SourceLocator, slocator, xctxt->getSAXLocator());
-		$init($System);
 		$var($String, var$2, $$str({fmsg, "; file "_s, $($nc(slocator)->getSystemId()), "; line "_s}));
 		$var($String, var$1, $$concat(var$2, $$str(slocator->getLineNumber())));
 		$var($String, var$0, $$concat(var$1, "; column "));

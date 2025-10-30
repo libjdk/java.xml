@@ -2,16 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/serializer/EncodingInfo$EncodingImpl.h>
 #include <com/sun/org/apache/xml/internal/serializer/EncodingInfo$InEncoding.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $EncodingInfo$EncodingImpl = ::com::sun::org::apache::xml::internal::serializer::EncodingInfo$EncodingImpl;
@@ -100,8 +90,7 @@ bool EncodingInfo::inEncoding(char16_t ch, $String* encoding) {
 		$var($String, s, $new($String, cArray));
 		$var($bytes, bArray, s->getBytes(encoding));
 		isInEncoding = inEncoding(ch, bArray);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		isInEncoding = false;
 		if (encoding == nullptr) {
 			isInEncoding = true;
@@ -120,8 +109,7 @@ bool EncodingInfo::inEncoding(char16_t high, char16_t low, $String* encoding) {
 		$var($String, s, $new($String, cArray));
 		$var($bytes, bArray, s->getBytes(encoding));
 		isInEncoding = inEncoding(high, bArray);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		isInEncoding = false;
 	}
 	return isInEncoding;

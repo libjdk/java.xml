@@ -26,17 +26,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLConfigurationException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/HashMap.h>
 #include <java/util/Iterator.h>
 #include <java/util/Locale.h>
@@ -242,51 +232,28 @@ $Object* allocate$XMLSchemaValidatorComponentManager($Class* clazz) {
 	return $of($alloc(XMLSchemaValidatorComponentManager));
 }
 
-
 $String* XMLSchemaValidatorComponentManager::SCHEMA_VALIDATION = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::VALIDATION = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::USE_GRAMMAR_POOL_ONLY = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::IGNORE_XSI_TYPE = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::ID_IDREF_CHECKING = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::UNPARSED_ENTITY_CHECKING = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::IDENTITY_CONSTRAINT_CHECKING = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::DISALLOW_DOCTYPE_DECL_FEATURE = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::NORMALIZE_DATA = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::SCHEMA_ELEMENT_DEFAULT = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::SCHEMA_AUGMENT_PSVI = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::ENTITY_MANAGER = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::ENTITY_RESOLVER = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::ERROR_HANDLER = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::ERROR_REPORTER = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::NAMESPACE_CONTEXT = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::SCHEMA_VALIDATOR = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::SECURITY_MANAGER = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::SYMBOL_TABLE = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::VALIDATION_MANAGER = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::XMLGRAMMAR_POOL = nullptr;
-
 $String* XMLSchemaValidatorComponentManager::LOCALE = nullptr;
 
 void XMLSchemaValidatorComponentManager::init$($XSGrammarPoolContainer* grammarContainer) {
@@ -317,8 +284,8 @@ void XMLSchemaValidatorComponentManager::init$($XSGrammarPoolContainer* grammarC
 	this->fUseGrammarPoolOnly = $nc(grammarContainer)->isFullyComposed();
 	$init($XSMessageFormatter);
 	$nc(this->fErrorReporter)->putMessageFormatter($XSMessageFormatter::SCHEMA_DOMAIN, $$new($XSMessageFormatter));
-		$init($XMLConstants);
-		$init($JdkConstants);
+	$init($XMLConstants);
+	$init($JdkConstants);
 	$var($StringArray, recognizedFeatures, $new($StringArray, {
 		XMLSchemaValidatorComponentManager::DISALLOW_DOCTYPE_DECL_FEATURE,
 		XMLSchemaValidatorComponentManager::NORMALIZE_DATA,

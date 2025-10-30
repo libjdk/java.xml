@@ -4,13 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/BaseSchemaDVFactory.h>
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.h>
 #include <com/sun/org/apache/xerces/internal/util/SymbolHash.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $XSSimpleType = ::com::sun::org::apache::xerces::internal::impl::dv::XSSimpleType;

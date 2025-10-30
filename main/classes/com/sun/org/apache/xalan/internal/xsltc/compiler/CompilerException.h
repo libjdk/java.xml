@@ -25,8 +25,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0x180CA366CDA21987;
 	$String* _msg = nullptr;
 	CompilerException(const CompilerException& e);
-	CompilerException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline CompilerException* operator ->() {
+		return (CompilerException*)throwing$;
+	}
 };
 
 							} // compiler

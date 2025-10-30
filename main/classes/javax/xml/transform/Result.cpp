@@ -1,12 +1,5 @@
 #include <javax/xml/transform/Result.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef PI_DISABLE_OUTPUT_ESCAPING
@@ -45,9 +38,7 @@ $Object* allocate$Result($Class* clazz) {
 	return $of($alloc(Result));
 }
 
-
 $String* Result::PI_DISABLE_OUTPUT_ESCAPING = nullptr;
-
 $String* Result::PI_ENABLE_OUTPUT_ESCAPING = nullptr;
 
 void clinit$Result($Class* class$) {

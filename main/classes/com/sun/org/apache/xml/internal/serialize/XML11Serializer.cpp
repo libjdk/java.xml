@@ -17,17 +17,6 @@
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMError.h>
 #include <org/w3c/dom/DOMErrorHandler.h>
 #include <org/w3c/dom/Node.h>
@@ -78,11 +67,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _XML11Serializer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _XML11Serializer_FieldInfo_[] = {
 	{"DEBUG", "Z", nullptr, $PROTECTED | $STATIC | $FINAL, $constField(XML11Serializer, DEBUG)},
@@ -215,8 +204,7 @@ void XML11Serializer::characters($chars* chars, int32_t start, int32_t length) {
 				printText(chars, start, length, false, state->unescaped);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }

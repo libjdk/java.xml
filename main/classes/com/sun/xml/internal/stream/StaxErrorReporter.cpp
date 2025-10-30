@@ -7,17 +7,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
 #include <com/sun/xml/internal/stream/StaxErrorReporter$1.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/stream/Location.h>
 #include <javax/xml/stream/XMLInputFactory.h>
@@ -145,8 +135,7 @@ $String* StaxErrorReporter::reportError($XMLLocator* location, $String* domain, 
 					if (this->fXMLReporter != nullptr) {
 						$nc(this->fXMLReporter)->report(message, "WARNING"_s, nullptr, $(convertToStaxLocation(location)));
 					}
-				} catch ($XMLStreamException&) {
-					$var($XMLStreamException, ex, $catch());
+				} catch ($XMLStreamException& ex) {
 					$throwNew($XNIException, static_cast<$Exception*>(ex));
 				}
 				break;
@@ -159,8 +148,7 @@ $String* StaxErrorReporter::reportError($XMLLocator* location, $String* domain, 
 					if (this->fXMLReporter != nullptr) {
 						$nc(this->fXMLReporter)->report(message, "ERROR"_s, nullptr, $(convertToStaxLocation(location)));
 					}
-				} catch ($XMLStreamException&) {
-					$var($XMLStreamException, ex, $catch());
+				} catch ($XMLStreamException& ex) {
 					$throwNew($XNIException, static_cast<$Exception*>(ex));
 				}
 				break;

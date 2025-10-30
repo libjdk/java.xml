@@ -2,16 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/MessageFormat.h>
 #include <java/util/ResourceBundle.h>
 #include <jdk/xml/internal/SecuritySupport.h>
@@ -67,9 +57,7 @@ $Object* allocate$XPATHMessages($Class* clazz) {
 	return $of($alloc(XPATHMessages));
 }
 
-
 $ResourceBundle* XPATHMessages::XPATHBundle = nullptr;
-
 $String* XPATHMessages::XPATH_ERROR_RESOURCES = nullptr;
 
 void XPATHMessages::init$() {
@@ -123,8 +111,7 @@ $String* XPATHMessages::createXPATHMsg($ResourceBundle* fResourceBundle, $String
 				}
 			}
 			$assign(fmsg, $MessageFormat::format(msg, args));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$init($XPATHErrorResources);
 			$assign(fmsg, $nc(fResourceBundle)->getString($XPATHErrorResources::FORMAT_FAILED));
 			$plusAssign(fmsg, $$str({" "_s, msg}));

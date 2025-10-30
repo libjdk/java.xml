@@ -13,16 +13,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLConfigurationException.h>
 #include <com/sun/org/apache/xerces/internal/xs/AttributePSVI.h>
 #include <com/sun/org/apache/xerces/internal/xs/ElementPSVI.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/transform/Result.h>
 #include <javax/xml/transform/Source.h>
@@ -156,7 +146,6 @@ void ValidatorImpl::finalize() {
 	this->$Validator::finalize();
 }
 
-
 $String* ValidatorImpl::CURRENT_ELEMENT_NODE = nullptr;
 
 void ValidatorImpl::init$($XSGrammarPoolContainer* grammarContainer) {
@@ -225,8 +214,7 @@ bool ValidatorImpl::getFeature($String* name) {
 	}
 	try {
 		return $nc(this->fComponentManager)->getFeature(name);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		$var($String, key, e->getType() == $Status::NOT_RECOGNIZED ? "feature-not-recognized"_s : "feature-not-supported"_s);
@@ -242,8 +230,7 @@ void ValidatorImpl::setFeature($String* name, bool value) {
 	}
 	try {
 		$nc(this->fComponentManager)->setFeature(name, value);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$var($String, key, nullptr);
 		$init($Status);
@@ -271,8 +258,7 @@ $Object* ValidatorImpl::getProperty($String* name) {
 	}
 	try {
 		return $of($nc(this->fComponentManager)->getProperty(name));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		$var($String, key, e->getType() == $Status::NOT_RECOGNIZED ? "property-not-recognized"_s : "property-not-supported"_s);
@@ -288,8 +274,7 @@ void ValidatorImpl::setProperty($String* name, Object$* object) {
 	}
 	try {
 		$nc(this->fComponentManager)->setProperty(name, object);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		$var($String, key, e->getType() == $Status::NOT_RECOGNIZED ? "property-not-recognized"_s : "property-not-supported"_s);

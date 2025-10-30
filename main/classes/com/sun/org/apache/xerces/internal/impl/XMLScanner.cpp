@@ -24,19 +24,8 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLConfigurationException.h>
 #include <com/sun/xml/internal/stream/Entity$ScannedEntity.h>
 #include <com/sun/xml/internal/stream/XMLEntityStorage.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ArrayList.h>
 #include <javax/xml/stream/events/XMLEvent.h>
 #include <jcpp.h>
@@ -235,36 +224,21 @@ $Object* allocate$XMLScanner($Class* clazz) {
 	return $of($alloc(XMLScanner));
 }
 
-
 $String* XMLScanner::NAMESPACES = nullptr;
-
 $String* XMLScanner::VALIDATION = nullptr;
-
 $String* XMLScanner::NOTIFY_CHAR_REFS = nullptr;
 $String* XMLScanner::PARSER_SETTINGS = nullptr;
-
 $String* XMLScanner::SYMBOL_TABLE = nullptr;
-
 $String* XMLScanner::ERROR_REPORTER = nullptr;
-
 $String* XMLScanner::ENTITY_MANAGER = nullptr;
-
 $String* XMLScanner::SECURITY_MANAGER = nullptr;
-
 $String* XMLScanner::fVersionSymbol = nullptr;
-
 $String* XMLScanner::fEncodingSymbol = nullptr;
-
 $String* XMLScanner::fStandaloneSymbol = nullptr;
-
 $String* XMLScanner::fAmpSymbol = nullptr;
-
 $String* XMLScanner::fLtSymbol = nullptr;
-
 $String* XMLScanner::fGtSymbol = nullptr;
-
 $String* XMLScanner::fQuotSymbol = nullptr;
-
 $String* XMLScanner::fAposSymbol = nullptr;
 
 void XMLScanner::init$() {
@@ -1007,8 +981,7 @@ int32_t XMLScanner::scanCharReferenceValue($XMLStringBuffer* buf, $XMLStringBuff
 			errorBuf->append($nc(this->fStringBuffer3)->ch, $nc(this->fStringBuffer3)->offset, $nc(this->fStringBuffer3)->length);
 			reportFatalError("InvalidCharRef"_s, $$new($ObjectArray, {$($of(errorBuf->toString()))}));
 		}
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		$var($StringBuffer, errorBuf, $new($StringBuffer, $nc(this->fStringBuffer3)->length + 1));
 		if (hex) {
 			errorBuf->append(u'x');

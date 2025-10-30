@@ -1,20 +1,7 @@
 #include <javax/xml/xpath/XPathEvaluationResult$XPathResultType.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Objects.h>
 #include <javax/xml/namespace/QName.h>
 #include <javax/xml/xpath/XPathConstants.h>
@@ -101,17 +88,11 @@ $Object* allocate$XPathEvaluationResult$XPathResultType($Class* clazz) {
 	return $of($alloc(XPathEvaluationResult$XPathResultType));
 }
 
-
 XPathEvaluationResult$XPathResultType* XPathEvaluationResult$XPathResultType::ANY = nullptr;
-
 XPathEvaluationResult$XPathResultType* XPathEvaluationResult$XPathResultType::BOOLEAN = nullptr;
-
 XPathEvaluationResult$XPathResultType* XPathEvaluationResult$XPathResultType::NUMBER = nullptr;
-
 XPathEvaluationResult$XPathResultType* XPathEvaluationResult$XPathResultType::STRING = nullptr;
-
 XPathEvaluationResult$XPathResultType* XPathEvaluationResult$XPathResultType::NODESET = nullptr;
-
 XPathEvaluationResult$XPathResultType* XPathEvaluationResult$XPathResultType::NODE = nullptr;
 $XPathEvaluationResult$XPathResultTypeArray* XPathEvaluationResult$XPathResultType::$VALUES = nullptr;
 
@@ -190,7 +171,6 @@ void clinit$XPathEvaluationResult$XPathResultType($Class* class$) {
 	$assignStatic(XPathEvaluationResult$XPathResultType::BOOLEAN, $new(XPathEvaluationResult$XPathResultType, "BOOLEAN"_s, 1, $XPathConstants::BOOLEAN, $Boolean::class$));
 	$load($Number);
 	$assignStatic(XPathEvaluationResult$XPathResultType::NUMBER, $new(XPathEvaluationResult$XPathResultType, "NUMBER"_s, 2, $XPathConstants::NUMBER, $Number::class$));
-	$load($String);
 	$assignStatic(XPathEvaluationResult$XPathResultType::STRING, $new(XPathEvaluationResult$XPathResultType, "STRING"_s, 3, $XPathConstants::STRING, $String::class$));
 	$load($XPathNodes);
 	$assignStatic(XPathEvaluationResult$XPathResultType::NODESET, $new(XPathEvaluationResult$XPathResultType, "NODESET"_s, 4, $XPathConstants::NODESET, $XPathNodes::class$));

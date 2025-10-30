@@ -36,22 +36,7 @@
 #include <java/io/IOException.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/catalog/CatalogFeatures$Feature.h>
@@ -266,17 +251,11 @@ $Object* allocate$XMLSchemaFactory($Class* clazz) {
 	return $of($alloc(XMLSchemaFactory));
 }
 
-
 $String* XMLSchemaFactory::JAXP_SOURCE_FEATURE_PREFIX = nullptr;
-
 $String* XMLSchemaFactory::SCHEMA_FULL_CHECKING = nullptr;
-
 $String* XMLSchemaFactory::USE_GRAMMAR_POOL_ONLY = nullptr;
-
 $String* XMLSchemaFactory::XMLGRAMMAR_POOL = nullptr;
-
 $String* XMLSchemaFactory::SECURITY_MANAGER = nullptr;
-
 $String* XMLSchemaFactory::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 
 void XMLSchemaFactory::init$() {
@@ -400,11 +379,9 @@ $Schema* XMLSchemaFactory::newSchema($SourceArray* schemas) {
 	}
 	try {
 		$nc(this->fXMLSchemaLoader)->loadGrammar(xmlInputSources);
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($($Util::toSAXException(e)));
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$var($SAXParseException, se, $new($SAXParseException, $(e->getMessage()), nullptr, e));
 		if (this->fErrorHandler != nullptr) {
 			$nc(this->fErrorHandler)->error(se);
@@ -475,8 +452,7 @@ bool XMLSchemaFactory::getFeature($String* name) {
 	}
 	try {
 		return $nc(this->fXMLSchemaLoader)->getFeature(name);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -501,8 +477,7 @@ $Object* XMLSchemaFactory::getProperty($String* name) {
 	try {
 		$var($String, propertyValue, (this->fSecurityManager != nullptr) ? $nc(this->fSecurityManager)->getLimitAsString(name) : ($String*)nullptr);
 		return $of(propertyValue != nullptr ? $of(propertyValue) : $nc(this->fXMLSchemaLoader)->getProperty(name));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -569,8 +544,7 @@ void XMLSchemaFactory::setFeature($String* name, bool value) {
 	}
 	try {
 		$nc(this->fXMLSchemaLoader)->setFeature(name, value);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {
@@ -612,8 +586,7 @@ void XMLSchemaFactory::setProperty($String* name, Object$* object) {
 				$nc(this->fXMLSchemaLoader)->setProperty(name, object);
 			}
 		}
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		if (e->getType() == $Status::NOT_RECOGNIZED) {

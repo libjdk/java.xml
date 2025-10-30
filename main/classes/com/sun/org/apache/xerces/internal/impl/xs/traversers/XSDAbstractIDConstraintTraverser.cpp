@@ -18,13 +18,6 @@
 #include <com/sun/org/apache/xerces/internal/util/SymbolTable.h>
 #include <com/sun/org/apache/xerces/internal/util/XMLChar.h>
 #include <com/sun/org/apache/xerces/internal/xni/NamespaceContext.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Element.h>
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>
@@ -166,8 +159,7 @@ bool XSDAbstractIDConstraintTraverser::traverseIdentityConstraint($IdentityConst
 		$assign(sXpath, $new($Selector$XPath, sText, this->fSymbolTable, $nc(schemaDoc)->fNamespaceSupport));
 		$var($Selector, selector, $new($Selector, sXpath, ic));
 		$nc(ic)->setSelector(selector);
-	} catch ($XPathException&) {
-		$var($XPathException, e, $catch());
+	} catch ($XPathException& e) {
 		reportSchemaError($(e->getKey()), $$new($ObjectArray, {$of(sText)}), sElem);
 		$nc(this->fAttrChecker)->returnAttrArray(attrValues, schemaDoc);
 		return false;
@@ -225,8 +217,7 @@ bool XSDAbstractIDConstraintTraverser::traverseIdentityConstraint($IdentityConst
 			$var($Field$XPath, fXpath, $new($Field$XPath, fText, this->fSymbolTable, $nc(schemaDoc)->fNamespaceSupport));
 			$var($Field, field, $new($Field, fXpath, ic));
 			$nc(ic)->addField(field);
-		} catch ($XPathException&) {
-			$var($XPathException, e, $catch());
+		} catch ($XPathException& e) {
 			reportSchemaError($(e->getKey()), $$new($ObjectArray, {$of(fText)}), fElem);
 			$nc(this->fAttrChecker)->returnAttrArray(attrValues, schemaDoc);
 			return false;

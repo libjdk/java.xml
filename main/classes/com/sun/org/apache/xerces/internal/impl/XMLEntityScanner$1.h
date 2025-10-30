@@ -27,8 +27,10 @@ public:
 	virtual $Throwable* fillInStackTrace() override;
 	static const int64_t serialVersionUID = (int64_t)0x0D9ADC0245BEB3C4;
 	XMLEntityScanner$1(const XMLEntityScanner$1& e);
-	XMLEntityScanner$1 wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XMLEntityScanner$1* operator ->() {
+		return (XMLEntityScanner$1*)throwing$;
+	}
 };
 
 						} // impl

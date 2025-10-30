@@ -1,15 +1,7 @@
 #include <javax/xml/transform/stax/StAXSource.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/Location.h>
 #include <javax/xml/stream/XMLEventReader.h>
 #include <javax/xml/stream/XMLStreamConstants.h>
@@ -70,7 +62,6 @@ $ClassInfo _StAXSource_ClassInfo_ = {
 $Object* allocate$StAXSource($Class* clazz) {
 	return $of($alloc(StAXSource));
 }
-
 
 $String* StAXSource::FEATURE = nullptr;
 

@@ -2,14 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/utils/URI.h>
 #include <java/io/IOException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $URI = ::com::sun::org::apache::xml::internal::utils::URI;
@@ -74,16 +66,10 @@ void URI$MalformedURIException::init$($String* p_msg) {
 URI$MalformedURIException::URI$MalformedURIException() {
 }
 
-URI$MalformedURIException::URI$MalformedURIException(const URI$MalformedURIException& e) {
+URI$MalformedURIException::URI$MalformedURIException(const URI$MalformedURIException& e) : $IOException(e) {
 }
 
-URI$MalformedURIException URI$MalformedURIException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void URI$MalformedURIException::throwWrapper$() {
-	$pendingException(this);
+void URI$MalformedURIException::throw$() {
 	throw *this;
 }
 

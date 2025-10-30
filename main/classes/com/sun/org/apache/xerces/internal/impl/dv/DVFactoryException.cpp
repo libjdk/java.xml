@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/DVFactoryException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -59,16 +51,10 @@ void DVFactoryException::init$($String* msg) {
 DVFactoryException::DVFactoryException() {
 }
 
-DVFactoryException::DVFactoryException(const DVFactoryException& e) {
+DVFactoryException::DVFactoryException(const DVFactoryException& e) : $RuntimeException(e) {
 }
 
-DVFactoryException DVFactoryException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void DVFactoryException::throwWrapper$() {
-	$pendingException(this);
+void DVFactoryException::throw$() {
 	throw *this;
 }
 

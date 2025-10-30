@@ -31,8 +31,10 @@ public:
 	static const int64_t serialVersionUID = (int64_t)0x176C71B7E417BE2A;
 	static ::com::sun::org::apache::xerces::internal::parsers::AbstractDOMParser$Abort* INSTANCE;
 	AbstractDOMParser$Abort(const AbstractDOMParser$Abort& e);
-	AbstractDOMParser$Abort wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline AbstractDOMParser$Abort* operator ->() {
+		return (AbstractDOMParser$Abort*)throwing$;
+	}
 };
 
 						} // parsers

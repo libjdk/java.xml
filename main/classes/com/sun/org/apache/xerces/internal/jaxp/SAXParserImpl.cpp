@@ -28,18 +28,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/AttributePSVI.h>
 #include <com/sun/org/apache/xerces/internal/xs/ElementPSVI.h>
 #include <com/sun/org/apache/xerces/internal/xs/PSVIProvider.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <java/util/Locale.h>
 #include <java/util/Map$Entry.h>
@@ -239,19 +228,12 @@ void SAXParserImpl::finalize() {
 	this->$SAXParser::finalize();
 }
 
-
 $String* SAXParserImpl::NAMESPACES_FEATURE = nullptr;
-
 $String* SAXParserImpl::NAMESPACE_PREFIXES_FEATURE = nullptr;
-
 $String* SAXParserImpl::VALIDATION_FEATURE = nullptr;
-
 $String* SAXParserImpl::XMLSCHEMA_VALIDATION_FEATURE = nullptr;
-
 $String* SAXParserImpl::XINCLUDE_FEATURE = nullptr;
-
 $String* SAXParserImpl::SECURITY_MANAGER = nullptr;
-
 $String* SAXParserImpl::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 
 void SAXParserImpl::init$($SAXParserFactoryImpl* spf, $Map* features) {
@@ -351,22 +333,18 @@ $XMLReader* SAXParserImpl::getXMLReader() {
 }
 
 bool SAXParserImpl::isNamespaceAware() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->xmlReader)->getFeature(SAXParserImpl::NAMESPACES_FEATURE);
-	} catch ($SAXException&) {
-		$var($SAXException, x, $catch());
+	} catch ($SAXException& x) {
 		$throwNew($IllegalStateException, $(x->getMessage()));
 	}
 	$shouldNotReachHere();
 }
 
 bool SAXParserImpl::isValidating() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->xmlReader)->getFeature(SAXParserImpl::VALIDATION_FEATURE);
-	} catch ($SAXException&) {
-		$var($SAXException, x, $catch());
+	} catch ($SAXException& x) {
 		$throwNew($IllegalStateException, $(x->getMessage()));
 	}
 	$shouldNotReachHere();
@@ -375,8 +353,7 @@ bool SAXParserImpl::isValidating() {
 bool SAXParserImpl::isXIncludeAware() {
 	try {
 		return $nc(this->xmlReader)->getFeature(SAXParserImpl::XINCLUDE_FEATURE);
-	} catch ($SAXException&) {
-		$var($SAXException, exc, $catch());
+	} catch ($SAXException& exc) {
 		return false;
 	}
 	$shouldNotReachHere();
@@ -425,8 +402,7 @@ $Schema* SAXParserImpl::getSchema() {
 void SAXParserImpl::reset() {
 	try {
 		$nc(this->xmlReader)->restoreInitState();
-	} catch ($SAXException&) {
-		$catch();
+	} catch ($SAXException& exc) {
 	}
 	$nc(this->xmlReader)->setContentHandler(nullptr);
 	$nc(this->xmlReader)->setDTDHandler(nullptr);

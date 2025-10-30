@@ -2,14 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/dtm/DTMIterator.h>
 #include <com/sun/org/apache/xml/internal/utils/WrappedRuntimeException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -80,12 +72,10 @@ $DTMIterator* IteratorPool::getInstanceOrThrow() {
 
 $DTMIterator* IteratorPool::getInstance() {
 	$synchronized(this) {
-		$useLocalCurrentObjectStackCache();
 		if ($nc(this->m_freeStack)->isEmpty()) {
 			try {
 				return $cast($DTMIterator, $nc(this->m_orig)->clone());
-			} catch ($Exception&) {
-				$var($Exception, ex, $catch());
+			} catch ($Exception& ex) {
 				$throwNew($WrappedRuntimeException, ex);
 			}
 		} else {

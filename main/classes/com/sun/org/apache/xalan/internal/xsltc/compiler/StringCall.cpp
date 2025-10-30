@@ -13,12 +13,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -87,7 +81,7 @@ $Type* StringCall::typeCheck($SymbolTable* stable) {
 		$nc($(argument()))->typeCheck(stable);
 	}
 	$init($Type);
-	return $assignField(this, _type, $Type::String);
+	return $set(this, _type, $Type::String);
 }
 
 void StringCall::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {

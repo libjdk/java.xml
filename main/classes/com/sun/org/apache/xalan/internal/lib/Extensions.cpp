@@ -7,14 +7,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XBoolean.h>
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/StringTokenizer.h>
 #include <jdk/xml/internal/JdkXmlUtils.h>
 #include <org/w3c/dom/CharacterData.h>

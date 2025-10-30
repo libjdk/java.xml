@@ -2,14 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/utils/StopParseException.h>
 #include <com/sun/org/apache/xml/internal/utils/SystemIDResolver.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -202,8 +194,7 @@ void StylesheetPIHandler::processingInstruction($String* target, $String* data) 
 						$assign(href, $SystemIDResolver::getAbsoluteURI(href, this->m_baseID));
 						$assign(source, $new($SAXSource, $$new($InputSource, href)));
 					}
-				} catch ($TransformerException&) {
-					$var($TransformerException, te, $catch());
+				} catch ($TransformerException& te) {
 					$throwNew($SAXException, static_cast<$Exception*>(te));
 				}
 			} else if (name->equals("title"_s)) {

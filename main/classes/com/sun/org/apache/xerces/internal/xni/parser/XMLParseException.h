@@ -58,8 +58,10 @@ public:
 	int32_t fColumnNumber = 0;
 	int32_t fCharacterOffset = 0;
 	XMLParseException(const XMLParseException& e);
-	XMLParseException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XMLParseException* operator ->() {
+		return (XMLParseException*)throwing$;
+	}
 };
 
 							} // parser

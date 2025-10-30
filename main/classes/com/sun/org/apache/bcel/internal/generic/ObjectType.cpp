@@ -4,15 +4,7 @@
 #include <com/sun/org/apache/bcel/internal/Repository.h>
 #include <com/sun/org/apache/bcel/internal/classfile/JavaClass.h>
 #include <com/sun/org/apache/bcel/internal/generic/ReferenceType.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef T_REFERENCE
@@ -103,24 +95,20 @@ bool ObjectType::equals(Object$* type) {
 }
 
 bool ObjectType::referencesClass() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var($JavaClass, jc, $Repository::lookupClass(this->className));
 		return $nc(jc)->isClass();
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e, $catch());
+	} catch ($ClassNotFoundException& e) {
 		return false;
 	}
 	$shouldNotReachHere();
 }
 
 bool ObjectType::referencesInterface() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var($JavaClass, jc, $Repository::lookupClass(this->className));
 		return !$nc(jc)->isClass();
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e, $catch());
+	} catch ($ClassNotFoundException& e) {
 		return false;
 	}
 	$shouldNotReachHere();

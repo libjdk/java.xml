@@ -12,14 +12,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLPullParserConfiguration.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/JdkConstants.h>
 #include <jdk/xml/internal/JdkProperty$State.h>
 #include <jcpp.h>
@@ -99,16 +91,11 @@ $Object* allocate$SAXParser($Class* clazz) {
 	return $of($alloc(SAXParser));
 }
 
-
 $String* SAXParser::NOTIFY_BUILTIN_REFS = nullptr;
 $String* SAXParser::REPORT_WHITESPACE = nullptr;
-
 $StringArray* SAXParser::RECOGNIZED_FEATURES = nullptr;
-
 $String* SAXParser::SYMBOL_TABLE = nullptr;
-
 $String* SAXParser::XMLGRAMMAR_POOL = nullptr;
-
 $StringArray* SAXParser::RECOGNIZED_PROPERTIES = nullptr;
 
 void SAXParser::init$($XMLParserConfiguration* config) {

@@ -20,15 +20,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Util.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassNotFoundException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
 #include <java/lang/reflect/Method.h>
 #include <java/lang/reflect/Modifier.h>
 #include <java/util/List.h>
@@ -136,7 +128,7 @@ $Type* FunctionAvailableCall::typeCheck($SymbolTable* stable) {
 	}
 	if ($instanceOf($LiteralExpr, this->_arg)) {
 		$init($Type);
-		return $assignField(this, _type, $Type::Boolean);
+		return $set(this, _type, $Type::Boolean);
 	}
 	$init($ErrorMsg);
 	$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::NEED_LITERAL_ERR, $of("function-available"_s), static_cast<$SyntaxTreeNode*>(this)));
@@ -190,8 +182,7 @@ bool FunctionAvailableCall::hasMethods() {
 				return true;
 			}
 		}
-	} catch ($ClassNotFoundException&) {
-		$var($ClassNotFoundException, e, $catch());
+	} catch ($ClassNotFoundException& e) {
 		return false;
 	}
 	return false;

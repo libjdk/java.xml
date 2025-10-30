@@ -1,14 +1,5 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/TransletException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/SAXException.h>
 #include <jcpp.h>
 
@@ -67,16 +58,10 @@ void TransletException::init$($String* message) {
 TransletException::TransletException() {
 }
 
-TransletException::TransletException(const TransletException& e) {
+TransletException::TransletException(const TransletException& e) : $SAXException(e) {
 }
 
-TransletException TransletException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void TransletException::throwWrapper$() {
-	$pendingException(this);
+void TransletException::throw$() {
 	throw *this;
 }
 

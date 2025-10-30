@@ -1,17 +1,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/util/ByteListImpl.h>
 
 #include <com/sun/org/apache/xerces/internal/xs/XSException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Byte.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/Collection.h>
 #include <java/util/Comparator.h>

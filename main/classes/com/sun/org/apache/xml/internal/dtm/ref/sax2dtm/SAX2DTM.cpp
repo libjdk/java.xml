@@ -23,23 +23,7 @@
 #include <com/sun/org/apache/xml/internal/utils/WrappedRuntimeException.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringFactory.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -306,7 +290,6 @@ void SAX2DTM::finalize() {
 	this->$DTMDefaultBaseIterators::finalize();
 }
 
-
 $StringArray* SAX2DTM::m_fixednames = nullptr;
 
 void SAX2DTM::init$($DTMManager* mgr, $Source* source, int32_t dtmIdentity, $DTMWSFilter* whiteSpaceFilter, $XMLStringFactory* xstringfactory, bool doIndexing) {
@@ -565,8 +548,8 @@ void SAX2DTM::dispatchToEvents(int32_t nodeHandle, $ContentHandler* ch) {
 		$var($Throwable, var$0, nullptr);
 		try {
 			treeWalker->traverse(nodeHandle);
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			treeWalker->setcontentHandler(nullptr);
 		}
@@ -659,8 +642,7 @@ void SAX2DTM::addNewDTMID(int32_t nodeIndex) {
 		int32_t id = $nc(mgrD)->getFirstFreeDTMID();
 		mgrD->addDTM(this, id, nodeIndex);
 		$nc(this->m_dtmIdent)->addElement($sl(id, $DTMManager::IDENT_DTM_NODE_BITS));
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e, $catch());
+	} catch ($ClassCastException& e) {
 		$init($XMLErrorResources);
 		error($($XMLMessages::createXMLMessage($XMLErrorResources::ER_NO_DTMIDS_AVAIL, nullptr)));
 	}
@@ -686,7 +668,6 @@ void SAX2DTM::setSourceLocation() {
 	$nc(this->m_sourceColumn)->addElement($nc(this->m_locator)->getColumnNumber());
 	if ($nc(this->m_sourceSystemId)->size() != this->m_size) {
 		$var($String, msg, $str({"CODING ERROR in Source Location: "_s, $$str(this->m_size), " != "_s, $$str($nc(this->m_sourceSystemId)->size())}));
-		$init($System);
 		$nc($System::err)->println(msg);
 		$throwNew($RuntimeException, msg);
 	}
@@ -965,8 +946,7 @@ void SAX2DTM::unparsedEntityDecl($String* name, $String* publicId, $String* syst
 	}
 	try {
 		$assign(systemId, $SystemIDResolver::getAbsoluteURI(systemId, $(getDocumentBaseURI())));
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($SAXException, e);
 	}
 	$nc(this->m_entities)->add(publicId);
@@ -1173,7 +1153,6 @@ void SAX2DTM::skippedEntity($String* name) {
 }
 
 void SAX2DTM::warning($SAXParseException* e) {
-	$init($System);
 	$nc($System::err)->println($($nc(e)->getMessage()));
 }
 

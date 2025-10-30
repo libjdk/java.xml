@@ -14,20 +14,8 @@
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -132,11 +120,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _BaseMarkupSerializer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _BaseMarkupSerializer_FieldInfo_[] = {
 	{"features", "S", nullptr, $PROTECTED, $field(BaseMarkupSerializer, features)},
@@ -440,11 +428,9 @@ void BaseMarkupSerializer::serialize($Document* doc) {
 }
 
 void BaseMarkupSerializer::startDocument() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		prepare();
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, $(except->toString()));
 	}
 }
@@ -499,8 +485,7 @@ void BaseMarkupSerializer::characters($chars* chars, int32_t start, int32_t leng
 				printText(chars, start, length, false, state->unescaped);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -515,8 +500,7 @@ void BaseMarkupSerializer::ignorableWhitespace($chars* chars, int32_t start, int
 				$nc(this->_printer)->printText($nc(chars)->get(i));
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -524,8 +508,7 @@ void BaseMarkupSerializer::ignorableWhitespace($chars* chars, int32_t start, int
 void BaseMarkupSerializer::processingInstruction($String* target, $String* code) {
 	try {
 		processingInstructionIO(target, code);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -568,11 +551,9 @@ void BaseMarkupSerializer::processingInstructionIO($String* target, $String* cod
 }
 
 void BaseMarkupSerializer::comment($chars* chars, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		comment($$new($String, chars, start, length));
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -652,8 +633,7 @@ void BaseMarkupSerializer::endDocument() {
 	try {
 		serializePreRoot();
 		$nc(this->_printer)->flush();
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -674,8 +654,7 @@ void BaseMarkupSerializer::skippedEntity($String* name) {
 		$nc(this->_printer)->printText(u'&');
 		$nc(this->_printer)->printText(name);
 		$nc(this->_printer)->printText(u';');
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -695,8 +674,7 @@ void BaseMarkupSerializer::startDTD($String* name, $String* publicId, $String* s
 		$nc(this->_printer)->enterDTD();
 		$set(this, _docTypePublicId, publicId);
 		$set(this, _docTypeSystemId, systemId);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -715,8 +693,7 @@ void BaseMarkupSerializer::elementDecl($String* name, $String* model) {
 		if (this->_indenting) {
 			$nc(this->_printer)->breakLine();
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -743,8 +720,7 @@ void BaseMarkupSerializer::attributeDecl($String* eName, $String* aName, $String
 		if (this->_indenting) {
 			$nc(this->_printer)->breakLine();
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -760,8 +736,7 @@ void BaseMarkupSerializer::internalEntityDecl($String* name, $String* value) {
 		if (this->_indenting) {
 			$nc(this->_printer)->breakLine();
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -770,8 +745,7 @@ void BaseMarkupSerializer::externalEntityDecl($String* name, $String* publicId, 
 	try {
 		$nc(this->_printer)->enterDTD();
 		unparsedEntityDecl(name, publicId, systemId, nullptr);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -800,8 +774,7 @@ void BaseMarkupSerializer::unparsedEntityDecl($String* name, $String* publicId, 
 		if (this->_indenting) {
 			$nc(this->_printer)->breakLine();
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -828,8 +801,7 @@ void BaseMarkupSerializer::notationDecl($String* name, $String* publicId, $Strin
 		if (this->_indenting) {
 			$nc(this->_printer)->breakLine();
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		$throwNew($SAXException, static_cast<$Exception*>(except));
 	}
 }
@@ -1062,8 +1034,7 @@ void BaseMarkupSerializer::serializeNode($Node* node) {
 							$nc(this->_printer)->printText(internal);
 						}
 						endDTD();
-					} catch ($Exception&) {
-						$var($Exception, e, $catch());
+					} catch ($Exception& e) {
 						$nc(this->_printer)->enterDTD();
 						$set(this, _docTypePublicId, nullptr);
 						$set(this, _docTypeSystemId, nullptr);

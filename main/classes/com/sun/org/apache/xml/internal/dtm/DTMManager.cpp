@@ -7,13 +7,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMManagerDefault.h>
 #include <com/sun/org/apache/xml/internal/utils/PrefixResolver.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringFactory.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/Source.h>
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>

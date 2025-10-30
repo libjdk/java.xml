@@ -22,21 +22,6 @@
 #include <java/io/FilterInputStream.h>
 #include <java/io/IOException.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -296,18 +281,16 @@ void InstructionList::init$($bytes* code) {
 						ihs->set(count, ih);
 						++count;
 					}
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					try {
 						bytes->close();
-					} catch ($Throwable&) {
-						$var($Throwable, x2, $catch());
+					} catch ($Throwable& x2) {
 						t$->addSuppressed(x2);
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				bytes->close();
 			}
@@ -315,8 +298,7 @@ void InstructionList::init$($bytes* code) {
 				$throw(var$0);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($ClassGenException, $(e->toString()), e);
 	}
 	$set(this, bytePositions, $new($ints, count));
@@ -324,8 +306,8 @@ void InstructionList::init$($bytes* code) {
 	for (int32_t i = 0; i < count; ++i) {
 		if ($instanceOf($BranchHandle, $nc(ihs)->get(i))) {
 			$var($BranchInstruction, bi, $cast($BranchInstruction, $nc(ihs->get(i))->getInstruction()));
-			int32_t var$1 = $nc(bi)->getPosition();
-			int32_t target = var$1 + bi->getIndex();
+			int32_t var$2 = $nc(bi)->getPosition();
+			int32_t target = var$2 + bi->getIndex();
 			$var($InstructionHandle, ih, findHandle(ihs, pos, count, target));
 			if (ih == nullptr) {
 				$throwNew($ClassGenException, $$str({"Couldn\'t find target for branch: "_s, bi}));
@@ -398,7 +380,7 @@ $InstructionHandle* InstructionList::append(InstructionList* il) {
 
 void InstructionList::append($InstructionHandle* ih) {
 	if (isEmpty()) {
-		$set(this, start, ($assignField(this, end, ih)));
+		$set(this, start, ($set(this, end, ih)));
 		$nc(ih)->setNext($(ih->setPrev(nullptr)));
 	} else {
 		$nc(this->end)->setNext(ih);
@@ -483,7 +465,7 @@ $InstructionHandle* InstructionList::insert(InstructionList* il) {
 
 void InstructionList::insert($InstructionHandle* ih) {
 	if (isEmpty()) {
-		$set(this, start, ($assignField(this, end, ih)));
+		$set(this, start, ($set(this, end, ih)));
 		$nc(ih)->setNext($(ih->setPrev(nullptr)));
 	} else {
 		$nc(this->start)->setPrev(ih);
@@ -606,7 +588,7 @@ void InstructionList::remove($InstructionHandle* prev, $InstructionHandle* next$
 	if ((prev == nullptr) && (next == nullptr)) {
 		$assign(first, this->start);
 		$assign(last, this->end);
-		$set(this, start, ($assignField(this, end, nullptr)));
+		$set(this, start, ($set(this, end, nullptr)));
 	} else {
 		if (prev == nullptr) {
 			$assign(first, this->start);
@@ -836,9 +818,7 @@ $bytes* InstructionList::getByteCode() {
 			}
 		}
 		out->flush();
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
-		$init($System);
+	} catch ($IOException& e) {
 		$nc($System::err)->println($of(e));
 		return $new($bytes, 0);
 	}
@@ -857,18 +837,16 @@ $InstructionArray* InstructionList::getInstructions() {
 					while (bytes->available() > 0) {
 						instructions->add($($Instruction::readInstruction(bytes)));
 					}
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					try {
 						bytes->close();
-					} catch ($Throwable&) {
-						$var($Throwable, x2, $catch());
+					} catch ($Throwable& x2) {
 						t$->addSuppressed(x2);
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				bytes->close();
 			}
@@ -876,8 +854,7 @@ $InstructionArray* InstructionList::getInstructions() {
 				$throw(var$0);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($ClassGenException, $(e->toString()), e);
 	}
 	return $fcast($InstructionArray, instructions->toArray($$new($InstructionArray, instructions->size())));
@@ -974,7 +951,7 @@ void InstructionList::replaceConstantPool($ConstantPoolGen* old_cp, $ConstantPoo
 }
 
 void InstructionList::clear() {
-	$set(this, start, ($assignField(this, end, nullptr)));
+	$set(this, start, ($set(this, end, nullptr)));
 	this->length = 0;
 }
 

@@ -3,14 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/msg/XMLMessageFormatter.h>
 #include <com/sun/org/apache/xerces/internal/util/DOMErrorHandlerWrapper.h>
 #include <com/sun/org/apache/xerces/internal/util/XMLErrorCode.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Collections.h>
 #include <java/util/HashMap.h>
@@ -74,7 +66,6 @@ $ClassInfo _DOMErrorHandlerWrapper$DOMErrorTypeMap_ClassInfo_ = {
 $Object* allocate$DOMErrorHandlerWrapper$DOMErrorTypeMap($Class* clazz) {
 	return $of($alloc(DOMErrorHandlerWrapper$DOMErrorTypeMap));
 }
-
 
 $Map* DOMErrorHandlerWrapper$DOMErrorTypeMap::fgDOMErrorTypeTable = nullptr;
 

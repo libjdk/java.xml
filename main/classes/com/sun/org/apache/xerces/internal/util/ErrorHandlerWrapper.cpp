@@ -4,16 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/ErrorHandler.h>
 #include <org/xml/sax/SAXException.h>
 #include <org/xml/sax/SAXParseException.h>
@@ -106,11 +96,9 @@ void ErrorHandlerWrapper::warning($String* domain, $String* key, $XMLParseExcept
 		$var($SAXParseException, saxException, createSAXParseException(exception));
 		try {
 			$nc(this->fErrorHandler)->warning(saxException);
-		} catch ($SAXParseException&) {
-			$var($SAXParseException, e, $catch());
+		} catch ($SAXParseException& e) {
 			$throw($(createXMLParseException(e)));
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throw($(createXNIException(e)));
 		}
 	}
@@ -122,11 +110,9 @@ void ErrorHandlerWrapper::error($String* domain, $String* key, $XMLParseExceptio
 		$var($SAXParseException, saxException, createSAXParseException(exception));
 		try {
 			$nc(this->fErrorHandler)->error(saxException);
-		} catch ($SAXParseException&) {
-			$var($SAXParseException, e, $catch());
+		} catch ($SAXParseException& e) {
 			$throw($(createXMLParseException(e)));
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throw($(createXNIException(e)));
 		}
 	}
@@ -138,11 +124,9 @@ void ErrorHandlerWrapper::fatalError($String* domain, $String* key, $XMLParseExc
 		$var($SAXParseException, saxException, createSAXParseException(exception));
 		try {
 			$nc(this->fErrorHandler)->fatalError(saxException);
-		} catch ($SAXParseException&) {
-			$var($SAXParseException, e, $catch());
+		} catch ($SAXParseException& e) {
 			$throw($(createXMLParseException(e)));
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throw($(createXNIException(e)));
 		}
 	}

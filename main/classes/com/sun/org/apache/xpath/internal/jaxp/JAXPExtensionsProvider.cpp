@@ -6,17 +6,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XNodeSet.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -129,8 +118,7 @@ bool JAXPExtensionsProvider::functionAvailable($String* ns, $String* funcName) {
 			return false;
 		}
 		return true;
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		return false;
 	}
 	$shouldNotReachHere();
@@ -169,11 +157,9 @@ $Object* JAXPExtensionsProvider::extFunction($String* ns, $String* funcName, $Li
 			}
 		}
 		return $of(($nc(xpathFunction)->evaluate(argList)));
-	} catch ($XPathFunctionException&) {
-		$var($XPathFunctionException, xfe, $catch());
+	} catch ($XPathFunctionException& xfe) {
 		$throwNew($WrappedRuntimeException, xfe);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransformerException, static_cast<$Throwable*>(e));
 	}
 	$shouldNotReachHere();
@@ -205,11 +191,9 @@ $Object* JAXPExtensionsProvider::extFunction($FuncExtFunction* extFunction, $Lis
 			}
 		}
 		return $of(($nc(xpathFunction)->evaluate(argList)));
-	} catch ($XPathFunctionException&) {
-		$var($XPathFunctionException, xfe, $catch());
+	} catch ($XPathFunctionException& xfe) {
 		$throwNew($WrappedRuntimeException, xfe);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$throwNew($TransformerException, static_cast<$Throwable*>(e));
 	}
 	$shouldNotReachHere();

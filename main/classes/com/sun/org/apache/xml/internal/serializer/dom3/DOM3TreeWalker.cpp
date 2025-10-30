@@ -14,18 +14,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/Utils.h>
 #include <java/io/IOException.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Collections.h>
 #include <java/util/HashMap.h>
@@ -306,7 +294,6 @@ $String* DOM3TreeWalker::XMLNS_URI = nullptr;
 $String* DOM3TreeWalker::XMLNS_PREFIX = nullptr;
 $String* DOM3TreeWalker::XML_URI = nullptr;
 $String* DOM3TreeWalker::XML_PREFIX = nullptr;
-
 $Map* DOM3TreeWalker::fFeatureMap = nullptr;
 
 void DOM3TreeWalker::init$($SerializationHandler* serialHandler, $DOMErrorHandler* errHandler, $LSSerializerFilter* filter, $String* newLine) {
@@ -574,8 +561,7 @@ void DOM3TreeWalker::serializeDocType($DocumentType* node, bool bStart) {
 				dtd->append(this->fNewLine);
 				$nc(writer)->write($(dtd->toString()));
 				writer->flush();
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				$init($Utils);
 				$init($MsgKey);
 				$throwNew($SAXException, $($nc($Utils::messages)->createMessage($MsgKey::ER_WRITING_INTERNAL_SUBSET, nullptr)), e);

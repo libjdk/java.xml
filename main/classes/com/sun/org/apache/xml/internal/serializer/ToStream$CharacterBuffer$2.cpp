@@ -7,17 +7,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/ToStream.h>
 #include <java/io/IOException.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/EnclosingMethodInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/SAXException.h>
 #include <jcpp.h>
 
@@ -97,7 +86,6 @@ void ToStream$CharacterBuffer$2::init$($ToStream$CharacterBuffer* this$1, $Strin
 }
 
 bool ToStream$CharacterBuffer$2::flush(bool skipBeginningNewlines) {
-	$useLocalCurrentObjectStackCache();
 	if ($nc($nc(this->this$1->this$0)->m_elemContext)->m_startTagOpen) {
 		$nc(this->this$1->this$0)->closeStartTag();
 		$nc($nc(this->this$1->this$0)->m_elemContext)->m_startTagOpen = false;
@@ -109,8 +97,7 @@ bool ToStream$CharacterBuffer$2::flush(bool skipBeginningNewlines) {
 	try {
 		$nc($nc(this->this$1->this$0)->m_writer)->write(cs, 0, $nc(cs)->length);
 		$nc(this->this$1->this$0)->m_isprevtext = true;
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 	return false;

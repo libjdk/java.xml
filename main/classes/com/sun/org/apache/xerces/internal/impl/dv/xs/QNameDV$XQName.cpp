@@ -2,13 +2,6 @@
 
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/QNameDV.h>
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/namespace/QName.h>
 #include <jcpp.h>
 

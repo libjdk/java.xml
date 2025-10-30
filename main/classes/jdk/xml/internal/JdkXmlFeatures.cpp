@@ -1,17 +1,7 @@
 #include <jdk/xml/internal/JdkXmlFeatures.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/XMLConstants.h>
 #include <jdk/xml/internal/JdkProperty$State.h>
 #include <jdk/xml/internal/JdkXmlFeatures$XmlFeature.h>
@@ -251,8 +241,7 @@ bool JdkXmlFeatures::getSystemProperty($JdkXmlFeatures$XmlFeature* feature, $Str
 			setFeature(feature, $JdkProperty$State::JAXPDOTPROPERTIES, $Boolean::parseBoolean(value));
 			return true;
 		}
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		$throwNew($NumberFormatException, $$str({"Invalid setting for system property: "_s, $($nc(feature)->systemProperty())}));
 	}
 	return false;

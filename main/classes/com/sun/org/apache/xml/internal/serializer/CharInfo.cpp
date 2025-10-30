@@ -12,21 +12,7 @@
 #include <java/io/InputStreamReader.h>
 #include <java/io/Reader.h>
 #include <java/io/UnsupportedEncodingException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URL.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Enumeration.h>
@@ -156,11 +142,8 @@ $Object* allocate$CharInfo($Class* clazz) {
 	return $of($alloc(CharInfo));
 }
 
-
 $String* CharInfo::HTML_ENTITIES_RESOURCE = nullptr;
-
 $String* CharInfo::XML_ENTITIES_RESOURCE = nullptr;
-
 $Map* CharInfo::m_getCharInfoCache = nullptr;
 
 void CharInfo::init$($String* entitiesResource, $String* method) {
@@ -186,8 +169,7 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 				$assign(entities, $PropertyResourceBundle::getBundle(entitiesResource, $($Locale::getDefault()), cl));
 			}
 		}
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	if (entities != nullptr) {
 		$var($Enumeration, keys, entities->getKeys());
@@ -216,8 +198,7 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 						if (cl != nullptr) {
 							try {
 								$assign(is, cl->getResourceAsStream(entitiesResource));
-							} catch ($Exception&) {
-								$var($Exception, e, $catch());
+							} catch ($Exception& e) {
 								$assign(err, e->getMessage());
 							}
 						}
@@ -225,8 +206,7 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 							try {
 								$var($URL, url, $new($URL, entitiesResource));
 								$assign(is, url->openStream());
-							} catch ($Exception&) {
-								$var($Exception, e, $catch());
+							} catch ($Exception& e) {
 								$assign(err, e->getMessage());
 							}
 						}
@@ -242,8 +222,7 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 					$var($BufferedReader, reader, nullptr);
 					try {
 						$assign(reader, $new($BufferedReader, $$new($InputStreamReader, is, "UTF-8"_s)));
-					} catch ($UnsupportedEncodingException&) {
-						$var($UnsupportedEncodingException, e, $catch());
+					} catch ($UnsupportedEncodingException& e) {
 						$assign(reader, $new($BufferedReader, $$new($InputStreamReader, is)));
 					}
 					$var($String, line, $nc(reader)->readLine());
@@ -275,8 +254,7 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 					$nc(is)->close();
 					set(CharInfo::S_LINEFEED);
 					set(CharInfo::S_CARRIAGERETURN);
-				} catch ($Exception&) {
-					$var($Exception, e, $catch());
+				} catch ($Exception& e) {
 					$init($Utils);
 					$init($MsgKey);
 					$throwNew($RuntimeException, $($nc($Utils::messages)->createMessage($MsgKey::ER_RESOURCE_COULD_NOT_LOAD, $$new($ObjectArray, {
@@ -286,14 +264,13 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 						$($of(e->toString()))
 					}))));
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$2) {
+				$assign(var$0, var$2);
 			} /*finally*/ {
 				if (is != nullptr) {
 					try {
 						is->close();
-					} catch ($Exception&) {
-						$catch();
+					} catch ($Exception& except) {
 					}
 				}
 			}
@@ -367,11 +344,9 @@ CharInfo* CharInfo::getCharInfoInternal($String* entitiesFileName, $String* meth
 
 CharInfo* CharInfo::getCharInfo($String* entitiesFileName, $String* method) {
 	$init(CharInfo);
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $new(CharInfo, entitiesFileName, method, false);
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& e) {
 	}
 	$var($String, absoluteEntitiesFileName, nullptr);
 	if ($nc(entitiesFileName)->indexOf((int32_t)u':') < 0) {
@@ -379,8 +354,7 @@ CharInfo* CharInfo::getCharInfo($String* entitiesFileName, $String* method) {
 	} else {
 		try {
 			$assign(absoluteEntitiesFileName, $SystemIDResolver::getAbsoluteURI(entitiesFileName, nullptr));
-		} catch ($TransformerException&) {
-			$var($TransformerException, te, $catch());
+		} catch ($TransformerException& te) {
 			$throwNew($WrappedRuntimeException, te);
 		}
 	}

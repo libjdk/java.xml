@@ -3,12 +3,6 @@
 #include <com/sun/org/apache/xalan/internal/extensions/ExpressionContext.h>
 #include <com/sun/org/apache/xml/internal/dtm/DTM.h>
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/SourceLocator.h>
 #include <org/w3c/dom/Node.h>
 #include <org/w3c/dom/NodeList.h>

@@ -8,21 +8,8 @@
 #include <com/sun/org/apache/xerces/internal/util/ParserConfigurationSettings.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLConfigurationException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/Number.h>
 #include <java/lang/SecurityManager.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/catalog/CatalogFeatures$Builder.h>
 #include <javax/xml/catalog/CatalogFeatures$Feature.h>
@@ -157,19 +144,15 @@ $Object* allocate$JdkXmlUtils($Class* clazz) {
 $String* JdkXmlUtils::DOM_FACTORY_ID = nullptr;
 $String* JdkXmlUtils::SAX_FACTORY_ID = nullptr;
 $String* JdkXmlUtils::SAX_DRIVER = nullptr;
-
 $String* JdkXmlUtils::NAMESPACES_FEATURE = nullptr;
 $String* JdkXmlUtils::NAMESPACE_PREFIXES_FEATURE = nullptr;
-
 $String* JdkXmlUtils::USE_CATALOG = nullptr;
 $String* JdkXmlUtils::SP_USE_CATALOG = nullptr;
 $String* JdkXmlUtils::CATALOG_FILES = nullptr;
 $String* JdkXmlUtils::CATALOG_DEFER = nullptr;
 $String* JdkXmlUtils::CATALOG_PREFER = nullptr;
 $String* JdkXmlUtils::CATALOG_RESOLVE = nullptr;
-
 bool JdkXmlUtils::USE_CATALOG_DEFAULT = false;
-
 $SAXParserFactory* JdkXmlUtils::defaultSAXFactory = nullptr;
 
 void JdkXmlUtils::init$() {
@@ -195,13 +178,11 @@ void JdkXmlUtils::setXMLReaderPropertyIfSupport($XMLReader* reader, $String* pro
 	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(reader)->setProperty(property, value);
-	} catch ($SAXNotRecognizedException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXNotRecognizedException& e) {
 		if (warn) {
 			$XMLSecurityManager::printWarning($($nc($of(reader))->getClass()->getName()), property, e);
 		}
-	} catch ($SAXNotSupportedException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXNotSupportedException& e) {
 		if (warn) {
 			$XMLSecurityManager::printWarning($($nc($of(reader))->getClass()->getName()), property, e);
 		}
@@ -257,8 +238,7 @@ void JdkXmlUtils::catalogFeaturesConfig2Config($XMLComponentManager* config1, $P
 	bool useCatalog = $nc(config1)->getFeature($XMLConstants::USE_CATALOG);
 	try {
 		$nc(config2)->setFeature(JdkXmlUtils::USE_CATALOG, useCatalog);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		supportCatalog = false;
 	}
 	if (supportCatalog && useCatalog) {
@@ -275,8 +255,7 @@ void JdkXmlUtils::catalogFeaturesConfig2Config($XMLComponentManager* config1, $P
 					}
 				}
 			}
-		} catch ($XMLConfigurationException&) {
-			$catch();
+		} catch ($XMLConfigurationException& e) {
 		}
 	}
 }
@@ -289,11 +268,9 @@ void JdkXmlUtils::catalogFeaturesConfig2Reader($XMLComponentManager* config, $XM
 	bool useCatalog = $nc(config)->getFeature($XMLConstants::USE_CATALOG);
 	try {
 		$nc(reader)->setFeature(JdkXmlUtils::USE_CATALOG, useCatalog);
-	} catch ($SAXNotRecognizedException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXNotRecognizedException& e) {
 		supportCatalog = false;
-	} catch ($SAXNotSupportedException&) {
-		$var($SAXException, e, $catch());
+	} catch ($SAXNotSupportedException& e) {
 		supportCatalog = false;
 	}
 	if (supportCatalog && useCatalog) {
@@ -310,10 +287,8 @@ void JdkXmlUtils::catalogFeaturesConfig2Reader($XMLComponentManager* config, $XM
 					}
 				}
 			}
-		} catch ($SAXNotRecognizedException&) {
-			$var($SAXException, e, $catch());
-		} catch ($SAXNotSupportedException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXNotRecognizedException& e) {
+		} catch ($SAXNotSupportedException& e) {
 		}
 	}
 }
@@ -334,8 +309,7 @@ $XMLReader* JdkXmlUtils::getXMLReader(bool overrideDefaultParser, bool securePro
 			try {
 				$init($XMLConstants);
 				reader->setFeature($XMLConstants::FEATURE_SECURE_PROCESSING, secureProcessing);
-			} catch ($SAXException&) {
-				$var($SAXException, e, $catch());
+			} catch ($SAXException& e) {
 				$init($XMLConstants);
 				$XMLSecurityManager::printWarning($($of(reader)->getClass()->getName()), $XMLConstants::FEATURE_SECURE_PROCESSING, e);
 			}
@@ -343,18 +317,15 @@ $XMLReader* JdkXmlUtils::getXMLReader(bool overrideDefaultParser, bool securePro
 		try {
 			reader->setFeature(JdkXmlUtils::NAMESPACES_FEATURE, true);
 			reader->setFeature(JdkXmlUtils::NAMESPACE_PREFIXES_FEATURE, false);
-		} catch ($SAXException&) {
-			$catch();
+		} catch ($SAXException& se) {
 		}
 		return reader;
 	}
 	$assign(saxFactory, JdkXmlUtils::defaultSAXFactory);
 	try {
 		$assign(reader, $nc($($nc(saxFactory)->newSAXParser()))->getXMLReader());
-	} catch ($ParserConfigurationException&) {
-		$var($Exception, ex, $catch());
-	} catch ($SAXException&) {
-		$var($Exception, ex, $catch());
+	} catch ($ParserConfigurationException& ex) {
+	} catch ($SAXException& ex) {
 	}
 	return reader;
 }
@@ -365,8 +336,7 @@ $Document* JdkXmlUtils::getDOMDocument() {
 	try {
 		$var($DocumentBuilderFactory, dbf, JdkXmlUtils::getDOMFactory(false));
 		return $nc($($nc(dbf)->newDocumentBuilder()))->newDocument();
-	} catch ($ParserConfigurationException&) {
-		$catch();
+	} catch ($ParserConfigurationException& pce) {
 	}
 	return nullptr;
 }
@@ -403,8 +373,7 @@ $SAXTransformerFactory* JdkXmlUtils::getSAXTransformFactory(bool overrideDefault
 	$var($SAXTransformerFactory, tf, overrideDefaultParser ? $cast($SAXTransformerFactory, $SAXTransformerFactory::newInstance()) : static_cast<$SAXTransformerFactory*>($new($TransformerFactoryImpl)));
 	try {
 		$nc(tf)->setFeature("jdk.xml.overrideDefaultParser"_s, overrideDefaultParser);
-	} catch ($TransformerConfigurationException&) {
-		$catch();
+	} catch ($TransformerConfigurationException& ex) {
 	}
 	return tf;
 }
@@ -424,11 +393,9 @@ $XMLReader* JdkXmlUtils::getXMLReaderWSAXFactory(bool overrideDefaultParser) {
 	$var($SAXParserFactory, saxFactory, getSAXFactory(overrideDefaultParser));
 	try {
 		return $nc($($nc(saxFactory)->newSAXParser()))->getXMLReader();
-	} catch ($ParserConfigurationException&) {
-		$var($Exception, ex, $catch());
+	} catch ($ParserConfigurationException& ex) {
 		return getXMLReaderWXMLReaderFactory();
-	} catch ($SAXException&) {
-		$var($Exception, ex, $catch());
+	} catch ($SAXException& ex) {
 		return getXMLReaderWXMLReaderFactory();
 	}
 	$shouldNotReachHere();
@@ -438,8 +405,7 @@ $XMLReader* JdkXmlUtils::getXMLReaderWXMLReaderFactory() {
 	$init(JdkXmlUtils);
 	try {
 		return $XMLReaderFactory::createXMLReader();
-	} catch ($SAXException&) {
-		$catch();
+	} catch ($SAXException& ex1) {
 	}
 	return nullptr;
 }

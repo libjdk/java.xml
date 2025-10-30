@@ -1,17 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/parsers/AbstractDOMParser$Abort.h>
 
 #include <com/sun/org/apache/xerces/internal/parsers/AbstractDOMParser.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef INSTANCE
@@ -86,16 +75,10 @@ void clinit$AbstractDOMParser$Abort($Class* class$) {
 AbstractDOMParser$Abort::AbstractDOMParser$Abort() {
 }
 
-AbstractDOMParser$Abort::AbstractDOMParser$Abort(const AbstractDOMParser$Abort& e) {
+AbstractDOMParser$Abort::AbstractDOMParser$Abort(const AbstractDOMParser$Abort& e) : $RuntimeException(e) {
 }
 
-AbstractDOMParser$Abort AbstractDOMParser$Abort::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void AbstractDOMParser$Abort::throwWrapper$() {
-	$pendingException(this);
+void AbstractDOMParser$Abort::throw$() {
 	throw *this;
 }
 

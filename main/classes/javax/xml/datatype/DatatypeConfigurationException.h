@@ -25,8 +25,10 @@ public:
 	void init$($Throwable* cause);
 	static const int64_t serialVersionUID = (int64_t)0xE86A9D1D935C04BA;
 	DatatypeConfigurationException(const DatatypeConfigurationException& e);
-	DatatypeConfigurationException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline DatatypeConfigurationException* operator ->() {
+		return (DatatypeConfigurationException*)throwing$;
+	}
 };
 
 		} // datatype

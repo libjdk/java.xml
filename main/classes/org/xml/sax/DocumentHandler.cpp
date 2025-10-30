@@ -1,13 +1,5 @@
 #include <org/xml/sax/DocumentHandler.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/AttributeList.h>
 #include <org/xml/sax/Locator.h>
 #include <jcpp.h>
@@ -27,11 +19,11 @@ $NamedAttribute DocumentHandler_Attribute_var$0[] = {
 	{"since", 's', "1.5"},
 	{}
 };
+
 $CompoundAttribute _DocumentHandler_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", DocumentHandler_Attribute_var$0},
 	{}
 };
-
 
 $MethodInfo _DocumentHandler_MethodInfo_[] = {
 	{"characters", "([CII)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},

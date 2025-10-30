@@ -3,17 +3,7 @@
 #include <com/sun/xml/internal/stream/util/BufferAllocator.h>
 #include <com/sun/xml/internal/stream/util/ThreadLocalBufferAllocator.h>
 #include <java/io/InputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef DEFAULT_BUFFER_SIZE
@@ -113,7 +103,6 @@ int32_t UCSReader::read() {
 		if (b3 == 255) {
 			return -1;
 		}
-		$init($System);
 		$nc($System::err)->println($$str({"b0 is "_s, $$str(((int32_t)(b0 & (uint32_t)255))), " b1 "_s, $$str(((int32_t)(b1 & (uint32_t)255))), " b2 "_s, $$str(((int32_t)(b2 & (uint32_t)255))), " b3 "_s, $$str(((int32_t)(b3 & (uint32_t)255)))}));
 		if (this->fEncoding == UCSReader::UCS4BE) {
 			return (b0 << 24) + (b1 << 16) + (b2 << 8) + b3;

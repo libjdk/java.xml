@@ -4,12 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.h>
 #include <com/sun/org/apache/xerces/internal/xinclude/XIncludeTextReader.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $XML11Char = ::com::sun::org::apache::xerces::internal::util::XML11Char;

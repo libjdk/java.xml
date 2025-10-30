@@ -1,15 +1,5 @@
 #include <org/xml/sax/HandlerBase.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/AttributeList.h>
 #include <org/xml/sax/EntityResolver.h>
 #include <org/xml/sax/InputSource.h>
@@ -39,11 +29,11 @@ $NamedAttribute HandlerBase_Attribute_var$0[] = {
 	{"since", 's', "1.5"},
 	{}
 };
+
 $CompoundAttribute _HandlerBase_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", HandlerBase_Attribute_var$0},
 	{}
 };
-
 
 $MethodInfo _HandlerBase_MethodInfo_[] = {
 	{"*clone", "()Ljava/lang/Object;", nullptr, $PROTECTED | $NATIVE},

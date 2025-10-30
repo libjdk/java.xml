@@ -1,15 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.h>
 
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/MessageFormat.h>
 #include <java/util/Locale.h>
 #include <java/util/MissingResourceException.h>
@@ -82,14 +73,12 @@ $String* DatatypeMessageFormatter::formatMessage($Locale* locale, $String* key, 
 		if (arguments != nullptr) {
 			try {
 				$assign(msg, $MessageFormat::format(msg, arguments));
-			} catch ($Exception&) {
-				$var($Exception, e, $catch());
+			} catch ($Exception& e) {
 				$assign(msg, resourceBundle->getString("FormatFailed"_s));
 				$plusAssign(msg, $$str({" "_s, $(resourceBundle->getString(key))}));
 			}
 		}
-	} catch ($MissingResourceException&) {
-		$var($MissingResourceException, e, $catch());
+	} catch ($MissingResourceException& e) {
 		$assign(msg, $nc(resourceBundle)->getString("BadMessageKey"_s));
 		$throwNew($MissingResourceException, key, msg, key);
 	}

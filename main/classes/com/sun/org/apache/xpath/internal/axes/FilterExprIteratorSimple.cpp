@@ -18,16 +18,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XNodeSet.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jcpp.h>
@@ -166,12 +156,11 @@ $XNodeSet* FilterExprIteratorSimple::executeFilterExpr(int32_t context, $XPathCo
 				} else {
 					$assign(result, $cast($XNodeSet, $nc(expr)->execute(xctxt)));
 				}
-			} catch ($TransformerException&) {
-				$var($TransformerException, se, $catch());
+			} catch ($TransformerException& se) {
 				$throwNew($WrappedRuntimeException, se);
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			xctxt->popCurrentNode();
 			xctxt->setNamespaceContext(savedResolver);

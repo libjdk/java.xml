@@ -3,14 +3,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XNumber.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/operations/Operation.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $XNumber = ::com::sun::org::apache::xpath::internal::objects::XNumber;
@@ -28,11 +20,11 @@ namespace com {
 				namespace xpath {
 					namespace internal {
 						namespace operations {
+
 $CompoundAttribute _Quo_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _Quo_FieldInfo_[] = {
 	{"serialVersionUID", "J", nullptr, $STATIC | $FINAL, $constField(Quo, serialVersionUID)},

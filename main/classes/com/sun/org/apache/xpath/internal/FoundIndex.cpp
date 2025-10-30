@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xpath/internal/FoundIndex.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -52,16 +44,10 @@ void FoundIndex::init$() {
 FoundIndex::FoundIndex() {
 }
 
-FoundIndex::FoundIndex(const FoundIndex& e) {
+FoundIndex::FoundIndex(const FoundIndex& e) : $RuntimeException(e) {
 }
 
-FoundIndex FoundIndex::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void FoundIndex::throwWrapper$() {
-	$pendingException(this);
+void FoundIndex::throw$() {
 	throw *this;
 }
 

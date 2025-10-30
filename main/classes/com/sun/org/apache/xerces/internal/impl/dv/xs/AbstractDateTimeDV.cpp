@@ -5,21 +5,9 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/TypeValidator.h>
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
 #include <java/lang/Math.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/math/BigDecimal.h>
 #include <javax/xml/datatype/DatatypeFactory.h>
 #include <javax/xml/datatype/Duration.h>
@@ -657,7 +645,6 @@ void AbstractDateTimeDV::append2($StringBuffer* message, double value) {
 }
 
 void AbstractDateTimeDV::append3($StringBuffer* message, double value) {
-	$useLocalCurrentObjectStackCache();
 	$var($String, d, $String::valueOf(value));
 	int32_t eIndex = d->indexOf((int32_t)u'E');
 	if (eIndex == -1) {
@@ -668,8 +655,7 @@ void AbstractDateTimeDV::append3($StringBuffer* message, double value) {
 	if (value < 1) {
 		try {
 			exp = parseInt(d, eIndex + 2, d->length());
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$nc(message)->append(d);
 			return;
 		}
@@ -694,8 +680,7 @@ void AbstractDateTimeDV::append3($StringBuffer* message, double value) {
 	} else {
 		try {
 			exp = parseInt(d, eIndex + 1, d->length());
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$nc(message)->append(d);
 			return;
 		}

@@ -9,19 +9,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Locale.h>
@@ -145,17 +133,11 @@ $Object* allocate$XMLErrorReporter($Class* clazz) {
 	return $of($alloc(XMLErrorReporter));
 }
 
-
 $String* XMLErrorReporter::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* XMLErrorReporter::ERROR_HANDLER = nullptr;
-
 $StringArray* XMLErrorReporter::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLErrorReporter::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLErrorReporter::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLErrorReporter::PROPERTY_DEFAULTS = nullptr;
 
 void XMLErrorReporter::init$() {

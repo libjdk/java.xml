@@ -3,19 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/XPath.h>
 #include <com/sun/org/apache/xerces/internal/impl/xpath/XPathException.h>
 #include <com/sun/org/apache/xerces/internal/util/SymbolTable.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Iterator.h>
@@ -308,11 +296,9 @@ void XPath$Tokens::addToken($String* tokenStr) {
 }
 
 void XPath$Tokens::addToken(int32_t token) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$nc(this->fTokens)->set(this->fTokenCount, token);
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, ex, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& ex) {
 		$var($ints, oldList, this->fTokens);
 		$set(this, fTokens, $new($ints, this->fTokenCount << 1));
 		$System::arraycopy(oldList, 0, this->fTokens, 0, this->fTokenCount);
@@ -357,148 +343,120 @@ void XPath$Tokens::dumpTokens() {
 		switch ($nc(this->fTokens)->get(i)) {
 		case XPath$Tokens::EXPRTOKEN_OPEN_PAREN:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPEN_PAREN/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_CLOSE_PAREN:
 			{
-				$init($System);
 				$nc($System::out)->print("<CLOSE_PAREN/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPEN_BRACKET:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPEN_BRACKET/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_CLOSE_BRACKET:
 			{
-				$init($System);
 				$nc($System::out)->print("<CLOSE_BRACKET/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_PERIOD:
 			{
-				$init($System);
 				$nc($System::out)->print("<PERIOD/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_DOUBLE_PERIOD:
 			{
-				$init($System);
 				$nc($System::out)->print("<DOUBLE_PERIOD/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_ATSIGN:
 			{
-				$init($System);
 				$nc($System::out)->print("<ATSIGN/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_COMMA:
 			{
-				$init($System);
 				$nc($System::out)->print("<COMMA/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_DOUBLE_COLON:
 			{
-				$init($System);
 				$nc($System::out)->print("<DOUBLE_COLON/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NAMETEST_ANY:
 			{
-				$init($System);
 				$nc($System::out)->print("<NAMETEST_ANY/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NAMETEST_NAMESPACE:
 			{
-				$init($System);
 				$nc($System::out)->print("<NAMETEST_NAMESPACE"_s);
-				$init($System);
 				$nc($System::out)->print($$str({" prefix=\""_s, $(getTokenString($nc(this->fTokens)->get(++i))), "\""_s}));
-				$init($System);
 				$nc($System::out)->print("/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NAMETEST_QNAME:
 			{
-				$init($System);
 				$nc($System::out)->print("<NAMETEST_QNAME"_s);
 				if ($nc(this->fTokens)->get(++i) != -1) {
-					$init($System);
 					$nc($System::out)->print($$str({" prefix=\""_s, $(getTokenString($nc(this->fTokens)->get(i))), "\""_s}));
 				}
-				$init($System);
 				$nc($System::out)->print($$str({" localpart=\""_s, $(getTokenString($nc(this->fTokens)->get(++i))), "\""_s}));
-				$init($System);
 				$nc($System::out)->print("/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NODETYPE_COMMENT:
 			{
-				$init($System);
 				$nc($System::out)->print("<NODETYPE_COMMENT/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NODETYPE_TEXT:
 			{
-				$init($System);
 				$nc($System::out)->print("<NODETYPE_TEXT/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NODETYPE_PI:
 			{
-				$init($System);
 				$nc($System::out)->print("<NODETYPE_PI/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NODETYPE_NODE:
 			{
-				$init($System);
 				$nc($System::out)->print("<NODETYPE_NODE/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_AND:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_AND/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_OR:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_OR/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_MOD:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_MOD/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_DIV:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_DIV/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_MULT:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_MULT/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_SLASH:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_SLASH/>"_s);
 				if (i + 1 < this->fTokenCount) {
-					$init($System);
 					$nc($System::out)->println();
 					$nc($System::out)->print("  "_s);
 				}
@@ -506,200 +464,160 @@ void XPath$Tokens::dumpTokens() {
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_DOUBLE_SLASH:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_DOUBLE_SLASH/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_UNION:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_UNION/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_PLUS:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_PLUS/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_MINUS:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_MINUS/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_EQUAL:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_EQUAL/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_NOT_EQUAL:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_NOT_EQUAL/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_LESS:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_LESS/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_LESS_EQUAL:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_LESS_EQUAL/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_GREATER:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_GREATER/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_OPERATOR_GREATER_EQUAL:
 			{
-				$init($System);
 				$nc($System::out)->print("<OPERATOR_GREATER_EQUAL/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_FUNCTION_NAME:
 			{
-				$init($System);
 				$nc($System::out)->print("<FUNCTION_NAME"_s);
 				if ($nc(this->fTokens)->get(++i) != -1) {
-					$init($System);
 					$nc($System::out)->print($$str({" prefix=\""_s, $(getTokenString($nc(this->fTokens)->get(i))), "\""_s}));
 				}
-				$init($System);
 				$nc($System::out)->print($$str({" localpart=\""_s, $(getTokenString($nc(this->fTokens)->get(++i))), "\""_s}));
-				$init($System);
 				$nc($System::out)->print("/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_ANCESTOR:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_ANCESTOR/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_ANCESTOR_OR_SELF:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_ANCESTOR_OR_SELF/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_ATTRIBUTE:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_ATTRIBUTE/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_CHILD:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_CHILD/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_DESCENDANT:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_DESCENDANT/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_DESCENDANT_OR_SELF:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_DESCENDANT_OR_SELF/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_FOLLOWING:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_FOLLOWING/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_FOLLOWING_SIBLING:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_FOLLOWING_SIBLING/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_NAMESPACE:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_NAMESPACE/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_PARENT:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_PARENT/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_PRECEDING:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_PRECEDING/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_PRECEDING_SIBLING:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_PRECEDING_SIBLING/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_AXISNAME_SELF:
 			{
-				$init($System);
 				$nc($System::out)->print("<AXISNAME_SELF/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_LITERAL:
 			{
-				$init($System);
 				$nc($System::out)->print("<LITERAL"_s);
-				$init($System);
 				$nc($System::out)->print($$str({" value=\""_s, $(getTokenString($nc(this->fTokens)->get(++i))), "\""_s}));
-				$init($System);
 				$nc($System::out)->print("/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_NUMBER:
 			{
-				$init($System);
 				$nc($System::out)->print("<NUMBER"_s);
-				$init($System);
 				$nc($System::out)->print($$str({" whole=\""_s, $(getTokenString($nc(this->fTokens)->get(++i))), "\""_s}));
-				$init($System);
 				$nc($System::out)->print($$str({" part=\""_s, $(getTokenString($nc(this->fTokens)->get(++i))), "\""_s}));
-				$init($System);
 				$nc($System::out)->print("/>"_s);
 				break;
 			}
 		case XPath$Tokens::EXPRTOKEN_VARIABLE_REFERENCE:
 			{
-				$init($System);
 				$nc($System::out)->print("<VARIABLE_REFERENCE"_s);
 				if ($nc(this->fTokens)->get(++i) != -1) {
-					$init($System);
 					$nc($System::out)->print($$str({" prefix=\""_s, $(getTokenString($nc(this->fTokens)->get(i))), "\""_s}));
 				}
-				$init($System);
 				$nc($System::out)->print($$str({" localpart=\""_s, $(getTokenString($nc(this->fTokens)->get(++i))), "\""_s}));
-				$init($System);
 				$nc($System::out)->print("/>"_s);
 				break;
 			}
 		default:
 			{
-				$init($System);
 				$nc($System::out)->println("<???/>"_s);
 			}
 		}
 	}
-	$init($System);
 	$nc($System::out)->println();
 }
 

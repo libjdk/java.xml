@@ -41,20 +41,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
 #include <com/sun/org/apache/xerces/internal/xs/AttributePSVI.h>
 #include <com/sun/org/apache/xerces/internal/xs/ElementPSVI.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Locale.h>
@@ -343,23 +329,14 @@ void ValidatorHandlerImpl::finalize() {
 	this->$ValidatorHandler::finalize();
 }
 
-
 $String* ValidatorHandlerImpl::NAMESPACE_PREFIXES = nullptr;
-
 $String* ValidatorHandlerImpl::STRING_INTERNING = nullptr;
-
 $String* ValidatorHandlerImpl::ERROR_REPORTER = nullptr;
-
 $String* ValidatorHandlerImpl::NAMESPACE_CONTEXT = nullptr;
-
 $String* ValidatorHandlerImpl::SCHEMA_VALIDATOR = nullptr;
-
 $String* ValidatorHandlerImpl::SECURITY_MANAGER = nullptr;
-
 $String* ValidatorHandlerImpl::SYMBOL_TABLE = nullptr;
-
 $String* ValidatorHandlerImpl::VALIDATION_MANAGER = nullptr;
-
 $String* ValidatorHandlerImpl::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 
 void ValidatorHandlerImpl::init$($XSGrammarPoolContainer* grammarContainer) {
@@ -428,8 +405,7 @@ bool ValidatorHandlerImpl::getFeature($String* name) {
 	}
 	try {
 		return $nc(this->fComponentManager)->getFeature(name);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		$var($String, key, e->getType() == $Status::NOT_RECOGNIZED ? "feature-not-recognized"_s : "feature-not-supported"_s);
@@ -445,8 +421,7 @@ void ValidatorHandlerImpl::setFeature($String* name, bool value) {
 	}
 	try {
 		$nc(this->fComponentManager)->setFeature(name, value);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$var($String, key, nullptr);
 		$init($Status);
@@ -470,8 +445,7 @@ $Object* ValidatorHandlerImpl::getProperty($String* name) {
 	}
 	try {
 		return $of($nc(this->fComponentManager)->getProperty(name));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		$var($String, key, e->getType() == $Status::NOT_RECOGNIZED ? "property-not-recognized"_s : "property-not-supported"_s);
@@ -487,8 +461,7 @@ void ValidatorHandlerImpl::setProperty($String* name, Object$* object) {
 	}
 	try {
 		$nc(this->fComponentManager)->setProperty(name, object);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$var($String, identifier, e->getIdentifier());
 		$init($Status);
 		$var($String, key, e->getType() == $Status::NOT_RECOGNIZED ? "property-not-recognized"_s : "property-not-supported"_s);
@@ -511,8 +484,7 @@ void ValidatorHandlerImpl::startDocument($XMLLocator* locator, $String* encoding
 	if (this->fContentHandler != nullptr) {
 		try {
 			$nc(this->fContentHandler)->startDocument();
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($XNIException, static_cast<$Exception*>(e));
 		}
 	}
@@ -528,19 +500,16 @@ void ValidatorHandlerImpl::comment($XMLString* text, $Augmentations* augs) {
 }
 
 void ValidatorHandlerImpl::processingInstruction($String* target, $XMLString* data, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fContentHandler != nullptr) {
 		try {
 			$nc(this->fContentHandler)->processingInstruction(target, $($nc(data)->toString()));
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($XNIException, static_cast<$Exception*>(e));
 		}
 	}
 }
 
 void ValidatorHandlerImpl::startElement($QName* element, $XMLAttributes* attributes, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fContentHandler != nullptr) {
 		{
 			$var($Throwable, var$0, nullptr);
@@ -549,12 +518,11 @@ void ValidatorHandlerImpl::startElement($QName* element, $XMLAttributes* attribu
 					$nc(this->fTypeInfoProvider)->beginStartElement(augs, attributes);
 					$init($XMLSymbols);
 					$nc(this->fContentHandler)->startElement(($nc(element)->uri != nullptr) ? $nc(element)->uri : $XMLSymbols::EMPTY_STRING, element->localpart, element->rawname, this->fAttrAdapter);
-				} catch ($SAXException&) {
-					$var($SAXException, e, $catch());
+				} catch ($SAXException& e) {
 					$throwNew($XNIException, static_cast<$Exception*>(e));
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				$nc(this->fTypeInfoProvider)->finishStartElement();
 			}
@@ -586,8 +554,7 @@ void ValidatorHandlerImpl::characters($XMLString* text, $Augmentations* augs) {
 		}
 		try {
 			$nc(this->fContentHandler)->characters($nc(text)->ch, text->offset, text->length);
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($XNIException, static_cast<$Exception*>(e));
 		}
 	}
@@ -597,15 +564,13 @@ void ValidatorHandlerImpl::ignorableWhitespace($XMLString* text, $Augmentations*
 	if (this->fContentHandler != nullptr) {
 		try {
 			$nc(this->fContentHandler)->ignorableWhitespace($nc(text)->ch, text->offset, text->length);
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($XNIException, static_cast<$Exception*>(e));
 		}
 	}
 }
 
 void ValidatorHandlerImpl::endElement($QName* element, $Augmentations* augs) {
-	$useLocalCurrentObjectStackCache();
 	if (this->fContentHandler != nullptr) {
 		{
 			$var($Throwable, var$0, nullptr);
@@ -614,12 +579,11 @@ void ValidatorHandlerImpl::endElement($QName* element, $Augmentations* augs) {
 					$nc(this->fTypeInfoProvider)->beginEndElement(augs);
 					$init($XMLSymbols);
 					$nc(this->fContentHandler)->endElement(($nc(element)->uri != nullptr) ? $nc(element)->uri : $XMLSymbols::EMPTY_STRING, element->localpart, element->rawname);
-				} catch ($SAXException&) {
-					$var($SAXException, e, $catch());
+				} catch ($SAXException& e) {
 					$throwNew($XNIException, static_cast<$Exception*>(e));
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				$nc(this->fTypeInfoProvider)->finishEndElement();
 			}
@@ -640,8 +604,7 @@ void ValidatorHandlerImpl::endDocument($Augmentations* augs) {
 	if (this->fContentHandler != nullptr) {
 		try {
 			$nc(this->fContentHandler)->endDocument();
-		} catch ($SAXException&) {
-			$var($SAXException, e, $catch());
+		} catch ($SAXException& e) {
 			$throwNew($XNIException, static_cast<$Exception*>(e));
 		}
 	}
@@ -674,11 +637,9 @@ void ValidatorHandlerImpl::startDocument() {
 	$nc(this->fErrorReporter)->setDocumentLocator(this->fSAXLocatorWrapper);
 	try {
 		$nc(this->fSchemaValidator)->startDocument(this->fSAXLocatorWrapper, $($nc(this->fSAXLocatorWrapper)->getEncoding()), this->fNamespaceContext, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$throw($($Util::toSAXParseException(e)));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($($Util::toSAXException(e)));
 	}
 }
@@ -688,11 +649,9 @@ void ValidatorHandlerImpl::endDocument() {
 	$nc(this->fSAXLocatorWrapper)->setLocator(nullptr);
 	try {
 		$nc(this->fSchemaValidator)->endDocument(nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$throw($($Util::toSAXParseException(e)));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($($Util::toSAXException(e)));
 	}
 }
@@ -740,11 +699,9 @@ void ValidatorHandlerImpl::startElement($String* uri, $String* localName, $Strin
 	}
 	try {
 		$nc(this->fSchemaValidator)->startElement(this->fElementQName, this->fAttributes, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$throw($($Util::toSAXParseException(e)));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($($Util::toSAXException(e)));
 	}
 }
@@ -757,15 +714,13 @@ void ValidatorHandlerImpl::endElement($String* uri, $String* localName, $String*
 		try {
 			try {
 				$nc(this->fSchemaValidator)->endElement(this->fElementQName, nullptr);
-			} catch ($XMLParseException&) {
-				$var($XMLParseException, e, $catch());
+			} catch ($XMLParseException& e) {
 				$throw($($Util::toSAXParseException(e)));
-			} catch ($XNIException&) {
-				$var($XNIException, e, $catch());
+			} catch ($XNIException& e) {
 				$throw($($Util::toSAXException(e)));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			$nc(this->fNamespaceContext)->popContext();
 		}
@@ -780,11 +735,9 @@ void ValidatorHandlerImpl::characters($chars* ch, int32_t start, int32_t length)
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaValidator)->characters(this->fTempString, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$throw($($Util::toSAXParseException(e)));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($($Util::toSAXException(e)));
 	}
 }
@@ -794,11 +747,9 @@ void ValidatorHandlerImpl::ignorableWhitespace($chars* ch, int32_t start, int32_
 	try {
 		$nc(this->fTempString)->setValues(ch, start, length);
 		$nc(this->fSchemaValidator)->ignorableWhitespace(this->fTempString, nullptr);
-	} catch ($XMLParseException&) {
-		$var($XMLParseException, e, $catch());
+	} catch ($XMLParseException& e) {
 		$throw($($Util::toSAXParseException(e)));
-	} catch ($XNIException&) {
-		$var($XNIException, e, $catch());
+	} catch ($XNIException& e) {
 		$throw($($Util::toSAXException(e)));
 	}
 }
@@ -848,29 +799,25 @@ void ValidatorHandlerImpl::validate($Source* source, $Result* result) {
 							if (securityManager != nullptr) {
 								try {
 									$nc(reader)->setProperty(ValidatorHandlerImpl::SECURITY_MANAGER, securityManager);
-								} catch ($SAXException&) {
-									$catch();
+								} catch ($SAXException& exc) {
 								}
 							}
 							try {
 								$var($XMLSecurityPropertyManager, spm, $cast($XMLSecurityPropertyManager, $nc(this->fComponentManager)->getProperty(ValidatorHandlerImpl::XML_SECURITY_PROPERTY_MANAGER)));
 								$init($XMLSecurityPropertyManager$Property);
 								$nc(reader)->setProperty($XMLConstants::ACCESS_EXTERNAL_DTD, $($nc(spm)->getValue($XMLSecurityPropertyManager$Property::ACCESS_EXTERNAL_DTD)));
-							} catch ($SAXException&) {
-								$var($SAXException, exc, $catch());
+							} catch ($SAXException& exc) {
 								$XMLSecurityManager::printWarning($($nc($of(reader))->getClass()->getName()), $XMLConstants::ACCESS_EXTERNAL_DTD, exc);
 							}
 						}
 						$JdkXmlUtils::catalogFeaturesConfig2Reader(this->fComponentManager, reader);
-					} catch ($Exception&) {
-						$var($Exception, e, $catch());
+					} catch ($Exception& e) {
 						$throwNew($FactoryConfigurationError, e);
 					}
 				}
 				try {
 					this->fStringsInternalized = $nc(reader)->getFeature(ValidatorHandlerImpl::STRING_INTERNING);
-				} catch ($SAXException&) {
-					$var($SAXException, exc, $catch());
+				} catch ($SAXException& exc) {
 					this->fStringsInternalized = false;
 				}
 				$var($ErrorHandler, errorHandler, $nc(this->fComponentManager)->getErrorHandler());
@@ -881,8 +828,8 @@ void ValidatorHandlerImpl::validate($Source* source, $Result* result) {
 				reader->setDTDHandler(this);
 				$var($InputSource, is, saxSource->getInputSource());
 				reader->parse(is);
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$2) {
+				$assign(var$0, var$2);
 			} /*finally*/ {
 				setContentHandler(nullptr);
 			}
@@ -892,9 +839,9 @@ void ValidatorHandlerImpl::validate($Source* source, $Result* result) {
 		}
 		return;
 	}
-	$var($Locale, var$2, $nc(this->fComponentManager)->getLocale());
-	$var($String, var$3, "SourceResultMismatch"_s);
-	$throwNew($IllegalArgumentException, $($JAXPValidationMessageFormatter::formatMessage(var$2, var$3, $$new($ObjectArray, {
+	$var($Locale, var$3, $nc(this->fComponentManager)->getLocale());
+	$var($String, var$4, "SourceResultMismatch"_s);
+	$throwNew($IllegalArgumentException, $($JAXPValidationMessageFormatter::formatMessage(var$3, var$4, $$new($ObjectArray, {
 		$($of($nc($of(source))->getClass()->getName())),
 		$($of($nc($of(result))->getClass()->getName()))
 	}))));

@@ -2,14 +2,6 @@
 
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef TYPE_CHECK_ERR
@@ -117,16 +109,10 @@ $String* TypeCheckError::toString() {
 TypeCheckError::TypeCheckError() {
 }
 
-TypeCheckError::TypeCheckError(const TypeCheckError& e) {
+TypeCheckError::TypeCheckError(const TypeCheckError& e) : $Exception(e) {
 }
 
-TypeCheckError TypeCheckError::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void TypeCheckError::throwWrapper$() {
-	$pendingException(this);
+void TypeCheckError::throw$() {
 	throw *this;
 }
 

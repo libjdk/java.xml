@@ -16,15 +16,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef EMPTY_STRING
@@ -172,19 +163,12 @@ void XMLNamespaceBinder::finalize() {
 	this->$XMLComponent::finalize();
 }
 
-
 $String* XMLNamespaceBinder::NAMESPACES = nullptr;
-
 $String* XMLNamespaceBinder::SYMBOL_TABLE = nullptr;
-
 $String* XMLNamespaceBinder::ERROR_REPORTER = nullptr;
-
 $StringArray* XMLNamespaceBinder::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLNamespaceBinder::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLNamespaceBinder::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLNamespaceBinder::PROPERTY_DEFAULTS = nullptr;
 
 void XMLNamespaceBinder::init$() {

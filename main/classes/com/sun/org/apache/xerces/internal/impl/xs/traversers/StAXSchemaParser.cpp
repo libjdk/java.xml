@@ -13,14 +13,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLAttributes.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Iterator.h>
@@ -277,8 +269,7 @@ void StAXSchemaParser::parse($XMLEventReader* input) {
 
 				if (loop$break) {
 					break;
-				}
-			}
+				}			}
 		}
 		$nc(this->fLocationWrapper)->setLocation(nullptr);
 		$nc(this->fNamespaceContext)->setNamespaceContext(nullptr);

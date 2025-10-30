@@ -1,13 +1,5 @@
 #include <javax/xml/datatype/DatatypeConstants.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/XMLConstants.h>
 #include <javax/xml/datatype/DatatypeConstants$Field.h>
 #include <javax/xml/namespace/QName.h>
@@ -134,39 +126,22 @@ $Object* allocate$DatatypeConstants($Class* clazz) {
 	return $of($alloc(DatatypeConstants));
 }
 
-
 $DatatypeConstants$Field* DatatypeConstants::YEARS = nullptr;
-
 $DatatypeConstants$Field* DatatypeConstants::MONTHS = nullptr;
-
 $DatatypeConstants$Field* DatatypeConstants::DAYS = nullptr;
-
 $DatatypeConstants$Field* DatatypeConstants::HOURS = nullptr;
-
 $DatatypeConstants$Field* DatatypeConstants::MINUTES = nullptr;
-
 $DatatypeConstants$Field* DatatypeConstants::SECONDS = nullptr;
-
 $QName* DatatypeConstants::DATETIME = nullptr;
-
 $QName* DatatypeConstants::TIME = nullptr;
-
 $QName* DatatypeConstants::DATE = nullptr;
-
 $QName* DatatypeConstants::GYEARMONTH = nullptr;
-
 $QName* DatatypeConstants::GMONTHDAY = nullptr;
-
 $QName* DatatypeConstants::GYEAR = nullptr;
-
 $QName* DatatypeConstants::GMONTH = nullptr;
-
 $QName* DatatypeConstants::GDAY = nullptr;
-
 $QName* DatatypeConstants::DURATION = nullptr;
-
 $QName* DatatypeConstants::DURATION_DAYTIME = nullptr;
-
 $QName* DatatypeConstants::DURATION_YEARMONTH = nullptr;
 
 void DatatypeConstants::init$() {

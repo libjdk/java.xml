@@ -1,13 +1,5 @@
 #include <org/w3c/dom/events/EventException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef UNSPECIFIED_EVENT_TYPE_ERR
@@ -55,16 +47,10 @@ void EventException::init$(int16_t code, $String* message) {
 EventException::EventException() {
 }
 
-EventException::EventException(const EventException& e) {
+EventException::EventException(const EventException& e) : $RuntimeException(e) {
 }
 
-EventException EventException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void EventException::throwWrapper$() {
-	$pendingException(this);
+void EventException::throw$() {
 	throw *this;
 }
 

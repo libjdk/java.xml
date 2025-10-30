@@ -25,8 +25,10 @@ public:
 	static const int16_t BAD_BOUNDARYPOINTS_ERR = 1;
 	static const int16_t INVALID_NODE_TYPE_ERR = 2;
 	RangeException(const RangeException& e);
-	RangeException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline RangeException* operator ->() {
+		return (RangeException*)throwing$;
+	}
 };
 
 			} // ranges

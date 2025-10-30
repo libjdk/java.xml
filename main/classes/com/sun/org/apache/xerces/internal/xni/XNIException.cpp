@@ -1,15 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/xni/XNIException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -79,16 +69,10 @@ $Throwable* XNIException::getCause() {
 XNIException::XNIException() {
 }
 
-XNIException::XNIException(const XNIException& e) {
+XNIException::XNIException(const XNIException& e) : $RuntimeException(e) {
 }
 
-XNIException XNIException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void XNIException::throwWrapper$() {
-	$pendingException(this);
+void XNIException::throw$() {
 	throw *this;
 }
 

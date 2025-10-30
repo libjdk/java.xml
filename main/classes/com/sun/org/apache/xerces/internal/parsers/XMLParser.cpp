@@ -5,14 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/JdkConstants.h>
 #include <jcpp.h>
 
@@ -74,11 +66,8 @@ $Object* allocate$XMLParser($Class* clazz) {
 	return $of($alloc(XMLParser));
 }
 
-
 $String* XMLParser::ENTITY_RESOLVER = nullptr;
-
 $String* XMLParser::ERROR_HANDLER = nullptr;
-
 $StringArray* XMLParser::RECOGNIZED_PROPERTIES = nullptr;
 
 bool XMLParser::getFeature($String* featureId) {

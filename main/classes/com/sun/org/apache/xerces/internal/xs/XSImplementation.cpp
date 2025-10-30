@@ -2,12 +2,6 @@
 
 #include <com/sun/org/apache/xerces/internal/xs/StringList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSLoader.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;

@@ -21,17 +21,7 @@
 #include <com/sun/org/apache/xml/internal/utils/XMLCharacterRecognizer.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <com/sun/org/apache/xml/internal/utils/XMLStringFactory.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -213,7 +203,6 @@ $Object* allocate$DOM2DTM($Class* clazz) {
 	return $of($alloc(DOM2DTM));
 }
 
-
 $String* DOM2DTM::NAMESPACE_DECL_NS = nullptr;
 
 void DOM2DTM::init$($DTMManager* mgr, $DOMSource* domSource, int32_t dtmIdentity, $DTMWSFilter* whiteSpaceFilter, $XMLStringFactory* xstringfactory, bool doIndexing) {
@@ -224,7 +213,7 @@ void DOM2DTM::init$($DTMManager* mgr, $DOMSource* domSource, int32_t dtmIdentity
 	this->m_processedFirstElement = false;
 	$set(this, m_nodes, $new($ArrayList));
 	$set(this, m_walker, $new($TreeWalker, nullptr));
-	$set(this, m_pos, ($assignField(this, m_root, $nc(domSource)->getNode())));
+	$set(this, m_pos, ($set(this, m_root, $nc(domSource)->getNode())));
 	this->m_last_parent = (this->m_last_kid = $DTM::NULL);
 	this->m_last_kid = addNode(this->m_root, this->m_last_parent, this->m_last_kid, $DTM::NULL);
 	if ($DTM::ELEMENT_NODE == $nc(this->m_root)->getNodeType()) {
@@ -254,8 +243,7 @@ int32_t DOM2DTM::addNode($Node* node, int32_t parentIndex, int32_t previousSibli
 			int32_t id = $nc(mgrD)->getFirstFreeDTMID();
 			mgrD->addDTM(this, id, nodeIndex);
 			$nc(this->m_dtmIdent)->addElement($sl(id, $DTMManager::IDENT_DTM_NODE_BITS));
-		} catch ($ClassCastException&) {
-			$var($ClassCastException, e, $catch());
+		} catch ($ClassCastException& e) {
 			$init($XMLErrorResources);
 			error($($XMLMessages::createXMLMessage($XMLErrorResources::ER_NO_DTMIDS_AVAIL, nullptr)));
 		}
@@ -534,8 +522,8 @@ $XMLString* DOM2DTM::getStringValue(int32_t nodeHandle) {
 			try {
 				getNodeData(node, buf);
 				$assign(s, ($nc(buf)->length() > 0) ? $nc(buf)->toString() : ""_s);
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				$StringBufferPool::free(buf);
 			}
@@ -994,8 +982,8 @@ void DOM2DTM::dispatchToEvents(int32_t nodeHandle, $ContentHandler* ch) {
 		try {
 			$var($Node, node, getNode(nodeHandle));
 			treeWalker->traverseFragment(node);
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$1) {
+			$assign(var$0, var$1);
 		} /*finally*/ {
 			treeWalker->setContentHandler(nullptr);
 		}

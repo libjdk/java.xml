@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xml/internal/utils/res/XResourceBundle.h>
 
 #include <com/sun/org/apache/xml/internal/utils/res/CharArrayWrapper.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/ListResourceBundle.h>
 #include <jcpp.h>
 
@@ -88,41 +80,23 @@ $Object* allocate$XResourceBundle($Class* clazz) {
 	return $of($alloc(XResourceBundle));
 }
 
-
 $String* XResourceBundle::ERROR_RESOURCES = nullptr;
-
 $String* XResourceBundle::XSLT_RESOURCE = nullptr;
-
 $String* XResourceBundle::LANG_BUNDLE_NAME = nullptr;
-
 $String* XResourceBundle::MULT_ORDER = nullptr;
-
 $String* XResourceBundle::MULT_PRECEDES = nullptr;
-
 $String* XResourceBundle::MULT_FOLLOWS = nullptr;
-
 $String* XResourceBundle::LANG_ORIENTATION = nullptr;
-
 $String* XResourceBundle::LANG_RIGHTTOLEFT = nullptr;
-
 $String* XResourceBundle::LANG_LEFTTORIGHT = nullptr;
-
 $String* XResourceBundle::LANG_NUMBERING = nullptr;
-
 $String* XResourceBundle::LANG_ADDITIVE = nullptr;
-
 $String* XResourceBundle::LANG_MULT_ADD = nullptr;
-
 $String* XResourceBundle::LANG_MULTIPLIER = nullptr;
-
 $String* XResourceBundle::LANG_MULTIPLIER_CHAR = nullptr;
-
 $String* XResourceBundle::LANG_NUMBERGROUPS = nullptr;
-
 $String* XResourceBundle::LANG_NUM_TABLES = nullptr;
-
 $String* XResourceBundle::LANG_ALPHABET = nullptr;
-
 $String* XResourceBundle::LANG_TRAD_ALPHABET = nullptr;
 
 void XResourceBundle::init$() {

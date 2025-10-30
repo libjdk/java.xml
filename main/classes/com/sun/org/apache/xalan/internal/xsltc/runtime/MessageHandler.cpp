@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/MessageHandler.h>
 
-#include <java/io/PrintStream.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/ErrorListener.h>
 #include <jcpp.h>
 
@@ -49,7 +41,6 @@ void MessageHandler::init$() {
 }
 
 void MessageHandler::displayMessage($String* msg) {
-	$init($System);
 	$nc($System::err)->println(msg);
 }
 

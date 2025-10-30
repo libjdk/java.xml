@@ -3,16 +3,7 @@
 #include <com/sun/xml/internal/stream/XMLOutputFactoryImpl.h>
 #include <java/io/OutputStream.h>
 #include <java/io/Writer.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/FactoryFinder.h>
 #include <javax/xml/stream/XMLEventWriter.h>
 #include <javax/xml/stream/XMLInputFactory.h>
@@ -91,7 +82,6 @@ $ClassInfo _XMLOutputFactory_ClassInfo_ = {
 $Object* allocate$XMLOutputFactory($Class* clazz) {
 	return $of($alloc(XMLOutputFactory));
 }
-
 
 $String* XMLOutputFactory::IS_REPAIRING_NAMESPACES = nullptr;
 $String* XMLOutputFactory::DEFAULIMPL = nullptr;

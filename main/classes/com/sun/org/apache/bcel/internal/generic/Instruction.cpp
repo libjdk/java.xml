@@ -78,19 +78,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/Visitor.h>
 #include <com/sun/org/apache/bcel/internal/util/ByteSequence.h>
 #include <java/io/DataOutputStream.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Byte.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/Short.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ALOAD
@@ -389,16 +377,13 @@ $String* Instruction::toString($ConstantPool* cp) {
 }
 
 Instruction* Instruction::copy() {
-	$useLocalCurrentObjectStackCache();
 	$var(Instruction, i, nullptr);
 	if ($InstructionConst::getInstruction(this->getOpcode()) != nullptr) {
 		$assign(i, this);
 	} else {
 		try {
 			$assign(i, $cast(Instruction, clone()));
-		} catch ($CloneNotSupportedException&) {
-			$var($CloneNotSupportedException, e, $catch());
-			$init($System);
+		} catch ($CloneNotSupportedException& e) {
 			$nc($System::err)->println($of(e));
 		}
 	}

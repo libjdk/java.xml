@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/ParseException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -62,16 +54,10 @@ int32_t ParseException::getLocation() {
 ParseException::ParseException() {
 }
 
-ParseException::ParseException(const ParseException& e) {
+ParseException::ParseException(const ParseException& e) : $RuntimeException(e) {
 }
 
-ParseException ParseException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void ParseException::throwWrapper$() {
-	$pendingException(this);
+void ParseException::throw$() {
 	throw *this;
 }
 

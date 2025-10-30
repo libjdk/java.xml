@@ -4,17 +4,7 @@
 #include <java/io/IOException.h>
 #include <java/io/StringWriter.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
@@ -35,11 +25,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _Printer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _Printer_FieldInfo_[] = {
 	{"_format", "Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;", nullptr, $PROTECTED | $FINAL, $field(Printer, _format)},
@@ -137,8 +127,7 @@ void Printer::printText($String* text) {
 			$nc(this->_buffer)->set(this->_pos, text->charAt(i));
 			++this->_pos;
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -157,8 +146,7 @@ void Printer::printText($StringBuffer* text) {
 			$nc(this->_buffer)->set(this->_pos, text->charAt(i));
 			++this->_pos;
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -177,8 +165,7 @@ void Printer::printText($chars* chars, int32_t start, int32_t length) {
 			++start;
 			++this->_pos;
 		}
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -194,8 +181,7 @@ void Printer::printText(char16_t ch) {
 		}
 		$nc(this->_buffer)->set(this->_pos, ch);
 		++this->_pos;
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -211,8 +197,7 @@ void Printer::printSpace() {
 		}
 		$nc(this->_buffer)->set(this->_pos, u' ');
 		++this->_pos;
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -228,8 +213,7 @@ void Printer::breakLine() {
 		}
 		$nc(this->_buffer)->set(this->_pos, u'\n');
 		++this->_pos;
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -244,8 +228,7 @@ void Printer::breakLine(bool preserveSpace) {
 void Printer::flushLine(bool preserveSpace) {
 	try {
 		$nc(this->_writer)->write(this->_buffer, 0, this->_pos);
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -257,8 +240,7 @@ void Printer::flush() {
 	try {
 		$nc(this->_writer)->write(this->_buffer, 0, this->_pos);
 		$nc(this->_writer)->flush();
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}

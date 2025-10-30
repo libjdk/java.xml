@@ -28,8 +28,10 @@ public:
 	void init$($String* message, $Throwable* e);
 	static const int64_t serialVersionUID = (int64_t)0xF53C995B1E86EF32;
 	DTMException(const DTMException& e);
-	DTMException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline DTMException* operator ->() {
+		return (DTMException*)throwing$;
+	}
 };
 
 						} // dtm

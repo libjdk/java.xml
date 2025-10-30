@@ -1,11 +1,5 @@
 #include <com/sun/org/apache/xml/internal/serializer/SerializerConstants.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef CDATA_CONTINUE
@@ -66,9 +60,7 @@ $Object* allocate$SerializerConstants($Class* clazz) {
 	return $of($alloc(SerializerConstants));
 }
 
-
 $String* SerializerConstants::CDATA_CONTINUE = nullptr;
-
 $String* SerializerConstants::CDATA_DELIMITER_CLOSE = nullptr;
 $String* SerializerConstants::CDATA_DELIMITER_OPEN = nullptr;
 $String* SerializerConstants::EMPTYSTRING = nullptr;
@@ -81,7 +73,6 @@ $String* SerializerConstants::XML_PREFIX = nullptr;
 $String* SerializerConstants::XMLNS_PREFIX = nullptr;
 $String* SerializerConstants::XMLNS_URI = nullptr;
 $String* SerializerConstants::DEFAULT_SAX_SERIALIZER = nullptr;
-
 $String* SerializerConstants::XMLVERSION11 = nullptr;
 $String* SerializerConstants::XMLVERSION10 = nullptr;
 

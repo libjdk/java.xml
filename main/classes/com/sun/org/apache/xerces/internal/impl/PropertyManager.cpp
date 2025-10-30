@@ -5,17 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State.h>
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager.h>
 #include <com/sun/xml/internal/stream/StaxEntityResolverWrapper.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/HashMap.h>
 #include <java/util/Map.h>
@@ -146,9 +135,7 @@ $Object* allocate$PropertyManager($Class* clazz) {
 $String* PropertyManager::STAX_NOTATIONS = nullptr;
 $String* PropertyManager::STAX_ENTITIES = nullptr;
 $String* PropertyManager::STRING_INTERNING = nullptr;
-
 $String* PropertyManager::SECURITY_MANAGER = nullptr;
-
 $String* PropertyManager::XML_SECURITY_PROPERTY_MANAGER = nullptr;
 
 void PropertyManager::init$(int32_t context) {

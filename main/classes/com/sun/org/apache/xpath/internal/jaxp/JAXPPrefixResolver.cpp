@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xpath/internal/jaxp/JAXPPrefixResolver.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/namespace/NamespaceContext.h>
 #include <org/w3c/dom/NamedNodeMap.h>
 #include <org/w3c/dom/Node.h>
@@ -59,7 +52,6 @@ $ClassInfo _JAXPPrefixResolver_ClassInfo_ = {
 $Object* allocate$JAXPPrefixResolver($Class* clazz) {
 	return $of($alloc(JAXPPrefixResolver));
 }
-
 
 $String* JAXPPrefixResolver::S_XMLNAMESPACEURI = nullptr;
 

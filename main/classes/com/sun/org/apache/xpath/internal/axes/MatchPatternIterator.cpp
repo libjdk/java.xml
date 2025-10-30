@@ -15,15 +15,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <com/sun/org/apache/xpath/internal/patterns/StepPattern.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jcpp.h>
 
@@ -212,8 +203,8 @@ int32_t MatchPatternIterator::nextNode() {
 				return$1 = true;
 				goto $finally;
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			if (-1 != this->m_stackFrame) {
 				$nc(vars)->setStackFrame(savedStart);
@@ -244,12 +235,11 @@ int16_t MatchPatternIterator::acceptNode(int32_t n, $XPathContext* xctxt) {
 				var$2 = ($equals(score, $NodeTest::SCORE_NONE)) ? $DTMIterator::FILTER_SKIP : $DTMIterator::FILTER_ACCEPT;
 				return$1 = true;
 				goto $finally;
-			} catch ($TransformerException&) {
-				$var($TransformerException, se, $catch());
+			} catch ($TransformerException& se) {
 				$throwNew($RuntimeException, $(se->getMessage()));
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			$nc(xctxt)->popCurrentNode();
 			xctxt->popIteratorRoot();

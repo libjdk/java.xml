@@ -1,14 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/util/XML11Char.h>
 
 #include <com/sun/org/apache/xerces/internal/util/XMLChar.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Arrays.h>
 #include <jcpp.h>
 
@@ -82,7 +74,6 @@ $ClassInfo _XML11Char_ClassInfo_ = {
 $Object* allocate$XML11Char($Class* clazz) {
 	return $of($alloc(XML11Char));
 }
-
 
 $bytes* XML11Char::XML11CHARS = nullptr;
 

@@ -1,14 +1,5 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/CompilerException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -78,16 +69,10 @@ $String* CompilerException::getMessage() {
 CompilerException::CompilerException() {
 }
 
-CompilerException::CompilerException(const CompilerException& e) {
+CompilerException::CompilerException(const CompilerException& e) : $Exception(e) {
 }
 
-CompilerException CompilerException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void CompilerException::throwWrapper$() {
-	$pendingException(this);
+void CompilerException::throw$() {
 	throw *this;
 }
 

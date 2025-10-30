@@ -1,12 +1,5 @@
 #include <javax/xml/transform/sax/SAXTransformerFactory.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/Source.h>
 #include <javax/xml/transform/Templates.h>
 #include <javax/xml/transform/TransformerFactory.h>
@@ -63,9 +56,7 @@ $Object* allocate$SAXTransformerFactory($Class* clazz) {
 	return $of($alloc(SAXTransformerFactory));
 }
 
-
 $String* SAXTransformerFactory::FEATURE = nullptr;
-
 $String* SAXTransformerFactory::FEATURE_XMLFILTER = nullptr;
 
 void SAXTransformerFactory::init$() {

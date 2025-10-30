@@ -24,14 +24,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/NodeSetType.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 

@@ -3,19 +3,7 @@
 #include <com/sun/java_cup/internal/runtime/Scanner.h>
 #include <com/sun/java_cup/internal/runtime/Symbol.h>
 #include <com/sun/java_cup/internal/runtime/virtual_parse_stack.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Error.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Stack.h>
 #include <jcpp.h>
 
@@ -153,7 +141,6 @@ void lr_parser::report_fatal_error($String* message, Object$* info) {
 
 void lr_parser::report_error($String* message, Object$* info) {
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$nc($System::err)->print(message);
 	if ($instanceOf($Symbol, info)) {
 		if ($nc(($cast($Symbol, info)))->left != -1) {
@@ -273,7 +260,6 @@ $Symbol* lr_parser::parse() {
 }
 
 void lr_parser::debug_message($String* mess) {
-	$init($System);
 	$nc($System::err)->println(mess);
 }
 

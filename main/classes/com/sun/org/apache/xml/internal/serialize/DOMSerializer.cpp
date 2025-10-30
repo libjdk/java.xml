@@ -1,12 +1,5 @@
 #include <com/sun/org/apache/xml/internal/serialize/DOMSerializer.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Document.h>
 #include <org/w3c/dom/DocumentFragment.h>
 #include <org/w3c/dom/Element.h>
@@ -26,11 +19,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _DOMSerializer_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $MethodInfo _DOMSerializer_MethodInfo_[] = {
 	{"serialize", "(Lorg/w3c/dom/Element;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},

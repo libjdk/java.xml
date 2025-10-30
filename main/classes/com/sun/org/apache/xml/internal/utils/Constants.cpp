@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xml/internal/utils/Constants.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef S_BUILTIN_EXTENSIONS_URL
@@ -90,49 +82,27 @@ $Object* allocate$Constants($Class* clazz) {
 	return $of($alloc(Constants));
 }
 
-
 $String* Constants::S_XMLNAMESPACEURI = nullptr;
-
 $String* Constants::S_XSLNAMESPACEURL = nullptr;
-
 $String* Constants::S_OLDXSLNAMESPACEURL = nullptr;
-
 $String* Constants::S_VENDOR = nullptr;
-
 $String* Constants::S_VENDORURL = nullptr;
-
 $String* Constants::S_BUILTIN_EXTENSIONS_URL = nullptr;
-
 $String* Constants::S_BUILTIN_OLD_EXTENSIONS_URL = nullptr;
-
 $String* Constants::S_EXTENSIONS_OLD_JAVA_URL = nullptr;
-
 $String* Constants::S_EXTENSIONS_JAVA_URL = nullptr;
-
 $String* Constants::S_EXTENSIONS_LOTUSXSL_JAVA_URL = nullptr;
-
 $String* Constants::S_EXTENSIONS_XALANLIB_URL = nullptr;
-
 $String* Constants::S_EXTENSIONS_REDIRECT_URL = nullptr;
-
 $String* Constants::S_EXTENSIONS_PIPE_URL = nullptr;
-
 $String* Constants::S_EXTENSIONS_SQL_URL = nullptr;
-
 $String* Constants::S_EXSLT_COMMON_URL = nullptr;
-
 $String* Constants::S_EXSLT_MATH_URL = nullptr;
-
 $String* Constants::S_EXSLT_SETS_URL = nullptr;
-
 $String* Constants::S_EXSLT_DATETIME_URL = nullptr;
-
 $String* Constants::S_EXSLT_FUNCTIONS_URL = nullptr;
-
 $String* Constants::S_EXSLT_DYNAMIC_URL = nullptr;
-
 $String* Constants::S_EXSLT_STRINGS_URL = nullptr;
-
 double Constants::XSLTVERSUPPORTED = 0.0;
 
 void Constants::init$() {

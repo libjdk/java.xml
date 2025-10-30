@@ -15,22 +15,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/res/XPATHErrorResources.h>
 #include <java/io/IOException.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Double.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/Integer.h>
-#include <java/lang/Long.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/namespace/QName.h>
 #include <javax/xml/parsers/DocumentBuilder.h>
 #include <javax/xml/parsers/DocumentBuilderFactory.h>
@@ -190,14 +174,11 @@ $Document* XPathImplUtil::getDocument($InputSource* source) {
 	try {
 		$var($DocumentBuilderFactory, dbf, $JdkXmlUtils::getDOMFactory(this->overrideDefaultParser));
 		return $nc($($nc(dbf)->newDocumentBuilder()))->parse(source);
-	} catch ($ParserConfigurationException&) {
-		$var($Exception, e, $catch());
+	} catch ($ParserConfigurationException& e) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(e));
-	} catch ($SAXException&) {
-		$var($Exception, e, $catch());
+	} catch ($SAXException& e) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(e));
-	} catch ($IOException&) {
-		$var($Exception, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(e));
 	}
 	$shouldNotReachHere();
@@ -243,7 +224,6 @@ $Object* XPathImplUtil::getXPathResult($XObject* resultObject, $Class* type) {
 		}
 	case $XObject::CLASS_STRING:
 		{
-			$load($String);
 			return $of($nc(type)->cast($$new($XPathResultImpl, resultObject, $String::class$)));
 		}
 	case $XObject::CLASS_NODESET:
@@ -271,7 +251,6 @@ void XPathImplUtil::isSupportedClassType($Class* type) {
 	bool var$4 = var$5 || $nc(type)->isAssignableFrom($Integer::class$);
 	$load($Long);
 	bool var$3 = var$4 || $nc(type)->isAssignableFrom($Long::class$);
-	$load($String);
 	bool var$2 = var$3 || $nc(type)->isAssignableFrom($String::class$);
 	$load($XPathNodes);
 	bool var$1 = var$2 || $nc(type)->isAssignableFrom($XPathNodes::class$);

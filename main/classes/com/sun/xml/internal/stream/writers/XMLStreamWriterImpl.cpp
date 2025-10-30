@@ -17,28 +17,10 @@
 #include <java/io/OutputStream.h>
 #include <java/io/OutputStreamWriter.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
 #include <java/lang/ArrayIndexOutOfBoundsException.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
 #include <java/lang/IndexOutOfBoundsException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/Throwable.h>
 #include <java/lang/UnsupportedOperationException.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/nio/charset/Charset.h>
 #include <java/nio/charset/CharsetEncoder.h>
 #include <java/util/AbstractList.h>
@@ -444,8 +426,7 @@ void XMLStreamWriterImpl::close() {
 	if (this->fWriter != nullptr) {
 		try {
 			$nc(this->fWriter)->flush();
-		} catch ($IOException&) {
-			$var($IOException, e, $catch());
+		} catch ($IOException& e) {
 			$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 		}
 	}
@@ -463,8 +444,7 @@ void XMLStreamWriterImpl::close() {
 void XMLStreamWriterImpl::flush() {
 	try {
 		$nc(this->fWriter)->flush();
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -539,7 +519,6 @@ void XMLStreamWriterImpl::setPrefix($String* prefix$renamed, $String* uri$rename
 }
 
 void XMLStreamWriterImpl::writeAttribute($String* localName, $String* value) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		if (!this->fStartTagOpened) {
 			$throwNew($XMLStreamException, "Attribute not associated with any element"_s);
@@ -555,8 +534,7 @@ void XMLStreamWriterImpl::writeAttribute($String* localName, $String* value) {
 		$nc(this->fWriter)->write("=\""_s);
 		writeXMLContent(value, true, true);
 		$nc(this->fWriter)->write("\""_s);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -583,8 +561,7 @@ void XMLStreamWriterImpl::writeAttribute($String* namespaceURI$renamed, $String*
 			attr->setValues(nullptr, localName, nullptr, namespaceURI);
 			$nc(this->fAttributeCache)->add(attr);
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -648,8 +625,7 @@ void XMLStreamWriterImpl::writeAttribute($String* prefix$renamed, $String* names
 			attr->setValues(prefix, localName, nullptr, namespaceURI);
 			$nc(this->fAttributeCache)->add(attr);
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -665,8 +641,7 @@ void XMLStreamWriterImpl::writeCData($String* cdata) {
 		$nc(this->fWriter)->write(XMLStreamWriterImpl::START_CDATA);
 		$nc(this->fWriter)->write(cdata);
 		$nc(this->fWriter)->write(XMLStreamWriterImpl::END_CDATA);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -677,8 +652,7 @@ void XMLStreamWriterImpl::writeCharacters($String* data) {
 			closeStartTag();
 		}
 		writeXMLContent(data);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -689,8 +663,7 @@ void XMLStreamWriterImpl::writeCharacters($chars* data, int32_t start, int32_t l
 			closeStartTag();
 		}
 		writeXMLContent(data, start, len, this->fEscapeCharacters);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -705,8 +678,7 @@ void XMLStreamWriterImpl::writeComment($String* comment) {
 			$nc(this->fWriter)->write(comment);
 		}
 		$nc(this->fWriter)->write(XMLStreamWriterImpl::END_COMMENT);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -717,8 +689,7 @@ void XMLStreamWriterImpl::writeDTD($String* dtd) {
 			closeStartTag();
 		}
 		$nc(this->fWriter)->write(dtd);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -751,8 +722,7 @@ void XMLStreamWriterImpl::writeDefaultNamespace($String* namespaceURI) {
 		}
 		$nc(this->fInternalNamespaceContext)->declarePrefix(""_s, namespaceURINormalized);
 		writenamespace(nullptr, namespaceURINormalized);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -768,8 +738,7 @@ void XMLStreamWriterImpl::writeEmptyElement($String* localName) {
 		if (!this->fIsRepairingNamespace) {
 			$nc(this->fWriter)->write(localName);
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -819,8 +788,7 @@ void XMLStreamWriterImpl::writeEmptyElement($String* prefix$renamed, $String* lo
 			$nc(this->fWriter)->write(":"_s);
 		}
 		$nc(this->fWriter)->write(localName);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -845,11 +813,9 @@ void XMLStreamWriterImpl::writeEndDocument() {
 				$nc(this->fWriter)->write((int32_t)XMLStreamWriterImpl::CLOSE_END_TAG);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($XMLStreamException, "No more elements to write"_s);
 	}
 }
@@ -875,11 +841,9 @@ void XMLStreamWriterImpl::writeEndElement() {
 		$nc(this->fWriter)->write($nc(currentElement)->localpart);
 		$nc(this->fWriter)->write((int32_t)XMLStreamWriterImpl::CLOSE_END_TAG);
 		$nc(this->fInternalNamespaceContext)->popContext();
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
-	} catch ($ArrayIndexOutOfBoundsException&) {
-		$var($ArrayIndexOutOfBoundsException, e, $catch());
+	} catch ($ArrayIndexOutOfBoundsException& e) {
 		$throwNew($XMLStreamException, $$str({"No element was found to write: "_s, $(e->toString())}), static_cast<$Throwable*>(e));
 	}
 }
@@ -892,8 +856,7 @@ void XMLStreamWriterImpl::writeEntityRef($String* refName) {
 		$nc(this->fWriter)->write((int32_t)u'&');
 		$nc(this->fWriter)->write(refName);
 		$nc(this->fWriter)->write((int32_t)u';');
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -942,8 +905,7 @@ void XMLStreamWriterImpl::writeNamespace($String* prefix$renamed, $String* names
 		}
 		$nc(this->fInternalNamespaceContext)->declarePrefix(prefix, namespaceURINormalized);
 		writenamespace(prefix, namespaceURINormalized);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -971,8 +933,7 @@ void XMLStreamWriterImpl::writeProcessingInstruction($String* target) {
 			$nc(this->fWriter)->write("?>"_s);
 			return;
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 	$throwNew($XMLStreamException, "PI target cannot be null"_s);
@@ -991,8 +952,7 @@ void XMLStreamWriterImpl::writeProcessingInstruction($String* target, $String* d
 		$nc(this->fWriter)->write(XMLStreamWriterImpl::SPACE);
 		$nc(this->fWriter)->write(data);
 		$nc(this->fWriter)->write("?>"_s);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(e));
 	}
 }
@@ -1038,8 +998,7 @@ void XMLStreamWriterImpl::writeStartDocument($String* encoding, $String* version
 			}
 		}
 		$nc(this->fWriter)->write("\"?>"_s);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(ex));
 	}
 }
@@ -1086,8 +1045,7 @@ void XMLStreamWriterImpl::writeStartElement($String* localName) {
 			return;
 		}
 		$nc(this->fWriter)->write(localName);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(ex));
 	}
 }
@@ -1158,8 +1116,7 @@ void XMLStreamWriterImpl::writeStartElement($String* prefix$renamed, $String* lo
 			$nc(this->fWriter)->write(":"_s);
 		}
 		$nc(this->fWriter)->write(localName);
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(ex));
 	}
 }
@@ -1337,8 +1294,7 @@ void XMLStreamWriterImpl::closeStartTag() {
 			$nc(this->fWriter)->write((int32_t)XMLStreamWriterImpl::CLOSE_START_TAG);
 		}
 		this->fStartTagOpened = false;
-	} catch ($IOException&) {
-		$var($IOException, ex, $catch());
+	} catch ($IOException& ex) {
 		this->fStartTagOpened = false;
 		$throwNew($XMLStreamException, static_cast<$Throwable*>(ex));
 	}

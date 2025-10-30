@@ -1,15 +1,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/XMLEntityManager$EncodingInfo.h>
 
 #include <com/sun/org/apache/xerces/internal/impl/XMLEntityManager.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef EBCDIC
@@ -110,25 +101,15 @@ $String* XMLEntityManager$EncodingInfo::STR_UTF16LE = nullptr;
 $String* XMLEntityManager$EncodingInfo::STR_UCS4 = nullptr;
 $String* XMLEntityManager$EncodingInfo::STR_UCS2 = nullptr;
 $String* XMLEntityManager$EncodingInfo::STR_CP037 = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UTF_8 = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UTF_8_WITH_BOM = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UTF_16_BIG_ENDIAN = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UTF_16_BIG_ENDIAN_WITH_BOM = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UTF_16_LITTLE_ENDIAN = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UTF_16_LITTLE_ENDIAN_WITH_BOM = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UCS_4_BIG_ENDIAN = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UCS_4_LITTLE_ENDIAN = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::UCS_4_UNUSUAL_BYTE_ORDER = nullptr;
-
 XMLEntityManager$EncodingInfo* XMLEntityManager$EncodingInfo::EBCDIC = nullptr;
 
 void XMLEntityManager$EncodingInfo::init$($String* autoDetectedEncoding, $Boolean* isBigEndian, bool hasBOM) {

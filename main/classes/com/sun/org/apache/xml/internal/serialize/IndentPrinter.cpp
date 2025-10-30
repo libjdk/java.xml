@@ -5,16 +5,7 @@
 #include <java/io/IOException.h>
 #include <java/io/StringWriter.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
@@ -35,11 +26,11 @@ namespace com {
 				namespace xml {
 					namespace internal {
 						namespace serialize {
+
 $CompoundAttribute _IndentPrinter_Annotations_[] = {
 	{"Ljava/lang/Deprecated;", nullptr},
 	{}
 };
-
 
 $FieldInfo _IndentPrinter_FieldInfo_[] = {
 	{"_line", "Ljava/lang/StringBuffer;", nullptr, $PRIVATE, $field(IndentPrinter, _line)},
@@ -136,7 +127,6 @@ void IndentPrinter::printText($chars* chars, int32_t start, int32_t length) {
 }
 
 void IndentPrinter::printSpace() {
-	$useLocalCurrentObjectStackCache();
 	if ($nc(this->_text)->length() > 0) {
 		bool var$0 = $nc(this->_format)->getLineWidth() > 0;
 		if (var$0) {
@@ -148,8 +138,7 @@ void IndentPrinter::printSpace() {
 			flushLine(false);
 			try {
 				$nc(this->_writer)->write($($nc(this->_format)->getLineSeparator()));
-			} catch ($IOException&) {
-				$var($IOException, except, $catch());
+			} catch ($IOException& except) {
 				if (this->_exception == nullptr) {
 					$set(this, _exception, except);
 				}
@@ -170,7 +159,6 @@ void IndentPrinter::breakLine() {
 }
 
 void IndentPrinter::breakLine(bool preserveSpace) {
-	$useLocalCurrentObjectStackCache();
 	if ($nc(this->_text)->length() > 0) {
 		while (this->_spaces > 0) {
 			$nc(this->_line)->append(u' ');
@@ -182,8 +170,7 @@ void IndentPrinter::breakLine(bool preserveSpace) {
 	flushLine(preserveSpace);
 	try {
 		$nc(this->_writer)->write($($nc(this->_format)->getLineSeparator()));
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}
@@ -191,7 +178,6 @@ void IndentPrinter::breakLine(bool preserveSpace) {
 }
 
 void IndentPrinter::flushLine(bool preserveSpace) {
-	$useLocalCurrentObjectStackCache();
 	int32_t indent = 0;
 	if ($nc(this->_line)->length() > 0) {
 		try {
@@ -210,8 +196,7 @@ void IndentPrinter::flushLine(bool preserveSpace) {
 			this->_spaces = 0;
 			$nc(this->_writer)->write($($nc(this->_line)->toString()));
 			$set(this, _line, $new($StringBuffer, 40));
-		} catch ($IOException&) {
-			$var($IOException, except, $catch());
+		} catch ($IOException& except) {
 			if (this->_exception == nullptr) {
 				$set(this, _exception, except);
 			}
@@ -226,8 +211,7 @@ void IndentPrinter::flush() {
 	}
 	try {
 		$nc(this->_writer)->flush();
-	} catch ($IOException&) {
-		$var($IOException, except, $catch());
+	} catch ($IOException& except) {
 		if (this->_exception == nullptr) {
 			$set(this, _exception, except);
 		}

@@ -15,20 +15,8 @@
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <com/sun/org/apache/xpath/internal/patterns/StepPattern$PredOwner.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Error.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jcpp.h>
@@ -428,8 +416,8 @@ bool StepPattern::checkProximityPosition($XPathContext* xctxt, int32_t predPos, 
 														break$7 = true;
 														goto $finally3;
 													}
-												} catch ($Throwable&) {
-													$assign(var$6, $catch());
+												} catch ($Throwable& var$8) {
+													$assign(var$6, var$8);
 												} $finally3: {
 													$nc(pred)->detach();
 												}
@@ -440,8 +428,8 @@ bool StepPattern::checkProximityPosition($XPathContext* xctxt, int32_t predPos, 
 													break;
 												}
 											}
-										} catch ($Throwable&) {
-											$assign(var$4, $catch());
+										} catch ($Throwable& var$9) {
+											$assign(var$4, var$9);
 										} /*finally*/ {
 											xctxt->popPredicatePos();
 										}
@@ -453,8 +441,8 @@ bool StepPattern::checkProximityPosition($XPathContext* xctxt, int32_t predPos, 
 										}
 									}
 								}
-							} catch ($Throwable&) {
-								$assign(var$3, $catch());
+							} catch ($Throwable& var$10) {
+								$assign(var$3, var$10);
 							} /*finally*/ {
 								xctxt->popSubContextList();
 							}
@@ -471,8 +459,8 @@ bool StepPattern::checkProximityPosition($XPathContext* xctxt, int32_t predPos, 
 							goto $finally;
 						}
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$11) {
+					$assign(var$0, var$11);
 				} $finally: {
 					$nc(xctxt)->popCurrentNode();
 				}
@@ -484,8 +472,7 @@ bool StepPattern::checkProximityPosition($XPathContext* xctxt, int32_t predPos, 
 				}
 			}
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, se, $catch());
+	} catch ($TransformerException& se) {
 		$throwNew($RuntimeException, $(se->getMessage()));
 	}
 	return (pos == 1);
@@ -539,8 +526,8 @@ int32_t StepPattern::getProximityPosition($XPathContext* xctxt, int32_t predPos,
 														break$9 = true;
 														goto $finally3;
 													}
-												} catch ($Throwable&) {
-													$assign(var$7, $catch());
+												} catch ($Throwable& var$10) {
+													$assign(var$7, var$10);
 												} $finally3: {
 													$nc(pred)->detach();
 												}
@@ -554,8 +541,8 @@ int32_t StepPattern::getProximityPosition($XPathContext* xctxt, int32_t predPos,
 													break;
 												}
 											}
-										} catch ($Throwable&) {
-											$assign(var$4, $catch());
+										} catch ($Throwable& var$11) {
+											$assign(var$4, var$11);
 										} /*finally*/ {
 											xctxt->popPredicatePos();
 										}
@@ -570,8 +557,8 @@ int32_t StepPattern::getProximityPosition($XPathContext* xctxt, int32_t predPos,
 										}
 									}
 								}
-							} catch ($Throwable&) {
-								$assign(var$3, $catch());
+							} catch ($Throwable& var$12) {
+								$assign(var$3, var$12);
 							} /*finally*/ {
 								xctxt->popSubContextList();
 							}
@@ -588,8 +575,8 @@ int32_t StepPattern::getProximityPosition($XPathContext* xctxt, int32_t predPos,
 							goto $finally;
 						}
 					}
-				} catch ($Throwable&) {
-					$assign(var$0, $catch());
+				} catch ($Throwable& var$13) {
+					$assign(var$0, var$13);
 				} $finally: {
 					xctxt->popCurrentNode();
 				}
@@ -601,8 +588,7 @@ int32_t StepPattern::getProximityPosition($XPathContext* xctxt, int32_t predPos,
 				}
 			}
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, se, $catch());
+	} catch ($TransformerException& se) {
 		$throwNew($RuntimeException, $(se->getMessage()));
 	}
 	return pos;
@@ -635,8 +621,8 @@ $XObject* StepPattern::executeRelativePathPattern($XPathContext* xctxt, $DTM* dt
 					break$1 = true;
 					goto $finally;
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$2) {
+				$assign(var$0, var$2);
 			} $finally: {
 				$nc(xctxt)->popCurrentNode();
 			}
@@ -697,8 +683,8 @@ bool StepPattern::executePredicates($XPathContext* xctxt, $DTM* dtm, int32_t cur
 									break$8 = true;
 									goto $finally2;
 								}
-							} catch ($Throwable&) {
-								$assign(var$5, $catch());
+							} catch ($Throwable& var$9) {
+								$assign(var$5, var$9);
 							} $finally2: {
 								$nc(pred)->detach();
 							}
@@ -715,8 +701,8 @@ bool StepPattern::executePredicates($XPathContext* xctxt, $DTM* dtm, int32_t cur
 								break;
 							}
 						}
-					} catch ($Throwable&) {
-						$assign(var$1, $catch());
+					} catch ($Throwable& var$10) {
+						$assign(var$1, var$10);
 					} /*finally*/ {
 						xctxt->popPredicatePos();
 					}
@@ -734,8 +720,8 @@ bool StepPattern::executePredicates($XPathContext* xctxt, $DTM* dtm, int32_t cur
 					}
 				}
 			}
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$11) {
+			$assign(var$0, var$11);
 		} /*finally*/ {
 			$nc(xctxt)->popSubContextList();
 		}
@@ -815,8 +801,8 @@ double StepPattern::getMatchScore($XPathContext* xctxt, int32_t context) {
 			var$2 = $nc(score)->num();
 			return$1 = true;
 			goto $finally;
-		} catch ($Throwable&) {
-			$assign(var$0, $catch());
+		} catch ($Throwable& var$3) {
+			$assign(var$0, var$3);
 		} $finally: {
 			xctxt->popCurrentNode();
 			xctxt->popCurrentExpressionNode();

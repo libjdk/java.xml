@@ -2,17 +2,6 @@
 
 #include <com/sun/org/apache/xml/internal/res/XMLErrorResources.h>
 #include <com/sun/org/apache/xml/internal/res/XMLMessages.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/Attr.h>
 #include <org/w3c/dom/CDATASection.h>
 #include <org/w3c/dom/Comment.h>
@@ -243,14 +232,12 @@ void UnImplNode::init$() {
 
 void UnImplNode::error($String* msg) {
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$nc($System::out)->println($$str({"DOM ERROR! class: "_s, $($of(this)->getClass()->getName())}));
 	$throwNew($RuntimeException, $($XMLMessages::createXMLMessage(msg, nullptr)));
 }
 
 void UnImplNode::error($String* msg, $ObjectArray* args) {
 	$useLocalCurrentObjectStackCache();
-	$init($System);
 	$nc($System::out)->println($$str({"DOM ERROR! class: "_s, $($of(this)->getClass()->getName())}));
 	$throwNew($RuntimeException, $($XMLMessages::createXMLMessage(msg, args)));
 }

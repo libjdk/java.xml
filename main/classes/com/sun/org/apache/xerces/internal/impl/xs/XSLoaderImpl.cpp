@@ -10,15 +10,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/StringList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSLoader.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSModel.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/w3c/dom/DOMConfiguration.h>
 #include <org/w3c/dom/DOMStringList.h>
 #include <org/w3c/dom/ls/LSInput.h>
@@ -144,8 +135,7 @@ $XSModel* XSLoaderImpl::loadURIList($StringList* uriList) {
 			$nc(this->fSchemaLoader)->loadGrammar($$new($XMLInputSource, nullptr, $(uriList->item(i)), nullptr, false));
 		}
 		return $nc(this->fGrammarPool)->toXSModel();
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$nc(this->fSchemaLoader)->reportDOMFatalError(e);
 		return nullptr;
 	}
@@ -161,8 +151,7 @@ $XSModel* XSLoaderImpl::loadInputList($LSInputList* is) {
 			$nc(this->fSchemaLoader)->loadGrammar($($nc(this->fSchemaLoader)->dom2xmlInputSource($(is->item(i)))));
 		}
 		return $nc(this->fGrammarPool)->toXSModel();
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$nc(this->fSchemaLoader)->reportDOMFatalError(e);
 		return nullptr;
 	}
@@ -174,8 +163,7 @@ $XSModel* XSLoaderImpl::loadURI($String* uri) {
 	try {
 		$nc(this->fGrammarPool)->clear();
 		return $nc(($cast($XSGrammar, $($nc(this->fSchemaLoader)->loadGrammar($$new($XMLInputSource, nullptr, uri, nullptr, false))))))->toXSModel();
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$nc(this->fSchemaLoader)->reportDOMFatalError(e);
 		return nullptr;
 	}
@@ -187,8 +175,7 @@ $XSModel* XSLoaderImpl::load($LSInput* is) {
 	try {
 		$nc(this->fGrammarPool)->clear();
 		return $nc(($cast($XSGrammar, $($nc(this->fSchemaLoader)->loadGrammar($($nc(this->fSchemaLoader)->dom2xmlInputSource(is)))))))->toXSModel();
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$nc(this->fSchemaLoader)->reportDOMFatalError(e);
 		return nullptr;
 	}

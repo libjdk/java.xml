@@ -3,16 +3,7 @@
 #include <com/sun/xml/internal/stream/XMLInputFactoryImpl.h>
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/ClassLoader.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NamedAttribute.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/stream/EventFilter.h>
 #include <javax/xml/stream/FactoryFinder.h>
 #include <javax/xml/stream/StreamFilter.h>
@@ -129,23 +120,14 @@ $Object* allocate$XMLInputFactory($Class* clazz) {
 	return $of($alloc(XMLInputFactory));
 }
 
-
 $String* XMLInputFactory::IS_NAMESPACE_AWARE = nullptr;
-
 $String* XMLInputFactory::IS_VALIDATING = nullptr;
-
 $String* XMLInputFactory::IS_COALESCING = nullptr;
-
 $String* XMLInputFactory::IS_REPLACING_ENTITY_REFERENCES = nullptr;
-
 $String* XMLInputFactory::IS_SUPPORTING_EXTERNAL_ENTITIES = nullptr;
-
 $String* XMLInputFactory::SUPPORT_DTD = nullptr;
-
 $String* XMLInputFactory::REPORTER = nullptr;
-
 $String* XMLInputFactory::RESOLVER = nullptr;
-
 $String* XMLInputFactory::ALLOCATOR = nullptr;
 $String* XMLInputFactory::DEFAULIMPL = nullptr;
 

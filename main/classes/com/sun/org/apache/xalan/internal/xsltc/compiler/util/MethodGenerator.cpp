@@ -70,16 +70,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/OutlineableChunkEnd.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/OutlineableChunkStart.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/SlotAllocator.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -570,7 +560,7 @@ $Instruction* MethodGenerator::loadCurrentNode() {
 }
 
 $Instruction* MethodGenerator::storeCurrentNode() {
-	return this->_istoreCurrent != nullptr ? this->_istoreCurrent : ($assignField(this, _istoreCurrent, $new($ISTORE, getLocalIndex("current"_s))));
+	return this->_istoreCurrent != nullptr ? this->_istoreCurrent : ($set(this, _istoreCurrent, $new($ISTORE, getLocalIndex("current"_s))));
 }
 
 $Instruction* MethodGenerator::loadContextNode() {
@@ -1020,8 +1010,7 @@ $Method* MethodGenerator::outline($InstructionHandle* first, $InstructionHandle*
 	newIL->append(static_cast<$Instruction*>($InstructionConst::RETURN));
 	try {
 		oldMethodIL->delete$(first, last);
-	} catch ($TargetLostException&) {
-		$var($TargetLostException, e, $catch());
+	} catch ($TargetLostException& e) {
 		$var($InstructionHandleArray, targets, e->getTargets());
 		for (int32_t i = 0; i < $nc(targets)->length; ++i) {
 			$var($InstructionHandle, lostTarget, targets->get(i));
@@ -1276,8 +1265,7 @@ bool MethodGenerator::widenConditionalBranchTargetOffsets() {
 					}
 					try {
 						il->delete$(static_cast<$InstructionHandle*>(oldIfHandle));
-					} catch ($TargetLostException&) {
-						$var($TargetLostException, tle, $catch());
+					} catch ($TargetLostException& tle) {
 						$init($ErrorMsg);
 						$var($String, msg, $$new($ErrorMsg, $ErrorMsg::OUTLINE_ERR_DELETED_TARGET, $($of(tle->getMessage())))->toString());
 						$throwNew($InternalError, msg);

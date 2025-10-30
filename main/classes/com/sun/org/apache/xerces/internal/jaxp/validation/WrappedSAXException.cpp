@@ -1,13 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/jaxp/validation/WrappedSAXException.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <org/xml/sax/SAXException.h>
 #include <jcpp.h>
 
@@ -58,16 +50,10 @@ void WrappedSAXException::init$($SAXException* e) {
 WrappedSAXException::WrappedSAXException() {
 }
 
-WrappedSAXException::WrappedSAXException(const WrappedSAXException& e) {
+WrappedSAXException::WrappedSAXException(const WrappedSAXException& e) : $RuntimeException(e) {
 }
 
-WrappedSAXException WrappedSAXException::wrapper$() {
-	$pendingException(this);
-	return *this;
-}
-
-void WrappedSAXException::throwWrapper$() {
-	$pendingException(this);
+void WrappedSAXException::throw$() {
 	throw *this;
 }
 

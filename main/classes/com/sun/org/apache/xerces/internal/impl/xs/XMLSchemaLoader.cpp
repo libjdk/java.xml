@@ -67,18 +67,6 @@
 #include <java/io/InputStream.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/net/URI.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
@@ -448,57 +436,34 @@ void XMLSchemaLoader::finalize() {
 	this->$XMLGrammarLoader::finalize();
 }
 
-
 $String* XMLSchemaLoader::SCHEMA_FULL_CHECKING = nullptr;
-
 $String* XMLSchemaLoader::CONTINUE_AFTER_FATAL_ERROR = nullptr;
-
 $String* XMLSchemaLoader::ALLOW_JAVA_ENCODINGS = nullptr;
-
 $String* XMLSchemaLoader::STANDARD_URI_CONFORMANT_FEATURE = nullptr;
-
 $String* XMLSchemaLoader::VALIDATE_ANNOTATIONS = nullptr;
-
 $String* XMLSchemaLoader::DISALLOW_DOCTYPE = nullptr;
-
 $String* XMLSchemaLoader::GENERATE_SYNTHETIC_ANNOTATIONS = nullptr;
-
 $String* XMLSchemaLoader::HONOUR_ALL_SCHEMALOCATIONS = nullptr;
 $String* XMLSchemaLoader::AUGMENT_PSVI = nullptr;
 $String* XMLSchemaLoader::PARSER_SETTINGS = nullptr;
-
 $String* XMLSchemaLoader::NAMESPACE_GROWTH = nullptr;
-
 $String* XMLSchemaLoader::TOLERATE_DUPLICATES = nullptr;
-
 $String* XMLSchemaLoader::SCHEMA_DV_FACTORY = nullptr;
 $String* XMLSchemaLoader::OVERRIDE_PARSER = nullptr;
 $StringArray* XMLSchemaLoader::RECOGNIZED_FEATURES = nullptr;
-
 $String* XMLSchemaLoader::SYMBOL_TABLE = nullptr;
-
 $String* XMLSchemaLoader::ERROR_REPORTER = nullptr;
-
 $String* XMLSchemaLoader::ERROR_HANDLER = nullptr;
-
 $String* XMLSchemaLoader::ENTITY_RESOLVER = nullptr;
-
 $String* XMLSchemaLoader::XMLGRAMMAR_POOL = nullptr;
-
 $String* XMLSchemaLoader::SCHEMA_LOCATION = nullptr;
-
 $String* XMLSchemaLoader::SCHEMA_NONS_LOCATION = nullptr;
-
 $String* XMLSchemaLoader::JAXP_SCHEMA_SOURCE = nullptr;
 $String* XMLSchemaLoader::SECURITY_MANAGER = nullptr;
-
 $String* XMLSchemaLoader::LOCALE = nullptr;
 $String* XMLSchemaLoader::ENTITY_MANAGER = nullptr;
-
 $String* XMLSchemaLoader::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* XMLSchemaLoader::ACCESS_EXTERNAL_DTD = nullptr;
-
 $String* XMLSchemaLoader::ACCESS_EXTERNAL_SCHEMA = nullptr;
 $StringArray* XMLSchemaLoader::RECOGNIZED_PROPERTIES = nullptr;
 
@@ -751,8 +716,7 @@ void XMLSchemaLoader::processExternalHints($String* sl, $String* nsl, $Map* loca
 				$init($XSMessageFormatter);
 				$nc(er)->reportError($XSMessageFormatter::SCHEMA_DOMAIN, "SchemaLocation"_s, $$new($ObjectArray, {$of(sl)}), $XMLErrorReporter::SEVERITY_WARNING);
 			}
-		} catch ($InvalidDatatypeValueException&) {
-			$var($InvalidDatatypeValueException, ex, $catch());
+		} catch ($InvalidDatatypeValueException& ex) {
 			$init($XSMessageFormatter);
 			$var($String, var$0, $XSMessageFormatter::SCHEMA_DOMAIN);
 			$var($String, var$1, ex->getKey());
@@ -772,8 +736,7 @@ void XMLSchemaLoader::processExternalHints($String* sl, $String* nsl, $Map* loca
 				locations->put($XMLSymbols::EMPTY_STRING, la);
 			}
 			$nc(la)->addLocation(nsl);
-		} catch ($InvalidDatatypeValueException&) {
-			$var($InvalidDatatypeValueException, ex, $catch());
+		} catch ($InvalidDatatypeValueException& ex) {
 			$init($XSMessageFormatter);
 			$var($String, var$2, $XSMessageFormatter::SCHEMA_DOMAIN);
 			$var($String, var$3, ex->getKey());
@@ -803,8 +766,7 @@ bool XMLSchemaLoader::tokenizeSchemaLocationStr($String* schemaStr, $Map* locati
 			if (base != nullptr) {
 				try {
 					$assign(location, $XMLEntityManager::expandSystemId(location, base, false));
-				} catch ($URI$MalformedURIException&) {
-					$catch();
+				} catch ($URI$MalformedURIException& e) {
 				}
 			}
 			$nc(la)->addLocation(location);
@@ -852,7 +814,6 @@ void XMLSchemaLoader::processJAXPSchemaSource($Map* locationPairs) {
 		}
 		return;
 	} else {
-		$load($String);
 		$load($File);
 		bool var$5 = (componentType != $Object::class$) && (componentType != $String::class$) && !$File::class$->isAssignableFrom(componentType);
 		$load($InputStream);
@@ -920,8 +881,7 @@ $XMLInputSource* XMLSchemaLoader::xsdToXMLInputSource(Object$* val) {
 		$var($XMLInputSource, xis, nullptr);
 		try {
 			$assign(xis, $nc(this->fEntityManager)->resolveEntity(static_cast<$XMLResourceIdentifier*>(static_cast<$XMLResourceIdentifierImpl*>(this->fXSDDescription))));
-		} catch ($IOException&) {
-			$var($IOException, ex, $catch());
+		} catch ($IOException& ex) {
 			$init($XSMessageFormatter);
 			$nc(this->fErrorReporter)->reportError($XSMessageFormatter::SCHEMA_DOMAIN, "schema_reference.4"_s, $$new($ObjectArray, {$of(loc)}), $XMLErrorReporter::SEVERITY_ERROR);
 		}
@@ -938,8 +898,7 @@ $XMLInputSource* XMLSchemaLoader::xsdToXMLInputSource(Object$* val) {
 		$var($InputStream, is, nullptr);
 		try {
 			$assign(is, $new($BufferedInputStream, $$new($FileInputStream, file)));
-		} catch ($FileNotFoundException&) {
-			$var($FileNotFoundException, ex, $catch());
+		} catch ($FileNotFoundException& ex) {
 			$init($XSMessageFormatter);
 			$nc(this->fErrorReporter)->reportError($XSMessageFormatter::SCHEMA_DOMAIN, "schema_reference.4"_s, $$new($ObjectArray, {$($of($nc(file)->toString()))}), $XMLErrorReporter::SEVERITY_ERROR);
 		}
@@ -1020,8 +979,7 @@ void XMLSchemaLoader::reset($XMLComponentManager* componentManager) {
 	try {
 		$set(this, fExternalSchemas, $cast($String, componentManager->getProperty(XMLSchemaLoader::SCHEMA_LOCATION)));
 		$set(this, fExternalNoNSSchema, $cast($String, componentManager->getProperty(XMLSchemaLoader::SCHEMA_NONS_LOCATION)));
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$set(this, fExternalSchemas, nullptr);
 		$set(this, fExternalNoNSSchema, nullptr);
 	}
@@ -1054,8 +1012,7 @@ void XMLSchemaLoader::reset($XMLComponentManager* componentManager) {
 		if (!fatalError) {
 			$nc(this->fErrorReporter)->setFeature(XMLSchemaLoader::CONTINUE_AFTER_FATAL_ERROR, fatalError);
 		}
-	} catch ($XMLConfigurationException&) {
-		$catch();
+	} catch ($XMLConfigurationException& e) {
 	}
 	this->fIsCheckedFully = componentManager->getFeature(XMLSchemaLoader::SCHEMA_FULL_CHECKING, false);
 	$nc(this->fSchemaHandler)->setGenerateSyntheticAnnotations(componentManager->getFeature(XMLSchemaLoader::GENERATE_SYNTHETIC_ANNOTATIONS, false));
@@ -1085,8 +1042,7 @@ $XSModel* XMLSchemaLoader::load($LSInput* is) {
 	try {
 		$var($Grammar, g, loadGrammar($(dom2xmlInputSource(is))));
 		return $nc(($cast($XSGrammar, g)))->toXSModel();
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		reportDOMFatalError(e);
 		return nullptr;
 	}
@@ -1100,8 +1056,7 @@ $XSModel* XMLSchemaLoader::loadInputList($LSInputList* is) {
 	for (int32_t i = 0; i < length; ++i) {
 		try {
 			gs->set(i, $cast($SchemaGrammar, $(loadGrammar($(dom2xmlInputSource($(is->item(i))))))));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			reportDOMFatalError(e);
 			return nullptr;
 		}
@@ -1114,8 +1069,7 @@ $XSModel* XMLSchemaLoader::loadURI($String* uri) {
 	try {
 		$var($Grammar, g, loadGrammar($$new($XMLInputSource, nullptr, uri, nullptr, false)));
 		return $nc(($cast($XSGrammar, g)))->toXSModel();
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		reportDOMFatalError(e);
 		return nullptr;
 	}
@@ -1129,8 +1083,7 @@ $XSModel* XMLSchemaLoader::loadURIList($StringList* uriList) {
 	for (int32_t i = 0; i < length; ++i) {
 		try {
 			gs->set(i, $cast($SchemaGrammar, $(loadGrammar($$new($XMLInputSource, nullptr, $(uriList->item(i)), nullptr, false)))));
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			reportDOMFatalError(e);
 			return nullptr;
 		}
@@ -1198,14 +1151,12 @@ $Object* XMLSchemaLoader::getParameter($String* name) {
 		bool feature = getFeature(name);
 		$init($Boolean);
 		return $of((feature) ? $Boolean::TRUE : $Boolean::FALSE);
-	} catch ($Exception&) {
-		$var($Exception, e, $catch());
+	} catch ($Exception& e) {
 		$var($Object, property, nullptr);
 		try {
 			$assign(property, getProperty(name));
 			return $of(property);
-		} catch ($Exception&) {
-			$var($Exception, ex, $catch());
+		} catch ($Exception& ex) {
 			$init($DOMMessageFormatter);
 			$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "FEATURE_NOT_SUPPORTED"_s, $$new($ObjectArray, {$of(name)})));
 			$throwNew($DOMException, $DOMException::NOT_SUPPORTED_ERR, msg);
@@ -1253,8 +1204,7 @@ void XMLSchemaLoader::setParameter($String* name, Object$* value) {
 		}
 		try {
 			setFeature(name, state);
-		} catch ($Exception&) {
-			$var($Exception, e, $catch());
+		} catch ($Exception& e) {
 			$init($DOMMessageFormatter);
 			$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "FEATURE_NOT_SUPPORTED"_s, $$new($ObjectArray, {$of(name)})));
 			$throwNew($DOMException, $DOMException::NOT_SUPPORTED_ERR, msg);
@@ -1267,8 +1217,7 @@ void XMLSchemaLoader::setParameter($String* name, Object$* value) {
 			try {
 				$set(this, fErrorHandler, $new($DOMErrorHandlerWrapper, $cast($DOMErrorHandler, value)));
 				setErrorHandler(this->fErrorHandler);
-			} catch ($XMLConfigurationException&) {
-				$catch();
+			} catch ($XMLConfigurationException& e) {
 			}
 		} else {
 			$init($DOMMessageFormatter);
@@ -1282,8 +1231,7 @@ void XMLSchemaLoader::setParameter($String* name, Object$* value) {
 			try {
 				$set(this, fResourceResolver, $new($DOMEntityResolverWrapper, $cast($LSResourceResolver, value)));
 				setEntityResolver(this->fResourceResolver);
-			} catch ($XMLConfigurationException&) {
-				$catch();
+			} catch ($XMLConfigurationException& e) {
 			}
 		} else {
 			$init($DOMMessageFormatter);
@@ -1294,8 +1242,7 @@ void XMLSchemaLoader::setParameter($String* name, Object$* value) {
 	}
 	try {
 		setProperty(name, value);
-	} catch ($Exception&) {
-		$var($Exception, ex, $catch());
+	} catch ($Exception& ex) {
 		$init($DOMMessageFormatter);
 		$var($String, msg, $DOMMessageFormatter::formatMessage($DOMMessageFormatter::DOM_DOMAIN, "FEATURE_NOT_SUPPORTED"_s, $$new($ObjectArray, {$of(name)})));
 		$throwNew($DOMException, $DOMException::NOT_SUPPORTED_ERR, msg);
@@ -1372,7 +1319,7 @@ void clinit$XMLSchemaLoader($Class* class$) {
 	$init($XMLConstants);
 	$assignStatic(XMLSchemaLoader::ACCESS_EXTERNAL_DTD, $XMLConstants::ACCESS_EXTERNAL_DTD);
 	$assignStatic(XMLSchemaLoader::ACCESS_EXTERNAL_SCHEMA, $XMLConstants::ACCESS_EXTERNAL_SCHEMA);
-		$init($XMLConstants);
+	$init($XMLConstants);
 	$assignStatic(XMLSchemaLoader::RECOGNIZED_FEATURES, $new($StringArray, {
 		XMLSchemaLoader::SCHEMA_FULL_CHECKING,
 		XMLSchemaLoader::AUGMENT_PSVI,
@@ -1388,8 +1335,8 @@ void clinit$XMLSchemaLoader($Class* class$) {
 		XMLSchemaLoader::OVERRIDE_PARSER,
 		$XMLConstants::USE_CATALOG
 	}));
-		$init($JdkXmlUtils);
-		$init($JdkConstants);
+	$init($JdkXmlUtils);
+	$init($JdkConstants);
 	$assignStatic(XMLSchemaLoader::RECOGNIZED_PROPERTIES, $new($StringArray, {
 		XMLSchemaLoader::ENTITY_MANAGER,
 		XMLSchemaLoader::SYMBOL_TABLE,

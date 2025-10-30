@@ -67,8 +67,10 @@ public:
 	$Object* m_styleNode = nullptr;
 	::java::lang::Exception* m_exception = nullptr;
 	XPathException(const XPathException& e);
-	XPathException wrapper$();
-	virtual void throwWrapper$() override;
+	virtual void throw$() override;
+	inline XPathException* operator ->() {
+		return (XPathException*)throwing$;
+	}
 };
 
 					} // internal

@@ -2,20 +2,8 @@
 
 #include <com/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit.h>
 #include <com/sun/org/apache/xalan/internal/utils/XMLSecurityManager$NameMap.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Enum.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/concurrent/CopyOnWriteArrayList.h>
 #include <jdk/xml/internal/JdkConstants.h>
 #include <jdk/xml/internal/JdkProperty$ImplPropMap.h>
@@ -326,7 +314,6 @@ void XMLSecurityManager::printWarning($String* parserClassName, $String* propert
 	$useLocalCurrentObjectStackCache();
 	$var($String, key, $str({parserClassName, ":"_s, propertyName}));
 	if ($nc(XMLSecurityManager::printedWarnings)->addIfAbsent(key)) {
-		$init($System);
 		$nc($System::err)->println($$str({"Warning: "_s, parserClassName, ": "_s, $($nc(exception)->getMessage())}));
 	}
 }
@@ -350,8 +337,7 @@ bool XMLSecurityManager::getSystemProperty($XMLSecurityManager$Limit* limit, $St
 			$nc(this->states)->set(limit->ordinal(), $JdkProperty$State::JAXPDOTPROPERTIES);
 			return true;
 		}
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		$throwNew($NumberFormatException, $$str({"Invalid setting for system property: "_s, $($nc(limit)->systemProperty())}));
 	}
 	return false;

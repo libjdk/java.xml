@@ -22,15 +22,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDSource.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentFilter.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Map.h>
 #include <jcpp.h>
 
@@ -120,15 +111,10 @@ $Object* allocate$XIncludeParserConfiguration($Class* clazz) {
 	return $of($alloc(XIncludeParserConfiguration));
 }
 
-
 $String* XIncludeParserConfiguration::ALLOW_UE_AND_NOTATION_EVENTS = nullptr;
-
 $String* XIncludeParserConfiguration::XINCLUDE_FIXUP_BASE_URIS = nullptr;
-
 $String* XIncludeParserConfiguration::XINCLUDE_FIXUP_LANGUAGE = nullptr;
-
 $String* XIncludeParserConfiguration::XINCLUDE_HANDLER = nullptr;
-
 $String* XIncludeParserConfiguration::NAMESPACE_CONTEXT = nullptr;
 
 void XIncludeParserConfiguration::init$() {

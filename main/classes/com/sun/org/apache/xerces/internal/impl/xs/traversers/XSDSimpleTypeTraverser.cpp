@@ -28,15 +28,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/List.h>
@@ -167,7 +159,7 @@ $XSSimpleType* XSDSimpleTypeTraverser::traverseGlobal($Element* elmNode, $XSDocu
 	$var($XSSimpleType, type, traverseSimpleTypeDecl(elmNode, attrValues, schemaDoc, grammar));
 	$nc(this->fAttrChecker)->returnAttrArray(attrValues, schemaDoc);
 	if (nameAtt == nullptr) {
-			$init($SchemaSymbols);
+		$init($SchemaSymbols);
 		reportSchemaError("s4s-att-must-appear"_s, $$new($ObjectArray, {
 			$of($SchemaSymbols::ELT_SIMPLETYPE),
 			$of($SchemaSymbols::ATT_NAME)
@@ -410,8 +402,7 @@ $XSSimpleType* XSDSimpleTypeTraverser::getSimpleType($String* name, $Element* si
 		try {
 			$nc(this->fValidationState)->setNamespaceSupport(schemaDoc->fNamespaceSupport);
 			$nc(newDecl)->applyFacets(fi->facetdata, fi->fPresentFacets, fi->fFixedFacets, this->fValidationState);
-		} catch ($InvalidDatatypeFacetException&) {
-			$var($InvalidDatatypeFacetException, ex, $catch());
+		} catch ($InvalidDatatypeFacetException& ex) {
 			$var($String, var$0, ex->getKey());
 			reportSchemaError(var$0, $(ex->getArgs()), child);
 			$assign(newDecl, $nc($nc(this->fSchemaHandler)->fDVFactory)->createTypeRestriction(name, schemaDoc->fTargetNamespace, (int16_t)finalProperty, baseValidator, annotations == nullptr ? ($XSObjectList*)nullptr : static_cast<$XSObjectList*>($$new($XSObjectListImpl, $fcast($XSObjectArray, annotations), $nc(annotations)->length))));

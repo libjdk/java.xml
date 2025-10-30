@@ -5,14 +5,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/dtd/DTDDVFactoryImpl.h>
 #include <com/sun/org/apache/xerces/internal/impl/dv/dtd/XML11DTDDVFactoryImpl.h>
 #include <com/sun/org/apache/xerces/internal/utils/ObjectFactory.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Map.h>
 #include <jcpp.h>
 
@@ -77,7 +70,6 @@ DTDDVFactory* DTDDVFactory::getInstance() {
 
 DTDDVFactory* DTDDVFactory::getInstance($String* factoryClass) {
 	$init(DTDDVFactory);
-	$useLocalCurrentObjectStackCache();
 	try {
 		if ($nc(DTDDVFactory::DEFAULT_FACTORY_CLASS)->equals(factoryClass)) {
 			return $new($DTDDVFactoryImpl);
@@ -88,8 +80,7 @@ DTDDVFactory* DTDDVFactory::getInstance($String* factoryClass) {
 				return ($cast(DTDDVFactory, $ObjectFactory::newInstance(factoryClass, true)));
 			}
 		}
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e, $catch());
+	} catch ($ClassCastException& e) {
 		$throwNew($DVFactoryException, $$str({"DTD factory class "_s, factoryClass, " does not extend from DTDDVFactory."_s}));
 	}
 	$shouldNotReachHere();

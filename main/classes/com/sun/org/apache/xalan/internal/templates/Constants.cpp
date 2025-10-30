@@ -1,13 +1,6 @@
 #include <com/sun/org/apache/xalan/internal/templates/Constants.h>
 
 #include <com/sun/org/apache/xml/internal/utils/Constants.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ATTRNAME_AMOUNT
@@ -714,355 +707,180 @@ $Object* allocate$Constants($Class* clazz) {
 	return $of($alloc(Constants));
 }
 
-
 $String* Constants::ELEMNAME_ANCHOR_STRING = nullptr;
-
 $String* Constants::ELEMNAME_ANY_STRING = nullptr;
-
 $String* Constants::ELEMNAME_APPLY_IMPORTS_STRING = nullptr;
-
 $String* Constants::ELEMNAME_APPLY_TEMPLATES_STRING = nullptr;
-
 $String* Constants::ELEMNAME_ARG_STRING = nullptr;
-
 $String* Constants::ELEMNAME_ATTRIBUTESET_STRING = nullptr;
-
 $String* Constants::ELEMNAME_ATTRIBUTE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CALLTEMPLATEARG_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CALLTEMPLATE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CALL_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CHILDREN_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CHOOSE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COMMENT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COMPONENT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CONSTRUCT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CONTENTS_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COPY_OF_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COPY_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COUNTERINCREMENT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COUNTERRESET_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COUNTERSCOPE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COUNTERS_STRING = nullptr;
-
 $String* Constants::ELEMNAME_COUNTER_STRING = nullptr;
-
 $String* Constants::ELEMNAME_CSSSTYLECONVERSION_STRING = nullptr;
-
 $String* Constants::ELEMNAME_DECIMALFORMAT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_DISPLAYIF_STRING = nullptr;
-
 $String* Constants::ELEMNAME_ELEMENT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_EMPTY_STRING = nullptr;
-
 $String* Constants::ELEMNAME_EVAL_STRING = nullptr;
-
 $String* Constants::ELEMNAME_EXPECTEDCHILDREN_STRING = nullptr;
-
 $String* Constants::ELEMNAME_EXTENSIONHANDLER_STRING = nullptr;
-
 $String* Constants::ELEMNAME_EXTENSION_STRING = nullptr;
-
 $String* Constants::ELEMNAME_FALLBACK_STRING = nullptr;
-
 $String* Constants::ELEMNAME_FOREACH_STRING = nullptr;
-
 $String* Constants::ELEMNAME_IF_STRING = nullptr;
-
 $String* Constants::ELEMNAME_IMPORT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_INCLUDE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_KEY_STRING = nullptr;
-
 $String* Constants::ELEMNAME_LOCALE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_MESSAGE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_NSALIAS_STRING = nullptr;
-
 $String* Constants::ELEMNAME_NUMBER_STRING = nullptr;
-
 $String* Constants::ELEMNAME_OTHERWISE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_OUTPUT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_PARAMVARIABLE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_PI_OLD_STRING = nullptr;
-
 $String* Constants::ELEMNAME_PI_STRING = nullptr;
-
 $String* Constants::ELEMNAME_PRESERVESPACE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_ROOT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_SCRIPT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_SORT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_STRIPSPACE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_STYLESHEET_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TARGETATTRIBUTE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TARGETCOMMENT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TARGETELEMENT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TARGETPI_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TARGETTEXT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TEMPLATE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TEXT_STRING = nullptr;
-
 $String* Constants::ELEMNAME_TRANSFORM_STRING = nullptr;
-
 $String* Constants::ELEMNAME_URL_STRING = nullptr;
-
 $String* Constants::ELEMNAME_USE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_VALUEOF_STRING = nullptr;
-
 $String* Constants::ELEMNAME_VARIABLE_STRING = nullptr;
-
 $String* Constants::ELEMNAME_WHEN_STRING = nullptr;
-
 $String* Constants::ELEMNAME_WITHPARAM_STRING = nullptr;
-
 $String* Constants::EXSLT_ELEMNAME_FUNCTION_STRING = nullptr;
-
 $String* Constants::EXSLT_ELEMNAME_FUNCRESULT_STRING = nullptr;
-
 $String* Constants::ATTRNAME_AMOUNT = nullptr;
-
 $String* Constants::ATTRNAME_ANCESTOR = nullptr;
-
 $String* Constants::ATTRNAME_ARCHIVE = nullptr;
-
 $String* Constants::ATTRNAME_ATTRIBUTE = nullptr;
-
 $String* Constants::ATTRNAME_ATTRIBUTE_SET = nullptr;
-
 $String* Constants::ATTRNAME_CASEORDER = nullptr;
-
 $String* Constants::ATTRNAME_CLASS = nullptr;
-
 $String* Constants::ATTRNAME_CLASSID = nullptr;
-
 $String* Constants::ATTRNAME_CODEBASE = nullptr;
-
 $String* Constants::ATTRNAME_CODETYPE = nullptr;
-
 $String* Constants::ATTRNAME_CONDITION = nullptr;
-
 $String* Constants::ATTRNAME_COPYTYPE = nullptr;
-
 $String* Constants::ATTRNAME_COUNT = nullptr;
-
 $String* Constants::ATTRNAME_DATATYPE = nullptr;
-
 $String* Constants::ATTRNAME_DECIMALSEPARATOR = nullptr;
-
 $String* Constants::ATTRNAME_DEFAULT = nullptr;
-
 $String* Constants::ATTRNAME_DEFAULTSPACE = nullptr;
-
 $String* Constants::ATTRNAME_DEPTH = nullptr;
-
 $String* Constants::ATTRNAME_DIGIT = nullptr;
-
 $String* Constants::ATTRNAME_DIGITGROUPSEP = nullptr;
-
 $String* Constants::ATTRNAME_DISABLE_OUTPUT_ESCAPING = nullptr;
-
 $String* Constants::ATTRNAME_ELEMENT = nullptr;
-
 $String* Constants::ATTRNAME_ELEMENTS = nullptr;
-
 $String* Constants::ATTRNAME_EXCLUDE_RESULT_PREFIXES = nullptr;
-
 $String* Constants::ATTRNAME_EXPR = nullptr;
-
 $String* Constants::ATTRNAME_EXTENSIONELEMENTPREFIXES = nullptr;
-
 $String* Constants::ATTRNAME_FORMAT = nullptr;
-
 $String* Constants::ATTRNAME_FROM = nullptr;
-
 $String* Constants::ATTRNAME_GROUPINGSEPARATOR = nullptr;
-
 $String* Constants::ATTRNAME_GROUPINGSIZE = nullptr;
-
 $String* Constants::ATTRNAME_HREF = nullptr;
-
 $String* Constants::ATTRNAME_ID = nullptr;
-
 $String* Constants::ATTRNAME_IMPORTANCE = nullptr;
-
 $String* Constants::ATTRNAME_INDENTRESULT = nullptr;
-
 $String* Constants::ATTRNAME_INFINITY = nullptr;
-
 $String* Constants::ATTRNAME_LANG = nullptr;
-
 $String* Constants::ATTRNAME_LETTERVALUE = nullptr;
-
 $String* Constants::ATTRNAME_LEVEL = nullptr;
-
 $String* Constants::ATTRNAME_MATCH = nullptr;
-
 $String* Constants::ATTRNAME_METHOD = nullptr;
-
 $String* Constants::ATTRNAME_MINUSSIGN = nullptr;
-
 $String* Constants::ATTRNAME_MODE = nullptr;
-
 $String* Constants::ATTRNAME_NAME = nullptr;
-
 $String* Constants::ATTRNAME_NAMESPACE = nullptr;
-
 $String* Constants::ATTRNAME_NAN = nullptr;
-
 $String* Constants::ATTRNAME_NDIGITSPERGROUP = nullptr;
-
 $String* Constants::ATTRNAME_NS = nullptr;
-
 $String* Constants::ATTRNAME_ONLY = nullptr;
-
 $String* Constants::ATTRNAME_ORDER = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_CDATA_SECTION_ELEMENTS = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_DOCTYPE_PUBLIC = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_DOCTYPE_SYSTEM = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_ENCODING = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_INDENT = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_MEDIATYPE = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_METHOD = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_OMITXMLDECL = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_STANDALONE = nullptr;
-
 $String* Constants::ATTRNAME_OUTPUT_VERSION = nullptr;
-
 $String* Constants::ATTRNAME_PATTERNSEPARATOR = nullptr;
-
 $String* Constants::ATTRNAME_PERCENT = nullptr;
-
 $String* Constants::ATTRNAME_PERMILLE = nullptr;
-
 $String* Constants::ATTRNAME_PRIORITY = nullptr;
-
 $String* Constants::ATTRNAME_REFID = nullptr;
-
 $String* Constants::ATTRNAME_RESULTNS = nullptr;
-
 $String* Constants::ATTRNAME_RESULT_PREFIX = nullptr;
-
 $String* Constants::ATTRNAME_SELECT = nullptr;
-
 $String* Constants::ATTRNAME_SEQUENCESRC = nullptr;
-
 $String* Constants::ATTRNAME_STYLE = nullptr;
-
 $String* Constants::ATTRNAME_STYLESHEET_PREFIX = nullptr;
-
 $String* Constants::ATTRNAME_TERMINATE = nullptr;
-
 $String* Constants::ATTRNAME_TEST = nullptr;
-
 $String* Constants::ATTRNAME_TOSTRING = nullptr;
-
 $String* Constants::ATTRNAME_TYPE = nullptr;
-
 $String* Constants::ATTRNAME_USE = nullptr;
-
 $String* Constants::ATTRNAME_USEATTRIBUTESETS = nullptr;
-
 $String* Constants::ATTRNAME_VALUE = nullptr;
-
 $String* Constants::ATTRNAME_VERSION = nullptr;
-
 $String* Constants::ATTRNAME_XMLNS = nullptr;
-
 $String* Constants::ATTRNAME_XMLNSDEF = nullptr;
-
 $String* Constants::ATTRNAME_XMLSPACE = nullptr;
-
 $String* Constants::ATTRNAME_ZERODIGIT = nullptr;
-
 $String* Constants::ATTRVAL_OUTPUT_METHOD_HTML = nullptr;
-
 $String* Constants::ATTRVAL_OUTPUT_METHOD_XML = nullptr;
-
 $String* Constants::ATTRVAL_OUTPUT_METHOD_TEXT = nullptr;
-
 $String* Constants::ATTRVAL_ALPHABETIC = nullptr;
-
 $String* Constants::ATTRVAL_OTHER = nullptr;
-
 $String* Constants::ATTRVAL_TRADITIONAL = nullptr;
-
 $String* Constants::ATTRVAL_SINGLE = nullptr;
-
 $String* Constants::ATTRVAL_MULTI = nullptr;
-
 $String* Constants::ATTRVAL_ANY = nullptr;
-
 $String* Constants::ATTRVAL_DEFAULT_PREFIX = nullptr;
-
 $String* Constants::ATTRVAL_THIS = nullptr;
-
 $String* Constants::ATTRVAL_PARENT = nullptr;
-
 $String* Constants::ATTRVAL_ANCESTOR = nullptr;
-
 $String* Constants::ATTRVAL_ID = nullptr;
-
 $String* Constants::ATTRVAL_DATATYPE_TEXT = nullptr;
-
 $String* Constants::ATTRVAL_DATATYPE_NUMBER = nullptr;
-
 $String* Constants::ATTRVAL_ORDER_ASCENDING = nullptr;
-
 $String* Constants::ATTRVAL_ORDER_DESCENDING = nullptr;
-
 $String* Constants::ATTRVAL_CASEORDER_UPPER = nullptr;
-
 $String* Constants::ATTRVAL_CASEORDER_LOWER = nullptr;
-
 $String* Constants::ATTRVAL_INFINITY = nullptr;
-
 $String* Constants::ATTRVAL_NAN = nullptr;
-
 $String* Constants::DEFAULT_DECIMAL_FORMAT = nullptr;
-
 $String* Constants::ATTRNAME_XXXX = nullptr;
 
 void Constants::init$() {

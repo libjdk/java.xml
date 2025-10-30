@@ -7,17 +7,6 @@
 #include <com/sun/org/apache/xpath/internal/jaxp/XPathImplUtil.h>
 #include <com/sun/org/apache/xpath/internal/jaxp/XPathResultImpl.h>
 #include <com/sun/org/apache/xpath/internal/objects/XObject.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/namespace/NamespaceContext.h>
 #include <javax/xml/namespace/QName.h>
 #include <javax/xml/transform/SourceLocator.h>
@@ -152,8 +141,8 @@ void XPathImpl::init$($XPathVariableResolver* vr, $XPathFunctionResolver* fr) {
 void XPathImpl::init$($XPathVariableResolver* vr, $XPathFunctionResolver* fr, bool featureSecureProcessing, $JdkXmlFeatures* featureManager) {
 	$XPathImplUtil::init$();
 	$set(this, namespaceContext, nullptr);
-	$set(this, origVariableResolver, ($assignField(this, variableResolver, vr)));
-	$set(this, origFunctionResolver, ($assignField(this, functionResolver, fr)));
+	$set(this, origVariableResolver, ($set(this, variableResolver, vr)));
+	$set(this, origFunctionResolver, ($set(this, functionResolver, fr)));
 	this->featureSecureProcessing = featureSecureProcessing;
 	$set(this, featureManager, featureManager);
 	$init($JdkXmlFeatures$XmlFeature);
@@ -201,11 +190,9 @@ $Object* XPathImpl::evaluate($String* expression, Object$* item, $QName* returnT
 	try {
 		$var($XObject, resultObject, eval(expression, item));
 		return $of(getResultAsType(resultObject, returnType));
-	} catch ($NullPointerException&) {
-		$var($NullPointerException, npe, $catch());
+	} catch ($NullPointerException& npe) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(npe));
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$var($Throwable, nestedException, te->getException());
 		if ($instanceOf($XPathFunctionException, nestedException)) {
 			$throw($cast($XPathFunctionException, nestedException));
@@ -228,8 +215,7 @@ $XPathExpression* XPathImpl::compile($String* expression) {
 		$var($1XPath, xpath, $new($1XPath, expression, nullptr, this->prefixResolver, $1XPath::SELECT));
 		$var($XPathExpressionImpl, ximpl, $new($XPathExpressionImpl, xpath, this->prefixResolver, this->functionResolver, this->variableResolver, this->featureSecureProcessing, this->featureManager));
 		return ximpl;
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(te));
 	}
 	$shouldNotReachHere();
@@ -242,8 +228,7 @@ $Object* XPathImpl::evaluate($String* expression, $InputSource* source, $QName* 
 		$var($Document, document, getDocument(source));
 		$var($XObject, resultObject, eval(expression, $of(document)));
 		return $of(getResultAsType(resultObject, returnType));
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$var($Throwable, nestedException, te->getException());
 		if ($instanceOf($XPathFunctionException, nestedException)) {
 			$throw($cast($XPathFunctionException, nestedException));
@@ -266,7 +251,6 @@ void XPathImpl::reset() {
 }
 
 $Object* XPathImpl::evaluateExpression($String* expression, Object$* item, $Class* type) {
-	$useLocalCurrentObjectStackCache();
 	isSupportedClassType(type);
 	try {
 		$var($XObject, resultObject, eval(expression, item));
@@ -276,8 +260,7 @@ $Object* XPathImpl::evaluateExpression($String* expression, Object$* item, $Clas
 		} else {
 			return $of($XPathResultImpl::getValue(resultObject, type));
 		}
-	} catch ($TransformerException&) {
-		$var($TransformerException, te, $catch());
+	} catch ($TransformerException& te) {
 		$throwNew($XPathExpressionException, static_cast<$Throwable*>(te));
 	}
 	$shouldNotReachHere();

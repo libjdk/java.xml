@@ -6,16 +6,7 @@
 #include <com/sun/org/apache/bcel/internal/classfile/Utility.h>
 #include <java/io/DataInput.h>
 #include <java/io/DataOutputStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/CloneNotSupportedException.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Arrays.h>
 #include <jcpp.h>
 
@@ -159,8 +150,7 @@ void BootstrapMethod::dump($DataOutputStream* file) {
 BootstrapMethod* BootstrapMethod::copy() {
 	try {
 		return $cast(BootstrapMethod, clone());
-	} catch ($CloneNotSupportedException&) {
-		$catch();
+	} catch ($CloneNotSupportedException& e) {
 	}
 	return nullptr;
 }

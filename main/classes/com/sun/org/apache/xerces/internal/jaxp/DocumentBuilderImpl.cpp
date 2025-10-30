@@ -31,19 +31,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDSource.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/IllegalArgumentException.h>
 #include <java/lang/IllegalStateException.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/RuntimeException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Iterator.h>
 #include <java/util/Locale.h>
 #include <java/util/Map$Entry.h>
@@ -241,29 +229,17 @@ void DocumentBuilderImpl::finalize() {
 	this->$DocumentBuilder::finalize();
 }
 
-
 $String* DocumentBuilderImpl::NAMESPACES_FEATURE = nullptr;
-
 $String* DocumentBuilderImpl::INCLUDE_IGNORABLE_WHITESPACE = nullptr;
-
 $String* DocumentBuilderImpl::CREATE_ENTITY_REF_NODES_FEATURE = nullptr;
-
 $String* DocumentBuilderImpl::INCLUDE_COMMENTS_FEATURE = nullptr;
-
 $String* DocumentBuilderImpl::CREATE_CDATA_NODES_FEATURE = nullptr;
-
 $String* DocumentBuilderImpl::XINCLUDE_FEATURE = nullptr;
-
 $String* DocumentBuilderImpl::XMLSCHEMA_VALIDATION_FEATURE = nullptr;
-
 $String* DocumentBuilderImpl::VALIDATION_FEATURE = nullptr;
-
 $String* DocumentBuilderImpl::SECURITY_MANAGER = nullptr;
-
 $String* DocumentBuilderImpl::XML_SECURITY_PROPERTY_MANAGER = nullptr;
-
 $String* DocumentBuilderImpl::ACCESS_EXTERNAL_DTD = nullptr;
-
 $String* DocumentBuilderImpl::ACCESS_EXTERNAL_SCHEMA = nullptr;
 
 void DocumentBuilderImpl::init$($DocumentBuilderFactoryImpl* dbf, $Map* dbfAttrs, $Map* features) {
@@ -439,22 +415,18 @@ $Document* DocumentBuilderImpl::parse($InputSource* is) {
 }
 
 bool DocumentBuilderImpl::isNamespaceAware() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->domParser)->getFeature(DocumentBuilderImpl::NAMESPACES_FEATURE);
-	} catch ($SAXException&) {
-		$var($SAXException, x, $catch());
+	} catch ($SAXException& x) {
 		$throwNew($IllegalStateException, $(x->getMessage()));
 	}
 	$shouldNotReachHere();
 }
 
 bool DocumentBuilderImpl::isValidating() {
-	$useLocalCurrentObjectStackCache();
 	try {
 		return $nc(this->domParser)->getFeature(DocumentBuilderImpl::VALIDATION_FEATURE);
-	} catch ($SAXException&) {
-		$var($SAXException, x, $catch());
+	} catch ($SAXException& x) {
 		$throwNew($IllegalStateException, $(x->getMessage()));
 	}
 	$shouldNotReachHere();
@@ -463,8 +435,7 @@ bool DocumentBuilderImpl::isValidating() {
 bool DocumentBuilderImpl::isXIncludeAware() {
 	try {
 		return $nc(this->domParser)->getFeature(DocumentBuilderImpl::XINCLUDE_FEATURE);
-	} catch ($SAXException&) {
-		$var($SAXException, exc, $catch());
+	} catch ($SAXException& exc) {
 		return false;
 	}
 	$shouldNotReachHere();
@@ -498,8 +469,7 @@ $DOMParser* DocumentBuilderImpl::getDOMParser() {
 void DocumentBuilderImpl::resetSchemaValidator() {
 	try {
 		$nc(this->fSchemaValidator)->reset(this->fSchemaValidatorComponentManager);
-	} catch ($XMLConfigurationException&) {
-		$var($XMLConfigurationException, e, $catch());
+	} catch ($XMLConfigurationException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }

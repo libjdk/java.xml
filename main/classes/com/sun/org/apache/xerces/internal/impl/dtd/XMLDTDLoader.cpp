@@ -32,16 +32,7 @@
 #include <java/io/EOFException.h>
 #include <java/io/Reader.h>
 #include <java/io/StringReader.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Locale.h>
 #include <jcpp.h>
 
@@ -202,18 +193,12 @@ void XMLDTDLoader::finalize() {
 	this->$XMLDTDProcessor::finalize();
 }
 
-
 $String* XMLDTDLoader::STANDARD_URI_CONFORMANT_FEATURE = nullptr;
-
 $String* XMLDTDLoader::BALANCE_SYNTAX_TREES = nullptr;
 $StringArray* XMLDTDLoader::LOADER_RECOGNIZED_FEATURES = nullptr;
-
 $String* XMLDTDLoader::ERROR_HANDLER = nullptr;
-
 $String* XMLDTDLoader::ENTITY_RESOLVER = nullptr;
-
 $String* XMLDTDLoader::LOCALE = nullptr;
-
 $StringArray* XMLDTDLoader::LOADER_RECOGNIZED_PROPERTIES = nullptr;
 
 void XMLDTDLoader::init$() {
@@ -430,11 +415,10 @@ $Grammar* XMLDTDLoader::loadGrammar($XMLInputSource* source) {
 			try {
 				$nc(this->fDTDScanner)->setInputSource(source);
 				$nc(this->fDTDScanner)->scanDTDExternalSubset(true);
-			} catch ($EOFException&) {
-				$catch();
+			} catch ($EOFException& e) {
 			}
-		} catch ($Throwable&) {
-			$assign(var$3, $catch());
+		} catch ($Throwable& var$4) {
+			$assign(var$3, var$4);
 		} /*finally*/ {
 			$nc(this->fEntityManager)->closeReaders();
 		}
@@ -474,11 +458,10 @@ void XMLDTDLoader::loadGrammarWithContext($XMLDTDValidator* validator, $String* 
 						$nc(this->fDTDScanner)->setInputSource(source);
 						$nc(this->fDTDScanner)->scanDTDExternalSubset(true);
 					}
-				} catch ($EOFException&) {
-					$catch();
+				} catch ($EOFException& e) {
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				$nc(this->fEntityManager)->closeReaders();
 			}
@@ -511,7 +494,7 @@ void clinit$XMLDTDLoader($Class* class$) {
 	$assignStatic(XMLDTDLoader::ERROR_HANDLER, $str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::ERROR_HANDLER_PROPERTY}));
 	$assignStatic(XMLDTDLoader::ENTITY_RESOLVER, $str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::ENTITY_RESOLVER_PROPERTY}));
 	$assignStatic(XMLDTDLoader::LOCALE, $str({$Constants::XERCES_PROPERTY_PREFIX, $Constants::LOCALE_PROPERTY}));
-		$init($XMLDTDProcessor);
+	$init($XMLDTDProcessor);
 	$assignStatic(XMLDTDLoader::LOADER_RECOGNIZED_FEATURES, $new($StringArray, {
 		$XMLDTDProcessor::VALIDATION,
 		$XMLDTDProcessor::WARN_ON_DUPLICATE_ATTDEF,

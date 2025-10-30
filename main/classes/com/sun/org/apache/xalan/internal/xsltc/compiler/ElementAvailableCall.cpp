@@ -17,14 +17,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/TypeCheckError.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <jcpp.h>
 
@@ -96,7 +89,7 @@ $Type* ElementAvailableCall::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($LiteralExpr, $(argument()))) {
 		$init($Type);
-		return $assignField(this, _type, $Type::Boolean);
+		return $set(this, _type, $Type::Boolean);
 	}
 	$init($ErrorMsg);
 	$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::NEED_LITERAL_ERR, $of("element-available"_s), static_cast<$SyntaxTreeNode*>(this)));
@@ -116,8 +109,7 @@ bool ElementAvailableCall::getResult() {
 		int32_t index = $nc(qname)->indexOf((int32_t)u':');
 		$var($String, localName, (index > 0) ? qname->substring(index + 1) : qname);
 		return $nc($(getParser()))->elementSupported($(arg->getNamespace()), localName);
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e, $catch());
+	} catch ($ClassCastException& e) {
 		return false;
 	}
 	$shouldNotReachHere();

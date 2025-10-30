@@ -26,16 +26,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDContentModelSource.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDSource.h>
-#include <java/lang/Array.h>
-#include <java/lang/Boolean.h>
-#include <java/lang/Class.h>
 #include <java/lang/ClassCastException.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/ArrayList.h>
@@ -286,30 +277,18 @@ void XMLDTDProcessor::finalize() {
 	this->$XMLComponent::finalize();
 }
 
-
 $String* XMLDTDProcessor::VALIDATION = nullptr;
-
 $String* XMLDTDProcessor::NOTIFY_CHAR_REFS = nullptr;
-
 $String* XMLDTDProcessor::WARN_ON_DUPLICATE_ATTDEF = nullptr;
-
 $String* XMLDTDProcessor::WARN_ON_UNDECLARED_ELEMDEF = nullptr;
 $String* XMLDTDProcessor::PARSER_SETTINGS = nullptr;
-
 $String* XMLDTDProcessor::SYMBOL_TABLE = nullptr;
-
 $String* XMLDTDProcessor::ERROR_REPORTER = nullptr;
-
 $String* XMLDTDProcessor::GRAMMAR_POOL = nullptr;
-
 $String* XMLDTDProcessor::DTD_VALIDATOR = nullptr;
-
 $StringArray* XMLDTDProcessor::RECOGNIZED_FEATURES = nullptr;
-
 $BooleanArray* XMLDTDProcessor::FEATURE_DEFAULTS = nullptr;
-
 $StringArray* XMLDTDProcessor::RECOGNIZED_PROPERTIES = nullptr;
-
 $ObjectArray* XMLDTDProcessor::PROPERTY_DEFAULTS = nullptr;
 
 void XMLDTDProcessor::init$() {
@@ -337,8 +316,7 @@ void XMLDTDProcessor::reset($XMLComponentManager* componentManager) {
 	$set(this, fGrammarPool, $cast($XMLGrammarPool, componentManager->getProperty(XMLDTDProcessor::GRAMMAR_POOL, nullptr)));
 	try {
 		$set(this, fValidator, $cast($XMLDTDValidator, componentManager->getProperty(XMLDTDProcessor::DTD_VALIDATOR, nullptr)));
-	} catch ($ClassCastException&) {
-		$var($ClassCastException, e, $catch());
+	} catch ($ClassCastException& e) {
 		$set(this, fValidator, nullptr);
 	}
 	if (this->fValidator != nullptr) {
@@ -1047,7 +1025,7 @@ void clinit$XMLDTDProcessor($Class* class$) {
 		XMLDTDProcessor::WARN_ON_UNDECLARED_ELEMDEF,
 		XMLDTDProcessor::NOTIFY_CHAR_REFS
 	}));
-		$init($Boolean);
+	$init($Boolean);
 	$assignStatic(XMLDTDProcessor::FEATURE_DEFAULTS, $new($BooleanArray, {
 		($Boolean*)nullptr,
 		$Boolean::FALSE,

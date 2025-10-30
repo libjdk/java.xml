@@ -2,18 +2,6 @@
 
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit.h>
 #include <com/sun/org/apache/xerces/internal/utils/XMLSecurityManager.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractMap.h>
 #include <java/util/Formatter.h>
 #include <java/util/HashMap.h>
@@ -219,7 +207,6 @@ void XMLLimitAnalyzer::reset($XMLSecurityManager$Limit* limit) {
 void XMLLimitAnalyzer::debugPrint($XMLSecurityManager* securityManager) {
 	$useLocalCurrentObjectStackCache();
 	$var($Formatter, formatter, $new($Formatter));
-	$init($System);
 	$nc($System::out)->println($($of(formatter->format("%30s %15s %15s %15s %30s"_s, $$new($ObjectArray, {
 		$of("Property"_s),
 		$of("Limit"_s),

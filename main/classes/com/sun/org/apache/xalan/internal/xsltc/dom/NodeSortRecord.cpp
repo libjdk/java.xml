@@ -4,18 +4,8 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/dom/SortSettings.h>
 #include <com/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet.h>
 #include <com/sun/org/apache/xml/internal/utils/StringComparable.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
 #include <java/lang/Comparable.h>
-#include <java/lang/CompoundAttribute.h>
-#include <java/lang/Double.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/text/Collator.h>
 #include <java/util/Locale.h>
 #include <jcpp.h>
@@ -112,7 +102,6 @@ $Object* allocate$NodeSortRecord($Class* clazz) {
 	return $of($alloc(NodeSortRecord));
 }
 
-
 $Collator* NodeSortRecord::DEFAULT_COLLATOR = nullptr;
 
 void NodeSortRecord::init$(int32_t node) {
@@ -168,8 +157,7 @@ $Double* NodeSortRecord::numericValue(int32_t level) {
 		$var($Double, num, nullptr);
 		try {
 			$assign(num, $Double::valueOf($Double::parseDouble(str)));
-		} catch ($NumberFormatException&) {
-			$var($NumberFormatException, e, $catch());
+		} catch ($NumberFormatException& e) {
 			$init($Double);
 			$assign(num, $Double::valueOf($Double::NEGATIVE_INFINITY));
 		}

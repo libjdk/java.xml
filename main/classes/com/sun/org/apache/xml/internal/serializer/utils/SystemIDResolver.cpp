@@ -4,17 +4,8 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/URI.h>
 #include <java/io/File.h>
 #include <java/io/IOException.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/SecurityException.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <javax/xml/transform/TransformerException.h>
 #include <jcpp.h>
 
@@ -77,8 +68,7 @@ $String* SystemIDResolver::getAbsoluteURIFromRelative($String* localPath) {
 	if (!isAbsolutePath(localPath)) {
 		try {
 			$assign(absolutePath, getAbsolutePathFromRelativePath(localPath));
-		} catch ($SecurityException&) {
-			$var($SecurityException, se, $catch());
+		} catch ($SecurityException& se) {
 			return $str({"file:"_s, localPath});
 		}
 	}
@@ -181,8 +171,7 @@ $String* SystemIDResolver::getAbsoluteURI($String* systemId) {
 								$var($String, var$1, $(systemId->substring(0, secondColonIndex - 1)));
 								$assign(absoluteURI, $concat(var$1, $(getAbsolutePathFromRelativePath(localPath))));
 							}
-						} catch ($SecurityException&) {
-							$var($SecurityException, se, $catch());
+						} catch ($SecurityException& se) {
 							return systemId;
 						}
 					}
@@ -209,8 +198,7 @@ $String* SystemIDResolver::getAbsoluteURI($String* urlString, $String* base) {
 	try {
 		$var($URI, baseURI, $new($URI, absoluteBase));
 		$assign(uri, $new($URI, baseURI, urlString));
-	} catch ($URI$MalformedURIException&) {
-		$var($URI$MalformedURIException, mue, $catch());
+	} catch ($URI$MalformedURIException& mue) {
 		$throwNew($TransformerException, static_cast<$Throwable*>(mue));
 	}
 	return replaceChars($($nc(uri)->toString()));

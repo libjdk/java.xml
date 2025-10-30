@@ -11,17 +11,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLAttributes.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
-#include <java/io/PrintStream.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
 #include <java/lang/StringBuffer.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractList.h>
 #include <java/util/ArrayList.h>
 #include <java/util/Enumeration.h>
@@ -334,7 +324,6 @@ void SchemaDOM::traverse($Node* node, int32_t depth) {
 	$init(SchemaDOM);
 	$useLocalCurrentObjectStackCache();
 	indent(depth);
-	$init($System);
 	$nc($System::out)->print($$str({"<"_s, $($nc(node)->getNodeName())}));
 	if ($nc(node)->hasAttributes()) {
 		$var($NamedNodeMap, attrs, node->getAttributes());
@@ -364,7 +353,6 @@ void SchemaDOM::traverse($Node* node, int32_t depth) {
 void SchemaDOM::indent(int32_t amount) {
 	$init(SchemaDOM);
 	for (int32_t i = 0; i < amount; ++i) {
-		$init($System);
 		$nc($System::out)->print(u' ');
 	}
 }

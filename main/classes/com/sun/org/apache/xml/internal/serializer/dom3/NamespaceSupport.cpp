@@ -1,16 +1,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/dom3/NamespaceSupport.h>
 
 #include <com/sun/org/apache/xml/internal/serializer/dom3/NamespaceSupport$Prefixes.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/Enumeration.h>
 #include <jcpp.h>
 
@@ -88,9 +78,7 @@ $Object* allocate$NamespaceSupport($Class* clazz) {
 
 $String* NamespaceSupport::PREFIX_XML = nullptr;
 $String* NamespaceSupport::PREFIX_XMLNS = nullptr;
-
 $String* NamespaceSupport::XML_URI = nullptr;
-
 $String* NamespaceSupport::XMLNS_URI = nullptr;
 
 void NamespaceSupport::init$() {

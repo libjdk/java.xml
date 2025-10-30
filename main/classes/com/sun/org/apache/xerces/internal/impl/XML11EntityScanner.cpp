@@ -12,14 +12,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
 #include <com/sun/xml/internal/stream/Entity$ScannedEntity.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef COMMENT

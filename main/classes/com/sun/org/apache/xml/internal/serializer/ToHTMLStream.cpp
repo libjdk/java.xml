@@ -20,19 +20,7 @@
 #include <com/sun/org/apache/xml/internal/serializer/utils/Utils.h>
 #include <java/io/IOException.h>
 #include <java/io/Writer.h>
-#include <java/lang/Array.h>
-#include <java/lang/Character.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
 #include <java/lang/NumberFormatException.h>
-#include <java/lang/String.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/List.h>
 #include <java/util/Properties.h>
 #include <javax/xml/transform/ErrorListener.h>
@@ -197,11 +185,8 @@ $Object* allocate$ToHTMLStream($Class* clazz) {
 	return $of($alloc(ToHTMLStream));
 }
 
-
 $CharInfo* ToHTMLStream::m_htmlcharInfo = nullptr;
-
 $ToHTMLStream$Trie* ToHTMLStream::m_elementFlags = nullptr;
-
 $ElemDesc* ToHTMLStream::m_dummy = nullptr;
 
 void ToHTMLStream::initTagReference($ToHTMLStream$Trie* m_elementFlags) {
@@ -481,8 +466,7 @@ void ToHTMLStream::startDocumentInternal() {
 				}
 				writer->write((int32_t)u'>');
 				outputLineSep();
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
 		}
@@ -498,8 +482,7 @@ void ToHTMLStream::endDocument() {
 	if (this->m_doIndent && !this->m_isprevtext) {
 		try {
 			outputLineSep();
-		} catch ($IOException&) {
-			$var($IOException, e, $catch());
+		} catch ($IOException& e) {
 			$throwNew($SAXException, static_cast<$Exception*>(e));
 		}
 	}
@@ -594,8 +577,7 @@ void ToHTMLStream::startElement($String* namespaceURI, $String* localName, $Stri
 				writer->write("\">"_s);
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -663,8 +645,7 @@ void ToHTMLStream::endElement($String* namespaceURI, $String* localName, $String
 			return;
 		}
 		$set(this, m_elemContext, elemContext->m_prev);
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -705,8 +686,7 @@ bool ToHTMLStream::isHHSign($String* str) {
 	bool sign = true;
 	try {
 		char16_t r = (char16_t)$Integer::parseInt(str, 16);
-	} catch ($NumberFormatException&) {
-		$var($NumberFormatException, e, $catch());
+	} catch ($NumberFormatException& e) {
 		sign = false;
 	}
 	return sign;
@@ -878,7 +858,6 @@ void ToHTMLStream::writeAttrString($Writer* writer, $String* string, $String* en
 }
 
 void ToHTMLStream::characters($chars* chars, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	if ($nc(this->m_elemContext)->m_isRaw) {
 		try {
 			if ($nc(this->m_elemContext)->m_startTagOpen) {
@@ -891,8 +870,7 @@ void ToHTMLStream::characters($chars* chars, int32_t start, int32_t length) {
 				$ToStream::fireCharEvent(chars, start, length);
 			}
 			return;
-		} catch ($IOException&) {
-			$var($IOException, ioe, $catch());
+		} catch ($IOException& ioe) {
 			$init($Utils);
 			$init($MsgKey);
 			$throwNew($SAXException, $($nc($Utils::messages)->createMessage($MsgKey::ER_OIERROR, nullptr)), ioe);
@@ -903,7 +881,6 @@ void ToHTMLStream::characters($chars* chars, int32_t start, int32_t length) {
 }
 
 void ToHTMLStream::cdata($chars* ch, int32_t start, int32_t length) {
-	$useLocalCurrentObjectStackCache();
 	bool var$0 = (nullptr != $nc(this->m_elemContext)->m_elementName);
 	if (var$0) {
 		bool var$1 = $nc($nc(this->m_elemContext)->m_elementName)->equalsIgnoreCase("SCRIPT"_s);
@@ -919,8 +896,7 @@ void ToHTMLStream::cdata($chars* ch, int32_t start, int32_t length) {
 				indent();
 			}
 			writeNormalizedChars(ch, start, length, true, this->m_lineSepUse);
-		} catch ($IOException&) {
-			$var($IOException, ioe, $catch());
+		} catch ($IOException& ioe) {
 			$init($Utils);
 			$init($MsgKey);
 			$throwNew($SAXException, $($nc($Utils::messages)->createMessage($MsgKey::ER_OIERROR, nullptr)), ioe);
@@ -931,7 +907,6 @@ void ToHTMLStream::cdata($chars* ch, int32_t start, int32_t length) {
 }
 
 void ToHTMLStream::processingInstruction($String* target, $String* data) {
-	$useLocalCurrentObjectStackCache();
 	if (this->m_doIndent) {
 		++this->m_childNodeNum;
 		flushCharactersBuffer(false);
@@ -967,8 +942,7 @@ void ToHTMLStream::processingInstruction($String* target, $String* data) {
 					outputLineSep();
 				}
 				this->m_startNewLine = true;
-			} catch ($IOException&) {
-				$var($IOException, e, $catch());
+			} catch ($IOException& e) {
 				$throwNew($SAXException, static_cast<$Exception*>(e));
 			}
 		}
@@ -979,14 +953,12 @@ void ToHTMLStream::processingInstruction($String* target, $String* data) {
 }
 
 void ToHTMLStream::entityReference($String* name) {
-	$useLocalCurrentObjectStackCache();
 	try {
 		$var($Writer, writer, this->m_writer);
 		$nc(writer)->write((int32_t)u'&');
 		writer->write(name);
 		writer->write((int32_t)u';');
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -1018,8 +990,7 @@ void ToHTMLStream::closeStartTag() {
 		if (this->m_StringOfCDATASections != nullptr) {
 			$nc(this->m_elemContext)->m_isCdataSection = isCdataSection();
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }
@@ -1087,8 +1058,7 @@ void ToHTMLStream::addUniqueAttribute($String* name, $String* value, int32_t fla
 				writer->write((int32_t)u'\"');
 			}
 		}
-	} catch ($IOException&) {
-		$var($IOException, e, $catch());
+	} catch ($IOException& e) {
 		$throwNew($SAXException, static_cast<$Exception*>(e));
 	}
 }

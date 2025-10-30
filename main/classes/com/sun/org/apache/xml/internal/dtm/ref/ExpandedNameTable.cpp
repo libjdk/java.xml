@@ -3,17 +3,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/DTM.h>
 #include <com/sun/org/apache/xml/internal/dtm/ref/ExpandedNameTable$HashEntry.h>
 #include <com/sun/org/apache/xml/internal/dtm/ref/ExtendedType.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Float.h>
-#include <java/lang/InnerClassInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jcpp.h>
 
 #undef ATTRIBUTE
@@ -120,13 +109,9 @@ $Object* allocate$ExpandedNameTable($Class* clazz) {
 	return $of($alloc(ExpandedNameTable));
 }
 
-
 int32_t ExpandedNameTable::m_initialSize = 0;
-
 $ExtendedTypeArray* ExpandedNameTable::m_defaultExtendedTypes = nullptr;
-
 float ExpandedNameTable::m_loadFactor = 0.0;
-
 int32_t ExpandedNameTable::m_initialCapacity = 0;
 
 void ExpandedNameTable::init$() {

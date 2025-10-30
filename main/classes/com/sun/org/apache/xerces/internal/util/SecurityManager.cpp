@@ -1,15 +1,5 @@
 #include <com/sun/org/apache/xerces/internal/util/SecurityManager.h>
 
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/Exception.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/Integer.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/String.h>
-#include <java/lang/System.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <jdk/xml/internal/JdkConstants.h>
 #include <jcpp.h>
 
@@ -114,8 +104,7 @@ void SecurityManager::readSystemProperties() {
 		} else {
 			this->entityExpansionLimit = SecurityManager::DEFAULT_ENTITY_EXPANSION_LIMIT;
 		}
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& ex) {
 	}
 	try {
 		$init($JdkConstants);
@@ -128,8 +117,7 @@ void SecurityManager::readSystemProperties() {
 		} else {
 			this->maxOccurLimit = SecurityManager::DEFAULT_MAX_OCCUR_NODE_LIMIT;
 		}
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& ex) {
 	}
 	try {
 		$init($JdkConstants);
@@ -142,8 +130,7 @@ void SecurityManager::readSystemProperties() {
 		} else {
 			this->fElementAttributeLimit = SecurityManager::DEFAULT_ELEMENT_ATTRIBUTE_LIMIT;
 		}
-	} catch ($Exception&) {
-		$catch();
+	} catch ($Exception& ex) {
 	}
 }
 

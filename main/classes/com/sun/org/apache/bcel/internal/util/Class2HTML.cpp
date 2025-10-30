@@ -15,20 +15,7 @@
 #include <java/io/File.h>
 #include <java/io/FileOutputStream.h>
 #include <java/io/OutputStream.h>
-#include <java/io/PrintStream.h>
 #include <java/io/PrintWriter.h>
-#include <java/lang/Array.h>
-#include <java/lang/Class.h>
-#include <java/lang/ClassInfo.h>
-#include <java/lang/FieldInfo.h>
-#include <java/lang/MethodInfo.h>
-#include <java/lang/NullPointerException.h>
-#include <java/lang/String.h>
-#include <java/lang/StringBuilder.h>
-#include <java/lang/System.h>
-#include <java/lang/Throwable.h>
-#include <java/lang/reflect/Constructor.h>
-#include <java/lang/reflect/Method.h>
 #include <java/util/AbstractSet.h>
 #include <java/util/HashSet.h>
 #include <java/util/Set.h>
@@ -151,7 +138,6 @@ void Class2HTML::main($StringArray* argv) {
 					bool created = store->mkdirs();
 					if (!created) {
 						if (!store->isDirectory()) {
-							$init($System);
 							$nc($System::out)->println($$str({"Tried to create the directory "_s, dir, " but failed"_s}));
 						}
 					}
@@ -159,7 +145,6 @@ void Class2HTML::main($StringArray* argv) {
 			} else if ($nc(argv->get(i))->equals("-zip"_s)) {
 				$assign(zip_file, argv->get(++i));
 			} else {
-				$init($System);
 				$nc($System::out)->println($$str({"Unknown option "_s, argv->get(i)}));
 			}
 		} else {
@@ -167,11 +152,9 @@ void Class2HTML::main($StringArray* argv) {
 		}
 	}
 	if (files == 0) {
-		$init($System);
 		$nc($System::err)->println("Class2HTML: No input files specified."_s);
 	} else {
 		for (int32_t i = 0; i < files; ++i) {
-			$init($System);
 			$nc($System::out)->print($$str({"Processing "_s, file_name->get(i), "..."_s}));
 			if (zip_file == nullptr) {
 				$assign(parser, $new($ClassParser, file_name->get(i)));
@@ -254,18 +237,16 @@ void Class2HTML::writeMainHTML($AttributeHTML* attribute_html) {
 			try {
 				try {
 					file->println($$str({"<HTML>\n<HEAD><TITLE>Documentation for "_s, Class2HTML::class_name, "</TITLE></HEAD>\n<FRAMESET BORDER=1 cols=\"30%,*\">\n<FRAMESET BORDER=1 rows=\"80%,*\">\n<FRAME NAME=\"ConstantPool\" SRC=\""_s, Class2HTML::class_name, "_cp.html\"\n MARGINWIDTH=\"0\" MARGINHEIGHT=\"0\" FRAMEBORDER=\"1\" SCROLLING=\"AUTO\">\n<FRAME NAME=\"Attributes\" SRC=\""_s, Class2HTML::class_name, "_attributes.html\"\n MARGINWIDTH=\"0\" MARGINHEIGHT=\"0\" FRAMEBORDER=\"1\" SCROLLING=\"AUTO\">\n</FRAMESET>\n<FRAMESET BORDER=1 rows=\"80%,*\">\n<FRAME NAME=\"Code\" SRC=\""_s, Class2HTML::class_name, "_code.html\"\n MARGINWIDTH=0 MARGINHEIGHT=0 FRAMEBORDER=1 SCROLLING=\"AUTO\">\n<FRAME NAME=\"Methods\" SRC=\""_s, Class2HTML::class_name, "_methods.html\"\n MARGINWIDTH=0 MARGINHEIGHT=0 FRAMEBORDER=1 SCROLLING=\"AUTO\">\n</FRAMESET></FRAMESET></HTML>"_s}));
-				} catch ($Throwable&) {
-					$var($Throwable, t$, $catch());
+				} catch ($Throwable& t$) {
 					try {
 						file->close();
-					} catch ($Throwable&) {
-						$var($Throwable, x2, $catch());
+					} catch ($Throwable& x2) {
 						t$->addSuppressed(x2);
 					}
 					$throw(t$);
 				}
-			} catch ($Throwable&) {
-				$assign(var$0, $catch());
+			} catch ($Throwable& var$1) {
+				$assign(var$0, var$1);
 			} /*finally*/ {
 				file->close();
 			}
