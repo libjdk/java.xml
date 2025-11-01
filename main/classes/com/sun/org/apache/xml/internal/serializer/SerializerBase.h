@@ -77,7 +77,6 @@ class SerializerBase : public ::com::sun::org::apache::xml::internal::serializer
 	$class(SerializerBase, $NO_CLASS_INIT, ::com::sun::org::apache::xml::internal::serializer::SerializationHandler, ::com::sun::org::apache::xml::internal::serializer::SerializerConstants)
 public:
 	SerializerBase();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xml::internal::serializer::SerializationHandler::characters;
 	using ::com::sun::org::apache::xml::internal::serializer::SerializationHandler::endElement;
 	using ::com::sun::org::apache::xml::internal::serializer::SerializationHandler::comment;

@@ -67,7 +67,6 @@ class Predicate : public ::com::sun::org::apache::xalan::internal::xsltc::compil
 	$class(Predicate, $NO_CLASS_INIT, ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression, ::com::sun::org::apache::xalan::internal::xsltc::compiler::Closure)
 public:
 	Predicate();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -67,7 +67,6 @@ class XPathImpl : public ::com::sun::org::apache::xpath::internal::jaxp::XPathIm
 	$class(XPathImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::jaxp::XPathImplUtil, ::javax::xml::xpath::XPath)
 public:
 	XPathImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::jaxp::XPathImplUtil::eval;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

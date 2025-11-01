@@ -162,7 +162,6 @@ class SAXImpl : public ::com::sun::org::apache::xml::internal::dtm::ref::sax2dtm
 	$class(SAXImpl, 0, ::com::sun::org::apache::xml::internal::dtm::ref::sax2dtm::SAX2DTM2, ::com::sun::org::apache::xalan::internal::xsltc::DOMEnhancedForDTM, ::com::sun::org::apache::xalan::internal::xsltc::dom::DOMBuilder)
 public:
 	SAXImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xml::internal::dtm::ref::sax2dtm::SAX2DTM2::getStringValue;
 	using ::com::sun::org::apache::xml::internal::dtm::ref::sax2dtm::SAX2DTM2::getAttributeNode;
 	using ::com::sun::org::apache::xml::internal::dtm::ref::sax2dtm::SAX2DTM2::error;

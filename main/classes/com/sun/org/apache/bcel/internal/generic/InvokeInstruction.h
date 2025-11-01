@@ -54,7 +54,6 @@ class InvokeInstruction : public ::com::sun::org::apache::bcel::internal::generi
 	$class(InvokeInstruction, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower, ::com::sun::org::apache::bcel::internal::generic::StackConsumer, ::com::sun::org::apache::bcel::internal::generic::StackProducer)
 public:
 	InvokeInstruction();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod::getName;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;

@@ -18,7 +18,6 @@ namespace com {
 class XMLDocumentFilter : public ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler, public ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource {
 	$interface(XMLDocumentFilter, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource)
 public:
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

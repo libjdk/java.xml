@@ -77,7 +77,6 @@ class DOMParserImpl$AbortHandler : public ::com::sun::org::apache::xerces::inter
 	$class(DOMParserImpl$AbortHandler, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler, ::com::sun::org::apache::xerces::internal::xni::XMLDTDHandler, ::com::sun::org::apache::xerces::internal::xni::XMLDTDContentModelHandler)
 public:
 	DOMParserImpl$AbortHandler();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

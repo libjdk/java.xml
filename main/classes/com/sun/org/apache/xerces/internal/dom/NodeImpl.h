@@ -111,7 +111,6 @@ class NodeImpl : public ::org::w3c::dom::Node, public ::org::w3c::dom::NodeList,
 	$class(NodeImpl, $NO_CLASS_INIT, ::org::w3c::dom::Node, ::org::w3c::dom::NodeList, ::org::w3c::dom::events::EventTarget, ::java::lang::Cloneable, ::java::io::Serializable)
 public:
 	NodeImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

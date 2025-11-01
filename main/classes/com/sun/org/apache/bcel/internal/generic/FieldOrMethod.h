@@ -37,7 +37,6 @@ class FieldOrMethod : public ::com::sun::org::apache::bcel::internal::generic::C
 	$class(FieldOrMethod, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::CPInstruction, ::com::sun::org::apache::bcel::internal::generic::LoadClass)
 public:
 	FieldOrMethod();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::bcel::internal::generic::CPInstruction::getName;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;

@@ -66,7 +66,6 @@ class SAX2XNI : public ::org::xml::sax::ContentHandler, public ::com::sun::org::
 	$class(SAX2XNI, $NO_CLASS_INIT, ::org::xml::sax::ContentHandler, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource)
 public:
 	SAX2XNI();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -171,7 +171,6 @@ class SimpleResultTreeImpl : public ::com::sun::org::apache::xml::internal::seri
 	$class(SimpleResultTreeImpl, 0, ::com::sun::org::apache::xml::internal::serializer::EmptySerializer, ::com::sun::org::apache::xalan::internal::xsltc::DOM, ::com::sun::org::apache::xml::internal::dtm::DTM)
 public:
 	SimpleResultTreeImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xml::internal::serializer::EmptySerializer::getPrefix;
 	using ::com::sun::org::apache::xml::internal::serializer::EmptySerializer::getNamespaceURI;
 	using ::com::sun::org::apache::xml::internal::serializer::EmptySerializer::characters;

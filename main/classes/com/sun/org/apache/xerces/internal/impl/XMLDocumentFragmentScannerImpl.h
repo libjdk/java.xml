@@ -206,7 +206,6 @@ class XMLDocumentFragmentScannerImpl : public ::com::sun::org::apache::xerces::i
 	$class(XMLDocumentFragmentScannerImpl, 0, ::com::sun::org::apache::xerces::internal::impl::XMLScanner, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentScanner, ::com::sun::org::apache::xerces::internal::impl::XMLEntityHandler, ::com::sun::xml::internal::stream::XMLBufferListener)
 public:
 	XMLDocumentFragmentScannerImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

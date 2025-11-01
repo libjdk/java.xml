@@ -48,7 +48,6 @@ class PUSH : public ::com::sun::org::apache::bcel::internal::generic::CompoundIn
 	$class(PUSH, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction, ::com::sun::org::apache::bcel::internal::generic::VariableLengthInstruction)
 public:
 	PUSH();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

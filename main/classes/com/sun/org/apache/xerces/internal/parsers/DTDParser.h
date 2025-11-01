@@ -89,7 +89,6 @@ class DTDParser : public ::com::sun::org::apache::xerces::internal::parsers::XML
 	$class(DTDParser, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::parsers::XMLGrammarParser, ::com::sun::org::apache::xerces::internal::xni::XMLDTDHandler, ::com::sun::org::apache::xerces::internal::xni::XMLDTDContentModelHandler)
 public:
 	DTDParser();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::xni::XMLDTDContentModelHandler::endContentModel;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

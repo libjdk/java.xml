@@ -87,7 +87,6 @@ class CoreDocumentImpl : public ::com::sun::org::apache::xerces::internal::dom::
 	$class(CoreDocumentImpl, 0, ::com::sun::org::apache::xerces::internal::dom::ParentNode, ::org::w3c::dom::Document)
 public:
 	CoreDocumentImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::addEventListener;
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::dispatchEvent;

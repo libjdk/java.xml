@@ -32,7 +32,6 @@ class $import XMLFilterImpl : public ::org::xml::sax::XMLFilter, public ::org::x
 	$class(XMLFilterImpl, $NO_CLASS_INIT, ::org::xml::sax::XMLFilter, ::org::xml::sax::EntityResolver, ::org::xml::sax::DTDHandler, ::org::xml::sax::ContentHandler, ::org::xml::sax::ErrorHandler)
 public:
 	XMLFilterImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

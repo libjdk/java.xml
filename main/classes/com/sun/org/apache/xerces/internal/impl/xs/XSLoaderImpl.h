@@ -90,7 +90,6 @@ class XSLoaderImpl : public ::com::sun::org::apache::xerces::internal::xs::XSLoa
 	$class(XSLoaderImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::xs::XSLoader, ::org::w3c::dom::DOMConfiguration)
 public:
 	XSLoaderImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

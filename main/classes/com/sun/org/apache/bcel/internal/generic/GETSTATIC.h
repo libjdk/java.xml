@@ -41,7 +41,6 @@ class GETSTATIC : public ::com::sun::org::apache::bcel::internal::generic::Field
 	$class(GETSTATIC, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::FieldInstruction, ::com::sun::org::apache::bcel::internal::generic::PushInstruction, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower)
 public:
 	GETSTATIC();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::bcel::internal::generic::FieldInstruction::getName;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;

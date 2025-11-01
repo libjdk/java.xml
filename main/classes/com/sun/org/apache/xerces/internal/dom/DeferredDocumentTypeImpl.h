@@ -35,7 +35,6 @@ class DeferredDocumentTypeImpl : public ::com::sun::org::apache::xerces::interna
 	$class(DeferredDocumentTypeImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::DocumentTypeImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredDocumentTypeImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::DocumentTypeImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::DocumentTypeImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

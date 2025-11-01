@@ -238,7 +238,6 @@ class DOMConfigurationImpl : public ::com::sun::org::apache::xerces::internal::u
 	$class(DOMConfigurationImpl, 0, ::com::sun::org::apache::xerces::internal::util::ParserConfigurationSettings, ::com::sun::org::apache::xerces::internal::xni::parser::XMLParserConfiguration, ::org::w3c::dom::DOMConfiguration)
 public:
 	DOMConfigurationImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void addRecognizedFeatures($StringArray* featureIds) override;
 	virtual void addRecognizedProperties($StringArray* propertyIds) override;
 	virtual $Object* clone() override;

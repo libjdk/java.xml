@@ -18,7 +18,6 @@ class NamespaceImpl : public ::com::sun::xml::internal::stream::events::Attribut
 	$class(NamespaceImpl, $NO_CLASS_INIT, ::com::sun::xml::internal::stream::events::AttributeImpl, ::javax::xml::stream::events::Namespace)
 public:
 	NamespaceImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual ::javax::xml::stream::events::Characters* asCharacters() override;
 	virtual ::javax::xml::stream::events::EndElement* asEndElement() override;
 	virtual ::javax::xml::stream::events::StartElement* asStartElement() override;

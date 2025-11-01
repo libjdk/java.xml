@@ -58,7 +58,6 @@ class Select : public ::com::sun::org::apache::bcel::internal::generic::BranchIn
 	$class(Select, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::BranchInstruction, ::com::sun::org::apache::bcel::internal::generic::VariableLengthInstruction, ::com::sun::org::apache::bcel::internal::generic::StackConsumer, ::com::sun::org::apache::bcel::internal::generic::StackProducer)
 public:
 	Select();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::bcel::internal::generic::BranchInstruction::getTarget;
 	virtual int32_t consumeStack(::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen* cpg) override;
 	virtual bool equals(Object$* that) override;

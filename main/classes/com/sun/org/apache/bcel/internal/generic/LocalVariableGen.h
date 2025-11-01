@@ -53,7 +53,6 @@ class LocalVariableGen : public ::com::sun::org::apache::bcel::internal::generic
 	$class(LocalVariableGen, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::InstructionTargeter, ::com::sun::org::apache::bcel::internal::generic::NamedAndTyped, ::java::lang::Cloneable)
 public:
 	LocalVariableGen();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void finalize() override;
 	void init$(int32_t index, $String* name, ::com::sun::org::apache::bcel::internal::generic::Type* type, ::com::sun::org::apache::bcel::internal::generic::InstructionHandle* start, ::com::sun::org::apache::bcel::internal::generic::InstructionHandle* end);
 	void init$(int32_t index, $String* name, ::com::sun::org::apache::bcel::internal::generic::Type* type, ::com::sun::org::apache::bcel::internal::generic::InstructionHandle* start, ::com::sun::org::apache::bcel::internal::generic::InstructionHandle* end, int32_t origIndex);

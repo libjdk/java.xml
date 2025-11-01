@@ -60,7 +60,6 @@ class $import XString : public ::com::sun::org::apache::xpath::internal::objects
 	$class(XString, 0, ::com::sun::org::apache::xpath::internal::objects::XObject, ::com::sun::org::apache::xml::internal::utils::XMLString)
 public:
 	XString();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::objects::XObject::execute;
 	using ::com::sun::org::apache::xpath::internal::objects::XObject::error;
 	using ::com::sun::org::apache::xpath::internal::objects::XObject::bool$;

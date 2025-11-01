@@ -73,7 +73,6 @@ class Variable : public ::com::sun::org::apache::xpath::internal::Expression, pu
 	$class(Variable, 0, ::com::sun::org::apache::xpath::internal::Expression, ::com::sun::org::apache::xpath::internal::axes::PathComponent)
 public:
 	Variable();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::Expression::execute;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

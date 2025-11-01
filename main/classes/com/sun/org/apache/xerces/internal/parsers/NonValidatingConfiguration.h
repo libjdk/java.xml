@@ -197,7 +197,6 @@ class NonValidatingConfiguration : public ::com::sun::org::apache::xerces::inter
 	$class(NonValidatingConfiguration, 0, ::com::sun::org::apache::xerces::internal::parsers::BasicParserConfiguration, ::com::sun::org::apache::xerces::internal::xni::parser::XMLPullParserConfiguration)
 public:
 	NonValidatingConfiguration();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void addRecognizedFeatures($StringArray* featureIds) override;
 	virtual void addRecognizedProperties($StringArray* propertyIds) override;
 	virtual $Object* clone() override;

@@ -124,7 +124,6 @@ class SAX2DTM : public ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefa
 	$class(SAX2DTM, 0, ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators, ::org::xml::sax::EntityResolver, ::org::xml::sax::DTDHandler, ::org::xml::sax::ContentHandler, ::org::xml::sax::ErrorHandler, ::org::xml::sax::ext::DeclHandler, ::org::xml::sax::ext::LexicalHandler)
 public:
 	SAX2DTM();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators::error;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

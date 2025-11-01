@@ -41,7 +41,6 @@ class PUTFIELD : public ::com::sun::org::apache::bcel::internal::generic::FieldI
 	$class(PUTFIELD, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::FieldInstruction, ::com::sun::org::apache::bcel::internal::generic::PopInstruction, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower)
 public:
 	PUTFIELD();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::bcel::internal::generic::FieldInstruction::getName;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;

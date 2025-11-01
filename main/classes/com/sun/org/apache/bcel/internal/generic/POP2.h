@@ -38,7 +38,6 @@ class POP2 : public ::com::sun::org::apache::bcel::internal::generic::StackInstr
 	$class(POP2, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::StackInstruction, ::com::sun::org::apache::bcel::internal::generic::PopInstruction)
 public:
 	POP2();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual int32_t consumeStack(::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen* cpg) override;
 	virtual bool equals(Object$* that) override;

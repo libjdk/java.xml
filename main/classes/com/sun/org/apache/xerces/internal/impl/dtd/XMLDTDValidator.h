@@ -209,7 +209,6 @@ class XMLDTDValidator : public ::com::sun::org::apache::xerces::internal::xni::p
 	$class(XMLDTDValidator, 0, ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponent, ::com::sun::org::apache::xerces::internal::impl::dtd::XMLDTDValidatorFilter, ::com::sun::org::apache::xerces::internal::impl::RevalidationHandler)
 public:
 	XMLDTDValidator();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

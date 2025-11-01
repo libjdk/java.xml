@@ -35,7 +35,6 @@ class DeferredEntityReferenceImpl : public ::com::sun::org::apache::xerces::inte
 	$class(DeferredEntityReferenceImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::EntityReferenceImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredEntityReferenceImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::EntityReferenceImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::EntityReferenceImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

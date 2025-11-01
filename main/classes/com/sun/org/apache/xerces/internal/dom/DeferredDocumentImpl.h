@@ -72,7 +72,6 @@ class DeferredDocumentImpl : public ::com::sun::org::apache::xerces::internal::d
 	$class(DeferredDocumentImpl, 0, ::com::sun::org::apache::xerces::internal::dom::DocumentImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredDocumentImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::DocumentImpl::addEventListener;
 	using ::com::sun::org::apache::xerces::internal::dom::DocumentImpl::dispatchEvent;
 	using ::com::sun::org::apache::xerces::internal::dom::DocumentImpl::cloneNode;

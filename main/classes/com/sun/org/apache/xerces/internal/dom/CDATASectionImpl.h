@@ -35,7 +35,6 @@ class CDATASectionImpl : public ::com::sun::org::apache::xerces::internal::dom::
 	$class(CDATASectionImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::TextImpl, ::org::w3c::dom::CDATASection)
 public:
 	CDATASectionImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::TextImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::TextImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

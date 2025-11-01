@@ -121,7 +121,6 @@ class DTMDocumentImpl : public ::com::sun::org::apache::xml::internal::dtm::DTM,
 	$class(DTMDocumentImpl, 0, ::com::sun::org::apache::xml::internal::dtm::DTM, ::org::xml::sax::ContentHandler, ::org::xml::sax::ext::LexicalHandler)
 public:
 	DTMDocumentImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

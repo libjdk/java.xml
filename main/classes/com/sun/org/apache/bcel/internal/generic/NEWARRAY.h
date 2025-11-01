@@ -63,7 +63,6 @@ class NEWARRAY : public ::com::sun::org::apache::bcel::internal::generic::Instru
 	$class(NEWARRAY, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::Instruction, ::com::sun::org::apache::bcel::internal::generic::AllocationInstruction, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower, ::com::sun::org::apache::bcel::internal::generic::StackProducer)
 public:
 	NEWARRAY();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

@@ -29,7 +29,6 @@ class $import HandlerBase : public ::org::xml::sax::EntityResolver, public ::org
 	$class(HandlerBase, $NO_CLASS_INIT, ::org::xml::sax::EntityResolver, ::org::xml::sax::DTDHandler, ::org::xml::sax::DocumentHandler, ::org::xml::sax::ErrorHandler)
 public:
 	HandlerBase();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

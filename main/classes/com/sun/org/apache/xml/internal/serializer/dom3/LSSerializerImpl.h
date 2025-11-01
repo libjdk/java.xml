@@ -110,7 +110,6 @@ class LSSerializerImpl : public ::org::w3c::dom::DOMConfiguration, public ::org:
 	$class(LSSerializerImpl, $NO_CLASS_INIT, ::org::w3c::dom::DOMConfiguration, ::org::w3c::dom::ls::LSSerializer)
 public:
 	LSSerializerImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

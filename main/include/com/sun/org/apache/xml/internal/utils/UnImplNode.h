@@ -42,7 +42,6 @@ class $import UnImplNode : public ::org::w3c::dom::Element, public ::org::w3c::d
 	$class(UnImplNode, $NO_CLASS_INIT, ::org::w3c::dom::Element, ::org::w3c::dom::NodeList, ::org::w3c::dom::Document)
 public:
 	UnImplNode();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

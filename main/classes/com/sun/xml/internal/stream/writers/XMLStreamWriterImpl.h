@@ -163,7 +163,6 @@ class XMLStreamWriterImpl : public ::java::util::AbstractMap, public ::com::sun:
 	$class(XMLStreamWriterImpl, 0, ::java::util::AbstractMap, ::com::sun::xml::internal::stream::writers::XMLStreamWriterBase)
 public:
 	XMLStreamWriterImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual void finalize() override;
 	void init$(::java::io::OutputStream* outputStream, ::com::sun::org::apache::xerces::internal::impl::PropertyManager* props);

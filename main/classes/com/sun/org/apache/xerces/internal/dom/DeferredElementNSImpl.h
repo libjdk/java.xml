@@ -35,7 +35,6 @@ class DeferredElementNSImpl : public ::com::sun::org::apache::xerces::internal::
 	$class(DeferredElementNSImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::ElementNSImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredElementNSImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::ElementNSImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::ElementNSImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

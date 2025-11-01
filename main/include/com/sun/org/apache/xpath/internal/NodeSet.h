@@ -51,7 +51,6 @@ class $import NodeSet : public ::org::w3c::dom::NodeList, public ::org::w3c::dom
 	$class(NodeSet, $NO_CLASS_INIT, ::org::w3c::dom::NodeList, ::org::w3c::dom::traversal::NodeIterator, ::java::lang::Cloneable, ::com::sun::org::apache::xpath::internal::axes::ContextNodeList)
 public:
 	NodeSet();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;
 	virtual int32_t hashCode() override;

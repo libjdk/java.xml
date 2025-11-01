@@ -40,7 +40,6 @@ class MONITOREXIT : public ::com::sun::org::apache::bcel::internal::generic::Ins
 	$class(MONITOREXIT, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::Instruction, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower, ::com::sun::org::apache::bcel::internal::generic::StackConsumer)
 public:
 	MONITOREXIT();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual int32_t consumeStack(::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen* cpg) override;
 	virtual bool equals(Object$* that) override;

@@ -79,7 +79,6 @@ class PredicatedNodeTest : public ::com::sun::org::apache::xpath::internal::patt
 	$class(PredicatedNodeTest, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::patterns::NodeTest, ::com::sun::org::apache::xpath::internal::axes::SubContextList)
 public:
 	PredicatedNodeTest();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::patterns::NodeTest::execute;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -85,7 +85,6 @@ class $export NodeSequence : public ::com::sun::org::apache::xpath::internal::ob
 	$class(NodeSequence, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::objects::XObject, ::com::sun::org::apache::xml::internal::dtm::DTMIterator, ::com::sun::org::apache::xpath::internal::axes::PathComponent)
 public:
 	NodeSequence();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::objects::XObject::execute;
 	using ::com::sun::org::apache::xpath::internal::objects::XObject::bool$;
 	using ::com::sun::org::apache::xpath::internal::objects::XObject::equals;

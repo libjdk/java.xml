@@ -193,7 +193,6 @@ class TransformerImpl : public ::javax::xml::transform::Transformer, public ::co
 	$class(TransformerImpl, 0, ::javax::xml::transform::Transformer, ::com::sun::org::apache::xalan::internal::xsltc::DOMCache)
 public:
 	TransformerImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

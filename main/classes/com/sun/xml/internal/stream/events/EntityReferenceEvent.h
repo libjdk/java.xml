@@ -33,7 +33,6 @@ class EntityReferenceEvent : public ::com::sun::xml::internal::stream::events::D
 	$class(EntityReferenceEvent, $NO_CLASS_INIT, ::com::sun::xml::internal::stream::events::DummyEvent, ::javax::xml::stream::events::EntityReference)
 public:
 	EntityReferenceEvent();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual ::javax::xml::stream::events::Characters* asCharacters() override;
 	virtual ::javax::xml::stream::events::EndElement* asEndElement() override;
 	virtual ::javax::xml::stream::events::StartElement* asStartElement() override;

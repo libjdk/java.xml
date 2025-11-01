@@ -38,7 +38,6 @@ class DUP2 : public ::com::sun::org::apache::bcel::internal::generic::StackInstr
 	$class(DUP2, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::StackInstruction, ::com::sun::org::apache::bcel::internal::generic::PushInstruction)
 public:
 	DUP2();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

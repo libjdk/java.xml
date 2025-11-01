@@ -181,7 +181,6 @@ class DTDGrammar : public ::com::sun::org::apache::xerces::internal::xni::XMLDTD
 	$class(DTDGrammar, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::xni::XMLDTDHandler, ::com::sun::org::apache::xerces::internal::xni::XMLDTDContentModelHandler, ::com::sun::org::apache::xerces::internal::impl::validation::EntityState, ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar)
 public:
 	DTDGrammar();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

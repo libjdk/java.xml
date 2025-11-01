@@ -44,7 +44,6 @@ class StackMapEntry : public ::com::sun::org::apache::bcel::internal::classfile:
 	$class(StackMapEntry, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::classfile::Node, ::java::lang::Cloneable)
 public:
 	StackMapEntry();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

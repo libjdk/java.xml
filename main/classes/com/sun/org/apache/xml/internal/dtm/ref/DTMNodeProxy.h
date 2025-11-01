@@ -65,7 +65,6 @@ class DTMNodeProxy : public ::org::w3c::dom::Document, public ::org::w3c::dom::T
 	$class(DTMNodeProxy, 0, ::org::w3c::dom::Document, ::org::w3c::dom::Text, ::org::w3c::dom::Element, ::org::w3c::dom::Attr, ::org::w3c::dom::ProcessingInstruction, ::org::w3c::dom::Comment, ::org::w3c::dom::DocumentFragment)
 public:
 	DTMNodeProxy();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual void finalize() override;
 	void init$(::com::sun::org::apache::xml::internal::dtm::DTM* dtm, int32_t node);

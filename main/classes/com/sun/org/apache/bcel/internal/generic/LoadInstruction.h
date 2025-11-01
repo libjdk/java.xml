@@ -35,7 +35,6 @@ class LoadInstruction : public ::com::sun::org::apache::bcel::internal::generic:
 	$class(LoadInstruction, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction, ::com::sun::org::apache::bcel::internal::generic::PushInstruction)
 public:
 	LoadInstruction();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

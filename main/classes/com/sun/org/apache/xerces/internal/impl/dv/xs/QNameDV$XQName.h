@@ -29,7 +29,6 @@ class QNameDV$XQName : public ::com::sun::org::apache::xerces::internal::xni::QN
 	$class(QNameDV$XQName, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::xni::QName, ::com::sun::org::apache::xerces::internal::xs::datatypes::XSQName)
 public:
 	QNameDV$XQName();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual void finalize() override;
 	virtual int32_t hashCode() override;

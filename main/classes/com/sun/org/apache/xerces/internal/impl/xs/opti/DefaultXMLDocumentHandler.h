@@ -64,7 +64,6 @@ class DefaultXMLDocumentHandler : public ::com::sun::org::apache::xerces::intern
 	$class(DefaultXMLDocumentHandler, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler, ::com::sun::org::apache::xerces::internal::xni::XMLDTDHandler, ::com::sun::org::apache::xerces::internal::xni::XMLDTDContentModelHandler)
 public:
 	DefaultXMLDocumentHandler();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -24,7 +24,6 @@ namespace javax {
 class $export TransformerHandler : public ::org::xml::sax::ContentHandler, public ::org::xml::sax::ext::LexicalHandler, public ::org::xml::sax::DTDHandler {
 	$interface(TransformerHandler, $NO_CLASS_INIT, ::org::xml::sax::ContentHandler, ::org::xml::sax::ext::LexicalHandler, ::org::xml::sax::DTDHandler)
 public:
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -55,7 +55,6 @@ class AttrImpl : public ::com::sun::org::apache::xerces::internal::dom::NodeImpl
 	$class(AttrImpl, 0, ::com::sun::org::apache::xerces::internal::dom::NodeImpl, ::org::w3c::dom::Attr, ::org::w3c::dom::TypeInfo)
 public:
 	AttrImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::NodeImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::NodeImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

@@ -230,7 +230,6 @@ class XML11DTDConfiguration : public ::com::sun::org::apache::xerces::internal::
 	$class(XML11DTDConfiguration, 0, ::com::sun::org::apache::xerces::internal::util::ParserConfigurationSettings, ::com::sun::org::apache::xerces::internal::xni::parser::XMLPullParserConfiguration, ::com::sun::org::apache::xerces::internal::parsers::XML11Configurable)
 public:
 	XML11DTDConfiguration();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void addRecognizedFeatures($StringArray* featureIds) override;
 	virtual void addRecognizedProperties($StringArray* propertyIds) override;
 	virtual $Object* clone() override;

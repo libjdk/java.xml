@@ -49,7 +49,6 @@ class ElementImpl : public ::com::sun::org::apache::xerces::internal::dom::Paren
 	$class(ElementImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::ParentNode, ::org::w3c::dom::Element, ::org::w3c::dom::ElementTraversal, ::org::w3c::dom::TypeInfo)
 public:
 	ElementImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

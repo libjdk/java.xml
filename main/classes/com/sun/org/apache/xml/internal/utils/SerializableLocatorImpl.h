@@ -19,7 +19,6 @@ class $export SerializableLocatorImpl : public ::org::xml::sax::Locator, public 
 	$class(SerializableLocatorImpl, $NO_CLASS_INIT, ::org::xml::sax::Locator, ::java::io::Serializable)
 public:
 	SerializableLocatorImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

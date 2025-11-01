@@ -126,7 +126,6 @@ class MethodGenerator : public ::com::sun::org::apache::bcel::internal::generic:
 	$class(MethodGenerator, 0, ::com::sun::org::apache::bcel::internal::generic::MethodGen, ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants)
 public:
 	MethodGenerator();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::bcel::internal::generic::MethodGen::addLocalVariable;
 	using ::com::sun::org::apache::bcel::internal::generic::MethodGen::getInstructionList;
 	virtual $Object* clone() override;

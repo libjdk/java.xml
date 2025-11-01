@@ -94,7 +94,6 @@ class DocumentImpl : public ::com::sun::org::apache::xerces::internal::dom::Core
 	$class(DocumentImpl, 0, ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl, ::org::w3c::dom::traversal::DocumentTraversal, ::org::w3c::dom::events::DocumentEvent, ::org::w3c::dom::ranges::DocumentRange)
 public:
 	DocumentImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl::cloneNode;
 	using ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl::getUserData;

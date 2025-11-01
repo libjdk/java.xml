@@ -25,7 +25,6 @@ class $export Attributes2Impl : public ::org::xml::sax::helpers::AttributesImpl,
 	$class(Attributes2Impl, $NO_CLASS_INIT, ::org::xml::sax::helpers::AttributesImpl, ::org::xml::sax::ext::Attributes2)
 public:
 	Attributes2Impl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

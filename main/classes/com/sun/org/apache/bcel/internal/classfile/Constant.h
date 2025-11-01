@@ -41,7 +41,6 @@ class Constant : public ::java::lang::Cloneable, public ::com::sun::org::apache:
 	$class(Constant, 0, ::java::lang::Cloneable, ::com::sun::org::apache::bcel::internal::classfile::Node)
 public:
 	Constant();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void accept(::com::sun::org::apache::bcel::internal::classfile::Visitor* v) override {}
 	virtual void finalize() override;
 	void init$(int8_t tag);

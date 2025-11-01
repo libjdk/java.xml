@@ -51,7 +51,6 @@ class $import ParserAdapter : public ::org::xml::sax::XMLReader, public ::org::x
 	$class(ParserAdapter, 0, ::org::xml::sax::XMLReader, ::org::xml::sax::DocumentHandler)
 public:
 	ParserAdapter();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

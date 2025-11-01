@@ -84,7 +84,6 @@ class WalkingIterator : public ::com::sun::org::apache::xpath::internal::axes::L
 	$class(WalkingIterator, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::axes::LocPathIterator, ::com::sun::org::apache::xpath::internal::ExpressionOwner)
 public:
 	WalkingIterator();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::axes::LocPathIterator::execute;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

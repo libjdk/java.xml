@@ -48,7 +48,6 @@ class Attribute : public ::java::lang::Cloneable, public ::com::sun::org::apache
 	$class(Attribute, 0, ::java::lang::Cloneable, ::com::sun::org::apache::bcel::internal::classfile::Node)
 public:
 	Attribute();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void accept(::com::sun::org::apache::bcel::internal::classfile::Visitor* v) override {}
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

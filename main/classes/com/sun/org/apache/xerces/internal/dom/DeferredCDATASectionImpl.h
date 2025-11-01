@@ -35,7 +35,6 @@ class DeferredCDATASectionImpl : public ::com::sun::org::apache::xerces::interna
 	$class(DeferredCDATASectionImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::CDATASectionImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredCDATASectionImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::CDATASectionImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::CDATASectionImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

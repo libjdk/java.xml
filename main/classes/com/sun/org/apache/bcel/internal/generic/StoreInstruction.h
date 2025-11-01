@@ -35,7 +35,6 @@ class StoreInstruction : public ::com::sun::org::apache::bcel::internal::generic
 	$class(StoreInstruction, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction, ::com::sun::org::apache::bcel::internal::generic::PopInstruction)
 public:
 	StoreInstruction();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual int32_t consumeStack(::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen* cpg) override;
 	virtual bool equals(Object$* that) override;

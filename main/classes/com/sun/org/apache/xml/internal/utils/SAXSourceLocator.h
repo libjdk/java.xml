@@ -29,7 +29,6 @@ class $export SAXSourceLocator : public ::org::xml::sax::helpers::LocatorImpl, p
 	$class(SAXSourceLocator, $NO_CLASS_INIT, ::org::xml::sax::helpers::LocatorImpl, ::javax::xml::transform::SourceLocator, ::java::io::Serializable)
 public:
 	SAXSourceLocator();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

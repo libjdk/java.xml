@@ -76,7 +76,6 @@ class ClassGen : public ::com::sun::org::apache::bcel::internal::classfile::Acce
 	$class(ClassGen, 0, ::com::sun::org::apache::bcel::internal::classfile::AccessFlags, ::java::lang::Cloneable)
 public:
 	ClassGen();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void finalize() override;
 	void init$($String* className, $String* superClassName, $String* fileName, int32_t accessFlags, $StringArray* interfaces, ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen* cp);
 	void init$($String* className, $String* superClassName, $String* fileName, int32_t accessFlags, $StringArray* interfaces);

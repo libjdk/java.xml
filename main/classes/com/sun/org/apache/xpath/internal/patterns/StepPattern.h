@@ -75,7 +75,6 @@ class StepPattern : public ::com::sun::org::apache::xpath::internal::patterns::N
 	$class(StepPattern, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::patterns::NodeTest, ::com::sun::org::apache::xpath::internal::axes::SubContextList, ::com::sun::org::apache::xpath::internal::ExpressionOwner)
 public:
 	StepPattern();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::patterns::NodeTest::execute;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

@@ -42,7 +42,6 @@ class CodeException : public ::java::lang::Cloneable, public ::com::sun::org::ap
 	$class(CodeException, $NO_CLASS_INIT, ::java::lang::Cloneable, ::com::sun::org::apache::bcel::internal::classfile::Node)
 public:
 	CodeException();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

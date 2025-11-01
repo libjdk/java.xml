@@ -72,7 +72,6 @@ class CPInstruction : public ::com::sun::org::apache::bcel::internal::generic::I
 	$class(CPInstruction, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::Instruction, ::com::sun::org::apache::bcel::internal::generic::TypedInstruction, ::com::sun::org::apache::bcel::internal::generic::IndexedInstruction)
 public:
 	CPInstruction();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

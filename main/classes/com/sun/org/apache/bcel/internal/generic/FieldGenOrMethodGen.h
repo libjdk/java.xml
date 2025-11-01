@@ -59,7 +59,6 @@ class FieldGenOrMethodGen : public ::com::sun::org::apache::bcel::internal::clas
 	$class(FieldGenOrMethodGen, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::classfile::AccessFlags, ::com::sun::org::apache::bcel::internal::generic::NamedAndTyped, ::java::lang::Cloneable)
 public:
 	FieldGenOrMethodGen();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;
 	virtual int32_t hashCode() override;

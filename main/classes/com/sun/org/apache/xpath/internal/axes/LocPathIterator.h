@@ -126,7 +126,6 @@ class LocPathIterator : public ::com::sun::org::apache::xpath::internal::axes::P
 	$class(LocPathIterator, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest, ::java::lang::Cloneable, ::com::sun::org::apache::xml::internal::dtm::DTMIterator, ::com::sun::org::apache::xpath::internal::axes::PathComponent)
 public:
 	LocPathIterator();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest::execute;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

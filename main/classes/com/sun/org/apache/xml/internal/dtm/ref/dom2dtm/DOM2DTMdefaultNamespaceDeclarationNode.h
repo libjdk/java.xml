@@ -37,7 +37,6 @@ class DOM2DTMdefaultNamespaceDeclarationNode : public ::org::w3c::dom::Attr, pub
 	$class(DOM2DTMdefaultNamespaceDeclarationNode, $NO_CLASS_INIT, ::org::w3c::dom::Attr, ::org::w3c::dom::TypeInfo)
 public:
 	DOM2DTMdefaultNamespaceDeclarationNode();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

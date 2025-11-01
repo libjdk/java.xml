@@ -38,7 +38,6 @@ class SALOAD : public ::com::sun::org::apache::bcel::internal::generic::ArrayIns
 	$class(SALOAD, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::ArrayInstruction, ::com::sun::org::apache::bcel::internal::generic::StackProducer)
 public:
 	SALOAD();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

@@ -159,7 +159,6 @@ class DocumentBuilderImpl : public ::javax::xml::parsers::DocumentBuilder, publi
 	$class(DocumentBuilderImpl, 0, ::javax::xml::parsers::DocumentBuilder, ::com::sun::org::apache::xerces::internal::jaxp::JAXPConstants)
 public:
 	DocumentBuilderImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

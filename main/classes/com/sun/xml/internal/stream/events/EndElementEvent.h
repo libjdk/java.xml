@@ -46,7 +46,6 @@ class EndElementEvent : public ::com::sun::xml::internal::stream::events::DummyE
 	$class(EndElementEvent, $NO_CLASS_INIT, ::com::sun::xml::internal::stream::events::DummyEvent, ::javax::xml::stream::events::EndElement)
 public:
 	EndElementEvent();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual ::javax::xml::stream::events::Characters* asCharacters() override;
 	virtual ::javax::xml::stream::events::EndElement* asEndElement() override;
 	virtual ::javax::xml::stream::events::StartElement* asStartElement() override;

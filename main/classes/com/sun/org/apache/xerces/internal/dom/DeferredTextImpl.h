@@ -35,7 +35,6 @@ class DeferredTextImpl : public ::com::sun::org::apache::xerces::internal::dom::
 	$class(DeferredTextImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::TextImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredTextImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::TextImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::TextImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

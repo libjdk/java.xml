@@ -104,7 +104,6 @@ class BaseMarkupSerializer : public ::org::xml::sax::ContentHandler, public ::or
 	$class(BaseMarkupSerializer, $NO_CLASS_INIT, ::org::xml::sax::ContentHandler, ::org::xml::sax::DocumentHandler, ::org::xml::sax::ext::LexicalHandler, ::org::xml::sax::DTDHandler, ::org::xml::sax::ext::DeclHandler, ::com::sun::org::apache::xml::internal::serialize::DOMSerializer, ::com::sun::org::apache::xml::internal::serialize::Serializer)
 public:
 	BaseMarkupSerializer();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::org::xml::sax::ContentHandler::endElement;
 	using ::org::xml::sax::DocumentHandler::endElement;
 	virtual $Object* clone() override;

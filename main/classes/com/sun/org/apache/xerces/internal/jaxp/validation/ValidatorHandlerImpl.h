@@ -236,7 +236,6 @@ class ValidatorHandlerImpl : public ::javax::xml::validation::ValidatorHandler, 
 	$class(ValidatorHandlerImpl, 0, ::javax::xml::validation::ValidatorHandler, ::org::xml::sax::DTDHandler, ::com::sun::org::apache::xerces::internal::impl::validation::EntityState, ::com::sun::org::apache::xerces::internal::xs::PSVIProvider, ::com::sun::org::apache::xerces::internal::jaxp::validation::ValidatorHelper, ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler)
 public:
 	ValidatorHandlerImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

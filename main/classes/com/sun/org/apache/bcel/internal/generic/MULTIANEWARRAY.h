@@ -78,7 +78,6 @@ class MULTIANEWARRAY : public ::com::sun::org::apache::bcel::internal::generic::
 	$class(MULTIANEWARRAY, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::CPInstruction, ::com::sun::org::apache::bcel::internal::generic::LoadClass, ::com::sun::org::apache::bcel::internal::generic::AllocationInstruction, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower)
 public:
 	MULTIANEWARRAY();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

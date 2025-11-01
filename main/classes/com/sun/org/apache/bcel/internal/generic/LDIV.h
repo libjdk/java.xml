@@ -39,7 +39,6 @@ class LDIV : public ::com::sun::org::apache::bcel::internal::generic::Arithmetic
 	$class(LDIV, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::ArithmeticInstruction, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower)
 public:
 	LDIV();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

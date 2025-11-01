@@ -41,7 +41,6 @@ class ACONST_NULL : public ::com::sun::org::apache::bcel::internal::generic::Ins
 	$class(ACONST_NULL, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::Instruction, ::com::sun::org::apache::bcel::internal::generic::PushInstruction, ::com::sun::org::apache::bcel::internal::generic::TypedInstruction)
 public:
 	ACONST_NULL();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

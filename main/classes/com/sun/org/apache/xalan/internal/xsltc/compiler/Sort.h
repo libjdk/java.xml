@@ -84,7 +84,6 @@ class Sort : public ::com::sun::org::apache::xalan::internal::xsltc::compiler::I
 	$class(Sort, $NO_CLASS_INIT, ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction, ::com::sun::org::apache::xalan::internal::xsltc::compiler::Closure)
 public:
 	Sort();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

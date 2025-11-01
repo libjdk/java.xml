@@ -35,7 +35,6 @@ class DeferredElementImpl : public ::com::sun::org::apache::xerces::internal::do
 	$class(DeferredElementImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::ElementImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredElementImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::ElementImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::ElementImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

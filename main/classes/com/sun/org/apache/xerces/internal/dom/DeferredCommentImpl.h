@@ -35,7 +35,6 @@ class DeferredCommentImpl : public ::com::sun::org::apache::xerces::internal::do
 	$class(DeferredCommentImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::CommentImpl, ::com::sun::org::apache::xerces::internal::dom::DeferredNode)
 public:
 	DeferredCommentImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::CommentImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::CommentImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

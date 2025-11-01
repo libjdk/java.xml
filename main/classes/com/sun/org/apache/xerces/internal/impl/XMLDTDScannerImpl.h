@@ -145,7 +145,6 @@ class XMLDTDScannerImpl : public ::com::sun::org::apache::xerces::internal::impl
 	$class(XMLDTDScannerImpl, 0, ::com::sun::org::apache::xerces::internal::impl::XMLScanner, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDScanner, ::com::sun::org::apache::xerces::internal::impl::XMLEntityHandler)
 public:
 	XMLDTDScannerImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

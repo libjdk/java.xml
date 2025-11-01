@@ -80,7 +80,6 @@ class JavaClass : public ::com::sun::org::apache::bcel::internal::classfile::Acc
 	$class(JavaClass, 0, ::com::sun::org::apache::bcel::internal::classfile::AccessFlags, ::java::lang::Cloneable, ::com::sun::org::apache::bcel::internal::classfile::Node, ::java::lang::Comparable)
 public:
 	JavaClass();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual void finalize() override;
 	void init$(int32_t classNameIndex, int32_t superclassNameIndex, $String* fileName, int32_t major, int32_t minor, int32_t access_flags, ::com::sun::org::apache::bcel::internal::classfile::ConstantPool* constantPool, $ints* interfaces, $Array<::com::sun::org::apache::bcel::internal::classfile::Field>* fields, $Array<::com::sun::org::apache::bcel::internal::classfile::Method>* methods, $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>* attributes, int8_t source);

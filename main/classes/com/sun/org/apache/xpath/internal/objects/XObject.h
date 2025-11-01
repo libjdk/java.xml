@@ -114,7 +114,6 @@ class $export XObject : public ::com::sun::org::apache::xpath::internal::Express
 	$class(XObject, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::Expression, ::java::lang::Cloneable)
 public:
 	XObject();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::Expression::execute;
 	using ::com::sun::org::apache::xpath::internal::Expression::bool$;
 	using ::com::sun::org::apache::xpath::internal::Expression::error;

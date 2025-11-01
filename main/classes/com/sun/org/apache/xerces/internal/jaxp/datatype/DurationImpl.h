@@ -59,7 +59,6 @@ class DurationImpl : public ::javax::xml::datatype::Duration, public ::java::io:
 	$class(DurationImpl, 0, ::javax::xml::datatype::Duration, ::java::io::Serializable)
 public:
 	DurationImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* duration) override;
 	virtual void finalize() override;

@@ -23,7 +23,6 @@ namespace com {
 class ConstantPushInstruction : public ::com::sun::org::apache::bcel::internal::generic::PushInstruction, public ::com::sun::org::apache::bcel::internal::generic::TypedInstruction {
 	$interface(ConstantPushInstruction, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::PushInstruction, ::com::sun::org::apache::bcel::internal::generic::TypedInstruction)
 public:
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

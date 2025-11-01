@@ -15,7 +15,6 @@ namespace javax {
 class $export CatalogResolver : public ::org::xml::sax::EntityResolver, public ::javax::xml::stream::XMLResolver, public ::javax::xml::transform::URIResolver, public ::org::w3c::dom::ls::LSResourceResolver {
 	$interface(CatalogResolver, $NO_CLASS_INIT, ::org::xml::sax::EntityResolver, ::javax::xml::stream::XMLResolver, ::javax::xml::transform::URIResolver, ::org::w3c::dom::ls::LSResourceResolver)
 public:
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

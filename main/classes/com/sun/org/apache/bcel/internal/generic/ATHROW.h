@@ -40,7 +40,6 @@ class ATHROW : public ::com::sun::org::apache::bcel::internal::generic::Instruct
 	$class(ATHROW, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::Instruction, ::com::sun::org::apache::bcel::internal::generic::UnconditionalBranch, ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower)
 public:
 	ATHROW();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

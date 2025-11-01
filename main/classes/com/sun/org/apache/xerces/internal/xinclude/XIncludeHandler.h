@@ -258,7 +258,6 @@ class XIncludeHandler : public ::com::sun::org::apache::xerces::internal::xni::p
 	$class(XIncludeHandler, 0, ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponent, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentFilter, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDFilter)
 public:
 	XIncludeHandler();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

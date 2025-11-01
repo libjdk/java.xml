@@ -24,7 +24,6 @@ class $import Locator2Impl : public ::org::xml::sax::helpers::LocatorImpl, publi
 	$class(Locator2Impl, $NO_CLASS_INIT, ::org::xml::sax::helpers::LocatorImpl, ::org::xml::sax::ext::Locator2)
 public:
 	Locator2Impl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

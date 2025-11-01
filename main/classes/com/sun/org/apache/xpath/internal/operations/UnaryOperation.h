@@ -54,7 +54,6 @@ class UnaryOperation : public ::com::sun::org::apache::xpath::internal::Expressi
 	$class(UnaryOperation, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::Expression, ::com::sun::org::apache::xpath::internal::ExpressionOwner)
 public:
 	UnaryOperation();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::Expression::execute;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

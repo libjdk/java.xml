@@ -39,7 +39,6 @@ class AbstractXMLSchema : public ::javax::xml::validation::Schema, public ::com:
 	$class(AbstractXMLSchema, $NO_CLASS_INIT, ::javax::xml::validation::Schema, ::com::sun::org::apache::xerces::internal::jaxp::validation::XSGrammarPoolContainer)
 public:
 	AbstractXMLSchema();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -99,7 +99,6 @@ class BasicParserConfiguration : public ::com::sun::org::apache::xerces::interna
 	$class(BasicParserConfiguration, 0, ::com::sun::org::apache::xerces::internal::util::ParserConfigurationSettings, ::com::sun::org::apache::xerces::internal::xni::parser::XMLParserConfiguration)
 public:
 	BasicParserConfiguration();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void addRecognizedFeatures($StringArray* featureIds) override;
 	virtual void addRecognizedProperties($StringArray* propertyIds) override;
 	virtual $Object* clone() override;

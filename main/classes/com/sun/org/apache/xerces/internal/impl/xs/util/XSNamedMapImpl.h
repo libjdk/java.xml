@@ -61,7 +61,6 @@ class XSNamedMapImpl : public ::java::util::AbstractMap, public ::com::sun::org:
 	$class(XSNamedMapImpl, 0, ::java::util::AbstractMap, ::com::sun::org::apache::xerces::internal::xs::XSNamedMap)
 public:
 	XSNamedMapImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual void clear() override;
 	virtual $Object* clone() override;
 	virtual $Object* compute(Object$* arg0, ::java::util::function::BiFunction* arg1) override;

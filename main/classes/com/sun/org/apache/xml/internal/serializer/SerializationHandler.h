@@ -53,7 +53,6 @@ namespace com {
 class SerializationHandler : public ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler, public ::com::sun::org::apache::xml::internal::serializer::ExtendedLexicalHandler, public ::com::sun::org::apache::xml::internal::serializer::XSLOutputAttributes, public ::org::xml::sax::ext::DeclHandler, public ::org::xml::sax::DTDHandler, public ::org::xml::sax::ErrorHandler, public ::com::sun::org::apache::xml::internal::serializer::DOMSerializer, public ::com::sun::org::apache::xml::internal::serializer::Serializer {
 	$interface(SerializationHandler, $NO_CLASS_INIT, ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler, ::com::sun::org::apache::xml::internal::serializer::ExtendedLexicalHandler, ::com::sun::org::apache::xml::internal::serializer::XSLOutputAttributes, ::org::xml::sax::ext::DeclHandler, ::org::xml::sax::DTDHandler, ::org::xml::sax::ErrorHandler, ::com::sun::org::apache::xml::internal::serializer::DOMSerializer, ::com::sun::org::apache::xml::internal::serializer::Serializer)
 public:
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler::characters;
 	virtual $Object* clone() override;
 	virtual void close() {}

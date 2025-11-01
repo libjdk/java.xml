@@ -155,7 +155,6 @@ class SAXParserImpl : public ::javax::xml::parsers::SAXParser, public ::com::sun
 	$class(SAXParserImpl, 0, ::javax::xml::parsers::SAXParser, ::com::sun::org::apache::xerces::internal::jaxp::JAXPConstants, ::com::sun::org::apache::xerces::internal::xs::PSVIProvider)
 public:
 	SAXParserImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

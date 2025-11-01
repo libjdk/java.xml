@@ -39,7 +39,6 @@ class $export FunctionOneArg : public ::com::sun::org::apache::xpath::internal::
 	$class(FunctionOneArg, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::functions::Function, ::com::sun::org::apache::xpath::internal::ExpressionOwner)
 public:
 	FunctionOneArg();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::functions::Function::execute;
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;

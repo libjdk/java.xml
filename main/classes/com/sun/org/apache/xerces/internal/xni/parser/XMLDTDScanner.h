@@ -51,7 +51,6 @@ namespace com {
 class XMLDTDScanner : public ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDSource, public ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDContentModelSource {
 	$interface(XMLDTDScanner, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDSource, ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDContentModelSource)
 public:
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

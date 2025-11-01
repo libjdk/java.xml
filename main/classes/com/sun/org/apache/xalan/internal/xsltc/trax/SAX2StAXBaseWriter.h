@@ -50,7 +50,6 @@ class SAX2StAXBaseWriter : public ::org::xml::sax::helpers::DefaultHandler, publ
 	$class(SAX2StAXBaseWriter, $NO_CLASS_INIT, ::org::xml::sax::helpers::DefaultHandler, ::org::xml::sax::ext::LexicalHandler)
 public:
 	SAX2StAXBaseWriter();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -290,7 +290,6 @@ class XMLSchemaLoader : public ::com::sun::org::apache::xerces::internal::xni::g
 	$class(XMLSchemaLoader, 0, ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarLoader, ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponent, ::com::sun::org::apache::xerces::internal::impl::xs::XSElementDeclHelper, ::com::sun::org::apache::xerces::internal::xs::XSLoader, ::org::w3c::dom::DOMConfiguration)
 public:
 	XMLSchemaLoader();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

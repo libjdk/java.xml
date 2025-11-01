@@ -55,7 +55,6 @@ class BranchInstruction : public ::com::sun::org::apache::bcel::internal::generi
 	$class(BranchInstruction, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::Instruction, ::com::sun::org::apache::bcel::internal::generic::InstructionTargeter)
 public:
 	BranchInstruction();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

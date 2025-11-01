@@ -89,7 +89,6 @@ class AxesWalker : public ::com::sun::org::apache::xpath::internal::axes::Predic
 	$class(AxesWalker, $NO_CLASS_INIT, ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest, ::java::lang::Cloneable, ::com::sun::org::apache::xpath::internal::axes::PathComponent, ::com::sun::org::apache::xpath::internal::ExpressionOwner)
 public:
 	AxesWalker();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest::execute;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;

@@ -35,7 +35,6 @@ class CommentImpl : public ::com::sun::org::apache::xerces::internal::dom::Chara
 	$class(CommentImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::CharacterDataImpl, ::org::w3c::dom::Comment)
 public:
 	CommentImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::CharacterDataImpl::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::CharacterDataImpl::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

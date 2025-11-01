@@ -42,7 +42,6 @@ class EntityImpl : public ::com::sun::org::apache::xerces::internal::dom::Parent
 	$class(EntityImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::ParentNode, ::org::w3c::dom::Entity)
 public:
 	EntityImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

@@ -45,7 +45,6 @@ class LDC2_W : public ::com::sun::org::apache::bcel::internal::generic::CPInstru
 	$class(LDC2_W, $NO_CLASS_INIT, ::com::sun::org::apache::bcel::internal::generic::CPInstruction, ::com::sun::org::apache::bcel::internal::generic::PushInstruction)
 public:
 	LDC2_W();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* that) override;
 	virtual void finalize() override;

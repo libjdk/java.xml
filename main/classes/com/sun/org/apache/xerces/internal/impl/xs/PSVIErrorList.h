@@ -21,7 +21,6 @@ class PSVIErrorList : public ::java::util::AbstractList, public ::com::sun::org:
 	$class(PSVIErrorList, $NO_CLASS_INIT, ::java::util::AbstractList, ::com::sun::org::apache::xerces::internal::xs::StringList)
 public:
 	PSVIErrorList();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual bool add(Object$* arg0) override;
 	virtual void add(int32_t arg0, Object$* arg1) override;
 	virtual bool addAll(int32_t arg0, ::java::util::Collection* arg1) override;

@@ -114,7 +114,6 @@ class XMLGregorianCalendarImpl : public ::javax::xml::datatype::XMLGregorianCale
 	$class(XMLGregorianCalendarImpl, 0, ::javax::xml::datatype::XMLGregorianCalendar, ::java::io::Serializable)
 public:
 	XMLGregorianCalendarImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual bool equals(Object$* obj) override;
 	virtual void finalize() override;
 	virtual int32_t hashCode() override;

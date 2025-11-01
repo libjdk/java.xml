@@ -35,7 +35,6 @@ class DocumentFragmentImpl : public ::com::sun::org::apache::xerces::internal::d
 	$class(DocumentFragmentImpl, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::dom::ParentNode, ::org::w3c::dom::DocumentFragment)
 public:
 	DocumentFragmentImpl();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::getTextContent;
 	using ::com::sun::org::apache::xerces::internal::dom::ParentNode::getUserData;
 	virtual ::org::w3c::dom::Node* appendChild(::org::w3c::dom::Node* newChild) override;

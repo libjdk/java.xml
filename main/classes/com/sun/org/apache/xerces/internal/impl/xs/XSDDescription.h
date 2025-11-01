@@ -57,7 +57,6 @@ class XSDDescription : public ::com::sun::org::apache::xerces::internal::util::X
 	$class(XSDDescription, $NO_CLASS_INIT, ::com::sun::org::apache::xerces::internal::util::XMLResourceIdentifierImpl, ::com::sun::org::apache::xerces::internal::xni::grammars::XMLSchemaDescription)
 public:
 	XSDDescription();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual void finalize() override;
 	virtual $String* getBaseSystemId() override;

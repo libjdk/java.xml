@@ -66,7 +66,6 @@ class StAXStream2SAX : public ::org::xml::sax::XMLReader, public ::org::xml::sax
 	$class(StAXStream2SAX, $NO_CLASS_INIT, ::org::xml::sax::XMLReader, ::org::xml::sax::Locator)
 public:
 	StAXStream2SAX();
-	virtual ::java::lang::Object0* toObject0$() const override {return (::java::lang::Object0*)(void*)this;}
 	virtual $Object* clone() override;
 	virtual bool equals(Object$* arg0) override;
 	virtual void finalize() override;
