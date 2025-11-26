@@ -1,10 +1,10 @@
 #machine generated
 
-aux_source_directory("${CMAKE_CURRENT_SOURCE_DIR}" classes.com.sun.org.apache._53_SRCS)
-file(GLOB classes.com.sun.org.apache._53_HEADERS *.h *.hpp)
-source_group("Include" FILES ${classes.com.sun.org.apache._53_HEADERS}) 
-list(LENGTH classes.com.sun.org.apache._53_SRCS classes.com.sun.org.apache._53_SRCS_LENGTH)
-if(classes.com.sun.org.apache._53_SRCS_LENGTH)
-	add_library(classes.com.sun.org.apache._53 OBJECT "${classes.com.sun.org.apache._53_SRCS}" "${classes.com.sun.org.apache._53_HEADERS}")
-	jcpp_enable_bigobj(classes.com.sun.org.apache._53)
+aux_source_directory(. SRCS)
+file(GLOB HEADERS *.h *.hpp)
+source_group("Include" FILES ${HEADERS}) 
+list(LENGTH SRCS SRCS_LENGTH)
+if(SRCS_LENGTH)
+	add_library(com.sun.org.apache.xerces.i_45 OBJECT ${SRCS} ${HEADERS})
+	jcpp_enable_bigobj(com.sun.org.apache.xerces.i_45)
 endif()

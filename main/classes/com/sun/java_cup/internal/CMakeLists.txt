@@ -2,11 +2,11 @@
 
 add_subdirectory("runtime")
 
-aux_source_directory("${CMAKE_CURRENT_SOURCE_DIR}" classes.com.sun.java_cup.int_0_SRCS)
-file(GLOB classes.com.sun.java_cup.int_0_HEADERS *.h *.hpp)
-source_group("Include" FILES ${classes.com.sun.java_cup.int_0_HEADERS}) 
-list(LENGTH classes.com.sun.java_cup.int_0_SRCS classes.com.sun.java_cup.int_0_SRCS_LENGTH)
-if(classes.com.sun.java_cup.int_0_SRCS_LENGTH)
-	add_library(classes.com.sun.java_cup.int_0 OBJECT "${classes.com.sun.java_cup.int_0_SRCS}" "${classes.com.sun.java_cup.int_0_HEADERS}")
-	jcpp_enable_bigobj(classes.com.sun.java_cup.int_0)
+aux_source_directory(. SRCS)
+file(GLOB HEADERS *.h *.hpp)
+source_group("Include" FILES ${HEADERS}) 
+list(LENGTH SRCS SRCS_LENGTH)
+if(SRCS_LENGTH)
+	add_library(com.sun.java_cup.internal OBJECT ${SRCS} ${HEADERS})
+	jcpp_enable_bigobj(com.sun.java_cup.internal)
 endif()

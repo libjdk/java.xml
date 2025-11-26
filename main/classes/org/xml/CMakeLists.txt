@@ -2,11 +2,11 @@
 
 add_subdirectory("sax")
 
-aux_source_directory("${CMAKE_CURRENT_SOURCE_DIR}" classes.org.xml_SRCS)
-file(GLOB classes.org.xml_HEADERS *.h *.hpp)
-source_group("Include" FILES ${classes.org.xml_HEADERS}) 
-list(LENGTH classes.org.xml_SRCS classes.org.xml_SRCS_LENGTH)
-if(classes.org.xml_SRCS_LENGTH)
-	add_library(classes.org.xml OBJECT "${classes.org.xml_SRCS}" "${classes.org.xml_HEADERS}")
-	jcpp_enable_bigobj(classes.org.xml)
+aux_source_directory(. SRCS)
+file(GLOB HEADERS *.h *.hpp)
+source_group("Include" FILES ${HEADERS}) 
+list(LENGTH SRCS SRCS_LENGTH)
+if(SRCS_LENGTH)
+	add_library(org.xml OBJECT ${SRCS} ${HEADERS})
+	jcpp_enable_bigobj(org.xml)
 endif()

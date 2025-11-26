@@ -1,10 +1,10 @@
 #machine generated
 
-aux_source_directory("${CMAKE_CURRENT_SOURCE_DIR}" classes.jdk.xml.internal_SRCS)
-file(GLOB classes.jdk.xml.internal_HEADERS *.h *.hpp)
-source_group("Include" FILES ${classes.jdk.xml.internal_HEADERS}) 
-list(LENGTH classes.jdk.xml.internal_SRCS classes.jdk.xml.internal_SRCS_LENGTH)
-if(classes.jdk.xml.internal_SRCS_LENGTH)
-	add_library(classes.jdk.xml.internal OBJECT "${classes.jdk.xml.internal_SRCS}" "${classes.jdk.xml.internal_HEADERS}")
-	jcpp_enable_bigobj(classes.jdk.xml.internal)
+aux_source_directory(. SRCS)
+file(GLOB HEADERS *.h *.hpp)
+source_group("Include" FILES ${HEADERS}) 
+list(LENGTH SRCS SRCS_LENGTH)
+if(SRCS_LENGTH)
+	add_library(jdk.xml.internal OBJECT ${SRCS} ${HEADERS})
+	jcpp_enable_bigobj(jdk.xml.internal)
 endif()
