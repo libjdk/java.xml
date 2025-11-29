@@ -36,22 +36,17 @@ using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 using $CDATASection = ::org::w3c::dom::CDATASection;
 using $CharacterData = ::org::w3c::dom::CharacterData;
-using $Comment = ::org::w3c::dom::Comment;
 using $Document = ::org::w3c::dom::Document;
 using $DocumentFragment = ::org::w3c::dom::DocumentFragment;
 using $Element = ::org::w3c::dom::Element;
-using $EntityReference = ::org::w3c::dom::EntityReference;
 using $Node = ::org::w3c::dom::Node;
-using $ProcessingInstruction = ::org::w3c::dom::ProcessingInstruction;
 using $Text = ::org::w3c::dom::Text;
 using $Attributes = ::org::xml::sax::Attributes;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $Locator = ::org::xml::sax::Locator;
 using $SAXException = ::org::xml::sax::SAXException;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace com {
 	namespace sun {

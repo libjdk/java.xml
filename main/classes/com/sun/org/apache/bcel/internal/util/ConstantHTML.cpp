@@ -17,11 +17,9 @@
 #include <java/io/PrintWriter.h>
 #include <jcpp.h>
 
-using $ConstantArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Constant>;
 using $MethodArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Method>;
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
-using $ConstantCP = ::com::sun::org::apache::bcel::internal::classfile::ConstantCP;
 using $ConstantClass = ::com::sun::org::apache::bcel::internal::classfile::ConstantClass;
 using $ConstantFieldref = ::com::sun::org::apache::bcel::internal::classfile::ConstantFieldref;
 using $ConstantInterfaceMethodref = ::com::sun::org::apache::bcel::internal::classfile::ConstantInterfaceMethodref;
@@ -29,7 +27,6 @@ using $ConstantMethodref = ::com::sun::org::apache::bcel::internal::classfile::C
 using $ConstantNameAndType = ::com::sun::org::apache::bcel::internal::classfile::ConstantNameAndType;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantString = ::com::sun::org::apache::bcel::internal::classfile::ConstantString;
-using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::classfile::FieldOrMethod;
 using $Method = ::com::sun::org::apache::bcel::internal::classfile::Method;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;
 using $Class2HTML = ::com::sun::org::apache::bcel::internal::util::Class2HTML;

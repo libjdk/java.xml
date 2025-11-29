@@ -8,9 +8,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Document = ::org::w3c::dom::Document;
-using $DocumentFragment = ::org::w3c::dom::DocumentFragment;
-using $Element = ::org::w3c::dom::Element;
 
 namespace com {
 	namespace sun {

@@ -36,11 +36,9 @@
 
 using $SAXParserFactoryImpl = ::com::sun::org::apache::xerces::internal::jaxp::SAXParserFactoryImpl;
 using $IOException = ::java::io::IOException;
-using $InputStream = ::java::io::InputStream;
 using $Reader = ::java::io::Reader;
 using $StringReader = ::java::io::StringReader;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Enum = ::java::lang::Enum;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

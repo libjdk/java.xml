@@ -5,8 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Templates = ::javax::xml::transform::Templates;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
 
 namespace javax {
 	namespace xml {

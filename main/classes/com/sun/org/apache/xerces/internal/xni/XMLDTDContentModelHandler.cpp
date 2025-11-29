@@ -10,8 +10,6 @@
 #undef SEPARATOR_CHOICE
 #undef SEPARATOR_SEQUENCE
 
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $XMLDTDContentModelSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDContentModelSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

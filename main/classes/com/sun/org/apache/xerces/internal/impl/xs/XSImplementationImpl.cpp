@@ -19,7 +19,6 @@ using $XSLoaderImpl = ::com::sun::org::apache::xerces::internal::impl::xs::XSLoa
 using $StringListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::StringListImpl;
 using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
 using $XSException = ::com::sun::org::apache::xerces::internal::xs::XSException;
-using $XSImplementation = ::com::sun::org::apache::xerces::internal::xs::XSImplementation;
 using $XSLoader = ::com::sun::org::apache::xerces::internal::xs::XSLoader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

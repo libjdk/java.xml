@@ -9,7 +9,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Result = ::javax::xml::transform::Result;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 

@@ -4,12 +4,10 @@
 #include <java/util/NoSuchElementException.h>
 #include <jcpp.h>
 
-using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Enumeration = ::java::util::Enumeration;
 using $NoSuchElementException = ::java::util::NoSuchElementException;
 
 namespace com {

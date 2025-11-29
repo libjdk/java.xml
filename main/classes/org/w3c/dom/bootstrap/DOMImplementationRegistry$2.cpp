@@ -11,8 +11,6 @@ using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $SecurityException = ::java::lang::SecurityException;
-using $PrivilegedAction = ::java::security::PrivilegedAction;
-using $DOMImplementationRegistry = ::org::w3c::dom::bootstrap::DOMImplementationRegistry;
 
 namespace org {
 	namespace w3c {

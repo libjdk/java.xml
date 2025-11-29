@@ -10,7 +10,6 @@
 #undef S_XMLNAMESPACEURI
 
 using $Constants = ::com::sun::org::apache::xml::internal::utils::Constants;
-using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

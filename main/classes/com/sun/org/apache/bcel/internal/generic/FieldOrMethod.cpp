@@ -16,7 +16,6 @@
 #include <jcpp.h>
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantCP = ::com::sun::org::apache::bcel::internal::classfile::ConstantCP;
 using $ConstantNameAndType = ::com::sun::org::apache::bcel::internal::classfile::ConstantNameAndType;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
@@ -25,7 +24,6 @@ using $ArrayType = ::com::sun::org::apache::bcel::internal::generic::ArrayType;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $LoadClass = ::com::sun::org::apache::bcel::internal::generic::LoadClass;
 using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
 using $ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;

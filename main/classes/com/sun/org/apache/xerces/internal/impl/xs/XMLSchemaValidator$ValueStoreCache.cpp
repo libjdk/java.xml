@@ -53,7 +53,6 @@ using $Map = ::java::util::Map;
 using $Map$Entry = ::java::util::Map$Entry;
 using $Set = ::java::util::Set;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

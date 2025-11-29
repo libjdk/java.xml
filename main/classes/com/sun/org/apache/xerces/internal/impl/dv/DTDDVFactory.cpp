@@ -13,7 +13,6 @@
 #undef XML11_DATATYPE_VALIDATOR_FACTORY
 
 using $DVFactoryException = ::com::sun::org::apache::xerces::internal::impl::dv::DVFactoryException;
-using $DatatypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::DatatypeValidator;
 using $DTDDVFactoryImpl = ::com::sun::org::apache::xerces::internal::impl::dv::dtd::DTDDVFactoryImpl;
 using $XML11DTDDVFactoryImpl = ::com::sun::org::apache::xerces::internal::impl::dv::dtd::XML11DTDDVFactoryImpl;
 using $ObjectFactory = ::com::sun::org::apache::xerces::internal::utils::ObjectFactory;
@@ -21,7 +20,6 @@ using $ClassCastException = ::java::lang::ClassCastException;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Map = ::java::util::Map;
 
 namespace com {
 	namespace sun {

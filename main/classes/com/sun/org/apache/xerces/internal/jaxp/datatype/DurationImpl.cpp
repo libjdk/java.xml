@@ -53,7 +53,6 @@ using $XMLGregorianCalendarArray = $Array<::javax::xml::datatype::XMLGregorianCa
 using $DurationImpl$DurationStream = ::com::sun::org::apache::xerces::internal::jaxp::datatype::DurationImpl$DurationStream;
 using $XMLGregorianCalendarImpl = ::com::sun::org::apache::xerces::internal::jaxp::datatype::XMLGregorianCalendarImpl;
 using $DatatypeMessageFormatter = ::com::sun::org::apache::xerces::internal::util::DatatypeMessageFormatter;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;

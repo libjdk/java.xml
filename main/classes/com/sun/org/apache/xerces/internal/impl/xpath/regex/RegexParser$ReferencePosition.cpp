@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/RegexParser.h>
 #include <jcpp.h>
 
-using $RegexParser = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegexParser;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

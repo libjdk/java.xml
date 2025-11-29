@@ -12,7 +12,6 @@
 #include <jcpp.h>
 
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMIterator = ::com::sun::org::apache::xml::internal::dtm::DTMIterator;
 using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;

@@ -43,7 +43,6 @@ using $XPathEvaluationResult = ::javax::xml::xpath::XPathEvaluationResult;
 using $XPathEvaluationResult$XPathResultType = ::javax::xml::xpath::XPathEvaluationResult$XPathResultType;
 using $XPathNodes = ::javax::xml::xpath::XPathNodes;
 using $Node = ::org::w3c::dom::Node;
-using $NodeList = ::org::w3c::dom::NodeList;
 using $NodeIterator = ::org::w3c::dom::traversal::NodeIterator;
 
 namespace com {

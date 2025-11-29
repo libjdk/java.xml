@@ -7,7 +7,6 @@ using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $AttributeList = ::org::xml::sax::AttributeList;
 
 namespace com {
 	namespace sun {

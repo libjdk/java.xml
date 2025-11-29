@@ -25,7 +25,6 @@ using $XSObjectArray = $Array<::com::sun::org::apache::xerces::internal::xs::XSO
 using $XSNamedMapImpl$1 = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSNamedMapImpl$1;
 using $XSNamedMapImpl$XSNamedMapEntry = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSNamedMapImpl$XSNamedMapEntry;
 using $SymbolHash = ::com::sun::org::apache::xerces::internal::util::SymbolHash;
-using $XSNamedMap = ::com::sun::org::apache::xerces::internal::xs::XSNamedMap;
 using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

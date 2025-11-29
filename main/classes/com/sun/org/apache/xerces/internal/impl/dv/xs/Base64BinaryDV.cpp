@@ -18,7 +18,6 @@
 using $InvalidDatatypeValueException = ::com::sun::org::apache::xerces::internal::impl::dv::InvalidDatatypeValueException;
 using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
 using $Base64 = ::com::sun::org::apache::xerces::internal::impl::dv::util::Base64;
-using $ByteListImpl = ::com::sun::org::apache::xerces::internal::impl::dv::util::ByteListImpl;
 using $Base64BinaryDV$XBase64 = ::com::sun::org::apache::xerces::internal::impl::dv::xs::Base64BinaryDV$XBase64;
 using $TypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::xs::TypeValidator;
 using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;

@@ -65,7 +65,6 @@
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -86,11 +85,8 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
@@ -105,7 +101,7 @@ using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::uti
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $NodeSetType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeSetType;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;
 using $XML11Char = ::com::sun::org::apache::xml::internal::utils::XML11Char;
@@ -190,15 +186,15 @@ $String* Key::getName() {
 	return $nc(this->_name)->toString();
 }
 
-$1Type* Key::typeCheck($SymbolTable* stable) {
+$Type* Key::typeCheck($SymbolTable* stable) {
 	$nc(this->_match)->typeCheck(stable);
 	$set(this, _useType, $nc(this->_use)->typeCheck(stable));
 	if ($instanceOf($StringType, this->_useType) == false && $instanceOf($NodeSetType, this->_useType) == false) {
-		$init($1Type);
-		$set(this, _use, $new($CastExpr, this->_use, $1Type::String));
+		$init($Type);
+		$set(this, _use, $new($CastExpr, this->_use, $Type::String));
 	}
-	$init($1Type);
-	return $1Type::Void;
+	$init($Type);
+	return $Type::Void;
 }
 
 void Key::traverseNodeSet($ClassGenerator* classGen, $MethodGenerator* methodGen, int32_t buildKeyIndex) {

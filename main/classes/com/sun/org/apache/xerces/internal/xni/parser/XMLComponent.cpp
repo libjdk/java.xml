@@ -3,8 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 #include <jcpp.h>
 
-using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
-using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -21,22 +21,18 @@
 #undef NOP
 #undef POP
 
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
-using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ErrorMsg;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -77,14 +73,14 @@ $Object* allocate$VoidType($Class* clazz) {
 }
 
 void VoidType::init$() {
-	$1Type::init$();
+	$Type::init$();
 }
 
 $String* VoidType::toString() {
 	return "void"_s;
 }
 
-bool VoidType::identicalTo($1Type* other) {
+bool VoidType::identicalTo($Type* other) {
 	return $equals(this, other);
 }
 
@@ -92,7 +88,7 @@ $String* VoidType::toSignature() {
 	return "V"_s;
 }
 
-$Type* VoidType::toJCType() {
+$1Type* VoidType::toJCType() {
 	return nullptr;
 }
 
@@ -101,10 +97,10 @@ $Instruction* VoidType::POP() {
 	return $Constants::NOP;
 }
 
-void VoidType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+void VoidType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Type* type) {
 	$useLocalCurrentObjectStackCache();
-	$init($1Type);
-	if (type == $1Type::String) {
+	$init($Type);
+	if (type == $Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
 	} else {
 		$init($ErrorMsg);

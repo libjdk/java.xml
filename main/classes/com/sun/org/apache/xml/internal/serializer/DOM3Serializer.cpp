@@ -7,9 +7,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $DOMErrorHandler = ::org::w3c::dom::DOMErrorHandler;
-using $Node = ::org::w3c::dom::Node;
-using $LSSerializerFilter = ::org::w3c::dom::ls::LSSerializerFilter;
 
 namespace com {
 	namespace sun {

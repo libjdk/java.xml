@@ -22,11 +22,7 @@
 
 using $ObjectFactory = ::com::sun::org::apache::xerces::internal::utils::ObjectFactory;
 using $Method = ::com::sun::org::apache::xml::internal::serialize::Method;
-using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
-using $Serializer = ::com::sun::org::apache::xml::internal::serialize::Serializer;
 using $SerializerFactoryImpl = ::com::sun::org::apache::xml::internal::serialize::SerializerFactoryImpl;
-using $OutputStream = ::java::io::OutputStream;
-using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $Exception = ::java::lang::Exception;

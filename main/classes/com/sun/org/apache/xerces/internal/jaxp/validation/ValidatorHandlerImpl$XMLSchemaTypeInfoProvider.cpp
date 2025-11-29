@@ -33,7 +33,6 @@ using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttrib
 using $AttributePSVI = ::com::sun::org::apache::xerces::internal::xs::AttributePSVI;
 using $ElementPSVI = ::com::sun::org::apache::xerces::internal::xs::ElementPSVI;
 using $ItemPSVI = ::com::sun::org::apache::xerces::internal::xs::ItemPSVI;
-using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
 using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -42,7 +41,6 @@ using $IndexOutOfBoundsException = ::java::lang::IndexOutOfBoundsException;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Locale = ::java::util::Locale;
 using $TypeInfoProvider = ::javax::xml::validation::TypeInfoProvider;
 using $TypeInfo = ::org::w3c::dom::TypeInfo;
 

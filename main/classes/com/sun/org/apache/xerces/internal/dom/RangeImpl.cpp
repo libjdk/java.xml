@@ -47,7 +47,6 @@
 #undef TEXT_NODE
 #undef WRONG_DOCUMENT_ERR
 
-using $CharacterDataImpl = ::com::sun::org::apache::xerces::internal::dom::CharacterDataImpl;
 using $ChildNode = ::com::sun::org::apache::xerces::internal::dom::ChildNode;
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
@@ -65,11 +64,9 @@ using $ArrayList = ::java::util::ArrayList;
 using $List = ::java::util::List;
 using $CharacterData = ::org::w3c::dom::CharacterData;
 using $DOMException = ::org::w3c::dom::DOMException;
-using $Document = ::org::w3c::dom::Document;
 using $DocumentFragment = ::org::w3c::dom::DocumentFragment;
 using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;
-using $Text = ::org::w3c::dom::Text;
 using $Range = ::org::w3c::dom::ranges::Range;
 using $RangeException = ::org::w3c::dom::ranges::RangeException;
 

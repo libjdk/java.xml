@@ -54,7 +54,6 @@
 
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -62,14 +61,11 @@ using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOK
 using $INVOKESPECIAL = ::com::sun::org::apache::bcel::internal::generic::INVOKESPECIAL;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;

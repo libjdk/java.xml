@@ -4,10 +4,8 @@
 #include <javax/xml/namespace/QName.h>
 #include <jcpp.h>
 
-using $1QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $QName = ::javax::xml::namespace$::QName;
 
 namespace com {
 	namespace sun {

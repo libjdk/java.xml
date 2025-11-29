@@ -14,7 +14,6 @@ using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $List = ::java::util::List;
 using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
-using $DOMImplementationList = ::org::w3c::dom::DOMImplementationList;
 using $DOMImplementationRegistry = ::org::w3c::dom::bootstrap::DOMImplementationRegistry;
 
 namespace org {

@@ -9,7 +9,6 @@ using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $AbstractCollection = ::java::util::AbstractCollection;
 using $LinkedList = ::java::util::LinkedList;
 
 namespace com {

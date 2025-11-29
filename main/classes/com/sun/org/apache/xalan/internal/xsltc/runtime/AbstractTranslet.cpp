@@ -58,7 +58,6 @@
 using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $DOMCache = ::com::sun::org::apache::xalan::internal::xsltc::DOMCache;
 using $DOMEnhancedForDTM = ::com::sun::org::apache::xalan::internal::xsltc::DOMEnhancedForDTM;
-using $Translet = ::com::sun::org::apache::xalan::internal::xsltc::Translet;
 using $TransletException = ::com::sun::org::apache::xalan::internal::xsltc::TransletException;
 using $DOMAdapter = ::com::sun::org::apache::xalan::internal::xsltc::dom::DOMAdapter;
 using $KeyIndex = ::com::sun::org::apache::xalan::internal::xsltc::dom::KeyIndex;
@@ -69,9 +68,7 @@ using $StringValueHandler = ::com::sun::org::apache::xalan::internal::xsltc::run
 using $TransletOutputHandlerFactory = ::com::sun::org::apache::xalan::internal::xsltc::runtime::output::TransletOutputHandlerFactory;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
-using $XSLOutputAttributes = ::com::sun::org::apache::xml::internal::serializer::XSLOutputAttributes;
 using $BufferedOutputStream = ::java::io::BufferedOutputStream;
 using $File = ::java::io::File;
 using $FileOutputStream = ::java::io::FileOutputStream;
@@ -97,14 +94,12 @@ using $Map$Entry = ::java::util::Map$Entry;
 using $Set = ::java::util::Set;
 using $DocumentBuilder = ::javax::xml::parsers::DocumentBuilder;
 using $DocumentBuilderFactory = ::javax::xml::parsers::DocumentBuilderFactory;
-using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $Templates = ::javax::xml::transform::Templates;
 using $JdkConstants = ::jdk::xml::internal::JdkConstants;
 using $JdkXmlUtils = ::jdk::xml::internal::JdkXmlUtils;
 using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
 using $Document = ::org::w3c::dom::Document;
 using $DocumentType = ::org::w3c::dom::DocumentType;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
 
 namespace com {
 	namespace sun {

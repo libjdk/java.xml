@@ -7,7 +7,6 @@
 #undef NOTSTRIP
 #undef STRIP
 
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

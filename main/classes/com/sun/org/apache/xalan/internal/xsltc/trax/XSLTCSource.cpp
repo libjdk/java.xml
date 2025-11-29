@@ -28,7 +28,6 @@ using $DOMWSFilter = ::com::sun::org::apache::xalan::internal::xsltc::dom::DOMWS
 using $SAXImpl = ::com::sun::org::apache::xalan::internal::xsltc::dom::SAXImpl;
 using $XSLTCDTMManager = ::com::sun::org::apache::xalan::internal::xsltc::dom::XSLTCDTMManager;
 using $AbstractTranslet = ::com::sun::org::apache::xalan::internal::xsltc::runtime::AbstractTranslet;
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $DTMWSFilter = ::com::sun::org::apache::xml::internal::dtm::DTMWSFilter;
 using $DTMManagerDefault = ::com::sun::org::apache::xml::internal::dtm::ref::DTMManagerDefault;

@@ -32,14 +32,10 @@
 #undef SHORT
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $StackConsumer = ::com::sun::org::apache::bcel::internal::generic::StackConsumer;
-using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
-using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

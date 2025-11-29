@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xpath/internal/Expression.h>
 #include <jcpp.h>
 
-using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

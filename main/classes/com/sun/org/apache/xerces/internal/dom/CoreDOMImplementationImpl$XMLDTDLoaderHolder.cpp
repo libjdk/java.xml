@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDLoader.h>
 #include <jcpp.h>
 
-using $CoreDOMImplementationImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDOMImplementationImpl;
 using $XMLDTDLoader = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLDTDLoader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

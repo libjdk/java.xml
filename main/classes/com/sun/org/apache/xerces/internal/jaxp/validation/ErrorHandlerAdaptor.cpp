@@ -10,14 +10,12 @@
 
 using $Util = ::com::sun::org::apache::xerces::internal::jaxp::validation::Util;
 using $WrappedSAXException = ::com::sun::org::apache::xerces::internal::jaxp::validation::WrappedSAXException;
-using $XMLErrorHandler = ::com::sun::org::apache::xerces::internal::xni::parser::XMLErrorHandler;
 using $XMLParseException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLParseException;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $SAXException = ::org::xml::sax::SAXException;
-using $SAXParseException = ::org::xml::sax::SAXParseException;
 
 namespace com {
 	namespace sun {

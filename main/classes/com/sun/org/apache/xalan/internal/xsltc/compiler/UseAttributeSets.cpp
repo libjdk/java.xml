@@ -32,18 +32,15 @@
 #undef EMPTYSTRING
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKESPECIAL = ::com::sun::org::apache::bcel::internal::generic::INVOKESPECIAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $AttributeSet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeSet;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
@@ -100,7 +97,7 @@ $Object* allocate$UseAttributeSets($Class* clazz) {
 $String* UseAttributeSets::ATTR_SET_NOT_FOUND = nullptr;
 
 void UseAttributeSets::init$($String* setNames, $Parser* parser) {
-	$1Instruction::init$();
+	$Instruction::init$();
 	$set(this, _sets, $new($ArrayList, 2));
 	setParser(parser);
 	addAttributeSets(setNames);
@@ -143,7 +140,7 @@ void UseAttributeSets::translate($ClassGenerator* classGen, $MethodGenerator* me
 					il->append($(methodGen->loadCurrentNode()));
 					$init($Constants);
 					int32_t method = $nc(cpg)->addMethodref($(classGen->getClassName()), methodName, $Constants::ATTR_SET_SIG);
-					il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, method)));
+					il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, method)));
 				} else {
 					$var($Parser, parser, getParser());
 					$var($String, atrs, $nc(name)->toString());

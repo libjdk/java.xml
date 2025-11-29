@@ -37,23 +37,19 @@
 #undef WRITER_SIG
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
 using $INVOKESPECIAL = ::com::sun::org::apache::bcel::internal::generic::INVOKESPECIAL;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
@@ -101,7 +97,7 @@ $Object* allocate$Message($Class* clazz) {
 }
 
 void Message::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	this->_terminate = false;
 }
 
@@ -144,57 +140,57 @@ void Message::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) 
 			{
 				il->append($(methodGen->loadHandler()));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($NEW, $nc(cpg)->addClass($Constants::STREAM_XML_OUTPUT))));
+				il->append(static_cast<$1Instruction*>($$new($NEW, $nc(cpg)->addClass($Constants::STREAM_XML_OUTPUT))));
 				il->append($(methodGen->storeHandler()));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($NEW, $nc(cpg)->addClass($Constants::STRING_WRITER))));
+				il->append(static_cast<$1Instruction*>($$new($NEW, $nc(cpg)->addClass($Constants::STRING_WRITER))));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($Constants::DUP));
+				il->append(static_cast<$1Instruction*>($Constants::DUP));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($Constants::DUP));
+				il->append(static_cast<$1Instruction*>($Constants::DUP));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::STRING_WRITER, "<init>"_s, "()V"_s))));
+				il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::STRING_WRITER, "<init>"_s, "()V"_s))));
 				il->append($(methodGen->loadHandler()));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::STREAM_XML_OUTPUT, "<init>"_s, "()V"_s))));
+				il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::STREAM_XML_OUTPUT, "<init>"_s, "()V"_s))));
 				il->append($(methodGen->loadHandler()));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($Constants::SWAP));
+				il->append(static_cast<$1Instruction*>($Constants::SWAP));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "setWriter"_s, $$str({"("_s, $Constants::WRITER_SIG, ")V"_s})), 2)));
+				il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "setWriter"_s, $$str({"("_s, $Constants::WRITER_SIG, ")V"_s})), 2)));
 				il->append($(methodGen->loadHandler()));
 				il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, "UTF-8"_s)));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "setEncoding"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s})), 2)));
+				il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "setEncoding"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s})), 2)));
 				il->append($(methodGen->loadHandler()));
 				$init($Constants);
 				il->append($Constants::ICONST_1);
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "setOmitXMLDeclaration"_s, "(Z)V"_s), 2)));
+				il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "setOmitXMLDeclaration"_s, "(Z)V"_s), 2)));
 				il->append($(methodGen->loadHandler()));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "startDocument"_s, "()V"_s), 1)));
+				il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "startDocument"_s, "()V"_s), 1)));
 				translateContents(classGen, methodGen);
 				il->append($(methodGen->loadHandler()));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "endDocument"_s, "()V"_s), 1)));
+				il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "endDocument"_s, "()V"_s), 1)));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_WRITER, "toString"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
+				il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_WRITER, "toString"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
 				$init($Constants);
-				il->append(static_cast<$Instruction*>($Constants::SWAP));
+				il->append(static_cast<$1Instruction*>($Constants::SWAP));
 				il->append($(methodGen->storeHandler()));
 				break;
 			}
 		}
 	}
 	$init($Constants);
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, "displayMessage"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s})))));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, "displayMessage"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s})))));
 	if (this->_terminate == true) {
 		int32_t einit = $nc(cpg)->addMethodref("java.lang.RuntimeException"_s, "<init>"_s, "(Ljava/lang/String;)V"_s);
-		il->append(static_cast<$Instruction*>($$new($NEW, cpg->addClass("java.lang.RuntimeException"_s))));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($$new($NEW, cpg->addClass("java.lang.RuntimeException"_s))));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, "Termination forced by an xsl:message instruction"_s)));
-		il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, einit)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, einit)));
 		il->append($Constants::ATHROW);
 	}
 }

@@ -36,7 +36,6 @@ using $DataInput = ::java::io::DataInput;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
-using $Cloneable = ::java::lang::Cloneable;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $Error = ::java::lang::Error;
 using $FieldInfo = ::java::lang::FieldInfo;

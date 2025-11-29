@@ -113,11 +113,11 @@ int32_t ChunkedIntArray::appendSlot(int32_t w0, int32_t w1, int32_t w2, int32_t 
 int32_t ChunkedIntArray::readEntry(int32_t position, int32_t offset) {
 	$useLocalCurrentObjectStackCache();
 	{
-		if (offset >= this->slotsize) {
+		if (offset >= ChunkedIntArray::slotsize) {
 			$init($XMLErrorResources);
 			$throwNew($ArrayIndexOutOfBoundsException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_OFFSET_BIGGER_THAN_SLOT, nullptr)));
 		}
-		position *= this->slotsize;
+		position *= ChunkedIntArray::slotsize;
 		int32_t chunkpos = $sr(position, ChunkedIntArray::lowbits);
 		int32_t slotpos = (int32_t)(position & (uint32_t)ChunkedIntArray::lowmask);
 		$var($ints, chunk, $nc(this->chunks)->elementAt(chunkpos));
@@ -129,7 +129,7 @@ int32_t ChunkedIntArray::specialFind(int32_t startPos, int32_t position) {
 	$useLocalCurrentObjectStackCache();
 	int32_t ancestor = startPos;
 	while (ancestor > 0) {
-		ancestor *= this->slotsize;
+		ancestor *= ChunkedIntArray::slotsize;
 		int32_t chunkpos = $sr(ancestor, ChunkedIntArray::lowbits);
 		int32_t slotpos = (int32_t)(ancestor & (uint32_t)ChunkedIntArray::lowmask);
 		$var($ints, chunk, $nc(this->chunks)->elementAt(chunkpos));
@@ -155,11 +155,11 @@ void ChunkedIntArray::discardLast() {
 void ChunkedIntArray::writeEntry(int32_t position, int32_t offset, int32_t value) {
 	$useLocalCurrentObjectStackCache();
 	{
-		if (offset >= this->slotsize) {
+		if (offset >= ChunkedIntArray::slotsize) {
 			$init($XMLErrorResources);
 			$throwNew($ArrayIndexOutOfBoundsException, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_OFFSET_BIGGER_THAN_SLOT, nullptr)));
 		}
-		position *= this->slotsize;
+		position *= ChunkedIntArray::slotsize;
 		int32_t chunkpos = $sr(position, ChunkedIntArray::lowbits);
 		int32_t slotpos = (int32_t)(position & (uint32_t)ChunkedIntArray::lowmask);
 		$var($ints, chunk, $nc(this->chunks)->elementAt(chunkpos));
@@ -169,7 +169,7 @@ void ChunkedIntArray::writeEntry(int32_t position, int32_t offset, int32_t value
 
 void ChunkedIntArray::writeSlot(int32_t position, int32_t w0, int32_t w1, int32_t w2, int32_t w3) {
 	$useLocalCurrentObjectStackCache();
-	position *= this->slotsize;
+	position *= ChunkedIntArray::slotsize;
 	int32_t chunkpos = $sr(position, ChunkedIntArray::lowbits);
 	int32_t slotpos = ((int32_t)(position & (uint32_t)ChunkedIntArray::lowmask));
 	if (chunkpos > $nc(this->chunks)->size() - 1) {
@@ -185,14 +185,14 @@ void ChunkedIntArray::writeSlot(int32_t position, int32_t w0, int32_t w1, int32_
 void ChunkedIntArray::readSlot(int32_t position, $ints* buffer) {
 	$useLocalCurrentObjectStackCache();
 	{
-		position *= this->slotsize;
+		position *= ChunkedIntArray::slotsize;
 		int32_t chunkpos = $sr(position, ChunkedIntArray::lowbits);
 		int32_t slotpos = ((int32_t)(position & (uint32_t)ChunkedIntArray::lowmask));
 		if (chunkpos > $nc(this->chunks)->size() - 1) {
 			$nc(this->chunks)->addElement($$new($ints, ChunkedIntArray::chunkalloc));
 		}
 		$var($ints, chunk, $nc(this->chunks)->elementAt(chunkpos));
-		$System::arraycopy(chunk, slotpos, buffer, 0, this->slotsize);
+		$System::arraycopy(chunk, slotpos, buffer, 0, ChunkedIntArray::slotsize);
 	}
 }
 

@@ -19,7 +19,6 @@
 using $ChildNode = ::com::sun::org::apache::xerces::internal::dom::ChildNode;
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DeferredDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DeferredDocumentImpl;
-using $DeferredNode = ::com::sun::org::apache::xerces::internal::dom::DeferredNode;
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
 using $ElementDefinitionImpl = ::com::sun::org::apache::xerces::internal::dom::ElementDefinitionImpl;
 using $NamedNodeMapImpl = ::com::sun::org::apache::xerces::internal::dom::NamedNodeMapImpl;

@@ -10,7 +10,6 @@
 
 #undef XHTML
 
-using $BaseMarkupSerializer = ::com::sun::org::apache::xml::internal::serialize::BaseMarkupSerializer;
 using $HTMLSerializer = ::com::sun::org::apache::xml::internal::serialize::HTMLSerializer;
 using $Method = ::com::sun::org::apache::xml::internal::serialize::Method;
 using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;

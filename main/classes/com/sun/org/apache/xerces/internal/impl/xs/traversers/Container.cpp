@@ -7,9 +7,7 @@
 
 #undef THRESHOLD
 
-using $OneAttrArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::traversers::OneAttr>;
 using $LargeContainer = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::LargeContainer;
-using $OneAttr = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::OneAttr;
 using $SmallContainer = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::SmallContainer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

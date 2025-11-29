@@ -17,7 +17,6 @@ using $ExceptionConst = ::com::sun::org::apache::bcel::internal::ExceptionConst;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $ExceptionThrower = ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $StackConsumer = ::com::sun::org::apache::bcel::internal::generic::StackConsumer;
 using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;
 using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
 using $ClassInfo = ::java::lang::ClassInfo;

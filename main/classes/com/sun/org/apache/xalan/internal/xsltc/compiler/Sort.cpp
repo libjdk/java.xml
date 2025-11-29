@@ -109,19 +109,13 @@
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
 using $InstructionHandleArray = $Array<::com::sun::org::apache::bcel::internal::generic::InstructionHandle>;
 using $TypeArray = $Array<::com::sun::org::apache::bcel::internal::generic::Type>;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
-using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ANEWARRAY = ::com::sun::org::apache::bcel::internal::generic::ANEWARRAY;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
-using $ArrayInstruction = ::com::sun::org::apache::bcel::internal::generic::ArrayInstruction;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
-using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -130,26 +124,22 @@ using $GETFIELD = ::com::sun::org::apache::bcel::internal::generic::GETFIELD;
 using $ILOAD = ::com::sun::org::apache::bcel::internal::generic::ILOAD;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
 using $INVOKESPECIAL = ::com::sun::org::apache::bcel::internal::generic::INVOKESPECIAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $NOP = ::com::sun::org::apache::bcel::internal::generic::NOP;
-using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $PUTFIELD = ::com::sun::org::apache::bcel::internal::generic::PUTFIELD;
 using $ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
-using $ReturnInstruction = ::com::sun::org::apache::bcel::internal::generic::ReturnInstruction;
 using $Select = ::com::sun::org::apache::bcel::internal::generic::Select;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
 using $TABLESWITCH = ::com::sun::org::apache::bcel::internal::generic::TABLESWITCH;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ApplyTemplates = ::com::sun::org::apache::xalan::internal::xsltc::compiler::ApplyTemplates;
 using $AttributeValue = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValue;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
@@ -157,9 +147,8 @@ using $Closure = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Clos
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $ForEach = ::com::sun::org::apache::xalan::internal::xsltc::compiler::ForEach;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
-using $Stylesheet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Stylesheet;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $VariableBase = ::com::sun::org::apache::xalan::internal::xsltc::compiler::VariableBase;
@@ -173,7 +162,7 @@ using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compil
 using $NodeSortRecordFactGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeSortRecordFactGenerator;
 using $NodeSortRecordGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeSortRecordGenerator;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $TypeCheckError = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::TypeCheckError;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;
@@ -248,27 +237,27 @@ $Object* allocate$Sort($Class* clazz) {
 }
 
 int32_t Sort::hashCode() {
-	 return this->$1Instruction::hashCode();
+	 return this->$Instruction::hashCode();
 }
 
 bool Sort::equals(Object$* arg0) {
-	 return this->$1Instruction::equals(arg0);
+	 return this->$Instruction::equals(arg0);
 }
 
 $Object* Sort::clone() {
-	 return this->$1Instruction::clone();
+	 return this->$Instruction::clone();
 }
 
 $String* Sort::toString() {
-	 return this->$1Instruction::toString();
+	 return this->$Instruction::toString();
 }
 
 void Sort::finalize() {
-	this->$1Instruction::finalize();
+	this->$Instruction::finalize();
 }
 
 void Sort::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	$set(this, _className, nullptr);
 	$set(this, _closureVars, nullptr);
 	this->_needsSortRecordFactory = false;
@@ -317,7 +306,7 @@ void Sort::parseContents($Parser* parser) {
 	$assign(val, getAttribute("data-type"_s));
 	if ($nc(val)->length() == 0) {
 		try {
-			$var($1Type, type, $nc(this->_select)->typeCheck($(parser->getSymbolTable())));
+			$var($Type, type, $nc(this->_select)->typeCheck($(parser->getSymbolTable())));
 			if ($instanceOf($IntType, type)) {
 				$assign(val, "number"_s);
 			} else {
@@ -334,18 +323,18 @@ void Sort::parseContents($Parser* parser) {
 	$set(this, _caseOrder, $AttributeValue::create(this, val, parser));
 }
 
-$1Type* Sort::typeCheck($SymbolTable* stable) {
-	$var($1Type, tselect, $nc(this->_select)->typeCheck(stable));
+$Type* Sort::typeCheck($SymbolTable* stable) {
+	$var($Type, tselect, $nc(this->_select)->typeCheck(stable));
 	if (!($instanceOf($StringType, tselect))) {
-		$init($1Type);
-		$set(this, _select, $new($CastExpr, this->_select, $1Type::String));
+		$init($Type);
+		$set(this, _select, $new($CastExpr, this->_select, $Type::String));
 	}
 	$nc(this->_order)->typeCheck(stable);
 	$nc(this->_caseOrder)->typeCheck(stable);
 	$nc(this->_dataType)->typeCheck(stable);
 	$nc(this->_lang)->typeCheck(stable);
-	$init($1Type);
-	return $1Type::Void;
+	$init($Type);
+	return $Type::Void;
 }
 
 void Sort::translateSortType($ClassGenerator* classGen, $MethodGenerator* methodGen) {
@@ -384,18 +373,18 @@ void Sort::translateSortIterator($ClassGenerator* classGen, $MethodGenerator* me
 		int32_t children = cpg->addInterfaceMethodref($Constants::DOM_INTF, "getAxisIterator"_s, $$str({"(I)"_s, $Constants::NODE_ITERATOR_SIG}));
 		$nc(il)->append($(methodGen->loadDOM()));
 		il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, $Axis::CHILD)));
-		il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, children, 2)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, children, 2)));
 	} else {
 		$nc(nodeSet)->translate(classGen, methodGen);
 	}
-	$nc(nodesTemp)->setStart($($nc(il)->append(static_cast<$Instruction*>($$new($ASTORE, nodesTemp->getIndex())))));
+	$nc(nodesTemp)->setStart($($nc(il)->append(static_cast<$1Instruction*>($$new($ASTORE, nodesTemp->getIndex())))));
 	compileSortRecordFactory(sortObjects, classGen, methodGen);
-	$nc(sortRecordFactoryTemp)->setStart($($nc(il)->append(static_cast<$Instruction*>($$new($ASTORE, sortRecordFactoryTemp->getIndex())))));
-	$nc(il)->append(static_cast<$Instruction*>($$new($NEW, cpg->addClass($Constants::SORT_ITERATOR))));
-	il->append(static_cast<$Instruction*>($Constants::DUP));
-	nodesTemp->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, nodesTemp->getIndex())))));
-	sortRecordFactoryTemp->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, sortRecordFactoryTemp->getIndex())))));
-	il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, init)));
+	$nc(sortRecordFactoryTemp)->setStart($($nc(il)->append(static_cast<$1Instruction*>($$new($ASTORE, sortRecordFactoryTemp->getIndex())))));
+	$nc(il)->append(static_cast<$1Instruction*>($$new($NEW, cpg->addClass($Constants::SORT_ITERATOR))));
+	il->append(static_cast<$1Instruction*>($Constants::DUP));
+	nodesTemp->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, nodesTemp->getIndex())))));
+	sortRecordFactoryTemp->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, sortRecordFactoryTemp->getIndex())))));
+	il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, init)));
 }
 
 void Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* classGen, $MethodGenerator* methodGen) {
@@ -417,58 +406,58 @@ void Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* classGe
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$var($LocalVariableGen, sortOrderTemp, methodGen->addLocalVariable("sort_order_tmp"_s, $($Util::getJCRefType($$str({"["_s, $Constants::STRING_SIG}))), nullptr, nullptr));
 	$nc(il)->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, nsorts)));
-	il->append(static_cast<$Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
+	il->append(static_cast<$1Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
 	for (int32_t level = 0; level < nsorts; ++level) {
 		$var(Sort, sort, $cast(Sort, sortObjects->get(level)));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, level)));
 		$nc(sort)->translateSortOrder(classGen, methodGen);
-		il->append(static_cast<$Instruction*>($Constants::AASTORE));
+		il->append(static_cast<$1Instruction*>($Constants::AASTORE));
 	}
-	$nc(sortOrderTemp)->setStart($(il->append(static_cast<$Instruction*>($$new($ASTORE, sortOrderTemp->getIndex())))));
+	$nc(sortOrderTemp)->setStart($(il->append(static_cast<$1Instruction*>($$new($ASTORE, sortOrderTemp->getIndex())))));
 	$var($LocalVariableGen, sortTypeTemp, methodGen->addLocalVariable("sort_type_tmp"_s, $($Util::getJCRefType($$str({"["_s, $Constants::STRING_SIG}))), nullptr, nullptr));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, nsorts)));
-	il->append(static_cast<$Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
+	il->append(static_cast<$1Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
 	for (int32_t level = 0; level < nsorts; ++level) {
 		$var(Sort, sort, $cast(Sort, sortObjects->get(level)));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, level)));
 		$nc(sort)->translateSortType(classGen, methodGen);
-		il->append(static_cast<$Instruction*>($Constants::AASTORE));
+		il->append(static_cast<$1Instruction*>($Constants::AASTORE));
 	}
-	$nc(sortTypeTemp)->setStart($(il->append(static_cast<$Instruction*>($$new($ASTORE, sortTypeTemp->getIndex())))));
+	$nc(sortTypeTemp)->setStart($(il->append(static_cast<$1Instruction*>($$new($ASTORE, sortTypeTemp->getIndex())))));
 	$var($LocalVariableGen, sortLangTemp, methodGen->addLocalVariable("sort_lang_tmp"_s, $($Util::getJCRefType($$str({"["_s, $Constants::STRING_SIG}))), nullptr, nullptr));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, nsorts)));
-	il->append(static_cast<$Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
+	il->append(static_cast<$1Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
 	for (int32_t level = 0; level < nsorts; ++level) {
 		$var(Sort, sort, $cast(Sort, sortObjects->get(level)));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, level)));
 		$nc(sort)->translateLang(classGen, methodGen);
-		il->append(static_cast<$Instruction*>($Constants::AASTORE));
+		il->append(static_cast<$1Instruction*>($Constants::AASTORE));
 	}
-	$nc(sortLangTemp)->setStart($(il->append(static_cast<$Instruction*>($$new($ASTORE, sortLangTemp->getIndex())))));
+	$nc(sortLangTemp)->setStart($(il->append(static_cast<$1Instruction*>($$new($ASTORE, sortLangTemp->getIndex())))));
 	$var($LocalVariableGen, sortCaseOrderTemp, methodGen->addLocalVariable("sort_case_order_tmp"_s, $($Util::getJCRefType($$str({"["_s, $Constants::STRING_SIG}))), nullptr, nullptr));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, nsorts)));
-	il->append(static_cast<$Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
+	il->append(static_cast<$1Instruction*>($$new($ANEWARRAY, $nc(cpg)->addClass($Constants::STRING))));
 	for (int32_t level = 0; level < nsorts; ++level) {
 		$var(Sort, sort, $cast(Sort, sortObjects->get(level)));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, level)));
 		$nc(sort)->translateCaseOrder(classGen, methodGen);
-		il->append(static_cast<$Instruction*>($Constants::AASTORE));
+		il->append(static_cast<$1Instruction*>($Constants::AASTORE));
 	}
-	$nc(sortCaseOrderTemp)->setStart($(il->append(static_cast<$Instruction*>($$new($ASTORE, sortCaseOrderTemp->getIndex())))));
-	il->append(static_cast<$Instruction*>($$new($NEW, $nc(cpg)->addClass(sortRecordFactoryClass))));
-	il->append(static_cast<$Instruction*>($Constants::DUP));
+	$nc(sortCaseOrderTemp)->setStart($(il->append(static_cast<$1Instruction*>($$new($ASTORE, sortCaseOrderTemp->getIndex())))));
+	il->append(static_cast<$1Instruction*>($$new($NEW, $nc(cpg)->addClass(sortRecordFactoryClass))));
+	il->append(static_cast<$1Instruction*>($Constants::DUP));
 	il->append($(methodGen->loadDOM()));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, sortRecordClass)));
 	il->append($(classGen->loadTranslet()));
-	sortOrderTemp->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, sortOrderTemp->getIndex())))));
-	sortTypeTemp->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, sortTypeTemp->getIndex())))));
-	sortLangTemp->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, sortLangTemp->getIndex())))));
-	sortCaseOrderTemp->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, sortCaseOrderTemp->getIndex())))));
-	il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref(sortRecordFactoryClass, "<init>"_s, $$str({"("_s, $Constants::DOM_INTF_SIG, $Constants::STRING_SIG, $Constants::TRANSLET_INTF_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, ")V"_s})))));
+	sortOrderTemp->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, sortOrderTemp->getIndex())))));
+	sortTypeTemp->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, sortTypeTemp->getIndex())))));
+	sortLangTemp->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, sortLangTemp->getIndex())))));
+	sortCaseOrderTemp->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, sortCaseOrderTemp->getIndex())))));
+	il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref(sortRecordFactoryClass, "<init>"_s, $$str({"("_s, $Constants::DOM_INTF_SIG, $Constants::STRING_SIG, $Constants::TRANSLET_INTF_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, ")V"_s})))));
 	$var($List, dups, $new($ArrayList));
 	for (int32_t j = 0; j < nsorts; ++j) {
 		$var(Sort, sort, $cast(Sort, sortObjects->get(j)));
@@ -479,11 +468,11 @@ void Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* classGe
 				continue;
 			}
 			$var($VariableBase, var, $nc(varRef)->getVariable());
-			il->append(static_cast<$Instruction*>($Constants::DUP));
+			il->append(static_cast<$1Instruction*>($Constants::DUP));
 			il->append($($nc(var)->loadInstruction()));
 			$var($String, var$0, sortRecordFactoryClass);
 			$var($String, var$1, $nc(var)->getEscapedName());
-			il->append(static_cast<$Instruction*>($$new($PUTFIELD, $nc(cpg)->addFieldref(var$0, var$1, $($nc($(var->getType()))->toSignature())))));
+			il->append(static_cast<$1Instruction*>($$new($PUTFIELD, $nc(cpg)->addFieldref(var$0, var$1, $($nc($(var->getType()))->toSignature())))));
 			dups->add(varRef);
 		}
 	}
@@ -532,48 +521,48 @@ $String* Sort::compileSortRecordFactory($List* sortObjects, $ClassGenerator* cla
 	argNames->set(5, "lang"_s);
 	argNames->set(6, "case_order"_s);
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
-	$var($MethodGenerator, constructor, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, argTypes, argNames, "<init>"_s, className, il, cpg));
-	il->append(static_cast<$Instruction*>($Constants::ALOAD_0));
-	il->append(static_cast<$Instruction*>($Constants::ALOAD_1));
-	il->append(static_cast<$Instruction*>($Constants::ALOAD_2));
-	il->append(static_cast<$Instruction*>($$new($ALOAD, 3)));
-	il->append(static_cast<$Instruction*>($$new($ALOAD, 4)));
-	il->append(static_cast<$Instruction*>($$new($ALOAD, 5)));
-	il->append(static_cast<$Instruction*>($$new($ALOAD, 6)));
-	il->append(static_cast<$Instruction*>($$new($ALOAD, 7)));
-	il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::NODE_SORT_FACTORY, "<init>"_s, $$str({"("_s, $Constants::DOM_INTF_SIG, $Constants::STRING_SIG, $Constants::TRANSLET_INTF_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, ")V"_s})))));
-	il->append(static_cast<$Instruction*>($Constants::RETURN));
+	$init($1Type);
+	$var($MethodGenerator, constructor, $new($MethodGenerator, $Constants::ACC_PUBLIC, $1Type::VOID, argTypes, argNames, "<init>"_s, className, il, cpg));
+	il->append(static_cast<$1Instruction*>($Constants::ALOAD_0));
+	il->append(static_cast<$1Instruction*>($Constants::ALOAD_1));
+	il->append(static_cast<$1Instruction*>($Constants::ALOAD_2));
+	il->append(static_cast<$1Instruction*>($$new($ALOAD, 3)));
+	il->append(static_cast<$1Instruction*>($$new($ALOAD, 4)));
+	il->append(static_cast<$1Instruction*>($$new($ALOAD, 5)));
+	il->append(static_cast<$1Instruction*>($$new($ALOAD, 6)));
+	il->append(static_cast<$1Instruction*>($$new($ALOAD, 7)));
+	il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::NODE_SORT_FACTORY, "<init>"_s, $$str({"("_s, $Constants::DOM_INTF_SIG, $Constants::STRING_SIG, $Constants::TRANSLET_INTF_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, "["_s, $Constants::STRING_SIG, ")V"_s})))));
+	il->append(static_cast<$1Instruction*>($Constants::RETURN));
 	$assign(il, $new($InstructionList));
 	$var($MethodGenerator, makeNodeSortRecord, $new($MethodGenerator, $Constants::ACC_PUBLIC, $($Util::getJCRefType($Constants::NODE_SORT_RECORD_SIG)), $$new($TypeArray, {
-		static_cast<$Type*>($Type::INT),
-		static_cast<$Type*>($Type::INT)
+		static_cast<$1Type*>($1Type::INT),
+		static_cast<$1Type*>($1Type::INT)
 	}), $$new($StringArray, {
 		"node"_s,
 		"last"_s
 	}), "makeNodeSortRecord"_s, className, il, cpg));
-	il->append(static_cast<$Instruction*>($Constants::ALOAD_0));
-	il->append(static_cast<$Instruction*>($Constants::ILOAD_1));
-	il->append(static_cast<$Instruction*>($Constants::ILOAD_2));
-	il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::NODE_SORT_FACTORY, "makeNodeSortRecord"_s, $$str({"(II)"_s, $Constants::NODE_SORT_RECORD_SIG})))));
-	il->append(static_cast<$Instruction*>($Constants::DUP));
-	il->append(static_cast<$Instruction*>($$new($CHECKCAST, $nc(cpg)->addClass(sortRecordClass))));
+	il->append(static_cast<$1Instruction*>($Constants::ALOAD_0));
+	il->append(static_cast<$1Instruction*>($Constants::ILOAD_1));
+	il->append(static_cast<$1Instruction*>($Constants::ILOAD_2));
+	il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::NODE_SORT_FACTORY, "makeNodeSortRecord"_s, $$str({"(II)"_s, $Constants::NODE_SORT_RECORD_SIG})))));
+	il->append(static_cast<$1Instruction*>($Constants::DUP));
+	il->append(static_cast<$1Instruction*>($$new($CHECKCAST, $nc(cpg)->addClass(sortRecordClass))));
 	int32_t ndups = dups->size();
 	for (int32_t i = 0; i < ndups; ++i) {
 		$var($VariableRefBase, varRef, $cast($VariableRefBase, dups->get(i)));
 		$var($VariableBase, var, $nc(varRef)->getVariable());
-		$var($1Type, varType, $nc(var)->getType());
-		il->append(static_cast<$Instruction*>($Constants::DUP));
-		il->append(static_cast<$Instruction*>($Constants::ALOAD_0));
+		$var($Type, varType, $nc(var)->getType());
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::ALOAD_0));
 		$var($String, var$3, className);
 		$var($String, var$4, var->getEscapedName());
-		il->append(static_cast<$Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref(var$3, var$4, $($nc(varType)->toSignature())))));
+		il->append(static_cast<$1Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref(var$3, var$4, $($nc(varType)->toSignature())))));
 		$var($String, var$5, sortRecordClass);
 		$var($String, var$6, var->getEscapedName());
-		il->append(static_cast<$Instruction*>($$new($PUTFIELD, $nc(cpg)->addFieldref(var$5, var$6, $($nc(varType)->toSignature())))));
+		il->append(static_cast<$1Instruction*>($$new($PUTFIELD, $nc(cpg)->addFieldref(var$5, var$6, $($nc(varType)->toSignature())))));
 	}
-	il->append(static_cast<$Instruction*>($Constants::POP));
-	il->append(static_cast<$Instruction*>($Constants::ARETURN));
+	il->append(static_cast<$1Instruction*>($Constants::POP));
+	il->append(static_cast<$1Instruction*>($Constants::ARETURN));
 	constructor->setMaxLocals();
 	constructor->setMaxStack();
 	sortRecordFactory->addMethod(constructor);
@@ -623,12 +612,12 @@ $MethodGenerator* Sort::compileInit($NodeSortRecordGenerator* sortRecord, $Const
 	$init(Sort);
 	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
-	$var($MethodGenerator, init, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, nullptr, nullptr, "<init>"_s, className, il, cpg));
+	$init($1Type);
+	$var($MethodGenerator, init, $new($MethodGenerator, $Constants::ACC_PUBLIC, $1Type::VOID, nullptr, nullptr, "<init>"_s, className, il, cpg));
 	$init($Constants);
-	il->append(static_cast<$Instruction*>($Constants::ALOAD_0));
-	il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::NODE_SORT_RECORD, "<init>"_s, "()V"_s))));
-	il->append(static_cast<$Instruction*>($Constants::RETURN));
+	il->append(static_cast<$1Instruction*>($Constants::ALOAD_0));
+	il->append(static_cast<$1Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::NODE_SORT_RECORD, "<init>"_s, "()V"_s))));
+	il->append(static_cast<$1Instruction*>($Constants::RETURN));
 	return init;
 }
 
@@ -636,14 +625,14 @@ $MethodGenerator* Sort::compileExtract($List* sortObjects, $NodeSortRecordGenera
 	$init(Sort);
 	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
+	$init($1Type);
 	$init($Constants);
-	$var($CompareGenerator, extractMethod, $new($CompareGenerator, $Constants::ACC_PUBLIC | $Constants::ACC_FINAL, $Type::STRING, $$new($TypeArray, {
+	$var($CompareGenerator, extractMethod, $new($CompareGenerator, $Constants::ACC_PUBLIC | $Constants::ACC_FINAL, $1Type::STRING, $$new($TypeArray, {
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),
-		static_cast<$Type*>($Type::INT),
-		static_cast<$Type*>($Type::INT),
+		static_cast<$1Type*>($1Type::INT),
+		static_cast<$1Type*>($1Type::INT),
 		$($Util::getJCRefType($Constants::TRANSLET_SIG)),
-		static_cast<$Type*>($Type::INT)
+		static_cast<$1Type*>($1Type::INT)
 	}), $$new($StringArray, {
 		"dom"_s,
 		"current"_s,
@@ -656,20 +645,20 @@ $MethodGenerator* Sort::compileExtract($List* sortObjects, $NodeSortRecordGenera
 	$var($InstructionHandleArray, target, $new($InstructionHandleArray, levels));
 	$var($InstructionHandle, tblswitch, nullptr);
 	if (levels > 1) {
-		il->append(static_cast<$Instruction*>($$new($ILOAD, extractMethod->getLocalIndex("level"_s))));
-		$assign(tblswitch, il->append(static_cast<$Instruction*>($$new($NOP))));
+		il->append(static_cast<$1Instruction*>($$new($ILOAD, extractMethod->getLocalIndex("level"_s))));
+		$assign(tblswitch, il->append(static_cast<$1Instruction*>($$new($NOP))));
 	}
 	for (int32_t level = 0; level < levels; ++level) {
 		match->set(level, level);
 		$var(Sort, sort, $cast(Sort, sortObjects->get(level)));
 		target->set(level, $(il->append($Constants::NOP)));
 		$nc(sort)->translateSelect(sortRecord, extractMethod);
-		il->append(static_cast<$Instruction*>($Constants::ARETURN));
+		il->append(static_cast<$1Instruction*>($Constants::ARETURN));
 	}
 	if (levels > 1) {
 		$var($InstructionHandle, defaultTarget, il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, $Constants::EMPTYSTRING))));
 		il->insert(tblswitch, static_cast<$BranchInstruction*>($$new($TABLESWITCH, match, target, defaultTarget)));
-		il->append(static_cast<$Instruction*>($Constants::ARETURN));
+		il->append(static_cast<$1Instruction*>($Constants::ARETURN));
 	}
 	return extractMethod;
 }

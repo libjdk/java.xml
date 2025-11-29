@@ -9,7 +9,6 @@
 
 #undef XPOINTER_DOMAIN
 
-using $MessageFormatter = ::com::sun::org::apache::xerces::internal::util::MessageFormatter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;

@@ -30,7 +30,6 @@ using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::Const
 using $ExceptionThrower = ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower;
 using $LoadClass = ::com::sun::org::apache::bcel::internal::generic::LoadClass;
 using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
-using $StackConsumer = ::com::sun::org::apache::bcel::internal::generic::StackConsumer;
 using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;

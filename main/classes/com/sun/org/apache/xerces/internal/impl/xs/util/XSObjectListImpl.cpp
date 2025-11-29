@@ -27,7 +27,6 @@ using $XSObjectArray = $Array<::com::sun::org::apache::xerces::internal::xs::XSO
 using $XSObjectListImpl$EmptyIterator = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl$EmptyIterator;
 using $XSObjectListImpl$XSObjectListIterator = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl$XSObjectListIterator;
 using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IndexOutOfBoundsException = ::java::lang::IndexOutOfBoundsException;

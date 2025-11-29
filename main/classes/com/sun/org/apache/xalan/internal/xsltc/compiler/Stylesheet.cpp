@@ -148,14 +148,9 @@
 
 using $InstructionHandleArray = $Array<::com::sun::org::apache::bcel::internal::generic::InstructionHandle>;
 using $TypeArray = $Array<::com::sun::org::apache::bcel::internal::generic::Type>;
-using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
-using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
-using $Method = ::com::sun::org::apache::bcel::internal::classfile::Method;
 using $ANEWARRAY = ::com::sun::org::apache::bcel::internal::generic::ANEWARRAY;
-using $ArrayInstruction = ::com::sun::org::apache::bcel::internal::generic::ArrayInstruction;
 using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldGen = ::com::sun::org::apache::bcel::internal::generic::FieldGen;
@@ -174,17 +169,14 @@ using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::Instr
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $NEWARRAY = ::com::sun::org::apache::bcel::internal::generic::NEWARRAY;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $PUTFIELD = ::com::sun::org::apache::bcel::internal::generic::PUTFIELD;
 using $PUTSTATIC = ::com::sun::org::apache::bcel::internal::generic::PUTSTATIC;
-using $ReturnInstruction = ::com::sun::org::apache::bcel::internal::generic::ReturnInstruction;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
 using $TargetLostException = ::com::sun::org::apache::bcel::internal::generic::TargetLostException;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $InstructionFinder = ::com::sun::org::apache::bcel::internal::util::InstructionFinder;
 using $AttributeSet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeSet;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
@@ -209,7 +201,7 @@ using $XSLTC = ::com::sun::org::apache::xalan::internal::xsltc::compiler::XSLTC;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ErrorMsg;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $AbstractTranslet = ::com::sun::org::apache::xalan::internal::xsltc::runtime::AbstractTranslet;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
@@ -220,12 +212,7 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Void = ::java::lang::Void;
-using $CallSite = ::java::lang::invoke::CallSite;
-using $LambdaMetafactory = ::java::lang::invoke::LambdaMetafactory;
 using $MethodHandle = ::java::lang::invoke::MethodHandle;
-using $MethodHandles$Lookup = ::java::lang::invoke::MethodHandles$Lookup;
-using $MethodType = ::java::lang::invoke::MethodType;
 using $AbstractList = ::java::util::AbstractList;
 using $AbstractMap = ::java::util::AbstractMap;
 using $ArrayList = ::java::util::ArrayList;
@@ -816,7 +803,7 @@ $Mode* Stylesheet::getMode($QName* modeName) {
 	}
 }
 
-$1Type* Stylesheet::typeCheck($SymbolTable* stable) {
+$Type* Stylesheet::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	int32_t count = $nc(this->_globals)->size();
 	for (int32_t i = 0; i < count; ++i) {
@@ -834,7 +821,7 @@ void Stylesheet::addDOMField($ClassGenerator* classGen) {
 	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $Constants::ACC_PUBLIC;
 	$init($Constants);
-	$var($Type, var$1, $Util::getJCRefType($Constants::DOM_INTF_SIG));
+	$var($1Type, var$1, $Util::getJCRefType($Constants::DOM_INTF_SIG));
 	$var($String, var$2, $Constants::DOM_FIELD);
 	$var($FieldGen, fgen, $new($FieldGen, var$0, var$1, var$2, $($nc(classGen)->getConstantPool())));
 	$nc(classGen)->addField($(fgen->getField()));
@@ -843,7 +830,7 @@ void Stylesheet::addDOMField($ClassGenerator* classGen) {
 void Stylesheet::addStaticField($ClassGenerator* classGen, $String* type, $String* name) {
 	$useLocalCurrentObjectStackCache();
 	int32_t var$0 = $Constants::ACC_PROTECTED | $Constants::ACC_STATIC;
-	$var($Type, var$1, $Util::getJCRefType(type));
+	$var($1Type, var$1, $Util::getJCRefType(type));
 	$var($String, var$2, name);
 	$var($FieldGen, fgen, $new($FieldGen, var$0, var$1, var$2, $($nc(classGen)->getConstantPool())));
 	$nc(classGen)->addField($(fgen->getField()));
@@ -886,8 +873,8 @@ void Stylesheet::compileStaticInitializer($ClassGenerator* classGen) {
 	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
-	$var($MethodGenerator, staticConst, $new($MethodGenerator, $Constants::ACC_PUBLIC | $Constants::ACC_STATIC, $Type::VOID, nullptr, nullptr, "<clinit>"_s, this->_className, il, cpg));
+	$init($1Type);
+	$var($MethodGenerator, staticConst, $new($MethodGenerator, $Constants::ACC_PUBLIC | $Constants::ACC_STATIC, $1Type::VOID, nullptr, nullptr, "<clinit>"_s, this->_className, il, cpg));
 	$init($Constants);
 	addStaticField(classGen, $$str({"["_s, $Constants::STRING_SIG}), $Constants::STATIC_NAMES_ARRAY_FIELD);
 	addStaticField(classGen, $$str({"["_s, $Constants::STRING_SIG}), $Constants::STATIC_URIS_ARRAY_FIELD);
@@ -1002,8 +989,8 @@ void Stylesheet::compileConstructor($ClassGenerator* classGen, $Output* output) 
 	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
-	$var($MethodGenerator, constructor, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, nullptr, nullptr, "<init>"_s, this->_className, il, cpg));
+	$init($1Type);
+	$var($MethodGenerator, constructor, $new($MethodGenerator, $Constants::ACC_PUBLIC, $1Type::VOID, nullptr, nullptr, "<init>"_s, this->_className, il, cpg));
 	il->append($(classGen->loadTranslet()));
 	$init($Constants);
 	il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, "<init>"_s, "()V"_s))));
@@ -1067,10 +1054,10 @@ $String* Stylesheet::compileTopLevel($ClassGenerator* classGen) {
 		$Constants::TRANSLET_OUTPUT_PNAME
 	}));
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
-	$var($MethodGenerator, toplevel, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, argTypes, argNames, "topLevel"_s, this->_className, il, $(classGen->getConstantPool())));
+	$init($1Type);
+	$var($MethodGenerator, toplevel, $new($MethodGenerator, $Constants::ACC_PUBLIC, $1Type::VOID, argTypes, argNames, "topLevel"_s, this->_className, il, $(classGen->getConstantPool())));
 	toplevel->addException("com.sun.org.apache.xalan.internal.xsltc.TransletException"_s);
-	$var($LocalVariableGen, current, toplevel->addLocalVariable("current"_s, $Type::INT, nullptr, nullptr));
+	$var($LocalVariableGen, current, toplevel->addLocalVariable("current"_s, $1Type::INT, nullptr, nullptr));
 	int32_t setFilter = $nc(cpg)->addInterfaceMethodref($Constants::DOM_INTF, "setFilter"_s, "(Lcom/sun/org/apache/xalan/internal/xsltc/StripFilter;)V"_s);
 	int32_t gitr = cpg->addInterfaceMethodref($Constants::DOM_INTF, "getIterator"_s, $$str({"()"_s, $Constants::NODE_ITERATOR_SIG}));
 	il->append($(toplevel->loadDOM()));
@@ -1148,12 +1135,12 @@ $String* Stylesheet::compileBuildKeys($ClassGenerator* classGen) {
 	$useLocalCurrentObjectStackCache();
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$init($Constants);
-	$init($Type);
+	$init($1Type);
 	$var($TypeArray, argTypes, $new($TypeArray, {
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),
 		$($Util::getJCRefType($Constants::NODE_ITERATOR_SIG)),
 		$($Util::getJCRefType($Constants::TRANSLET_OUTPUT_SIG)),
-		static_cast<$Type*>($Type::INT)
+		static_cast<$1Type*>($1Type::INT)
 	}));
 	$var($StringArray, argNames, $new($StringArray, {
 		$Constants::DOCUMENT_PNAME,
@@ -1162,7 +1149,7 @@ $String* Stylesheet::compileBuildKeys($ClassGenerator* classGen) {
 		"current"_s
 	}));
 	$var($InstructionList, il, $new($InstructionList));
-	$var($MethodGenerator, buildKeys, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, argTypes, argNames, "buildKeys"_s, this->_className, il, $(classGen->getConstantPool())));
+	$var($MethodGenerator, buildKeys, $new($MethodGenerator, $Constants::ACC_PUBLIC, $1Type::VOID, argTypes, argNames, "buildKeys"_s, this->_className, il, $(classGen->getConstantPool())));
 	buildKeys->addException("com.sun.org.apache.xalan.internal.xsltc.TransletException"_s);
 	$var($Iterator, elements, this->elements());
 	while ($nc(elements)->hasNext()) {
@@ -1195,12 +1182,12 @@ void Stylesheet::compileTransform($ClassGenerator* classGen) {
 	argNames->set(1, $Constants::ITERATOR_PNAME);
 	argNames->set(2, $Constants::TRANSLET_OUTPUT_PNAME);
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
-	$var($MethodGenerator, transf, $new($MethodGenerator, $Constants::ACC_PUBLIC, $Type::VOID, argTypes, argNames, "transform"_s, this->_className, il, $(classGen->getConstantPool())));
+	$init($1Type);
+	$var($MethodGenerator, transf, $new($MethodGenerator, $Constants::ACC_PUBLIC, $1Type::VOID, argTypes, argNames, "transform"_s, this->_className, il, $(classGen->getConstantPool())));
 	transf->addException("com.sun.org.apache.xalan.internal.xsltc.TransletException"_s);
 	int32_t check = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "resetPrefixIndex"_s, "()V"_s);
 	il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, check)));
-	$var($LocalVariableGen, current, transf->addLocalVariable("current"_s, $Type::INT, nullptr, nullptr));
+	$var($LocalVariableGen, current, transf->addLocalVariable("current"_s, $1Type::INT, nullptr, nullptr));
 	$var($String, applyTemplatesSig, classGen->getApplyTemplatesSig());
 	int32_t applyTemplates = cpg->addMethodref($(getClassName()), "applyTemplates"_s, applyTemplatesSig);
 	int32_t domField = cpg->addFieldref($(getClassName()), $Constants::DOM_FIELD, $Constants::DOM_INTF_SIG);

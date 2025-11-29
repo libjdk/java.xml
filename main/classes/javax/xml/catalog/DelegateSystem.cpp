@@ -15,7 +15,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $URI = ::java::net::URI;
 using $AltCatalog = ::javax::xml::catalog::AltCatalog;
-using $BaseEntry = ::javax::xml::catalog::BaseEntry;
 using $BaseEntry$CatalogEntryType = ::javax::xml::catalog::BaseEntry$CatalogEntryType;
 using $CatalogMessages = ::javax::xml::catalog::CatalogMessages;
 using $Normalizer = ::javax::xml::catalog::Normalizer;

@@ -11,14 +11,11 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <jcpp.h>
 
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
-using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;

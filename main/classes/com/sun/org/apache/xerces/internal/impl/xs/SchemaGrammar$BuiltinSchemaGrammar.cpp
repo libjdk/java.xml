@@ -60,7 +60,6 @@ using $SimpleLocator = ::com::sun::org::apache::xerces::internal::impl::xs::util
 using $DOMParser = ::com::sun::org::apache::xerces::internal::parsers::DOMParser;
 using $SAXParser = ::com::sun::org::apache::xerces::internal::parsers::SAXParser;
 using $SymbolHash = ::com::sun::org::apache::xerces::internal::util::SymbolHash;
-using $XMLResourceIdentifierImpl = ::com::sun::org::apache::xerces::internal::util::XMLResourceIdentifierImpl;
 using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $XMLSchemaDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLSchemaDescription;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;

@@ -67,7 +67,6 @@ using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;
 using $DTMManagerDefault = ::com::sun::org::apache::xml::internal::dtm::ref::DTMManagerDefault;
 using $EmptySerializer = ::com::sun::org::apache::xml::internal::serializer::EmptySerializer;
-using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
 using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $XMLStringDefault = ::com::sun::org::apache::xml::internal::utils::XMLStringDefault;

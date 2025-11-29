@@ -13,7 +13,6 @@ using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Location = ::javax::xml::stream::Location;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
-using $Locator2 = ::org::xml::sax::ext::Locator2;
 
 namespace com {
 	namespace sun {

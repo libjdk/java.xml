@@ -27,17 +27,12 @@
 #undef HTML_ATTRURL
 #undef NO_BAD_CHARS
 
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $AttributeValue = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValue;
-using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $LiteralElement = ::com::sun::org::apache::xalan::internal::xsltc::compiler::LiteralElement;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SimpleAttributeValue = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SimpleAttributeValue;
@@ -94,7 +89,7 @@ $Object* allocate$LiteralAttribute($Class* clazz) {
 }
 
 void LiteralAttribute::init$($String* name, $String* value, $Parser* parser, $SyntaxTreeNode* parent) {
-	$1Instruction::init$();
+	$Instruction::init$();
 	$set(this, _name, name);
 	setParent(parent);
 	$set(this, _value, $AttributeValue::create(this, value, parser));

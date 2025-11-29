@@ -13,9 +13,6 @@
 #undef CONTEXT_REDEFINE
 #undef CONTEXT_XSITYPE
 
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
-using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

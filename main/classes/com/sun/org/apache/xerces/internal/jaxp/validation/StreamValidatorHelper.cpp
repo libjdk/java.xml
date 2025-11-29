@@ -76,7 +76,6 @@ using $XMLSchemaValidator = ::com::sun::org::apache::xerces::internal::impl::xs:
 using $JAXPValidationMessageFormatter = ::com::sun::org::apache::xerces::internal::jaxp::validation::JAXPValidationMessageFormatter;
 using $Util = ::com::sun::org::apache::xerces::internal::jaxp::validation::Util;
 using $ValidatorHandlerImpl = ::com::sun::org::apache::xerces::internal::jaxp::validation::ValidatorHandlerImpl;
-using $ValidatorHelper = ::com::sun::org::apache::xerces::internal::jaxp::validation::ValidatorHelper;
 using $XMLSchemaValidatorComponentManager = ::com::sun::org::apache::xerces::internal::jaxp::validation::XMLSchemaValidatorComponentManager;
 using $XML11Configuration = ::com::sun::org::apache::xerces::internal::parsers::XML11Configuration;
 using $MessageFormatter = ::com::sun::org::apache::xerces::internal::util::MessageFormatter;
@@ -92,14 +91,11 @@ using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::
 using $XMLParseException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLParseException;
 using $XMLParserConfiguration = ::com::sun::org::apache::xerces::internal::xni::parser::XMLParserConfiguration;
 using $XMLPullParserConfiguration = ::com::sun::org::apache::xerces::internal::xni::parser::XMLPullParserConfiguration;
-using $InputStream = ::java::io::InputStream;
-using $Reader = ::java::io::Reader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $SoftReference = ::java::lang::ref::SoftReference;
 using $Locale = ::java::util::Locale;
 using $XMLConstants = ::javax::xml::XMLConstants;
@@ -115,8 +111,6 @@ using $StreamSource = ::javax::xml::transform::stream::StreamSource;
 using $JdkConstants = ::jdk::xml::internal::JdkConstants;
 using $JdkXmlUtils = ::jdk::xml::internal::JdkXmlUtils;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $SAXException = ::org::xml::sax::SAXException;
-using $SAXParseException = ::org::xml::sax::SAXParseException;
 
 namespace com {
 	namespace sun {

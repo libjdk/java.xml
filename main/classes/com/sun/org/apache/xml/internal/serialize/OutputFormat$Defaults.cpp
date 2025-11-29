@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xml/internal/serialize/OutputFormat.h>
 #include <jcpp.h>
 
-using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

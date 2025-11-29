@@ -4,10 +4,8 @@
 #include <org/w3c/dom/Element.h>
 #include <jcpp.h>
 
-using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Element = ::org::w3c::dom::Element;
 
 namespace com {
 	namespace sun {

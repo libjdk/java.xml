@@ -162,7 +162,6 @@ using $FunctionPattern = ::com::sun::org::apache::xpath::internal::patterns::Fun
 using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $StepPattern = ::com::sun::org::apache::xpath::internal::patterns::StepPattern;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $PrintStream = ::java::io::PrintStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

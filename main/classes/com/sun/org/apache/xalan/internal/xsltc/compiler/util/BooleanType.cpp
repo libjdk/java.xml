@@ -65,15 +65,12 @@
 #undef SWAP
 #undef TYPE
 
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $ConversionInstruction = ::com::sun::org::apache::bcel::internal::generic::ConversionInstruction;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $GOTO = ::com::sun::org::apache::bcel::internal::generic::GOTO;
 using $GotoInstruction = ::com::sun::org::apache::bcel::internal::generic::GotoInstruction;
@@ -97,12 +94,10 @@ using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::Instr
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
@@ -111,7 +106,7 @@ using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compil
 using $RealType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::RealType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -164,14 +159,14 @@ $Object* allocate$BooleanType($Class* clazz) {
 }
 
 void BooleanType::init$() {
-	$1Type::init$();
+	$Type::init$();
 }
 
 $String* BooleanType::toString() {
 	return "boolean"_s;
 }
 
-bool BooleanType::identicalTo($1Type* other) {
+bool BooleanType::identicalTo($Type* other) {
 	return $equals(this, other);
 }
 
@@ -183,21 +178,21 @@ bool BooleanType::isSimple() {
 	return true;
 }
 
-$Type* BooleanType::toJCType() {
-	$init($Type);
-	return $Type::BOOLEAN;
+$1Type* BooleanType::toJCType() {
+	$init($1Type);
+	return $1Type::BOOLEAN;
 }
 
-void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Type* type) {
 	$useLocalCurrentObjectStackCache();
-	$init($1Type);
-	if (type == $1Type::String) {
+	$init($Type);
+	if (type == $Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
 	} else {
-		if (type == $1Type::Real) {
+		if (type == $Type::Real) {
 			translateTo(classGen, methodGen, $cast($RealType, type));
 		} else {
-			if (type == $1Type::Reference) {
+			if (type == $Type::Reference) {
 				translateTo(classGen, methodGen, $cast($ReferenceType, type));
 			} else {
 				$init($ErrorMsg);
@@ -246,8 +241,8 @@ void BooleanType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 		$nc($($nc(methodGen)->getInstructionList()))->append($Constants::NOP);
 	} else {
 		if ($nc(clazz)->isAssignableFrom($Boolean::class$)) {
-			$init($1Type);
-			translateTo(classGen, methodGen, $1Type::Reference);
+			$init($Type);
+			translateTo(classGen, methodGen, $Type::Reference);
 		} else {
 			$init($ErrorMsg);
 			$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
@@ -263,8 +258,8 @@ void BooleanType::translateFrom($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void BooleanType::translateBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::Reference);
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::Reference);
 }
 
 void BooleanType::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {

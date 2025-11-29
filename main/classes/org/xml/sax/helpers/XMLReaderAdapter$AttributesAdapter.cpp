@@ -8,7 +8,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $AttributeList = ::org::xml::sax::AttributeList;
 using $Attributes = ::org::xml::sax::Attributes;
 using $XMLReaderAdapter = ::org::xml::sax::helpers::XMLReaderAdapter;
 

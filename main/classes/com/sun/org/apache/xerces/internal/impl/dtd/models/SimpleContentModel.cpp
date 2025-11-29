@@ -15,7 +15,6 @@
 
 using $QNameArray = $Array<::com::sun::org::apache::xerces::internal::xni::QName>;
 using $XMLContentSpec = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLContentSpec;
-using $ContentModelValidator = ::com::sun::org::apache::xerces::internal::impl::dtd::models::ContentModelValidator;
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

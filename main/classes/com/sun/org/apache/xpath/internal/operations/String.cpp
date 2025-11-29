@@ -6,7 +6,6 @@
 #include <com/sun/org/apache/xpath/internal/operations/UnaryOperation.h>
 #include <jcpp.h>
 
-using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XString = ::com::sun::org::apache::xpath::internal::objects::XString;
 using $UnaryOperation = ::com::sun::org::apache::xpath::internal::operations::UnaryOperation;

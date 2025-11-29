@@ -8,7 +8,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $QName = ::javax::xml::namespace$::QName;
 using $XPathEvaluationResult = ::javax::xml::xpath::XPathEvaluationResult;
 using $XPathEvaluationResult$XPathResultType = ::javax::xml::xpath::XPathEvaluationResult$XPathResultType;
 using $InputSource = ::org::xml::sax::InputSource;

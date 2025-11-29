@@ -10,12 +10,8 @@
 
 #undef DEFAULT_FACTORY_CLASS
 
-using $XSSimpleTypeArray = $Array<::com::sun::org::apache::xerces::internal::impl::dv::XSSimpleType>;
 using $DVFactoryException = ::com::sun::org::apache::xerces::internal::impl::dv::DVFactoryException;
-using $XSSimpleType = ::com::sun::org::apache::xerces::internal::impl::dv::XSSimpleType;
-using $SymbolHash = ::com::sun::org::apache::xerces::internal::util::SymbolHash;
 using $ObjectFactory = ::com::sun::org::apache::xerces::internal::utils::ObjectFactory;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassCastException = ::java::lang::ClassCastException;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

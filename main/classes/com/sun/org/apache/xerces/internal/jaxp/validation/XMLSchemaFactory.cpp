@@ -128,7 +128,6 @@ using $XMLSecurityPropertyManager = ::com::sun::org::apache::xerces::internal::u
 using $XMLSecurityPropertyManager$Property = ::com::sun::org::apache::xerces::internal::utils::XMLSecurityPropertyManager$Property;
 using $XMLSecurityPropertyManager$State = ::com::sun::org::apache::xerces::internal::utils::XMLSecurityPropertyManager$State;
 using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIException;
-using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
 using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $XMLGrammarPool = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarPool;
 using $XMLConfigurationException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLConfigurationException;
@@ -147,12 +146,10 @@ using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NullPointerException = ::java::lang::NullPointerException;
-using $SecurityManager = ::java::lang::SecurityManager;
 using $Locale = ::java::util::Locale;
 using $XMLConstants = ::javax::xml::XMLConstants;
 using $CatalogFeatures$Feature = ::javax::xml::catalog::CatalogFeatures$Feature;
 using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
-using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
 using $Source = ::javax::xml::transform::Source;
 using $DOMSource = ::javax::xml::transform::dom::DOMSource;
 using $SAXSource = ::javax::xml::transform::sax::SAXSource;
@@ -175,7 +172,6 @@ using $SAXException = ::org::xml::sax::SAXException;
 using $SAXNotRecognizedException = ::org::xml::sax::SAXNotRecognizedException;
 using $SAXNotSupportedException = ::org::xml::sax::SAXNotSupportedException;
 using $SAXParseException = ::org::xml::sax::SAXParseException;
-using $XMLReader = ::org::xml::sax::XMLReader;
 
 namespace com {
 	namespace sun {

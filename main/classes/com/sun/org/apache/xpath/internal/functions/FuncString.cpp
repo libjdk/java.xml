@@ -7,7 +7,6 @@
 #include <com/sun/org/apache/xpath/internal/objects/XString.h>
 #include <jcpp.h>
 
-using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $FunctionDef1Arg = ::com::sun::org::apache::xpath::internal::functions::FunctionDef1Arg;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;

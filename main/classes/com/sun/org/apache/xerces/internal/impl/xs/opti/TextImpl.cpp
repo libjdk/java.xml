@@ -12,11 +12,8 @@
 #undef INDEX_SIZE_ERR
 #undef TEXT_NODE
 
-using $NodeImplArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl>;
-using $NodeImplArray2 = $Array<::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl, 2>;
 using $DefaultNode = ::com::sun::org::apache::xerces::internal::impl::xs::opti::DefaultNode;
 using $DefaultText = ::com::sun::org::apache::xerces::internal::impl::xs::opti::DefaultText;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl;
 using $SchemaDOM = ::com::sun::org::apache::xerces::internal::impl::xs::opti::SchemaDOM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

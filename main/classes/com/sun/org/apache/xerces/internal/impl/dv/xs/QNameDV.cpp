@@ -22,7 +22,6 @@ using $QNameDV$XQName = ::com::sun::org::apache::xerces::internal::impl::dv::xs:
 using $TypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::xs::TypeValidator;
 using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

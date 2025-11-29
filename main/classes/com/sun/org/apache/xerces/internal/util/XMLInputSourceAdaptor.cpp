@@ -11,7 +11,6 @@ using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Source = ::javax::xml::transform::Source;
 
 namespace com {
 	namespace sun {

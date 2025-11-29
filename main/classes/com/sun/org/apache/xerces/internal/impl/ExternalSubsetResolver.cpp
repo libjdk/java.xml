@@ -4,9 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <jcpp.h>
 
-using $XMLDTDDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLDTDDescription;
-using $XMLEntityResolver = ::com::sun::org::apache::xerces::internal::xni::parser::XMLEntityResolver;
-using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

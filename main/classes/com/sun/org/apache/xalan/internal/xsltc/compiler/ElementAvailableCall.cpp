@@ -25,12 +25,9 @@
 #undef NEED_LITERAL_ERR
 #undef TRUE
 
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $FunctionCall = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FunctionCall;

@@ -12,8 +12,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $NullPointerException = ::java::lang::NullPointerException;
 using $Result = ::javax::xml::transform::Result;
 using $Source = ::javax::xml::transform::Source;
-using $LSResourceResolver = ::org::w3c::dom::ls::LSResourceResolver;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $SAXNotRecognizedException = ::org::xml::sax::SAXNotRecognizedException;
 
 namespace javax {

@@ -3,10 +3,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObject.h>
 #include <jcpp.h>
 
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Map = ::java::util::Map;
 
 namespace com {
 	namespace sun {

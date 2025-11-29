@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Attributes = ::org::xml::sax::Attributes;
-using $Locator = ::org::xml::sax::Locator;
 
 namespace org {
 	namespace xml {

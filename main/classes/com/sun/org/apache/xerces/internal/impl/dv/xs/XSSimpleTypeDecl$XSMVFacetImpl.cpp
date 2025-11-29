@@ -12,11 +12,9 @@
 #undef EMPTY_LIST
 #undef MULTIVALUE_FACET
 
-using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $XSObjectListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl;
 using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
-using $XSMultiValueFacet = ::com::sun::org::apache::xerces::internal::xs::XSMultiValueFacet;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ObjectList = ::com::sun::org::apache::xerces::internal::xs::datatypes::ObjectList;

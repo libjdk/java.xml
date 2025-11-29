@@ -43,7 +43,6 @@
 #undef SWAP
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $ILOAD = ::com::sun::org::apache::bcel::internal::generic::ILOAD;
@@ -56,10 +55,7 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $AncestorPattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AncestorPattern;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
@@ -75,7 +71,7 @@ using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compile
 using $TopLevelElement = ::com::sun::org::apache::xalan::internal::xsltc::compiler::TopLevelElement;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -145,7 +141,7 @@ void ParentPattern::reduceKernelPattern() {
 	$nc(this->_right)->reduceKernelPattern();
 }
 
-$1Type* ParentPattern::typeCheck($SymbolTable* stable) {
+$Type* ParentPattern::typeCheck($SymbolTable* stable) {
 	$nc(this->_left)->typeCheck(stable);
 	return $nc(this->_right)->typeCheck(stable);
 }

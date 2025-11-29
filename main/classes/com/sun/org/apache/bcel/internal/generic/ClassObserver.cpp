@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/ClassGen.h>
 #include <jcpp.h>
 
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

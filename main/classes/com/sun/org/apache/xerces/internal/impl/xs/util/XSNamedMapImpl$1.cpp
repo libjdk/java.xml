@@ -10,7 +10,6 @@
 using $XSNamedMapImpl$XSNamedMapEntryArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::util::XSNamedMapImpl$XSNamedMapEntry>;
 using $XSNamedMapImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSNamedMapImpl;
 using $XSNamedMapImpl$1$1 = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSNamedMapImpl$1$1;
-using $XSNamedMapImpl$XSNamedMapEntry = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSNamedMapImpl$XSNamedMapEntry;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

@@ -36,17 +36,12 @@
 #undef WIDE
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $IndexedInstruction = ::com::sun::org::apache::bcel::internal::generic::IndexedInstruction;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
 using $ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
-using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;
 using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
-using $DataInputStream = ::java::io::DataInputStream;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

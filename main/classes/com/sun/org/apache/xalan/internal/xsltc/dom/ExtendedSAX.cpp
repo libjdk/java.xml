@@ -6,9 +6,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
-using $DeclHandler = ::org::xml::sax::ext::DeclHandler;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace com {
 	namespace sun {

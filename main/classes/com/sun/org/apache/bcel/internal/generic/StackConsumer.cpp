@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.h>
 #include <jcpp.h>
 
-using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

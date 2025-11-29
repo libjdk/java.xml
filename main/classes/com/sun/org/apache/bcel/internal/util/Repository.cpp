@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/bcel/internal/classfile/JavaClass.h>
 #include <jcpp.h>
 
-using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

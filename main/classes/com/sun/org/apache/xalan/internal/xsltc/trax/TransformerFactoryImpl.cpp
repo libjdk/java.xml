@@ -153,7 +153,6 @@
 using $FileArray = $Array<::java::io::File>;
 using $URIArray = $Array<::java::net::URI>;
 using $byteArray2 = $Array<int8_t, 2>;
-using $FeaturePropertyBase = ::com::sun::org::apache::xalan::internal::utils::FeaturePropertyBase;
 using $FeaturePropertyBase$State = ::com::sun::org::apache::xalan::internal::utils::FeaturePropertyBase$State;
 using $ObjectFactory = ::com::sun::org::apache::xalan::internal::utils::ObjectFactory;
 using $XMLSecurityManager = ::com::sun::org::apache::xalan::internal::utils::XMLSecurityManager;
@@ -196,9 +195,7 @@ using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NullPointerException = ::java::lang::NullPointerException;
 using $NumberFormatException = ::java::lang::NumberFormatException;
-using $SecurityManager = ::java::lang::SecurityManager;
 using $MalformedURLException = ::java::net::MalformedURLException;
-using $URI = ::java::net::URI;
 using $URL = ::java::net::URL;
 using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;

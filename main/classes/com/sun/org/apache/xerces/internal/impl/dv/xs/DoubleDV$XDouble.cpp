@@ -8,7 +8,6 @@
 #undef POSITIVE_INFINITY
 
 using $DoubleDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::DoubleDV;
-using $XSDouble = ::com::sun::org::apache::xerces::internal::xs::datatypes::XSDouble;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Double = ::java::lang::Double;
 using $FieldInfo = ::java::lang::FieldInfo;

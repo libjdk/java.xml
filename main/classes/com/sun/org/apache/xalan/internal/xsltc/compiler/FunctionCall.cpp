@@ -111,10 +111,8 @@
 using $LocalVariableGenArray = $Array<::com::sun::org::apache::bcel::internal::generic::LocalVariableGen>;
 using $ConstructorArray = $Array<::java::lang::reflect::Constructor>;
 using $MethodArray = $Array<::java::lang::reflect::Method>;
-using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -131,11 +129,8 @@ using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::Instr
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LDC = ::com::sun::org::apache::bcel::internal::generic::LDC;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ObjectFactory = ::com::sun::org::apache::xalan::internal::utils::ObjectFactory;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
@@ -156,7 +151,7 @@ using $MethodType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::u
 using $MultiHashtable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MultiHashtable;
 using $ObjectType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ObjectType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $TypeCheckError = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::TypeCheckError;
 using $Boolean = ::java::lang::Boolean;
 using $Byte = ::java::lang::Byte;
@@ -185,7 +180,6 @@ using $HashMap = ::java::util::HashMap;
 using $Iterator = ::java::util::Iterator;
 using $List = ::java::util::List;
 using $Map = ::java::util::Map;
-using $Set = ::java::util::Set;
 using $JdkXmlFeatures$XmlFeature = ::jdk::xml::internal::JdkXmlFeatures$XmlFeature;
 
 namespace com {
@@ -360,7 +354,7 @@ $String* FunctionCall::getClassNameFromUri($String* uri) {
 	}
 }
 
-$1Type* FunctionCall::typeCheck($SymbolTable* stable) {
+$Type* FunctionCall::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	if (this->_type != nullptr) {
 		return this->_type;
@@ -417,24 +411,24 @@ $1Type* FunctionCall::typeCheck($SymbolTable* stable) {
 				$assign(errorMsg, $new($ErrorMsg, $ErrorMsg::METHOD_NOT_FOUND_ERR, $of(name)));
 			}
 			$nc($(getParser()))->reportError($Constants::ERROR, errorMsg);
-			$init($1Type);
-			return $set(this, _type, $1Type::Void);
+			$init($Type);
+			return $set(this, _type, $Type::Void);
 		}
 	}
 	$shouldNotReachHere();
 }
 
-$1Type* FunctionCall::typeCheckStandard($SymbolTable* stable) {
+$Type* FunctionCall::typeCheckStandard($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	$nc(this->_fname)->clearNamespace();
 	int32_t n = $nc(this->_arguments)->size();
 	$var($List, argsType, typeCheckArgs(stable));
-	$init($1Type);
-	$var($MethodType, args, $new($MethodType, $1Type::Void, argsType));
+	$init($Type);
+	$var($MethodType, args, $new($MethodType, $Type::Void, argsType));
 	$var($MethodType, ptype, lookupPrimop(stable, $($nc(this->_fname)->getLocalPart()), args));
 	if (ptype != nullptr) {
 		for (int32_t i = 0; i < n; ++i) {
-			$var($1Type, argType, $cast($1Type, $nc($(ptype->argsType()))->get(i)));
+			$var($Type, argType, $cast($Type, $nc($(ptype->argsType()))->get(i)));
 			$var($Expression, exp, $cast($Expression, $nc(this->_arguments)->get(i)));
 			if (!$nc(argType)->identicalTo($($nc(exp)->getType()))) {
 				try {
@@ -450,7 +444,7 @@ $1Type* FunctionCall::typeCheckStandard($SymbolTable* stable) {
 	$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 }
 
-$1Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
+$Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	$var($List, constructors, findConstructors());
 	if (constructors == nullptr) {
@@ -472,7 +466,7 @@ $1Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
 			int32_t currConstrDistance = 0;
 			for (j = 0; j < nArgs; ++j) {
 				extType = $nc(paramTypes)->get(j);
-				$var($1Type, intType, $cast($1Type, $nc(argsType)->get(j)));
+				$var($Type, intType, $cast($Type, $nc(argsType)->get(j)));
 				$var($FunctionCall$JavaType, match, $cast($FunctionCall$JavaType, $nc(FunctionCall::_internal2Java)->maps(intType, $$new($FunctionCall$JavaType, extType, 0))));
 				if (match != nullptr) {
 					currConstrDistance += match->distance;
@@ -495,7 +489,7 @@ $1Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
 				$set(this, _chosenConstructor, constructor);
 				this->_isExtConstructor = true;
 				bestConstrDistance = currConstrDistance;
-				$set(this, _type, (this->_clazz != nullptr) ? $1Type::newObjectType(this->_clazz) : $1Type::newObjectType(this->_className));
+				$set(this, _type, (this->_clazz != nullptr) ? $Type::newObjectType(this->_clazz) : $Type::newObjectType(this->_className));
 			}
 		}
 	}
@@ -506,7 +500,7 @@ $1Type* FunctionCall::typeCheckConstructor($SymbolTable* stable) {
 	$throwNew($TypeCheckError, $ErrorMsg::ARGUMENT_CONVERSION_ERR, $(getMethodSignature(argsType)));
 }
 
-$1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
+$Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	int32_t nArgs = $nc(this->_arguments)->size();
 	$var($String, name, $nc(this->_fname)->getLocalPart());
@@ -522,7 +516,7 @@ $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 				hasThisArgument = true;
 			}
 			$var($Expression, firstArg, $cast($Expression, $nc(this->_arguments)->get(0)));
-			$var($1Type, firstArgType, $nc(firstArg)->typeCheck(stable));
+			$var($Type, firstArgType, $nc(firstArg)->typeCheck(stable));
 			if (this->_namespace_format == FunctionCall::NAMESPACE_FORMAT_CLASS && $instanceOf($ObjectType, firstArgType) && this->_clazz != nullptr && $nc(this->_clazz)->isAssignableFrom($nc(($cast($ObjectType, firstArgType)))->getJavaClass())) {
 				hasThisArgument = true;
 			}
@@ -544,8 +538,8 @@ $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 				reportWarning(this, parser, $ErrorMsg::FUNCTION_RESOLVE_ERR, $($nc(this->_fname)->toString()));
 			}
 			this->unresolvedExternal = true;
-			$init($1Type);
-			return $set(this, _type, $1Type::Int);
+			$init($Type);
+			return $set(this, _type, $Type::Int);
 		}
 	}
 	$var($List, methods, findMethods());
@@ -567,7 +561,7 @@ $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 			int32_t currMethodDistance = 0;
 			for (j = 0; j < nArgs; ++j) {
 				extType = $nc(paramTypes)->get(j);
-				$var($1Type, intType, $cast($1Type, $nc(argsType)->get(j)));
+				$var($Type, intType, $cast($Type, $nc(argsType)->get(j)));
 				$var($FunctionCall$JavaType, match, $cast($FunctionCall$JavaType, $nc(FunctionCall::_internal2Java)->maps(intType, $$new($FunctionCall$JavaType, extType, 0))));
 				if (match != nullptr) {
 					currMethodDistance += match->distance;
@@ -590,9 +584,9 @@ $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 			}
 			if (j == nArgs) {
 				extType = method->getReturnType();
-				$set(this, _type, $cast($1Type, $nc(FunctionCall::JAVA2INTERNAL)->get(extType)));
+				$set(this, _type, $cast($Type, $nc(FunctionCall::JAVA2INTERNAL)->get(extType)));
 				if (this->_type == nullptr) {
-					$set(this, _type, $1Type::newObjectType(extType));
+					$set(this, _type, $Type::newObjectType(extType));
 				}
 				if (this->_type != nullptr && currMethodDistance < bestMethodDistance) {
 					$set(this, _chosenMethod, method);
@@ -606,8 +600,8 @@ $1Type* FunctionCall::typeCheckExternal($SymbolTable* stable) {
 		$throwNew($TypeCheckError, $ErrorMsg::NO_JAVA_FUNCT_THIS_REF, $(getMethodSignature(argsType)));
 	}
 	if (this->_type != nullptr) {
-		$init($1Type);
-		if (this->_type == $1Type::NodeSet) {
+		$init($Type);
+		if (this->_type == $Type::NodeSet) {
 			$nc($(getXSLTC()))->setMultiDocument(true);
 		}
 		return this->_type;
@@ -649,8 +643,8 @@ void FunctionCall::setArgument(int32_t i, $Expression* exp) {
 
 void FunctionCall::translateDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 	$useLocalCurrentObjectStackCache();
-	$init($1Type);
-	$var($1Type, type, $1Type::Boolean);
+	$init($Type);
+	$var($Type, type, $Type::Boolean);
 	if (this->_chosenMethodType != nullptr) {
 		$assign(type, $nc(this->_chosenMethodType)->resultType());
 	}
@@ -707,7 +701,7 @@ void FunctionCall::translate($ClassGenerator* classGen, $MethodGenerator* method
 		$var($LocalVariableGenArray, paramTemp, $new($LocalVariableGenArray, n));
 		for (int32_t i = 0; i < n; ++i) {
 			$var($Expression, exp, argument(i));
-			$var($1Type, expType, $nc(exp)->getType());
+			$var($Type, expType, $nc(exp)->getType());
 			exp->translate(classGen, methodGen);
 			exp->startIterator(classGen, methodGen);
 			$nc(expType)->translateTo(classGen, methodGen, $nc(paramTypes)->get(i));
@@ -730,8 +724,8 @@ void FunctionCall::translate($ClassGenerator* classGen, $MethodGenerator* method
 		buffer->append("V"_s);
 		index = $nc(cpg)->addMethodref(clazz, "<init>"_s, $(buffer->toString()));
 		il->append(static_cast<$Instruction*>($$new($INVOKESPECIAL, index)));
-		$init($1Type);
-		$nc(($1Type::Object))->translateFrom(classGen, methodGen, $nc(this->_chosenConstructor)->getDeclaringClass());
+		$init($Type);
+		$nc(($Type::Object))->translateFrom(classGen, methodGen, $nc(this->_chosenConstructor)->getDeclaringClass());
 	} else {
 		if (isSecureProcessing && !isExtensionFunctionEnabled) {
 			translateUnallowedExtension(cpg, il);
@@ -996,7 +990,7 @@ $String* FunctionCall::getMethodSignature($List* argsType) {
 	buf->append(u'.')->append($($nc(this->_fname)->getLocalPart()))->append(u'(');
 	int32_t nArgs = $nc(argsType)->size();
 	for (int32_t i = 0; i < nArgs; ++i) {
-		$var($1Type, intType, $cast($1Type, argsType->get(i)));
+		$var($Type, intType, $cast($Type, argsType->get(i)));
 		buf->append($($nc(intType)->toString()));
 		if (i < nArgs - 1) {
 			buf->append(", "_s);
@@ -1056,69 +1050,69 @@ void clinit$FunctionCall($Class* class$) {
 			$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::CLASS_NOT_FOUND_ERR, $of("org.w3c.dom.Node or NodeList"_s)));
 			$throwNew($Error, $(err->toString()));
 		}
-		$init($1Type);
+		$init($Type);
 		$init($Boolean);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Boolean, $$new($FunctionCall$JavaType, $Boolean::TYPE, 0));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Boolean, $$new($FunctionCall$JavaType, $Boolean::class$, 1));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Boolean, $$new($FunctionCall$JavaType, $Object::class$, 2));
+		$nc(FunctionCall::_internal2Java)->put($Type::Boolean, $$new($FunctionCall$JavaType, $Boolean::TYPE, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::Boolean, $$new($FunctionCall$JavaType, $Boolean::class$, 1));
+		$nc(FunctionCall::_internal2Java)->put($Type::Boolean, $$new($FunctionCall$JavaType, $Object::class$, 2));
 		$init($Double);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Double::TYPE, 0));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Double::class$, 1));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Double::TYPE, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Double::class$, 1));
 		$init($Float);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Float::TYPE, 2));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Float::TYPE, 2));
 		$init($Long);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Long::TYPE, 3));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Long::TYPE, 3));
 		$init($Integer);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Integer::TYPE, 4));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Integer::TYPE, 4));
 		$init($Short);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Short::TYPE, 5));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Short::TYPE, 5));
 		$init($Byte);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Byte::TYPE, 6));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Byte::TYPE, 6));
 		$init($Character);
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Character::TYPE, 7));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Real, $$new($FunctionCall$JavaType, $Object::class$, 8));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Double::TYPE, 0));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Double::class$, 1));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Float::TYPE, 2));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Long::TYPE, 3));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Integer::TYPE, 4));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Short::TYPE, 5));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Byte::TYPE, 6));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Character::TYPE, 7));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Int, $$new($FunctionCall$JavaType, $Object::class$, 8));
-		$nc(FunctionCall::_internal2Java)->put($1Type::String, $$new($FunctionCall$JavaType, $String::class$, 0));
-		$nc(FunctionCall::_internal2Java)->put($1Type::String, $$new($FunctionCall$JavaType, $Object::class$, 1));
-		$nc(FunctionCall::_internal2Java)->put($1Type::NodeSet, $$new($FunctionCall$JavaType, nodeListClass, 0));
-		$nc(FunctionCall::_internal2Java)->put($1Type::NodeSet, $$new($FunctionCall$JavaType, nodeClass, 1));
-		$nc(FunctionCall::_internal2Java)->put($1Type::NodeSet, $$new($FunctionCall$JavaType, $Object::class$, 2));
-		$nc(FunctionCall::_internal2Java)->put($1Type::NodeSet, $$new($FunctionCall$JavaType, $String::class$, 3));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Node, $$new($FunctionCall$JavaType, nodeListClass, 0));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Node, $$new($FunctionCall$JavaType, nodeClass, 1));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Node, $$new($FunctionCall$JavaType, $Object::class$, 2));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Node, $$new($FunctionCall$JavaType, $String::class$, 3));
-		$nc(FunctionCall::_internal2Java)->put($1Type::ResultTree, $$new($FunctionCall$JavaType, nodeListClass, 0));
-		$nc(FunctionCall::_internal2Java)->put($1Type::ResultTree, $$new($FunctionCall$JavaType, nodeClass, 1));
-		$nc(FunctionCall::_internal2Java)->put($1Type::ResultTree, $$new($FunctionCall$JavaType, $Object::class$, 2));
-		$nc(FunctionCall::_internal2Java)->put($1Type::ResultTree, $$new($FunctionCall$JavaType, $String::class$, 3));
-		$nc(FunctionCall::_internal2Java)->put($1Type::Reference, $$new($FunctionCall$JavaType, $Object::class$, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Character::TYPE, 7));
+		$nc(FunctionCall::_internal2Java)->put($Type::Real, $$new($FunctionCall$JavaType, $Object::class$, 8));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Double::TYPE, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Double::class$, 1));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Float::TYPE, 2));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Long::TYPE, 3));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Integer::TYPE, 4));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Short::TYPE, 5));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Byte::TYPE, 6));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Character::TYPE, 7));
+		$nc(FunctionCall::_internal2Java)->put($Type::Int, $$new($FunctionCall$JavaType, $Object::class$, 8));
+		$nc(FunctionCall::_internal2Java)->put($Type::String, $$new($FunctionCall$JavaType, $String::class$, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::String, $$new($FunctionCall$JavaType, $Object::class$, 1));
+		$nc(FunctionCall::_internal2Java)->put($Type::NodeSet, $$new($FunctionCall$JavaType, nodeListClass, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::NodeSet, $$new($FunctionCall$JavaType, nodeClass, 1));
+		$nc(FunctionCall::_internal2Java)->put($Type::NodeSet, $$new($FunctionCall$JavaType, $Object::class$, 2));
+		$nc(FunctionCall::_internal2Java)->put($Type::NodeSet, $$new($FunctionCall$JavaType, $String::class$, 3));
+		$nc(FunctionCall::_internal2Java)->put($Type::Node, $$new($FunctionCall$JavaType, nodeListClass, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::Node, $$new($FunctionCall$JavaType, nodeClass, 1));
+		$nc(FunctionCall::_internal2Java)->put($Type::Node, $$new($FunctionCall$JavaType, $Object::class$, 2));
+		$nc(FunctionCall::_internal2Java)->put($Type::Node, $$new($FunctionCall$JavaType, $String::class$, 3));
+		$nc(FunctionCall::_internal2Java)->put($Type::ResultTree, $$new($FunctionCall$JavaType, nodeListClass, 0));
+		$nc(FunctionCall::_internal2Java)->put($Type::ResultTree, $$new($FunctionCall$JavaType, nodeClass, 1));
+		$nc(FunctionCall::_internal2Java)->put($Type::ResultTree, $$new($FunctionCall$JavaType, $Object::class$, 2));
+		$nc(FunctionCall::_internal2Java)->put($Type::ResultTree, $$new($FunctionCall$JavaType, $String::class$, 3));
+		$nc(FunctionCall::_internal2Java)->put($Type::Reference, $$new($FunctionCall$JavaType, $Object::class$, 0));
 		$nc(FunctionCall::_internal2Java)->makeUnmodifiable();
 		$var($Map, java2Internal, $new($HashMap));
 		$var($Map, extensionNamespaceTable, $new($HashMap));
 		$var($Map, extensionFunctionTable, $new($HashMap));
-		java2Internal->put($Boolean::TYPE, $1Type::Boolean);
+		java2Internal->put($Boolean::TYPE, $Type::Boolean);
 		$init($Void);
-		java2Internal->put($Void::TYPE, $1Type::Void);
-		java2Internal->put($Character::TYPE, $1Type::Real);
-		java2Internal->put($Byte::TYPE, $1Type::Real);
-		java2Internal->put($Short::TYPE, $1Type::Real);
-		java2Internal->put($Integer::TYPE, $1Type::Real);
-		java2Internal->put($Long::TYPE, $1Type::Real);
-		java2Internal->put($Float::TYPE, $1Type::Real);
-		java2Internal->put($Double::TYPE, $1Type::Real);
-		java2Internal->put($String::class$, $1Type::String);
-		java2Internal->put($Object::class$, $1Type::Reference);
-		java2Internal->put(nodeListClass, $1Type::NodeSet);
-		java2Internal->put(nodeClass, $1Type::NodeSet);
+		java2Internal->put($Void::TYPE, $Type::Void);
+		java2Internal->put($Character::TYPE, $Type::Real);
+		java2Internal->put($Byte::TYPE, $Type::Real);
+		java2Internal->put($Short::TYPE, $Type::Real);
+		java2Internal->put($Integer::TYPE, $Type::Real);
+		java2Internal->put($Long::TYPE, $Type::Real);
+		java2Internal->put($Float::TYPE, $Type::Real);
+		java2Internal->put($Double::TYPE, $Type::Real);
+		java2Internal->put($String::class$, $Type::String);
+		java2Internal->put($Object::class$, $Type::Reference);
+		java2Internal->put(nodeListClass, $Type::NodeSet);
+		java2Internal->put(nodeClass, $Type::NodeSet);
 		extensionNamespaceTable->put(FunctionCall::EXT_XALAN, "com.sun.org.apache.xalan.internal.lib.Extensions"_s);
 		extensionNamespaceTable->put(FunctionCall::EXSLT_COMMON, "com.sun.org.apache.xalan.internal.lib.ExsltCommon"_s);
 		extensionNamespaceTable->put(FunctionCall::EXSLT_MATH, "com.sun.org.apache.xalan.internal.lib.ExsltMath"_s);

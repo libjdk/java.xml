@@ -21,13 +21,10 @@ using $AttributeMap = ::com::sun::org::apache::xerces::internal::dom::AttributeM
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DOMNormalizer = ::com::sun::org::apache::xerces::internal::dom::DOMNormalizer;
 using $ElementImpl = ::com::sun::org::apache::xerces::internal::dom::ElementImpl;
-using $NamedNodeMapImpl = ::com::sun::org::apache::xerces::internal::dom::NamedNodeMapImpl;
-using $ParentNode = ::com::sun::org::apache::xerces::internal::dom::ParentNode;
 using $AugmentationsImpl = ::com::sun::org::apache::xerces::internal::util::AugmentationsImpl;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -35,7 +32,6 @@ using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Vector = ::java::util::Vector;
 using $Attr = ::org::w3c::dom::Attr;
-using $Document = ::org::w3c::dom::Document;
 using $Node = ::org::w3c::dom::Node;
 
 namespace com {

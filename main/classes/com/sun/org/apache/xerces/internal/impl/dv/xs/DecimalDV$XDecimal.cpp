@@ -10,9 +10,7 @@
 
 #undef ZERO
 
-using $DecimalDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::DecimalDV;
 using $TypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::xs::TypeValidator;
-using $XSDecimal = ::com::sun::org::apache::xerces::internal::xs::datatypes::XSDecimal;
 using $Byte = ::java::lang::Byte;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

@@ -7,14 +7,9 @@
 #include <org/xml/sax/ext/LexicalHandler.h>
 #include <jcpp.h>
 
-using $CoroutineManager = ::com::sun::org::apache::xml::internal::dtm::ref::CoroutineManager;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $InputSource = ::org::xml::sax::InputSource;
-using $XMLReader = ::org::xml::sax::XMLReader;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace com {
 	namespace sun {

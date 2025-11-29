@@ -7,11 +7,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Result = ::javax::xml::transform::Result;
-using $Transformer = ::javax::xml::transform::Transformer;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace javax {
 	namespace xml {

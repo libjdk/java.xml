@@ -22,7 +22,6 @@ using $List = ::java::util::List;
 using $QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
 using $Characters = ::javax::xml::stream::events::Characters;
-using $DTD = ::javax::xml::stream::events::DTD;
 using $EndElement = ::javax::xml::stream::events::EndElement;
 using $StartElement = ::javax::xml::stream::events::StartElement;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;

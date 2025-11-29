@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Validator = ::javax::xml::validation::Validator;
-using $ValidatorHandler = ::javax::xml::validation::ValidatorHandler;
 
 namespace javax {
 	namespace xml {

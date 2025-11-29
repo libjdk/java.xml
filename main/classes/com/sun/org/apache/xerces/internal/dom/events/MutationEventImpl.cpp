@@ -19,7 +19,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Node = ::org::w3c::dom::Node;
 using $EventTarget = ::org::w3c::dom::events::EventTarget;
-using $MutationEvent = ::org::w3c::dom::events::MutationEvent;
 
 namespace com {
 	namespace sun {

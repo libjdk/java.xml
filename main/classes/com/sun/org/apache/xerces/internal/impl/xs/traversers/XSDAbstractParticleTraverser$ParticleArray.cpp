@@ -6,7 +6,6 @@
 
 using $XSParticleDeclArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl>;
 using $XSParticleDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl;
-using $XSDAbstractParticleTraverser = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDAbstractParticleTraverser;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

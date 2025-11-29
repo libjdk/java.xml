@@ -9,7 +9,6 @@
 #include <jcpp.h>
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $ElementValue = ::com::sun::org::apache::bcel::internal::classfile::ElementValue;

@@ -152,7 +152,6 @@ using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $HttpURLConnection = ::java::net::HttpURLConnection;
 using $URL = ::java::net::URL;
@@ -174,7 +173,6 @@ using $Document = ::org::w3c::dom::Document;
 using $Node = ::org::w3c::dom::Node;
 using $LSException = ::org::w3c::dom::ls::LSException;
 using $LSOutput = ::org::w3c::dom::ls::LSOutput;
-using $LSSerializer = ::org::w3c::dom::ls::LSSerializer;
 using $LSSerializerFilter = ::org::w3c::dom::ls::LSSerializerFilter;
 
 namespace com {

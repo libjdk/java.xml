@@ -10,7 +10,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $AttributeList = ::org::xml::sax::AttributeList;
-using $Attributes = ::org::xml::sax::Attributes;
 using $AttributesImpl = ::org::xml::sax::helpers::AttributesImpl;
 using $ParserAdapter = ::org::xml::sax::helpers::ParserAdapter;
 

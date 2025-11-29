@@ -5,7 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription.h>
 #include <jcpp.h>
 
-using $XMLGrammarPoolImpl = ::com::sun::org::apache::xerces::internal::util::XMLGrammarPoolImpl;
 using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
 using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $ClassInfo = ::java::lang::ClassInfo;

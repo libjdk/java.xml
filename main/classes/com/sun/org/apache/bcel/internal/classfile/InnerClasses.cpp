@@ -19,7 +19,6 @@ using $InnerClass = ::com::sun::org::apache::bcel::internal::classfile::InnerCla
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $DataInput = ::java::io::DataInput;
 using $DataOutputStream = ::java::io::DataOutputStream;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

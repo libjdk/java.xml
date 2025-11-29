@@ -8,14 +8,8 @@
 #include <org/w3c/dom/traversal/NodeIterator.h>
 #include <jcpp.h>
 
-using $QName = ::com::sun::org::apache::xml::internal::utils::QName;
-using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
-using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $ErrorListener = ::javax::xml::transform::ErrorListener;
-using $Node = ::org::w3c::dom::Node;
-using $NodeIterator = ::org::w3c::dom::traversal::NodeIterator;
 
 namespace com {
 	namespace sun {

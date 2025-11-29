@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Op.h>
 #include <jcpp.h>
 
-using $Op = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op;
 using $Op$ChildOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$ChildOp;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

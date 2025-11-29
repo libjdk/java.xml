@@ -10,11 +10,9 @@
 #undef DESCENDANT
 #undef SELF
 
-using $XPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath;
 using $XPath$Axis = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Axis;
 using $XPath$NodeTest = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$NodeTest;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Cloneable = ::java::lang::Cloneable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

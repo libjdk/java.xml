@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Stream = ::java::util::stream::Stream;
 
 namespace javax {
 	namespace xml {

@@ -18,7 +18,6 @@ using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $PushInstruction = ::com::sun::org::apache::bcel::internal::generic::PushInstruction;
-using $ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
 using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;

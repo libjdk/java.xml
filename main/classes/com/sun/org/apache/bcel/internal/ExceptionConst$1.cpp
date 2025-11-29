@@ -11,12 +11,9 @@
 #undef EXCS_INTERFACE_METHOD_RESOLUTION
 #undef EXCS_STRING_RESOLUTION
 
-using $ExceptionConst$EXCSArray = $Array<::com::sun::org::apache::bcel::internal::ExceptionConst$EXCS>;
-using $ExceptionConst = ::com::sun::org::apache::bcel::internal::ExceptionConst;
 using $ExceptionConst$EXCS = ::com::sun::org::apache::bcel::internal::ExceptionConst$EXCS;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
-using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $NoSuchFieldError = ::java::lang::NoSuchFieldError;

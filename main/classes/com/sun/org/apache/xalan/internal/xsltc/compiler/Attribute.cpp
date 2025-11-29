@@ -9,7 +9,6 @@
 
 using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
-using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $ClassInfo = ::java::lang::ClassInfo;

@@ -84,14 +84,10 @@
 
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
 using $TypeArray = $Array<::com::sun::org::apache::bcel::internal::generic::Type>;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
-using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -104,14 +100,11 @@ using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::Instr
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $PUTFIELD = ::com::sun::org::apache::bcel::internal::generic::PUTFIELD;
-using $ReturnInstruction = ::com::sun::org::apache::bcel::internal::generic::ReturnInstruction;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $AbsoluteLocationPath = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AbsoluteLocationPath;
 using $BooleanExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::BooleanExpr;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
@@ -127,7 +120,6 @@ using $PositionCall = ::com::sun::org::apache::xalan::internal::xsltc::compiler:
 using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $Step = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Step;
 using $StepPattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::StepPattern;
-using $Stylesheet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Stylesheet;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $TopLevelElement = ::com::sun::org::apache::xalan::internal::xsltc::compiler::TopLevelElement;
@@ -143,7 +135,7 @@ using $NumberType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::u
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
 using $ResultTreeType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ResultTreeType;
 using $TestGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::TestGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $Operators = ::com::sun::org::apache::xalan::internal::xsltc::runtime::Operators;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -353,23 +345,23 @@ $String* Predicate::toString() {
 	return $str({"pred("_s, this->_exp, $$str(u')')});
 }
 
-$1Type* Predicate::typeCheck($SymbolTable* stable) {
+$Type* Predicate::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
-	$var($1Type, texp, $nc(this->_exp)->typeCheck(stable));
+	$var($Type, texp, $nc(this->_exp)->typeCheck(stable));
 	if ($instanceOf($ReferenceType, texp)) {
-		$init($1Type);
-		$set(this, _exp, $new($CastExpr, this->_exp, $assign(texp, $1Type::Real)));
+		$init($Type);
+		$set(this, _exp, $new($CastExpr, this->_exp, $assign(texp, $Type::Real)));
 	}
 	if ($instanceOf($ResultTreeType, texp)) {
-		$init($1Type);
-		$set(this, _exp, $new($CastExpr, this->_exp, $1Type::Boolean));
-		$set(this, _exp, $new($CastExpr, this->_exp, $1Type::Real));
+		$init($Type);
+		$set(this, _exp, $new($CastExpr, this->_exp, $Type::Boolean));
+		$set(this, _exp, $new($CastExpr, this->_exp, $Type::Real));
 		$assign(texp, $nc(this->_exp)->typeCheck(stable));
 	}
 	if ($instanceOf($NumberType, texp)) {
 		if ($instanceOf($IntType, texp) == false) {
-			$init($1Type);
-			$set(this, _exp, $new($CastExpr, this->_exp, $1Type::Int));
+			$init($Type);
+			$set(this, _exp, $new($CastExpr, this->_exp, $Type::Int));
 		}
 		if (this->_canOptimize) {
 			bool var$0 = !$nc(this->_exp)->hasLastCall();
@@ -377,8 +369,8 @@ $1Type* Predicate::typeCheck($SymbolTable* stable) {
 			if (this->_nthPositionFilter) {
 				$var($SyntaxTreeNode, parent, getParent());
 				this->_nthDescendant = ($instanceOf($Step, parent)) && ($instanceOf($AbsoluteLocationPath, $($nc(parent)->getParent())));
-				$init($1Type);
-				return $set(this, _type, $1Type::NodeSet);
+				$init($Type);
+				return $set(this, _type, $Type::NodeSet);
 			}
 		}
 		this->_nthPositionFilter = (this->_nthDescendant = false);
@@ -387,18 +379,18 @@ $1Type* Predicate::typeCheck($SymbolTable* stable) {
 		positionCall->setParser($(getParser()));
 		positionCall->setParent(this);
 		$set(this, _exp, $new($EqualityExpr, $Operators::EQ, positionCall, this->_exp));
-		$init($1Type);
-		if ($nc(this->_exp)->typeCheck(stable) != $1Type::Boolean) {
-			$set(this, _exp, $new($CastExpr, this->_exp, $1Type::Boolean));
+		$init($Type);
+		if ($nc(this->_exp)->typeCheck(stable) != $Type::Boolean) {
+			$set(this, _exp, $new($CastExpr, this->_exp, $Type::Boolean));
 		}
-		return $set(this, _type, $1Type::Boolean);
+		return $set(this, _type, $Type::Boolean);
 	} else {
 		if ($instanceOf($BooleanType, texp) == false) {
-			$init($1Type);
-			$set(this, _exp, $new($CastExpr, this->_exp, $1Type::Boolean));
+			$init($Type);
+			$set(this, _exp, $new($CastExpr, this->_exp, $Type::Boolean));
 		}
-		$init($1Type);
-		return $set(this, _type, $1Type::Boolean);
+		$init($Type);
+		return $set(this, _type, $Type::Boolean);
 	}
 }
 
@@ -425,12 +417,12 @@ void Predicate::compileFilter($ClassGenerator* classGen, $MethodGenerator* metho
 		filterGen->addField($$new($Field, var$5, var$6, var$7, nullptr, $(cpg->getConstantPool())));
 	}
 	$var($InstructionList, il, $new($InstructionList));
-	$init($Type);
-	$assign(testGen, $new($TestGenerator, $Constants::ACC_PUBLIC | $Constants::ACC_FINAL, $Type::BOOLEAN, $$new($TypeArray, {
-		static_cast<$Type*>($Type::INT),
-		static_cast<$Type*>($Type::INT),
-		static_cast<$Type*>($Type::INT),
-		static_cast<$Type*>($Type::INT),
+	$init($1Type);
+	$assign(testGen, $new($TestGenerator, $Constants::ACC_PUBLIC | $Constants::ACC_FINAL, $1Type::BOOLEAN, $$new($TypeArray, {
+		static_cast<$1Type*>($1Type::INT),
+		static_cast<$1Type*>($1Type::INT),
+		static_cast<$1Type*>($1Type::INT),
+		static_cast<$1Type*>($1Type::INT),
 		$($Util::getJCRefType($Constants::TRANSLET_SIG)),
 		$($Util::getJCRefType($Constants::NODE_ITERATOR_SIG))
 	}), $$new($StringArray, {
@@ -511,8 +503,8 @@ $Expression* Predicate::getCompareValue() {
 			$set(this, _value, left);
 			return this->_value;
 		}
-		$init($1Type);
-		if ($instanceOf($VariableRefBase, left) && $nc(left)->getType() == $1Type::String) {
+		$init($Type);
+		if ($instanceOf($VariableRefBase, left) && $nc(left)->getType() == $Type::String) {
 			$set(this, _value, left);
 			return this->_value;
 		}
@@ -520,7 +512,7 @@ $Expression* Predicate::getCompareValue() {
 			$set(this, _value, right);
 			return this->_value;
 		}
-		if ($instanceOf($VariableRefBase, right) && $nc(right)->getType() == $1Type::String) {
+		if ($instanceOf($VariableRefBase, right) && $nc(right)->getType() == $Type::String) {
 			$set(this, _value, right);
 			return this->_value;
 		}
@@ -541,7 +533,7 @@ void Predicate::translateFilter($ClassGenerator* classGen, $MethodGenerator* met
 	for (int32_t i = 0; i < length; ++i) {
 		$var($VariableRefBase, varRef, $cast($VariableRefBase, $nc(this->_closureVars)->get(i)));
 		$var($VariableBase, var, $nc(varRef)->getVariable());
-		$var($1Type, varType, $nc(var)->getType());
+		$var($Type, varType, $nc(var)->getType());
 		il->append(static_cast<$Instruction*>($Constants::DUP));
 		$var($Closure, variableClosure, this->_parentClosure);
 		while (variableClosure != nullptr) {

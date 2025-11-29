@@ -3,7 +3,6 @@
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
-using $CharacterData = ::org::w3c::dom::CharacterData;
 
 namespace org {
 	namespace w3c {

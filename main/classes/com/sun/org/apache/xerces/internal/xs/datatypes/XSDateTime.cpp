@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Duration = ::javax::xml::datatype::Duration;
-using $XMLGregorianCalendar = ::javax::xml::datatype::XMLGregorianCalendar;
 
 namespace com {
 	namespace sun {

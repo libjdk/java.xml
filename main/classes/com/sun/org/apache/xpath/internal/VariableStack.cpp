@@ -22,12 +22,10 @@ using $QName = ::com::sun::org::apache::xml::internal::utils::QName;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Cloneable = ::java::lang::Cloneable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $SourceLocator = ::javax::xml::transform::SourceLocator;
 using $TransformerException = ::javax::xml::transform::TransformerException;
 
 namespace com {

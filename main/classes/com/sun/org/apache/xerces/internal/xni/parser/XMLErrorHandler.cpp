@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.h>
 #include <jcpp.h>
 
-using $XMLParseException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLParseException;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

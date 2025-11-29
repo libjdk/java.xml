@@ -23,7 +23,6 @@ using $ObjectFactory = ::com::sun::org::apache::xalan::internal::utils::ObjectFa
 using $XMLErrorResources = ::com::sun::org::apache::xml::internal::res::XMLErrorResources;
 using $XMLMessages = ::com::sun::org::apache::xml::internal::res::XMLMessages;
 using $WrappedRuntimeException = ::com::sun::org::apache::xml::internal::utils::WrappedRuntimeException;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $ClassNotFoundException = ::java::lang::ClassNotFoundException;
 using $Exception = ::java::lang::Exception;

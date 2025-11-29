@@ -3,8 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool.h>
 #include <jcpp.h>
 
-using $XMLGrammarPool = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarPool;
-using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

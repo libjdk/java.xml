@@ -19,7 +19,6 @@ using $XMLDocumentHandler = ::com::sun::org::apache::xerces::internal::xni::XMLD
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $XMLDocumentFilter = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentFilter;
 using $XMLDocumentSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

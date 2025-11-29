@@ -5,7 +5,6 @@
 #include <java/text/CharacterIterator.h>
 #include <jcpp.h>
 
-using $RegularExpression = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression;
 using $RegularExpression$ExpressionTarget = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression$ExpressionTarget;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;

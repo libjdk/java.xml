@@ -9,7 +9,6 @@
 #undef THRESHHOLD_LENGTH
 
 using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
-using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $IOException = ::java::io::IOException;
 using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;

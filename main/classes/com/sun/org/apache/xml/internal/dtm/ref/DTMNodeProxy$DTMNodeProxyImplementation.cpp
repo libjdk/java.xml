@@ -10,12 +10,10 @@
 #undef NOT_SUPPORTED_ERR
 
 using $DTMDOMException = ::com::sun::org::apache::xml::internal::dtm::DTMDOMException;
-using $DTMNodeProxy = ::com::sun::org::apache::xml::internal::dtm::ref::DTMNodeProxy;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $DOMException = ::org::w3c::dom::DOMException;
-using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
 using $Document = ::org::w3c::dom::Document;
 using $DocumentType = ::org::w3c::dom::DocumentType;
 

@@ -7,7 +7,6 @@
 #include <javax/xml/namespace/QName.h>
 #include <jcpp.h>
 
-using $XSNamedMapImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSNamedMapImpl;
 using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

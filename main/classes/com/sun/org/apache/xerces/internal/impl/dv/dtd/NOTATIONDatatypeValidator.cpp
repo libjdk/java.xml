@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/ValidationContext.h>
 #include <jcpp.h>
 
-using $DatatypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::DatatypeValidator;
 using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

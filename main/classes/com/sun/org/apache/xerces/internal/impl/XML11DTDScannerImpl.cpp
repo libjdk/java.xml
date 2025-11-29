@@ -17,7 +17,6 @@ using $XMLDTDScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLD
 using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEntityManager;
 using $XMLEntityScanner = ::com::sun::org::apache::xerces::internal::impl::XMLEntityScanner;
 using $XMLErrorReporter = ::com::sun::org::apache::xerces::internal::impl::XMLErrorReporter;
-using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $XMLScanner$NameType = ::com::sun::org::apache::xerces::internal::impl::XMLScanner$NameType;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XML11Char = ::com::sun::org::apache::xerces::internal::util::XML11Char;

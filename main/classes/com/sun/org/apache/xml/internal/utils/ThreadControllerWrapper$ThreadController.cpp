@@ -6,7 +6,6 @@
 #include <jcpp.h>
 
 using $SafeThread = ::com::sun::org::apache::xml::internal::utils::SafeThread;
-using $ThreadControllerWrapper = ::com::sun::org::apache::xml::internal::utils::ThreadControllerWrapper;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

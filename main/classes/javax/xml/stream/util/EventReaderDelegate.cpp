@@ -8,7 +8,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Iterator = ::java::util::Iterator;
 using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 

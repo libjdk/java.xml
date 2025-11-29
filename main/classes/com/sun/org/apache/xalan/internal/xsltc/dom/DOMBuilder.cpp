@@ -2,7 +2,6 @@
 
 #include <jcpp.h>
 
-using $ExtendedSAX = ::com::sun::org::apache::xalan::internal::xsltc::dom::ExtendedSAX;
 using $ClassInfo = ::java::lang::ClassInfo;
 
 namespace com {

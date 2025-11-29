@@ -9,7 +9,6 @@
 
 using $DTMIterator = ::com::sun::org::apache::xml::internal::dtm::DTMIterator;
 using $WrappedRuntimeException = ::com::sun::org::apache::xml::internal::utils::WrappedRuntimeException;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;

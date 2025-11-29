@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/util/PropertyState.h>
 #include <jcpp.h>
 
-using $FeatureState = ::com::sun::org::apache::xerces::internal::util::FeatureState;
-using $PropertyState = ::com::sun::org::apache::xerces::internal::util::PropertyState;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

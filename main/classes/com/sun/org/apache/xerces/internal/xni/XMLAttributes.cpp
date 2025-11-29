@@ -5,9 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLString.h>
 #include <jcpp.h>
 
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -51,8 +51,6 @@
 #undef TEXT_OFFSET_BITS
 #undef TEXT_OFFSET_MAX
 
-using $ExtendedTypeArray = $Array<::com::sun::org::apache::xml::internal::dtm::ref::ExtendedType>;
-using $intArray2 = $Array<int32_t, 2>;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $DTMWSFilter = ::com::sun::org::apache::xml::internal::dtm::DTMWSFilter;
@@ -82,7 +80,6 @@ using $Vector = ::java::util::Vector;
 using $Source = ::javax::xml::transform::Source;
 using $Attributes = ::org::xml::sax::Attributes;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $Locator = ::org::xml::sax::Locator;
 
 namespace com {
 	namespace sun {

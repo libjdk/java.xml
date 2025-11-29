@@ -5,9 +5,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <jcpp.h>
 
-using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

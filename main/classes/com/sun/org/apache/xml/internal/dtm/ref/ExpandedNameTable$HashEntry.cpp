@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/ExtendedType.h>
 #include <jcpp.h>
 
-using $ExpandedNameTable = ::com::sun::org::apache::xml::internal::dtm::ref::ExpandedNameTable;
 using $ExtendedType = ::com::sun::org::apache::xml::internal::dtm::ref::ExtendedType;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

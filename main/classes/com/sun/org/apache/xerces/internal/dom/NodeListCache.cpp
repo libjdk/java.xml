@@ -3,9 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/dom/ParentNode.h>
 #include <jcpp.h>
 
-using $ChildNode = ::com::sun::org::apache::xerces::internal::dom::ChildNode;
 using $ParentNode = ::com::sun::org::apache::xerces::internal::dom::ParentNode;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

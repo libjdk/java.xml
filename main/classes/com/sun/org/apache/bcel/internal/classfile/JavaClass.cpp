@@ -54,12 +54,10 @@ using $AnnotationEntry = ::com::sun::org::apache::bcel::internal::classfile::Ann
 using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
-using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::classfile::FieldOrMethod;
 using $InnerClass = ::com::sun::org::apache::bcel::internal::classfile::InnerClass;
 using $InnerClasses = ::com::sun::org::apache::bcel::internal::classfile::InnerClasses;
 using $JavaClass$1 = ::com::sun::org::apache::bcel::internal::classfile::JavaClass$1;
-using $1Method = ::com::sun::org::apache::bcel::internal::classfile::Method;
-using $Node = ::com::sun::org::apache::bcel::internal::classfile::Node;
+using $Method = ::com::sun::org::apache::bcel::internal::classfile::Method;
 using $SourceFile = ::com::sun::org::apache::bcel::internal::classfile::SourceFile;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
@@ -72,20 +70,16 @@ using $ByteArrayOutputStream = ::java::io::ByteArrayOutputStream;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $File = ::java::io::File;
 using $FileOutputStream = ::java::io::FileOutputStream;
-using $FilterOutputStream = ::java::io::FilterOutputStream;
 using $IOException = ::java::io::IOException;
 using $OutputStream = ::java::io::OutputStream;
 using $PrintStream = ::java::io::PrintStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
-using $Cloneable = ::java::lang::Cloneable;
-using $Comparable = ::java::lang::Comparable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
-using $Method = ::java::lang::reflect::Method;
+using $1Method = ::java::lang::reflect::Method;
 using $AbstractList = ::java::util::AbstractList;
 using $AbstractSet = ::java::util::AbstractSet;
 using $ArrayList = ::java::util::ArrayList;
@@ -431,7 +425,7 @@ void JavaClass::dump($DataOutputStream* file) {
 		int32_t len$ = arr$->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
-			$var($1Method, method, arr$->get(i$));
+			$var($Method, method, arr$->get(i$));
 			{
 				$nc(method)->dump(file);
 			}
@@ -507,14 +501,14 @@ $MethodArray* JavaClass::getMethods() {
 	return this->methods;
 }
 
-$1Method* JavaClass::getMethod($Method* m) {
+$Method* JavaClass::getMethod($1Method* m) {
 	$useLocalCurrentObjectStackCache();
 	{
 		$var($MethodArray, arr$, this->methods);
 		int32_t len$ = $nc(arr$)->length;
 		int32_t i$ = 0;
 		for (; i$ < len$; ++i$) {
-			$var($1Method, method, arr$->get(i$));
+			$var($Method, method, arr$->get(i$));
 			{
 				bool var$1 = $nc($($nc(m)->getName()))->equals($($nc(method)->getName()));
 				if (var$1) {
@@ -676,7 +670,7 @@ $String* JavaClass::toString() {
 			int32_t len$ = $nc(arr$)->length;
 			int32_t i$ = 0;
 			for (; i$ < len$; ++i$) {
-				$var($1Method, method, arr$->get(i$));
+				$var($Method, method, arr$->get(i$));
 				{
 					buf->append("\t"_s)->append($of(method))->append(u'\n');
 				}

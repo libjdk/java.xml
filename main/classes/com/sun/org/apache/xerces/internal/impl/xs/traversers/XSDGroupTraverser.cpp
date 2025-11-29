@@ -60,7 +60,6 @@ using $XSDAbstractParticleTraverser = ::com::sun::org::apache::xerces::internal:
 using $XSDAbstractTraverser = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDAbstractTraverser;
 using $XSDHandler = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDHandler;
 using $XSDocumentInfo = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDocumentInfo;
-using $SimpleLocator = ::com::sun::org::apache::xerces::internal::impl::xs::util::SimpleLocator;
 using $XInt = ::com::sun::org::apache::xerces::internal::impl::xs::util::XInt;
 using $XSObjectListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl;
 using $DOMUtil = ::com::sun::org::apache::xerces::internal::util::DOMUtil;

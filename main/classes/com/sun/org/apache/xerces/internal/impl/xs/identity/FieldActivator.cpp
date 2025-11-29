@@ -5,9 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/identity/XPathMatcher.h>
 #include <jcpp.h>
 
-using $Field = ::com::sun::org::apache::xerces::internal::impl::xs::identity::Field;
-using $IdentityConstraint = ::com::sun::org::apache::xerces::internal::impl::xs::identity::IdentityConstraint;
-using $XPathMatcher = ::com::sun::org::apache::xerces::internal::impl::xs::identity::XPathMatcher;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

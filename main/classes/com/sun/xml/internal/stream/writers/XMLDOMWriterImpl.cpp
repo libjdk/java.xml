@@ -27,9 +27,7 @@
 #undef XMLNS_ATTRIBUTE
 #undef XMLNS_ATTRIBUTE_NS_URI
 
-using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
-using $XMLStreamWriterBase = ::com::sun::xml::internal::stream::writers::XMLStreamWriterBase;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalStateException = ::java::lang::IllegalStateException;

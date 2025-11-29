@@ -8,7 +8,6 @@
 #include <org/xml/sax/SAXParseException.h>
 #include <jcpp.h>
 
-using $XSDHandler = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDHandler;
 using $ErrorHandlerWrapper = ::com::sun::org::apache::xerces::internal::util::ErrorHandlerWrapper;
 using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIException;
 using $XMLParseException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLParseException;

@@ -56,28 +56,24 @@ using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $Stylesheet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Stylesheet;
@@ -87,7 +83,7 @@ using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compile
 using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ErrorMsg;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $XML11Char = ::com::sun::org::apache::xml::internal::utils::XML11Char;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -141,7 +137,7 @@ $Object* allocate$WithParam($Class* clazz) {
 }
 
 void WithParam::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	this->_doParameterOptimization = false;
 }
 
@@ -194,18 +190,18 @@ void WithParam::parseContents($Parser* parser) {
 	parseChildren(parser);
 }
 
-$1Type* WithParam::typeCheck($SymbolTable* stable) {
+$Type* WithParam::typeCheck($SymbolTable* stable) {
 	if (this->_select != nullptr) {
-		$var($1Type, tselect, $nc(this->_select)->typeCheck(stable));
+		$var($Type, tselect, $nc(this->_select)->typeCheck(stable));
 		if ($instanceOf($ReferenceType, tselect) == false) {
-			$init($1Type);
-			$set(this, _select, $new($CastExpr, this->_select, $1Type::Reference));
+			$init($Type);
+			$set(this, _select, $new($CastExpr, this->_select, $Type::Reference));
 		}
 	} else {
 		typeCheckContents(stable);
 	}
-	$init($1Type);
-	return $1Type::Void;
+	$init($Type);
+	return $Type::Void;
 }
 
 void WithParam::translateValue($ClassGenerator* classGen, $MethodGenerator* methodGen) {
@@ -217,12 +213,12 @@ void WithParam::translateValue($ClassGenerator* classGen, $MethodGenerator* meth
 		$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 		compileResultTree(classGen, methodGen);
 		$var($String, var$0, $str({"@"_s, this->_escapedName}));
-		$init($1Type);
-		$var($Type, var$1, $nc($1Type::ResultTree)->toJCType());
+		$init($Type);
+		$var($1Type, var$1, $nc($Type::ResultTree)->toJCType());
 		$set(this, _domAdapter, methodGen->addLocalVariable2(var$0, var$1, $($nc(il)->getEnd())));
 		$init($Constants);
-		$nc(il)->append(static_cast<$Instruction*>($Constants::DUP));
-		il->append(static_cast<$Instruction*>($$new($ASTORE, $nc(this->_domAdapter)->getIndex())));
+		$nc(il)->append(static_cast<$1Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($$new($ASTORE, $nc(this->_domAdapter)->getIndex())));
 	} else {
 		$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 		$var($InstructionList, il, $nc(methodGen)->getInstructionList());
@@ -245,8 +241,8 @@ void WithParam::translate($ClassGenerator* classGen, $MethodGenerator* methodGen
 	translateValue(classGen, methodGen);
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, false)));
 	$init($Constants);
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, $Constants::ADD_PARAMETER, $Constants::ADD_PARAMETER_SIG))));
-	il->append(static_cast<$Instruction*>($Constants::POP));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, $Constants::ADD_PARAMETER, $Constants::ADD_PARAMETER_SIG))));
+	il->append(static_cast<$1Instruction*>($Constants::POP));
 }
 
 void WithParam::releaseResultTree($ClassGenerator* classGen, $MethodGenerator* methodGen) {
@@ -259,14 +255,14 @@ void WithParam::releaseResultTree($ClassGenerator* classGen, $MethodGenerator* m
 		if (var$0 && $nc($(classGen->getDOMClass()))->equals($Constants::MULTI_DOM_CLASS)) {
 			int32_t removeDA = $nc(cpg)->addMethodref($Constants::MULTI_DOM_CLASS, "removeDOMAdapter"_s, $$str({"("_s, $Constants::DOM_ADAPTER_SIG, ")V"_s}));
 			$nc(il)->append($(methodGen->loadDOM()));
-			il->append(static_cast<$Instruction*>($$new($CHECKCAST, cpg->addClass($Constants::MULTI_DOM_CLASS))));
-			il->append(static_cast<$Instruction*>($$new($ALOAD, $nc(this->_domAdapter)->getIndex())));
-			il->append(static_cast<$Instruction*>($$new($CHECKCAST, cpg->addClass($Constants::DOM_ADAPTER_CLASS))));
-			il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, removeDA)));
+			il->append(static_cast<$1Instruction*>($$new($CHECKCAST, cpg->addClass($Constants::MULTI_DOM_CLASS))));
+			il->append(static_cast<$1Instruction*>($$new($ALOAD, $nc(this->_domAdapter)->getIndex())));
+			il->append(static_cast<$1Instruction*>($$new($CHECKCAST, cpg->addClass($Constants::DOM_ADAPTER_CLASS))));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, removeDA)));
 		}
 		int32_t release = $nc(cpg)->addInterfaceMethodref($Constants::DOM_IMPL_CLASS, "release"_s, "()V"_s);
-		$nc(il)->append(static_cast<$Instruction*>($$new($ALOAD, $nc(this->_domAdapter)->getIndex())));
-		il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, release, 1)));
+		$nc(il)->append(static_cast<$1Instruction*>($$new($ALOAD, $nc(this->_domAdapter)->getIndex())));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, release, 1)));
 		$nc(this->_domAdapter)->setEnd($(il->getEnd()));
 		methodGen->removeLocalVariable(this->_domAdapter);
 		$set(this, _domAdapter, nullptr);

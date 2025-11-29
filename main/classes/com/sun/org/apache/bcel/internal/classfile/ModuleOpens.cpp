@@ -12,12 +12,10 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
-using $Node = ::com::sun::org::apache::bcel::internal::classfile::Node;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $DataInput = ::java::io::DataInput;
 using $DataOutputStream = ::java::io::DataOutputStream;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
 using $Cloneable = ::java::lang::Cloneable;

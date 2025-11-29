@@ -5,9 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $XMLResolver = ::javax::xml::stream::XMLResolver;
-using $URIResolver = ::javax::xml::transform::URIResolver;
-using $LSResourceResolver = ::org::w3c::dom::ls::LSResourceResolver;
 using $EntityResolver = ::org::xml::sax::EntityResolver;
 
 namespace javax {

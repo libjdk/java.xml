@@ -5,7 +5,6 @@
 #include <jcpp.h>
 
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

@@ -22,7 +22,6 @@
 #undef MODEL_GROUP
 #undef OCCURRENCE_UNBOUNDED
 
-using $XSParticleDeclArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl>;
 using $XSObjectArray = $Array<::com::sun::org::apache::xerces::internal::xs::XSObject>;
 using $SchemaSymbols = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaSymbols;
 using $XSParticleDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl;
@@ -31,7 +30,6 @@ using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotatio
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
 using $XSModelGroup = ::com::sun::org::apache::xerces::internal::xs::XSModelGroup;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

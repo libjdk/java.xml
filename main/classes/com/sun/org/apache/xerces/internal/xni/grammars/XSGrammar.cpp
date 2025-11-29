@@ -3,9 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSModel.h>
 #include <jcpp.h>
 
-using $XSGrammarArray = $Array<::com::sun::org::apache::xerces::internal::xni::grammars::XSGrammar>;
-using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
-using $XSModel = ::com::sun::org::apache::xerces::internal::xs::XSModel;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

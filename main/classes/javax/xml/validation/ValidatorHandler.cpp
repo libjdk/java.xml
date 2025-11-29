@@ -9,10 +9,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NullPointerException = ::java::lang::NullPointerException;
-using $TypeInfoProvider = ::javax::xml::validation::TypeInfoProvider;
-using $LSResourceResolver = ::org::w3c::dom::ls::LSResourceResolver;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $SAXNotRecognizedException = ::org::xml::sax::SAXNotRecognizedException;
 
 namespace javax {

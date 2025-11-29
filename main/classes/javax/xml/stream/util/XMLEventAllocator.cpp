@@ -7,9 +7,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
-using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
-using $XMLEventConsumer = ::javax::xml::stream::util::XMLEventConsumer;
 
 namespace javax {
 	namespace xml {

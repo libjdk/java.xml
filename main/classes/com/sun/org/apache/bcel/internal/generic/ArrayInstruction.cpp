@@ -41,15 +41,11 @@
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $ExceptionConst = ::com::sun::org::apache::bcel::internal::ExceptionConst;
 using $ExceptionConst$EXCS = ::com::sun::org::apache::bcel::internal::ExceptionConst$EXCS;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $ExceptionThrower = ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
 using $ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
-using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

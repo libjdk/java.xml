@@ -65,8 +65,8 @@ $Object* allocate$ChunkedIntArray$ChunksVector($Class* clazz) {
 
 void ChunkedIntArray$ChunksVector::init$($ChunkedIntArray* this$0) {
 	$set(this, this$0, this$0);
-	$set(this, m_map, $new($intArray2, this->BLOCKSIZE));
-	this->m_mapSize = this->BLOCKSIZE;
+	$set(this, m_map, $new($intArray2, ChunkedIntArray$ChunksVector::BLOCKSIZE));
+	this->m_mapSize = ChunkedIntArray$ChunksVector::BLOCKSIZE;
 	this->pos = 0;
 }
 
@@ -78,7 +78,7 @@ void ChunkedIntArray$ChunksVector::addElement($ints* value) {
 	if (this->pos >= this->m_mapSize) {
 		int32_t orgMapSize = this->m_mapSize;
 		while (this->pos >= this->m_mapSize) {
-			this->m_mapSize += this->BLOCKSIZE;
+			this->m_mapSize += ChunkedIntArray$ChunksVector::BLOCKSIZE;
 		}
 		$var($intArray2, newMap, $new($intArray2, this->m_mapSize));
 		$System::arraycopy(this->m_map, 0, newMap, 0, orgMapSize);

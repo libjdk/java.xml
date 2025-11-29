@@ -24,15 +24,12 @@
 #undef PACKAGES_PATH
 
 using $URLArray = $Array<::java::net::URL>;
-using $Closeable = ::java::io::Closeable;
 using $File = ::java::io::File;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $ClassLoader = ::java::lang::ClassLoader;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $URI = ::java::net::URI;
-using $URL = ::java::net::URL;
 using $URLClassLoader = ::java::net::URLClassLoader;
 using $DirectoryStream = ::java::nio::file::DirectoryStream;
 using $FileSystem = ::java::nio::file::FileSystem;

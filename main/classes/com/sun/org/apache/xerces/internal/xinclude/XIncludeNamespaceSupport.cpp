@@ -5,7 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/NamespaceContext.h>
 #include <jcpp.h>
 
-using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
 using $MultipleScopeNamespaceSupport = ::com::sun::org::apache::xerces::internal::xinclude::MultipleScopeNamespaceSupport;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $ClassInfo = ::java::lang::ClassInfo;

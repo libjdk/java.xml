@@ -91,7 +91,6 @@ using $DocumentTypeImpl = ::com::sun::org::apache::xerces::internal::dom::Docume
 using $ElementImpl = ::com::sun::org::apache::xerces::internal::dom::ElementImpl;
 using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
 using $ParentNode = ::com::sun::org::apache::xerces::internal::dom::ParentNode;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $FieldInfo = ::java::lang::FieldInfo;

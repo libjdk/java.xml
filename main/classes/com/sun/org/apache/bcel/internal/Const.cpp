@@ -393,7 +393,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $Arrays = ::java::util::Arrays;
 using $Collection = ::java::util::Collection;
 using $Collections = ::java::util::Collections;
-using $List = ::java::util::List;
 
 namespace com {
 	namespace sun {

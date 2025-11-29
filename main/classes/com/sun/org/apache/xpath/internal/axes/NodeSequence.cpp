@@ -24,7 +24,6 @@ using $DTMFilter = ::com::sun::org::apache::xml::internal::dtm::DTMFilter;
 using $DTMIterator = ::com::sun::org::apache::xml::internal::dtm::DTMIterator;
 using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $NodeVector = ::com::sun::org::apache::xml::internal::utils::NodeVector;
-using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $NodeSetDTM = ::com::sun::org::apache::xpath::internal::NodeSetDTM;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $NodeSequence$IteratorCache = ::com::sun::org::apache::xpath::internal::axes::NodeSequence$IteratorCache;
@@ -35,7 +34,6 @@ using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $List = ::java::util::List;
 

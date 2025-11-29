@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint.h>
 #include <jcpp.h>
 
-using $XMLSchemaValidator = ::com::sun::org::apache::xerces::internal::impl::xs::XMLSchemaValidator;
 using $IdentityConstraint = ::com::sun::org::apache::xerces::internal::impl::xs::identity::IdentityConstraint;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

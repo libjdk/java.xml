@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
 #include <jcpp.h>
 
-using $XMLDocumentFragmentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl;
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

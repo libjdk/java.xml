@@ -32,21 +32,9 @@
 #undef ROOT_NODE
 #undef TEXT_NODE
 
-using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $DTMAxisTraverser = ::com::sun::org::apache::xml::internal::dtm::DTMAxisTraverser;
-using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
-using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $SourceLocator = ::javax::xml::transform::SourceLocator;
-using $Node = ::org::w3c::dom::Node;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
-using $EntityResolver = ::org::xml::sax::EntityResolver;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
-using $DeclHandler = ::org::xml::sax::ext::DeclHandler;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace com {
 	namespace sun {

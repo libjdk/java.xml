@@ -23,7 +23,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $AttributeList = ::org::xml::sax::AttributeList;
-using $Attributes2 = ::org::xml::sax::ext::Attributes2;
 
 namespace com {
 	namespace sun {

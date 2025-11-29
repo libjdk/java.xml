@@ -12,7 +12,6 @@
 #undef MAX_ENTRIES
 #undef MAX_ENTRY_SIZE
 
-using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $ConstantUtf8$Cache$1 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8$Cache$1;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

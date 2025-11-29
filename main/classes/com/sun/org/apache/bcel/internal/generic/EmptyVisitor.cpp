@@ -364,7 +364,6 @@ using $TABLESWITCH = ::com::sun::org::apache::bcel::internal::generic::TABLESWIT
 using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;
 using $UnconditionalBranch = ::com::sun::org::apache::bcel::internal::generic::UnconditionalBranch;
 using $VariableLengthInstruction = ::com::sun::org::apache::bcel::internal::generic::VariableLengthInstruction;
-using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

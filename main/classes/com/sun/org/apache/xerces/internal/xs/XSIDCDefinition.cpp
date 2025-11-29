@@ -8,9 +8,6 @@
 #undef IC_KEYREF
 #undef IC_UNIQUE
 
-using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

@@ -41,7 +41,6 @@ using $Iterator = ::java::util::Iterator;
 using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
 using $QName = ::javax::xml::namespace$::QName;
 using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
-using $XMLEventWriter = ::javax::xml::stream::XMLEventWriter;
 using $XMLStreamException = ::javax::xml::stream::XMLStreamException;
 using $XMLStreamWriter = ::javax::xml::stream::XMLStreamWriter;
 using $Attribute = ::javax::xml::stream::events::Attribute;

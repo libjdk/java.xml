@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/DTMAxisIterator.h>
 #include <jcpp.h>
 
-using $AbstractTranslet = ::com::sun::org::apache::xalan::internal::xsltc::runtime::AbstractTranslet;
-using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

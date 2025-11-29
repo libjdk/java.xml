@@ -14,16 +14,13 @@
 using $XMLSchemaValidator = ::com::sun::org::apache::xerces::internal::impl::xs::XMLSchemaValidator;
 using $XMLSchemaValidator$KeyValueStore = ::com::sun::org::apache::xerces::internal::impl::xs::XMLSchemaValidator$KeyValueStore;
 using $XMLSchemaValidator$ValueStoreBase = ::com::sun::org::apache::xerces::internal::impl::xs::XMLSchemaValidator$ValueStoreBase;
-using $XMLSchemaValidator$ValueStoreCache = ::com::sun::org::apache::xerces::internal::impl::xs::XMLSchemaValidator$ValueStoreCache;
 using $IdentityConstraint = ::com::sun::org::apache::xerces::internal::impl::xs::identity::IdentityConstraint;
 using $KeyRef = ::com::sun::org::apache::xerces::internal::impl::xs::identity::KeyRef;
-using $UniqueOrKey = ::com::sun::org::apache::xerces::internal::impl::xs::identity::UniqueOrKey;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Map = ::java::util::Map;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

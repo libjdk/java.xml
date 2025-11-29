@@ -23,7 +23,6 @@ using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NoSuchMethodException = ::java::lang::NoSuchMethodException;
-using $Method = ::java::lang::reflect::Method;
 using $SourceLocator = ::javax::xml::transform::SourceLocator;
 using $TransformerException = ::javax::xml::transform::TransformerException;
 using $Node = ::org::w3c::dom::Node;

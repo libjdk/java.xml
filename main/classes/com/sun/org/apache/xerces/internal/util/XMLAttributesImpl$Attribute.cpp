@@ -8,10 +8,8 @@
 #include <jcpp.h>
 
 using $AugmentationsImpl = ::com::sun::org::apache::xerces::internal::util::AugmentationsImpl;
-using $XMLAttributesImpl = ::com::sun::org::apache::xerces::internal::util::XMLAttributesImpl;
 using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

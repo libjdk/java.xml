@@ -12,7 +12,6 @@ using $XMLGrammarPool = ::com::sun::org::apache::xerces::internal::xni::grammars
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Reference = ::java::lang::ref::Reference;
 using $WeakReference = ::java::lang::ref::WeakReference;
 
 namespace com {

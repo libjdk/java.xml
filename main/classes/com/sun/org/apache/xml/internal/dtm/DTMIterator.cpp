@@ -8,8 +8,6 @@
 #undef FILTER_REJECT
 #undef FILTER_SKIP
 
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

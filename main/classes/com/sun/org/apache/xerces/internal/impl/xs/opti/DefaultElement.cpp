@@ -19,7 +19,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $Attr = ::org::w3c::dom::Attr;
 using $DOMException = ::org::w3c::dom::DOMException;
 using $Document = ::org::w3c::dom::Document;
-using $Element = ::org::w3c::dom::Element;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;

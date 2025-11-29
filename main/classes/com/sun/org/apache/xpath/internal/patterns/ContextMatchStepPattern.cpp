@@ -28,7 +28,6 @@ using $DTMAxisTraverser = ::com::sun::org::apache::xml::internal::dtm::DTMAxisTr
 using $DTMFilter = ::com::sun::org::apache::xml::internal::dtm::DTMFilter;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $WalkerFactory = ::com::sun::org::apache::xpath::internal::axes::WalkerFactory;
-using $XNumber = ::com::sun::org::apache::xpath::internal::objects::XNumber;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $StepPattern = ::com::sun::org::apache::xpath::internal::patterns::StepPattern;

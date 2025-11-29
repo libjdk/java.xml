@@ -11,7 +11,6 @@
 #undef EXTERNAL_ACCESS_DEFAULT
 
 using $XMLSecurityPropertyManager$PropertyArray = $Array<::com::sun::org::apache::xerces::internal::utils::XMLSecurityPropertyManager$Property>;
-using $XMLSecurityPropertyManager = ::com::sun::org::apache::xerces::internal::utils::XMLSecurityPropertyManager;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;

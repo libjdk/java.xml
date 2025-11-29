@@ -10,7 +10,6 @@ using $ConfigurationError = ::com::sun::org::apache::xalan::internal::utils::Con
 using $ObjectFactory = ::com::sun::org::apache::xalan::internal::utils::ObjectFactory;
 using $Function = ::com::sun::org::apache::xpath::internal::functions::Function;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $TransformerException = ::javax::xml::transform::TransformerException;

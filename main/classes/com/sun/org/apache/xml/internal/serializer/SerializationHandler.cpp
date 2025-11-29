@@ -6,19 +6,9 @@
 #include <org/xml/sax/ContentHandler.h>
 #include <jcpp.h>
 
-using $DOMSerializer = ::com::sun::org::apache::xml::internal::serializer::DOMSerializer;
 using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
-using $ExtendedLexicalHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedLexicalHandler;
-using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
-using $Serializer = ::com::sun::org::apache::xml::internal::serializer::Serializer;
-using $XSLOutputAttributes = ::com::sun::org::apache::xml::internal::serializer::XSLOutputAttributes;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Transformer = ::javax::xml::transform::Transformer;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
-using $DeclHandler = ::org::xml::sax::ext::DeclHandler;
 
 namespace com {
 	namespace sun {

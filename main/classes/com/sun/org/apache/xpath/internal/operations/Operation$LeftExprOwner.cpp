@@ -7,7 +7,6 @@
 
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode;
-using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $Operation = ::com::sun::org::apache::xpath::internal::operations::Operation;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

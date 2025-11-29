@@ -16,7 +16,6 @@
 using $Pattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Pattern;
 using $StepPattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::StepPattern;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
-using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $Template = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Template;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;

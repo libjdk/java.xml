@@ -9,11 +9,9 @@
 #undef DESCENDANT
 
 using $XPath$StepArray = $Array<::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Step>;
-using $XPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath;
 using $XPath$Axis = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Axis;
 using $XPath$Step = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Step;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Cloneable = ::java::lang::Cloneable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

@@ -32,7 +32,6 @@ using $ChildNode = ::com::sun::org::apache::xerces::internal::dom::ChildNode;
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
 using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
-using $NodeListCache = ::com::sun::org::apache::xerces::internal::dom::NodeListCache;
 using $ParentNode$1 = ::com::sun::org::apache::xerces::internal::dom::ParentNode$1;
 using $TextImpl = ::com::sun::org::apache::xerces::internal::dom::TextImpl;
 using $ObjectInputStream = ::java::io::ObjectInputStream;
@@ -46,7 +45,6 @@ using $DOMException = ::org::w3c::dom::DOMException;
 using $Document = ::org::w3c::dom::Document;
 using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;
-using $Text = ::org::w3c::dom::Text;
 
 namespace com {
 	namespace sun {

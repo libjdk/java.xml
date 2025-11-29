@@ -4,7 +4,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $XMLStreamWriter = ::javax::xml::stream::XMLStreamWriter;
 
 namespace com {
 	namespace sun {

@@ -32,7 +32,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $StringBuffer = ::java::lang::StringBuffer;
 using $Document = ::org::w3c::dom::Document;
 using $DocumentType = ::org::w3c::dom::DocumentType;
-using $EntityReference = ::org::w3c::dom::EntityReference;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;

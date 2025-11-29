@@ -30,7 +30,6 @@ using $BasicTestIterator = ::com::sun::org::apache::xpath::internal::axes::Basic
 using $ChildTestIterator = ::com::sun::org::apache::xpath::internal::axes::ChildTestIterator;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;
 using $PredicatedNodeTest = ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest;
-using $XNumber = ::com::sun::org::apache::xpath::internal::objects::XNumber;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $ClassInfo = ::java::lang::ClassInfo;

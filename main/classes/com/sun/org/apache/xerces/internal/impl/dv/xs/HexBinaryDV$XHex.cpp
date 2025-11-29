@@ -7,7 +7,6 @@
 
 using $ByteListImpl = ::com::sun::org::apache::xerces::internal::impl::dv::util::ByteListImpl;
 using $HexBin = ::com::sun::org::apache::xerces::internal::impl::dv::util::HexBin;
-using $HexBinaryDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::HexBinaryDV;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

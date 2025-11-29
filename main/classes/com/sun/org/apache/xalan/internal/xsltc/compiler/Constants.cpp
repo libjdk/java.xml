@@ -278,7 +278,6 @@
 #undef XSLT_PACKAGE
 #undef XSLT_URI
 
-using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $ArithmeticInstruction = ::com::sun::org::apache::bcel::internal::generic::ArithmeticInstruction;
 using $ArrayInstruction = ::com::sun::org::apache::bcel::internal::generic::ArrayInstruction;
 using $ConversionInstruction = ::com::sun::org::apache::bcel::internal::generic::ConversionInstruction;

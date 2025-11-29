@@ -17,7 +17,6 @@ using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::Ins
 using $InstructionTargeter = ::com::sun::org::apache::bcel::internal::generic::InstructionTargeter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
-using $Cloneable = ::java::lang::Cloneable;
 using $Error = ::java::lang::Error;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

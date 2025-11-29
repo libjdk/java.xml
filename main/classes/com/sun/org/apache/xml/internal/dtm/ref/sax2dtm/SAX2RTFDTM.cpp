@@ -21,7 +21,6 @@
 #undef NULL
 #undef SAX2RTFDTM
 
-using $intArray3 = $Array<int32_t, 3>;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $DTMWSFilter = ::com::sun::org::apache::xml::internal::dtm::DTMWSFilter;

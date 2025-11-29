@@ -4,9 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription.h>
 #include <jcpp.h>
 
-using $GrammarArray = $Array<::com::sun::org::apache::xerces::internal::xni::grammars::Grammar>;
-using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
-using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

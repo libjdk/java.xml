@@ -74,7 +74,6 @@ using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTabl
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ReadOnlyIterator = ::com::sun::xml::internal::stream::util::ReadOnlyIterator;
 using $UTF8OutputStreamWriter = ::com::sun::xml::internal::stream::writers::UTF8OutputStreamWriter;
-using $XMLStreamWriterBase = ::com::sun::xml::internal::stream::writers::XMLStreamWriterBase;
 using $XMLStreamWriterImpl$Attribute = ::com::sun::xml::internal::stream::writers::XMLStreamWriterImpl$Attribute;
 using $XMLStreamWriterImpl$ElementStack = ::com::sun::xml::internal::stream::writers::XMLStreamWriterImpl$ElementStack;
 using $XMLStreamWriterImpl$ElementState = ::com::sun::xml::internal::stream::writers::XMLStreamWriterImpl$ElementState;

@@ -23,8 +23,6 @@ using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentat
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
-using $XMLDTDContentModelHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDTDContentModelHandler;
-using $XMLDTDHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDTDHandler;
 using $XMLDocumentHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler;
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
@@ -36,7 +34,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 
 namespace com {
 	namespace sun {

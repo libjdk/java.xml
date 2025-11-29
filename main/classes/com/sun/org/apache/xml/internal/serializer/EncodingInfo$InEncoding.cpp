@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/EncodingInfo.h>
 #include <jcpp.h>
 
-using $EncodingInfo = ::com::sun::org::apache::xml::internal::serializer::EncodingInfo;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

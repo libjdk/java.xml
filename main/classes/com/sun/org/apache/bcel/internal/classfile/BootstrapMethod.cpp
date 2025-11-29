@@ -11,14 +11,12 @@
 #include <jcpp.h>
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;
 using $DataInput = ::java::io::DataInput;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
-using $Cloneable = ::java::lang::Cloneable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Arrays = ::java::util::Arrays;

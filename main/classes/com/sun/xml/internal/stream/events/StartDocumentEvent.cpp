@@ -22,7 +22,6 @@ using $Location = ::javax::xml::stream::Location;
 using $XMLStreamConstants = ::javax::xml::stream::XMLStreamConstants;
 using $Characters = ::javax::xml::stream::events::Characters;
 using $EndElement = ::javax::xml::stream::events::EndElement;
-using $StartDocument = ::javax::xml::stream::events::StartDocument;
 using $StartElement = ::javax::xml::stream::events::StartElement;
 
 namespace com {

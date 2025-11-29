@@ -54,7 +54,6 @@
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -72,11 +71,8 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $AncestorPattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AncestorPattern;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
@@ -90,7 +86,7 @@ using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -151,9 +147,9 @@ void AbsolutePathPattern::setParser($Parser* parser) {
 	}
 }
 
-$1Type* AbsolutePathPattern::typeCheck($SymbolTable* stable) {
-	$init($1Type);
-	return this->_left == nullptr ? $1Type::Root : $nc(this->_left)->typeCheck(stable);
+$Type* AbsolutePathPattern::typeCheck($SymbolTable* stable) {
+	$init($Type);
+	return this->_left == nullptr ? $Type::Root : $nc(this->_left)->typeCheck(stable);
 }
 
 bool AbsolutePathPattern::isWildcard() {

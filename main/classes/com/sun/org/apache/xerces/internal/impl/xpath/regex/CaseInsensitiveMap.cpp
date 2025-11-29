@@ -9,7 +9,6 @@
 #undef LOWER_CASE_MATCH
 #undef UPPER_CASE_MATCH
 
-using $intArray2 = $Array<int32_t, 2>;
 using $intArray3 = $Array<int32_t, 3>;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;

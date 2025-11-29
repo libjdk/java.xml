@@ -21,20 +21,16 @@
 #undef SEVERITY_ERROR
 #undef XML_DOMAIN
 
-using $XMLDocumentFragmentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl;
 using $XMLDocumentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentScannerImpl;
 using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEntityManager;
 using $XMLEntityScanner = ::com::sun::org::apache::xerces::internal::impl::XMLEntityScanner;
 using $XMLErrorReporter = ::com::sun::org::apache::xerces::internal::impl::XMLErrorReporter;
-using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $XMLScanner$NameType = ::com::sun::org::apache::xerces::internal::impl::XMLScanner$NameType;
 using $XMLMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::msg::XMLMessageFormatter;
 using $XML11Char = ::com::sun::org::apache::xerces::internal::util::XML11Char;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $Entity = ::com::sun::xml::internal::stream::Entity;
-using $Entity$ScannedEntity = ::com::sun::xml::internal::stream::Entity$ScannedEntity;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $Integer = ::java::lang::Integer;

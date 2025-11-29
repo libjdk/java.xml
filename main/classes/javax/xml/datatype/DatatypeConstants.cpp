@@ -47,7 +47,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
-using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $XMLConstants = ::javax::xml::XMLConstants;
 using $DatatypeConstants$Field = ::javax::xml::datatype::DatatypeConstants$Field;

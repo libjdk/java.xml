@@ -9,7 +9,6 @@
 
 using $SchemaSymbols = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaSymbols;
 using $XSCMRepeatingLeaf = ::com::sun::org::apache::xerces::internal::impl::xs::models::XSCMRepeatingLeaf;
-using $XSDFACM = ::com::sun::org::apache::xerces::internal::impl::xs::models::XSDFACM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

@@ -7,9 +7,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $InputSource = ::org::xml::sax::InputSource;
-using $DeclHandler = ::org::xml::sax::ext::DeclHandler;
-using $EntityResolver2 = ::org::xml::sax::ext::EntityResolver2;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 using $DefaultHandler = ::org::xml::sax::helpers::DefaultHandler;
 
 namespace org {

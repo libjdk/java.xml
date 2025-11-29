@@ -21,7 +21,6 @@ using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode
 using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $XPathVisitor = ::com::sun::org::apache::xpath::internal::XPathVisitor;
-using $XNumber = ::com::sun::org::apache::xpath::internal::objects::XNumber;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $StepPattern = ::com::sun::org::apache::xpath::internal::patterns::StepPattern;

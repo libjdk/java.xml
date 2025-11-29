@@ -7,7 +7,6 @@
 #undef EMPTYSTRING
 
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $Whitespace = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Whitespace;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

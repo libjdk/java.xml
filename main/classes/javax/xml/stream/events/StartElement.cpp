@@ -8,11 +8,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Iterator = ::java::util::Iterator;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
-using $QName = ::javax::xml::namespace$::QName;
-using $Attribute = ::javax::xml::stream::events::Attribute;
-using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 
 namespace javax {
 	namespace xml {

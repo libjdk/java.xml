@@ -11,7 +11,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
-using $BaseEntry = ::javax::xml::catalog::BaseEntry;
 using $BaseEntry$CatalogEntryType = ::javax::xml::catalog::BaseEntry$CatalogEntryType;
 using $GroupEntry = ::javax::xml::catalog::GroupEntry;
 

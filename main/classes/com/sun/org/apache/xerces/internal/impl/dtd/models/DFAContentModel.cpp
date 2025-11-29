@@ -35,7 +35,6 @@ using $CMLeaf = ::com::sun::org::apache::xerces::internal::impl::dtd::models::CM
 using $CMNode = ::com::sun::org::apache::xerces::internal::impl::dtd::models::CMNode;
 using $CMStateSet = ::com::sun::org::apache::xerces::internal::impl::dtd::models::CMStateSet;
 using $CMUniOp = ::com::sun::org::apache::xerces::internal::impl::dtd::models::CMUniOp;
-using $ContentModelValidator = ::com::sun::org::apache::xerces::internal::impl::dtd::models::ContentModelValidator;
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $PrintStream = ::java::io::PrintStream;
 using $ClassInfo = ::java::lang::ClassInfo;

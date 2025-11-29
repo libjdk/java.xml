@@ -13,14 +13,12 @@ using $Scanner = ::com::sun::java_cup::internal::runtime::Scanner;
 using $Symbol = ::com::sun::java_cup::internal::runtime::Symbol;
 using $virtual_parse_stack = ::com::sun::java_cup::internal::runtime::virtual_parse_stack;
 using $PrintStream = ::java::io::PrintStream;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Error = ::java::lang::Error;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

@@ -47,18 +47,15 @@ using $GOTO = ::com::sun::org::apache::bcel::internal::generic::GOTO;
 using $GotoInstruction = ::com::sun::org::apache::bcel::internal::generic::GotoInstruction;
 using $IFEQ = ::com::sun::org::apache::bcel::internal::generic::IFEQ;
 using $IfInstruction = ::com::sun::org::apache::bcel::internal::generic::IfInstruction;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $FunctionCall = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FunctionCall;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Otherwise = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Otherwise;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
-using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $Text = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Text;
 using $When = ::com::sun::org::apache::xalan::internal::xsltc::compiler::When;
@@ -108,7 +105,7 @@ $Object* allocate$Choose($Class* clazz) {
 }
 
 void Choose::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 }
 
 void Choose::display(int32_t indent) {

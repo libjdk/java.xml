@@ -5,9 +5,6 @@
 #include <java/io/DataInputStream.h>
 #include <jcpp.h>
 
-using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
-using $DataInputStream = ::java::io::DataInputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;

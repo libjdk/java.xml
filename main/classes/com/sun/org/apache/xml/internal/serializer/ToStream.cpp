@@ -118,7 +118,6 @@ using $OutputStreamWriter = ::java::io::OutputStreamWriter;
 using $PrintStream = ::java::io::PrintStream;
 using $UnsupportedEncodingException = ::java::io::UnsupportedEncodingException;
 using $Writer = ::java::io::Writer;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
@@ -127,7 +126,6 @@ using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $StringBuffer = ::java::lang::StringBuffer;
-using $Method = ::java::lang::reflect::Method;
 using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $Enumeration = ::java::util::Enumeration;
@@ -138,7 +136,6 @@ using $Set = ::java::util::Set;
 using $StringTokenizer = ::java::util::StringTokenizer;
 using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $OutputKeys = ::javax::xml::transform::OutputKeys;
-using $SourceLocator = ::javax::xml::transform::SourceLocator;
 using $Transformer = ::javax::xml::transform::Transformer;
 using $TransformerException = ::javax::xml::transform::TransformerException;
 using $JdkConstants = ::jdk::xml::internal::JdkConstants;
@@ -147,7 +144,6 @@ using $Node = ::org::w3c::dom::Node;
 using $Attributes = ::org::xml::sax::Attributes;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $SAXException = ::org::xml::sax::SAXException;
-using $AttributesImpl = ::org::xml::sax::helpers::AttributesImpl;
 
 namespace com {
 	namespace sun {

@@ -2,7 +2,6 @@
 
 #include <jcpp.h>
 
-using $Filter = ::com::sun::org::apache::xalan::internal::xsltc::dom::Filter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

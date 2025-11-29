@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $QName = ::javax::xml::namespace$::QName;
-using $XPathFunction = ::javax::xml::xpath::XPathFunction;
 
 namespace javax {
 	namespace xml {

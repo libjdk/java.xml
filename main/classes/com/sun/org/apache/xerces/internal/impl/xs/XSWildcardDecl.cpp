@@ -33,7 +33,6 @@ using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
 using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $XSWildcard = ::com::sun::org::apache::xerces::internal::xs::XSWildcard;
 using $ClassInfo = ::java::lang::ClassInfo;

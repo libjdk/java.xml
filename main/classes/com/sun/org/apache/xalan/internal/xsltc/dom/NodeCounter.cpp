@@ -15,9 +15,7 @@
 
 using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $Translet = ::com::sun::org::apache::xalan::internal::xsltc::Translet;
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

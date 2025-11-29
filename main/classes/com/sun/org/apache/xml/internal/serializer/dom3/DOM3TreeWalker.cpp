@@ -133,12 +133,9 @@
 
 using $XML11Char = ::com::sun::org::apache::xerces::internal::util::XML11Char;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
-using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
 using $ExtendedLexicalHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedLexicalHandler;
 using $OutputPropertiesFactory = ::com::sun::org::apache::xml::internal::serializer::OutputPropertiesFactory;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
-using $Serializer = ::com::sun::org::apache::xml::internal::serializer::Serializer;
-using $XSLOutputAttributes = ::com::sun::org::apache::xml::internal::serializer::XSLOutputAttributes;
 using $DOMConstants = ::com::sun::org::apache::xml::internal::serializer::dom3::DOMConstants;
 using $DOMErrorImpl = ::com::sun::org::apache::xml::internal::serializer::dom3::DOMErrorImpl;
 using $DOMLocatorImpl = ::com::sun::org::apache::xml::internal::serializer::dom3::DOMLocatorImpl;
@@ -183,7 +180,6 @@ using $Text = ::org::w3c::dom::Text;
 using $TypeInfo = ::org::w3c::dom::TypeInfo;
 using $LSSerializerFilter = ::org::w3c::dom::ls::LSSerializerFilter;
 using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $Locator = ::org::xml::sax::Locator;
 using $SAXException = ::org::xml::sax::SAXException;
 using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;

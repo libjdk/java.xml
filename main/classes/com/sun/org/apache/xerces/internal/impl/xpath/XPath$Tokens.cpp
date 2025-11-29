@@ -64,7 +64,6 @@
 #undef EXPRTOKEN_VARIABLE_REFERENCE
 #undef INITIAL_TOKEN_COUNT
 
-using $XPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath;
 using $XPathException = ::com::sun::org::apache::xerces::internal::impl::xpath::XPathException;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $PrintStream = ::java::io::PrintStream;

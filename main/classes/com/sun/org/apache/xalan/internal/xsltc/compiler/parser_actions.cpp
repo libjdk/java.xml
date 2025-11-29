@@ -205,7 +205,6 @@ using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $List = ::java::util::List;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

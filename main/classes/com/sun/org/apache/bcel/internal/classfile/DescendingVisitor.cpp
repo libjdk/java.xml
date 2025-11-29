@@ -109,7 +109,6 @@ using $Deprecated = ::com::sun::org::apache::bcel::internal::classfile::Deprecat
 using $EnclosingMethod = ::com::sun::org::apache::bcel::internal::classfile::EnclosingMethod;
 using $ExceptionTable = ::com::sun::org::apache::bcel::internal::classfile::ExceptionTable;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
-using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::classfile::FieldOrMethod;
 using $InnerClass = ::com::sun::org::apache::bcel::internal::classfile::InnerClass;
 using $InnerClasses = ::com::sun::org::apache::bcel::internal::classfile::InnerClasses;
 using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
@@ -143,7 +142,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

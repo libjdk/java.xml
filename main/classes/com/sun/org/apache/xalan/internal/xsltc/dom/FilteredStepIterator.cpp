@@ -11,7 +11,6 @@
 using $Filter = ::com::sun::org::apache::xalan::internal::xsltc::dom::Filter;
 using $StepIterator = ::com::sun::org::apache::xalan::internal::xsltc::dom::StepIterator;
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

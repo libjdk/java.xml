@@ -27,7 +27,6 @@ using $XSObjectListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::u
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSParticle = ::com::sun::org::apache::xerces::internal::xs::XSParticle;
 using $XSTerm = ::com::sun::org::apache::xerces::internal::xs::XSTerm;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

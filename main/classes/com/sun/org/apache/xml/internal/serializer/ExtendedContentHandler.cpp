@@ -10,14 +10,9 @@
 #undef HTML_ATTRURL
 #undef NO_BAD_CHARS
 
-using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $SourceLocator = ::javax::xml::transform::SourceLocator;
-using $Node = ::org::w3c::dom::Node;
-using $Attributes = ::org::xml::sax::Attributes;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
 
 namespace com {
 	namespace sun {

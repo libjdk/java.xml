@@ -11,10 +11,8 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
-using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

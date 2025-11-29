@@ -9,11 +9,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
-using $EntityResolver = ::org::xml::sax::EntityResolver;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
-using $InputSource = ::org::xml::sax::InputSource;
 
 namespace org {
 	namespace xml {

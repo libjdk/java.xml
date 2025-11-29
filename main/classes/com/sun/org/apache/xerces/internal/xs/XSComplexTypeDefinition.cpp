@@ -11,11 +11,6 @@
 #undef CONTENTTYPE_MIXED
 #undef CONTENTTYPE_SIMPLE
 
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSParticle = ::com::sun::org::apache::xerces::internal::xs::XSParticle;
-using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
-using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
-using $XSWildcard = ::com::sun::org::apache::xerces::internal::xs::XSWildcard;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

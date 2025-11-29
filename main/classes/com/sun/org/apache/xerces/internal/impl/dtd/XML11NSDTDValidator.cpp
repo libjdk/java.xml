@@ -23,7 +23,6 @@
 
 using $XMLErrorReporter = ::com::sun::org::apache::xerces::internal::impl::XMLErrorReporter;
 using $XML11DTDValidator = ::com::sun::org::apache::xerces::internal::impl::dtd::XML11DTDValidator;
-using $XMLDTDValidator = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLDTDValidator;
 using $XMLMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::msg::XMLMessageFormatter;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XMLSymbols = ::com::sun::org::apache::xerces::internal::util::XMLSymbols;

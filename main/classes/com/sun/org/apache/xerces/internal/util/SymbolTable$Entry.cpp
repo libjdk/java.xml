@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/util/SymbolTable.h>
 #include <jcpp.h>
 
-using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

@@ -4,7 +4,6 @@
 #include <java/io/IOException.h>
 #include <jcpp.h>
 
-using $URI = ::com::sun::org::apache::xml::internal::serializer::utils::URI;
 using $IOException = ::java::io::IOException;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

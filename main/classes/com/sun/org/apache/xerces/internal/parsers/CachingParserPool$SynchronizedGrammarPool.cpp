@@ -7,7 +7,6 @@
 #include <jcpp.h>
 
 using $GrammarArray = $Array<::com::sun::org::apache::xerces::internal::xni::grammars::Grammar>;
-using $CachingParserPool = ::com::sun::org::apache::xerces::internal::parsers::CachingParserPool;
 using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
 using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $XMLGrammarPool = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarPool;

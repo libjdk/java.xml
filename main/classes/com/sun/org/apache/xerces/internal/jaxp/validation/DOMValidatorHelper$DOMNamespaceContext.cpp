@@ -22,7 +22,6 @@ using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::Names
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XMLSymbols = ::com::sun::org::apache::xerces::internal::util::XMLSymbols;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

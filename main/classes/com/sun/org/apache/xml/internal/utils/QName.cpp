@@ -23,7 +23,6 @@ using $XMLMessages = ::com::sun::org::apache::xml::internal::res::XMLMessages;
 using $NameSpace = ::com::sun::org::apache::xml::internal::utils::NameSpace;
 using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
 using $XML11Char = ::com::sun::org::apache::xml::internal::utils::XML11Char;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
@@ -31,7 +30,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $Stack = ::java::util::Stack;
 using $StringTokenizer = ::java::util::StringTokenizer;
-using $Vector = ::java::util::Vector;
 using $Element = ::org::w3c::dom::Element;
 using $Node = ::org::w3c::dom::Node;
 

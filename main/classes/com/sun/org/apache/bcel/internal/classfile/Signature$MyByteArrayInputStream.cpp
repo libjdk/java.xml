@@ -4,7 +4,6 @@
 #include <java/io/ByteArrayInputStream.h>
 #include <jcpp.h>
 
-using $Signature = ::com::sun::org::apache::bcel::internal::classfile::Signature;
 using $ByteArrayInputStream = ::java::io::ByteArrayInputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

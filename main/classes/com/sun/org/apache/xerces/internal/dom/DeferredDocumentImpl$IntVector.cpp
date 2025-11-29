@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.h>
 #include <jcpp.h>
 
-using $DeferredDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DeferredDocumentImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

@@ -21,8 +21,6 @@ using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIExcepti
 using $XMLEntityResolver = ::com::sun::org::apache::xerces::internal::xni::parser::XMLEntityResolver;
 using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $IOException = ::java::io::IOException;
-using $InputStream = ::java::io::InputStream;
-using $Reader = ::java::io::Reader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $Exception = ::java::lang::Exception;
@@ -30,7 +28,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $LSInput = ::org::w3c::dom::ls::LSInput;
-using $LSResourceResolver = ::org::w3c::dom::ls::LSResourceResolver;
 
 namespace com {
 	namespace sun {

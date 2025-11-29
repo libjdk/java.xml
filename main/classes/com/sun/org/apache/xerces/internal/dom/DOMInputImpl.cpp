@@ -9,7 +9,6 @@ using $Reader = ::java::io::Reader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $LSInput = ::org::w3c::dom::ls::LSInput;
 
 namespace com {
 	namespace sun {

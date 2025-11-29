@@ -19,7 +19,6 @@
 #undef INDEX_SIZE_ERR
 
 using $XSException = ::com::sun::org::apache::xerces::internal::xs::XSException;
-using $ByteList = ::com::sun::org::apache::xerces::internal::xs::datatypes::ByteList;
 using $Byte = ::java::lang::Byte;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

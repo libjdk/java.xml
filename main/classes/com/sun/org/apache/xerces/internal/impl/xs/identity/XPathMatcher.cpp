@@ -36,13 +36,11 @@
 #undef QNAME
 #undef SELF
 
-using $XPath$LocationPathArray = $Array<::com::sun::org::apache::xerces::internal::impl::xpath::XPath$LocationPath>;
 using $XPath$StepArray = $Array<::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Step>;
 using $IntStackArray = $Array<::com::sun::org::apache::xerces::internal::util::IntStack>;
 using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
 using $XPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath;
 using $XPath$Axis = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Axis;
-using $XPath$LocationPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$LocationPath;
 using $XPath$NodeTest = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$NodeTest;
 using $XPath$Step = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Step;
 using $IntStack = ::com::sun::org::apache::xerces::internal::util::IntStack;
@@ -50,7 +48,6 @@ using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentat
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $AttributePSVI = ::com::sun::org::apache::xerces::internal::xs::AttributePSVI;
-using $ItemPSVI = ::com::sun::org::apache::xerces::internal::xs::ItemPSVI;
 using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
 using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
 using $XSValue = ::com::sun::org::apache::xerces::internal::xs::XSValue;

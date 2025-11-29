@@ -5,8 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $QName = ::javax::xml::namespace$::QName;
-using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 
 namespace javax {
 	namespace xml {

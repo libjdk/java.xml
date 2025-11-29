@@ -20,7 +20,6 @@ using $ParameterAnnotationEntryArray = $Array<::com::sun::org::apache::bcel::int
 using $AnnotationEntry = ::com::sun::org::apache::bcel::internal::classfile::AnnotationEntry;
 using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
-using $Node = ::com::sun::org::apache::bcel::internal::classfile::Node;
 using $ParameterAnnotations = ::com::sun::org::apache::bcel::internal::classfile::ParameterAnnotations;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $DataInput = ::java::io::DataInput;

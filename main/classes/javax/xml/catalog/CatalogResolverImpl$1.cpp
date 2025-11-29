@@ -9,15 +9,11 @@
 #undef IGNORE
 #undef STRICT
 
-using $GroupEntry$ResolveTypeArray = $Array<::javax::xml::catalog::GroupEntry$ResolveType>;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
-using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $NoSuchFieldError = ::java::lang::NoSuchFieldError;
-using $CatalogResolverImpl = ::javax::xml::catalog::CatalogResolverImpl;
-using $GroupEntry = ::javax::xml::catalog::GroupEntry;
 using $GroupEntry$ResolveType = ::javax::xml::catalog::GroupEntry$ResolveType;
 
 namespace javax {

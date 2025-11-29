@@ -20,15 +20,12 @@
 #undef WIDE
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
 using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
-using $DataInputStream = ::java::io::DataInputStream;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $Byte = ::java::lang::Byte;
 using $ClassInfo = ::java::lang::ClassInfo;

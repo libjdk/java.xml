@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/ElementPSVI.h>
 #include <jcpp.h>
 
-using $AttributePSVI = ::com::sun::org::apache::xerces::internal::xs::AttributePSVI;
-using $ElementPSVI = ::com::sun::org::apache::xerces::internal::xs::ElementPSVI;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

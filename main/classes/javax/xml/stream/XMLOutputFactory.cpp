@@ -15,8 +15,6 @@
 #undef IS_REPAIRING_NAMESPACES
 
 using $XMLOutputFactoryImpl = ::com::sun::xml::internal::stream::XMLOutputFactoryImpl;
-using $OutputStream = ::java::io::OutputStream;
-using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $ClassLoader = ::java::lang::ClassLoader;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
@@ -24,10 +22,7 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NamedAttribute = ::java::lang::NamedAttribute;
 using $FactoryFinder = ::javax::xml::stream::FactoryFinder;
-using $XMLEventWriter = ::javax::xml::stream::XMLEventWriter;
 using $XMLInputFactory = ::javax::xml::stream::XMLInputFactory;
-using $XMLStreamWriter = ::javax::xml::stream::XMLStreamWriter;
-using $Result = ::javax::xml::transform::Result;
 
 namespace javax {
 	namespace xml {

@@ -61,7 +61,6 @@ using $XMLDocumentScannerImpl$ContentDriver = ::com::sun::org::apache::xerces::i
 using $XMLEntityScanner = ::com::sun::org::apache::xerces::internal::impl::XMLEntityScanner;
 using $XMLErrorReporter = ::com::sun::org::apache::xerces::internal::impl::XMLErrorReporter;
 using $XMLNSDocumentScannerImpl$NSContentDriver = ::com::sun::org::apache::xerces::internal::impl::XMLNSDocumentScannerImpl$NSContentDriver;
-using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $XMLScanner$NameType = ::com::sun::org::apache::xerces::internal::impl::XMLScanner$NameType;
 using $XMLDTDValidatorFilter = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLDTDValidatorFilter;
 using $XMLMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::msg::XMLMessageFormatter;

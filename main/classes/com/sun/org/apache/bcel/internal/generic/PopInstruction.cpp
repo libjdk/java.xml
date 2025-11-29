@@ -2,7 +2,6 @@
 
 #include <jcpp.h>
 
-using $StackConsumer = ::com::sun::org::apache::bcel::internal::generic::StackConsumer;
 using $ClassInfo = ::java::lang::ClassInfo;
 
 namespace com {

@@ -20,7 +20,6 @@
 
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
-using $XPathVisitable = ::com::sun::org::apache::xpath::internal::XPathVisitable;
 using $XPathVisitor = ::com::sun::org::apache::xpath::internal::XPathVisitor;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;
 using $FuncLast = ::com::sun::org::apache::xpath::internal::functions::FuncLast;

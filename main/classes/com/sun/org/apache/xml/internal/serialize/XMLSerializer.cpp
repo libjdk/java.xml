@@ -53,7 +53,6 @@
 #undef XMLNS_URI
 #undef XML_DOMAIN
 
-using $DOMErrorImpl = ::com::sun::org::apache::xerces::internal::dom::DOMErrorImpl;
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
 using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;

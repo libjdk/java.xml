@@ -25,7 +25,6 @@ using $UniqueOrKey = ::com::sun::org::apache::xerces::internal::impl::xs::identi
 using $ValueStore = ::com::sun::org::apache::xerces::internal::impl::xs::identity::ValueStore;
 using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

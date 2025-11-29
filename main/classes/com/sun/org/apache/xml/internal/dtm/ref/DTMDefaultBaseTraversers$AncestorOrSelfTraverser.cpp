@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers.h>
 #include <jcpp.h>
 
-using $DTMDefaultBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBase;
 using $DTMDefaultBaseTraversers = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseTraversers;
 using $DTMDefaultBaseTraversers$AncestorTraverser = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseTraversers$AncestorTraverser;
 using $ClassInfo = ::java::lang::ClassInfo;

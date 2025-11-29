@@ -27,23 +27,13 @@
 #undef SUPPORT_DTD
 
 using $XMLInputFactoryImpl = ::com::sun::xml::internal::stream::XMLInputFactoryImpl;
-using $InputStream = ::java::io::InputStream;
-using $Reader = ::java::io::Reader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $ClassLoader = ::java::lang::ClassLoader;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NamedAttribute = ::java::lang::NamedAttribute;
-using $EventFilter = ::javax::xml::stream::EventFilter;
 using $FactoryFinder = ::javax::xml::stream::FactoryFinder;
-using $StreamFilter = ::javax::xml::stream::StreamFilter;
-using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
-using $XMLReporter = ::javax::xml::stream::XMLReporter;
-using $XMLResolver = ::javax::xml::stream::XMLResolver;
-using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
-using $XMLEventAllocator = ::javax::xml::stream::util::XMLEventAllocator;
-using $Source = ::javax::xml::transform::Source;
 
 namespace javax {
 	namespace xml {

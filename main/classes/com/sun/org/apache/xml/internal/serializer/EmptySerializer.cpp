@@ -19,7 +19,6 @@
 
 using $DOMSerializer = ::com::sun::org::apache::xml::internal::serializer::DOMSerializer;
 using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
-using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
 using $OutputStream = ::java::io::OutputStream;
 using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;

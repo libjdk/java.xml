@@ -12,7 +12,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $IllegalStateException = ::java::lang::IllegalStateException;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Result = ::javax::xml::transform::Result;
 using $Node = ::org::w3c::dom::Node;
 
 namespace javax {

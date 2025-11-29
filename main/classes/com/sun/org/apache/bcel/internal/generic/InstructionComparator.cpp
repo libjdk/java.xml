@@ -22,16 +22,11 @@ using $IndexedInstruction = ::com::sun::org::apache::bcel::internal::generic::In
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $NEWARRAY = ::com::sun::org::apache::bcel::internal::generic::NEWARRAY;
 using $Serializable = ::java::io::Serializable;
-using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Number = ::java::lang::Number;
-using $CallSite = ::java::lang::invoke::CallSite;
-using $LambdaMetafactory = ::java::lang::invoke::LambdaMetafactory;
 using $MethodHandle = ::java::lang::invoke::MethodHandle;
-using $MethodHandles$Lookup = ::java::lang::invoke::MethodHandles$Lookup;
-using $MethodType = ::java::lang::invoke::MethodType;
 
 namespace com {
 	namespace sun {

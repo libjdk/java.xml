@@ -12,8 +12,6 @@ using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $PrivilegedAction = ::java::security::PrivilegedAction;
-using $DOMImplementationRegistry = ::org::w3c::dom::bootstrap::DOMImplementationRegistry;
 
 namespace org {
 	namespace w3c {

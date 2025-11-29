@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $TransformerException = ::javax::xml::transform::TransformerException;
 
 namespace javax {
 	namespace xml {

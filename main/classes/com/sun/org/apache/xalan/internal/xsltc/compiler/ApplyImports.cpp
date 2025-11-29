@@ -30,20 +30,16 @@
 #undef TRANSLET_CLASS
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Mode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Mode;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
-using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $Stylesheet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Stylesheet;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
@@ -96,7 +92,7 @@ $Object* allocate$ApplyImports($Class* clazz) {
 }
 
 void ApplyImports::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 }
 
 void ApplyImports::display(int32_t indent) {
@@ -153,7 +149,7 @@ void ApplyImports::translate($ClassGenerator* classGen, $MethodGenerator* method
 		il->append($(classGen->loadTranslet()));
 		$init($Constants);
 		int32_t pushFrame = $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, $Constants::PUSH_PARAM_FRAME, $Constants::PUSH_PARAM_FRAME_SIG);
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, pushFrame)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, pushFrame)));
 	}
 	int32_t maxPrecedence = this->_precedence;
 	int32_t minPrecedence = getMinPrecedence(maxPrecedence);
@@ -162,12 +158,12 @@ void ApplyImports::translate($ClassGenerator* classGen, $MethodGenerator* method
 	$var($String, className, $nc($(classGen->getStylesheet()))->getClassName());
 	$var($String, signature, classGen->getApplyTemplatesSigForImport());
 	int32_t applyTemplates = $nc(cpg)->addMethodref(className, functionName, signature);
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, applyTemplates)));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, applyTemplates)));
 	if (stylesheet->hasLocalParams()) {
 		il->append($(classGen->loadTranslet()));
 		$init($Constants);
 		int32_t pushFrame = cpg->addMethodref($Constants::TRANSLET_CLASS, $Constants::POP_PARAM_FRAME, $Constants::POP_PARAM_FRAME_SIG);
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, pushFrame)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, pushFrame)));
 	}
 }
 

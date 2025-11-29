@@ -22,7 +22,6 @@ using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentat
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $XMLBufferListener = ::com::sun::xml::internal::stream::XMLBufferListener;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

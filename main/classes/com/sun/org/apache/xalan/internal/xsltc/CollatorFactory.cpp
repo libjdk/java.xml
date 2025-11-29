@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Collator = ::java::text::Collator;
-using $Locale = ::java::util::Locale;
 
 namespace com {
 	namespace sun {

@@ -19,14 +19,8 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $Cloneable = ::java::lang::Cloneable;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $BigDecimal = ::java::math::BigDecimal;
-using $BigInteger = ::java::math::BigInteger;
 using $Arrays = ::java::util::Arrays;
-using $GregorianCalendar = ::java::util::GregorianCalendar;
-using $Locale = ::java::util::Locale;
-using $TimeZone = ::java::util::TimeZone;
 using $DatatypeConstants = ::javax::xml::datatype::DatatypeConstants;
-using $Duration = ::javax::xml::datatype::Duration;
-using $QName = ::javax::xml::namespace$::QName;
 
 namespace javax {
 	namespace xml {

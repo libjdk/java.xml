@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
 
 namespace javax {
 	namespace xml {

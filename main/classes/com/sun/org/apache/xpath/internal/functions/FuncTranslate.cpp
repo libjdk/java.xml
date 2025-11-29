@@ -12,9 +12,7 @@
 
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
-using $Function2Args = ::com::sun::org::apache::xpath::internal::functions::Function2Args;
 using $Function3Args = ::com::sun::org::apache::xpath::internal::functions::Function3Args;
-using $FunctionOneArg = ::com::sun::org::apache::xpath::internal::functions::FunctionOneArg;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XString = ::com::sun::org::apache::xpath::internal::objects::XString;
 using $ClassInfo = ::java::lang::ClassInfo;

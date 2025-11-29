@@ -15,11 +15,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $DOMConfiguration = ::org::w3c::dom::DOMConfiguration;
-using $Document = ::org::w3c::dom::Document;
-using $Node = ::org::w3c::dom::Node;
-using $LSInput = ::org::w3c::dom::ls::LSInput;
-using $LSParserFilter = ::org::w3c::dom::ls::LSParserFilter;
 
 namespace org {
 	namespace w3c {

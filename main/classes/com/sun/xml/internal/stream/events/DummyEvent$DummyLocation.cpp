@@ -3,11 +3,9 @@
 #include <com/sun/xml/internal/stream/events/DummyEvent.h>
 #include <jcpp.h>
 
-using $DummyEvent = ::com::sun::xml::internal::stream::events::DummyEvent;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Location = ::javax::xml::stream::Location;
 
 namespace com {
 	namespace sun {

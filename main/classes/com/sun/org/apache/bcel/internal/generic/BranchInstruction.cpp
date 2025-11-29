@@ -13,7 +13,6 @@ using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instructi
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionTargeter = ::com::sun::org::apache::bcel::internal::generic::InstructionTargeter;
 using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
-using $DataInputStream = ::java::io::DataInputStream;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

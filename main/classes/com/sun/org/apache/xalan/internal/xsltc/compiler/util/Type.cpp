@@ -58,8 +58,6 @@
 
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $NodeTest = ::com::sun::org::apache::xalan::internal::xsltc::compiler::NodeTest;

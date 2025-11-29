@@ -116,7 +116,6 @@ using $StackMap = ::com::sun::org::apache::bcel::internal::classfile::StackMap;
 using $StackMapEntry = ::com::sun::org::apache::bcel::internal::classfile::StackMapEntry;
 using $Synthetic = ::com::sun::org::apache::bcel::internal::classfile::Synthetic;
 using $Unknown = ::com::sun::org::apache::bcel::internal::classfile::Unknown;
-using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -10,7 +10,6 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
-using $ConstantObject = ::com::sun::org::apache::bcel::internal::classfile::ConstantObject;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $DataInput = ::java::io::DataInput;

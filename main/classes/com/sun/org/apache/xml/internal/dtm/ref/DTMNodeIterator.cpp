@@ -26,7 +26,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $DOMException = ::org::w3c::dom::DOMException;
 using $Node = ::org::w3c::dom::Node;
 using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
-using $NodeIterator = ::org::w3c::dom::traversal::NodeIterator;
 
 namespace com {
 	namespace sun {

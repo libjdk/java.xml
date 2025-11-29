@@ -9,10 +9,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator.h>
 #include <jcpp.h>
 
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $FunctionCall = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FunctionCall;
 using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;

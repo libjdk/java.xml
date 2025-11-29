@@ -33,7 +33,6 @@
 #undef TRANSLET_OUTPUT_INTERFACE
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -41,18 +40,14 @@ using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOr
 using $GETFIELD = ::com::sun::org::apache::bcel::internal::generic::GETFIELD;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
-using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $Text = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Text;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
@@ -91,7 +86,7 @@ $Object* allocate$Comment($Class* clazz) {
 }
 
 void Comment::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 }
 
 void Comment::parseContents($Parser* parser) {
@@ -121,25 +116,25 @@ void Comment::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) 
 			rawText->loadAsArrayOffsetLength(classGen, methodGen);
 			$init($Constants);
 			int32_t comment = $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "comment"_s, "([CII)V"_s);
-			il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, comment, 4)));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, comment, 4)));
 		} else {
 			il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, $(rawText->getText()))));
 			$init($Constants);
 			int32_t comment = $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "comment"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s}));
-			il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, comment, 2)));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, comment, 2)));
 		}
 	} else {
 		$nc(il)->append($(methodGen->loadHandler()));
 		$init($Constants);
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append($(classGen->loadTranslet()));
-		il->append(static_cast<$Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref($Constants::TRANSLET_CLASS, "stringValueHandler"_s, $Constants::STRING_VALUE_HANDLER_SIG))));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref($Constants::TRANSLET_CLASS, "stringValueHandler"_s, $Constants::STRING_VALUE_HANDLER_SIG))));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append($(methodGen->storeHandler()));
 		translateContents(classGen, methodGen);
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_VALUE_HANDLER, "getValue"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_VALUE_HANDLER, "getValue"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
 		int32_t comment = $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "comment"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s}));
-		il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, comment, 2)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, comment, 2)));
 		il->append($(methodGen->storeHandler()));
 	}
 }

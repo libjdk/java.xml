@@ -14,7 +14,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
 using $XMLEventWriter = ::javax::xml::stream::XMLEventWriter;
 using $XMLStreamWriter = ::javax::xml::stream::XMLStreamWriter;
-using $Result = ::javax::xml::transform::Result;
 
 namespace javax {
 	namespace xml {

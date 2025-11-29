@@ -24,7 +24,6 @@
 using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
 using $FeatureState = ::com::sun::org::apache::xerces::internal::util::FeatureState;
 using $PropertyState = ::com::sun::org::apache::xerces::internal::util::PropertyState;
-using $Status = ::com::sun::org::apache::xerces::internal::util::Status;
 using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
 using $XMLConfigurationException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLConfigurationException;
 using $Boolean = ::java::lang::Boolean;

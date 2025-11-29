@@ -15,7 +15,6 @@
 #include <java/util/stream/Stream.h>
 #include <jcpp.h>
 
-using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IndexOutOfBoundsException = ::java::lang::IndexOutOfBoundsException;

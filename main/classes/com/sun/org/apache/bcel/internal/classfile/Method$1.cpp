@@ -7,9 +7,7 @@
 #undef THAT
 #undef THIS
 
-using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::classfile::FieldOrMethod;
 using $Method = ::com::sun::org::apache::bcel::internal::classfile::Method;
-using $BCELComparator = ::com::sun::org::apache::bcel::internal::util::BCELComparator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

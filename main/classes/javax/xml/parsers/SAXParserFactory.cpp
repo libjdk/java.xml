@@ -19,7 +19,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $Package = ::java::lang::Package;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
 using $FactoryFinder = ::javax::xml::parsers::FactoryFinder;
-using $SAXParser = ::javax::xml::parsers::SAXParser;
 using $Schema = ::javax::xml::validation::Schema;
 
 namespace javax {

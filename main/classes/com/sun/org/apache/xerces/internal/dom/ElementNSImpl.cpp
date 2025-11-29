@@ -26,20 +26,15 @@ using $AttributeMap = ::com::sun::org::apache::xerces::internal::dom::AttributeM
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
 using $ElementImpl = ::com::sun::org::apache::xerces::internal::dom::ElementImpl;
-using $NamedNodeMapImpl = ::com::sun::org::apache::xerces::internal::dom::NamedNodeMapImpl;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
-using $ParentNode = ::com::sun::org::apache::xerces::internal::dom::ParentNode;
 using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $XSComplexTypeDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSComplexTypeDecl;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Attr = ::org::w3c::dom::Attr;
 using $DOMException = ::org::w3c::dom::DOMException;
-using $Node = ::org::w3c::dom::Node;
 
 namespace com {
 	namespace sun {

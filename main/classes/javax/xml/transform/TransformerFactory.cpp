@@ -15,12 +15,7 @@ using $TransformerFactoryImpl = ::com::sun::org::apache::xalan::internal::xsltc:
 using $ClassInfo = ::java::lang::ClassInfo;
 using $ClassLoader = ::java::lang::ClassLoader;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $FactoryFinder = ::javax::xml::transform::FactoryFinder;
-using $Source = ::javax::xml::transform::Source;
-using $Templates = ::javax::xml::transform::Templates;
-using $Transformer = ::javax::xml::transform::Transformer;
-using $URIResolver = ::javax::xml::transform::URIResolver;
 using $SAXTransformerFactory = ::javax::xml::transform::sax::SAXTransformerFactory;
 
 namespace javax {

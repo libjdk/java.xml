@@ -36,11 +36,8 @@
 #undef XML_DOMAIN
 
 using $XMLDocumentFragmentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl;
-using $XMLDocumentFragmentScannerImpl$Driver = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl$Driver;
-using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEntityManager;
 using $XMLEntityScanner = ::com::sun::org::apache::xerces::internal::impl::XMLEntityScanner;
 using $XMLErrorReporter = ::com::sun::org::apache::xerces::internal::impl::XMLErrorReporter;
-using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $XMLScanner$NameType = ::com::sun::org::apache::xerces::internal::impl::XMLScanner$NameType;
 using $MalformedByteSequenceException = ::com::sun::org::apache::xerces::internal::impl::io::MalformedByteSequenceException;
 using $XMLMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::msg::XMLMessageFormatter;
@@ -49,7 +46,6 @@ using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIException;
-using $Entity$ScannedEntity = ::com::sun::xml::internal::stream::Entity$ScannedEntity;
 using $XMLEntityStorage = ::com::sun::xml::internal::stream::XMLEntityStorage;
 using $DTDGrammarUtil = ::com::sun::xml::internal::stream::dtd::DTDGrammarUtil;
 using $CharConversionException = ::java::io::CharConversionException;

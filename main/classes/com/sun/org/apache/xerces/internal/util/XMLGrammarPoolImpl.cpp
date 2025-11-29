@@ -13,7 +13,6 @@ using $GrammarArray = $Array<::com::sun::org::apache::xerces::internal::xni::gra
 using $XMLGrammarPoolImpl$Entry = ::com::sun::org::apache::xerces::internal::util::XMLGrammarPoolImpl$Entry;
 using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
 using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
-using $XMLGrammarPool = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarPool;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

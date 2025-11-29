@@ -3,10 +3,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSNamespaceItem.h>
 #include <jcpp.h>
 
-using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $List = ::java::util::List;
 
 namespace com {
 	namespace sun {

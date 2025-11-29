@@ -7,7 +7,6 @@
 #undef BYTES_MAX
 #undef CHARS_MAX
 
-using $WriterChain = ::com::sun::org::apache::xml::internal::serializer::WriterChain;
 using $OutputStream = ::java::io::OutputStream;
 using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;

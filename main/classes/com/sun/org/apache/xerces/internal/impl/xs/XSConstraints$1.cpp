@@ -7,12 +7,10 @@
 
 using $XSElementDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSElementDecl;
 using $XSParticleDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl;
-using $XSTerm = ::com::sun::org::apache::xerces::internal::xs::XSTerm;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Comparator = ::java::util::Comparator;
 
 namespace com {
 	namespace sun {

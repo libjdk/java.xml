@@ -10,11 +10,6 @@
 #undef CONDITIONAL_IGNORE
 #undef CONDITIONAL_INCLUDE
 
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
-using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
-using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $XMLDTDSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

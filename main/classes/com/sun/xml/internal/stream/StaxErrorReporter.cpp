@@ -34,7 +34,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $StringBuffer = ::java::lang::StringBuffer;
-using $Locale = ::java::util::Locale;
 using $Location = ::javax::xml::stream::Location;
 using $XMLInputFactory = ::javax::xml::stream::XMLInputFactory;
 using $XMLReporter = ::javax::xml::stream::XMLReporter;

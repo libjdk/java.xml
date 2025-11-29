@@ -12,11 +12,8 @@
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <jcpp.h>
 
-using $LocPathIteratorArray = $Array<::com::sun::org::apache::xpath::internal::axes::LocPathIterator>;
-using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode;
-using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $AxesWalker = ::com::sun::org::apache::xpath::internal::axes::AxesWalker;
 using $FilterExprWalker = ::com::sun::org::apache::xpath::internal::axes::FilterExprWalker;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;

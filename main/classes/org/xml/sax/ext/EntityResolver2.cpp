@@ -5,8 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $EntityResolver = ::org::xml::sax::EntityResolver;
-using $InputSource = ::org::xml::sax::InputSource;
 
 namespace org {
 	namespace xml {

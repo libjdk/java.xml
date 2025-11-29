@@ -13,13 +13,10 @@
 #include <org/w3c/dom/UserDataHandler.h>
 #include <jcpp.h>
 
-using $CharacterDataImpl = ::com::sun::org::apache::xerces::internal::dom::CharacterDataImpl;
 using $CommentImpl = ::com::sun::org::apache::xerces::internal::dom::CommentImpl;
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DeferredDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DeferredDocumentImpl;
-using $DeferredNode = ::com::sun::org::apache::xerces::internal::dom::DeferredNode;
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

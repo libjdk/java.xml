@@ -10,7 +10,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $EventTarget = ::org::w3c::dom::events::EventTarget;
 
 namespace org {
 	namespace w3c {

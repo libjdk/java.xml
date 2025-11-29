@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/bcel/internal/classfile/Visitor.h>
 #include <jcpp.h>
 
-using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

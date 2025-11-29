@@ -16,7 +16,6 @@
 using $Closure = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Closure;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $Param = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Param;
-using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $TopLevelElement = ::com::sun::org::apache::xalan::internal::xsltc::compiler::TopLevelElement;

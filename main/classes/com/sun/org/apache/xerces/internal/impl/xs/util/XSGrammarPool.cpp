@@ -17,13 +17,10 @@
 #undef XML_SCHEMA
 
 using $SchemaGrammarArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar>;
-using $XMLGrammarPoolImpl$EntryArray = $Array<::com::sun::org::apache::xerces::internal::util::XMLGrammarPoolImpl$Entry>;
 using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
-using $SchemaGrammar = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar;
 using $XSModelImpl = ::com::sun::org::apache::xerces::internal::impl::xs::XSModelImpl;
 using $XMLGrammarPoolImpl = ::com::sun::org::apache::xerces::internal::util::XMLGrammarPoolImpl;
 using $XMLGrammarPoolImpl$Entry = ::com::sun::org::apache::xerces::internal::util::XMLGrammarPoolImpl$Entry;
-using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
 using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $XSModel = ::com::sun::org::apache::xerces::internal::xs::XSModel;
 using $ClassInfo = ::java::lang::ClassInfo;

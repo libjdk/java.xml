@@ -28,8 +28,6 @@ using $StreamSource = ::javax::xml::transform::stream::StreamSource;
 using $Schema = ::javax::xml::validation::Schema;
 using $SchemaFactoryFinder = ::javax::xml::validation::SchemaFactoryFinder;
 using $SecuritySupport = ::jdk::xml::internal::SecuritySupport;
-using $LSResourceResolver = ::org::w3c::dom::ls::LSResourceResolver;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $SAXNotRecognizedException = ::org::xml::sax::SAXNotRecognizedException;
 
 namespace javax {

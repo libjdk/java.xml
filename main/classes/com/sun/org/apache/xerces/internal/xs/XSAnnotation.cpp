@@ -6,7 +6,6 @@
 #undef W3C_DOM_DOCUMENT
 #undef W3C_DOM_ELEMENT
 
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

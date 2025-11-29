@@ -34,15 +34,12 @@ using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttrib
 using $XMLDocumentHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler;
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $XMLDocumentSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $Attributes = ::org::xml::sax::Attributes;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $Locator = ::org::xml::sax::Locator;
-using $SAXException = ::org::xml::sax::SAXException;
 
 namespace com {
 	namespace sun {

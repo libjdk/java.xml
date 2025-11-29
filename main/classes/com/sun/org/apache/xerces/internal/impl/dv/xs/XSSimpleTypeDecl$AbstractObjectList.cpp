@@ -16,8 +16,6 @@
 #include <java/util/stream/Stream.h>
 #include <jcpp.h>
 
-using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
-using $ObjectList = ::com::sun::org::apache::xerces::internal::xs::datatypes::ObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $IndexOutOfBoundsException = ::java::lang::IndexOutOfBoundsException;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

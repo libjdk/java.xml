@@ -32,7 +32,6 @@
 #undef REFRESH_INTERVAL
 
 using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
-using $DOMCache = ::com::sun::org::apache::xalan::internal::xsltc::DOMCache;
 using $Translet = ::com::sun::org::apache::xalan::internal::xsltc::Translet;
 using $DocumentCache$CachedDocument = ::com::sun::org::apache::xalan::internal::xsltc::dom::DocumentCache$CachedDocument;
 using $XSLTCDTMManager = ::com::sun::org::apache::xalan::internal::xsltc::dom::XSLTCDTMManager;
@@ -47,7 +46,6 @@ using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $URI = ::java::net::URI;
 using $URL = ::java::net::URL;
 using $URLConnection = ::java::net::URLConnection;
 using $Path = ::java::nio::file::Path;
@@ -61,7 +59,6 @@ using $SAXParser = ::javax::xml::parsers::SAXParser;
 using $SAXParserFactory = ::javax::xml::parsers::SAXParserFactory;
 using $TransformerException = ::javax::xml::transform::TransformerException;
 using $SAXException = ::org::xml::sax::SAXException;
-using $XMLReader = ::org::xml::sax::XMLReader;
 
 namespace com {
 	namespace sun {

@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/ElemDesc.h>
 #include <jcpp.h>
 
-using $ElemDesc = ::com::sun::org::apache::xml::internal::serializer::ElemDesc;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

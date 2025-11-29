@@ -194,7 +194,7 @@ using $EncodingMap = ::com::sun::org::apache::xerces::internal::util::EncodingMa
 using $HTTPInputSource = ::com::sun::org::apache::xerces::internal::util::HTTPInputSource;
 using $MessageFormatter = ::com::sun::org::apache::xerces::internal::util::MessageFormatter;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
-using $1URI = ::com::sun::org::apache::xerces::internal::util::URI;
+using $URI = ::com::sun::org::apache::xerces::internal::util::URI;
 using $URI$MalformedURIException = ::com::sun::org::apache::xerces::internal::util::URI$MalformedURIException;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $XMLEntityDescriptionImpl = ::com::sun::org::apache::xerces::internal::util::XMLEntityDescriptionImpl;
@@ -242,7 +242,7 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $SecurityException = ::java::lang::SecurityException;
 using $HttpURLConnection = ::java::net::HttpURLConnection;
-using $URI = ::java::net::URI;
+using $1URI = ::java::net::URI;
 using $URISyntaxException = ::java::net::URISyntaxException;
 using $URL = ::java::net::URL;
 using $URLConnection = ::java::net::URLConnection;
@@ -254,7 +254,6 @@ using $Map = ::java::util::Map;
 using $Map$Entry = ::java::util::Map$Entry;
 using $Stack = ::java::util::Stack;
 using $StringTokenizer = ::java::util::StringTokenizer;
-using $Vector = ::java::util::Vector;
 using $XMLConstants = ::javax::xml::XMLConstants;
 using $CatalogException = ::javax::xml::catalog::CatalogException;
 using $CatalogFeatures = ::javax::xml::catalog::CatalogFeatures;
@@ -367,7 +366,7 @@ $MethodInfo _XMLEntityManager_MethodInfo_[] = {
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
 	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLEntityManager::*)()>(&XMLEntityManager::init$))},
 	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLEntityManager::*)($PropertyManager*)>(&XMLEntityManager::init$))},
-	{"absolutizeAgainstUserDir", "(Lcom/sun/org/apache/xerces/internal/util/URI;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($1URI*)>(&XMLEntityManager::absolutizeAgainstUserDir)), "com.sun.org.apache.xerces.internal.util.URI$MalformedURIException"},
+	{"absolutizeAgainstUserDir", "(Lcom/sun/org/apache/xerces/internal/util/URI;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($URI*)>(&XMLEntityManager::absolutizeAgainstUserDir)), "com.sun.org.apache.xerces.internal.util.URI$MalformedURIException"},
 	{"addExternalEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
 	{"addInternalEntity", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC},
 	{"addUnparsedEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC},
@@ -399,7 +398,7 @@ $MethodInfo _XMLEntityManager_MethodInfo_[] = {
 	{"getRecognizedFeatures", "()[Ljava/lang/String;", nullptr, $PUBLIC},
 	{"getRecognizedProperties", "()[Ljava/lang/String;", nullptr, $PUBLIC},
 	{"getTopLevelEntity", "()Lcom/sun/xml/internal/stream/Entity$ScannedEntity;", nullptr, $PUBLIC},
-	{"getUserDir", "()Lcom/sun/org/apache/xerces/internal/util/URI;", nullptr, $PRIVATE | $STATIC | $SYNCHRONIZED, $method(static_cast<$1URI*(*)()>(&XMLEntityManager::getUserDir)), "com.sun.org.apache.xerces.internal.util.URI$MalformedURIException"},
+	{"getUserDir", "()Lcom/sun/org/apache/xerces/internal/util/URI;", nullptr, $PRIVATE | $STATIC | $SYNCHRONIZED, $method(static_cast<$URI*(*)()>(&XMLEntityManager::getUserDir)), "com.sun.org.apache.xerces.internal.util.URI$MalformedURIException"},
 	{"isDeclaredEntity", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
 	{"isEntityDeclInExternalSubset", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
 	{"isExternalEntity", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
@@ -497,7 +496,7 @@ $ObjectArray* XMLEntityManager::PROPERTY_DEFAULTS = nullptr;
 $String* XMLEntityManager::XMLEntity = nullptr;
 $String* XMLEntityManager::DTDEntity = nullptr;
 $String* XMLEntityManager::gUserDir = nullptr;
-$1URI* XMLEntityManager::gUserDirURI = nullptr;
+$URI* XMLEntityManager::gUserDirURI = nullptr;
 $booleans* XMLEntityManager::gNeedEscaping = nullptr;
 $chars* XMLEntityManager::gAfterEscaping1 = nullptr;
 $chars* XMLEntityManager::gAfterEscaping2 = nullptr;
@@ -1437,7 +1436,7 @@ $String* XMLEntityManager::expandSystemId($String* systemId) {
 	return expandSystemId(systemId, nullptr);
 }
 
-$1URI* XMLEntityManager::getUserDir() {
+$URI* XMLEntityManager::getUserDir() {
 	$load(XMLEntityManager);
 	$synchronized(class$) {
 		$init(XMLEntityManager);
@@ -1448,7 +1447,7 @@ $1URI* XMLEntityManager::getUserDir() {
 		} catch ($SecurityException& se) {
 		}
 		if (userDir->length() == 0) {
-			return $new($1URI, "file"_s, ""_s, ""_s, nullptr, nullptr);
+			return $new($URI, "file"_s, ""_s, ""_s, nullptr, nullptr);
 		}
 		if (XMLEntityManager::gUserDirURI != nullptr && userDir->equals(XMLEntityManager::gUserDir)) {
 			return XMLEntityManager::gUserDirURI;
@@ -1486,7 +1485,7 @@ $1URI* XMLEntityManager::getUserDir() {
 			try {
 				$assign(bytes, $(userDir->substring(i))->getBytes("UTF-8"_s));
 			} catch ($UnsupportedEncodingException& e) {
-				return $new($1URI, "file"_s, ""_s, userDir, nullptr, nullptr);
+				return $new($URI, "file"_s, ""_s, userDir, nullptr, nullptr);
 			}
 			len = $nc(bytes)->length;
 			for (i = 0; i < len; ++i) {
@@ -1510,7 +1509,7 @@ $1URI* XMLEntityManager::getUserDir() {
 		if (!userDir->endsWith("/"_s)) {
 			buffer->append(u'/');
 		}
-		$assignStatic(XMLEntityManager::gUserDirURI, $new($1URI, "file"_s, ""_s, $(buffer->toString()), nullptr, nullptr));
+		$assignStatic(XMLEntityManager::gUserDirURI, $new($URI, "file"_s, ""_s, $(buffer->toString()), nullptr, nullptr));
 		return XMLEntityManager::gUserDirURI;
 	}
 }
@@ -1570,7 +1569,7 @@ $String* XMLEntityManager::getPathWithoutEscapes($String* origPath) {
 	return origPath;
 }
 
-void XMLEntityManager::absolutizeAgainstUserDir($1URI* uri) {
+void XMLEntityManager::absolutizeAgainstUserDir($URI* uri) {
 	$init(XMLEntityManager);
 	$nc(uri)->absolutize($(getUserDir()));
 }
@@ -1582,34 +1581,34 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 		return systemId;
 	}
 	try {
-		$var($1URI, uri, $new($1URI, systemId));
+		$var($URI, uri, $new($URI, systemId));
 		if (uri != nullptr) {
 			return systemId;
 		}
 	} catch ($URI$MalformedURIException& e) {
 	}
 	$var($String, id, fixURI(systemId));
-	$var($1URI, base, nullptr);
-	$var($1URI, uri, nullptr);
+	$var($URI, base, nullptr);
+	$var($URI, uri, nullptr);
 	try {
 		bool var$0 = baseSystemId == nullptr || $nc(baseSystemId)->length() == 0;
 		if (var$0 || $nc(baseSystemId)->equals(systemId)) {
 			$var($String, dir, $nc($(getUserDir()))->toString());
-			$assign(base, $new($1URI, "file"_s, ""_s, dir, nullptr, nullptr));
+			$assign(base, $new($URI, "file"_s, ""_s, dir, nullptr, nullptr));
 		} else {
 			try {
-				$assign(base, $new($1URI, $(fixURI(baseSystemId))));
+				$assign(base, $new($URI, $(fixURI(baseSystemId))));
 			} catch ($URI$MalformedURIException& e) {
 				if (baseSystemId->indexOf((int32_t)u':') != -1) {
-					$assign(base, $new($1URI, "file"_s, ""_s, $(fixURI(baseSystemId)), nullptr, nullptr));
+					$assign(base, $new($URI, "file"_s, ""_s, $(fixURI(baseSystemId)), nullptr, nullptr));
 				} else {
 					$var($String, dir, $nc($(getUserDir()))->toString());
 					$assign(dir, $str({dir, $(fixURI(baseSystemId))}));
-					$assign(base, $new($1URI, "file"_s, ""_s, dir, nullptr, nullptr));
+					$assign(base, $new($URI, "file"_s, ""_s, dir, nullptr, nullptr));
 				}
 			}
 		}
-		$assign(uri, $new($1URI, base, id));
+		$assign(uri, $new($URI, base, id));
 	} catch ($Exception& e) {
 	}
 	if (uri == nullptr) {
@@ -1626,23 +1625,23 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 	}
 	if (strict) {
 		try {
-			$new($1URI, systemId);
+			$new($URI, systemId);
 			return systemId;
 		} catch ($URI$MalformedURIException& ex) {
 		}
-		$var($1URI, base, nullptr);
+		$var($URI, base, nullptr);
 		if (baseSystemId == nullptr || $nc(baseSystemId)->length() == 0) {
-			$assign(base, $new($1URI, "file"_s, ""_s, $($nc($(getUserDir()))->toString()), nullptr, nullptr));
+			$assign(base, $new($URI, "file"_s, ""_s, $($nc($(getUserDir()))->toString()), nullptr, nullptr));
 		} else {
 			try {
-				$assign(base, $new($1URI, baseSystemId));
+				$assign(base, $new($URI, baseSystemId));
 			} catch ($URI$MalformedURIException& e) {
 				$var($String, dir, $nc($(getUserDir()))->toString());
 				$assign(dir, $str({dir, baseSystemId}));
-				$assign(base, $new($1URI, "file"_s, ""_s, dir, nullptr, nullptr));
+				$assign(base, $new($URI, "file"_s, ""_s, dir, nullptr, nullptr));
 			}
 		}
-		$var($1URI, uri, $new($1URI, base, systemId));
+		$var($URI, uri, $new($URI, base, systemId));
 		return uri->toString();
 	}
 	try {
@@ -1657,25 +1656,25 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 		return systemId;
 	}
 	$var($String, id, fixURI(systemId));
-	$var($1URI, base, nullptr);
-	$var($1URI, uri, nullptr);
+	$var($URI, base, nullptr);
+	$var($URI, uri, nullptr);
 	try {
 		bool var$0 = baseSystemId == nullptr || $nc(baseSystemId)->length() == 0;
 		if (var$0 || $nc(baseSystemId)->equals(systemId)) {
 			$assign(base, getUserDir());
 		} else {
 			try {
-				$assign(base, $new($1URI, $($nc($(fixURI(baseSystemId)))->trim())));
+				$assign(base, $new($URI, $($nc($(fixURI(baseSystemId)))->trim())));
 			} catch ($URI$MalformedURIException& e) {
 				if (baseSystemId->indexOf((int32_t)u':') != -1) {
-					$assign(base, $new($1URI, "file"_s, ""_s, $($nc($(fixURI(baseSystemId)))->trim()), nullptr, nullptr));
+					$assign(base, $new($URI, "file"_s, ""_s, $($nc($(fixURI(baseSystemId)))->trim()), nullptr, nullptr));
 				} else {
-					$var($1URI, var$1, getUserDir());
-					$assign(base, $new($1URI, var$1, $(fixURI(baseSystemId))));
+					$var($URI, var$1, getUserDir());
+					$assign(base, $new($URI, var$1, $(fixURI(baseSystemId))));
 				}
 			}
 		}
-		$assign(uri, $new($1URI, base, $($nc(id)->trim())));
+		$assign(uri, $new($URI, base, $($nc(id)->trim())));
 	} catch ($Exception& e) {
 	}
 	if (uri == nullptr) {
@@ -1687,15 +1686,15 @@ $String* XMLEntityManager::expandSystemId($String* systemId, $String* baseSystem
 $String* XMLEntityManager::expandSystemIdStrictOn($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityManager);
 	$useLocalCurrentObjectStackCache();
-	$var($1URI, systemURI, $new($1URI, systemId, true));
+	$var($URI, systemURI, $new($URI, systemId, true));
 	if (systemURI->isAbsoluteURI()) {
 		return systemId;
 	}
-	$var($1URI, baseURI, nullptr);
+	$var($URI, baseURI, nullptr);
 	if (baseSystemId == nullptr || $nc(baseSystemId)->length() == 0) {
 		$assign(baseURI, getUserDir());
 	} else {
-		$assign(baseURI, $new($1URI, baseSystemId, true));
+		$assign(baseURI, $new($URI, baseSystemId, true));
 		if (!baseURI->isAbsoluteURI()) {
 			baseURI->absolutize($(getUserDir()));
 		}
@@ -1707,18 +1706,18 @@ $String* XMLEntityManager::expandSystemIdStrictOn($String* systemId, $String* ba
 $String* XMLEntityManager::expandSystemIdStrictOff($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityManager);
 	$useLocalCurrentObjectStackCache();
-	$var($1URI, systemURI, $new($1URI, systemId, true));
+	$var($URI, systemURI, $new($URI, systemId, true));
 	if (systemURI->isAbsoluteURI()) {
 		if ($nc($(systemURI->getScheme()))->length() > 1) {
 			return systemId;
 		}
 		$throwNew($URI$MalformedURIException);
 	}
-	$var($1URI, baseURI, nullptr);
+	$var($URI, baseURI, nullptr);
 	if (baseSystemId == nullptr || $nc(baseSystemId)->length() == 0) {
 		$assign(baseURI, getUserDir());
 	} else {
-		$assign(baseURI, $new($1URI, baseSystemId, true));
+		$assign(baseURI, $new($URI, baseSystemId, true));
 		if (!baseURI->isAbsoluteURI()) {
 			baseURI->absolutize($(getUserDir()));
 		}
@@ -1730,23 +1729,23 @@ $String* XMLEntityManager::expandSystemIdStrictOff($String* systemId, $String* b
 $String* XMLEntityManager::expandSystemIdStrictOff1($String* systemId, $String* baseSystemId) {
 	$init(XMLEntityManager);
 	$useLocalCurrentObjectStackCache();
-	$var($URI, systemURI, $new($URI, systemId));
+	$var($1URI, systemURI, $new($1URI, systemId));
 	if (systemURI->isAbsolute()) {
 		if ($nc($(systemURI->getScheme()))->length() > 1) {
 			return systemId;
 		}
 		$throwNew($URISyntaxException, systemId, "the scheme\'s length is only one character"_s);
 	}
-	$var($1URI, baseURI, nullptr);
+	$var($URI, baseURI, nullptr);
 	if (baseSystemId == nullptr || $nc(baseSystemId)->length() == 0) {
 		$assign(baseURI, getUserDir());
 	} else {
-		$assign(baseURI, $new($1URI, baseSystemId, true));
+		$assign(baseURI, $new($URI, baseSystemId, true));
 		if (!baseURI->isAbsoluteURI()) {
 			baseURI->absolutize($(getUserDir()));
 		}
 	}
-	$assign(systemURI, ($$new($URI, $($nc(baseURI)->toString())))->resolve(systemURI));
+	$assign(systemURI, ($$new($1URI, $($nc(baseURI)->toString())))->resolve(systemURI));
 	return $nc(systemURI)->toString();
 }
 

@@ -14,7 +14,6 @@ using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Iterator = ::java::util::Iterator;
 using $List = ::java::util::List;
-using $1NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
 
 namespace com {
 	namespace sun {

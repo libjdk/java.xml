@@ -85,14 +85,12 @@
 #undef SWAP
 
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -119,13 +117,10 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $PUTFIELD = ::com::sun::org::apache::bcel::internal::generic::PUTFIELD;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
@@ -141,7 +136,7 @@ using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compile
 using $XSLTC = ::com::sun::org::apache::xalan::internal::xsltc::compiler::XSLTC;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
@@ -335,7 +330,7 @@ $String* StepPattern::getNextFieldName() {
 	return $str({"__step_pattern_iter_"_s, $$str($nc($(getXSLTC()))->nextStepPatternSerial())});
 }
 
-$1Type* StepPattern::typeCheck($SymbolTable* stable) {
+$Type* StepPattern::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	if (hasPredicates()) {
 		{
@@ -375,8 +370,8 @@ $1Type* StepPattern::typeCheck($SymbolTable* stable) {
 			$set(this, _step, step);
 		}
 	}
-	$init($1Type);
-	return this->_axis == $Axis::CHILD ? $1Type::Element : $1Type::Attribute;
+	$init($Type);
+	return this->_axis == $Axis::CHILD ? $Type::Element : $Type::Attribute;
 }
 
 void StepPattern::translateKernel($ClassGenerator* classGen, $MethodGenerator* methodGen) {

@@ -14,7 +14,6 @@
 #undef XML_TYPE
 
 using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEntityManager;
-using $ValidatorHandlerImpl = ::com::sun::org::apache::xerces::internal::jaxp::validation::ValidatorHandlerImpl;
 using $URI$MalformedURIException = ::com::sun::org::apache::xerces::internal::util::URI$MalformedURIException;
 using $InputStream = ::java::io::InputStream;
 using $Reader = ::java::io::Reader;
@@ -26,7 +25,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $LSInput = ::org::w3c::dom::ls::LSInput;
 using $LSResourceResolver = ::org::w3c::dom::ls::LSResourceResolver;
 using $InputSource = ::org::xml::sax::InputSource;
-using $EntityResolver2 = ::org::xml::sax::ext::EntityResolver2;
 
 namespace com {
 	namespace sun {

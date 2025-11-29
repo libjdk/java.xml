@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/FieldGen.h>
 #include <jcpp.h>
 
-using $FieldGen = ::com::sun::org::apache::bcel::internal::generic::FieldGen;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

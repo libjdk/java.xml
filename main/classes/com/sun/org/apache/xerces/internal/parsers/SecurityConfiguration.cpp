@@ -14,7 +14,6 @@
 
 using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
 using $XIncludeAwareParserConfiguration = ::com::sun::org::apache::xerces::internal::parsers::XIncludeAwareParserConfiguration;
-using $XML11Configuration = ::com::sun::org::apache::xerces::internal::parsers::XML11Configuration;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XMLSecurityManager = ::com::sun::org::apache::xerces::internal::utils::XMLSecurityManager;
 using $XMLGrammarPool = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarPool;

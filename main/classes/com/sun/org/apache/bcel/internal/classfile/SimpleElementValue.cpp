@@ -24,7 +24,6 @@
 #undef STRING
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantDouble = ::com::sun::org::apache::bcel::internal::classfile::ConstantDouble;
 using $ConstantFloat = ::com::sun::org::apache::bcel::internal::classfile::ConstantFloat;
 using $ConstantInteger = ::com::sun::org::apache::bcel::internal::classfile::ConstantInteger;

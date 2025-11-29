@@ -15,19 +15,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Attr = ::org::w3c::dom::Attr;
-using $CDATASection = ::org::w3c::dom::CDATASection;
-using $Comment = ::org::w3c::dom::Comment;
-using $DOMConfiguration = ::org::w3c::dom::DOMConfiguration;
-using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
-using $DocumentFragment = ::org::w3c::dom::DocumentFragment;
-using $DocumentType = ::org::w3c::dom::DocumentType;
-using $Element = ::org::w3c::dom::Element;
-using $EntityReference = ::org::w3c::dom::EntityReference;
-using $Node = ::org::w3c::dom::Node;
-using $NodeList = ::org::w3c::dom::NodeList;
-using $ProcessingInstruction = ::org::w3c::dom::ProcessingInstruction;
-using $Text = ::org::w3c::dom::Text;
 
 namespace org {
 	namespace w3c {

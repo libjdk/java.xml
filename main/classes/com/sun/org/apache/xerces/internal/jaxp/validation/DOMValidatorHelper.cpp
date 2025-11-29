@@ -91,7 +91,6 @@ using $Util = ::com::sun::org::apache::xerces::internal::jaxp::validation::Util;
 using $ValidatorHelper = ::com::sun::org::apache::xerces::internal::jaxp::validation::ValidatorHelper;
 using $XMLSchemaValidatorComponentManager = ::com::sun::org::apache::xerces::internal::jaxp::validation::XMLSchemaValidatorComponentManager;
 using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
-using $ParserConfigurationSettings = ::com::sun::org::apache::xerces::internal::util::ParserConfigurationSettings;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XMLAttributesImpl = ::com::sun::org::apache::xerces::internal::util::XMLAttributesImpl;
 using $XMLSymbols = ::com::sun::org::apache::xerces::internal::util::XMLSymbols;
@@ -110,7 +109,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $Locale = ::java::util::Locale;
 using $DocumentBuilder = ::javax::xml::parsers::DocumentBuilder;
 using $DocumentBuilderFactory = ::javax::xml::parsers::DocumentBuilderFactory;
@@ -132,7 +130,6 @@ using $Node = ::org::w3c::dom::Node;
 using $ProcessingInstruction = ::org::w3c::dom::ProcessingInstruction;
 using $Text = ::org::w3c::dom::Text;
 using $SAXException = ::org::xml::sax::SAXException;
-using $SAXParseException = ::org::xml::sax::SAXParseException;
 
 namespace com {
 	namespace sun {

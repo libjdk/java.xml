@@ -23,7 +23,6 @@ using $QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
 using $Characters = ::javax::xml::stream::events::Characters;
 using $EndElement = ::javax::xml::stream::events::EndElement;
-using $NotationDeclaration = ::javax::xml::stream::events::NotationDeclaration;
 using $StartElement = ::javax::xml::stream::events::StartElement;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 

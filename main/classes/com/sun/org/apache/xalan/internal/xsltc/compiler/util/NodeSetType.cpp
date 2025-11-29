@@ -71,7 +71,6 @@ using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -87,13 +86,11 @@ using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::Instr
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $1ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $1ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -106,7 +103,7 @@ using $ObjectType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::u
 using $RealType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::RealType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -159,14 +156,14 @@ $Object* allocate$NodeSetType($Class* clazz) {
 }
 
 void NodeSetType::init$() {
-	$1Type::init$();
+	$Type::init$();
 }
 
 $String* NodeSetType::toString() {
 	return "node-set"_s;
 }
 
-bool NodeSetType::identicalTo($1Type* other) {
+bool NodeSetType::identicalTo($Type* other) {
 	return $equals(this, other);
 }
 
@@ -175,30 +172,30 @@ $String* NodeSetType::toSignature() {
 	return $Constants::NODE_ITERATOR_SIG;
 }
 
-$Type* NodeSetType::toJCType() {
+$1Type* NodeSetType::toJCType() {
 	$init($Constants);
 	return $new($1ObjectType, $Constants::NODE_ITERATOR);
 }
 
-void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Type* type) {
 	$useLocalCurrentObjectStackCache();
-	$init($1Type);
-	if (type == $1Type::String) {
+	$init($Type);
+	if (type == $Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
 	} else {
-		if (type == $1Type::Boolean) {
+		if (type == $Type::Boolean) {
 			translateTo(classGen, methodGen, $cast($BooleanType, type));
 		} else {
-			if (type == $1Type::Real) {
+			if (type == $Type::Real) {
 				translateTo(classGen, methodGen, $cast($RealType, type));
 			} else {
-				if (type == $1Type::Node) {
+				if (type == $Type::Node) {
 					translateTo(classGen, methodGen, $cast($NodeType, type));
 				} else {
-					if (type == $1Type::Reference) {
+					if (type == $Type::Reference) {
 						translateTo(classGen, methodGen, $cast($ReferenceType, type));
 					} else {
-						if (type == $1Type::Object) {
+						if (type == $Type::Object) {
 							translateTo(classGen, methodGen, $cast($ObjectType, type));
 						} else {
 							$init($ErrorMsg);
@@ -257,8 +254,8 @@ void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 	$init($Constants);
 	$nc(il)->append(static_cast<$Instruction*>($Constants::DUP));
 	$var($BranchHandle, falsec, il->append(static_cast<$BranchInstruction*>($$new($IFLT, nullptr))));
-	$init($1Type);
-	$nc($1Type::Node)->translateTo(classGen, methodGen, static_cast<$1Type*>(type));
+	$init($Type);
+	$nc($Type::Node)->translateTo(classGen, methodGen, static_cast<$Type*>(type));
 	$var($BranchHandle, truec, il->append(static_cast<$BranchInstruction*>($$new($GOTO, nullptr))));
 	$nc(falsec)->setTarget($(il->append(static_cast<$Instruction*>($Constants::POP))));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, $($nc(classGen)->getConstantPool()), ""_s)));
@@ -266,9 +263,9 @@ void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* metho
 }
 
 void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $RealType* type) {
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::String);
-	$nc($1Type::String)->translateTo(classGen, methodGen, $1Type::Real);
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::String);
+	$nc($Type::String)->translateTo(classGen, methodGen, $Type::Real);
 }
 
 void NodeSetType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $NodeType* type) {
@@ -330,8 +327,8 @@ void NodeSetType::getFirstNode($ClassGenerator* classGen, $MethodGenerator* meth
 }
 
 void NodeSetType::translateBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::Reference);
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::Reference);
 }
 
 void NodeSetType::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {

@@ -4,11 +4,9 @@
 #include <org/w3c/dom/Node.h>
 #include <jcpp.h>
 
-using $DOM2DTM = ::com::sun::org::apache::xml::internal::dtm::ref::dom2dtm::DOM2DTM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Node = ::org::w3c::dom::Node;
 
 namespace com {
 	namespace sun {

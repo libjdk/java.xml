@@ -6,7 +6,6 @@
 #undef DEFAULT_NS_PREFIX
 #undef NULL_NS_URI
 
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;

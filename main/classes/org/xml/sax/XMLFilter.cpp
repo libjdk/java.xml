@@ -4,7 +4,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $XMLReader = ::org::xml::sax::XMLReader;
 
 namespace org {
 	namespace xml {

@@ -8,7 +8,6 @@
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
-using $StackConsumer = ::com::sun::org::apache::bcel::internal::generic::StackConsumer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

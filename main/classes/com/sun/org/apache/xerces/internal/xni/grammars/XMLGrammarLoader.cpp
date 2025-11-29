@@ -7,13 +7,8 @@
 #include <java/util/Locale.h>
 #include <jcpp.h>
 
-using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
-using $XMLEntityResolver = ::com::sun::org::apache::xerces::internal::xni::parser::XMLEntityResolver;
-using $XMLErrorHandler = ::com::sun::org::apache::xerces::internal::xni::parser::XMLErrorHandler;
-using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Locale = ::java::util::Locale;
 
 namespace com {
 	namespace sun {

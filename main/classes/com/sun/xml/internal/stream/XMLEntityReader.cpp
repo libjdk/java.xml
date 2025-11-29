@@ -5,11 +5,6 @@
 #include <com/sun/xml/internal/stream/XMLBufferListener.h>
 #include <jcpp.h>
 
-using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
-using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $XMLBufferListener = ::com::sun::xml::internal::stream::XMLBufferListener;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

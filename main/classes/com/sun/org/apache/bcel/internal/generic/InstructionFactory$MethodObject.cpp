@@ -5,7 +5,6 @@
 #include <jcpp.h>
 
 using $TypeArray = $Array<::com::sun::org::apache::bcel::internal::generic::Type>;
-using $InstructionFactory = ::com::sun::org::apache::bcel::internal::generic::InstructionFactory;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

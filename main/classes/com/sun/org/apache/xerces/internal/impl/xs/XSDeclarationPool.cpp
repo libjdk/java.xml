@@ -29,7 +29,6 @@ using $XSComplexTypeDeclArray2 = $Array<::com::sun::org::apache::xerces::interna
 using $XSElementDeclArray2 = $Array<::com::sun::org::apache::xerces::internal::impl::xs::XSElementDecl, 2>;
 using $XSModelGroupImplArray2 = $Array<::com::sun::org::apache::xerces::internal::impl::xs::XSModelGroupImpl, 2>;
 using $XSParticleDeclArray2 = $Array<::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl, 2>;
-using $BaseSchemaDVFactory = ::com::sun::org::apache::xerces::internal::impl::dv::xs::BaseSchemaDVFactory;
 using $SchemaDVFactoryImpl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::SchemaDVFactoryImpl;
 using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $XSAttributeDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSAttributeDecl;

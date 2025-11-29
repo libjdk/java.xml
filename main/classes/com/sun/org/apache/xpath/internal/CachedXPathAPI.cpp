@@ -31,7 +31,6 @@ using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $SourceLocator = ::javax::xml::transform::SourceLocator;
 using $JdkConstants = ::jdk::xml::internal::JdkConstants;
 using $Document = ::org::w3c::dom::Document;
-using $Element = ::org::w3c::dom::Element;
 using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;
 using $NodeIterator = ::org::w3c::dom::traversal::NodeIterator;

@@ -13,17 +13,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <jcpp.h>
 
-using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
-using $XSAttributeDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSAttributeDeclaration;
-using $XSAttributeGroupDefinition = ::com::sun::org::apache::xerces::internal::xs::XSAttributeGroupDefinition;
-using $XSElementDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSElementDeclaration;
-using $XSIDCDefinition = ::com::sun::org::apache::xerces::internal::xs::XSIDCDefinition;
-using $XSModelGroupDefinition = ::com::sun::org::apache::xerces::internal::xs::XSModelGroupDefinition;
-using $XSNamedMap = ::com::sun::org::apache::xerces::internal::xs::XSNamedMap;
-using $XSNamespaceItemList = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItemList;
-using $XSNotationDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSNotationDeclaration;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -14,14 +14,9 @@
 
 #undef ATTRIBUTE
 
-using $XPath$LocationPathArray = $Array<::com::sun::org::apache::xerces::internal::impl::xpath::XPath$LocationPath>;
-using $XPath$StepArray = $Array<::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Step>;
 using $XPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath;
 using $XPath$Axis = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Axis;
-using $XPath$LocationPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$LocationPath;
-using $XPath$Step = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Step;
 using $XPathException = ::com::sun::org::apache::xerces::internal::impl::xpath::XPathException;
-using $Field = ::com::sun::org::apache::xerces::internal::impl::xs::identity::Field;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;

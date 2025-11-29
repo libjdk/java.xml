@@ -8,8 +8,6 @@
 #undef THIS
 
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
-using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::classfile::FieldOrMethod;
-using $BCELComparator = ::com::sun::org::apache::bcel::internal::util::BCELComparator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

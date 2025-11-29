@@ -22,14 +22,11 @@
 #include <jcpp.h>
 
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
-using $FieldArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Field>;
 using $MethodArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Method>;
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
 using $ClassParser = ::com::sun::org::apache::bcel::internal::classfile::ClassParser;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
-using $Method = ::com::sun::org::apache::bcel::internal::classfile::Method;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;
 using $AttributeHTML = ::com::sun::org::apache::bcel::internal::util::AttributeHTML;
 using $CodeHTML = ::com::sun::org::apache::bcel::internal::util::CodeHTML;
@@ -43,7 +40,6 @@ using $PrintWriter = ::java::io::PrintWriter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $AbstractSet = ::java::util::AbstractSet;
 using $HashSet = ::java::util::HashSet;
 using $Set = ::java::util::Set;

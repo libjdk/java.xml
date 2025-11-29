@@ -22,7 +22,6 @@ using $Document = ::org::w3c::dom::Document;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;
-using $ProcessingInstruction = ::org::w3c::dom::ProcessingInstruction;
 using $UserDataHandler = ::org::w3c::dom::UserDataHandler;
 
 namespace com {

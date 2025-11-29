@@ -27,7 +27,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $DOMException = ::org::w3c::dom::DOMException;
 using $Document = ::org::w3c::dom::Document;
-using $Entity = ::org::w3c::dom::Entity;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;

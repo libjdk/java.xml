@@ -14,7 +14,6 @@
 
 using $IOException = ::java::io::IOException;
 using $UnsupportedEncodingException = ::java::io::UnsupportedEncodingException;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $CharSequence = ::java::lang::CharSequence;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;

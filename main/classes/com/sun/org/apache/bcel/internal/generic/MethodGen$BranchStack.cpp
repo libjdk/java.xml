@@ -10,7 +10,6 @@
 #include <jcpp.h>
 
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $MethodGen$BranchTarget = ::com::sun::org::apache::bcel::internal::generic::MethodGen$BranchTarget;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

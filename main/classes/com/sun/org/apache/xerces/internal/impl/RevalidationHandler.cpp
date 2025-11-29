@@ -3,8 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/Augmentations.h>
 #include <jcpp.h>
 
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $XMLDocumentFilter = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentFilter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

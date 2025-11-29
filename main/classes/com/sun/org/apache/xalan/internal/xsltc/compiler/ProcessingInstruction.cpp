@@ -49,7 +49,6 @@
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -57,28 +56,24 @@ using $GETFIELD = ::com::sun::org::apache::bcel::internal::generic::GETFIELD;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
 using $INVOKESTATIC = ::com::sun::org::apache::bcel::internal::generic::INVOKESTATIC;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $AttributeValue = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValue;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ErrorMsg;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $XML11Char = ::com::sun::org::apache::xml::internal::utils::XML11Char;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -122,7 +117,7 @@ $Object* allocate$ProcessingInstruction($Class* clazz) {
 }
 
 void ProcessingInstruction::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	this->_isLiteral = false;
 }
 
@@ -150,11 +145,11 @@ void ProcessingInstruction::parseContents($Parser* parser) {
 	parseChildren(parser);
 }
 
-$1Type* ProcessingInstruction::typeCheck($SymbolTable* stable) {
+$Type* ProcessingInstruction::typeCheck($SymbolTable* stable) {
 	$nc(this->_name)->typeCheck(stable);
 	typeCheckContents(stable);
-	$init($1Type);
-	return $1Type::Void;
+	$init($Type);
+	return $Type::Void;
 }
 
 void ProcessingInstruction::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
@@ -165,28 +160,28 @@ void ProcessingInstruction::translate($ClassGenerator* classGen, $MethodGenerato
 		$init($Constants);
 		$var($LocalVariableGen, nameValue, methodGen->addLocalVariable2("nameValue"_s, $($Util::getJCRefType($Constants::STRING_SIG)), nullptr));
 		$nc(this->_name)->translate(classGen, methodGen);
-		$nc(nameValue)->setStart($($nc(il)->append(static_cast<$Instruction*>($$new($ASTORE, nameValue->getIndex())))));
-		$nc(il)->append(static_cast<$Instruction*>($$new($ALOAD, nameValue->getIndex())));
+		$nc(nameValue)->setStart($($nc(il)->append(static_cast<$1Instruction*>($$new($ASTORE, nameValue->getIndex())))));
+		$nc(il)->append(static_cast<$1Instruction*>($$new($ALOAD, nameValue->getIndex())));
 		int32_t check = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "checkNCName"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s}));
-		il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, check)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKESTATIC, check)));
 		il->append($(methodGen->loadHandler()));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
-		nameValue->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, nameValue->getIndex())))));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
+		nameValue->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, nameValue->getIndex())))));
 	} else {
 		$nc(il)->append($(methodGen->loadHandler()));
 		$init($Constants);
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		$nc(this->_name)->translate(classGen, methodGen);
 	}
 	$nc(il)->append($(classGen->loadTranslet()));
 	$init($Constants);
-	il->append(static_cast<$Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref($Constants::TRANSLET_CLASS, "stringValueHandler"_s, $Constants::STRING_VALUE_HANDLER_SIG))));
-	il->append(static_cast<$Instruction*>($Constants::DUP));
+	il->append(static_cast<$1Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref($Constants::TRANSLET_CLASS, "stringValueHandler"_s, $Constants::STRING_VALUE_HANDLER_SIG))));
+	il->append(static_cast<$1Instruction*>($Constants::DUP));
 	il->append($(methodGen->storeHandler()));
 	translateContents(classGen, methodGen);
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_VALUE_HANDLER, "getValueOfPI"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_VALUE_HANDLER, "getValueOfPI"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
 	int32_t processingInstruction = $nc(cpg)->addInterfaceMethodref($Constants::TRANSLET_OUTPUT_INTERFACE, "processingInstruction"_s, $$str({"("_s, $Constants::STRING_SIG, $Constants::STRING_SIG, ")V"_s}));
-	il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, processingInstruction, 3)));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, processingInstruction, 3)));
 	il->append($(methodGen->storeHandler()));
 }
 

@@ -35,7 +35,6 @@
 using $XMLErrorResources = ::com::sun::org::apache::xml::internal::res::XMLErrorResources;
 using $XMLMessages = ::com::sun::org::apache::xml::internal::res::XMLMessages;
 using $URI$MalformedURIException = ::com::sun::org::apache::xml::internal::utils::URI$MalformedURIException;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

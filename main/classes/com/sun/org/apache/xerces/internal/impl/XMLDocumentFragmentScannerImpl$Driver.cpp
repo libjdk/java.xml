@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl.h>
 #include <jcpp.h>
 
-using $XMLDocumentFragmentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

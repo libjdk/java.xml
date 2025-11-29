@@ -31,7 +31,6 @@ using $AttrImpl = ::com::sun::org::apache::xerces::internal::dom::AttrImpl;
 using $AttrNSImpl = ::com::sun::org::apache::xerces::internal::dom::AttrNSImpl;
 using $ChildNode = ::com::sun::org::apache::xerces::internal::dom::ChildNode;
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
-using $DOMConfigurationImpl = ::com::sun::org::apache::xerces::internal::dom::DOMConfigurationImpl;
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
 using $ElementImpl = ::com::sun::org::apache::xerces::internal::dom::ElementImpl;
 using $ElementNSImpl = ::com::sun::org::apache::xerces::internal::dom::ElementNSImpl;

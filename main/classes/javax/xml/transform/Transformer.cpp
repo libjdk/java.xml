@@ -13,11 +13,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Package = ::java::lang::Package;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
-using $Properties = ::java::util::Properties;
-using $ErrorListener = ::javax::xml::transform::ErrorListener;
-using $Result = ::javax::xml::transform::Result;
-using $Source = ::javax::xml::transform::Source;
-using $URIResolver = ::javax::xml::transform::URIResolver;
 
 namespace javax {
 	namespace xml {

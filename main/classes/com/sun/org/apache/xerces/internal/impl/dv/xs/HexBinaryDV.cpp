@@ -17,7 +17,6 @@
 
 using $InvalidDatatypeValueException = ::com::sun::org::apache::xerces::internal::impl::dv::InvalidDatatypeValueException;
 using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
-using $ByteListImpl = ::com::sun::org::apache::xerces::internal::impl::dv::util::ByteListImpl;
 using $HexBin = ::com::sun::org::apache::xerces::internal::impl::dv::util::HexBin;
 using $HexBinaryDV$XHex = ::com::sun::org::apache::xerces::internal::impl::dv::xs::HexBinaryDV$XHex;
 using $TypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::xs::TypeValidator;

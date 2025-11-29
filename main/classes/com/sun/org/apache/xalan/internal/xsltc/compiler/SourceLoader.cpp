@@ -4,10 +4,8 @@
 #include <org/xml/sax/InputSource.h>
 #include <jcpp.h>
 
-using $XSLTC = ::com::sun::org::apache::xalan::internal::xsltc::compiler::XSLTC;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $InputSource = ::org::xml::sax::InputSource;
 
 namespace com {
 	namespace sun {

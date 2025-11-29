@@ -4,7 +4,6 @@
 #include <java/io/Writer.h>
 #include <jcpp.h>
 
-using $WriterChain = ::com::sun::org::apache::xml::internal::serializer::WriterChain;
 using $OutputStream = ::java::io::OutputStream;
 using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;

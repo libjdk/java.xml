@@ -9,7 +9,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.h>
 #include <jcpp.h>
 
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantCP = ::com::sun::org::apache::bcel::internal::classfile::ConstantCP;
 using $ConstantNameAndType = ::com::sun::org::apache::bcel::internal::classfile::ConstantNameAndType;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;

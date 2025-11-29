@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier.h>
 #include <jcpp.h>
 
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

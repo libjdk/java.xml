@@ -171,10 +171,9 @@ using $AugmentationsImpl = ::com::sun::org::apache::xerces::internal::util::Augm
 using $HTTPInputSource = ::com::sun::org::apache::xerces::internal::util::HTTPInputSource;
 using $IntStack = ::com::sun::org::apache::xerces::internal::util::IntStack;
 using $MessageFormatter = ::com::sun::org::apache::xerces::internal::util::MessageFormatter;
-using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
 using $ParserConfigurationSettings = ::com::sun::org::apache::xerces::internal::util::ParserConfigurationSettings;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
-using $1URI = ::com::sun::org::apache::xerces::internal::util::URI;
+using $URI = ::com::sun::org::apache::xerces::internal::util::URI;
 using $URI$MalformedURIException = ::com::sun::org::apache::xerces::internal::util::URI$MalformedURIException;
 using $XMLAttributesImpl = ::com::sun::org::apache::xerces::internal::util::XMLAttributesImpl;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
@@ -183,7 +182,6 @@ using $XMLResourceIdentifierImpl = ::com::sun::org::apache::xerces::internal::ut
 using $XMLSymbols = ::com::sun::org::apache::xerces::internal::util::XMLSymbols;
 using $XMLSecurityManager = ::com::sun::org::apache::xerces::internal::utils::XMLSecurityManager;
 using $XMLSecurityPropertyManager = ::com::sun::org::apache::xerces::internal::utils::XMLSecurityPropertyManager;
-using $MultipleScopeNamespaceSupport = ::com::sun::org::apache::xerces::internal::xinclude::MultipleScopeNamespaceSupport;
 using $XInclude11TextReader = ::com::sun::org::apache::xerces::internal::xinclude::XInclude11TextReader;
 using $XIncludeHandler$Notation = ::com::sun::org::apache::xerces::internal::xinclude::XIncludeHandler$Notation;
 using $XIncludeHandler$UnparsedEntity = ::com::sun::org::apache::xerces::internal::xinclude::XIncludeHandler$UnparsedEntity;
@@ -203,9 +201,7 @@ using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIExcepti
 using $XMLComponent = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponent;
 using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
 using $XMLConfigurationException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLConfigurationException;
-using $XMLDTDFilter = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDFilter;
 using $XMLDTDSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDSource;
-using $XMLDocumentFilter = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentFilter;
 using $XMLDocumentSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource;
 using $XMLEntityResolver = ::com::sun::org::apache::xerces::internal::xni::parser::XMLEntityResolver;
 using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
@@ -215,10 +211,7 @@ using $XPointerHandler = ::com::sun::org::apache::xerces::internal::xpointer::XP
 using $XPointerProcessor = ::com::sun::org::apache::xerces::internal::xpointer::XPointerProcessor;
 using $CharConversionException = ::java::io::CharConversionException;
 using $IOException = ::java::io::IOException;
-using $InputStream = ::java::io::InputStream;
-using $Reader = ::java::io::Reader;
 using $UnsupportedEncodingException = ::java::io::UnsupportedEncodingException;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
@@ -226,7 +219,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $URI = ::java::net::URI;
 using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $Enumeration = ::java::util::Enumeration;
@@ -235,7 +227,6 @@ using $Locale = ::java::util::Locale;
 using $Objects = ::java::util::Objects;
 using $Stack = ::java::util::Stack;
 using $StringTokenizer = ::java::util::StringTokenizer;
-using $Vector = ::java::util::Vector;
 using $XMLConstants = ::javax::xml::XMLConstants;
 using $CatalogException = ::javax::xml::catalog::CatalogException;
 using $CatalogFeatures = ::javax::xml::catalog::CatalogFeatures;
@@ -1329,9 +1320,9 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 			return false;
 		}
 	}
-	$var($1URI, hrefURI, nullptr);
+	$var($URI, hrefURI, nullptr);
 	try {
-		$assign(hrefURI, $new($1URI, href, true));
+		$assign(hrefURI, $new($URI, href, true));
 		if (hrefURI->getFragment() != nullptr) {
 			reportFatalError("HrefFragmentIdentifierIllegal"_s, $$new($ObjectArray, {$of(href)}));
 		}
@@ -1340,7 +1331,7 @@ bool XIncludeHandler::handleIncludeElement($XMLAttributes* attributes) {
 		if (href != newHref) {
 			$assign(href, newHref);
 			try {
-				$assign(hrefURI, $new($1URI, href, true));
+				$assign(hrefURI, $new($URI, href, true));
 				if (hrefURI->getFragment() != nullptr) {
 					reportFatalError("HrefFragmentIdentifierIllegal"_s, $$new($ObjectArray, {$of(href)}));
 				}
@@ -1803,8 +1794,8 @@ $String* XIncludeHandler::getRelativeBaseURI() {
 			if ($nc(this->fParentRelativeURI)->length() == 0) {
 				return relativeURI;
 			}
-			$var($1URI, base, $new($1URI, this->fParentRelativeURI, true));
-			$var($1URI, uri, $new($1URI, base, relativeURI));
+			$var($URI, base, $new($URI, this->fParentRelativeURI, true));
+			$var($URI, uri, $new($URI, base, relativeURI));
 			$var($String, baseScheme, base->getScheme());
 			$var($String, literalScheme, uri->getScheme());
 			if (!$Objects::equals(baseScheme, literalScheme)) {
@@ -2183,9 +2174,9 @@ $String* XIncludeHandler::getRelativeURI(int32_t depth) {
 	if (start == $nc(this->fBaseURIScope)->size()) {
 		return ""_s;
 	}
-	$var($1URI, uri, $new($1URI, "file"_s, $cast($String, $($nc(this->fLiteralSystemID)->get(start)))));
+	$var($URI, uri, $new($URI, "file"_s, $cast($String, $($nc(this->fLiteralSystemID)->get(start)))));
 	for (int32_t i = start + 1; i < $nc(this->fBaseURIScope)->size(); ++i) {
-		$assign(uri, $new($1URI, uri, $cast($String, $($nc(this->fLiteralSystemID)->get(i)))));
+		$assign(uri, $new($URI, uri, $cast($String, $($nc(this->fLiteralSystemID)->get(i)))));
 	}
 	return uri->getPath();
 }

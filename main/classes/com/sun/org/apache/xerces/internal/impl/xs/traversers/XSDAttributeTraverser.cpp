@@ -65,14 +65,12 @@
 #undef VC_FIXED
 #undef VC_NONE
 
-using $DatatypeException = ::com::sun::org::apache::xerces::internal::impl::dv::DatatypeException;
 using $InvalidDatatypeValueException = ::com::sun::org::apache::xerces::internal::impl::dv::InvalidDatatypeValueException;
 using $ValidatedInfo = ::com::sun::org::apache::xerces::internal::impl::dv::ValidatedInfo;
 using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
 using $XSSimpleType = ::com::sun::org::apache::xerces::internal::impl::dv::XSSimpleType;
 using $ValidationState = ::com::sun::org::apache::xerces::internal::impl::validation::ValidationState;
 using $SchemaGrammar = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar;
-using $SchemaNamespaceSupport = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaNamespaceSupport;
 using $SchemaSymbols = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaSymbols;
 using $XSAnnotationImpl = ::com::sun::org::apache::xerces::internal::impl::xs::XSAnnotationImpl;
 using $XSAttributeDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSAttributeDecl;
@@ -100,7 +98,6 @@ using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::X
 using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Attr = ::org::w3c::dom::Attr;
 using $Element = ::org::w3c::dom::Element;
 using $Node = ::org::w3c::dom::Node;
 

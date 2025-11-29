@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
 #include <jcpp.h>
 
-using $XSElementDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSElementDecl;
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

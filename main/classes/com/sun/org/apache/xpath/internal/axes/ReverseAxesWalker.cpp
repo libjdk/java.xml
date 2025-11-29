@@ -16,7 +16,6 @@ using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIte
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $AxesWalker = ::com::sun::org::apache::xpath::internal::axes::AxesWalker;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;
-using $PredicatedNodeTest = ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest;
 using $WalkingIterator = ::com::sun::org::apache::xpath::internal::axes::WalkingIterator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;

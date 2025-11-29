@@ -14,7 +14,6 @@
 #include <jcpp.h>
 
 using $JAXPValidatorComponent = ::com::sun::org::apache::xerces::internal::jaxp::JAXPValidatorComponent;
-using $TeeXMLDocumentFilterImpl = ::com::sun::org::apache::xerces::internal::jaxp::TeeXMLDocumentFilterImpl;
 using $AugmentationsImpl = ::com::sun::org::apache::xerces::internal::util::AugmentationsImpl;
 using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
@@ -27,7 +26,6 @@ using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $Attributes = ::org::xml::sax::Attributes;
 using $SAXException = ::org::xml::sax::SAXException;

@@ -70,16 +70,13 @@ using $ElementImpl = ::com::sun::org::apache::xerces::internal::dom::ElementImpl
 using $NamedNodeMapImpl = ::com::sun::org::apache::xerces::internal::dom::NamedNodeMapImpl;
 using $ParentNode = ::com::sun::org::apache::xerces::internal::dom::ParentNode;
 using $ObjectOutputStream = ::java::io::ObjectOutputStream;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
-using $Cloneable = ::java::lang::Cloneable;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $Map = ::java::util::Map;
-using $Attr = ::org::w3c::dom::Attr;
 using $DOMException = ::org::w3c::dom::DOMException;
 using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
 using $Document = ::org::w3c::dom::Document;
@@ -91,7 +88,6 @@ using $NodeList = ::org::w3c::dom::NodeList;
 using $UserDataHandler = ::org::w3c::dom::UserDataHandler;
 using $Event = ::org::w3c::dom::events::Event;
 using $EventListener = ::org::w3c::dom::events::EventListener;
-using $EventTarget = ::org::w3c::dom::events::EventTarget;
 
 namespace com {
 	namespace sun {

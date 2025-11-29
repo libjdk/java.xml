@@ -13,11 +13,9 @@
 #undef EMPTY_LIST
 #undef FACET
 
-using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $XSObjectListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl;
 using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
-using $XSFacet = ::com::sun::org::apache::xerces::internal::xs::XSFacet;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;

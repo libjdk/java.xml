@@ -22,7 +22,6 @@ using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $JdkProperty = ::jdk::xml::internal::JdkProperty;
 using $JdkProperty$State = ::jdk::xml::internal::JdkProperty$State;
 
 namespace jdk {

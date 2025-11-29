@@ -19,7 +19,6 @@ using $XMLStreamException = ::javax::xml::stream::XMLStreamException;
 using $XMLStreamWriter = ::javax::xml::stream::XMLStreamWriter;
 using $Attributes = ::org::xml::sax::Attributes;
 using $SAXException = ::org::xml::sax::SAXException;
-using $DefaultHandler = ::org::xml::sax::helpers::DefaultHandler;
 
 namespace com {
 	namespace sun {

@@ -33,7 +33,6 @@ using $XNumber = ::com::sun::org::apache::xpath::internal::objects::XNumber;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XString = ::com::sun::org::apache::xpath::internal::objects::XString;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Double = ::java::lang::Double;

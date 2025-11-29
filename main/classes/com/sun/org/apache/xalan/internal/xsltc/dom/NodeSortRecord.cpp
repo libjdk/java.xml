@@ -31,7 +31,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NumberFormatException = ::java::lang::NumberFormatException;
 using $Collator = ::java::text::Collator;
-using $Locale = ::java::util::Locale;
 
 namespace com {
 	namespace sun {

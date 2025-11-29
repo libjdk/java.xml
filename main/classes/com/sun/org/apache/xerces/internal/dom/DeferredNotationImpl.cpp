@@ -14,9 +14,7 @@
 
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DeferredDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DeferredDocumentImpl;
-using $DeferredNode = ::com::sun::org::apache::xerces::internal::dom::DeferredNode;
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
 using $NotationImpl = ::com::sun::org::apache::xerces::internal::dom::NotationImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

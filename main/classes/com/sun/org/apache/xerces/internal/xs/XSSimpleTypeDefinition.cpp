@@ -26,10 +26,6 @@
 #undef VARIETY_LIST
 #undef VARIETY_UNION
 
-using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

@@ -121,7 +121,7 @@ using $BasisLibrary$3 = ::com::sun::org::apache::xalan::internal::xsltc::runtime
 using $BasisLibrary$4 = ::com::sun::org::apache::xalan::internal::xsltc::runtime::BasisLibrary$4;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::runtime::Constants;
 using $InternalRuntimeError = ::com::sun::org::apache::xalan::internal::xsltc::runtime::InternalRuntimeError;
-using $Node = ::com::sun::org::apache::xalan::internal::xsltc::runtime::Node;
+using $1Node = ::com::sun::org::apache::xalan::internal::xsltc::runtime::Node;
 using $Operators = ::com::sun::org::apache::xalan::internal::xsltc::runtime::Operators;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
@@ -131,12 +131,10 @@ using $DTMWSFilter = ::com::sun::org::apache::xml::internal::dtm::DTMWSFilter;
 using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;
 using $DTMDefaultBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBase;
 using $DTMNodeProxy = ::com::sun::org::apache::xml::internal::dtm::ref::DTMNodeProxy;
-using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
 using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
 using $XML11Char = ::com::sun::org::apache::xml::internal::utils::XML11Char;
 using $PrintStream = ::java::io::PrintStream;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ArrayIndexOutOfBoundsException = ::java::lang::ArrayIndexOutOfBoundsException;
 using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -170,9 +168,8 @@ using $SecuritySupport = ::jdk::xml::internal::SecuritySupport;
 using $Attr = ::org::w3c::dom::Attr;
 using $Document = ::org::w3c::dom::Document;
 using $Element = ::org::w3c::dom::Element;
-using $1Node = ::org::w3c::dom::Node;
+using $Node = ::org::w3c::dom::Node;
 using $NodeList = ::org::w3c::dom::NodeList;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $SAXException = ::org::xml::sax::SAXException;
 
 namespace com {
@@ -258,7 +255,7 @@ $MethodInfo _BasisLibrary_MethodInfo_[] = {
 	{"mapQNameToJavaName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&BasisLibrary::mapQNameToJavaName))},
 	{"namespace_uriF", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($DTMAxisIterator*,$DOM*)>(&BasisLibrary::namespace_uriF))},
 	{"namespace_uriF", "(ILcom/sun/org/apache/xalan/internal/xsltc/DOM;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t,$DOM*)>(&BasisLibrary::namespace_uriF))},
-	{"node2Iterator", "(Lorg/w3c/dom/Node;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DTMAxisIterator*(*)($1Node*,$Translet*,$DOM*)>(&BasisLibrary::node2Iterator))},
+	{"node2Iterator", "(Lorg/w3c/dom/Node;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DTMAxisIterator*(*)($Node*,$Translet*,$DOM*)>(&BasisLibrary::node2Iterator))},
 	{"nodeList2Iterator", "(Lorg/w3c/dom/NodeList;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DTMAxisIterator*(*)($NodeList*,$Translet*,$DOM*)>(&BasisLibrary::nodeList2Iterator))},
 	{"nodeList2IteratorUsingHandleFromNode", "(Lorg/w3c/dom/NodeList;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$DTMAxisIterator*(*)($NodeList*,$Translet*,$DOM*)>(&BasisLibrary::nodeList2IteratorUsingHandleFromNode))},
 	{"nodesetF", "(Ljava/lang/Object;)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DTMAxisIterator*(*)(Object$*)>(&BasisLibrary::nodesetF))},
@@ -273,7 +270,7 @@ $MethodInfo _BasisLibrary_MethodInfo_[] = {
 	{"referenceToBoolean", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(Object$*)>(&BasisLibrary::referenceToBoolean))},
 	{"referenceToDouble", "(Ljava/lang/Object;)D", nullptr, $PUBLIC | $STATIC, $method(static_cast<double(*)(Object$*)>(&BasisLibrary::referenceToDouble))},
 	{"referenceToLong", "(Ljava/lang/Object;)J", nullptr, $PUBLIC | $STATIC, $method(static_cast<int64_t(*)(Object$*)>(&BasisLibrary::referenceToLong))},
-	{"referenceToNode", "(Ljava/lang/Object;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$1Node*(*)(Object$*,$DOM*)>(&BasisLibrary::referenceToNode))},
+	{"referenceToNode", "(Ljava/lang/Object;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Node*(*)(Object$*,$DOM*)>(&BasisLibrary::referenceToNode))},
 	{"referenceToNodeList", "(Ljava/lang/Object;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)(Object$*,$DOM*)>(&BasisLibrary::referenceToNodeList))},
 	{"referenceToNodeSet", "(Ljava/lang/Object;)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DTMAxisIterator*(*)(Object$*)>(&BasisLibrary::referenceToNodeSet))},
 	{"referenceToResultTree", "(Ljava/lang/Object;)Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DOM*(*)(Object$*)>(&BasisLibrary::referenceToResultTree))},
@@ -418,8 +415,8 @@ $String* BasisLibrary::stringF(Object$* obj, $DOM* dom) {
 	$init(BasisLibrary);
 	if ($instanceOf($DTMAxisIterator, obj)) {
 		return $nc(dom)->getStringValueX($nc($($nc(($cast($DTMAxisIterator, obj)))->reset()))->next());
-	} else if ($instanceOf($Node, obj)) {
-		return $nc(dom)->getStringValueX($nc(($cast($Node, obj)))->node);
+	} else if ($instanceOf($1Node, obj)) {
+		return $nc(dom)->getStringValueX($nc(($cast($1Node, obj)))->node);
 	} else if ($instanceOf($DOM, obj)) {
 		return $nc(($cast($DOM, obj)))->getStringValue();
 	} else {
@@ -432,8 +429,8 @@ $String* BasisLibrary::stringF(Object$* obj, int32_t node, $DOM* dom) {
 	$useLocalCurrentObjectStackCache();
 	if ($instanceOf($DTMAxisIterator, obj)) {
 		return $nc(dom)->getStringValueX($nc($($nc(($cast($DTMAxisIterator, obj)))->reset()))->next());
-	} else if ($instanceOf($Node, obj)) {
-		return $nc(dom)->getStringValueX($nc(($cast($Node, obj)))->node);
+	} else if ($instanceOf($1Node, obj)) {
+		return $nc(dom)->getStringValueX($nc(($cast($1Node, obj)))->node);
 	} else if ($instanceOf($DOM, obj)) {
 		return $nc(($cast($DOM, obj)))->getStringValue();
 	} else if ($instanceOf($Double, obj)) {
@@ -470,8 +467,8 @@ double BasisLibrary::numberF(Object$* obj, $DOM* dom) {
 	} else if ($instanceOf($DTMAxisIterator, obj)) {
 		$var($DTMAxisIterator, iter, $cast($DTMAxisIterator, obj));
 		return stringToReal($($nc(dom)->getStringValueX($nc($($nc(iter)->reset()))->next())));
-	} else if ($instanceOf($Node, obj)) {
-		return stringToReal($($nc(dom)->getStringValueX($nc(($cast($Node, obj)))->node)));
+	} else if ($instanceOf($1Node, obj)) {
+		return stringToReal($($nc(dom)->getStringValueX($nc(($cast($1Node, obj)))->node)));
 	} else if ($instanceOf($DOM, obj)) {
 		return stringToReal($($nc(($cast($DOM, obj)))->getStringValue()));
 	} else {
@@ -502,7 +499,7 @@ bool BasisLibrary::booleanF(Object$* obj) {
 	} else if ($instanceOf($DTMAxisIterator, obj)) {
 		$var($DTMAxisIterator, iter, $cast($DTMAxisIterator, obj));
 		return $nc($($nc(iter)->reset()))->next() != $DTMAxisIterator::END;
-	} else if ($instanceOf($Node, obj)) {
+	} else if ($instanceOf($1Node, obj)) {
 		return true;
 	} else if ($instanceOf($DOM, obj)) {
 		$var($String, temp, $nc(($cast($DOM, obj)))->getStringValue());
@@ -975,7 +972,7 @@ bool BasisLibrary::compare(Object$* left$renamed, Object$* right$renamed, int32_
 	bool var$0 = hasSimpleType(left);
 	bool hasSimpleArgs = var$0 && hasSimpleType(right);
 	if (op != $Operators::EQ && op != $Operators::NE) {
-		if ($instanceOf($Node, left) || $instanceOf($Node, right)) {
+		if ($instanceOf($1Node, left) || $instanceOf($1Node, right)) {
 			if ($instanceOf($Boolean, left)) {
 				$assign(right, $Boolean::valueOf(booleanF(right)));
 				hasSimpleArgs = true;
@@ -1028,11 +1025,11 @@ bool BasisLibrary::compare(Object$* left$renamed, Object$* right$renamed, int32_
 			result = !result;
 		}
 	} else {
-		if ($instanceOf($Node, left)) {
-			$assign(left, $new($SingletonIterator, $nc(($cast($Node, left)))->node));
+		if ($instanceOf($1Node, left)) {
+			$assign(left, $new($SingletonIterator, $nc(($cast($1Node, left)))->node));
 		}
-		if ($instanceOf($Node, right)) {
-			$assign(right, $new($SingletonIterator, $nc(($cast($Node, right)))->node));
+		if ($instanceOf($1Node, right)) {
+			$assign(right, $new($SingletonIterator, $nc(($cast($1Node, right)))->node));
 		}
 		if (hasSimpleType(left) || $instanceOf($DOM, left) && $instanceOf($DTMAxisIterator, right)) {
 			$var($Object, temp, right);
@@ -1102,7 +1099,7 @@ bool BasisLibrary::testLanguage($String* testLang$renamed, $DOM* dom, int32_t no
 
 bool BasisLibrary::hasSimpleType(Object$* obj) {
 	$init(BasisLibrary);
-	return $instanceOf($Boolean, obj) || $instanceOf($Double, obj) || $instanceOf($Integer, obj) || $instanceOf($String, obj) || $instanceOf($Node, obj) || $instanceOf($DOM, obj);
+	return $instanceOf($Boolean, obj) || $instanceOf($Double, obj) || $instanceOf($Integer, obj) || $instanceOf($String, obj) || $instanceOf($1Node, obj) || $instanceOf($DOM, obj);
 }
 
 double BasisLibrary::stringToReal($String* s) {
@@ -1182,8 +1179,8 @@ $String* BasisLibrary::formatNumber(double number, $String* pattern, $DecimalFor
 $DTMAxisIterator* BasisLibrary::referenceToNodeSet(Object$* obj) {
 	$init(BasisLibrary);
 	$useLocalCurrentObjectStackCache();
-	if ($instanceOf($Node, obj)) {
-		return ($new($SingletonIterator, $nc(($cast($Node, obj)))->node));
+	if ($instanceOf($1Node, obj)) {
+		return ($new($SingletonIterator, $nc(($cast($1Node, obj)))->node));
 	} else if ($instanceOf($DTMAxisIterator, obj)) {
 		return ($nc($($nc(($cast($DTMAxisIterator, obj)))->cloneIterator()))->reset());
 	} else {
@@ -1197,7 +1194,7 @@ $NodeList* BasisLibrary::referenceToNodeList(Object$* obj, $DOM* dom$renamed) {
 	$init(BasisLibrary);
 	$useLocalCurrentObjectStackCache();
 	$var($DOM, dom, dom$renamed);
-	if ($instanceOf($Node, obj) || $instanceOf($DTMAxisIterator, obj)) {
+	if ($instanceOf($1Node, obj) || $instanceOf($DTMAxisIterator, obj)) {
 		$var($DTMAxisIterator, iter, referenceToNodeSet(obj));
 		return $nc(dom)->makeNodeList(iter);
 	} else if ($instanceOf($DOM, obj)) {
@@ -1210,11 +1207,11 @@ $NodeList* BasisLibrary::referenceToNodeList(Object$* obj, $DOM* dom$renamed) {
 	}
 }
 
-$1Node* BasisLibrary::referenceToNode(Object$* obj, $DOM* dom$renamed) {
+$Node* BasisLibrary::referenceToNode(Object$* obj, $DOM* dom$renamed) {
 	$init(BasisLibrary);
 	$useLocalCurrentObjectStackCache();
 	$var($DOM, dom, dom$renamed);
-	if ($instanceOf($Node, obj) || $instanceOf($DTMAxisIterator, obj)) {
+	if ($instanceOf($1Node, obj) || $instanceOf($DTMAxisIterator, obj)) {
 		$var($DTMAxisIterator, iter, referenceToNodeSet(obj));
 		return $nc(dom)->makeNode(iter);
 	} else if ($instanceOf($DOM, obj)) {
@@ -1271,8 +1268,8 @@ $String* BasisLibrary::referenceToString(Object$* obj, $DOM* dom) {
 		return $cast($String, obj);
 	} else if ($instanceOf($DTMAxisIterator, obj)) {
 		return $nc(dom)->getStringValueX($nc($($nc(($cast($DTMAxisIterator, obj)))->reset()))->next());
-	} else if ($instanceOf($Node, obj)) {
-		return $nc(dom)->getStringValueX($nc(($cast($Node, obj)))->node);
+	} else if ($instanceOf($1Node, obj)) {
+		return $nc(dom)->getStringValueX($nc(($cast($1Node, obj)))->node);
 	} else if ($instanceOf($DOM, obj)) {
 		return $nc(($cast($DOM, obj)))->getStringValue();
 	} else {
@@ -1282,10 +1279,10 @@ $String* BasisLibrary::referenceToString(Object$* obj, $DOM* dom) {
 	}
 }
 
-$DTMAxisIterator* BasisLibrary::node2Iterator($1Node* node, $Translet* translet, $DOM* dom) {
+$DTMAxisIterator* BasisLibrary::node2Iterator($Node* node, $Translet* translet, $DOM* dom) {
 	$init(BasisLibrary);
 	$useLocalCurrentObjectStackCache();
-	$var($1Node, inNode, node);
+	$var($Node, inNode, node);
 	$var($NodeList, nodelist, $new($BasisLibrary$3, inNode));
 	return nodeList2Iterator(nodelist, translet, dom);
 }
@@ -1300,7 +1297,7 @@ $DTMAxisIterator* BasisLibrary::nodeList2IteratorUsingHandleFromNode($NodeList* 
 		$assign(dtmManager, $nc(($cast($MultiDOM, dom)))->getDTMManager());
 	}
 	for (int32_t i = 0; i < n; ++i) {
-		$var($1Node, node, nodeList->item(i));
+		$var($Node, node, nodeList->item(i));
 		int32_t handle = 0;
 		if (dtmManager != nullptr) {
 			handle = dtmManager->getDTMHandleFromNode(node);
@@ -1327,7 +1324,7 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 		$assign(dtmManager, $nc(($cast($MultiDOM, dom)))->getDTMManager());
 	}
 	for (int32_t i = 0; i < nodeList->getLength(); ++i) {
-		$var($1Node, node, nodeList->item(i));
+		$var($Node, node, nodeList->item(i));
 		if ($instanceOf($DTMNodeProxy, node)) {
 			$var($DTMNodeProxy, proxy, $cast($DTMNodeProxy, node));
 			$var($DTM, nodeDTM, $nc(proxy)->getDTM());
@@ -1362,17 +1359,17 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 		}
 		$var($Element, mid, nullptr);
 		switch (nodeType) {
-		case $1Node::ELEMENT_NODE:
+		case $Node::ELEMENT_NODE:
 			{}
-		case $1Node::TEXT_NODE:
+		case $Node::TEXT_NODE:
 			{}
-		case $1Node::CDATA_SECTION_NODE:
+		case $Node::CDATA_SECTION_NODE:
 			{}
-		case $1Node::COMMENT_NODE:
+		case $Node::COMMENT_NODE:
 			{}
-		case $1Node::ENTITY_REFERENCE_NODE:
+		case $Node::ENTITY_REFERENCE_NODE:
 			{}
-		case $1Node::PROCESSING_INSTRUCTION_NODE:
+		case $Node::PROCESSING_INSTRUCTION_NODE:
 			{
 				$assign(mid, $nc(doc)->createElementNS(nullptr, "__dummy__"_s));
 				$nc(mid)->appendChild($($nc(doc)->importNode(node, true)));
@@ -1380,7 +1377,7 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 				++n;
 				break;
 			}
-		case $1Node::ATTRIBUTE_NODE:
+		case $Node::ATTRIBUTE_NODE:
 			{
 				$assign(mid, $nc(doc)->createElementNS(nullptr, "__dummy__"_s));
 				$nc(mid)->setAttributeNodeNS($cast($Attr, $($nc(doc)->importNode(node, true))));
@@ -1420,26 +1417,26 @@ $DTMAxisIterator* BasisLibrary::nodeList2Iterator($NodeList* nodeList, $Translet
 			dtmHandles->set(n++, proxyNodes->get(i));
 			continue;
 		}
-		$var($1Node, node, nodeList->item(i));
+		$var($Node, node, nodeList->item(i));
 		$var($DTMAxisIterator, iter3, nullptr);
 		int32_t nodeType = $nc(node)->getNodeType();
 		switch (nodeType) {
-		case $1Node::ELEMENT_NODE:
+		case $Node::ELEMENT_NODE:
 			{}
-		case $1Node::TEXT_NODE:
+		case $Node::TEXT_NODE:
 			{}
-		case $1Node::CDATA_SECTION_NODE:
+		case $Node::CDATA_SECTION_NODE:
 			{}
-		case $1Node::COMMENT_NODE:
+		case $Node::COMMENT_NODE:
 			{}
-		case $1Node::ENTITY_REFERENCE_NODE:
+		case $Node::ENTITY_REFERENCE_NODE:
 			{}
-		case $1Node::PROCESSING_INSTRUCTION_NODE:
+		case $Node::PROCESSING_INSTRUCTION_NODE:
 			{
 				$assign(iter3, childIter);
 				break;
 			}
-		case $1Node::ATTRIBUTE_NODE:
+		case $Node::ATTRIBUTE_NODE:
 			{
 				$assign(iter3, attrIter);
 				break;
@@ -1492,8 +1489,8 @@ void BasisLibrary::copy(Object$* obj, $SerializationHandler* handler, int32_t no
 		if ($instanceOf($DTMAxisIterator, obj)) {
 			$var($DTMAxisIterator, iter, $cast($DTMAxisIterator, obj));
 			$nc(dom)->copy($($nc(iter)->reset()), handler);
-		} else if ($instanceOf($Node, obj)) {
-			$nc(dom)->copy($nc(($cast($Node, obj)))->node, handler);
+		} else if ($instanceOf($1Node, obj)) {
+			$nc(dom)->copy($nc(($cast($1Node, obj)))->node, handler);
 		} else if ($instanceOf($DOM, obj)) {
 			$var($DOM, newDom, $cast($DOM, obj));
 			$nc(newDom)->copy(newDom->getDocument(), handler);

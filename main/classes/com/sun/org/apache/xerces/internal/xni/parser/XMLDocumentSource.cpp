@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLDocumentHandler.h>
 #include <jcpp.h>
 
-using $XMLDocumentHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

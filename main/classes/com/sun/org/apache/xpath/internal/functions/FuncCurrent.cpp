@@ -22,7 +22,6 @@
 using $XSLMessages = ::com::sun::org::apache::xalan::internal::res::XSLMessages;
 using $XSLTErrorResources = ::com::sun::org::apache::xalan::internal::res::XSLTErrorResources;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;
 using $NodeSequence = ::com::sun::org::apache::xpath::internal::axes::NodeSequence;

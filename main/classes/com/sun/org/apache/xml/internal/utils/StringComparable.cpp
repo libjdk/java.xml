@@ -22,7 +22,6 @@ using $Comparable = ::java::lang::Comparable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $CollationElementIterator = ::java::text::CollationElementIterator;
-using $CollationKey = ::java::text::CollationKey;
 using $Collator = ::java::text::Collator;
 using $RuleBasedCollator = ::java::text::RuleBasedCollator;
 using $Locale = ::java::util::Locale;

@@ -7,7 +7,6 @@
 #include <java/lang/ref/ReferenceQueue.h>
 #include <jcpp.h>
 
-using $SoftReferenceGrammarPool = ::com::sun::org::apache::xerces::internal::jaxp::validation::SoftReferenceGrammarPool;
 using $SoftReferenceGrammarPool$SoftGrammarReference = ::com::sun::org::apache::xerces::internal::jaxp::validation::SoftReferenceGrammarPool$SoftGrammarReference;
 using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
 using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;

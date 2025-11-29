@@ -20,7 +20,6 @@
 #undef TRANSLET_OUTPUT_SIG
 
 using $MethodArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Method>;
-using $Method = ::com::sun::org::apache::bcel::internal::classfile::Method;
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
@@ -29,7 +28,6 @@ using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::gener
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $Stylesheet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Stylesheet;
-using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

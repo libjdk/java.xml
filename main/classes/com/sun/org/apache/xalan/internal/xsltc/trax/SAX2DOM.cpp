@@ -33,7 +33,6 @@
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::runtime::Constants;
 using $DocumentBuilderFactoryImpl = ::com::sun::org::apache::xerces::internal::jaxp::DocumentBuilderFactoryImpl;
 using $XMLSymbols = ::com::sun::org::apache::xerces::internal::util::XMLSymbols;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassCastException = ::java::lang::ClassCastException;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -51,11 +50,9 @@ using $Document = ::org::w3c::dom::Document;
 using $Element = ::org::w3c::dom::Element;
 using $Node = ::org::w3c::dom::Node;
 using $ProcessingInstruction = ::org::w3c::dom::ProcessingInstruction;
-using $Text = ::org::w3c::dom::Text;
 using $Attributes = ::org::xml::sax::Attributes;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $Locator = ::org::xml::sax::Locator;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 using $Locator2 = ::org::xml::sax::ext::Locator2;
 
 namespace com {

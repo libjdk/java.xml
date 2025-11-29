@@ -45,22 +45,18 @@
 #undef TRANSLET_OUTPUT_SIG
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
 using $INVOKESTATIC = ::com::sun::org::apache::bcel::internal::generic::INVOKESTATIC;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
@@ -114,7 +110,7 @@ $Object* allocate$CopyOf($Class* clazz) {
 }
 
 void CopyOf::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 }
 
 void CopyOf::display(int32_t indent) {
@@ -162,30 +158,30 @@ void CopyOf::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 		$nc(this->_select)->translate(classGen, methodGen);
 		$nc(this->_select)->startIterator(classGen, methodGen);
 		il->append($(methodGen->loadHandler()));
-		il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, cpy1, 3)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, cpy1, 3)));
 	} else if ($instanceOf($NodeType, tselect)) {
 		$nc(il)->append($(methodGen->loadDOM()));
 		$nc(this->_select)->translate(classGen, methodGen);
 		il->append($(methodGen->loadHandler()));
-		il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, cpy2, 3)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, cpy2, 3)));
 	} else if ($instanceOf($ResultTreeType, tselect)) {
 		$nc(this->_select)->translate(classGen, methodGen);
-		$nc(il)->append(static_cast<$Instruction*>($Constants::DUP));
-		il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, getDoc, 1)));
+		$nc(il)->append(static_cast<$1Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, getDoc, 1)));
 		il->append($(methodGen->loadHandler()));
-		il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, cpy2, 3)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, cpy2, 3)));
 	} else if ($instanceOf($ReferenceType, tselect)) {
 		$nc(this->_select)->translate(classGen, methodGen);
 		$nc(il)->append($(methodGen->loadHandler()));
 		il->append($(methodGen->loadCurrentNode()));
 		il->append($(methodGen->loadDOM()));
 		int32_t copy = cpg->addMethodref($Constants::BASIS_LIBRARY_CLASS, "copy"_s, $$str({"("_s, $Constants::OBJECT_SIG, $Constants::TRANSLET_OUTPUT_SIG, $Constants::NODE_SIG, $Constants::DOM_INTF_SIG, ")V"_s}));
-		il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, copy)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKESTATIC, copy)));
 	} else {
 		$nc(il)->append($(classGen->loadTranslet()));
 		$nc(this->_select)->translate(classGen, methodGen);
 		il->append($(methodGen->loadHandler()));
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, cpg->addMethodref($Constants::TRANSLET_CLASS, $Constants::CHARACTERSW, $Constants::CHARACTERSW_SIG))));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, cpg->addMethodref($Constants::TRANSLET_CLASS, $Constants::CHARACTERSW, $Constants::CHARACTERSW_SIG))));
 	}
 }
 

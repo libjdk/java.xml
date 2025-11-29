@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $BigDecimal = ::java::math::BigDecimal;
-using $BigInteger = ::java::math::BigInteger;
 
 namespace com {
 	namespace sun {

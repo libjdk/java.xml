@@ -48,7 +48,6 @@ using $XSMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::xs:
 using $XIncludeAwareParserConfiguration = ::com::sun::org::apache::xerces::internal::parsers::XIncludeAwareParserConfiguration;
 using $XML11Configuration = ::com::sun::org::apache::xerces::internal::parsers::XML11Configuration;
 using $MessageFormatter = ::com::sun::org::apache::xerces::internal::util::MessageFormatter;
-using $ParserConfigurationSettings = ::com::sun::org::apache::xerces::internal::util::ParserConfigurationSettings;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $SynchronizedSymbolTable = ::com::sun::org::apache::xerces::internal::util::SynchronizedSymbolTable;
 using $XMLGrammarPoolImpl = ::com::sun::org::apache::xerces::internal::util::XMLGrammarPoolImpl;

@@ -10,7 +10,6 @@
 
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode;
-using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $Function = ::com::sun::org::apache::xpath::internal::functions::Function;
 using $Function2Args = ::com::sun::org::apache::xpath::internal::functions::Function2Args;
 using $Function3Args = ::com::sun::org::apache::xpath::internal::functions::Function3Args;

@@ -18,7 +18,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Package = ::java::lang::Package;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
-using $DocumentBuilder = ::javax::xml::parsers::DocumentBuilder;
 using $FactoryFinder = ::javax::xml::parsers::FactoryFinder;
 using $Schema = ::javax::xml::validation::Schema;
 

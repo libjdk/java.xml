@@ -8,10 +8,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $DOMConfiguration = ::org::w3c::dom::DOMConfiguration;
-using $Node = ::org::w3c::dom::Node;
-using $LSOutput = ::org::w3c::dom::ls::LSOutput;
-using $LSSerializerFilter = ::org::w3c::dom::ls::LSSerializerFilter;
 
 namespace org {
 	namespace w3c {

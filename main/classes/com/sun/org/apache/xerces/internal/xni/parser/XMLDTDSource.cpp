@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLDTDHandler.h>
 #include <jcpp.h>
 
-using $XMLDTDHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDTDHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

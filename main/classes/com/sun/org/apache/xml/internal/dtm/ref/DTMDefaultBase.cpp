@@ -51,12 +51,9 @@
 #undef ROOTNODE
 #undef TEXT_NODE
 
-using $DTMArray = $Array<::com::sun::org::apache::xml::internal::dtm::DTM>;
-using $DTMAxisTraverserArray = $Array<::com::sun::org::apache::xml::internal::dtm::DTMAxisTraverser>;
 using $intArray2 = $Array<int32_t, 2>;
 using $intArray3 = $Array<int32_t, 3>;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMAxisTraverser = ::com::sun::org::apache::xml::internal::dtm::DTMAxisTraverser;
 using $DTMException = ::com::sun::org::apache::xml::internal::dtm::DTMException;
 using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $DTMWSFilter = ::com::sun::org::apache::xml::internal::dtm::DTMWSFilter;
@@ -67,7 +64,6 @@ using $XMLErrorResources = ::com::sun::org::apache::xml::internal::res::XMLError
 using $XMLMessages = ::com::sun::org::apache::xml::internal::res::XMLMessages;
 using $BoolStack = ::com::sun::org::apache::xml::internal::utils::BoolStack;
 using $SuballocatedIntVector = ::com::sun::org::apache::xml::internal::utils::SuballocatedIntVector;
-using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $XMLStringFactory = ::com::sun::org::apache::xml::internal::utils::XMLStringFactory;
 using $File = ::java::io::File;
 using $FileOutputStream = ::java::io::FileOutputStream;

@@ -7,13 +7,8 @@
 #include <org/xml/sax/ContentHandler.h>
 #include <jcpp.h>
 
-using $DOMSerializer = ::com::sun::org::apache::xml::internal::serializer::DOMSerializer;
-using $OutputStream = ::java::io::OutputStream;
-using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Properties = ::java::util::Properties;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
 
 namespace com {
 	namespace sun {

@@ -92,17 +92,16 @@ using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEn
 using $XMLEntityScanner = ::com::sun::org::apache::xerces::internal::impl::XMLEntityScanner;
 using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $XMLScanner$NameType = ::com::sun::org::apache::xerces::internal::impl::XMLScanner$NameType;
-using $1XMLDTDDescription = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLDTDDescription;
+using $XMLDTDDescription = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLDTDDescription;
 using $ValidationManager = ::com::sun::org::apache::xerces::internal::impl::validation::ValidationManager;
 using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
-using $XMLResourceIdentifierImpl = ::com::sun::org::apache::xerces::internal::util::XMLResourceIdentifierImpl;
 using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
 using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $XMLDocumentHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler;
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
-using $XMLDTDDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLDTDDescription;
+using $1XMLDTDDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLDTDDescription;
 using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
 using $XMLConfigurationException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLConfigurationException;
 using $XMLDTDScanner = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDScanner;
@@ -256,7 +255,7 @@ void XMLDocumentScannerImpl::init$() {
 	this->fSeenInternalSubset = false;
 	$set(this, fStrings, $new($StringArray, 3));
 	$set(this, fExternalSubsetSource, nullptr);
-	$set(this, fDTDDescription, $new($1XMLDTDDescription, nullptr, nullptr, nullptr, nullptr, nullptr));
+	$set(this, fDTDDescription, $new($XMLDTDDescription, nullptr, nullptr, nullptr, nullptr, nullptr));
 }
 
 void XMLDocumentScannerImpl::setInputSource($XMLInputSource* inputSource) {

@@ -24,7 +24,6 @@ using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
 using $XMLStreamConstants = ::javax::xml::stream::XMLStreamConstants;
 using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
-using $Source = ::javax::xml::transform::Source;
 
 namespace javax {
 	namespace xml {

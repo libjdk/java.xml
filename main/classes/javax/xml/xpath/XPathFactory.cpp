@@ -23,12 +23,9 @@ using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NullPointerException = ::java::lang::NullPointerException;
 using $RuntimeException = ::java::lang::RuntimeException;
-using $XPath = ::javax::xml::xpath::XPath;
 using $XPathException = ::javax::xml::xpath::XPathException;
 using $XPathFactoryConfigurationException = ::javax::xml::xpath::XPathFactoryConfigurationException;
 using $XPathFactoryFinder = ::javax::xml::xpath::XPathFactoryFinder;
-using $XPathFunctionResolver = ::javax::xml::xpath::XPathFunctionResolver;
-using $XPathVariableResolver = ::javax::xml::xpath::XPathVariableResolver;
 using $SecuritySupport = ::jdk::xml::internal::SecuritySupport;
 
 namespace javax {

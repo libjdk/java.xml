@@ -6,7 +6,6 @@
 #include <jcpp.h>
 
 using $XPathMatcherArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::identity::XPathMatcher>;
-using $XMLSchemaValidator = ::com::sun::org::apache::xerces::internal::impl::xs::XMLSchemaValidator;
 using $XPathMatcher = ::com::sun::org::apache::xerces::internal::impl::xs::identity::XPathMatcher;
 using $IntStack = ::com::sun::org::apache::xerces::internal::util::IntStack;
 using $ClassInfo = ::java::lang::ClassInfo;

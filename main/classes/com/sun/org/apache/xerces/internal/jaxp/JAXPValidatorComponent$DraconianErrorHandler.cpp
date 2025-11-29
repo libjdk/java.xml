@@ -6,13 +6,10 @@
 
 #undef ERROR_HANDLER_INSTANCE
 
-using $JAXPValidatorComponent = ::com::sun::org::apache::xerces::internal::jaxp::JAXPValidatorComponent;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $SAXParseException = ::org::xml::sax::SAXParseException;
 
 namespace com {

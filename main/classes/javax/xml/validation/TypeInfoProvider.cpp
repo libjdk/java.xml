@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $TypeInfo = ::org::w3c::dom::TypeInfo;
 
 namespace javax {
 	namespace xml {

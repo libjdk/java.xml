@@ -4,9 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSTerm.h>
 #include <jcpp.h>
 
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSTerm = ::com::sun::org::apache::xerces::internal::xs::XSTerm;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -13,11 +13,6 @@
 #undef VALIDITY_NOTKNOWN
 #undef VALIDITY_VALID
 
-using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
-using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
-using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
-using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
-using $XSValue = ::com::sun::org::apache::xerces::internal::xs::XSValue;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $FieldInfo = ::java::lang::FieldInfo;

@@ -3,7 +3,6 @@
 #include <com/sun/java_cup/internal/runtime/Symbol.h>
 #include <jcpp.h>
 
-using $Symbol = ::com::sun::java_cup::internal::runtime::Symbol;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

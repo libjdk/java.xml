@@ -8,8 +8,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $SAXParseException = ::org::xml::sax::SAXParseException;
 
 namespace com {

@@ -54,7 +54,6 @@ using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::X
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $XMLComponent = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponent;
 using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
-using $XMLDocumentFilter = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentFilter;
 using $XMLDocumentSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource;
 using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;

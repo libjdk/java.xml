@@ -5,7 +5,6 @@
 #include <jcpp.h>
 
 using $NodeVector = ::com::sun::org::apache::xml::internal::utils::NodeVector;
-using $NodeSequence = ::com::sun::org::apache::xpath::internal::axes::NodeSequence;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

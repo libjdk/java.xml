@@ -17,7 +17,6 @@
 #undef MAX_SHORT
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $LocalVariable = ::com::sun::org::apache::bcel::internal::classfile::LocalVariable;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
@@ -25,11 +24,9 @@ using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::Const
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionTargeter = ::com::sun::org::apache::bcel::internal::generic::InstructionTargeter;
-using $NamedAndTyped = ::com::sun::org::apache::bcel::internal::generic::NamedAndTyped;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
-using $Cloneable = ::java::lang::Cloneable;
 using $Error = ::java::lang::Error;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

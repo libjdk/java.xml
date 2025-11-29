@@ -68,13 +68,10 @@
 
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
-using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $ConversionInstruction = ::com::sun::org::apache::bcel::internal::generic::ConversionInstruction;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $IFEQ = ::com::sun::org::apache::bcel::internal::generic::IFEQ;
 using $ILOAD = ::com::sun::org::apache::bcel::internal::generic::ILOAD;
@@ -87,12 +84,10 @@ using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::Instr
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
-using $1ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -106,7 +101,7 @@ using $ObjectType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::u
 using $RealType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::RealType;
 using $ResultTreeType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ResultTreeType;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $Boolean = ::java::lang::Boolean;
 using $Byte = ::java::lang::Byte;
@@ -167,14 +162,14 @@ $Object* allocate$ReferenceType($Class* clazz) {
 }
 
 void ReferenceType::init$() {
-	$1Type::init$();
+	$Type::init$();
 }
 
 $String* ReferenceType::toString() {
 	return "reference"_s;
 }
 
-bool ReferenceType::identicalTo($1Type* other) {
+bool ReferenceType::identicalTo($Type* other) {
 	return $equals(this, other);
 }
 
@@ -182,36 +177,36 @@ $String* ReferenceType::toSignature() {
 	return "Ljava/lang/Object;"_s;
 }
 
-$Type* ReferenceType::toJCType() {
-	$init($Type);
-	return $Type::OBJECT;
+$1Type* ReferenceType::toJCType() {
+	$init($1Type);
+	return $1Type::OBJECT;
 }
 
-void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Type* type) {
 	$useLocalCurrentObjectStackCache();
-	$init($1Type);
-	if (type == $1Type::String) {
+	$init($Type);
+	if (type == $Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
 	} else {
-		if (type == $1Type::Real) {
+		if (type == $Type::Real) {
 			translateTo(classGen, methodGen, $cast($RealType, type));
 		} else {
-			if (type == $1Type::Boolean) {
+			if (type == $Type::Boolean) {
 				translateTo(classGen, methodGen, $cast($BooleanType, type));
 			} else {
-				if (type == $1Type::NodeSet) {
+				if (type == $Type::NodeSet) {
 					translateTo(classGen, methodGen, $cast($NodeSetType, type));
 				} else {
-					if (type == $1Type::Node) {
+					if (type == $Type::Node) {
 						translateTo(classGen, methodGen, $cast($NodeType, type));
 					} else {
-						if (type == $1Type::ResultTree) {
+						if (type == $Type::ResultTree) {
 							translateTo(classGen, methodGen, $cast($ResultTreeType, type));
 						} else {
-							if (type == $1Type::Object) {
+							if (type == $Type::Object) {
 								translateTo(classGen, methodGen, $cast($ObjectType, type));
 							} else {
-								if (type == $1Type::Reference) {
+								if (type == $Type::Reference) {
 								} else {
 									$init($ErrorMsg);
 									$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::INTERNAL_ERR, $($of($nc(type)->toString()))));
@@ -273,9 +268,9 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $NodeType* type) {
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::NodeSet);
-	$nc($1Type::NodeSet)->translateTo(classGen, methodGen, static_cast<$1Type*>(type));
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::NodeSet);
+	$nc($Type::NodeSet)->translateTo(classGen, methodGen, static_cast<$Type*>(type));
 }
 
 void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $ResultTreeType* type) {
@@ -308,8 +303,8 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 			$nc(il)->append(static_cast<$Instruction*>($$new($INVOKESTATIC, referenceToDouble)));
 		} else if ($nc($(clazz->getName()))->equals("java.lang.Double"_s)) {
 			$nc(il)->append(static_cast<$Instruction*>($$new($INVOKESTATIC, referenceToDouble)));
-			$init($1Type);
-			$nc($1Type::Real)->translateTo(classGen, methodGen, $1Type::Reference);
+			$init($Type);
+			$nc($Type::Real)->translateTo(classGen, methodGen, $Type::Reference);
 		} else {
 			$init($Float);
 			if (clazz == $Float::TYPE) {
@@ -328,8 +323,8 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 				$nc(il)->append($(methodGen->loadDOM()));
 				il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, index)));
 			} else if ($nc($(clazz->getName()))->equals("com.sun.org.apache.xalan.internal.xsltc.DOM"_s)) {
-				$init($1Type);
-				translateTo(classGen, methodGen, $1Type::ResultTree);
+				$init($Type);
+				translateTo(classGen, methodGen, $Type::ResultTree);
 			} else {
 				$init($Long);
 				if (clazz == $Long::TYPE) {
@@ -363,8 +358,8 @@ void ReferenceType::translateTo($ClassGenerator* classGen, $MethodGenerator* met
 										$nc(il)->append(static_cast<$Instruction*>($$new($INVOKESTATIC, referenceToBoolean)));
 									} else if ($nc($(clazz->getName()))->equals("java.lang.Boolean"_s)) {
 										$nc(il)->append(static_cast<$Instruction*>($$new($INVOKESTATIC, referenceToBoolean)));
-										$init($1Type);
-										$nc($1Type::Boolean)->translateTo(classGen, methodGen, $1Type::Reference);
+										$init($Type);
+										$nc($Type::Boolean)->translateTo(classGen, methodGen, $Type::Reference);
 									} else {
 										$init($ErrorMsg);
 										$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);

@@ -28,7 +28,6 @@ using $Enumeration = ::java::util::Enumeration;
 using $HashMap = ::java::util::HashMap;
 using $List = ::java::util::List;
 using $Map = ::java::util::Map;
-using $Set = ::java::util::Set;
 using $NamespaceSupport = ::org::xml::sax::helpers::NamespaceSupport;
 
 namespace org {

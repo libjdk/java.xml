@@ -21,7 +21,6 @@
 #undef FLOAT
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $ConstantPushInstruction = ::com::sun::org::apache::bcel::internal::generic::ConstantPushInstruction;

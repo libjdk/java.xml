@@ -86,10 +86,8 @@ using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttrib
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $XMLComponent = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponent;
 using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
 using $XMLConfigurationException = ::com::sun::org::apache::xerces::internal::xni::parser::XMLConfigurationException;
-using $Entity = ::com::sun::xml::internal::stream::Entity;
 using $Entity$ScannedEntity = ::com::sun::xml::internal::stream::Entity$ScannedEntity;
 using $XMLEntityStorage = ::com::sun::xml::internal::stream::XMLEntityStorage;
 using $Character = ::java::lang::Character;
@@ -101,7 +99,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $NumberFormatException = ::java::lang::NumberFormatException;
 using $StringBuffer = ::java::lang::StringBuffer;
 using $ArrayList = ::java::util::ArrayList;
-using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 
 namespace com {
 	namespace sun {

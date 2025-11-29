@@ -15,9 +15,7 @@
 #include <org/w3c/dom/traversal/NodeIterator.h>
 #include <jcpp.h>
 
-using $ExpressionContext = ::com::sun::org::apache::xalan::internal::extensions::ExpressionContext;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMIterator = ::com::sun::org::apache::xml::internal::dtm::DTMIterator;
 using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $DTMNodeIterator = ::com::sun::org::apache::xml::internal::dtm::ref::DTMNodeIterator;
 using $QName = ::com::sun::org::apache::xml::internal::utils::QName;

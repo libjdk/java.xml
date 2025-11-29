@@ -55,7 +55,6 @@ using $DOMInputImpl = ::com::sun::org::apache::xerces::internal::dom::DOMInputIm
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
 using $DOMOutputImpl = ::com::sun::org::apache::xerces::internal::dom::DOMOutputImpl;
 using $DocumentTypeImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentTypeImpl;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
 using $RevalidationHandler = ::com::sun::org::apache::xerces::internal::impl::RevalidationHandler;
 using $XML11DTDProcessor = ::com::sun::org::apache::xerces::internal::impl::dtd::XML11DTDProcessor;
 using $XML11DTDValidator = ::com::sun::org::apache::xerces::internal::impl::dtd::XML11DTDValidator;

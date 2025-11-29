@@ -27,7 +27,6 @@ using $ChildNode = ::com::sun::org::apache::xerces::internal::dom::ChildNode;
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
 using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

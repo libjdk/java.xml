@@ -18,7 +18,6 @@
 #undef XMLNS_ATTRIBUTE_NS_URI
 
 using $AttributeImpl = ::com::sun::xml::internal::stream::events::AttributeImpl;
-using $DummyEvent = ::com::sun::xml::internal::stream::events::DummyEvent;
 using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -27,7 +26,6 @@ using $QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
 using $Characters = ::javax::xml::stream::events::Characters;
 using $EndElement = ::javax::xml::stream::events::EndElement;
-using $Namespace = ::javax::xml::stream::events::Namespace;
 using $StartElement = ::javax::xml::stream::events::StartElement;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 

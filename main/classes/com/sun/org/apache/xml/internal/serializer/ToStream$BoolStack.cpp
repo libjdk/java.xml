@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/ToStream.h>
 #include <jcpp.h>
 
-using $ToStream = ::com::sun::org::apache::xml::internal::serializer::ToStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

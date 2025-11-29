@@ -16,7 +16,6 @@ using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDo
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Comment = ::org::w3c::dom::Comment;
 using $Document = ::org::w3c::dom::Document;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;

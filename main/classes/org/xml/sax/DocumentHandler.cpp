@@ -8,8 +8,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NamedAttribute = ::java::lang::NamedAttribute;
-using $AttributeList = ::org::xml::sax::AttributeList;
-using $Locator = ::org::xml::sax::Locator;
 
 namespace org {
 	namespace xml {

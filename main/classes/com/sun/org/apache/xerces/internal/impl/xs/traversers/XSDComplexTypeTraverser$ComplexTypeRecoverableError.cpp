@@ -4,7 +4,6 @@
 #include <org/w3c/dom/Element.h>
 #include <jcpp.h>
 
-using $XSDComplexTypeTraverser = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDComplexTypeTraverser;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;

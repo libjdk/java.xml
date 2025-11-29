@@ -48,17 +48,14 @@
 
 using $SyntaxTreeNodeArray = $Array<::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode>;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Param = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Param;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
@@ -66,7 +63,6 @@ using $Stylesheet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::S
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $Template = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Template;
-using $VariableBase = ::com::sun::org::apache::xalan::internal::xsltc::compiler::VariableBase;
 using $WithParam = ::com::sun::org::apache::xalan::internal::xsltc::compiler::WithParam;
 using $XSLTC = ::com::sun::org::apache::xalan::internal::xsltc::compiler::XSLTC;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
@@ -125,7 +121,7 @@ $Object* allocate$CallTemplate($Class* clazz) {
 }
 
 void CallTemplate::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	$set(this, _parameters, nullptr);
 	$set(this, _calleeTemplate, nullptr);
 }
@@ -186,7 +182,7 @@ void CallTemplate::translate($ClassGenerator* classGen, $MethodGenerator* method
 			$init($Constants);
 			int32_t push = $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, $Constants::PUSH_PARAM_FRAME, $Constants::PUSH_PARAM_FRAME_SIG);
 			$nc(il)->append($(classGen->loadTranslet()));
-			il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, push)));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, push)));
 			translateContents(classGen, methodGen);
 		}
 	}
@@ -212,7 +208,7 @@ void CallTemplate::translate($ClassGenerator* classGen, $MethodGenerator* method
 		}
 	}
 	methodSig->append(")V"_s);
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref(className, methodName, $(methodSig->toString())))));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref(className, methodName, $(methodSig->toString())))));
 	if (this->_parameters != nullptr) {
 		for (int32_t i = 0; i < $nc(this->_parameters)->length; ++i) {
 			if ($instanceOf($WithParam, $nc(this->_parameters)->get(i))) {
@@ -228,7 +224,7 @@ void CallTemplate::translate($ClassGenerator* classGen, $MethodGenerator* method
 	if (var$1) {
 		int32_t pop = $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, $Constants::POP_PARAM_FRAME, $Constants::POP_PARAM_FRAME_SIG);
 		il->append($(classGen->loadTranslet()));
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, pop)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, pop)));
 	}
 }
 

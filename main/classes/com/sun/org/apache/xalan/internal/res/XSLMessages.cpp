@@ -8,7 +8,6 @@
 
 #undef XSLT_ERROR_RESOURCES
 
-using $XMLMessages = ::com::sun::org::apache::xml::internal::res::XMLMessages;
 using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

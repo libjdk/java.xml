@@ -39,18 +39,12 @@
 #undef XML_ENTITIES_RESOURCE
 
 using $CharInfo = ::com::sun::org::apache::xml::internal::serializer::CharInfo;
-using $ElemContext = ::com::sun::org::apache::xml::internal::serializer::ElemContext;
-using $EncodingInfo = ::com::sun::org::apache::xml::internal::serializer::EncodingInfo;
 using $Encodings = ::com::sun::org::apache::xml::internal::serializer::Encodings;
 using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
 using $Method = ::com::sun::org::apache::xml::internal::serializer::Method;
 using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
-using $SerializerBase = ::com::sun::org::apache::xml::internal::serializer::SerializerBase;
 using $SerializerConstants = ::com::sun::org::apache::xml::internal::serializer::SerializerConstants;
-using $SerializerTrace = ::com::sun::org::apache::xml::internal::serializer::SerializerTrace;
 using $ToStream = ::com::sun::org::apache::xml::internal::serializer::ToStream;
-using $ToStream$BoolStack = ::com::sun::org::apache::xml::internal::serializer::ToStream$BoolStack;
-using $ToStream$CharacterBuffer = ::com::sun::org::apache::xml::internal::serializer::ToStream$CharacterBuffer;
 using $Messages = ::com::sun::org::apache::xml::internal::serializer::utils::Messages;
 using $MsgKey = ::com::sun::org::apache::xml::internal::serializer::utils::MsgKey;
 using $Utils = ::com::sun::org::apache::xml::internal::serializer::utils::Utils;
@@ -62,10 +56,8 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $List = ::java::util::List;
 using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $Result = ::javax::xml::transform::Result;
-using $SourceLocator = ::javax::xml::transform::SourceLocator;
 using $Transformer = ::javax::xml::transform::Transformer;
 using $TransformerException = ::javax::xml::transform::TransformerException;
 using $SAXException = ::org::xml::sax::SAXException;

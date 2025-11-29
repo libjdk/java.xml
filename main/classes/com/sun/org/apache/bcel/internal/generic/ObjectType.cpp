@@ -11,7 +11,6 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $Repository = ::com::sun::org::apache::bcel::internal::Repository;
-using $AccessFlags = ::com::sun::org::apache::bcel::internal::classfile::AccessFlags;
 using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
 using $ReferenceType = ::com::sun::org::apache::bcel::internal::generic::ReferenceType;
 using $ClassInfo = ::java::lang::ClassInfo;

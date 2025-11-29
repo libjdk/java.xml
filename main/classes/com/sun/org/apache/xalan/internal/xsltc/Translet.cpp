@@ -5,10 +5,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/SerializationHandler.h>
 #include <jcpp.h>
 
-using $SerializationHandlerArray = $Array<::com::sun::org::apache::xml::internal::serializer::SerializationHandler>;
-using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
-using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -13,18 +13,13 @@
 #include <java/lang/StringBuffer.h>
 #include <jcpp.h>
 
-using $ExpressionArray = $Array<::com::sun::org::apache::xpath::internal::Expression>;
 using $XSLMessages = ::com::sun::org::apache::xalan::internal::res::XSLMessages;
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
-using $Function2Args = ::com::sun::org::apache::xpath::internal::functions::Function2Args;
-using $Function3Args = ::com::sun::org::apache::xpath::internal::functions::Function3Args;
 using $FunctionMultiArgs = ::com::sun::org::apache::xpath::internal::functions::FunctionMultiArgs;
-using $FunctionOneArg = ::com::sun::org::apache::xpath::internal::functions::FunctionOneArg;
 using $WrongNumberArgsException = ::com::sun::org::apache::xpath::internal::functions::WrongNumberArgsException;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XString = ::com::sun::org::apache::xpath::internal::objects::XString;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

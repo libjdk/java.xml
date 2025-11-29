@@ -4,9 +4,7 @@
 
 #undef END
 
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Cloneable = ::java::lang::Cloneable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

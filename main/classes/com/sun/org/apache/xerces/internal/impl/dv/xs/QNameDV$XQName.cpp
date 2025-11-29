@@ -5,13 +5,11 @@
 #include <javax/xml/namespace/QName.h>
 #include <jcpp.h>
 
-using $QNameDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::QNameDV;
-using $1QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XSQName = ::com::sun::org::apache::xerces::internal::xs::datatypes::XSQName;
+using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $QName = ::javax::xml::namespace$::QName;
+using $1QName = ::javax::xml::namespace$::QName;
 
 namespace com {
 	namespace sun {
@@ -61,25 +59,25 @@ $Object* allocate$QNameDV$XQName($Class* clazz) {
 }
 
 $Object* QNameDV$XQName::clone() {
-	 return this->$1QName::clone();
+	 return this->$QName::clone();
 }
 
 int32_t QNameDV$XQName::hashCode() {
-	 return this->$1QName::hashCode();
+	 return this->$QName::hashCode();
 }
 
 void QNameDV$XQName::finalize() {
-	this->$1QName::finalize();
+	this->$QName::finalize();
 }
 
 void QNameDV$XQName::init$($String* prefix, $String* localpart, $String* rawname, $String* uri) {
-	$1QName::init$();
+	$QName::init$();
 	setValues(prefix, localpart, rawname, uri);
 }
 
 bool QNameDV$XQName::equals(Object$* object) {
-	if ($instanceOf($1QName, object)) {
-		$var($1QName, qname, $cast($1QName, object));
+	if ($instanceOf($QName, object)) {
+		$var($QName, qname, $cast($QName, object));
 		return this->uri == $nc(qname)->uri && this->localpart == qname->localpart;
 	}
 	return false;
@@ -91,11 +89,11 @@ $String* QNameDV$XQName::toString() {
 	}
 }
 
-$QName* QNameDV$XQName::getJAXPQName() {
-	return $new($QName, this->uri, this->localpart, this->prefix);
+$1QName* QNameDV$XQName::getJAXPQName() {
+	return $new($1QName, this->uri, this->localpart, this->prefix);
 }
 
-$1QName* QNameDV$XQName::getXNIQName() {
+$QName* QNameDV$XQName::getXNIQName() {
 	return this;
 }
 

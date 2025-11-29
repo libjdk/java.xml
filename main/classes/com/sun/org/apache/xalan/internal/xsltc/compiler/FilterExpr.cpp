@@ -49,7 +49,6 @@
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $ILOAD = ::com::sun::org::apache::bcel::internal::generic::ILOAD;
@@ -62,11 +61,8 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
@@ -79,7 +75,7 @@ using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compile
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $NodeSetType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeSetType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $TypeCheckError = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::TypeCheckError;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -160,14 +156,14 @@ $String* FilterExpr::toString() {
 	return $str({"filter-expr("_s, this->_primary, ", "_s, this->_predicates, ")"_s});
 }
 
-$1Type* FilterExpr::typeCheck($SymbolTable* stable) {
+$Type* FilterExpr::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
-	$var($1Type, ptype, $nc(this->_primary)->typeCheck(stable));
+	$var($Type, ptype, $nc(this->_primary)->typeCheck(stable));
 	bool canOptimize = $instanceOf($KeyCall, this->_primary);
 	if ($instanceOf($NodeSetType, ptype) == false) {
 		if ($instanceOf($ReferenceType, ptype)) {
-			$init($1Type);
-			$set(this, _primary, $new($CastExpr, this->_primary, $1Type::NodeSet));
+			$init($Type);
+			$set(this, _primary, $new($CastExpr, this->_primary, $Type::NodeSet));
 		} else {
 			$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 		}
@@ -180,8 +176,8 @@ $1Type* FilterExpr::typeCheck($SymbolTable* stable) {
 		}
 		$nc(pred)->typeCheck(stable);
 	}
-	$init($1Type);
-	return $set(this, _type, $1Type::NodeSet);
+	$init($Type);
+	return $set(this, _type, $Type::NodeSet);
 }
 
 void FilterExpr::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {

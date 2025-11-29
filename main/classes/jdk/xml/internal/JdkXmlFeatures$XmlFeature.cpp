@@ -23,7 +23,6 @@ using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $JdkProperty$ImplPropMap = ::jdk::xml::internal::JdkProperty$ImplPropMap;
 using $JdkProperty$State = ::jdk::xml::internal::JdkProperty$State;
-using $JdkXmlFeatures = ::jdk::xml::internal::JdkXmlFeatures;
 
 namespace jdk {
 	namespace xml {

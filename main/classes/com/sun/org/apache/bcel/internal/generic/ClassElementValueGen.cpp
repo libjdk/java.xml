@@ -15,14 +15,11 @@
 #undef CLASS
 
 using $ClassElementValue = ::com::sun::org::apache::bcel::internal::classfile::ClassElementValue;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $ElementValue = ::com::sun::org::apache::bcel::internal::classfile::ElementValue;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $ElementValueGen = ::com::sun::org::apache::bcel::internal::generic::ElementValueGen;
 using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

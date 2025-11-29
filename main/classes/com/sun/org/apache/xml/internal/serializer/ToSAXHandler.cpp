@@ -14,15 +14,12 @@
 #include <org/xml/sax/ext/LexicalHandler.h>
 #include <jcpp.h>
 
-using $ElemContext = ::com::sun::org::apache::xml::internal::serializer::ElemContext;
 using $SerializerBase = ::com::sun::org::apache::xml::internal::serializer::SerializerBase;
-using $SerializerTrace = ::com::sun::org::apache::xml::internal::serializer::SerializerTrace;
 using $TransformStateSetter = ::com::sun::org::apache::xml::internal::serializer::TransformStateSetter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $List = ::java::util::List;
-using $Transformer = ::javax::xml::transform::Transformer;
 using $Node = ::org::w3c::dom::Node;
 using $Attributes = ::org::xml::sax::Attributes;
 using $ContentHandler = ::org::xml::sax::ContentHandler;

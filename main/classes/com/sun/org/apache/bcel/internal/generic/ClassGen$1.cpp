@@ -8,7 +8,6 @@
 #undef THIS
 
 using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
-using $BCELComparator = ::com::sun::org::apache::bcel::internal::util::BCELComparator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

@@ -13,7 +13,6 @@
 #undef END
 #undef ROOTNODE
 
-using $ExtendedTypeArray = $Array<::com::sun::org::apache::xml::internal::dtm::ref::ExtendedType>;
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
 using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;
 using $DTMDefaultBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBase;

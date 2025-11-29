@@ -59,7 +59,6 @@ using $ClassCastException = ::java::lang::ClassCastException;
 using $ClassCircularityError = ::java::lang::ClassCircularityError;
 using $ClassFormatError = ::java::lang::ClassFormatError;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Enum = ::java::lang::Enum;
 using $ExceptionInInitializerError = ::java::lang::ExceptionInInitializerError;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalAccessError = ::java::lang::IllegalAccessError;

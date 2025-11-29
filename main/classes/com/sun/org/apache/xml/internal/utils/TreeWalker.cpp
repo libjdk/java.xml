@@ -38,7 +38,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Result = ::javax::xml::transform::Result;
-using $CharacterData = ::org::w3c::dom::CharacterData;
 using $Comment = ::org::w3c::dom::Comment;
 using $Element = ::org::w3c::dom::Element;
 using $EntityReference = ::org::w3c::dom::EntityReference;

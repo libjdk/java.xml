@@ -6,7 +6,6 @@
 #include <java/lang/StringBuffer.h>
 #include <jcpp.h>
 
-using $PrecisionDecimalDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::PrecisionDecimalDV;
 using $TypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::xs::TypeValidator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

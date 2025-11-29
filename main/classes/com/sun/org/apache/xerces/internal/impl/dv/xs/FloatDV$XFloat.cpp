@@ -9,8 +9,6 @@
 #undef POSITIVE_INFINITY
 
 using $DoubleDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::DoubleDV;
-using $FloatDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::FloatDV;
-using $XSFloat = ::com::sun::org::apache::xerces::internal::xs::datatypes::XSFloat;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $Float = ::java::lang::Float;

@@ -6,7 +6,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Event = ::org::w3c::dom::events::Event;
 using $EventTarget = ::org::w3c::dom::events::EventTarget;
 
 namespace com {

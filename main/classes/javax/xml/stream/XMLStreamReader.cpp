@@ -7,10 +7,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
-using $QName = ::javax::xml::namespace$::QName;
-using $Location = ::javax::xml::stream::Location;
-using $XMLStreamConstants = ::javax::xml::stream::XMLStreamConstants;
 
 namespace javax {
 	namespace xml {

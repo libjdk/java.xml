@@ -7,7 +7,6 @@
 #include <java/lang/ref/SoftReference.h>
 #include <jcpp.h>
 
-using $SoftReferenceGrammarPool = ::com::sun::org::apache::xerces::internal::jaxp::validation::SoftReferenceGrammarPool;
 using $SoftReferenceGrammarPool$Entry = ::com::sun::org::apache::xerces::internal::jaxp::validation::SoftReferenceGrammarPool$Entry;
 using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
 using $ClassInfo = ::java::lang::ClassInfo;

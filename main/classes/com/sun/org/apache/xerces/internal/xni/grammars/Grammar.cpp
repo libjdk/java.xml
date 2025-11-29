@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription.h>
 #include <jcpp.h>
 
-using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

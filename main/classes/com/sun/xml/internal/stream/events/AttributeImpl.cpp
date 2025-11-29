@@ -19,7 +19,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
-using $Attribute = ::javax::xml::stream::events::Attribute;
 using $Characters = ::javax::xml::stream::events::Characters;
 using $EndElement = ::javax::xml::stream::events::EndElement;
 using $StartElement = ::javax::xml::stream::events::StartElement;

@@ -17,7 +17,6 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $JsrInstruction = ::com::sun::org::apache::bcel::internal::generic::JsrInstruction;
 using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;

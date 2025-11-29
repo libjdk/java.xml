@@ -20,7 +20,6 @@
 #undef EMPTY_LIST
 
 using $LSInputArray = $Array<::org::w3c::dom::ls::LSInput>;
-using $LSInputList = ::com::sun::org::apache::xerces::internal::xs::LSInputList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IndexOutOfBoundsException = ::java::lang::IndexOutOfBoundsException;

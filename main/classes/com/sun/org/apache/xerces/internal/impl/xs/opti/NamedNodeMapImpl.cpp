@@ -13,7 +13,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Attr = ::org::w3c::dom::Attr;
 using $DOMException = ::org::w3c::dom::DOMException;
-using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
 
 namespace com {

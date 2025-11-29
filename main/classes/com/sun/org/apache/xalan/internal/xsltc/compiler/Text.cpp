@@ -33,22 +33,18 @@
 #undef SWAP
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $GETSTATIC = ::com::sun::org::apache::bcel::internal::generic::GETSTATIC;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $LiteralElement = ::com::sun::org::apache::xalan::internal::xsltc::compiler::LiteralElement;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
@@ -109,7 +105,7 @@ $Object* allocate$Text($Class* clazz) {
 }
 
 void Text::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	this->_escaping = true;
 	this->_ignore = false;
 	this->_textElement = false;
@@ -117,7 +113,7 @@ void Text::init$() {
 }
 
 void Text::init$($String* text) {
-	$1Instruction::init$();
+	$Instruction::init$();
 	this->_escaping = true;
 	this->_ignore = false;
 	this->_textElement = false;
@@ -223,23 +219,23 @@ void Text::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 		if (!this->_escaping) {
 			$nc(il)->append($(methodGen->loadHandler()));
 			il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, false)));
-			il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, esc, 2)));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, esc, 2)));
 		}
 		$nc(il)->append($(methodGen->loadHandler()));
 		if (!canLoadAsArrayOffsetLength()) {
 			int32_t characters = cpg->addInterfaceMethodref($Constants::OUTPUT_HANDLER, "characters"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s}));
 			il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, this->_text)));
-			il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, characters, 2)));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, characters, 2)));
 		} else {
 			int32_t characters = cpg->addInterfaceMethodref($Constants::OUTPUT_HANDLER, "characters"_s, "([CII)V"_s);
 			loadAsArrayOffsetLength(classGen, methodGen);
-			il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, characters, 4)));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, characters, 4)));
 		}
 		if (!this->_escaping) {
 			il->append($(methodGen->loadHandler()));
-			il->append(static_cast<$Instruction*>($Constants::SWAP));
-			il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, esc, 2)));
-			il->append(static_cast<$Instruction*>($Constants::POP));
+			il->append(static_cast<$1Instruction*>($Constants::SWAP));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, esc, 2)));
+			il->append(static_cast<$1Instruction*>($Constants::POP));
 		}
 	}
 	translateContents(classGen, methodGen);
@@ -258,7 +254,7 @@ void Text::loadAsArrayOffsetLength($ClassGenerator* classGen, $MethodGenerator* 
 	int32_t length = $nc(this->_text)->length();
 	$init($Constants);
 	$var($String, charDataFieldName, $str({$Constants::STATIC_CHAR_DATA_FIELD, $$str((xsltc->getCharacterDataCount() - 1))}));
-	$nc(il)->append(static_cast<$Instruction*>($$new($GETSTATIC, $nc(cpg)->addFieldref($(xsltc->getClassName()), charDataFieldName, $Constants::STATIC_CHAR_DATA_FIELD_SIG))));
+	$nc(il)->append(static_cast<$1Instruction*>($$new($GETSTATIC, $nc(cpg)->addFieldref($(xsltc->getClassName()), charDataFieldName, $Constants::STATIC_CHAR_DATA_FIELD_SIG))));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, offset)));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, $nc(this->_text)->length())));
 }

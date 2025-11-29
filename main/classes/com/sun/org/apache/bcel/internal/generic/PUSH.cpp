@@ -40,7 +40,6 @@ using $LDC = ::com::sun::org::apache::bcel::internal::generic::LDC;
 using $LDC2_W = ::com::sun::org::apache::bcel::internal::generic::LDC2_W;
 using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
 using $SIPUSH = ::com::sun::org::apache::bcel::internal::generic::SIPUSH;
-using $VariableLengthInstruction = ::com::sun::org::apache::bcel::internal::generic::VariableLengthInstruction;
 using $Boolean = ::java::lang::Boolean;
 using $Byte = ::java::lang::Byte;
 using $Character = ::java::lang::Character;

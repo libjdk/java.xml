@@ -3,8 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/util/ErrorHandlerWrapper.h>
 #include <jcpp.h>
 
-using $ErrorHandlerWrapper = ::com::sun::org::apache::xerces::internal::util::ErrorHandlerWrapper;
-using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

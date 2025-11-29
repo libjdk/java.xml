@@ -4,9 +4,7 @@
 #include <com/sun/org/apache/xerces/internal/dom/DocumentImpl.h>
 #include <jcpp.h>
 
-using $AttrImpl = ::com::sun::org::apache::xerces::internal::dom::AttrImpl;
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

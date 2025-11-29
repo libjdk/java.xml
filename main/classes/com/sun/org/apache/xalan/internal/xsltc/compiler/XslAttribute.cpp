@@ -67,7 +67,6 @@
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -75,26 +74,22 @@ using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOr
 using $GETFIELD = ::com::sun::org::apache::bcel::internal::generic::GETFIELD;
 using $INVOKESTATIC = ::com::sun::org::apache::bcel::internal::generic::INVOKESTATIC;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $AttributeValue = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValue;
 using $AttributeValueTemplate = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValueTemplate;
 using $Choose = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Choose;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $CopyOf = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CopyOf;
-using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $If = ::com::sun::org::apache::xalan::internal::xsltc::compiler::If;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $LiteralAttribute = ::com::sun::org::apache::xalan::internal::xsltc::compiler::LiteralAttribute;
 using $LiteralElement = ::com::sun::org::apache::xalan::internal::xsltc::compiler::LiteralElement;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -108,7 +103,7 @@ using $VariableBase = ::com::sun::org::apache::xalan::internal::xsltc::compiler:
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ErrorMsg;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $ElemDesc = ::com::sun::org::apache::xml::internal::serializer::ElemDesc;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
@@ -160,7 +155,7 @@ $Object* allocate$XslAttribute($Class* clazz) {
 }
 
 void XslAttribute::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	$set(this, _namespace, nullptr);
 	this->_ignore = false;
 	this->_isLiteral = false;
@@ -268,7 +263,7 @@ void XslAttribute::parseContents($Parser* parser) {
 	parseChildren(parser);
 }
 
-$1Type* XslAttribute::typeCheck($SymbolTable* stable) {
+$Type* XslAttribute::typeCheck($SymbolTable* stable) {
 	if (!this->_ignore) {
 		$nc(this->_name)->typeCheck(stable);
 		if (this->_namespace != nullptr) {
@@ -276,8 +271,8 @@ $1Type* XslAttribute::typeCheck($SymbolTable* stable) {
 		}
 		typeCheckContents(stable);
 	}
-	$init($1Type);
-	return $1Type::Void;
+	$init($Type);
+	return $Type::Void;
 }
 
 void XslAttribute::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
@@ -298,17 +293,17 @@ void XslAttribute::translate($ClassGenerator* classGen, $MethodGenerator* method
 		$init($Constants);
 		$var($LocalVariableGen, nameValue, methodGen->addLocalVariable2("nameValue"_s, $($Util::getJCRefType($Constants::STRING_SIG)), nullptr));
 		$nc(this->_name)->translate(classGen, methodGen);
-		$nc(nameValue)->setStart($($nc(il)->append(static_cast<$Instruction*>($$new($ASTORE, nameValue->getIndex())))));
-		$nc(il)->append(static_cast<$Instruction*>($$new($ALOAD, nameValue->getIndex())));
+		$nc(nameValue)->setStart($($nc(il)->append(static_cast<$1Instruction*>($$new($ASTORE, nameValue->getIndex())))));
+		$nc(il)->append(static_cast<$1Instruction*>($$new($ALOAD, nameValue->getIndex())));
 		int32_t check = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "checkAttribQName"_s, $$str({"("_s, $Constants::STRING_SIG, ")V"_s}));
-		il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, check)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKESTATIC, check)));
 		il->append($(methodGen->loadHandler()));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
-		nameValue->setEnd($(il->append(static_cast<$Instruction*>($$new($ALOAD, nameValue->getIndex())))));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
+		nameValue->setEnd($(il->append(static_cast<$1Instruction*>($$new($ALOAD, nameValue->getIndex())))));
 	} else {
 		$nc(il)->append($(methodGen->loadHandler()));
 		$init($Constants);
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		$nc(this->_name)->translate(classGen, methodGen);
 	}
 	bool var$0 = (elementCount() == 1);
@@ -317,11 +312,11 @@ void XslAttribute::translate($ClassGenerator* classGen, $MethodGenerator* method
 	} else {
 		$nc(il)->append($(classGen->loadTranslet()));
 		$init($Constants);
-		il->append(static_cast<$Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref($Constants::TRANSLET_CLASS, "stringValueHandler"_s, $Constants::STRING_VALUE_HANDLER_SIG))));
-		il->append(static_cast<$Instruction*>($Constants::DUP));
+		il->append(static_cast<$1Instruction*>($$new($GETFIELD, $nc(cpg)->addFieldref($Constants::TRANSLET_CLASS, "stringValueHandler"_s, $Constants::STRING_VALUE_HANDLER_SIG))));
+		il->append(static_cast<$1Instruction*>($Constants::DUP));
 		il->append($(methodGen->storeHandler()));
 		translateContents(classGen, methodGen);
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_VALUE_HANDLER, "getValue"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, $nc(cpg)->addMethodref($Constants::STRING_VALUE_HANDLER, "getValue"_s, $$str({"()"_s, $Constants::STRING_SIG})))));
 	}
 	$var($SyntaxTreeNode, parent, getParent());
 	if ($instanceOf($LiteralElement, parent) && $nc(($cast($LiteralElement, parent)))->allAttributesUnique()) {

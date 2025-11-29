@@ -14,12 +14,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Source = ::javax::xml::transform::Source;
-using $Templates = ::javax::xml::transform::Templates;
 using $TransformerFactory = ::javax::xml::transform::TransformerFactory;
-using $TemplatesHandler = ::javax::xml::transform::sax::TemplatesHandler;
-using $TransformerHandler = ::javax::xml::transform::sax::TransformerHandler;
-using $XMLFilter = ::org::xml::sax::XMLFilter;
 
 namespace javax {
 	namespace xml {

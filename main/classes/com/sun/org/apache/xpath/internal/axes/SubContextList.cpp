@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xpath/internal/XPathContext.h>
 #include <jcpp.h>
 
-using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

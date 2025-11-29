@@ -13,12 +13,8 @@
 
 #undef NTYPES
 
-using $ExtendedTypeArray = $Array<::com::sun::org::apache::xml::internal::dtm::ref::ExtendedType>;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;
-using $DTMDefaultBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBase;
 using $DTMDefaultBaseIterators = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators;
-using $DTMDefaultBaseIterators$InternalAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators$InternalAxisIteratorBase;
 using $DTMDefaultBaseIterators$RootIterator = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators$RootIterator;
 using $ExtendedType = ::com::sun::org::apache::xml::internal::dtm::ref::ExtendedType;
 using $SAX2DTM = ::com::sun::org::apache::xml::internal::dtm::ref::sax2dtm::SAX2DTM;

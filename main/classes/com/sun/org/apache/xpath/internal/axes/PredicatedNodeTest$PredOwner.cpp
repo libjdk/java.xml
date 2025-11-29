@@ -6,10 +6,8 @@
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <jcpp.h>
 
-using $ExpressionArray = $Array<::com::sun::org::apache::xpath::internal::Expression>;
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode;
-using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $PredicatedNodeTest = ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest;
 using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $ClassInfo = ::java::lang::ClassInfo;

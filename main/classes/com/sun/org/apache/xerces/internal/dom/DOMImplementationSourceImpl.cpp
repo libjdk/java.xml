@@ -22,7 +22,6 @@ using $List = ::java::util::List;
 using $StringTokenizer = ::java::util::StringTokenizer;
 using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
 using $DOMImplementationList = ::org::w3c::dom::DOMImplementationList;
-using $DOMImplementationSource = ::org::w3c::dom::DOMImplementationSource;
 
 namespace com {
 	namespace sun {

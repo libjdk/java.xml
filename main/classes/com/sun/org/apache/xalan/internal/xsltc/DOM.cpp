@@ -18,15 +18,9 @@
 #undef SIMPLE_RTF
 #undef TREE_RTF
 
-using $StripFilter = ::com::sun::org::apache::xalan::internal::xsltc::StripFilter;
-using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Map = ::java::util::Map;
-using $Node = ::org::w3c::dom::Node;
-using $NodeList = ::org::w3c::dom::NodeList;
 
 namespace com {
 	namespace sun {

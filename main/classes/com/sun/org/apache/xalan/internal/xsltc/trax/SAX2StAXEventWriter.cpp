@@ -48,23 +48,14 @@ using $HashMap = ::java::util::HashMap;
 using $Iterator = ::java::util::Iterator;
 using $List = ::java::util::List;
 using $Map = ::java::util::Map;
-using $Location = ::javax::xml::stream::Location;
 using $XMLEventFactory = ::javax::xml::stream::XMLEventFactory;
 using $XMLEventWriter = ::javax::xml::stream::XMLEventWriter;
 using $XMLStreamException = ::javax::xml::stream::XMLStreamException;
 using $Attribute = ::javax::xml::stream::events::Attribute;
-using $Characters = ::javax::xml::stream::events::Characters;
-using $Comment = ::javax::xml::stream::events::Comment;
-using $EndDocument = ::javax::xml::stream::events::EndDocument;
-using $EndElement = ::javax::xml::stream::events::EndElement;
 using $Namespace = ::javax::xml::stream::events::Namespace;
-using $ProcessingInstruction = ::javax::xml::stream::events::ProcessingInstruction;
-using $StartDocument = ::javax::xml::stream::events::StartDocument;
-using $StartElement = ::javax::xml::stream::events::StartElement;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 using $Attributes = ::org::xml::sax::Attributes;
 using $SAXException = ::org::xml::sax::SAXException;
-using $DefaultHandler = ::org::xml::sax::helpers::DefaultHandler;
 
 namespace com {
 	namespace sun {

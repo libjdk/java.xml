@@ -5,9 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <jcpp.h>
 
-using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

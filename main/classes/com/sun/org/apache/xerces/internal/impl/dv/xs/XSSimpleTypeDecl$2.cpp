@@ -5,7 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.h>
 #include <jcpp.h>
 
-using $ValidatedInfoArray = $Array<::com::sun::org::apache::xerces::internal::impl::dv::ValidatedInfo>;
 using $ValidatedInfo = ::com::sun::org::apache::xerces::internal::impl::dv::ValidatedInfo;
 using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $XSSimpleTypeDecl$AbstractObjectList = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl$AbstractObjectList;

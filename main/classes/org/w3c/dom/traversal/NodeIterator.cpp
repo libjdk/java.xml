@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Node = ::org::w3c::dom::Node;
-using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
 
 namespace org {
 	namespace w3c {

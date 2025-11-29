@@ -4,12 +4,10 @@
 #include <org/xml/sax/Locator.h>
 #include <jcpp.h>
 
-using $SAX2StAXBaseWriter = ::com::sun::org::apache::xalan::internal::xsltc::trax::SAX2StAXBaseWriter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Location = ::javax::xml::stream::Location;
 using $Locator = ::org::xml::sax::Locator;
 
 namespace com {

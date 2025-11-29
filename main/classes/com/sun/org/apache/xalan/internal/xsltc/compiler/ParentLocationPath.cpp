@@ -57,7 +57,6 @@
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
@@ -70,11 +69,8 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -84,7 +80,7 @@ using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
@@ -178,14 +174,14 @@ $String* ParentLocationPath::toString() {
 	return $str({"ParentLocationPath("_s, this->_path, ", "_s, this->_step, $$str(u')')});
 }
 
-$1Type* ParentLocationPath::typeCheck($SymbolTable* stable) {
+$Type* ParentLocationPath::typeCheck($SymbolTable* stable) {
 	$set(this, stype, $nc(this->_step)->typeCheck(stable));
 	$nc(this->_path)->typeCheck(stable);
 	if (this->_axisMismatch) {
 		enableNodeOrdering();
 	}
-	$init($1Type);
-	return $set(this, _type, $1Type::NodeSet);
+	$init($Type);
+	return $set(this, _type, $Type::NodeSet);
 }
 
 void ParentLocationPath::enableNodeOrdering() {

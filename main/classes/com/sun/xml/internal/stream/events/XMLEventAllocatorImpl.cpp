@@ -53,7 +53,6 @@
 using $PropertyManager = ::com::sun::org::apache::xerces::internal::impl::PropertyManager;
 using $NamespaceContextWrapper = ::com::sun::org::apache::xerces::internal::util::NamespaceContextWrapper;
 using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
-using $1NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $AttributeImpl = ::com::sun::xml::internal::stream::events::AttributeImpl;
 using $CharacterEvent = ::com::sun::xml::internal::stream::events::CharacterEvent;
 using $CommentEvent = ::com::sun::xml::internal::stream::events::CommentEvent;
@@ -74,7 +73,6 @@ using $List = ::java::util::List;
 using $XMLConstants = ::javax::xml::XMLConstants;
 using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
 using $QName = ::javax::xml::namespace$::QName;
-using $Location = ::javax::xml::stream::Location;
 using $XMLInputFactory = ::javax::xml::stream::XMLInputFactory;
 using $XMLStreamException = ::javax::xml::stream::XMLStreamException;
 using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;

@@ -7,7 +7,6 @@
 #include <java/lang/Cloneable.h>
 #include <jcpp.h>
 
-using $Node = ::com::sun::org::apache::bcel::internal::classfile::Node;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $DataInput = ::java::io::DataInput;
 using $DataOutputStream = ::java::io::DataOutputStream;

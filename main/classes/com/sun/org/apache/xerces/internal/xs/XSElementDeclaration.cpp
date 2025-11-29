@@ -8,14 +8,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSValue.h>
 #include <jcpp.h>
 
-using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
-using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
-using $XSComplexTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSComplexTypeDefinition;
-using $XSNamedMap = ::com::sun::org::apache::xerces::internal::xs::XSNamedMap;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSTerm = ::com::sun::org::apache::xerces::internal::xs::XSTerm;
-using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
-using $XSValue = ::com::sun::org::apache::xerces::internal::xs::XSValue;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;

@@ -140,7 +140,6 @@ using $XSModelGroupDefinition = ::com::sun::org::apache::xerces::internal::xs::X
 using $XSNamedMap = ::com::sun::org::apache::xerces::internal::xs::XSNamedMap;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $XSNotationDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSNotationDeclaration;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
 using $ObjectList = ::com::sun::org::apache::xerces::internal::xs::datatypes::ObjectList;

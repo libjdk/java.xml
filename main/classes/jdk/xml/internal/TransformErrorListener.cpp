@@ -5,8 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
-using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $TransformerException = ::javax::xml::transform::TransformerException;
 
 namespace jdk {

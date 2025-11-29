@@ -11,8 +11,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $DocumentFragment = ::org::w3c::dom::DocumentFragment;
-using $Node = ::org::w3c::dom::Node;
 
 namespace org {
 	namespace w3c {

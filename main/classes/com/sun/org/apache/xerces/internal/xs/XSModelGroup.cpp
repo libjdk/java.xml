@@ -8,9 +8,6 @@
 #undef COMPOSITOR_CHOICE
 #undef COMPOSITOR_SEQUENCE
 
-using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $XSTerm = ::com::sun::org::apache::xerces::internal::xs::XSTerm;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

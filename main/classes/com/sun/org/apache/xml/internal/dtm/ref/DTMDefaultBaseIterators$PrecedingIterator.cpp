@@ -93,7 +93,7 @@ $Object* allocate$DTMDefaultBaseIterators$PrecedingIterator($Class* clazz) {
 void DTMDefaultBaseIterators$PrecedingIterator::init$($DTMDefaultBaseIterators* this$0) {
 	$set(this, this$0, this$0);
 	$DTMDefaultBaseIterators$InternalAxisIteratorBase::init$(this$0);
-	$set(this, _stack, $new($ints, this->_maxAncestors));
+	$set(this, _stack, $new($ints, DTMDefaultBaseIterators$PrecedingIterator::_maxAncestors));
 }
 
 bool DTMDefaultBaseIterators$PrecedingIterator::isReverse() {

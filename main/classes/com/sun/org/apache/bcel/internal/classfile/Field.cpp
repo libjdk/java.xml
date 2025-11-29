@@ -18,7 +18,6 @@
 
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $AccessFlags = ::com::sun::org::apache::bcel::internal::classfile::AccessFlags;
 using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantValue = ::com::sun::org::apache::bcel::internal::classfile::ConstantValue;

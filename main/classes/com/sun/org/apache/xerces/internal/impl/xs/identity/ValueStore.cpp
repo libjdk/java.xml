@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/ShortList.h>
 #include <jcpp.h>
 
-using $Field = ::com::sun::org::apache::xerces::internal::impl::xs::identity::Field;
-using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

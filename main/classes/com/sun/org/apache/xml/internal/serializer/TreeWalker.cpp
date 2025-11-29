@@ -29,7 +29,6 @@
 #undef PROCESSING_INSTRUCTION_NODE
 #undef TEXT_NODE
 
-using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
 using $AttList = ::com::sun::org::apache::xml::internal::utils::AttList;
 using $DOM2Helper = ::com::sun::org::apache::xml::internal::utils::DOM2Helper;
@@ -37,7 +36,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Result = ::javax::xml::transform::Result;
-using $CharacterData = ::org::w3c::dom::CharacterData;
 using $Comment = ::org::w3c::dom::Comment;
 using $Element = ::org::w3c::dom::Element;
 using $EntityReference = ::org::w3c::dom::EntityReference;

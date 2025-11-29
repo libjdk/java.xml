@@ -5,10 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/datatypes/ObjectList.h>
 #include <jcpp.h>
 
-using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
-using $ObjectList = ::com::sun::org::apache::xerces::internal::xs::datatypes::ObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

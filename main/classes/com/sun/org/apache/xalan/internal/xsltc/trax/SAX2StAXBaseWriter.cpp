@@ -33,7 +33,6 @@ using $Attributes = ::org::xml::sax::Attributes;
 using $Locator = ::org::xml::sax::Locator;
 using $SAXException = ::org::xml::sax::SAXException;
 using $SAXParseException = ::org::xml::sax::SAXParseException;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 using $Locator2 = ::org::xml::sax::ext::Locator2;
 using $DefaultHandler = ::org::xml::sax::helpers::DefaultHandler;
 

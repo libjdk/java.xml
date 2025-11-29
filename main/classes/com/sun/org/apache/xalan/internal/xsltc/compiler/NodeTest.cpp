@@ -11,8 +11,6 @@
 #undef ROOT
 #undef TEXT
 
-using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 

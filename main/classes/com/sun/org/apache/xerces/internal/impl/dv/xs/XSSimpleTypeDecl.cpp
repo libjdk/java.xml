@@ -227,7 +227,6 @@ using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
 using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
-using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
 using $XSFacet = ::com::sun::org::apache::xerces::internal::xs::XSFacet;
 using $XSMultiValueFacet = ::com::sun::org::apache::xerces::internal::xs::XSMultiValueFacet;
@@ -248,9 +247,7 @@ using $StringBuffer = ::java::lang::StringBuffer;
 using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $List = ::java::util::List;
-using $Locale = ::java::util::Locale;
 using $StringTokenizer = ::java::util::StringTokenizer;
-using $TypeInfo = ::org::w3c::dom::TypeInfo;
 
 namespace com {
 	namespace sun {

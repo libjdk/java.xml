@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <jcpp.h>
 
-using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

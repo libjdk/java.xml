@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/util/XMLGrammarPoolImpl.h>
 #include <jcpp.h>
 
-using $XMLSchemaFactory = ::com::sun::org::apache::xerces::internal::jaxp::validation::XMLSchemaFactory;
 using $XMLGrammarPoolImpl = ::com::sun::org::apache::xerces::internal::util::XMLGrammarPoolImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

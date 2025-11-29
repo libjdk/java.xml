@@ -14,7 +14,6 @@
 #undef SP_MAX_OCCUR_LIMIT
 
 using $XMLLimitAnalyzer$NameMapArray = $Array<::com::sun::org::apache::xerces::internal::utils::XMLLimitAnalyzer$NameMap>;
-using $XMLLimitAnalyzer = ::com::sun::org::apache::xerces::internal::utils::XMLLimitAnalyzer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;

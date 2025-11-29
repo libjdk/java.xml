@@ -33,25 +33,21 @@ using $AttrArray = $Array<::org::w3c::dom::Attr>;
 using $StringArray2 = $Array<::java::lang::String, 2>;
 using $AttrImpl = ::com::sun::org::apache::xerces::internal::dom::AttrImpl;
 using $DocumentImpl = ::com::sun::org::apache::xerces::internal::dom::DocumentImpl;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
+using $1NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
 using $ElementImpl = ::com::sun::org::apache::xerces::internal::impl::xs::opti::ElementImpl;
-using $1NodeImpl = ::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl;
+using $NodeImpl = ::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $StringBuffer = ::java::lang::StringBuffer;
 using $Map = ::java::util::Map;
 using $Attr = ::org::w3c::dom::Attr;
-using $CDATASection = ::org::w3c::dom::CDATASection;
 using $CharacterData = ::org::w3c::dom::CharacterData;
-using $Comment = ::org::w3c::dom::Comment;
 using $DOMException = ::org::w3c::dom::DOMException;
 using $Document = ::org::w3c::dom::Document;
 using $Element = ::org::w3c::dom::Element;
-using $EntityReference = ::org::w3c::dom::EntityReference;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
-using $ProcessingInstruction = ::org::w3c::dom::ProcessingInstruction;
 using $Text = ::org::w3c::dom::Text;
 using $LSException = ::org::w3c::dom::ls::LSException;
 
@@ -329,49 +325,49 @@ $Element* DOMUtil::getNextVisibleSiblingElement($Node* node, $Map* hiddenNodes) 
 }
 
 void DOMUtil::setHidden($Node* node) {
-	if ($instanceOf($1NodeImpl, node)) {
-		$nc(($cast($1NodeImpl, node)))->setReadOnly(true, false);
-	} else if ($instanceOf($NodeImpl, node)) {
+	if ($instanceOf($NodeImpl, node)) {
 		$nc(($cast($NodeImpl, node)))->setReadOnly(true, false);
+	} else if ($instanceOf($1NodeImpl, node)) {
+		$nc(($cast($1NodeImpl, node)))->setReadOnly(true, false);
 	}
 }
 
 void DOMUtil::setHidden($Node* node, $Map* hiddenNodes) {
-	if ($instanceOf($1NodeImpl, node)) {
-		$nc(($cast($1NodeImpl, node)))->setReadOnly(true, false);
+	if ($instanceOf($NodeImpl, node)) {
+		$nc(($cast($NodeImpl, node)))->setReadOnly(true, false);
 	} else {
 		$nc(hiddenNodes)->put(node, ""_s);
 	}
 }
 
 void DOMUtil::setVisible($Node* node) {
-	if ($instanceOf($1NodeImpl, node)) {
-		$nc(($cast($1NodeImpl, node)))->setReadOnly(false, false);
-	} else if ($instanceOf($NodeImpl, node)) {
+	if ($instanceOf($NodeImpl, node)) {
 		$nc(($cast($NodeImpl, node)))->setReadOnly(false, false);
+	} else if ($instanceOf($1NodeImpl, node)) {
+		$nc(($cast($1NodeImpl, node)))->setReadOnly(false, false);
 	}
 }
 
 void DOMUtil::setVisible($Node* node, $Map* hiddenNodes) {
-	if ($instanceOf($1NodeImpl, node)) {
-		$nc(($cast($1NodeImpl, node)))->setReadOnly(false, false);
+	if ($instanceOf($NodeImpl, node)) {
+		$nc(($cast($NodeImpl, node)))->setReadOnly(false, false);
 	} else {
 		$nc(hiddenNodes)->remove(node);
 	}
 }
 
 bool DOMUtil::isHidden($Node* node) {
-	if ($instanceOf($1NodeImpl, node)) {
-		return $nc(($cast($1NodeImpl, node)))->getReadOnly();
-	} else if ($instanceOf($NodeImpl, node)) {
+	if ($instanceOf($NodeImpl, node)) {
 		return $nc(($cast($NodeImpl, node)))->getReadOnly();
+	} else if ($instanceOf($1NodeImpl, node)) {
+		return $nc(($cast($1NodeImpl, node)))->getReadOnly();
 	}
 	return false;
 }
 
 bool DOMUtil::isHidden($Node* node, $Map* hiddenNodes) {
-	if ($instanceOf($1NodeImpl, node)) {
-		return $nc(($cast($1NodeImpl, node)))->getReadOnly();
+	if ($instanceOf($NodeImpl, node)) {
+		return $nc(($cast($NodeImpl, node)))->getReadOnly();
 	} else {
 		return $nc(hiddenNodes)->containsKey(node);
 	}

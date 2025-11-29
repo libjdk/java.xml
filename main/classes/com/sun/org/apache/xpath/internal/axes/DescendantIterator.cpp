@@ -45,7 +45,6 @@ using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $VariableStack = ::com::sun::org::apache::xpath::internal::VariableStack;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;
-using $PredicatedNodeTest = ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest;
 using $WalkerFactory = ::com::sun::org::apache::xpath::internal::axes::WalkerFactory;
 using $Compiler = ::com::sun::org::apache::xpath::internal::compiler::Compiler;
 using $OpCodes = ::com::sun::org::apache::xpath::internal::compiler::OpCodes;

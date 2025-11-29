@@ -19,7 +19,6 @@
 using $AttrImpl = ::com::sun::org::apache::xerces::internal::dom::AttrImpl;
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
 using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $ClassInfo = ::java::lang::ClassInfo;

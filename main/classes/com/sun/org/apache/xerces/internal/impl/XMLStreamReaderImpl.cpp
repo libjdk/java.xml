@@ -98,12 +98,10 @@ using $XML11DocumentScannerImpl = ::com::sun::org::apache::xerces::internal::imp
 using $XML11NSDocumentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XML11NSDocumentScannerImpl;
 using $XMLDTDScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDTDScannerImpl;
 using $XMLDocumentFragmentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl;
-using $XMLDocumentFragmentScannerImpl$Driver = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl$Driver;
 using $XMLDocumentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentScannerImpl;
 using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEntityManager;
 using $XMLEntityScanner = ::com::sun::org::apache::xerces::internal::impl::XMLEntityScanner;
 using $XMLNSDocumentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLNSDocumentScannerImpl;
-using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $XMLStreamReaderImpl$1 = ::com::sun::org::apache::xerces::internal::impl::XMLStreamReaderImpl$1;
 using $NamespaceContextWrapper = ::com::sun::org::apache::xerces::internal::util::NamespaceContextWrapper;
 using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
@@ -112,17 +110,15 @@ using $XMLAttributesImpl = ::com::sun::org::apache::xerces::internal::util::XMLA
 using $XMLAttributesIteratorImpl = ::com::sun::org::apache::xerces::internal::util::XMLAttributesIteratorImpl;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
-using $1NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
+using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $1QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIException;
-using $XMLDTDScanner = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDScanner;
 using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $Entity = ::com::sun::xml::internal::stream::Entity;
 using $Entity$ExternalEntity = ::com::sun::xml::internal::stream::Entity$ExternalEntity;
 using $Entity$InternalEntity = ::com::sun::xml::internal::stream::Entity$InternalEntity;
-using $Entity$ScannedEntity = ::com::sun::xml::internal::stream::Entity$ScannedEntity;
 using $StaxErrorReporter = ::com::sun::xml::internal::stream::StaxErrorReporter;
 using $XMLBufferListener = ::com::sun::xml::internal::stream::XMLBufferListener;
 using $XMLEntityStorage = ::com::sun::xml::internal::stream::XMLEntityStorage;
@@ -156,13 +152,12 @@ using $Map$Entry = ::java::util::Map$Entry;
 using $NoSuchElementException = ::java::util::NoSuchElementException;
 using $Set = ::java::util::Set;
 using $XMLConstants = ::javax::xml::XMLConstants;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
+using $1NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
 using $QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
 using $XMLInputFactory = ::javax::xml::stream::XMLInputFactory;
 using $XMLStreamConstants = ::javax::xml::stream::XMLStreamConstants;
 using $XMLStreamException = ::javax::xml::stream::XMLStreamException;
-using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 
 namespace com {
@@ -681,7 +676,7 @@ int32_t XMLStreamReaderImpl::next() {
 
 void XMLStreamReaderImpl::switchToXML11Scanner() {
 	int32_t oldEntityDepth = $nc(this->fScanner)->fEntityDepth;
-	$var($1NamespaceContext, oldNamespaceContext, $nc(this->fScanner)->fNamespaceContext);
+	$var($NamespaceContext, oldNamespaceContext, $nc(this->fScanner)->fNamespaceContext);
 	$set(this, fScanner, $new($XML11NSDocumentScannerImpl));
 	$nc(this->fScanner)->reset(this->fPropertyManager);
 	$nc(this->fScanner)->setPropertyManager(this->fPropertyManager);
@@ -891,7 +886,7 @@ $QName* XMLStreamReaderImpl::getName() {
 	}
 }
 
-$NamespaceContext* XMLStreamReaderImpl::getNamespaceContext() {
+$1NamespaceContext* XMLStreamReaderImpl::getNamespaceContext() {
 	return this->fNamespaceContextWrapper;
 }
 

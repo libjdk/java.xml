@@ -40,7 +40,6 @@ using $Calendar = ::java::util::Calendar;
 using $Date = ::java::util::Date;
 using $GregorianCalendar = ::java::util::GregorianCalendar;
 using $DatatypeConstants = ::javax::xml::datatype::DatatypeConstants;
-using $DatatypeConstants$Field = ::javax::xml::datatype::DatatypeConstants$Field;
 using $QName = ::javax::xml::namespace$::QName;
 
 namespace javax {

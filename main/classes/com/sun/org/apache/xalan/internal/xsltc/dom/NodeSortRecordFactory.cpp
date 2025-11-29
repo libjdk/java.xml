@@ -46,7 +46,6 @@ using $ReflectiveOperationException = ::java::lang::ReflectiveOperationException
 using $Constructor = ::java::lang::reflect::Constructor;
 using $InvocationTargetException = ::java::lang::reflect::InvocationTargetException;
 using $Collator = ::java::text::Collator;
-using $Locale = ::java::util::Locale;
 
 namespace com {
 	namespace sun {

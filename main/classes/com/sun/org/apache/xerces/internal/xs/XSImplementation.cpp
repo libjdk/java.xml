@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSLoader.h>
 #include <jcpp.h>
 
-using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
-using $XSLoader = ::com::sun::org::apache::xerces::internal::xs::XSLoader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -71,9 +71,7 @@ using $Method = ::com::sun::org::apache::xml::internal::serializer::Method;
 using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
 using $OutputPropertiesFactory = ::com::sun::org::apache::xml::internal::serializer::OutputPropertiesFactory;
 using $OutputPropertyUtils = ::com::sun::org::apache::xml::internal::serializer::OutputPropertyUtils;
-using $SerializerBase = ::com::sun::org::apache::xml::internal::serializer::SerializerBase;
 using $SerializerConstants = ::com::sun::org::apache::xml::internal::serializer::SerializerConstants;
-using $SerializerTrace = ::com::sun::org::apache::xml::internal::serializer::SerializerTrace;
 using $ToHTMLStream$Trie = ::com::sun::org::apache::xml::internal::serializer::ToHTMLStream$Trie;
 using $ToStream = ::com::sun::org::apache::xml::internal::serializer::ToStream;
 using $Messages = ::com::sun::org::apache::xml::internal::serializer::utils::Messages;
@@ -95,7 +93,6 @@ using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $Result = ::javax::xml::transform::Result;
 using $Attributes = ::org::xml::sax::Attributes;
 using $SAXException = ::org::xml::sax::SAXException;
-using $AttributesImpl = ::org::xml::sax::helpers::AttributesImpl;
 
 namespace com {
 	namespace sun {

@@ -14,7 +14,6 @@
 #undef SP_MAX_OCCUR_LIMIT
 
 using $XMLSecurityManager$NameMapArray = $Array<::com::sun::org::apache::xalan::internal::utils::XMLSecurityManager$NameMap>;
-using $XMLSecurityManager = ::com::sun::org::apache::xalan::internal::utils::XMLSecurityManager;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;

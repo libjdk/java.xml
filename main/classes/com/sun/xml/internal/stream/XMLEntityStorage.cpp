@@ -45,7 +45,6 @@ using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::par
 using $Entity = ::com::sun::xml::internal::stream::Entity;
 using $Entity$ExternalEntity = ::com::sun::xml::internal::stream::Entity$ExternalEntity;
 using $Entity$InternalEntity = ::com::sun::xml::internal::stream::Entity$InternalEntity;
-using $Entity$ScannedEntity = ::com::sun::xml::internal::stream::Entity$ScannedEntity;
 using $File = ::java::io::File;
 using $UnsupportedEncodingException = ::java::io::UnsupportedEncodingException;
 using $Character = ::java::lang::Character;

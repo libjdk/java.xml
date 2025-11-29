@@ -32,13 +32,9 @@
 #undef WELLFORMED
 #undef XML
 
-using $DOMErrorImpl = ::com::sun::org::apache::xerces::internal::dom::DOMErrorImpl;
 using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOMMessageFormatter;
-using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
-using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XML11Char = ::com::sun::org::apache::xerces::internal::util::XML11Char;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
-using $BaseMarkupSerializer = ::com::sun::org::apache::xml::internal::serialize::BaseMarkupSerializer;
 using $DOMSerializerImpl = ::com::sun::org::apache::xml::internal::serialize::DOMSerializerImpl;
 using $ElementState = ::com::sun::org::apache::xml::internal::serialize::ElementState;
 using $EncodingInfo = ::com::sun::org::apache::xml::internal::serialize::EncodingInfo;
@@ -57,7 +53,6 @@ using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $DOMError = ::org::w3c::dom::DOMError;
 using $DOMErrorHandler = ::org::w3c::dom::DOMErrorHandler;
-using $Node = ::org::w3c::dom::Node;
 using $SAXException = ::org::xml::sax::SAXException;
 
 namespace com {

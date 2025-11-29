@@ -6,7 +6,6 @@
 #include <jcpp.h>
 
 using $XSFacets = ::com::sun::org::apache::xerces::internal::impl::dv::XSFacets;
-using $XSDAbstractTraverser = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDAbstractTraverser;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

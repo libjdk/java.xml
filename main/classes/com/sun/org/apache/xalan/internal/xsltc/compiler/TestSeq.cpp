@@ -23,19 +23,15 @@
 #include <java/util/Map.h>
 #include <jcpp.h>
 
-using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $GOTO_W = ::com::sun::org::apache::bcel::internal::generic::GOTO_W;
 using $GotoInstruction = ::com::sun::org::apache::bcel::internal::generic::GotoInstruction;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $LocationPathPattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::LocationPathPattern;
 using $Mode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Mode;
 using $Pattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Pattern;
-using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $Template = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Template;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;

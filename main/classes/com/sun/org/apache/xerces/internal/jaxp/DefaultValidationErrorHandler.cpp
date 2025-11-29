@@ -15,7 +15,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Locale = ::java::util::Locale;
-using $SAXException = ::org::xml::sax::SAXException;
 using $SAXParseException = ::org::xml::sax::SAXParseException;
 using $DefaultHandler = ::org::xml::sax::helpers::DefaultHandler;
 

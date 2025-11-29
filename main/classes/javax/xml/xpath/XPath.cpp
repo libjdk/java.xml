@@ -12,13 +12,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
-using $QName = ::javax::xml::namespace$::QName;
 using $XPathEvaluationResult = ::javax::xml::xpath::XPathEvaluationResult;
 using $XPathEvaluationResult$XPathResultType = ::javax::xml::xpath::XPathEvaluationResult$XPathResultType;
-using $XPathExpression = ::javax::xml::xpath::XPathExpression;
-using $XPathFunctionResolver = ::javax::xml::xpath::XPathFunctionResolver;
-using $XPathVariableResolver = ::javax::xml::xpath::XPathVariableResolver;
 using $InputSource = ::org::xml::sax::InputSource;
 
 namespace javax {

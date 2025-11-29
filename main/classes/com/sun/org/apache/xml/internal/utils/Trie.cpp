@@ -5,7 +5,6 @@
 
 #undef ALPHA_SIZE
 
-using $Trie$NodeArray = $Array<::com::sun::org::apache::xml::internal::utils::Trie$Node>;
 using $Trie$Node = ::com::sun::org::apache::xml::internal::utils::Trie$Node;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;

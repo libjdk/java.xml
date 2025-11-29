@@ -9,7 +9,6 @@ using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $LSOutput = ::org::w3c::dom::ls::LSOutput;
 
 namespace com {
 	namespace sun {

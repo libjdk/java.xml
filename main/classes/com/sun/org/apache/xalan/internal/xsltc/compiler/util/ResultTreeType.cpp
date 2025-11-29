@@ -77,11 +77,9 @@
 
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
-using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -99,12 +97,10 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -117,7 +113,7 @@ using $ObjectType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::u
 using $RealType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::RealType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -178,12 +174,12 @@ $Object* allocate$ResultTreeType($Class* clazz) {
 }
 
 void ResultTreeType::init$() {
-	$1Type::init$();
+	$Type::init$();
 	$set(this, _methodName, nullptr);
 }
 
 void ResultTreeType::init$($String* methodName) {
-	$1Type::init$();
+	$Type::init$();
 	$set(this, _methodName, methodName);
 }
 
@@ -191,7 +187,7 @@ $String* ResultTreeType::toString() {
 	return "result-tree"_s;
 }
 
-bool ResultTreeType::identicalTo($1Type* other) {
+bool ResultTreeType::identicalTo($Type* other) {
 	return ($instanceOf(ResultTreeType, other));
 }
 
@@ -200,7 +196,7 @@ $String* ResultTreeType::toSignature() {
 	return $Constants::DOM_INTF_SIG;
 }
 
-$Type* ResultTreeType::toJCType() {
+$1Type* ResultTreeType::toJCType() {
 	return $Util::getJCRefType($(toSignature()));
 }
 
@@ -212,25 +208,25 @@ bool ResultTreeType::implementedAsMethod() {
 	return this->_methodName != nullptr;
 }
 
-void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Type* type) {
 	$useLocalCurrentObjectStackCache();
-	$init($1Type);
-	if (type == $1Type::String) {
+	$init($Type);
+	if (type == $Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
 	} else {
-		if (type == $1Type::Boolean) {
+		if (type == $Type::Boolean) {
 			translateTo(classGen, methodGen, $cast($BooleanType, type));
 		} else {
-			if (type == $1Type::Real) {
+			if (type == $Type::Real) {
 				translateTo(classGen, methodGen, $cast($RealType, type));
 			} else {
-				if (type == $1Type::NodeSet) {
+				if (type == $Type::NodeSet) {
 					translateTo(classGen, methodGen, $cast($NodeSetType, type));
 				} else {
-					if (type == $1Type::Reference) {
+					if (type == $Type::Reference) {
 						translateTo(classGen, methodGen, $cast($ReferenceType, type));
 					} else {
-						if (type == $1Type::Object) {
+						if (type == $Type::Object) {
 							translateTo(classGen, methodGen, $cast($ObjectType, type));
 						} else {
 							$init($ErrorMsg);
@@ -289,9 +285,9 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $RealType* type) {
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::String);
-	$nc($1Type::String)->translateTo(classGen, methodGen, $1Type::Real);
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::String);
+	$nc($Type::String)->translateTo(classGen, methodGen, $Type::Real);
 }
 
 void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $ReferenceType* type) {
@@ -367,8 +363,8 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 $FlowList* ResultTreeType::translateToDesynthesized($ClassGenerator* classGen, $MethodGenerator* methodGen, $BooleanType* type) {
 	$useLocalCurrentObjectStackCache();
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::Boolean);
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::Boolean);
 	return $new($FlowList, $(static_cast<$InstructionHandle*>($nc(il)->append(static_cast<$BranchInstruction*>($$new($IFEQ, nullptr))))));
 }
 
@@ -378,14 +374,14 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 	$var($ConstantPoolGen, cpg, $nc(classGen)->getConstantPool());
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	if ($nc(className)->equals("org.w3c.dom.Node"_s)) {
-		$init($1Type);
-		translateTo(classGen, methodGen, $1Type::NodeSet);
+		$init($Type);
+		translateTo(classGen, methodGen, $Type::NodeSet);
 		$init($Constants);
 		int32_t index = $nc(cpg)->addInterfaceMethodref($Constants::DOM_INTF, $Constants::MAKE_NODE, $Constants::MAKE_NODE_SIG2);
 		$nc(il)->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, index, 2)));
 	} else if (className->equals("org.w3c.dom.NodeList"_s)) {
-		$init($1Type);
-		translateTo(classGen, methodGen, $1Type::NodeSet);
+		$init($Type);
+		translateTo(classGen, methodGen, $Type::NodeSet);
 		$init($Constants);
 		int32_t index = $nc(cpg)->addInterfaceMethodref($Constants::DOM_INTF, $Constants::MAKE_NODE_LIST, $Constants::MAKE_NODE_LIST_SIG2);
 		$nc(il)->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, index, 2)));
@@ -393,8 +389,8 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 		$init($Constants);
 		$nc(il)->append($Constants::NOP);
 	} else if (className->equals("java.lang.String"_s)) {
-		$init($1Type);
-		translateTo(classGen, methodGen, $1Type::String);
+		$init($Type);
+		translateTo(classGen, methodGen, $Type::String);
 	} else {
 		$init($ErrorMsg);
 		$var($ErrorMsg, err, $new($ErrorMsg, $ErrorMsg::DATA_CONVERSION_ERR, $($of(toString())), $of(className)));
@@ -403,8 +399,8 @@ void ResultTreeType::translateTo($ClassGenerator* classGen, $MethodGenerator* me
 }
 
 void ResultTreeType::translateBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::Reference);
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::Reference);
 }
 
 void ResultTreeType::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {

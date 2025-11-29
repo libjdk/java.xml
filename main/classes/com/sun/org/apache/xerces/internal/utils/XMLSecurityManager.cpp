@@ -221,7 +221,7 @@ bool XMLSecurityManager::setLimit($String* propertyName, $JdkProperty$State* sta
 	if (index > -1) {
 		$JdkProperty$State* pState = state;
 		$init($JdkProperty$State);
-		if (index != this->indexEntityCountInfo && state == $JdkProperty$State::APIPROPERTY) {
+		if (index != XMLSecurityManager::indexEntityCountInfo && state == $JdkProperty$State::APIPROPERTY) {
 			pState = $nc(($($XMLSecurityManager$Limit::values())->get(index)))->getState(propertyName);
 		}
 		setLimit(index, pState, value);
@@ -235,7 +235,7 @@ void XMLSecurityManager::setLimit($XMLSecurityManager$Limit* limit, $JdkProperty
 }
 
 void XMLSecurityManager::setLimit(int32_t index, $JdkProperty$State* state, Object$* value) {
-	if (index == this->indexEntityCountInfo) {
+	if (index == XMLSecurityManager::indexEntityCountInfo) {
 		$set(this, printEntityCountInfo$, $cast($String, value));
 	} else {
 		int32_t temp = 0;
@@ -252,7 +252,7 @@ void XMLSecurityManager::setLimit(int32_t index, $JdkProperty$State* state, Obje
 }
 
 void XMLSecurityManager::setLimit(int32_t index, $JdkProperty$State* state, int32_t value) {
-	if (index == this->indexEntityCountInfo) {
+	if (index == XMLSecurityManager::indexEntityCountInfo) {
 		$init($JdkConstants);
 		$set(this, printEntityCountInfo$, $JdkConstants::JDK_YES);
 	} else if ($nc(state)->compareTo(static_cast<$Enum*>($nc(this->states)->get(index))) >= 0) {
@@ -279,7 +279,7 @@ $String* XMLSecurityManager::getLimitValueAsString($XMLSecurityManager$Limit* li
 }
 
 $String* XMLSecurityManager::getLimitValueByIndex(int32_t index) {
-	if (index == this->indexEntityCountInfo) {
+	if (index == XMLSecurityManager::indexEntityCountInfo) {
 		return this->printEntityCountInfo$;
 	}
 	return $Integer::toString($nc(this->values)->get(index));
@@ -309,7 +309,7 @@ int32_t XMLSecurityManager::getIndex($String* propertyName) {
 	}
 	$init($JdkProperty$ImplPropMap);
 	if ($JdkProperty$ImplPropMap::ENTITYCOUNT->is(propertyName)) {
-		return this->indexEntityCountInfo;
+		return XMLSecurityManager::indexEntityCountInfo;
 	}
 	return -1;
 }

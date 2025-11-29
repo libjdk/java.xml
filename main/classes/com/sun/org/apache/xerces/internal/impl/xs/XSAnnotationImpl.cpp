@@ -25,8 +25,6 @@
 
 using $CoreDocumentImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDocumentImpl;
 using $SchemaGrammar = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar;
-using $AbstractDOMParser = ::com::sun::org::apache::xerces::internal::parsers::AbstractDOMParser;
-using $AbstractSAXParser = ::com::sun::org::apache::xerces::internal::parsers::AbstractSAXParser;
 using $DOMParser = ::com::sun::org::apache::xerces::internal::parsers::DOMParser;
 using $SAXParser = ::com::sun::org::apache::xerces::internal::parsers::SAXParser;
 using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;

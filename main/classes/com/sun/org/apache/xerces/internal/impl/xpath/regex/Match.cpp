@@ -7,7 +7,6 @@
 
 using $REUtil = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::REUtil;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Cloneable = ::java::lang::Cloneable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $IllegalStateException = ::java::lang::IllegalStateException;

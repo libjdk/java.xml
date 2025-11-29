@@ -9,7 +9,6 @@
 
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode;
-using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $FunctionPattern = ::com::sun::org::apache::xpath::internal::patterns::FunctionPattern;
 using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $StepPattern = ::com::sun::org::apache::xpath::internal::patterns::StepPattern;

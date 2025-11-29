@@ -11,7 +11,6 @@
 #undef SYSTEMPROPERTY
 
 using $FeaturePropertyBase$StateArray = $Array<::com::sun::org::apache::xalan::internal::utils::FeaturePropertyBase$State>;
-using $FeaturePropertyBase = ::com::sun::org::apache::xalan::internal::utils::FeaturePropertyBase;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;

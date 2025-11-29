@@ -21,11 +21,9 @@
 
 using $ValidatedInfo = ::com::sun::org::apache::xerces::internal::impl::dv::ValidatedInfo;
 using $SchemaSymbols = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaSymbols;
-using $XSAttributeDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSAttributeDecl;
 using $XSObjectListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl;
 using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
 using $XSAttributeDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSAttributeDeclaration;
-using $XSAttributeUse = ::com::sun::org::apache::xerces::internal::xs::XSAttributeUse;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;

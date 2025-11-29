@@ -9,7 +9,6 @@
 #undef UNKNOWN
 
 using $BCELifier$FLAGSArray = $Array<::com::sun::org::apache::bcel::internal::util::BCELifier$FLAGS>;
-using $BCELifier = ::com::sun::org::apache::bcel::internal::util::BCELifier;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;

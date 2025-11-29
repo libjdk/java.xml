@@ -18,7 +18,6 @@ using $XPathVisitor = ::com::sun::org::apache::xpath::internal::XPathVisitor;
 using $Compiler = ::com::sun::org::apache::xpath::internal::compiler::Compiler;
 using $WrongNumberArgsException = ::com::sun::org::apache::xpath::internal::functions::WrongNumberArgsException;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $PrintStream = ::java::io::PrintStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

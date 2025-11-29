@@ -21,7 +21,6 @@ using $HashMap = ::java::util::HashMap;
 using $Iterator = ::java::util::Iterator;
 using $Set = ::java::util::Set;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $SAXException = ::org::xml::sax::SAXException;
 

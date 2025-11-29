@@ -54,13 +54,11 @@
 #undef VARIABLE_REDEF_ERR
 
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -73,11 +71,9 @@ using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::Ins
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $PUTFIELD = ::com::sun::org::apache::bcel::internal::generic::PUTFIELD;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
@@ -94,7 +90,7 @@ using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::uti
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $ObjectType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ObjectType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $BasisLibrary = ::com::sun::org::apache::xalan::internal::xsltc::runtime::BasisLibrary;
 using $PrintStream = ::java::io::PrintStream;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -208,19 +204,19 @@ void Param::parseContents($Parser* parser) {
 	}
 }
 
-$1Type* Param::typeCheck($SymbolTable* stable) {
+$Type* Param::typeCheck($SymbolTable* stable) {
 	if (this->_select != nullptr) {
 		$set(this, _type, $nc(this->_select)->typeCheck(stable));
 		if ($instanceOf($ReferenceType, this->_type) == false && !($instanceOf($ObjectType, this->_type))) {
-			$init($1Type);
-			$set(this, _select, $new($CastExpr, this->_select, $1Type::Reference));
+			$init($Type);
+			$set(this, _select, $new($CastExpr, this->_select, $Type::Reference));
 		}
 	} else if (hasContents()) {
 		typeCheckContents(stable);
 	}
-	$init($1Type);
-	$set(this, _type, $1Type::Reference);
-	return $1Type::Void;
+	$init($Type);
+	$set(this, _type, $Type::Reference);
+	return $Type::Void;
 }
 
 void Param::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
@@ -259,7 +255,7 @@ void Param::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
 			$set(this, _local, nullptr);
 		} else {
 			$var($String, var$0, name);
-			$var($Type, var$1, $nc(this->_type)->toJCType());
+			$var($1Type, var$1, $nc(this->_type)->toJCType());
 			$set(this, _local, methodGen->addLocalVariable2(var$0, var$1, $(il->getEnd())));
 			il->append($($nc(this->_type)->STORE($nc(this->_local)->getIndex())));
 		}

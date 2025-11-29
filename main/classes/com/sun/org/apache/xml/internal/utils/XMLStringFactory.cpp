@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <jcpp.h>
 
-using $FastStringBuffer = ::com::sun::org::apache::xml::internal::utils::FastStringBuffer;
-using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

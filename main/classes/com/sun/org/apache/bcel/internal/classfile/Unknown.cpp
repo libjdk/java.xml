@@ -20,7 +20,6 @@
 using $UnknownArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Unknown>;
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;

@@ -76,7 +76,6 @@ using $EncodingInfo = ::com::sun::org::apache::xml::internal::serialize::Encodin
 using $IndentPrinter = ::com::sun::org::apache::xml::internal::serialize::IndentPrinter;
 using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
 using $Printer = ::com::sun::org::apache::xml::internal::serialize::Printer;
-using $Serializer = ::com::sun::org::apache::xml::internal::serialize::Serializer;
 using $IOException = ::java::io::IOException;
 using $OutputStream = ::java::io::OutputStream;
 using $Writer = ::java::io::Writer;
@@ -106,12 +105,9 @@ using $LSException = ::org::w3c::dom::ls::LSException;
 using $LSSerializerFilter = ::org::w3c::dom::ls::LSSerializerFilter;
 using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
 using $DocumentHandler = ::org::xml::sax::DocumentHandler;
 using $Locator = ::org::xml::sax::Locator;
 using $SAXException = ::org::xml::sax::SAXException;
-using $DeclHandler = ::org::xml::sax::ext::DeclHandler;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace com {
 	namespace sun {

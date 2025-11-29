@@ -30,7 +30,6 @@ using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode
 using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $ExtensionsProvider = ::com::sun::org::apache::xpath::internal::ExtensionsProvider;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
-using $XPathVisitable = ::com::sun::org::apache::xpath::internal::XPathVisitable;
 using $XPathVisitor = ::com::sun::org::apache::xpath::internal::XPathVisitor;
 using $NodeSequence = ::com::sun::org::apache::xpath::internal::axes::NodeSequence;
 using $FuncExtFunction$ArgExtOwner = ::com::sun::org::apache::xpath::internal::functions::FuncExtFunction$ArgExtOwner;

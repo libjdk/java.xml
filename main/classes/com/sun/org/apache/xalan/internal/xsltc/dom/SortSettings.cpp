@@ -11,8 +11,6 @@ using $AbstractTranslet = ::com::sun::org::apache::xalan::internal::xsltc::runti
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Collator = ::java::text::Collator;
-using $Locale = ::java::util::Locale;
 
 namespace com {
 	namespace sun {

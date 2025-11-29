@@ -52,23 +52,19 @@
 #undef WARNING
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Mode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Mode;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
-using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
 using $Sort = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Sort;
 using $Stylesheet = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Stylesheet;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
@@ -134,7 +130,7 @@ $Object* allocate$ApplyTemplates($Class* clazz) {
 }
 
 void ApplyTemplates::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	$set(this, _type, nullptr);
 }
 
@@ -218,7 +214,7 @@ void ApplyTemplates::translate($ClassGenerator* classGen, $MethodGenerator* meth
 		$nc(il)->append($(classGen->loadTranslet()));
 		$init($Constants);
 		int32_t pushFrame = $nc(cpg)->addMethodref($Constants::TRANSLET_CLASS, $Constants::PUSH_PARAM_FRAME, $Constants::PUSH_PARAM_FRAME_SIG);
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, pushFrame)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, pushFrame)));
 		translateContents(classGen, methodGen);
 	}
 	$nc(il)->append($(classGen->loadTranslet()));
@@ -238,7 +234,7 @@ void ApplyTemplates::translate($ClassGenerator* classGen, $MethodGenerator* meth
 			$init($Constants);
 			int32_t setStartNode = $nc(cpg)->addInterfaceMethodref($Constants::NODE_ITERATOR, $Constants::SET_START_NODE, $$str({"(I)"_s, $Constants::NODE_ITERATOR_SIG}));
 			il->append($(methodGen->loadCurrentNode()));
-			il->append(static_cast<$Instruction*>($$new($INVOKEINTERFACE, setStartNode, 2)));
+			il->append(static_cast<$1Instruction*>($$new($INVOKEINTERFACE, setStartNode, 2)));
 			setStartNodeCalled = true;
 		} else if (this->_select == nullptr) {
 			$Mode::compileGetChildren(classGen, methodGen, current);
@@ -253,7 +249,7 @@ void ApplyTemplates::translate($ClassGenerator* classGen, $MethodGenerator* meth
 	il->append($(methodGen->loadHandler()));
 	$var($String, applyTemplatesSig, classGen->getApplyTemplatesSig());
 	int32_t applyTemplates = $nc(cpg)->addMethodref(className, this->_functionName, applyTemplatesSig);
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, applyTemplates)));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, applyTemplates)));
 	{
 		$var($Iterator, i$, $nc($(getContents()))->iterator());
 		for (; $nc(i$)->hasNext();) {
@@ -270,7 +266,7 @@ void ApplyTemplates::translate($ClassGenerator* classGen, $MethodGenerator* meth
 		il->append($(classGen->loadTranslet()));
 		$init($Constants);
 		int32_t popFrame = cpg->addMethodref($Constants::TRANSLET_CLASS, $Constants::POP_PARAM_FRAME, $Constants::POP_PARAM_FRAME_SIG);
-		il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, popFrame)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, popFrame)));
 	}
 }
 

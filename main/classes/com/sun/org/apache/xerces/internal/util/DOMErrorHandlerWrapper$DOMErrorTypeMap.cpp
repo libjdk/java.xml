@@ -12,7 +12,6 @@
 #undef XML_DOMAIN
 
 using $XMLMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::msg::XMLMessageFormatter;
-using $DOMErrorHandlerWrapper = ::com::sun::org::apache::xerces::internal::util::DOMErrorHandlerWrapper;
 using $XMLErrorCode = ::com::sun::org::apache::xerces::internal::util::XMLErrorCode;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

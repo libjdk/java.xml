@@ -38,25 +38,19 @@
 #undef SEVERITY_FATAL_ERROR
 #undef XML_DOMAIN
 
-using $PropertyManager = ::com::sun::org::apache::xerces::internal::impl::PropertyManager;
 using $XML11DTDScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XML11DTDScannerImpl;
 using $XML11EntityScanner = ::com::sun::org::apache::xerces::internal::impl::XML11EntityScanner;
 using $XMLDTDScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDTDScannerImpl;
 using $XMLDocumentFragmentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl;
-using $XMLDocumentFragmentScannerImpl$Driver = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentFragmentScannerImpl$Driver;
 using $XMLDocumentScannerImpl = ::com::sun::org::apache::xerces::internal::impl::XMLDocumentScannerImpl;
 using $XMLEntityHandler = ::com::sun::org::apache::xerces::internal::impl::XMLEntityHandler;
 using $XMLEntityManager = ::com::sun::org::apache::xerces::internal::impl::XMLEntityManager;
 using $XMLEntityScanner = ::com::sun::org::apache::xerces::internal::impl::XMLEntityScanner;
 using $XMLErrorReporter = ::com::sun::org::apache::xerces::internal::impl::XMLErrorReporter;
-using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $XMLScanner$NameType = ::com::sun::org::apache::xerces::internal::impl::XMLScanner$NameType;
 using $MalformedByteSequenceException = ::com::sun::org::apache::xerces::internal::impl::io::MalformedByteSequenceException;
 using $XMLMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::msg::XMLMessageFormatter;
-using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XMLResourceIdentifierImpl = ::com::sun::org::apache::xerces::internal::util::XMLResourceIdentifierImpl;
-using $XMLLimitAnalyzer = ::com::sun::org::apache::xerces::internal::utils::XMLLimitAnalyzer;
-using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIException;
 using $XMLDTDScanner = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDTDScanner;
@@ -66,7 +60,6 @@ using $Entity$ScannedEntity = ::com::sun::xml::internal::stream::Entity$ScannedE
 using $StaxXMLInputSource = ::com::sun::xml::internal::stream::StaxXMLInputSource;
 using $XMLEntityStorage = ::com::sun::xml::internal::stream::XMLEntityStorage;
 using $DTDGrammarUtil = ::com::sun::xml::internal::stream::dtd::DTDGrammarUtil;
-using $DTDGrammar = ::com::sun::xml::internal::stream::dtd::nonvalidating::DTDGrammar;
 using $CharConversionException = ::java::io::CharConversionException;
 using $EOFException = ::java::io::EOFException;
 using $IOException = ::java::io::IOException;

@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
-using $DOMImplementationList = ::org::w3c::dom::DOMImplementationList;
 
 namespace org {
 	namespace w3c {

@@ -122,10 +122,6 @@ using $ByteArrayInputStream = ::java::io::ByteArrayInputStream;
 using $ByteArrayOutputStream = ::java::io::ByteArrayOutputStream;
 using $CharArrayReader = ::java::io::CharArrayReader;
 using $CharArrayWriter = ::java::io::CharArrayWriter;
-using $DataInputStream = ::java::io::DataInputStream;
-using $FilterInputStream = ::java::io::FilterInputStream;
-using $FilterReader = ::java::io::FilterReader;
-using $FilterWriter = ::java::io::FilterWriter;
 using $IOException = ::java::io::IOException;
 using $InputStream = ::java::io::InputStream;
 using $OutputStream = ::java::io::OutputStream;
@@ -133,7 +129,6 @@ using $PrintStream = ::java::io::PrintStream;
 using $PrintWriter = ::java::io::PrintWriter;
 using $Reader = ::java::io::Reader;
 using $Writer = ::java::io::Writer;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $CharSequence = ::java::lang::CharSequence;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
@@ -144,7 +139,6 @@ using $IndexOutOfBoundsException = ::java::lang::IndexOutOfBoundsException;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $StringIndexOutOfBoundsException = ::java::lang::StringIndexOutOfBoundsException;
 using $ThreadLocal = ::java::lang::ThreadLocal;
@@ -152,10 +146,8 @@ using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $List = ::java::util::List;
 using $Locale = ::java::util::Locale;
-using $DeflaterOutputStream = ::java::util::zip::DeflaterOutputStream;
 using $GZIPInputStream = ::java::util::zip::GZIPInputStream;
 using $GZIPOutputStream = ::java::util::zip::GZIPOutputStream;
-using $InflaterInputStream = ::java::util::zip::InflaterInputStream;
 
 namespace com {
 	namespace sun {

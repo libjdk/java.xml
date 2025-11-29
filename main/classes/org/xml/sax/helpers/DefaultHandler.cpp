@@ -9,12 +9,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $Attributes = ::org::xml::sax::Attributes;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
 using $EntityResolver = ::org::xml::sax::EntityResolver;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $InputSource = ::org::xml::sax::InputSource;
 using $Locator = ::org::xml::sax::Locator;
 using $SAXParseException = ::org::xml::sax::SAXParseException;

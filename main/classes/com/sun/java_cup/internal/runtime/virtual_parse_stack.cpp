@@ -11,7 +11,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

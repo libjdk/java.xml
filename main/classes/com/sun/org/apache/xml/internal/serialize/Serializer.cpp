@@ -8,15 +8,9 @@
 #include <org/xml/sax/DocumentHandler.h>
 #include <jcpp.h>
 
-using $DOMSerializer = ::com::sun::org::apache::xml::internal::serialize::DOMSerializer;
-using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
-using $OutputStream = ::java::io::OutputStream;
-using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $ContentHandler = ::org::xml::sax::ContentHandler;
-using $DocumentHandler = ::org::xml::sax::DocumentHandler;
 
 namespace com {
 	namespace sun {

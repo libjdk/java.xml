@@ -29,7 +29,7 @@
 #undef STRING
 
 using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
-using $1XPath = ::com::sun::org::apache::xpath::internal::XPath;
+using $XPath = ::com::sun::org::apache::xpath::internal::XPath;
 using $JAXPPrefixResolver = ::com::sun::org::apache::xpath::internal::jaxp::JAXPPrefixResolver;
 using $XPathExpressionImpl = ::com::sun::org::apache::xpath::internal::jaxp::XPathExpressionImpl;
 using $XPathImplUtil = ::com::sun::org::apache::xpath::internal::jaxp::XPathImplUtil;
@@ -45,7 +45,6 @@ using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
 using $QName = ::javax::xml::namespace$::QName;
 using $SourceLocator = ::javax::xml::transform::SourceLocator;
 using $TransformerException = ::javax::xml::transform::TransformerException;
-using $XPath = ::javax::xml::xpath::XPath;
 using $XPathConstants = ::javax::xml::xpath::XPathConstants;
 using $XPathEvaluationResult = ::javax::xml::xpath::XPathEvaluationResult;
 using $XPathExpression = ::javax::xml::xpath::XPathExpression;
@@ -179,7 +178,7 @@ $NamespaceContext* XPathImpl::getNamespaceContext() {
 
 $XObject* XPathImpl::eval($String* expression, Object$* contextItem) {
 	requireNonNull(expression, "XPath expression"_s);
-	$var($1XPath, xpath, $new($1XPath, expression, nullptr, this->prefixResolver, $1XPath::SELECT));
+	$var($XPath, xpath, $new($XPath, expression, nullptr, this->prefixResolver, $XPath::SELECT));
 	return eval(contextItem, xpath);
 }
 
@@ -212,7 +211,7 @@ $XPathExpression* XPathImpl::compile($String* expression) {
 	$useLocalCurrentObjectStackCache();
 	requireNonNull(expression, "XPath expression"_s);
 	try {
-		$var($1XPath, xpath, $new($1XPath, expression, nullptr, this->prefixResolver, $1XPath::SELECT));
+		$var($XPath, xpath, $new($XPath, expression, nullptr, this->prefixResolver, $XPath::SELECT));
 		$var($XPathExpressionImpl, ximpl, $new($XPathExpressionImpl, xpath, this->prefixResolver, this->functionResolver, this->variableResolver, this->featureSecureProcessing, this->featureManager));
 		return ximpl;
 	} catch ($TransformerException& te) {

@@ -91,15 +91,11 @@
 #undef SUB
 #undef TYPE
 
-using $ArithmeticInstruction = ::com::sun::org::apache::bcel::internal::generic::ArithmeticInstruction;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $ConversionInstruction = ::com::sun::org::apache::bcel::internal::generic::ConversionInstruction;
 using $DLOAD = ::com::sun::org::apache::bcel::internal::generic::DLOAD;
 using $DSTORE = ::com::sun::org::apache::bcel::internal::generic::DSTORE;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -119,11 +115,9 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -135,7 +129,7 @@ using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compil
 using $NumberType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NumberType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
 using $StringType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::StringType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Byte = ::java::lang::Byte;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -208,7 +202,7 @@ $String* RealType::toString() {
 	return "real"_s;
 }
 
-bool RealType::identicalTo($1Type* other) {
+bool RealType::identicalTo($Type* other) {
 	return $equals(this, other);
 }
 
@@ -216,17 +210,17 @@ $String* RealType::toSignature() {
 	return "D"_s;
 }
 
-$Type* RealType::toJCType() {
-	$init($Type);
-	return $Type::DOUBLE;
+$1Type* RealType::toJCType() {
+	$init($1Type);
+	return $1Type::DOUBLE;
 }
 
-int32_t RealType::distanceTo($1Type* type) {
+int32_t RealType::distanceTo($Type* type) {
 	if ($equals(type, this)) {
 		return 0;
 	} else {
-		$init($1Type);
-		if (type == $1Type::Int) {
+		$init($Type);
+		if (type == $Type::Int) {
 			return 1;
 		} else {
 			return $Integer::MAX_VALUE;
@@ -234,19 +228,19 @@ int32_t RealType::distanceTo($1Type* type) {
 	}
 }
 
-void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $1Type* type) {
+void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGen, $Type* type) {
 	$useLocalCurrentObjectStackCache();
-	$init($1Type);
-	if (type == $1Type::String) {
+	$init($Type);
+	if (type == $Type::String) {
 		translateTo(classGen, methodGen, $cast($StringType, type));
 	} else {
-		if (type == $1Type::Boolean) {
+		if (type == $Type::Boolean) {
 			translateTo(classGen, methodGen, $cast($BooleanType, type));
 		} else {
-			if (type == $1Type::Reference) {
+			if (type == $Type::Reference) {
 				translateTo(classGen, methodGen, $cast($ReferenceType, type));
 			} else {
-				if (type == $1Type::Int) {
+				if (type == $Type::Int) {
 					translateTo(classGen, methodGen, $cast($IntType, type));
 				} else {
 					$init($ErrorMsg);
@@ -295,8 +289,8 @@ $FlowList* RealType::translateToDesynthesized($ClassGenerator* classGen, $Method
 	$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 	$init($Constants);
 	$nc(il)->append(static_cast<$Instruction*>($Constants::DUP2));
-	$init($Type);
-	$assign(local, methodGen->addLocalVariable("real_to_boolean_tmp"_s, $Type::DOUBLE, nullptr, nullptr));
+	$init($1Type);
+	$assign(local, methodGen->addLocalVariable("real_to_boolean_tmp"_s, $1Type::DOUBLE, nullptr, nullptr));
 	$nc(local)->setStart($(il->append(static_cast<$Instruction*>($$new($DSTORE, local->getIndex())))));
 	il->append($Constants::DCONST_0);
 	il->append($Constants::DCMPG);
@@ -362,8 +356,8 @@ void RealType::translateTo($ClassGenerator* classGen, $MethodGenerator* methodGe
 								$nc(il)->append($Constants::NOP);
 							} else {
 								if ($nc(clazz)->isAssignableFrom($Double::class$)) {
-									$init($1Type);
-									translateTo(classGen, methodGen, $1Type::Reference);
+									$init($Type);
+									translateTo(classGen, methodGen, $Type::Reference);
 								} else {
 									$init($ErrorMsg);
 									$var($String, var$0, $ErrorMsg::DATA_CONVERSION_ERR);
@@ -418,8 +412,8 @@ void RealType::translateFrom($ClassGenerator* classGen, $MethodGenerator* method
 }
 
 void RealType::translateBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {
-	$init($1Type);
-	translateTo(classGen, methodGen, $1Type::Reference);
+	$init($Type);
+	translateTo(classGen, methodGen, $Type::Reference);
 }
 
 void RealType::translateUnBox($ClassGenerator* classGen, $MethodGenerator* methodGen) {

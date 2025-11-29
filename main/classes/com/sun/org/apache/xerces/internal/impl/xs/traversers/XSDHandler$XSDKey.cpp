@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler.h>
 #include <jcpp.h>
 
-using $XSDHandler = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

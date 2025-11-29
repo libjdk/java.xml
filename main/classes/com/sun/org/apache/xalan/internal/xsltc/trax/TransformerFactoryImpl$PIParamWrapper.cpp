@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.h>
 #include <jcpp.h>
 
-using $TransformerFactoryImpl = ::com::sun::org::apache::xalan::internal::xsltc::trax::TransformerFactoryImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

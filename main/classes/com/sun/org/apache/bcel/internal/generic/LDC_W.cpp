@@ -9,10 +9,8 @@
 #undef LDC_W
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $LDC = ::com::sun::org::apache::bcel::internal::generic::LDC;
 using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
-using $DataInputStream = ::java::io::DataInputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -15,7 +15,6 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantClass = ::com::sun::org::apache::bcel::internal::classfile::ConstantClass;
 using $ConstantNameAndType = ::com::sun::org::apache::bcel::internal::classfile::ConstantNameAndType;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;

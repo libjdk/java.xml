@@ -23,7 +23,6 @@ using $Location = ::javax::xml::stream::Location;
 using $Characters = ::javax::xml::stream::events::Characters;
 using $EndElement = ::javax::xml::stream::events::EndElement;
 using $EntityDeclaration = ::javax::xml::stream::events::EntityDeclaration;
-using $EntityReference = ::javax::xml::stream::events::EntityReference;
 using $StartElement = ::javax::xml::stream::events::StartElement;
 using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 

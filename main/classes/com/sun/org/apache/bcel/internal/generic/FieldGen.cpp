@@ -49,9 +49,7 @@
 
 using $AnnotationEntryArray = $Array<::com::sun::org::apache::bcel::internal::classfile::AnnotationEntry>;
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
-using $AnnotationEntryGenArray = $Array<::com::sun::org::apache::bcel::internal::generic::AnnotationEntryGen>;
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $AccessFlags = ::com::sun::org::apache::bcel::internal::classfile::AccessFlags;
 using $AnnotationEntry = ::com::sun::org::apache::bcel::internal::classfile::AnnotationEntry;
 using $Annotations = ::com::sun::org::apache::bcel::internal::classfile::Annotations;
 using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
@@ -60,10 +58,8 @@ using $ConstantObject = ::com::sun::org::apache::bcel::internal::classfile::Cons
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantValue = ::com::sun::org::apache::bcel::internal::classfile::ConstantValue;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
-using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::classfile::FieldOrMethod;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;
 using $AnnotationEntryGen = ::com::sun::org::apache::bcel::internal::generic::AnnotationEntryGen;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $ClassGenException = ::com::sun::org::apache::bcel::internal::generic::ClassGenException;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldGen$1 = ::com::sun::org::apache::bcel::internal::generic::FieldGen$1;

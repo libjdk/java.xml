@@ -47,7 +47,6 @@ using $Characters = ::javax::xml::stream::events::Characters;
 using $EndElement = ::javax::xml::stream::events::EndElement;
 using $Namespace = ::javax::xml::stream::events::Namespace;
 using $StartElement = ::javax::xml::stream::events::StartElement;
-using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 
 namespace com {
 	namespace sun {

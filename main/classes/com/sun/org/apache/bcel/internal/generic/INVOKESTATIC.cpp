@@ -26,7 +26,6 @@ using $ExceptionConst$EXCS = ::com::sun::org::apache::bcel::internal::ExceptionC
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
 using $ExceptionThrower = ::com::sun::org::apache::bcel::internal::generic::ExceptionThrower;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
 using $LoadClass = ::com::sun::org::apache::bcel::internal::generic::LoadClass;
 using $StackConsumer = ::com::sun::org::apache::bcel::internal::generic::StackConsumer;

@@ -15,7 +15,6 @@
 #undef FLOAT
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $BasicType = ::com::sun::org::apache::bcel::internal::generic::BasicType;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $StackConsumer = ::com::sun::org::apache::bcel::internal::generic::StackConsumer;

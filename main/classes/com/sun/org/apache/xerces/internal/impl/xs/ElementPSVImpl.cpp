@@ -21,10 +21,8 @@
 #undef VALIDATION_NONE
 #undef VALIDITY_NOTKNOWN
 
-using $SchemaGrammarArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar>;
 using $ValidatedInfo = ::com::sun::org::apache::xerces::internal::impl::dv::ValidatedInfo;
 using $PSVIErrorList = ::com::sun::org::apache::xerces::internal::impl::xs::PSVIErrorList;
-using $SchemaGrammar = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar;
 using $XSModelImpl = ::com::sun::org::apache::xerces::internal::impl::xs::XSModelImpl;
 using $StringListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::StringListImpl;
 using $ElementPSVI = ::com::sun::org::apache::xerces::internal::xs::ElementPSVI;

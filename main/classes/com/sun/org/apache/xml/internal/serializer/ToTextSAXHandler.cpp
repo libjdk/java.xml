@@ -13,8 +13,6 @@
 #include <org/xml/sax/ext/LexicalHandler.h>
 #include <jcpp.h>
 
-using $SerializerBase = ::com::sun::org::apache::xml::internal::serializer::SerializerBase;
-using $SerializerTrace = ::com::sun::org::apache::xml::internal::serializer::SerializerTrace;
 using $ToSAXHandler = ::com::sun::org::apache::xml::internal::serializer::ToSAXHandler;
 using $OutputStream = ::java::io::OutputStream;
 using $Writer = ::java::io::Writer;

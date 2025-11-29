@@ -4,8 +4,6 @@
 #include <java/io/Writer.h>
 #include <jcpp.h>
 
-using $OutputStream = ::java::io::OutputStream;
-using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

@@ -14,7 +14,6 @@ using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;
-using $PredicatedNodeTest = ::com::sun::org::apache::xpath::internal::axes::PredicatedNodeTest;
 using $Compiler = ::com::sun::org::apache::xpath::internal::compiler::Compiler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

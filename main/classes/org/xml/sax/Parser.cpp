@@ -12,12 +12,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NamedAttribute = ::java::lang::NamedAttribute;
-using $Locale = ::java::util::Locale;
-using $DTDHandler = ::org::xml::sax::DTDHandler;
-using $DocumentHandler = ::org::xml::sax::DocumentHandler;
-using $EntityResolver = ::org::xml::sax::EntityResolver;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
-using $InputSource = ::org::xml::sax::InputSource;
 
 namespace org {
 	namespace xml {

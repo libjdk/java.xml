@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Event = ::org::w3c::dom::events::Event;
-using $EventListener = ::org::w3c::dom::events::EventListener;
 
 namespace org {
 	namespace w3c {

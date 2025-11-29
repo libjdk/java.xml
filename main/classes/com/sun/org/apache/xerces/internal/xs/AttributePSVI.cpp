@@ -3,8 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSAttributeDeclaration.h>
 #include <jcpp.h>
 
-using $ItemPSVI = ::com::sun::org::apache::xerces::internal::xs::ItemPSVI;
-using $XSAttributeDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSAttributeDeclaration;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

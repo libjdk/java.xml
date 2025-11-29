@@ -25,12 +25,10 @@
 #undef PRIMITIVE_SHORT
 #undef STRING
 
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantDouble = ::com::sun::org::apache::bcel::internal::classfile::ConstantDouble;
 using $ConstantFloat = ::com::sun::org::apache::bcel::internal::classfile::ConstantFloat;
 using $ConstantInteger = ::com::sun::org::apache::bcel::internal::classfile::ConstantInteger;
 using $ConstantLong = ::com::sun::org::apache::bcel::internal::classfile::ConstantLong;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $ElementValue = ::com::sun::org::apache::bcel::internal::classfile::ElementValue;
 using $SimpleElementValue = ::com::sun::org::apache::bcel::internal::classfile::SimpleElementValue;

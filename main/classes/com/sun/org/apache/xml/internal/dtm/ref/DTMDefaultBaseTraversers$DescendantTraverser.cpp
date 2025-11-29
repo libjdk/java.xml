@@ -5,7 +5,6 @@
 #include <com/sun/org/apache/xml/internal/utils/SuballocatedIntVector.h>
 #include <jcpp.h>
 
-using $DTMDefaultBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBase;
 using $DTMDefaultBaseTraversers = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseTraversers;
 using $DTMDefaultBaseTraversers$IndexedDTMAxisTraverser = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseTraversers$IndexedDTMAxisTraverser;
 using $SuballocatedIntVector = ::com::sun::org::apache::xml::internal::utils::SuballocatedIntVector;

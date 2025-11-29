@@ -85,7 +85,6 @@
 #undef EXPRTOKEN_PERIOD
 #undef EXPRTOKEN_VARIABLE_REFERENCE
 
-using $XPath = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath;
 using $XPath$Tokens = ::com::sun::org::apache::xerces::internal::impl::xpath::XPath$Tokens;
 using $XPathException = ::com::sun::org::apache::xerces::internal::impl::xpath::XPathException;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;

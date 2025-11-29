@@ -29,10 +29,6 @@
 #undef WS_PRESERVE
 #undef WS_REPLACE
 
-using $ValidatedInfo = ::com::sun::org::apache::xerces::internal::impl::dv::ValidatedInfo;
-using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
-using $XSFacets = ::com::sun::org::apache::xerces::internal::impl::dv::XSFacets;
-using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

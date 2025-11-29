@@ -9,7 +9,6 @@
 #include <org/xml/sax/SAXException.h>
 #include <jcpp.h>
 
-using $DOM3Serializer = ::com::sun::org::apache::xml::internal::serializer::DOM3Serializer;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
 using $DOM3TreeWalker = ::com::sun::org::apache::xml::internal::serializer::dom3::DOM3TreeWalker;
 using $WrappedRuntimeException = ::com::sun::org::apache::xml::internal::serializer::utils::WrappedRuntimeException;

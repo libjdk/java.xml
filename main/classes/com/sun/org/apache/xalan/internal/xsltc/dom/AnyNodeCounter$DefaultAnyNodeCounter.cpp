@@ -12,7 +12,6 @@
 using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $Translet = ::com::sun::org::apache::xalan::internal::xsltc::Translet;
 using $AnyNodeCounter = ::com::sun::org::apache::xalan::internal::xsltc::dom::AnyNodeCounter;
-using $NodeCounter = ::com::sun::org::apache::xalan::internal::xsltc::dom::NodeCounter;
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Double = ::java::lang::Double;

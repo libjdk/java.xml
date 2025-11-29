@@ -12,7 +12,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $CatalogResolverImpl = ::javax::xml::catalog::CatalogResolverImpl;
-using $LSInput = ::org::w3c::dom::ls::LSInput;
 
 namespace javax {
 	namespace xml {

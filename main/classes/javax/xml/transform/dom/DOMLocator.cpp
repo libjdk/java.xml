@@ -5,8 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $SourceLocator = ::javax::xml::transform::SourceLocator;
-using $Node = ::org::w3c::dom::Node;
 
 namespace javax {
 	namespace xml {

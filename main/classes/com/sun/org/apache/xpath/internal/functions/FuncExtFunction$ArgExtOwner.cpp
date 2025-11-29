@@ -8,7 +8,6 @@
 
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode;
-using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $FuncExtFunction = ::com::sun::org::apache::xpath::internal::functions::FuncExtFunction;
 using $Function = ::com::sun::org::apache::xpath::internal::functions::Function;
 using $ClassInfo = ::java::lang::ClassInfo;

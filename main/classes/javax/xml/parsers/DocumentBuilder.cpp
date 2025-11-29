@@ -22,10 +22,7 @@ using $Package = ::java::lang::Package;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
 using $URI = ::java::net::URI;
 using $Schema = ::javax::xml::validation::Schema;
-using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
 using $Document = ::org::w3c::dom::Document;
-using $EntityResolver = ::org::xml::sax::EntityResolver;
-using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $InputSource = ::org::xml::sax::InputSource;
 
 namespace javax {

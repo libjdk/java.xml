@@ -15,7 +15,6 @@ using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $List = ::java::util::List;
 using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
-using $DOMImplementationList = ::org::w3c::dom::DOMImplementationList;
 
 namespace com {
 	namespace sun {

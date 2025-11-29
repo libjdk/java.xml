@@ -12,10 +12,7 @@
 #undef NTYPES
 
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;
-using $DTMDefaultBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBase;
 using $DTMDefaultBaseIterators = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators;
-using $DTMDefaultBaseIterators$InternalAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators$InternalAxisIteratorBase;
 using $DTMDefaultBaseIterators$PrecedingIterator = ::com::sun::org::apache::xml::internal::dtm::ref::DTMDefaultBaseIterators$PrecedingIterator;
 using $ExpandedNameTable = ::com::sun::org::apache::xml::internal::dtm::ref::ExpandedNameTable;
 using $ClassInfo = ::java::lang::ClassInfo;

@@ -18,20 +18,15 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/util/Type.h>
 #include <jcpp.h>
 
-using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $GOTO = ::com::sun::org::apache::bcel::internal::generic::GOTO;
 using $GotoInstruction = ::com::sun::org::apache::bcel::internal::generic::GotoInstruction;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
-using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $FlowList = ::com::sun::org::apache::xalan::internal::xsltc::compiler::FlowList;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $Pattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Pattern;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
-using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;

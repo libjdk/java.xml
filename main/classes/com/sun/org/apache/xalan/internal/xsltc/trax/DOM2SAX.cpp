@@ -53,7 +53,6 @@ using $HashMap = ::java::util::HashMap;
 using $List = ::java::util::List;
 using $Map = ::java::util::Map;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
 using $Attributes = ::org::xml::sax::Attributes;

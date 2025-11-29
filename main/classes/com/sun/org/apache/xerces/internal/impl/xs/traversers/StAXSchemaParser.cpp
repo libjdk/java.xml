@@ -59,8 +59,8 @@ using $XMLAttributesImpl = ::com::sun::org::apache::xerces::internal::util::XMLA
 using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
 using $XMLSymbols = ::com::sun::org::apache::xerces::internal::util::XMLSymbols;
 using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $1NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
-using $1QName = ::com::sun::org::apache::xerces::internal::xni::QName;
+using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
+using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
@@ -71,8 +71,8 @@ using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $Iterator = ::java::util::Iterator;
 using $List = ::java::util::List;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
-using $QName = ::javax::xml::namespace$::QName;
+using $1NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
+using $1QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
 using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
 using $XMLStreamConstants = ::javax::xml::stream::XMLStreamConstants;
@@ -123,8 +123,8 @@ $MethodInfo _StAXSchemaParser_MethodInfo_[] = {
 	{"fillDeclaredPrefixes", "(Ljava/util/Iterator;)V", "(Ljava/util/Iterator<Ljavax/xml/stream/events/Namespace;>;)V", $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($Iterator*)>(&StAXSchemaParser::fillDeclaredPrefixes))},
 	{"fillDeclaredPrefixes", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($XMLStreamReader*)>(&StAXSchemaParser::fillDeclaredPrefixes))},
 	{"fillProcessingInstruction", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($String*)>(&StAXSchemaParser::fillProcessingInstruction))},
-	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljavax/xml/namespace/QName;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($1QName*,$QName*)>(&StAXSchemaParser::fillQName))},
-	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $FINAL, $method(static_cast<void(StAXSchemaParser::*)($1QName*,$String*,$String*,$String*)>(&StAXSchemaParser::fillQName))},
+	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljavax/xml/namespace/QName;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($QName*,$1QName*)>(&StAXSchemaParser::fillQName))},
+	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $FINAL, $method(static_cast<void(StAXSchemaParser::*)($QName*,$String*,$String*,$String*)>(&StAXSchemaParser::fillQName))},
 	{"fillXMLAttributes", "(Ljavax/xml/stream/events/StartElement;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($StartElement*)>(&StAXSchemaParser::fillXMLAttributes))},
 	{"fillXMLAttributes", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($XMLStreamReader*)>(&StAXSchemaParser::fillXMLAttributes))},
 	{"getDocument", "()Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $method(static_cast<$Document*(StAXSchemaParser::*)()>(&StAXSchemaParser::getDocument))},
@@ -152,8 +152,8 @@ void StAXSchemaParser::init$() {
 	$set(this, fCharBuffer, $new($chars, StAXSchemaParser::CHUNK_SIZE));
 	$set(this, fLocationWrapper, $new($StAXLocationWrapper));
 	$set(this, fNamespaceContext, $new($JAXPNamespaceContextWrapper, this->fSymbolTable));
-	$set(this, fElementQName, $new($1QName));
-	$set(this, fAttributeQName, $new($1QName));
+	$set(this, fElementQName, $new($QName));
+	$set(this, fAttributeQName, $new($QName));
 	$set(this, fAttributes, $new($XMLAttributesImpl));
 	$set(this, fTempString, $new($XMLString));
 	$set(this, fDeclaredPrefixes, $new($ArrayList));
@@ -300,7 +300,7 @@ void StAXSchemaParser::parse($XMLStreamReader* input) {
 					++this->fDepth;
 					$nc(this->fLocationWrapper)->setLocation($(input->getLocation()));
 					$nc(this->fNamespaceContext)->setNamespaceContext($(input->getNamespaceContext()));
-					$var($1QName, var$0, this->fElementQName);
+					$var($QName, var$0, this->fElementQName);
 					$var($String, var$1, input->getNamespaceURI());
 					$var($String, var$2, input->getLocalName());
 					fillQName(var$0, var$1, var$2, $(input->getPrefix()));
@@ -315,7 +315,7 @@ void StAXSchemaParser::parse($XMLStreamReader* input) {
 				{
 					$nc(this->fLocationWrapper)->setLocation($(input->getLocation()));
 					$nc(this->fNamespaceContext)->setNamespaceContext($(input->getNamespaceContext()));
-					$var($1QName, var$3, this->fElementQName);
+					$var($QName, var$3, this->fElementQName);
 					$var($String, var$4, input->getNamespaceURI());
 					$var($String, var$5, input->getLocalName());
 					fillQName(var$3, var$4, var$5, $(input->getPrefix()));
@@ -451,7 +451,7 @@ void StAXSchemaParser::fillXMLAttributes($XMLStreamReader* input) {
 	$nc(this->fAttributes)->removeAllAttributes();
 	int32_t len = $nc(input)->getAttributeCount();
 	for (int32_t i = 0; i < len; ++i) {
-		$var($1QName, var$0, this->fAttributeQName);
+		$var($QName, var$0, this->fAttributeQName);
 		$var($String, var$1, input->getAttributeNamespace(i));
 		$var($String, var$2, input->getAttributeLocalName(i));
 		fillQName(var$0, var$1, var$2, $(input->getAttributePrefix(i)));
@@ -488,8 +488,8 @@ void StAXSchemaParser::addNamespaceDeclarations() {
 			$assign(localpart, $XMLSymbols::PREFIX_XMLNS);
 			$assign(rawname, $XMLSymbols::PREFIX_XMLNS);
 		}
-		$init($1NamespaceContext);
-		$nc(this->fAttributeQName)->setValues(prefix, localpart, rawname, $1NamespaceContext::XMLNS_URI);
+		$init($NamespaceContext);
+		$nc(this->fAttributeQName)->setValues(prefix, localpart, rawname, $NamespaceContext::XMLNS_URI);
 		$init($XMLSymbols);
 		$nc(this->fAttributes)->addAttribute(this->fAttributeQName, $XMLSymbols::fCDATASymbol, (nsURI != nullptr) ? nsURI : $XMLSymbols::EMPTY_STRING);
 	}
@@ -523,15 +523,15 @@ void StAXSchemaParser::fillDeclaredPrefixes($XMLStreamReader* reader) {
 	}
 }
 
-void StAXSchemaParser::fillQName($1QName* toFill, $QName* toCopy) {
+void StAXSchemaParser::fillQName($QName* toFill, $1QName* toCopy) {
 	$useLocalCurrentObjectStackCache();
-	$var($1QName, var$0, toFill);
+	$var($QName, var$0, toFill);
 	$var($String, var$1, $nc(toCopy)->getNamespaceURI());
 	$var($String, var$2, toCopy->getLocalPart());
 	fillQName(var$0, var$1, var$2, $(toCopy->getPrefix()));
 }
 
-void StAXSchemaParser::fillQName($1QName* toFill, $String* uri$renamed, $String* localpart$renamed, $String* prefix$renamed) {
+void StAXSchemaParser::fillQName($QName* toFill, $String* uri$renamed, $String* localpart$renamed, $String* prefix$renamed) {
 	$useLocalCurrentObjectStackCache();
 	$var($String, prefix, prefix$renamed);
 	$var($String, localpart, localpart$renamed);

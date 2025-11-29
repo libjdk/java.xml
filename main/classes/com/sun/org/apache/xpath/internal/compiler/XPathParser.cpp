@@ -106,7 +106,6 @@
 using $XSLMessages = ::com::sun::org::apache::xalan::internal::res::XSLMessages;
 using $ObjectVector = ::com::sun::org::apache::xml::internal::utils::ObjectVector;
 using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
-using $XPathException = ::com::sun::org::apache::xpath::internal::XPathException;
 using $XPathProcessorException = ::com::sun::org::apache::xpath::internal::XPathProcessorException;
 using $Compiler = ::com::sun::org::apache::xpath::internal::compiler::Compiler;
 using $FunctionTable = ::com::sun::org::apache::xpath::internal::compiler::FunctionTable;
@@ -117,7 +116,6 @@ using $OpMap = ::com::sun::org::apache::xpath::internal::compiler::OpMap;
 using $XNumber = ::com::sun::org::apache::xpath::internal::objects::XNumber;
 using $XString = ::com::sun::org::apache::xpath::internal::objects::XString;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $PrintStream = ::java::io::PrintStream;
 using $Character = ::java::lang::Character;
 using $ClassCastException = ::java::lang::ClassCastException;

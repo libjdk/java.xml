@@ -33,11 +33,8 @@
 #undef TEXT_NODE
 #undef XMLNS_PREFIX
 
-using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
-using $ExtendedLexicalHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedLexicalHandler;
 using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
 using $SerializationHandler = ::com::sun::org::apache::xml::internal::serializer::SerializationHandler;
-using $XSLOutputAttributes = ::com::sun::org::apache::xml::internal::serializer::XSLOutputAttributes;
 using $IOException = ::java::io::IOException;
 using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -53,7 +50,6 @@ using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $InputSource = ::org::xml::sax::InputSource;
 using $Locator = ::org::xml::sax::Locator;
 using $XMLReader = ::org::xml::sax::XMLReader;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 using $Locator2 = ::org::xml::sax::ext::Locator2;
 
 namespace com {

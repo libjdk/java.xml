@@ -40,7 +40,6 @@ using $XSElementDeclHelper = ::com::sun::org::apache::xerces::internal::impl::xs
 using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $XSComplexTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSComplexTypeDefinition;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
 using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;

@@ -15,7 +15,6 @@
 #undef NULL
 #undef ROOTNODE
 
-using $ExtendedTypeArray = $Array<::com::sun::org::apache::xml::internal::dtm::ref::ExtendedType>;
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
 using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;

@@ -3,7 +3,6 @@
 #include <java/util/Locale.h>
 #include <jcpp.h>
 
-using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $EnclosingMethodInfo = ::java::lang::EnclosingMethodInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

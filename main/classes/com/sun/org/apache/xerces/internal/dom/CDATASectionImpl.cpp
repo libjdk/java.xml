@@ -17,7 +17,6 @@ using $TextImpl = ::com::sun::org::apache::xerces::internal::dom::TextImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $CDATASection = ::org::w3c::dom::CDATASection;
 using $Document = ::org::w3c::dom::Document;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;

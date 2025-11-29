@@ -5,7 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/util/XMLChar.h>
 #include <jcpp.h>
 
-using $DatatypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::DatatypeValidator;
 using $InvalidDatatypeValueException = ::com::sun::org::apache::xerces::internal::impl::dv::InvalidDatatypeValueException;
 using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;

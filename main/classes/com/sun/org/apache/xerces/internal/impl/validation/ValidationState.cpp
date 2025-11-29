@@ -11,7 +11,6 @@
 #include <java/util/Locale.h>
 #include <jcpp.h>
 
-using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
 using $EntityState = ::com::sun::org::apache::xerces::internal::impl::validation::EntityState;
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;

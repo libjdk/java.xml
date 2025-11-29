@@ -70,7 +70,6 @@ using $StepPattern = ::com::sun::org::apache::xalan::internal::xsltc::compiler::
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
 using $TopLevelElement = ::com::sun::org::apache::xalan::internal::xsltc::compiler::TopLevelElement;
-using $VariableBase = ::com::sun::org::apache::xalan::internal::xsltc::compiler::VariableBase;
 using $VariableRef = ::com::sun::org::apache::xalan::internal::xsltc::compiler::VariableRef;
 using $XSLTC = ::com::sun::org::apache::xalan::internal::xsltc::compiler::XSLTC;
 using $parser_actions = ::com::sun::org::apache::xalan::internal::xsltc::compiler::parser_actions;

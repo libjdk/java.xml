@@ -10,8 +10,6 @@
 #include <org/xml/sax/SAXException.h>
 #include <jcpp.h>
 
-using $SerializerBase = ::com::sun::org::apache::xml::internal::serializer::SerializerBase;
-using $ToStream = ::com::sun::org::apache::xml::internal::serializer::ToStream;
 using $ToStream$CharacterBuffer = ::com::sun::org::apache::xml::internal::serializer::ToStream$CharacterBuffer;
 using $ToStream$CharacterBuffer$GenericCharacters = ::com::sun::org::apache::xml::internal::serializer::ToStream$CharacterBuffer$GenericCharacters;
 using $IOException = ::java::io::IOException;

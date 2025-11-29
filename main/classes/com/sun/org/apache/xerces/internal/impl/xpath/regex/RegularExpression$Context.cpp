@@ -11,8 +11,6 @@
 #include <jcpp.h>
 
 using $RegularExpression$ClosureContextArray = $Array<::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression$ClosureContext>;
-using $Match = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Match;
-using $RegularExpression = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression;
 using $RegularExpression$CharArrayTarget = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression$CharArrayTarget;
 using $RegularExpression$CharacterIteratorTarget = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression$CharacterIteratorTarget;
 using $RegularExpression$ClosureContext = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression$ClosureContext;

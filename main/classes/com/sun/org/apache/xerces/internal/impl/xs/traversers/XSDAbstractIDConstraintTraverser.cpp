@@ -29,9 +29,7 @@
 #undef ELT_SELECTOR
 
 using $XPathException = ::com::sun::org::apache::xerces::internal::impl::xpath::XPathException;
-using $SchemaNamespaceSupport = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaNamespaceSupport;
 using $SchemaSymbols = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaSymbols;
-using $XSAnnotationImpl = ::com::sun::org::apache::xerces::internal::impl::xs::XSAnnotationImpl;
 using $Field = ::com::sun::org::apache::xerces::internal::impl::xs::identity::Field;
 using $Field$XPath = ::com::sun::org::apache::xerces::internal::impl::xs::identity::Field$XPath;
 using $IdentityConstraint = ::com::sun::org::apache::xerces::internal::impl::xs::identity::IdentityConstraint;
@@ -43,7 +41,6 @@ using $XSDHandler = ::com::sun::org::apache::xerces::internal::impl::xs::travers
 using $XSDocumentInfo = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::XSDocumentInfo;
 using $DOMUtil = ::com::sun::org::apache::xerces::internal::util::DOMUtil;
 using $NamespaceSupport = ::com::sun::org::apache::xerces::internal::util::NamespaceSupport;
-using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $ClassInfo = ::java::lang::ClassInfo;

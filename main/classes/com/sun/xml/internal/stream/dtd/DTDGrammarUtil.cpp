@@ -51,7 +51,6 @@ using $DTDGrammar = ::com::sun::xml::internal::stream::dtd::nonvalidating::DTDGr
 using $XMLAttributeDecl = ::com::sun::xml::internal::stream::dtd::nonvalidating::XMLAttributeDecl;
 using $XMLElementDecl = ::com::sun::xml::internal::stream::dtd::nonvalidating::XMLElementDecl;
 using $XMLSimpleType = ::com::sun::xml::internal::stream::dtd::nonvalidating::XMLSimpleType;
-using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

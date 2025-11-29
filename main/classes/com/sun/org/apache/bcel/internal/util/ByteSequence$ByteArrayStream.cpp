@@ -4,7 +4,6 @@
 #include <java/io/ByteArrayInputStream.h>
 #include <jcpp.h>
 
-using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
 using $ByteArrayInputStream = ::java::io::ByteArrayInputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

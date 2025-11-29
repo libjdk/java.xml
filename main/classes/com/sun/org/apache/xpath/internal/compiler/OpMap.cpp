@@ -30,7 +30,6 @@ using $OpCodes = ::com::sun::org::apache::xpath::internal::compiler::OpCodes;
 using $OpMapVector = ::com::sun::org::apache::xpath::internal::compiler::OpMapVector;
 using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

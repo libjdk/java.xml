@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec.h>
 #include <jcpp.h>
 
-using $XMLContentSpec = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLContentSpec;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

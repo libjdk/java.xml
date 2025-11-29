@@ -31,21 +31,14 @@
 #undef T_XMLSCHEMA_CC_SUBTRACTION
 #undef UTF16_MAX
 
-using $ParseException = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::ParseException;
 using $RangeToken = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RangeToken;
 using $RegexParser = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegexParser;
 using $RegularExpression = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression;
 using $Token = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token;
-using $Token$CharToken = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token$CharToken;
-using $Token$ClosureToken = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token$ClosureToken;
-using $Token$ConcatToken = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token$ConcatToken;
-using $Token$ParenToken = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token$ParenToken;
-using $Token$UnionToken = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token$UnionToken;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $AbstractMap = ::java::util::AbstractMap;
 using $HashMap = ::java::util::HashMap;

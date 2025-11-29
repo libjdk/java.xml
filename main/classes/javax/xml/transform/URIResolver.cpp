@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Source = ::javax::xml::transform::Source;
 
 namespace javax {
 	namespace xml {

@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.h>
 #include <jcpp.h>
 
-using $RegularExpression = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression;
 using $RegularExpression$ExpressionTarget = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression$ExpressionTarget;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

@@ -7,7 +7,6 @@
 #undef DEFAULT_COLLATOR
 #undef DEFAULT_LOCALE
 
-using $CollatorFactory = ::com::sun::org::apache::xalan::internal::xsltc::CollatorFactory;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

@@ -27,12 +27,10 @@
 
 using $XSLMessages = ::com::sun::org::apache::xalan::internal::res::XSLMessages;
 using $WrappedRuntimeException = ::com::sun::org::apache::xml::internal::utils::WrappedRuntimeException;
-using $ExtensionsProvider = ::com::sun::org::apache::xpath::internal::ExtensionsProvider;
 using $FuncExtFunction = ::com::sun::org::apache::xpath::internal::functions::FuncExtFunction;
 using $XNodeSet = ::com::sun::org::apache::xpath::internal::objects::XNodeSet;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -50,7 +48,6 @@ using $XPathFunctionException = ::javax::xml::xpath::XPathFunctionException;
 using $XPathFunctionResolver = ::javax::xml::xpath::XPathFunctionResolver;
 using $JdkXmlFeatures = ::jdk::xml::internal::JdkXmlFeatures;
 using $JdkXmlFeatures$XmlFeature = ::jdk::xml::internal::JdkXmlFeatures$XmlFeature;
-using $NodeList = ::org::w3c::dom::NodeList;
 
 namespace com {
 	namespace sun {

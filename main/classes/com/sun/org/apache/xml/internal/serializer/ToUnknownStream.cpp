@@ -36,10 +36,8 @@
 #undef EVENTTYPE_OUTPUT_PSEUDO_CHARACTERS
 #undef HTML
 
-using $AttributesImplSerializer = ::com::sun::org::apache::xml::internal::serializer::AttributesImplSerializer;
 using $DOMSerializer = ::com::sun::org::apache::xml::internal::serializer::DOMSerializer;
 using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
-using $ExtendedLexicalHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedLexicalHandler;
 using $Method = ::com::sun::org::apache::xml::internal::serializer::Method;
 using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
 using $OutputPropertiesFactory = ::com::sun::org::apache::xml::internal::serializer::OutputPropertiesFactory;
@@ -50,7 +48,6 @@ using $SerializerFactory = ::com::sun::org::apache::xml::internal::serializer::S
 using $SerializerTrace = ::com::sun::org::apache::xml::internal::serializer::SerializerTrace;
 using $ToStream = ::com::sun::org::apache::xml::internal::serializer::ToStream;
 using $ToXMLStream = ::com::sun::org::apache::xml::internal::serializer::ToXMLStream;
-using $XSLOutputAttributes = ::com::sun::org::apache::xml::internal::serializer::XSLOutputAttributes;
 using $OutputStream = ::java::io::OutputStream;
 using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -70,8 +67,6 @@ using $Attributes = ::org::xml::sax::Attributes;
 using $ContentHandler = ::org::xml::sax::ContentHandler;
 using $Locator = ::org::xml::sax::Locator;
 using $SAXException = ::org::xml::sax::SAXException;
-using $DeclHandler = ::org::xml::sax::ext::DeclHandler;
-using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 using $AttributesImpl = ::org::xml::sax::helpers::AttributesImpl;
 
 namespace com {

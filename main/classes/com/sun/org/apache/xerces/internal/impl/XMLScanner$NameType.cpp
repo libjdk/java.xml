@@ -16,7 +16,6 @@
 #undef REFERENCE
 
 using $XMLScanner$NameTypeArray = $Array<::com::sun::org::apache::xerces::internal::impl::XMLScanner$NameType>;
-using $XMLScanner = ::com::sun::org::apache::xerces::internal::impl::XMLScanner;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;

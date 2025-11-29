@@ -11,13 +11,9 @@
 
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $ReturnaddressType = ::com::sun::org::apache::bcel::internal::generic::ReturnaddressType;
-using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
-using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;
-using $UnconditionalBranch = ::com::sun::org::apache::bcel::internal::generic::UnconditionalBranch;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $IllegalStateException = ::java::lang::IllegalStateException;
 using $MethodInfo = ::java::lang::MethodInfo;

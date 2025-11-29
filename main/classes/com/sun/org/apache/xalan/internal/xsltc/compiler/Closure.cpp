@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/VariableRefBase.h>
 #include <jcpp.h>
 
-using $VariableRefBase = ::com::sun::org::apache::xalan::internal::xsltc::compiler::VariableRefBase;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

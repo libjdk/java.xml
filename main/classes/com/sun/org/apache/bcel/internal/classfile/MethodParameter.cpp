@@ -15,7 +15,6 @@
 #undef ACC_SYNTHETIC
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
@@ -23,7 +22,6 @@ using $DataInput = ::java::io::DataInput;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
-using $Cloneable = ::java::lang::Cloneable;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

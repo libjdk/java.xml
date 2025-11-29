@@ -12,12 +12,9 @@
 #undef XERCES_PROPERTY_PREFIX
 
 using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
-using $DTDGrammarBucket = ::com::sun::org::apache::xerces::internal::impl::dtd::DTDGrammarBucket;
 using $XMLDTDValidator = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLDTDValidator;
 using $DTDDVFactory = ::com::sun::org::apache::xerces::internal::impl::dv::DTDDVFactory;
-using $DatatypeValidator = ::com::sun::org::apache::xerces::internal::impl::dv::DatatypeValidator;
 using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
-using $PrintStream = ::java::io::PrintStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;

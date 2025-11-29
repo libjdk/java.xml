@@ -5,8 +5,6 @@
 #include <java/util/Objects.h>
 #include <jcpp.h>
 
-using $XIncludeHandler = ::com::sun::org::apache::xerces::internal::xinclude::XIncludeHandler;
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

@@ -84,16 +84,11 @@
 #undef WT_OTHER
 #undef XMLSCHEMA_MODE
 
-using $RegularExpression$ClosureContextArray = $Array<::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression$ClosureContext>;
 using $BMPattern = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::BMPattern;
 using $Match = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Match;
 using $Op = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op;
-using $Op$CharOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$CharOp;
 using $Op$ChildOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$ChildOp;
 using $Op$ConditionOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$ConditionOp;
-using $Op$ModifierOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$ModifierOp;
-using $Op$RangeOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$RangeOp;
-using $Op$StringOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$StringOp;
 using $Op$UnionOp = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Op$UnionOp;
 using $ParserForXMLSchema = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::ParserForXMLSchema;
 using $REUtil = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::REUtil;
@@ -107,7 +102,6 @@ using $Token$ConditionToken = ::com::sun::org::apache::xerces::internal::impl::x
 using $Token$FixedStringContainer = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token$FixedStringContainer;
 using $Token$ModifierToken = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token$ModifierToken;
 using $IntStack = ::com::sun::org::apache::xerces::internal::util::IntStack;
-using $Serializable = ::java::io::Serializable;
 using $Character = ::java::lang::Character;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -117,7 +111,6 @@ using $RuntimeException = ::java::lang::RuntimeException;
 using $CharacterIterator = ::java::text::CharacterIterator;
 using $Locale = ::java::util::Locale;
 using $Stack = ::java::util::Stack;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

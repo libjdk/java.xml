@@ -16,7 +16,6 @@
 
 using $ElementValueArray = $Array<::com::sun::org::apache::bcel::internal::classfile::ElementValue>;
 using $ArrayElementValue = ::com::sun::org::apache::bcel::internal::classfile::ArrayElementValue;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ElementValue = ::com::sun::org::apache::bcel::internal::classfile::ElementValue;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $ElementValueGen = ::com::sun::org::apache::bcel::internal::generic::ElementValueGen;

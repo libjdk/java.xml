@@ -75,7 +75,6 @@ using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $CHECKCAST = ::com::sun::org::apache::bcel::internal::generic::CHECKCAST;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
@@ -91,12 +90,9 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
@@ -113,7 +109,7 @@ using $UnionPathExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler
 using $XSLTC = ::com::sun::org::apache::xalan::internal::xsltc::compiler::XSLTC;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $TypeCheckError = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::TypeCheckError;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;
@@ -255,17 +251,17 @@ bool Step::isAbbreviatedDDot() {
 	return this->_nodeType == $NodeTest::ANODE && this->_axis == $Axis::PARENT;
 }
 
-$1Type* Step::typeCheck($SymbolTable* stable) {
+$Type* Step::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
 	this->_hadPredicates = hasPredicates();
 	if (isAbbreviatedDot()) {
 		bool var$1 = hasParentPattern();
 		bool var$0 = var$1 || hasPredicates();
-		$init($1Type);
-		$set(this, _type, (var$0 || hasParentLocationPath()) ? $1Type::NodeSet : $1Type::Node);
+		$init($Type);
+		$set(this, _type, (var$0 || hasParentLocationPath()) ? $Type::NodeSet : $Type::Node);
 	} else {
-		$init($1Type);
-		$set(this, _type, $1Type::NodeSet);
+		$init($Type);
+		$set(this, _type, $Type::NodeSet);
 	}
 	if (this->_predicates != nullptr) {
 		{
@@ -311,8 +307,8 @@ void Step::translateStep($ClassGenerator* classGen, $MethodGenerator* methodGen,
 		}
 		$var($SyntaxTreeNode, parent, getParent());
 		if (isAbbreviatedDot()) {
-			$init($1Type);
-			if (this->_type == $1Type::Node) {
+			$init($Type);
+			if (this->_type == $Type::Node) {
 				$nc(il)->append($(methodGen->loadContextNode()));
 			} else if ($instanceOf($ParentLocationPath, parent)) {
 				$init($Constants);

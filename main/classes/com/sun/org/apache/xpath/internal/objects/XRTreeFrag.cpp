@@ -30,7 +30,6 @@
 
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMIterator = ::com::sun::org::apache::xml::internal::dtm::DTMIterator;
-using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $DTMNodeIterator = ::com::sun::org::apache::xml::internal::dtm::ref::DTMNodeIterator;
 using $DTMNodeList = ::com::sun::org::apache::xml::internal::dtm::ref::DTMNodeList;
 using $DTMNodeListBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMNodeListBase;

@@ -17,12 +17,10 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
 using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $Signature$MyByteArrayInputStream = ::com::sun::org::apache::bcel::internal::classfile::Signature$MyByteArrayInputStream;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
-using $ByteArrayInputStream = ::java::io::ByteArrayInputStream;
 using $DataInput = ::java::io::DataInput;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $AbstractStringBuilder = ::java::lang::AbstractStringBuilder;

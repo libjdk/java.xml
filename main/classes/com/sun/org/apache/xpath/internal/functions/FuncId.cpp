@@ -23,7 +23,6 @@
 
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMIterator = ::com::sun::org::apache::xml::internal::dtm::DTMIterator;
-using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $StringVector = ::com::sun::org::apache::xml::internal::utils::StringVector;
 using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;

@@ -14,7 +14,6 @@
 #undef XERCES_PROPERTY_PREFIX
 
 using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
-using $DTDDVFactory = ::com::sun::org::apache::xerces::internal::impl::dv::DTDDVFactory;
 using $XIncludeAwareParserConfiguration = ::com::sun::org::apache::xerces::internal::parsers::XIncludeAwareParserConfiguration;
 using $XML11Configuration = ::com::sun::org::apache::xerces::internal::parsers::XML11Configuration;
 using $XMLParser = ::com::sun::org::apache::xerces::internal::parsers::XMLParser;

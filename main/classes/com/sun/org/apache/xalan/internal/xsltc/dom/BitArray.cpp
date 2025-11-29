@@ -11,9 +11,6 @@
 #undef MIN_VALUE
 
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $DataInput = ::java::io::DataInput;
-using $DataOutput = ::java::io::DataOutput;
-using $Externalizable = ::java::io::Externalizable;
 using $ObjectInput = ::java::io::ObjectInput;
 using $ObjectOutput = ::java::io::ObjectOutput;
 using $ClassInfo = ::java::lang::ClassInfo;

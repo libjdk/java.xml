@@ -9,9 +9,6 @@
 #undef EVENT_ELEMENT_END
 #undef EVENT_ELEMENT_START
 
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

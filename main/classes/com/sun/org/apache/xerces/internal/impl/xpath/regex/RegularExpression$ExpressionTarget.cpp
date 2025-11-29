@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.h>
 #include <jcpp.h>
 
-using $RegularExpression = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::RegularExpression;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

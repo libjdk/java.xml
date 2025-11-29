@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Result = ::javax::xml::transform::Result;
-using $Source = ::javax::xml::transform::Source;
 
 namespace com {
 	namespace sun {

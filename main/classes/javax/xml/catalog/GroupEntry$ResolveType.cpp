@@ -19,7 +19,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $CatalogFeatures = ::javax::xml::catalog::CatalogFeatures;
-using $GroupEntry = ::javax::xml::catalog::GroupEntry;
 
 namespace javax {
 	namespace xml {

@@ -5,10 +5,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSNotationDeclaration.h>
 #include <jcpp.h>
 
-using $ItemPSVI = ::com::sun::org::apache::xerces::internal::xs::ItemPSVI;
-using $XSElementDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSElementDeclaration;
-using $XSModel = ::com::sun::org::apache::xerces::internal::xs::XSModel;
-using $XSNotationDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSNotationDeclaration;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

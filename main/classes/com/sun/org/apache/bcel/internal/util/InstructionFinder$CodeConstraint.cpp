@@ -4,8 +4,6 @@
 #include <com/sun/org/apache/bcel/internal/util/InstructionFinder.h>
 #include <jcpp.h>
 
-using $InstructionHandleArray = $Array<::com::sun::org::apache::bcel::internal::generic::InstructionHandle>;
-using $InstructionFinder = ::com::sun::org::apache::bcel::internal::util::InstructionFinder;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

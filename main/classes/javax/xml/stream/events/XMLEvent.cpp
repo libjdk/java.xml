@@ -8,15 +8,8 @@
 #include <javax/xml/stream/events/StartElement.h>
 #include <jcpp.h>
 
-using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $QName = ::javax::xml::namespace$::QName;
-using $Location = ::javax::xml::stream::Location;
-using $XMLStreamConstants = ::javax::xml::stream::XMLStreamConstants;
-using $Characters = ::javax::xml::stream::events::Characters;
-using $EndElement = ::javax::xml::stream::events::EndElement;
-using $StartElement = ::javax::xml::stream::events::StartElement;
 
 namespace javax {
 	namespace xml {

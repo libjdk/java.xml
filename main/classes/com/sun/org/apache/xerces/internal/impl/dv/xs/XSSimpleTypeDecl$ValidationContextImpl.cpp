@@ -7,7 +7,6 @@
 #include <jcpp.h>
 
 using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
-using $XSSimpleTypeDecl = ::com::sun::org::apache::xerces::internal::impl::dv::xs::XSSimpleTypeDecl;
 using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

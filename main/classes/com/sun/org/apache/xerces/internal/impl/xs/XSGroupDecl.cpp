@@ -13,14 +13,11 @@
 #undef EMPTY_LIST
 #undef MODEL_GROUP_DEFINITION
 
-using $XSModelGroupImpl = ::com::sun::org::apache::xerces::internal::impl::xs::XSModelGroupImpl;
 using $XSObjectListImpl = ::com::sun::org::apache::xerces::internal::impl::xs::util::XSObjectListImpl;
 using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
 using $XSConstants = ::com::sun::org::apache::xerces::internal::xs::XSConstants;
 using $XSModelGroup = ::com::sun::org::apache::xerces::internal::xs::XSModelGroup;
-using $XSModelGroupDefinition = ::com::sun::org::apache::xerces::internal::xs::XSModelGroupDefinition;
 using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

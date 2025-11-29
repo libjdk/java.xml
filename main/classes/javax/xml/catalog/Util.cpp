@@ -33,21 +33,17 @@ using $URIArray = $Array<::java::net::URI>;
 using $File = ::java::io::File;
 using $IOException = ::java::io::IOException;
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $MalformedURLException = ::java::net::MalformedURLException;
 using $URI = ::java::net::URI;
-using $URL = ::java::net::URL;
 using $Iterator = ::java::util::Iterator;
 using $JarEntry = ::java::util::jar::JarEntry;
 using $JarFile = ::java::util::jar::JarFile;
-using $BaseStream = ::java::util::stream::BaseStream;
 using $Stream = ::java::util::stream::Stream;
 using $CatalogFeatures$Feature = ::javax::xml::catalog::CatalogFeatures$Feature;
 using $CatalogImpl = ::javax::xml::catalog::CatalogImpl;
 using $CatalogMessages = ::javax::xml::catalog::CatalogMessages;
-using $GroupEntry = ::javax::xml::catalog::GroupEntry;
 using $SecuritySupport = ::jdk::xml::internal::SecuritySupport;
 
 namespace javax {

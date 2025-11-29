@@ -11,7 +11,6 @@
 #undef EXCS_STRING_RESOLUTION
 
 using $ExceptionConst$EXCSArray = $Array<::com::sun::org::apache::bcel::internal::ExceptionConst$EXCS>;
-using $ExceptionConst = ::com::sun::org::apache::bcel::internal::ExceptionConst;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Enum = ::java::lang::Enum;
 using $FieldInfo = ::java::lang::FieldInfo;

@@ -4,7 +4,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Locator = ::org::xml::sax::Locator;
 
 namespace org {
 	namespace xml {

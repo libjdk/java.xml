@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Range = ::org::w3c::dom::ranges::Range;
 
 namespace org {
 	namespace w3c {

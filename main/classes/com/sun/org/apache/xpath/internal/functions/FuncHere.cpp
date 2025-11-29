@@ -23,8 +23,6 @@
 #undef TEXT_NODE
 
 using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
-using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $NodeSetDTM = ::com::sun::org::apache::xpath::internal::NodeSetDTM;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $NodeSequence = ::com::sun::org::apache::xpath::internal::axes::NodeSequence;

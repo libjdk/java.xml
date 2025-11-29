@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/XSElementDecl.h>
 #include <jcpp.h>
 
-using $SubstitutionGroupHandler = ::com::sun::org::apache::xerces::internal::impl::xs::SubstitutionGroupHandler;
 using $XSElementDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSElementDecl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

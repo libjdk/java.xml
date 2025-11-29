@@ -7,15 +7,8 @@
 #include <org/w3c/dom/ProcessingInstruction.h>
 #include <jcpp.h>
 
-using $XMLDocumentHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $DOMResult = ::javax::xml::transform::dom::DOMResult;
-using $CDATASection = ::org::w3c::dom::CDATASection;
-using $Comment = ::org::w3c::dom::Comment;
-using $DocumentType = ::org::w3c::dom::DocumentType;
-using $ProcessingInstruction = ::org::w3c::dom::ProcessingInstruction;
-using $Text = ::org::w3c::dom::Text;
 
 namespace com {
 	namespace sun {

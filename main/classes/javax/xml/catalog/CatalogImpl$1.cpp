@@ -14,13 +14,10 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $URI = ::java::net::URI;
-using $Iterator = ::java::util::Iterator;
 using $List = ::java::util::List;
 using $NoSuchElementException = ::java::util::NoSuchElementException;
-using $AltCatalog = ::javax::xml::catalog::AltCatalog;
 using $Catalog = ::javax::xml::catalog::Catalog;
 using $CatalogImpl = ::javax::xml::catalog::CatalogImpl;
-using $GroupEntry = ::javax::xml::catalog::GroupEntry;
 using $NextCatalog = ::javax::xml::catalog::NextCatalog;
 
 namespace javax {

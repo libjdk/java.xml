@@ -4,7 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/RevalidationHandler.h>
 #include <jcpp.h>
 
-using $CoreDOMImplementationImpl = ::com::sun::org::apache::xerces::internal::dom::CoreDOMImplementationImpl;
 using $RevalidationHandler = ::com::sun::org::apache::xerces::internal::impl::RevalidationHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

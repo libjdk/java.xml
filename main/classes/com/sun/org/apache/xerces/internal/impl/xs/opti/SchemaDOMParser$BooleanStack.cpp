@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOMParser.h>
 #include <jcpp.h>
 
-using $SchemaDOMParser = ::com::sun::org::apache::xerces::internal::impl::xs::opti::SchemaDOMParser;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

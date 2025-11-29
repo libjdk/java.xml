@@ -16,7 +16,6 @@ using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $DOMEnhancedForDTM = ::com::sun::org::apache::xalan::internal::xsltc::DOMEnhancedForDTM;
 using $DocumentCache = ::com::sun::org::apache::xalan::internal::xsltc::dom::DocumentCache;
 using $XSLTCDTMManager = ::com::sun::org::apache::xalan::internal::xsltc::dom::XSLTCDTMManager;
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $DTMWSFilter = ::com::sun::org::apache::xml::internal::dtm::DTMWSFilter;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
@@ -26,7 +25,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $Source = ::javax::xml::transform::Source;
 using $SAXSource = ::javax::xml::transform::sax::SAXSource;
 using $InputSource = ::org::xml::sax::InputSource;
-using $XMLReader = ::org::xml::sax::XMLReader;
 
 namespace com {
 	namespace sun {

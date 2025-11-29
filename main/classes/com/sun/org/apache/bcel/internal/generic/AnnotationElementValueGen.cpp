@@ -15,7 +15,6 @@
 
 using $AnnotationElementValue = ::com::sun::org::apache::bcel::internal::classfile::AnnotationElementValue;
 using $AnnotationEntry = ::com::sun::org::apache::bcel::internal::classfile::AnnotationEntry;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ElementValue = ::com::sun::org::apache::bcel::internal::classfile::ElementValue;
 using $AnnotationEntryGen = ::com::sun::org::apache::bcel::internal::generic::AnnotationEntryGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;

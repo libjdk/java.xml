@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $SchemaFactory = ::javax::xml::validation::SchemaFactory;
 
 namespace javax {
 	namespace xml {

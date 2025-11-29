@@ -4,7 +4,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Attribute = ::javax::xml::stream::events::Attribute;
 
 namespace javax {
 	namespace xml {

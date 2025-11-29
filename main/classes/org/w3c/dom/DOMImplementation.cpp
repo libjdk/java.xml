@@ -6,8 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Document = ::org::w3c::dom::Document;
-using $DocumentType = ::org::w3c::dom::DocumentType;
 
 namespace org {
 	namespace w3c {

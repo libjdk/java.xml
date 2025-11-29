@@ -43,7 +43,6 @@ using $ConstantNameAndType = ::com::sun::org::apache::bcel::internal::classfile:
 using $ConstantPackage = ::com::sun::org::apache::bcel::internal::classfile::ConstantPackage;
 using $ConstantString = ::com::sun::org::apache::bcel::internal::classfile::ConstantString;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
-using $Node = ::com::sun::org::apache::bcel::internal::classfile::Node;
 using $Utility = ::com::sun::org::apache::bcel::internal::classfile::Utility;
 using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $DataInput = ::java::io::DataInput;

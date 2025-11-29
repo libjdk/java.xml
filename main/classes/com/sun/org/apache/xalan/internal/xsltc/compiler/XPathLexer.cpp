@@ -76,7 +76,6 @@
 #undef YY_START
 
 using $intArray2 = $Array<int32_t, 2>;
-using $Scanner = ::com::sun::java_cup::internal::runtime::Scanner;
 using $Symbol = ::com::sun::java_cup::internal::runtime::Symbol;
 using $sym = ::com::sun::org::apache::xalan::internal::xsltc::compiler::sym;
 using $BufferedReader = ::java::io::BufferedReader;
@@ -92,7 +91,6 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $Integer = ::java::lang::Integer;
 using $Long = ::java::lang::Long;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 
 namespace com {
 	namespace sun {
@@ -308,248 +306,248 @@ void XPathLexer::init$() {
 		"Error: Unmatched input.\n"_s
 	}));
 	$set(this, yy_acpt, $new($ints, {
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NOT_ACCEPT,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR,
-		this->YY_NO_ANCHOR
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NOT_ACCEPT,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR,
+		XPathLexer::YY_NO_ANCHOR
 	}));
-	$set(this, yy_buffer, $new($chars, this->YY_BUFFER_SIZE));
+	$set(this, yy_buffer, $new($chars, XPathLexer::YY_BUFFER_SIZE));
 	this->yy_buffer_read = 0;
 	this->yy_buffer_index = 0;
 	this->yy_buffer_start = 0;
 	this->yy_buffer_end = 0;
 	this->yy_at_bol = true;
-	this->yy_lexical_state = this->YYINITIAL;
+	this->yy_lexical_state = XPathLexer::YYINITIAL;
 }
 
 void XPathLexer::yybegin(int32_t state) {
@@ -577,7 +575,7 @@ int32_t XPathLexer::yy_advance() {
 		this->yy_buffer_index = j;
 		next_read = $nc(this->yy_reader)->read(this->yy_buffer, this->yy_buffer_read, $nc(this->yy_buffer)->length - this->yy_buffer_read);
 		if (-1 == next_read) {
-			return this->YY_EOF;
+			return XPathLexer::YY_EOF;
 		}
 		this->yy_buffer_read = this->yy_buffer_read + next_read;
 	}
@@ -587,7 +585,7 @@ int32_t XPathLexer::yy_advance() {
 		}
 		next_read = $nc(this->yy_reader)->read(this->yy_buffer, this->yy_buffer_read, $nc(this->yy_buffer)->length - this->yy_buffer_read);
 		if (-1 == next_read) {
-			return this->YY_EOF;
+			return XPathLexer::YY_EOF;
 		}
 		this->yy_buffer_read = this->yy_buffer_read + next_read;
 	}
@@ -682,42 +680,42 @@ $intArray2* XPathLexer::unpackFromString(int32_t size1, int32_t size2, $String* 
 $Symbol* XPathLexer::next_token() {
 	$useLocalCurrentObjectStackCache();
 	int32_t yy_lookahead = 0;
-	int32_t yy_anchor = this->YY_NO_ANCHOR;
+	int32_t yy_anchor = XPathLexer::YY_NO_ANCHOR;
 	int32_t yy_state = $nc(this->yy_state_dtrans)->get(this->yy_lexical_state);
-	int32_t yy_next_state = this->YY_NO_STATE;
-	int32_t yy_last_accept_state = this->YY_NO_STATE;
+	int32_t yy_next_state = XPathLexer::YY_NO_STATE;
+	int32_t yy_last_accept_state = XPathLexer::YY_NO_STATE;
 	bool yy_initial = true;
 	int32_t yy_this_accept = 0;
 	yy_mark_start();
 	yy_this_accept = $nc(this->yy_acpt)->get(yy_state);
-	if (this->YY_NOT_ACCEPT != yy_this_accept) {
+	if (XPathLexer::YY_NOT_ACCEPT != yy_this_accept) {
 		yy_last_accept_state = yy_state;
 		yy_mark_end();
 	}
 	while (true) {
 		if (yy_initial && this->yy_at_bol) {
-			yy_lookahead = this->YY_BOL;
+			yy_lookahead = XPathLexer::YY_BOL;
 		} else {
 			yy_lookahead = yy_advance();
 		}
-		yy_next_state = this->YY_F;
+		yy_next_state = XPathLexer::YY_F;
 		yy_next_state = $nc($nc(XPathLexer::yy_nxt)->get($nc(XPathLexer::yy_rmap)->get(yy_state)))->get($nc(XPathLexer::yy_cmap)->get(yy_lookahead));
-		if (this->YY_EOF == yy_lookahead && true == yy_initial) {
+		if (XPathLexer::YY_EOF == yy_lookahead && true == yy_initial) {
 			return newSymbol($sym::EOF);
 		}
-		if (this->YY_F != yy_next_state) {
+		if (XPathLexer::YY_F != yy_next_state) {
 			yy_state = yy_next_state;
 			yy_initial = false;
 			yy_this_accept = $nc(this->yy_acpt)->get(yy_state);
-			if (this->YY_NOT_ACCEPT != yy_this_accept) {
+			if (XPathLexer::YY_NOT_ACCEPT != yy_this_accept) {
 				yy_last_accept_state = yy_state;
 				yy_mark_end();
 			}
-		} else if (this->YY_NO_STATE == yy_last_accept_state) {
+		} else if (XPathLexer::YY_NO_STATE == yy_last_accept_state) {
 			$throw($$new($Error, "Lexical Error: Unmatched Input."_s));
 		} else {
 			yy_anchor = $nc(this->yy_acpt)->get(yy_last_accept_state);
-			if (0 != ((int32_t)(this->YY_END & (uint32_t)yy_anchor))) {
+			if (0 != ((int32_t)(XPathLexer::YY_END & (uint32_t)yy_anchor))) {
 				yy_move_end();
 			}
 			yy_to_mark();
@@ -2721,18 +2719,18 @@ $Symbol* XPathLexer::next_token() {
 				}
 			default:
 				{
-					yy_error(this->YY_E_INTERNAL, false);
+					yy_error(XPathLexer::YY_E_INTERNAL, false);
 				}
 			case -1:
 				{}
 			}
 			yy_initial = true;
 			yy_state = $nc(this->yy_state_dtrans)->get(this->yy_lexical_state);
-			yy_next_state = this->YY_NO_STATE;
-			yy_last_accept_state = this->YY_NO_STATE;
+			yy_next_state = XPathLexer::YY_NO_STATE;
+			yy_last_accept_state = XPathLexer::YY_NO_STATE;
 			yy_mark_start();
 			yy_this_accept = $nc(this->yy_acpt)->get(yy_state);
-			if (this->YY_NOT_ACCEPT != yy_this_accept) {
+			if (XPathLexer::YY_NOT_ACCEPT != yy_this_accept) {
 				yy_last_accept_state = yy_state;
 				yy_mark_end();
 			}

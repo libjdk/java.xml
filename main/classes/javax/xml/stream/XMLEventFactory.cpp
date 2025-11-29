@@ -30,23 +30,7 @@ using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NamedAttribute = ::java::lang::NamedAttribute;
-using $Iterator = ::java::util::Iterator;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
-using $QName = ::javax::xml::namespace$::QName;
 using $FactoryFinder = ::javax::xml::stream::FactoryFinder;
-using $Location = ::javax::xml::stream::Location;
-using $Attribute = ::javax::xml::stream::events::Attribute;
-using $Characters = ::javax::xml::stream::events::Characters;
-using $Comment = ::javax::xml::stream::events::Comment;
-using $DTD = ::javax::xml::stream::events::DTD;
-using $EndDocument = ::javax::xml::stream::events::EndDocument;
-using $EndElement = ::javax::xml::stream::events::EndElement;
-using $EntityDeclaration = ::javax::xml::stream::events::EntityDeclaration;
-using $EntityReference = ::javax::xml::stream::events::EntityReference;
-using $Namespace = ::javax::xml::stream::events::Namespace;
-using $ProcessingInstruction = ::javax::xml::stream::events::ProcessingInstruction;
-using $StartDocument = ::javax::xml::stream::events::StartDocument;
-using $StartElement = ::javax::xml::stream::events::StartElement;
 
 namespace javax {
 	namespace xml {

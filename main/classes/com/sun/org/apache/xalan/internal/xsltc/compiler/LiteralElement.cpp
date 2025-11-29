@@ -72,15 +72,11 @@
 #undef XMLNS_PREFIX
 #undef XSLT_URI
 
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $ApplyTemplates = ::com::sun::org::apache::xalan::internal::xsltc::compiler::ApplyTemplates;
 using $AttributeValue = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValue;
 using $AttributeValueTemplate = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValueTemplate;
@@ -92,7 +88,7 @@ using $Copy = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Copy;
 using $CopyOf = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CopyOf;
 using $ForEach = ::com::sun::org::apache::xalan::internal::xsltc::compiler::ForEach;
 using $If = ::com::sun::org::apache::xalan::internal::xsltc::compiler::If;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $LiteralAttribute = ::com::sun::org::apache::xalan::internal::xsltc::compiler::LiteralAttribute;
 using $Number = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Number;
 using $Otherwise = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Otherwise;
@@ -121,16 +117,10 @@ using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Void = ::java::lang::Void;
-using $CallSite = ::java::lang::invoke::CallSite;
-using $LambdaMetafactory = ::java::lang::invoke::LambdaMetafactory;
 using $MethodHandle = ::java::lang::invoke::MethodHandle;
-using $MethodHandles$Lookup = ::java::lang::invoke::MethodHandles$Lookup;
-using $MethodType = ::java::lang::invoke::MethodType;
 using $AbstractList = ::java::util::AbstractList;
 using $AbstractMap = ::java::util::AbstractMap;
 using $ArrayList = ::java::util::ArrayList;
-using $Collection = ::java::util::Collection;
 using $HashMap = ::java::util::HashMap;
 using $Hashtable = ::java::util::Hashtable;
 using $Iterator = ::java::util::Iterator;
@@ -237,7 +227,7 @@ $Object* allocate$LiteralElement($Class* clazz) {
 }
 
 void LiteralElement::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 	$set(this, _literalElemParent, nullptr);
 	$set(this, _attributeElements, nullptr);
 	$set(this, _accessedPrefixes, nullptr);
@@ -447,7 +437,7 @@ void LiteralElement::translate($ClassGenerator* classGen, $MethodGenerator* meth
 	$nc(il)->append($(methodGen->loadHandler()));
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, this->_name)));
 	$init($Constants);
-	il->append(static_cast<$Instruction*>($Constants::DUP2));
+	il->append(static_cast<$1Instruction*>($Constants::DUP2));
 	il->append($(methodGen->startElement()));
 	int32_t j = 0;
 	while (j < elementCount()) {

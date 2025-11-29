@@ -10,14 +10,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentSource.h>
 #include <jcpp.h>
 
-using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
-using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
-using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
-using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
-using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
-using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
-using $XMLDocumentSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLDocumentSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

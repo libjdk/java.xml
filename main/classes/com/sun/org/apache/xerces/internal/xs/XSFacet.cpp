@@ -4,9 +4,6 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
 #include <jcpp.h>
 
-using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
-using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

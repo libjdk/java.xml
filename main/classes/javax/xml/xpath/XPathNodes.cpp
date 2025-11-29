@@ -4,9 +4,7 @@
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
-using $Iterable = ::java::lang::Iterable;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Node = ::org::w3c::dom::Node;
 
 namespace javax {
 	namespace xml {

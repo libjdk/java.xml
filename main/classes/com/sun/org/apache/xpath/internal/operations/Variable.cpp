@@ -27,7 +27,6 @@
 #undef WG_ILLEGAL_VARIABLE_REFERENCE
 
 using $XSLMessages = ::com::sun::org::apache::xalan::internal::res::XSLMessages;
-using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
 using $QName = ::com::sun::org::apache::xml::internal::utils::QName;
 using $WrappedRuntimeException = ::com::sun::org::apache::xml::internal::utils::WrappedRuntimeException;
@@ -38,12 +37,10 @@ using $VariableStack = ::com::sun::org::apache::xpath::internal::VariableStack;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $XPathVisitor = ::com::sun::org::apache::xpath::internal::XPathVisitor;
 using $NodeSequence = ::com::sun::org::apache::xpath::internal::axes::NodeSequence;
-using $PathComponent = ::com::sun::org::apache::xpath::internal::axes::PathComponent;
 using $WalkerFactory = ::com::sun::org::apache::xpath::internal::axes::WalkerFactory;
 using $XNodeSet = ::com::sun::org::apache::xpath::internal::objects::XNodeSet;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;

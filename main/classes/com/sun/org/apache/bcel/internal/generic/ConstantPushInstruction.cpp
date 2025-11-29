@@ -5,10 +5,8 @@
 #include <jcpp.h>
 
 using $PushInstruction = ::com::sun::org::apache::bcel::internal::generic::PushInstruction;
-using $TypedInstruction = ::com::sun::org::apache::bcel::internal::generic::TypedInstruction;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Number = ::java::lang::Number;
 
 namespace com {
 	namespace sun {

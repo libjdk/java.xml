@@ -7,7 +7,6 @@
 
 using $Base64 = ::com::sun::org::apache::xerces::internal::impl::dv::util::Base64;
 using $ByteListImpl = ::com::sun::org::apache::xerces::internal::impl::dv::util::ByteListImpl;
-using $Base64BinaryDV = ::com::sun::org::apache::xerces::internal::impl::dv::xs::Base64BinaryDV;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

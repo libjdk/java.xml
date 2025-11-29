@@ -2,7 +2,6 @@
 
 #include <jcpp.h>
 
-using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;
 using $ClassInfo = ::java::lang::ClassInfo;
 
 namespace com {

@@ -11,7 +11,6 @@
 
 using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ExpressionNode = ::com::sun::org::apache::xpath::internal::ExpressionNode;
-using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
 using $BasicTestIterator = ::com::sun::org::apache::xpath::internal::axes::BasicTestIterator;
 using $FilterExprIterator = ::com::sun::org::apache::xpath::internal::axes::FilterExprIterator;
 using $LocPathIterator = ::com::sun::org::apache::xpath::internal::axes::LocPathIterator;

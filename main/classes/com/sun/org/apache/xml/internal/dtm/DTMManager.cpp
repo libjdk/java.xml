@@ -16,18 +16,11 @@
 #undef IDENT_MAX_DTMS
 #undef IDENT_NODE_DEFAULT
 
-using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
-using $DTMFilter = ::com::sun::org::apache::xml::internal::dtm::DTMFilter;
-using $DTMIterator = ::com::sun::org::apache::xml::internal::dtm::DTMIterator;
-using $DTMWSFilter = ::com::sun::org::apache::xml::internal::dtm::DTMWSFilter;
 using $DTMManagerDefault = ::com::sun::org::apache::xml::internal::dtm::ref::DTMManagerDefault;
-using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
 using $XMLStringFactory = ::com::sun::org::apache::xml::internal::utils::XMLStringFactory;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Source = ::javax::xml::transform::Source;
-using $Node = ::org::w3c::dom::Node;
 
 namespace com {
 	namespace sun {

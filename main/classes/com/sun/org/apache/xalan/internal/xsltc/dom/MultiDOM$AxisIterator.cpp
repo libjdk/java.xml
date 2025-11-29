@@ -14,7 +14,6 @@
 #undef IDENT_DTM_NODE_BITS
 #undef NULL
 
-using $DOMArray = $Array<::com::sun::org::apache::xalan::internal::xsltc::DOM>;
 using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $MultiDOM = ::com::sun::org::apache::xalan::internal::xsltc::dom::MultiDOM;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;

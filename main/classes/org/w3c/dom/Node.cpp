@@ -28,10 +28,6 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Document = ::org::w3c::dom::Document;
-using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
-using $NodeList = ::org::w3c::dom::NodeList;
-using $UserDataHandler = ::org::w3c::dom::UserDataHandler;
 
 namespace org {
 	namespace w3c {

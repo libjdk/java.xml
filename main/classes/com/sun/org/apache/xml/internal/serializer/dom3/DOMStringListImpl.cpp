@@ -13,7 +13,6 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $AbstractList = ::java::util::AbstractList;
 using $ArrayList = ::java::util::ArrayList;
 using $List = ::java::util::List;
-using $DOMStringList = ::org::w3c::dom::DOMStringList;
 
 namespace com {
 	namespace sun {

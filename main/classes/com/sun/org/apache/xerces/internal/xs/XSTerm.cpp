@@ -2,7 +2,6 @@
 
 #include <jcpp.h>
 
-using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $ClassInfo = ::java::lang::ClassInfo;
 
 namespace com {

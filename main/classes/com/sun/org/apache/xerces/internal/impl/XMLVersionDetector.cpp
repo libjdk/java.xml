@@ -45,7 +45,6 @@ using $XMLMessageFormatter = ::com::sun::org::apache::xerces::internal::impl::ms
 using $SymbolTable = ::com::sun::org::apache::xerces::internal::util::SymbolTable;
 using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $XMLLocator = ::com::sun::org::apache::xerces::internal::xni::XMLLocator;
-using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
 using $XMLComponentManager = ::com::sun::org::apache::xerces::internal::xni::parser::XMLComponentManager;
 using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;

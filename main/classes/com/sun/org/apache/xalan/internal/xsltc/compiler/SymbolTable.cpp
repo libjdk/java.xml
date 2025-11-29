@@ -48,7 +48,6 @@ using $List = ::java::util::List;
 using $Map = ::java::util::Map;
 using $Stack = ::java::util::Stack;
 using $StringTokenizer = ::java::util::StringTokenizer;
-using $Vector = ::java::util::Vector;
 
 namespace com {
 	namespace sun {

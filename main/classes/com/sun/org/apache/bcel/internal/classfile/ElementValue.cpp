@@ -34,7 +34,6 @@ using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::Consta
 using $EnumElementValue = ::com::sun::org::apache::bcel::internal::classfile::EnumElementValue;
 using $SimpleElementValue = ::com::sun::org::apache::bcel::internal::classfile::SimpleElementValue;
 using $DataInput = ::java::io::DataInput;
-using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;

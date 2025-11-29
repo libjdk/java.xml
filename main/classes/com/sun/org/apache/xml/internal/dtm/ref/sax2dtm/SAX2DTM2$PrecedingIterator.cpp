@@ -98,7 +98,7 @@ $Object* allocate$SAX2DTM2$PrecedingIterator($Class* clazz) {
 void SAX2DTM2$PrecedingIterator::init$($SAX2DTM2* this$0) {
 	$set(this, this$0, this$0);
 	$DTMDefaultBaseIterators$InternalAxisIteratorBase::init$(this$0);
-	$set(this, _stack, $new($ints, this->_maxAncestors));
+	$set(this, _stack, $new($ints, SAX2DTM2$PrecedingIterator::_maxAncestors));
 }
 
 bool SAX2DTM2$PrecedingIterator::isReverse() {

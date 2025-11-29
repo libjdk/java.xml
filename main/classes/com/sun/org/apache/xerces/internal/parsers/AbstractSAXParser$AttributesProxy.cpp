@@ -12,7 +12,6 @@
 #undef TRUE
 
 using $Constants = ::com::sun::org::apache::xerces::internal::impl::Constants;
-using $AbstractSAXParser = ::com::sun::org::apache::xerces::internal::parsers::AbstractSAXParser;
 using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $ArrayIndexOutOfBoundsException = ::java::lang::ArrayIndexOutOfBoundsException;
@@ -23,7 +22,6 @@ using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $AttributeList = ::org::xml::sax::AttributeList;
-using $Attributes2 = ::org::xml::sax::ext::Attributes2;
 
 namespace com {
 	namespace sun {

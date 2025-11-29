@@ -14,13 +14,11 @@
 
 using $Const = ::com::sun::org::apache::bcel::internal::Const;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $JsrInstruction = ::com::sun::org::apache::bcel::internal::generic::JsrInstruction;
 using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackProducer;
 using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
 using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
-using $DataInputStream = ::java::io::DataInputStream;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

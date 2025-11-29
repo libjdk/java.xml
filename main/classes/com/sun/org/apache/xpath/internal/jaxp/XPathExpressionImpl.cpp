@@ -37,7 +37,6 @@ using $QName = ::javax::xml::namespace$::QName;
 using $TransformerException = ::javax::xml::transform::TransformerException;
 using $XPathConstants = ::javax::xml::xpath::XPathConstants;
 using $XPathEvaluationResult = ::javax::xml::xpath::XPathEvaluationResult;
-using $XPathExpression = ::javax::xml::xpath::XPathExpression;
 using $XPathExpressionException = ::javax::xml::xpath::XPathExpressionException;
 using $XPathFunctionException = ::javax::xml::xpath::XPathFunctionException;
 using $XPathFunctionResolver = ::javax::xml::xpath::XPathFunctionResolver;

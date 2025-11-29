@@ -45,21 +45,18 @@
 
 using $BranchHandle = ::com::sun::org::apache::bcel::internal::generic::BranchHandle;
 using $BranchInstruction = ::com::sun::org::apache::bcel::internal::generic::BranchInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $GOTO = ::com::sun::org::apache::bcel::internal::generic::GOTO;
 using $GotoInstruction = ::com::sun::org::apache::bcel::internal::generic::GotoInstruction;
 using $IFGT = ::com::sun::org::apache::bcel::internal::generic::IFGT;
 using $IfInstruction = ::com::sun::org::apache::bcel::internal::generic::IfInstruction;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $Sort = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Sort;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
@@ -122,7 +119,7 @@ $Object* allocate$ForEach($Class* clazz) {
 }
 
 void ForEach::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 }
 
 void ForEach::display(int32_t indent) {
@@ -184,7 +181,7 @@ void ForEach::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) 
 		$init($Type);
 		$nc(this->_type)->translateTo(classGen, methodGen, $Type::NodeSet);
 		$init($Constants);
-		il->append(static_cast<$Instruction*>($Constants::SWAP));
+		il->append(static_cast<$1Instruction*>($Constants::SWAP));
 		il->append($(methodGen->storeDOM()));
 	} else {
 		if (sortObjects->size() > 0) {
@@ -205,7 +202,7 @@ void ForEach::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) 
 	translateContents(classGen, methodGen);
 	$nc(nextNode)->setTarget($(il->append($(methodGen->loadIterator()))));
 	il->append($(methodGen->nextNode()));
-	il->append(static_cast<$Instruction*>($Constants::DUP));
+	il->append(static_cast<$1Instruction*>($Constants::DUP));
 	il->append($(methodGen->storeCurrentNode()));
 	il->append(static_cast<$BranchInstruction*>($$new($IFGT, loop)));
 	if ((this->_type != nullptr) && ($instanceOf($ResultTreeType, this->_type))) {

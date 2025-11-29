@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
 #include <jcpp.h>
 
-using $QNameArray = $Array<::com::sun::org::apache::xerces::internal::xni::QName>;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

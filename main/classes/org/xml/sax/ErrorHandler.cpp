@@ -5,7 +5,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $SAXParseException = ::org::xml::sax::SAXParseException;
 
 namespace org {
 	namespace xml {

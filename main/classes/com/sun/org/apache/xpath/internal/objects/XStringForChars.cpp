@@ -15,10 +15,8 @@
 
 using $XSLMessages = ::com::sun::org::apache::xalan::internal::res::XSLMessages;
 using $FastStringBuffer = ::com::sun::org::apache::xml::internal::utils::FastStringBuffer;
-using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XString = ::com::sun::org::apache::xpath::internal::objects::XString;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;

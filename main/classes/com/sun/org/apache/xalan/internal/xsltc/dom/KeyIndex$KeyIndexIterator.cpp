@@ -28,7 +28,6 @@ using $BasisLibrary = ::com::sun::org::apache::xalan::internal::xsltc::runtime::
 using $IntegerArray = ::com::sun::org::apache::xalan::internal::xsltc::util::IntegerArray;
 using $Axis = ::com::sun::org::apache::xml::internal::dtm::Axis;
 using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
-using $DTMAxisIteratorBase = ::com::sun::org::apache::xml::internal::dtm::ref::DTMAxisIteratorBase;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

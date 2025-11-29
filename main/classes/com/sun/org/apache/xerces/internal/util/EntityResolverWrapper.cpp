@@ -13,7 +13,6 @@
 
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIException;
-using $XMLEntityResolver = ::com::sun::org::apache::xerces::internal::xni::parser::XMLEntityResolver;
 using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $InputStream = ::java::io::InputStream;
 using $Reader = ::java::io::Reader;

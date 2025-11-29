@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/bcel/internal/generic/InstructionHandle.h>
 #include <jcpp.h>
 
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

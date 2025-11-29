@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xerces/internal/impl/xpath/regex/Token.h>
 #include <jcpp.h>
 
-using $Token = ::com::sun::org::apache::xerces::internal::impl::xpath::regex::Token;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

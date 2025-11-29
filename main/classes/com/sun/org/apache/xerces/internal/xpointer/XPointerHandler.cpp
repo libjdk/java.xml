@@ -62,7 +62,6 @@ using $XPointerHandler$Scanner = ::com::sun::org::apache::xerces::internal::xpoi
 using $XPointerHandler$Tokens = ::com::sun::org::apache::xerces::internal::xpointer::XPointerHandler$Tokens;
 using $XPointerMessageFormatter = ::com::sun::org::apache::xerces::internal::xpointer::XPointerMessageFormatter;
 using $XPointerPart = ::com::sun::org::apache::xerces::internal::xpointer::XPointerPart;
-using $XPointerProcessor = ::com::sun::org::apache::xerces::internal::xpointer::XPointerProcessor;
 using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
@@ -72,7 +71,6 @@ using $Integer = ::java::lang::Integer;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $ArrayList = ::java::util::ArrayList;
-using $Locale = ::java::util::Locale;
 
 namespace com {
 	namespace sun {

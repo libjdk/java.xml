@@ -20,7 +20,6 @@ using $VariableStack = ::com::sun::org::apache::xpath::internal::VariableStack;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $XObject = ::com::sun::org::apache::xpath::internal::objects::XObject;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;

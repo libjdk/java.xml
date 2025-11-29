@@ -29,7 +29,6 @@ using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $NodeVector = ::com::sun::org::apache::xml::internal::utils::NodeVector;
 using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $XPATHErrorResources = ::com::sun::org::apache::xpath::internal::res::XPATHErrorResources;
-using $XPATHMessages = ::com::sun::org::apache::xpath::internal::res::XPATHMessages;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

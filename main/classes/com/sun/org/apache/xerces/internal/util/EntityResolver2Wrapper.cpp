@@ -12,7 +12,6 @@
 #include <org/xml/sax/ext/EntityResolver2.h>
 #include <jcpp.h>
 
-using $ExternalSubsetResolver = ::com::sun::org::apache::xerces::internal::impl::ExternalSubsetResolver;
 using $XMLEntityDescription = ::com::sun::org::apache::xerces::internal::impl::XMLEntityDescription;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XNIException = ::com::sun::org::apache::xerces::internal::xni::XNIException;

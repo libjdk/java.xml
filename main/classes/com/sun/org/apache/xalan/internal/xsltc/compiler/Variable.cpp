@@ -40,11 +40,9 @@
 #undef VARIABLE_REDEF_ERR
 
 using $AttributeArray = $Array<::com::sun::org::apache::bcel::internal::classfile::Attribute>;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $Field = ::com::sun::org::apache::bcel::internal::classfile::Field;
 using $ACONST_NULL = ::com::sun::org::apache::bcel::internal::generic::ACONST_NULL;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $DCONST = ::com::sun::org::apache::bcel::internal::generic::DCONST;
 using $FieldInstruction = ::com::sun::org::apache::bcel::internal::generic::FieldInstruction;
@@ -54,9 +52,7 @@ using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instructi
 using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUTFIELD = ::com::sun::org::apache::bcel::internal::generic::PUTFIELD;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -73,7 +69,7 @@ using $IntType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $NodeType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeType;
 using $RealType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::RealType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $List = ::java::util::List;
@@ -148,19 +144,19 @@ void Variable::parseContents($Parser* parser) {
 	}
 }
 
-$1Type* Variable::typeCheck($SymbolTable* stable) {
+$Type* Variable::typeCheck($SymbolTable* stable) {
 	if (this->_select != nullptr) {
 		$set(this, _type, $nc(this->_select)->typeCheck(stable));
 	} else if (hasContents()) {
 		typeCheckContents(stable);
-		$init($1Type);
-		$set(this, _type, $1Type::ResultTree);
+		$init($Type);
+		$set(this, _type, $Type::ResultTree);
 	} else {
-		$init($1Type);
-		$set(this, _type, $1Type::Reference);
+		$init($Type);
+		$set(this, _type, $Type::Reference);
 	}
-	$init($1Type);
-	return $1Type::Void;
+	$init($Type);
+	return $Type::Void;
 }
 
 void Variable::initialize($ClassGenerator* classGen, $MethodGenerator* methodGen) {

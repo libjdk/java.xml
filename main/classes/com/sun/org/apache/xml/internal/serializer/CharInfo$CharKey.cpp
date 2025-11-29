@@ -3,7 +3,6 @@
 #include <com/sun/org/apache/xml/internal/serializer/CharInfo.h>
 #include <jcpp.h>
 
-using $CharInfo = ::com::sun::org::apache::xml::internal::serializer::CharInfo;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;

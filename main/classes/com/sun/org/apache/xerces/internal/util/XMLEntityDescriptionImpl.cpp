@@ -4,7 +4,6 @@
 #include <java/lang/StringBuffer.h>
 #include <jcpp.h>
 
-using $XMLEntityDescription = ::com::sun::org::apache::xerces::internal::impl::XMLEntityDescription;
 using $XMLResourceIdentifierImpl = ::com::sun::org::apache::xerces::internal::util::XMLResourceIdentifierImpl;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

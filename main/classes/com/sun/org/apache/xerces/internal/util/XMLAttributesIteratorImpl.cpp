@@ -6,15 +6,12 @@
 #include <java/util/NoSuchElementException.h>
 #include <jcpp.h>
 
-using $XMLAttributesImpl$AttributeArray = $Array<::com::sun::org::apache::xerces::internal::util::XMLAttributesImpl$Attribute>;
 using $XMLAttributesImpl = ::com::sun::org::apache::xerces::internal::util::XMLAttributesImpl;
-using $XMLAttributesImpl$Attribute = ::com::sun::org::apache::xerces::internal::util::XMLAttributesImpl$Attribute;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalStateException = ::java::lang::IllegalStateException;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $Iterator = ::java::util::Iterator;
 using $NoSuchElementException = ::java::util::NoSuchElementException;
 
 namespace com {

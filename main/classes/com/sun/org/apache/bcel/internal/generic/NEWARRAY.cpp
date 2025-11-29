@@ -32,7 +32,6 @@ using $StackProducer = ::com::sun::org::apache::bcel::internal::generic::StackPr
 using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
 using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
-using $DataInputStream = ::java::io::DataInputStream;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

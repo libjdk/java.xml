@@ -38,23 +38,20 @@
 #undef TRANSLET_OUTPUT_SIG
 
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $CompoundInstruction = ::com::sun::org::apache::bcel::internal::generic::CompoundInstruction;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKESTATIC = ::com::sun::org::apache::bcel::internal::generic::INVOKESTATIC;
 using $INVOKEVIRTUAL = ::com::sun::org::apache::bcel::internal::generic::INVOKEVIRTUAL;
-using $Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
-using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
+using $1Instruction = ::com::sun::org::apache::bcel::internal::generic::Instruction;
 using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::InvokeInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
 using $AttributeValue = ::com::sun::org::apache::xalan::internal::xsltc::compiler::AttributeValue;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
-using $1Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
+using $Instruction = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Instruction;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $SymbolTable = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SymbolTable;
 using $SyntaxTreeNode = ::com::sun::org::apache::xalan::internal::xsltc::compiler::SyntaxTreeNode;
@@ -108,7 +105,7 @@ $Object* allocate$TransletOutput($Class* clazz) {
 }
 
 void TransletOutput::init$() {
-	$1Instruction::init$();
+	$Instruction::init$();
 }
 
 void TransletOutput::display(int32_t indent) {
@@ -161,7 +158,7 @@ void TransletOutput::translate($ClassGenerator* classGen, $MethodGenerator* meth
 		$init($Constants);
 		int32_t index = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "unallowed_extension_elementF"_s, "(Ljava/lang/String;)V"_s);
 		$nc(il)->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, "redirect"_s)));
-		il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, index)));
+		il->append(static_cast<$1Instruction*>($$new($INVOKESTATIC, index)));
 		return;
 	}
 	$nc(il)->append($(methodGen->loadHandler()));
@@ -171,12 +168,12 @@ void TransletOutput::translate($ClassGenerator* classGen, $MethodGenerator* meth
 	il->append($(classGen->loadTranslet()));
 	$nc(this->_filename)->translate(classGen, methodGen);
 	il->append(static_cast<$CompoundInstruction*>($$new($PUSH, cpg, this->_append)));
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, open)));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, open)));
 	il->append($(methodGen->storeHandler()));
 	translateContents(classGen, methodGen);
 	il->append($(classGen->loadTranslet()));
 	il->append($(methodGen->loadHandler()));
-	il->append(static_cast<$Instruction*>($$new($INVOKEVIRTUAL, close)));
+	il->append(static_cast<$1Instruction*>($$new($INVOKEVIRTUAL, close)));
 	il->append($(methodGen->storeHandler()));
 }
 

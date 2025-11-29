@@ -6,9 +6,6 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
-using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
-using $XMLEventConsumer = ::javax::xml::stream::util::XMLEventConsumer;
 
 namespace javax {
 	namespace xml {

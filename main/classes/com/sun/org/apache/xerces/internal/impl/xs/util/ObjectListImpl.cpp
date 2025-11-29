@@ -18,7 +18,6 @@
 
 #undef EMPTY_LIST
 
-using $ObjectList = ::com::sun::org::apache::xerces::internal::xs::datatypes::ObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IndexOutOfBoundsException = ::java::lang::IndexOutOfBoundsException;

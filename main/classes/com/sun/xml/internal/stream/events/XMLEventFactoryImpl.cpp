@@ -34,7 +34,6 @@ using $AttributeImpl = ::com::sun::xml::internal::stream::events::AttributeImpl;
 using $CharacterEvent = ::com::sun::xml::internal::stream::events::CharacterEvent;
 using $CommentEvent = ::com::sun::xml::internal::stream::events::CommentEvent;
 using $DTDEvent = ::com::sun::xml::internal::stream::events::DTDEvent;
-using $DummyEvent = ::com::sun::xml::internal::stream::events::DummyEvent;
 using $EndDocumentEvent = ::com::sun::xml::internal::stream::events::EndDocumentEvent;
 using $EndElementEvent = ::com::sun::xml::internal::stream::events::EndElementEvent;
 using $EntityReferenceEvent = ::com::sun::xml::internal::stream::events::EntityReferenceEvent;

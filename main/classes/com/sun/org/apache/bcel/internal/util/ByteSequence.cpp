@@ -10,7 +10,6 @@
 using $ByteSequence$ByteArrayStream = ::com::sun::org::apache::bcel::internal::util::ByteSequence$ByteArrayStream;
 using $ByteArrayInputStream = ::java::io::ByteArrayInputStream;
 using $DataInputStream = ::java::io::DataInputStream;
-using $FilterInputStream = ::java::io::FilterInputStream;
 using $InputStream = ::java::io::InputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;

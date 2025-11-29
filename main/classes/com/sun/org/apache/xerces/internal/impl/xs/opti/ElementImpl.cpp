@@ -14,15 +14,10 @@
 
 #undef ELEMENT_NODE
 
-using $NodeImplArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl>;
-using $AttrArray = $Array<::org::w3c::dom::Attr>;
-using $NodeImplArray2 = $Array<::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl, 2>;
 using $DefaultDocument = ::com::sun::org::apache::xerces::internal::impl::xs::opti::DefaultDocument;
 using $DefaultElement = ::com::sun::org::apache::xerces::internal::impl::xs::opti::DefaultElement;
 using $DefaultNode = ::com::sun::org::apache::xerces::internal::impl::xs::opti::DefaultNode;
 using $NamedNodeMapImpl = ::com::sun::org::apache::xerces::internal::impl::xs::opti::NamedNodeMapImpl;
-using $NodeImpl = ::com::sun::org::apache::xerces::internal::impl::xs::opti::NodeImpl;
-using $SchemaDOM = ::com::sun::org::apache::xerces::internal::impl::xs::opti::SchemaDOM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

@@ -20,7 +20,6 @@ using $QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
 using $XMLStreamConstants = ::javax::xml::stream::XMLStreamConstants;
 using $Characters = ::javax::xml::stream::events::Characters;
-using $EndDocument = ::javax::xml::stream::events::EndDocument;
 using $EndElement = ::javax::xml::stream::events::EndElement;
 using $StartElement = ::javax::xml::stream::events::StartElement;
 

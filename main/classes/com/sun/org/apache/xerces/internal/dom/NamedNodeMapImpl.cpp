@@ -30,7 +30,6 @@ using $DOMMessageFormatter = ::com::sun::org::apache::xerces::internal::dom::DOM
 using $NodeImpl = ::com::sun::org::apache::xerces::internal::dom::NodeImpl;
 using $ObjectInputStream = ::java::io::ObjectInputStream;
 using $ObjectOutputStream = ::java::io::ObjectOutputStream;
-using $Serializable = ::java::io::Serializable;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -41,7 +40,6 @@ using $Collection = ::java::util::Collection;
 using $List = ::java::util::List;
 using $Vector = ::java::util::Vector;
 using $DOMException = ::org::w3c::dom::DOMException;
-using $Document = ::org::w3c::dom::Document;
 using $NamedNodeMap = ::org::w3c::dom::NamedNodeMap;
 using $Node = ::org::w3c::dom::Node;
 

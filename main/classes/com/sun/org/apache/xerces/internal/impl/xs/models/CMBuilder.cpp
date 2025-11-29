@@ -32,7 +32,6 @@
 #undef PARTICLE_ZERO_OR_MORE
 #undef PARTICLE_ZERO_OR_ONE
 
-using $XSParticleDeclArray = $Array<::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl>;
 using $CMNode = ::com::sun::org::apache::xerces::internal::impl::dtd::models::CMNode;
 using $SchemaSymbols = ::com::sun::org::apache::xerces::internal::impl::xs::SchemaSymbols;
 using $XSComplexTypeDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSComplexTypeDecl;
@@ -48,8 +47,6 @@ using $XSCMUniOp = ::com::sun::org::apache::xerces::internal::impl::xs::models::
 using $XSCMValidator = ::com::sun::org::apache::xerces::internal::impl::xs::models::XSCMValidator;
 using $XSDFACM = ::com::sun::org::apache::xerces::internal::impl::xs::models::XSDFACM;
 using $XSEmptyCM = ::com::sun::org::apache::xerces::internal::impl::xs::models::XSEmptyCM;
-using $XSParticle = ::com::sun::org::apache::xerces::internal::xs::XSParticle;
-using $XSTerm = ::com::sun::org::apache::xerces::internal::xs::XSTerm;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;

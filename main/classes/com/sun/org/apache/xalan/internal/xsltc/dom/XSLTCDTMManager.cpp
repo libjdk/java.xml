@@ -44,7 +44,6 @@
 #undef ER_NOT_SUPPORTED
 #undef IDENT_DTM_NODE_BITS
 
-using $DOMBuilder = ::com::sun::org::apache::xalan::internal::xsltc::dom::DOMBuilder;
 using $ExtendedSAX = ::com::sun::org::apache::xalan::internal::xsltc::dom::ExtendedSAX;
 using $SAXImpl = ::com::sun::org::apache::xalan::internal::xsltc::dom::SAXImpl;
 using $DOM2SAX = ::com::sun::org::apache::xalan::internal::xsltc::trax::DOM2SAX;
@@ -70,7 +69,6 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $Exception = ::java::lang::Exception;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $NullPointerException = ::java::lang::NullPointerException;
 using $RuntimeException = ::java::lang::RuntimeException;
 using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
 using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;

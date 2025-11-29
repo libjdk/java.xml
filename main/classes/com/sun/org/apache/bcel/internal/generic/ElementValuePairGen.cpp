@@ -10,8 +10,6 @@
 #include <java/io/DataOutputStream.h>
 #include <jcpp.h>
 
-using $Constant = ::com::sun::org::apache::bcel::internal::classfile::Constant;
-using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $ElementValue = ::com::sun::org::apache::bcel::internal::classfile::ElementValue;
 using $ElementValuePair = ::com::sun::org::apache::bcel::internal::classfile::ElementValuePair;

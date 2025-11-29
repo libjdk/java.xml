@@ -2,7 +2,6 @@
 
 #include <jcpp.h>
 
-using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 

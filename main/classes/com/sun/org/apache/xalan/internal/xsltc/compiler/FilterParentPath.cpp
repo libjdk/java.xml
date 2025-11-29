@@ -51,7 +51,6 @@
 using $ALOAD = ::com::sun::org::apache::bcel::internal::generic::ALOAD;
 using $ASTORE = ::com::sun::org::apache::bcel::internal::generic::ASTORE;
 using $CPInstruction = ::com::sun::org::apache::bcel::internal::generic::CPInstruction;
-using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $FieldOrMethod = ::com::sun::org::apache::bcel::internal::generic::FieldOrMethod;
 using $INVOKEINTERFACE = ::com::sun::org::apache::bcel::internal::generic::INVOKEINTERFACE;
@@ -64,11 +63,8 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
-using $MethodGen = ::com::sun::org::apache::bcel::internal::generic::MethodGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
-using $StackInstruction = ::com::sun::org::apache::bcel::internal::generic::StackInstruction;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $CastExpr = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CastExpr;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $CurrentCall = ::com::sun::org::apache::xalan::internal::xsltc::compiler::CurrentCall;
@@ -84,7 +80,7 @@ using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compil
 using $NodeSetType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeSetType;
 using $NodeType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeType;
 using $ReferenceType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ReferenceType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $TypeCheckError = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::TypeCheckError;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $ClassInfo = ::java::lang::ClassInfo;
@@ -151,27 +147,27 @@ void FilterParentPath::setDescendantAxis() {
 	this->_hasDescendantAxis = true;
 }
 
-$1Type* FilterParentPath::typeCheck($SymbolTable* stable) {
+$Type* FilterParentPath::typeCheck($SymbolTable* stable) {
 	$useLocalCurrentObjectStackCache();
-	$var($1Type, ftype, $nc(this->_filterExpr)->typeCheck(stable));
+	$var($Type, ftype, $nc(this->_filterExpr)->typeCheck(stable));
 	if ($instanceOf($NodeSetType, ftype) == false) {
 		if ($instanceOf($ReferenceType, ftype)) {
-			$init($1Type);
-			$set(this, _filterExpr, $new($CastExpr, this->_filterExpr, $1Type::NodeSet));
+			$init($Type);
+			$set(this, _filterExpr, $new($CastExpr, this->_filterExpr, $Type::NodeSet));
 		} else if ($instanceOf($NodeType, ftype)) {
-			$init($1Type);
-			$set(this, _filterExpr, $new($CastExpr, this->_filterExpr, $1Type::NodeSet));
+			$init($Type);
+			$set(this, _filterExpr, $new($CastExpr, this->_filterExpr, $Type::NodeSet));
 		} else {
 			$throwNew($TypeCheckError, static_cast<$SyntaxTreeNode*>(this));
 		}
 	}
-	$var($1Type, ptype, $nc(this->_path)->typeCheck(stable));
+	$var($Type, ptype, $nc(this->_path)->typeCheck(stable));
 	if (!($instanceOf($NodeSetType, ptype))) {
-		$init($1Type);
-		$set(this, _path, $new($CastExpr, this->_path, $1Type::NodeSet));
+		$init($Type);
+		$set(this, _path, $new($CastExpr, this->_path, $Type::NodeSet));
 	}
-	$init($1Type);
-	return $set(this, _type, $1Type::NodeSet);
+	$init($Type);
+	return $set(this, _type, $Type::NodeSet);
 }
 
 void FilterParentPath::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {
