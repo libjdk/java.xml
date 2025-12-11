@@ -44,5 +44,4 @@ void java$xml$test::init() {
 		java$xml$test$GetResource
 	};
 	$System::addLibrary(&lib);
-	$System::init();
 }

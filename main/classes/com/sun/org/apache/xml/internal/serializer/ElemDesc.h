@@ -93,31 +93,31 @@ public:
 	void setAttr($String* name, int32_t flags);
 	int32_t m_flags = 0;
 	::com::sun::org::apache::xml::internal::serializer::utils::StringToIntTable* m_attrs = nullptr;
-	static const int32_t EMPTY = (1 << 1);
-	static const int32_t FLOW = (1 << 2);
-	static const int32_t BLOCK = (1 << 3);
-	static const int32_t BLOCKFORM = (1 << 4);
-	static const int32_t BLOCKFORMFIELDSET = (1 << 5);
-	static const int32_t CDATA = (1 << 6);
-	static const int32_t PCDATA = (1 << 7);
-	static const int32_t RAW = (1 << 8);
-	static const int32_t INLINE = (1 << 9);
-	static const int32_t INLINEA = (1 << 10);
-	static const int32_t INLINELABEL = (1 << 11);
-	static const int32_t FONTSTYLE = (1 << 12);
-	static const int32_t PHRASE = (1 << 13);
-	static const int32_t FORMCTRL = (1 << 14);
-	static const int32_t SPECIAL = (1 << 15);
-	static const int32_t ASPECIAL = (1 << 16);
-	static const int32_t HEADMISC = (1 << 17);
-	static const int32_t HEAD = (1 << 18);
-	static const int32_t LIST = (1 << 19);
-	static const int32_t PREFORMATTED = (1 << 20);
-	static const int32_t WHITESPACESENSITIVE = (1 << 21);
-	static const int32_t HEADELEM = (1 << 22);
-	static const int32_t HTMLELEM = (1 << 23);
-	static const int32_t ATTRURL = (1 << 1);
-	static const int32_t ATTREMPTY = (1 << 2);
+	static const int32_t EMPTY = 2; // (1 << 1)
+	static const int32_t FLOW = 4; // (1 << 2)
+	static const int32_t BLOCK = 8; // (1 << 3)
+	static const int32_t BLOCKFORM = 16; // (1 << 4)
+	static const int32_t BLOCKFORMFIELDSET = 32; // (1 << 5)
+	static const int32_t CDATA = 64; // (1 << 6)
+	static const int32_t PCDATA = 128; // (1 << 7)
+	static const int32_t RAW = 256; // (1 << 8)
+	static const int32_t INLINE = 512; // (1 << 9)
+	static const int32_t INLINEA = 1024; // (1 << 10)
+	static const int32_t INLINELABEL = 2048; // (1 << 11)
+	static const int32_t FONTSTYLE = 4096; // (1 << 12)
+	static const int32_t PHRASE = 8192; // (1 << 13)
+	static const int32_t FORMCTRL = 16384; // (1 << 14)
+	static const int32_t SPECIAL = 32768; // (1 << 15)
+	static const int32_t ASPECIAL = 65536; // (1 << 16)
+	static const int32_t HEADMISC = 131072; // (1 << 17)
+	static const int32_t HEAD = 262144; // (1 << 18)
+	static const int32_t LIST = 524288; // (1 << 19)
+	static const int32_t PREFORMATTED = 1048576; // (1 << 20)
+	static const int32_t WHITESPACESENSITIVE = 2097152; // (1 << 21)
+	static const int32_t HEADELEM = 4194304; // (1 << 22)
+	static const int32_t HTMLELEM = 8388608; // (1 << 23)
+	static const int32_t ATTRURL = 2; // (1 << 1)
+	static const int32_t ATTREMPTY = 4; // (1 << 2)
 };
 
 						} // serializer

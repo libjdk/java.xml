@@ -205,7 +205,7 @@ public:
 	virtual $String* toString() override;
 	virtual void validate(::javax::xml::transform::Source* source, ::javax::xml::transform::Result* result) override;
 	void validate(::org::w3c::dom::Node* node);
-	static const int32_t CHUNK_SIZE = (1 << 10);
+	static const int32_t CHUNK_SIZE = 1024; // (1 << 10)
 	static const int32_t CHUNK_MASK = 1023; // CHUNK_SIZE - 1
 	static $String* ERROR_REPORTER;
 	static $String* NAMESPACE_CONTEXT;

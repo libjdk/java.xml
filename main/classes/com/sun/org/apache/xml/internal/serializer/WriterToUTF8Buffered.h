@@ -48,7 +48,7 @@ public:
 	virtual void write($chars* chars, int32_t start, int32_t length) override;
 	virtual void write($String* s) override;
 	static const int32_t BYTES_MAX = 16384; // 16 * 1024
-	static const int32_t CHARS_MAX = (BYTES_MAX / 3);
+	static const int32_t CHARS_MAX = 5461; // (BYTES_MAX / 3)
 	::java::io::OutputStream* m_os = nullptr;
 	$bytes* m_outputBytes = nullptr;
 	$chars* m_inputChars = nullptr;

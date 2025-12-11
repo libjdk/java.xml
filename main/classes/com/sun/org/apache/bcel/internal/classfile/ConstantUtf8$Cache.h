@@ -38,7 +38,7 @@ public:
 	static bool isEnabled();
 	static const bool BCEL_STATISTICS = false;
 	static const int32_t MAX_ENTRIES = 20000;
-	static const int32_t INITIAL_CAPACITY = (int32_t)(MAX_ENTRIES / 0.75);
+	static const int32_t INITIAL_CAPACITY = 26666; // (int32_t)(MAX_ENTRIES / 0.75)
 	static ::java::util::HashMap* CACHE;
 	static const int32_t MAX_ENTRY_SIZE = 200;
 };

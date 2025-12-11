@@ -190,26 +190,26 @@ public:
 	static const int32_t BITS_COUNT = 255;
 	static const int32_t BITS_RESERVED = 3840;
 	static const int32_t BIT_PREDICATE = (4096);
-	static const int32_t BIT_ANCESTOR = (4096 << 1);
-	static const int32_t BIT_ANCESTOR_OR_SELF = (4096 << 2);
-	static const int32_t BIT_ATTRIBUTE = (4096 << 3);
-	static const int32_t BIT_CHILD = (4096 << 4);
-	static const int32_t BIT_DESCENDANT = (4096 << 5);
-	static const int32_t BIT_DESCENDANT_OR_SELF = (4096 << 6);
-	static const int32_t BIT_FOLLOWING = (4096 << 7);
-	static const int32_t BIT_FOLLOWING_SIBLING = (4096 << 8);
-	static const int32_t BIT_NAMESPACE = (4096 << 9);
-	static const int32_t BIT_PARENT = (4096 << 10);
-	static const int32_t BIT_PRECEDING = (4096 << 11);
-	static const int32_t BIT_PRECEDING_SIBLING = (4096 << 12);
-	static const int32_t BIT_SELF = (4096 << 13);
-	static const int32_t BIT_FILTER = (4096 << 14);
-	static const int32_t BIT_ROOT = (4096 << 15);
-	static const int32_t BITMASK_TRAVERSES_OUTSIDE_SUBTREE = (BIT_NAMESPACE | BIT_PRECEDING_SIBLING | BIT_PRECEDING | BIT_FOLLOWING_SIBLING | BIT_FOLLOWING | BIT_PARENT | BIT_ANCESTOR_OR_SELF | BIT_ANCESTOR | BIT_FILTER | BIT_ROOT);
-	static const int32_t BIT_BACKWARDS_SELF = (4096 << 16);
-	static const int32_t BIT_ANY_DESCENDANT_FROM_ROOT = (4096 << 17);
-	static const int32_t BIT_NODETEST_ANY = (4096 << 18);
-	static const int32_t BIT_MATCH_PATTERN = (4096 << 19);
+	static const int32_t BIT_ANCESTOR = 8192; // (4096 << 1)
+	static const int32_t BIT_ANCESTOR_OR_SELF = 16384; // (4096 << 2)
+	static const int32_t BIT_ATTRIBUTE = 32768; // (4096 << 3)
+	static const int32_t BIT_CHILD = 65536; // (4096 << 4)
+	static const int32_t BIT_DESCENDANT = 131072; // (4096 << 5)
+	static const int32_t BIT_DESCENDANT_OR_SELF = 262144; // (4096 << 6)
+	static const int32_t BIT_FOLLOWING = 524288; // (4096 << 7)
+	static const int32_t BIT_FOLLOWING_SIBLING = 1048576; // (4096 << 8)
+	static const int32_t BIT_NAMESPACE = 2097152; // (4096 << 9)
+	static const int32_t BIT_PARENT = 4194304; // (4096 << 10)
+	static const int32_t BIT_PRECEDING = 8388608; // (4096 << 11)
+	static const int32_t BIT_PRECEDING_SIBLING = 16777216; // (4096 << 12)
+	static const int32_t BIT_SELF = 33554432; // (4096 << 13)
+	static const int32_t BIT_FILTER = 67108864; // (4096 << 14)
+	static const int32_t BIT_ROOT = 0x08000000; // (4096 << 15)
+	static const int32_t BITMASK_TRAVERSES_OUTSIDE_SUBTREE = 0x0DF86000; // (BIT_NAMESPACE | BIT_PRECEDING_SIBLING | BIT_PRECEDING | BIT_FOLLOWING_SIBLING | BIT_FOLLOWING | BIT_PARENT | BIT_ANCESTOR_OR_SELF | BIT_ANCESTOR | BIT_FILTER | BIT_ROOT)
+	static const int32_t BIT_BACKWARDS_SELF = 0x10000000; // (4096 << 16)
+	static const int32_t BIT_ANY_DESCENDANT_FROM_ROOT = 0x20000000; // (4096 << 17)
+	static const int32_t BIT_NODETEST_ANY = 0x40000000; // (4096 << 18)
+	static const int32_t BIT_MATCH_PATTERN = 0x80000000; // (4096 << 19)
 };
 
 						} // axes

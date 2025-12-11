@@ -208,9 +208,9 @@ public:
 	static const bool DEBUG_PRINT_TABLES = false;
 	static const bool DEBUG_IDS = false;
 	static const int32_t CHUNK_SHIFT = 8;
-	static const int32_t CHUNK_SIZE = (1 << CHUNK_SHIFT);
+	static const int32_t CHUNK_SIZE = 256; // (1 << CHUNK_SHIFT)
 	static const int32_t CHUNK_MASK = 255; // CHUNK_SIZE - 1
-	static const int32_t INITIAL_CHUNK_COUNT = (1 << (13 - CHUNK_SHIFT));
+	static const int32_t INITIAL_CHUNK_COUNT = 32; // (1 << (13 - CHUNK_SHIFT))
 	int32_t fNodeCount = 0;
 	$Array<int32_t, 2>* fNodeType = nullptr;
 	$Array<::java::lang::Object, 2>* fNodeName = nullptr;

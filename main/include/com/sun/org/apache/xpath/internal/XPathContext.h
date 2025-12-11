@@ -269,7 +269,7 @@ public:
 	::javax::xml::transform::URIResolver* m_uriResolver = nullptr;
 	::org::xml::sax::XMLReader* m_primaryReader = nullptr;
 	::java::util::Stack* m_contextNodeLists = nullptr;
-	static const int32_t RECURSIONLIMIT = (1024 * 4);
+	static const int32_t RECURSIONLIMIT = 4096; // (1024 * 4)
 	::com::sun::org::apache::xml::internal::utils::IntStack* m_currentNodes = nullptr;
 	::com::sun::org::apache::xml::internal::utils::NodeVector* m_iteratorRoots = nullptr;
 	::com::sun::org::apache::xml::internal::utils::NodeVector* m_predicateRoots = nullptr;

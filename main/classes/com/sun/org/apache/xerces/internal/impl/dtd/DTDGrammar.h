@@ -290,9 +290,9 @@ public:
 	virtual void unparsedEntityDecl($String* name, ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier* identifier, $String* notation, ::com::sun::org::apache::xerces::internal::xni::Augmentations* augs) override;
 	static const int32_t TOP_LEVEL_SCOPE = (-1);
 	static const int32_t CHUNK_SHIFT = 8;
-	static const int32_t CHUNK_SIZE = (1 << CHUNK_SHIFT);
+	static const int32_t CHUNK_SIZE = 256; // (1 << CHUNK_SHIFT)
 	static const int32_t CHUNK_MASK = 255; // CHUNK_SIZE - 1
-	static const int32_t INITIAL_CHUNK_COUNT = (1 << (10 - CHUNK_SHIFT));
+	static const int32_t INITIAL_CHUNK_COUNT = 4; // (1 << (10 - CHUNK_SHIFT))
 	static const int16_t LIST_FLAG = 128;
 	static const int16_t LIST_MASK = ~LIST_FLAG;
 	static const bool DEBUG = false;

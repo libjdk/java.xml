@@ -162,11 +162,11 @@ void CharInfo::init$($String* entitiesResource, $String* method, bool internal) 
 	bool noExtraEntities = true;
 	try {
 		if (internal) {
-			$assign(entities, $PropertyResourceBundle::getBundle(entitiesResource));
+			$assign(entities, $ResourceBundle::getBundle(entitiesResource));
 		} else {
 			$var($ClassLoader, cl, $SecuritySupport::getContextClassLoader());
 			if (cl != nullptr) {
-				$assign(entities, $PropertyResourceBundle::getBundle(entitiesResource, $($Locale::getDefault()), cl));
+				$assign(entities, $ResourceBundle::getBundle(entitiesResource, $($Locale::getDefault()), cl));
 			}
 		}
 	} catch ($Exception& e) {

@@ -97,7 +97,7 @@ public:
 	static const int32_t CHUNK_SHIFT = 8;
 	static const int32_t CHUNK_SIZE = 256; // 1 << CHUNK_SHIFT
 	static const int32_t CHUNK_MASK = 255; // CHUNK_SIZE - 1
-	static const int32_t INITIAL_CHUNK_COUNT = (1 << (10 - CHUNK_SHIFT));
+	static const int32_t INITIAL_CHUNK_COUNT = 4; // (1 << (10 - CHUNK_SHIFT))
 	$Array<::com::sun::org::apache::xerces::internal::impl::xs::XSElementDecl, 2>* fElementDecl = nullptr;
 	int32_t fElementDeclIndex = 0;
 	$Array<::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl, 2>* fParticleDecl = nullptr;

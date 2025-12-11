@@ -43,8 +43,8 @@ public:
 	static void set(int32_t codePoint, $ints* map);
 	static $ints* updateMap(int32_t codePoint, $ints* codePointMap, int32_t ciCodePoint, $ints* ciCodePointMap, int32_t matchType);
 	static const int32_t CHUNK_SHIFT = 10;
-	static const int32_t CHUNK_SIZE = (1 << CHUNK_SHIFT);
-	static const int32_t CHUNK_MASK = (CHUNK_SIZE - 1);
+	static const int32_t CHUNK_SIZE = 1024; // (1 << CHUNK_SHIFT)
+	static const int32_t CHUNK_MASK = 1023; // (CHUNK_SIZE - 1)
 	static const int32_t INITIAL_CHUNK_COUNT = 64;
 	static $Array<int32_t, 3>* caseInsensitiveMap;
 	static const int32_t LOWER_CASE_MATCH = 1;

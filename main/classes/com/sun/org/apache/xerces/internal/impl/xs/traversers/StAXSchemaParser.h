@@ -133,7 +133,7 @@ public:
 	void parse(::javax::xml::stream::XMLStreamReader* input);
 	void reset(::com::sun::org::apache::xerces::internal::impl::xs::opti::SchemaDOMParser* schemaDOMParser, ::com::sun::org::apache::xerces::internal::util::SymbolTable* symbolTable);
 	void sendCharactersToSchemaParser($String* str, bool whitespace);
-	static const int32_t CHUNK_SIZE = (1 << 10);
+	static const int32_t CHUNK_SIZE = 1024; // (1 << 10)
 	static const int32_t CHUNK_MASK = 1023; // CHUNK_SIZE - 1
 	$chars* fCharBuffer = nullptr;
 	::com::sun::org::apache::xerces::internal::util::SymbolTable* fSymbolTable = nullptr;
