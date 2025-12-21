@@ -799,15 +799,15 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_CURLYBRACE),
-			$of(u"Fel: Uttryck f\u00e5r inte inneh\u00e5lla \'{\'"_s)
+			$of(u"Fel: Uttryck får inte innehålla \'{\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ILLEGAL_ATTRIBUTE),
-			$of(u"{0} har ett otill\u00e5tet attribut: {1}"_s)
+			$of(u"{0} har ett otillåtet attribut: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_SOURCENODE_APPLYIMPORTS),
-			$of(u"sourceNode \u00e4r null i xsl:apply-imports!"_s)
+			$of(u"sourceNode är null i xsl:apply-imports!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_ADD),
@@ -815,11 +815,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_SOURCENODE_HANDLEAPPLYTEMPLATES),
-			$of(u"sourceNode \u00e4r null i handleApplyTemplatesInstruction!"_s)
+			$of(u"sourceNode är null i handleApplyTemplatesInstruction!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_NAME_ATTRIB),
-			$of(u"{0} m\u00e5ste ha ett namnattribut."_s)
+			$of(u"{0} måste ha ett namnattribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_TEMPLATE_NOT_FOUND),
@@ -831,43 +831,43 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_REQUIRES_ATTRIB),
-			$of(u"{0} kr\u00e4ver attribut: {1}"_s)
+			$of(u"{0} kräver attribut: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MUST_HAVE_TEST_ATTRIB),
-			$of(u"{0} m\u00e5ste ha ett \'\'test\'\'-attribut."_s)
+			$of(u"{0} måste ha ett \'\'test\'\'-attribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_BAD_VAL_ON_LEVEL_ATTRIB),
-			$of(u"Felaktigt v\u00e4rde i niv\u00e5attribut: {0}"_s)
+			$of(u"Felaktigt värde i nivåattribut: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
-			$of(u"Namn p\u00e5 bearbetningsinstruktion kan inte vara \'xml\'"_s)
+			$of(u"Namn på bearbetningsinstruktion kan inte vara \'xml\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"Namn p\u00e5 bearbetningsinstruktion m\u00e5ste vara ett giltigt NCName: {0}"_s)
+			$of(u"Namn på bearbetningsinstruktion måste vara ett giltigt NCName: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NEED_MATCH_ATTRIB),
-			$of(u"{0} m\u00e5ste ha ett matchningsattribut n\u00e4r det anger ett l\u00e4ge."_s)
+			$of(u"{0} måste ha ett matchningsattribut när det anger ett läge."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NEED_NAME_OR_MATCH_ATTRIB),
-			$of(u"{0} kr\u00e4ver antingen ett namn eller ett matchningsattribut."_s)
+			$of(u"{0} kräver antingen ett namn eller ett matchningsattribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANT_RESOLVE_NSPREFIX),
-			$of(u"Kan inte matcha prefix f\u00f6r namnrymd: {0}"_s)
+			$of(u"Kan inte matcha prefix för namnrymd: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ILLEGAL_VALUE),
-			$of(u"xml:space har ett otill\u00e5tet v\u00e4rde: {0}"_s)
+			$of(u"xml:space har ett otillåtet värde: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_OWNERDOC),
-			$of(u"Underordnad nod har inget \u00e4gardokument!"_s)
+			$of(u"Underordnad nod har inget ägardokument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ELEMTEMPLATEELEM_ERR),
@@ -875,23 +875,23 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_CHILD),
-			$of(u"F\u00f6rs\u00f6ker l\u00e4gga till en null-underordnad!"_s)
+			$of(u"Försöker lägga till en null-underordnad!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NEED_SELECT_ATTRIB),
-			$of(u"{0} kr\u00e4ver ett select-attribut."_s)
+			$of(u"{0} kräver ett select-attribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NEED_TEST_ATTRIB),
-			$of(u"xsl:when m\u00e5ste ha ett \'test\'-attribut."_s)
+			$of(u"xsl:when måste ha ett \'test\'-attribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NEED_NAME_ATTRIB),
-			$of(u"xsl:with-parametern m\u00e5ste ha ett \'namn\'-attribut."_s)
+			$of(u"xsl:with-parametern måste ha ett \'namn\'-attribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_CONTEXT_OWNERDOC),
-			$of(u"context har inget \u00e4gardokument!"_s)
+			$of(u"context har inget ägardokument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_COULD_NOT_CREATE_XML_PROC_LIAISON),
@@ -899,15 +899,15 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROCESS_NOT_SUCCESSFUL),
-			$of(u"Xalan: Processen utf\u00f6rdes inte."_s)
+			$of(u"Xalan: Processen utfördes inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NOT_SUCCESSFUL),
-			$of(u"Xalan: utf\u00f6rdes inte."_s)
+			$of(u"Xalan: utfördes inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"Kodningen st\u00f6ds inte: {0}"_s)
+			$of(u"Kodningen stöds inte: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_COULD_NOT_CREATE_TRACELISTENER),
@@ -915,27 +915,27 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_KEY_REQUIRES_NAME_ATTRIB),
-			$of(u"xsl:key kr\u00e4ver ett \'namn\'-attribut!"_s)
+			$of(u"xsl:key kräver ett \'namn\'-attribut!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_KEY_REQUIRES_MATCH_ATTRIB),
-			$of(u"xsl:key kr\u00e4ver ett \'matchning\'-attribut!"_s)
+			$of(u"xsl:key kräver ett \'matchning\'-attribut!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_KEY_REQUIRES_USE_ATTRIB),
-			$of(u"xsl:key kr\u00e4ver ett \'anv\u00e4nd\'-attribut!"_s)
+			$of(u"xsl:key kräver ett \'använd\'-attribut!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_REQUIRES_ELEMENTS_ATTRIB),
-			$of(u"(StylesheetHandler) {0} kr\u00e4ver ett \'\'element\'\'-attribut!"_s)
+			$of(u"(StylesheetHandler) {0} kräver ett \'\'element\'\'-attribut!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MISSING_PREFIX_ATTRIB),
-			$of(u"(StylesheetHandler) \'\'prefix\'\' f\u00f6r {0}-attribut saknas"_s)
+			$of(u"(StylesheetHandler) \'\'prefix\'\' för {0}-attribut saknas"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_BAD_STYLESHEET_URL),
-			$of(u"Formatmall-URL \u00e4r felaktig: {0}"_s)
+			$of(u"Formatmall-URL är felaktig: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_FILE_NOT_FOUND),
@@ -947,11 +947,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_HREF_ATTRIB),
-			$of(u"(StylesheetHandler) Hittade inte href-attribut f\u00f6r {0}"_s)
+			$of(u"(StylesheetHandler) Hittade inte href-attribut för {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_STYLESHEET_INCLUDES_ITSELF),
-			$of(u"(StylesheetHandler) {0} inkluderar, direkt eller indirekt, sig sj\u00e4lv!"_s)
+			$of(u"(StylesheetHandler) {0} inkluderar, direkt eller indirekt, sig själv!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROCESSINCLUDE_ERROR),
@@ -959,11 +959,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MISSING_LANG_ATTRIB),
-			$of(u"(StylesheetHandler) \'\'lang\'\' f\u00f6r {0}-attribut saknas"_s)
+			$of(u"(StylesheetHandler) \'\'lang\'\' för {0}-attribut saknas"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MISSING_CONTAINER_ELEMENT_COMPONENT),
-			$of(u"(StylesheetHandler) {0}-element?? \u00e4r felplacerat Container-elementet \'\'component\'\' saknas"_s)
+			$of(u"(StylesheetHandler) {0}-element?? är felplacerat Container-elementet \'\'component\'\' saknas"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CAN_ONLY_OUTPUT_TO_ELEMENT),
@@ -1003,15 +1003,15 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NODE_NOT_ELEMENT),
-			$of(u"Nod som pekades p\u00e5 av fragment-identifierare var inte ett element: {0}"_s)
+			$of(u"Nod som pekades på av fragment-identifierare var inte ett element: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_FOREACH_NEED_MATCH_OR_NAME_ATTRIB),
-			$of(u"for-each kr\u00e4ver antingen en matchning eller ett namnattribut"_s)
+			$of(u"for-each kräver antingen en matchning eller ett namnattribut"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_TEMPLATES_NEED_MATCH_OR_NAME_ATTRIB),
-			$of(u"templates kr\u00e4ver antingen en matchning eller ett namnattribut"_s)
+			$of(u"templates kräver antingen en matchning eller ett namnattribut"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_CLONE_OF_DOCUMENT_FRAG),
@@ -1019,23 +1019,23 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANT_CREATE_ITEM),
-			$of(u"Kan inte skapa element i resultattr\u00e4d: {0}"_s)
+			$of(u"Kan inte skapa element i resultatträd: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XMLSPACE_ILLEGAL_VALUE),
-			$of(u"xml:space i k\u00e4ll-XML har ett otill\u00e5tet v\u00e4rde: {0}"_s)
+			$of(u"xml:space i käll-XML har ett otillåtet värde: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_XSLKEY_DECLARATION),
-			$of(u"Det finns ingen xsl:key-deklaration f\u00f6r {0}!"_s)
+			$of(u"Det finns ingen xsl:key-deklaration för {0}!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANT_CREATE_URL),
-			$of(u"Fel! Kan inte skapa URL f\u00f6r: {0}"_s)
+			$of(u"Fel! Kan inte skapa URL för: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XSLFUNCTIONS_UNSUPPORTED),
-			$of(u"xsl:functions st\u00f6ds inte"_s)
+			$of(u"xsl:functions stöds inte"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROCESSOR_ERROR),
@@ -1043,31 +1043,31 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NOT_ALLOWED_INSIDE_STYLESHEET),
-			$of(u"(StylesheetHandler) {0} \u00e4r inte till\u00e5ten inne i en formatmall!"_s)
+			$of(u"(StylesheetHandler) {0} är inte tillåten inne i en formatmall!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_RESULTNS_NOT_SUPPORTED),
-			$of(u"result-ns st\u00f6ds inte l\u00e4ngre! Anv\u00e4nd xsl:output ist\u00e4llet."_s)
+			$of(u"result-ns stöds inte längre! Använd xsl:output istället."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_DEFAULTSPACE_NOT_SUPPORTED),
-			$of(u"default-space st\u00f6ds inte l\u00e4ngre! Anv\u00e4nd xsl:strip-space eller xsl:preserve-space ist\u00e4llet."_s)
+			$of(u"default-space stöds inte längre! Använd xsl:strip-space eller xsl:preserve-space istället."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INDENTRESULT_NOT_SUPPORTED),
-			$of(u"indent-result st\u00f6ds inte l\u00e4ngre! Anv\u00e4nd xsl:output ist\u00e4llet."_s)
+			$of(u"indent-result stöds inte längre! Använd xsl:output istället."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ILLEGAL_ATTRIB),
-			$of(u"(StylesheetHandler) {0} har ett otill\u00e5tet attribut: {1}"_s)
+			$of(u"(StylesheetHandler) {0} har ett otillåtet attribut: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_UNKNOWN_XSL_ELEM),
-			$of(u"Ok\u00e4nt XSL-element: {0}"_s)
+			$of(u"Okänt XSL-element: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_BAD_XSLSORT_USE),
-			$of(u"(StylesheetHandler) xsl:sort kan endast anv\u00e4ndas med xsl:apply-templates eller xsl:for-each."_s)
+			$of(u"(StylesheetHandler) xsl:sort kan endast användas med xsl:apply-templates eller xsl:for-each."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MISPLACED_XSLWHEN),
@@ -1075,7 +1075,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XSLWHEN_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:when h\u00e4rstammar inte fr\u00e5n xsl:choose!"_s)
+			$of(u"(StylesheetHandler) xsl:when härstammar inte från xsl:choose!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MISPLACED_XSLOTHERWISE),
@@ -1083,31 +1083,31 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XSLOTHERWISE_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:otherwise h\u00e4rstammar inte fr\u00e5n xsl:choose!"_s)
+			$of(u"(StylesheetHandler) xsl:otherwise härstammar inte från xsl:choose!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NOT_ALLOWED_INSIDE_TEMPLATE),
-			$of(u"(StylesheetHandler) {0} \u00e4r inte till\u00e5ten inne i en mall!"_s)
+			$of(u"(StylesheetHandler) {0} är inte tillåten inne i en mall!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_UNKNOWN_EXT_NS_PREFIX),
-			$of(u"(StylesheetHandler) ok\u00e4nt namnrymdsprefix {1} f\u00f6r till\u00e4gg {0}"_s)
+			$of(u"(StylesheetHandler) okänt namnrymdsprefix {1} för tillägg {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_IMPORTS_AS_FIRST_ELEM),
-			$of(u"(StylesheetHandler) Imports kan endast f\u00f6rekomma som de f\u00f6rsta elementen i formatmallen!"_s)
+			$of(u"(StylesheetHandler) Imports kan endast förekomma som de första elementen i formatmallen!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_IMPORTING_ITSELF),
-			$of(u"(StylesheetHandler) {0} importerar, direkt eller indirekt, sig sj\u00e4lv!"_s)
+			$of(u"(StylesheetHandler) {0} importerar, direkt eller indirekt, sig själv!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XMLSPACE_ILLEGAL_VAL),
-			$of(u"(StylesheetHandler) xml:space har ett otill\u00e5tet v\u00e4rde: {0}"_s)
+			$of(u"(StylesheetHandler) xml:space har ett otillåtet värde: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROCESSSTYLESHEET_NOT_SUCCESSFUL),
-			$of(u"processStylesheet utf\u00f6rdes inte!"_s)
+			$of(u"processStylesheet utfördes inte!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_SAX_EXCEPTION),
@@ -1115,7 +1115,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Funktionen st\u00f6ds inte!"_s)
+			$of(u"Funktionen stöds inte!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XSLT_ERROR),
@@ -1123,11 +1123,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CURRENCY_SIGN_ILLEGAL),
-			$of(u"valutatecken \u00e4r inte till\u00e5tet i formatm\u00f6nsterstr\u00e4ng"_s)
+			$of(u"valutatecken är inte tillåtet i formatmönstersträng"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_DOCUMENT_FUNCTION_INVALID_IN_STYLESHEET_DOM),
-			$of(u"Dokumentfunktion st\u00f6ds inte i Stylesheet DOM!"_s)
+			$of(u"Dokumentfunktion stöds inte i Stylesheet DOM!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANT_RESOLVE_PREFIX_OF_NON_PREFIX_RESOLVER),
@@ -1135,23 +1135,23 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_REDIRECT_COULDNT_GET_FILENAME),
-			$of(u"Redirect-till\u00e4gg: Hittade inte filnamn - fil eller valattribut m\u00e5ste returnera giltig str\u00e4ng."_s)
+			$of(u"Redirect-tillägg: Hittade inte filnamn - fil eller valattribut måste returnera giltig sträng."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_BUILD_FORMATTERLISTENER_IN_REDIRECT),
-			$of(u"Kan inte bygga FormatterListener i Redirect-till\u00e4gg!"_s)
+			$of(u"Kan inte bygga FormatterListener i Redirect-tillägg!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_PREFIX_IN_EXCLUDERESULTPREFIX),
-			$of(u"Prefix i exclude-result-prefixes \u00e4r inte giltigt: {0}"_s)
+			$of(u"Prefix i exclude-result-prefixes är inte giltigt: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MISSING_NS_URI),
-			$of(u"Namnrymds-URI saknas f\u00f6r angivna prefix"_s)
+			$of(u"Namnrymds-URI saknas för angivna prefix"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MISSING_ARG_FOR_OPTION),
-			$of(u"Argument saknas f\u00f6r alternativet: {0}"_s)
+			$of(u"Argument saknas för alternativet: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_OPTION),
@@ -1159,47 +1159,47 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MALFORMED_FORMAT_STRING),
-			$of(u"Felaktigt utformad formatstr\u00e4ng: {0}"_s)
+			$of(u"Felaktigt utformad formatsträng: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_STYLESHEET_REQUIRES_VERSION_ATTRIB),
-			$of(u"xsl:stylesheet kr\u00e4ver ett \'version\'-attribut!"_s)
+			$of(u"xsl:stylesheet kräver ett \'version\'-attribut!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"Attribut: {0} har ett otill\u00e5tet v\u00e4rde: {1}"_s)
+			$of(u"Attribut: {0} har ett otillåtet värde: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CHOOSE_REQUIRES_WHEN),
-			$of(u"xsl:choose kr\u00e4ver xsl:when"_s)
+			$of(u"xsl:choose kräver xsl:when"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_APPLY_IMPORT_IN_FOR_EACH),
-			$of(u"xsl:apply-imports inte till\u00e5tet i xsl:for-each"_s)
+			$of(u"xsl:apply-imports inte tillåtet i xsl:for-each"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANT_USE_DTM_FOR_OUTPUT),
-			$of(u"Kan inte anv\u00e4nda DTMLiaison till en DOM utdatanod... skicka en com.sun.org.apache.xpath.internal.DOM2Helper ist\u00e4llet!"_s)
+			$of(u"Kan inte använda DTMLiaison till en DOM utdatanod... skicka en com.sun.org.apache.xpath.internal.DOM2Helper istället!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANT_USE_DTM_FOR_INPUT),
-			$of(u"Kan inte anv\u00e4nda DTMLiaison till en DOM indatanod... skicka en com.sun.org.apache.xpath.internal.DOM2Helper ist\u00e4llet!"_s)
+			$of(u"Kan inte använda DTMLiaison till en DOM indatanod... skicka en com.sun.org.apache.xpath.internal.DOM2Helper istället!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CALL_TO_EXT_FAILED),
-			$of(u"Anrop till till\u00e4ggselement utf\u00f6rdes inte: {0}"_s)
+			$of(u"Anrop till tilläggselement utfördes inte: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PREFIX_MUST_RESOLVE),
-			$of(u"Prefix m\u00e5ste matchas till en namnrymd: {0}"_s)
+			$of(u"Prefix måste matchas till en namnrymd: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Ogiltigt UTF-16-surrogat uppt\u00e4ckt: {0} ?"_s)
+			$of(u"Ogiltigt UTF-16-surrogat upptäckt: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XSLATTRSET_USED_ITSELF),
-			$of(u"xsl:attribute-set {0} anv\u00e4nde sig sj\u00e4lvt, vilket kommer att orsaka en o\u00e4ndlig slinga."_s)
+			$of(u"xsl:attribute-set {0} använde sig självt, vilket kommer att orsaka en oändlig slinga."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_MIX_XERCESDOM),
@@ -1215,23 +1215,23 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_DUPLICATE_NAMED_TEMPLATE),
-			$of(u"Hittade fler \u00e4n en mall med namnet: {0}"_s)
+			$of(u"Hittade fler än en mall med namnet: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_KEY_CALL),
-			$of(u"Ogiltigt funktionsanrop: rekursiva key()-anrop \u00e4r inte till\u00e5tna"_s)
+			$of(u"Ogiltigt funktionsanrop: rekursiva key()-anrop är inte tillåtna"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_REFERENCING_ITSELF),
-			$of(u"Variabeln {0} refererar, direkt eller indirekt, till sig sj\u00e4lv!"_s)
+			$of(u"Variabeln {0} refererar, direkt eller indirekt, till sig själv!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ILLEGAL_DOMSOURCE_INPUT),
-			$of(u"Indatanoden till en DOMSource f\u00f6r newTemplates f\u00e5r inte vara null!"_s)
+			$of(u"Indatanoden till en DOMSource för newTemplates får inte vara null!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CLASS_NOT_FOUND_FOR_OPTION),
-			$of(u"Klassfil f\u00f6r alternativ {0} saknas"_s)
+			$of(u"Klassfil för alternativ {0} saknas"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_REQUIRED_ELEM_NOT_FOUND),
@@ -1259,15 +1259,15 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_CMPL_EXTENSN),
-			$of(u"Kunde inte kompilera till\u00e4gg"_s)
+			$of(u"Kunde inte kompilera tillägg"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_CREATE_EXTENSN),
-			$of(u"Kunde inte skapa till\u00e4gg: {0} p\u00e5 grund av: {1}"_s)
+			$of(u"Kunde inte skapa tillägg: {0} på grund av: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INSTANCE_MTHD_CALL_REQUIRES),
-			$of(u"Instansmetodanrop till metod {0} kr\u00e4ver en objektinstans som f\u00f6rsta argument"_s)
+			$of(u"Instansmetodanrop till metod {0} kräver en objektinstans som första argument"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_ELEMENT_NAME),
@@ -1275,27 +1275,27 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ELEMENT_NAME_METHOD_STATIC),
-			$of(u"Elementnamnmetod m\u00e5ste vara statisk {0}"_s)
+			$of(u"Elementnamnmetod måste vara statisk {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_EXTENSION_FUNC_UNKNOWN),
-			$of(u"Till\u00e4ggsfunktion {0} : {1} \u00e4r ok\u00e4nd"_s)
+			$of(u"Tilläggsfunktion {0} : {1} är okänd"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MORE_MATCH_CONSTRUCTOR),
-			$of(u"Fler \u00e4n en b\u00e4sta matchning f\u00f6r konstruktor f\u00f6r {0}"_s)
+			$of(u"Fler än en bästa matchning för konstruktor för {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MORE_MATCH_METHOD),
-			$of(u"Fler \u00e4n en b\u00e4sta matchning f\u00f6r metod {0}"_s)
+			$of(u"Fler än en bästa matchning för metod {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_MORE_MATCH_ELEMENT),
-			$of(u"Fler \u00e4n en b\u00e4sta matchning f\u00f6r elementmetod {0}"_s)
+			$of(u"Fler än en bästa matchning för elementmetod {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_CONTEXT_PASSED),
-			$of(u"Ogiltig kontext skickad f\u00f6r att utv\u00e4rdera {0}"_s)
+			$of(u"Ogiltig kontext skickad för att utvärdera {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_POOL_EXISTS),
@@ -1311,7 +1311,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_POOL_SIZE_LESSTHAN_ONE),
-			$of(u"Poolstorlek \u00e4r mindre \u00e4n ett!"_s)
+			$of(u"Poolstorlek är mindre än ett!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_DRIVER),
@@ -1323,11 +1323,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ILLEGAL_XMLSPACE_VALUE),
-			$of(u"Otill\u00e5tet v\u00e4rde f\u00f6r xml:space"_s)
+			$of(u"Otillåtet värde för xml:space"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROCESSFROMNODE_FAILED),
-			$of(u"processFromNode utf\u00f6rdes inte"_s)
+			$of(u"processFromNode utfördes inte"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_RESOURCE_COULD_NOT_LOAD),
@@ -1339,7 +1339,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_UNKNOWN_ERROR_CALLING_EXTENSION),
-			$of(u"Ok\u00e4nt fel vid anrop av till\u00e4gg"_s)
+			$of(u"Okänt fel vid anrop av tillägg"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_NAMESPACE_DECL),
@@ -1347,7 +1347,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ELEM_CONTENT_NOT_ALLOWED),
-			$of(u"Elementinneh\u00e5ll inte till\u00e5tet f\u00f6r lang=javaclass {0}"_s)
+			$of(u"Elementinnehåll inte tillåtet för lang=javaclass {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_STYLESHEET_DIRECTED_TERMINATION),
@@ -1363,7 +1363,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"Kunde inte ladda {0} (kontrollera CLASSPATH), anv\u00e4nder nu enbart standardv\u00e4rden"_s)
+			$of(u"Kunde inte ladda {0} (kontrollera CLASSPATH), använder nu enbart standardvärden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_INIT_DEFAULT_TEMPLATES),
@@ -1375,7 +1375,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_RESULT_COULD_NOT_BE_SET),
-			$of(u"Result kunde inte st\u00e4llas in"_s)
+			$of(u"Result kunde inte ställas in"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_OUTPUT_SPECIFIED),
@@ -1391,11 +1391,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_CONTENT_HANDLER),
-			$of(u"Inneh\u00e5llshanterare med v\u00e4rde null"_s)
+			$of(u"Innehållshanterare med värde null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_ERROR_HANDLER),
-			$of(u"Felhanterare med v\u00e4rde null"_s)
+			$of(u"Felhanterare med värde null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_CALL_PARSE),
@@ -1403,7 +1403,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_PARENT_FOR_FILTER),
-			$of(u"Ingen \u00f6verordnad f\u00f6r filter"_s)
+			$of(u"Ingen överordnad för filter"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_STYLESHEET_IN_MEDIA),
@@ -1411,23 +1411,23 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_STYLESHEET_PI),
-			$of(u"PI f\u00f6r xml-formatmall saknas i: {0}"_s)
+			$of(u"PI för xml-formatmall saknas i: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NOT_SUPPORTED),
-			$of(u"Underst\u00f6ds inte: {0}"_s)
+			$of(u"Understöds inte: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PROPERTY_VALUE_BOOLEAN),
-			$of(u"V\u00e4rde f\u00f6r egenskap {0} b\u00f6r vara en boolesk instans"_s)
+			$of(u"Värde för egenskap {0} bör vara en boolesk instans"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_COULD_NOT_FIND_EXTERN_SCRIPT),
-			$of(u"Kunde inte h\u00e4mta externt skript fr\u00e5n {0}"_s)
+			$of(u"Kunde inte hämta externt skript från {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"Resursen [ {0} ] kunde inte h\u00e4mtas.\n {1}"_s)
+			$of(u"Resursen [ {0} ] kunde inte hämtas.\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_OUTPUT_PROPERTY_NOT_RECOGNIZED),
@@ -1439,11 +1439,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_VALUE_SHOULD_BE_NUMBER),
-			$of(u"V\u00e4rdet f\u00f6r {0} b\u00f6r inneh\u00e5lla ett tal som kan tolkas"_s)
+			$of(u"Värdet för {0} bör innehålla ett tal som kan tolkas"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_VALUE_SHOULD_EQUAL),
-			$of(u"V\u00e4rdet f\u00f6r {0} b\u00f6r vara ja eller nej"_s)
+			$of(u"Värdet för {0} bör vara ja eller nej"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_FAILED_CALLING_METHOD),
@@ -1455,15 +1455,15 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CHARS_NOT_ALLOWED),
-			$of(u"Tecken \u00e4r inte till\u00e5tna i dokumentet i det h\u00e4r skedet"_s)
+			$of(u"Tecken är inte tillåtna i dokumentet i det här skedet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ATTR_NOT_ALLOWED),
-			$of(u"Attributet \"{0}\" \u00e4r inte till\u00e5tet i elementet {1}!"_s)
+			$of(u"Attributet \"{0}\" är inte tillåtet i elementet {1}!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_BAD_VALUE),
-			$of(u"{0} felaktigt v\u00e4rde {1} "_s)
+			$of(u"{0} felaktigt värde {1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ATTRIB_VALUE_NOT_FOUND),
@@ -1471,15 +1471,15 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ATTRIB_VALUE_NOT_RECOGNIZED),
-			$of(u"Attributv\u00e4rdet {0} kan inte identifieras "_s)
+			$of(u"Attributvärdet {0} kan inte identifieras "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_URI_NAMESPACE),
-			$of(u"F\u00f6rs\u00f6ker generera ett namnrymdsprefix med en null-URI"_s)
+			$of(u"Försöker generera ett namnrymdsprefix med en null-URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NUMBER_TOO_BIG),
-			$of(u"F\u00f6rs\u00f6ker formatera ett tal som \u00e4r st\u00f6rre \u00e4n det st\u00f6rsta l\u00e5nga heltalet"_s)
+			$of(u"Försöker formatera ett tal som är större än det största långa heltalet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANNOT_FIND_SAX1_DRIVER),
@@ -1499,11 +1499,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PARSER_PROPERTY_NOT_SPECIFIED),
-			$of(u"Systemegenskapen org.xml.sax.parser \u00e4r inte angiven"_s)
+			$of(u"Systemegenskapen org.xml.sax.parser är inte angiven"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_PARSER_ARG_CANNOT_BE_NULL),
-			$of(u"Parserargument m\u00e5ste vara null"_s)
+			$of(u"Parserargument måste vara null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_FEATURE),
@@ -1515,11 +1515,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_ENTITY_RESOLVER),
-			$of(u"Enhetsmatchning med v\u00e4rde null"_s)
+			$of(u"Enhetsmatchning med värde null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NULL_DTD_HANDLER),
-			$of(u"DTD-hanterare med v\u00e4rde null"_s)
+			$of(u"DTD-hanterare med värde null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_DRIVER_NAME_SPECIFIED),
@@ -1531,7 +1531,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_POOLSIZE_LESS_THAN_ONE),
-			$of(u"Poolstorlek \u00e4r mindre \u00e4n ett!"_s)
+			$of(u"Poolstorlek är mindre än ett!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_DRIVER_NAME),
@@ -1543,7 +1543,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ASSERT_NO_TEMPLATE_PARENT),
-			$of(u"Programmerarfel! Uttrycket har ingen \u00f6verordnad ElemTemplateElement!"_s)
+			$of(u"Programmerarfel! Uttrycket har ingen överordnad ElemTemplateElement!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ASSERT_REDUNDENT_EXPR_ELIMINATOR),
@@ -1551,43 +1551,43 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NOT_ALLOWED_IN_POSITION),
-			$of(u"{0} \u00e4r inte till\u00e5ten i denna position i formatmallen!"_s)
+			$of(u"{0} är inte tillåten i denna position i formatmallen!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NONWHITESPACE_NOT_ALLOWED_IN_POSITION),
-			$of(u"Text utan blanktecken \u00e4r inte till\u00e5ten i denna position i formatmallen!"_s)
+			$of(u"Text utan blanktecken är inte tillåten i denna position i formatmallen!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::INVALID_TCHAR),
-			$of(u"Otill\u00e5tet v\u00e4rde: {1} anv\u00e4nds f\u00f6r CHAR-attributet: {0}. Ett attribut av CHAR-typ f\u00e5r bara ha 1 tecken!"_s)
+			$of(u"Otillåtet värde: {1} används för CHAR-attributet: {0}. Ett attribut av CHAR-typ får bara ha 1 tecken!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::INVALID_QNAME),
-			$of(u"Otill\u00e5tet v\u00e4rde: {1} anv\u00e4nds f\u00f6r QNAME-attributet: {0}"_s)
+			$of(u"Otillåtet värde: {1} används för QNAME-attributet: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::INVALID_ENUM),
-			$of(u"Otill\u00e5tet v\u00e4rde: {1} anv\u00e4nds f\u00f6r ENUM-attributet: {0}. Giltiga v\u00e4rden \u00e4r: {2}."_s)
+			$of(u"Otillåtet värde: {1} används för ENUM-attributet: {0}. Giltiga värden är: {2}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::INVALID_NMTOKEN),
-			$of(u"Otill\u00e5tet v\u00e4rde: {1} anv\u00e4nds f\u00f6r NMTOKEN-attributet: {0} "_s)
+			$of(u"Otillåtet värde: {1} används för NMTOKEN-attributet: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::INVALID_NCNAME),
-			$of(u"Otill\u00e5tet v\u00e4rde: {1} anv\u00e4nds f\u00f6r NCNAME-attributet: {0} "_s)
+			$of(u"Otillåtet värde: {1} används för NCNAME-attributet: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::INVALID_BOOLEAN),
-			$of(u"Otill\u00e5tet v\u00e4rde: {1} anv\u00e4nds f\u00f6r boolean-attributet: {0} "_s)
+			$of(u"Otillåtet värde: {1} används för boolean-attributet: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::INVALID_NUMBER),
-			$of(u"Otill\u00e5tet v\u00e4rde: {1} anv\u00e4nds f\u00f6r number-attributet: {0} "_s)
+			$of(u"Otillåtet värde: {1} används för number-attributet: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_ARG_LITERAL),
-			$of(u"Argument f\u00f6r {0} i matchningsm\u00f6nstret m\u00e5ste vara litteral."_s)
+			$of(u"Argument för {0} i matchningsmönstret måste vara litteral."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_DUPLICATE_GLOBAL_VAR),
@@ -1599,11 +1599,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_TEMPLATE_NAME_MATCH),
-			$of(u"xsl:template m\u00e5ste ha name- och/eller match-attribut"_s)
+			$of(u"xsl:template måste ha name- och/eller match-attribut"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_PREFIX),
-			$of(u"Prefix i exclude-result-prefixes \u00e4r inte giltigt: {0}"_s)
+			$of(u"Prefix i exclude-result-prefixes är inte giltigt: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NO_ATTRIB_SET),
@@ -1615,47 +1615,47 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_CANT_HAVE_CONTENT_AND_SELECT),
-			$of(u"Elementet {0} kan inte ha b\u00e5de inneh\u00e5ll och select-attribut."_s)
+			$of(u"Elementet {0} kan inte ha både innehåll och select-attribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_SET_PARAM_VALUE),
-			$of(u"Parameterv\u00e4rdet f\u00f6r {0} m\u00e5ste vara giltigt Java-objekt"_s)
+			$of(u"Parametervärdet för {0} måste vara giltigt Java-objekt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX_FOR_DEFAULT),
-			$of(u"result-prefix-attributet i xsl:namespace-alias-element har v\u00e4rdet \'#default\', men det finns ingen deklaration av standardnamnrymd inom omfattningen av elementet"_s)
+			$of(u"result-prefix-attributet i xsl:namespace-alias-element har värdet \'#default\', men det finns ingen deklaration av standardnamnrymd inom omfattningen av elementet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX),
-			$of(u"result-prefix-attributet i xsl:namespace-alias-element har v\u00e4rdet \'\'{0}\'\', men det finns ingen deklaration av namnrymd f\u00f6r prefixet \'\'{0}\'\' inom omfattningen av elementet."_s)
+			$of(u"result-prefix-attributet i xsl:namespace-alias-element har värdet \'\'{0}\'\', men det finns ingen deklaration av namnrymd för prefixet \'\'{0}\'\' inom omfattningen av elementet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_SET_FEATURE_NULL_NAME),
-			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.setFeature(namn p\u00e5 str\u00e4ng, booleskt v\u00e4rde)."_s)
+			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.setFeature(namn på sträng, booleskt värde)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_GET_FEATURE_NULL_NAME),
-			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.getFeature(namn p\u00e5 str\u00e4ng)."_s)
+			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.getFeature(namn på sträng)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_UNSUPPORTED_FEATURE),
-			$of(u"Kan inte st\u00e4lla in funktionen \'\'{0}\'\' i denna TransformerFactory."_s)
+			$of(u"Kan inte ställa in funktionen \'\'{0}\'\' i denna TransformerFactory."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_EXTENSION_ELEMENT_NOT_ALLOWED_IN_SECURE_PROCESSING),
-			$of(u"Anv\u00e4ndning av till\u00e4ggselementet \'\'{0}\'\' \u00e4r inte till\u00e5tet n\u00e4r s\u00e4ker bearbetning till\u00e4mpas."_s)
+			$of(u"Användning av tilläggselementet \'\'{0}\'\' är inte tillåtet när säker bearbetning tillämpas."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NAMESPACE_CONTEXT_NULL_NAMESPACE),
-			$of(u"Kan inte h\u00e4mta prefix f\u00f6r namnrymds-uri som \u00e4r null."_s)
+			$of(u"Kan inte hämta prefix för namnrymds-uri som är null."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_NAMESPACE_CONTEXT_NULL_PREFIX),
-			$of(u"Kan inte h\u00e4mta namnrymds-uri f\u00f6r prefix som \u00e4r null."_s)
+			$of(u"Kan inte hämta namnrymds-uri för prefix som är null."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XPATH_RESOLVER_NULL_QNAME),
-			$of(u"Funktionsnamn f\u00e5r inte vara null."_s)
+			$of(u"Funktionsnamn får inte vara null."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::ER_XPATH_RESOLVER_NEGATIVE_ARITY),
@@ -1663,55 +1663,55 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_FOUND_CURLYBRACE),
-			$of(u"Hittade \'}\' men det finns ingen \u00f6ppen attributmall!"_s)
+			$of(u"Hittade \'}\' men det finns ingen öppen attributmall!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_COUNT_ATTRIB_MATCHES_NO_ANCESTOR),
-			$of(u"Varning: r\u00e4knarattribut matchar inte \u00f6verordnad i xsl:number! Target = {0}"_s)
+			$of(u"Varning: räknarattribut matchar inte överordnad i xsl:number! Target = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_EXPR_ATTRIB_CHANGED_TO_SELECT),
-			$of(u"Gammal syntax: Namnet p\u00e5 \'expr\'-attributet har \u00e4ndrats till \'select\'."_s)
+			$of(u"Gammal syntax: Namnet på \'expr\'-attributet har ändrats till \'select\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_NO_LOCALE_IN_FORMATNUMBER),
-			$of(u"Xalan hanterar \u00e4nnu inte spr\u00e5kkonventionen i funktionen format-number."_s)
+			$of(u"Xalan hanterar ännu inte språkkonventionen i funktionen format-number."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_LOCALE_NOT_FOUND),
-			$of(u"Varning: Hittade inte spr\u00e5kkonvention f\u00f6r xml:lang={0}"_s)
+			$of(u"Varning: Hittade inte språkkonvention för xml:lang={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_CANNOT_MAKE_URL_FROM),
-			$of(u"Kan inte skapa URL fr\u00e5n: {0}"_s)
+			$of(u"Kan inte skapa URL från: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_CANNOT_LOAD_REQUESTED_DOC),
-			$of(u"Kan inte ladda beg\u00e4rt dokument: {0}"_s)
+			$of(u"Kan inte ladda begärt dokument: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_CANNOT_FIND_COLLATOR),
-			$of(u"Hittade inte kollationering f\u00f6r <sort xml:lang={0}"_s)
+			$of(u"Hittade inte kollationering för <sort xml:lang={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_FUNCTIONS_SHOULD_USE_URL),
-			$of(u"Gammal syntax: funktionsinstruktionen b\u00f6r anv\u00e4nda url:en {0}"_s)
+			$of(u"Gammal syntax: funktionsinstruktionen bör använda url:en {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ENCODING_NOT_SUPPORTED_USING_UTF8),
-			$of(u"kodning underst\u00f6ds inte: {0}, anv\u00e4nder UTF-8"_s)
+			$of(u"kodning understöds inte: {0}, använder UTF-8"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ENCODING_NOT_SUPPORTED_USING_JAVA),
-			$of(u"kodning underst\u00f6ds inte: {0}, anv\u00e4nder Java {1}"_s)
+			$of(u"kodning understöds inte: {0}, använder Java {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_SPECIFICITY_CONFLICTS),
-			$of(u"Specifika konflikter hittades: {0} Senast hittade i formatmall kommer att anv\u00e4ndas."_s)
+			$of(u"Specifika konflikter hittades: {0} Senast hittade i formatmall kommer att användas."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_PARSING_AND_PREPARING),
-			$of(u"========= Tolkar och f\u00f6rbereder {0} =========="_s)
+			$of(u"========= Tolkar och förbereder {0} =========="_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ATTR_TEMPLATE),
@@ -1723,27 +1723,27 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ATTRIB_NOT_HANDLED),
-			$of(u"Xalan hanterar \u00e4nnu inte attributet {0}!"_s)
+			$of(u"Xalan hanterar ännu inte attributet {0}!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_NO_DECIMALFORMAT_DECLARATION),
-			$of(u"Hittade ingen deklaration f\u00f6r decimalformatet: {0}"_s)
+			$of(u"Hittade ingen deklaration för decimalformatet: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_OLD_XSLT_NS),
-			$of(u"XSLT-namnrymd saknas eller \u00e4r inkorrekt. "_s)
+			$of(u"XSLT-namnrymd saknas eller är inkorrekt. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ONE_DEFAULT_XSLDECIMALFORMAT_ALLOWED),
-			$of(u"Endast en standarddeklaration av xsl:decimal-format \u00e4r till\u00e5ten."_s)
+			$of(u"Endast en standarddeklaration av xsl:decimal-format är tillåten."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_XSLDECIMALFORMAT_NAMES_MUST_BE_UNIQUE),
-			$of(u"Namn p\u00e5 xsl:decimal-format m\u00e5ste vara unika. Namnet \"{0}\" har blivit duplicerat."_s)
+			$of(u"Namn på xsl:decimal-format måste vara unika. Namnet \"{0}\" har blivit duplicerat."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ILLEGAL_ATTRIBUTE),
-			$of(u"{0} har ett otill\u00e5tet attribut: {1}"_s)
+			$of(u"{0} har ett otillåtet attribut: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_COULD_NOT_RESOLVE_PREFIX),
@@ -1751,35 +1751,35 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_STYLESHEET_REQUIRES_VERSION_ATTRIB),
-			$of(u"xsl:stylesheet kr\u00e4ver ett \'version\'-attribut!"_s)
+			$of(u"xsl:stylesheet kräver ett \'version\'-attribut!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ILLEGAL_ATTRIBUTE_NAME),
-			$of(u"Otill\u00e5tet attributnamn: {0}"_s)
+			$of(u"Otillåtet attributnamn: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"Otill\u00e5tet v\u00e4rde anv\u00e4nds f\u00f6r attributet {0}: {1}"_s)
+			$of(u"Otillåtet värde används för attributet {0}: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_EMPTY_SECOND_ARG),
-			$of(u"Resulterande nodupps\u00e4ttning fr\u00e5n dokumentfunktionens andra argumentet \u00e4r tomt. En tom nodupps\u00e4ttning anv\u00e4nds."_s)
+			$of(u"Resulterande noduppsättning från dokumentfunktionens andra argumentet är tomt. En tom noduppsättning används."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
-			$of(u"\'name\'-attributets v\u00e4rde f\u00f6r xsl:processing-instruction kan inte vara \'xml\'"_s)
+			$of(u"\'name\'-attributets värde för xsl:processing-instruction kan inte vara \'xml\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"\'\'name\'\'-attributets v\u00e4rde f\u00f6r xsl:processing-instruction m\u00e5ste vara giltigt NCName: {0}"_s)
+			$of(u"\'\'name\'\'-attributets värde för xsl:processing-instruction måste vara giltigt NCName: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::WG_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Kan inte l\u00e4gga till attributet {0} efter underordnade noder eller innan ett element har skapats. Attributet ignoreras."_s)
+			$of(u"Kan inte lägga till attributet {0} efter underordnade noder eller innan ett element har skapats. Attributet ignoreras."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_sv::NO_MODIFICATION_ALLOWED_ERR),
-			$of(u"F\u00f6rs\u00f6ker \u00e4ndra ett objekt d\u00e4r \u00e4ndringar inte \u00e4r till\u00e5tna."_s)
+			$of(u"Försöker ändra ett objekt där ändringar inte är tillåtna."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1795,11 +1795,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"Parameter f\u00f6r createMessage ligger utanf\u00f6r gr\u00e4nsv\u00e4rdet"_s)
+			$of(u"Parameter för createMessage ligger utanför gränsvärdet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Undantag utl\u00f6st vid messageFormat-anrop"_s)
+			$of(u"Undantag utlöst vid messageFormat-anrop"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
@@ -1823,47 +1823,47 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("xsldone"_s),
-			$of(u"XSLProcessor: utf\u00f6rd"_s)
+			$of(u"XSLProcessor: utförd"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_option"_s),
-			$of(u"Process-klassalternativ f\u00f6r Xalan-J-kommandorad:"_s)
+			$of(u"Process-klassalternativ för Xalan-J-kommandorad:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_option"_s),
-			$of(u"Process-klassalternativ f\u00f6r Xalan-J-kommandorad:"_s)
+			$of(u"Process-klassalternativ för Xalan-J-kommandorad:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xsltc_option"_s),
-			$of(u"Alternativet {0} underst\u00f6ds inte i XSLTC-l\u00e4ge."_s)
+			$of(u"Alternativet {0} understöds inte i XSLTC-läge."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xalan_option"_s),
-			$of(u"Alternativet {0} kan anv\u00e4ndas endast med -XSLTC."_s)
+			$of(u"Alternativet {0} kan användas endast med -XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_no_input"_s),
-			$of(u"Fel: Ingen formatmall eller indata-xml har angetts. K\u00f6r kommandot utan n\u00e5got alternativ f\u00f6r att visa syntax."_s)
+			$of(u"Fel: Ingen formatmall eller indata-xml har angetts. Kör kommandot utan något alternativ för att visa syntax."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_common_options"_s),
-			$of(u"-Allm\u00e4nna alternativ-"_s)
+			$of(u"-Allmänna alternativ-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xalan_options"_s),
-			$of(u"-Alternativ f\u00f6r Xalan-"_s)
+			$of(u"-Alternativ för Xalan-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xsltc_options"_s),
-			$of(u"-Alternativ f\u00f6r XSLTC-"_s)
+			$of(u"-Alternativ för XSLTC-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_return_to_continue"_s),
-			$of(u"(tryck p\u00e5 Enter f\u00f6r att forts\u00e4tta)"_s)
+			$of(u"(tryck på Enter för att fortsätta)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXSLTC"_s),
-			$of(u"   [-XSLTC (anv\u00e4nd XSLTC f\u00f6r transformering)]"_s)
+			$of(u"   [-XSLTC (använd XSLTC för transformering)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionIN"_s),
@@ -1887,87 +1887,87 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionPARSER"_s),
-			$of(u"   [-PARSER fullt kvalificerat klassnamn p\u00e5 parserf\u00f6rbindelse]"_s)
+			$of(u"   [-PARSER fullt kvalificerat klassnamn på parserförbindelse]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionE"_s),
-			$of(u"   [-E (Ut\u00f6ka inte enhetsreferenser)]"_s)
+			$of(u"   [-E (Utöka inte enhetsreferenser)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionV"_s),
-			$of(u"   [-E (Ut\u00f6ka inte enhetsreferenser)]"_s)
+			$of(u"   [-E (Utöka inte enhetsreferenser)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionQC"_s),
-			$of(u"   [-QC (Tysta m\u00f6nsterkonfliktvarningar)]"_s)
+			$of(u"   [-QC (Tysta mönsterkonfliktvarningar)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionQ"_s),
-			$of(u"   [-Q  (Tyst l\u00e4ge)]"_s)
+			$of(u"   [-Q  (Tyst läge)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionLF"_s),
-			$of(u"   [-LF (Anv\u00e4nd radmatningar endast f\u00f6r utdata {standard \u00e4r CR/LF})]"_s)
+			$of(u"   [-LF (Använd radmatningar endast för utdata {standard är CR/LF})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCR"_s),
-			$of(u"   [-CR (Anv\u00e4nd radmatningar endast f\u00f6r utdata {standard \u00e4r CR/LF})]"_s)
+			$of(u"   [-CR (Använd radmatningar endast för utdata {standard är CR/LF})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionESCAPE"_s),
-			$of(u"   [-ESCAPE (Vilka tecken \u00e4r skiftningstecken {standard \u00e4r <>&\"\'\\r\\n}]"_s)
+			$of(u"   [-ESCAPE (Vilka tecken är skiftningstecken {standard är <>&\"\'\\r\\n}]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionINDENT"_s),
-			$of(u"   [-INDENT (Best\u00e4m antal blanksteg f\u00f6r indrag {standard \u00e4r 0})]"_s)
+			$of(u"   [-INDENT (Bestäm antal blanksteg för indrag {standard är 0})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTT"_s),
-			$of(u"   [-TT (Sp\u00e5ra mallar vid anrop.)]"_s)
+			$of(u"   [-TT (Spåra mallar vid anrop.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTG"_s),
-			$of(u"   [-TG (Sp\u00e5ra varje generationsh\u00e4ndelse.)]"_s)
+			$of(u"   [-TG (Spåra varje generationshändelse.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTS"_s),
-			$of(u"   [-TS (Sp\u00e5ra varje urvalsh\u00e4ndelse.)]"_s)
+			$of(u"   [-TS (Spåra varje urvalshändelse.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTTC"_s),
-			$of(u"   [-TTC (Sp\u00e5ra mallunderordnade n\u00e4r de bearbetas.)]"_s)
+			$of(u"   [-TTC (Spåra mallunderordnade när de bearbetas.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTCLASS"_s),
-			$of(u"   [-TCLASS (TraceListener-klass f\u00f6r sp\u00e5rningstill\u00e4gg.)]"_s)
+			$of(u"   [-TCLASS (TraceListener-klass för spårningstillägg.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionVALIDATE"_s),
-			$of(u"   [-VALIDATE (St\u00e4ll in om validering utf\u00f6rs. Standard \u00e4r att validering \u00e4r avst\u00e4ngd.)]"_s)
+			$of(u"   [-VALIDATE (Ställ in om validering utförs. Standard är att validering är avstängd.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionEDUMP"_s),
-			$of(u"   [-EDUMP {valfritt filnamn} (G\u00f6r stackdump vid fel.)]"_s)
+			$of(u"   [-EDUMP {valfritt filnamn} (Gör stackdump vid fel.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXML"_s),
-			$of(u"   [-XML (Anv\u00e4nd XML-formaterare och l\u00e4gg till XML-huvud.)]"_s)
+			$of(u"   [-XML (Använd XML-formaterare och lägg till XML-huvud.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTEXT"_s),
-			$of(u"   [-TEXT (Anv\u00e4nd enkel textformaterare.)]"_s)
+			$of(u"   [-TEXT (Använd enkel textformaterare.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionHTML"_s),
-			$of(u"   [-HTML (Anv\u00e4nd HTML-formaterare.)]"_s)
+			$of(u"   [-HTML (Använd HTML-formaterare.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionPARAM"_s),
-			$of(u"   [-PARAM-namnuttryck (St\u00e4ll in parameter f\u00f6r formatmall)]"_s)
+			$of(u"   [-PARAM-namnuttryck (Ställ in parameter för formatmall)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
-			$of(u"XSL-processen utf\u00f6rdes inte."_s)
+			$of(u"XSL-processen utfördes inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg2"_s),
@@ -1975,11 +1975,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"Kontrollera klass\u00f6kv\u00e4gen."_s)
+			$of(u"Kontrollera klassökvägen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"Om du inte har IBMs XML Parser f\u00f6r Java kan du ladda ned den fr\u00e5n"_s)
+			$of(u"Om du inte har IBMs XML Parser för Java kan du ladda ned den från"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),
@@ -1987,47 +1987,47 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionURIRESOLVER"_s),
-			$of(u"   [-URIRESOLVER fullst\u00e4ndigt klassnamn (URIResolver som anv\u00e4nds vid matchning av URI-er)]"_s)
+			$of(u"   [-URIRESOLVER fullständigt klassnamn (URIResolver som används vid matchning av URI-er)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionENTITYRESOLVER"_s),
-			$of(u"   [-ENTITYRESOLVER fullst\u00e4ndigt klassnamn (EntityResolver som anv\u00e4nds vid matchning av enheter)]"_s)
+			$of(u"   [-ENTITYRESOLVER fullständigt klassnamn (EntityResolver som används vid matchning av enheter)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCONTENTHANDLER"_s),
-			$of(u"   [-CONTENTHANDLER fullst\u00e4ndigt klassnamn (ContentHandler som anv\u00e4nds vid serialisering av utdata)]"_s)
+			$of(u"   [-CONTENTHANDLER fullständigt klassnamn (ContentHandler som används vid serialisering av utdata)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionLINENUMBERS"_s),
-			$of(u"   [-L anv\u00e4nd radnummer i k\u00e4lldokument]"_s)
+			$of(u"   [-L använd radnummer i källdokument]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionSECUREPROCESSING"_s),
-			$of(u"   [-SECURE (ange att s\u00e4ker bearbetning ska till\u00e4mpas.)]"_s)
+			$of(u"   [-SECURE (ange att säker bearbetning ska tillämpas.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionMEDIA"_s),
-			$of(u"   [-MEDIA mediaType (anv\u00e4nd medieattribut f\u00f6r att hitta formatmall som h\u00f6r ihop med dokument.)]"_s)
+			$of(u"   [-MEDIA mediaType (använd medieattribut för att hitta formatmall som hör ihop med dokument.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionFLAVOR"_s),
-			$of(u"   [-FLAVOR flavorName (Anv\u00e4nd s2s=SAX eller d2d=DOM vid transformering.)] "_s)
+			$of(u"   [-FLAVOR flavorName (Använd s2s=SAX eller d2d=DOM vid transformering.)] "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionDIAG"_s),
-			$of(u"   [-DIAG (Skriv ut tid f\u00f6r transformering i millisekunder.)]"_s)
+			$of(u"   [-DIAG (Skriv ut tid för transformering i millisekunder.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionINCREMENTAL"_s),
-			$of(u"   [-INCREMENTAL (beg\u00e4r inkrementell DTM-konstruktion genom att ange http://xml.apache.org/xalan/features/incremental true.)]"_s)
+			$of(u"   [-INCREMENTAL (begär inkrementell DTM-konstruktion genom att ange http://xml.apache.org/xalan/features/incremental true.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionNOOPTIMIMIZE"_s),
-			$of(u"   [-NOOPTIMIMIZE (beg\u00e4r att ingen formatmallsoptimering utf\u00f6rs genom att ange http://xml.apache.org/xalan/features/optimize false.)]"_s)
+			$of(u"   [-NOOPTIMIMIZE (begär att ingen formatmallsoptimering utförs genom att ange http://xml.apache.org/xalan/features/optimize false.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionRL"_s),
-			$of(u"   [-RL rekursionsgr\u00e4ns (verifiera numeriskt gr\u00e4nsv\u00e4rde f\u00f6r formatmallens rekursionsdjup.)]"_s)
+			$of(u"   [-RL rekursionsgräns (verifiera numeriskt gränsvärde för formatmallens rekursionsdjup.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXO"_s),
@@ -2035,7 +2035,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionXD"_s),
-			$of(u"   [-XD destinationDirectory (ange destinationskatalog f\u00f6r translet)]"_s)
+			$of(u"   [-XD destinationDirectory (ange destinationskatalog för translet)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXJ"_s),
@@ -2043,7 +2043,7 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionXP"_s),
-			$of(u"   [-XP package (anger paketnamnsprefix f\u00f6r alla genererade transletklasser)]"_s)
+			$of(u"   [-XP package (anger paketnamnsprefix för alla genererade transletklasser)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXN"_s),
@@ -2051,11 +2051,11 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionXX"_s),
-			$of(u"   [-XX (aktiverar ytterligare fels\u00f6kningsmeddelanden)]"_s)
+			$of(u"   [-XX (aktiverar ytterligare felsökningsmeddelanden)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXT"_s),
-			$of(u"   [-XT (anv\u00e4nder translet vid transformering om m\u00f6jligt)]"_s)
+			$of(u"   [-XT (använder translet vid transformering om möjligt)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("diagTiming"_s),
@@ -2063,15 +2063,15 @@ $ObjectArray2* XSLTErrorResources_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("recursionTooDeep"_s),
-			$of(u"Mallkapslingen \u00e4r f\u00f6r djup. kapsling = {0}, mall {1} {2}"_s)
+			$of(u"Mallkapslingen är för djup. kapsling = {0}, mall {1} {2}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("nameIs"_s),
-			$of(u"namnet \u00e4r"_s)
+			$of(u"namnet är"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("matchPatternIs"_s),
-			$of(u"matchningsm\u00f6nstret \u00e4r"_s)
+			$of(u"matchningsmönstret är"_s)
 		})
 	});
 }

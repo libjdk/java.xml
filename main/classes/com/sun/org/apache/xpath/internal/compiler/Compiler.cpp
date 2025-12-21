@@ -966,7 +966,7 @@ void Compiler::warn($String* msg, $ObjectArray* args) {
 	} else {
 		$var($String, var$2, $$str({fmsg, "; file "_s, $($nc(this->m_locator)->getSystemId()), "; line "_s}));
 		$var($String, var$1, $$concat(var$2, $$str($nc(this->m_locator)->getLineNumber())));
-		$var($String, var$0, $$concat(var$1, "; column "));
+		$var($String, var$0, $$concat(var$1, "; column "_s));
 		$nc($System::out)->println($$concat(var$0, $$str($nc(this->m_locator)->getColumnNumber())));
 	}
 }

@@ -323,7 +323,7 @@ void WalkerFactory::diagnoseIterator($String* name, int32_t analysis, $Compiler*
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$2, $$str({$($nc(compiler)->toString()), ", "_s, name, ", "_s}));
 	$var($String, var$1, $$concat(var$2, $($Integer::toBinaryString(analysis))));
-	$var($String, var$0, $$concat(var$1, ", "));
+	$var($String, var$0, $$concat(var$1, ", "_s));
 	$nc($System::out)->println($$concat(var$0, $(getAnalysisString(analysis))));
 }
 

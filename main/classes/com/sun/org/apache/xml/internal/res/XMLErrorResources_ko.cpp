@@ -369,319 +369,319 @@ void clinit$XMLErrorResources_ko($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"\ud568\uc218\uac00 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"함수가 지원되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"\uc6d0\uc778\uc744 \uacb9\uccd0 \uc4f8 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"원인을 겹쳐 쓸 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_DEFAULT_IMPL),
-			$of(u"\uae30\ubcf8 \uad6c\ud604\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. "_s)
+			$of(u"기본 구현을 찾을 수 없습니다. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0})\ub294 \ud604\uc7ac \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"ChunkedIntArray({0})는 현재 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"\uc624\ud504\uc14b\uc774 \uc2ac\ub86f\ubcf4\ub2e4 \ud07d\ub2c8\ub2e4."_s)
+			$of(u"오프셋이 슬롯보다 큽니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Coroutine\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. ID={0}"_s)
+			$of(u"Coroutine을 사용할 수 없습니다. ID={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager\uac00 co_exit() \uc694\uccad\uc744 \uc218\uc2e0\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"CoroutineManager가 co_exit() 요청을 수신했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COJOINROUTINESET_FAILED),
-			$of(u"co_joinCoroutineSet()\ub97c \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"co_joinCoroutineSet()를 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COROUTINE_PARAM),
-			$of(u"Coroutine \ub9e4\uac1c\ubcc0\uc218 \uc624\ub958({0})"_s)
+			$of(u"Coroutine 매개변수 오류({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\n\uc608\uc0c1\uce58 \uc54a\uc740 \uc624\ub958: \uad6c\ubb38 \ubd84\uc11d\uae30 doTerminate\uac00 {0}\uc5d0 \uc751\ub2f5\ud569\ub2c8\ub2e4."_s)
+			$of(u"\n예상치 않은 오류: 구문 분석기 doTerminate가 {0}에 응답합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"\uad6c\ubb38 \ubd84\uc11d \uc911 parse\ub97c \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"구문 분석 중 parse를 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\uc624\ub958: {0} \ucd95\uc5d0 \ub300\ud574 \uc785\ub825\ub41c \uc774\ud130\ub808\uc774\ud130\uac00 \uad6c\ud604\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"오류: {0} 축에 대해 입력된 이터레이터가 구현되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\uc624\ub958: {0} \ucd95\uc5d0 \ub300\ud55c \uc774\ud130\ub808\uc774\ud130\uac00 \uad6c\ud604\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4. "_s)
+			$of(u"오류: {0} 축에 대한 이터레이터가 구현되지 않았습니다. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"\uc774\ud130\ub808\uc774\ud130 \ubcf5\uc81c\ub294 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이터레이터 복제는 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 \ucd95 \uc21c\ud68c \uc720\ud615: {0}"_s)
+			$of(u"알 수 없는 축 순회 유형: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_AXIS_NOT_SUPPORTED),
-			$of(u"\ucd95 \uc21c\ud658\uae30\uac00 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}"_s)
+			$of(u"축 순환기가 지원되지 않음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_DTMIDS_AVAIL),
-			$of(u"\ub354 \uc774\uc0c1 \uc0ac\uc6a9 \uac00\ub2a5\ud55c DTM ID\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"더 이상 사용 가능한 DTM ID가 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NOT_SUPPORTED),
-			$of(u"\uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}"_s)
+			$of(u"지원되지 않음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NODE_NON_NULL),
-			$of(u"\ub178\ub4dc\ub294 getDTMHandleFromNode\uc5d0 \ub300\ud574 \ub110\uc774 \uc544\ub2c8\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"노드는 getDTMHandleFromNode에 대해 널이 아니어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"\ub178\ub4dc\ub97c \ud578\ub4e4\ub85c \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"노드를 핸들로 분석할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"\uad6c\ubb38 \ubd84\uc11d \uc911 startParse\ub97c \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"구문 분석 중 startParse를 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse\uc5d0\ub294 \ub110\uc774 \uc544\ub2cc SAXParser\uac00 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"startParse에는 널이 아닌 SAXParser가 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COULD_NOT_INIT_PARSER),
-			$of(u"\uad6c\ubb38 \ubd84\uc11d\uae30\ub97c \ucd08\uae30\ud654\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"구문 분석기를 초기화할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_EXCEPTION_CREATING_POOL),
-			$of(u"\ud480\uc5d0 \ub300\ud55c \uc0c8 \uc778\uc2a4\ud134\uc2a4\ub97c \uc0dd\uc131\ud558\ub294 \uc911 \uc608\uc678\uc0ac\ud56d\uc774 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"풀에 대한 새 인스턴스를 생성하는 중 예외사항이 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"\uacbd\ub85c\uc5d0 \ubd80\uc801\ud569\ud55c \uc774\uc2a4\ucf00\uc774\ud504 \uc2dc\ud000\uc2a4\uac00 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"경로에 부적합한 이스케이프 시퀀스가 포함되어 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_SCHEME_REQUIRED),
-			$of(u"\uccb4\uacc4\uac00 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"체계가 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_SCHEME_IN_URI),
-			$of(u"URI\uc5d0\uc11c \uccb4\uacc4\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"URI에서 체계를 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_SCHEME_INURI),
-			$of(u"URI\uc5d0\uc11c \uccb4\uacc4\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"URI에서 체계를 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_PATH_INVALID_CHAR),
-			$of(u"\uacbd\ub85c\uc5d0 \ubd80\uc801\ud569\ud55c \ubb38\uc790\uac00 \ud3ec\ud568\ub428: {0}"_s)
+			$of(u"경로에 부적합한 문자가 포함됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"\ub110 \ubb38\uc790\uc5f4\uc5d0\uc11c \uccb4\uacc4\ub97c \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"널 문자열에서 체계를 설정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"\uccb4\uacc4\uac00 \uc77c\uce58\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"체계가 일치하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"\ud638\uc2a4\ud2b8\uac00 \uc644\uc804\ud55c \uc8fc\uc18c\uac00 \uc544\ub2d9\ub2c8\ub2e4."_s)
+			$of(u"호스트가 완전한 주소가 아닙니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_PORT_WHEN_HOST_NULL),
-			$of(u"\ud638\uc2a4\ud2b8\uac00 \ub110\uc77c \uacbd\uc6b0 \ud3ec\ud2b8\ub97c \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"호스트가 널일 경우 포트를 설정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_INVALID_PORT),
-			$of(u"\ud3ec\ud2b8 \ubc88\ud638\uac00 \ubd80\uc801\ud569\ud569\ub2c8\ub2e4."_s)
+			$of(u"포트 번호가 부적합합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"\uc77c\ubc18 URI\uc5d0 \ub300\ud574\uc11c\ub9cc \ubd80\ubd84\uc744 \uc124\uc815\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"일반 URI에 대해서만 부분을 설정할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"\uacbd\ub85c\uac00 \ub110\uc77c \uacbd\uc6b0 \ubd80\ubd84\uc744 \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"경로가 널일 경우 부분을 설정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_FRAG_INVALID_CHAR),
-			$of(u"\ubd80\ubd84\uc5d0 \ubd80\uc801\ud569\ud55c \ubb38\uc790\uac00 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"부분에 부적합한 문자가 포함되어 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_PARSER_IN_USE),
-			$of(u"\uad6c\ubb38 \ubd84\uc11d\uae30\uac00 \uc774\ubbf8 \uc0ac\uc6a9\ub418\uace0 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"구문 분석기가 이미 사용되고 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"\uad6c\ubb38 \ubd84\uc11d \uc911 {0} {1}\uc744(\ub97c) \ubcc0\uacbd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"구문 분석 중 {0} {1}을(를) 변경할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"\uc790\uccb4 \uc778\uacfc \uad00\uacc4\ub294 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"자체 인과 관계는 허용되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"\ud638\uc2a4\ud2b8\ub97c \uc9c0\uc815\ud558\uc9c0 \uc54a\uc740 \uacbd\uc6b0\uc5d0\ub294 Userinfo\ub97c \uc9c0\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"호스트를 지정하지 않은 경우에는 Userinfo를 지정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_PORT_IF_NO_HOST),
-			$of(u"\ud638\uc2a4\ud2b8\ub97c \uc9c0\uc815\ud558\uc9c0 \uc54a\uc740 \uacbd\uc6b0\uc5d0\ub294 \ud3ec\ud2b8\ub97c \uc9c0\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"호스트를 지정하지 않은 경우에는 포트를 지정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"\uacbd\ub85c \ubc0f \uc9c8\uc758 \ubb38\uc790\uc5f4\uc5d0 \uc9c8\uc758 \ubb38\uc790\uc5f4\uc744 \uc9c0\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"경로 및 질의 문자열에 질의 문자열을 지정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"\uacbd\ub85c\uc640 \ubd80\ubd84\uc5d0 \ubaa8\ub450 \ubd80\ubd84\uc744 \uc9c0\uc815\ud560 \uc218\ub294 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"경로와 부분에 모두 부분을 지정할 수는 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"\ube48 \ub9e4\uac1c\ubcc0\uc218\ub85c URI\ub97c \ucd08\uae30\ud654\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"빈 매개변수로 URI를 초기화할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_METHOD_NOT_SUPPORTED),
-			$of(u"\uba54\uc18c\ub4dc\uac00 \uc544\uc9c1 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. "_s)
+			$of(u"메소드가 아직 지원되지 않습니다. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"\ud604\uc7ac IncrementalSAXSource_Filter\ub97c \uc7ac\uc2dc\uc791\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"현재 IncrementalSAXSource_Filter를 재시작할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"startParse \uc694\uccad \uc804\uc5d0 XMLReader\uac00 \uc2e4\ud589\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"startParse 요청 전에 XMLReader가 실행되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"\ucd95 \uc21c\ud658\uae30\uac00 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}"_s)
+			$of(u"축 순환기가 지원되지 않음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
-			$of(u"\ub110 PrintWriter\ub85c ListingErrorHandler\uac00 \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"널 PrintWriter로 ListingErrorHandler가 생성되었습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_SYSTEMID_UNKNOWN),
-			$of(u"SystemId\ub97c \uc54c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"SystemId를 알 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_LOCATION_UNKNOWN),
-			$of(u"\uc624\ub958 \uc704\uce58\ub97c \uc54c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"오류 위치를 알 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\uc811\ub450\uc5b4\ub294 \ub124\uc784\uc2a4\ud398\uc774\uc2a4\ub85c \ubd84\uc11d\ub418\uc5b4\uc57c \ud568: {0}"_s)
+			$of(u"접두어는 네임스페이스로 분석되어야 함: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"XPathContext\uc5d0\uc11c\ub294 createDocument()\uac00 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"XPathContext에서는 createDocument()가 지원되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"\uc18d\uc131 \ud558\uc704\uc5d0 \uc18c\uc720\uc790 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"속성 하위에 소유자 문서가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"\uc18d\uc131 \ud558\uc704\uc5d0 \uc18c\uc720\uc790 \ubb38\uc11c \uc694\uc18c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"속성 하위에 소유자 문서 요소가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"\uacbd\uace0: \ubb38\uc11c \uc694\uc18c \uc55e\uc5d0 \ud14d\uc2a4\ud2b8\ub97c \ucd9c\ub825\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4! \ubb34\uc2dc\ud558\ub294 \uc911..."_s)
+			$of(u"경고: 문서 요소 앞에 텍스트를 출력할 수 없습니다! 무시하는 중..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"DOM\uc5d0\uc11c \ub8e8\ud2b8\ub97c \ub450 \uac1c \uc774\uc0c1 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"DOM에서 루트를 두 개 이상 사용할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ARG_LOCALNAME_NULL),
-			$of(u"\'localName\' \uc778\uc218\uac00 \ub110\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'localName\' 인수가 널입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ARG_LOCALNAME_INVALID),
-			$of(u"QNAME\uc758 Localname\uc740 \uc801\ud569\ud55c NCName\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"QNAME의 Localname은 적합한 NCName이어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ARG_PREFIX_INVALID),
-			$of(u"QNAME\uc758 \uc811\ub450\uc5b4\ub294 \uc801\ud569\ud55c NCName\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"QNAME의 접두어는 적합한 NCName이어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NAME_CANT_START_WITH_COLON),
-			$of(u"\uc774\ub984\uc740 \ucf5c\ub860\uc73c\ub85c \uc2dc\uc791\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이름은 콜론으로 시작할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage\uc5d0 \ub300\ud55c \ub9e4\uac1c\ubcc0\uc218\uac00 \ubc94\uc704\ub97c \ubc97\uc5b4\ub0ac\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"createMessage에 대한 매개변수가 범위를 벗어났습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"messageFormat \ud638\ucd9c \uc911 \uc608\uc678\uc0ac\ud56d\uc774 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"messageFormat 호출 중 예외사항이 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\ud589 \ubc88\ud638"_s)
+			$of(u"행 번호"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\uc5f4 \ubc88\ud638"_s)
+			$of(u"열 번호"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"Serializer \ud074\ub798\uc2a4 \'\'{0}\'\'\uc774(\uac00) org.xml.sax.ContentHandler\ub97c \uad6c\ud604\ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Serializer 클래스 \'\'{0}\'\'이(가) org.xml.sax.ContentHandler를 구현하지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"[{0}] \ub9ac\uc18c\uc2a4\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.\n {1}"_s)
+			$of(u"[{0}] 리소스를 찾을 수 없습니다.\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"[{0}] \ub9ac\uc18c\uc2a4\uac00 \ub2e4\uc74c\uc744 \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc74c: {1} \n {2} \t {3}"_s)
+			$of(u"[{0}] 리소스가 다음을 로드할 수 없음: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"\ubc84\ud37c \ud06c\uae30 <=0"_s)
+			$of(u"버퍼 크기 <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\ubd80\uc801\ud569\ud55c UTF-16 \ub300\ub9ac \uc694\uc18c\uac00 \uac10\uc9c0\ub428: {0}"_s)
+			$of(u"부적합한 UTF-16 대리 요소가 감지됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_OIERROR),
-			$of(u"IO \uc624\ub958"_s)
+			$of(u"IO 오류"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"\ud558\uc704 \ub178\ub4dc\uac00 \uc0dd\uc131\ub41c \ud6c4 \ub610\ub294 \uc694\uc18c\uac00 \uc0dd\uc131\ub418\uae30 \uc804\uc5d0 {0} \uc18d\uc131\uc744 \ucd94\uac00\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc18d\uc131\uc774 \ubb34\uc2dc\ub429\ub2c8\ub2e4."_s)
+			$of(u"하위 노드가 생성된 후 또는 요소가 생성되기 전에 {0} 속성을 추가할 수 없습니다. 속성이 무시됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_NAMESPACE_PREFIX),
-			$of(u"\'\'{0}\'\' \uc811\ub450\uc5b4\uc5d0 \ub300\ud55c \ub124\uc784\uc2a4\ud398\uc774\uc2a4\uac00 \uc120\uc5b8\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 접두어에 대한 네임스페이스가 선언되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_STRAY_ATTRIBUTE),
-			$of(u"\'\'{0}\'\' \uc18d\uc131\uc774 \uc694\uc18c\uc5d0 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 속성이 요소에 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_STRAY_NAMESPACE),
-			$of(u"\ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc120\uc5b8 \'\'{0}\'\'=\'\'{1}\'\'\uc774(\uac00) \uc694\uc18c\uc5d0 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"네임스페이스 선언 \'\'{0}\'\'=\'\'{1}\'\'이(가) 요소에 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"{0}\uc744(\ub97c) \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. CLASSPATH\ub97c \ud655\uc778\ud558\uc2ed\uc2dc\uc624. \ud604\uc7ac \uae30\ubcf8\uac12\ub9cc \uc0ac\uc6a9\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."_s)
+			$of(u"{0}을(를) 로드할 수 없습니다. CLASSPATH를 확인하십시오. 현재 기본값만 사용하는 중입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_ILLEGAL_CHARACTER),
-			$of(u"{1}\uc758 \uc9c0\uc815\ub41c \ucd9c\ub825 \uc778\ucf54\ub529\uc5d0\uc11c \ud45c\uc2dc\ub418\uc9c0 \uc54a\ub294 \uc815\uc218 \uac12 {0}\uc758 \ubb38\uc790\ub97c \ucd9c\ub825\ud558\ub824\uace0 \uc2dc\ub3c4\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{1}의 지정된 출력 인코딩에서 표시되지 않는 정수 값 {0}의 문자를 출력하려고 시도했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ko::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"\ucd9c\ub825 \uba54\uc18c\ub4dc \'\'{1}\'\'\uc5d0 \ub300\ud55c \uc18d\uc131 \ud30c\uc77c \'\'{0}\'\'\uc744(\ub97c) \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. CLASSPATH\ub97c \ud655\uc778\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"출력 메소드 \'\'{1}\'\'에 대한 속성 파일 \'\'{0}\'\'을(를) 로드할 수 없습니다. CLASSPATH를 확인하십시오."_s)
 		})
 	}));
 }

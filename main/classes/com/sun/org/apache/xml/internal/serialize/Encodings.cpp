@@ -139,7 +139,7 @@ $EncodingInfo* Encodings::getEncodingInfo($String* encoding$renamed, bool allowJ
 
 void clinit$Encodings($Class* class$) {
 	$assignStatic(Encodings::DEFAULT_ENCODING, "UTF8"_s);
-	$assignStatic(Encodings::JIS_DANGER_CHARS, u"\\~\u007f\u00a2\u00a3\u00a5\u00ac\u2014\u2015\u2016\u2026\u203e\u203e\u2225\u222f\u301c\uff3c\uff5e\uffe0\uffe1\uffe2\uffe3"_s);
+	$assignStatic(Encodings::JIS_DANGER_CHARS, u"\\~\u007f¢£¥¬—―‖…‾‾∥∯〜＼～￠￡￢￣"_s);
 	$assignStatic(Encodings::UNICODE_ENCODINGS, $new($StringArray, {
 		"Unicode"_s,
 		"UnicodeBig"_s,

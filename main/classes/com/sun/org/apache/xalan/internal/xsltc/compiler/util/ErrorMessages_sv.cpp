@@ -164,7 +164,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_STYLESHEET_ERR),
-			$of(u"Fler \u00e4n en formatmall har definierats i samma fil."_s)
+			$of(u"Fler än en formatmall har definierats i samma fil."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_REDEF_ERR),
@@ -176,7 +176,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_REDEF_ERR),
-			$of(u"Variabeln \'\'{0}\'\' har definierats flera g\u00e5nger i samma omfattning."_s)
+			$of(u"Variabeln \'\'{0}\'\' har definierats flera gånger i samma omfattning."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_UNDEF_ERR),
@@ -188,7 +188,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::METHOD_NOT_FOUND_ERR),
-			$of(u"Hittar inte den externa metoden \'\'{0}\'\' (m\u00e5ste vara allm\u00e4n)."_s)
+			$of(u"Hittar inte den externa metoden \'\'{0}\'\' (måste vara allmän)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ARGUMENT_CONVERSION_ERR),
@@ -204,15 +204,15 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CATALOG_EXCEPTION),
-			$of(u"JAXP08090001: CatalogResolver \u00e4r aktiverat med katalogen \"{0}\", men ett CatalogException returneras."_s)
+			$of(u"JAXP08090001: CatalogResolver är aktiverat med katalogen \"{0}\", men ett CatalogException returneras."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_ACCESS_ERR),
-			$of(u"Kan inte \u00f6ppna filen eller URI \'\'{0}\'\'."_s)
+			$of(u"Kan inte öppna filen eller URI \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_ROOT_ERR),
-			$of(u"F\u00f6rv\u00e4ntade <xsl:stylesheet>- eller <xsl:transform>-element."_s)
+			$of(u"Förväntade <xsl:stylesheet>- eller <xsl:transform>-element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NAMESPACE_UNDEF_ERR),
@@ -224,7 +224,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NEED_LITERAL_ERR),
-			$of(u"Argument till \'\'{0}\'\' m\u00e5ste vara en litteral str\u00e4ng."_s)
+			$of(u"Argument till \'\'{0}\'\' måste vara en litteral sträng."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XPATH_PARSER_ERR),
@@ -236,31 +236,31 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHAR_ERR),
-			$of(u"Otill\u00e5tet tecken \'\'{0}\'\' i XPath-uttrycket."_s)
+			$of(u"Otillåtet tecken \'\'{0}\'\' i XPath-uttrycket."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_PI_ERR),
-			$of(u"\'\'{0}\'\' \u00e4r ett otill\u00e5tet namn i bearbetningsinstruktion."_s)
+			$of(u"\'\'{0}\'\' är ett otillåtet namn i bearbetningsinstruktion."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_ATTRIBUTE_ERR),
-			$of(u"Attributet \'\'{0}\'\' finns utanf\u00f6r elementet."_s)
+			$of(u"Attributet \'\'{0}\'\' finns utanför elementet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTRIBUTE_ERR),
-			$of(u"\'\'{0}\'\' \u00e4r ett otill\u00e5tet attribut."_s)
+			$of(u"\'\'{0}\'\' är ett otillåtet attribut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_INCLUDE_ERR),
-			$of(u"Cirkul\u00e4r import/include. Formatmallen \'\'{0}\'\' har redan laddats."_s)
+			$of(u"Cirkulär import/include. Formatmallen \'\'{0}\'\' har redan laddats."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::IMPORT_PRECEDE_OTHERS_ERR),
-			$of(u"Underordnade till xsl:import-elementet m\u00e5ste komma f\u00f6re alla andra underordnade till element f\u00f6r ett xsl:stylesheet-element, inklusive alla underordnade till xsl:include-elementet."_s)
+			$of(u"Underordnade till xsl:import-elementet måste komma före alla andra underordnade till element för ett xsl:stylesheet-element, inklusive alla underordnade till xsl:include-elementet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RESULT_TREE_SORT_ERR),
-			$of(u"Resultattr\u00e4dfragment kan inte sorteras (<xsl:sort>-element ignoreras). Du m\u00e5ste sortera noderna n\u00e4r resultattr\u00e4det skapas."_s)
+			$of(u"Resultatträdfragment kan inte sorteras (<xsl:sort>-element ignoreras). Du måste sortera noderna när resultatträdet skapas."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYMBOLS_REDEF_ERR),
@@ -268,43 +268,43 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSL_VERSION_ERR),
-			$of(u"XSL-versionen \'\'{0}\'\' underst\u00f6ds inte i XSLTC."_s)
+			$of(u"XSL-versionen \'\'{0}\'\' understöds inte i XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_VARIABLE_ERR),
-			$of(u"Cirkul\u00e4r variabel-/parameterreferens i \'\'{0}\'\'."_s)
+			$of(u"Cirkulär variabel-/parameterreferens i \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_BINARY_OP_ERR),
-			$of(u"Ok\u00e4nd operator f\u00f6r bin\u00e4rt uttryck."_s)
+			$of(u"Okänd operator för binärt uttryck."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ARG_ERR),
-			$of(u"Otill\u00e5tna argument f\u00f6r funktionsanrop."_s)
+			$of(u"Otillåtna argument för funktionsanrop."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DOCUMENT_ARG_ERR),
-			$of(u"Andra argumentet f\u00f6r document()-funktion m\u00e5ste vara en nodupps\u00e4ttning."_s)
+			$of(u"Andra argumentet för document()-funktion måste vara en noduppsättning."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_WHEN_ERR),
-			$of(u"Minst ett <xsl:when>-element kr\u00e4vs i <xsl:choose>."_s)
+			$of(u"Minst ett <xsl:when>-element krävs i <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_OTHERWISE_ERR),
-			$of(u"Endast ett <xsl:otherwise>-element \u00e4r till\u00e5tet i <xsl:choose>."_s)
+			$of(u"Endast ett <xsl:otherwise>-element är tillåtet i <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_OTHERWISE_ERR),
-			$of(u"<xsl:otherwise> anv\u00e4nds endast inom <xsl:choose>."_s)
+			$of(u"<xsl:otherwise> används endast inom <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_WHEN_ERR),
-			$of(u"<xsl:when> anv\u00e4nds endast inom <xsl:choose>."_s)
+			$of(u"<xsl:when> används endast inom <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WHEN_ELEMENT_ERR),
-			$of(u"Endast <xsl:when>- och <xsl:otherwise>-element \u00e4r till\u00e5tna i <xsl:choose>."_s)
+			$of(u"Endast <xsl:when>- och <xsl:otherwise>-element är tillåtna i <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNNAMED_ATTRIBSET_ERR),
@@ -312,7 +312,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHILD_ERR),
-			$of(u"Otill\u00e5tet underordnat element."_s)
+			$of(u"Otillåtet underordnat element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ELEM_NAME_ERR),
@@ -324,7 +324,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_TEXT_NODE_ERR),
-			$of(u"Textdata utanf\u00f6r toppniv\u00e5elementet <xsl:stylesheet>."_s)
+			$of(u"Textdata utanför toppnivåelementet <xsl:stylesheet>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX_PARSER_CONFIG_ERR),
@@ -332,19 +332,19 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INTERNAL_ERR),
-			$of(u"O\u00e5terkalleligt internt XSLTC-fel: \'\'{0}\'\'"_s)
+			$of(u"Oåterkalleligt internt XSLTC-fel: \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_XSL_ERR),
-			$of(u"XSL-elementet \'\'{0}\'\' st\u00f6ds inte."_s)
+			$of(u"XSL-elementet \'\'{0}\'\' stöds inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_EXT_ERR),
-			$of(u"XSLTC-till\u00e4gget \'\'{0}\'\' \u00e4r ok\u00e4nt."_s)
+			$of(u"XSLTC-tillägget \'\'{0}\'\' är okänt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_URI_ERR),
-			$of(u"Indatadokumentet \u00e4r ingen formatmall (XSL-namnrymden har inte deklarerats i rotelementet)."_s)
+			$of(u"Indatadokumentet är ingen formatmall (XSL-namnrymden har inte deklarerats i rotelementet)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_TARGET_ERR),
@@ -352,7 +352,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ACCESSING_XSLT_TARGET_ERR),
-			$of(u"Kunde inte l\u00e4sa formatmallen \'\'{0}\'\', eftersom \'\'{1}\'\'-\u00e5tkomst inte till\u00e5ts p\u00e5 grund av begr\u00e4nsning som anges av egenskapen accessExternalStylesheet."_s)
+			$of(u"Kunde inte läsa formatmallen \'\'{0}\'\', eftersom \'\'{1}\'\'-åtkomst inte tillåts på grund av begränsning som anges av egenskapen accessExternalStylesheet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_IMPLEMENTED_ERR),
@@ -360,7 +360,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_STYLESHEET_ERR),
-			$of(u"Indatadokumentet inneh\u00e5ller ingen XSL-formatmall."_s)
+			$of(u"Indatadokumentet innehåller ingen XSL-formatmall."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ELEMENT_PARSE_ERR),
@@ -368,27 +368,27 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::KEY_USE_ATTR_ERR),
-			$of(u"use-attribut f\u00f6r <key> m\u00e5ste vara node, node-set, string eller number."_s)
+			$of(u"use-attribut för <key> måste vara node, node-set, string eller number."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTPUT_VERSION_ERR),
-			$of(u"XML-dokumentets utdataversion m\u00e5ste vara 1.0"_s)
+			$of(u"XML-dokumentets utdataversion måste vara 1.0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_RELAT_OP_ERR),
-			$of(u"Ok\u00e4nd operator f\u00f6r relationsuttryck"_s)
+			$of(u"Okänd operator för relationsuttryck"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTRIBSET_UNDEF_ERR),
-			$of(u"F\u00f6rs\u00f6ker anv\u00e4nda en icke-befintlig attributupps\u00e4ttning \'\'{0}\'\'."_s)
+			$of(u"Försöker använda en icke-befintlig attributuppsättning \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTR_VAL_TEMPLATE_ERR),
-			$of(u"Kan inte tolka attributv\u00e4rdemallen \'\'{0}\'\'."_s)
+			$of(u"Kan inte tolka attributvärdemallen \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNKNOWN_SIG_TYPE_ERR),
-			$of(u"Ok\u00e4nd datatyp i signaturen f\u00f6r klassen \'\'{0}\'\'."_s)
+			$of(u"Okänd datatyp i signaturen för klassen \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DATA_CONVERSION_ERR),
@@ -396,11 +396,11 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_TRANSLET_CLASS_ERR),
-			$of(u"Templates inneh\u00e5ller inte n\u00e5gon giltig klassdefinition f\u00f6r translet."_s)
+			$of(u"Templates innehåller inte någon giltig klassdefinition för translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_MAIN_TRANSLET_ERR),
-			$of(u"Templates inneh\u00e5ller inte n\u00e5gon klass med namnet \'\'{0}\'\'."_s)
+			$of(u"Templates innehåller inte någon klass med namnet \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_CLASS_ERR),
@@ -412,15 +412,15 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ERROR_LISTENER_NULL_ERR),
-			$of(u"F\u00f6rs\u00f6ker st\u00e4lla in ErrorListener f\u00f6r \'\'{0}\'\' p\u00e5 null"_s)
+			$of(u"Försöker ställa in ErrorListener för \'\'{0}\'\' på null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_SOURCE_ERR),
-			$of(u"Endast StreamSource, SAXSource och DOMSource st\u00f6ds av XSLTC"_s)
+			$of(u"Endast StreamSource, SAXSource och DOMSource stöds av XSLTC"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_SOURCE_ERR),
-			$of(u"Source-objektet som \u00f6verf\u00f6rdes till \'\'{0}\'\' saknar inneh\u00e5ll."_s)
+			$of(u"Source-objektet som överfördes till \'\'{0}\'\' saknar innehåll."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_COMPILE_ERR),
@@ -428,31 +428,31 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_ERR),
-			$of(u"TransformerFactory k\u00e4nner inte igen attributet \'\'{0}\'\'."_s)
+			$of(u"TransformerFactory känner inte igen attributet \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_VALUE_ERR),
-			$of(u"Fel v\u00e4rde har angetts f\u00f6r attributet \'\'{0}\'\'."_s)
+			$of(u"Fel värde har angetts för attributet \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_RESULT_ERR),
-			$of(u"setResult() m\u00e5ste anropas f\u00f6re startDocument()."_s)
+			$of(u"setResult() måste anropas före startDocument()."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_TRANSLET_ERR),
-			$of(u"Transformer saknar inkapslat objekt f\u00f6r translet."_s)
+			$of(u"Transformer saknar inkapslat objekt för translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_HANDLER_ERR),
-			$of(u"Det finns ingen definierad utdatahanterare f\u00f6r transformeringsresultat."_s)
+			$of(u"Det finns ingen definierad utdatahanterare för transformeringsresultat."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_RESULT_ERR),
-			$of(u"Result-objekt som \u00f6verf\u00f6rdes till \'\'{0}\'\' \u00e4r ogiltigt."_s)
+			$of(u"Result-objekt som överfördes till \'\'{0}\'\' är ogiltigt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_PROP_ERR),
-			$of(u"F\u00f6rs\u00f6ker f\u00e5 \u00e5tkomst till ogiltig Transformer-egenskap, \'\'{0}\'\'."_s)
+			$of(u"Försöker få åtkomst till ogiltig Transformer-egenskap, \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX2DOM_ADAPTER_ERR),
@@ -468,28 +468,28 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_SET_PARAM_VALUE),
-			$of(u"Parameterv\u00e4rdet f\u00f6r {0} m\u00e5ste vara giltigt Java-objekt"_s)
+			$of(u"Parametervärdet för {0} måste vara giltigt Java-objekt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_STDIN_ERR),
-			$of(u"Alternativet -i m\u00e5ste anv\u00e4ndas med alternativet -o."_s)
+			$of(u"Alternativet -i måste användas med alternativet -o."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_USAGE_STR),
-			$of(u"SYNOPSIS\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <utdata>]\n      [-d <katalog>] [-j <jarfile>] [-p <paket>]\n      [-n] [-x] [-u] [-v] [-h] { <formatmall> | -i }\n\nALTERNATIV\n   -o <utdata>    tilldelar namnet <utdata> till genererad\n                  translet. Som standard tas namnet p\u00e5 translet\n                  fr\u00e5n namnet p\u00e5 <formatmallen>. Alternativet\n                  ignoreras vid kompilering av flera formatmallar.\n   -d <katalog> anger en destinationskatalog f\u00f6r translet\n   -j <jarfile>   paketerar transletklasserna i en jar-fil med\n                  namnet <jarfile>\n   -p <paket>   anger ett paketnamnprefix f\u00f6r alla genererade\n                  transletklasser.\n   -n             aktiverar mallinfogning (ger ett b\u00e4ttre genomsnittligt\n                  standardbeteende).\n   -x             ger ytterligare fels\u00f6kningsmeddelanden\n   -u             tolkar argument i <formatmall> som URL:er\n   -i             tvingar kompilatorn att l\u00e4sa formatmallen fr\u00e5n stdin\n   -v             sk"
+			$of(u"SYNOPSIS\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <utdata>]\n      [-d <katalog>] [-j <jarfile>] [-p <paket>]\n      [-n] [-x] [-u] [-v] [-h] { <formatmall> | -i }\n\nALTERNATIV\n   -o <utdata>    tilldelar namnet <utdata> till genererad\n                  translet. Som standard tas namnet på translet\n                  från namnet på <formatmallen>. Alternativet\n                  ignoreras vid kompilering av flera formatmallar.\n   -d <katalog> anger en destinationskatalog för translet\n   -j <jarfile>   paketerar transletklasserna i en jar-fil med\n                  namnet <jarfile>\n   -p <paket>   anger ett paketnamnprefix för alla genererade\n                  transletklasser.\n   -n             aktiverar mallinfogning (ger ett bättre genomsnittligt\n                  standardbeteende).\n   -x             ger ytterligare felsökningsmeddelanden\n   -u             tolkar argument i <formatmall> som URL:er\n   -i             tvingar kompilatorn att läsa formatmallen från stdin\n   -v             sk"
 				"river ut kompilatorns versionsnummer\n   -h             skriver ut denna syntaxsats\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_USAGE_STR),
-			$of(u"SYNOPSIS \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-n <iterationer>] {-u <dokument_url> | <dokument>}\n      <klass> [<param1>=<v\u00e4rde1> ...]\n\n   anv\u00e4nder translet <klass> vid transformering av XML-dokument \n   angivna som <dokument>. Translet-<klass> finns antingen i\n   anv\u00e4ndarens CLASSPATH eller i valfritt angiven <jarfile>.\nALTERNATIV\n   -j <jarfile>    anger en jar-fil varifr\u00e5n translet laddas\n   -x              ger ytterligare fels\u00f6kningsmeddelanden\n   -n <iterationer> k\u00f6r <iterations>-tider vid transformering och\n                   visar profileringsinformation\n   -u <dokument_url> anger XML-indatadokument som URL\n"_s)
+			$of(u"SYNOPSIS \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-n <iterationer>] {-u <dokument_url> | <dokument>}\n      <klass> [<param1>=<värde1> ...]\n\n   använder translet <klass> vid transformering av XML-dokument \n   angivna som <dokument>. Translet-<klass> finns antingen i\n   användarens CLASSPATH eller i valfritt angiven <jarfile>.\nALTERNATIV\n   -j <jarfile>    anger en jar-fil varifrån translet laddas\n   -x              ger ytterligare felsökningsmeddelanden\n   -n <iterationer> kör <iterations>-tider vid transformering och\n                   visar profileringsinformation\n   -u <dokument_url> anger XML-indatadokument som URL\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_SORT_ERR),
-			$of(u"<xsl:sort> kan anv\u00e4ndas endast i <xsl:for-each> eller <xsl:apply-templates>."_s)
+			$of(u"<xsl:sort> kan användas endast i <xsl:for-each> eller <xsl:apply-templates>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_ENCODING),
-			$of(u"Utdatakodning \'\'{0}\'\' underst\u00f6ds inte i JVM."_s)
+			$of(u"Utdatakodning \'\'{0}\'\' understöds inte i JVM."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYNTAX_ERR),
@@ -501,7 +501,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_JAVA_FUNCT_THIS_REF),
-			$of(u"Det f\u00f6rsta argumentet f\u00f6r den icke-statiska Java-funktionen \'\'{0}\'\' \u00e4r inte n\u00e5gon giltig objektreferens."_s)
+			$of(u"Det första argumentet för den icke-statiska Java-funktionen \'\'{0}\'\' är inte någon giltig objektreferens."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_ERR),
@@ -509,7 +509,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_UNK_LOC_ERR),
-			$of(u"Fel vid kontroll av typ av ett uttryck p\u00e5 ok\u00e4nd plats."_s)
+			$of(u"Fel vid kontroll av typ av ett uttryck på okänd plats."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CMDLINE_OPTION_ERR),
@@ -549,7 +549,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_JAR_STR),
-			$of(u"Transformering via translet \'\'{0}\'\' fr\u00e5n jar-filen \'\'{1}\'\'"_s)
+			$of(u"Transformering via translet \'\'{0}\'\' från jar-filen \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COULD_NOT_CREATE_TRANS_FACT),
@@ -557,7 +557,7 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_NAME_JAVA_CONFLICT),
-			$of(u"\'\'{0}\'\' kunde inte anv\u00e4ndas som namn p\u00e5 transletklassen eftersom det inneh\u00e5ller otill\u00e5tna tecken f\u00f6r Java-klassnamn. Namnet \'\'{1}\'\' anv\u00e4ndes ist\u00e4llet."_s)
+			$of(u"\'\'{0}\'\' kunde inte användas som namn på transletklassen eftersom det innehåller otillåtna tecken för Java-klassnamn. Namnet \'\'{1}\'\' användes istället."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_ERROR_KEY),
@@ -573,39 +573,39 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_QNAME_ERR),
-			$of(u"Ett attribut vars v\u00e4rde m\u00e5ste vara ett QName eller en blankteckenavgr\u00e4nsad lista med QNames hade v\u00e4rdet \'\'{0}\'\'"_s)
+			$of(u"Ett attribut vars värde måste vara ett QName eller en blankteckenavgränsad lista med QNames hade värdet \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_NCNAME_ERR),
-			$of(u"Ett attribut vars v\u00e4rde m\u00e5ste vara ett NCName hade v\u00e4rdet \'\'{0}\'\'"_s)
+			$of(u"Ett attribut vars värde måste vara ett NCName hade värdet \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_METHOD_IN_OUTPUT),
-			$of(u"Metodattributet f\u00f6r ett <xsl:output>-element hade v\u00e4rdet \'\'{0}\'\'. Endast n\u00e5got av f\u00f6ljande v\u00e4rden kan anv\u00e4ndas: \'\'xml\'\', \'\'html\'\', \'\'text\'\' eller qname-but-not-ncname i XML"_s)
+			$of(u"Metodattributet för ett <xsl:output>-element hade värdet \'\'{0}\'\'. Endast något av följande värden kan användas: \'\'xml\'\', \'\'html\'\', \'\'text\'\' eller qname-but-not-ncname i XML"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_GET_FEATURE_NULL_NAME),
-			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.getFeature(namn p\u00e5 str\u00e4ng)."_s)
+			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.getFeature(namn på sträng)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_FEATURE_NULL_NAME),
-			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.setFeature(namn p\u00e5 str\u00e4ng, booleskt v\u00e4rde)."_s)
+			$of(u"Funktionsnamnet kan inte vara null i TransformerFactory.setFeature(namn på sträng, booleskt värde)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNSUPPORTED_FEATURE),
-			$of(u"Kan inte st\u00e4lla in funktionen \'\'{0}\'\' i denna TransformerFactory."_s)
+			$of(u"Kan inte ställa in funktionen \'\'{0}\'\' i denna TransformerFactory."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: Funktionen kan inte anges till false om s\u00e4kerhetshanteraren anv\u00e4nds."_s)
+			$of(u"FEATURE_SECURE_PROCESSING: Funktionen kan inte anges till false om säkerhetshanteraren används."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_TRY_CATCH),
-			$of(u"Internt XSLTC-fel: den genererade bytekoden inneh\u00e5ller ett try-catch-finally-block och kan inte g\u00f6ras till en disposition."_s)
+			$of(u"Internt XSLTC-fel: den genererade bytekoden innehåller ett try-catch-finally-block och kan inte göras till en disposition."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_UNBALANCED_MARKERS),
-			$of(u"Internt XSLTC-fel: mark\u00f6rerna OutlineableChunkStart och OutlineableChunkEnd m\u00e5ste vara balanserade och korrekt kapslade."_s)
+			$of(u"Internt XSLTC-fel: markörerna OutlineableChunkStart och OutlineableChunkEnd måste vara balanserade och korrekt kapslade."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_DELETED_TARGET),
@@ -613,11 +613,11 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_METHOD_TOO_BIG),
-			$of(u"Internt XSLTC-fel: en metod i transleten \u00f6verstiger Java Virtual Machines l\u00e4ngdbegr\u00e4nsning f\u00f6r en metod p\u00e5 64 kilobytes.  Det h\u00e4r orsakas vanligen av mycket stora mallar i en formatmall. F\u00f6rs\u00f6k att omstrukturera formatmallen att anv\u00e4nda mindre mallar."_s)
+			$of(u"Internt XSLTC-fel: en metod i transleten överstiger Java Virtual Machines längdbegränsning för en metod på 64 kilobytes.  Det här orsakas vanligen av mycket stora mallar i en formatmall. Försök att omstrukturera formatmallen att använda mindre mallar."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DESERIALIZE_TRANSLET_ERR),
-			$of(u"N\u00e4r Java-s\u00e4kerheten \u00e4r aktiverad \u00e4r st\u00f6det f\u00f6r avserialisering av TemplatesImpl avaktiverat. Du kan \u00e5sidos\u00e4tta det h\u00e4r genom att st\u00e4lla in systemegenskapen jdk.xml.enableTemplatesImplDeserialization till sant."_s)
+			$of(u"När Java-säkerheten är aktiverad är stödet för avserialisering av TemplatesImpl avaktiverat. Du kan åsidosätta det här genom att ställa in systemegenskapen jdk.xml.enableTemplatesImplDeserialization till sant."_s)
 		})
 	});
 }

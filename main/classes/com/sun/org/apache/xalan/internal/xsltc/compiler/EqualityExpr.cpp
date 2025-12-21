@@ -366,9 +366,9 @@ void EqualityExpr::translate($ClassGenerator* classGen, $MethodGenerator* method
 		$init($Constants);
 		$var($String, var$3, $$str({"("_s, $($nc(tleft)->toSignature())}));
 		$var($String, var$2, $$concat(var$3, $($nc(tright)->toSignature())));
-		$var($String, var$1, $$concat(var$2, "I"));
+		$var($String, var$1, $$concat(var$2, "I"_s));
 		$var($String, var$0, $$concat(var$1, $Constants::DOM_INTF_SIG));
-		int32_t cmp = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "compare"_s, $$concat(var$0, ")Z"));
+		int32_t cmp = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "compare"_s, $$concat(var$0, ")Z"_s));
 		il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, cmp)));
 		return;
 	}
@@ -386,9 +386,9 @@ void EqualityExpr::translate($ClassGenerator* classGen, $MethodGenerator* method
 	$init($Constants);
 	$var($String, var$7, $$str({"("_s, $($nc(tleft)->toSignature())}));
 	$var($String, var$6, $$concat(var$7, $($nc(tright)->toSignature())));
-	$var($String, var$5, $$concat(var$6, "I"));
+	$var($String, var$5, $$concat(var$6, "I"_s));
 	$var($String, var$4, $$concat(var$5, $Constants::DOM_INTF_SIG));
-	int32_t compare = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "compare"_s, $$concat(var$4, ")Z"));
+	int32_t compare = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "compare"_s, $$concat(var$4, ")Z"_s));
 	il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, compare)));
 }
 

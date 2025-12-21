@@ -369,7 +369,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Funci\u00f3n no soportada."_s)
+			$of(u"Función no soportada."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_CANNOT_OVERWRITE_CAUSE),
@@ -377,11 +377,11 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NO_DEFAULT_IMPL),
-			$of(u"No se ha encontrado la implantaci\u00f3n por defecto "_s)
+			$of(u"No se ha encontrado la implantación por defecto "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0}) no est\u00e1 soportado actualmente"_s)
+			$of(u"ChunkedIntArray({0}) no está soportado actualmente"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_OFFSET_BIGGER_THAN_SLOT),
@@ -401,7 +401,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_COROUTINE_PARAM),
-			$of(u"Error de par\u00e1metro de corrutina ({0})"_s)
+			$of(u"Error de parámetro de corrutina ({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_PARSER_DOTERMINATE_ANSWERS),
@@ -409,7 +409,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"no se puede realizar un an\u00e1lisis mientras se lleva a cabo otro"_s)
+			$of(u"no se puede realizar un análisis mientras se lleva a cabo otro"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
@@ -421,7 +421,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"La clonaci\u00f3n del iterador no est\u00e1 soportada"_s)
+			$of(u"La clonación del iterador no está soportada"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_UNKNOWN_AXIS_TYPE),
@@ -433,7 +433,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NO_DTMIDS_AVAIL),
-			$of(u"No hay m\u00e1s identificadores de DTM disponibles"_s)
+			$of(u"No hay más identificadores de DTM disponibles"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NOT_SUPPORTED),
@@ -449,7 +449,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"startParse no puede llamarse durante el an\u00e1lisis"_s)
+			$of(u"startParse no puede llamarse durante el análisis"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_STARTPARSE_NEEDS_SAXPARSER),
@@ -461,11 +461,11 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_EXCEPTION_CREATING_POOL),
-			$of(u"excepci\u00f3n al crear la nueva instancia para el pool"_s)
+			$of(u"excepción al crear la nueva instancia para el pool"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"La ruta de acceso contiene una secuencia de escape no v\u00e1lida"_s)
+			$of(u"La ruta de acceso contiene una secuencia de escape no válida"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_SCHEME_REQUIRED),
@@ -481,7 +481,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_PATH_INVALID_CHAR),
-			$of(u"La ruta de acceso contiene un car\u00e1cter no v\u00e1lido: {0}"_s)
+			$of(u"La ruta de acceso contiene un carácter no válido: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_SCHEME_FROM_NULL_STRING),
@@ -489,11 +489,11 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"El esquema no es v\u00e1lido."_s)
+			$of(u"El esquema no es válido."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"El formato de la direcci\u00f3n de host no es correcto"_s)
+			$of(u"El formato de la dirección de host no es correcto"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_PORT_WHEN_HOST_NULL),
@@ -501,11 +501,11 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_INVALID_PORT),
-			$of(u"N\u00famero de puerto no v\u00e1lido"_s)
+			$of(u"Número de puerto no válido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"S\u00f3lo se puede definir el fragmento para un URI gen\u00e9rico"_s)
+			$of(u"Sólo se puede definir el fragmento para un URI genérico"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_FRAG_WHEN_PATH_NULL),
@@ -513,23 +513,23 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_FRAG_INVALID_CHAR),
-			$of(u"El fragmento contiene un car\u00e1cter no v\u00e1lido"_s)
+			$of(u"El fragmento contiene un carácter no válido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_PARSER_IN_USE),
-			$of(u"El analizador ya se est\u00e1 utilizando"_s)
+			$of(u"El analizador ya se está utilizando"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"No se puede cambiar {0} {1} durante el an\u00e1lisis"_s)
+			$of(u"No se puede cambiar {0} {1} durante el análisis"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"La autocausalidad no est\u00e1 permitida"_s)
+			$of(u"La autocausalidad no está permitida"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"No se puede especificar la informaci\u00f3n de usuario si no se ha especificado el host"_s)
+			$of(u"No se puede especificar la información de usuario si no se ha especificado el host"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NO_PORT_IF_NO_HOST),
@@ -545,11 +545,11 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"No se puede inicializar el URI con par\u00e1metros vac\u00edos"_s)
+			$of(u"No se puede inicializar el URI con parámetros vacíos"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_METHOD_NOT_SUPPORTED),
-			$of(u"M\u00e9todo no soportado a\u00fan "_s)
+			$of(u"Método no soportado aún "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
@@ -573,7 +573,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_LOCATION_UNKNOWN),
-			$of(u"Ubicaci\u00f3n del error desconocida"_s)
+			$of(u"Ubicación del error desconocida"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_PREFIX_MUST_RESOLVE),
@@ -597,7 +597,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"No se puede tener m\u00e1s de una ra\u00edz en un DOM."_s)
+			$of(u"No se puede tener más de una raíz en un DOM."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_ARG_LOCALNAME_NULL),
@@ -605,11 +605,11 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_ARG_LOCALNAME_INVALID),
-			$of(u"El nombre local de QNAME debe ser un NCName v\u00e1lido"_s)
+			$of(u"El nombre local de QNAME debe ser un NCName válido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_ARG_PREFIX_INVALID),
-			$of(u"El prefijo de QNAME debe ser un NCName v\u00e1lido"_s)
+			$of(u"El prefijo de QNAME debe ser un NCName válido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NAME_CANT_START_WITH_COLON),
@@ -617,19 +617,19 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"El par\u00e1metro para crear un mensaje est\u00e1 fuera de los l\u00edmites"_s)
+			$of(u"El parámetro para crear un mensaje está fuera de los límites"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Se ha emitido una excepci\u00f3n durante la llamada a messageFormat"_s)
+			$of(u"Se ha emitido una excepción durante la llamada a messageFormat"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"N\u00ba de L\u00ednea"_s)
+			$of(u"Nº de Línea"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"N\u00ba de Columna"_s)
+			$of(u"Nº de Columna"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_SERIALIZER_NOT_CONTENTHANDLER),
@@ -645,11 +645,11 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"Tama\u00f1o de buffer menor o igual que 0"_s)
+			$of(u"Tamaño de buffer menor o igual que 0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u00bfSe ha detectado un sustituto UTF-16 no v\u00e1lido: {0}?"_s)
+			$of(u"¿Se ha detectado un sustituto UTF-16 no válido: {0}?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_OIERROR),
@@ -657,7 +657,7 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"No se puede agregar el atributo {0} despu\u00e9s de nodos secundarios o antes de que se produzca un elemento. Se ignorar\u00e1 el atributo."_s)
+			$of(u"No se puede agregar el atributo {0} después de nodos secundarios o antes de que se produzca un elemento. Se ignorará el atributo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_NAMESPACE_PREFIX),
@@ -665,23 +665,23 @@ void clinit$XMLErrorResources_es($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_STRAY_ATTRIBUTE),
-			$of(u"El atributo \'\'{0}\'\' est\u00e1 fuera del elemento."_s)
+			$of(u"El atributo \'\'{0}\'\' está fuera del elemento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_STRAY_NAMESPACE),
-			$of(u"Declaraci\u00f3n del espacio de nombres \'\'{0}\'\'=\'\'{1}\'\' fuera del elemento."_s)
+			$of(u"Declaración del espacio de nombres \'\'{0}\'\'=\'\'{1}\'\' fuera del elemento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"No se ha podido cargar \'\'{0}\'\' (compruebe la CLASSPATH), ahora s\u00f3lo se est\u00e1n utilizando los valores por defecto"_s)
+			$of(u"No se ha podido cargar \'\'{0}\'\' (compruebe la CLASSPATH), ahora sólo se están utilizando los valores por defecto"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_ILLEGAL_CHARACTER),
-			$of(u"Intento de realizar la salida del car\u00e1cter del valor integral {0}, que no est\u00e1 representado en la codificaci\u00f3n de salida de {1}."_s)
+			$of(u"Intento de realizar la salida del carácter del valor integral {0}, que no está representado en la codificación de salida de {1}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_es::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"No se ha podido cargar el archivo de propiedades \'\'{0}\'\' para el m\u00e9todo de salida \'\'{1}\'\' (compruebe la CLASSPATH)"_s)
+			$of(u"No se ha podido cargar el archivo de propiedades \'\'{0}\'\' para el método de salida \'\'{1}\'\' (compruebe la CLASSPATH)"_s)
 		})
 	}));
 }

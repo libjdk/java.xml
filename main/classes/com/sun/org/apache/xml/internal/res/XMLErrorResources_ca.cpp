@@ -361,7 +361,7 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Aquesta funci\u00f3 no t\u00e9 suport. "_s)
+			$of(u"Aquesta funció no té suport. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CANNOT_OVERWRITE_CAUSE),
@@ -369,31 +369,31 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NO_DEFAULT_IMPL),
-			$of(u"No s\'ha trobat cap implementaci\u00f3 per defecte "_s)
+			$of(u"No s\'ha trobat cap implementació per defecte "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"En l\'\'actualitat ChunkedIntArray({0}) no t\u00e9 suport "_s)
+			$of(u"En l\'\'actualitat ChunkedIntArray({0}) no té suport "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"El despla\u00e7ament \u00e9s m\u00e9s gran que la ranura "_s)
+			$of(u"El desplaçament és més gran que la ranura "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Coroutine no est\u00e0 disponible, id={0} "_s)
+			$of(u"Coroutine no està disponible, id={0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager ha rebut una petici\u00f3 co_exit() "_s)
+			$of(u"CoroutineManager ha rebut una petició co_exit() "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_COJOINROUTINESET_FAILED),
-			$of(u"S\'ha produ\u00eft un error a co_joinCoroutineSet() "_s)
+			$of(u"S\'ha produït un error a co_joinCoroutineSet() "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_COROUTINE_PARAM),
-			$of(u"Error de par\u00e0metre coroutine ({0}) "_s)
+			$of(u"Error de paràmetre coroutine ({0}) "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_PARSER_DOTERMINATE_ANSWERS),
@@ -401,7 +401,7 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"L\'an\u00e0lisi no es pot cridar mentre s\'est\u00e0 duent a terme "_s)
+			$of(u"L\'anàlisi no es pot cridar mentre s\'està duent a terme "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
@@ -413,23 +413,23 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"El clonatge de l\'iterador no t\u00e9 suport "_s)
+			$of(u"El clonatge de l\'iterador no té suport "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"Tipus de commutaci\u00f3 de l\'\'eix desconeguda: {0} "_s)
+			$of(u"Tipus de commutació de l\'\'eix desconeguda: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_AXIS_NOT_SUPPORTED),
-			$of(u"La commutaci\u00f3 de l\'\'eix no t\u00e9 suport: {0} "_s)
+			$of(u"La commutació de l\'\'eix no té suport: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NO_DTMIDS_AVAIL),
-			$of(u"No hi ha m\u00e9s ID de DTM disponibles "_s)
+			$of(u"No hi ha més ID de DTM disponibles "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NOT_SUPPORTED),
-			$of(u"No t\u00e9 suport: {0} "_s)
+			$of(u"No té suport: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NODE_NON_NULL),
@@ -441,7 +441,7 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"startParse no es pot cridar mentre s\'est\u00e0 duent a terme l\'an\u00e0lisi "_s)
+			$of(u"startParse no es pot cridar mentre s\'està duent a terme l\'anàlisi "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_STARTPARSE_NEEDS_SAXPARSER),
@@ -453,11 +453,11 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_EXCEPTION_CREATING_POOL),
-			$of(u"S\'ha produ\u00eft una excepci\u00f3 en crear una nova inst\u00e0ncia de l\'agrupaci\u00f3 "_s)
+			$of(u"S\'ha produït una excepció en crear una nova instància de l\'agrupació "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"La via d\'acc\u00e9s cont\u00e9 una seq\u00fc\u00e8ncia d\'escapament no v\u00e0lida "_s)
+			$of(u"La via d\'accés conté una seqüència d\'escapament no vàlida "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_SCHEME_REQUIRED),
@@ -473,55 +473,55 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_PATH_INVALID_CHAR),
-			$of(u"La via d\'acc\u00e9s cont\u00e9 un car\u00e0cter no v\u00e0lid {0} "_s)
+			$of(u"La via d\'accés conté un caràcter no vàlid {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"No es pot establir un esquema des d\'una cadena nul\u00b7la "_s)
+			$of(u"No es pot establir un esquema des d\'una cadena nul·la "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"L\'esquema no t\u00e9 conformitat. "_s)
+			$of(u"L\'esquema no té conformitat. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"El sistema principal no t\u00e9 una adre\u00e7a ben formada "_s)
+			$of(u"El sistema principal no té una adreça ben formada "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_PORT_WHEN_HOST_NULL),
-			$of(u"El port no es pot establir quan el sistema principal \u00e9s nul "_s)
+			$of(u"El port no es pot establir quan el sistema principal és nul "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_INVALID_PORT),
-			$of(u"N\u00famero de port no v\u00e0lid "_s)
+			$of(u"Número de port no vàlid "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"El fragment nom\u00e9s es pot establir per a un URI gen\u00e8ric "_s)
+			$of(u"El fragment només es pot establir per a un URI genèric "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"El fragment no es pot establir si la via d\'acc\u00e9s \u00e9s nul\u00b7la "_s)
+			$of(u"El fragment no es pot establir si la via d\'accés és nul·la "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_FRAG_INVALID_CHAR),
-			$of(u"El fragment cont\u00e9 un car\u00e0cter no v\u00e0lid "_s)
+			$of(u"El fragment conté un caràcter no vàlid "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_PARSER_IN_USE),
-			$of(u"L\'analitzador ja s\'est\u00e0 utilitzant "_s)
+			$of(u"L\'analitzador ja s\'està utilitzant "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"No es pot modificar {0} {1} mentre es du a terme l\'\'an\u00e0lisi "_s)
+			$of(u"No es pot modificar {0} {1} mentre es du a terme l\'\'anàlisi "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"La causalitat pr\u00f2pia no est\u00e0 permesa. "_s)
+			$of(u"La causalitat pròpia no està permesa. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"No es pot especificar informaci\u00f3 de l\'usuari si no s\'especifica el sistema principal "_s)
+			$of(u"No es pot especificar informació de l\'usuari si no s\'especifica el sistema principal "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NO_PORT_IF_NO_HOST),
@@ -529,19 +529,19 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"No es pot especificar una cadena de consulta en la via d\'acc\u00e9s i la cadena de consulta "_s)
+			$of(u"No es pot especificar una cadena de consulta en la via d\'accés i la cadena de consulta "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"No es pot especificar un fragment tant en la via d\'acc\u00e9s com en el fragment "_s)
+			$of(u"No es pot especificar un fragment tant en la via d\'accés com en el fragment "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"No es pot inicialitzar l\'URI amb par\u00e0metres buits "_s)
+			$of(u"No es pot inicialitzar l\'URI amb paràmetres buits "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_METHOD_NOT_SUPPORTED),
-			$of(u"Aquest m\u00e8tode encara no t\u00e9 suport "_s)
+			$of(u"Aquest mètode encara no té suport "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
@@ -549,11 +549,11 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader no es pot produir abans de la petici\u00f3 d\'startParse "_s)
+			$of(u"XMLReader no es pot produir abans de la petició d\'startParse "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"La commutaci\u00f3 de l\'\'eix no t\u00e9 suport: {0} "_s)
+			$of(u"La commutació de l\'\'eix no té suport: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
@@ -565,7 +565,7 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_LOCATION_UNKNOWN),
-			$of(u"Ubicaci\u00f3 de l\'error desconeguda"_s)
+			$of(u"Ubicació de l\'error desconeguda"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_PREFIX_MUST_RESOLVE),
@@ -573,51 +573,51 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"createDocument() no t\u00e9 suport a XPathContext "_s)
+			$of(u"createDocument() no té suport a XPathContext "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"El subordinat de l\'atribut no t\u00e9 un document de propietari. "_s)
+			$of(u"El subordinat de l\'atribut no té un document de propietari. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"El subordinat de l\'atribut no t\u00e9 un element de document de propietari. "_s)
+			$of(u"El subordinat de l\'atribut no té un element de document de propietari. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"Av\u00eds: no es pot produir text abans de l\'element de document. Es passa per alt. "_s)
+			$of(u"Avís: no es pot produir text abans de l\'element de document. Es passa per alt. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"No hi pot haver m\u00e9s d\'una arrel en un DOM. "_s)
+			$of(u"No hi pot haver més d\'una arrel en un DOM. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_ARG_LOCALNAME_NULL),
-			$of(u"L\'argument \'localName\' \u00e9s nul. "_s)
+			$of(u"L\'argument \'localName\' és nul. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_ARG_LOCALNAME_INVALID),
-			$of(u"El nom local de QNAME ha de ser un NCName v\u00e0lid. "_s)
+			$of(u"El nom local de QNAME ha de ser un NCName vàlid. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_ARG_PREFIX_INVALID),
-			$of(u"El prefix de QNAME ha de ser un NCName v\u00e0lid. "_s)
+			$of(u"El prefix de QNAME ha de ser un NCName vàlid. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"El par\u00e0metre de createMessage estava fora dels l\u00edmits. "_s)
+			$of(u"El paràmetre de createMessage estava fora dels límits. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"S\'ha generat una excepci\u00f3 durant la crida messageFormat. "_s)
+			$of(u"S\'ha generat una excepció durant la crida messageFormat. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"L\u00ednia n\u00fam. "_s)
+			$of(u"Línia núm. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"Columna n\u00fam. "_s)
+			$of(u"Columna núm. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_SERIALIZER_NOT_CONTENTHANDLER),
@@ -633,11 +633,11 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"Grand\u00e0ria del buffer <=0 "_s)
+			$of(u"Grandària del buffer <=0 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_INVALID_UTF16_SURROGATE),
-			$of(u"S\'\'ha detectat un suplent UTF-16 no v\u00e0lid: {0} ? "_s)
+			$of(u"S\'\'ha detectat un suplent UTF-16 no vàlid: {0} ? "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_OIERROR),
@@ -645,7 +645,7 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"No es pot afegir l\'\'atribut {0} despr\u00e9s dels nodes subordinats o abans que es produeixi un element. Es passar\u00e0 per alt l\'\'atribut. "_s)
+			$of(u"No es pot afegir l\'\'atribut {0} després dels nodes subordinats o abans que es produeixi un element. Es passarà per alt l\'\'atribut. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_NAMESPACE_PREFIX),
@@ -657,7 +657,7 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_STRAY_NAMESPACE),
-			$of(u"La declaraci\u00f3 d\'\'espai de noms \'\'{0}\'\'=\'\'{1}\'\' es troba fora de l\'\'element."_s)
+			$of(u"La declaració d\'\'espai de noms \'\'{0}\'\'=\'\'{1}\'\' es troba fora de l\'\'element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_COULD_NOT_LOAD_RESOURCE),
@@ -665,7 +665,7 @@ void clinit$XMLErrorResources_ca($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ca::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"No s\'\'ha pogut carregar el fitxer de propietats \'\'{0}\'\' del m\u00e8tode de sortida \'\'{1}\'\' (comproveu la CLASSPATH)"_s)
+			$of(u"No s\'\'ha pogut carregar el fitxer de propietats \'\'{0}\'\' del mètode de sortida \'\'{1}\'\' (comproveu la CLASSPATH)"_s)
 		})
 	}));
 }

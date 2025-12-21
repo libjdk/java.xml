@@ -664,571 +664,571 @@ void clinit$XPATHErrorResources_ko($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CURRENT_NOT_ALLOWED_IN_MATCH),
-			$of(u"\uc77c\uce58 \ud328\ud134\uc5d0\uc11c\ub294 current() \ud568\uc218\uac00 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"일치 패턴에서는 current() 함수가 허용되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CURRENT_TAKES_NO_ARGS),
-			$of(u"current() \ud568\uc218\uc5d0\ub294 \uc778\uc218\ub97c \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"current() 함수에는 인수를 사용할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_DOCUMENT_REPLACED),
-			$of(u"document() \ud568\uc218 \uad6c\ud604\uc774 com.sun.org.apache.xalan.internal.xslt.FuncDocument\ub85c \ub300\uccb4\ub418\uc5c8\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"document() 함수 구현이 com.sun.org.apache.xalan.internal.xslt.FuncDocument로 대체되었습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CONTEXT_CAN_NOT_BE_NULL),
-			$of(u"\uc791\uc5c5\uc774 \ucee8\ud14d\uc2a4\ud2b8\uc5d0 \uc885\uc18d\uc801\uc77c \ub54c \ucee8\ud14d\uc2a4\ud2b8\ub294 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"작업이 컨텍스트에 종속적일 때 컨텍스트는 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CONTEXT_HAS_NO_OWNERDOC),
-			$of(u"\ucee8\ud14d\uc2a4\ud2b8\uc5d0 \uc18c\uc720\uc790 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"컨텍스트에 소유자 문서가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_LOCALNAME_HAS_TOO_MANY_ARGS),
-			$of(u"local-name()\uc5d0 \uc778\uc218\uac00 \ub108\ubb34 \ub9ce\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"local-name()에 인수가 너무 많습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NAMESPACEURI_HAS_TOO_MANY_ARGS),
-			$of(u"namespace-uri()\uc5d0 \uc778\uc218\uac00 \ub108\ubb34 \ub9ce\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"namespace-uri()에 인수가 너무 많습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NORMALIZESPACE_HAS_TOO_MANY_ARGS),
-			$of(u"normalize-space()\uc5d0 \uc778\uc218\uac00 \ub108\ubb34 \ub9ce\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"normalize-space()에 인수가 너무 많습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NUMBER_HAS_TOO_MANY_ARGS),
-			$of(u"number()\uc5d0 \uc778\uc218\uac00 \ub108\ubb34 \ub9ce\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"number()에 인수가 너무 많습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NAME_HAS_TOO_MANY_ARGS),
-			$of(u"name()\uc5d0 \uc778\uc218\uac00 \ub108\ubb34 \ub9ce\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"name()에 인수가 너무 많습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_STRING_HAS_TOO_MANY_ARGS),
-			$of(u"string()\uc5d0 \uc778\uc218\uac00 \ub108\ubb34 \ub9ce\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"string()에 인수가 너무 많습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_STRINGLENGTH_HAS_TOO_MANY_ARGS),
-			$of(u"string-length()\uc5d0 \uc778\uc218\uac00 \ub108\ubb34 \ub9ce\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"string-length()에 인수가 너무 많습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_TRANSLATE_TAKES_3_ARGS),
-			$of(u"translate() \ud568\uc218\uc5d0 \uc138 \uac1c\uc758 \uc778\uc218\uac00 \uc0ac\uc6a9\ub429\ub2c8\ub2e4!"_s)
+			$of(u"translate() 함수에 세 개의 인수가 사용됩니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNPARSEDENTITYURI_TAKES_1_ARG),
-			$of(u"unparsed-entity-uri \ud568\uc218\uc5d0\ub294 \ud55c \uac1c\uc758 \uc778\uc218\uac00 \uc0ac\uc6a9\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4!"_s)
+			$of(u"unparsed-entity-uri 함수에는 한 개의 인수가 사용되어야 합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NAMESPACEAXIS_NOT_IMPLEMENTED),
-			$of(u"\ub124\uc784\uc2a4\ud398\uc774\uc2a4 \ucd95\uc774 \uc544\uc9c1 \uad6c\ud604\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"네임스페이스 축이 아직 구현되지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNKNOWN_AXIS),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 \ucd95: {0}"_s)
+			$of(u"알 수 없는 축: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNKNOWN_MATCH_OPERATION),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 \uc77c\uce58 \uc791\uc5c5\uc785\ub2c8\ub2e4!"_s)
+			$of(u"알 수 없는 일치 작업입니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_INCORRECT_ARG_LENGTH),
-			$of(u"processing-instruction() \ub178\ub4dc \ud14c\uc2a4\ud2b8\uc758 \uc778\uc218 \uae38\uc774\uac00 \uc62c\ubc14\ub974\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"processing-instruction() 노드 테스트의 인수 길이가 올바르지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_TO_NUMBER),
-			$of(u"{0}\uc744(\ub97c) \uc22b\uc790\ub85c \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}을(를) 숫자로 변환할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_TO_NODELIST),
-			$of(u"{0}\uc744(\ub97c) NodeList\ub85c \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"{0}을(를) NodeList로 변환할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_TO_MUTABLENODELIST),
-			$of(u"{0}\uc744(\ub97c) NodeSetDTM\uc73c\ub85c \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"{0}을(를) NodeSetDTM으로 변환할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_TO_TYPE),
-			$of(u"{0}\uc744(\ub97c) type#{1}(\uc73c)\ub85c \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}을(를) type#{1}(으)로 변환할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_MATCH_PATTERN),
-			$of(u"getMatchScore\uc5d0 \uc77c\uce58 \ud328\ud134\uc774 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"getMatchScore에 일치 패턴이 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_COULDNOT_GET_VAR_NAMED),
-			$of(u"\uc774\ub984\uc774 {0}\uc778 \ubcc0\uc218\ub97c \uac00\uc838\uc62c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이름이 {0}인 변수를 가져올 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNKNOWN_OPCODE),
-			$of(u"\uc624\ub958! \uc54c \uc218 \uc5c6\ub294 \uc791\uc5c5 \ucf54\ub4dc: {0}"_s)
+			$of(u"오류! 알 수 없는 작업 코드: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXTRA_ILLEGAL_TOKENS),
-			$of(u"\uc798\ubabb\ub41c \ucd94\uac00 \ud1a0\ud070: {0}"_s)
+			$of(u"잘못된 추가 토큰: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_DOUBLE_QUOTE),
-			$of(u"\ub9ac\ud130\ub7f4\uc758 \ub530\uc634\ud45c\uac00 \uc798\ubabb \uc9c0\uc815\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ud070 \ub530\uc634\ud45c\uac00 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"리터럴의 따옴표가 잘못 지정되었습니다. 큰 따옴표가 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_SINGLE_QUOTE),
-			$of(u"\ub9ac\ud130\ub7f4\uc758 \ub530\uc634\ud45c\uac00 \uc798\ubabb \uc9c0\uc815\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc791\uc740 \ub530\uc634\ud45c\uac00 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"리터럴의 따옴표가 잘못 지정되었습니다. 작은 따옴표가 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EMPTY_EXPRESSION),
-			$of(u"\ud45c\ud604\uc2dd\uc774 \ube44\uc5b4 \uc788\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"표현식이 비어 있습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_BUT_FOUND),
-			$of(u"{0}\uc774(\uac00) \ud544\uc694\ud558\uc9c0\ub9cc {1}\uc774(\uac00) \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}이(가) 필요하지만 {1}이(가) 발견되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_INCORRECT_PROGRAMMER_ASSERTION),
-			$of(u"\ud504\ub85c\uadf8\ub798\uba38 \uac80\uc99d\uc774 \uc62c\ubc14\ub974\uc9c0 \uc54a\uc74c - {0}"_s)
+			$of(u"프로그래머 검증이 올바르지 않음 - {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_BOOLEAN_ARG_NO_LONGER_OPTIONAL),
-			$of(u"19990709 XPath \ucd08\uc548\uc5d0\uc11c\ub294 boolean(...) \uc778\uc218\uac00 \ub354 \uc774\uc0c1 \uc120\ud0dd\uc801 \uc778\uc218\uac00 \uc544\ub2d9\ub2c8\ub2e4."_s)
+			$of(u"19990709 XPath 초안에서는 boolean(...) 인수가 더 이상 선택적 인수가 아닙니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FOUND_COMMA_BUT_NO_PRECEDING_ARG),
-			$of(u"\',\'\ub97c \ucc3e\uc558\uc9c0\ub9cc \uc120\ud589 \uc778\uc218\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"\',\'를 찾았지만 선행 인수가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FOUND_COMMA_BUT_NO_FOLLOWING_ARG),
-			$of(u"\',\'\ub97c \ucc3e\uc558\uc9c0\ub9cc \ud6c4\ud589 \uc778\uc218\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"\',\'를 찾았지만 후행 인수가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_PREDICATE_ILLEGAL_SYNTAX),
-			$of(u"\'..[predicate]\' \ub610\ub294 \'.[predicate]\'\ub294 \uc798\ubabb\ub41c \uad6c\ubb38\uc785\ub2c8\ub2e4. \ub300\uc2e0 \'self::node()[predicate]\'\ub97c \uc0ac\uc6a9\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"\'..[predicate]\' 또는 \'.[predicate]\'는 잘못된 구문입니다. 대신 \'self::node()[predicate]\'를 사용하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_ILLEGAL_AXIS_NAME),
-			$of(u"\uc798\ubabb\ub41c \ucd95 \uc774\ub984: {0}"_s)
+			$of(u"잘못된 축 이름: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNKNOWN_NODETYPE),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 nodetype: {0}"_s)
+			$of(u"알 수 없는 nodetype: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_PATTERN_LITERAL_NEEDS_BE_QUOTED),
-			$of(u"\ud328\ud134 \ub9ac\ud130\ub7f4({0})\uc5d0 \ub530\uc634\ud45c\ub97c \uc9c0\uc815\ud574\uc57c \ud569\ub2c8\ub2e4!"_s)
+			$of(u"패턴 리터럴({0})에 따옴표를 지정해야 합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_COULDNOT_BE_FORMATTED_TO_NUMBER),
-			$of(u"{0}\uc758 \ud615\uc2dd\uc744 \uc22b\uc790\ub85c \uc9c0\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"{0}의 형식을 숫자로 지정할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_COULDNOT_CREATE_XMLPROCESSORLIAISON),
-			$of(u"XML TransformerFactory \uc5f0\uacb0\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"XML TransformerFactory 연결을 생성할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_DIDNOT_FIND_XPATH_SELECT_EXP),
-			$of(u"\uc624\ub958: xpath select \ud45c\ud604\uc2dd(-select)\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"오류: xpath select 표현식(-select)을 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_COULDNOT_FIND_ENDOP_AFTER_OPLOCATIONPATH),
-			$of(u"\uc624\ub958! OP_LOCATIONPATH \ub4a4\uc5d0\uc11c ENDOP\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"오류! OP_LOCATIONPATH 뒤에서 ENDOP를 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_ERROR_OCCURED),
-			$of(u"\uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"오류가 발생했습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"\ubcc0\uc218\uc5d0 \ub300\ud574 \uc81c\uacf5\ub41c VariableReference\uac00 \ucee8\ud14d\uc2a4\ud2b8\uc5d0\uc11c \ubc97\uc5b4\ub098\uac70\ub098 \uc815\uc758\ub97c \ud3ec\ud568\ud558\uc9c0 \uc5c6\uc2b5\ub2c8\ub2e4! \uc774\ub984 = {0}"_s)
+			$of(u"변수에 대해 제공된 VariableReference가 컨텍스트에서 벗어나거나 정의를 포함하지 없습니다! 이름 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_AXES_NOT_ALLOWED),
-			$of(u"\uc77c\uce58 \ud328\ud134\uc5d0\uc11c\ub294 child:: \ubc0f attribute:: \ucd95\ub9cc \ud5c8\uc6a9\ub429\ub2c8\ub2e4! \uc798\ubabb\ub41c \ucd95 = {0}"_s)
+			$of(u"일치 패턴에서는 child:: 및 attribute:: 축만 허용됩니다! 잘못된 축 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_KEY_HAS_TOO_MANY_ARGS),
-			$of(u"key()\uc5d0 \uc62c\ubc14\ub974\uc9c0 \uc54a\uc740 \uc218\uc758 \uc778\uc218\uac00 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"key()에 올바르지 않은 수의 인수가 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_COUNT_TAKES_1_ARG),
-			$of(u"count \ud568\uc218\uc5d0\ub294 \ud55c \uac1c\uc758 \uc778\uc218\uac00 \uc0ac\uc6a9\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4!"_s)
+			$of(u"count 함수에는 한 개의 인수가 사용되어야 합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_COULDNOT_FIND_FUNCTION),
-			$of(u"\ud568\uc218\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"함수를 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNSUPPORTED_ENCODING),
-			$of(u"\uc9c0\uc6d0\ub418\uc9c0 \uc54a\ub294 \uc778\ucf54\ub529: {0}"_s)
+			$of(u"지원되지 않는 인코딩: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_PROBLEM_IN_DTM_NEXTSIBLING),
-			$of(u"DTM\uc5d0\uc11c getNextSibling\uc5d0 \ubb38\uc81c\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4. \ubcf5\uad6c\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911"_s)
+			$of(u"DTM에서 getNextSibling에 문제가 발생했습니다. 복구하려고 시도하는 중"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANNOT_WRITE_TO_EMPTYNODELISTIMPL),
-			$of(u"\ud504\ub85c\uadf8\ub798\uba38 \uc624\ub958: EmptyNodeList\uc5d0 \uc4f8 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"프로그래머 오류: EmptyNodeList에 쓸 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_SETDOMFACTORY_NOT_SUPPORTED),
-			$of(u"XPathContext\uc5d0\uc11c\ub294 setDOMFactory\uac00 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"XPathContext에서는 setDOMFactory가 지원되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\uc811\ub450\uc5b4\ub294 \ub124\uc784\uc2a4\ud398\uc774\uc2a4\ub85c \ubd84\uc11d\ub418\uc5b4\uc57c \ud568: {0}"_s)
+			$of(u"접두어는 네임스페이스로 분석되어야 함: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_PARSE_NOT_SUPPORTED),
-			$of(u"XPathContext\uc5d0\uc11c\ub294 parse(InputSource \uc18c\uc2a4)\uac00 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4! {0}\uc744(\ub97c) \uc5f4 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XPathContext에서는 parse(InputSource 소스)가 지원되지 않습니다! {0}을(를) 열 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_SAX_API_NOT_HANDLED),
-			$of(u"DTM\uc774 SAX API \ubb38\uc790(char ch[]...\ub97c \ucc98\ub9ac\ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"DTM이 SAX API 문자(char ch[]...를 처리하지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_IGNORABLE_WHITESPACE_NOT_HANDLED),
-			$of(u"DTM\uc774 ignorableWhitespace(char ch[]...\ub97c \ucc98\ub9ac\ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"DTM이 ignorableWhitespace(char ch[]...를 처리하지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_DTM_CANNOT_HANDLE_NODES),
-			$of(u"DTMLiaison\uc740 {0} \uc720\ud615\uc758 \ub178\ub4dc\ub97c \ucc98\ub9ac\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"DTMLiaison은 {0} 유형의 노드를 처리할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_XERCES_CANNOT_HANDLE_NODES),
-			$of(u"DOM2Helper\ub294 {0} \uc720\ud615\uc758 \ub178\ub4dc\ub97c \ucc98\ub9ac\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"DOM2Helper는 {0} 유형의 노드를 처리할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_XERCES_PARSE_ERROR_DETAILS),
-			$of(u"DOM2Helper.parse \uc624\ub958: SystemID - {0} \ud589 - {1}"_s)
+			$of(u"DOM2Helper.parse 오류: SystemID - {0} 행 - {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_XERCES_PARSE_ERROR),
-			$of(u"DOM2Helper.parse \uc624\ub958"_s)
+			$of(u"DOM2Helper.parse 오류"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\ubd80\uc801\ud569\ud55c UTF-16 \ub300\ub9ac \uc694\uc18c\uac00 \uac10\uc9c0\ub428: {0}"_s)
+			$of(u"부적합한 UTF-16 대리 요소가 감지됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_OIERROR),
-			$of(u"IO \uc624\ub958"_s)
+			$of(u"IO 오류"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANNOT_CREATE_URL),
-			$of(u"{0}\uc5d0 \ub300\ud55c URL\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}에 대한 URL을 생성할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_XPATH_READOBJECT),
-			$of(u"XPath.readObject\uc5d0 \uc624\ub958 \ubc1c\uc0dd: {0}"_s)
+			$of(u"XPath.readObject에 오류 발생: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FUNCTION_TOKEN_NOT_FOUND),
-			$of(u"\ud568\uc218 \ud1a0\ud070\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"함수 토큰을 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANNOT_DEAL_XPATH_TYPE),
-			$of(u"XPath \uc720\ud615\uc744 \ucc98\ub9ac\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"XPath 유형을 처리할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NODESET_NOT_MUTABLE),
-			$of(u"\uc774 NodeSet\ub294 \ubcc0\uacbd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 NodeSet는 변경할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NODESETDTM_NOT_MUTABLE),
-			$of(u"\uc774 NodeSetDTM\uc740 \ubcc0\uacbd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 NodeSetDTM은 변경할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_VAR_NOT_RESOLVABLE),
-			$of(u"\ubcc0\uc218\ub97c \ubd84\uc11d\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"변수를 분석할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NULL_ERROR_HANDLER),
-			$of(u"\ub110 \uc624\ub958 \ucc98\ub9ac\uae30"_s)
+			$of(u"널 오류 처리기"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_PROG_ASSERT_UNKNOWN_OPCODE),
-			$of(u"\ud504\ub85c\uadf8\ub798\uba38 \uac80\uc99d: \uc54c \uc218 \uc5c6\ub294 opcode: {0}"_s)
+			$of(u"프로그래머 검증: 알 수 없는 opcode: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_ZERO_OR_ONE),
-			$of(u"0 \ub610\ub294 1"_s)
+			$of(u"0 또는 1"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper\ub294 rtf()\ub97c \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XRTreeFragSelectWrapper는 rtf()를 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper\ub294 asNodeIterator()\ub97c \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XRTreeFragSelectWrapper는 asNodeIterator()를 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_DETACH_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper\ub294 detach()\ub97c \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XRTreeFragSelectWrapper는 detach()를 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NUM_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper\ub294 num()\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XRTreeFragSelectWrapper는 num()을 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_XSTR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper\ub294 xstr()\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XRTreeFragSelectWrapper는 xstr()을 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_STR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper\ub294 str()\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XRTreeFragSelectWrapper는 str()을 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS),
-			$of(u"fsb()\ub294 XStringForChars\uc5d0 \ub300\ud574 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"fsb()는 XStringForChars에 대해 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_COULD_NOT_FIND_VAR),
-			$of(u"\uc774\ub984\uc774 {0}\uc778 \ubcc0\uc218\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이름이 {0}인 변수를 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING),
-			$of(u"XStringForChars\ub294 \uc778\uc218\uc5d0 \ubb38\uc790\uc5f4\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XStringForChars는 인수에 문자열을 사용할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FASTSTRINGBUFFER_CANNOT_BE_NULL),
-			$of(u"FastStringBuffer \uc778\uc218\ub294 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"FastStringBuffer 인수는 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_TWO_OR_THREE),
-			$of(u"2 \ub610\ub294 3"_s)
+			$of(u"2 또는 3"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_VARIABLE_ACCESSED_BEFORE_BIND),
-			$of(u"\ubcc0\uc218\uac00 \ubc14\uc778\ub4dc\ub418\uae30 \uc804\uc5d0 \ubcc0\uc218\uc5d0 \uc561\uc138\uc2a4\ub418\uc5c8\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"변수가 바인드되기 전에 변수에 액세스되었습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FSB_CANNOT_TAKE_STRING),
-			$of(u"XStringForFSB\ub294 \uc778\uc218\uc5d0 \ubb38\uc790\uc5f4\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"XStringForFSB는 인수에 문자열을 사용할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_SETTING_WALKER_ROOT_TO_NULL),
-			$of(u"\n !!!! \uc624\ub958! \uc6cc\ucee4\uc758 \ub8e8\ud2b8\ub97c null\ub85c \uc124\uc815\ud558\ub294 \uc911\uc785\ub2c8\ub2e4!"_s)
+			$of(u"\n !!!! 오류! 워커의 루트를 null로 설정하는 중입니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NODESETDTM_CANNOT_ITERATE),
-			$of(u"\uc774 NodeSetDTM\uc740 \uc774\uc804 \ub178\ub4dc\ub97c \ubc18\ubcf5\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"이 NodeSetDTM은 이전 노드를 반복할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NODESET_CANNOT_ITERATE),
-			$of(u"\uc774 NodeSet\ub294 \uc774\uc804 \ub178\ub4dc\ub97c \ubc18\ubcf5\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"이 NodeSet는 이전 노드를 반복할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NODESETDTM_CANNOT_INDEX),
-			$of(u"\uc774 NodeSetDTM\uc740 \ud568\uc218\ub97c \uc778\ub371\uc2a4\ud654\ud558\uac70\ub098 \uc9d1\uacc4\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"이 NodeSetDTM은 함수를 인덱스화하거나 집계할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NODESET_CANNOT_INDEX),
-			$of(u"\uc774 NodeSet\ub294 \ud568\uc218\ub97c \uc778\ub371\uc2a4\ud654\ud558\uac70\ub098 \uc9d1\uacc4\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"이 NodeSet는 함수를 인덱스화하거나 집계할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANNOT_CALL_SETSHOULDCACHENODE),
-			$of(u"nextNode\uac00 \ud638\ucd9c\ub41c \ud6c4\uc5d0\ub294 setShouldCacheNodes\ub97c \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"nextNode가 호출된 후에는 setShouldCacheNodes를 호출할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_ONLY_ALLOWS),
-			$of(u"{0}\uc740(\ub294) {1}\uac1c\uc758 \uc778\uc218\ub9cc \ud5c8\uc6a9\ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}은(는) {1}개의 인수만 허용합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNKNOWN_STEP),
-			$of(u"getNextStepPos\uc5d0 \ud504\ub85c\uadf8\ub798\uba38 \uac80\uc99d\uc774 \uc788\uc74c: \uc54c \uc218 \uc5c6\ub294 stepType: {0}"_s)
+			$of(u"getNextStepPos에 프로그래머 검증이 있음: 알 수 없는 stepType: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_REL_LOC_PATH),
-			$of(u"\'/\' \ub610\ub294 \'//\' \ud1a0\ud070 \ub4a4\uc5d0 \uc0c1\ub300 \uc704\uce58 \uacbd\ub85c\uac00 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"\'/\' 또는 \'//\' 토큰 뒤에 상대 위치 경로가 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_LOC_PATH),
-			$of(u"\uc704\uce58 \uacbd\ub85c\uac00 \ud544\uc694\ud558\uc9c0\ub9cc {0} \ud1a0\ud070\uc774 \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"위치 경로가 필요하지만 {0} 토큰이 발견되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_LOC_PATH_AT_END_EXPR),
-			$of(u"\uc704\uce58 \uacbd\ub85c\uac00 \ud544\uc694\ud558\uc9c0\ub9cc XPath \ud45c\ud604\uc2dd \ub05d\uc774 \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"위치 경로가 필요하지만 XPath 표현식 끝이 발견되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_LOC_STEP),
-			$of(u"\'/\' \ub610\ub294 \'//\' \ud1a0\ud070 \ub4a4\uc5d0 \uc704\uce58 \ub2e8\uacc4\uac00 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"\'/\' 또는 \'//\' 토큰 뒤에 위치 단계가 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_NODE_TEST),
-			$of(u"NCName:* \ub610\ub294 QName\uacfc \uc77c\uce58\ud558\ub294 \ub178\ub4dc \ud14c\uc2a4\ud2b8\uac00 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"NCName:* 또는 QName과 일치하는 노드 테스트가 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_STEP_PATTERN),
-			$of(u"\ub2e8\uacc4 \ud328\ud134\uc774 \ud544\uc694\ud558\uc9c0\ub9cc \'/\'\uac00 \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"단계 패턴이 필요하지만 \'/\'가 발견되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXPECTED_REL_PATH_PATTERN),
-			$of(u"\uc0c1\ub300 \uacbd\ub85c \ud328\ud134\uc774 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"상대 경로 패턴이 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_TO_BOOLEAN),
-			$of(u"XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc758 XPathResultType\uc774 \ubd80\uc6b8\ub85c \ubcc0\ud658\ub420 \uc218 \uc5c6\ub294 {1}\uc785\ub2c8\ub2e4."_s)
+			$of(u"XPath 표현식 \'\'{0}\'\'에 대한 XPathResult의 XPathResultType이 부울로 변환될 수 없는 {1}입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_TO_SINGLENODE),
-			$of(u"XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc758 XPathResultType\uc774 \ub2e8\uc77c \ub178\ub4dc\ub85c \ubcc0\ud658\ub420 \uc218 \uc5c6\ub294 {1}\uc785\ub2c8\ub2e4. getSingleNodeValue \uba54\uc18c\ub4dc\ub294 ANY_UNORDERED_NODE_TYPE \ubc0f FIRST_ORDERED_NODE_TYPE \uc720\ud615\uc5d0\ub9cc \uc801\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"XPath 표현식 \'\'{0}\'\'에 대한 XPathResult의 XPathResultType이 단일 노드로 변환될 수 없는 {1}입니다. getSingleNodeValue 메소드는 ANY_UNORDERED_NODE_TYPE 및 FIRST_ORDERED_NODE_TYPE 유형에만 적용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_GET_SNAPSHOT_LENGTH),
-			$of(u"XPathResultType\uc774 {1}\uc774\ubbc0\ub85c getSnapshotLength \uba54\uc18c\ub4dc\ub294 XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc5d0\uc11c \ud638\ucd9c\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc774 \uba54\uc18c\ub4dc\ub294 UNORDERED_NODE_SNAPSHOT_TYPE \ubc0f ORDERED_NODE_SNAPSHOT_TYPE \uc720\ud615\uc5d0\ub9cc \uc801\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"XPathResultType이 {1}이므로 getSnapshotLength 메소드는 XPath 표현식 \'\'{0}\'\'에 대한 XPathResult에서 호출될 수 없습니다. 이 메소드는 UNORDERED_NODE_SNAPSHOT_TYPE 및 ORDERED_NODE_SNAPSHOT_TYPE 유형에만 적용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NON_ITERATOR_TYPE),
-			$of(u"XPathResultType\uc774 {1}\uc774\ubbc0\ub85c iterateNext \uba54\uc18c\ub4dc\ub294 XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc5d0\uc11c \ud638\ucd9c\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc774 \uba54\uc18c\ub4dc\ub294 UNORDERED_NODE_ITERATOR_TYPE \ubc0f ORDERED_NODE_ITERATOR_TYPE \uc720\ud615\uc5d0\ub9cc \uc801\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"XPathResultType이 {1}이므로 iterateNext 메소드는 XPath 표현식 \'\'{0}\'\'에 대한 XPathResult에서 호출될 수 없습니다. 이 메소드는 UNORDERED_NODE_ITERATOR_TYPE 및 ORDERED_NODE_ITERATOR_TYPE 유형에만 적용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_DOC_MUTATED),
-			$of(u"\uacb0\uacfc\uac00 \ubc18\ud658\ub41c \ud6c4 \ubb38\uc11c\uac00 \ubcc0\uacbd\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc774\ud130\ub808\uc774\ud130\uac00 \ubd80\uc801\ud569\ud569\ub2c8\ub2e4."_s)
+			$of(u"결과가 반환된 후 문서가 변경되었습니다. 이터레이터가 부적합합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_INVALID_XPATH_TYPE),
-			$of(u"\ubd80\uc801\ud569\ud55c XPath \uc720\ud615 \uc778\uc218: {0}"_s)
+			$of(u"부적합한 XPath 유형 인수: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EMPTY_XPATH_RESULT),
-			$of(u"XPath \uacb0\uacfc \uac1d\uccb4\uac00 \ube44\uc5b4 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XPath 결과 객체가 비어 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_INCOMPATIBLE_TYPES),
-			$of(u"XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc758 XPathResultType\uc774 \uc9c0\uc815\ub41c XPathResultType {2}(\uc73c)\ub85c \uac15\uc81c \ubcc0\ud658\ub420 \uc218 \uc5c6\ub294 {1}\uc785\ub2c8\ub2e4."_s)
+			$of(u"XPath 표현식 \'\'{0}\'\'에 대한 XPathResult의 XPathResultType이 지정된 XPathResultType {2}(으)로 강제 변환될 수 없는 {1}입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NULL_RESOLVER),
-			$of(u"\ub110 \uc811\ub450\uc5b4 \ubd84\uc11d\uae30\ub85c \uc811\ub450\uc5b4\ub97c \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"널 접두어 분석기로 접두어를 분석할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_TO_STRING),
-			$of(u"XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc758 XPathResultType\uc774 \ubb38\uc790\uc5f4\ub85c \ubcc0\ud658\ub420 \uc218 \uc5c6\ub294 {1}\uc785\ub2c8\ub2e4."_s)
+			$of(u"XPath 표현식 \'\'{0}\'\'에 대한 XPathResult의 XPathResultType이 문자열로 변환될 수 없는 {1}입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NON_SNAPSHOT_TYPE),
-			$of(u"XPathResultType\uc774 {1}\uc774\ubbc0\ub85c snapshotItem \uba54\uc18c\ub4dc\ub294 XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc5d0\uc11c \ud638\ucd9c\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc774 \uba54\uc18c\ub4dc\ub294 UNORDERED_NODE_SNAPSHOT_TYPE \ubc0f ORDERED_NODE_SNAPSHOT_TYPE \uc720\ud615\uc5d0\ub9cc \uc801\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"XPathResultType이 {1}이므로 snapshotItem 메소드는 XPath 표현식 \'\'{0}\'\'에 대한 XPathResult에서 호출될 수 없습니다. 이 메소드는 UNORDERED_NODE_SNAPSHOT_TYPE 및 ORDERED_NODE_SNAPSHOT_TYPE 유형에만 적용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_WRONG_DOCUMENT),
-			$of(u"\ucee8\ud14d\uc2a4\ud2b8 \ub178\ub4dc\uac00 \uc774 XPathEvaluator\uc5d0 \ubc14\uc778\ub4dc\ub41c \ubb38\uc11c\uc5d0 \uc18d\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"컨텍스트 노드가 이 XPathEvaluator에 바인드된 문서에 속하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_WRONG_NODETYPE),
-			$of(u"\ucee8\ud14d\uc2a4\ud2b8 \ub178\ub4dc \uc720\ud615\uc740 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"컨텍스트 노드 유형은 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_XPATH_ERROR),
-			$of(u"XPath\uc5d0 \uc54c \uc218 \uc5c6\ub294 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XPath에 알 수 없는 오류가 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_CANT_CONVERT_XPATHRESULTTYPE_TO_NUMBER),
-			$of(u"XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc5d0 \ub300\ud55c XPathResult\uc758 XPathResultType\uc774 \uc22b\uc790\ub85c \ubcc0\ud658\ub420 \uc218 \uc5c6\ub294 {1}\uc785\ub2c8\ub2e4."_s)
+			$of(u"XPath 표현식 \'\'{0}\'\'에 대한 XPathResult의 XPathResultType이 숫자로 변환될 수 없는 {1}입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED),
-			$of(u"XMLConstants.FEATURE_SECURE_PROCESSING \uae30\ub2a5\uc774 true\ub85c \uc124\uc815\ub41c \uacbd\uc6b0 \ud655\uc7a5 \ud568\uc218 \'\'{0}\'\'\uc744(\ub97c) \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XMLConstants.FEATURE_SECURE_PROCESSING 기능이 true로 설정된 경우 확장 함수 \'\'{0}\'\'을(를) 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_RESOLVE_VARIABLE_RETURNS_NULL),
-			$of(u"{0} \ubcc0\uc218\uc5d0 \ub300\ud55c resolveVariable\uc774 \ub110\uc744 \ubc18\ud658\ud569\ub2c8\ub2e4."_s)
+			$of(u"{0} 변수에 대한 resolveVariable이 널을 반환합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_UNSUPPORTED_RETURN_TYPE),
-			$of(u"\uc9c0\uc6d0\ub418\uc9c0 \uc54a\ub294 \ubc18\ud658 \uc720\ud615: {0}"_s)
+			$of(u"지원되지 않는 반환 유형: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"\uc18c\uc2a4 \ubc0f/\ub610\ub294 \ubc18\ud658 \uc720\ud615\uc740 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"소스 및/또는 반환 유형은 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"\uc18c\uc2a4 \ubc0f/\ub610\ub294 \ubc18\ud658 \uc720\ud615\uc740 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"소스 및/또는 반환 유형은 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_ARG_CANNOT_BE_NULL),
-			$of(u"{0} \uc778\uc218\ub294 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 인수는 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_OBJECT_MODEL_NULL),
-			$of(u"objectModel == null\ub85c {0}#isObjectModelSupported(String objectModel)\ub97c \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"objectModel == null로 {0}#isObjectModelSupported(String objectModel)를 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_OBJECT_MODEL_EMPTY),
-			$of(u"objectModel == \"\"\ub85c {0}#isObjectModelSupported(String objectModel)\ub97c \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"objectModel == \"\"로 {0}#isObjectModelSupported(String objectModel)를 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FEATURE_NAME_NULL),
-			$of(u"\ub110 \uc774\ub984\uc73c\ub85c \uae30\ub2a5\uc744 \uc124\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911: {0}#setFeature(null, {1})"_s)
+			$of(u"널 이름으로 기능을 설정하려고 시도하는 중: {0}#setFeature(null, {1})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_FEATURE_UNKNOWN),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 \uae30\ub2a5 \"{0}\"\uc744(\ub97c) \uc124\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911: {1}#setFeature({0},{2})"_s)
+			$of(u"알 수 없는 기능 \"{0}\"을(를) 설정하려고 시도하는 중: {1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_GETTING_NULL_FEATURE),
-			$of(u"\ub110 \uc774\ub984\uc73c\ub85c \uae30\ub2a5\uc744 \uac00\uc838\uc624\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911: {0}#getFeature(null)"_s)
+			$of(u"널 이름으로 기능을 가져오려고 시도하는 중: {0}#getFeature(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_GETTING_UNKNOWN_FEATURE),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 \uae30\ub2a5 \"{0}\"\uc744(\ub97c) \uac00\uc838\uc624\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911: {1}#getFeature({0})"_s)
+			$of(u"알 수 없는 기능 \"{0}\"을(를) 가져오려고 시도하는 중: {1}#getFeature({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: \ubcf4\uc548 \uad00\ub9ac\uc790\uac00 \uc788\uc744 \uacbd\uc6b0 \uae30\ub2a5\uc744 false\ub85c \uc124\uc815\ud560 \uc218 \uc5c6\uc74c: {1}#setFeature({0},{2})"_s)
+			$of(u"FEATURE_SECURE_PROCESSING: 보안 관리자가 있을 경우 기능을 false로 설정할 수 없음: {1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NULL_XPATH_FUNCTION_RESOLVER),
-			$of(u"\ub110 XPathFunctionResolver\ub97c \uc124\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911: {0}#setXPathFunctionResolver(null)"_s)
+			$of(u"널 XPathFunctionResolver를 설정하려고 시도하는 중: {0}#setXPathFunctionResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::ER_NULL_XPATH_VARIABLE_RESOLVER),
-			$of(u"\ub110 XPathVariableResolver\ub97c \uc124\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911: {0}#setXPathVariableResolver(null)"_s)
+			$of(u"널 XPathVariableResolver를 설정하려고 시도하는 중: {0}#setXPathVariableResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_LOCALE_NAME_NOT_HANDLED),
-			$of(u"format-number \ud568\uc218\uc758 \ub85c\ucf00\uc77c \uc774\ub984\uc774 \uc544\uc9c1 \ucc98\ub9ac\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"format-number 함수의 로케일 이름이 아직 처리되지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_PROPERTY_NOT_SUPPORTED),
-			$of(u"XSL \uc18d\uc131\uc774 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}"_s)
+			$of(u"XSL 속성이 지원되지 않음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_DONT_DO_ANYTHING_WITH_NS),
-			$of(u"\uc18d\uc131\uc758 {0} \ub124\uc784\uc2a4\ud398\uc774\uc2a4\uc5d0 \ub300\ud574 \ud604\uc7ac \uc5b4\ub5a4 \uc791\uc5c5\ub3c4 \uc218\ud589\ud558\uc9c0 \uc54a\uc544\uc57c \ud568: {1}"_s)
+			$of(u"속성의 {0} 네임스페이스에 대해 현재 어떤 작업도 수행하지 않아야 함: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_SECURITY_EXCEPTION),
-			$of(u"XSL \uc2dc\uc2a4\ud15c \uc18d\uc131\uc5d0 \uc561\uc138\uc2a4\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911 SecurityException \ubc1c\uc0dd: {0}"_s)
+			$of(u"XSL 시스템 속성에 액세스하려고 시도하는 중 SecurityException 발생: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_QUO_NO_LONGER_DEFINED),
-			$of(u"\uc774\uc804 \uad6c\ubb38: quo(...)\uac00 XPath\uc5d0 \ub354 \uc774\uc0c1 \uc815\uc758\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이전 구문: quo(...)가 XPath에 더 이상 정의되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_NEED_DERIVED_OBJECT_TO_IMPLEMENT_NODETEST),
-			$of(u"nodeTest\ub97c \uad6c\ud604\ud558\ub824\uba74 XPath\uc5d0 \ud30c\uc0dd \uac1d\uccb4\uac00 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"nodeTest를 구현하려면 XPath에 파생 객체가 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_FUNCTION_TOKEN_NOT_FOUND),
-			$of(u"\ud568\uc218 \ud1a0\ud070\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"함수 토큰을 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_COULDNOT_FIND_FUNCTION),
-			$of(u"\ud568\uc218\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"함수를 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_CANNOT_MAKE_URL_FROM),
-			$of(u"{0}\uc5d0\uc11c URL\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}에서 URL을 생성할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_EXPAND_ENTITIES_NOT_SUPPORTED),
-			$of(u"DTM \uad6c\ubb38 \ubd84\uc11d\uae30\uc5d0 \ub300\ud574\uc11c\ub294 -E \uc635\uc158\uc774 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"DTM 구문 분석기에 대해서는 -E 옵션이 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"\ubcc0\uc218\uc5d0 \ub300\ud574 \uc81c\uacf5\ub41c VariableReference\uac00 \ucee8\ud14d\uc2a4\ud2b8\uc5d0\uc11c \ubc97\uc5b4\ub098\uac70\ub098 \uc815\uc758\ub97c \ud3ec\ud568\ud558\uc9c0 \uc5c6\uc2b5\ub2c8\ub2e4! \uc774\ub984 = {0}"_s)
+			$of(u"변수에 대해 제공된 VariableReference가 컨텍스트에서 벗어나거나 정의를 포함하지 없습니다! 이름 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ko::WG_UNSUPPORTED_ENCODING),
-			$of(u"\uc9c0\uc6d0\ub418\uc9c0 \uc54a\ub294 \uc778\ucf54\ub529: {0}"_s)
+			$of(u"지원되지 않는 인코딩: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1244,15 +1244,15 @@ void clinit$XPATHErrorResources_ko($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage\uc5d0 \ub300\ud55c \ub9e4\uac1c\ubcc0\uc218\uac00 \ubc94\uc704\ub97c \ubc97\uc5b4\ub0ac\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"createMessage에 대한 매개변수가 범위를 벗어났습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"messageFormat \ud638\ucd9c \uc911 \uc608\uc678\uc0ac\ud56d\uc774 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"messageFormat 호출 중 예외사항이 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
-			$of(u">>>>>>> Xalan \ubc84\uc804 "_s)
+			$of(u">>>>>>> Xalan 버전 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version2"_s),
@@ -1260,23 +1260,23 @@ void clinit$XPATHErrorResources_ko($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("yes"_s),
-			$of(u"\uc608"_s)
+			$of(u"예"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\ud589 \ubc88\ud638"_s)
+			$of(u"행 번호"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\uc5f4 \ubc88\ud638"_s)
+			$of(u"열 번호"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xsldone"_s),
-			$of(u"XSLProcessor: \uc644\ub8cc"_s)
+			$of(u"XSLProcessor: 완료"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xpath_option"_s),
-			$of(u"XPath \uc635\uc158: "_s)
+			$of(u"XPath 옵션: "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionIN"_s),
@@ -1284,31 +1284,31 @@ void clinit$XPATHErrorResources_ko($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("optionSelect"_s),
-			$of(u"   [-select XPath \ud45c\ud604\uc2dd]"_s)
+			$of(u"   [-select XPath 표현식]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionMatch"_s),
-			$of(u"   [-match \uc77c\uce58 \ud328\ud134(\uc77c\uce58 \uc9c4\ub2e8\uc758 \uacbd\uc6b0)]"_s)
+			$of(u"   [-match 일치 패턴(일치 진단의 경우)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionAnyExpr"_s),
-			$of(u"\ub610\ub294 XPath \ud45c\ud604\uc2dd\uc774 \uc9c4\ub2e8 \ub364\ud504\ub97c \uc218\ud589\ud569\ub2c8\ub2e4."_s)
+			$of(u"또는 XPath 표현식이 진단 덤프를 수행합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
-			$of(u"XSL \ud504\ub85c\uc138\uc2a4\ub97c \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XSL 프로세스를 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg2"_s),
-			$of(u"** \uad6c\ubb38 \ubd84\uc11d\uae30\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c **"_s)
+			$of(u"** 구문 분석기를 찾을 수 없음 **"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"\ud074\ub798\uc2a4 \uacbd\ub85c\ub97c \ud655\uc778\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"클래스 경로를 확인하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"IBM\uc758 Java\uc6a9 XML \uad6c\ubb38 \ubd84\uc11d\uae30\uac00 \uc5c6\uc744 \uacbd\uc6b0 \ub2e4\uc74c \uc704\uce58\uc5d0\uc11c \ub2e4\uc6b4\ub85c\ub4dc\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"IBM의 Java용 XML 구문 분석기가 없을 경우 다음 위치에서 다운로드할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),

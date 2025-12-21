@@ -686,11 +686,11 @@ $String* DTMDefaultBase::dumpNode(int32_t nodeHandle) {
 	}
 	$var($String, var$5, $$str({"["_s, $$str(nodeHandle), ": "_s, typestring, "(0x"_s, $($Integer::toHexString(getExpandedTypeID(nodeHandle))), ") "_s}));
 	$var($String, var$4, $$concat(var$5, $(getNodeNameX(nodeHandle))));
-	$var($String, var$3, $$concat(var$4, " {"));
+	$var($String, var$3, $$concat(var$4, " {"_s));
 	$var($String, var$2, $$concat(var$3, $(getNamespaceURI(nodeHandle))));
-	$var($String, var$1, $$concat(var$2, "}=\""));
+	$var($String, var$1, $$concat(var$2, "}=\""_s));
 	$var($String, var$0, $$concat(var$1, $(getNodeValue(nodeHandle))));
-	return $concat(var$0, "\"]");
+	return $concat(var$0, "\"]"_s);
 }
 
 void DTMDefaultBase::setFeature($String* featureId, bool state) {

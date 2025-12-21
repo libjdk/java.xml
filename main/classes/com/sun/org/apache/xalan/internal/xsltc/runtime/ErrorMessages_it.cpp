@@ -121,7 +121,7 @@ $ObjectArray2* ErrorMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"Lo spazio di nomi per il prefisso \'\'{0}\'\' non \u00e8 stato dichiarato."_s)
+			$of(u"Lo spazio di nomi per il prefisso \'\'{0}\'\' non è stato dichiarato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
@@ -149,7 +149,7 @@ $ObjectArray2* ErrorMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"Il translet specificato \'\'{0}\'\' \u00e8 stato creato utilizzando una versione di XSLTC pi\u00f9 recente di quella della fase di esecuzione XSLTC in uso. Ricompilare il foglio di stile o utilizzare una versione pi\u00f9 recente di XSLTC per eseguire questo translet."_s)
+			$of(u"Il translet specificato \'\'{0}\'\' è stato creato utilizzando una versione di XSLTC più recente di quella della fase di esecuzione XSLTC in uso. Ricompilare il foglio di stile o utilizzare una versione più recente di XSLTC per eseguire questo translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
@@ -161,11 +161,11 @@ $ObjectArray2* ErrorMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"Non \u00e8 consentito utilizzare la funzione di estensione \'\'{0}\'\' se la funzione di elaborazione sicura \u00e8 impostata su true."_s)
+			$of(u"Non è consentito utilizzare la funzione di estensione \'\'{0}\'\' se la funzione di elaborazione sicura è impostata su true."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"Non \u00e8 consentito utilizzare l\'\'elemento di estensione \'\'{0}\'\' se la funzione di elaborazione sicura \u00e8 impostata su true."_s)
+			$of(u"Non è consentito utilizzare l\'\'elemento di estensione \'\'{0}\'\' se la funzione di elaborazione sicura è impostata su true."_s)
 		})
 	});
 }

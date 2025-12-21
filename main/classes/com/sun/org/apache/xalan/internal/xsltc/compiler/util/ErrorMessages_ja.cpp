@@ -164,359 +164,359 @@ $ObjectArray2* ErrorMessages_ja::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_STYLESHEET_ERR),
-			$of(u"\u540c\u3058\u30d5\u30a1\u30a4\u30eb\u306b\u8907\u6570\u306e\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u304c\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"同じファイルに複数のスタイルシートが定義されています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_REDEF_ERR),
-			$of(u"\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\'\'{0}\'\'\u306f\u3053\u306e\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u5185\u3067\u3059\u3067\u306b\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"テンプレート\'\'{0}\'\'はこのスタイルシート内ですでに定義されています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_UNDEF_ERR),
-			$of(u"\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\'\'{0}\'\'\u306f\u3053\u306e\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u5185\u3067\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"テンプレート\'\'{0}\'\'はこのスタイルシート内で定義されていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_REDEF_ERR),
-			$of(u"\u5909\u6570\'\'{0}\'\'\u306f\u540c\u3058\u30b9\u30b3\u30fc\u30d7\u5185\u3067\u8907\u6570\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"変数\'\'{0}\'\'は同じスコープ内で複数定義されています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_UNDEF_ERR),
-			$of(u"\u5909\u6570\u307e\u305f\u306f\u30d1\u30e9\u30e1\u30fc\u30bf\'\'{0}\'\'\u304c\u672a\u5b9a\u7fa9\u3067\u3059\u3002"_s)
+			$of(u"変数またはパラメータ\'\'{0}\'\'が未定義です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CLASS_NOT_FOUND_ERR),
-			$of(u"\u30af\u30e9\u30b9\'\'{0}\'\'\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"クラス\'\'{0}\'\'が見つかりません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::METHOD_NOT_FOUND_ERR),
-			$of(u"\u5916\u90e8\u30e1\u30bd\u30c3\u30c9\'\'{0}\'\'\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093(public\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059)\u3002"_s)
+			$of(u"外部メソッド\'\'{0}\'\'が見つかりません(publicである必要があります)。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ARGUMENT_CONVERSION_ERR),
-			$of(u"\u30e1\u30bd\u30c3\u30c9\'\'{0}\'\'\u306e\u547c\u51fa\u3057\u306e\u5f15\u6570\u30bf\u30a4\u30d7\u307e\u305f\u306f\u623b\u308a\u578b\u3092\u5909\u63db\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"メソッド\'\'{0}\'\'の呼出しの引数タイプまたは戻り型を変換できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_NOT_FOUND_ERR),
-			$of(u"\u30d5\u30a1\u30a4\u30eb\u307e\u305f\u306fURI \'\'{0}\'\'\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"ファイルまたはURI \'\'{0}\'\'が見つかりません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_URI_ERR),
-			$of(u"URI \'\'{0}\'\'\u304c\u7121\u52b9\u3067\u3059\u3002"_s)
+			$of(u"URI \'\'{0}\'\'が無効です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CATALOG_EXCEPTION),
-			$of(u"JAXP08090001: CatalogResolver\u306f\u30ab\u30bf\u30ed\u30b0\"{0}\"\u3067\u6709\u52b9\u3067\u3059\u304c\u3001CatalogException\u304c\u8fd4\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"JAXP08090001: CatalogResolverはカタログ\"{0}\"で有効ですが、CatalogExceptionが返されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_ACCESS_ERR),
-			$of(u"\u30d5\u30a1\u30a4\u30eb\u307e\u305f\u306fURI \'\'{0}\'\'\u3092\u958b\u304f\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"ファイルまたはURI \'\'{0}\'\'を開くことができません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_ROOT_ERR),
-			$of(u"<xsl:stylesheet>\u307e\u305f\u306f<xsl:transform>\u306e\u8981\u7d20\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"<xsl:stylesheet>または<xsl:transform>の要素がありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NAMESPACE_UNDEF_ERR),
-			$of(u"\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u306e\u63a5\u982d\u8f9e\'\'{0}\'\'\u306f\u5ba3\u8a00\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"ネームスペースの接頭辞\'\'{0}\'\'は宣言されていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FUNCTION_RESOLVE_ERR),
-			$of(u"\u95a2\u6570\'\'{0}\'\'\u306e\u547c\u51fa\u3057\u3092\u89e3\u6c7a\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"関数\'\'{0}\'\'の呼出しを解決できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NEED_LITERAL_ERR),
-			$of(u"\'\'{0}\'\'\u3078\u306e\u5f15\u6570\u306f\u30ea\u30c6\u30e9\u30eb\u6587\u5b57\u5217\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"\'\'{0}\'\'への引数はリテラル文字列である必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XPATH_PARSER_ERR),
-			$of(u"XPath\u5f0f\'\'{0}\'\'\u306e\u89e3\u6790\u4e2d\u306b\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"XPath式\'\'{0}\'\'の解析中にエラーが発生しました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::REQUIRED_ATTR_ERR),
-			$of(u"\u5fc5\u9808\u5c5e\u6027\'\'{0}\'\'\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"必須属性\'\'{0}\'\'がありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHAR_ERR),
-			$of(u"XPath\u5f0f\u306e\u6587\u5b57\'\'{0}\'\'\u306f\u7121\u52b9\u3067\u3059\u3002"_s)
+			$of(u"XPath式の文字\'\'{0}\'\'は無効です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_PI_ERR),
-			$of(u"\u51e6\u7406\u547d\u4ee4\u306e\u540d\u524d\'\'{0}\'\'\u306f\u7121\u52b9\u3067\u3059\u3002"_s)
+			$of(u"処理命令の名前\'\'{0}\'\'は無効です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_ATTRIBUTE_ERR),
-			$of(u"\u5c5e\u6027\'\'{0}\'\'\u304c\u8981\u7d20\u306e\u5916\u5074\u306b\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"属性\'\'{0}\'\'が要素の外側にあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTRIBUTE_ERR),
-			$of(u"\u4e0d\u6b63\u306a\u5c5e\u6027\'\'{0}\'\'\u3067\u3059\u3002"_s)
+			$of(u"不正な属性\'\'{0}\'\'です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_INCLUDE_ERR),
-			$of(u"\u30a4\u30f3\u30dd\u30fc\u30c8\u307e\u305f\u306f\u30a4\u30f3\u30af\u30eb\u30fc\u30c9\u304c\u5faa\u74b0\u3057\u3066\u3044\u307e\u3059\u3002\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\'\'{0}\'\'\u306f\u3059\u3067\u306b\u30ed\u30fc\u30c9\u3055\u308c\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"インポートまたはインクルードが循環しています。スタイルシート\'\'{0}\'\'はすでにロードされています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::IMPORT_PRECEDE_OTHERS_ERR),
-			$of(u"xsl:import\u8981\u7d20\u306e\u5b50\u306f\u3001xsl:stylesheet\u8981\u7d20\u306e\u4ed6\u306e\u3059\u3079\u3066\u306e\u8981\u7d20\u306e\u5b50(\u3059\u3079\u3066\u306exsl:include\u8981\u7d20\u306e\u5b50\u3092\u542b\u3080)\u3088\u308a\u524d\u306b\u7f6e\u304f\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"xsl:import要素の子は、xsl:stylesheet要素の他のすべての要素の子(すべてのxsl:include要素の子を含む)より前に置く必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RESULT_TREE_SORT_ERR),
-			$of(u"\u7d50\u679c\u30c4\u30ea\u30fc\u30fb\u30d5\u30e9\u30b0\u30e1\u30f3\u30c8\u306f\u30bd\u30fc\u30c8\u3067\u304d\u307e\u305b\u3093(<xsl:sort>\u8981\u7d20\u306f\u7121\u8996\u3055\u308c\u307e\u3059)\u3002\u7d50\u679c\u30c4\u30ea\u30fc\u3092\u4f5c\u6210\u3059\u308b\u3068\u304d\u306b\u30ce\u30fc\u30c9\u3092\u30bd\u30fc\u30c8\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"結果ツリー・フラグメントはソートできません(<xsl:sort>要素は無視されます)。結果ツリーを作成するときにノードをソートする必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYMBOLS_REDEF_ERR),
-			$of(u"10\u9032\u6570\u30d5\u30a9\u30fc\u30de\u30c3\u30c8\'\'{0}\'\'\u306f\u3059\u3067\u306b\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"10進数フォーマット\'\'{0}\'\'はすでに定義されています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSL_VERSION_ERR),
-			$of(u"XSL\u30d0\u30fc\u30b8\u30e7\u30f3\'\'{0}\'\'\u306fXSLTC\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"XSLバージョン\'\'{0}\'\'はXSLTCによってサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_VARIABLE_ERR),
-			$of(u"\'\'{0}\'\'\u5185\u306e\u5909\u6570\u53c2\u7167\u307e\u305f\u306f\u30d1\u30e9\u30e1\u30fc\u30bf\u53c2\u7167\u304c\u5faa\u74b0\u3057\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"\'\'{0}\'\'内の変数参照またはパラメータ参照が循環しています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_BINARY_OP_ERR),
-			$of(u"2\u9032\u6570\u306e\u5f0f\u306b\u5bfe\u3059\u308b\u4e0d\u660e\u306a\u6f14\u7b97\u5b50\u3067\u3059\u3002"_s)
+			$of(u"2進数の式に対する不明な演算子です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ARG_ERR),
-			$of(u"\u95a2\u6570\u547c\u51fa\u3057\u306e\u5f15\u6570\u304c\u4e0d\u6b63\u3067\u3059\u3002"_s)
+			$of(u"関数呼出しの引数が不正です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DOCUMENT_ARG_ERR),
-			$of(u"document()\u95a2\u6570\u306e2\u756a\u76ee\u306e\u5f15\u6570\u306f\u30ce\u30fc\u30c9\u30bb\u30c3\u30c8\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"document()関数の2番目の引数はノードセットである必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_WHEN_ERR),
-			$of(u"<xsl:choose>\u5185\u306b\u306f\u5c11\u306a\u304f\u3068\u30821\u3064\u306e<xsl:when>\u8981\u7d20\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"<xsl:choose>内には少なくとも1つの<xsl:when>要素が必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_OTHERWISE_ERR),
-			$of(u"<xsl:choose>\u5185\u3067\u306f1\u3064\u306e<xsl:otherwise>\u8981\u7d20\u306e\u307f\u304c\u8a31\u53ef\u3055\u308c\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"<xsl:choose>内では1つの<xsl:otherwise>要素のみが許可されています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_OTHERWISE_ERR),
-			$of(u"<xsl:otherwise>\u306f<xsl:choose>\u5185\u3067\u306e\u307f\u4f7f\u7528\u3067\u304d\u307e\u3059\u3002"_s)
+			$of(u"<xsl:otherwise>は<xsl:choose>内でのみ使用できます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_WHEN_ERR),
-			$of(u"<xsl:when>\u306f<xsl:choose>\u5185\u3067\u306e\u307f\u4f7f\u7528\u3067\u304d\u307e\u3059\u3002"_s)
+			$of(u"<xsl:when>は<xsl:choose>内でのみ使用できます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WHEN_ELEMENT_ERR),
-			$of(u"<xsl:choose>\u5185\u3067\u306f<xsl:when>\u3068<xsl:otherwise>\u306e\u8981\u7d20\u306e\u307f\u304c\u8a31\u53ef\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"<xsl:choose>内では<xsl:when>と<xsl:otherwise>の要素のみが許可されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNNAMED_ATTRIBSET_ERR),
-			$of(u"<xsl:attribute-set>\u306b\'name\'\u5c5e\u6027\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"<xsl:attribute-set>に\'name\'属性がありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHILD_ERR),
-			$of(u"\u5b50\u8981\u7d20\u304c\u4e0d\u6b63\u3067\u3059\u3002"_s)
+			$of(u"子要素が不正です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ELEM_NAME_ERR),
-			$of(u"\u8981\u7d20\'\'{0}\'\'\u3092\u547c\u3073\u51fa\u3059\u3053\u3068\u306f\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"要素\'\'{0}\'\'を呼び出すことはできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTR_NAME_ERR),
-			$of(u"\u5c5e\u6027\'\'{0}\'\'\u3092\u547c\u3073\u51fa\u3059\u3053\u3068\u306f\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"属性\'\'{0}\'\'を呼び出すことはできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_TEXT_NODE_ERR),
-			$of(u"\u30c6\u30ad\u30b9\u30c8\u30fb\u30c7\u30fc\u30bf\u306f\u30c8\u30c3\u30d7\u30ec\u30d9\u30eb\u306e<xsl:stylesheet>\u8981\u7d20\u306e\u5916\u5074\u306b\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"テキスト・データはトップレベルの<xsl:stylesheet>要素の外側にあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX_PARSER_CONFIG_ERR),
-			$of(u"JAXP\u30d1\u30fc\u30b5\u30fc\u304c\u6b63\u3057\u304f\u69cb\u6210\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"JAXPパーサーが正しく構成されていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INTERNAL_ERR),
-			$of(u"\u30ea\u30ab\u30d0\u30ea\u4e0d\u80fd\u306aXSLTC\u5185\u90e8\u30a8\u30e9\u30fc: \'\'{0}\'\'"_s)
+			$of(u"リカバリ不能なXSLTC内部エラー: \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_XSL_ERR),
-			$of(u"XSL\u8981\u7d20\'\'{0}\'\'\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"XSL要素\'\'{0}\'\'はサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_EXT_ERR),
-			$of(u"XSLTC\u62e1\u5f35\'\'{0}\'\'\u306f\u8a8d\u8b58\u3055\u308c\u307e\u305b\u3093\u3002"_s)
+			$of(u"XSLTC拡張\'\'{0}\'\'は認識されません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_URI_ERR),
-			$of(u"\u5165\u529b\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306f\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u3067\u306f\u3042\u308a\u307e\u305b\u3093(XSL\u306e\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u306f\u30eb\u30fc\u30c8\u8981\u7d20\u5185\u3067\u5ba3\u8a00\u3055\u308c\u3066\u3044\u307e\u305b\u3093)\u3002"_s)
+			$of(u"入力ドキュメントはスタイルシートではありません(XSLのネームスペースはルート要素内で宣言されていません)。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_TARGET_ERR),
-			$of(u"\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u30fb\u30bf\u30fc\u30b2\u30c3\u30c8\'\'{0}\'\'\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"スタイルシート・ターゲット\'\'{0}\'\'が見つかりませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ACCESSING_XSLT_TARGET_ERR),
-			$of(u"accessExternalStylesheet\u30d7\u30ed\u30d1\u30c6\u30a3\u3067\u8a2d\u5b9a\u3055\u308c\u305f\u5236\u9650\u306b\u3088\u308a\'\'{1}\'\'\u30a2\u30af\u30bb\u30b9\u304c\u8a31\u53ef\u3055\u308c\u3066\u3044\u306a\u3044\u305f\u3081\u3001\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u30fb\u30bf\u30fc\u30b2\u30c3\u30c8\'\'{0}\'\'\u3092\u8aad\u307f\u53d6\u308c\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"accessExternalStylesheetプロパティで設定された制限により\'\'{1}\'\'アクセスが許可されていないため、スタイルシート・ターゲット\'\'{0}\'\'を読み取れませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_IMPLEMENTED_ERR),
-			$of(u"\'\'{0}\'\'\u304c\u5b9f\u88c5\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"\'\'{0}\'\'が実装されていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_STYLESHEET_ERR),
-			$of(u"\u5165\u529b\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306bXSL\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"入力ドキュメントにXSLスタイルシートが含まれていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ELEMENT_PARSE_ERR),
-			$of(u"\u8981\u7d20\'\'{0}\'\'\u3092\u89e3\u6790\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"要素\'\'{0}\'\'を解析できませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::KEY_USE_ATTR_ERR),
-			$of(u"<key>\u306euse\u5c5e\u6027\u306f\u3001\u30ce\u30fc\u30c9\u3001\u30ce\u30fc\u30c9\u30bb\u30c3\u30c8\u3001\u6587\u5b57\u5217\u307e\u305f\u306f\u6570\u5024\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"<key>のuse属性は、ノード、ノードセット、文字列または数値である必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTPUT_VERSION_ERR),
-			$of(u"\u51fa\u529bXML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u306f1.0\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059"_s)
+			$of(u"出力XMLドキュメントのバージョンは1.0である必要があります"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_RELAT_OP_ERR),
-			$of(u"\u95a2\u4fc2\u5f0f\u306e\u4e0d\u660e\u306a\u6f14\u7b97\u5b50\u3067\u3059"_s)
+			$of(u"関係式の不明な演算子です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTRIBSET_UNDEF_ERR),
-			$of(u"\u5b58\u5728\u3057\u306a\u3044\u5c5e\u6027\u30bb\u30c3\u30c8\'\'{0}\'\'\u3092\u4f7f\u7528\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"存在しない属性セット\'\'{0}\'\'を使用しようとしました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTR_VAL_TEMPLATE_ERR),
-			$of(u"\u5c5e\u6027\u5024\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\'\'{0}\'\'\u3092\u89e3\u6790\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"属性値テンプレート\'\'{0}\'\'を解析できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNKNOWN_SIG_TYPE_ERR),
-			$of(u"\u30af\u30e9\u30b9\'\'{0}\'\'\u306e\u7f72\u540d\u306b\u4e0d\u660e\u306a\u30c7\u30fc\u30bf\u578b\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"クラス\'\'{0}\'\'の署名に不明なデータ型があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DATA_CONVERSION_ERR),
-			$of(u"\u30c7\u30fc\u30bf\u578b\'\'{0}\'\'\u3092\'\'{1}\'\'\u306b\u5909\u63db\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"データ型\'\'{0}\'\'を\'\'{1}\'\'に変換できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_TRANSLET_CLASS_ERR),
-			$of(u"\u3053\u306e\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u306b\u306f\u6709\u52b9\u306atranslet\u30af\u30e9\u30b9\u5b9a\u7fa9\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"このテンプレートには有効なtransletクラス定義が含まれていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_MAIN_TRANSLET_ERR),
-			$of(u"\u3053\u306e\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u306b\u306f\u540d\u524d\'\'{0}\'\'\u3092\u6301\u3064\u30af\u30e9\u30b9\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"このテンプレートには名前\'\'{0}\'\'を持つクラスが含まれていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_CLASS_ERR),
-			$of(u"translet\u30af\u30e9\u30b9\'\'{0}\'\'\u3092\u30ed\u30fc\u30c9\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"transletクラス\'\'{0}\'\'をロードできませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_OBJECT_ERR),
-			$of(u"Translet\u30af\u30e9\u30b9\u304c\u30ed\u30fc\u30c9\u3055\u308c\u307e\u3057\u305f\u304c\u3001translet\u30a4\u30f3\u30b9\u30bf\u30f3\u30b9\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"Transletクラスがロードされましたが、transletインスタンスを作成できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ERROR_LISTENER_NULL_ERR),
-			$of(u"\'\'{0}\'\'\u306eErrorListener\u3092null\u306b\u8a2d\u5b9a\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f"_s)
+			$of(u"\'\'{0}\'\'のErrorListenerをnullに設定しようとしました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_SOURCE_ERR),
-			$of(u"StreamSource\u3001SAXSource\u304a\u3088\u3073DOMSource\u306e\u307f\u304cXSLTC\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u3059"_s)
+			$of(u"StreamSource、SAXSourceおよびDOMSourceのみがXSLTCによってサポートされています"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_SOURCE_ERR),
-			$of(u"\'\'{0}\'\'\u306b\u6e21\u3055\u308c\u305f\u30bd\u30fc\u30b9\u30fb\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u306b\u30b3\u30f3\u30c6\u30f3\u30c4\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"\'\'{0}\'\'に渡されたソース・オブジェクトにコンテンツがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_COMPILE_ERR),
-			$of(u"\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u3092\u30b3\u30f3\u30d1\u30a4\u30eb\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"スタイルシートをコンパイルできませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_ERR),
-			$of(u"TransformerFactory\u306f\u5c5e\u6027\'\'{0}\'\'\u3092\u8a8d\u8b58\u3057\u307e\u305b\u3093\u3002"_s)
+			$of(u"TransformerFactoryは属性\'\'{0}\'\'を認識しません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_VALUE_ERR),
-			$of(u"\'\'{0}\'\'\u5c5e\u6027\u306b\u6307\u5b9a\u3055\u308c\u305f\u5024\u304c\u6b63\u3057\u304f\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"\'\'{0}\'\'属性に指定された値が正しくありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_RESULT_ERR),
-			$of(u"setResult()\u306fstartDocument()\u3088\u308a\u3082\u524d\u306b\u547c\u3073\u51fa\u3059\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"setResult()はstartDocument()よりも前に呼び出す必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_TRANSLET_ERR),
-			$of(u"\u30c8\u30e9\u30f3\u30b9\u30d5\u30a9\u30fc\u30de\u306b\u306f\u30ab\u30d7\u30bb\u30eb\u5316\u3055\u308c\u305ftranslet\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"トランスフォーマにはカプセル化されたtransletオブジェクトがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_HANDLER_ERR),
-			$of(u"\u5909\u63db\u7d50\u679c\u306b\u5bfe\u3057\u3066\u5b9a\u7fa9\u6e08\u306e\u51fa\u529b\u30cf\u30f3\u30c9\u30e9\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"変換結果に対して定義済の出力ハンドラがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_RESULT_ERR),
-			$of(u"\'\'{0}\'\'\u306b\u6e21\u3055\u308c\u305f\u7d50\u679c\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u306f\u7121\u52b9\u3067\u3059\u3002"_s)
+			$of(u"\'\'{0}\'\'に渡された結果オブジェクトは無効です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_PROP_ERR),
-			$of(u"\u7121\u52b9\u306a\u30c8\u30e9\u30f3\u30b9\u30d5\u30a9\u30fc\u30de\u30fb\u30d7\u30ed\u30d1\u30c6\u30a3\'\'{0}\'\'\u306b\u30a2\u30af\u30bb\u30b9\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"無効なトランスフォーマ・プロパティ\'\'{0}\'\'にアクセスしようとしました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX2DOM_ADAPTER_ERR),
-			$of(u"SAX2DOM\u30a2\u30c0\u30d7\u30bf\'\'{0}\'\'\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"SAX2DOMアダプタ\'\'{0}\'\'を作成できませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSLTC_SOURCE_ERR),
-			$of(u"systemId\u3092\u8a2d\u5b9a\u305b\u305a\u306bXSLTCSource.build()\u304c\u547c\u3073\u51fa\u3055\u308c\u307e\u3057\u305f\u3002"_s)
+			$of(u"systemIdを設定せずにXSLTCSource.build()が呼び出されました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ER_RESULT_NULL),
-			$of(u"\u7d50\u679c\u306fnull\u306b\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"結果はnullにできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_SET_PARAM_VALUE),
-			$of(u"\u30d1\u30e9\u30e1\u30fc\u30bf{0}\u306f\u6709\u52b9\u306aJava\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059"_s)
+			$of(u"パラメータ{0}は有効なJavaオブジェクトである必要があります"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_STDIN_ERR),
-			$of(u"-i\u30aa\u30d7\u30b7\u30e7\u30f3\u306f-o\u30aa\u30d7\u30b7\u30e7\u30f3\u3068\u3068\u3082\u306b\u4f7f\u7528\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"-iオプションは-oオプションとともに使用する必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_USAGE_STR),
-			$of(u"\u5f62\u5f0f\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <output>]\n      [-d <directory>] [-j <jarfile>] [-p <package>]\n      [-n] [-x] [-u] [-v] [-h] { <stylesheet> | -i }\n\nOPTIONS\n   -o <output>    \u540d\u524d<output>\u3092\u751f\u6210\u6e08translet\u306b\n                  \u5272\u308a\u5f53\u3066\u308b\u3002\u30c7\u30d5\u30a9\u30eb\u30c8\u3067\u306f\u3001translet\u540d\u306f\n                  <stylesheet>\u540d\u306b\u7531\u6765\u3057\u307e\u3059\u3002\u3053\u306e\u30aa\u30d7\u30b7\u30e7\u30f3\u306f\n                  \u8907\u6570\u306e\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u3092\u30b3\u30f3\u30d1\u30a4\u30eb\u3059\u308b\u5834\u5408\u306f\u7121\u8996\u3055\u308c\u307e\u3059\u3002\n   -d <directory> translet\u306e\u5b9b\u5148\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u3092\u6307\u5b9a\u3059\u308b\n   -j <jarfile>   <jarfile>\u3067\u6307\u5b9a\u3055\u308c\u308b\u540d\u524d\u306ejar\u30d5\u30a1\u30a4\u30eb\u306btranslet\u30af\u30e9\u30b9\u3092\n                  \u30d1\u30c3\u30b1\u30fc\u30b8\u3059\u308b\n   -p <package>   \u751f\u6210\u3055\u308c\u308b\u3059\u3079\u3066\u306etranslet\u30af\u30e9\u30b9\u306e\u30d1\u30c3\u30b1\u30fc\u30b8\u540d\n                  \u63a5\u982d\u8f9e\u3092\u6307\u5b9a\u3059\u308b\u3002\n   -n             \u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u306e\u30a4\u30f3\u30e9\u30a4\u30f3\u5316\u3092\u6709\u52b9\u306b\u3059\u308b(\u5e73\u5747\u3057\u3066\u30c7\u30d5\u30a9\u30eb\u30c8\u52d5\u4f5c\u306e\u65b9\u304c\n                  \u512a\u308c\u3066\u3044\u307e\u3059)\u3002\n   -x             \u8ffd\u52a0\u306e\u30c7\u30d0\u30c3\u30b0\u30fb\u30e1\u30c3\u30bb\u30fc\u30b8\u51fa\u529b\u3092\u30aa\u30f3\u306b\u3059\u308b\n   -u             <stylesheet>\u5f15\u6570\u3092URL\u3068\u3057\u3066\u89e3\u91c8\u3059\u308b\n   -i             \u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u3092stdin\u304b\u3089\u8aad\u307f\u8fbc\u3080\u3053\u3068\u3092\u30b3\u30f3\u30d1\u30a4\u30e9\u306b\u5f37\u5236\u3059\u308b\n   -v             \u30b3\u30f3\u30d1\u30a4\u30e9\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u51fa\u529b\u3059\u308b\n   -h             \u3053\u306e\u4f7f\u7528\u65b9\u6cd5\u306e\u6587\u3092\u51fa\u529b\u3059\u308b\n"_s)
+			$of(u"形式\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <output>]\n      [-d <directory>] [-j <jarfile>] [-p <package>]\n      [-n] [-x] [-u] [-v] [-h] { <stylesheet> | -i }\n\nOPTIONS\n   -o <output>    名前<output>を生成済transletに\n                  割り当てる。デフォルトでは、translet名は\n                  <stylesheet>名に由来します。このオプションは\n                  複数のスタイルシートをコンパイルする場合は無視されます。\n   -d <directory> transletの宛先ディレクトリを指定する\n   -j <jarfile>   <jarfile>で指定される名前のjarファイルにtransletクラスを\n                  パッケージする\n   -p <package>   生成されるすべてのtransletクラスのパッケージ名\n                  接頭辞を指定する。\n   -n             テンプレートのインライン化を有効にする(平均してデフォルト動作の方が\n                  優れています)。\n   -x             追加のデバッグ・メッセージ出力をオンにする\n   -u             <stylesheet>引数をURLとして解釈する\n   -i             スタイルシートをstdinから読み込むことをコンパイラに強制する\n   -v             コンパイラのバージョンを出力する\n   -h             この使用方法の文を出力する\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_USAGE_STR),
-			$of(u"\u5f62\u5f0f \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-n <iterations>] {-u <document_url> | <document>}\n      <class> [<param1>=<value1> ...]\n\n   translet <class>\u3092\u4f7f\u7528\u3057\u3066\u3001<document>\u3067\u6307\u5b9a\u3055\u308c\u308b\n   XML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3092\u5909\u63db\u3059\u308b\u3002translet <class>\u306f\n   \u30e6\u30fc\u30b6\u30fc\u306eCLASSPATH\u5185\u304b\u3001\u30aa\u30d7\u30b7\u30e7\u30f3\u3067\u6307\u5b9a\u3055\u308c\u305f<jarfile>\u5185\u306b\u3042\u308a\u307e\u3059\u3002\nOPTIONS\n   -j <jarfile>    translet\u3092\u30ed\u30fc\u30c9\u3059\u308bjarfile\u3092\u6307\u5b9a\u3059\u308b\n   -x              \u8ffd\u52a0\u306e\u30c7\u30d0\u30c3\u30b0\u30fb\u30e1\u30c3\u30bb\u30fc\u30b8\u51fa\u529b\u3092\u30aa\u30f3\u306b\u3059\u308b\n   -n <iterations> \u5909\u63db\u3092<iterations>\u56de\u5b9f\u884c\u3057\u3001\n                   \u30d7\u30ed\u30d5\u30a1\u30a4\u30ea\u30f3\u30b0\u60c5\u5831\u3092\u8868\u793a\u3059\u308b\n   -u <document_url> XML\u5165\u529b\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3092URL\u3068\u3057\u3066\u6307\u5b9a\u3059\u308b\n"_s)
+			$of(u"形式 \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-n <iterations>] {-u <document_url> | <document>}\n      <class> [<param1>=<value1> ...]\n\n   translet <class>を使用して、<document>で指定される\n   XMLドキュメントを変換する。translet <class>は\n   ユーザーのCLASSPATH内か、オプションで指定された<jarfile>内にあります。\nOPTIONS\n   -j <jarfile>    transletをロードするjarfileを指定する\n   -x              追加のデバッグ・メッセージ出力をオンにする\n   -n <iterations> 変換を<iterations>回実行し、\n                   プロファイリング情報を表示する\n   -u <document_url> XML入力ドキュメントをURLとして指定する\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_SORT_ERR),
-			$of(u"<xsl:sort>\u306f<xsl:for-each>\u307e\u305f\u306f<xsl:apply-templates>\u306e\u5185\u90e8\u3067\u306e\u307f\u4f7f\u7528\u3067\u304d\u307e\u3059\u3002"_s)
+			$of(u"<xsl:sort>は<xsl:for-each>または<xsl:apply-templates>の内部でのみ使用できます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_ENCODING),
-			$of(u"\u51fa\u529b\u30a8\u30f3\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\'\'{0}\'\'\u306f\u3053\u306eJVM\u3067\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"出力エンコーディング\'\'{0}\'\'はこのJVMではサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYNTAX_ERR),
-			$of(u"\'\'{0}\'\'\u306b\u69cb\u6587\u30a8\u30e9\u30fc\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"\'\'{0}\'\'に構文エラーがあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CONSTRUCTOR_NOT_FOUND),
-			$of(u"\u5916\u90e8\u30b3\u30f3\u30b9\u30c8\u30e9\u30af\u30bf\'\'{0}\'\'\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"外部コンストラクタ\'\'{0}\'\'が見つかりません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_JAVA_FUNCT_THIS_REF),
-			$of(u"static\u3067\u306a\u3044Java\u95a2\u6570\'\'{0}\'\'\u306e\u6700\u521d\u306e\u5f15\u6570\u306f\u7121\u52b9\u306a\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u53c2\u7167\u3067\u3059\u3002"_s)
+			$of(u"staticでないJava関数\'\'{0}\'\'の最初の引数は無効なオブジェクト参照です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_ERR),
-			$of(u"\u5f0f\'\'{0}\'\'\u306e\u30bf\u30a4\u30d7\u306e\u78ba\u8a8d\u4e2d\u306b\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"式\'\'{0}\'\'のタイプの確認中にエラーが発生しました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_UNK_LOC_ERR),
-			$of(u"\u4e0d\u660e\u306a\u5834\u6240\u3067\u306e\u5f0f\u306e\u30bf\u30a4\u30d7\u306e\u78ba\u8a8d\u4e2d\u306b\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"不明な場所での式のタイプの確認中にエラーが発生しました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CMDLINE_OPTION_ERR),
-			$of(u"\u30b3\u30de\u30f3\u30c9\u884c\u30aa\u30d7\u30b7\u30e7\u30f3\'\'{0}\'\'\u306f\u7121\u52b9\u3067\u3059\u3002"_s)
+			$of(u"コマンド行オプション\'\'{0}\'\'は無効です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CMDLINE_OPT_MISSING_ARG_ERR),
-			$of(u"\u30b3\u30de\u30f3\u30c9\u884c\u30aa\u30d7\u30b7\u30e7\u30f3\'\'{0}\'\'\u306b\u5fc5\u9808\u306e\u5f15\u6570\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"コマンド行オプション\'\'{0}\'\'に必須の引数がありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WARNING_PLUS_WRAPPED_MSG),
@@ -544,79 +544,79 @@ $ObjectArray2* ErrorMessages_ja::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_TRANSLET_STR),
-			$of(u"translet \'\'{0}\'\'\u3092\u4f7f\u7528\u3057\u3066\u5909\u63db\u3057\u307e\u3059 "_s)
+			$of(u"translet \'\'{0}\'\'を使用して変換します "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_JAR_STR),
-			$of(u"translet \'\'{0}\'\'\u3092\u4f7f\u7528\u3057\u3066jar\u30d5\u30a1\u30a4\u30eb\'\'{1}\'\'\u304b\u3089\u5909\u63db\u3057\u307e\u3059"_s)
+			$of(u"translet \'\'{0}\'\'を使用してjarファイル\'\'{1}\'\'から変換します"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COULD_NOT_CREATE_TRANS_FACT),
-			$of(u"TransformerFactory\u30af\u30e9\u30b9\'\'{0}\'\'\u306e\u30a4\u30f3\u30b9\u30bf\u30f3\u30b9\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"TransformerFactoryクラス\'\'{0}\'\'のインスタンスを作成できませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_NAME_JAVA_CONFLICT),
-			$of(u"\u540d\u524d\'\'{0}\'\'\u306b\u306fJava\u30af\u30e9\u30b9\u306e\u540d\u524d\u306b\u8a31\u53ef\u3055\u308c\u3066\u3044\u306a\u3044\u6587\u5b57\u304c\u542b\u307e\u308c\u3066\u3044\u308b\u305f\u3081\u3001translet\u30af\u30e9\u30b9\u306e\u540d\u524d\u3068\u3057\u3066\u4f7f\u7528\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002\u540d\u524d\'\'{1}\'\'\u304c\u304b\u308f\u308a\u306b\u4f7f\u7528\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"名前\'\'{0}\'\'にはJavaクラスの名前に許可されていない文字が含まれているため、transletクラスの名前として使用できませんでした。名前\'\'{1}\'\'がかわりに使用されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_ERROR_KEY),
-			$of(u"\u30b3\u30f3\u30d1\u30a4\u30e9\u30fb\u30a8\u30e9\u30fc:"_s)
+			$of(u"コンパイラ・エラー:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_WARNING_KEY),
-			$of(u"\u30b3\u30f3\u30d1\u30a4\u30e9\u306e\u8b66\u544a:"_s)
+			$of(u"コンパイラの警告:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RUNTIME_ERROR_KEY),
-			$of(u"Translet\u30a8\u30e9\u30fc:"_s)
+			$of(u"Transletエラー:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_QNAME_ERR),
-			$of(u"\u5024\u304c1\u3064\u306eQName\u307e\u305f\u306fQName\u306e\u7a7a\u767d\u6587\u5b57\u533a\u5207\u308a\u30ea\u30b9\u30c8\u3067\u3042\u308b\u3053\u3068\u304c\u5fc5\u8981\u306a\u5c5e\u6027\u306e\u5024\u304c\'\'{0}\'\'\u3067\u3057\u305f"_s)
+			$of(u"値が1つのQNameまたはQNameの空白文字区切りリストであることが必要な属性の値が\'\'{0}\'\'でした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_NCNAME_ERR),
-			$of(u"\u5024\u304cNCName\u3067\u3042\u308b\u3053\u3068\u304c\u5fc5\u8981\u306a\u5c5e\u6027\u306e\u5024\u304c\'\'{0}\'\'\u3067\u3057\u305f"_s)
+			$of(u"値がNCNameであることが必要な属性の値が\'\'{0}\'\'でした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_METHOD_IN_OUTPUT),
-			$of(u"<xsl:output>\u8981\u7d20\u306e\u30e1\u30bd\u30c3\u30c9\u5c5e\u6027\u306e\u5024\u304c\'\'{0}\'\'\u3067\u3057\u305f\u3002\u5024\u306f\'\'xml\'\'\u3001\'\'html\'\'\u3001\'\'text\'\'\u307e\u305f\u306fqname-but-not-ncname\u306e\u3044\u305a\u308c\u304b\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059"_s)
+			$of(u"<xsl:output>要素のメソッド属性の値が\'\'{0}\'\'でした。値は\'\'xml\'\'、\'\'html\'\'、\'\'text\'\'またはqname-but-not-ncnameのいずれかである必要があります"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_GET_FEATURE_NULL_NAME),
-			$of(u"\u6a5f\u80fd\u540d\u306fTransformerFactory.getFeature(String name)\u5185\u3067null\u306b\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"機能名はTransformerFactory.getFeature(String name)内でnullにできません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_FEATURE_NULL_NAME),
-			$of(u"\u6a5f\u80fd\u540d\u306fTransformerFactory.setFeature(String name, boolean value)\u5185\u3067null\u306b\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"機能名はTransformerFactory.setFeature(String name, boolean value)内でnullにできません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNSUPPORTED_FEATURE),
-			$of(u"\u6a5f\u80fd\'\'{0}\'\'\u3092\u3053\u306eTransformerFactory\u306b\u8a2d\u5b9a\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"機能\'\'{0}\'\'をこのTransformerFactoryに設定できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: \u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u30fb\u30de\u30cd\u30fc\u30b8\u30e3\u304c\u5b58\u5728\u3059\u308b\u3068\u304d\u3001\u6a5f\u80fd\u3092false\u306b\u8a2d\u5b9a\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"FEATURE_SECURE_PROCESSING: セキュリティ・マネージャが存在するとき、機能をfalseに設定できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_TRY_CATCH),
-			$of(u"\u5185\u90e8XSLTC\u30a8\u30e9\u30fc: \u751f\u6210\u3055\u308c\u305f\u30d0\u30a4\u30c8\u30fb\u30b3\u30fc\u30c9\u306f\u3001try-catch-finally\u30d6\u30ed\u30c3\u30af\u3092\u542b\u3093\u3067\u3044\u308b\u305f\u3081\u3001\u30a2\u30a6\u30c8\u30e9\u30a4\u30f3\u5316\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"内部XSLTCエラー: 生成されたバイト・コードは、try-catch-finallyブロックを含んでいるため、アウトライン化できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_UNBALANCED_MARKERS),
-			$of(u"\u5185\u90e8XSLTC\u30a8\u30e9\u30fc: OutlineableChunkStart\u30de\u30fc\u30ab\u30fc\u3068OutlineableChunkEnd\u30de\u30fc\u30ab\u30fc\u306f\u3001\u5bfe\u306b\u306a\u3063\u3066\u304a\u308a\u3001\u304b\u3064\u6b63\u3057\u304f\u30cd\u30b9\u30c8\u3055\u308c\u3066\u3044\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"内部XSLTCエラー: OutlineableChunkStartマーカーとOutlineableChunkEndマーカーは、対になっており、かつ正しくネストされている必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_DELETED_TARGET),
-			$of(u"\u5185\u90e8XSLTC\u30a8\u30e9\u30fc: \u30a2\u30a6\u30c8\u30e9\u30a4\u30f3\u5316\u3055\u308c\u305f\u30d0\u30a4\u30c8\u30fb\u30b3\u30fc\u30c9\u306e\u30d6\u30ed\u30c3\u30af\u306e\u4e00\u90e8\u3067\u3042\u3063\u305f\u547d\u4ee4\u306f\u3001\u5143\u306e\u30e1\u30bd\u30c3\u30c9\u306e\u4e2d\u3067\u307e\u3060\u53c2\u7167\u3055\u308c\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"内部XSLTCエラー: アウトライン化されたバイト・コードのブロックの一部であった命令は、元のメソッドの中でまだ参照されています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_METHOD_TOO_BIG),
-			$of(u"\u5185\u90e8XSLTC\u30a8\u30e9\u30fc: \u30c8\u30e9\u30f3\u30b9\u30ec\u30c3\u30c8\u5185\u306e\u30e1\u30bd\u30c3\u30c9\u304c\u3001Java\u4eee\u60f3\u30de\u30b7\u30f3\u306e\u5236\u9650(1\u30e1\u30bd\u30c3\u30c9\u306e\u9577\u3055\u306f\u6700\u592764\u30ad\u30ed\u30d0\u30a4\u30c8)\u3092\u8d85\u3048\u3066\u3044\u307e\u3059\u3002\u4e00\u822c\u7684\u306b\u3001\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u5185\u306e\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u306e\u30b5\u30a4\u30ba\u304c\u5927\u304d\u904e\u304e\u308b\u3053\u3068\u304c\u539f\u56e0\u3068\u3057\u3066\u8003\u3048\u3089\u308c\u307e\u3059\u3002\u5c0f\u3055\u3044\u30b5\u30a4\u30ba\u306e\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u3092\u4f7f\u7528\u3057\u3066\u3001\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u3092\u518d\u69cb\u6210\u3057\u3066\u304f\u3060\u3055\u3044\u3002"_s)
+			$of(u"内部XSLTCエラー: トランスレット内のメソッドが、Java仮想マシンの制限(1メソッドの長さは最大64キロバイト)を超えています。一般的に、スタイルシート内のテンプレートのサイズが大き過ぎることが原因として考えられます。小さいサイズのテンプレートを使用して、スタイルシートを再構成してください。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DESERIALIZE_TRANSLET_ERR),
-			$of(u"Java\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u304c\u6709\u52b9\u5316\u3055\u308c\u3066\u3044\u308b\u5834\u5408\u3001TemplatesImpl\u306e\u30c7\u30b7\u30ea\u30a2\u30e9\u30a4\u30ba\u306e\u30b5\u30dd\u30fc\u30c8\u306f\u7121\u52b9\u5316\u3055\u308c\u307e\u3059\u3002\u3053\u308c\u306f\u3001jdk.xml.enableTemplatesImplDeserialization\u30b7\u30b9\u30c6\u30e0\u30fb\u30d7\u30ed\u30d1\u30c6\u30a3\u3092true\u306b\u8a2d\u5b9a\u3057\u3066\u30aa\u30fc\u30d0\u30fc\u30e9\u30a4\u30c9\u3067\u304d\u307e\u3059\u3002"_s)
+			$of(u"Javaセキュリティが有効化されている場合、TemplatesImplのデシリアライズのサポートは無効化されます。これは、jdk.xml.enableTemplatesImplDeserializationシステム・プロパティをtrueに設定してオーバーライドできます。"_s)
 		})
 	});
 }

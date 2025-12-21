@@ -86,9 +86,9 @@ void SAXParser::reset() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$3, $$str({"This SAXParser, \""_s, $($of(this)->getClass()->getName()), "\", does not support the reset functionality.  Specification \""_s}));
 	$var($String, var$2, $$concat(var$3, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationTitle())));
-	$var($String, var$1, $$concat(var$2, "\" version \""));
+	$var($String, var$1, $$concat(var$2, "\" version \""_s));
 	$var($String, var$0, $$concat(var$1, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationVersion())));
-	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""));
+	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""_s));
 }
 
 void SAXParser::parse($InputStream* is, $HandlerBase* hb) {
@@ -191,7 +191,7 @@ $Schema* SAXParser::getSchema() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"This parser does not support specification \""_s, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationTitle()), "\" version \""_s}));
 	$var($String, var$0, $$concat(var$1, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationVersion())));
-	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""));
+	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""_s));
 	$shouldNotReachHere();
 }
 
@@ -199,7 +199,7 @@ bool SAXParser::isXIncludeAware() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"This parser does not support specification \""_s, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationTitle()), "\" version \""_s}));
 	$var($String, var$0, $$concat(var$1, $($nc($($of(this)->getClass()->getPackage()))->getSpecificationVersion())));
-	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""));
+	$throwNew($UnsupportedOperationException, $$concat(var$0, "\""_s));
 	$shouldNotReachHere();
 }
 

@@ -153,7 +153,7 @@ $String* XNumber::str() {
 	if (exp > 0) {
 		$var($String, var$5, $$str({sign, $(s->substring(0, 1))}));
 		$var($String, var$4, $$concat(var$5, $(s->substring(2, 2 + exp))));
-		$var($String, var$3, $$concat(var$4, "."));
+		$var($String, var$3, $$concat(var$4, "."_s));
 		return $concat(var$3, $(s->substring(2 + exp, e)));
 	}
 	$var($String, var$7, $$str({sign, "0."_s, $(zeros(-1 - exp))}));

@@ -343,7 +343,7 @@ void REUtil::main($StringArray* argv) {
 			} else {
 				$var($String, var$2, $$str({$$str(match->getBeginning(i)), ", "_s}));
 				$var($String, var$1, $$concat(var$2, $$str(match->getEnd(i))));
-				$nc($System::out)->print($$concat(var$1, ", "));
+				$nc($System::out)->print($$concat(var$1, ", "_s));
 				$nc($System::out)->println($$str({"\""_s, $(match->getCapturedText(i)), "\""_s}));
 			}
 		}

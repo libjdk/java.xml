@@ -369,11 +369,11 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Funktion nicht unterst\u00fctzt."_s)
+			$of(u"Funktion nicht unterstützt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"Ursache kann nicht \u00fcberschrieben werden"_s)
+			$of(u"Ursache kann nicht überschrieben werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NO_DEFAULT_IMPL),
@@ -381,15 +381,15 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0}) derzeit nicht unterst\u00fctzt"_s)
+			$of(u"ChunkedIntArray({0}) derzeit nicht unterstützt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"Offset gr\u00f6\u00dfer als Slot"_s)
+			$of(u"Offset größer als Slot"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Coroutine nicht verf\u00fcgbar; ID={0}"_s)
+			$of(u"Coroutine nicht verfügbar; ID={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_COROUTINE_CO_EXIT),
@@ -409,19 +409,19 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"\"parse\" darf w\u00e4hrend des Parsing nicht aufgerufen werden"_s)
+			$of(u"\"parse\" darf während des Parsing nicht aufgerufen werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Fehler: Typisierter Iterator f\u00fcr Achse {0} nicht implementiert"_s)
+			$of(u"Fehler: Typisierter Iterator für Achse {0} nicht implementiert"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Fehler: Iterator f\u00fcr Achse {0} nicht implementiert "_s)
+			$of(u"Fehler: Iterator für Achse {0} nicht implementiert "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"Iteratorclone nicht unterst\u00fctzt"_s)
+			$of(u"Iteratorclone nicht unterstützt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_UNKNOWN_AXIS_TYPE),
@@ -429,27 +429,27 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_AXIS_NOT_SUPPORTED),
-			$of(u"Achsen-Traverser nicht unterst\u00fctzt: {0}"_s)
+			$of(u"Achsen-Traverser nicht unterstützt: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NO_DTMIDS_AVAIL),
-			$of(u"Keine weiteren DTM-IDs verf\u00fcgbar"_s)
+			$of(u"Keine weiteren DTM-IDs verfügbar"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NOT_SUPPORTED),
-			$of(u"Nicht unterst\u00fctzt: {0}"_s)
+			$of(u"Nicht unterstützt: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NODE_NON_NULL),
-			$of(u"Knoten darf nicht null sein f\u00fcr getDTMHandleFromNode"_s)
+			$of(u"Knoten darf nicht null sein für getDTMHandleFromNode"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"Knoten konnte nicht in Handle aufgel\u00f6st werden"_s)
+			$of(u"Knoten konnte nicht in Handle aufgelöst werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"\"startParse\" darf w\u00e4hrend des Parsing nicht aufgerufen werden"_s)
+			$of(u"\"startParse\" darf während des Parsing nicht aufgerufen werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_STARTPARSE_NEEDS_SAXPARSER),
@@ -461,11 +461,11 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_EXCEPTION_CREATING_POOL),
-			$of(u"Ausnahme beim Erstellen einer neuen Instanz f\u00fcr Pool"_s)
+			$of(u"Ausnahme beim Erstellen einer neuen Instanz für Pool"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"Pfad enth\u00e4lt eine ung\u00fcltige Escapesequenz"_s)
+			$of(u"Pfad enthält eine ungültige Escapesequenz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_SCHEME_REQUIRED),
@@ -481,7 +481,7 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_PATH_INVALID_CHAR),
-			$of(u"Pfad enth\u00e4lt ung\u00fcltiges Zeichen: {0}"_s)
+			$of(u"Pfad enthält ungültiges Zeichen: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_SCHEME_FROM_NULL_STRING),
@@ -501,11 +501,11 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_INVALID_PORT),
-			$of(u"Ung\u00fcltige Portnummer"_s)
+			$of(u"Ungültige Portnummer"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Fragment kann nur f\u00fcr einen generischen URI festgelegt werden"_s)
+			$of(u"Fragment kann nur für einen generischen URI festgelegt werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_FRAG_WHEN_PATH_NULL),
@@ -513,7 +513,7 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_FRAG_INVALID_CHAR),
-			$of(u"Fragment enth\u00e4lt ein ung\u00fcltiges Zeichen"_s)
+			$of(u"Fragment enthält ein ungültiges Zeichen"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_PARSER_IN_USE),
@@ -521,15 +521,15 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"{0} {1} kann w\u00e4hrend Parsing nicht ge\u00e4ndert werden"_s)
+			$of(u"{0} {1} kann während Parsing nicht geändert werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"Selbstkausalit\u00e4t nicht zul\u00e4ssig"_s)
+			$of(u"Selbstkausalität nicht zulässig"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Benutzerinformationen k\u00f6nnen nicht angegeben werden, wenn der Host nicht angegeben wurde"_s)
+			$of(u"Benutzerinformationen können nicht angegeben werden, wenn der Host nicht angegeben wurde"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NO_PORT_IF_NO_HOST),
@@ -549,7 +549,7 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_METHOD_NOT_SUPPORTED),
-			$of(u"Methode noch nicht unterst\u00fctzt "_s)
+			$of(u"Methode noch nicht unterstützt "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
@@ -561,7 +561,7 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"Achsen-Traverser nicht unterst\u00fctzt: {0}"_s)
+			$of(u"Achsen-Traverser nicht unterstützt: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
@@ -577,19 +577,19 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_PREFIX_MUST_RESOLVE),
-			$of(u"Pr\u00e4fix muss in Namespace aufgel\u00f6st werden: {0}"_s)
+			$of(u"Präfix muss in Namespace aufgelöst werden: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"createDocument() nicht in XPathContext unterst\u00fctzt."_s)
+			$of(u"createDocument() nicht in XPathContext unterstützt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"Untergeordnetes Attribut hat kein Eigent\u00fcmerdokument."_s)
+			$of(u"Untergeordnetes Attribut hat kein Eigentümerdokument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"Untergeordnetes Attribut hat kein Eigent\u00fcmerdokumentelement."_s)
+			$of(u"Untergeordnetes Attribut hat kein Eigentümerdokumentelement."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
@@ -597,7 +597,7 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"Mehrere Roots f\u00fcr ein DOM nicht zul\u00e4ssig."_s)
+			$of(u"Mehrere Roots für ein DOM nicht zulässig."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ARG_LOCALNAME_NULL),
@@ -605,11 +605,11 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ARG_LOCALNAME_INVALID),
-			$of(u"Localname in QNAME muss ein g\u00fcltiger NCName sein"_s)
+			$of(u"Localname in QNAME muss ein gültiger NCName sein"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ARG_PREFIX_INVALID),
-			$of(u"Pr\u00e4fix in QNAME muss ein g\u00fcltiger NCName sein"_s)
+			$of(u"Präfix in QNAME muss ein gültiger NCName sein"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NAME_CANT_START_WITH_COLON),
@@ -617,11 +617,11 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"Parameter f\u00fcr createMessage war au\u00dferhalb des g\u00fcltigen Bereichs"_s)
+			$of(u"Parameter für createMessage war außerhalb des gültigen Bereichs"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Ausnahme bei messageFormat-Aufruf ausgel\u00f6st"_s)
+			$of(u"Ausnahme bei messageFormat-Aufruf ausgelöst"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
@@ -645,11 +645,11 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"Puffergr\u00f6\u00dfe <=0"_s)
+			$of(u"Puffergröße <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Ung\u00fcltige UTF-16-Ersetzung festgestellt: {0}?"_s)
+			$of(u"Ungültige UTF-16-Ersetzung festgestellt: {0}?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_OIERROR),
@@ -657,23 +657,23 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Attribut {0} kann nicht nach untergeordneten Knoten oder vor dem Erstellen eines Elements hinzugef\u00fcgt werden. Attribut wird ignoriert."_s)
+			$of(u"Attribut {0} kann nicht nach untergeordneten Knoten oder vor dem Erstellen eines Elements hinzugefügt werden. Attribut wird ignoriert."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_NAMESPACE_PREFIX),
-			$of(u"Namespace f\u00fcr Pr\u00e4fix \"{0}\" wurde nicht deklariert."_s)
+			$of(u"Namespace für Präfix \"{0}\" wurde nicht deklariert."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_STRAY_ATTRIBUTE),
-			$of(u"Attribut \"{0}\" au\u00dferhalb des Elements."_s)
+			$of(u"Attribut \"{0}\" außerhalb des Elements."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_STRAY_NAMESPACE),
-			$of(u"Namespace-Deklaration {0}={1} au\u00dferhalb des Elements."_s)
+			$of(u"Namespace-Deklaration {0}={1} außerhalb des Elements."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"\"{0}\" konnte nicht geladen werden (CLASSPATH pr\u00fcfen). Die Standardwerte werden verwendet"_s)
+			$of(u"\"{0}\" konnte nicht geladen werden (CLASSPATH prüfen). Die Standardwerte werden verwendet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_ILLEGAL_CHARACTER),
@@ -681,7 +681,7 @@ void clinit$XMLErrorResources_de($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_de::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Property-Datei \"{0}\" konnte f\u00fcr Ausgabemethode \"{1}\" nicht geladen werden (CLASSPATH pr\u00fcfen)"_s)
+			$of(u"Property-Datei \"{0}\" konnte für Ausgabemethode \"{1}\" nicht geladen werden (CLASSPATH prüfen)"_s)
 		})
 	}));
 }

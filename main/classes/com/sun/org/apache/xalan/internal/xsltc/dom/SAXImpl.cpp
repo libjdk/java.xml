@@ -1007,7 +1007,7 @@ void SAXImpl::print(int32_t node, int32_t level) {
 				for (int32_t a = getFirstAttribute(node); a != $DTM::NULL; a = getNextAttribute(a)) {
 					$var($String, var$1, $$str({"\n"_s, $(getNodeName(a)), "=\""_s}));
 					$var($String, var$0, $$concat(var$1, $(getStringValueX(a))));
-					$nc($System::out)->print($$concat(var$0, "\""));
+					$nc($System::out)->print($$concat(var$0, "\""_s));
 				}
 				$nc($System::out)->print(u'>');
 				for (int32_t child = getFirstChild(node); child != $DTM::NULL; child = getNextSibling(child)) {

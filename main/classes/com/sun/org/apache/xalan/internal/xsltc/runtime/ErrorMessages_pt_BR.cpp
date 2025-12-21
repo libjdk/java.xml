@@ -81,35 +81,35 @@ $ObjectArray2* ErrorMessages_pt_BR::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"Convers\u00e3o inv\u00e1lida de \'\'{0}\'\' para \'\'{1}\'\'."_s)
+			$of(u"Conversão inválida de \'\'{0}\'\' para \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"Fun\u00e7\u00e3o externa \'\'{0}\'\' n\u00e3o suportada por XSLTC."_s)
+			$of(u"Função externa \'\'{0}\'\' não suportada por XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"Tipo de argumento desconhecido na express\u00e3o de igualdade."_s)
+			$of(u"Tipo de argumento desconhecido na expressão de igualdade."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"Tipo de argumento inv\u00e1lido \'\'{0}\'\' na chamada para \'\'{1}\'\'"_s)
+			$of(u"Tipo de argumento inválido \'\'{0}\'\' na chamada para \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"Tentativa de formatar o n\u00famero \'\'{0}\'\' usando o padr\u00e3o \'\'{1}\'\'."_s)
+			$of(u"Tentativa de formatar o número \'\'{0}\'\' usando o padrão \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
-			$of(u"N\u00e3o \u00e9 poss\u00edvel clonar o iterador \'\'{0}\'\'."_s)
+			$of(u"Não é possível clonar o iterador \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"Iterador do eixo \'\'{0}\'\' n\u00e3o suportado."_s)
+			$of(u"Iterador do eixo \'\'{0}\'\' não suportado."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"Iterador do eixo digitado \'\'{0}\'\' n\u00e3o suportado."_s)
+			$of(u"Iterador do eixo digitado \'\'{0}\'\' não suportado."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
@@ -117,11 +117,11 @@ $ObjectArray2* ErrorMessages_pt_BR::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"Declara\u00e7\u00e3o de namespace \'\'{0}\'\'=\'\'{1}\'\' fora do elemento."_s)
+			$of(u"Declaração de namespace \'\'{0}\'\'=\'\'{1}\'\' fora do elemento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"O namespace do prefixo \'\'{0}\'\' n\u00e3o foi declarado."_s)
+			$of(u"O namespace do prefixo \'\'{0}\'\' não foi declarado."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
@@ -129,27 +129,27 @@ $ObjectArray2* ErrorMessages_pt_BR::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"O parser SAX que voc\u00ea est\u00e1 usando n\u00e3o trata eventos de declara\u00e7\u00e3o de DTD."_s)
+			$of(u"O parser SAX que você está usando não trata eventos de declaração de DTD."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"O parser SAX que voc\u00ea est\u00e1 usando n\u00e3o tem suporte para os Namespaces de XML."_s)
+			$of(u"O parser SAX que você está usando não tem suporte para os Namespaces de XML."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"N\u00e3o foi poss\u00edvel resolver a refer\u00eancia do URI \'\'{0}\'\'."_s)
+			$of(u"Não foi possível resolver a referência do URI \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_XSL_ERR),
-			$of(u"Elemento XSL \'\'{0}\'\' n\u00e3o suportado"_s)
+			$of(u"Elemento XSL \'\'{0}\'\' não suportado"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
-			$of(u"Extens\u00e3o \'\'{0}\'\' de XSLTC n\u00e3o reconhecida"_s)
+			$of(u"Extensão \'\'{0}\'\' de XSLTC não reconhecida"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"O translet especificado, \'\'{0}\'\', foi criado usando uma vers\u00e3o do XSLTC mais recente que a vers\u00e3o de runtime de XSLTC em uso. Recompile a folha de estilos ou use uma vers\u00e3o mais recente de XSLTC para executar este translet."_s)
+			$of(u"O translet especificado, \'\'{0}\'\', foi criado usando uma versão do XSLTC mais recente que a versão de runtime de XSLTC em uso. Recompile a folha de estilos ou use uma versão mais recente de XSLTC para executar este translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
@@ -161,11 +161,11 @@ $ObjectArray2* ErrorMessages_pt_BR::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"O uso da fun\u00e7\u00e3o da extens\u00e3o \'\'{0}\'\' n\u00e3o ser\u00e1 permitido quando o recurso de processamento seguro for definido como verdadeiro."_s)
+			$of(u"O uso da função da extensão \'\'{0}\'\' não será permitido quando o recurso de processamento seguro for definido como verdadeiro."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"O uso do elemento da extens\u00e3o \'\'{0}\'\' n\u00e3o ser\u00e1 permitido quando o recurso de processamento seguro for definido como verdadeiro."_s)
+			$of(u"O uso do elemento da extensão \'\'{0}\'\' não será permitido quando o recurso de processamento seguro for definido como verdadeiro."_s)
 		})
 	});
 }

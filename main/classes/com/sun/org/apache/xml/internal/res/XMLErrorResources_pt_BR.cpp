@@ -369,19 +369,19 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Fun\u00e7\u00e3o n\u00e3o suportada!"_s)
+			$of(u"Função não suportada!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"N\u00e3o \u00e9 poss\u00edvel substituir a causa"_s)
+			$of(u"Não é possível substituir a causa"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_DEFAULT_IMPL),
-			$of(u"Nenhuma implementa\u00e7\u00e3o padr\u00e3o encontrada "_s)
+			$of(u"Nenhuma implementação padrão encontrada "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0}) n\u00e3o suportado atualmente"_s)
+			$of(u"ChunkedIntArray({0}) não suportado atualmente"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_OFFSET_BIGGER_THAN_SLOT),
@@ -389,11 +389,11 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Co-rotina n\u00e3o dispon\u00edvel, id={0}"_s)
+			$of(u"Co-rotina não disponível, id={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager recebeu a solicita\u00e7\u00e3o co_exit()"_s)
+			$of(u"CoroutineManager recebeu a solicitação co_exit()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COJOINROUTINESET_FAILED),
@@ -401,7 +401,7 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COROUTINE_PARAM),
-			$of(u"Erro no par\u00e2metro da co-rotina ({0})"_s)
+			$of(u"Erro no parâmetro da co-rotina ({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_PARSER_DOTERMINATE_ANSWERS),
@@ -409,19 +409,19 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"o parsing n\u00e3o pode ser chamado durante o parsing"_s)
+			$of(u"o parsing não pode ser chamado durante o parsing"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Erro: iterador digitado para o eixo {0} n\u00e3o implementado"_s)
+			$of(u"Erro: iterador digitado para o eixo {0} não implementado"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Erro: iterador para o eixo {0} n\u00e3o implementado "_s)
+			$of(u"Erro: iterador para o eixo {0} não implementado "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"clonagem do iterador n\u00e3o suportada"_s)
+			$of(u"clonagem do iterador não suportada"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_UNKNOWN_AXIS_TYPE),
@@ -429,47 +429,47 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_AXIS_NOT_SUPPORTED),
-			$of(u"Transversor de eixo n\u00e3o suportado: {0}"_s)
+			$of(u"Transversor de eixo não suportado: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_DTMIDS_AVAIL),
-			$of(u"N\u00e3o h\u00e1 mais IDs de DTM dispon\u00edveis"_s)
+			$of(u"Não há mais IDs de DTM disponíveis"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NOT_SUPPORTED),
-			$of(u"N\u00e3o suportado: {0}"_s)
+			$of(u"Não suportado: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NODE_NON_NULL),
-			$of(u"O n\u00f3 deve ser n\u00e3o-nulo para getDTMHandleFromNode"_s)
+			$of(u"O nó deve ser não-nulo para getDTMHandleFromNode"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"N\u00e3o foi poss\u00edvel resolver o n\u00f3 para um handle"_s)
+			$of(u"Não foi possível resolver o nó para um handle"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"startParse n\u00e3o pode ser chamado durante o parsing"_s)
+			$of(u"startParse não pode ser chamado durante o parsing"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse requer um SAXParser n\u00e3o nulo"_s)
+			$of(u"startParse requer um SAXParser não nulo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COULD_NOT_INIT_PARSER),
-			$of(u"n\u00e3o foi poss\u00edvel inicializar o parser com"_s)
+			$of(u"não foi possível inicializar o parser com"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_EXCEPTION_CREATING_POOL),
-			$of(u"exce\u00e7\u00e3o ao criar a nova inst\u00e2ncia do pool"_s)
+			$of(u"exceção ao criar a nova instância do pool"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"O caminho cont\u00e9m uma sequ\u00eancia inv\u00e1lida de caracteres de escape"_s)
+			$of(u"O caminho contém uma sequência inválida de caracteres de escape"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_SCHEME_REQUIRED),
-			$of(u"O esquema \u00e9 obrigat\u00f3rio!"_s)
+			$of(u"O esquema é obrigatório!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_SCHEME_IN_URI),
@@ -481,87 +481,87 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_PATH_INVALID_CHAR),
-			$of(u"O caminho cont\u00e9m um caractere inv\u00e1lido: {0}"_s)
+			$of(u"O caminho contém um caractere inválido: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"N\u00e3o \u00e9 poss\u00edvel definir o esquema de uma string nula"_s)
+			$of(u"Não é possível definir o esquema de uma string nula"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"O esquema n\u00e3o \u00e9 compat\u00edvel."_s)
+			$of(u"O esquema não é compatível."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"O host n\u00e3o \u00e9 um endere\u00e7o correto"_s)
+			$of(u"O host não é um endereço correto"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_PORT_WHEN_HOST_NULL),
-			$of(u"A porta n\u00e3o pode ser definida quando o host \u00e9 nulo"_s)
+			$of(u"A porta não pode ser definida quando o host é nulo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_INVALID_PORT),
-			$of(u"N\u00famero de porta inv\u00e1lido"_s)
+			$of(u"Número de porta inválido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"O fragmento s\u00f3 pode ser definido para um URI gen\u00e9rico"_s)
+			$of(u"O fragmento só pode ser definido para um URI genérico"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"O fragmento n\u00e3o pode ser definido quando o caminho \u00e9 nulo"_s)
+			$of(u"O fragmento não pode ser definido quando o caminho é nulo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_FRAG_INVALID_CHAR),
-			$of(u"O fragmento cont\u00e9m um caractere inv\u00e1lido"_s)
+			$of(u"O fragmento contém um caractere inválido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_PARSER_IN_USE),
-			$of(u"O parser j\u00e1 est\u00e1 sendo usado"_s)
+			$of(u"O parser já está sendo usado"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"N\u00e3o \u00e9 poss\u00edvel alterar {0} {1} durante o parsing"_s)
+			$of(u"Não é possível alterar {0} {1} durante o parsing"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"Autoaverigua\u00e7\u00e3o n\u00e3o permitida"_s)
+			$of(u"Autoaveriguação não permitida"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"As informa\u00e7\u00f5es do usu\u00e1rio n\u00e3o podem ser especificadas se o host n\u00e3o tiver sido especificado"_s)
+			$of(u"As informações do usuário não podem ser especificadas se o host não tiver sido especificado"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_PORT_IF_NO_HOST),
-			$of(u"A porta n\u00e3o pode ser especificada se o host n\u00e3o tiver sido especificado"_s)
+			$of(u"A porta não pode ser especificada se o host não tiver sido especificado"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"A string de consulta n\u00e3o pode ser especificada no caminho nem na string de consulta"_s)
+			$of(u"A string de consulta não pode ser especificada no caminho nem na string de consulta"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"O fragmento n\u00e3o pode ser especificado no caminho nem no fragmento"_s)
+			$of(u"O fragmento não pode ser especificado no caminho nem no fragmento"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"N\u00e3o \u00e9 poss\u00edvel inicializar o URI com par\u00e2metros vazios"_s)
+			$of(u"Não é possível inicializar o URI com parâmetros vazios"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_METHOD_NOT_SUPPORTED),
-			$of(u"M\u00e9todo ainda n\u00e3o suportado "_s)
+			$of(u"Método ainda não suportado "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"IncrementalSAXSource_Filter atualmente n\u00e3o reinicializ\u00e1vel"_s)
+			$of(u"IncrementalSAXSource_Filter atualmente não reinicializável"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader n\u00e3o anterior \u00e0 solicita\u00e7\u00e3o de startParse"_s)
+			$of(u"XMLReader não anterior à solicitação de startParse"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"Transversor de eixo n\u00e3o suportado: {0}"_s)
+			$of(u"Transversor de eixo não suportado: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
@@ -573,7 +573,7 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_LOCATION_UNKNOWN),
-			$of(u"Localiza\u00e7\u00e3o de erro desconhecida"_s)
+			$of(u"Localização de erro desconhecida"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_PREFIX_MUST_RESOLVE),
@@ -581,67 +581,67 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"createDocument() n\u00e3o suportado no XPathContext!"_s)
+			$of(u"createDocument() não suportado no XPathContext!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"O filho do atributo n\u00e3o tem um documento do propriet\u00e1rio!"_s)
+			$of(u"O filho do atributo não tem um documento do proprietário!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"O filho do atributo n\u00e3o tem um elemento do documento do propriet\u00e1rio!"_s)
+			$of(u"O filho do atributo não tem um elemento do documento do proprietário!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"Advert\u00eancia: n\u00e3o pode haver texto antes do elemento do documento! Ignorando..."_s)
+			$of(u"Advertência: não pode haver texto antes do elemento do documento! Ignorando..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"N\u00e3o pode ter mais de uma raiz em um DOM!"_s)
+			$of(u"Não pode ter mais de uma raiz em um DOM!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ARG_LOCALNAME_NULL),
-			$of(u"O argumento \'localName\' \u00e9 nulo"_s)
+			$of(u"O argumento \'localName\' é nulo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ARG_LOCALNAME_INVALID),
-			$of(u"Localname em QNAME deve ser um NCName v\u00e1lido"_s)
+			$of(u"Localname em QNAME deve ser um NCName válido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ARG_PREFIX_INVALID),
-			$of(u"O prefixo em QNAME deve ser um NCName v\u00e1lido"_s)
+			$of(u"O prefixo em QNAME deve ser um NCName válido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NAME_CANT_START_WITH_COLON),
-			$of(u"O nome n\u00e3o pode come\u00e7ar com dois pontos"_s)
+			$of(u"O nome não pode começar com dois pontos"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"O par\u00e2metro para createMessage estava fora dos limites"_s)
+			$of(u"O parâmetro para createMessage estava fora dos limites"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Exce\u00e7\u00e3o gerada durante a chamada messageFormat"_s)
+			$of(u"Exceção gerada durante a chamada messageFormat"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"N\u00b0 da Linha"_s)
+			$of(u"N° da Linha"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"N\u00b0 da Coluna"_s)
+			$of(u"N° da Coluna"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"A classe \'\'{0}\'\' do serializador n\u00e3o implementa org.xml.sax.ContentHandler."_s)
+			$of(u"A classe \'\'{0}\'\' do serializador não implementa org.xml.sax.ContentHandler."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"N\u00e3o foi poss\u00edvel encontrar o recurso [ {0} ].\n {1}"_s)
+			$of(u"Não foi possível encontrar o recurso [ {0} ].\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"O recurso [ {0} ] n\u00e3o foi carregado: {1} \n {2} \t {3}"_s)
+			$of(u"O recurso [ {0} ] não foi carregado: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_BUFFER_SIZE_LESSTHAN_ZERO),
@@ -649,7 +649,7 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Foi detectado um substituto de UTF-16 inv\u00e1lido: {0} ?"_s)
+			$of(u"Foi detectado um substituto de UTF-16 inválido: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_OIERROR),
@@ -657,11 +657,11 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"N\u00e3o \u00e9 poss\u00edvel adicionar o atributo {0} depois dos n\u00f3s filhos ou antes que um elemento seja produzido. O atributo ser\u00e1 ignorado."_s)
+			$of(u"Não é possível adicionar o atributo {0} depois dos nós filhos ou antes que um elemento seja produzido. O atributo será ignorado."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_NAMESPACE_PREFIX),
-			$of(u"O namespace do prefixo \'\'{0}\'\' n\u00e3o foi declarado."_s)
+			$of(u"O namespace do prefixo \'\'{0}\'\' não foi declarado."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_STRAY_ATTRIBUTE),
@@ -669,19 +669,19 @@ void clinit$XMLErrorResources_pt_BR($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_STRAY_NAMESPACE),
-			$of(u"Declara\u00e7\u00e3o de namespace \'\'{0}\'\'=\'\'{1}\'\' fora do elemento."_s)
+			$of(u"Declaração de namespace \'\'{0}\'\'=\'\'{1}\'\' fora do elemento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"N\u00e3o foi poss\u00edvel carregar \'\'{0}\'\' (verificar CLASSPATH); usando agora apenas os padr\u00f5es"_s)
+			$of(u"Não foi possível carregar \'\'{0}\'\' (verificar CLASSPATH); usando agora apenas os padrões"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_ILLEGAL_CHARACTER),
-			$of(u"Tentativa de exibir um caractere de valor integral {0} que n\u00e3o est\u00e1 representado na codifica\u00e7\u00e3o de sa\u00edda especificada de {1}."_s)
+			$of(u"Tentativa de exibir um caractere de valor integral {0} que não está representado na codificação de saída especificada de {1}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_pt_BR::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"N\u00e3o foi poss\u00edvel carregar o arquivo de propriedade \'\'{0}\'\' para o m\u00e9todo de sa\u00edda \'\'{1}\'\' (verificar CLASSPATH)"_s)
+			$of(u"Não foi possível carregar o arquivo de propriedade \'\'{0}\'\' para o método de saída \'\'{1}\'\' (verificar CLASSPATH)"_s)
 		})
 	}));
 }

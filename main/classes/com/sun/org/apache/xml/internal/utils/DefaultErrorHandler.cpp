@@ -226,10 +226,10 @@ void DefaultErrorHandler::printLocation($PrintWriter* pw, $Throwable* exception)
 		$var($String, id, (nullptr != locator->getPublicId()) ? locator->getPublicId() : (nullptr != locator->getSystemId()) ? locator->getSystemId() : $XMLMessages::createXMLMessage($XMLErrorResources::ER_SYSTEMID_UNKNOWN, nullptr));
 		$var($String, var$4, $$str({id, "; "_s, $($XMLMessages::createXMLMessage("line"_s, nullptr))}));
 		$var($String, var$3, $$concat(var$4, $$str(locator->getLineNumber())));
-		$var($String, var$2, $$concat(var$3, "; "));
+		$var($String, var$2, $$concat(var$3, "; "_s));
 		$var($String, var$1, $$concat(var$2, $($XMLMessages::createXMLMessage("column"_s, nullptr))));
 		$var($String, var$0, $$concat(var$1, $$str(locator->getColumnNumber())));
-		$nc(pw)->print($$concat(var$0, "; "));
+		$nc(pw)->print($$concat(var$0, "; "_s));
 	} else {
 		$init($XMLErrorResources);
 		$nc(pw)->print($$str({"("_s, $($XMLMessages::createXMLMessage($XMLErrorResources::ER_LOCATION_UNKNOWN, nullptr)), ")"_s}));

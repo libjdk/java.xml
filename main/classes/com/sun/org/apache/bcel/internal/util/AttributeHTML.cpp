@@ -153,11 +153,11 @@ void AttributeHTML::writeAttribute($Attribute* attribute, $String* anchor, int32
 				$assign(c, $cast($Code, attribute));
 				$var($String, var$5, $$str({"<UL><LI>Maximum stack size = "_s, $$str($nc(c)->getMaxStack()), "</LI>\n<LI>Number of local variables = "_s}));
 				$var($String, var$4, $$concat(var$5, $$str(c->getMaxLocals())));
-				$var($String, var$3, $$concat(var$4, "</LI>\n<LI><A HREF=\""));
+				$var($String, var$3, $$concat(var$4, "</LI>\n<LI><A HREF=\""_s));
 				$var($String, var$2, $$concat(var$3, this->class_name));
-				$var($String, var$1, $$concat(var$2, "_code.html#method"));
+				$var($String, var$1, $$concat(var$2, "_code.html#method"_s));
 				$var($String, var$0, $$concat(var$1, $$str(method_number)));
-				$nc(this->file)->print($$concat(var$0, "\" TARGET=Code>Byte code</A></LI></UL>\n"));
+				$nc(this->file)->print($$concat(var$0, "\" TARGET=Code>Byte code</A></LI></UL>\n"_s));
 				$assign(ce, $nc(c)->getExceptionTable());
 				len = $nc(ce)->length;
 				if (len > 0) {
@@ -178,9 +178,9 @@ void AttributeHTML::writeAttribute($Attribute* attribute, $String* anchor, int32
 								}
 								$var($String, var$9, $$str({"<BR>(Ranging from lines "_s, $(codeLink(cex->getStartPC(), method_number)), " to "_s}));
 								$var($String, var$8, $$concat(var$9, $(codeLink(cex->getEndPC(), method_number))));
-								$var($String, var$7, $$concat(var$8, ", handled at line "));
+								$var($String, var$7, $$concat(var$8, ", handled at line "_s));
 								$var($String, var$6, $$concat(var$7, $(codeLink(cex->getHandlerPC(), method_number))));
-								$nc(this->file)->print($$concat(var$6, ")</LI>"));
+								$nc(this->file)->print($$concat(var$6, ")</LI>"_s));
 							}
 						}
 					}
@@ -225,7 +225,7 @@ void AttributeHTML::writeAttribute($Attribute* attribute, $String* anchor, int32
 				for (int32_t i = 0; i < $nc(line_numbers)->length; ++i) {
 					$var($String, var$11, $$str({"("_s, $$str($nc(line_numbers->get(i))->getStartPC()), ",&nbsp;"_s}));
 					$var($String, var$10, $$concat(var$11, $$str($nc(line_numbers->get(i))->getLineNumber())));
-					$nc(this->file)->print($$concat(var$10, ")"));
+					$nc(this->file)->print($$concat(var$10, ")"_s));
 					if (i < line_numbers->length - 1) {
 						$nc(this->file)->print(", "_s);
 					}
@@ -250,25 +250,25 @@ void AttributeHTML::writeAttribute($Attribute* attribute, $String* anchor, int32
 							int32_t end = start + var->getLength();
 							$var($String, var$31, $$str({"<LI>"_s, $($Class2HTML::referenceType(signature)), "&nbsp;<B>"_s}));
 							$var($String, var$30, $$concat(var$31, $(var->getName())));
-							$var($String, var$29, $$concat(var$30, "</B> in slot %"));
+							$var($String, var$29, $$concat(var$30, "</B> in slot %"_s));
 							$var($String, var$28, $$concat(var$29, $$str(var->getIndex())));
-							$var($String, var$27, $$concat(var$28, "<BR>Valid from lines <A HREF=\""));
+							$var($String, var$27, $$concat(var$28, "<BR>Valid from lines <A HREF=\""_s));
 							$var($String, var$26, $$concat(var$27, this->class_name));
-							$var($String, var$25, $$concat(var$26, "_code.html#code"));
+							$var($String, var$25, $$concat(var$26, "_code.html#code"_s));
 							$var($String, var$24, $$concat(var$25, $$str(method_number)));
-							$var($String, var$23, $$concat(var$24, "@"));
+							$var($String, var$23, $$concat(var$24, "@"_s));
 							$var($String, var$22, $$concat(var$23, $$str(start)));
-							$var($String, var$21, $$concat(var$22, "\" TARGET=Code>"));
+							$var($String, var$21, $$concat(var$22, "\" TARGET=Code>"_s));
 							$var($String, var$20, $$concat(var$21, $$str(start)));
-							$var($String, var$19, $$concat(var$20, "</A> to <A HREF=\""));
+							$var($String, var$19, $$concat(var$20, "</A> to <A HREF=\""_s));
 							$var($String, var$18, $$concat(var$19, this->class_name));
-							$var($String, var$17, $$concat(var$18, "_code.html#code"));
+							$var($String, var$17, $$concat(var$18, "_code.html#code"_s));
 							$var($String, var$16, $$concat(var$17, $$str(method_number)));
-							$var($String, var$15, $$concat(var$16, "@"));
+							$var($String, var$15, $$concat(var$16, "@"_s));
 							$var($String, var$14, $$concat(var$15, $$str(end)));
-							$var($String, var$13, $$concat(var$14, "\" TARGET=Code>"));
+							$var($String, var$13, $$concat(var$14, "\" TARGET=Code>"_s));
 							$var($String, var$12, $$concat(var$13, $$str(end)));
-							$nc(this->file)->println($$concat(var$12, "</A></LI>"));
+							$nc(this->file)->println($$concat(var$12, "</A></LI>"_s));
 						}
 					}
 				}
@@ -297,9 +297,9 @@ void AttributeHTML::writeAttribute($Attribute* attribute, $String* anchor, int32
 							$assign(access, $Utility::accessToString(classe->getInnerAccessFlags()));
 							$var($String, var$35, $$str({"<LI><FONT COLOR=\"#FF0000\">"_s, access, "</FONT> "_s, $($nc(this->constant_html)->referenceConstant(classe->getInnerClassIndex())), " in&nbsp;class "_s}));
 							$var($String, var$34, $$concat(var$35, $($nc(this->constant_html)->referenceConstant(classe->getOuterClassIndex()))));
-							$var($String, var$33, $$concat(var$34, " named "));
+							$var($String, var$33, $$concat(var$34, " named "_s));
 							$var($String, var$32, $$concat(var$33, name));
-							$nc(this->file)->print($$concat(var$32, "</LI>\n"));
+							$nc(this->file)->print($$concat(var$32, "</LI>\n"_s));
 						}
 					}
 				}

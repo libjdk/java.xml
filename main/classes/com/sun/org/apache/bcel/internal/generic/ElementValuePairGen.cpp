@@ -111,7 +111,7 @@ $String* ElementValuePairGen::toString() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"ElementValuePair:["_s, $(getNameString()), "="_s}));
 	$var($String, var$0, $$concat(var$1, $($nc(this->value)->stringifyValue())));
-	return $concat(var$0, "]");
+	return $concat(var$0, "]"_s);
 }
 
 ElementValuePairGen::ElementValuePairGen() {

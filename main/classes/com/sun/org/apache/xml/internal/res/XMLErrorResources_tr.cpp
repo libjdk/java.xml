@@ -361,71 +361,71 @@ void clinit$XMLErrorResources_tr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"\u0130\u015flev desteklenmiyor!"_s)
+			$of(u"İşlev desteklenmiyor!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"Nedenin \u00fczerine yaz\u0131lamaz"_s)
+			$of(u"Nedenin üzerine yazılamaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_DEFAULT_IMPL),
-			$of(u"Varsay\u0131lan uygulama bulunamad\u0131"_s)
+			$of(u"Varsayılan uygulama bulunamadı"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0}) \u015fu an desteklenmiyor"_s)
+			$of(u"ChunkedIntArray({0}) şu an desteklenmiyor"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"G\u00f6reli konum yuvadan b\u00fcy\u00fck"_s)
+			$of(u"Göreli konum yuvadan büyük"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Coroutine kullan\u0131lam\u0131yor, id={0}"_s)
+			$of(u"Coroutine kullanılamıyor, id={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager co_exit() iste\u011fi ald\u0131"_s)
+			$of(u"CoroutineManager co_exit() isteği aldı"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COJOINROUTINESET_FAILED),
-			$of(u"co_joinCoroutineSet() ba\u015far\u0131s\u0131z oldu"_s)
+			$of(u"co_joinCoroutineSet() başarısız oldu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COROUTINE_PARAM),
-			$of(u"Coroutine de\u011fi\u015ftirgesi hatas\u0131 ({0})"_s)
+			$of(u"Coroutine değiştirgesi hatası ({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\nBEKLENMEYEN: Parser doTerminate yan\u0131t\u0131 {0}"_s)
+			$of(u"\nBEKLENMEYEN: Parser doTerminate yanıtı {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"Ayr\u0131\u015ft\u0131rma s\u0131ras\u0131nda parse \u00e7a\u011fr\u0131lamaz"_s)
+			$of(u"Ayrıştırma sırasında parse çağrılamaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Hata: {0} ekseni i\u00e7in tip atanm\u0131\u015f yineleyici ger\u00e7ekle\u015ftirilmedi"_s)
+			$of(u"Hata: {0} ekseni için tip atanmış yineleyici gerçekleştirilmedi"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Hata: {0} ekseni i\u00e7in yineleyici ger\u00e7ekle\u015ftirilmedi"_s)
+			$of(u"Hata: {0} ekseni için yineleyici gerçekleştirilmedi"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"Yineleyici e\u015fkopyas\u0131 desteklenmiyor"_s)
+			$of(u"Yineleyici eşkopyası desteklenmiyor"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"Bilinmeyen eksen dola\u015fma tipi: {0}"_s)
+			$of(u"Bilinmeyen eksen dolaşma tipi: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_AXIS_NOT_SUPPORTED),
-			$of(u"Eksen dola\u015f\u0131c\u0131 desteklenmiyor: {0}"_s)
+			$of(u"Eksen dolaşıcı desteklenmiyor: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_DTMIDS_AVAIL),
-			$of(u"Kullan\u0131labilecek ba\u015fka DTM tan\u0131t\u0131c\u0131s\u0131 yok"_s)
+			$of(u"Kullanılabilecek başka DTM tanıtıcısı yok"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NOT_SUPPORTED),
@@ -433,99 +433,99 @@ void clinit$XMLErrorResources_tr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NODE_NON_NULL),
-			$of(u"getDTMHandleFromNode i\u00e7in d\u00fc\u011f\u00fcm bo\u015f de\u011ferli olmamal\u0131d\u0131r"_s)
+			$of(u"getDTMHandleFromNode için düğüm boş değerli olmamalıdır"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"D\u00fc\u011f\u00fcm tan\u0131t\u0131c\u0131 de\u011fere \u00e7\u00f6z\u00fclemedi"_s)
+			$of(u"Düğüm tanıtıcı değere çözülemedi"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"Ayr\u0131\u015ft\u0131rma s\u0131ras\u0131nda startParse \u00e7a\u011fr\u0131lamaz"_s)
+			$of(u"Ayrıştırma sırasında startParse çağrılamaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse i\u00e7in bo\u015f de\u011ferli olmayan SAXParser gerekiyor"_s)
+			$of(u"startParse için boş değerli olmayan SAXParser gerekiyor"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COULD_NOT_INIT_PARSER),
-			$of(u"Ayr\u0131\u015ft\u0131r\u0131c\u0131 bununla kullan\u0131ma haz\u0131rlanamad\u0131"_s)
+			$of(u"Ayrıştırıcı bununla kullanıma hazırlanamadı"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_EXCEPTION_CREATING_POOL),
-			$of(u"Havuz i\u00e7in yeni \u00f6rnek yarat\u0131l\u0131rken kural d\u0131\u015f\u0131 durum"_s)
+			$of(u"Havuz için yeni örnek yaratılırken kural dışı durum"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"Yol ge\u00e7ersiz ka\u00e7\u0131\u015f dizisi i\u00e7eriyor"_s)
+			$of(u"Yol geçersiz kaçış dizisi içeriyor"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_SCHEME_REQUIRED),
-			$of(u"\u015eema gerekli!"_s)
+			$of(u"Şema gerekli!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_SCHEME_IN_URI),
-			$of(u"URI i\u00e7inde \u015fema bulunamad\u0131: {0}"_s)
+			$of(u"URI içinde şema bulunamadı: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_SCHEME_INURI),
-			$of(u"URI i\u00e7inde \u015fema bulunamad\u0131"_s)
+			$of(u"URI içinde şema bulunamadı"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_PATH_INVALID_CHAR),
-			$of(u"Yol ge\u00e7ersiz karakter i\u00e7eriyor: {0}"_s)
+			$of(u"Yol geçersiz karakter içeriyor: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"Bo\u015f de\u011ferli dizgiden \u015fema tan\u0131mlanamaz"_s)
+			$of(u"Boş değerli dizgiden şema tanımlanamaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"\u015eema uyumlu de\u011fil."_s)
+			$of(u"Şema uyumlu değil."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"Anasistem do\u011fru bi\u00e7imli bir adres de\u011fil"_s)
+			$of(u"Anasistem doğru biçimli bir adres değil"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_PORT_WHEN_HOST_NULL),
-			$of(u"Anasistem bo\u015f de\u011ferliyken kap\u0131 tan\u0131mlanamaz"_s)
+			$of(u"Anasistem boş değerliyken kapı tanımlanamaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_INVALID_PORT),
-			$of(u"Kap\u0131 numaras\u0131 ge\u00e7ersiz"_s)
+			$of(u"Kapı numarası geçersiz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Par\u00e7a yaln\u0131zca soysal URI i\u00e7in tan\u0131mlanabilir"_s)
+			$of(u"Parça yalnızca soysal URI için tanımlanabilir"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"Yol bo\u015f de\u011ferliyken par\u00e7a tan\u0131mlanamaz"_s)
+			$of(u"Yol boş değerliyken parça tanımlanamaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_FRAG_INVALID_CHAR),
-			$of(u"Par\u00e7a ge\u00e7ersiz karakter i\u00e7eriyor"_s)
+			$of(u"Parça geçersiz karakter içeriyor"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_PARSER_IN_USE),
-			$of(u"Ayr\u0131\u015ft\u0131r\u0131c\u0131 kullan\u0131mda"_s)
+			$of(u"Ayrıştırıcı kullanımda"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"Ayr\u0131\u015ft\u0131rma s\u0131ras\u0131nda {0} {1} de\u011fi\u015ftirilemez"_s)
+			$of(u"Ayrıştırma sırasında {0} {1} değiştirilemez"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"\u00d6znedenselli\u011fe izin verilmez"_s)
+			$of(u"Öznedenselliğe izin verilmez"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Anasistem belirtilmediyse kullan\u0131c\u0131 bilgisi belirtilemez"_s)
+			$of(u"Anasistem belirtilmediyse kullanıcı bilgisi belirtilemez"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_PORT_IF_NO_HOST),
-			$of(u"Anasistem belirtilmediyse kap\u0131 belirtilemez"_s)
+			$of(u"Anasistem belirtilmediyse kapı belirtilemez"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_QUERY_STRING_IN_PATH),
@@ -533,31 +533,31 @@ void clinit$XMLErrorResources_tr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Par\u00e7a hem yolda, hem de par\u00e7ada belirtilemez"_s)
+			$of(u"Parça hem yolda, hem de parçada belirtilemez"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"Bo\u015f de\u011fi\u015ftirgelerle URI kullan\u0131ma haz\u0131rlanamaz"_s)
+			$of(u"Boş değiştirgelerle URI kullanıma hazırlanamaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_METHOD_NOT_SUPPORTED),
-			$of(u"Y\u00f6ntem hen\u00fcz desteklenmiyor"_s)
+			$of(u"Yöntem henüz desteklenmiyor"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"IncrementalSAXSource_Filter \u015fu an yeniden ba\u015flat\u0131labilir durumda de\u011fil"_s)
+			$of(u"IncrementalSAXSource_Filter şu an yeniden başlatılabilir durumda değil"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader, startParse iste\u011finden \u00f6nce olmaz"_s)
+			$of(u"XMLReader, startParse isteğinden önce olmaz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"Eksen dola\u015f\u0131c\u0131 desteklenmiyor: {0}"_s)
+			$of(u"Eksen dolaşıcı desteklenmiyor: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
-			$of(u"ListingErrorHandler bo\u015f de\u011ferli PrintWriter ile yarat\u0131ld\u0131!"_s)
+			$of(u"ListingErrorHandler boş değerli PrintWriter ile yaratıldı!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_SYSTEMID_UNKNOWN),
@@ -569,51 +569,51 @@ void clinit$XMLErrorResources_tr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\u00d6nek bir ad alan\u0131na \u00e7\u00f6z\u00fclmelidir: {0}"_s)
+			$of(u"Önek bir ad alanına çözülmelidir: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"XPathContext i\u00e7inde createDocument() desteklenmiyor!"_s)
+			$of(u"XPathContext içinde createDocument() desteklenmiyor!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"\u00d6zniteli\u011fin alt \u00f6\u011fesinin iye belgesi yok!"_s)
+			$of(u"Özniteliğin alt öğesinin iye belgesi yok!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"\u00d6zniteli\u011fin alt \u00f6\u011fesinin iye belge \u00f6\u011fesi yok!"_s)
+			$of(u"Özniteliğin alt öğesinin iye belge öğesi yok!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"Uyar\u0131: Belge \u00f6\u011fesinden \u00f6nce metin \u00e7\u0131k\u0131\u015f\u0131 olamaz!  Yoksay\u0131l\u0131yor..."_s)
+			$of(u"Uyarı: Belge öğesinden önce metin çıkışı olamaz!  Yoksayılıyor..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"DOM \u00fczerinde birden fazla k\u00f6k olamaz!"_s)
+			$of(u"DOM üzerinde birden fazla kök olamaz!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_ARG_LOCALNAME_NULL),
-			$of(u"\'localName\' ba\u011f\u0131ms\u0131z de\u011fi\u015ftirgesi bo\u015f de\u011ferli"_s)
+			$of(u"\'localName\' bağımsız değiştirgesi boş değerli"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_ARG_LOCALNAME_INVALID),
-			$of(u"QNAME i\u00e7indeki yerel ad (localname) ge\u00e7erli bir NCName olmal\u0131d\u0131r"_s)
+			$of(u"QNAME içindeki yerel ad (localname) geçerli bir NCName olmalıdır"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_ARG_PREFIX_INVALID),
-			$of(u"QNAME i\u00e7indeki \u00f6nek ge\u00e7erli bir NCName olmal\u0131d\u0131r"_s)
+			$of(u"QNAME içindeki önek geçerli bir NCName olmalıdır"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage i\u00e7in kullan\u0131lan de\u011fi\u015ftirge s\u0131n\u0131rlar\u0131n d\u0131\u015f\u0131nda"_s)
+			$of(u"createMessage için kullanılan değiştirge sınırların dışında"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"messageFormat \u00e7a\u011fr\u0131s\u0131 s\u0131ras\u0131nda kural d\u0131\u015f\u0131 durum yay\u0131nland\u0131"_s)
+			$of(u"messageFormat çağrısı sırasında kural dışı durum yayınlandı"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"Sat\u0131r #"_s)
+			$of(u"Satır #"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
@@ -621,51 +621,51 @@ void clinit$XMLErrorResources_tr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"Diziselle\u015ftirici s\u0131n\u0131f\u0131 \'\'{0}\'\' org.xml.sax.ContentHandler i\u015flevini uygulam\u0131yor."_s)
+			$of(u"Diziselleştirici sınıfı \'\'{0}\'\' org.xml.sax.ContentHandler işlevini uygulamıyor."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"Kaynak [ {0} ] bulunamad\u0131.\n {1}"_s)
+			$of(u"Kaynak [ {0} ] bulunamadı.\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"Kaynak [ {0} ] y\u00fckleyemedi: {1} \n {2} \t {3}"_s)
+			$of(u"Kaynak [ {0} ] yükleyemedi: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"Arabellek b\u00fcy\u00fckl\u00fc\u011f\u00fc <=0"_s)
+			$of(u"Arabellek büyüklüğü <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_INVALID_UTF16_SURROGATE),
-			$of(u"UTF-16 yerine kullan\u0131lan de\u011fer ge\u00e7ersiz: {0} ?"_s)
+			$of(u"UTF-16 yerine kullanılan değer geçersiz: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_OIERROR),
-			$of(u"G\u00c7 hatas\u0131"_s)
+			$of(u"GÇ hatası"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Alt d\u00fc\u011f\u00fcmlerden sonra ya da bir \u00f6\u011fe \u00fcretilmeden \u00f6nce {0} \u00f6zniteli\u011fi eklenemez. \u00d6znitelik yoksay\u0131lacak."_s)
+			$of(u"Alt düğümlerden sonra ya da bir öğe üretilmeden önce {0} özniteliği eklenemez. Öznitelik yoksayılacak."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_NAMESPACE_PREFIX),
-			$of(u"\'\'{0}\'\' \u00f6nekine ili\u015fkin ad alan\u0131 bildirilmedi."_s)
+			$of(u"\'\'{0}\'\' önekine ilişkin ad alanı bildirilmedi."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_STRAY_ATTRIBUTE),
-			$of(u"\'\'{0}\'\' \u00f6zniteli\u011fi \u00f6\u011fenin d\u0131\u015f\u0131nda."_s)
+			$of(u"\'\'{0}\'\' özniteliği öğenin dışında."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_STRAY_NAMESPACE),
-			$of(u"\'\'{0}\'\'=\'\'{1}\'\' ad alan\u0131 bildirimi \u00f6\u011fenin d\u0131\u015f\u0131nda."_s)
+			$of(u"\'\'{0}\'\'=\'\'{1}\'\' ad alanı bildirimi öğenin dışında."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"\'\'{0}\'\' y\u00fcklenemedi (CLASSPATH de\u011fi\u015fkeninizi inceleyin), yaln\u0131zca varsay\u0131lanlar kullan\u0131l\u0131yor"_s)
+			$of(u"\'\'{0}\'\' yüklenemedi (CLASSPATH değişkeninizi inceleyin), yalnızca varsayılanlar kullanılıyor"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_tr::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"\'\'{1}\'\' \u00e7\u0131k\u0131\u015f y\u00f6ntemi i\u00e7in \'\'{0}\'\' \u00f6zellik dosyas\u0131 y\u00fcklenemedi (CLASSPATH de\u011fi\u015fkenini inceleyin)"_s)
+			$of(u"\'\'{1}\'\' çıkış yöntemi için \'\'{0}\'\' özellik dosyası yüklenemedi (CLASSPATH değişkenini inceleyin)"_s)
 		})
 	}));
 }

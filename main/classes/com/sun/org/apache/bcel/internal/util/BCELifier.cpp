@@ -166,12 +166,12 @@ void BCELifier::visitJavaClass($JavaClass* clazz) {
 	$nc(this->_out)->println($$str({"  public "_s, class_name, "Creator() {"_s}));
 	$var($String, var$5, $$str({"    _cg = new ClassGen(\""_s, ((""_s->equals(package_name)) ? class_name : $$str({package_name, "."_s, class_name})), "\", \""_s, super_name, "\", \""_s}));
 	$var($String, var$4, $$concat(var$5, $(clazz->getSourceFileName())));
-	$var($String, var$3, $$concat(var$4, "\", "));
+	$var($String, var$3, $$concat(var$4, "\", "_s));
 	$init($BCELifier$FLAGS);
 	$var($String, var$2, $$concat(var$3, $(printFlags(clazz->getAccessFlags(), $BCELifier$FLAGS::CLASS))));
-	$var($String, var$1, $$concat(var$2, ", new String[] { "));
+	$var($String, var$1, $$concat(var$2, ", new String[] { "_s));
 	$var($String, var$0, $$concat(var$1, inter));
-	$nc(this->_out)->println($$concat(var$0, " });"));
+	$nc(this->_out)->println($$concat(var$0, " });"_s));
 	$nc(this->_out)->println($$str({"    _cg.setMajor("_s, $$str(clazz->getMajor()), ");"_s}));
 	$nc(this->_out)->println($$str({"    _cg.setMinor("_s, $$str(clazz->getMinor()), ");"_s}));
 	$nc(this->_out)->println();
@@ -239,9 +239,9 @@ void BCELifier::visitField($Field* field) {
 	$nc(this->_out)->println();
 	$var($String, var$3, $$str({"    field = new FieldGen("_s, $(printFlags($nc(field)->getAccessFlags())), ", "_s}));
 	$var($String, var$2, $$concat(var$3, $(printType($($nc(field)->getSignature())))));
-	$var($String, var$1, $$concat(var$2, ", \""));
+	$var($String, var$1, $$concat(var$2, ", \""_s));
 	$var($String, var$0, $$concat(var$1, $($nc(field)->getName())));
-	$nc(this->_out)->println($$concat(var$0, "\", _cp);"));
+	$nc(this->_out)->println($$concat(var$0, "\", _cp);"_s));
 	$var($ConstantValue, cv, $nc(field)->getConstantValue());
 	if (cv != nullptr) {
 		$var($String, value, cv->toString());
@@ -257,15 +257,15 @@ void BCELifier::visitMethod($Method* method) {
 	$init($BCELifier$FLAGS);
 	$var($String, var$9, $$str({"    MethodGen method = new MethodGen("_s, $(printFlags($nc(method)->getAccessFlags(), $BCELifier$FLAGS::METHOD)), ", "_s}));
 	$var($String, var$8, $$concat(var$9, $(printType($(mg->getReturnType())))));
-	$var($String, var$7, $$concat(var$8, ", "));
+	$var($String, var$7, $$concat(var$8, ", "_s));
 	$var($String, var$6, $$concat(var$7, $(printArgumentTypes($(mg->getArgumentTypes())))));
-	$var($String, var$5, $$concat(var$6, ", new String[] { "));
+	$var($String, var$5, $$concat(var$6, ", new String[] { "_s));
 	$var($String, var$4, $$concat(var$5, $($Utility::printArray($(mg->getArgumentNames()), false, true))));
-	$var($String, var$3, $$concat(var$4, " }, \""));
+	$var($String, var$3, $$concat(var$4, " }, \""_s));
 	$var($String, var$2, $$concat(var$3, $($nc(method)->getName())));
-	$var($String, var$1, $$concat(var$2, "\", \""));
+	$var($String, var$1, $$concat(var$2, "\", \""_s));
 	$var($String, var$0, $$concat(var$1, $($nc(this->_clazz)->getClassName())));
-	$nc(this->_out)->println($$concat(var$0, "\", il, _cp);"));
+	$nc(this->_out)->println($$concat(var$0, "\", il, _cp);"_s));
 	$nc(this->_out)->println();
 	$var($BCELFactory, factory, $new($BCELFactory, mg, this->_out));
 	factory->start();
@@ -360,7 +360,7 @@ $String* BCELifier::printType($String* signature) {
 		$var($ArrayType, at, $cast($ArrayType, type));
 		$var($String, var$1, $$str({"new ArrayType("_s, $(printType($(at->getBasicType()))), ", "_s}));
 		$var($String, var$0, $$concat(var$1, $$str(at->getDimensions())));
-		return $concat(var$0, ")");
+		return $concat(var$0, ")"_s);
 	} else {
 		return $str({"new ObjectType(\""_s, $($Utility::signatureToString(signature, false)), "\")"_s});
 	}

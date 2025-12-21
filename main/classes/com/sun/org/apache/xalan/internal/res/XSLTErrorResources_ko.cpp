@@ -799,411 +799,411 @@ $ObjectArray2* XSLTErrorResources_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_CURLYBRACE),
-			$of(u"\uc624\ub958: \ud45c\ud604\uc2dd\uc5d0\ub294 \'{\'\uac00 \ud3ec\ud568\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"오류: 표현식에는 \'{\'가 포함될 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ILLEGAL_ATTRIBUTE),
-			$of(u"{0}\uc5d0 \uc798\ubabb\ub41c \uc18d\uc131\uc774 \uc788\uc74c: {1}"_s)
+			$of(u"{0}에 잘못된 속성이 있음: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_SOURCENODE_APPLYIMPORTS),
-			$of(u"xsl:apply-imports\uc758 sourceNode\uac00 \ub110\uc785\ub2c8\ub2e4!"_s)
+			$of(u"xsl:apply-imports의 sourceNode가 널입니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_ADD),
-			$of(u"{1}\uc5d0 {0}\uc744(\ub97c) \ucd94\uac00\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{1}에 {0}을(를) 추가할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_SOURCENODE_HANDLEAPPLYTEMPLATES),
-			$of(u"handleApplyTemplatesInstruction\uc758 sourceNode\uac00 \ub110\uc785\ub2c8\ub2e4!"_s)
+			$of(u"handleApplyTemplatesInstruction의 sourceNode가 널입니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_NAME_ATTRIB),
-			$of(u"{0}\uc5d0\ub294 name \uc18d\uc131\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}에는 name 속성이 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_TEMPLATE_NOT_FOUND),
-			$of(u"\uba85\uba85\ub41c \ud15c\ud50c\ub9ac\ud2b8\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"명명된 템플리트를 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_RESOLVE_NAME_AVT),
-			$of(u"xsl:call-template\uc5d0\uc11c \uc774\ub984 AVT\ub97c \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"xsl:call-template에서 이름 AVT를 분석할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_REQUIRES_ATTRIB),
-			$of(u"{0}\uc5d0 \uc18d\uc131\uc774 \ud544\uc694\ud568: {1}"_s)
+			$of(u"{0}에 속성이 필요함: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MUST_HAVE_TEST_ATTRIB),
-			$of(u"{0}\uc5d0\ub294 \'\'test\'\' \uc18d\uc131\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}에는 \'\'test\'\' 속성이 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_BAD_VAL_ON_LEVEL_ATTRIB),
-			$of(u"level \uc18d\uc131\uc5d0 \uc798\ubabb\ub41c \uac12\uc774 \uc788\uc74c: {0}"_s)
+			$of(u"level 속성에 잘못된 값이 있음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
-			$of(u"processing-instruction \uc774\ub984\uc740 \'xml\'\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"processing-instruction 이름은 \'xml\'일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"processing-instruction \uc774\ub984\uc740 \uc801\ud569\ud55c NCName\uc774\uc5b4\uc57c \ud568: {0}"_s)
+			$of(u"processing-instruction 이름은 적합한 NCName이어야 함: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NEED_MATCH_ATTRIB),
-			$of(u"{0}\uc5d0 \ubaa8\ub4dc\uac00 \uc788\uc744 \uacbd\uc6b0 match \uc18d\uc131\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}에 모드가 있을 경우 match 속성이 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NEED_NAME_OR_MATCH_ATTRIB),
-			$of(u"{0}\uc5d0\ub294 name \ub610\ub294 match \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}에는 name 또는 match 속성이 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_RESOLVE_NSPREFIX),
-			$of(u"\ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc811\ub450\uc5b4\ub97c \ubd84\uc11d\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"네임스페이스 접두어를 분석할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ILLEGAL_VALUE),
-			$of(u"xml:space\uc5d0 \uc798\ubabb\ub41c \uac12\uc774 \uc788\uc74c: {0}"_s)
+			$of(u"xml:space에 잘못된 값이 있음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_OWNERDOC),
-			$of(u"\ud558\uc704 \ub178\ub4dc\uc5d0 \uc18c\uc720\uc790 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"하위 노드에 소유자 문서가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ELEMTEMPLATEELEM_ERR),
-			$of(u"ElemTemplateElement \uc624\ub958: {0}"_s)
+			$of(u"ElemTemplateElement 오류: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_CHILD),
-			$of(u"\ub110 \ud558\uc704\ub97c \ucd94\uac00\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911\uc785\ub2c8\ub2e4!"_s)
+			$of(u"널 하위를 추가하려고 시도하는 중입니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NEED_SELECT_ATTRIB),
-			$of(u"{0}\uc5d0\ub294 select \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}에는 select 속성이 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NEED_TEST_ATTRIB),
-			$of(u"xsl:when\uc5d0\ub294 \'test\' \uc18d\uc131\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"xsl:when에는 \'test\' 속성이 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NEED_NAME_ATTRIB),
-			$of(u"xsl:with-param\uc5d0\ub294 \'name\' \uc18d\uc131\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"xsl:with-param에는 \'name\' 속성이 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_CONTEXT_OWNERDOC),
-			$of(u"\ucee8\ud14d\uc2a4\ud2b8\uc5d0 \uc18c\uc720\uc790 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"컨텍스트에 소유자 문서가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_COULD_NOT_CREATE_XML_PROC_LIAISON),
-			$of(u"XML TransformerFactory \uc5f0\uacb0\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"XML TransformerFactory 연결을 생성할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESS_NOT_SUCCESSFUL),
-			$of(u"Xalan: \ud504\ub85c\uc138\uc2a4\ub97c \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Xalan: 프로세스를 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NOT_SUCCESSFUL),
-			$of(u"Xalan: \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Xalan: 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"\uc778\ucf54\ub529\uc774 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}"_s)
+			$of(u"인코딩이 지원되지 않음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_COULD_NOT_CREATE_TRACELISTENER),
-			$of(u"TraceListener\ub97c \uc0dd\uc131\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"TraceListener를 생성할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_KEY_REQUIRES_NAME_ATTRIB),
-			$of(u"xsl:key\uc5d0\ub294 \'name\' \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"xsl:key에는 \'name\' 속성이 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_KEY_REQUIRES_MATCH_ATTRIB),
-			$of(u"xsl:key\uc5d0\ub294 \'match\' \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"xsl:key에는 \'match\' 속성이 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_KEY_REQUIRES_USE_ATTRIB),
-			$of(u"xsl:key\uc5d0\ub294 \'use\' \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"xsl:key에는 \'use\' 속성이 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_REQUIRES_ELEMENTS_ATTRIB),
-			$of(u"(StylesheetHandler) {0}\uc5d0\ub294 \'\'elements\'\' \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) {0}에는 \'\'elements\'\' 속성이 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MISSING_PREFIX_ATTRIB),
-			$of(u"(StylesheetHandler) {0} \uc18d\uc131 \'\'prefix\'\'\uac00 \ub204\ub77d\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"(StylesheetHandler) {0} 속성 \'\'prefix\'\'가 누락되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_BAD_STYLESHEET_URL),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 URL\uc774 \uc798\ubabb\ub428: {0}"_s)
+			$of(u"스타일시트 URL이 잘못됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FILE_NOT_FOUND),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ud30c\uc77c\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"스타일시트 파일을 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_IOEXCEPTION),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ud30c\uc77c\uc5d0 IO \uc608\uc678\uc0ac\ud56d \ubc1c\uc0dd: {0}"_s)
+			$of(u"스타일시트 파일에 IO 예외사항 발생: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_HREF_ATTRIB),
-			$of(u"(StylesheetHandler) {0}\uc5d0 \ub300\ud55c href \uc18d\uc131\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"(StylesheetHandler) {0}에 대한 href 속성을 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_STYLESHEET_INCLUDES_ITSELF),
-			$of(u"(StylesheetHandler) {0}\uc5d0 \uc9c1\uc811 \ub610\ub294 \uac04\uc811\uc801\uc73c\ub85c \uc790\uc2e0\uc774 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) {0}에 직접 또는 간접적으로 자신이 포함되어 있습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESSINCLUDE_ERROR),
-			$of(u"StylesheetHandler.processInclude \uc624\ub958, {0}"_s)
+			$of(u"StylesheetHandler.processInclude 오류, {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MISSING_LANG_ATTRIB),
-			$of(u"(StylesheetHandler) {0} \uc18d\uc131 \'\'lang\'\'\uac00 \ub204\ub77d\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"(StylesheetHandler) {0} 속성 \'\'lang\'\'가 누락되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MISSING_CONTAINER_ELEMENT_COMPONENT),
-			$of(u"(StylesheetHandler) {0} \uc694\uc18c\uc758 \uc704\uce58\uac00 \uc798\ubabb\ub41c \uac83 \uac19\uc2b5\ub2c8\ub2e4. \ucee8\ud14c\uc774\ub108 \uc694\uc18c \'\'component\'\'\uac00 \ub204\ub77d\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"(StylesheetHandler) {0} 요소의 위치가 잘못된 것 같습니다. 컨테이너 요소 \'\'component\'\'가 누락되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CAN_ONLY_OUTPUT_TO_ELEMENT),
-			$of(u"Element, DocumentFragment, Document \ub610\ub294 PrintWriter\uc5d0\ub9cc \ucd9c\ub825\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Element, DocumentFragment, Document 또는 PrintWriter에만 출력할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESS_ERROR),
-			$of(u"StylesheetRoot.process \uc624\ub958"_s)
+			$of(u"StylesheetRoot.process 오류"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_UNIMPLNODE_ERROR),
-			$of(u"UnImplNode \uc624\ub958: {0}"_s)
+			$of(u"UnImplNode 오류: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_SELECT_EXPRESSION),
-			$of(u"\uc624\ub958: xpath select \ud45c\ud604\uc2dd(-select)\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"오류: xpath select 표현식(-select)을 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_SERIALIZE_XSLPROCESSOR),
-			$of(u"XSLProcessor\ub97c \uc9c1\ub82c\ud654\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"XSLProcessor를 직렬화할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_INPUT_STYLESHEET),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \uc785\ub825\uac12\uc774 \uc9c0\uc815\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"스타일시트 입력값이 지정되지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FAILED_PROCESS_STYLESHEET),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ucc98\ub9ac\ub97c \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"스타일시트 처리를 실패했습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_COULDNT_PARSE_DOC),
-			$of(u"{0} \ubb38\uc11c\uc758 \uad6c\ubb38\uc744 \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"{0} 문서의 구문을 분석할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_COULDNT_FIND_FRAGMENT),
-			$of(u"\ubd80\ubd84\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"부분을 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NODE_NOT_ELEMENT),
-			$of(u"\ubd80\ubd84 \uc2dd\ubcc4\uc790\uac00 \uac00\ub9ac\ud0a8 \ub178\ub4dc\ub294 \uc694\uc18c\uac00 \uc544\ub2d8: {0}"_s)
+			$of(u"부분 식별자가 가리킨 노드는 요소가 아님: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FOREACH_NEED_MATCH_OR_NAME_ATTRIB),
-			$of(u"for-each\uc5d0\ub294 match \ub610\ub294 name \uc18d\uc131\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"for-each에는 match 또는 name 속성이 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_TEMPLATES_NEED_MATCH_OR_NAME_ATTRIB),
-			$of(u"templates\uc5d0\ub294 match \ub610\ub294 name \uc18d\uc131\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"templates에는 match 또는 name 속성이 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_CLONE_OF_DOCUMENT_FRAG),
-			$of(u"\ubb38\uc11c \ubd80\ubd84\uc758 \ubcf5\uc81c\ubcf8\uc774 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"문서 부분의 복제본이 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_CREATE_ITEM),
-			$of(u"\uacb0\uacfc \ud2b8\ub9ac\uc5d0 \ud56d\ubaa9\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"결과 트리에 항목을 생성할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XMLSPACE_ILLEGAL_VALUE),
-			$of(u"\uc18c\uc2a4 XML\uc758 xml:space\uc5d0 \uc798\ubabb\ub41c \uac12\uc774 \uc788\uc74c: {0}"_s)
+			$of(u"소스 XML의 xml:space에 잘못된 값이 있음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_XSLKEY_DECLARATION),
-			$of(u"{0}\uc5d0 \ub300\ud55c xsl:key \uc120\uc5b8\uc774 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"{0}에 대한 xsl:key 선언이 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_CREATE_URL),
-			$of(u"\uc624\ub958: {0}\uc5d0 \ub300\ud55c URL\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"오류: {0}에 대한 URL을 생성할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XSLFUNCTIONS_UNSUPPORTED),
-			$of(u"xsl:functions\ub294 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"xsl:functions는 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESSOR_ERROR),
-			$of(u"XSLT TransformerFactory \uc624\ub958"_s)
+			$of(u"XSLT TransformerFactory 오류"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NOT_ALLOWED_INSIDE_STYLESHEET),
-			$of(u"(StylesheetHandler) \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc5d0\uc11c\ub294 {0}\uc774(\uac00) \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) 스타일시트에서는 {0}이(가) 허용되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_RESULTNS_NOT_SUPPORTED),
-			$of(u"result-ns\ub294 \ub354 \uc774\uc0c1 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4! \ub300\uc2e0 xsl:output\uc744 \uc0ac\uc6a9\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"result-ns는 더 이상 지원되지 않습니다! 대신 xsl:output을 사용하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_DEFAULTSPACE_NOT_SUPPORTED),
-			$of(u"default-space\ub294 \ub354 \uc774\uc0c1 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4! \ub300\uc2e0 xsl:strip-space \ub610\ub294 xsl:preserve-space\ub97c \uc0ac\uc6a9\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"default-space는 더 이상 지원되지 않습니다! 대신 xsl:strip-space 또는 xsl:preserve-space를 사용하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INDENTRESULT_NOT_SUPPORTED),
-			$of(u"indent-result\ub294 \ub354 \uc774\uc0c1 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4! \ub300\uc2e0 xsl:output\uc744 \uc0ac\uc6a9\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"indent-result는 더 이상 지원되지 않습니다! 대신 xsl:output을 사용하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ILLEGAL_ATTRIB),
-			$of(u"(StylesheetHandler) {0}\uc5d0 \uc798\ubabb\ub41c \uc18d\uc131\uc774 \uc788\uc74c: {1}"_s)
+			$of(u"(StylesheetHandler) {0}에 잘못된 속성이 있음: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_UNKNOWN_XSL_ELEM),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 XSL \uc694\uc18c: {0}"_s)
+			$of(u"알 수 없는 XSL 요소: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_BAD_XSLSORT_USE),
-			$of(u"(StylesheetHandler) xsl:sort\ub294 xsl:apply-templates \ub610\ub294 xsl:for-each\uc640 \ud568\uaed8\ub9cc \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"(StylesheetHandler) xsl:sort는 xsl:apply-templates 또는 xsl:for-each와 함께만 사용할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MISPLACED_XSLWHEN),
-			$of(u"(StylesheetHandler) xsl:when\uc758 \uc704\uce58\uac00 \uc798\ubabb\ub418\uc5c8\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) xsl:when의 위치가 잘못되었습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XSLWHEN_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:when\uc774 xsl:choose\uc5d0 \uc758\ud574 \uc0c1\uc704\ub85c \uc9c0\uc815\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) xsl:when이 xsl:choose에 의해 상위로 지정되지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MISPLACED_XSLOTHERWISE),
-			$of(u"(StylesheetHandler) xsl:otherwise\uc758 \uc704\uce58\uac00 \uc798\ubabb\ub418\uc5c8\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) xsl:otherwise의 위치가 잘못되었습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XSLOTHERWISE_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:otherwise\uac00 xsl:choose\uc5d0 \uc758\ud574 \uc0c1\uc704\ub85c \uc9c0\uc815\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) xsl:otherwise가 xsl:choose에 의해 상위로 지정되지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NOT_ALLOWED_INSIDE_TEMPLATE),
-			$of(u"(StylesheetHandler) \ud15c\ud50c\ub9ac\ud2b8\uc5d0\uc11c\ub294 {0}\uc774(\uac00) \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) 템플리트에서는 {0}이(가) 허용되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_UNKNOWN_EXT_NS_PREFIX),
-			$of(u"(StylesheetHandler) {0} \ud655\uc7a5 \ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc811\ub450\uc5b4 {1}\uc744(\ub97c) \uc54c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"(StylesheetHandler) {0} 확장 네임스페이스 접두어 {1}을(를) 알 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_IMPORTS_AS_FIRST_ELEM),
-			$of(u"(StylesheetHandler) \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc758 \uccab\ubc88\uc9f8 \uc694\uc18c\ub85c\ub9cc \uc784\ud3ec\ud2b8\ub97c \uc218\ud589\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) 스타일시트의 첫번째 요소로만 임포트를 수행할 수 있습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_IMPORTING_ITSELF),
-			$of(u"(StylesheetHandler) {0}\uc774(\uac00) \uc9c1\uc811 \ub610\ub294 \uac04\uc811\uc801\uc73c\ub85c \uc790\uc2e0\uc744 \uc784\ud3ec\ud2b8\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"(StylesheetHandler) {0}이(가) 직접 또는 간접적으로 자신을 임포트하고 있습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XMLSPACE_ILLEGAL_VAL),
-			$of(u"(StylesheetHandler) xml:space\uc5d0 \uc798\ubabb\ub41c \uac12\uc774 \uc788\uc74c: {0}"_s)
+			$of(u"(StylesheetHandler) xml:space에 잘못된 값이 있음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESSSTYLESHEET_NOT_SUCCESSFUL),
-			$of(u"processStylesheet\ub97c \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"processStylesheet를 실패했습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_SAX_EXCEPTION),
-			$of(u"SAX \uc608\uc678\uc0ac\ud56d"_s)
+			$of(u"SAX 예외사항"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"\ud568\uc218\uac00 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"함수가 지원되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XSLT_ERROR),
-			$of(u"XSLT \uc624\ub958"_s)
+			$of(u"XSLT 오류"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CURRENCY_SIGN_ILLEGAL),
-			$of(u"\ud615\uc2dd \ud328\ud134 \ubb38\uc790\uc5f4\uc5d0\uc11c\ub294 \ud1b5\ud654 \uae30\ud638\uac00 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"형식 패턴 문자열에서는 통화 기호가 허용되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_DOCUMENT_FUNCTION_INVALID_IN_STYLESHEET_DOM),
-			$of(u"Document \ud568\uc218\ub294 \uc2a4\ud0c0\uc77c\uc2dc\ud2b8 DOM\uc5d0\uc11c \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"Document 함수는 스타일시트 DOM에서 지원되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_RESOLVE_PREFIX_OF_NON_PREFIX_RESOLVER),
-			$of(u"\ube44\uc811\ub450\uc5b4 \ubd84\uc11d\uae30\uc758 \uc811\ub450\uc5b4\ub97c \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"비접두어 분석기의 접두어를 분석할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_REDIRECT_COULDNT_GET_FILENAME),
-			$of(u"\uc7ac\uc9c0\uc815 \ud655\uc7a5: \ud30c\uc77c \uc774\ub984\uc744 \uac00\uc838\uc62c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. file \ub610\ub294 select \uc18d\uc131\uc740 \uc801\ud569\ud55c \ubb38\uc790\uc5f4\uc744 \ubc18\ud658\ud574\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"재지정 확장: 파일 이름을 가져올 수 없습니다. file 또는 select 속성은 적합한 문자열을 반환해야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_BUILD_FORMATTERLISTENER_IN_REDIRECT),
-			$of(u"\uc7ac\uc9c0\uc815 \ud655\uc7a5\uc5d0 FormatterListener\ub97c \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"재지정 확장에 FormatterListener를 생성할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_PREFIX_IN_EXCLUDERESULTPREFIX),
-			$of(u"exclude-result-prefixes\uc758 \uc811\ub450\uc5b4\uac00 \ubd80\uc801\ud569\ud568: {0}"_s)
+			$of(u"exclude-result-prefixes의 접두어가 부적합함: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MISSING_NS_URI),
-			$of(u"\uc9c0\uc815\ub41c \uc811\ub450\uc5b4\uc5d0 \ub300\ud55c \ub124\uc784\uc2a4\ud398\uc774\uc2a4 URI\uac00 \ub204\ub77d\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"지정된 접두어에 대한 네임스페이스 URI가 누락되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MISSING_ARG_FOR_OPTION),
-			$of(u"\uc635\uc158\uc5d0 \ub300\ud55c \uc778\uc218\uac00 \ub204\ub77d\ub428: {0}"_s)
+			$of(u"옵션에 대한 인수가 누락됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_OPTION),
-			$of(u"\ubd80\uc801\ud569\ud55c \uc635\uc158: {0}"_s)
+			$of(u"부적합한 옵션: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MALFORMED_FORMAT_STRING),
-			$of(u"\uc798\ubabb\ub41c \ud615\uc2dd \ubb38\uc790\uc5f4: {0}"_s)
+			$of(u"잘못된 형식 문자열: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_STYLESHEET_REQUIRES_VERSION_ATTRIB),
-			$of(u"xsl:stylesheet\uc5d0\ub294 \'version\' \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"xsl:stylesheet에는 \'version\' 속성이 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"{0} \uc18d\uc131\uc5d0 \uc798\ubabb\ub41c \uac12\uc774 \uc788\uc74c: {1}"_s)
+			$of(u"{0} 속성에 잘못된 값이 있음: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CHOOSE_REQUIRES_WHEN),
-			$of(u"xsl:choose\uc5d0\ub294 xsl:when\uc774 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"xsl:choose에는 xsl:when이 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_APPLY_IMPORT_IN_FOR_EACH),
-			$of(u"xsl:for-each\uc5d0\uc11c\ub294 xsl:apply-imports\uac00 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"xsl:for-each에서는 xsl:apply-imports가 허용되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_USE_DTM_FOR_OUTPUT),
-			$of(u"\ucd9c\ub825 DOM \ub178\ub4dc\uc5d0 DTMLiaison\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \ub300\uc2e0 com.sun.org.apache.xpath.internal.DOM2Helper\ub97c \uc804\ub2ec\ud558\uc2ed\uc2dc\uc624!"_s)
+			$of(u"출력 DOM 노드에 DTMLiaison을 사용할 수 없습니다. 대신 com.sun.org.apache.xpath.internal.DOM2Helper를 전달하십시오!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_USE_DTM_FOR_INPUT),
-			$of(u"\uc785\ub825 DOM \ub178\ub4dc\uc5d0 DTMLiaison\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \ub300\uc2e0 com.sun.org.apache.xpath.internal.DOM2Helper\ub97c \uc804\ub2ec\ud558\uc2ed\uc2dc\uc624!"_s)
+			$of(u"입력 DOM 노드에 DTMLiaison을 사용할 수 없습니다. 대신 com.sun.org.apache.xpath.internal.DOM2Helper를 전달하십시오!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CALL_TO_EXT_FAILED),
-			$of(u"\ud655\uc7a5 \uc694\uc18c\uc5d0 \ub300\ud55c \ud638\ucd9c \uc2e4\ud328: {0}"_s)
+			$of(u"확장 요소에 대한 호출 실패: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\uc811\ub450\uc5b4\ub294 \ub124\uc784\uc2a4\ud398\uc774\uc2a4\ub85c \ubd84\uc11d\ub418\uc5b4\uc57c \ud568: {0}"_s)
+			$of(u"접두어는 네임스페이스로 분석되어야 함: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\ubd80\uc801\ud569\ud55c UTF-16 \ub300\ub9ac \uc694\uc18c\uac00 \uac10\uc9c0\ub428: {0}"_s)
+			$of(u"부적합한 UTF-16 대리 요소가 감지됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XSLATTRSET_USED_ITSELF),
-			$of(u"xsl:attribute-set {0}\uc774(\uac00) \uc790\uc2e0\uc744 \uc0ac\uc6a9\ud588\uc2b5\ub2c8\ub2e4. \uc774 \uacbd\uc6b0 \ubb34\ud55c \ub8e8\ud504\uac00 \ubc1c\uc0dd\ud569\ub2c8\ub2e4."_s)
+			$of(u"xsl:attribute-set {0}이(가) 자신을 사용했습니다. 이 경우 무한 루프가 발생합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_MIX_XERCESDOM),
-			$of(u"\ube44Xerces-DOM \uc785\ub825\uacfc Xerces-DOM \ucd9c\ub825\uc744 \ud568\uaed8 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"비Xerces-DOM 입력과 Xerces-DOM 출력을 함께 사용할 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_TOO_MANY_LISTENERS),
@@ -1211,331 +1211,331 @@ $ObjectArray2* XSLTErrorResources_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_IN_ELEMTEMPLATEELEM_READOBJECT),
-			$of(u"ElemTemplateElement.readObject\uc5d0 \uc624\ub958 \ubc1c\uc0dd: {0}"_s)
+			$of(u"ElemTemplateElement.readObject에 오류 발생: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_DUPLICATE_NAMED_TEMPLATE),
-			$of(u"\uba85\uba85\ub41c \ud15c\ud50c\ub9ac\ud2b8\ub97c \ub450 \uac1c \uc774\uc0c1 \ucc3e\uc74c: {0}"_s)
+			$of(u"명명된 템플리트를 두 개 이상 찾음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_KEY_CALL),
-			$of(u"\ubd80\uc801\ud569\ud55c \ud568\uc218 \ud638\ucd9c: recursive key() \ud638\ucd9c\uc740 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"부적합한 함수 호출: recursive key() 호출은 허용되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_REFERENCING_ITSELF),
-			$of(u"{0} \ubcc0\uc218\uac00 \uc9c1\uc811 \ub610\ub294 \uac04\uc811\uc801\uc73c\ub85c \uc790\uc2e0\uc744 \ucc38\uc870\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"{0} 변수가 직접 또는 간접적으로 자신을 참조하고 있습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ILLEGAL_DOMSOURCE_INPUT),
-			$of(u"newTemplates\uc758 DOMSource\uc5d0 \ub300\ud55c \uc785\ub825 \ub178\ub4dc\ub294 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"newTemplates의 DOMSource에 대한 입력 노드는 널일 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CLASS_NOT_FOUND_FOR_OPTION),
-			$of(u"{0} \uc635\uc158\uc5d0 \ub300\ud55c \ud074\ub798\uc2a4 \ud30c\uc77c\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 옵션에 대한 클래스 파일을 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_REQUIRED_ELEM_NOT_FOUND),
-			$of(u"\ud544\uc218 \uc694\uc18c\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"필수 요소를 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INPUT_CANNOT_BE_NULL),
-			$of(u"InputStream\uc740 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"InputStream은 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_URI_CANNOT_BE_NULL),
-			$of(u"URI\ub294 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"URI는 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FILE_CANNOT_BE_NULL),
-			$of(u"\ud30c\uc77c\uc740 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"파일은 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_SOURCE_CANNOT_BE_NULL),
-			$of(u"InputSource\ub294 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"InputSource는 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_INIT_BSFMGR),
-			$of(u"BSF \uad00\ub9ac\uc790\ub97c \ucd08\uae30\ud654\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"BSF 관리자를 초기화할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_CMPL_EXTENSN),
-			$of(u"\ud655\uc7a5\uc744 \ucef4\ud30c\uc77c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"확장을 컴파일할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_CREATE_EXTENSN),
-			$of(u"{0} \ud655\uc7a5\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\ub294 \uc6d0\uc778: {1}"_s)
+			$of(u"{0} 확장을 생성할 수 없는 원인: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INSTANCE_MTHD_CALL_REQUIRES),
-			$of(u"{0} \uba54\uc18c\ub4dc\uc5d0 \ub300\ud55c \uc778\uc2a4\ud134\uc2a4 \uba54\uc18c\ub4dc\uc5d0\ub294 \uac1d\uccb4 \uc778\uc2a4\ud134\uc2a4\uac00 \uccab\ubc88\uc9f8 \uc778\uc218\ub85c \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"{0} 메소드에 대한 인스턴스 메소드에는 객체 인스턴스가 첫번째 인수로 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_ELEMENT_NAME),
-			$of(u"\ubd80\uc801\ud569\ud55c \uc694\uc18c \uc774\ub984\uc774 \uc9c0\uc815\ub428: {0}"_s)
+			$of(u"부적합한 요소 이름이 지정됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ELEMENT_NAME_METHOD_STATIC),
-			$of(u"\uc694\uc18c \uc774\ub984 \uba54\uc18c\ub4dc\ub294 \uc815\uc801 {0}\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"요소 이름 메소드는 정적 {0}이어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_EXTENSION_FUNC_UNKNOWN),
-			$of(u"\ud655\uc7a5 \ud568\uc218 {0}: {1}\uc744(\ub97c) \uc54c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"확장 함수 {0}: {1}을(를) 알 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MORE_MATCH_CONSTRUCTOR),
-			$of(u"{0}\uc5d0 \ub300\ud55c \uc0dd\uc131\uc790\uc640 \uac00\uc7a5 \uc798 \uc77c\uce58\ud558\ub294 \ud56d\ubaa9\uc774 \ub450 \uac1c \uc774\uc0c1 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}에 대한 생성자와 가장 잘 일치하는 항목이 두 개 이상 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MORE_MATCH_METHOD),
-			$of(u"{0} \uba54\uc18c\ub4dc\uc640 \uac00\uc7a5 \uc798 \uc77c\uce58\ud558\ub294 \ud56d\ubaa9\uc774 \ub450 \uac1c \uc774\uc0c1 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 메소드와 가장 잘 일치하는 항목이 두 개 이상 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_MORE_MATCH_ELEMENT),
-			$of(u"\uc694\uc18c \uba54\uc18c\ub4dc {0}\uacfc(\uc640) \uac00\uc7a5 \uc798 \uc77c\uce58\ud558\ub294 \ud56d\ubaa9\uc774 \ub450 \uac1c \uc774\uc0c1 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"요소 메소드 {0}과(와) 가장 잘 일치하는 항목이 두 개 이상 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_CONTEXT_PASSED),
-			$of(u"{0} \ud3c9\uac00\ub97c \uc704\ud574 \ubd80\uc801\ud569\ud55c \ucee8\ud14d\uc2a4\ud2b8\uac00 \uc804\ub2ec\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 평가를 위해 부적합한 컨텍스트가 전달되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_POOL_EXISTS),
-			$of(u"\ud480\uc774 \uc874\uc7ac\ud569\ub2c8\ub2e4."_s)
+			$of(u"풀이 존재합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_DRIVER_NAME),
-			$of(u"\uc9c0\uc815\ub41c \ub4dc\ub77c\uc774\ubc84 \uc774\ub984\uc774 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"지정된 드라이버 이름이 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_URL),
-			$of(u"\uc9c0\uc815\ub41c URL\uc774 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"지정된 URL이 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_POOL_SIZE_LESSTHAN_ONE),
-			$of(u"\ud480 \ud06c\uae30\uac00 1\ubcf4\ub2e4 \uc791\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"풀 크기가 1보다 작습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_DRIVER),
-			$of(u"\ubd80\uc801\ud569\ud55c \ub4dc\ub77c\uc774\ubc84 \uc774\ub984\uc774 \uc9c0\uc815\ub418\uc5c8\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"부적합한 드라이버 이름이 지정되었습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_STYLESHEETROOT),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ub8e8\ud2b8\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"스타일시트 루트를 찾을 수 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ILLEGAL_XMLSPACE_VALUE),
-			$of(u"xml:space\uc5d0 \ub300\ud55c \uac12\uc774 \uc798\ubabb\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"xml:space에 대한 값이 잘못되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROCESSFROMNODE_FAILED),
-			$of(u"processFromNode\ub97c \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"processFromNode를 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"[{0}] \ub9ac\uc18c\uc2a4\uac00 \ub2e4\uc74c\uc744 \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc74c: {1} \n {2} \t {3}"_s)
+			$of(u"[{0}] 리소스가 다음을 로드할 수 없음: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"\ubc84\ud37c \ud06c\uae30 <=0"_s)
+			$of(u"버퍼 크기 <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_UNKNOWN_ERROR_CALLING_EXTENSION),
-			$of(u"\ud655\uc7a5\uc744 \ud638\ucd9c\ud558\ub294 \uc911 \uc54c \uc218 \uc5c6\ub294 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"확장을 호출하는 중 알 수 없는 오류가 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_NAMESPACE_DECL),
-			$of(u"{0} \uc811\ub450\uc5b4\uc5d0 \ud574\ub2f9\ud558\ub294 \ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc120\uc5b8\uc774 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 접두어에 해당하는 네임스페이스 선언이 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ELEM_CONTENT_NOT_ALLOWED),
-			$of(u"lang=javaclass {0}\uc5d0 \ub300\ud574\uc11c\ub294 \uc694\uc18c \ucf58\ud150\uce20\uac00 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"lang=javaclass {0}에 대해서는 요소 콘텐츠가 허용되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_STYLESHEET_DIRECTED_TERMINATION),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uac00 \uc885\ub8cc\ub97c \uc9c0\uc815\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"스타일시트가 종료를 지정했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ONE_OR_TWO),
-			$of(u"1 \ub610\ub294 2"_s)
+			$of(u"1 또는 2"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_TWO_OR_THREE),
-			$of(u"2 \ub610\ub294 3"_s)
+			$of(u"2 또는 3"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"{0}\uc744(\ub97c) \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. CLASSPATH\ub97c \ud655\uc778\ud558\uc2ed\uc2dc\uc624. \ud604\uc7ac \uae30\ubcf8\uac12\ub9cc \uc0ac\uc6a9\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."_s)
+			$of(u"{0}을(를) 로드할 수 없습니다. CLASSPATH를 확인하십시오. 현재 기본값만 사용하는 중입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_INIT_DEFAULT_TEMPLATES),
-			$of(u"\uae30\ubcf8 \ud15c\ud50c\ub9ac\ud2b8\ub97c \ucd08\uae30\ud654\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"기본 템플리트를 초기화할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_RESULT_NULL),
-			$of(u"\uacb0\uacfc\ub294 \ub110\uc774 \uc544\ub2c8\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"결과는 널이 아니어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_RESULT_COULD_NOT_BE_SET),
-			$of(u"\uacb0\uacfc\ub97c \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"결과를 설정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_OUTPUT_SPECIFIED),
-			$of(u"\uc9c0\uc815\ub41c \ucd9c\ub825\uc774 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"지정된 출력이 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_TRANSFORM_TO_RESULT_TYPE),
-			$of(u"{0} \uc720\ud615\uc758 \uacb0\uacfc\ub85c \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 유형의 결과로 변환할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_TRANSFORM_SOURCE_TYPE),
-			$of(u"{0} \uc720\ud615\uc758 \uc18c\uc2a4\ub97c \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 유형의 소스를 변환할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_CONTENT_HANDLER),
-			$of(u"\ub110 \ucf58\ud150\uce20 \ucc98\ub9ac\uae30"_s)
+			$of(u"널 콘텐츠 처리기"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_ERROR_HANDLER),
-			$of(u"\ub110 \uc624\ub958 \ucc98\ub9ac\uae30"_s)
+			$of(u"널 오류 처리기"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_CALL_PARSE),
-			$of(u"ContentHandler\uac00 \uc124\uc815\ub418\uc9c0 \uc54a\uc740 \uacbd\uc6b0 parse\ub97c \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"ContentHandler가 설정되지 않은 경우 parse를 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_PARENT_FOR_FILTER),
-			$of(u"\ud544\ud130\uc5d0 \ub300\ud55c \uc0c1\uc704\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"필터에 대한 상위가 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_STYLESHEET_IN_MEDIA),
-			$of(u"{0}\uc5d0\uc11c \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \ub9e4\uccb4 = {1}"_s)
+			$of(u"{0}에서 스타일시트를 찾을 수 없습니다. 매체 = {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_STYLESHEET_PI),
-			$of(u"{0}\uc5d0\uc11c xml-stylesheet PI\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}에서 xml-stylesheet PI를 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NOT_SUPPORTED),
-			$of(u"\uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}"_s)
+			$of(u"지원되지 않음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROPERTY_VALUE_BOOLEAN),
-			$of(u"{0} \uc18d\uc131\uc5d0 \ub300\ud55c \uac12\uc740 \ubd80\uc6b8 \uc778\uc2a4\ud134\uc2a4\uc5ec\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0} 속성에 대한 값은 부울 인스턴스여야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_COULD_NOT_FIND_EXTERN_SCRIPT),
-			$of(u"{0}\uc5d0 \uc788\ub294 \uc678\ubd80 \uc2a4\ud06c\ub9bd\ud2b8\ub85c \uac00\uc838\uc62c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}에 있는 외부 스크립트로 가져올 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"[{0}] \ub9ac\uc18c\uc2a4\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.\n {1}"_s)
+			$of(u"[{0}] 리소스를 찾을 수 없습니다.\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_OUTPUT_PROPERTY_NOT_RECOGNIZED),
-			$of(u"\ucd9c\ub825 \uc18d\uc131\uc744 \uc778\uc2dd\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"출력 속성을 인식할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FAILED_CREATING_ELEMLITRSLT),
-			$of(u"ElemLiteralResult \uc778\uc2a4\ud134\uc2a4 \uc0dd\uc131\uc744 \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"ElemLiteralResult 인스턴스 생성을 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_VALUE_SHOULD_BE_NUMBER),
-			$of(u"{0}\uc5d0 \ub300\ud55c \uac12\uc5d0\ub294 \uad6c\ubb38\uc744 \ubd84\uc11d\ud560 \uc218 \uc788\ub294 \uc22b\uc790\uac00 \ud3ec\ud568\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}에 대한 값에는 구문을 분석할 수 있는 숫자가 포함되어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_VALUE_SHOULD_EQUAL),
-			$of(u"{0}\uc5d0 \ub300\ud55c \uac12\uc740 yes \ub610\ub294 no\uc5ec\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0}에 대한 값은 yes 또는 no여야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FAILED_CALLING_METHOD),
-			$of(u"{0} \uba54\uc18c\ub4dc \ud638\ucd9c\uc744 \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 메소드 호출을 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FAILED_CREATING_ELEMTMPL),
-			$of(u"ElemTemplateElement \uc778\uc2a4\ud134\uc2a4 \uc0dd\uc131\uc744 \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"ElemTemplateElement 인스턴스 생성을 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CHARS_NOT_ALLOWED),
-			$of(u"\ubb38\uc11c\uc758 \uc774 \uc9c0\uc810\uc5d0\uc11c\ub294 \ubb38\uc790\uac00 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"문서의 이 지점에서는 문자가 허용되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ATTR_NOT_ALLOWED),
-			$of(u"{1} \uc694\uc18c\uc5d0\uc11c\ub294 \"{0}\" \uc18d\uc131\uc774 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"{1} 요소에서는 \"{0}\" 속성이 허용되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_BAD_VALUE),
-			$of(u"{0}: \uc798\ubabb\ub41c \uac12 {1} "_s)
+			$of(u"{0}: 잘못된 값 {1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ATTRIB_VALUE_NOT_FOUND),
-			$of(u"{0} \uc18d\uc131\uac12\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. "_s)
+			$of(u"{0} 속성값을 찾을 수 없습니다. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ATTRIB_VALUE_NOT_RECOGNIZED),
-			$of(u"{0} \uc18d\uc131\uac12\uc744 \uc778\uc2dd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. "_s)
+			$of(u"{0} 속성값을 인식할 수 없습니다. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_URI_NAMESPACE),
-			$of(u"\ub110 URI\ub97c \uc0ac\uc6a9\ud558\uc5ec \ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc811\ub450\uc5b4\ub97c \uc0dd\uc131\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911"_s)
+			$of(u"널 URI를 사용하여 네임스페이스 접두어를 생성하려고 시도하는 중"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NUMBER_TOO_BIG),
-			$of(u"\uac00\uc7a5 \ud070 Long \uc815\uc218\ubcf4\ub2e4 \ud070 \uc22b\uc790\uc758 \ud615\uc2dd\uc744 \uc9c0\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911"_s)
+			$of(u"가장 큰 Long 정수보다 큰 숫자의 형식을 지정하려고 시도하는 중"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANNOT_FIND_SAX1_DRIVER),
-			$of(u"SAX1 \ub4dc\ub77c\uc774\ubc84 \ud074\ub798\uc2a4 {0}\uc744(\ub97c) \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"SAX1 드라이버 클래스 {0}을(를) 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_SAX1_DRIVER_NOT_LOADED),
-			$of(u"SAX1 \ub4dc\ub77c\uc774\ubc84 \ud074\ub798\uc2a4 {0}\uc774(\uac00) \ubc1c\uacac\ub418\uc5c8\uc9c0\ub9cc \ud574\ub2f9 \ud074\ub798\uc2a4\ub97c \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"SAX1 드라이버 클래스 {0}이(가) 발견되었지만 해당 클래스를 로드할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_SAX1_DRIVER_NOT_INSTANTIATED),
-			$of(u"SAX1 \ub4dc\ub77c\uc774\ubc84 \ud074\ub798\uc2a4 {0}\uc774(\uac00) \ub85c\ub4dc\ub418\uc5c8\uc9c0\ub9cc \ud574\ub2f9 \ud074\ub798\uc2a4\ub97c \uc778\uc2a4\ud134\uc2a4\ud654\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"SAX1 드라이버 클래스 {0}이(가) 로드되었지만 해당 클래스를 인스턴스화할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_SAX1_DRIVER_NOT_IMPLEMENT_PARSER),
-			$of(u"SAX1 \ub4dc\ub77c\uc774\ubc84 \ud074\ub798\uc2a4 {0}\uc774(\uac00) org.xml.sax.Parser\ub97c \uad6c\ud604\ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"SAX1 드라이버 클래스 {0}이(가) org.xml.sax.Parser를 구현하지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PARSER_PROPERTY_NOT_SPECIFIED),
-			$of(u"\uc2dc\uc2a4\ud15c \uc18d\uc131 org.xml.sax.parser\uac00 \uc9c0\uc815\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"시스템 속성 org.xml.sax.parser가 지정되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PARSER_ARG_CANNOT_BE_NULL),
-			$of(u"\uad6c\ubb38 \ubd84\uc11d\uae30 \uc778\uc218\ub294 \ub110\uc774 \uc544\ub2c8\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"구문 분석기 인수는 널이 아니어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FEATURE),
-			$of(u"\uae30\ub2a5: {0}"_s)
+			$of(u"기능: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_PROPERTY),
-			$of(u"\uc18d\uc131: {0}"_s)
+			$of(u"속성: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_ENTITY_RESOLVER),
-			$of(u"\ub110 \uc5d4\ud2f0\ud2f0 \ubd84\uc11d\uae30"_s)
+			$of(u"널 엔티티 분석기"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NULL_DTD_HANDLER),
-			$of(u"\ub110 DTD \ucc98\ub9ac\uae30"_s)
+			$of(u"널 DTD 처리기"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_DRIVER_NAME_SPECIFIED),
-			$of(u"\uc9c0\uc815\ub41c \ub4dc\ub77c\uc774\ubc84 \uc774\ub984\uc774 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"지정된 드라이버 이름이 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_URL_SPECIFIED),
-			$of(u"\uc9c0\uc815\ub41c URL\uc774 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"지정된 URL이 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_POOLSIZE_LESS_THAN_ONE),
-			$of(u"\ud480 \ud06c\uae30\uac00 1 \ubbf8\ub9cc\uc785\ub2c8\ub2e4!"_s)
+			$of(u"풀 크기가 1 미만입니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_DRIVER_NAME),
-			$of(u"\ubd80\uc801\ud569\ud55c \ub4dc\ub77c\uc774\ubc84 \uc774\ub984\uc774 \uc9c0\uc815\ub418\uc5c8\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"부적합한 드라이버 이름이 지정되었습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ERRORLISTENER),
@@ -1543,243 +1543,243 @@ $ObjectArray2* XSLTErrorResources_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ASSERT_NO_TEMPLATE_PARENT),
-			$of(u"\ud504\ub85c\uadf8\ub798\uba38 \uc624\ub958\uc785\ub2c8\ub2e4! \ud45c\ud604\uc2dd\uc5d0 ElemTemplateElement \uc0c1\uc704\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"프로그래머 오류입니다! 표현식에 ElemTemplateElement 상위가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ASSERT_REDUNDENT_EXPR_ELIMINATOR),
-			$of(u"RedundentExprEliminator\uc5d0 \ud504\ub85c\uadf8\ub798\uba38 \uac80\uc99d\uc774 \uc788\uc74c: {0}"_s)
+			$of(u"RedundentExprEliminator에 프로그래머 검증이 있음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NOT_ALLOWED_IN_POSITION),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc758 \uc774 \uc704\uce58\uc5d0\ub294 {0}\uc774(\uac00) \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"스타일시트의 이 위치에는 {0}이(가) 허용되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NONWHITESPACE_NOT_ALLOWED_IN_POSITION),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc758 \uc774 \uc704\uce58\uc5d0\ub294 \uacf5\ubc31\uc774 \uc544\ub2cc \ud14d\uc2a4\ud2b8\ub294 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"스타일시트의 이 위치에는 공백이 아닌 텍스트는 허용되지 않습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::INVALID_TCHAR),
-			$of(u"\uc798\ubabb\ub41c \uac12: {1}\uc774(\uac00) CHAR \uc18d\uc131\uc5d0 \uc0ac\uc6a9\ub428: {0}. CHAR \uc720\ud615\uc758 \uc18d\uc131\uc740 1\uc790\uc5ec\uc57c \ud569\ub2c8\ub2e4!"_s)
+			$of(u"잘못된 값: {1}이(가) CHAR 속성에 사용됨: {0}. CHAR 유형의 속성은 1자여야 합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::INVALID_QNAME),
-			$of(u"\uc798\ubabb\ub41c \uac12: {1}\uc774(\uac00) QNAME \uc18d\uc131\uc5d0 \uc0ac\uc6a9\ub428: {0}"_s)
+			$of(u"잘못된 값: {1}이(가) QNAME 속성에 사용됨: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::INVALID_ENUM),
-			$of(u"\uc798\ubabb\ub41c \uac12: {1}\uc774(\uac00) ENUM \uc18d\uc131\uc5d0 \uc0ac\uc6a9\ub428: {0}. \uc801\ud569\ud55c \uac12: {2}."_s)
+			$of(u"잘못된 값: {1}이(가) ENUM 속성에 사용됨: {0}. 적합한 값: {2}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::INVALID_NMTOKEN),
-			$of(u"\uc798\ubabb\ub41c \uac12: {1}\uc774(\uac00) NMTOKEN \uc18d\uc131\uc5d0 \uc0ac\uc6a9\ub428: {0} "_s)
+			$of(u"잘못된 값: {1}이(가) NMTOKEN 속성에 사용됨: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::INVALID_NCNAME),
-			$of(u"\uc798\ubabb\ub41c \uac12: {1}\uc774(\uac00) NCNAME \uc18d\uc131\uc5d0 \uc0ac\uc6a9\ub428: {0} "_s)
+			$of(u"잘못된 값: {1}이(가) NCNAME 속성에 사용됨: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::INVALID_BOOLEAN),
-			$of(u"\uc798\ubabb\ub41c \uac12: {1}\uc774(\uac00) boolean \uc18d\uc131\uc5d0 \uc0ac\uc6a9\ub428: {0} "_s)
+			$of(u"잘못된 값: {1}이(가) boolean 속성에 사용됨: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::INVALID_NUMBER),
-			$of(u"\uc798\ubabb\ub41c \uac12: {1}\uc774(\uac00) number \uc18d\uc131\uc5d0 \uc0ac\uc6a9\ub428: {0} "_s)
+			$of(u"잘못된 값: {1}이(가) number 속성에 사용됨: {0} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_ARG_LITERAL),
-			$of(u"\uc77c\uce58 \ud328\ud134\uc758 {0}\uc5d0 \ub300\ud55c \uc778\uc218\ub294 \ub9ac\ud130\ub7f4\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"일치 패턴의 {0}에 대한 인수는 리터럴이어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_DUPLICATE_GLOBAL_VAR),
-			$of(u"\uc804\uc5ed \ubcc0\uc218 \uc120\uc5b8\uc774 \uc911\ubcf5\ub429\ub2c8\ub2e4."_s)
+			$of(u"전역 변수 선언이 중복됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_DUPLICATE_VAR),
-			$of(u"\ubcc0\uc218 \uc120\uc5b8\uc774 \uc911\ubcf5\ub429\ub2c8\ub2e4."_s)
+			$of(u"변수 선언이 중복됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_TEMPLATE_NAME_MATCH),
-			$of(u"xsl:template\uc5d0\ub294 name \ub610\ub294 match \uc18d\uc131 \uc911 \ud558\ub098\uac00 \uc788\uac70\ub098 \ubaa8\ub450 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"xsl:template에는 name 또는 match 속성 중 하나가 있거나 모두 있어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_PREFIX),
-			$of(u"exclude-result-prefixes\uc758 \uc811\ub450\uc5b4\uac00 \ubd80\uc801\ud569\ud568: {0}"_s)
+			$of(u"exclude-result-prefixes의 접두어가 부적합함: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NO_ATTRIB_SET),
-			$of(u"\uc774\ub984\uc774 {0}\uc778 attribute-set\uac00 \uc874\uc7ac\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이름이 {0}인 attribute-set가 존재하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_FUNCTION_NOT_FOUND),
-			$of(u"\uc774\ub984\uc774 {0}\uc778 \ud568\uc218\uac00 \uc874\uc7ac\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이름이 {0}인 함수가 존재하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_CANT_HAVE_CONTENT_AND_SELECT),
-			$of(u"{0} \uc694\uc18c\uc5d0\ub294 content \uc18d\uc131\uacfc select \uc18d\uc131\uc774 \ud568\uaed8 \ud3ec\ud568\ub418\uc9c0 \uc54a\uc544\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0} 요소에는 content 속성과 select 속성이 함께 포함되지 않아야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_SET_PARAM_VALUE),
-			$of(u"{0} \ub9e4\uac1c\ubcc0\uc218\uc758 \uac12\uc740 \uc801\ud569\ud55c Java \uac1d\uccb4\uc5ec\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0} 매개변수의 값은 적합한 Java 객체여야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX_FOR_DEFAULT),
-			$of(u"xsl:namespace-alias \uc694\uc18c\uc758 result-prefix \uc18d\uc131\uc5d0 \ub300\ud55c \uac12\uc740 \'#default\'\uc774\uc9c0\ub9cc \uc694\uc18c\uc5d0 \ub300\ud55c \ubc94\uc704\uc5d0\uc11c \uae30\ubcf8 \ub124\uc784\uc2a4\ud398\uc774\uc2a4\uac00 \uc120\uc5b8\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"xsl:namespace-alias 요소의 result-prefix 속성에 대한 값은 \'#default\'이지만 요소에 대한 범위에서 기본 네임스페이스가 선언되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX),
-			$of(u"xsl:namespace-alias \uc694\uc18c\uc758 result-prefix \uc18d\uc131\uc5d0 \ub300\ud55c \uac12\uc740 \'\'{0}\'\'\uc774\uc9c0\ub9cc \uc694\uc18c\uc5d0 \ub300\ud55c \ubc94\uc704\uc5d0\uc11c \'\'{0}\'\' \uc811\ub450\uc5b4\uc758 \ub124\uc784\uc2a4\ud398\uc774\uc2a4\uac00 \uc120\uc5b8\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"xsl:namespace-alias 요소의 result-prefix 속성에 대한 값은 \'\'{0}\'\'이지만 요소에 대한 범위에서 \'\'{0}\'\' 접두어의 네임스페이스가 선언되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_SET_FEATURE_NULL_NAME),
-			$of(u"\uae30\ub2a5 \uc774\ub984\uc740 TransformerFactory.setFeature(\ubb38\uc790\uc5f4 \uc774\ub984, \ubd80\uc6b8 \uac12)\uc5d0\uc11c \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"기능 이름은 TransformerFactory.setFeature(문자열 이름, 부울 값)에서 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_GET_FEATURE_NULL_NAME),
-			$of(u"\uae30\ub2a5 \uc774\ub984\uc740 TransformerFactory.getFeature(\ubb38\uc790\uc5f4 \uc774\ub984)\uc5d0\uc11c \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"기능 이름은 TransformerFactory.getFeature(문자열 이름)에서 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_UNSUPPORTED_FEATURE),
-			$of(u"\uc774 TransformerFactory\uc5d0\uc11c \'\'{0}\'\' \uae30\ub2a5\uc744 \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 TransformerFactory에서 \'\'{0}\'\' 기능을 설정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_EXTENSION_ELEMENT_NOT_ALLOWED_IN_SECURE_PROCESSING),
-			$of(u"\ubcf4\uc548 \ucc98\ub9ac \uae30\ub2a5\uc774 true\ub85c \uc124\uc815\ub41c \uacbd\uc6b0 \ud655\uc7a5 \uc694\uc18c \'\'{0}\'\'\uc744(\ub97c) \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"보안 처리 기능이 true로 설정된 경우 확장 요소 \'\'{0}\'\'을(를) 사용할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NAMESPACE_CONTEXT_NULL_NAMESPACE),
-			$of(u"\ub110 \ub124\uc784\uc2a4\ud398\uc774\uc2a4 URI\uc5d0 \ub300\ud55c \uc811\ub450\uc5b4\ub97c \uac00\uc838\uc62c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"널 네임스페이스 URI에 대한 접두어를 가져올 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_NAMESPACE_CONTEXT_NULL_PREFIX),
-			$of(u"\ub110 \uc811\ub450\uc5b4\uc5d0 \ub300\ud55c \ub124\uc784\uc2a4\ud398\uc774\uc2a4 URI\ub97c \uac00\uc838\uc62c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"널 접두어에 대한 네임스페이스 URI를 가져올 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XPATH_RESOLVER_NULL_QNAME),
-			$of(u"\ud568\uc218 \uc774\ub984\uc740 \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"함수 이름은 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::ER_XPATH_RESOLVER_NEGATIVE_ARITY),
-			$of(u"\uc778\uc790 \uc218\ub294 \uc74c\uc218\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"인자 수는 음수일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_FOUND_CURLYBRACE),
-			$of(u"\'}\'\ub97c \ucc3e\uc558\uc9c0\ub9cc \uc5f4\ub824 \uc788\ub294 \uc18d\uc131 \ud15c\ud50c\ub9ac\ud2b8\uac00 \uc5c6\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"\'}\'를 찾았지만 열려 있는 속성 템플리트가 없습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_COUNT_ATTRIB_MATCHES_NO_ANCESTOR),
-			$of(u"\uacbd\uace0: count \uc18d\uc131\uc774 xsl:number\uc758 \uc870\uc0c1\uacfc \uc77c\uce58\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4! \ub300\uc0c1 = {0}"_s)
+			$of(u"경고: count 속성이 xsl:number의 조상과 일치하지 않습니다! 대상 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_EXPR_ATTRIB_CHANGED_TO_SELECT),
-			$of(u"\uc774\uc804 \uad6c\ubb38: \'expr\' \uc18d\uc131\uc758 \uc774\ub984\uc774 \'select\'\ub85c \ubcc0\uacbd\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이전 구문: \'expr\' 속성의 이름이 \'select\'로 변경되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_NO_LOCALE_IN_FORMATNUMBER),
-			$of(u"Xalan\uc774 format-number \ud568\uc218\uc5d0\uc11c \ub85c\ucf00\uc77c \uc774\ub984\uc744 \uc544\uc9c1 \ucc98\ub9ac\ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Xalan이 format-number 함수에서 로케일 이름을 아직 처리하지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_LOCALE_NOT_FOUND),
-			$of(u"\uacbd\uace0: xml:lang={0}\uc5d0 \ub300\ud55c \ub85c\ucf00\uc77c\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"경고: xml:lang={0}에 대한 로케일을 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_CANNOT_MAKE_URL_FROM),
-			$of(u"{0}\uc5d0\uc11c URL\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0}에서 URL을 생성할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_CANNOT_LOAD_REQUESTED_DOC),
-			$of(u"\uc694\uccad\ub41c \ubb38\uc11c\ub97c \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"요청된 문서를 로드할 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_CANNOT_FIND_COLLATOR),
-			$of(u"<sort xml:lang={0}\uc5d0 \ub300\ud55c \ubcd1\ud569\uae30\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"<sort xml:lang={0}에 대한 병합기를 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_FUNCTIONS_SHOULD_USE_URL),
-			$of(u"\uc774\uc804 \uad6c\ubb38: \ud568\uc218 \uba85\ub839\uc5d0 {0} URL\uc774 \uc0ac\uc6a9\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"이전 구문: 함수 명령에 {0} URL이 사용되어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ENCODING_NOT_SUPPORTED_USING_UTF8),
-			$of(u"\uc778\ucf54\ub529\uc774 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}. UTF-8\uc744 \uc0ac\uc6a9\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."_s)
+			$of(u"인코딩이 지원되지 않음: {0}. UTF-8을 사용하는 중입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ENCODING_NOT_SUPPORTED_USING_JAVA),
-			$of(u"\uc778\ucf54\ub529\uc774 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc74c: {0}. Java {1}\uc744(\ub97c) \uc0ac\uc6a9\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."_s)
+			$of(u"인코딩이 지원되지 않음: {0}. Java {1}을(를) 사용하는 중입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_SPECIFICITY_CONFLICTS),
-			$of(u"\ud2b9\uc218 \ucda9\ub3cc\uc774 \ubc1c\uacac\ub428: {0}. \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc5d0\uc11c \ubc1c\uacac\ub41c \ub9c8\uc9c0\ub9c9 \ud56d\ubaa9\uc774 \uc0ac\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"특수 충돌이 발견됨: {0}. 스타일시트에서 발견된 마지막 항목이 사용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_PARSING_AND_PREPARING),
-			$of(u"========= \uad6c\ubb38 \ubd84\uc11d \ud6c4 {0} \uc900\ube44 \uc911 =========="_s)
+			$of(u"========= 구문 분석 후 {0} 준비 중 =========="_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ATTR_TEMPLATE),
-			$of(u"\uc18d\uc131 \ud15c\ud50c\ub9ac\ud2b8, {0}"_s)
+			$of(u"속성 템플리트, {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_CONFLICT_BETWEEN_XSLSTRIPSPACE_AND_XSLPRESERVESPACE),
-			$of(u"xsl:strip-space\uc640 xsl:preserve-space \uac04\uc758 \uc77c\uce58 \ucda9\ub3cc"_s)
+			$of(u"xsl:strip-space와 xsl:preserve-space 간의 일치 충돌"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ATTRIB_NOT_HANDLED),
-			$of(u"Xalan\uc774 {0} \uc18d\uc131\uc744 \uc544\uc9c1 \ucc98\ub9ac\ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4!"_s)
+			$of(u"Xalan이 {0} 속성을 아직 처리하지 않았습니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_NO_DECIMALFORMAT_DECLARATION),
-			$of(u"\uc2ed\uc9c4\uc218 \ud615\uc2dd\uc5d0 \ub300\ud55c \uc120\uc5b8\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc74c: {0}"_s)
+			$of(u"십진수 형식에 대한 선언을 찾을 수 없음: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_OLD_XSLT_NS),
-			$of(u"XSLT \ub124\uc784\uc2a4\ud398\uc774\uc2a4\uac00 \ub204\ub77d\ub418\uac70\ub098 \uc62c\ubc14\ub974\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. "_s)
+			$of(u"XSLT 네임스페이스가 누락되거나 올바르지 않습니다. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ONE_DEFAULT_XSLDECIMALFORMAT_ALLOWED),
-			$of(u"\uae30\ubcf8 xsl:decimal-format \uc120\uc5b8\uc740 \ud558\ub098\ub9cc \ud5c8\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"기본 xsl:decimal-format 선언은 하나만 허용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_XSLDECIMALFORMAT_NAMES_MUST_BE_UNIQUE),
-			$of(u"xsl:decimal-format \uc774\ub984\uc740 \uace0\uc720\ud574\uc57c \ud569\ub2c8\ub2e4. \"{0}\" \uc774\ub984\uc774 \uc911\ubcf5\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"xsl:decimal-format 이름은 고유해야 합니다. \"{0}\" 이름이 중복되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ILLEGAL_ATTRIBUTE),
-			$of(u"{0}\uc5d0 \uc798\ubabb\ub41c \uc18d\uc131\uc774 \uc788\uc74c: {1}"_s)
+			$of(u"{0}에 잘못된 속성이 있음: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_COULD_NOT_RESOLVE_PREFIX),
-			$of(u"\ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc811\ub450\uc5b4\ub97c \ubd84\uc11d\ud560 \uc218 \uc5c6\uc74c: {0}. \ub178\ub4dc\uac00 \ubb34\uc2dc\ub429\ub2c8\ub2e4."_s)
+			$of(u"네임스페이스 접두어를 분석할 수 없음: {0}. 노드가 무시됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_STYLESHEET_REQUIRES_VERSION_ATTRIB),
-			$of(u"xsl:stylesheet\uc5d0\ub294 \'version\' \uc18d\uc131\uc774 \ud544\uc694\ud569\ub2c8\ub2e4!"_s)
+			$of(u"xsl:stylesheet에는 \'version\' 속성이 필요합니다!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ILLEGAL_ATTRIBUTE_NAME),
-			$of(u"\uc798\ubabb\ub41c \uc18d\uc131 \uc774\ub984: {0}"_s)
+			$of(u"잘못된 속성 이름: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"{0} \uc18d\uc131\uc5d0 \uc798\ubabb\ub41c \uac12\uc774 \uc0ac\uc6a9\ub428: {1}"_s)
+			$of(u"{0} 속성에 잘못된 값이 사용됨: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_EMPTY_SECOND_ARG),
-			$of(u"document \ud568\uc218\uc758 \ub450\ubc88\uc9f8 \uc778\uc218\uc5d0\uc11c \uacb0\uacfc\ub85c \ub098\ud0c0\ub09c nodeset\uac00 \ube44\uc5b4 \uc788\uc2b5\ub2c8\ub2e4. \ube48 node-set\uac00 \ubc18\ud658\ub429\ub2c8\ub2e4."_s)
+			$of(u"document 함수의 두번째 인수에서 결과로 나타난 nodeset가 비어 있습니다. 빈 node-set가 반환됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
-			$of(u"xsl:processing-instruction \uc774\ub984\uc758 \'name\' \uc18d\uc131\uac12\uc740 \'xml\'\uc774 \uc544\ub2c8\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"xsl:processing-instruction 이름의 \'name\' 속성값은 \'xml\'이 아니어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"xsl:processing-instruction\uc758 \'\'name\'\' \uc18d\uc131\uac12\uc740 \uc801\ud569\ud55c NCName\uc774\uc5b4\uc57c \ud568: {0}"_s)
+			$of(u"xsl:processing-instruction의 \'\'name\'\' 속성값은 적합한 NCName이어야 함: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::WG_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"\ud558\uc704 \ub178\ub4dc\uac00 \uc0dd\uc131\ub41c \ud6c4 \ub610\ub294 \uc694\uc18c\uac00 \uc0dd\uc131\ub418\uae30 \uc804\uc5d0 {0} \uc18d\uc131\uc744 \ucd94\uac00\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc18d\uc131\uc774 \ubb34\uc2dc\ub429\ub2c8\ub2e4."_s)
+			$of(u"하위 노드가 생성된 후 또는 요소가 생성되기 전에 {0} 속성을 추가할 수 없습니다. 속성이 무시됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_ko::NO_MODIFICATION_ALLOWED_ERR),
-			$of(u"\uc218\uc815\uc774 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\ub294 \uac1d\uccb4\ub97c \uc218\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"수정이 허용되지 않는 객체를 수정하려고 시도했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1795,15 +1795,15 @@ $ObjectArray2* XSLTErrorResources_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage\uc5d0 \ub300\ud55c \ub9e4\uac1c\ubcc0\uc218\uac00 \ubc94\uc704\ub97c \ubc97\uc5b4\ub0ac\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"createMessage에 대한 매개변수가 범위를 벗어났습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"messageFormat \ud638\ucd9c \uc911 \uc608\uc678\uc0ac\ud56d\uc774 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"messageFormat 호출 중 예외사항이 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
-			$of(u">>>>>>> Xalan \ubc84\uc804 "_s)
+			$of(u">>>>>>> Xalan 버전 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version2"_s),
@@ -1811,59 +1811,59 @@ $ObjectArray2* XSLTErrorResources_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("yes"_s),
-			$of(u"\uc608"_s)
+			$of(u"예"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\ud589 \ubc88\ud638"_s)
+			$of(u"행 번호"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\uc5f4 \ubc88\ud638"_s)
+			$of(u"열 번호"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xsldone"_s),
-			$of(u"XSLProcessor: \uc644\ub8cc"_s)
+			$of(u"XSLProcessor: 완료"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_option"_s),
-			$of(u"Xalan-J \uba85\ub839\ud589 Process \ud074\ub798\uc2a4 \uc635\uc158:"_s)
+			$of(u"Xalan-J 명령행 Process 클래스 옵션:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_option"_s),
-			$of(u"Xalan-J \uba85\ub839\ud589 Process \ud074\ub798\uc2a4 \uc635\uc158:"_s)
+			$of(u"Xalan-J 명령행 Process 클래스 옵션:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xsltc_option"_s),
-			$of(u"XSLTC \ubaa8\ub4dc\uc5d0\uc11c\ub294 {0} \uc635\uc158\uc774 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XSLTC 모드에서는 {0} 옵션이 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xalan_option"_s),
-			$of(u"{0} \uc635\uc158\uc740 -XSLTC\uc5d0\ub9cc \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"{0} 옵션은 -XSLTC에만 사용할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_no_input"_s),
-			$of(u"\uc624\ub958: \uc9c0\uc815\ub41c \uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ub610\ub294 \uc785\ub825 xml\uc774 \uc5c6\uc2b5\ub2c8\ub2e4. \uc0ac\uc6a9\ubc95 \uc9c0\uce68\uc5d0 \ub300\ud55c \uc635\uc158 \uc5c6\uc774 \uc774 \uba85\ub839\uc744 \uc2e4\ud589\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"오류: 지정된 스타일시트 또는 입력 xml이 없습니다. 사용법 지침에 대한 옵션 없이 이 명령을 실행하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_common_options"_s),
-			$of(u"-\uc77c\ubc18 \uc635\uc158-"_s)
+			$of(u"-일반 옵션-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xalan_options"_s),
-			$of(u"-Xalan \uc635\uc158-"_s)
+			$of(u"-Xalan 옵션-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xsltc_options"_s),
-			$of(u"-XSLTC \uc635\uc158-"_s)
+			$of(u"-XSLTC 옵션-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_return_to_continue"_s),
-			$of(u"(\uacc4\uc18d\ud558\ub824\uba74 <Return> \ud0a4\ub97c \ub204\ub974\uc2ed\uc2dc\uc624.)"_s)
+			$of(u"(계속하려면 <Return> 키를 누르십시오.)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXSLTC"_s),
-			$of(u"   [-XSLTC(\ubcc0\ud658\uc5d0 XSLTC \uc0ac\uc6a9)]"_s)
+			$of(u"   [-XSLTC(변환에 XSLTC 사용)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionIN"_s),
@@ -1887,99 +1887,99 @@ $ObjectArray2* XSLTErrorResources_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionPARSER"_s),
-			$of(u"   [-PARSER \uad6c\ubb38 \ubd84\uc11d\uae30 \uc5f0\uacb0\uc758 \uc804\uccb4 \ud074\ub798\uc2a4 \uc774\ub984]"_s)
+			$of(u"   [-PARSER 구문 분석기 연결의 전체 클래스 이름]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionE"_s),
-			$of(u"   [-E(\uc5d4\ud2f0\ud2f0 \ucc38\uc870 \ud655\uc7a5 \uc548\ud568)]"_s)
+			$of(u"   [-E(엔티티 참조 확장 안함)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionV"_s),
-			$of(u"   [-E(\uc5d4\ud2f0\ud2f0 \ucc38\uc870 \ud655\uc7a5 \uc548\ud568)]"_s)
+			$of(u"   [-E(엔티티 참조 확장 안함)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionQC"_s),
-			$of(u"   [-QC(\uc790\ub3d9 \ud328\ud134 \ucda9\ub3cc \uacbd\uace0)]"_s)
+			$of(u"   [-QC(자동 패턴 충돌 경고)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionQ"_s),
-			$of(u"   [-Q(\uc790\ub3d9 \ubaa8\ub4dc)]"_s)
+			$of(u"   [-Q(자동 모드)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionLF"_s),
-			$of(u"   [-LF(\ucd9c\ub825\uc5d0\ub9cc \uc904 \ubc14\uafc8 \uc0ac\uc6a9 {\uae30\ubcf8\uac12: CR/LF})]"_s)
+			$of(u"   [-LF(출력에만 줄 바꿈 사용 {기본값: CR/LF})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCR"_s),
-			$of(u"   [-CR(\ucd9c\ub825\uc5d0\ub9cc \uce90\ub9ac\uc9c0 \ub9ac\ud134 \uc0ac\uc6a9 {\uae30\ubcf8\uac12: CR/LF})]"_s)
+			$of(u"   [-CR(출력에만 캐리지 리턴 사용 {기본값: CR/LF})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionESCAPE"_s),
-			$of(u"   [-ESCAPE(\uc774\uc2a4\ucf00\uc774\ud504 \ubb38\uc790 {\uae30\ubcf8\uac12: <>&\"\'\\r\\n}]"_s)
+			$of(u"   [-ESCAPE(이스케이프 문자 {기본값: <>&\"\'\\r\\n}]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionINDENT"_s),
-			$of(u"   [-INDENT(\ub4e4\uc5ec \uc4f8 \uacf5\ubc31 \uc218 \uc81c\uc5b4 {\uae30\ubcf8\uac12: 0})]"_s)
+			$of(u"   [-INDENT(들여 쓸 공백 수 제어 {기본값: 0})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTT"_s),
-			$of(u"   [-TT(\ud15c\ud50c\ub9ac\ud2b8 \ud638\ucd9c \uc2dc \ucd94\uc801)]"_s)
+			$of(u"   [-TT(템플리트 호출 시 추적)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTG"_s),
-			$of(u"   [-TG(\uac01 \uc0dd\uc131 \uc774\ubca4\ud2b8 \ucd94\uc801)]"_s)
+			$of(u"   [-TG(각 생성 이벤트 추적)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTS"_s),
-			$of(u"   [-TS(\uac01 \uc120\ud0dd \uc774\ubca4\ud2b8 \ucd94\uc801)]"_s)
+			$of(u"   [-TS(각 선택 이벤트 추적)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTTC"_s),
-			$of(u"   [-TTC(\ud15c\ud50c\ub9ac\ud2b8 \ud558\uc704 \ud56d\ubaa9 \ucc98\ub9ac \uc2dc \ucd94\uc801)]"_s)
+			$of(u"   [-TTC(템플리트 하위 항목 처리 시 추적)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTCLASS"_s),
-			$of(u"   [-TCLASS(\ucd94\uc801 \ud655\uc7a5\uc5d0 \ub300\ud55c TraceListener \ud074\ub798\uc2a4)]"_s)
+			$of(u"   [-TCLASS(추적 확장에 대한 TraceListener 클래스)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionVALIDATE"_s),
-			$of(u"   [-VALIDATE(\uac80\uc99d \uc5ec\ubd80 \uc124\uc815. \uae30\ubcf8\uc801\uc73c\ub85c \uac80\uc99d\uc740 \ud574\uc81c\ub418\uc5b4 \uc788\uc74c)]"_s)
+			$of(u"   [-VALIDATE(검증 여부 설정. 기본적으로 검증은 해제되어 있음)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionEDUMP"_s),
-			$of(u"   [-EDUMP {\uc120\ud0dd\uc801 \ud30c\uc77c \uc774\ub984}(\uc624\ub958 \ubc1c\uc0dd \uc2dc \uc2a4\ud0dd \ub364\ud504)]"_s)
+			$of(u"   [-EDUMP {선택적 파일 이름}(오류 발생 시 스택 덤프)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXML"_s),
-			$of(u"   [-XML(XML \ud3ec\ub9f7\ud130 \uc0ac\uc6a9 \ubc0f XML \ud5e4\ub354 \ucd94\uac00)]"_s)
+			$of(u"   [-XML(XML 포맷터 사용 및 XML 헤더 추가)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTEXT"_s),
-			$of(u"   [-TEXT(\uac04\ub2e8\ud55c \ud14d\uc2a4\ud2b8 \ud3ec\ub9f7\ud130 \uc0ac\uc6a9)]"_s)
+			$of(u"   [-TEXT(간단한 텍스트 포맷터 사용)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionHTML"_s),
-			$of(u"   [-HTML(HTML \ud3ec\ub9f7\ud130 \uc0ac\uc6a9)]"_s)
+			$of(u"   [-HTML(HTML 포맷터 사용)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionPARAM"_s),
-			$of(u"   [-PARAM \uc774\ub984 \ud45c\ud604\uc2dd(\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ub9e4\uac1c\ubcc0\uc218 \uc124\uc815)]"_s)
+			$of(u"   [-PARAM 이름 표현식(스타일시트 매개변수 설정)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
-			$of(u"XSL \ud504\ub85c\uc138\uc2a4\ub97c \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XSL 프로세스를 실패했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg2"_s),
-			$of(u"** \uad6c\ubb38 \ubd84\uc11d\uae30\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c **"_s)
+			$of(u"** 구문 분석기를 찾을 수 없음 **"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"\ud074\ub798\uc2a4 \uacbd\ub85c\ub97c \ud655\uc778\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"클래스 경로를 확인하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"IBM\uc758 Java\uc6a9 XML \uad6c\ubb38 \ubd84\uc11d\uae30\uac00 \uc5c6\uc744 \uacbd\uc6b0 \ub2e4\uc74c \uc704\uce58\uc5d0\uc11c \ub2e4\uc6b4\ub85c\ub4dc\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"IBM의 Java용 XML 구문 분석기가 없을 경우 다음 위치에서 다운로드할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),
@@ -1987,91 +1987,91 @@ $ObjectArray2* XSLTErrorResources_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionURIRESOLVER"_s),
-			$of(u"   [-URIRESOLVER \uc804\uccb4 \ud074\ub798\uc2a4 \uc774\ub984(URI \ubd84\uc11d\uc5d0 \uc0ac\uc6a9\ud560 URIResolver)]"_s)
+			$of(u"   [-URIRESOLVER 전체 클래스 이름(URI 분석에 사용할 URIResolver)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionENTITYRESOLVER"_s),
-			$of(u"   [-ENTITYRESOLVER \uc804\uccb4 \ud074\ub798\uc2a4 \uc774\ub984(\uc5d4\ud2f0\ud2f0 \ubd84\uc11d\uc5d0 \uc0ac\uc6a9\ud560 EntityResolver)]"_s)
+			$of(u"   [-ENTITYRESOLVER 전체 클래스 이름(엔티티 분석에 사용할 EntityResolver)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCONTENTHANDLER"_s),
-			$of(u"   [-CONTENTHANDLER \uc804\uccb4 \ud074\ub798\uc2a4 \uc774\ub984(\ucd9c\ub825 \uc9c1\ub82c\ud654\uc5d0 \uc0ac\uc6a9\ud560 ContentHandler)]"_s)
+			$of(u"   [-CONTENTHANDLER 전체 클래스 이름(출력 직렬화에 사용할 ContentHandler)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionLINENUMBERS"_s),
-			$of(u"   [-L(\uc18c\uc2a4 \ubb38\uc11c\uc5d0 \ud589 \ubc88\ud638 \uc0ac\uc6a9)]"_s)
+			$of(u"   [-L(소스 문서에 행 번호 사용)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionSECUREPROCESSING"_s),
-			$of(u"   [-SECURE(\ubcf4\uc548 \ucc98\ub9ac \uae30\ub2a5\uc744 true\ub85c \uc124\uc815)]"_s)
+			$of(u"   [-SECURE(보안 처리 기능을 true로 설정)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionMEDIA"_s),
-			$of(u"   [-MEDIA mediaType(media \uc18d\uc131\uc744 \uc0ac\uc6a9\ud558\uc5ec \ubb38\uc11c\uc640 \uc5f0\uad00\ub41c \uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ucc3e\uae30)]"_s)
+			$of(u"   [-MEDIA mediaType(media 속성을 사용하여 문서와 연관된 스타일시트 찾기)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionFLAVOR"_s),
-			$of(u"   [-FLAVOR flavorName(\ubcc0\ud658\uc5d0 \uba85\uc2dc\uc801\uc73c\ub85c s2s=SAX \ub610\ub294 d2d=DOM \uc0ac\uc6a9)] "_s)
+			$of(u"   [-FLAVOR flavorName(변환에 명시적으로 s2s=SAX 또는 d2d=DOM 사용)] "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionDIAG"_s),
-			$of(u"   [-DIAG(\ubcc0\ud658\uc5d0 \uac78\ub9b0 \ucd1d \uc2dc\uac04(\ubc00\ub9ac\ucd08) \uc778\uc1c4)]"_s)
+			$of(u"   [-DIAG(변환에 걸린 총 시간(밀리초) 인쇄)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionINCREMENTAL"_s),
-			$of(u"   [-INCREMENTAL(http://xml.apache.org/xalan/features/incremental\uc744 true\ub85c \uc124\uc815\ud558\uc5ec \uc99d\ubd84\uc801 DTM \uc0dd\uc131 \uc694\uccad)]"_s)
+			$of(u"   [-INCREMENTAL(http://xml.apache.org/xalan/features/incremental을 true로 설정하여 증분적 DTM 생성 요청)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionNOOPTIMIMIZE"_s),
-			$of(u"   [-NOOPTIMIMIZE(http://xml.apache.org/xalan/features/optimize\ub97c false\ub85c \uc124\uc815\ud558\uc5ec \uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ucd5c\uc801\ud654 \ucc98\ub9ac \uc548\ud568 \uc694\uccad)]"_s)
+			$of(u"   [-NOOPTIMIMIZE(http://xml.apache.org/xalan/features/optimize를 false로 설정하여 스타일시트 최적화 처리 안함 요청)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionRL"_s),
-			$of(u"   [-RL recursionlimit(\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \uc21c\ud658 \uae4a\uc774\uc5d0 \ub300\ud55c \uc22b\uc790 \uc81c\ud55c \uac80\uc99d)]"_s)
+			$of(u"   [-RL recursionlimit(스타일시트 순환 깊이에 대한 숫자 제한 검증)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXO"_s),
-			$of(u"   [-XO [transletName](\uc0dd\uc131\ub41c translet\uc5d0 \uc774\ub984 \uc9c0\uc815)]"_s)
+			$of(u"   [-XO [transletName](생성된 translet에 이름 지정)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXD"_s),
-			$of(u"   [-XD destinationDirectory(translet\uc5d0 \ub300\ud55c \ub300\uc0c1 \ub514\ub809\ud1a0\ub9ac \uc9c0\uc815)]"_s)
+			$of(u"   [-XD destinationDirectory(translet에 대한 대상 디렉토리 지정)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXJ"_s),
-			$of(u"   [-XJ jarfile(translet \ud074\ub798\uc2a4\ub97c <jarfile> \uc774\ub984\uc758 jar \ud30c\uc77c\ub85c \ud328\ud0a4\uc9c0\ud654)]"_s)
+			$of(u"   [-XJ jarfile(translet 클래스를 <jarfile> 이름의 jar 파일로 패키지화)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXP"_s),
-			$of(u"   [-XP package(\uc0dd\uc131\ub41c \ubaa8\ub4e0 translet \ud074\ub798\uc2a4\uc5d0 \ub300\ud55c \ud328\ud0a4\uc9c0 \uc774\ub984 \uc811\ub450\uc5b4 \uc9c0\uc815)]"_s)
+			$of(u"   [-XP package(생성된 모든 translet 클래스에 대한 패키지 이름 접두어 지정)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXN"_s),
-			$of(u"   [-XN(\ud15c\ud50c\ub9ac\ud2b8 \uc778\ub77c\uc778\uc744 \uc0ac\uc6a9\uc73c\ub85c \uc124\uc815)]"_s)
+			$of(u"   [-XN(템플리트 인라인을 사용으로 설정)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXX"_s),
-			$of(u"   [-XX(\ucd94\uac00 \ub514\ubc84\uae45 \uba54\uc2dc\uc9c0 \ucd9c\ub825 \uc124\uc815)]"_s)
+			$of(u"   [-XX(추가 디버깅 메시지 출력 설정)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXT"_s),
-			$of(u"   [-XT(\uac00\ub2a5\ud55c \uacbd\uc6b0 \ubcc0\ud658\uc5d0 translet \uc0ac\uc6a9)]"_s)
+			$of(u"   [-XT(가능한 경우 변환에 translet 사용)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("diagTiming"_s),
-			$of(u" --------- {1}\uc744(\ub97c) \ud1b5\ud55c {0} \ubcc0\ud658\uc5d0 {2}\ubc00\ub9ac\ucd08\uac00 \uac78\ub838\uc2b5\ub2c8\ub2e4."_s)
+			$of(u" --------- {1}을(를) 통한 {0} 변환에 {2}밀리초가 걸렸습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("recursionTooDeep"_s),
-			$of(u"\ud15c\ud50c\ub9ac\ud2b8\uac00 \ub108\ubb34 \uae4a\uac8c \uc911\ucca9\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc911\ucca9 = {0}, \ud15c\ud50c\ub9ac\ud2b8: {1} {2}"_s)
+			$of(u"템플리트가 너무 깊게 중첩되었습니다. 중첩 = {0}, 템플리트: {1} {2}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("nameIs"_s),
-			$of(u"\uc774\ub984:"_s)
+			$of(u"이름:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("matchPatternIs"_s),
-			$of(u"\uc77c\uce58 \ud328\ud134:"_s)
+			$of(u"일치 패턴:"_s)
 		})
 	});
 }

@@ -103,67 +103,67 @@ $ObjectArray2* SerializerMessages_cs::getContents() {
 	$var($ObjectArray2, contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"T\u0159\u00edda serializace \'\'{0}\'\' neimplementuje org.xml.sax.ContentHandler."_s)
+			$of(u"Třída serializace \'\'{0}\'\' neimplementuje org.xml.sax.ContentHandler."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"Nelze naj\u00edt zdroj [ {0} ].\n {1}"_s)
+			$of(u"Nelze najít zdroj [ {0} ].\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"Nelze zav\u00e9st zdroj [ {0} ]: {1} \n {2} \n {3}"_s)
+			$of(u"Nelze zavést zdroj [ {0} ]: {1} \n {2} \n {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"Velikost vyrovn\u00e1vac\u00ed pam\u011bti <=0"_s)
+			$of(u"Velikost vyrovnávací paměti <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Byla zji\u0161t\u011bna neplatn\u00e1 n\u00e1hrada UTF-16: {0} ?"_s)
+			$of(u"Byla zjištěna neplatná náhrada UTF-16: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_OIERROR),
-			$of(u"Chyba vstupu/v\u00fdstupu"_s)
+			$of(u"Chyba vstupu/výstupu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Nelze p\u0159idat atribut {0} po uzlech potomk\u016f ani p\u0159ed t\u00edm, ne\u017e je vytvo\u0159en prvek. Atribut bude ignorov\u00e1n."_s)
+			$of(u"Nelze přidat atribut {0} po uzlech potomků ani před tím, než je vytvořen prvek. Atribut bude ignorován."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NAMESPACE_PREFIX),
-			$of(u"Obor n\u00e1zv\u016f pro p\u0159edponu \'\'{0}\'\' nebyl deklarov\u00e1n."_s)
+			$of(u"Obor názvů pro předponu \'\'{0}\'\' nebyl deklarován."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRAY_NAMESPACE),
-			$of(u"Deklarace oboru n\u00e1zv\u016f \'\'{0}\'\'=\'\'{1}\'\' je vn\u011b prvku."_s)
+			$of(u"Deklarace oboru názvů \'\'{0}\'\'=\'\'{1}\'\' je vně prvku."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"Nelze zav\u00e9st \'\'{0}\'\' (zkontrolujte prom\u011bnnou CLASSPATH), proto se pou\u017e\u00edvaj\u00ed pouze v\u00fdchoz\u00ed hodnoty"_s)
+			$of(u"Nelze zavést \'\'{0}\'\' (zkontrolujte proměnnou CLASSPATH), proto se používají pouze výchozí hodnoty"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Nelze na\u010d\u00edst soubor vlastnost\u00ed \'\'{0}\'\' pro v\u00fdstupn\u00ed metodu \'\'{1}\'\' (zkontrolujte prom\u011bnnou CLASSPATH)."_s)
+			$of(u"Nelze načíst soubor vlastností \'\'{0}\'\' pro výstupní metodu \'\'{1}\'\' (zkontrolujte proměnnou CLASSPATH)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_INVALID_PORT),
-			$of(u"Neplatn\u00e9 \u010d\u00edslo portu."_s)
+			$of(u"Neplatné číslo portu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PORT_WHEN_HOST_NULL),
-			$of(u"M\u00e1-li hostitel hodnotu null, nelze nastavit port."_s)
+			$of(u"Má-li hostitel hodnotu null, nelze nastavit port."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"Adresa hostitele m\u00e1 nespr\u00e1vn\u00fd form\u00e1t."_s)
+			$of(u"Adresa hostitele má nesprávný formát."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"Sch\u00e9ma nevyhovuje."_s)
+			$of(u"Schéma nevyhovuje."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"Nelze nastavit sch\u00e9ma \u0159et\u011bzce s hodnotou null."_s)
+			$of(u"Nelze nastavit schéma řetězce s hodnotou null."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
@@ -171,151 +171,151 @@ $ObjectArray2* SerializerMessages_cs::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PATH_INVALID_CHAR),
-			$of(u"Cesta obsahuje neplatn\u00fd znak: {0}"_s)
+			$of(u"Cesta obsahuje neplatný znak: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_INVALID_CHAR),
-			$of(u"Fragment obsahuje neplatn\u00fd znak."_s)
+			$of(u"Fragment obsahuje neplatný znak."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"M\u00e1-li cesta hodnotu null, nelze nastavit fragment."_s)
+			$of(u"Má-li cesta hodnotu null, nelze nastavit fragment."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Fragment lze nastavit jen u generick\u00e9ho URI."_s)
+			$of(u"Fragment lze nastavit jen u generického URI."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_SCHEME_IN_URI),
-			$of(u"V URI nebylo nalezeno \u017e\u00e1dn\u00e9 sch\u00e9ma: {0}"_s)
+			$of(u"V URI nebylo nalezeno žádné schéma: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"URI nelze inicializovat s pr\u00e1zdn\u00fdmi parametry."_s)
+			$of(u"URI nelze inicializovat s prázdnými parametry."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Fragment nelze ur\u010dit z\u00e1rove\u0148 v cest\u011b i ve fragmentu."_s)
+			$of(u"Fragment nelze určit zároveň v cestě i ve fragmentu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"V \u0159et\u011bzci cesty a dotazu nelze zadat \u0159et\u011bzec dotazu."_s)
+			$of(u"V řetězci cesty a dotazu nelze zadat řetězec dotazu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_PORT_IF_NO_HOST),
-			$of(u"Nen\u00ed-li ur\u010den hostitel, nelze zadat port."_s)
+			$of(u"Není-li určen hostitel, nelze zadat port."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Nen\u00ed-li ur\u010den hostitel, nelze zadat \u00fadaje o u\u017eivateli."_s)
+			$of(u"Není-li určen hostitel, nelze zadat údaje o uživateli."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_REQUIRED),
-			$of(u"Je vy\u017eadov\u00e1no sch\u00e9ma!"_s)
+			$of(u"Je vyžadováno schéma!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FACTORY_PROPERTY_MISSING),
-			$of(u"Objekt vlastnost\u00ed p\u0159edan\u00fd faktorii SerializerFactory neobsahuje vlastnost \'\'{0}\'\'. "_s)
+			$of(u"Objekt vlastností předaný faktorii SerializerFactory neobsahuje vlastnost \'\'{0}\'\'. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"Varov\u00e1n\u00ed: K\u00f3dov\u00e1n\u00ed \'\'{0}\'\' nen\u00ed v b\u011bhov\u00e9m prost\u0159ed\u00ed Java podporov\u00e1no."_s)
+			$of(u"Varování: Kódování \'\'{0}\'\' není v běhovém prostředí Java podporováno."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_FOUND),
-			$of(u"Parametr \'\'{0}\'\' nebyl rozpozn\u00e1n."_s)
+			$of(u"Parametr \'\'{0}\'\' nebyl rozpoznán."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_SUPPORTED),
-			$of(u"Parametr \'\'{0}\'\' byl rozpozn\u00e1n, ale nelze nastavit po\u017eadovanou hodnotu."_s)
+			$of(u"Parametr \'\'{0}\'\' byl rozpoznán, ale nelze nastavit požadovanou hodnotu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRING_TOO_LONG),
-			$of(u"V\u00fdsledn\u00fd \u0159et\u011bzec je p\u0159\u00edli\u0161 dlouh\u00fd pro \u0159et\u011bzec DOMString: \'\'{0}\'\'."_s)
+			$of(u"Výsledný řetězec je příliš dlouhý pro řetězec DOMString: \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_TYPE_MISMATCH_ERR),
-			$of(u"Typ hodnoty pro tento n\u00e1zev parametru nen\u00ed kompatibiln\u00ed s o\u010dek\u00e1van\u00fdm typem hodnoty."_s)
+			$of(u"Typ hodnoty pro tento název parametru není kompatibilní s očekávaným typem hodnoty."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_OUTPUT_SPECIFIED),
-			$of(u"C\u00edlov\u00e9 um\u00edst\u011bn\u00ed v\u00fdstupu pro data ur\u010den\u00e1 k z\u00e1pisu je rovno hodnot\u011b Null. "_s)
+			$of(u"Cílové umístění výstupu pro data určená k zápisu je rovno hodnotě Null. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNSUPPORTED_ENCODING),
-			$of(u"Bylo nalezeno nepodporovan\u00e9 k\u00f3dov\u00e1n\u00ed."_s)
+			$of(u"Bylo nalezeno nepodporované kódování."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNABLE_TO_SERIALIZE_NODE),
-			$of(u"Nelze prov\u00e9st serializaci uzlu. "_s)
+			$of(u"Nelze provést serializaci uzlu. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_CDATA_SECTIONS_SPLIT),
-			$of(u"Sekce CDATA obsahuje jednu nebo v\u00edce ukon\u010dovac\u00edch zna\u010dek \']]>\'."_s)
+			$of(u"Sekce CDATA obsahuje jednu nebo více ukončovacích značek \']]>\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WARNING_WF_NOT_CHECKED),
-			$of(u"Nelze vytvo\u0159it instanci modulu pro kontrolu spr\u00e1vn\u00e9ho utvo\u0159en\u00ed. Parametr spr\u00e1vn\u00e9ho utvo\u0159en\u00ed byl nastaven na hodnotu true, nepoda\u0159ilo se v\u0161ak zkontrolovat spr\u00e1vnost utvo\u0159en\u00ed. "_s)
+			$of(u"Nelze vytvořit instanci modulu pro kontrolu správného utvoření. Parametr správného utvoření byl nastaven na hodnotu true, nepodařilo se však zkontrolovat správnost utvoření. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER),
-			$of(u"Uzel \'\'{0}\'\' obsahuje neplatn\u00e9 znaky XML. "_s)
+			$of(u"Uzel \'\'{0}\'\' obsahuje neplatné znaky XML. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_COMMENT),
-			$of(u"V pozn\u00e1mce byl zji\u0161t\u011bn neplatn\u00fd znak XML (Unicode: 0x{0})."_s)
+			$of(u"V poznámce byl zjištěn neplatný znak XML (Unicode: 0x{0})."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_PI),
-			$of(u"V datech instrukce zpracov\u00e1n\u00ed byl nalezen neplatn\u00fd znak XML (Unicode: 0x{0})."_s)
+			$of(u"V datech instrukce zpracování byl nalezen neplatný znak XML (Unicode: 0x{0})."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_CDATA),
-			$of(u"V odd\u00edlu CDATASection byl nalezen neplatn\u00fd znak XML (Unicode: 0x{0})."_s)
+			$of(u"V oddílu CDATASection byl nalezen neplatný znak XML (Unicode: 0x{0})."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_TEXT),
-			$of(u"V obsahu znakov\u00fdch dat uzlu byl nalezen neplatn\u00fd znak XML (Unicode: 0x{0})."_s)
+			$of(u"V obsahu znakových dat uzlu byl nalezen neplatný znak XML (Unicode: 0x{0})."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_NODE_NAME),
-			$of(u"V objektu {0} s n\u00e1zvem \'\'{1}\'\' byl nalezen neplatn\u00fd znak XML. "_s)
+			$of(u"V objektu {0} s názvem \'\'{1}\'\' byl nalezen neplatný znak XML. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_DASH_IN_COMMENT),
-			$of(u"V pozn\u00e1mk\u00e1ch nen\u00ed povolen \u0159et\u011bzec \"--\"."_s)
+			$of(u"V poznámkách není povolen řetězec \"--\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_LT_IN_ATTVAL),
-			$of(u"Hodnota atributu \"{1}\" souvisej\u00edc\u00edho s typem prvku \"{0}\" nesm\u00ed obsahovat znak \'\'<\'\'."_s)
+			$of(u"Hodnota atributu \"{1}\" souvisejícího s typem prvku \"{0}\" nesmí obsahovat znak \'\'<\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_UNPARSED_ENT),
-			$of(u"Odkaz na neanalyzovanou entitu \"&{0};\" nen\u00ed povolen."_s)
+			$of(u"Odkaz na neanalyzovanou entitu \"&{0};\" není povolen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_EXTERNAL_ENT),
-			$of(u"Extern\u00ed odkaz na entitu \"&{0};\" nen\u00ed v hodnot\u011b atributu povolen."_s)
+			$of(u"Externí odkaz na entitu \"&{0};\" není v hodnotě atributu povolen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NS_PREFIX_CANNOT_BE_BOUND),
-			$of(u"P\u0159edpona \"{0}\" nesm\u00ed b\u00fdt v\u00e1zan\u00e1 k oboru n\u00e1zv\u016f \"{1}\"."_s)
+			$of(u"Předpona \"{0}\" nesmí být vázaná k oboru názvů \"{1}\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ELEMENT_NAME),
-			$of(u"Lok\u00e1ln\u00ed n\u00e1zev prvku \"{0}\" m\u00e1 hodnotu Null. "_s)
+			$of(u"Lokální název prvku \"{0}\" má hodnotu Null. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ATTR_NAME),
-			$of(u"Lok\u00e1ln\u00ed n\u00e1zev atributu \"{0}\" m\u00e1 hodnotu Null. "_s)
+			$of(u"Lokální název atributu \"{0}\" má hodnotu Null. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ELEM_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"Nov\u00fd text uzlu entity \"{0}\" obsahuje uzel prvku \"{1}\" s nesv\u00e1zanou p\u0159edponou \"{2}\"."_s)
+			$of(u"Nový text uzlu entity \"{0}\" obsahuje uzel prvku \"{1}\" s nesvázanou předponou \"{2}\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ATTR_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"Nov\u00fd text uzlu entity \"{0}\" obsahuje uzel atributu \"{1}\" s nesv\u00e1zanou p\u0159edponou \"{2}\". "_s)
+			$of(u"Nový text uzlu entity \"{0}\" obsahuje uzel atributu \"{1}\" s nesvázanou předponou \"{2}\". "_s)
 		})
 	}));
 	return contents;

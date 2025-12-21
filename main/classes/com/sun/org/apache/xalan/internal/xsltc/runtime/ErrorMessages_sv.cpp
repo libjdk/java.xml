@@ -81,23 +81,23 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"Ogiltig konvertering fr\u00e5n \'\'{0}\'\' till \'\'{1}\'\'."_s)
+			$of(u"Ogiltig konvertering från \'\'{0}\'\' till \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"Den externa funktionen \'\'{0}\'\' underst\u00f6ds inte i XSLTC."_s)
+			$of(u"Den externa funktionen \'\'{0}\'\' understöds inte i XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"Ok\u00e4nd argumenttyp i likhetsuttryck."_s)
+			$of(u"Okänd argumenttyp i likhetsuttryck."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"Argumenttyp \'\'{0}\'\' i anrop till \'\'{1}\'\' \u00e4r inte giltig"_s)
+			$of(u"Argumenttyp \'\'{0}\'\' i anrop till \'\'{1}\'\' är inte giltig"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"F\u00f6rs\u00f6ker formatera talet \'\'{0}\'\' med m\u00f6nstret \'\'{1}\'\'."_s)
+			$of(u"Försöker formatera talet \'\'{0}\'\' med mönstret \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
@@ -105,35 +105,35 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"Iteratorn f\u00f6r axeln \'\'{0}\'\' underst\u00f6ds inte."_s)
+			$of(u"Iteratorn för axeln \'\'{0}\'\' understöds inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"Iteratorn f\u00f6r den typade axeln \'\'{0}\'\' underst\u00f6ds inte."_s)
+			$of(u"Iteratorn för den typade axeln \'\'{0}\'\' understöds inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"Attributet \'\'{0}\'\' finns utanf\u00f6r elementet."_s)
+			$of(u"Attributet \'\'{0}\'\' finns utanför elementet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"Namnrymdsdeklarationen \'\'{0}\'\'=\'\'{1}\'\' finns utanf\u00f6r element."_s)
+			$of(u"Namnrymdsdeklarationen \'\'{0}\'\'=\'\'{1}\'\' finns utanför element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"Namnrymd f\u00f6r prefix \'\'{0}\'\' har inte deklarerats."_s)
+			$of(u"Namnrymd för prefix \'\'{0}\'\' har inte deklarerats."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
-			$of(u"DOMAdapter har skapats med fel typ av DOM-k\u00e4lla."_s)
+			$of(u"DOMAdapter har skapats med fel typ av DOM-källa."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"Den SAX-parser som du anv\u00e4nder hanterar inga DTD-deklarationsh\u00e4ndelser."_s)
+			$of(u"Den SAX-parser som du använder hanterar inga DTD-deklarationshändelser."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"Den SAX-parser som du anv\u00e4nder saknar st\u00f6d f\u00f6r XML-namnrymder."_s)
+			$of(u"Den SAX-parser som du använder saknar stöd för XML-namnrymder."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
@@ -141,31 +141,31 @@ $ObjectArray2* ErrorMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_XSL_ERR),
-			$of(u"XSL-elementet \'\'{0}\'\' st\u00f6ds inte"_s)
+			$of(u"XSL-elementet \'\'{0}\'\' stöds inte"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
-			$of(u"XSLTC-till\u00e4gget \'\'{0}\'\' \u00e4r ok\u00e4nt"_s)
+			$of(u"XSLTC-tillägget \'\'{0}\'\' är okänt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"Angiven translet, \'\'{0}\'\', har skapats med en XSLTC-version som \u00e4r senare \u00e4n den XSLTC-k\u00f6rning i bruk. F\u00f6r att kunna k\u00f6ra denna translet m\u00e5ste du omkompilera formatmallen eller anv\u00e4nda en senare version av XSLTC."_s)
+			$of(u"Angiven translet, \'\'{0}\'\', har skapats med en XSLTC-version som är senare än den XSLTC-körning i bruk. För att kunna köra denna translet måste du omkompilera formatmallen eller använda en senare version av XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
-			$of(u"Ett attribut vars v\u00e4rde m\u00e5ste vara ett QName hade v\u00e4rdet \'\'{0}\'\'"_s)
+			$of(u"Ett attribut vars värde måste vara ett QName hade värdet \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_NCNAME_ERR),
-			$of(u"Ett attribut vars v\u00e4rde m\u00e5ste vara ett NCName hade v\u00e4rdet \'\'{0}\'\'"_s)
+			$of(u"Ett attribut vars värde måste vara ett NCName hade värdet \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"Anv\u00e4ndning av till\u00e4ggsfunktionen \'\'{0}\'\' \u00e4r inte till\u00e5tet n\u00e4r s\u00e4ker bearbetning till\u00e4mpas."_s)
+			$of(u"Användning av tilläggsfunktionen \'\'{0}\'\' är inte tillåtet när säker bearbetning tillämpas."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"Anv\u00e4ndning av till\u00e4ggselementet \'\'{0}\'\' \u00e4r inte till\u00e5tet n\u00e4r s\u00e4ker bearbetning till\u00e4mpas."_s)
+			$of(u"Användning av tilläggselementet \'\'{0}\'\' är inte tillåtet när säker bearbetning tillämpas."_s)
 		})
 	});
 }

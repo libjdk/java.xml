@@ -66,71 +66,71 @@ $ObjectArray2* ErrorMessages_cs::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),
-			$of(u"Vnit\u0159n\u00ed b\u011bhov\u00e1 chyba v \'\'{0}\'\'"_s)
+			$of(u"Vnitřní běhová chyba v \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"Vnit\u0159n\u00ed b\u011bhov\u00e1 chyba p\u0159i prov\u00e1d\u011bn\u00ed funkce <xsl:copy>."_s)
+			$of(u"Vnitřní běhová chyba při provádění funkce <xsl:copy>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"Neplatn\u00e1 konverze z \'\'{0}\'\' do \'\'{1}\'\'."_s)
+			$of(u"Neplatná konverze z \'\'{0}\'\' do \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"Extern\u00ed funkce \'\'{0}\'\' nen\u00ed podporov\u00e1na produktem SLTC."_s)
+			$of(u"Externí funkce \'\'{0}\'\' není podporována produktem SLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"Nezn\u00e1m\u00fd typ argumentu ve v\u00fdrazu rovnosti."_s)
+			$of(u"Neznámý typ argumentu ve výrazu rovnosti."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"Neplatn\u00fd typ argumentu \'\'{0}\'\' p\u0159i vol\u00e1n\u00ed \'\'{1}\'\'"_s)
+			$of(u"Neplatný typ argumentu \'\'{0}\'\' při volání \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"Pokus form\u00e1tovat \u010d\u00edslo \'\'{0}\'\' pou\u017eit\u00edm vzorku \'\'{1}\'\'."_s)
+			$of(u"Pokus formátovat číslo \'\'{0}\'\' použitím vzorku \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
-			$of(u"Nelze klonovat iter\u00e1tor \'\'{0}\'\'."_s)
+			$of(u"Nelze klonovat iterátor \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"Iter\u00e1tor pro osu \'\'{0}\'\' nen\u00ed podporov\u00e1n."_s)
+			$of(u"Iterátor pro osu \'\'{0}\'\' není podporován."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"Iter\u00e1tor pro typizovanou osu \'\'{0}\'\' nen\u00ed podporov\u00e1n."_s)
+			$of(u"Iterátor pro typizovanou osu \'\'{0}\'\' není podporován."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"Atribut \'\'{0}\'\' je vn\u011b prvku."_s)
+			$of(u"Atribut \'\'{0}\'\' je vně prvku."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"Deklarace oboru n\u00e1zv\u016f \'\'{0}\'\'=\'\'{1}\'\' je vn\u011b prvku."_s)
+			$of(u"Deklarace oboru názvů \'\'{0}\'\'=\'\'{1}\'\' je vně prvku."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"Obor n\u00e1zv\u016f pro p\u0159edponu \'\'{0}\'\' nebyl deklarov\u00e1n."_s)
+			$of(u"Obor názvů pro předponu \'\'{0}\'\' nebyl deklarován."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
-			$of(u"DOMAdapter byl vytvo\u0159en s pou\u017eit\u00edm chybn\u00e9ho typu zdroje DOM."_s)
+			$of(u"DOMAdapter byl vytvořen s použitím chybného typu zdroje DOM."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"Pou\u017eit\u00fd analyz\u00e1tor SAX nem\u016f\u017ee manipulovat s deklara\u010dn\u00edmi ud\u00e1lostmi DTD."_s)
+			$of(u"Použitý analyzátor SAX nemůže manipulovat s deklaračními událostmi DTD."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"Pou\u017eit\u00fd analyz\u00e1tor SAX nem\u016f\u017ee podporovat obory n\u00e1zv\u016f pro XML."_s)
+			$of(u"Použitý analyzátor SAX nemůže podporovat obory názvů pro XML."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"Nelze p\u0159elo\u017eit odkazy URI \'\'{0}\'\'."_s)
+			$of(u"Nelze přeložit odkazy URI \'\'{0}\'\'."_s)
 		})
 	});
 }

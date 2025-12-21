@@ -407,7 +407,7 @@ void XPath::error($XPathContext* xctxt, int32_t sourceNode, $String* msg, $Objec
 		$var($SourceLocator, slocator, xctxt->getSAXLocator());
 		$var($String, var$2, $$str({fmsg, "; file "_s, $($nc(slocator)->getSystemId()), "; line "_s}));
 		$var($String, var$1, $$concat(var$2, $$str(slocator->getLineNumber())));
-		$var($String, var$0, $$concat(var$1, "; column "));
+		$var($String, var$0, $$concat(var$1, "; column "_s));
 		$nc($System::out)->println($$concat(var$0, $$str(slocator->getColumnNumber())));
 	}
 }

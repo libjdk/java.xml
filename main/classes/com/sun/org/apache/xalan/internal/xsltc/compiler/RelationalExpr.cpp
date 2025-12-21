@@ -289,9 +289,9 @@ void RelationalExpr::translate($ClassGenerator* classGen, $MethodGenerator* meth
 		$init($Constants);
 		$var($String, var$4, $$str({"("_s, $($nc($($nc(this->_left)->getType()))->toSignature())}));
 		$var($String, var$3, $$concat(var$4, $($nc($($nc(this->_right)->getType()))->toSignature())));
-		$var($String, var$2, $$concat(var$3, "I"));
+		$var($String, var$2, $$concat(var$3, "I"_s));
 		$var($String, var$1, $$concat(var$2, $Constants::DOM_INTF_SIG));
-		int32_t index = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "compare"_s, $$concat(var$1, ")Z"));
+		int32_t index = $nc(cpg)->addMethodref($Constants::BASIS_LIBRARY_CLASS, "compare"_s, $$concat(var$1, ")Z"_s));
 		il->append(static_cast<$Instruction*>($$new($INVOKESTATIC, index)));
 	} else {
 		translateDesynthesized(classGen, methodGen);

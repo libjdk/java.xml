@@ -66,31 +66,31 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),
-			$of(u"S\'\'ha produ\u00eft un error intern de temps d\'\'execuci\u00f3 a \'\'{0}\'\'"_s)
+			$of(u"S\'\'ha produït un error intern de temps d\'\'execució a \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"Es produeix un error de temps d\'execuci\u00f3 en executar <xsl:copy>."_s)
+			$of(u"Es produeix un error de temps d\'execució en executar <xsl:copy>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"La conversi\u00f3 de \'\'{0}\'\' a \'\'{1}\'\' no \u00e9s v\u00e0lida."_s)
+			$of(u"La conversió de \'\'{0}\'\' a \'\'{1}\'\' no és vàlida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"XSLTC no d\u00f3na suport a la funci\u00f3 externa \'\'{0}\'\'."_s)
+			$of(u"XSLTC no dóna suport a la funció externa \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"L\'expressi\u00f3 d\'igualtat cont\u00e9 un tipus d\'argument desconegut."_s)
+			$of(u"L\'expressió d\'igualtat conté un tipus d\'argument desconegut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"La crida a \'\'{1}\'\' cont\u00e9 un tipus d\'\'argument \'\'{0}\'\' no v\u00e0lid."_s)
+			$of(u"La crida a \'\'{1}\'\' conté un tipus d\'\'argument \'\'{0}\'\' no vàlid."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"S\'\'ha intentat donar format al n\u00famero \'\'{0}\'\' mitjan\u00e7ant el patr\u00f3 \'\'{1}\'\'."_s)
+			$of(u"S\'\'ha intentat donar format al número \'\'{0}\'\' mitjançant el patró \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
@@ -98,11 +98,11 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"L\'\'iterador de l\'\'eix \'\'{0}\'\' no t\u00e9 suport."_s)
+			$of(u"L\'\'iterador de l\'\'eix \'\'{0}\'\' no té suport."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"L\'\'iterador de l\'\'eix escrit \'\'{0}\'\' no t\u00e9 suport."_s)
+			$of(u"L\'\'iterador de l\'\'eix escrit \'\'{0}\'\' no té suport."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
@@ -110,7 +110,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"La declaraci\u00f3 d\'\'espai de noms \'\'{0}\'\'=\'\'{1}\'\' es troba fora de l\'\'element."_s)
+			$of(u"La declaració d\'\'espai de noms \'\'{0}\'\'=\'\'{1}\'\' es troba fora de l\'\'element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
@@ -118,19 +118,19 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
-			$of(u"DOMAdapter s\'ha creat mitjan\u00e7ant un tipus incorrecte de DOM d\'origen."_s)
+			$of(u"DOMAdapter s\'ha creat mitjançant un tipus incorrecte de DOM d\'origen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"L\'analitzador SAX que feu servir no gestiona esdeveniments de declaraci\u00f3 de DTD."_s)
+			$of(u"L\'analitzador SAX que feu servir no gestiona esdeveniments de declaració de DTD."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"L\'analitzador SAX que feu servir no d\u00f3na suport a espais de noms XML."_s)
+			$of(u"L\'analitzador SAX que feu servir no dóna suport a espais de noms XML."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"No s\'\'ha pogut resoldre la refer\u00e8ncia d\'\'URI \'\'{0}\'\'."_s)
+			$of(u"No s\'\'ha pogut resoldre la referència d\'\'URI \'\'{0}\'\'."_s)
 		})
 	});
 }

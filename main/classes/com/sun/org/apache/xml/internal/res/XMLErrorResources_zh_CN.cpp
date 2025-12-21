@@ -369,319 +369,319 @@ void clinit$XMLErrorResources_zh_CN($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301\u8be5\u51fd\u6570!"_s)
+			$of(u"不支持该函数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"\u65e0\u6cd5\u8986\u76d6\u539f\u56e0"_s)
+			$of(u"无法覆盖原因"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_DEFAULT_IMPL),
-			$of(u"\u627e\u4e0d\u5230\u9ed8\u8ba4\u5b9e\u73b0 "_s)
+			$of(u"找不到默认实现 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"\u5f53\u524d\u4e0d\u652f\u6301 ChunkedIntArray({0})"_s)
+			$of(u"当前不支持 ChunkedIntArray({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"\u504f\u79fb\u91cf\u5927\u4e8e\u63d2\u69fd"_s)
+			$of(u"偏移量大于插槽"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Coroutine \u4e0d\u53ef\u7528, id={0}"_s)
+			$of(u"Coroutine 不可用, id={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager \u6536\u5230 co_exit() \u8bf7\u6c42"_s)
+			$of(u"CoroutineManager 收到 co_exit() 请求"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COJOINROUTINESET_FAILED),
-			$of(u"co_joinCoroutineSet() \u5931\u8d25"_s)
+			$of(u"co_joinCoroutineSet() 失败"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COROUTINE_PARAM),
-			$of(u"Coroutine \u53c2\u6570\u9519\u8bef ({0})"_s)
+			$of(u"Coroutine 参数错误 ({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\n\u610f\u5916: \u89e3\u6790\u5668\u5bf9\u7b54\u590d{0}\u6267\u884c doTerminate"_s)
+			$of(u"\n意外: 解析器对答复{0}执行 doTerminate"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"\u65e0\u6cd5\u5728\u89e3\u6790\u65f6\u8c03\u7528 parse"_s)
+			$of(u"无法在解析时调用 parse"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\u9519\u8bef: \u672a\u5b9e\u73b0\u8f74{0}\u7684\u7c7b\u578b\u5316\u8fed\u4ee3\u5668"_s)
+			$of(u"错误: 未实现轴{0}的类型化迭代器"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\u9519\u8bef: \u672a\u5b9e\u73b0\u8f74{0}\u7684\u8fed\u4ee3\u5668 "_s)
+			$of(u"错误: 未实现轴{0}的迭代器 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301\u514b\u9686\u8fed\u4ee3\u5668"_s)
+			$of(u"不支持克隆迭代器"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"\u8f74\u904d\u5386\u7c7b\u578b\u672a\u77e5: {0}"_s)
+			$of(u"轴遍历类型未知: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_AXIS_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301\u8f74\u904d\u5386\u7a0b\u5e8f: {0}"_s)
+			$of(u"不支持轴遍历程序: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_DTMIDS_AVAIL),
-			$of(u"\u65e0\u6cd5\u4f7f\u7528\u66f4\u591a DTM ID"_s)
+			$of(u"无法使用更多 DTM ID"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301: {0}"_s)
+			$of(u"不支持: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NODE_NON_NULL),
-			$of(u"getDTMHandleFromNode \u7684\u8282\u70b9\u5fc5\u987b\u4e3a\u975e\u7a7a\u503c"_s)
+			$of(u"getDTMHandleFromNode 的节点必须为非空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"\u65e0\u6cd5\u5c06\u8282\u70b9\u89e3\u6790\u4e3a\u53e5\u67c4"_s)
+			$of(u"无法将节点解析为句柄"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"\u65e0\u6cd5\u5728\u89e3\u6790\u65f6\u8c03\u7528 startParse"_s)
+			$of(u"无法在解析时调用 startParse"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse \u9700\u8981\u975e\u7a7a SAXParser"_s)
+			$of(u"startParse 需要非空 SAXParser"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COULD_NOT_INIT_PARSER),
-			$of(u"\u65e0\u6cd5\u4f7f\u7528\u4ee5\u4e0b\u5bf9\u8c61\u521d\u59cb\u5316\u89e3\u6790\u5668"_s)
+			$of(u"无法使用以下对象初始化解析器"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_EXCEPTION_CREATING_POOL),
-			$of(u"\u4e3a\u6c60\u521b\u5efa\u65b0\u5b9e\u4f8b\u65f6\u51fa\u73b0\u5f02\u5e38\u9519\u8bef"_s)
+			$of(u"为池创建新实例时出现异常错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"\u8def\u5f84\u5305\u542b\u65e0\u6548\u7684\u8f6c\u4e49\u5e8f\u5217"_s)
+			$of(u"路径包含无效的转义序列"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_SCHEME_REQUIRED),
-			$of(u"\u65b9\u6848\u662f\u5fc5\u9700\u7684!"_s)
+			$of(u"方案是必需的!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_SCHEME_IN_URI),
-			$of(u"\u5728 URI \u4e2d\u627e\u4e0d\u5230\u65b9\u6848: {0}"_s)
+			$of(u"在 URI 中找不到方案: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_SCHEME_INURI),
-			$of(u"\u5728 URI \u4e2d\u627e\u4e0d\u5230\u65b9\u6848"_s)
+			$of(u"在 URI 中找不到方案"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_PATH_INVALID_CHAR),
-			$of(u"\u8def\u5f84\u5305\u542b\u65e0\u6548\u7684\u5b57\u7b26: {0}"_s)
+			$of(u"路径包含无效的字符: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"\u65e0\u6cd5\u4ece\u7a7a\u5b57\u7b26\u4e32\u8bbe\u7f6e\u65b9\u6848"_s)
+			$of(u"无法从空字符串设置方案"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"\u65b9\u6848\u4e0d\u4e00\u81f4\u3002"_s)
+			$of(u"方案不一致。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"\u4e3b\u673a\u4e0d\u662f\u683c\u5f0f\u826f\u597d\u7684\u5730\u5740"_s)
+			$of(u"主机不是格式良好的地址"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_PORT_WHEN_HOST_NULL),
-			$of(u"\u4e3b\u673a\u4e3a\u7a7a\u65f6, \u65e0\u6cd5\u8bbe\u7f6e\u7aef\u53e3"_s)
+			$of(u"主机为空时, 无法设置端口"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_INVALID_PORT),
-			$of(u"\u65e0\u6548\u7684\u7aef\u53e3\u53f7"_s)
+			$of(u"无效的端口号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"\u53ea\u80fd\u4e3a\u4e00\u822c URI \u8bbe\u7f6e\u7247\u6bb5"_s)
+			$of(u"只能为一般 URI 设置片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"\u8def\u5f84\u4e3a\u7a7a\u65f6, \u65e0\u6cd5\u8bbe\u7f6e\u7247\u6bb5"_s)
+			$of(u"路径为空时, 无法设置片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_FRAG_INVALID_CHAR),
-			$of(u"\u7247\u6bb5\u5305\u542b\u65e0\u6548\u7684\u5b57\u7b26"_s)
+			$of(u"片段包含无效的字符"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_PARSER_IN_USE),
-			$of(u"\u89e3\u6790\u5668\u5df2\u5728\u4f7f\u7528"_s)
+			$of(u"解析器已在使用"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"\u65e0\u6cd5\u5728\u89e3\u6790\u65f6\u66f4\u6539{0} {1}"_s)
+			$of(u"无法在解析时更改{0} {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"\u4e0d\u5141\u8bb8\u4f7f\u7528\u81ea\u56e0"_s)
+			$of(u"不允许使用自因"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"\u5982\u679c\u6ca1\u6709\u6307\u5b9a\u4e3b\u673a, \u5219\u4e0d\u53ef\u4ee5\u6307\u5b9a Userinfo"_s)
+			$of(u"如果没有指定主机, 则不可以指定 Userinfo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_PORT_IF_NO_HOST),
-			$of(u"\u5982\u679c\u6ca1\u6709\u6307\u5b9a\u4e3b\u673a, \u5219\u4e0d\u53ef\u4ee5\u6307\u5b9a\u7aef\u53e3"_s)
+			$of(u"如果没有指定主机, 则不可以指定端口"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"\u8def\u5f84\u548c\u67e5\u8be2\u5b57\u7b26\u4e32\u4e2d\u4e0d\u80fd\u6307\u5b9a\u67e5\u8be2\u5b57\u7b26\u4e32"_s)
+			$of(u"路径和查询字符串中不能指定查询字符串"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"\u8def\u5f84\u548c\u7247\u6bb5\u4e2d\u90fd\u65e0\u6cd5\u6307\u5b9a\u7247\u6bb5"_s)
+			$of(u"路径和片段中都无法指定片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"\u65e0\u6cd5\u4ee5\u7a7a\u53c2\u6570\u521d\u59cb\u5316 URI"_s)
+			$of(u"无法以空参数初始化 URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_METHOD_NOT_SUPPORTED),
-			$of(u"\u5c1a\u4e0d\u652f\u6301\u8be5\u65b9\u6cd5 "_s)
+			$of(u"尚不支持该方法 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"\u5f53\u524d\u65e0\u6cd5\u91cd\u65b0\u542f\u52a8 IncrementalSAXSource_Filter"_s)
+			$of(u"当前无法重新启动 IncrementalSAXSource_Filter"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader \u4e0d\u5728 startParse \u8bf7\u6c42\u4e4b\u524d"_s)
+			$of(u"XMLReader 不在 startParse 请求之前"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301\u8f74\u904d\u5386\u7a0b\u5e8f: {0}"_s)
+			$of(u"不支持轴遍历程序: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
-			$of(u"\u4f7f\u7528\u7a7a PrintWriter \u521b\u5efa\u4e86 ListingErrorHandler!"_s)
+			$of(u"使用空 PrintWriter 创建了 ListingErrorHandler!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_SYSTEMID_UNKNOWN),
-			$of(u"SystemId \u672a\u77e5"_s)
+			$of(u"SystemId 未知"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_LOCATION_UNKNOWN),
-			$of(u"\u9519\u8bef\u6240\u5728\u7684\u4f4d\u7f6e\u672a\u77e5"_s)
+			$of(u"错误所在的位置未知"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\u524d\u7f00\u5fc5\u987b\u89e3\u6790\u4e3a\u540d\u79f0\u7a7a\u95f4: {0}"_s)
+			$of(u"前缀必须解析为名称空间: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"XPathContext \u4e2d\u4e0d\u652f\u6301 createDocument()!"_s)
+			$of(u"XPathContext 中不支持 createDocument()!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"\u5c5e\u6027\u5b50\u7ea7\u6ca1\u6709\u6240\u6709\u8005\u6587\u6863!"_s)
+			$of(u"属性子级没有所有者文档!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"\u5c5e\u6027\u5b50\u7ea7\u6ca1\u6709\u6240\u6709\u8005\u6587\u6863\u5143\u7d20!"_s)
+			$of(u"属性子级没有所有者文档元素!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"\u8b66\u544a: \u65e0\u6cd5\u8f93\u51fa\u6587\u6863\u5143\u7d20\u4e4b\u524d\u7684\u6587\u672c! \u5c06\u5ffd\u7565..."_s)
+			$of(u"警告: 无法输出文档元素之前的文本! 将忽略..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"DOM \u4e0a\u4e0d\u80fd\u6709\u591a\u4e2a\u6839!"_s)
+			$of(u"DOM 上不能有多个根!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ARG_LOCALNAME_NULL),
-			$of(u"\u53c2\u6570 \'localName\' \u4e3a\u7a7a\u503c"_s)
+			$of(u"参数 \'localName\' 为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ARG_LOCALNAME_INVALID),
-			$of(u"QNAME \u4e2d\u7684\u672c\u5730\u540d\u79f0\u5e94\u4e3a\u6709\u6548 NCName"_s)
+			$of(u"QNAME 中的本地名称应为有效 NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ARG_PREFIX_INVALID),
-			$of(u"QNAME \u4e2d\u7684\u524d\u7f00\u5e94\u4e3a\u6709\u6548 NCName"_s)
+			$of(u"QNAME 中的前缀应为有效 NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NAME_CANT_START_WITH_COLON),
-			$of(u"\u540d\u79f0\u4e0d\u80fd\u4ee5\u5192\u53f7\u5f00\u5934"_s)
+			$of(u"名称不能以冒号开头"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage \u7684\u53c2\u6570\u8d85\u51fa\u8303\u56f4"_s)
+			$of(u"createMessage 的参数超出范围"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"\u8c03\u7528 messageFormat \u65f6\u629b\u51fa\u5f02\u5e38\u9519\u8bef"_s)
+			$of(u"调用 messageFormat 时抛出异常错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\u884c\u53f7"_s)
+			$of(u"行号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\u5217\u53f7"_s)
+			$of(u"列号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"\u4e32\u884c\u5668\u7c7b \'\'{0}\'\' \u4e0d\u5b9e\u73b0 org.xml.sax.ContentHandler\u3002"_s)
+			$of(u"串行器类 \'\'{0}\'\' 不实现 org.xml.sax.ContentHandler。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"\u627e\u4e0d\u5230\u8d44\u6e90 [ {0} ]\u3002\n {1}"_s)
+			$of(u"找不到资源 [ {0} ]。\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"\u8d44\u6e90 [ {0} ] \u65e0\u6cd5\u52a0\u8f7d: {1} \n {2} \t {3}"_s)
+			$of(u"资源 [ {0} ] 无法加载: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"\u7f13\u51b2\u533a\u5927\u5c0f <=0"_s)
+			$of(u"缓冲区大小 <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u68c0\u6d4b\u5230\u65e0\u6548\u7684 UTF-16 \u4ee3\u7406: {0}?"_s)
+			$of(u"检测到无效的 UTF-16 代理: {0}?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_OIERROR),
-			$of(u"IO \u9519\u8bef"_s)
+			$of(u"IO 错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"\u5728\u751f\u6210\u5b50\u8282\u70b9\u4e4b\u540e\u6216\u5728\u751f\u6210\u5143\u7d20\u4e4b\u524d\u65e0\u6cd5\u6dfb\u52a0\u5c5e\u6027 {0}\u3002\u5c06\u5ffd\u7565\u5c5e\u6027\u3002"_s)
+			$of(u"在生成子节点之后或在生成元素之前无法添加属性 {0}。将忽略属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_NAMESPACE_PREFIX),
-			$of(u"\u6ca1\u6709\u8bf4\u660e\u540d\u79f0\u7a7a\u95f4\u524d\u7f00 \'\'{0}\'\'\u3002"_s)
+			$of(u"没有说明名称空间前缀 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_STRAY_ATTRIBUTE),
-			$of(u"\u5c5e\u6027 \'\'{0}\'\' \u5728\u5143\u7d20\u5916\u90e8\u3002"_s)
+			$of(u"属性 \'\'{0}\'\' 在元素外部。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_STRAY_NAMESPACE),
-			$of(u"\u540d\u79f0\u7a7a\u95f4\u58f0\u660e \'\'{0}\'\'=\'\'{1}\'\' \u5728\u5143\u7d20\u5916\u90e8\u3002"_s)
+			$of(u"名称空间声明 \'\'{0}\'\'=\'\'{1}\'\' 在元素外部。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"\u65e0\u6cd5\u52a0\u8f7d \'\'{0}\'\' (\u68c0\u67e5 CLASSPATH), \u73b0\u5728\u53ea\u4f7f\u7528\u9ed8\u8ba4\u503c"_s)
+			$of(u"无法加载 \'\'{0}\'\' (检查 CLASSPATH), 现在只使用默认值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_ILLEGAL_CHARACTER),
-			$of(u"\u5c1d\u8bd5\u8f93\u51fa\u672a\u4ee5{1}\u7684\u6307\u5b9a\u8f93\u51fa\u7f16\u7801\u8868\u793a\u7684\u6574\u6570\u503c {0} \u7684\u5b57\u7b26\u3002"_s)
+			$of(u"尝试输出未以{1}的指定输出编码表示的整数值 {0} 的字符。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_CN::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"\u65e0\u6cd5\u4e3a\u8f93\u51fa\u65b9\u6cd5 \'\'{1}\'\' \u52a0\u8f7d\u5c5e\u6027\u6587\u4ef6 \'\'{0}\'\' (\u68c0\u67e5 CLASSPATH)"_s)
+			$of(u"无法为输出方法 \'\'{1}\'\' 加载属性文件 \'\'{0}\'\' (检查 CLASSPATH)"_s)
 		})
 	}));
 }

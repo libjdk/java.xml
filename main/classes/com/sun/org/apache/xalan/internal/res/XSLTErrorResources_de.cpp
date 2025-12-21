@@ -803,7 +803,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ILLEGAL_ATTRIBUTE),
-			$of(u"{0} hat ein ung\u00fcltiges Attribut: {1}"_s)
+			$of(u"{0} hat ein ungültiges Attribut: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NULL_SOURCENODE_APPLYIMPORTS),
@@ -811,7 +811,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANNOT_ADD),
-			$of(u"{0} kann nicht zu {1} hinzugef\u00fcgt werden"_s)
+			$of(u"{0} kann nicht zu {1} hinzugefügt werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NULL_SOURCENODE_HANDLEAPPLYTEMPLATES),
@@ -819,7 +819,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_NAME_ATTRIB),
-			$of(u"{0} muss \u00fcber ein \"name\"-Attribut verf\u00fcgen."_s)
+			$of(u"{0} muss über ein \"name\"-Attribut verfügen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_TEMPLATE_NOT_FOUND),
@@ -827,7 +827,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANT_RESOLVE_NAME_AVT),
-			$of(u"Namens-AVT in xsl:call-template konnte nicht aufgel\u00f6st werden."_s)
+			$of(u"Namens-AVT in xsl:call-template konnte nicht aufgelöst werden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_REQUIRES_ATTRIB),
@@ -835,11 +835,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MUST_HAVE_TEST_ATTRIB),
-			$of(u"{0} muss \u00fcber ein \"test\"-Attribut verf\u00fcgen."_s)
+			$of(u"{0} muss über ein \"test\"-Attribut verfügen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_BAD_VAL_ON_LEVEL_ATTRIB),
-			$of(u"Ung\u00fcltiger Wert bei Ebenenattribut: {0}"_s)
+			$of(u"Ungültiger Wert bei Ebenenattribut: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
@@ -847,11 +847,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"processing-instruction-Name muss ein g\u00fcltiger NCName sein: {0}"_s)
+			$of(u"processing-instruction-Name muss ein gültiger NCName sein: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NEED_MATCH_ATTRIB),
-			$of(u"{0} muss \u00fcber ein \"match\"-Attribut verf\u00fcgen, wenn ein Modus vorhanden ist."_s)
+			$of(u"{0} muss über ein \"match\"-Attribut verfügen, wenn ein Modus vorhanden ist."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NEED_NAME_OR_MATCH_ATTRIB),
@@ -859,15 +859,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANT_RESOLVE_NSPREFIX),
-			$of(u"Namespace-Pr\u00e4fix kann nicht aufgel\u00f6st werden: {0}"_s)
+			$of(u"Namespace-Präfix kann nicht aufgelöst werden: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ILLEGAL_VALUE),
-			$of(u"xml:space hat einen ung\u00fcltigen Wert: {0}"_s)
+			$of(u"xml:space hat einen ungültigen Wert: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_OWNERDOC),
-			$of(u"Der untergeordnete Knoten hat kein Eigent\u00fcmerdokument."_s)
+			$of(u"Der untergeordnete Knoten hat kein Eigentümerdokument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ELEMTEMPLATEELEM_ERR),
@@ -875,7 +875,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NULL_CHILD),
-			$of(u"Es wird versucht, ein leeres untergeordnetes Element hinzuzuf\u00fcgen."_s)
+			$of(u"Es wird versucht, ein leeres untergeordnetes Element hinzuzufügen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NEED_SELECT_ATTRIB),
@@ -883,15 +883,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NEED_TEST_ATTRIB),
-			$of(u"xsl:when muss \u00fcber ein \"test\"-Attribut verf\u00fcgen."_s)
+			$of(u"xsl:when muss über ein \"test\"-Attribut verfügen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NEED_NAME_ATTRIB),
-			$of(u"xsl:with-param muss \u00fcber ein \"name\"-Attribut verf\u00fcgen."_s)
+			$of(u"xsl:with-param muss über ein \"name\"-Attribut verfügen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_CONTEXT_OWNERDOC),
-			$of(u"Kontext hat kein Eigent\u00fcmerdokument."_s)
+			$of(u"Kontext hat kein Eigentümerdokument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_COULD_NOT_CREATE_XML_PROC_LIAISON),
@@ -907,7 +907,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"Codierung nicht unterst\u00fctzt: {0}"_s)
+			$of(u"Codierung nicht unterstützt: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_COULD_NOT_CREATE_TRACELISTENER),
@@ -935,7 +935,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_BAD_STYLESHEET_URL),
-			$of(u"Stylesheet-URL ist ung\u00fcltig: {0}"_s)
+			$of(u"Stylesheet-URL ist ungültig: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_FILE_NOT_FOUND),
@@ -947,11 +947,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_HREF_ATTRIB),
-			$of(u"(StylesheetHandler) \"href\"-Attribut f\u00fcr {0} konnte nicht gefunden werden"_s)
+			$of(u"(StylesheetHandler) \"href\"-Attribut für {0} konnte nicht gefunden werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_STYLESHEET_INCLUDES_ITSELF),
-			$of(u"(StylesheetHandler) {0} schlie\u00dft sich direkt oder indirekt selbst mit ein."_s)
+			$of(u"(StylesheetHandler) {0} schließt sich direkt oder indirekt selbst mit ein."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PROCESSINCLUDE_ERROR),
@@ -1011,7 +1011,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_TEMPLATES_NEED_MATCH_OR_NAME_ATTRIB),
-			$of(u"Vorlagen m\u00fcssen entweder ein \"match\"- oder ein \"name\"-Attribut haben"_s)
+			$of(u"Vorlagen müssen entweder ein \"match\"- oder ein \"name\"-Attribut haben"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_CLONE_OF_DOCUMENT_FRAG),
@@ -1023,19 +1023,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XMLSPACE_ILLEGAL_VALUE),
-			$of(u"xml:space in Quell-XML hat einen ung\u00fcltigen Wert: {0}"_s)
+			$of(u"xml:space in Quell-XML hat einen ungültigen Wert: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_XSLKEY_DECLARATION),
-			$of(u"Keine xsl:key-Deklaration f\u00fcr {0} vorhanden."_s)
+			$of(u"Keine xsl:key-Deklaration für {0} vorhanden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANT_CREATE_URL),
-			$of(u"Fehler. URL f\u00fcr {0} kann nicht erstellt werden"_s)
+			$of(u"Fehler. URL für {0} kann nicht erstellt werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XSLFUNCTIONS_UNSUPPORTED),
-			$of(u"xsl:functions nicht unterst\u00fctzt"_s)
+			$of(u"xsl:functions nicht unterstützt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PROCESSOR_ERROR),
@@ -1043,23 +1043,23 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NOT_ALLOWED_INSIDE_STYLESHEET),
-			$of(u"(StylesheetHandler) {0} nicht zul\u00e4ssig in einem Stylesheet."_s)
+			$of(u"(StylesheetHandler) {0} nicht zulässig in einem Stylesheet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_RESULTNS_NOT_SUPPORTED),
-			$of(u"result-ns wird nicht mehr unterst\u00fctzt. Verwenden Sie stattdessen xsl:output."_s)
+			$of(u"result-ns wird nicht mehr unterstützt. Verwenden Sie stattdessen xsl:output."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_DEFAULTSPACE_NOT_SUPPORTED),
-			$of(u"default-space wird nicht mehr unterst\u00fctzt. Verwenden Sie stattdessen xsl:strip-space oder xsl:preserve-space."_s)
+			$of(u"default-space wird nicht mehr unterstützt. Verwenden Sie stattdessen xsl:strip-space oder xsl:preserve-space."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INDENTRESULT_NOT_SUPPORTED),
-			$of(u"indent-result wird nicht mehr unterst\u00fctzt. Verwenden Sie stattdessen xsl:output."_s)
+			$of(u"indent-result wird nicht mehr unterstützt. Verwenden Sie stattdessen xsl:output."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ILLEGAL_ATTRIB),
-			$of(u"(StylesheetHandler) {0} hat ein ung\u00fcltiges Attribut: {1}"_s)
+			$of(u"(StylesheetHandler) {0} hat ein ungültiges Attribut: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_UNKNOWN_XSL_ELEM),
@@ -1075,7 +1075,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XSLWHEN_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:when hat nicht das \u00fcbergeordnete Element xsl:choose."_s)
+			$of(u"(StylesheetHandler) xsl:when hat nicht das übergeordnete Element xsl:choose."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MISPLACED_XSLOTHERWISE),
@@ -1083,19 +1083,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XSLOTHERWISE_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:otherwise hat nicht das \u00fcbergeordnete Element xsl:choose."_s)
+			$of(u"(StylesheetHandler) xsl:otherwise hat nicht das übergeordnete Element xsl:choose."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NOT_ALLOWED_INSIDE_TEMPLATE),
-			$of(u"(StylesheetHandler) {0} nicht zul\u00e4ssig in einer Vorlage."_s)
+			$of(u"(StylesheetHandler) {0} nicht zulässig in einer Vorlage."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_UNKNOWN_EXT_NS_PREFIX),
-			$of(u"(StylesheetHandler) {0}: Erweiterung des Namespace-Pr\u00e4fixes {1} ist unbekannt"_s)
+			$of(u"(StylesheetHandler) {0}: Erweiterung des Namespace-Präfixes {1} ist unbekannt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_IMPORTS_AS_FIRST_ELEM),
-			$of(u"(StylesheetHandler) Importe k\u00f6nnen nur als erste Elemente in einem Stylesheet auftreten."_s)
+			$of(u"(StylesheetHandler) Importe können nur als erste Elemente in einem Stylesheet auftreten."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_IMPORTING_ITSELF),
@@ -1103,7 +1103,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XMLSPACE_ILLEGAL_VAL),
-			$of(u"(StylesheetHandler) xml:space hat einen ung\u00fcltigen Wert: {0}"_s)
+			$of(u"(StylesheetHandler) xml:space hat einen ungültigen Wert: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PROCESSSTYLESHEET_NOT_SUCCESSFUL),
@@ -1115,7 +1115,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Funktion nicht unterst\u00fctzt."_s)
+			$of(u"Funktion nicht unterstützt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XSLT_ERROR),
@@ -1123,19 +1123,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CURRENCY_SIGN_ILLEGAL),
-			$of(u"W\u00e4hrungssymbol nicht zul\u00e4ssig in Formatmuster-Zeichenfolge"_s)
+			$of(u"Währungssymbol nicht zulässig in Formatmuster-Zeichenfolge"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_DOCUMENT_FUNCTION_INVALID_IN_STYLESHEET_DOM),
-			$of(u"Dokumentfunktion nicht unterst\u00fctzt in DOM-Stylesheet."_s)
+			$of(u"Dokumentfunktion nicht unterstützt in DOM-Stylesheet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANT_RESOLVE_PREFIX_OF_NON_PREFIX_RESOLVER),
-			$of(u"Pr\u00e4fix eines Non-Pr\u00e4fix-Resolver kann nicht aufgel\u00f6st werden."_s)
+			$of(u"Präfix eines Non-Präfix-Resolver kann nicht aufgelöst werden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_REDIRECT_COULDNT_GET_FILENAME),
-			$of(u"Umleitungserweiterung: Dateiname konnte nicht abgerufen werden. \"file\"- oder \"select\"-Attribut muss eine g\u00fcltige Zeichenfolge zur\u00fcckgeben."_s)
+			$of(u"Umleitungserweiterung: Dateiname konnte nicht abgerufen werden. \"file\"- oder \"select\"-Attribut muss eine gültige Zeichenfolge zurückgeben."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANNOT_BUILD_FORMATTERLISTENER_IN_REDIRECT),
@@ -1143,19 +1143,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_PREFIX_IN_EXCLUDERESULTPREFIX),
-			$of(u"Pr\u00e4fix in exclude-result-prefixes ist nicht g\u00fcltig: {0}"_s)
+			$of(u"Präfix in exclude-result-prefixes ist nicht gültig: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MISSING_NS_URI),
-			$of(u"Fehlender Namespace-URI f\u00fcr angegebenes Pr\u00e4fix"_s)
+			$of(u"Fehlender Namespace-URI für angegebenes Präfix"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MISSING_ARG_FOR_OPTION),
-			$of(u"Fehlendes Argument f\u00fcr Option: {0}"_s)
+			$of(u"Fehlendes Argument für Option: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_OPTION),
-			$of(u"Ung\u00fcltige Option: {0}"_s)
+			$of(u"Ungültige Option: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MALFORMED_FORMAT_STRING),
@@ -1167,7 +1167,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"Attribut {0} hat einen ung\u00fcltigen Wert: {1}"_s)
+			$of(u"Attribut {0} hat einen ungültigen Wert: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CHOOSE_REQUIRES_WHEN),
@@ -1175,15 +1175,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_APPLY_IMPORT_IN_FOR_EACH),
-			$of(u"xsl:apply-imports nicht zul\u00e4ssig in xsl:for-each"_s)
+			$of(u"xsl:apply-imports nicht zulässig in xsl:for-each"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANT_USE_DTM_FOR_OUTPUT),
-			$of(u"DTMLiaison kann nicht f\u00fcr einen Ausgabe-DOM-Knoten verwendet werden. \u00dcbergeben Sie stattdessen einen com.sun.org.apache.xpath.internal.DOM2Helper."_s)
+			$of(u"DTMLiaison kann nicht für einen Ausgabe-DOM-Knoten verwendet werden. Übergeben Sie stattdessen einen com.sun.org.apache.xpath.internal.DOM2Helper."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANT_USE_DTM_FOR_INPUT),
-			$of(u"DTMLiaison kann nicht f\u00fcr einen Eingabe-DOM-Knoten verwendet werden. \u00dcbergeben Sie stattdessen einen com.sun.org.apache.xpath.internal.DOM2Helper."_s)
+			$of(u"DTMLiaison kann nicht für einen Eingabe-DOM-Knoten verwendet werden. Übergeben Sie stattdessen einen com.sun.org.apache.xpath.internal.DOM2Helper."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CALL_TO_EXT_FAILED),
@@ -1191,15 +1191,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PREFIX_MUST_RESOLVE),
-			$of(u"Pr\u00e4fix muss in einen Namespace aufgel\u00f6st werden: {0}"_s)
+			$of(u"Präfix muss in einen Namespace aufgelöst werden: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Ung\u00fcltige UTF-16-Ersetzung festgestellt: {0}?"_s)
+			$of(u"Ungültige UTF-16-Ersetzung festgestellt: {0}?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XSLATTRSET_USED_ITSELF),
-			$of(u"xsl:attribute-set {0} hat sich selbst verwendet. Dies f\u00fchrt zu einer Endlosschleife."_s)
+			$of(u"xsl:attribute-set {0} hat sich selbst verwendet. Dies führt zu einer Endlosschleife."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANNOT_MIX_XERCESDOM),
@@ -1219,7 +1219,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_KEY_CALL),
-			$of(u"Ung\u00fcltiger Funktionsaufruf: Rekursive key()-Aufrufe sind nicht zul\u00e4ssig"_s)
+			$of(u"Ungültiger Funktionsaufruf: Rekursive key()-Aufrufe sind nicht zulässig"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_REFERENCING_ITSELF),
@@ -1227,11 +1227,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ILLEGAL_DOMSOURCE_INPUT),
-			$of(u"Der Eingabeknoten darf nicht null sein f\u00fcr eine DOMSource f\u00fcr newTemplates."_s)
+			$of(u"Der Eingabeknoten darf nicht null sein für eine DOMSource für newTemplates."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CLASS_NOT_FOUND_FOR_OPTION),
-			$of(u"Klassendatei nicht gefunden f\u00fcr Option {0}"_s)
+			$of(u"Klassendatei nicht gefunden für Option {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_REQUIRED_ELEM_NOT_FOUND),
@@ -1271,7 +1271,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_ELEMENT_NAME),
-			$of(u"Ung\u00fcltiger Elementname angegeben {0}"_s)
+			$of(u"Ungültiger Elementname angegeben {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ELEMENT_NAME_METHOD_STATIC),
@@ -1283,19 +1283,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MORE_MATCH_CONSTRUCTOR),
-			$of(u"Mehrere passende \u00dcbereinstimmungen f\u00fcr Constructor f\u00fcr {0}"_s)
+			$of(u"Mehrere passende Übereinstimmungen für Constructor für {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MORE_MATCH_METHOD),
-			$of(u"Mehrere passende \u00dcbereinstimmungen f\u00fcr Methode {0}"_s)
+			$of(u"Mehrere passende Übereinstimmungen für Methode {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_MORE_MATCH_ELEMENT),
-			$of(u"Mehrere passende \u00dcbereinstimmungen f\u00fcr Elementmethode {0}"_s)
+			$of(u"Mehrere passende Übereinstimmungen für Elementmethode {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_CONTEXT_PASSED),
-			$of(u"Ung\u00fcltiger Kontext zur Auswertung von {0} \u00fcbergeben"_s)
+			$of(u"Ungültiger Kontext zur Auswertung von {0} übergeben"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_POOL_EXISTS),
@@ -1311,11 +1311,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_POOL_SIZE_LESSTHAN_ONE),
-			$of(u"Poolgr\u00f6\u00dfe ist kleiner als eins."_s)
+			$of(u"Poolgröße ist kleiner als eins."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_DRIVER),
-			$of(u"Ung\u00fcltiger Treibername angegeben."_s)
+			$of(u"Ungültiger Treibername angegeben."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_STYLESHEETROOT),
@@ -1323,7 +1323,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ILLEGAL_XMLSPACE_VALUE),
-			$of(u"Ung\u00fcltiger Wert f\u00fcr xml:space"_s)
+			$of(u"Ungültiger Wert für xml:space"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PROCESSFROMNODE_FAILED),
@@ -1335,7 +1335,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"Puffergr\u00f6\u00dfe <=0"_s)
+			$of(u"Puffergröße <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_UNKNOWN_ERROR_CALLING_EXTENSION),
@@ -1343,15 +1343,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_NAMESPACE_DECL),
-			$of(u"Pr\u00e4fix {0} hat keine entsprechende Namespace-Deklaration"_s)
+			$of(u"Präfix {0} hat keine entsprechende Namespace-Deklaration"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ELEM_CONTENT_NOT_ALLOWED),
-			$of(u"Element-Content nicht zul\u00e4ssig f\u00fcr lang=javaclass {0}"_s)
+			$of(u"Element-Content nicht zulässig für lang=javaclass {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_STYLESHEET_DIRECTED_TERMINATION),
-			$of(u"Stylesheet f\u00fchrte zu Abbruch"_s)
+			$of(u"Stylesheet führte zu Abbruch"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ONE_OR_TWO),
@@ -1363,11 +1363,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"{0} konnte nicht geladen werden (CLASSPATH pr\u00fcfen); die Standardwerte werden verwendet"_s)
+			$of(u"{0} konnte nicht geladen werden (CLASSPATH prüfen); die Standardwerte werden verwendet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANNOT_INIT_DEFAULT_TEMPLATES),
-			$of(u"Standardvorlagen k\u00f6nnen nicht initialisiert werden"_s)
+			$of(u"Standardvorlagen können nicht initialisiert werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_RESULT_NULL),
@@ -1383,11 +1383,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANNOT_TRANSFORM_TO_RESULT_TYPE),
-			$of(u"Transformation in ein Ergebnis mit Typ {0} nicht m\u00f6glich"_s)
+			$of(u"Transformation in ein Ergebnis mit Typ {0} nicht möglich"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANNOT_TRANSFORM_SOURCE_TYPE),
-			$of(u"Transformation einer Quelle mit Typ {0} nicht m\u00f6glich"_s)
+			$of(u"Transformation einer Quelle mit Typ {0} nicht möglich"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NULL_CONTENT_HANDLER),
@@ -1403,23 +1403,23 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_PARENT_FOR_FILTER),
-			$of(u"Kein \u00fcbergeordnetes Objekt f\u00fcr Filter"_s)
+			$of(u"Kein übergeordnetes Objekt für Filter"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_STYLESHEET_IN_MEDIA),
-			$of(u"Kein Stylesheet gefunden in: {0}, Datentr\u00e4ger = {1}"_s)
+			$of(u"Kein Stylesheet gefunden in: {0}, Datenträger = {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_STYLESHEET_PI),
-			$of(u"Keine Verarbeitungsanweisung f\u00fcr xml-stylesheet gefunden in: {0}"_s)
+			$of(u"Keine Verarbeitungsanweisung für xml-stylesheet gefunden in: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NOT_SUPPORTED),
-			$of(u"Nicht unterst\u00fctzt: {0}"_s)
+			$of(u"Nicht unterstützt: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_PROPERTY_VALUE_BOOLEAN),
-			$of(u"Wert f\u00fcr Eigenschaft {0} muss eine boolesche Instanz sein"_s)
+			$of(u"Wert für Eigenschaft {0} muss eine boolesche Instanz sein"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_COULD_NOT_FIND_EXTERN_SCRIPT),
@@ -1439,11 +1439,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_VALUE_SHOULD_BE_NUMBER),
-			$of(u"Wert f\u00fcr {0} sollte eine parsef\u00e4hige Zahl enthalten"_s)
+			$of(u"Wert für {0} sollte eine parsefähige Zahl enthalten"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_VALUE_SHOULD_EQUAL),
-			$of(u"Wert f\u00fcr {0} muss \"Ja\" oder \"Nein\" entsprechen"_s)
+			$of(u"Wert für {0} muss \"Ja\" oder \"Nein\" entsprechen"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_FAILED_CALLING_METHOD),
@@ -1455,15 +1455,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CHARS_NOT_ALLOWED),
-			$of(u"An dieser Stelle im Dokument sind keine Zeichen zul\u00e4ssig"_s)
+			$of(u"An dieser Stelle im Dokument sind keine Zeichen zulässig"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ATTR_NOT_ALLOWED),
-			$of(u"\"{0}\"-Attribut ist nicht zul\u00e4ssig beim {1}-Element."_s)
+			$of(u"\"{0}\"-Attribut ist nicht zulässig beim {1}-Element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_BAD_VALUE),
-			$of(u"{0} ung\u00fcltiger Wert {1} "_s)
+			$of(u"{0} ungültiger Wert {1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ATTRIB_VALUE_NOT_FOUND),
@@ -1475,11 +1475,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NULL_URI_NAMESPACE),
-			$of(u"Versuch, ein Namespace-Pr\u00e4fix mit einem Null-URI zu generieren"_s)
+			$of(u"Versuch, ein Namespace-Präfix mit einem Null-URI zu generieren"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NUMBER_TOO_BIG),
-			$of(u"Versuch, eine Zahl zu formatieren, die gr\u00f6\u00dfer als die gr\u00f6\u00dfte Long-Ganzzahl ist"_s)
+			$of(u"Versuch, eine Zahl zu formatieren, die größer als die größte Long-Ganzzahl ist"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_CANNOT_FIND_SAX1_DRIVER),
@@ -1531,11 +1531,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_POOLSIZE_LESS_THAN_ONE),
-			$of(u"Poolgr\u00f6\u00dfe ist kleiner als 1."_s)
+			$of(u"Poolgröße ist kleiner als 1."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_DRIVER_NAME),
-			$of(u"Ung\u00fcltiger Treibername angegeben."_s)
+			$of(u"Ungültiger Treibername angegeben."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ERRORLISTENER),
@@ -1543,7 +1543,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ASSERT_NO_TEMPLATE_PARENT),
-			$of(u"Programmiererfehler. Der Ausdruck hat kein \u00fcbergeordnetes ElemTemplateElement-Objekt."_s)
+			$of(u"Programmiererfehler. Der Ausdruck hat kein übergeordnetes ElemTemplateElement-Objekt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ASSERT_REDUNDENT_EXPR_ELIMINATOR),
@@ -1551,43 +1551,43 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NOT_ALLOWED_IN_POSITION),
-			$of(u"{0} ist an dieser Position im Stylesheet nicht zul\u00e4ssig."_s)
+			$of(u"{0} ist an dieser Position im Stylesheet nicht zulässig."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NONWHITESPACE_NOT_ALLOWED_IN_POSITION),
-			$of(u"Anderer Text als Leerstellen ist an dieser Position im Stylesheet nicht zul\u00e4ssig."_s)
+			$of(u"Anderer Text als Leerstellen ist an dieser Position im Stylesheet nicht zulässig."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::INVALID_TCHAR),
-			$of(u"Ung\u00fcltiger Wert {1} f\u00fcr CHAR-Attribut {0} verwendet. Ein Attribut des Typs CHAR darf nur 1 Zeichen enthalten."_s)
+			$of(u"Ungültiger Wert {1} für CHAR-Attribut {0} verwendet. Ein Attribut des Typs CHAR darf nur 1 Zeichen enthalten."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::INVALID_QNAME),
-			$of(u"Ung\u00fcltiger Wert {1} f\u00fcr QNAME-Attribut {0} verwendet"_s)
+			$of(u"Ungültiger Wert {1} für QNAME-Attribut {0} verwendet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::INVALID_ENUM),
-			$of(u"Ung\u00fcltiger Wert {1} f\u00fcr ENUM-Attribut {0} verwendet. G\u00fcltige Werte sind: {2}."_s)
+			$of(u"Ungültiger Wert {1} für ENUM-Attribut {0} verwendet. Gültige Werte sind: {2}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::INVALID_NMTOKEN),
-			$of(u"Ung\u00fcltiger Wert {1} f\u00fcr NMTOKEN-Attribut {0} verwendet "_s)
+			$of(u"Ungültiger Wert {1} für NMTOKEN-Attribut {0} verwendet "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::INVALID_NCNAME),
-			$of(u"Ung\u00fcltiger Wert {1} f\u00fcr NCNAME-Attribut {0} verwendet "_s)
+			$of(u"Ungültiger Wert {1} für NCNAME-Attribut {0} verwendet "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::INVALID_BOOLEAN),
-			$of(u"Ung\u00fcltiger Wert {1} f\u00fcr \"Boolean\"-Attribut {0} verwendet "_s)
+			$of(u"Ungültiger Wert {1} für \"Boolean\"-Attribut {0} verwendet "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::INVALID_NUMBER),
-			$of(u"Ung\u00fcltiger Wert {1} f\u00fcr \"Number\"-Attribut {0} verwendet "_s)
+			$of(u"Ungültiger Wert {1} für \"Number\"-Attribut {0} verwendet "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_ARG_LITERAL),
-			$of(u"Argument f\u00fcr {0} in Vergleichsmuster muss ein Literal sein."_s)
+			$of(u"Argument für {0} in Vergleichsmuster muss ein Literal sein."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_DUPLICATE_GLOBAL_VAR),
@@ -1603,7 +1603,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_PREFIX),
-			$of(u"Pr\u00e4fix in exclude-result-prefixes ist nicht g\u00fcltig: {0}"_s)
+			$of(u"Präfix in exclude-result-prefixes ist nicht gültig: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NO_ATTRIB_SET),
@@ -1619,15 +1619,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_SET_PARAM_VALUE),
-			$of(u"Wert von Parameter {0} muss ein g\u00fcltiges Java-Objekt sein"_s)
+			$of(u"Wert von Parameter {0} muss ein gültiges Java-Objekt sein"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX_FOR_DEFAULT),
-			$of(u"Das result-prefix-Attribut eines xsl:namespace-alias-Elements hat den Wert \"#default\", es ist aber keine Deklaration des Standard-Namespace im G\u00fcltigkeitsbereich f\u00fcr das Element vorhanden"_s)
+			$of(u"Das result-prefix-Attribut eines xsl:namespace-alias-Elements hat den Wert \"#default\", es ist aber keine Deklaration des Standard-Namespace im Gültigkeitsbereich für das Element vorhanden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX),
-			$of(u"Das result-prefix-Attribut eines xsl:namespace-alias-Elements hat den Wert \"{0}\", es ist aber keine Namespace-Deklaration f\u00fcr das Pr\u00e4fix \"{0}\" im G\u00fcltigkeitsbereich f\u00fcr das Element vorhanden."_s)
+			$of(u"Das result-prefix-Attribut eines xsl:namespace-alias-Elements hat den Wert \"{0}\", es ist aber keine Namespace-Deklaration für das Präfix \"{0}\" im Gültigkeitsbereich für das Element vorhanden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_SET_FEATURE_NULL_NAME),
@@ -1639,19 +1639,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_UNSUPPORTED_FEATURE),
-			$of(u"Das Feature \"{0}\" kann nicht f\u00fcr diese TransformerFactory festgelegt werden."_s)
+			$of(u"Das Feature \"{0}\" kann nicht für diese TransformerFactory festgelegt werden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_EXTENSION_ELEMENT_NOT_ALLOWED_IN_SECURE_PROCESSING),
-			$of(u"Verwendung des Erweiterungselements \"{0}\" ist nicht zul\u00e4ssig, wenn das Feature f\u00fcr die sichere Verarbeitung auf \"true\" gesetzt ist."_s)
+			$of(u"Verwendung des Erweiterungselements \"{0}\" ist nicht zulässig, wenn das Feature für die sichere Verarbeitung auf \"true\" gesetzt ist."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NAMESPACE_CONTEXT_NULL_NAMESPACE),
-			$of(u"Pr\u00e4fix f\u00fcr Null-Namespace-URI kann nicht abgerufen werden."_s)
+			$of(u"Präfix für Null-Namespace-URI kann nicht abgerufen werden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_NAMESPACE_CONTEXT_NULL_PREFIX),
-			$of(u"Namespace-URI f\u00fcr Nullpr\u00e4fix kann nicht abgerufen werden."_s)
+			$of(u"Namespace-URI für Nullpräfix kann nicht abgerufen werden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::ER_XPATH_RESOLVER_NULL_QNAME),
@@ -1663,15 +1663,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_FOUND_CURLYBRACE),
-			$of(u"\"}\" gefunden, aber keine Attributvorlage ist ge\u00f6ffnet."_s)
+			$of(u"\"}\" gefunden, aber keine Attributvorlage ist geöffnet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_COUNT_ATTRIB_MATCHES_NO_ANCESTOR),
-			$of(u"Warnung: \"count\"-Attribut entspricht keinem Vorg\u00e4nger in xsl:number. Ziel = {0}"_s)
+			$of(u"Warnung: \"count\"-Attribut entspricht keinem Vorgänger in xsl:number. Ziel = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_EXPR_ATTRIB_CHANGED_TO_SELECT),
-			$of(u"Alte Syntax: Der Name des \"expr\"-Attributs wurde in \"select\" ge\u00e4ndert."_s)
+			$of(u"Alte Syntax: Der Name des \"expr\"-Attributs wurde in \"select\" geändert."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_NO_LOCALE_IN_FORMATNUMBER),
@@ -1679,7 +1679,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_LOCALE_NOT_FOUND),
-			$of(u"Warnung: Gebietsschema f\u00fcr xml:lang={0} konnte nicht gefunden werden"_s)
+			$of(u"Warnung: Gebietsschema für xml:lang={0} konnte nicht gefunden werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_CANNOT_MAKE_URL_FROM),
@@ -1691,7 +1691,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_CANNOT_FIND_COLLATOR),
-			$of(u"Collator f\u00fcr <sort xml:lang={0} konnte nicht gefunden werden"_s)
+			$of(u"Collator für <sort xml:lang={0} konnte nicht gefunden werden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_FUNCTIONS_SHOULD_USE_URL),
@@ -1699,11 +1699,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ENCODING_NOT_SUPPORTED_USING_UTF8),
-			$of(u"Codierung nicht unterst\u00fctzt: {0}. UTF-8 wird verwendet"_s)
+			$of(u"Codierung nicht unterstützt: {0}. UTF-8 wird verwendet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ENCODING_NOT_SUPPORTED_USING_JAVA),
-			$of(u"Codierung nicht unterst\u00fctzt: {0}. Java {1} wird verwendet"_s)
+			$of(u"Codierung nicht unterstützt: {0}. Java {1} wird verwendet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_SPECIFICITY_CONFLICTS),
@@ -1719,7 +1719,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_CONFLICT_BETWEEN_XSLSTRIPSPACE_AND_XSLPRESERVESPACE),
-			$of(u"\u00dcbereinstimmungskonflikt zwischen xsl:strip-space und xsl:preserve-space"_s)
+			$of(u"Übereinstimmungskonflikt zwischen xsl:strip-space und xsl:preserve-space"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ATTRIB_NOT_HANDLED),
@@ -1727,7 +1727,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_NO_DECIMALFORMAT_DECLARATION),
-			$of(u"Keine Deklaration f\u00fcr Dezimalformat gefunden: {0}"_s)
+			$of(u"Keine Deklaration für Dezimalformat gefunden: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_OLD_XSLT_NS),
@@ -1735,19 +1735,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ONE_DEFAULT_XSLDECIMALFORMAT_ALLOWED),
-			$of(u"Nur eine Standard-xsl:decimal-format-Deklaration ist zul\u00e4ssig."_s)
+			$of(u"Nur eine Standard-xsl:decimal-format-Deklaration ist zulässig."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_XSLDECIMALFORMAT_NAMES_MUST_BE_UNIQUE),
-			$of(u"xsl:decimal-format-Namen m\u00fcssen eindeutig sein. Name \"{0}\" wurde dupliziert."_s)
+			$of(u"xsl:decimal-format-Namen müssen eindeutig sein. Name \"{0}\" wurde dupliziert."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ILLEGAL_ATTRIBUTE),
-			$of(u"{0} hat ein ung\u00fcltiges Attribut: {1}"_s)
+			$of(u"{0} hat ein ungültiges Attribut: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_COULD_NOT_RESOLVE_PREFIX),
-			$of(u"Namespace-Pr\u00e4fix konnte nicht aufgel\u00f6st werden: {0}. Der Knoten wird ignoriert."_s)
+			$of(u"Namespace-Präfix konnte nicht aufgelöst werden: {0}. Der Knoten wird ignoriert."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_STYLESHEET_REQUIRES_VERSION_ATTRIB),
@@ -1755,15 +1755,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ILLEGAL_ATTRIBUTE_NAME),
-			$of(u"Ung\u00fcltiger Attributname: {0}"_s)
+			$of(u"Ungültiger Attributname: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"Ung\u00fcltiger Wert f\u00fcr Attribut {0}: {1}"_s)
+			$of(u"Ungültiger Wert für Attribut {0}: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_EMPTY_SECOND_ARG),
-			$of(u"Resultierendes NodeSet aus zweitem Argument von Dokumentfunktion ist leer. Geben Sie ein leeres NodeSet zur\u00fcck."_s)
+			$of(u"Resultierendes NodeSet aus zweitem Argument von Dokumentfunktion ist leer. Geben Sie ein leeres NodeSet zurück."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
@@ -1771,15 +1771,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"Der Wert des \"name\"-Attributs von xsl:processing-instruction muss ein g\u00fcltiger NCName sein: {0}"_s)
+			$of(u"Der Wert des \"name\"-Attributs von xsl:processing-instruction muss ein gültiger NCName sein: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::WG_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Attribut {0} kann nicht nach untergeordneten Knoten oder vor dem Erstellen eines Elements hinzugef\u00fcgt werden. Attribut wird ignoriert."_s)
+			$of(u"Attribut {0} kann nicht nach untergeordneten Knoten oder vor dem Erstellen eines Elements hinzugefügt werden. Attribut wird ignoriert."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_de::NO_MODIFICATION_ALLOWED_ERR),
-			$of(u"Es wurde versucht, ein Objekt zu \u00e4ndern, bei dem \u00c4nderungen nicht zul\u00e4ssig sind."_s)
+			$of(u"Es wurde versucht, ein Objekt zu ändern, bei dem Änderungen nicht zulässig sind."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1795,11 +1795,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"Parameter f\u00fcr createMessage war au\u00dferhalb des g\u00fcltigen Bereichs"_s)
+			$of(u"Parameter für createMessage war außerhalb des gültigen Bereichs"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Ausnahme bei messageFormat-Aufruf ausgel\u00f6st"_s)
+			$of(u"Ausnahme bei messageFormat-Aufruf ausgelöst"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
@@ -1835,7 +1835,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xsltc_option"_s),
-			$of(u"Option {0} wird im XSLTC-Modus nicht unterst\u00fctzt."_s)
+			$of(u"Option {0} wird im XSLTC-Modus nicht unterstützt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xalan_option"_s),
@@ -1843,7 +1843,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_no_input"_s),
-			$of(u"Fehler: Kein Stylesheet und keine Eingabe-XML angegeben. F\u00fchren Sie diesen Befehl ohne Optionen f\u00fcr Verwendungsanweisungen aus."_s)
+			$of(u"Fehler: Kein Stylesheet und keine Eingabe-XML angegeben. Führen Sie diesen Befehl ohne Optionen für Verwendungsanweisungen aus."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_common_options"_s),
@@ -1851,19 +1851,19 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xalan_options"_s),
-			$of(u"-Optionen f\u00fcr Xalan-"_s)
+			$of(u"-Optionen für Xalan-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xsltc_options"_s),
-			$of(u"-Optionen f\u00fcr XSLTC-"_s)
+			$of(u"-Optionen für XSLTC-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_return_to_continue"_s),
-			$of(u"(dr\u00fccken Sie die <Eingabetaste>, um fortzufahren)"_s)
+			$of(u"(drücken Sie die <Eingabetaste>, um fortzufahren)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXSLTC"_s),
-			$of(u"   [-XSLTC (XSLTC f\u00fcr Transformation verwenden)]"_s)
+			$of(u"   [-XSLTC (XSLTC für Transformation verwenden)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionIN"_s),
@@ -1907,7 +1907,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionLF"_s),
-			$of(u"   [-LF (Nur Zeilenvorsch\u00fcbe bei Ausgabe verwenden {Standard ist CR/LF})]"_s)
+			$of(u"   [-LF (Nur Zeilenvorschübe bei Ausgabe verwenden {Standard ist CR/LF})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCR"_s),
@@ -1939,11 +1939,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionTCLASS"_s),
-			$of(u"   [-TCLASS (TraceListener-Klasse f\u00fcr Traceerweiterungen.)]"_s)
+			$of(u"   [-TCLASS (TraceListener-Klasse für Traceerweiterungen.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionVALIDATE"_s),
-			$of(u"   [-VALIDATE (Festlegen, ob die Validierung ausgef\u00fchrt wird. Validierung ist standardm\u00e4\u00dfig ausgeschaltet.)]"_s)
+			$of(u"   [-VALIDATE (Festlegen, ob die Validierung ausgeführt wird. Validierung ist standardmäßig ausgeschaltet.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionEDUMP"_s),
@@ -1951,7 +1951,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionXML"_s),
-			$of(u"   [-XML (XML-Formatter verwenden und XML-Header hinzuf\u00fcgen.)]"_s)
+			$of(u"   [-XML (XML-Formatter verwenden und XML-Header hinzufügen.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTEXT"_s),
@@ -1975,11 +1975,11 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"Pr\u00fcfen Sie den Classpath."_s)
+			$of(u"Prüfen Sie den Classpath."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"Wenn Sie nicht \u00fcber den XML-Parser f\u00fcr Java von IBM verf\u00fcgen, k\u00f6nnen Sie ihn hier herunterladen:"_s)
+			$of(u"Wenn Sie nicht über den XML-Parser für Java von IBM verfügen, können Sie ihn hier herunterladen:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),
@@ -1987,15 +1987,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionURIRESOLVER"_s),
-			$of(u"   [-URIRESOLVER full class name (URIResolver f\u00fcr die Aufl\u00f6sung von URIs)]"_s)
+			$of(u"   [-URIRESOLVER full class name (URIResolver für die Auflösung von URIs)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionENTITYRESOLVER"_s),
-			$of(u"   [-ENTITYRESOLVER full class name (EntityResolver f\u00fcr die Aufl\u00f6sung von Entitys)]"_s)
+			$of(u"   [-ENTITYRESOLVER full class name (EntityResolver für die Auflösung von Entitys)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCONTENTHANDLER"_s),
-			$of(u"   [-CONTENTHANDLER full class name (ContentHandler f\u00fcr die Serialisierung der Ausgabe)]"_s)
+			$of(u"   [-CONTENTHANDLER full class name (ContentHandler für die Serialisierung der Ausgabe)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionLINENUMBERS"_s),
@@ -2003,15 +2003,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionSECUREPROCESSING"_s),
-			$of(u"   [-SECURE (Feature f\u00fcr die sichere Verarbeitung auf \"true\" setzen.)]"_s)
+			$of(u"   [-SECURE (Feature für die sichere Verarbeitung auf \"true\" setzen.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionMEDIA"_s),
-			$of(u"   [-MEDIA mediaType (\"media\"-Attribut verwenden, um mit einem Dokument verkn\u00fcpftes Stylesheet zu finden.)]"_s)
+			$of(u"   [-MEDIA mediaType (\"media\"-Attribut verwenden, um mit einem Dokument verknüpftes Stylesheet zu finden.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionFLAVOR"_s),
-			$of(u"   [-FLAVOR flavorName (s2s=SAX oder d2d=DOM explizit f\u00fcr Transformation verwenden.)] "_s)
+			$of(u"   [-FLAVOR flavorName (s2s=SAX oder d2d=DOM explizit für Transformation verwenden.)] "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionDIAG"_s),
@@ -2027,7 +2027,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionRL"_s),
-			$of(u"   [-RL recursionlimit (numerischen Grenzwert f\u00fcr Stylesheet-Rekursionstiefe bekannt machen.)]"_s)
+			$of(u"   [-RL recursionlimit (numerischen Grenzwert für Stylesheet-Rekursionstiefe bekannt machen.)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXO"_s),
@@ -2035,7 +2035,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionXD"_s),
-			$of(u"   [-XD destinationDirectory (Zielverzeichnis f\u00fcr Translet angeben)]"_s)
+			$of(u"   [-XD destinationDirectory (Zielverzeichnis für Translet angeben)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXJ"_s),
@@ -2043,7 +2043,7 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionXP"_s),
-			$of(u"   [-XP package (gibt ein Packagenamenspr\u00e4fix f\u00fcr alle generierten Translet-Klassen an)]"_s)
+			$of(u"   [-XP package (gibt ein Packagenamenspräfix für alle generierten Translet-Klassen an)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXN"_s),
@@ -2051,15 +2051,15 @@ $ObjectArray2* XSLTErrorResources_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionXX"_s),
-			$of(u"   [-XX (schaltet die zus\u00e4tzliche Debugging-Meldungsausgabe ein)]"_s)
+			$of(u"   [-XX (schaltet die zusätzliche Debugging-Meldungsausgabe ein)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXT"_s),
-			$of(u"   [-XT (wenn m\u00f6glich, Translet f\u00fcr Transformation verwenden)]"_s)
+			$of(u"   [-XT (wenn möglich, Translet für Transformation verwenden)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("diagTiming"_s),
-			$of(u" --------- Transformation von {0} \u00fcber {1} dauerte {2} ms"_s)
+			$of(u" --------- Transformation von {0} über {1} dauerte {2} ms"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("recursionTooDeep"_s),

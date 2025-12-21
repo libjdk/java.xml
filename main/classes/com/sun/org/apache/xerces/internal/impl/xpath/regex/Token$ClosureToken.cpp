@@ -110,21 +110,21 @@ $String* Token$ClosureToken::toString(int32_t options) {
 			if (var$2 == this->getMax()) {
 				$var($String, var$4, $$str({$($nc(this->child)->toString(options)), "{"_s}));
 				$var($String, var$3, $$concat(var$4, $$str(this->getMin())));
-				$assign(ret, $concat(var$3, "}"));
+				$assign(ret, $concat(var$3, "}"_s));
 			} else {
 				bool var$6 = this->getMin() >= 0;
 				if (var$6 && this->getMax() >= 0) {
 					$var($String, var$10, $$str({$($nc(this->child)->toString(options)), "{"_s}));
 					$var($String, var$9, $$concat(var$10, $$str(this->getMin())));
-					$var($String, var$8, $$concat(var$9, ","));
+					$var($String, var$8, $$concat(var$9, ","_s));
 					$var($String, var$7, $$concat(var$8, $$str(this->getMax())));
-					$assign(ret, $concat(var$7, "}"));
+					$assign(ret, $concat(var$7, "}"_s));
 				} else {
 					bool var$12 = this->getMin() >= 0;
 					if (var$12 && this->getMax() < 0) {
 						$var($String, var$14, $$str({$($nc(this->child)->toString(options)), "{"_s}));
 						$var($String, var$13, $$concat(var$14, $$str(this->getMin())));
-						$assign(ret, $concat(var$13, ",}"));
+						$assign(ret, $concat(var$13, ",}"_s));
 					} else {
 						$var($String, var$15, $$str({"Token#toString(): CLOSURE "_s, $$str(this->getMin()), ", "_s}));
 						$throwNew($RuntimeException, $$concat(var$15, $$str(this->getMax())));
@@ -141,21 +141,21 @@ $String* Token$ClosureToken::toString(int32_t options) {
 			if (var$19 == this->getMax()) {
 				$var($String, var$21, $$str({$($nc(this->child)->toString(options)), "{"_s}));
 				$var($String, var$20, $$concat(var$21, $$str(this->getMin())));
-				$assign(ret, $concat(var$20, "}?"));
+				$assign(ret, $concat(var$20, "}?"_s));
 			} else {
 				bool var$23 = this->getMin() >= 0;
 				if (var$23 && this->getMax() >= 0) {
 					$var($String, var$27, $$str({$($nc(this->child)->toString(options)), "{"_s}));
 					$var($String, var$26, $$concat(var$27, $$str(this->getMin())));
-					$var($String, var$25, $$concat(var$26, ","));
+					$var($String, var$25, $$concat(var$26, ","_s));
 					$var($String, var$24, $$concat(var$25, $$str(this->getMax())));
-					$assign(ret, $concat(var$24, "}?"));
+					$assign(ret, $concat(var$24, "}?"_s));
 				} else {
 					bool var$29 = this->getMin() >= 0;
 					if (var$29 && this->getMax() < 0) {
 						$var($String, var$31, $$str({$($nc(this->child)->toString(options)), "{"_s}));
 						$var($String, var$30, $$concat(var$31, $$str(this->getMin())));
-						$assign(ret, $concat(var$30, ",}?"));
+						$assign(ret, $concat(var$30, ",}?"_s));
 					} else {
 						$var($String, var$32, $$str({"Token#toString(): NONGREEDYCLOSURE "_s, $$str(this->getMin()), ", "_s}));
 						$throwNew($RuntimeException, $$concat(var$32, $$str(this->getMax())));

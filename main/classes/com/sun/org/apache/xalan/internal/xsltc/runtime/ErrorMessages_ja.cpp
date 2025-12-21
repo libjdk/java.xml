@@ -73,99 +73,99 @@ $ObjectArray2* ErrorMessages_ja::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),
-			$of(u"\'\'{0}\'\'\u5185\u306e\u30e9\u30f3\u30bf\u30a4\u30e0\u5185\u90e8\u30a8\u30e9\u30fc\u3067\u3059"_s)
+			$of(u"\'\'{0}\'\'内のランタイム内部エラーです"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"<xsl:copy>\u306e\u5b9f\u884c\u4e2d\u306e\u30e9\u30f3\u30bf\u30a4\u30e0\u30fb\u30a8\u30e9\u30fc\u3067\u3059\u3002"_s)
+			$of(u"<xsl:copy>の実行中のランタイム・エラーです。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"\'\'{0}\'\'\u304b\u3089\'\'{1}\'\'\u3078\u306e\u5909\u63db\u304c\u7121\u52b9\u3067\u3059\u3002"_s)
+			$of(u"\'\'{0}\'\'から\'\'{1}\'\'への変換が無効です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"\u5916\u90e8\u95a2\u6570\'\'{0}\'\'\u306fXSLTC\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"外部関数\'\'{0}\'\'はXSLTCによってサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"\u7b49\u4fa1\u5f0f\u306b\u4e0d\u660e\u306a\u5f15\u6570\u30bf\u30a4\u30d7\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"等価式に不明な引数タイプがあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"\'\'{1}\'\'\u306e\u547c\u51fa\u3057\u306e\u5f15\u6570\u30bf\u30a4\u30d7\'\'{0}\'\'\u304c\u7121\u52b9\u3067\u3059"_s)
+			$of(u"\'\'{1}\'\'の呼出しの引数タイプ\'\'{0}\'\'が無効です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"\u30d1\u30bf\u30fc\u30f3\'\'{1}\'\'\u3092\u4f7f\u7528\u3057\u3066\u6570\u5024\'\'{0}\'\'\u3092\u30d5\u30a9\u30fc\u30de\u30c3\u30c8\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"パターン\'\'{1}\'\'を使用して数値\'\'{0}\'\'をフォーマットしようとしました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
-			$of(u"\u30a4\u30c6\u30ec\u30fc\u30bf\'\'{0}\'\'\u306e\u30af\u30ed\u30fc\u30f3\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"イテレータ\'\'{0}\'\'のクローンを作成できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"\u8ef8\'\'{0}\'\'\u306e\u30a4\u30c6\u30ec\u30fc\u30bf\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"軸\'\'{0}\'\'のイテレータはサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"\u578b\u6307\u5b9a\u3055\u308c\u305f\u8ef8\'\'{0}\'\'\u306e\u30a4\u30c6\u30ec\u30fc\u30bf\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"型指定された軸\'\'{0}\'\'のイテレータはサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"\u5c5e\u6027\'\'{0}\'\'\u304c\u8981\u7d20\u306e\u5916\u5074\u306b\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"属性\'\'{0}\'\'が要素の外側にあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u5ba3\u8a00\'\'{0}\'\'=\'\'{1}\'\'\u304c\u8981\u7d20\u306e\u5916\u5074\u306b\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"ネームスペース宣言\'\'{0}\'\'=\'\'{1}\'\'が要素の外側にあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"\u63a5\u982d\u8f9e\'\'{0}\'\'\u306e\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u304c\u5ba3\u8a00\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"接頭辞\'\'{0}\'\'のネームスペースが宣言されていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
-			$of(u"DOMAdapter\u304c\u9593\u9055\u3063\u305f\u30bf\u30a4\u30d7\u306e\u30bd\u30fc\u30b9DOM\u3092\u4f7f\u7528\u3057\u3066\u4f5c\u6210\u3055\u308c\u307e\u3057\u305f\u3002"_s)
+			$of(u"DOMAdapterが間違ったタイプのソースDOMを使用して作成されました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"\u4f7f\u7528\u4e2d\u306eSAX\u30d1\u30fc\u30b5\u30fc\u306fDTD\u5ba3\u8a00\u30a4\u30d9\u30f3\u30c8\u3092\u51e6\u7406\u3057\u307e\u305b\u3093\u3002"_s)
+			$of(u"使用中のSAXパーサーはDTD宣言イベントを処理しません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"\u4f7f\u7528\u4e2d\u306eSAX\u30d1\u30fc\u30b5\u30fc\u306b\u306fXML\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u306e\u30b5\u30dd\u30fc\u30c8\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"使用中のSAXパーサーにはXMLネームスペースのサポートがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"URI\u53c2\u7167\'\'{0}\'\'\u3092\u89e3\u6c7a\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"URI参照\'\'{0}\'\'を解決できませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_XSL_ERR),
-			$of(u"\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u306a\u3044XSL\u8981\u7d20\'\'{0}\'\'"_s)
+			$of(u"サポートされていないXSL要素\'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
-			$of(u"\u8a8d\u8b58\u3055\u308c\u306a\u3044XSLTC\u62e1\u5f35\'\'{0}\'\'"_s)
+			$of(u"認識されないXSLTC拡張\'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"\u6307\u5b9a\u3055\u308c\u305ftranslet\u306e\'\'{0}\'\'\u306f\u3001\u4f7f\u7528\u4e2d\u306eXSLTC\u30e9\u30f3\u30bf\u30a4\u30e0\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u3088\u308a\u3082\u65b0\u3057\u3044XSLTC\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u4f7f\u7528\u3057\u3066\u4f5c\u6210\u3055\u308c\u305f\u3082\u306e\u3067\u3059\u3002\u3053\u306etranslet\u3092\u5b9f\u884c\u3059\u308b\u306b\u306f\u3001\u30b9\u30bf\u30a4\u30eb\u30b7\u30fc\u30c8\u3092\u518d\u30b3\u30f3\u30d1\u30a4\u30eb\u3059\u308b\u304b\u3001\u3088\u308a\u65b0\u3057\u3044\u30d0\u30fc\u30b8\u30e7\u30f3\u306eXSLTC\u3092\u4f7f\u7528\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"指定されたtransletの\'\'{0}\'\'は、使用中のXSLTCランタイムのバージョンよりも新しいXSLTCのバージョンを使用して作成されたものです。このtransletを実行するには、スタイルシートを再コンパイルするか、より新しいバージョンのXSLTCを使用する必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
-			$of(u"\u5024\u304cQName\u3067\u3042\u308b\u3053\u3068\u304c\u5fc5\u8981\u306a\u5c5e\u6027\u306e\u5024\u304c\'\'{0}\'\'\u3067\u3057\u305f"_s)
+			$of(u"値がQNameであることが必要な属性の値が\'\'{0}\'\'でした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_NCNAME_ERR),
-			$of(u"\u5024\u304cNCName\u3067\u3042\u308b\u3053\u3068\u304c\u5fc5\u8981\u306a\u5c5e\u6027\u306e\u5024\u304c\'\'{0}\'\'\u3067\u3057\u305f"_s)
+			$of(u"値がNCNameであることが必要な属性の値が\'\'{0}\'\'でした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"\u30bb\u30ad\u30e5\u30a2\u51e6\u7406\u6a5f\u80fd\u304ctrue\u306b\u8a2d\u5b9a\u3055\u308c\u3066\u3044\u308b\u3068\u304d\u3001\u62e1\u5f35\u95a2\u6570\'\'{0}\'\'\u306e\u4f7f\u7528\u306f\u8a31\u53ef\u3055\u308c\u307e\u305b\u3093\u3002"_s)
+			$of(u"セキュア処理機能がtrueに設定されているとき、拡張関数\'\'{0}\'\'の使用は許可されません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"\u30bb\u30ad\u30e5\u30a2\u51e6\u7406\u6a5f\u80fd\u304ctrue\u306b\u8a2d\u5b9a\u3055\u308c\u3066\u3044\u308b\u3068\u304d\u3001\u62e1\u5f35\u8981\u7d20\'\'{0}\'\'\u306e\u4f7f\u7528\u306f\u8a31\u53ef\u3055\u308c\u307e\u305b\u3093\u3002"_s)
+			$of(u"セキュア処理機能がtrueに設定されているとき、拡張要素\'\'{0}\'\'の使用は許可されません。"_s)
 		})
 	});
 }

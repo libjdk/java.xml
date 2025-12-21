@@ -369,319 +369,319 @@ void clinit$XMLErrorResources_zh_TW($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u63f4\u51fd\u6578\uff01"_s)
+			$of(u"不支援函數！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"\u7121\u6cd5\u8986\u5beb\u539f\u56e0"_s)
+			$of(u"無法覆寫原因"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_DEFAULT_IMPL),
-			$of(u"\u627e\u4e0d\u5230\u9810\u8a2d\u7684\u5be6\u884c"_s)
+			$of(u"找不到預設的實行"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"\u76ee\u524d\u4e0d\u652f\u63f4 ChunkedIntArray({0})"_s)
+			$of(u"目前不支援 ChunkedIntArray({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"\u4f4d\u79fb\u5927\u65bc\u4f4d\u7f6e"_s)
+			$of(u"位移大於位置"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COROUTINE_NOT_AVAIL),
-			$of(u"\u6c92\u6709\u53ef\u7528\u7684\u5171\u540c\u5e38\u5f0f\uff0cid={0}"_s)
+			$of(u"沒有可用的共同常式，id={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager \u6536\u5230 co_exit() \u8981\u6c42"_s)
+			$of(u"CoroutineManager 收到 co_exit() 要求"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COJOINROUTINESET_FAILED),
-			$of(u"co_joinCoroutineSet() \u5931\u6557"_s)
+			$of(u"co_joinCoroutineSet() 失敗"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COROUTINE_PARAM),
-			$of(u"\u5171\u540c\u5e38\u5f0f\u53c3\u6578\u932f\u8aa4 ({0})"_s)
+			$of(u"共同常式參數錯誤 ({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\n\u672a\u9810\u671f: \u5256\u6790\u5668 doTerminate \u7b54\u8986 {0}"_s)
+			$of(u"\n未預期: 剖析器 doTerminate 答覆 {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"\u5256\u6790\u6642\u53ef\u80fd\u672a\u547c\u53eb parse"_s)
+			$of(u"剖析時可能未呼叫 parse"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\u932f\u8aa4: \u672a\u5be6\u884c\u8ef8 {0} \u7684\u985e\u578b\u91cd\u8907\u7a0b\u5f0f"_s)
+			$of(u"錯誤: 未實行軸 {0} 的類型重複程式"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\u932f\u8aa4: \u672a\u5be6\u884c\u8ef8 {0} \u7684\u91cd\u8907\u7a0b\u5f0f"_s)
+			$of(u"錯誤: 未實行軸 {0} 的重複程式"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u63f4\u91cd\u8907\u7a0b\u5f0f\u8907\u88fd"_s)
+			$of(u"不支援重複程式複製"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"\u4e0d\u660e\u7684\u8ef8\u5468\u904a\u985e\u578b: {0}"_s)
+			$of(u"不明的軸周遊類型: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_AXIS_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u63f4\u8ef8\u5468\u904a\u7a0b\u5f0f: {0}"_s)
+			$of(u"不支援軸周遊程式: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_DTMIDS_AVAIL),
-			$of(u"\u4e0d\u518d\u6709\u53ef\u7528\u7684 DTM ID"_s)
+			$of(u"不再有可用的 DTM ID"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u63f4: {0}"_s)
+			$of(u"不支援: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NODE_NON_NULL),
-			$of(u"\u7bc0\u9ede\u5fc5\u9808\u662f\u975e\u7a7a\u503c\u7684 getDTMHandleFromNode"_s)
+			$of(u"節點必須是非空值的 getDTMHandleFromNode"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"\u7121\u6cd5\u89e3\u6790\u7bc0\u9ede\u70ba\u63a7\u5236\u4ee3\u78bc"_s)
+			$of(u"無法解析節點為控制代碼"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"\u5256\u6790\u6642\u53ef\u80fd\u672a\u547c\u53eb startParse"_s)
+			$of(u"剖析時可能未呼叫 startParse"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse \u9700\u8981\u975e\u7a7a\u503c SAXParser"_s)
+			$of(u"startParse 需要非空值 SAXParser"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COULD_NOT_INIT_PARSER),
-			$of(u"\u7121\u6cd5\u8d77\u59cb\u5256\u6790\u5668"_s)
+			$of(u"無法起始剖析器"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_EXCEPTION_CREATING_POOL),
-			$of(u"\u5efa\u7acb\u96c6\u5340\u7684\u65b0\u57f7\u884c\u8655\u7406\u6642\u767c\u751f\u7570\u5e38\u72c0\u6cc1"_s)
+			$of(u"建立集區的新執行處理時發生異常狀況"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"\u8def\u5f91\u5305\u542b\u7121\u6548\u7684\u9041\u96e2\u5e8f\u5217"_s)
+			$of(u"路徑包含無效的遁離序列"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_SCHEME_REQUIRED),
-			$of(u"\u914d\u7f6e\u662f\u5fc5\u8981\u9805\u76ee\uff01"_s)
+			$of(u"配置是必要項目！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_SCHEME_IN_URI),
-			$of(u"\u5728 URI \u4e2d\u627e\u4e0d\u5230\u914d\u7f6e: {0}"_s)
+			$of(u"在 URI 中找不到配置: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_SCHEME_INURI),
-			$of(u"\u5728 URI \u627e\u4e0d\u5230\u914d\u7f6e"_s)
+			$of(u"在 URI 找不到配置"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_PATH_INVALID_CHAR),
-			$of(u"\u8def\u5f91\u5305\u542b\u7121\u6548\u7684\u5b57\u5143: {0}"_s)
+			$of(u"路徑包含無效的字元: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"\u7121\u6cd5\u5f9e\u7a7a\u503c\u5b57\u4e32\u8a2d\u5b9a\u914d\u7f6e"_s)
+			$of(u"無法從空值字串設定配置"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"\u914d\u7f6e\u4e0d\u4e00\u81f4\u3002"_s)
+			$of(u"配置不一致。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"\u4e3b\u6a5f\u6c92\u6709\u5b8c\u6574\u7684\u4f4d\u5740"_s)
+			$of(u"主機沒有完整的位址"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_PORT_WHEN_HOST_NULL),
-			$of(u"\u4e3b\u6a5f\u70ba\u7a7a\u503c\u6642\uff0c\u7121\u6cd5\u8a2d\u5b9a\u9023\u63a5\u57e0"_s)
+			$of(u"主機為空值時，無法設定連接埠"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_INVALID_PORT),
-			$of(u"\u7121\u6548\u7684\u9023\u63a5\u57e0\u865f\u78bc"_s)
+			$of(u"無效的連接埠號碼"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"\u53ea\u80fd\u5c0d\u4e00\u822c URI \u8a2d\u5b9a\u7247\u6bb5"_s)
+			$of(u"只能對一般 URI 設定片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"\u8def\u5f91\u70ba\u7a7a\u503c\u6642\uff0c\u7121\u6cd5\u8a2d\u5b9a\u7247\u6bb5"_s)
+			$of(u"路徑為空值時，無法設定片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_FRAG_INVALID_CHAR),
-			$of(u"\u7247\u6bb5\u5305\u542b\u7121\u6548\u7684\u5b57\u5143"_s)
+			$of(u"片段包含無效的字元"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_PARSER_IN_USE),
-			$of(u"\u5256\u6790\u5668\u4f7f\u7528\u4e2d"_s)
+			$of(u"剖析器使用中"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"\u5256\u6790\u6642\u7121\u6cd5\u8b8a\u66f4 {0} {1}"_s)
+			$of(u"剖析時無法變更 {0} {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"\u4e0d\u5141\u8a31\u81ea\u884c\u5f15\u767c"_s)
+			$of(u"不允許自行引發"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"\u5982\u679c\u6c92\u6709\u6307\u5b9a\u4e3b\u6a5f\uff0c\u4e0d\u53ef\u6307\u5b9a Userinfo"_s)
+			$of(u"如果沒有指定主機，不可指定 Userinfo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_PORT_IF_NO_HOST),
-			$of(u"\u5982\u679c\u6c92\u6709\u6307\u5b9a\u4e3b\u6a5f\uff0c\u4e0d\u53ef\u6307\u5b9a\u9023\u63a5\u57e0"_s)
+			$of(u"如果沒有指定主機，不可指定連接埠"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"\u5728\u8def\u5f91\u53ca\u67e5\u8a62\u5b57\u4e32\u4e2d\u4e0d\u53ef\u6307\u5b9a\u67e5\u8a62\u5b57\u4e32"_s)
+			$of(u"在路徑及查詢字串中不可指定查詢字串"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"\u8def\u5f91\u548c\u7247\u6bb5\u4e0d\u80fd\u540c\u6642\u6307\u5b9a\u7247\u6bb5"_s)
+			$of(u"路徑和片段不能同時指定片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"\u7121\u6cd5\u4ee5\u7a7a\u767d\u53c3\u6578\u8d77\u59cb\u8a2d\u5b9a URI"_s)
+			$of(u"無法以空白參數起始設定 URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_METHOD_NOT_SUPPORTED),
-			$of(u"\u5c1a\u4e0d\u652f\u63f4\u65b9\u6cd5"_s)
+			$of(u"尚不支援方法"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"IncrementalSAXSource_Filter \u76ee\u524d\u7121\u6cd5\u91cd\u65b0\u555f\u52d5"_s)
+			$of(u"IncrementalSAXSource_Filter 目前無法重新啟動"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader \u4e0d\u80fd\u5728 startParse \u8981\u6c42\u4e4b\u524d"_s)
+			$of(u"XMLReader 不能在 startParse 要求之前"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u63f4\u8ef8\u5468\u904a\u7a0b\u5f0f: {0}"_s)
+			$of(u"不支援軸周遊程式: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
-			$of(u"\u4f7f\u7528\u7a7a\u503c PrintWriter \u5efa\u7acb ListingErrorHandler\uff01"_s)
+			$of(u"使用空值 PrintWriter 建立 ListingErrorHandler！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_SYSTEMID_UNKNOWN),
-			$of(u"\u4e0d\u660e\u7684 SystemId"_s)
+			$of(u"不明的 SystemId"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_LOCATION_UNKNOWN),
-			$of(u"\u4e0d\u660e\u7684\u932f\u8aa4\u4f4d\u7f6e"_s)
+			$of(u"不明的錯誤位置"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\u524d\u7f6e\u78bc\u5fc5\u9808\u89e3\u6790\u70ba\u547d\u540d\u7a7a\u9593: {0}"_s)
+			$of(u"前置碼必須解析為命名空間: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"XPathContext \u4e2d\u4e0d\u652f\u63f4 createDocument()\uff01"_s)
+			$of(u"XPathContext 中不支援 createDocument()！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"\u5c6c\u6027\u5b50\u9805\u4e0d\u5177\u6709\u64c1\u6709\u8005\u6587\u4ef6\uff01"_s)
+			$of(u"屬性子項不具有擁有者文件！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"\u5c6c\u6027\u5b50\u9805\u4e0d\u5177\u6709\u64c1\u6709\u8005\u6587\u4ef6\u5143\u7d20\uff01"_s)
+			$of(u"屬性子項不具有擁有者文件元素！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"\u8b66\u544a: \u7121\u6cd5\u5728\u6587\u4ef6\u5143\u7d20\u4e4b\u524d\u8f38\u51fa\u6587\u5b57\uff01\u6b63\u5728\u5ffd\u7565..."_s)
+			$of(u"警告: 無法在文件元素之前輸出文字！正在忽略..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"DOM \u7684\u6839\u4e0d\u80fd\u8d85\u904e\u4e00\u500b\uff01"_s)
+			$of(u"DOM 的根不能超過一個！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ARG_LOCALNAME_NULL),
-			$of(u"\u5f15\u6578 \'localName\' \u70ba\u7a7a\u503c"_s)
+			$of(u"引數 \'localName\' 為空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ARG_LOCALNAME_INVALID),
-			$of(u"QNAME \u4e2d\u7684 Localname \u61c9\u70ba\u6709\u6548\u7684 NCName"_s)
+			$of(u"QNAME 中的 Localname 應為有效的 NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ARG_PREFIX_INVALID),
-			$of(u"QNAME \u4e2d\u7684\u524d\u7f6e\u78bc\u61c9\u70ba\u6709\u6548\u7684 NCName"_s)
+			$of(u"QNAME 中的前置碼應為有效的 NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NAME_CANT_START_WITH_COLON),
-			$of(u"\u540d\u7a31\u4e0d\u80fd\u4ee5\u5192\u865f\u70ba\u958b\u982d"_s)
+			$of(u"名稱不能以冒號為開頭"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage \u7684\u53c3\u6578\u8d85\u51fa\u7bc4\u570d"_s)
+			$of(u"createMessage 的參數超出範圍"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"messageFormat \u547c\u53eb\u671f\u9593\u767c\u751f\u7570\u5e38\u72c0\u6cc1"_s)
+			$of(u"messageFormat 呼叫期間發生異常狀況"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\u884c\u865f"_s)
+			$of(u"行號"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\u8cc7\u6599\u6b04\u7de8\u865f"_s)
+			$of(u"資料欄編號"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"serializer \u985e\u5225 \'\'{0}\'\' \u4e0d\u5be6\u884c org.xml.sax.ContentHandler\u3002"_s)
+			$of(u"serializer 類別 \'\'{0}\'\' 不實行 org.xml.sax.ContentHandler。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"\u627e\u4e0d\u5230\u8cc7\u6e90 [ {0} ]\u3002\n{1}"_s)
+			$of(u"找不到資源 [ {0} ]。\n{1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"\u7121\u6cd5\u8f09\u5165\u8cc7\u6e90 [ {0} ]: {1} \n {2} \t {3}"_s)
+			$of(u"無法載入資源 [ {0} ]: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"\u7de9\u885d\u5340\u5927\u5c0f <=0"_s)
+			$of(u"緩衝區大小 <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u5075\u6e2c\u5230\u7121\u6548\u7684 UTF-16 \u4ee3\u7406: {0}\uff1f"_s)
+			$of(u"偵測到無效的 UTF-16 代理: {0}？"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_OIERROR),
-			$of(u"IO \u932f\u8aa4"_s)
+			$of(u"IO 錯誤"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"\u5728\u7522\u751f\u5b50\u9805\u7bc0\u9ede\u4e4b\u5f8c\uff0c\u6216\u5728\u7522\u751f\u5143\u7d20\u4e4b\u524d\uff0c\u4e0d\u53ef\u65b0\u589e\u5c6c\u6027 {0}\u3002\u5c6c\u6027\u6703\u88ab\u5ffd\u7565\u3002"_s)
+			$of(u"在產生子項節點之後，或在產生元素之前，不可新增屬性 {0}。屬性會被忽略。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_NAMESPACE_PREFIX),
-			$of(u"\u5b57\u9996 \'\'{0}\'\' \u7684\u547d\u540d\u7a7a\u9593\u5c1a\u672a\u5ba3\u544a\u3002"_s)
+			$of(u"字首 \'\'{0}\'\' 的命名空間尚未宣告。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_STRAY_ATTRIBUTE),
-			$of(u"\u5c6c\u6027 \'\'{0}\'\' \u5728\u5143\u7d20\u4e4b\u5916\u3002"_s)
+			$of(u"屬性 \'\'{0}\'\' 在元素之外。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_STRAY_NAMESPACE),
-			$of(u"\u547d\u540d\u7a7a\u9593\u5ba3\u544a \'\'{0}\'\'=\'\'{1}\'\' \u8d85\u51fa\u5143\u7d20\u5916\u3002"_s)
+			$of(u"命名空間宣告 \'\'{0}\'\'=\'\'{1}\'\' 超出元素外。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"\u7121\u6cd5\u8f09\u5165 \'\'{0}\'\' (\u6aa2\u67e5 CLASSPATH)\uff0c\u76ee\u524d\u53ea\u4f7f\u7528\u9810\u8a2d\u503c"_s)
+			$of(u"無法載入 \'\'{0}\'\' (檢查 CLASSPATH)，目前只使用預設值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_ILLEGAL_CHARACTER),
-			$of(u"\u5617\u8a66\u8f38\u51fa\u6574\u6578\u503c {0} \u7684\u5b57\u5143\uff0c\u4f46\u662f\u5b83\u4e0d\u662f\u4ee5\u6307\u5b9a\u7684 {1} \u8f38\u51fa\u7de8\u78bc\u5448\u73fe\u3002"_s)
+			$of(u"嘗試輸出整數值 {0} 的字元，但是它不是以指定的 {1} 輸出編碼呈現。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_zh_TW::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"\u7121\u6cd5\u8f09\u5165\u8f38\u51fa\u65b9\u6cd5 \'\'{1}\'\' \u7684\u5c6c\u6027\u6a94 \'\'{0}\'\' (\u6aa2\u67e5 CLASSPATH)"_s)
+			$of(u"無法載入輸出方法 \'\'{1}\'\' 的屬性檔 \'\'{0}\'\' (檢查 CLASSPATH)"_s)
 		})
 	}));
 }

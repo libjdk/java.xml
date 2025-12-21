@@ -512,13 +512,13 @@ $chars* XMLStreamReaderImpl::getTextCharacters() {
 	} else {
 		$var($String, var$7, $$str({"Current state = "_s, $(getEventTypeString(this->fEventType)), " is not among the states "_s}));
 		$var($String, var$6, $$concat(var$7, $(getEventTypeString($XMLEvent::CHARACTERS))));
-		$var($String, var$5, $$concat(var$6, " , "));
+		$var($String, var$5, $$concat(var$6, " , "_s));
 		$var($String, var$4, $$concat(var$5, $(getEventTypeString($XMLEvent::COMMENT))));
-		$var($String, var$3, $$concat(var$4, " , "));
+		$var($String, var$3, $$concat(var$4, " , "_s));
 		$var($String, var$2, $$concat(var$3, $(getEventTypeString($XMLEvent::CDATA))));
-		$var($String, var$1, $$concat(var$2, " , "));
+		$var($String, var$1, $$concat(var$2, " , "_s));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::SPACE))));
-		$throwNew($IllegalStateException, $$concat(var$0, " valid for getTextCharacters() "));
+		$throwNew($IllegalStateException, $$concat(var$0, " valid for getTextCharacters() "_s));
 	}
 }
 
@@ -529,13 +529,13 @@ int32_t XMLStreamReaderImpl::getTextLength() {
 	} else {
 		$var($String, var$7, $$str({"Current state = "_s, $(getEventTypeString(this->fEventType)), " is not among the states "_s}));
 		$var($String, var$6, $$concat(var$7, $(getEventTypeString($XMLEvent::CHARACTERS))));
-		$var($String, var$5, $$concat(var$6, " , "));
+		$var($String, var$5, $$concat(var$6, " , "_s));
 		$var($String, var$4, $$concat(var$5, $(getEventTypeString($XMLEvent::COMMENT))));
-		$var($String, var$3, $$concat(var$4, " , "));
+		$var($String, var$3, $$concat(var$4, " , "_s));
 		$var($String, var$2, $$concat(var$3, $(getEventTypeString($XMLEvent::CDATA))));
-		$var($String, var$1, $$concat(var$2, " , "));
+		$var($String, var$1, $$concat(var$2, " , "_s));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::SPACE))));
-		$throwNew($IllegalStateException, $$concat(var$0, " valid for getTextLength() "));
+		$throwNew($IllegalStateException, $$concat(var$0, " valid for getTextLength() "_s));
 	}
 }
 
@@ -546,13 +546,13 @@ int32_t XMLStreamReaderImpl::getTextStart() {
 	} else {
 		$var($String, var$7, $$str({"Current state = "_s, $(getEventTypeString(this->fEventType)), " is not among the states "_s}));
 		$var($String, var$6, $$concat(var$7, $(getEventTypeString($XMLEvent::CHARACTERS))));
-		$var($String, var$5, $$concat(var$6, " , "));
+		$var($String, var$5, $$concat(var$6, " , "_s));
 		$var($String, var$4, $$concat(var$5, $(getEventTypeString($XMLEvent::COMMENT))));
-		$var($String, var$3, $$concat(var$4, " , "));
+		$var($String, var$3, $$concat(var$4, " , "_s));
 		$var($String, var$2, $$concat(var$3, $(getEventTypeString($XMLEvent::CDATA))));
-		$var($String, var$1, $$concat(var$2, " , "));
+		$var($String, var$1, $$concat(var$2, " , "_s));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::SPACE))));
-		$throwNew($IllegalStateException, $$concat(var$0, " valid for getTextStart() "));
+		$throwNew($IllegalStateException, $$concat(var$0, " valid for getTextStart() "_s));
 	}
 }
 
@@ -751,7 +751,7 @@ int32_t XMLStreamReaderImpl::getAttributeCount() {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeCount()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeCount()"_s));
 	}
 }
 
@@ -762,7 +762,7 @@ $QName* XMLStreamReaderImpl::getAttributeName(int32_t index) {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeName()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeName()"_s));
 	}
 }
 
@@ -781,7 +781,7 @@ $String* XMLStreamReaderImpl::getAttributeNamespace(int32_t index) {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeNamespace()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeNamespace()"_s));
 	}
 }
 
@@ -792,7 +792,7 @@ $String* XMLStreamReaderImpl::getAttributePrefix(int32_t index) {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributePrefix()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributePrefix()"_s));
 	}
 }
 
@@ -805,7 +805,7 @@ $QName* XMLStreamReaderImpl::getAttributeQName(int32_t index) {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeQName()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeQName()"_s));
 	}
 }
 
@@ -816,7 +816,7 @@ $String* XMLStreamReaderImpl::getAttributeType(int32_t index) {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeType()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeType()"_s));
 	}
 }
 
@@ -827,7 +827,7 @@ $String* XMLStreamReaderImpl::getAttributeValue(int32_t index) {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeValue()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeValue()"_s));
 	}
 }
 
@@ -843,7 +843,7 @@ $String* XMLStreamReaderImpl::getAttributeValue($String* namespaceURI, $String* 
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeValue()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for getAttributeValue()"_s));
 	}
 }
 
@@ -881,7 +881,7 @@ $QName* XMLStreamReaderImpl::getName() {
 	} else {
 		$var($String, var$2, $$str({"Illegal to call getName() when event type is "_s, $(getEventTypeString(this->fEventType)), ". Valid states are "_s}));
 		$var($String, var$1, $$concat(var$2, $(getEventTypeString($XMLEvent::START_ELEMENT))));
-		$var($String, var$0, $$concat(var$1, ", "));
+		$var($String, var$0, $$concat(var$1, ", "_s));
 		$throwNew($IllegalStateException, $$concat(var$0, $(getEventTypeString($XMLEvent::END_ELEMENT))));
 	}
 }
@@ -897,11 +897,11 @@ int32_t XMLStreamReaderImpl::getNamespaceCount() {
 	} else {
 		$var($String, var$5, $$str({"Current event state is "_s, $(getEventTypeString(this->fEventType)), " is not among the states "_s}));
 		$var($String, var$4, $$concat(var$5, $(getEventTypeString($XMLEvent::START_ELEMENT))));
-		$var($String, var$3, $$concat(var$4, ", "));
+		$var($String, var$3, $$concat(var$4, ", "_s));
 		$var($String, var$2, $$concat(var$3, $(getEventTypeString($XMLEvent::END_ELEMENT))));
-		$var($String, var$1, $$concat(var$2, ", "));
+		$var($String, var$1, $$concat(var$2, ", "_s));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::NAMESPACE))));
-		$throwNew($IllegalStateException, $$concat(var$0, " valid for getNamespaceCount()."));
+		$throwNew($IllegalStateException, $$concat(var$0, " valid for getNamespaceCount()."_s));
 	}
 }
 
@@ -913,11 +913,11 @@ $String* XMLStreamReaderImpl::getNamespacePrefix(int32_t index) {
 	} else {
 		$var($String, var$5, $$str({"Current state "_s, $(getEventTypeString(this->fEventType)), " is not among the states "_s}));
 		$var($String, var$4, $$concat(var$5, $(getEventTypeString($XMLEvent::START_ELEMENT))));
-		$var($String, var$3, $$concat(var$4, ", "));
+		$var($String, var$3, $$concat(var$4, ", "_s));
 		$var($String, var$2, $$concat(var$3, $(getEventTypeString($XMLEvent::END_ELEMENT))));
-		$var($String, var$1, $$concat(var$2, ", "));
+		$var($String, var$1, $$concat(var$2, ", "_s));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::NAMESPACE))));
-		$throwNew($IllegalStateException, $$concat(var$0, " valid for getNamespacePrefix()."));
+		$throwNew($IllegalStateException, $$concat(var$0, " valid for getNamespacePrefix()."_s));
 	}
 }
 
@@ -928,11 +928,11 @@ $String* XMLStreamReaderImpl::getNamespaceURI(int32_t index) {
 	} else {
 		$var($String, var$5, $$str({"Current state "_s, $(getEventTypeString(this->fEventType)), " is not among the states "_s}));
 		$var($String, var$4, $$concat(var$5, $(getEventTypeString($XMLEvent::START_ELEMENT))));
-		$var($String, var$3, $$concat(var$4, ", "));
+		$var($String, var$3, $$concat(var$4, ", "_s));
 		$var($String, var$2, $$concat(var$3, $(getEventTypeString($XMLEvent::END_ELEMENT))));
-		$var($String, var$1, $$concat(var$2, ", "));
+		$var($String, var$1, $$concat(var$2, ", "_s));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::NAMESPACE))));
-		$throwNew($IllegalStateException, $$concat(var$0, " valid for getNamespaceURI()."));
+		$throwNew($IllegalStateException, $$concat(var$0, " valid for getNamespaceURI()."_s));
 	}
 }
 
@@ -988,17 +988,17 @@ $String* XMLStreamReaderImpl::getText() {
 	} else {
 		$var($String, var$11, $$str({"Current state "_s, $(getEventTypeString(this->fEventType)), " is not among the states"_s}));
 		$var($String, var$10, $$concat(var$11, $(getEventTypeString($XMLEvent::CHARACTERS))));
-		$var($String, var$9, $$concat(var$10, ", "));
+		$var($String, var$9, $$concat(var$10, ", "_s));
 		$var($String, var$8, $$concat(var$9, $(getEventTypeString($XMLEvent::COMMENT))));
-		$var($String, var$7, $$concat(var$8, ", "));
+		$var($String, var$7, $$concat(var$8, ", "_s));
 		$var($String, var$6, $$concat(var$7, $(getEventTypeString($XMLEvent::CDATA))));
-		$var($String, var$5, $$concat(var$6, ", "));
+		$var($String, var$5, $$concat(var$6, ", "_s));
 		$var($String, var$4, $$concat(var$5, $(getEventTypeString($XMLEvent::SPACE))));
-		$var($String, var$3, $$concat(var$4, ", "));
+		$var($String, var$3, $$concat(var$4, ", "_s));
 		$var($String, var$2, $$concat(var$3, $(getEventTypeString($XMLEvent::ENTITY_REFERENCE))));
-		$var($String, var$1, $$concat(var$2, ", "));
+		$var($String, var$1, $$concat(var$2, ", "_s));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::DTD))));
-		$throwNew($IllegalStateException, $$concat(var$0, " valid for getText() "));
+		$throwNew($IllegalStateException, $$concat(var$0, " valid for getText() "_s));
 	}
 }
 
@@ -1075,7 +1075,7 @@ bool XMLStreamReaderImpl::isAttributeSpecified(int32_t index) {
 	} else {
 		$var($String, var$1, $$str({"Current state is not among the states "_s, $(getEventTypeString($XMLEvent::START_ELEMENT)), " , "_s}));
 		$var($String, var$0, $$concat(var$1, $(getEventTypeString($XMLEvent::ATTRIBUTE))));
-		$throwNew($IllegalStateException, $$concat(var$0, "valid for isAttributeSpecified()"));
+		$throwNew($IllegalStateException, $$concat(var$0, "valid for isAttributeSpecified()"_s));
 	}
 }
 
@@ -1098,7 +1098,7 @@ int32_t XMLStreamReaderImpl::nextTag() {
 	if (eventType != $XMLStreamConstants::START_ELEMENT && eventType != $XMLStreamConstants::END_ELEMENT) {
 		$var($String, var$4, $$str({"found: "_s, $(getEventTypeString(eventType)), ", expected "_s}));
 		$var($String, var$3, $$concat(var$4, $(getEventTypeString($XMLStreamConstants::START_ELEMENT))));
-		$var($String, var$2, $$concat(var$3, " or "));
+		$var($String, var$2, $$concat(var$3, " or "_s));
 		$var($String, var$1, $concat(var$2, $(getEventTypeString($XMLStreamConstants::END_ELEMENT))));
 		$throwNew($XMLStreamException, var$1, $(getLocation()));
 	}

@@ -1219,7 +1219,7 @@ $String* NodeImpl::toString() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"["_s, $(getNodeName()), ": "_s}));
 	$var($String, var$0, $$concat(var$1, $(getNodeValue())));
-	return $concat(var$0, "]");
+	return $concat(var$0, "]"_s);
 }
 
 void NodeImpl::writeObject($ObjectOutputStream* out) {

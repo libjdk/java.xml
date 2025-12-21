@@ -73,99 +73,99 @@ $ObjectArray2* ErrorMessages_ko::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),
-			$of(u"\'\'{0}\'\'\uc5d0 \ub7f0\ud0c0\uc784 \ub0b4\ubd80 \uc624\ub958\uac00 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'에 런타임 내부 오류가 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"<xsl:copy>\ub97c \uc2e4\ud589\ud558\ub294 \uc911 \ub7f0\ud0c0\uc784 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"<xsl:copy>를 실행하는 중 런타임 오류가 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"\'\'{0}\'\'\uc5d0\uc11c \'\'{1}\'\'(\uc73c)\ub85c\uc758 \ubcc0\ud658\uc774 \ubd80\uc801\ud569\ud569\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'에서 \'\'{1}\'\'(으)로의 변환이 부적합합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"XSLTC\ub294 \uc678\ubd80 \ud568\uc218 \'\'{0}\'\'\uc744(\ub97c) \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XSLTC는 외부 함수 \'\'{0}\'\'을(를) 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"\ub3d9\ub4f1\uc131 \ud45c\ud604\uc2dd\uc5d0 \uc54c \uc218 \uc5c6\ub294 \uc778\uc218 \uc720\ud615\uc774 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"동등성 표현식에 알 수 없는 인수 유형이 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"\'\'{1}\'\'\uc5d0 \ub300\ud55c \ud638\ucd9c\uc5d0 \ubd80\uc801\ud569\ud55c \uc778\uc218 \uc720\ud615 \'\'{0}\'\'\uc774(\uac00) \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{1}\'\'에 대한 호출에 부적합한 인수 유형 \'\'{0}\'\'이(가) 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"\'\'{1}\'\' \ud328\ud134\uc744 \uc0ac\uc6a9\ud558\uc5ec \'\'{0}\'\' \uc22b\uc790\uc758 \ud615\uc2dd\uc744 \uc9c0\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'\'{1}\'\' 패턴을 사용하여 \'\'{0}\'\' 숫자의 형식을 지정하려고 시도하는 중입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
-			$of(u"\'\'{0}\'\' \uc774\ud130\ub808\uc774\ud130\ub97c \ubcf5\uc81c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 이터레이터를 복제할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"\'\'{0}\'\' \ucd95\uc5d0 \ub300\ud55c \uc774\ud130\ub808\uc774\ud130\ub294 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 축에 대한 이터레이터는 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"\uc785\ub825\ub41c \ucd95 \'\'{0}\'\'\uc5d0 \ub300\ud55c \uc774\ud130\ub808\uc774\ud130\ub294 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"입력된 축 \'\'{0}\'\'에 대한 이터레이터는 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"\'\'{0}\'\' \uc18d\uc131\uc774 \uc694\uc18c\uc5d0 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 속성이 요소에 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"\ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc120\uc5b8 \'\'{0}\'\'=\'\'{1}\'\'\uc774(\uac00) \uc694\uc18c\uc5d0 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"네임스페이스 선언 \'\'{0}\'\'=\'\'{1}\'\'이(가) 요소에 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"\'\'{0}\'\' \uc811\ub450\uc5b4\uc5d0 \ub300\ud55c \ub124\uc784\uc2a4\ud398\uc774\uc2a4\uac00 \uc120\uc5b8\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 접두어에 대한 네임스페이스가 선언되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
-			$of(u"\uc18c\uc2a4 DOM\uc758 \uc798\ubabb\ub41c \uc720\ud615\uc744 \uc0ac\uc6a9\ud558\uc5ec DOMAdapter\uac00 \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"소스 DOM의 잘못된 유형을 사용하여 DOMAdapter가 생성되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"\uc0ac\uc6a9 \uc911\uc778 SAX \uad6c\ubb38 \ubd84\uc11d\uae30\uac00 DTD \uc120\uc5b8 \uc774\ubca4\ud2b8\ub97c \ucc98\ub9ac\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"사용 중인 SAX 구문 분석기가 DTD 선언 이벤트를 처리하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"\uc0ac\uc6a9 \uc911\uc778 SAX \uad6c\ubb38 \ubd84\uc11d\uae30\uac00 XML \ub124\uc784\uc2a4\ud398\uc774\uc2a4\ub97c \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"사용 중인 SAX 구문 분석기가 XML 네임스페이스를 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"URI \ucc38\uc870 \'\'{0}\'\'\uc744(\ub97c) \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"URI 참조 \'\'{0}\'\'을(를) 분석할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_XSL_ERR),
-			$of(u"\'\'{0}\'\'\uc740(\ub294) \uc9c0\uc6d0\ub418\uc9c0 \uc54a\ub294 XSL \uc694\uc18c\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'은(는) 지원되지 않는 XSL 요소입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
-			$of(u"\'\'{0}\'\'\uc740(\ub294) \uc54c \uc218 \uc5c6\ub294 XSLTC \ud655\uc7a5\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'은(는) 알 수 없는 XSLTC 확장입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"\uc9c0\uc815\ub41c translet \'\'{0}\'\'\uc774(\uac00) \uc0ac\uc6a9 \uc911\uc778 XSLTC \ub7f0\ud0c0\uc784 \ubc84\uc804\ubcf4\ub2e4 \ucd5c\uc2e0\uc758 XSLTC \ubc84\uc804\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc774 translet\uc744 \uc2e4\ud589\ud558\ub824\uba74 \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\ub97c \uc7ac\ucef4\ud30c\uc77c\ud558\uac70\ub098 \ucd5c\uc2e0 XSLTC \ubc84\uc804\uc744 \uc0ac\uc6a9\ud574\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"지정된 translet \'\'{0}\'\'이(가) 사용 중인 XSLTC 런타임 버전보다 최신의 XSLTC 버전을 사용하여 생성되었습니다. 이 translet을 실행하려면 스타일시트를 재컴파일하거나 최신 XSLTC 버전을 사용해야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
-			$of(u"\uac12\uc774 QName\uc774\uc5b4\uc57c \ud558\ub294 \uc18d\uc131\uc758 \uac12\uc774 \'\'{0}\'\'\uc785\ub2c8\ub2e4."_s)
+			$of(u"값이 QName이어야 하는 속성의 값이 \'\'{0}\'\'입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_NCNAME_ERR),
-			$of(u"\uac12\uc774 NCName\uc774\uc5b4\uc57c \ud558\ub294 \uc18d\uc131\uc758 \uac12\uc774 \'\'{0}\'\'\uc785\ub2c8\ub2e4."_s)
+			$of(u"값이 NCName이어야 하는 속성의 값이 \'\'{0}\'\'입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"\ubcf4\uc548 \ucc98\ub9ac \uae30\ub2a5\uc774 true\ub85c \uc124\uc815\ub41c \uacbd\uc6b0 \ud655\uc7a5 \ud568\uc218 \'\'{0}\'\'\uc744(\ub97c) \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"보안 처리 기능이 true로 설정된 경우 확장 함수 \'\'{0}\'\'을(를) 사용할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"\ubcf4\uc548 \ucc98\ub9ac \uae30\ub2a5\uc774 true\ub85c \uc124\uc815\ub41c \uacbd\uc6b0 \ud655\uc7a5 \uc694\uc18c \'\'{0}\'\'\uc744(\ub97c) \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"보안 처리 기능이 true로 설정된 경우 확장 요소 \'\'{0}\'\'을(를) 사용할 수 없습니다."_s)
 		})
 	});
 }

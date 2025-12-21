@@ -50,11 +50,11 @@ $String* Version::getVersion() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$6, $$str({$(getProduct()), " "_s}));
 	$var($String, var$5, $$concat(var$6, $(getImplementationLanguage())));
-	$var($String, var$4, $$concat(var$5, " "));
+	$var($String, var$4, $$concat(var$5, " "_s));
 	$var($String, var$3, $$concat(var$4, $$str(getMajorVersionNum())));
-	$var($String, var$2, $$concat(var$3, "."));
+	$var($String, var$2, $$concat(var$3, "."_s));
 	$var($String, var$1, $$concat(var$2, $$str(getReleaseVersionNum())));
-	$var($String, var$0, $$concat(var$1, "."));
+	$var($String, var$0, $$concat(var$1, "."_s));
 	return $concat(var$0, ((getDevelopmentVersionNum() > 0) ? ($$str({"D"_s, $$str(getDevelopmentVersionNum())})) : ($$str({""_s, $$str(getMaintenanceVersionNum())}))));
 }
 

@@ -164,7 +164,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_STYLESHEET_ERR),
-			$of(u"Se ha definido m\u00e1s de una hoja de estilo en el mismo archivo."_s)
+			$of(u"Se ha definido más de una hoja de estilo en el mismo archivo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_REDEF_ERR),
@@ -176,11 +176,11 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_REDEF_ERR),
-			$of(u"Se ha definido varias veces la variable \'\'{0}\'\' en el mismo \u00e1mbito."_s)
+			$of(u"Se ha definido varias veces la variable \'\'{0}\'\' en el mismo ámbito."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_UNDEF_ERR),
-			$of(u"No se ha definido la variable o el par\u00e1metro \'\'{0}\'\'."_s)
+			$of(u"No se ha definido la variable o el parámetro \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CLASS_NOT_FOUND_ERR),
@@ -188,11 +188,11 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::METHOD_NOT_FOUND_ERR),
-			$of(u"No se ha encontrado el m\u00e9todo externo \'\'{0}\'\' (debe ser p\u00fablico)."_s)
+			$of(u"No se ha encontrado el método externo \'\'{0}\'\' (debe ser público)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ARGUMENT_CONVERSION_ERR),
-			$of(u"No se puede convertir el tipo de argumento/retorno en la llamada al m\u00e9todo \'\'{0}\'\'"_s)
+			$of(u"No se puede convertir el tipo de argumento/retorno en la llamada al método \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_NOT_FOUND_ERR),
@@ -200,11 +200,11 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_URI_ERR),
-			$of(u"URI \'\'{0}\'\' no v\u00e1lido."_s)
+			$of(u"URI \'\'{0}\'\' no válido."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CATALOG_EXCEPTION),
-			$of(u"JAXP08090001: CatalogResolver est\u00e1 activado con el cat\u00e1logo \"{0}\", pero se ha devuelto una excepci\u00f3n CatalogException."_s)
+			$of(u"JAXP08090001: CatalogResolver está activado con el catálogo \"{0}\", pero se ha devuelto una excepción CatalogException."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_ACCESS_ERR),
@@ -220,7 +220,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FUNCTION_RESOLVE_ERR),
-			$of(u"No se ha podido resolver la llamada a la funci\u00f3n \'\'{0}\'\'."_s)
+			$of(u"No se ha podido resolver la llamada a la función \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NEED_LITERAL_ERR),
@@ -228,7 +228,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XPATH_PARSER_ERR),
-			$of(u"Error al analizar la expresi\u00f3n XPath \'\'{0}\'\'."_s)
+			$of(u"Error al analizar la expresión XPath \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::REQUIRED_ATTR_ERR),
@@ -236,15 +236,15 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHAR_ERR),
-			$of(u"Car\u00e1cter \'\'{0}\'\' no permitido en la expresi\u00f3n XPath."_s)
+			$of(u"Carácter \'\'{0}\'\' no permitido en la expresión XPath."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_PI_ERR),
-			$of(u"Nombre \'\'{0}\'\' no permitido para la instrucci\u00f3n de procesamiento."_s)
+			$of(u"Nombre \'\'{0}\'\' no permitido para la instrucción de procesamiento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_ATTRIBUTE_ERR),
-			$of(u"El atributo \'\'{0}\'\' est\u00e1 fuera del elemento."_s)
+			$of(u"El atributo \'\'{0}\'\' está fuera del elemento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTRIBUTE_ERR),
@@ -260,7 +260,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RESULT_TREE_SORT_ERR),
-			$of(u"Los fragmentos del \u00e1rbol de resultados no se pueden ordenar (los elementos <xsl:sort> se ignoran). Debe ordenar los nodos al crear el \u00e1rbol de resultados."_s)
+			$of(u"Los fragmentos del árbol de resultados no se pueden ordenar (los elementos <xsl:sort> se ignoran). Debe ordenar los nodos al crear el árbol de resultados."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYMBOLS_REDEF_ERR),
@@ -268,23 +268,23 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSL_VERSION_ERR),
-			$of(u"La versi\u00f3n XSL \'\'{0}\'\' no est\u00e1 soportada por XSLTC."_s)
+			$of(u"La versión XSL \'\'{0}\'\' no está soportada por XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_VARIABLE_ERR),
-			$of(u"La referencia de variable/par\u00e1metro circular en \'\'{0}\'\'."_s)
+			$of(u"La referencia de variable/parámetro circular en \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_BINARY_OP_ERR),
-			$of(u"Operador desconocido para la expresi\u00f3n binaria."_s)
+			$of(u"Operador desconocido para la expresión binaria."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ARG_ERR),
-			$of(u"Argumentos no permitidos para la llamada de funci\u00f3n."_s)
+			$of(u"Argumentos no permitidos para la llamada de función."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DOCUMENT_ARG_ERR),
-			$of(u"El segundo argumento en la funci\u00f3n document() debe ser un juego de nodos."_s)
+			$of(u"El segundo argumento en la función document() debe ser un juego de nodos."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_WHEN_ERR),
@@ -292,19 +292,19 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_OTHERWISE_ERR),
-			$of(u"S\u00f3lo se permite un elemento <xsl:otherwise> en <xsl:choose>."_s)
+			$of(u"Sólo se permite un elemento <xsl:otherwise> en <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_OTHERWISE_ERR),
-			$of(u"<xsl:otherwise> s\u00f3lo se puede utilizar en <xsl:choose>."_s)
+			$of(u"<xsl:otherwise> sólo se puede utilizar en <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_WHEN_ERR),
-			$of(u"<xsl:when> s\u00f3lo se puede utilizar en <xsl:choose>."_s)
+			$of(u"<xsl:when> sólo se puede utilizar en <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WHEN_ELEMENT_ERR),
-			$of(u"S\u00f3lo se permiten los elementos <xsl:when> y <xsl:otherwise> en <xsl:choose>."_s)
+			$of(u"Sólo se permiten los elementos <xsl:when> y <xsl:otherwise> en <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNNAMED_ATTRIBSET_ERR),
@@ -340,11 +340,11 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_EXT_ERR),
-			$of(u"Extensi\u00f3n \'\'{0}\'\' de XSLTC no reconocida."_s)
+			$of(u"Extensión \'\'{0}\'\' de XSLTC no reconocida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_URI_ERR),
-			$of(u"El documento de entrada no es una hoja de estilo (el espacio de nombres XSL no se ha declarado en el elemento ra\u00edz)."_s)
+			$of(u"El documento de entrada no es una hoja de estilo (el espacio de nombres XSL no se ha declarado en el elemento raíz)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_TARGET_ERR),
@@ -352,7 +352,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ACCESSING_XSLT_TARGET_ERR),
-			$of(u"No se ha podido leer el destino de hoja de estilos \'\'{0}\'\', porque no se permite el acceso \'\'{1}\'\' debido a una restricci\u00f3n definida por la propiedad accessExternalStylesheet."_s)
+			$of(u"No se ha podido leer el destino de hoja de estilos \'\'{0}\'\', porque no se permite el acceso \'\'{1}\'\' debido a una restricción definida por la propiedad accessExternalStylesheet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_IMPLEMENTED_ERR),
@@ -372,15 +372,15 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTPUT_VERSION_ERR),
-			$of(u"La versi\u00f3n del documento XML de salida debe ser 1.0"_s)
+			$of(u"La versión del documento XML de salida debe ser 1.0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_RELAT_OP_ERR),
-			$of(u"Operador desconocido para la expresi\u00f3n relacional"_s)
+			$of(u"Operador desconocido para la expresión relacional"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTRIBSET_UNDEF_ERR),
-			$of(u"Se est\u00e1 intentando utilizar el juego de atributos \'\'{0}\'\' no existente."_s)
+			$of(u"Se está intentando utilizar el juego de atributos \'\'{0}\'\' no existente."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTR_VAL_TEMPLATE_ERR),
@@ -396,7 +396,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_TRANSLET_CLASS_ERR),
-			$of(u"Templates no contiene una definici\u00f3n de clase translet."_s)
+			$of(u"Templates no contiene una definición de clase translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_MAIN_TRANSLET_ERR),
@@ -416,7 +416,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_SOURCE_ERR),
-			$of(u"S\u00f3lo StreamSource, SAXSource y DOMSource est\u00e1n soportados por XSLTC"_s)
+			$of(u"Sólo StreamSource, SAXSource y DOMSource están soportados por XSLTC"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_SOURCE_ERR),
@@ -432,7 +432,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_VALUE_ERR),
-			$of(u"Valor no v\u00e1lido especificado para el atributo \'\'{0}\'\'."_s)
+			$of(u"Valor no válido especificado para el atributo \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_RESULT_ERR),
@@ -444,15 +444,15 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_HANDLER_ERR),
-			$of(u"No se ha definido el manejador de salida para el resultado de la transformaci\u00f3n."_s)
+			$of(u"No se ha definido el manejador de salida para el resultado de la transformación."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_RESULT_ERR),
-			$of(u"El objeto Result que se ha pasado a \'\'{0}\'\' no es v\u00e1lido."_s)
+			$of(u"El objeto Result que se ha pasado a \'\'{0}\'\' no es válido."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_PROP_ERR),
-			$of(u"Se est\u00e1 intentando acceder a la propiedad \'\'{0}\'\' de Transformer no v\u00e1lida."_s)
+			$of(u"Se está intentando acceder a la propiedad \'\'{0}\'\' de Transformer no válida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX2DOM_ADAPTER_ERR),
@@ -460,7 +460,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSLTC_SOURCE_ERR),
-			$of(u"Se ha llamado a XSLTCSource.build() sin haber definido la identificaci\u00f3n del sistema."_s)
+			$of(u"Se ha llamado a XSLTCSource.build() sin haber definido la identificación del sistema."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ER_RESULT_NULL),
@@ -468,28 +468,28 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_SET_PARAM_VALUE),
-			$of(u"El valor del par\u00e1metro {0} debe ser un objeto Java v\u00e1lido"_s)
+			$of(u"El valor del parámetro {0} debe ser un objeto Java válido"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_STDIN_ERR),
-			$of(u"La opci\u00f3n -i debe utilizarse con la opci\u00f3n -o."_s)
+			$of(u"La opción -i debe utilizarse con la opción -o."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_USAGE_STR),
-			$of(u"SINOPSIS\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <salida>]\n      [-d <directorio>] [-j <archivo jar>] [-p <paquete>]\n      [-n] [-x] [-u] [-v] [-h] { <hoja de estilo> | -i }\n\nOPCIONES\n   -o <salida>    asigna el nombre de <salida> al translet\n                  generado. Por defecto, el nombre del translet se\n                  deriva del nombre de <hoja de estilo>. Esta opci\u00f3n\n                  se ignora si se compilan varias hojas de estilo.\n   -d <directorio> especifica un directorio de destino para el translet\n   -j <archivo jar>   empaqueta las clases de translet en un archivo jar del\n                  nombre especificado como <archivo jar>\n   -p <paquete>   especifica un prefijo de nombre de paquete para todas las clases de translet n\n                  generadas.\n   -n             permite poner en l\u00ednea la plantilla (comportamiento por defecto mejor\n                  sobre la media).\n   -x             activa la salida del mensaje de depuraci\u00f3n\n   -u             interpreta los a"
-				"rgumentos <hoja de estilo> como URL\n   -i             obliga al compilador a leer la hoja de estilo de stdin\n   -v             imprime la versi\u00f3n del compilador\n   -h             imprime esta sentencia de uso\n"_s)
+			$of(u"SINOPSIS\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <salida>]\n      [-d <directorio>] [-j <archivo jar>] [-p <paquete>]\n      [-n] [-x] [-u] [-v] [-h] { <hoja de estilo> | -i }\n\nOPCIONES\n   -o <salida>    asigna el nombre de <salida> al translet\n                  generado. Por defecto, el nombre del translet se\n                  deriva del nombre de <hoja de estilo>. Esta opción\n                  se ignora si se compilan varias hojas de estilo.\n   -d <directorio> especifica un directorio de destino para el translet\n   -j <archivo jar>   empaqueta las clases de translet en un archivo jar del\n                  nombre especificado como <archivo jar>\n   -p <paquete>   especifica un prefijo de nombre de paquete para todas las clases de translet n\n                  generadas.\n   -n             permite poner en línea la plantilla (comportamiento por defecto mejor\n                  sobre la media).\n   -x             activa la salida del mensaje de depuración\n   -u             interpreta los a"
+				"rgumentos <hoja de estilo> como URL\n   -i             obliga al compilador a leer la hoja de estilo de stdin\n   -v             imprime la versión del compilador\n   -h             imprime esta sentencia de uso\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_USAGE_STR),
-			$of(u"SYNOPSIS \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <archivo jar>]\n      [-x] [-n <iteraciones>] {-u <url_documento> | <documento>}\n      <clase> [<par\u00e1metro1>=<valor1> ...]\n\n   utiliza el translet <clase> para transformar un documento XML \n   especificado como <documento>. El translet <clase> se encuentra en\n   la CLASSPATH del usuario o en el <archivo jar> especificado opcionalmente.\nOPCIONES\n   -j <archivo jar>    especifica un archivo jar desde el que cargar el translet\n   -x              activa la salida del mensaje de depuraci\u00f3n adicional\n   -n <iteraciones> ejecuta el n\u00famero de <iteraciones> de una transformaci\u00f3n y\n                   muestra la informaci\u00f3n de la creaci\u00f3n de perfil\n   -u <url_documento> especifica el documento de entrada XML como una URL\n"_s)
+			$of(u"SYNOPSIS \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <archivo jar>]\n      [-x] [-n <iteraciones>] {-u <url_documento> | <documento>}\n      <clase> [<parámetro1>=<valor1> ...]\n\n   utiliza el translet <clase> para transformar un documento XML \n   especificado como <documento>. El translet <clase> se encuentra en\n   la CLASSPATH del usuario o en el <archivo jar> especificado opcionalmente.\nOPCIONES\n   -j <archivo jar>    especifica un archivo jar desde el que cargar el translet\n   -x              activa la salida del mensaje de depuración adicional\n   -n <iteraciones> ejecuta el número de <iteraciones> de una transformación y\n                   muestra la información de la creación de perfil\n   -u <url_documento> especifica el documento de entrada XML como una URL\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_SORT_ERR),
-			$of(u"<xsl:sort> s\u00f3lo se puede utilizar en <xsl:for-each> o <xsl:apply-templates>."_s)
+			$of(u"<xsl:sort> sólo se puede utilizar en <xsl:for-each> o <xsl:apply-templates>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_ENCODING),
-			$of(u"La codificaci\u00f3n de salida \'\'{0}\'\' no est\u00e1 soportada en esta JVM."_s)
+			$of(u"La codificación de salida \'\'{0}\'\' no está soportada en esta JVM."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYNTAX_ERR),
@@ -501,23 +501,23 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_JAVA_FUNCT_THIS_REF),
-			$of(u"El primer argumento de la funci\u00f3n Java no est\u00e1tica \'\'{0}\'\' no es una referencia de objeto v\u00e1lida."_s)
+			$of(u"El primer argumento de la función Java no estática \'\'{0}\'\' no es una referencia de objeto válida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_ERR),
-			$of(u"Error al comprobar el tipo de la expresi\u00f3n \'\'{0}\'\'."_s)
+			$of(u"Error al comprobar el tipo de la expresión \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_UNK_LOC_ERR),
-			$of(u"Error al comprobar el tipo de una expresi\u00f3n en una ubicaci\u00f3n desconocida."_s)
+			$of(u"Error al comprobar el tipo de una expresión en una ubicación desconocida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CMDLINE_OPTION_ERR),
-			$of(u"La opci\u00f3n de l\u00ednea de comandos \'\'{0}\'\' no es v\u00e1lida."_s)
+			$of(u"La opción de línea de comandos \'\'{0}\'\' no es válida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CMDLINE_OPT_MISSING_ARG_ERR),
-			$of(u"Falta un argumento necesario en la opci\u00f3n de l\u00ednea de comandos \'\'{0}\'\'."_s)
+			$of(u"Falta un argumento necesario en la opción de línea de comandos \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WARNING_PLUS_WRAPPED_MSG),
@@ -545,11 +545,11 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_TRANSLET_STR),
-			$of(u"Transformaci\u00f3n que utiliza el translet \'\'{0}\'\' "_s)
+			$of(u"Transformación que utiliza el translet \'\'{0}\'\' "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_JAR_STR),
-			$of(u"Transformaci\u00f3n que utiliza el translet \'\'{0}\'\' del archivo jar \'\'{1}\'\'"_s)
+			$of(u"Transformación que utiliza el translet \'\'{0}\'\' del archivo jar \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COULD_NOT_CREATE_TRANS_FACT),
@@ -557,7 +557,7 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_NAME_JAVA_CONFLICT),
-			$of(u"El nombre \'\'{0}\'\' no se ha podido utilizar como el nombre de la clase de translet porque contiene caracteres que no est\u00e1n permitidos en el nombre de la clase Java. Se ha utilizado el nombre \'\'{1}\'\' en su lugar."_s)
+			$of(u"El nombre \'\'{0}\'\' no se ha podido utilizar como el nombre de la clase de translet porque contiene caracteres que no están permitidos en el nombre de la clase Java. Se ha utilizado el nombre \'\'{1}\'\' en su lugar."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_ERROR_KEY),
@@ -573,35 +573,35 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_QNAME_ERR),
-			$of(u"Un atributo cuyo valor debe ser un QName o lista de QNames separados por espacios en blanco ten\u00eda el valor \'\'{0}\'\'"_s)
+			$of(u"Un atributo cuyo valor debe ser un QName o lista de QNames separados por espacios en blanco tenía el valor \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_NCNAME_ERR),
-			$of(u"Un atributo cuyo valor debe ser un NCName ten\u00eda el valor \'\'{0}\'\'"_s)
+			$of(u"Un atributo cuyo valor debe ser un NCName tenía el valor \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_METHOD_IN_OUTPUT),
-			$of(u"El atributo method de un elemento <xsl:output> ten\u00eda el valor \'\'{0}\'\'. El valor debe ser \'\'xml\'\', \'\'html\'\', \'\'text\'\' o qname-but-not-ncname"_s)
+			$of(u"El atributo method de un elemento <xsl:output> tenía el valor \'\'{0}\'\'. El valor debe ser \'\'xml\'\', \'\'html\'\', \'\'text\'\' o qname-but-not-ncname"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_GET_FEATURE_NULL_NAME),
-			$of(u"El nombre de funci\u00f3n no puede ser nulo en TransformerFactory.getFeature (nombre de cadena)."_s)
+			$of(u"El nombre de función no puede ser nulo en TransformerFactory.getFeature (nombre de cadena)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_FEATURE_NULL_NAME),
-			$of(u"El nombre de funci\u00f3n no puede ser nulo en TransformerFactory.setFeature (nombre de cadena, valor booleano)."_s)
+			$of(u"El nombre de función no puede ser nulo en TransformerFactory.setFeature (nombre de cadena, valor booleano)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNSUPPORTED_FEATURE),
-			$of(u"No se puede definir la funci\u00f3n \'\'{0}\'\'en esta f\u00e1brica del transformador."_s)
+			$of(u"No se puede definir la función \'\'{0}\'\'en esta fábrica del transformador."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: no se puede definir la funci\u00f3n en false cuando est\u00e1 presente el gestor de seguridad."_s)
+			$of(u"FEATURE_SECURE_PROCESSING: no se puede definir la función en false cuando está presente el gestor de seguridad."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_TRY_CATCH),
-			$of(u"Error interno de XSLTC: el c\u00f3digo de bytes generado contiene un bloque try-catch-finally y no se puede delimitar."_s)
+			$of(u"Error interno de XSLTC: el código de bytes generado contiene un bloque try-catch-finally y no se puede delimitar."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_UNBALANCED_MARKERS),
@@ -609,15 +609,15 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_DELETED_TARGET),
-			$of(u"Error interno de XSLTC: todav\u00eda se hace referencia a una instrucci\u00f3n que formaba parte de un bloque de c\u00f3digo de bytes delimitado en el m\u00e9todo original."_s)
+			$of(u"Error interno de XSLTC: todavía se hace referencia a una instrucción que formaba parte de un bloque de código de bytes delimitado en el método original."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_METHOD_TOO_BIG),
-			$of(u"Error interno de XSLTC: un m\u00e9todo en el translet excede la limitaci\u00f3n de Java Virtual Machine de longitud de un m\u00e9todo de 64 kilobytes. Normalmente, esto lo causan plantillas en una hoja de estilos demasiado grandes. Pruebe a reestructurar la hoja de estilos para utilizar plantillas m\u00e1s peque\u00f1as."_s)
+			$of(u"Error interno de XSLTC: un método en el translet excede la limitación de Java Virtual Machine de longitud de un método de 64 kilobytes. Normalmente, esto lo causan plantillas en una hoja de estilos demasiado grandes. Pruebe a reestructurar la hoja de estilos para utilizar plantillas más pequeñas."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DESERIALIZE_TRANSLET_ERR),
-			$of(u"Cuando la seguridad de Java est\u00e1 activada, el soporte para anular la serializaci\u00f3n de TemplatesImpl est\u00e1 desactivado. Esto se puede sustituir definiendo la propiedad del sistema jdk.xml.enableTemplatesImplDeserialization en true."_s)
+			$of(u"Cuando la seguridad de Java está activada, el soporte para anular la serialización de TemplatesImpl está desactivado. Esto se puede sustituir definiendo la propiedad del sistema jdk.xml.enableTemplatesImplDeserialization en true."_s)
 		})
 	});
 }

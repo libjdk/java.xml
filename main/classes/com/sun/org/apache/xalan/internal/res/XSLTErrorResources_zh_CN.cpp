@@ -799,411 +799,411 @@ $ObjectArray2* XSLTErrorResources_zh_CN::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_CURLYBRACE),
-			$of(u"\u9519\u8bef: \u8868\u8fbe\u5f0f\u4e2d\u4e0d\u80fd\u5305\u542b \'{\'"_s)
+			$of(u"错误: 表达式中不能包含 \'{\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ILLEGAL_ATTRIBUTE),
-			$of(u"{0}\u5177\u6709\u975e\u6cd5\u5c5e\u6027: {1}"_s)
+			$of(u"{0}具有非法属性: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_SOURCENODE_APPLYIMPORTS),
-			$of(u"sourceNode \u5728 xsl:apply-imports \u4e2d\u4e3a\u7a7a\u503c!"_s)
+			$of(u"sourceNode 在 xsl:apply-imports 中为空值!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_ADD),
-			$of(u"\u65e0\u6cd5\u5411{1}\u6dfb\u52a0{0}"_s)
+			$of(u"无法向{1}添加{0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_SOURCENODE_HANDLEAPPLYTEMPLATES),
-			$of(u"sourceNode \u5728 handleApplyTemplatesInstruction \u4e2d\u4e3a\u7a7a\u503c!"_s)
+			$of(u"sourceNode 在 handleApplyTemplatesInstruction 中为空值!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_NAME_ATTRIB),
-			$of(u"{0}\u5fc5\u987b\u5177\u6709 name \u5c5e\u6027\u3002"_s)
+			$of(u"{0}必须具有 name 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_TEMPLATE_NOT_FOUND),
-			$of(u"\u627e\u4e0d\u5230\u540d\u4e3a{0}\u7684\u6a21\u677f"_s)
+			$of(u"找不到名为{0}的模板"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_RESOLVE_NAME_AVT),
-			$of(u"\u65e0\u6cd5\u89e3\u6790 xsl:call-template \u4e2d\u7684\u540d\u79f0 AVT\u3002"_s)
+			$of(u"无法解析 xsl:call-template 中的名称 AVT。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_REQUIRES_ATTRIB),
-			$of(u"{0}\u9700\u8981\u5c5e\u6027: {1}"_s)
+			$of(u"{0}需要属性: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MUST_HAVE_TEST_ATTRIB),
-			$of(u"{0}\u5fc5\u987b\u5177\u6709 \'\'test\'\' \u5c5e\u6027\u3002"_s)
+			$of(u"{0}必须具有 \'\'test\'\' 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_BAD_VAL_ON_LEVEL_ATTRIB),
-			$of(u"level \u5c5e\u6027\u7684\u503c\u9519\u8bef: {0}"_s)
+			$of(u"level 属性的值错误: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
-			$of(u"processing-instruction \u540d\u79f0\u4e0d\u80fd\u4e3a \'xml\'"_s)
+			$of(u"processing-instruction 名称不能为 \'xml\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"processing-instruction \u540d\u79f0\u5fc5\u987b\u662f\u6709\u6548\u7684 NCName: {0}"_s)
+			$of(u"processing-instruction 名称必须是有效的 NCName: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NEED_MATCH_ATTRIB),
-			$of(u"\u5982\u679c{0}\u5177\u6709\u67d0\u79cd\u6a21\u5f0f, \u5219\u5fc5\u987b\u5177\u6709 match \u5c5e\u6027\u3002"_s)
+			$of(u"如果{0}具有某种模式, 则必须具有 match 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NEED_NAME_OR_MATCH_ATTRIB),
-			$of(u"{0}\u9700\u8981 name \u6216 match \u5c5e\u6027\u3002"_s)
+			$of(u"{0}需要 name 或 match 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_RESOLVE_NSPREFIX),
-			$of(u"\u65e0\u6cd5\u89e3\u6790\u540d\u79f0\u7a7a\u95f4\u524d\u7f00: {0}"_s)
+			$of(u"无法解析名称空间前缀: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ILLEGAL_VALUE),
-			$of(u"xml:space \u5177\u6709\u975e\u6cd5\u503c: {0}"_s)
+			$of(u"xml:space 具有非法值: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_OWNERDOC),
-			$of(u"\u5b50\u8282\u70b9\u6ca1\u6709\u6240\u6709\u8005\u6587\u6863!"_s)
+			$of(u"子节点没有所有者文档!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ELEMTEMPLATEELEM_ERR),
-			$of(u"ElemTemplateElement \u9519\u8bef: {0}"_s)
+			$of(u"ElemTemplateElement 错误: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_CHILD),
-			$of(u"\u6b63\u5728\u5c1d\u8bd5\u6dfb\u52a0\u7a7a\u5b50\u7ea7!"_s)
+			$of(u"正在尝试添加空子级!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NEED_SELECT_ATTRIB),
-			$of(u"{0}\u9700\u8981 select \u5c5e\u6027\u3002"_s)
+			$of(u"{0}需要 select 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NEED_TEST_ATTRIB),
-			$of(u"xsl:when \u5fc5\u987b\u5177\u6709 \'test\' \u5c5e\u6027\u3002"_s)
+			$of(u"xsl:when 必须具有 \'test\' 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NEED_NAME_ATTRIB),
-			$of(u"xsl:with-param \u5fc5\u987b\u5177\u6709 \'name\' \u5c5e\u6027\u3002"_s)
+			$of(u"xsl:with-param 必须具有 \'name\' 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_CONTEXT_OWNERDOC),
-			$of(u"\u4e0a\u4e0b\u6587\u6ca1\u6709\u6240\u6709\u8005\u6587\u6863!"_s)
+			$of(u"上下文没有所有者文档!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_COULD_NOT_CREATE_XML_PROC_LIAISON),
-			$of(u"\u65e0\u6cd5\u521b\u5efa XML TransformerFactory Liaison: {0}"_s)
+			$of(u"无法创建 XML TransformerFactory Liaison: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESS_NOT_SUCCESSFUL),
-			$of(u"Xalan: \u8fdb\u7a0b\u672a\u6210\u529f\u3002"_s)
+			$of(u"Xalan: 进程未成功。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NOT_SUCCESSFUL),
-			$of(u"Xalan: \u672a\u6210\u529f\u3002"_s)
+			$of(u"Xalan: 未成功。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301\u7f16\u7801: {0}"_s)
+			$of(u"不支持编码: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_COULD_NOT_CREATE_TRACELISTENER),
-			$of(u"\u65e0\u6cd5\u521b\u5efa TraceListener: {0}"_s)
+			$of(u"无法创建 TraceListener: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_KEY_REQUIRES_NAME_ATTRIB),
-			$of(u"xsl:key \u9700\u8981 \'name\' \u5c5e\u6027!"_s)
+			$of(u"xsl:key 需要 \'name\' 属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_KEY_REQUIRES_MATCH_ATTRIB),
-			$of(u"xsl:key \u9700\u8981 \'match\' \u5c5e\u6027!"_s)
+			$of(u"xsl:key 需要 \'match\' 属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_KEY_REQUIRES_USE_ATTRIB),
-			$of(u"xsl:key \u9700\u8981 \'use\' \u5c5e\u6027!"_s)
+			$of(u"xsl:key 需要 \'use\' 属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_REQUIRES_ELEMENTS_ATTRIB),
-			$of(u"(StylesheetHandler) {0}\u9700\u8981 \'\'elements\'\' \u5c5e\u6027!"_s)
+			$of(u"(StylesheetHandler) {0}需要 \'\'elements\'\' 属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MISSING_PREFIX_ATTRIB),
-			$of(u"(StylesheetHandler) \u7f3a\u5c11{0}\u5c5e\u6027 \'\'prefix\'\'"_s)
+			$of(u"(StylesheetHandler) 缺少{0}属性 \'\'prefix\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_BAD_STYLESHEET_URL),
-			$of(u"\u6837\u5f0f\u8868 URL \u9519\u8bef: {0}"_s)
+			$of(u"样式表 URL 错误: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FILE_NOT_FOUND),
-			$of(u"\u627e\u4e0d\u5230\u6837\u5f0f\u8868\u6587\u4ef6: {0}"_s)
+			$of(u"找不到样式表文件: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_IOEXCEPTION),
-			$of(u"\u6837\u5f0f\u8868\u6587\u4ef6\u51fa\u73b0 IO \u5f02\u5e38\u9519\u8bef: {0}"_s)
+			$of(u"样式表文件出现 IO 异常错误: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_HREF_ATTRIB),
-			$of(u"(StylesheetHandler) \u627e\u4e0d\u5230{0}\u7684 href \u5c5e\u6027"_s)
+			$of(u"(StylesheetHandler) 找不到{0}的 href 属性"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_STYLESHEET_INCLUDES_ITSELF),
-			$of(u"(StylesheetHandler) {0}\u76f4\u63a5\u6216\u95f4\u63a5\u5305\u542b\u5176\u81ea\u8eab!"_s)
+			$of(u"(StylesheetHandler) {0}直接或间接包含其自身!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESSINCLUDE_ERROR),
-			$of(u"StylesheetHandler.processInclude \u9519\u8bef, {0}"_s)
+			$of(u"StylesheetHandler.processInclude 错误, {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MISSING_LANG_ATTRIB),
-			$of(u"(StylesheetHandler) \u7f3a\u5c11{0}\u5c5e\u6027 \'\'lang\'\'"_s)
+			$of(u"(StylesheetHandler) 缺少{0}属性 \'\'lang\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MISSING_CONTAINER_ELEMENT_COMPONENT),
-			$of(u"(StylesheetHandler) {0}\u5143\u7d20\u7684\u653e\u7f6e\u4f4d\u7f6e\u662f\u5426\u9519\u8bef?? \u7f3a\u5c11\u5bb9\u5668\u5143\u7d20 \'\'component\'\'"_s)
+			$of(u"(StylesheetHandler) {0}元素的放置位置是否错误?? 缺少容器元素 \'\'component\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CAN_ONLY_OUTPUT_TO_ELEMENT),
-			$of(u"\u53ea\u80fd\u8f93\u51fa\u5230 Element, DocumentFragment, Document \u6216 PrintWriter\u3002"_s)
+			$of(u"只能输出到 Element, DocumentFragment, Document 或 PrintWriter。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESS_ERROR),
-			$of(u"StylesheetRoot.process \u9519\u8bef"_s)
+			$of(u"StylesheetRoot.process 错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_UNIMPLNODE_ERROR),
-			$of(u"UnImplNode \u9519\u8bef: {0}"_s)
+			$of(u"UnImplNode 错误: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_SELECT_EXPRESSION),
-			$of(u"\u9519\u8bef! \u627e\u4e0d\u5230 xpath \u9009\u62e9\u8868\u8fbe\u5f0f (-select)\u3002"_s)
+			$of(u"错误! 找不到 xpath 选择表达式 (-select)。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_SERIALIZE_XSLPROCESSOR),
-			$of(u"\u65e0\u6cd5\u5e8f\u5217\u5316 XSLProcessor!"_s)
+			$of(u"无法序列化 XSLProcessor!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_INPUT_STYLESHEET),
-			$of(u"\u672a\u6307\u5b9a\u6837\u5f0f\u8868\u8f93\u5165!"_s)
+			$of(u"未指定样式表输入!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FAILED_PROCESS_STYLESHEET),
-			$of(u"\u65e0\u6cd5\u5904\u7406\u6837\u5f0f\u8868!"_s)
+			$of(u"无法处理样式表!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_COULDNT_PARSE_DOC),
-			$of(u"\u65e0\u6cd5\u89e3\u6790{0}\u6587\u6863!"_s)
+			$of(u"无法解析{0}文档!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_COULDNT_FIND_FRAGMENT),
-			$of(u"\u627e\u4e0d\u5230\u7247\u6bb5: {0}"_s)
+			$of(u"找不到片段: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NODE_NOT_ELEMENT),
-			$of(u"\u7247\u6bb5\u6807\u8bc6\u7b26\u6307\u5411\u7684\u8282\u70b9\u4e0d\u662f\u5143\u7d20: {0}"_s)
+			$of(u"片段标识符指向的节点不是元素: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FOREACH_NEED_MATCH_OR_NAME_ATTRIB),
-			$of(u"for-each \u5fc5\u987b\u5177\u6709 match \u6216 name \u5c5e\u6027"_s)
+			$of(u"for-each 必须具有 match 或 name 属性"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_TEMPLATES_NEED_MATCH_OR_NAME_ATTRIB),
-			$of(u"templates \u5fc5\u987b\u5177\u6709 match \u6216 name \u5c5e\u6027"_s)
+			$of(u"templates 必须具有 match 或 name 属性"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_CLONE_OF_DOCUMENT_FRAG),
-			$of(u"\u4e0d\u80fd\u514b\u9686\u6587\u6863\u7247\u6bb5!"_s)
+			$of(u"不能克隆文档片段!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_CREATE_ITEM),
-			$of(u"\u65e0\u6cd5\u5728\u7ed3\u679c\u6811\u4e2d\u521b\u5efa\u9879: {0}"_s)
+			$of(u"无法在结果树中创建项: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XMLSPACE_ILLEGAL_VALUE),
-			$of(u"\u6e90 XML \u4e2d\u7684 xml:space \u5177\u6709\u975e\u6cd5\u503c: {0}"_s)
+			$of(u"源 XML 中的 xml:space 具有非法值: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_XSLKEY_DECLARATION),
-			$of(u"{0}\u6ca1\u6709 xsl:key \u58f0\u660e!"_s)
+			$of(u"{0}没有 xsl:key 声明!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_CREATE_URL),
-			$of(u"\u9519\u8bef! \u65e0\u6cd5\u4e3a{0}\u521b\u5efa url"_s)
+			$of(u"错误! 无法为{0}创建 url"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XSLFUNCTIONS_UNSUPPORTED),
-			$of(u"\u4e0d\u652f\u6301 xsl:functions"_s)
+			$of(u"不支持 xsl:functions"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESSOR_ERROR),
-			$of(u"XSLT TransformerFactory \u9519\u8bef"_s)
+			$of(u"XSLT TransformerFactory 错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NOT_ALLOWED_INSIDE_STYLESHEET),
-			$of(u"(StylesheetHandler) \u6837\u5f0f\u8868\u4e2d\u4e0d\u5141\u8bb8\u4f7f\u7528{0}!"_s)
+			$of(u"(StylesheetHandler) 样式表中不允许使用{0}!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_RESULTNS_NOT_SUPPORTED),
-			$of(u"\u4e0d\u518d\u652f\u6301 result-ns! \u8bf7\u6539\u7528 xsl:output\u3002"_s)
+			$of(u"不再支持 result-ns! 请改用 xsl:output。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_DEFAULTSPACE_NOT_SUPPORTED),
-			$of(u"\u4e0d\u518d\u652f\u6301 default-space! \u8bf7\u6539\u7528 xsl:strip-space \u6216 xsl:preserve-space\u3002"_s)
+			$of(u"不再支持 default-space! 请改用 xsl:strip-space 或 xsl:preserve-space。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INDENTRESULT_NOT_SUPPORTED),
-			$of(u"\u4e0d\u518d\u652f\u6301 indent-result! \u8bf7\u6539\u7528 xsl:output\u3002"_s)
+			$of(u"不再支持 indent-result! 请改用 xsl:output。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ILLEGAL_ATTRIB),
-			$of(u"(StylesheetHandler) {0}\u5177\u6709\u975e\u6cd5\u5c5e\u6027: {1}"_s)
+			$of(u"(StylesheetHandler) {0}具有非法属性: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_UNKNOWN_XSL_ELEM),
-			$of(u"\u672a\u77e5 XSL \u5143\u7d20: {0}"_s)
+			$of(u"未知 XSL 元素: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_BAD_XSLSORT_USE),
-			$of(u"(StylesheetHandler) xsl:sort \u53ea\u80fd\u4e0e xsl:apply-templates \u6216 xsl:for-each \u4e00\u8d77\u4f7f\u7528\u3002"_s)
+			$of(u"(StylesheetHandler) xsl:sort 只能与 xsl:apply-templates 或 xsl:for-each 一起使用。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MISPLACED_XSLWHEN),
-			$of(u"(StylesheetHandler) xsl:when \u7684\u653e\u7f6e\u4f4d\u7f6e\u9519\u8bef!"_s)
+			$of(u"(StylesheetHandler) xsl:when 的放置位置错误!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XSLWHEN_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:when \u7684\u7236\u7ea7\u4e0d\u662f xsl:choose!"_s)
+			$of(u"(StylesheetHandler) xsl:when 的父级不是 xsl:choose!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MISPLACED_XSLOTHERWISE),
-			$of(u"(StylesheetHandler) xsl:otherwise \u7684\u653e\u7f6e\u4f4d\u7f6e\u9519\u8bef!"_s)
+			$of(u"(StylesheetHandler) xsl:otherwise 的放置位置错误!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XSLOTHERWISE_NOT_PARENTED_BY_XSLCHOOSE),
-			$of(u"(StylesheetHandler) xsl:otherwise \u7684\u7236\u7ea7\u4e0d\u662f xsl:choose!"_s)
+			$of(u"(StylesheetHandler) xsl:otherwise 的父级不是 xsl:choose!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NOT_ALLOWED_INSIDE_TEMPLATE),
-			$of(u"(StylesheetHandler) \u6a21\u677f\u4e2d\u4e0d\u5141\u8bb8\u4f7f\u7528{0}!"_s)
+			$of(u"(StylesheetHandler) 模板中不允许使用{0}!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_UNKNOWN_EXT_NS_PREFIX),
-			$of(u"(StylesheetHandler) {0}\u6269\u5c55\u540d\u79f0\u7a7a\u95f4\u524d\u7f00 {1} \u672a\u77e5"_s)
+			$of(u"(StylesheetHandler) {0}扩展名称空间前缀 {1} 未知"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_IMPORTS_AS_FIRST_ELEM),
-			$of(u"(StylesheetHandler) \u53ea\u80fd\u4f5c\u4e3a\u6837\u5f0f\u8868\u4e2d\u7684\u7b2c\u4e00\u4e2a\u5143\u7d20\u5bfc\u5165!"_s)
+			$of(u"(StylesheetHandler) 只能作为样式表中的第一个元素导入!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_IMPORTING_ITSELF),
-			$of(u"(StylesheetHandler) {0}\u76f4\u63a5\u6216\u95f4\u63a5\u5bfc\u5165\u5176\u81ea\u8eab!"_s)
+			$of(u"(StylesheetHandler) {0}直接或间接导入其自身!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XMLSPACE_ILLEGAL_VAL),
-			$of(u"(StylesheetHandler) xml:space \u5177\u6709\u975e\u6cd5\u503c: {0}"_s)
+			$of(u"(StylesheetHandler) xml:space 具有非法值: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESSSTYLESHEET_NOT_SUCCESSFUL),
-			$of(u"processStylesheet \u5931\u8d25!"_s)
+			$of(u"processStylesheet 失败!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_SAX_EXCEPTION),
-			$of(u"SAX \u5f02\u5e38\u9519\u8bef"_s)
+			$of(u"SAX 异常错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301\u8be5\u51fd\u6570!"_s)
+			$of(u"不支持该函数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XSLT_ERROR),
-			$of(u"XSLT \u9519\u8bef"_s)
+			$of(u"XSLT 错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CURRENCY_SIGN_ILLEGAL),
-			$of(u"\u683c\u5f0f\u6a21\u5f0f\u5b57\u7b26\u4e32\u4e2d\u4e0d\u5141\u8bb8\u4f7f\u7528\u8d27\u5e01\u7b26\u53f7"_s)
+			$of(u"格式模式字符串中不允许使用货币符号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_DOCUMENT_FUNCTION_INVALID_IN_STYLESHEET_DOM),
-			$of(u"\u6837\u5f0f\u8868 DOM \u4e2d\u4e0d\u652f\u6301 Document \u51fd\u6570!"_s)
+			$of(u"样式表 DOM 中不支持 Document 函数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_RESOLVE_PREFIX_OF_NON_PREFIX_RESOLVER),
-			$of(u"\u65e0\u6cd5\u89e3\u6790\u975e\u524d\u7f00\u89e3\u6790\u5668\u7684\u524d\u7f00!"_s)
+			$of(u"无法解析非前缀解析器的前缀!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_REDIRECT_COULDNT_GET_FILENAME),
-			$of(u"\u91cd\u5b9a\u5411\u6269\u5c55: \u65e0\u6cd5\u83b7\u53d6\u6587\u4ef6\u540d - file \u6216 select \u5c5e\u6027\u5fc5\u987b\u8fd4\u56de\u6709\u6548\u5b57\u7b26\u4e32\u3002"_s)
+			$of(u"重定向扩展: 无法获取文件名 - file 或 select 属性必须返回有效字符串。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_BUILD_FORMATTERLISTENER_IN_REDIRECT),
-			$of(u"\u65e0\u6cd5\u5728\u91cd\u5b9a\u5411\u6269\u5c55\u4e2d\u6784\u5efa FormatterListener!"_s)
+			$of(u"无法在重定向扩展中构建 FormatterListener!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_PREFIX_IN_EXCLUDERESULTPREFIX),
-			$of(u"exclude-result-prefixes \u4e2d\u7684\u524d\u7f00\u65e0\u6548: {0}"_s)
+			$of(u"exclude-result-prefixes 中的前缀无效: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MISSING_NS_URI),
-			$of(u"\u6307\u5b9a\u524d\u7f00\u7f3a\u5c11\u540d\u79f0\u7a7a\u95f4 URI"_s)
+			$of(u"指定前缀缺少名称空间 URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MISSING_ARG_FOR_OPTION),
-			$of(u"\u9009\u9879\u7f3a\u5c11\u53c2\u6570: {0}"_s)
+			$of(u"选项缺少参数: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_OPTION),
-			$of(u"\u9009\u9879\u65e0\u6548: {0}"_s)
+			$of(u"选项无效: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MALFORMED_FORMAT_STRING),
-			$of(u"\u683c\u5f0f\u5b57\u7b26\u4e32\u7684\u683c\u5f0f\u9519\u8bef: {0}"_s)
+			$of(u"格式字符串的格式错误: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_STYLESHEET_REQUIRES_VERSION_ATTRIB),
-			$of(u"xsl:stylesheet \u9700\u8981 \'version\' \u5c5e\u6027!"_s)
+			$of(u"xsl:stylesheet 需要 \'version\' 属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"\u5c5e\u6027{0}\u5177\u6709\u975e\u6cd5\u503c: {1}"_s)
+			$of(u"属性{0}具有非法值: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CHOOSE_REQUIRES_WHEN),
-			$of(u"xsl:choose \u9700\u8981 xsl:when"_s)
+			$of(u"xsl:choose 需要 xsl:when"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_APPLY_IMPORT_IN_FOR_EACH),
-			$of(u"xsl:for-each \u4e2d\u4e0d\u5141\u8bb8\u4f7f\u7528 xsl:apply-imports"_s)
+			$of(u"xsl:for-each 中不允许使用 xsl:apply-imports"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_USE_DTM_FOR_OUTPUT),
-			$of(u"\u65e0\u6cd5\u5c06 DTMLiaison \u7528\u4e8e\u8f93\u51fa DOM \u8282\u70b9... \u8bf7\u6539\u4e3a\u4f20\u9012 com.sun.org.apache.xpath.internal.DOM2Helper!"_s)
+			$of(u"无法将 DTMLiaison 用于输出 DOM 节点... 请改为传递 com.sun.org.apache.xpath.internal.DOM2Helper!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_USE_DTM_FOR_INPUT),
-			$of(u"\u65e0\u6cd5\u5c06 DTMLiaison \u7528\u4e8e\u8f93\u5165 DOM \u8282\u70b9... \u8bf7\u6539\u4e3a\u4f20\u9012 com.sun.org.apache.xpath.internal.DOM2Helper!"_s)
+			$of(u"无法将 DTMLiaison 用于输入 DOM 节点... 请改为传递 com.sun.org.apache.xpath.internal.DOM2Helper!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CALL_TO_EXT_FAILED),
-			$of(u"\u672a\u80fd\u8c03\u7528\u6269\u5c55\u5143\u7d20: {0}"_s)
+			$of(u"未能调用扩展元素: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\u524d\u7f00\u5fc5\u987b\u89e3\u6790\u4e3a\u540d\u79f0\u7a7a\u95f4: {0}"_s)
+			$of(u"前缀必须解析为名称空间: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u68c0\u6d4b\u5230\u65e0\u6548\u7684 UTF-16 \u4ee3\u7406: {0}?"_s)
+			$of(u"检测到无效的 UTF-16 代理: {0}?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XSLATTRSET_USED_ITSELF),
-			$of(u"xsl:attribute-set {0} \u4f7f\u7528\u5176\u81ea\u8eab, \u8fd9\u5c06\u5bfc\u81f4\u65e0\u9650\u5faa\u73af\u3002"_s)
+			$of(u"xsl:attribute-set {0} 使用其自身, 这将导致无限循环。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_MIX_XERCESDOM),
-			$of(u"\u65e0\u6cd5\u6df7\u5408\u975e Xerces-DOM \u8f93\u5165\u548c Xerces-DOM \u8f93\u51fa!"_s)
+			$of(u"无法混合非 Xerces-DOM 输入和 Xerces-DOM 输出!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_TOO_MANY_LISTENERS),
@@ -1211,331 +1211,331 @@ $ObjectArray2* XSLTErrorResources_zh_CN::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_IN_ELEMTEMPLATEELEM_READOBJECT),
-			$of(u"\u5728 ElemTemplateElement.readObject \u4e2d: {0}"_s)
+			$of(u"在 ElemTemplateElement.readObject 中: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_DUPLICATE_NAMED_TEMPLATE),
-			$of(u"\u627e\u5230\u591a\u4e2a\u540d\u4e3a{0}\u7684\u6a21\u677f"_s)
+			$of(u"找到多个名为{0}的模板"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_KEY_CALL),
-			$of(u"\u51fd\u6570\u8c03\u7528\u65e0\u6548: \u4e0d\u5141\u8bb8\u9012\u5f52 key() \u8c03\u7528"_s)
+			$of(u"函数调用无效: 不允许递归 key() 调用"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_REFERENCING_ITSELF),
-			$of(u"\u53d8\u91cf {0} \u76f4\u63a5\u6216\u95f4\u63a5\u5f15\u7528\u5176\u81ea\u8eab!"_s)
+			$of(u"变量 {0} 直接或间接引用其自身!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ILLEGAL_DOMSOURCE_INPUT),
-			$of(u"\u5bf9\u4e8e newTemplates \u7684 DOMSource, \u8f93\u5165\u8282\u70b9\u4e0d\u80fd\u4e3a\u7a7a\u503c!"_s)
+			$of(u"对于 newTemplates 的 DOMSource, 输入节点不能为空值!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CLASS_NOT_FOUND_FOR_OPTION),
-			$of(u"\u627e\u4e0d\u5230\u9009\u9879{0}\u7684\u7c7b\u6587\u4ef6"_s)
+			$of(u"找不到选项{0}的类文件"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_REQUIRED_ELEM_NOT_FOUND),
-			$of(u"\u627e\u4e0d\u5230\u6240\u9700\u5143\u7d20: {0}"_s)
+			$of(u"找不到所需元素: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INPUT_CANNOT_BE_NULL),
-			$of(u"InputStream \u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"InputStream 不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_URI_CANNOT_BE_NULL),
-			$of(u"URI \u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"URI 不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FILE_CANNOT_BE_NULL),
-			$of(u"File \u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"File 不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_SOURCE_CANNOT_BE_NULL),
-			$of(u"InputSource \u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"InputSource 不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_INIT_BSFMGR),
-			$of(u"\u65e0\u6cd5\u521d\u59cb\u5316 BSF \u7ba1\u7406\u5668"_s)
+			$of(u"无法初始化 BSF 管理器"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_CMPL_EXTENSN),
-			$of(u"\u65e0\u6cd5\u7f16\u8bd1\u6269\u5c55"_s)
+			$of(u"无法编译扩展"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_CREATE_EXTENSN),
-			$of(u"\u65e0\u6cd5\u521b\u5efa\u6269\u5c55: {0}, \u539f\u56e0: {1}"_s)
+			$of(u"无法创建扩展: {0}, 原因: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INSTANCE_MTHD_CALL_REQUIRES),
-			$of(u"\u5bf9\u65b9\u6cd5{0}\u7684\u5b9e\u4f8b\u65b9\u6cd5\u8c03\u7528\u9700\u8981\u5c06 Object \u5b9e\u4f8b\u4f5c\u4e3a\u7b2c\u4e00\u4e2a\u53c2\u6570"_s)
+			$of(u"对方法{0}的实例方法调用需要将 Object 实例作为第一个参数"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_ELEMENT_NAME),
-			$of(u"\u6307\u5b9a\u7684\u5143\u7d20\u540d\u79f0{0}\u65e0\u6548"_s)
+			$of(u"指定的元素名称{0}无效"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ELEMENT_NAME_METHOD_STATIC),
-			$of(u"\u5143\u7d20\u540d\u79f0\u65b9\u6cd5\u5fc5\u987b\u662f static {0}"_s)
+			$of(u"元素名称方法必须是 static {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_EXTENSION_FUNC_UNKNOWN),
-			$of(u"\u6269\u5c55\u51fd\u6570 {0}: {1} \u672a\u77e5"_s)
+			$of(u"扩展函数 {0}: {1} 未知"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MORE_MATCH_CONSTRUCTOR),
-			$of(u"{0}\u7684\u6784\u9020\u5668\u5177\u6709\u591a\u4e2a\u6700\u4f73\u5339\u914d"_s)
+			$of(u"{0}的构造器具有多个最佳匹配"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MORE_MATCH_METHOD),
-			$of(u"\u65b9\u6cd5{0}\u5177\u6709\u591a\u4e2a\u6700\u4f73\u5339\u914d"_s)
+			$of(u"方法{0}具有多个最佳匹配"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_MORE_MATCH_ELEMENT),
-			$of(u"\u5143\u7d20\u65b9\u6cd5{0}\u5177\u6709\u591a\u4e2a\u6700\u4f73\u5339\u914d"_s)
+			$of(u"元素方法{0}具有多个最佳匹配"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_CONTEXT_PASSED),
-			$of(u"\u4f20\u9012\u7684\u7528\u4e8e\u5bf9{0}\u6c42\u503c\u7684\u4e0a\u4e0b\u6587\u65e0\u6548"_s)
+			$of(u"传递的用于对{0}求值的上下文无效"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_POOL_EXISTS),
-			$of(u"\u6c60\u5df2\u5b58\u5728"_s)
+			$of(u"池已存在"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_DRIVER_NAME),
-			$of(u"\u672a\u6307\u5b9a\u9a71\u52a8\u7a0b\u5e8f\u540d\u79f0"_s)
+			$of(u"未指定驱动程序名称"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_URL),
-			$of(u"\u672a\u6307\u5b9a URL"_s)
+			$of(u"未指定 URL"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_POOL_SIZE_LESSTHAN_ONE),
-			$of(u"\u6c60\u5927\u5c0f\u5c0f\u4e8e 1!"_s)
+			$of(u"池大小小于 1!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_DRIVER),
-			$of(u"\u6307\u5b9a\u7684\u9a71\u52a8\u7a0b\u5e8f\u540d\u79f0\u65e0\u6548!"_s)
+			$of(u"指定的驱动程序名称无效!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_STYLESHEETROOT),
-			$of(u"\u627e\u4e0d\u5230\u6837\u5f0f\u8868\u6839!"_s)
+			$of(u"找不到样式表根!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ILLEGAL_XMLSPACE_VALUE),
-			$of(u"xml:space \u7684\u503c\u975e\u6cd5"_s)
+			$of(u"xml:space 的值非法"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROCESSFROMNODE_FAILED),
-			$of(u"processFromNode \u5931\u8d25"_s)
+			$of(u"processFromNode 失败"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"\u8d44\u6e90 [ {0} ] \u65e0\u6cd5\u52a0\u8f7d: {1} \n {2} \t {3}"_s)
+			$of(u"资源 [ {0} ] 无法加载: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"\u7f13\u51b2\u533a\u5927\u5c0f <=0"_s)
+			$of(u"缓冲区大小 <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_UNKNOWN_ERROR_CALLING_EXTENSION),
-			$of(u"\u8c03\u7528\u6269\u5c55\u65f6\u51fa\u73b0\u672a\u77e5\u9519\u8bef"_s)
+			$of(u"调用扩展时出现未知错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_NAMESPACE_DECL),
-			$of(u"\u524d\u7f00 {0} \u6ca1\u6709\u5bf9\u5e94\u7684\u540d\u79f0\u7a7a\u95f4\u58f0\u660e"_s)
+			$of(u"前缀 {0} 没有对应的名称空间声明"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ELEM_CONTENT_NOT_ALLOWED),
-			$of(u"lang=javaclass {0}\u4e0d\u5141\u8bb8\u4f7f\u7528\u5143\u7d20\u5185\u5bb9"_s)
+			$of(u"lang=javaclass {0}不允许使用元素内容"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_STYLESHEET_DIRECTED_TERMINATION),
-			$of(u"\u6837\u5f0f\u8868\u6307\u5411\u7ec8\u6b62"_s)
+			$of(u"样式表指向终止"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ONE_OR_TWO),
-			$of(u"1 \u6216 2"_s)
+			$of(u"1 或 2"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_TWO_OR_THREE),
-			$of(u"2 \u6216 3"_s)
+			$of(u"2 或 3"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"\u65e0\u6cd5\u52a0\u8f7d{0} (\u68c0\u67e5 CLASSPATH), \u73b0\u5728\u53ea\u4f7f\u7528\u9ed8\u8ba4\u503c"_s)
+			$of(u"无法加载{0} (检查 CLASSPATH), 现在只使用默认值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_INIT_DEFAULT_TEMPLATES),
-			$of(u"\u65e0\u6cd5\u521d\u59cb\u5316\u9ed8\u8ba4\u6a21\u677f"_s)
+			$of(u"无法初始化默认模板"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_RESULT_NULL),
-			$of(u"Result \u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"Result 不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_RESULT_COULD_NOT_BE_SET),
-			$of(u"\u65e0\u6cd5\u8bbe\u7f6e Result"_s)
+			$of(u"无法设置 Result"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_OUTPUT_SPECIFIED),
-			$of(u"\u672a\u6307\u5b9a\u8f93\u51fa"_s)
+			$of(u"未指定输出"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_TRANSFORM_TO_RESULT_TYPE),
-			$of(u"\u65e0\u6cd5\u8f6c\u6362\u4e3a\u7c7b\u578b\u4e3a{0}\u7684 Result"_s)
+			$of(u"无法转换为类型为{0}的 Result"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_TRANSFORM_SOURCE_TYPE),
-			$of(u"\u65e0\u6cd5\u8f6c\u6362\u7c7b\u578b\u4e3a{0}\u7684\u6e90"_s)
+			$of(u"无法转换类型为{0}的源"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_CONTENT_HANDLER),
-			$of(u"\u7a7a\u5185\u5bb9\u5904\u7406\u7a0b\u5e8f"_s)
+			$of(u"空内容处理程序"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_ERROR_HANDLER),
-			$of(u"\u7a7a\u9519\u8bef\u5904\u7406\u7a0b\u5e8f"_s)
+			$of(u"空错误处理程序"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_CALL_PARSE),
-			$of(u"\u5982\u679c\u5c1a\u672a\u8bbe\u7f6e ContentHandler, \u5219\u65e0\u6cd5\u8c03\u7528 parse"_s)
+			$of(u"如果尚未设置 ContentHandler, 则无法调用 parse"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_PARENT_FOR_FILTER),
-			$of(u"\u7b5b\u9009\u5668\u6ca1\u6709\u7236\u7ea7"_s)
+			$of(u"筛选器没有父级"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_STYLESHEET_IN_MEDIA),
-			$of(u"\u5728{0}\u4e2d\u627e\u4e0d\u5230\u6837\u5f0f\u8868, \u4ecb\u8d28= {1}"_s)
+			$of(u"在{0}中找不到样式表, 介质= {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_STYLESHEET_PI),
-			$of(u"\u5728{0}\u4e2d\u627e\u4e0d\u5230 xml-stylesheet PI"_s)
+			$of(u"在{0}中找不到 xml-stylesheet PI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301: {0}"_s)
+			$of(u"不支持: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROPERTY_VALUE_BOOLEAN),
-			$of(u"\u5c5e\u6027{0}\u7684\u503c\u5e94\u4e3a Boolean \u5b9e\u4f8b"_s)
+			$of(u"属性{0}的值应为 Boolean 实例"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_COULD_NOT_FIND_EXTERN_SCRIPT),
-			$of(u"\u65e0\u6cd5\u5728{0}\u4e2d\u83b7\u53d6\u5916\u90e8\u811a\u672c"_s)
+			$of(u"无法在{0}中获取外部脚本"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"\u627e\u4e0d\u5230\u8d44\u6e90 [ {0} ]\u3002\n {1}"_s)
+			$of(u"找不到资源 [ {0} ]。\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_OUTPUT_PROPERTY_NOT_RECOGNIZED),
-			$of(u"\u65e0\u6cd5\u8bc6\u522b\u8f93\u51fa\u5c5e\u6027: {0}"_s)
+			$of(u"无法识别输出属性: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FAILED_CREATING_ELEMLITRSLT),
-			$of(u"\u672a\u80fd\u521b\u5efa ElemLiteralResult \u5b9e\u4f8b"_s)
+			$of(u"未能创建 ElemLiteralResult 实例"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_VALUE_SHOULD_BE_NUMBER),
-			$of(u"{0}\u7684\u503c\u5e94\u5305\u542b\u53ef\u89e3\u6790\u7684\u6570\u5b57"_s)
+			$of(u"{0}的值应包含可解析的数字"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_VALUE_SHOULD_EQUAL),
-			$of(u"{0}\u7684\u503c\u5e94\u7b49\u4e8e\u201c\u662f\u201d\u6216\u201c\u5426\u201d"_s)
+			$of(u"{0}的值应等于“是”或“否”"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FAILED_CALLING_METHOD),
-			$of(u"\u672a\u80fd\u8c03\u7528{0}\u65b9\u6cd5"_s)
+			$of(u"未能调用{0}方法"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FAILED_CREATING_ELEMTMPL),
-			$of(u"\u672a\u80fd\u521b\u5efa ElemTemplateElement \u5b9e\u4f8b"_s)
+			$of(u"未能创建 ElemTemplateElement 实例"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CHARS_NOT_ALLOWED),
-			$of(u"\u4e0d\u5141\u8bb8\u5728\u6587\u6863\u4e2d\u7684\u6b64\u4f4d\u7f6e\u5904\u4f7f\u7528\u5b57\u7b26"_s)
+			$of(u"不允许在文档中的此位置处使用字符"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ATTR_NOT_ALLOWED),
-			$of(u"{1}\u5143\u7d20\u4e2d\u4e0d\u5141\u8bb8\u4f7f\u7528 \"{0}\" \u5c5e\u6027!"_s)
+			$of(u"{1}元素中不允许使用 \"{0}\" 属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_BAD_VALUE),
-			$of(u"{0}\u9519\u8bef\u503c{1} "_s)
+			$of(u"{0}错误值{1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ATTRIB_VALUE_NOT_FOUND),
-			$of(u"\u627e\u4e0d\u5230{0}\u5c5e\u6027\u503c "_s)
+			$of(u"找不到{0}属性值 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ATTRIB_VALUE_NOT_RECOGNIZED),
-			$of(u"\u65e0\u6cd5\u8bc6\u522b{0}\u5c5e\u6027\u503c "_s)
+			$of(u"无法识别{0}属性值 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_URI_NAMESPACE),
-			$of(u"\u5c1d\u8bd5\u4f7f\u7528\u7a7a URI \u751f\u6210\u540d\u79f0\u7a7a\u95f4\u524d\u7f00"_s)
+			$of(u"尝试使用空 URI 生成名称空间前缀"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NUMBER_TOO_BIG),
-			$of(u"\u5c1d\u8bd5\u8bbe\u7f6e\u8d85\u8fc7\u6700\u5927\u957f\u6574\u578b\u7684\u6570\u5b57\u7684\u683c\u5f0f"_s)
+			$of(u"尝试设置超过最大长整型的数字的格式"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANNOT_FIND_SAX1_DRIVER),
-			$of(u"\u627e\u4e0d\u5230 SAX1 \u9a71\u52a8\u7a0b\u5e8f\u7c7b{0}"_s)
+			$of(u"找不到 SAX1 驱动程序类{0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_SAX1_DRIVER_NOT_LOADED),
-			$of(u"\u5df2\u627e\u5230 SAX1 \u9a71\u52a8\u7a0b\u5e8f\u7c7b{0}, \u4f46\u65e0\u6cd5\u8fdb\u884c\u52a0\u8f7d"_s)
+			$of(u"已找到 SAX1 驱动程序类{0}, 但无法进行加载"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_SAX1_DRIVER_NOT_INSTANTIATED),
-			$of(u"\u5df2\u52a0\u8f7d SAX1 \u9a71\u52a8\u7a0b\u5e8f\u7c7b{0}, \u4f46\u65e0\u6cd5\u8fdb\u884c\u5b9e\u4f8b\u5316"_s)
+			$of(u"已加载 SAX1 驱动程序类{0}, 但无法进行实例化"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_SAX1_DRIVER_NOT_IMPLEMENT_PARSER),
-			$of(u"SAX1 \u9a71\u52a8\u7a0b\u5e8f\u7c7b {0} \u672a\u5b9e\u73b0 org.xml.sax.Parser"_s)
+			$of(u"SAX1 驱动程序类 {0} 未实现 org.xml.sax.Parser"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PARSER_PROPERTY_NOT_SPECIFIED),
-			$of(u"\u672a\u6307\u5b9a\u7cfb\u7edf\u5c5e\u6027 org.xml.sax.parser"_s)
+			$of(u"未指定系统属性 org.xml.sax.parser"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PARSER_ARG_CANNOT_BE_NULL),
-			$of(u"\u89e3\u6790\u5668\u53c2\u6570\u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"解析器参数不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FEATURE),
-			$of(u"\u529f\u80fd: {0}"_s)
+			$of(u"功能: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_PROPERTY),
-			$of(u"\u5c5e\u6027: {0}"_s)
+			$of(u"属性: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_ENTITY_RESOLVER),
-			$of(u"\u7a7a\u5b9e\u4f53\u89e3\u6790\u5668"_s)
+			$of(u"空实体解析器"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NULL_DTD_HANDLER),
-			$of(u"\u7a7a DTD \u5904\u7406\u7a0b\u5e8f"_s)
+			$of(u"空 DTD 处理程序"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_DRIVER_NAME_SPECIFIED),
-			$of(u"\u672a\u6307\u5b9a\u9a71\u52a8\u7a0b\u5e8f\u540d\u79f0!"_s)
+			$of(u"未指定驱动程序名称!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_URL_SPECIFIED),
-			$of(u"\u672a\u6307\u5b9a URL!"_s)
+			$of(u"未指定 URL!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_POOLSIZE_LESS_THAN_ONE),
-			$of(u"\u6c60\u5927\u5c0f\u5c0f\u4e8e 1!"_s)
+			$of(u"池大小小于 1!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_DRIVER_NAME),
-			$of(u"\u6307\u5b9a\u7684\u9a71\u52a8\u7a0b\u5e8f\u540d\u79f0\u65e0\u6548!"_s)
+			$of(u"指定的驱动程序名称无效!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ERRORLISTENER),
@@ -1543,243 +1543,243 @@ $ObjectArray2* XSLTErrorResources_zh_CN::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ASSERT_NO_TEMPLATE_PARENT),
-			$of(u"\u7a0b\u5e8f\u5458\u9519\u8bef! \u8868\u8fbe\u5f0f\u6ca1\u6709 ElemTemplateElement \u7236\u7ea7!"_s)
+			$of(u"程序员错误! 表达式没有 ElemTemplateElement 父级!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ASSERT_REDUNDENT_EXPR_ELIMINATOR),
-			$of(u"RedundentExprEliminator \u4e2d\u7684\u7a0b\u5e8f\u5458\u65ad\u8a00: {0}"_s)
+			$of(u"RedundentExprEliminator 中的程序员断言: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NOT_ALLOWED_IN_POSITION),
-			$of(u"\u4e0d\u5141\u8bb8\u5728\u6837\u5f0f\u8868\u4e2d\u7684\u6b64\u4f4d\u7f6e\u4f7f\u7528{0}!"_s)
+			$of(u"不允许在样式表中的此位置使用{0}!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NONWHITESPACE_NOT_ALLOWED_IN_POSITION),
-			$of(u"\u4e0d\u5141\u8bb8\u5728\u6837\u5f0f\u8868\u4e2d\u7684\u6b64\u4f4d\u7f6e\u4f7f\u7528\u975e\u7a7a\u767d\u6587\u672c!"_s)
+			$of(u"不允许在样式表中的此位置使用非空白文本!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::INVALID_TCHAR),
-			$of(u"CHAR \u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1}\u3002CHAR \u7c7b\u578b\u7684\u5c5e\u6027\u53ea\u80fd\u4e3a 1 \u4e2a\u5b57\u7b26!"_s)
+			$of(u"CHAR 属性{0}使用了非法值{1}。CHAR 类型的属性只能为 1 个字符!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::INVALID_QNAME),
-			$of(u"QNAME \u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1}"_s)
+			$of(u"QNAME 属性{0}使用了非法值{1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::INVALID_ENUM),
-			$of(u"ENUM \u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1}\u3002\u6709\u6548\u503c\u4e3a: {2}\u3002"_s)
+			$of(u"ENUM 属性{0}使用了非法值{1}。有效值为: {2}。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::INVALID_NMTOKEN),
-			$of(u"NMTOKEN \u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1} "_s)
+			$of(u"NMTOKEN 属性{0}使用了非法值{1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::INVALID_NCNAME),
-			$of(u"NCNAME \u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1} "_s)
+			$of(u"NCNAME 属性{0}使用了非法值{1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::INVALID_BOOLEAN),
-			$of(u"Boolean \u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1} "_s)
+			$of(u"Boolean 属性{0}使用了非法值{1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::INVALID_NUMBER),
-			$of(u"Number \u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1} "_s)
+			$of(u"Number 属性{0}使用了非法值{1} "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_ARG_LITERAL),
-			$of(u"\u5339\u914d\u6a21\u5f0f\u4e2d\u7684{0}\u7684\u53c2\u6570\u5fc5\u987b\u4e3a\u6587\u5b57\u3002"_s)
+			$of(u"匹配模式中的{0}的参数必须为文字。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_DUPLICATE_GLOBAL_VAR),
-			$of(u"\u5168\u5c40\u53d8\u91cf\u58f0\u660e\u91cd\u590d\u3002"_s)
+			$of(u"全局变量声明重复。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_DUPLICATE_VAR),
-			$of(u"\u53d8\u91cf\u58f0\u660e\u91cd\u590d\u3002"_s)
+			$of(u"变量声明重复。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_TEMPLATE_NAME_MATCH),
-			$of(u"xsl:template \u5fc5\u987b\u5177\u6709 name \u548c/\u6216 match \u5c5e\u6027"_s)
+			$of(u"xsl:template 必须具有 name 和/或 match 属性"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_PREFIX),
-			$of(u"exclude-result-prefixes \u4e2d\u7684\u524d\u7f00\u65e0\u6548: {0}"_s)
+			$of(u"exclude-result-prefixes 中的前缀无效: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NO_ATTRIB_SET),
-			$of(u"\u540d\u4e3a{0}\u7684\u5c5e\u6027\u96c6\u4e0d\u5b58\u5728"_s)
+			$of(u"名为{0}的属性集不存在"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_FUNCTION_NOT_FOUND),
-			$of(u"\u540d\u4e3a{0}\u7684\u51fd\u6570\u4e0d\u5b58\u5728"_s)
+			$of(u"名为{0}的函数不存在"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_CANT_HAVE_CONTENT_AND_SELECT),
-			$of(u"{0}\u5143\u7d20\u4e0d\u80fd\u540c\u65f6\u5177\u6709\u5185\u5bb9\u548c select \u5c5e\u6027\u3002"_s)
+			$of(u"{0}元素不能同时具有内容和 select 属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_SET_PARAM_VALUE),
-			$of(u"\u53c2\u6570 {0} \u7684\u503c\u5fc5\u987b\u662f\u6709\u6548 Java \u5bf9\u8c61"_s)
+			$of(u"参数 {0} 的值必须是有效 Java 对象"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX_FOR_DEFAULT),
-			$of(u"xsl:namespace-alias \u5143\u7d20\u7684 result-prefix \u5c5e\u6027\u5177\u6709\u503c \'#default\', \u4f46\u8be5\u5143\u7d20\u7684\u4f5c\u7528\u57df\u4e2d\u6ca1\u6709\u9ed8\u8ba4\u540d\u79f0\u7a7a\u95f4\u7684\u58f0\u660e"_s)
+			$of(u"xsl:namespace-alias 元素的 result-prefix 属性具有值 \'#default\', 但该元素的作用域中没有默认名称空间的声明"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_INVALID_NAMESPACE_URI_VALUE_FOR_RESULT_PREFIX),
-			$of(u"xsl:namespace-alias \u5143\u7d20\u7684 result-prefix \u5c5e\u6027\u5177\u6709\u503c \'\'{0}\'\', \u4f46\u8be5\u5143\u7d20\u7684\u4f5c\u7528\u57df\u4e2d\u6ca1\u6709\u524d\u7f00 \'\'{0}\'\' \u7684\u540d\u79f0\u7a7a\u95f4\u58f0\u660e\u3002"_s)
+			$of(u"xsl:namespace-alias 元素的 result-prefix 属性具有值 \'\'{0}\'\', 但该元素的作用域中没有前缀 \'\'{0}\'\' 的名称空间声明。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_SET_FEATURE_NULL_NAME),
-			$of(u"TransformerFactory.setFeature(String name, boolean value) \u4e2d\u7684\u529f\u80fd\u540d\u79f0\u4e0d\u80fd\u4e3a\u7a7a\u503c\u3002"_s)
+			$of(u"TransformerFactory.setFeature(String name, boolean value) 中的功能名称不能为空值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_GET_FEATURE_NULL_NAME),
-			$of(u"TransformerFactory.getFeature(String name) \u4e2d\u7684\u529f\u80fd\u540d\u79f0\u4e0d\u80fd\u4e3a\u7a7a\u503c\u3002"_s)
+			$of(u"TransformerFactory.getFeature(String name) 中的功能名称不能为空值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_UNSUPPORTED_FEATURE),
-			$of(u"\u65e0\u6cd5\u5bf9\u6b64 TransformerFactory \u8bbe\u7f6e\u529f\u80fd \'\'{0}\'\'\u3002"_s)
+			$of(u"无法对此 TransformerFactory 设置功能 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_EXTENSION_ELEMENT_NOT_ALLOWED_IN_SECURE_PROCESSING),
-			$of(u"\u5f53\u5b89\u5168\u5904\u7406\u529f\u80fd\u8bbe\u7f6e\u4e3a\u201c\u771f\u201d\u65f6, \u4e0d\u5141\u8bb8\u4f7f\u7528\u6269\u5c55\u5143\u7d20 \'\'{0}\'\'\u3002"_s)
+			$of(u"当安全处理功能设置为“真”时, 不允许使用扩展元素 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NAMESPACE_CONTEXT_NULL_NAMESPACE),
-			$of(u"\u65e0\u6cd5\u83b7\u53d6\u7a7a\u540d\u79f0\u7a7a\u95f4 uri \u7684\u524d\u7f00\u3002"_s)
+			$of(u"无法获取空名称空间 uri 的前缀。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_NAMESPACE_CONTEXT_NULL_PREFIX),
-			$of(u"\u65e0\u6cd5\u83b7\u53d6\u7a7a\u524d\u7f00\u7684\u540d\u79f0\u7a7a\u95f4 uri\u3002"_s)
+			$of(u"无法获取空前缀的名称空间 uri。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XPATH_RESOLVER_NULL_QNAME),
-			$of(u"\u51fd\u6570\u540d\u79f0\u4e0d\u80fd\u4e3a\u7a7a\u503c\u3002"_s)
+			$of(u"函数名称不能为空值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::ER_XPATH_RESOLVER_NEGATIVE_ARITY),
-			$of(u"\u5143\u6570\u4e0d\u80fd\u4e3a\u8d1f\u6570\u3002"_s)
+			$of(u"元数不能为负数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_FOUND_CURLYBRACE),
-			$of(u"\u5df2\u627e\u5230 \'}\', \u4f46\u672a\u6253\u5f00\u5c5e\u6027\u6a21\u677f!"_s)
+			$of(u"已找到 \'}\', 但未打开属性模板!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_COUNT_ATTRIB_MATCHES_NO_ANCESTOR),
-			$of(u"\u8b66\u544a: count \u5c5e\u6027\u4e0e xsl:number \u4e2d\u7684 ancestor \u4e0d\u5339\u914d! \u76ee\u6807 = {0}"_s)
+			$of(u"警告: count 属性与 xsl:number 中的 ancestor 不匹配! 目标 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_EXPR_ATTRIB_CHANGED_TO_SELECT),
-			$of(u"\u65e7\u8bed\u6cd5: \'expr\' \u5c5e\u6027\u7684\u540d\u79f0\u5df2\u66f4\u6539\u4e3a \'select\'\u3002"_s)
+			$of(u"旧语法: \'expr\' 属性的名称已更改为 \'select\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_NO_LOCALE_IN_FORMATNUMBER),
-			$of(u"Xalan \u5c1a\u672a\u5904\u7406 format-number \u51fd\u6570\u4e2d\u7684\u533a\u57df\u8bbe\u7f6e\u540d\u79f0\u3002"_s)
+			$of(u"Xalan 尚未处理 format-number 函数中的区域设置名称。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_LOCALE_NOT_FOUND),
-			$of(u"\u8b66\u544a: \u627e\u4e0d\u5230 xml:lang={0} \u7684\u533a\u57df\u8bbe\u7f6e"_s)
+			$of(u"警告: 找不到 xml:lang={0} 的区域设置"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_CANNOT_MAKE_URL_FROM),
-			$of(u"\u65e0\u6cd5\u6839\u636e{0}\u751f\u6210 URL"_s)
+			$of(u"无法根据{0}生成 URL"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_CANNOT_LOAD_REQUESTED_DOC),
-			$of(u"\u65e0\u6cd5\u52a0\u8f7d\u8bf7\u6c42\u7684\u6587\u6863: {0}"_s)
+			$of(u"无法加载请求的文档: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_CANNOT_FIND_COLLATOR),
-			$of(u"\u627e\u4e0d\u5230 <sort xml:lang={0} \u7684 Collator"_s)
+			$of(u"找不到 <sort xml:lang={0} 的 Collator"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_FUNCTIONS_SHOULD_USE_URL),
-			$of(u"\u65e7\u8bed\u6cd5: \u51fd\u6570\u6307\u4ee4\u5e94\u4f7f\u7528{0}\u7684 url"_s)
+			$of(u"旧语法: 函数指令应使用{0}的 url"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ENCODING_NOT_SUPPORTED_USING_UTF8),
-			$of(u"\u4e0d\u652f\u6301\u7f16\u7801: {0}, \u4f7f\u7528 UTF-8"_s)
+			$of(u"不支持编码: {0}, 使用 UTF-8"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ENCODING_NOT_SUPPORTED_USING_JAVA),
-			$of(u"\u4e0d\u652f\u6301\u7f16\u7801: {0}, \u4f7f\u7528 Java {1}"_s)
+			$of(u"不支持编码: {0}, 使用 Java {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_SPECIFICITY_CONFLICTS),
-			$of(u"\u53d1\u73b0\u7279\u5f81\u51b2\u7a81: \u5c06\u4f7f\u7528\u4e0a\u6b21\u5728\u6837\u5f0f\u8868\u4e2d\u627e\u5230\u7684{0}\u3002"_s)
+			$of(u"发现特征冲突: 将使用上次在样式表中找到的{0}。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_PARSING_AND_PREPARING),
-			$of(u"========= \u89e3\u6790\u548c\u51c6\u5907{0} =========="_s)
+			$of(u"========= 解析和准备{0} =========="_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ATTR_TEMPLATE),
-			$of(u"\u5c5e\u6027\u6a21\u677f{0}"_s)
+			$of(u"属性模板{0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_CONFLICT_BETWEEN_XSLSTRIPSPACE_AND_XSLPRESERVESPACE),
-			$of(u"xsl:strip-space \u548c xsl:preserve-space \u4e4b\u95f4\u5b58\u5728\u5339\u914d\u51b2\u7a81"_s)
+			$of(u"xsl:strip-space 和 xsl:preserve-space 之间存在匹配冲突"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ATTRIB_NOT_HANDLED),
-			$of(u"Xalan \u5c1a\u672a\u5904\u7406{0}\u5c5e\u6027!"_s)
+			$of(u"Xalan 尚未处理{0}属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_NO_DECIMALFORMAT_DECLARATION),
-			$of(u"\u627e\u4e0d\u5230\u5341\u8fdb\u5236\u683c\u5f0f\u7684\u58f0\u660e: {0}"_s)
+			$of(u"找不到十进制格式的声明: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_OLD_XSLT_NS),
-			$of(u"\u7f3a\u5c11 XSLT \u540d\u79f0\u7a7a\u95f4\u6216 XSLT \u540d\u79f0\u7a7a\u95f4\u9519\u8bef\u3002"_s)
+			$of(u"缺少 XSLT 名称空间或 XSLT 名称空间错误。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ONE_DEFAULT_XSLDECIMALFORMAT_ALLOWED),
-			$of(u"\u4ec5\u5141\u8bb8\u4f7f\u7528\u4e00\u4e2a\u9ed8\u8ba4\u7684 xsl:decimal-format \u58f0\u660e\u3002"_s)
+			$of(u"仅允许使用一个默认的 xsl:decimal-format 声明。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_XSLDECIMALFORMAT_NAMES_MUST_BE_UNIQUE),
-			$of(u"xsl:decimal-format \u540d\u79f0\u5fc5\u987b\u552f\u4e00\u3002\u540d\u79f0 \"{0}\" \u91cd\u590d\u3002"_s)
+			$of(u"xsl:decimal-format 名称必须唯一。名称 \"{0}\" 重复。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ILLEGAL_ATTRIBUTE),
-			$of(u"{0}\u5177\u6709\u975e\u6cd5\u5c5e\u6027: {1}"_s)
+			$of(u"{0}具有非法属性: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_COULD_NOT_RESOLVE_PREFIX),
-			$of(u"\u65e0\u6cd5\u89e3\u6790\u540d\u79f0\u7a7a\u95f4\u524d\u7f00: {0}\u3002\u5c06\u5ffd\u7565\u8282\u70b9\u3002"_s)
+			$of(u"无法解析名称空间前缀: {0}。将忽略节点。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_STYLESHEET_REQUIRES_VERSION_ATTRIB),
-			$of(u"xsl:stylesheet \u9700\u8981 \'version\' \u5c5e\u6027!"_s)
+			$of(u"xsl:stylesheet 需要 \'version\' 属性!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ILLEGAL_ATTRIBUTE_NAME),
-			$of(u"\u975e\u6cd5\u5c5e\u6027\u540d\u79f0: {0}"_s)
+			$of(u"非法属性名称: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ILLEGAL_ATTRIBUTE_VALUE),
-			$of(u"\u5c5e\u6027{0}\u4f7f\u7528\u4e86\u975e\u6cd5\u503c{1}"_s)
+			$of(u"属性{0}使用了非法值{1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_EMPTY_SECOND_ARG),
-			$of(u"\u6839\u636e document \u51fd\u6570\u7684\u7b2c\u4e8c\u4e2a\u53c2\u6570\u5f97\u5230\u7684\u8282\u70b9\u96c6\u4e3a\u7a7a\u3002\u8fd4\u56de\u7a7a node-set\u3002"_s)
+			$of(u"根据 document 函数的第二个参数得到的节点集为空。返回空 node-set。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_PROCESSINGINSTRUCTION_NAME_CANT_BE_XML),
-			$of(u"xsl:processing-instruction \u540d\u79f0\u7684 \'name\' \u5c5e\u6027\u7684\u503c\u4e0d\u80fd\u4e3a \'xml\'"_s)
+			$of(u"xsl:processing-instruction 名称的 \'name\' 属性的值不能为 \'xml\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_PROCESSINGINSTRUCTION_NOTVALID_NCNAME),
-			$of(u"xsl:processing-instruction \u7684 \'\'name\'\' \u5c5e\u6027\u7684\u503c\u5fc5\u987b\u662f\u6709\u6548\u7684 NCName: {0}"_s)
+			$of(u"xsl:processing-instruction 的 \'\'name\'\' 属性的值必须是有效的 NCName: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::WG_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"\u5728\u751f\u6210\u5b50\u8282\u70b9\u4e4b\u540e\u6216\u5728\u751f\u6210\u5143\u7d20\u4e4b\u524d\u65e0\u6cd5\u6dfb\u52a0\u5c5e\u6027 {0}\u3002\u5c06\u5ffd\u7565\u5c5e\u6027\u3002"_s)
+			$of(u"在生成子节点之后或在生成元素之前无法添加属性 {0}。将忽略属性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XSLTErrorResources_zh_CN::NO_MODIFICATION_ALLOWED_ERR),
-			$of(u"\u5c1d\u8bd5\u4fee\u6539\u4e0d\u5141\u8bb8\u4fee\u6539\u7684\u5bf9\u8c61\u3002"_s)
+			$of(u"尝试修改不允许修改的对象。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1795,15 +1795,15 @@ $ObjectArray2* XSLTErrorResources_zh_CN::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage \u7684\u53c2\u6570\u8d85\u51fa\u8303\u56f4"_s)
+			$of(u"createMessage 的参数超出范围"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"\u8c03\u7528 messageFormat \u65f6\u629b\u51fa\u5f02\u5e38\u9519\u8bef"_s)
+			$of(u"调用 messageFormat 时抛出异常错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
-			$of(u">>>>>>> Xalan \u7248\u672c "_s)
+			$of(u">>>>>>> Xalan 版本 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version2"_s),
@@ -1811,59 +1811,59 @@ $ObjectArray2* XSLTErrorResources_zh_CN::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("yes"_s),
-			$of(u"\u662f"_s)
+			$of(u"是"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\u884c\u53f7"_s)
+			$of(u"行号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\u5217\u53f7"_s)
+			$of(u"列号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xsldone"_s),
-			$of(u"XSLProcessor: \u5b8c\u6210"_s)
+			$of(u"XSLProcessor: 完成"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_option"_s),
-			$of(u"Xalan-J \u547d\u4ee4\u884c Process \u7c7b\u9009\u9879:"_s)
+			$of(u"Xalan-J 命令行 Process 类选项:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_option"_s),
-			$of(u"Xalan-J \u547d\u4ee4\u884c Process \u7c7b\u9009\u9879:"_s)
+			$of(u"Xalan-J 命令行 Process 类选项:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xsltc_option"_s),
-			$of(u"XSLTC \u6a21\u5f0f\u4e0b\u4e0d\u652f\u6301\u9009\u9879{0}\u3002"_s)
+			$of(u"XSLTC 模式下不支持选项{0}。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_invalid_xalan_option"_s),
-			$of(u"\u9009\u9879{0}\u53ea\u80fd\u4e0e -XSLTC \u4e00\u8d77\u4f7f\u7528\u3002"_s)
+			$of(u"选项{0}只能与 -XSLTC 一起使用。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_no_input"_s),
-			$of(u"\u9519\u8bef: \u672a\u6307\u5b9a\u6837\u5f0f\u8868\u6216\u8f93\u5165 xml\u3002\u8fd0\u884c\u6b64\u547d\u4ee4\u65f6, \u7528\u6cd5\u6307\u4ee4\u4e0d\u5e26\u4efb\u4f55\u9009\u9879\u3002"_s)
+			$of(u"错误: 未指定样式表或输入 xml。运行此命令时, 用法指令不带任何选项。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_common_options"_s),
-			$of(u"-\u516c\u7528\u9009\u9879-"_s)
+			$of(u"-公用选项-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xalan_options"_s),
-			$of(u"-Xalan \u7684\u9009\u9879-"_s)
+			$of(u"-Xalan 的选项-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_xsltc_options"_s),
-			$of(u"-XSLTC \u7684\u9009\u9879-"_s)
+			$of(u"-XSLTC 的选项-"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xslProc_return_to_continue"_s),
-			$of(u"(\u6309 <return> \u4ee5\u7ee7\u7eed)"_s)
+			$of(u"(按 <return> 以继续)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXSLTC"_s),
-			$of(u"   [-XSLTC (\u4f7f\u7528 XSLTC \u8fdb\u884c\u8f6c\u6362)]"_s)
+			$of(u"   [-XSLTC (使用 XSLTC 进行转换)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionIN"_s),
@@ -1891,187 +1891,187 @@ $ObjectArray2* XSLTErrorResources_zh_CN::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of("optionE"_s),
-			$of(u"   [-E (\u4e0d\u5c55\u5f00\u5b9e\u4f53\u5f15\u7528)]"_s)
+			$of(u"   [-E (不展开实体引用)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionV"_s),
-			$of(u"   [-E (\u4e0d\u5c55\u5f00\u5b9e\u4f53\u5f15\u7528)]"_s)
+			$of(u"   [-E (不展开实体引用)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionQC"_s),
-			$of(u"   [-QC (\u65e0\u63d0\u793a\u6a21\u5f0f\u51b2\u7a81\u8b66\u544a)]"_s)
+			$of(u"   [-QC (无提示模式冲突警告)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionQ"_s),
-			$of(u"   [-Q (\u65e0\u63d0\u793a\u6a21\u5f0f)]"_s)
+			$of(u"   [-Q (无提示模式)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionLF"_s),
-			$of(u"   [-LF (\u4ec5\u5728\u8f93\u51fa\u65f6\u4f7f\u7528\u6362\u884c\u7b26 {\u9ed8\u8ba4\u503c\u4e3a CR/LF})]"_s)
+			$of(u"   [-LF (仅在输出时使用换行符 {默认值为 CR/LF})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCR"_s),
-			$of(u"   [-CR (\u4ec5\u5728\u8f93\u51fa\u65f6\u4f7f\u7528\u56de\u8f66 {\u9ed8\u8ba4\u503c\u4e3a CR/LF})]"_s)
+			$of(u"   [-CR (仅在输出时使用回车 {默认值为 CR/LF})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionESCAPE"_s),
-			$of(u"   [-ESCAPE (\u8981\u8f6c\u79fb\u7684\u5b57\u7b26 {\u9ed8\u8ba4\u503c\u4e3a <>&\"\'\\r\\n}]"_s)
+			$of(u"   [-ESCAPE (要转移的字符 {默认值为 <>&\"\'\\r\\n}]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionINDENT"_s),
-			$of(u"   [-INDENT (\u63a7\u5236\u8981\u7f29\u8fdb\u7684\u7a7a\u683c\u6570 {\u9ed8\u8ba4\u503c\u4e3a 0})]"_s)
+			$of(u"   [-INDENT (控制要缩进的空格数 {默认值为 0})]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTT"_s),
-			$of(u"   [-TT (\u5728\u8c03\u7528\u6a21\u677f\u65f6\u8ddf\u8e2a\u6a21\u677f\u3002)]"_s)
+			$of(u"   [-TT (在调用模板时跟踪模板。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTG"_s),
-			$of(u"   [-TG (\u8ddf\u8e2a\u6bcf\u4e2a\u751f\u6210\u4e8b\u4ef6\u3002)]"_s)
+			$of(u"   [-TG (跟踪每个生成事件。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTS"_s),
-			$of(u"   [-TS (\u8ddf\u8e2a\u6bcf\u4e2a\u9009\u62e9\u4e8b\u4ef6\u3002)]"_s)
+			$of(u"   [-TS (跟踪每个选择事件。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTTC"_s),
-			$of(u"   [-TTC (\u5728\u5904\u7406\u6a21\u677f\u5b50\u7ea7\u65f6\u8ddf\u8e2a\u6a21\u677f\u5b50\u7ea7\u3002)]"_s)
+			$of(u"   [-TTC (在处理模板子级时跟踪模板子级。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTCLASS"_s),
-			$of(u"   [-TCLASS (\u7528\u4e8e\u8ddf\u8e2a\u6269\u5c55\u7684 TraceListener \u7c7b\u3002)]"_s)
+			$of(u"   [-TCLASS (用于跟踪扩展的 TraceListener 类。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionVALIDATE"_s),
-			$of(u"   [-VALIDATE (\u8bbe\u7f6e\u662f\u5426\u8fdb\u884c\u9a8c\u8bc1\u3002\u9ed8\u8ba4\u60c5\u51b5\u4e0b, \u5c06\u7981\u6b62\u9a8c\u8bc1\u3002)]"_s)
+			$of(u"   [-VALIDATE (设置是否进行验证。默认情况下, 将禁止验证。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionEDUMP"_s),
-			$of(u"   [-EDUMP {optional filename} (\u5728\u51fa\u9519\u65f6\u6267\u884c\u5806\u6808\u8f6c\u50a8\u3002)]"_s)
+			$of(u"   [-EDUMP {optional filename} (在出错时执行堆栈转储。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXML"_s),
-			$of(u"   [-XML (\u4f7f\u7528 XML \u683c\u5f0f\u8bbe\u7f6e\u5de5\u5177\u5e76\u6dfb\u52a0 XML \u6807\u5934\u3002)]"_s)
+			$of(u"   [-XML (使用 XML 格式设置工具并添加 XML 标头。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionTEXT"_s),
-			$of(u"   [-TEXT (\u4f7f\u7528\u7b80\u5355\u6587\u672c\u683c\u5f0f\u8bbe\u7f6e\u5de5\u5177\u3002)]"_s)
+			$of(u"   [-TEXT (使用简单文本格式设置工具。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionHTML"_s),
-			$of(u"   [-HTML (\u4f7f\u7528 HTML \u683c\u5f0f\u8bbe\u7f6e\u5de5\u5177\u3002)]"_s)
+			$of(u"   [-HTML (使用 HTML 格式设置工具。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionPARAM"_s),
-			$of(u"   [-PARAM \u540d\u79f0\u8868\u8fbe\u5f0f (\u8bbe\u7f6e\u6837\u5f0f\u8868\u53c2\u6570)]"_s)
+			$of(u"   [-PARAM 名称表达式 (设置样式表参数)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
-			$of(u"XSL \u8fdb\u7a0b\u672a\u6210\u529f\u3002"_s)
+			$of(u"XSL 进程未成功。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg2"_s),
-			$of(u"** \u627e\u4e0d\u5230\u89e3\u6790\u5668 **"_s)
+			$of(u"** 找不到解析器 **"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"\u8bf7\u68c0\u67e5\u60a8\u7684\u7c7b\u8def\u5f84\u3002"_s)
+			$of(u"请检查您的类路径。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"\u5982\u679c\u6ca1\u6709 IBM \u63d0\u4f9b\u7684 XML Parser for Java, \u5219\u53ef\u4ee5\u4ece"_s)
+			$of(u"如果没有 IBM 提供的 XML Parser for Java, 则可以从"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),
-			$of(u"IBM AlphaWorks \u8fdb\u884c\u4e0b\u8f7d, \u7f51\u5740\u4e3a: http://www.alphaworks.ibm.com/formula/xml"_s)
+			$of(u"IBM AlphaWorks 进行下载, 网址为: http://www.alphaworks.ibm.com/formula/xml"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionURIRESOLVER"_s),
-			$of(u"   [-URIRESOLVER \u5b8c\u6574\u7c7b\u540d (\u4f7f\u7528 URIResolver \u89e3\u6790 URI)]"_s)
+			$of(u"   [-URIRESOLVER 完整类名 (使用 URIResolver 解析 URI)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionENTITYRESOLVER"_s),
-			$of(u"   [-ENTITYRESOLVER \u5b8c\u6574\u7c7b\u540d (\u4f7f\u7528 EntityResolver \u89e3\u6790\u5b9e\u4f53)]"_s)
+			$of(u"   [-ENTITYRESOLVER 完整类名 (使用 EntityResolver 解析实体)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionCONTENTHANDLER"_s),
-			$of(u"   [-CONTENTHANDLER \u5b8c\u6574\u7c7b\u540d (\u4f7f\u7528 ContentHandler \u5e8f\u5217\u5316\u8f93\u51fa)]"_s)
+			$of(u"   [-CONTENTHANDLER 完整类名 (使用 ContentHandler 序列化输出)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionLINENUMBERS"_s),
-			$of(u"   [-L \u4f7f\u7528\u6e90\u6587\u6863\u7684\u884c\u53f7]"_s)
+			$of(u"   [-L 使用源文档的行号]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionSECUREPROCESSING"_s),
-			$of(u"   [-SECURE (\u5c06\u5b89\u5168\u5904\u7406\u529f\u80fd\u8bbe\u7f6e\u4e3a\u201c\u771f\u201d\u3002)]"_s)
+			$of(u"   [-SECURE (将安全处理功能设置为“真”。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionMEDIA"_s),
-			$of(u"   [-MEDIA mediaType (\u4f7f\u7528 media \u5c5e\u6027\u67e5\u627e\u4e0e\u6587\u6863\u5173\u8054\u7684\u6837\u5f0f\u8868\u3002)]"_s)
+			$of(u"   [-MEDIA mediaType (使用 media 属性查找与文档关联的样式表。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionFLAVOR"_s),
-			$of(u"   [-FLAVOR flavorName (\u660e\u786e\u4f7f\u7528 s2s=SAX \u6216 d2d=DOM \u6267\u884c\u8f6c\u6362\u3002)] "_s)
+			$of(u"   [-FLAVOR flavorName (明确使用 s2s=SAX 或 d2d=DOM 执行转换。)] "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionDIAG"_s),
-			$of(u"   [-DIAG (\u8f93\u51fa\u5168\u90e8\u8f6c\u6362\u65f6\u95f4 (\u6beb\u79d2)\u3002)]"_s)
+			$of(u"   [-DIAG (输出全部转换时间 (毫秒)。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionINCREMENTAL"_s),
-			$of(u"   [-INCREMENTAL (\u901a\u8fc7\u5c06 http://xml.apache.org/xalan/features/incremental \u8bbe\u7f6e\u4e3a\u201c\u771f\u201d\u6765\u8bf7\u6c42\u589e\u91cf DTM \u6784\u5efa\u3002)]"_s)
+			$of(u"   [-INCREMENTAL (通过将 http://xml.apache.org/xalan/features/incremental 设置为“真”来请求增量 DTM 构建。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionNOOPTIMIMIZE"_s),
-			$of(u"   [-NOOPTIMIMIZE (\u901a\u8fc7\u5c06 http://xml.apache.org/xalan/features/optimize \u8bbe\u7f6e\u4e3a\u201c\u5047\u201d\u6765\u8bf7\u6c42\u4e0d\u6267\u884c\u6837\u5f0f\u8868\u4f18\u5316\u5904\u7406\u3002)]"_s)
+			$of(u"   [-NOOPTIMIMIZE (通过将 http://xml.apache.org/xalan/features/optimize 设置为“假”来请求不执行样式表优化处理。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionRL"_s),
-			$of(u"   [-RL recursionlimit (\u58f0\u660e\u6837\u5f0f\u8868\u9012\u5f52\u6df1\u5ea6\u7684\u6570\u5b57\u9650\u5236\u3002)]"_s)
+			$of(u"   [-RL recursionlimit (声明样式表递归深度的数字限制。)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXO"_s),
-			$of(u"   [-XO [transletName] (\u4e3a\u751f\u6210\u7684 translet \u5206\u914d\u540d\u79f0)]"_s)
+			$of(u"   [-XO [transletName] (为生成的 translet 分配名称)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXD"_s),
-			$of(u"   [-XD destinationDirectory (\u6307\u5b9a translet \u7684\u76ee\u6807\u76ee\u5f55)]"_s)
+			$of(u"   [-XD destinationDirectory (指定 translet 的目标目录)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXJ"_s),
-			$of(u"   [-XJ jarfile (\u5c06 translet \u7c7b\u6253\u5305\u5230\u540d\u4e3a <jarfile> \u7684 jar \u6587\u4ef6\u4e2d)]"_s)
+			$of(u"   [-XJ jarfile (将 translet 类打包到名为 <jarfile> 的 jar 文件中)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXP"_s),
-			$of(u"   [-XP package (\u4e3a\u751f\u6210\u7684\u6240\u6709 translet \u7c7b\u6307\u5b9a\u7a0b\u5e8f\u5305\u540d\u79f0\u524d\u7f00)]"_s)
+			$of(u"   [-XP package (为生成的所有 translet 类指定程序包名称前缀)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXN"_s),
-			$of(u"   [-XN (\u542f\u7528\u6a21\u677f\u5185\u5d4c)]"_s)
+			$of(u"   [-XN (启用模板内嵌)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXX"_s),
-			$of(u"   [-XX (\u542f\u7528\u9644\u52a0\u8c03\u8bd5\u6d88\u606f\u8f93\u51fa)]"_s)
+			$of(u"   [-XX (启用附加调试消息输出)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionXT"_s),
-			$of(u"   [-XT (\u5982\u679c\u53ef\u80fd, \u4f7f\u7528 translet \u8fdb\u884c\u8f6c\u6362)]"_s)
+			$of(u"   [-XT (如果可能, 使用 translet 进行转换)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("diagTiming"_s),
-			$of(u" --------- \u901a\u8fc7{1}\u8f6c\u6362{0}\u82b1\u8d39\u4e86 {2} \u6beb\u79d2\u7684\u65f6\u95f4"_s)
+			$of(u" --------- 通过{1}转换{0}花费了 {2} 毫秒的时间"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("recursionTooDeep"_s),
-			$of(u"\u6a21\u677f\u5d4c\u5957\u592a\u6df1\u3002\u5d4c\u5957 = {0}, \u6a21\u677f{1} {2}"_s)
+			$of(u"模板嵌套太深。嵌套 = {0}, 模板{1} {2}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("nameIs"_s),
-			$of(u"\u540d\u79f0\u4e3a"_s)
+			$of(u"名称为"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("matchPatternIs"_s),
-			$of(u"\u5339\u914d\u6a21\u5f0f\u4e3a"_s)
+			$of(u"匹配模式为"_s)
 		})
 	});
 }

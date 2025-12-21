@@ -147,183 +147,183 @@ $ObjectArray2* ErrorMessages_sk::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_STYLESHEET_ERR),
-			$of(u"Viac ne\u017e jeden \u0161t\u00fdl dokumentu bol definovan\u00fd v rovnakom s\u00fabore."_s)
+			$of(u"Viac než jeden štýl dokumentu bol definovaný v rovnakom súbore."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_REDEF_ERR),
-			$of(u"Vzor \'\'{0}\'\' je u\u017e v tomto \u0161t\u00fdle dokumentu definovan\u00fd."_s)
+			$of(u"Vzor \'\'{0}\'\' je už v tomto štýle dokumentu definovaný."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_UNDEF_ERR),
-			$of(u"Vzor \'\'{0}\'\' nie je v tomto \u0161t\u00fdle dokumentu definovan\u00fd."_s)
+			$of(u"Vzor \'\'{0}\'\' nie je v tomto štýle dokumentu definovaný."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_REDEF_ERR),
-			$of(u"Premenn\u00e1 \'\'{0}\'\' je viackr\u00e1t definovan\u00e1 v tom istom rozsahu."_s)
+			$of(u"Premenná \'\'{0}\'\' je viackrát definovaná v tom istom rozsahu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_UNDEF_ERR),
-			$of(u"Premenn\u00e1 alebo parameter \'\'{0}\'\' nie je definovan\u00e1."_s)
+			$of(u"Premenná alebo parameter \'\'{0}\'\' nie je definovaná."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CLASS_NOT_FOUND_ERR),
-			$of(u"Nie je mo\u017en\u00e9 n\u00e1js\u0165 triedu \'\'{0}\'\'."_s)
+			$of(u"Nie je možné nájsť triedu \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::METHOD_NOT_FOUND_ERR),
-			$of(u"Nie je mo\u017en\u00e9 n\u00e1js\u0165 extern\u00fa met\u00f3du \'\'{0}\'\' (mus\u00ed by\u0165 verejn\u00e1)."_s)
+			$of(u"Nie je možné nájsť externú metódu \'\'{0}\'\' (musí byť verejná)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ARGUMENT_CONVERSION_ERR),
-			$of(u"Nie je mo\u017en\u00e9 konvertova\u0165 typ argumentu/n\u00e1vratu vo volan\u00ed met\u00f3dy \'\'{0}\'\'"_s)
+			$of(u"Nie je možné konvertovať typ argumentu/návratu vo volaní metódy \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_NOT_FOUND_ERR),
-			$of(u"S\u00fabor alebo URI \'\'{0}\'\' sa nena\u0161li."_s)
+			$of(u"Súbor alebo URI \'\'{0}\'\' sa nenašli."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_URI_ERR),
-			$of(u"Neplatn\u00fd URI \'\'{0}\'\'."_s)
+			$of(u"Neplatný URI \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_ACCESS_ERR),
-			$of(u"Nie je mo\u017en\u00e9 otvori\u0165 s\u00fabor alebo URI \'\'{0}\'\'."_s)
+			$of(u"Nie je možné otvoriť súbor alebo URI \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_ROOT_ERR),
-			$of(u"O\u010dak\u00e1va sa element <xsl:stylesheet> alebo <xsl:transform>."_s)
+			$of(u"Očakáva sa element <xsl:stylesheet> alebo <xsl:transform>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NAMESPACE_UNDEF_ERR),
-			$of(u"Predpona n\u00e1zvov\u00e9ho priestoru \'\'{0}\'\' nie je deklarovan\u00e1."_s)
+			$of(u"Predpona názvového priestoru \'\'{0}\'\' nie je deklarovaná."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FUNCTION_RESOLVE_ERR),
-			$of(u"Nie je mo\u017en\u00e9 rozl\u00ed\u0161i\u0165 volanie funkcie \'\'{0}\'\'."_s)
+			$of(u"Nie je možné rozlíšiť volanie funkcie \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NEED_LITERAL_ERR),
-			$of(u"Argument pre \'\'{0}\'\' mus\u00ed by\u0165 re\u0165azcom liter\u00e1lu."_s)
+			$of(u"Argument pre \'\'{0}\'\' musí byť reťazcom literálu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XPATH_PARSER_ERR),
-			$of(u"Chyba pri anal\u00fdze v\u00fdrazu XPath \'\'{0}\'\'."_s)
+			$of(u"Chyba pri analýze výrazu XPath \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::REQUIRED_ATTR_ERR),
-			$of(u"Ch\u00fdba po\u017eadovan\u00fd atrib\u00fat \'\'{0}\'\'."_s)
+			$of(u"Chýba požadovaný atribút \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHAR_ERR),
-			$of(u"Neplatn\u00fd znak \'\'{0}\'\' vo v\u00fdraze XPath."_s)
+			$of(u"Neplatný znak \'\'{0}\'\' vo výraze XPath."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_PI_ERR),
-			$of(u"Neplatn\u00fd n\u00e1zov \'\'{0}\'\' pre in\u0161trukciu spracovania."_s)
+			$of(u"Neplatný názov \'\'{0}\'\' pre inštrukciu spracovania."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_ATTRIBUTE_ERR),
-			$of(u"Atrib\u00fat \'\'{0}\'\' mimo elementu."_s)
+			$of(u"Atribút \'\'{0}\'\' mimo elementu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTRIBUTE_ERR),
-			$of(u"Neleg\u00e1lny atrib\u00fat \'\'{0}\'\'."_s)
+			$of(u"Nelegálny atribút \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_INCLUDE_ERR),
-			$of(u"Cirkul\u00e1rny import/zahrnutie. \u0160t\u00fdl dokumentu \'\'{0}\'\' je u\u017e zaveden\u00fd."_s)
+			$of(u"Cirkulárny import/zahrnutie. Štýl dokumentu \'\'{0}\'\' je už zavedený."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RESULT_TREE_SORT_ERR),
-			$of(u"Fragmenty stromu v\u00fdsledkov nemo\u017eno triedi\u0165 (elementy <xsl:sort> s\u00fa ignorovan\u00e9). Ke\u010f vytv\u00e1rate v\u00fdsledkov\u00fd strom, mus\u00edte triedi\u0165 uzly."_s)
+			$of(u"Fragmenty stromu výsledkov nemožno triediť (elementy <xsl:sort> sú ignorované). Keď vytvárate výsledkový strom, musíte triediť uzly."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYMBOLS_REDEF_ERR),
-			$of(u"Desiatkov\u00e9 form\u00e1tovanie \'\'{0}\'\' je u\u017e definovan\u00e9."_s)
+			$of(u"Desiatkové formátovanie \'\'{0}\'\' je už definované."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSL_VERSION_ERR),
-			$of(u"Verzia XSL \'\'{0}\'\' nie je podporovan\u00e1 XSLTC."_s)
+			$of(u"Verzia XSL \'\'{0}\'\' nie je podporovaná XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_VARIABLE_ERR),
-			$of(u"Cirkul\u00e1rna referencia premennej/parametra v \'\'{0}\'\'."_s)
+			$of(u"Cirkulárna referencia premennej/parametra v \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_BINARY_OP_ERR),
-			$of(u"Nezn\u00e1my oper\u00e1tor pre bin\u00e1rny v\u00fdraz."_s)
+			$of(u"Neznámy operátor pre binárny výraz."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ARG_ERR),
-			$of(u"Neplatn\u00fd argument(y) pre volanie funkcie."_s)
+			$of(u"Neplatný argument(y) pre volanie funkcie."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DOCUMENT_ARG_ERR),
-			$of(u"Druh\u00fd argument pre funkciu dokumentu() mus\u00ed by\u0165 sada uzlov."_s)
+			$of(u"Druhý argument pre funkciu dokumentu() musí byť sada uzlov."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_WHEN_ERR),
-			$of(u"V <xsl:choose> sa vy\u017eaduje najmenej jeden element <xsl:when>."_s)
+			$of(u"V <xsl:choose> sa vyžaduje najmenej jeden element <xsl:when>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_OTHERWISE_ERR),
-			$of(u"V  <xsl:choose> je povolen\u00fd len jeden element <xsl:otherwise>."_s)
+			$of(u"V  <xsl:choose> je povolený len jeden element <xsl:otherwise>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_OTHERWISE_ERR),
-			$of(u"<xsl:otherwise> mo\u017eno pou\u017ei\u0165 len v <xsl:choose>."_s)
+			$of(u"<xsl:otherwise> možno použiť len v <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_WHEN_ERR),
-			$of(u"<xsl:when> mo\u017eno pou\u017ei\u0165 len v <xsl:choose>."_s)
+			$of(u"<xsl:when> možno použiť len v <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WHEN_ELEMENT_ERR),
-			$of(u"V <xsl:choose> s\u00fa povolen\u00e9 len elementy <xsl:when> a <xsl:otherwise>."_s)
+			$of(u"V <xsl:choose> sú povolené len elementy <xsl:when> a <xsl:otherwise>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNNAMED_ATTRIBSET_ERR),
-			$of(u"<xsl:attribute-set> ch\u00fdba atrib\u00fat \'name\'."_s)
+			$of(u"<xsl:attribute-set> chýba atribút \'name\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHILD_ERR),
-			$of(u"Neplatn\u00fd element potomka."_s)
+			$of(u"Neplatný element potomka."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ELEM_NAME_ERR),
-			$of(u"Nem\u00f4\u017eete vola\u0165 element \'\'{0}\'\'"_s)
+			$of(u"Nemôžete volať element \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTR_NAME_ERR),
-			$of(u"Nem\u00f4\u017eete vola\u0165 atrib\u00fat \'\'{0}\'\'"_s)
+			$of(u"Nemôžete volať atribút \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_TEXT_NODE_ERR),
-			$of(u"Textov\u00e9 \u00fadaje s\u00fa mimo elementu vrchnej \u00farovne <xsl:stylesheet>."_s)
+			$of(u"Textové údaje sú mimo elementu vrchnej úrovne <xsl:stylesheet>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX_PARSER_CONFIG_ERR),
-			$of(u"Analyz\u00e1tor JAXP nie je spr\u00e1vne nakonfigurovan\u00fd"_s)
+			$of(u"Analyzátor JAXP nie je správne nakonfigurovaný"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INTERNAL_ERR),
-			$of(u"Neodstr\u00e1nite\u013en\u00e1 intern\u00e1 chyba XSLTC: \'\'{0}\'\'"_s)
+			$of(u"Neodstrániteľná interná chyba XSLTC: \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_XSL_ERR),
-			$of(u"Nepodporovan\u00fd element XSL \'\'{0}\'\'."_s)
+			$of(u"Nepodporovaný element XSL \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_EXT_ERR),
-			$of(u"Nerozl\u00ed\u0161en\u00e9 roz\u0161\u00edrenie XSLTC \'\'{0}\'\'."_s)
+			$of(u"Nerozlíšené rozšírenie XSLTC \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_URI_ERR),
-			$of(u"Vstupn\u00fd dokument nie je \u0161t\u00fdlom dokumentu (n\u00e1zvov\u00fd priestor XSL nie je deklarovan\u00fd v kore\u0148ovom elemente)."_s)
+			$of(u"Vstupný dokument nie je štýlom dokumentu (názvový priestor XSL nie je deklarovaný v koreňovom elemente)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_TARGET_ERR),
-			$of(u"Nebolo mo\u017en\u00e9 n\u00e1js\u0165 cie\u013e \u0161t\u00fdlu dokumentu \'\'{0}\'\'."_s)
+			$of(u"Nebolo možné nájsť cieľ štýlu dokumentu \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ACCESSING_XSLT_TARGET_ERR),
@@ -331,59 +331,59 @@ $ObjectArray2* ErrorMessages_sk::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_IMPLEMENTED_ERR),
-			$of(u"Nie je implementovan\u00e9: \'\'{0}\'\'."_s)
+			$of(u"Nie je implementované: \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_STYLESHEET_ERR),
-			$of(u"Vstupn\u00fd dokument neobsahuje \u0161t\u00fdl dokumentu XSL."_s)
+			$of(u"Vstupný dokument neobsahuje štýl dokumentu XSL."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ELEMENT_PARSE_ERR),
-			$of(u"Nebolo mo\u017en\u00e9 analyzova\u0165 element \'\'{0}\'\'"_s)
+			$of(u"Nebolo možné analyzovať element \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::KEY_USE_ATTR_ERR),
-			$of(u"Atrib\u00fat pou\u017eitia <key> mus\u00ed by\u0165 uzol, sada uzlov, re\u0165azec alebo \u010d\u00edslo."_s)
+			$of(u"Atribút použitia <key> musí byť uzol, sada uzlov, reťazec alebo číslo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTPUT_VERSION_ERR),
-			$of(u"Verzia v\u00fdstupn\u00e9ho dokumentu XML by mala by\u0165 1.0"_s)
+			$of(u"Verzia výstupného dokumentu XML by mala byť 1.0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_RELAT_OP_ERR),
-			$of(u"Nezn\u00e1my oper\u00e1tor pre rela\u010dn\u00fd v\u00fdraz"_s)
+			$of(u"Neznámy operátor pre relačný výraz"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTRIBSET_UNDEF_ERR),
-			$of(u"Pokus o pou\u017eitie neexistuj\u00facej sady atrib\u00fatov \'\'{0}\'\'."_s)
+			$of(u"Pokus o použitie neexistujúcej sady atribútov \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTR_VAL_TEMPLATE_ERR),
-			$of(u"Nie je mo\u017en\u00e9 analyzova\u0165 vzor hodnoty atrib\u00fatu \'\'{0}\'\'."_s)
+			$of(u"Nie je možné analyzovať vzor hodnoty atribútu \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNKNOWN_SIG_TYPE_ERR),
-			$of(u"Nezn\u00e1my typ \u00fadajov v podpise pre triedu \'\'{0}\'\'."_s)
+			$of(u"Neznámy typ údajov v podpise pre triedu \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DATA_CONVERSION_ERR),
-			$of(u"Nie je mo\u017en\u00e9 konvertova\u0165 typ \u00fadajov \'\'{0}\'\' na \'\'{1}\'\'."_s)
+			$of(u"Nie je možné konvertovať typ údajov \'\'{0}\'\' na \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_TRANSLET_CLASS_ERR),
-			$of(u"Tento vzor neobsahuje platn\u00fa defin\u00edciu triedy transletu."_s)
+			$of(u"Tento vzor neobsahuje platnú definíciu triedy transletu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_MAIN_TRANSLET_ERR),
-			$of(u"Tento vzor neobsahuje triedu s n\u00e1zvom \'\'{0}\'\'."_s)
+			$of(u"Tento vzor neobsahuje triedu s názvom \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_CLASS_ERR),
-			$of(u"Nebolo mo\u017en\u00e9 zavies\u0165 triedu transletu \'\'{0}\'\'."_s)
+			$of(u"Nebolo možné zaviesť triedu transletu \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_OBJECT_ERR),
-			$of(u"Trieda transletu zaveden\u00e1, ale nie je mo\u017en\u00e9 vytvori\u0165 in\u0161tanciu transletu."_s)
+			$of(u"Trieda transletu zavedená, ale nie je možné vytvoriť inštanciu transletu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ERROR_LISTENER_NULL_ERR),
@@ -395,64 +395,64 @@ $ObjectArray2* ErrorMessages_sk::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_SOURCE_ERR),
-			$of(u"Objekt zdroja odovzdan\u00fd \'\'{0}\'\' nem\u00e1 \u017eiadny obsah."_s)
+			$of(u"Objekt zdroja odovzdaný \'\'{0}\'\' nemá žiadny obsah."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_COMPILE_ERR),
-			$of(u"Nebolo mo\u017en\u00e9 skompilova\u0165 \u0161t\u00fdl dokumentu"_s)
+			$of(u"Nebolo možné skompilovať štýl dokumentu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_ERR),
-			$of(u"TransformerFactory nerozozn\u00e1va atrib\u00fat \'\'{0}\'\'."_s)
+			$of(u"TransformerFactory nerozoznáva atribút \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_RESULT_ERR),
-			$of(u"setResult() sa mus\u00ed vola\u0165 pred startDocument()."_s)
+			$of(u"setResult() sa musí volať pred startDocument()."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_TRANSLET_ERR),
-			$of(u"Transform\u00e1tor nem\u00e1 \u017eiadny zapuzdren\u00fd objekt transletu."_s)
+			$of(u"Transformátor nemá žiadny zapuzdrený objekt transletu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_HANDLER_ERR),
-			$of(u"Pre v\u00fdsledok transform\u00e1cie nebol definovan\u00fd \u017eiadny v\u00fdstupn\u00fd handler."_s)
+			$of(u"Pre výsledok transformácie nebol definovaný žiadny výstupný handler."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_RESULT_ERR),
-			$of(u"Objekt v\u00fdsledku odovzdan\u00fd \'\'{0}\'\' je neplatn\u00fd."_s)
+			$of(u"Objekt výsledku odovzdaný \'\'{0}\'\' je neplatný."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_PROP_ERR),
-			$of(u"Pokus o pr\u00edstup k neplatn\u00e9mu majetku transform\u00e1tora \'\'{0}\'\'."_s)
+			$of(u"Pokus o prístup k neplatnému majetku transformátora \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX2DOM_ADAPTER_ERR),
-			$of(u"Nebolo mo\u017en\u00e9 vytvori\u0165 adapt\u00e9r SAX2DOM: \'\'{0}\'\'."_s)
+			$of(u"Nebolo možné vytvoriť adaptér SAX2DOM: \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSLTC_SOURCE_ERR),
-			$of(u"XSLTCSource.build() bol zavolan\u00fd bez nastaven\u00e9ho systemId."_s)
+			$of(u"XSLTCSource.build() bol zavolaný bez nastaveného systemId."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_STDIN_ERR),
-			$of(u"Vo\u013eba -i sa mus\u00ed pou\u017e\u00edva\u0165 s vo\u013ebou -o."_s)
+			$of(u"Voľba -i sa musí používať s voľbou -o."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_USAGE_STR),
-			$of(u"SYNOPSIS\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <output>]\n      [-d <directory>] [-j <jarfile>] [-p <package>]\n      [-n] [-x] [-s] [-u] [-v] [-h] { <stylesheet> | -i }\n\nOPTIONS\n   -o <output>    prira\u010fuje n\u00e1zov <output> generovan\u00e9mu transletu \n. \u0160tandardne sa n\u00e1zov transletu \n berie z n\u00e1zvu <stylesheet>. T\u00e1to vo\u013eba sa ignoruje pri kompilovan\u00ed viacer\u00fdch \u0161t\u00fdlov dokumentov\n\n.   -d <directory> uv\u00e1dza cie\u013eov\u00fd adres\u00e1r pre translet\n   -j <jarfile>   pakuje triedy transletov do s\u00faboru jar n\u00e1zvu \n uveden\u00e9ho ako <jarfile>\n   -p <package>   uv\u00e1dza predponu n\u00e1zvu bal\u00edku pre v\u0161etky generovan\u00e9 triedy transletu.\n\n   -n             povo\u013euje zoradenie vzorov v riadku (\u0161tandardn\u00e9 chovanie v priemere lep\u0161ie). \n\n   -x             zap\u00edna   v\u00fdstupy spr\u00e1v ladenia \n   -s             zakazuje volanie System.exit\n   -u             interpretuje<stylesheet> argumenty ako URL\n   -i             n\u00fati kompil\u00e1tor \u010d\u00edta\u0165 \u0161t\u00fdl dokumentu z stdin\n   -v             tla\u010d\u00ed verziu kompil\u00e1tora\n   -h             tla\u010d\u00ed pr\u00edk"
-				"az tohto pou\u017eitia\n"_s)
+			$of(u"SYNOPSIS\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <output>]\n      [-d <directory>] [-j <jarfile>] [-p <package>]\n      [-n] [-x] [-s] [-u] [-v] [-h] { <stylesheet> | -i }\n\nOPTIONS\n   -o <output>    priraďuje názov <output> generovanému transletu \n. Štandardne sa názov transletu \n berie z názvu <stylesheet>. Táto voľba sa ignoruje pri kompilovaní viacerých štýlov dokumentov\n\n.   -d <directory> uvádza cieľový adresár pre translet\n   -j <jarfile>   pakuje triedy transletov do súboru jar názvu \n uvedeného ako <jarfile>\n   -p <package>   uvádza predponu názvu balíku pre všetky generované triedy transletu.\n\n   -n             povoľuje zoradenie vzorov v riadku (štandardné chovanie v priemere lepšie). \n\n   -x             zapína   výstupy správ ladenia \n   -s             zakazuje volanie System.exit\n   -u             interpretuje<stylesheet> argumenty ako URL\n   -i             núti kompilátor čítať štýl dokumentu z stdin\n   -v             tlačí verziu kompilátora\n   -h             tlačí prík"
+				"az tohto použitia\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_USAGE_STR),
-			$of(u"SYNOPSIS \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-s] [-n <iterations>] {-u <document_url> | <document>}\n      <class> [<param1>=<value1> ...]\n\n   pou\u017e\u00edva translet <class> na transform\u00e1ciu dokumentu XML \n   uveden\u00e9ho ako <document>. <class> transletu je bu\u010f v \n u\u017e\u00edvate\u013eovej CLASSPATH alebo vo volite\u013ene uvedenom <jarfile>.\nVO\u013dBY\n   -j <jarfile>    uv\u00e1dza s\u00fabor jar, z ktor\u00e9ho sa m\u00e1 zavies\u0165 translet\n   -x              zap\u00edna \u010fal\u0161\u00ed v\u00fdstup spr\u00e1v ladenia\n   -s              zakazuje volanie System.exit\n   -n <iterations> sp\u00fa\u0161\u0165a transform\u00e1ciu <iterations> r\u00e1z a \n                   zobrazuje inform\u00e1cie profilovania\n   -u <document_url> uv\u00e1dza vstupn\u00fd dokument XML ako URL\n"_s)
+			$of(u"SYNOPSIS \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-s] [-n <iterations>] {-u <document_url> | <document>}\n      <class> [<param1>=<value1> ...]\n\n   používa translet <class> na transformáciu dokumentu XML \n   uvedeného ako <document>. <class> transletu je buď v \n užívateľovej CLASSPATH alebo vo voliteľne uvedenom <jarfile>.\nVOĽBY\n   -j <jarfile>    uvádza súbor jar, z ktorého sa má zaviesť translet\n   -x              zapína ďalší výstup správ ladenia\n   -s              zakazuje volanie System.exit\n   -n <iterations> spúšťa transformáciu <iterations> ráz a \n                   zobrazuje informácie profilovania\n   -u <document_url> uvádza vstupný dokument XML ako URL\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_SORT_ERR),
-			$of(u"<xsl:sort> mo\u017eno pou\u017ei\u0165 len v <xsl:for-each> alebo <xsl:apply-templates>."_s)
+			$of(u"<xsl:sort> možno použiť len v <xsl:for-each> alebo <xsl:apply-templates>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_ENCODING),
-			$of(u"V\u00fdstupn\u00e9 k\u00f3dovanie \'\'{0}\'\' nie je v tomto JVM podporovan\u00e9."_s)
+			$of(u"Výstupné kódovanie \'\'{0}\'\' nie je v tomto JVM podporované."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYNTAX_ERR),
@@ -460,27 +460,27 @@ $ObjectArray2* ErrorMessages_sk::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CONSTRUCTOR_NOT_FOUND),
-			$of(u"Nie je mo\u017en\u00e9 n\u00e1js\u0165 extern\u00fd kon\u0161truktor \'\'{0}\'\'."_s)
+			$of(u"Nie je možné nájsť externý konštruktor \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_JAVA_FUNCT_THIS_REF),
-			$of(u"Prv\u00fd argument pre nestatick\u00fa funkciu Java \'\'{0}\'\' nie je platnou referenciou objektu."_s)
+			$of(u"Prvý argument pre nestatickú funkciu Java \'\'{0}\'\' nie je platnou referenciou objektu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_ERR),
-			$of(u"Chyba pri kontrole typu v\u00fdrazu \'\'{0}\'\'."_s)
+			$of(u"Chyba pri kontrole typu výrazu \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_UNK_LOC_ERR),
-			$of(u"Chyba pri kontrole typu v\u00fdrazu na nezn\u00e1mom mieste."_s)
+			$of(u"Chyba pri kontrole typu výrazu na neznámom mieste."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CMDLINE_OPTION_ERR),
-			$of(u"Vo\u013eba pr\u00edkazov\u00e9ho riadka \'\'{0}\'\' je neplatn\u00e1."_s)
+			$of(u"Voľba príkazového riadka \'\'{0}\'\' je neplatná."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CMDLINE_OPT_MISSING_ARG_ERR),
-			$of(u"Vo\u013ebe pr\u00edkazov\u00e9ho riadka \'\'{0}\'\' ch\u00fdba po\u017eadovan\u00fd argument."_s)
+			$of(u"Voľbe príkazového riadka \'\'{0}\'\' chýba požadovaný argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WARNING_PLUS_WRAPPED_MSG),
@@ -492,11 +492,11 @@ $ObjectArray2* ErrorMessages_sk::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FATAL_ERR_PLUS_WRAPPED_MSG),
-			$of(u"KRITICK\u00c1 CHYBA:  \'\'{0}\'\'\n           :{1}"_s)
+			$of(u"KRITICKÁ CHYBA:  \'\'{0}\'\'\n           :{1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FATAL_ERR_MSG),
-			$of(u"KRITICK\u00c1 CHYBA:  \'\'{0}\'\'"_s)
+			$of(u"KRITICKÁ CHYBA:  \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ERROR_PLUS_WRAPPED_MSG),
@@ -508,23 +508,23 @@ $ObjectArray2* ErrorMessages_sk::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_TRANSLET_STR),
-			$of(u"Transform\u00e1cia pomocou transletu \'\'{0}\'\' "_s)
+			$of(u"Transformácia pomocou transletu \'\'{0}\'\' "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_JAR_STR),
-			$of(u"Transform\u00e1cia pomocou transletu \'\'{0}\'\' zo s\u00faboru jar \'\'{1}\'\'"_s)
+			$of(u"Transformácia pomocou transletu \'\'{0}\'\' zo súboru jar \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COULD_NOT_CREATE_TRANS_FACT),
-			$of(u"Nebolo mo\u017en\u00e9 vytvori\u0165 in\u0161tanciu triedy TransformerFactory \'\'{0}\'\'."_s)
+			$of(u"Nebolo možné vytvoriť inštanciu triedy TransformerFactory \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_ERROR_KEY),
-			$of(u"Chyby preklada\u010da:"_s)
+			$of(u"Chyby prekladača:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_WARNING_KEY),
-			$of(u"Upozornenia preklada\u010da:"_s)
+			$of(u"Upozornenia prekladača:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RUNTIME_ERROR_KEY),

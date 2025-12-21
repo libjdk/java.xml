@@ -164,359 +164,359 @@ $ObjectArray2* ErrorMessages_ko::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_STYLESHEET_ERR),
-			$of(u"\ub3d9\uc77c\ud55c \ud30c\uc77c\uc5d0 \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uac00 \ub450 \uac1c \uc774\uc0c1 \uc815\uc758\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"동일한 파일에 스타일시트가 두 개 이상 정의되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_REDEF_ERR),
-			$of(u"\uc774 \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc5d0\ub294 \'\'{0}\'\' \ud15c\ud50c\ub9ac\ud2b8\uac00 \uc774\ubbf8 \uc815\uc758\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 스타일시트에는 \'\'{0}\'\' 템플리트가 이미 정의되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_UNDEF_ERR),
-			$of(u"\uc774 \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc5d0\ub294 \'\'{0}\'\' \ud15c\ud50c\ub9ac\ud2b8\uac00 \uc815\uc758\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 스타일시트에는 \'\'{0}\'\' 템플리트가 정의되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_REDEF_ERR),
-			$of(u"\ub3d9\uc77c\ud55c \ubc94\uc704\uc5d0\uc11c \'\'{0}\'\' \ubcc0\uc218\uac00 \uc5ec\ub7ec \uac1c \uc815\uc758\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"동일한 범위에서 \'\'{0}\'\' 변수가 여러 개 정의되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_UNDEF_ERR),
-			$of(u"\ubcc0\uc218 \ub610\ub294 \ub9e4\uac1c\ubcc0\uc218 \'\'{0}\'\'\uc774(\uac00) \uc815\uc758\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"변수 또는 매개변수 \'\'{0}\'\'이(가) 정의되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CLASS_NOT_FOUND_ERR),
-			$of(u"\'\'{0}\'\' \ud074\ub798\uc2a4\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 클래스를 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::METHOD_NOT_FOUND_ERR),
-			$of(u"\uc678\ubd80 \uba54\uc18c\ub4dc \'\'{0}\'\'\uc744(\ub97c) \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc774 \uba54\uc18c\ub4dc\ub294 public\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"외부 메소드 \'\'{0}\'\'을(를) 찾을 수 없습니다. 이 메소드는 public이어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ARGUMENT_CONVERSION_ERR),
-			$of(u"\'\'{0}\'\' \uba54\uc18c\ub4dc\uc5d0 \ub300\ud55c \ud638\ucd9c\uc5d0\uc11c \uc778\uc218/\ubc18\ud658 \uc720\ud615\uc744 \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 메소드에 대한 호출에서 인수/반환 유형을 변환할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_NOT_FOUND_ERR),
-			$of(u"\ud30c\uc77c \ub610\ub294 URI \'\'{0}\'\'\uc744(\ub97c) \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"파일 또는 URI \'\'{0}\'\'을(를) 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_URI_ERR),
-			$of(u"URI \'\'{0}\'\'\uc774(\uac00) \ubd80\uc801\ud569\ud569\ub2c8\ub2e4."_s)
+			$of(u"URI \'\'{0}\'\'이(가) 부적합합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CATALOG_EXCEPTION),
-			$of(u"JAXP08090001: CatalogResolver\uac00 \"{0}\" \uce74\ud0c8\ub85c\uadf8\uc5d0 \uc0ac\uc6a9\uc73c\ub85c \uc124\uc815\ub418\uc5c8\uc9c0\ub9cc CatalogException\uc774 \ubc18\ud658\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"JAXP08090001: CatalogResolver가 \"{0}\" 카탈로그에 사용으로 설정되었지만 CatalogException이 반환되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_ACCESS_ERR),
-			$of(u"\ud30c\uc77c \ub610\ub294 URI \'\'{0}\'\'\uc744(\ub97c) \uc5f4 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"파일 또는 URI \'\'{0}\'\'을(를) 열 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_ROOT_ERR),
-			$of(u"<xsl:stylesheet> \ub610\ub294 <xsl:transform> \uc694\uc18c\uac00 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"<xsl:stylesheet> 또는 <xsl:transform> 요소가 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NAMESPACE_UNDEF_ERR),
-			$of(u"\ub124\uc784\uc2a4\ud398\uc774\uc2a4 \uc811\ub450\uc5b4 \'\'{0}\'\'\uc774(\uac00) \uc120\uc5b8\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"네임스페이스 접두어 \'\'{0}\'\'이(가) 선언되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FUNCTION_RESOLVE_ERR),
-			$of(u"\'\'{0}\'\' \ud568\uc218\uc5d0 \ub300\ud55c \ud638\ucd9c\uc744 \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 함수에 대한 호출을 분석할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NEED_LITERAL_ERR),
-			$of(u"\'\'{0}\'\'\uc5d0 \ub300\ud55c \uc778\uc218\ub294 \ub9ac\ud130\ub7f4 \ubb38\uc790\uc5f4\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'에 대한 인수는 리터럴 문자열이어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XPATH_PARSER_ERR),
-			$of(u"XPath \ud45c\ud604\uc2dd \'\'{0}\'\'\uc758 \uad6c\ubb38\uc744 \ubd84\uc11d\ud558\ub294 \uc911 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XPath 표현식 \'\'{0}\'\'의 구문을 분석하는 중 오류가 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::REQUIRED_ATTR_ERR),
-			$of(u"\ud544\uc218 \uc18d\uc131 \'\'{0}\'\'\uc774(\uac00) \ub204\ub77d\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"필수 속성 \'\'{0}\'\'이(가) 누락되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHAR_ERR),
-			$of(u"XPath \ud45c\ud604\uc2dd\uc5d0 \uc798\ubabb\ub41c \ubb38\uc790 \'\'{0}\'\'\uc774(\uac00) \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XPath 표현식에 잘못된 문자 \'\'{0}\'\'이(가) 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_PI_ERR),
-			$of(u"\'\'{0}\'\'\uc740(\ub294) \uba85\ub839 \ucc98\ub9ac\uc5d0 \uc798\ubabb\ub41c \uc774\ub984\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'은(는) 명령 처리에 잘못된 이름입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_ATTRIBUTE_ERR),
-			$of(u"\'\'{0}\'\' \uc18d\uc131\uc774 \uc694\uc18c\uc5d0 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 속성이 요소에 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTRIBUTE_ERR),
-			$of(u"\'\'{0}\'\'\uc740(\ub294) \uc798\ubabb\ub41c \uc18d\uc131\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'은(는) 잘못된 속성입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_INCLUDE_ERR),
-			$of(u"\uc21c\ud658 import/include\uc785\ub2c8\ub2e4. \'\'{0}\'\' \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uac00 \uc774\ubbf8 \ub85c\ub4dc\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"순환 import/include입니다. \'\'{0}\'\' 스타일시트가 이미 로드되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::IMPORT_PRECEDE_OTHERS_ERR),
-			$of(u"xsl:import \uc694\uc18c \ud558\uc704\ub294 xsl:include \uc694\uc18c \ud558\uc704\ub97c \ud3ec\ud568\ud574 xsl:stylesheet \uc694\uc18c\uc758 \ubaa8\ub4e0 \ub2e4\ub978 \uc694\uc18c \ud558\uc704 \uc55e\uc5d0 \uc640\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"xsl:import 요소 하위는 xsl:include 요소 하위를 포함해 xsl:stylesheet 요소의 모든 다른 요소 하위 앞에 와야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RESULT_TREE_SORT_ERR),
-			$of(u"Result-tree \ubd80\ubd84\uc744 \uc815\ub82c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4(<xsl:sort> \uc694\uc18c\uac00 \ubb34\uc2dc\ub428). \uacb0\uacfc \ud2b8\ub9ac\ub97c \uc0dd\uc131\ud560 \ub54c\ub294 \ub178\ub4dc\ub97c \uc815\ub82c\ud574\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"Result-tree 부분을 정렬할 수 없습니다(<xsl:sort> 요소가 무시됨). 결과 트리를 생성할 때는 노드를 정렬해야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYMBOLS_REDEF_ERR),
-			$of(u"\uc2ed\uc9c4\uc218 \ud615\uc2dd \'\'{0}\'\'\uc774(\uac00) \uc774\ubbf8 \uc815\uc758\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"십진수 형식 \'\'{0}\'\'이(가) 이미 정의되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSL_VERSION_ERR),
-			$of(u"XSLTC\ub294 XSL \ubc84\uc804 \'\'{0}\'\'\uc744(\ub97c) \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"XSLTC는 XSL 버전 \'\'{0}\'\'을(를) 지원하지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_VARIABLE_ERR),
-			$of(u"\'\'{0}\'\'\uc5d0 \uc21c\ud658 \ubcc0\uc218/\ub9e4\uac1c\ubcc0\uc218 \ucc38\uc870\uac00 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'에 순환 변수/매개변수 참조가 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_BINARY_OP_ERR),
-			$of(u"\ubc14\uc774\ub108\ub9ac \ud45c\ud604\uc2dd\uc5d0 \ub300\ud574 \uc54c \uc218 \uc5c6\ub294 \uc5f0\uc0b0\uc790\uc785\ub2c8\ub2e4."_s)
+			$of(u"바이너리 표현식에 대해 알 수 없는 연산자입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ARG_ERR),
-			$of(u"\ud568\uc218 \ud638\ucd9c\uc5d0 \ub300\ud55c \uc778\uc218\uac00 \uc798\ubabb\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"함수 호출에 대한 인수가 잘못되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DOCUMENT_ARG_ERR),
-			$of(u"document() \ud568\uc218\uc5d0 \ub300\ud55c \ub450\ubc88\uc9f8 \uc778\uc218\ub294 node-set\uc5ec\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"document() 함수에 대한 두번째 인수는 node-set여야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_WHEN_ERR),
-			$of(u"<xsl:choose>\uc5d0\ub294 <xsl:when> \uc694\uc18c\uac00 \ud558\ub098 \uc774\uc0c1 \ud544\uc694\ud569\ub2c8\ub2e4."_s)
+			$of(u"<xsl:choose>에는 <xsl:when> 요소가 하나 이상 필요합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_OTHERWISE_ERR),
-			$of(u"<xsl:choose>\uc5d0\uc11c\ub294 <xsl:otherwise> \uc694\uc18c\uac00 \ud558\ub098\ub9cc \ud5c8\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"<xsl:choose>에서는 <xsl:otherwise> 요소가 하나만 허용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_OTHERWISE_ERR),
-			$of(u"<xsl:otherwise>\ub294 <xsl:choose>\uc5d0\uc11c\ub9cc \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"<xsl:otherwise>는 <xsl:choose>에서만 사용할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_WHEN_ERR),
-			$of(u"<xsl:when>\uc740 <xsl:choose>\uc5d0\uc11c\ub9cc \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"<xsl:when>은 <xsl:choose>에서만 사용할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WHEN_ELEMENT_ERR),
-			$of(u"<xsl:choose>\uc5d0\uc11c\ub294 <xsl:when> \ubc0f <xsl:otherwise> \uc694\uc18c\ub9cc \ud5c8\uc6a9\ub429\ub2c8\ub2e4."_s)
+			$of(u"<xsl:choose>에서는 <xsl:when> 및 <xsl:otherwise> 요소만 허용됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNNAMED_ATTRIBSET_ERR),
-			$of(u"<xsl:attribute-set>\uc5d0 \'name\' \uc18d\uc131\uc774 \ub204\ub77d\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"<xsl:attribute-set>에 \'name\' 속성이 누락되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHILD_ERR),
-			$of(u"\ud558\uc704 \uc694\uc18c\uac00 \uc798\ubabb\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"하위 요소가 잘못되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ELEM_NAME_ERR),
-			$of(u"\'\'{0}\'\' \uc694\uc18c\ub97c \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 요소를 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ATTR_NAME_ERR),
-			$of(u"\'\'{0}\'\' \uc18d\uc131\uc744 \ud638\ucd9c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 속성을 호출할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_TEXT_NODE_ERR),
-			$of(u"\ud14d\uc2a4\ud2b8 \ub370\uc774\ud130\uac00 \ucd5c\uc0c1\uc704 \ub808\ubca8 <xsl:stylesheet> \uc694\uc18c\uc5d0 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"텍스트 데이터가 최상위 레벨 <xsl:stylesheet> 요소에 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX_PARSER_CONFIG_ERR),
-			$of(u"JAXP \uad6c\ubb38 \ubd84\uc11d\uae30\uac00 \uc81c\ub300\ub85c \uad6c\uc131\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"JAXP 구문 분석기가 제대로 구성되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INTERNAL_ERR),
-			$of(u"\ubcf5\uad6c\ud560 \uc218 \uc5c6\ub294 XSLTC \ub0b4\ubd80 \uc624\ub958: \'\'{0}\'\'"_s)
+			$of(u"복구할 수 없는 XSLTC 내부 오류: \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_XSL_ERR),
-			$of(u"\'\'{0}\'\'\uc740(\ub294) \uc9c0\uc6d0\ub418\uc9c0 \uc54a\ub294 XSL \uc694\uc18c\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'은(는) 지원되지 않는 XSL 요소입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_EXT_ERR),
-			$of(u"\'\'{0}\'\'\uc740(\ub294) \uc54c \uc218 \uc5c6\ub294 XSLTC \ud655\uc7a5\uc785\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'은(는) 알 수 없는 XSLTC 확장입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_URI_ERR),
-			$of(u"\uc785\ub825 \ubb38\uc11c\ub294 \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uac00 \uc544\ub2d9\ub2c8\ub2e4. XSL \ub124\uc784\uc2a4\ud398\uc774\uc2a4\uac00 \ub8e8\ud2b8 \uc694\uc18c\uc5d0 \uc120\uc5b8\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"입력 문서는 스타일시트가 아닙니다. XSL 네임스페이스가 루트 요소에 선언되지 않았습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_TARGET_ERR),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ub300\uc0c1 \'\'{0}\'\'\uc744(\ub97c) \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"스타일시트 대상 \'\'{0}\'\'을(를) 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ACCESSING_XSLT_TARGET_ERR),
-			$of(u"accessExternalStylesheet \uc18d\uc131\uc73c\ub85c \uc124\uc815\ub41c \uc81c\ud55c\uc73c\ub85c \uc778\ud574 \'\'{1}\'\' \uc561\uc138\uc2a4\uac00 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\uc73c\ubbc0\ub85c \uc2a4\ud0c0\uc77c\uc2dc\ud2b8 \ub300\uc0c1 \'\'{0}\'\'\uc744(\ub97c) \uc77d\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"accessExternalStylesheet 속성으로 설정된 제한으로 인해 \'\'{1}\'\' 액세스가 허용되지 않으므로 스타일시트 대상 \'\'{0}\'\'을(를) 읽을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_IMPLEMENTED_ERR),
-			$of(u"\uad6c\ud604\ub418\uc9c0 \uc54a\uc74c: \'\'{0}\'\'."_s)
+			$of(u"구현되지 않음: \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_STYLESHEET_ERR),
-			$of(u"\uc785\ub825 \ubb38\uc11c\uc5d0 XSL \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uac00 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"입력 문서에 XSL 스타일시트가 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ELEMENT_PARSE_ERR),
-			$of(u"\'\'{0}\'\' \uc694\uc18c\uc758 \uad6c\ubb38\uc744 \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 요소의 구문을 분석할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::KEY_USE_ATTR_ERR),
-			$of(u"<key>\uc758 use \uc18d\uc131\uc740 node, node-set, string \ub610\ub294 number\uc5ec\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"<key>의 use 속성은 node, node-set, string 또는 number여야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTPUT_VERSION_ERR),
-			$of(u"\ucd9c\ub825 XML \ubb38\uc11c \ubc84\uc804\uc740 1.0\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"출력 XML 문서 버전은 1.0이어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_RELAT_OP_ERR),
-			$of(u"\uad00\uacc4 \ud45c\ud604\uc2dd\uc5d0 \ub300\ud574 \uc54c \uc218 \uc5c6\ub294 \uc5f0\uc0b0\uc790\uc785\ub2c8\ub2e4."_s)
+			$of(u"관계 표현식에 대해 알 수 없는 연산자입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTRIBSET_UNDEF_ERR),
-			$of(u"\uc874\uc7ac\ud558\uc9c0 \uc54a\ub294 \uc18d\uc131 \uc9d1\ud569 \'\'{0}\'\'\uc744(\ub97c) \uc0ac\uc6a9\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."_s)
+			$of(u"존재하지 않는 속성 집합 \'\'{0}\'\'을(를) 사용하려고 시도하는 중입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTR_VAL_TEMPLATE_ERR),
-			$of(u"\uc18d\uc131\uac12 \ud15c\ud50c\ub9ac\ud2b8 \'\'{0}\'\'\uc758 \uad6c\ubb38\uc744 \ubd84\uc11d\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"속성값 템플리트 \'\'{0}\'\'의 구문을 분석할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNKNOWN_SIG_TYPE_ERR),
-			$of(u"\'\'{0}\'\' \ud074\ub798\uc2a4\uc5d0 \ub300\ud55c \uc11c\uba85\uc5d0 \uc54c \uc218 \uc5c6\ub294 \ub370\uc774\ud130 \uc720\ud615\uc774 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 클래스에 대한 서명에 알 수 없는 데이터 유형이 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DATA_CONVERSION_ERR),
-			$of(u"\ub370\uc774\ud130 \uc720\ud615 \'\'{0}\'\'\uc744(\ub97c) \'\'{1}\'\'(\uc73c)\ub85c \ubcc0\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"데이터 유형 \'\'{0}\'\'을(를) \'\'{1}\'\'(으)로 변환할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_TRANSLET_CLASS_ERR),
-			$of(u"\uc774 Templates\uc5d0\ub294 \uc801\ud569\ud55c translet \ud074\ub798\uc2a4 \uc815\uc758\uac00 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 Templates에는 적합한 translet 클래스 정의가 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_MAIN_TRANSLET_ERR),
-			$of(u"\uc774 Templates\uc5d0\ub294 \uc774\ub984\uc774 \'\'{0}\'\'\uc778 \ud074\ub798\uc2a4\uac00 \ud3ec\ud568\ub418\uc5b4 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 Templates에는 이름이 \'\'{0}\'\'인 클래스가 포함되어 있지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_CLASS_ERR),
-			$of(u"Translet \ud074\ub798\uc2a4 \'\'{0}\'\'\uc744(\ub97c) \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Translet 클래스 \'\'{0}\'\'을(를) 로드할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_OBJECT_ERR),
-			$of(u"Translet \ud074\ub798\uc2a4\uac00 \ub85c\ub4dc\ub418\uc5c8\uc9c0\ub9cc translet \uc778\uc2a4\ud134\uc2a4\ub97c \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Translet 클래스가 로드되었지만 translet 인스턴스를 생성할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ERROR_LISTENER_NULL_ERR),
-			$of(u"\'\'{0}\'\'\uc5d0 \ub300\ud55c ErrorListener\ub97c null\ub85c \uc124\uc815\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911"_s)
+			$of(u"\'\'{0}\'\'에 대한 ErrorListener를 null로 설정하려고 시도하는 중"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_SOURCE_ERR),
-			$of(u"XSLTC\ub294 StreamSource, SAXSource \ubc0f DOMSource\ub9cc \uc9c0\uc6d0\ud569\ub2c8\ub2e4."_s)
+			$of(u"XSLTC는 StreamSource, SAXSource 및 DOMSource만 지원합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_SOURCE_ERR),
-			$of(u"\'\'{0}\'\'(\uc73c)\ub85c \uc804\ub2ec\ub41c Source \uac1d\uccb4\uc5d0 \ucf58\ud150\uce20\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'(으)로 전달된 Source 객체에 콘텐츠가 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_COMPILE_ERR),
-			$of(u"\uc2a4\ud0c0\uc77c\uc2dc\ud2b8\ub97c \ucef4\ud30c\uc77c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"스타일시트를 컴파일할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_ERR),
-			$of(u"TransformerFactory\uc5d0\uc11c \'\'{0}\'\' \uc18d\uc131\uc744 \uc778\uc2dd\ud558\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"TransformerFactory에서 \'\'{0}\'\' 속성을 인식하지 못했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_ATTR_VALUE_ERR),
-			$of(u"\'\'{0}\'\' \uc18d\uc131\uc5d0 \ub300\ud574 \uc62c\ubc14\ub974\uc9c0 \uc54a\uc740 \uac12\uc774 \uc9c0\uc815\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 속성에 대해 올바르지 않은 값이 지정되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_RESULT_ERR),
-			$of(u"setResult()\ub294 startDocument() \uc55e\uc5d0 \ud638\ucd9c\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"setResult()는 startDocument() 앞에 호출되어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_TRANSLET_ERR),
-			$of(u"Transformer\uc5d0 \ucea1\uc290\ud654\ub41c translet \uac1d\uccb4\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Transformer에 캡슐화된 translet 객체가 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_HANDLER_ERR),
-			$of(u"\ubcc0\ud658 \uacb0\uacfc\uc5d0 \ub300\ud574 \uc815\uc758\ub41c \ucd9c\ub825 \ucc98\ub9ac\uae30\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"변환 결과에 대해 정의된 출력 처리기가 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_RESULT_ERR),
-			$of(u"\'\'{0}\'\'(\uc73c)\ub85c \uc804\ub2ec\ub41c Result \uac1d\uccb4\uac00 \ubd80\uc801\ud569\ud569\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'(으)로 전달된 Result 객체가 부적합합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_PROP_ERR),
-			$of(u"\ubd80\uc801\ud569\ud55c Transformer \uc18d\uc131 \'\'{0}\'\'\uc5d0 \uc561\uc138\uc2a4\ud558\ub824\uace0 \uc2dc\ub3c4\ud558\ub294 \uc911\uc785\ub2c8\ub2e4."_s)
+			$of(u"부적합한 Transformer 속성 \'\'{0}\'\'에 액세스하려고 시도하는 중입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX2DOM_ADAPTER_ERR),
-			$of(u"SAX2DOM \uc5b4\ub311\ud130\ub97c \uc0dd\uc131\ud560 \uc218 \uc5c6\uc74c: \'\'{0}\'\'."_s)
+			$of(u"SAX2DOM 어댑터를 생성할 수 없음: \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSLTC_SOURCE_ERR),
-			$of(u"systemId\ub97c \uc124\uc815\ud558\uc9c0 \uc54a\uc740 \uc0c1\ud0dc\ub85c XSLTCSource.build()\uac00 \ud638\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"systemId를 설정하지 않은 상태로 XSLTCSource.build()가 호출되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ER_RESULT_NULL),
-			$of(u"\uacb0\uacfc\ub294 \ub110\uc774 \uc544\ub2c8\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"결과는 널이 아니어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_INVALID_SET_PARAM_VALUE),
-			$of(u"{0} \ub9e4\uac1c\ubcc0\uc218\uc758 \uac12\uc740 \uc801\ud569\ud55c Java \uac1d\uccb4\uc5ec\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"{0} 매개변수의 값은 적합한 Java 객체여야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_STDIN_ERR),
-			$of(u"-i \uc635\uc158\uc740 -o \uc635\uc158\uacfc \ud568\uaed8 \uc0ac\uc6a9\ud574\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"-i 옵션은 -o 옵션과 함께 사용해야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_USAGE_STR),
-			$of(u"\uc0ac\uc6a9\ubc95\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <output>]\n      [-d <directory>] [-j <jarfile>] [-p <package>]\n      [-n] [-x] [-u] [-v] [-h] { <stylesheet> | -i }\n\n\uc635\uc158\n   -o <output>    \uc0dd\uc131\ub41c translet\uc5d0 <output> \uc774\ub984\uc744\n                  \uc9c0\uc815\ud569\ub2c8\ub2e4. \uae30\ubcf8\uc801\uc73c\ub85c translet \uc774\ub984\uc740\n                  <stylesheet> \uc774\ub984\uc5d0\uc11c \ud30c\uc0dd\ub429\ub2c8\ub2e4. \uc5ec\ub7ec \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\ub97c\n                  \ucef4\ud30c\uc77c\ud558\ub294 \uacbd\uc6b0 \uc774 \uc635\uc158\uc740 \ubb34\uc2dc\ub429\ub2c8\ub2e4.\n   -d <directory> translet\uc5d0 \ub300\ud55c \ub300\uc0c1 \ub514\ub809\ud1a0\ub9ac\ub97c \uc9c0\uc815\ud569\ub2c8\ub2e4.\n   -j <jarfile>   translet \ud074\ub798\uc2a4\ub97c <jarfile>\uc774\ub77c\ub294 \uc774\ub984\uc774 \uc9c0\uc815\ub41c jar \ud30c\uc77c\uc5d0\n                  \ud328\ud0a4\uc9c0\ud654\ud569\ub2c8\ub2e4.\n   -p <package>   \uc0dd\uc131\ub41c \ubaa8\ub4e0 translet \ud074\ub798\uc2a4\uc5d0 \ub300\ud574 \ud328\ud0a4\uc9c0 \uc774\ub984 \uc811\ub450\uc5b4\ub97c\n                  \uc9c0\uc815\ud569\ub2c8\ub2e4.\n   -n             \ud15c\ud50c\ub9ac\ud2b8 \uc778\ub77c\uc778\uc744 \uc0ac\uc6a9\uc73c\ub85c \uc124\uc815\ud569\ub2c8\ub2e4. \uc77c\ubc18\uc801\uc73c\ub85c \uae30\ubcf8 \ub3d9\uc791\uc744\n                  \uc0ac\uc6a9\ud558\ub294 \uac83\uc774 \uc88b\uc2b5\ub2c8\ub2e4.\n   -x             \ucd94\uac00 \ub514\ubc84\uae45 \uba54\uc2dc\uc9c0 \ucd9c\ub825\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.\n   -u             <stylesheet> \uc778\uc218\ub97c URL\ub85c \ud574\uc11d\ud569\ub2c8\ub2e4.\n   -i             \ucef4\ud30c\uc77c\ub7ec\uac00 stdin\uc5d0\uc11c \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\ub97c \uac15\uc81c\ub85c \uc77d\ub3c4\ub85d \ud569\ub2c8\ub2e4.\n   -v             \ucef4\ud30c\uc77c\ub7ec\uc758 \ubc84\uc804\uc744 \uc778\uc1c4\ud569\ub2c8\ub2e4.\n   -h             \uc774 \uc0ac\uc6a9\ubc95 \uc9c0\uce68\uc744 \uc778\uc1c4\ud569\ub2c8\ub2e4.\n"_s)
+			$of(u"사용법\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <output>]\n      [-d <directory>] [-j <jarfile>] [-p <package>]\n      [-n] [-x] [-u] [-v] [-h] { <stylesheet> | -i }\n\n옵션\n   -o <output>    생성된 translet에 <output> 이름을\n                  지정합니다. 기본적으로 translet 이름은\n                  <stylesheet> 이름에서 파생됩니다. 여러 스타일시트를\n                  컴파일하는 경우 이 옵션은 무시됩니다.\n   -d <directory> translet에 대한 대상 디렉토리를 지정합니다.\n   -j <jarfile>   translet 클래스를 <jarfile>이라는 이름이 지정된 jar 파일에\n                  패키지화합니다.\n   -p <package>   생성된 모든 translet 클래스에 대해 패키지 이름 접두어를\n                  지정합니다.\n   -n             템플리트 인라인을 사용으로 설정합니다. 일반적으로 기본 동작을\n                  사용하는 것이 좋습니다.\n   -x             추가 디버깅 메시지 출력을 설정합니다.\n   -u             <stylesheet> 인수를 URL로 해석합니다.\n   -i             컴파일러가 stdin에서 스타일시트를 강제로 읽도록 합니다.\n   -v             컴파일러의 버전을 인쇄합니다.\n   -h             이 사용법 지침을 인쇄합니다.\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_USAGE_STR),
-			$of(u"\uc0ac\uc6a9\ubc95 \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-n <iterations>] {-u <document_url> | <document>}\n      <class> [<param1>=<value1> ...]\n\n   translet <class>\ub97c \uc0ac\uc6a9\ud558\uc5ec <document>\ub85c \uc9c0\uc815\ub41c XML \ubb38\uc11c\ub97c \n   \ubcc0\ud658\ud569\ub2c8\ub2e4. translet <class>\ub294 \n   \uc0ac\uc6a9\uc790\uc758 CLASSPATH \ub610\ub294 \uc120\ud0dd\uc801\uc73c\ub85c \uc9c0\uc815\ub41c <jarfile>\uc5d0 \uc788\uc2b5\ub2c8\ub2e4.\n\uc635\uc158\n   -j <jarfile>    translet\uc744 \ub85c\ub4dc\ud574 \uc62c jarfile\uc744 \uc9c0\uc815\ud569\ub2c8\ub2e4.\n   -x              \ucd94\uac00 \ub514\ubc84\uae45 \uba54\uc2dc\uc9c0 \ucd9c\ub825\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.\n   -n <iterations> \ubcc0\ud658\uc744 <iterations>\ud68c \uc2e4\ud589\ud558\uace0\n                   \ud504\ub85c\ud30c\uc77c \uc791\uc131 \uc815\ubcf4\ub97c \ud45c\uc2dc\ud569\ub2c8\ub2e4.\n   -u <document_url> XML \uc785\ub825 \ubb38\uc11c\ub97c URL\ub85c \uc9c0\uc815\ud569\ub2c8\ub2e4.\n"_s)
+			$of(u"사용법 \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <jarfile>]\n      [-x] [-n <iterations>] {-u <document_url> | <document>}\n      <class> [<param1>=<value1> ...]\n\n   translet <class>를 사용하여 <document>로 지정된 XML 문서를 \n   변환합니다. translet <class>는 \n   사용자의 CLASSPATH 또는 선택적으로 지정된 <jarfile>에 있습니다.\n옵션\n   -j <jarfile>    translet을 로드해 올 jarfile을 지정합니다.\n   -x              추가 디버깅 메시지 출력을 설정합니다.\n   -n <iterations> 변환을 <iterations>회 실행하고\n                   프로파일 작성 정보를 표시합니다.\n   -u <document_url> XML 입력 문서를 URL로 지정합니다.\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_SORT_ERR),
-			$of(u"<xsl:sort>\ub294 <xsl:for-each> \ub610\ub294 <xsl:apply-templates>\uc5d0\uc11c\ub9cc \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"<xsl:sort>는 <xsl:for-each> 또는 <xsl:apply-templates>에서만 사용할 수 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_ENCODING),
-			$of(u"\uc774 JVM\uc5d0\uc11c\ub294 \ucd9c\ub825 \uc778\ucf54\ub529 \'\'{0}\'\'\uc774(\uac00) \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 JVM에서는 출력 인코딩 \'\'{0}\'\'이(가) 지원되지 않습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYNTAX_ERR),
-			$of(u"\'\'{0}\'\'\uc5d0 \uad6c\ubb38 \uc624\ub958\uac00 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\'에 구문 오류가 있습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CONSTRUCTOR_NOT_FOUND),
-			$of(u"\uc678\ubd80 constructor \'\'{0}\'\'\uc744(\ub97c) \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"외부 constructor \'\'{0}\'\'을(를) 찾을 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_JAVA_FUNCT_THIS_REF),
-			$of(u"\ube44static Java \ud568\uc218 \'\'{0}\'\'\uc5d0 \ub300\ud55c \uccab\ubc88\uc9f8 \uc778\uc218\ub294 \uc801\ud569\ud55c \uac1d\uccb4 \ucc38\uc870\uac00 \uc544\ub2d9\ub2c8\ub2e4."_s)
+			$of(u"비static Java 함수 \'\'{0}\'\'에 대한 첫번째 인수는 적합한 객체 참조가 아닙니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_ERR),
-			$of(u"\'\'{0}\'\' \ud45c\ud604\uc2dd\uc758 \uc720\ud615\uc744 \ud655\uc778\ud558\ub294 \uc911 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 표현식의 유형을 확인하는 중 오류가 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_UNK_LOC_ERR),
-			$of(u"\uc54c \uc218 \uc5c6\ub294 \uc704\uce58\uc5d0\uc11c \ud45c\ud604\uc2dd\uc758 \uc720\ud615\uc744 \ud655\uc778\ud558\ub294 \uc911 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"알 수 없는 위치에서 표현식의 유형을 확인하는 중 오류가 발생했습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CMDLINE_OPTION_ERR),
-			$of(u"\uba85\ub839\ud589 \uc635\uc158 \'\'{0}\'\'\uc774(\uac00) \ubd80\uc801\ud569\ud569\ub2c8\ub2e4."_s)
+			$of(u"명령행 옵션 \'\'{0}\'\'이(가) 부적합합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CMDLINE_OPT_MISSING_ARG_ERR),
-			$of(u"\uba85\ub839\ud589 \uc635\uc158 \'\'{0}\'\'\uc5d0 \ud544\uc218 \uc778\uc218\uac00 \ub204\ub77d\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"명령행 옵션 \'\'{0}\'\'에 필수 인수가 누락되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WARNING_PLUS_WRAPPED_MSG),
@@ -544,79 +544,79 @@ $ObjectArray2* ErrorMessages_ko::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_TRANSLET_STR),
-			$of(u"translet \'\'{0}\'\'\uc744(\ub97c) \uc0ac\uc6a9\ud558\uc5ec \ubcc0\ud658\ud558\uc2ed\uc2dc\uc624. "_s)
+			$of(u"translet \'\'{0}\'\'을(를) 사용하여 변환하십시오. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_JAR_STR),
-			$of(u"jar \ud30c\uc77c \'\'{1}\'\'\uc758 translet \'\'{0}\'\'\uc744(\ub97c) \uc0ac\uc6a9\ud558\uc5ec \ubcc0\ud658\ud558\uc2ed\uc2dc\uc624."_s)
+			$of(u"jar 파일 \'\'{1}\'\'의 translet \'\'{0}\'\'을(를) 사용하여 변환하십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COULD_NOT_CREATE_TRANS_FACT),
-			$of(u"TransformerFactory \ud074\ub798\uc2a4 \'\'{0}\'\'\uc758 \uc778\uc2a4\ud134\uc2a4\ub97c \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"TransformerFactory 클래스 \'\'{0}\'\'의 인스턴스를 생성할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_NAME_JAVA_CONFLICT),
-			$of(u"\'\'{0}\'\' \uc774\ub984\uc5d0\ub294 Java \ud074\ub798\uc2a4 \uc774\ub984\uc5d0 \ud5c8\uc6a9\ub418\uc9c0 \uc54a\ub294 \ubb38\uc790\uac00 \ud3ec\ud568\ub418\uc5b4 \uc788\uc5b4 \uc774 \uc774\ub984\uc744 translet \ud074\ub798\uc2a4\uc758 \uc774\ub984\uc73c\ub85c \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \ub300\uc2e0 \'\'{1}\'\' \uc774\ub984\uc774 \uc0ac\uc6a9\ub418\uc5c8\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"\'\'{0}\'\' 이름에는 Java 클래스 이름에 허용되지 않는 문자가 포함되어 있어 이 이름을 translet 클래스의 이름으로 사용할 수 없습니다. 대신 \'\'{1}\'\' 이름이 사용되었습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_ERROR_KEY),
-			$of(u"\ucef4\ud30c\uc77c\ub7ec \uc624\ub958:"_s)
+			$of(u"컴파일러 오류:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_WARNING_KEY),
-			$of(u"\ucef4\ud30c\uc77c\ub7ec \uacbd\uace0:"_s)
+			$of(u"컴파일러 경고:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::RUNTIME_ERROR_KEY),
-			$of(u"Translet \uc624\ub958:"_s)
+			$of(u"Translet 오류:"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_QNAME_ERR),
-			$of(u"\uac12\uc774 QName \ub610\ub294 \uacf5\ubc31\uc73c\ub85c \uad6c\ubd84\ub41c QName \ubaa9\ub85d\uc774\uc5b4\uc57c \ud558\ub294 \uc18d\uc131\uc758 \uac12\uc774 \'\'{0}\'\'\uc785\ub2c8\ub2e4."_s)
+			$of(u"값이 QName 또는 공백으로 구분된 QName 목록이어야 하는 속성의 값이 \'\'{0}\'\'입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_NCNAME_ERR),
-			$of(u"\uac12\uc774 NCName\uc774\uc5b4\uc57c \ud558\ub294 \uc18d\uc131\uc758 \uac12\uc774 \'\'{0}\'\'\uc785\ub2c8\ub2e4."_s)
+			$of(u"값이 NCName이어야 하는 속성의 값이 \'\'{0}\'\'입니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_METHOD_IN_OUTPUT),
-			$of(u"<xsl:output> \uc694\uc18c\uc5d0 \ub300\ud55c method \uc18d\uc131\uc758 \uac12\uc774 \'\'{0}\'\'\uc785\ub2c8\ub2e4. \uac12\uc740 \'\'xml\'\', \'\'html\'\', \'\'text\'\' \ub610\ub294 qname-but-not-ncname \uc911 \ud558\ub098\uc5ec\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"<xsl:output> 요소에 대한 method 속성의 값이 \'\'{0}\'\'입니다. 값은 \'\'xml\'\', \'\'html\'\', \'\'text\'\' 또는 qname-but-not-ncname 중 하나여야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_GET_FEATURE_NULL_NAME),
-			$of(u"\uae30\ub2a5 \uc774\ub984\uc740 TransformerFactory.getFeature(\ubb38\uc790\uc5f4 \uc774\ub984)\uc5d0\uc11c \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"기능 이름은 TransformerFactory.getFeature(문자열 이름)에서 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SET_FEATURE_NULL_NAME),
-			$of(u"\uae30\ub2a5 \uc774\ub984\uc740 TransformerFactory.setFeature(\ubb38\uc790\uc5f4 \uc774\ub984, \ubd80\uc6b8 \uac12)\uc5d0\uc11c \ub110\uc77c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"기능 이름은 TransformerFactory.setFeature(문자열 이름, 부울 값)에서 널일 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNSUPPORTED_FEATURE),
-			$of(u"\uc774 TransformerFactory\uc5d0\uc11c \'\'{0}\'\' \uae30\ub2a5\uc744 \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"이 TransformerFactory에서 \'\'{0}\'\' 기능을 설정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: \ubcf4\uc548 \uad00\ub9ac\uc790\uac00 \uc788\uc744 \uacbd\uc6b0 \uae30\ub2a5\uc744 false\ub85c \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"FEATURE_SECURE_PROCESSING: 보안 관리자가 있을 경우 기능을 false로 설정할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_TRY_CATCH),
-			$of(u"\ub0b4\ubd80 XSLTC \uc624\ub958: \uc0dd\uc131\ub41c \ubc14\uc774\ud2b8 \ucf54\ub4dc\uac00 try-catch-finally \ube14\ub85d\uc744 \ud3ec\ud568\ud558\ubbc0\ub85c outlined \ucc98\ub9ac\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"내부 XSLTC 오류: 생성된 바이트 코드가 try-catch-finally 블록을 포함하므로 outlined 처리할 수 없습니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_UNBALANCED_MARKERS),
-			$of(u"\ub0b4\ubd80 XSLTC \uc624\ub958: OutlineableChunkStart \ubc0f OutlineableChunkEnd \ud45c\uc2dc\uc790\uc758 \uc9dd\uc774 \ub9de\uc544\uc57c \ud558\uace0 \uc62c\ubc14\ub974\uac8c \uc911\ucca9\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4."_s)
+			$of(u"내부 XSLTC 오류: OutlineableChunkStart 및 OutlineableChunkEnd 표시자의 짝이 맞아야 하고 올바르게 중첩되어야 합니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_DELETED_TARGET),
-			$of(u"\ub0b4\ubd80 XSLTC \uc624\ub958: outlined \ucc98\ub9ac\ub41c \ubc14\uc774\ud2b8 \ucf54\ub4dc \ube14\ub85d\uc5d0 \uc18d\ud55c \uba85\ub839\uc774 \uc5ec\uc804\ud788 \uc6d0\ub798 \uba54\uc18c\ub4dc\uc5d0\uc11c \ucc38\uc870\ub429\ub2c8\ub2e4."_s)
+			$of(u"내부 XSLTC 오류: outlined 처리된 바이트 코드 블록에 속한 명령이 여전히 원래 메소드에서 참조됩니다."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTLINE_ERR_METHOD_TOO_BIG),
-			$of(u"\ub0b4\ubd80 XSLTC \uc624\ub958: translet\uc758 \uba54\uc18c\ub4dc\uac00 Java Virtual Machine\uc758 \uba54\uc18c\ub4dc \uae38\uc774 \uc81c\ud55c\uc778 64KB\ub97c \ucd08\uacfc\ud569\ub2c8\ub2e4. \ub300\uac1c \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\uc758 \ud15c\ud50c\ub9ac\ud2b8\uac00 \ub9e4\uc6b0 \ud06c\uae30 \ub54c\ubb38\uc5d0 \ubc1c\uc0dd\ud569\ub2c8\ub2e4. \ub354 \uc791\uc740 \ud15c\ud50c\ub9ac\ud2b8\ub97c \uc0ac\uc6a9\ud558\ub3c4\ub85d \uc2a4\ud0c0\uc77c\uc2dc\ud2b8\ub97c \uc7ac\uad6c\uc131\ud574 \ubcf4\uc2ed\uc2dc\uc624."_s)
+			$of(u"내부 XSLTC 오류: translet의 메소드가 Java Virtual Machine의 메소드 길이 제한인 64KB를 초과합니다. 대개 스타일시트의 템플리트가 매우 크기 때문에 발생합니다. 더 작은 템플리트를 사용하도록 스타일시트를 재구성해 보십시오."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DESERIALIZE_TRANSLET_ERR),
-			$of(u"Java \ubcf4\uc548\uc774 \uc0ac\uc6a9\uc73c\ub85c \uc124\uc815\ub41c \uacbd\uc6b0 TemplatesImpl \uc9c1\ub82c\ud654 \ud574\uc81c\uc5d0 \ub300\ud55c \uc9c0\uc6d0\uc774 \uc0ac\uc6a9 \uc548\ud568\uc73c\ub85c \uc124\uc815\ub429\ub2c8\ub2e4. jdk.xml.enableTemplatesImplDeserialization \uc2dc\uc2a4\ud15c \uc18d\uc131\uc744 true\ub85c \uc124\uc815\ud558\uba74 \uc774\ub97c \ubb34\ud6a8\ud654\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4."_s)
+			$of(u"Java 보안이 사용으로 설정된 경우 TemplatesImpl 직렬화 해제에 대한 지원이 사용 안함으로 설정됩니다. jdk.xml.enableTemplatesImplDeserialization 시스템 속성을 true로 설정하면 이를 무효화할 수 있습니다."_s)
 		})
 	});
 }

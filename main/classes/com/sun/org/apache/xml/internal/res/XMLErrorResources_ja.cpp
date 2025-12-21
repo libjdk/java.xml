@@ -369,319 +369,319 @@ void clinit$XMLErrorResources_ja($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"\u95a2\u6570\u304c\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"関数がサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"\u539f\u56e0\u3092\u4e0a\u66f8\u304d\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"原因を上書きできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_DEFAULT_IMPL),
-			$of(u"\u30c7\u30d5\u30a9\u30eb\u30c8\u5b9f\u88c5\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093 "_s)
+			$of(u"デフォルト実装が見つかりません "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0})\u306f\u73fe\u5728\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"ChunkedIntArray({0})は現在サポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"\u30aa\u30d5\u30bb\u30c3\u30c8\u304c\u30b9\u30ed\u30c3\u30c8\u3088\u308a\u3082\u5927\u304d\u3044\u3067\u3059"_s)
+			$of(u"オフセットがスロットよりも大きいです"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COROUTINE_NOT_AVAIL),
-			$of(u"\u30b3\u30eb\u30fc\u30c1\u30f3\u3092\u4f7f\u7528\u3067\u304d\u307e\u305b\u3093\u3002id={0}"_s)
+			$of(u"コルーチンを使用できません。id={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager\u304cco_exit()\u30ea\u30af\u30a8\u30b9\u30c8\u3092\u53d7\u3051\u53d6\u308a\u307e\u3057\u305f"_s)
+			$of(u"CoroutineManagerがco_exit()リクエストを受け取りました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COJOINROUTINESET_FAILED),
-			$of(u"co_joinCoroutineSet()\u304c\u5931\u6557\u3057\u307e\u3057\u305f"_s)
+			$of(u"co_joinCoroutineSet()が失敗しました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COROUTINE_PARAM),
-			$of(u"\u30b3\u30eb\u30fc\u30c1\u30f3\u30fb\u30d1\u30e9\u30e1\u30fc\u30bf\u306e\u30a8\u30e9\u30fc({0})"_s)
+			$of(u"コルーチン・パラメータのエラー({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\n\u4e0d\u660e: \u30d1\u30fc\u30b5\u30fcdoTerminate\u306e\u5fdc\u7b54\u306f{0}\u3067\u3059"_s)
+			$of(u"\n不明: パーサーdoTerminateの応答は{0}です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"\u89e3\u6790\u306f\u69cb\u6587\u89e3\u6790\u4e2d\u306b\u547c\u3073\u51fa\u3059\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"解析は構文解析中に呼び出すことができません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\u30a8\u30e9\u30fc: \u8ef8{0}\u306e\u578b\u6307\u5b9a\u3055\u308c\u305f\u30a4\u30c6\u30ec\u30fc\u30bf\u304c\u5b9f\u88c5\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"エラー: 軸{0}の型指定されたイテレータが実装されていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"\u30a8\u30e9\u30fc: \u8ef8{0}\u306e\u30a4\u30c6\u30ec\u30fc\u30bf\u304c\u5b9f\u88c5\u3055\u308c\u3066\u3044\u307e\u305b\u3093 "_s)
+			$of(u"エラー: 軸{0}のイテレータが実装されていません "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"\u30a4\u30c6\u30ec\u30fc\u30bf\u306e\u30af\u30ed\u30fc\u30f3\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"イテレータのクローンはサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"\u4e0d\u660e\u306a\u8ef8\u30c8\u30e9\u30d0\u30fc\u30b9\u30fb\u30bf\u30a4\u30d7\u3067\u3059: {0}"_s)
+			$of(u"不明な軸トラバース・タイプです: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_AXIS_NOT_SUPPORTED),
-			$of(u"\u8ef8\u30c8\u30e9\u30d0\u30fc\u30b5\u6a5f\u80fd\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093: {0}"_s)
+			$of(u"軸トラバーサ機能はサポートされていません: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_DTMIDS_AVAIL),
-			$of(u"DTM ID\u306f\u3053\u308c\u4ee5\u4e0a\u4f7f\u7528\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"DTM IDはこれ以上使用できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NOT_SUPPORTED),
-			$of(u"\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093: {0}"_s)
+			$of(u"サポートされていません: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NODE_NON_NULL),
-			$of(u"\u30ce\u30fc\u30c9\u306fgetDTMHandleFromNode\u306b\u3064\u3044\u3066\u975enull\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059"_s)
+			$of(u"ノードはgetDTMHandleFromNodeについて非nullである必要があります"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"\u30ce\u30fc\u30c9\u3092\u30cf\u30f3\u30c9\u30eb\u306b\u89e3\u6c7a\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"ノードをハンドルに解決できませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"startParse\u306f\u69cb\u6587\u89e3\u6790\u4e2d\u306b\u547c\u3073\u51fa\u3059\u3053\u3068\u306f\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"startParseは構文解析中に呼び出すことはできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse\u306b\u306f\u975enull\u306eSAXParser\u304c\u5fc5\u8981\u3067\u3059"_s)
+			$of(u"startParseには非nullのSAXParserが必要です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COULD_NOT_INIT_PARSER),
-			$of(u"\u6b21\u306e\u7406\u7531\u3067\u30d1\u30fc\u30b5\u30fc\u3092\u521d\u671f\u5316\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f: "_s)
+			$of(u"次の理由でパーサーを初期化できませんでした: "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_EXCEPTION_CREATING_POOL),
-			$of(u"\u30d7\u30fc\u30eb\u7528\u306e\u65b0\u898f\u30a4\u30f3\u30b9\u30bf\u30f3\u30b9\u306e\u4f5c\u6210\u4e2d\u306b\u767a\u751f\u3057\u305f\u4f8b\u5916"_s)
+			$of(u"プール用の新規インスタンスの作成中に発生した例外"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"\u30d1\u30b9\u306b\u7121\u52b9\u306a\u30a8\u30b9\u30b1\u30fc\u30d7\u30fb\u30b7\u30fc\u30b1\u30f3\u30b9\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u3059"_s)
+			$of(u"パスに無効なエスケープ・シーケンスが含まれています"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_SCHEME_REQUIRED),
-			$of(u"\u30b9\u30ad\u30fc\u30e0\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"スキームが必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_SCHEME_IN_URI),
-			$of(u"\u30b9\u30ad\u30fc\u30e0\u304cURI\u306b\u898b\u3064\u304b\u308a\u307e\u305b\u3093: {0}"_s)
+			$of(u"スキームがURIに見つかりません: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_SCHEME_INURI),
-			$of(u"\u30b9\u30ad\u30fc\u30e0\u304cURI\u306b\u898b\u3064\u304b\u308a\u307e\u305b\u3093"_s)
+			$of(u"スキームがURIに見つかりません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_PATH_INVALID_CHAR),
-			$of(u"\u30d1\u30b9\u306b\u7121\u52b9\u306a\u6587\u5b57\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u3059: {0}"_s)
+			$of(u"パスに無効な文字が含まれています: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"null\u6587\u5b57\u5217\u304b\u3089\u306f\u30b9\u30ad\u30fc\u30e0\u3092\u8a2d\u5b9a\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"null文字列からはスキームを設定できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"\u30b9\u30ad\u30fc\u30e0\u304c\u6574\u5408\u3057\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"スキームが整合していません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"\u30db\u30b9\u30c8\u306f\u6574\u5f62\u5f0f\u306e\u30a2\u30c9\u30ec\u30b9\u3067\u306f\u3042\u308a\u307e\u305b\u3093"_s)
+			$of(u"ホストは整形式のアドレスではありません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_PORT_WHEN_HOST_NULL),
-			$of(u"\u30db\u30b9\u30c8\u304cnull\u306e\u5834\u5408\u306f\u30dd\u30fc\u30c8\u3092\u8a2d\u5b9a\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"ホストがnullの場合はポートを設定できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_INVALID_PORT),
-			$of(u"\u7121\u52b9\u306a\u30dd\u30fc\u30c8\u756a\u53f7"_s)
+			$of(u"無効なポート番号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"\u6c4e\u7528URI\u306e\u30d5\u30e9\u30b0\u30e1\u30f3\u30c8\u306e\u307f\u8a2d\u5b9a\u3067\u304d\u307e\u3059"_s)
+			$of(u"汎用URIのフラグメントのみ設定できます"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"\u30d1\u30b9\u304cnull\u306e\u5834\u5408\u306f\u30d5\u30e9\u30b0\u30e1\u30f3\u30c8\u3092\u8a2d\u5b9a\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"パスがnullの場合はフラグメントを設定できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_FRAG_INVALID_CHAR),
-			$of(u"\u30d5\u30e9\u30b0\u30e1\u30f3\u30c8\u306b\u7121\u52b9\u6587\u5b57\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u3059"_s)
+			$of(u"フラグメントに無効文字が含まれています"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_PARSER_IN_USE),
-			$of(u"\u30d1\u30fc\u30b5\u30fc\u306f\u3059\u3067\u306b\u4f7f\u7528\u4e2d\u3067\u3059"_s)
+			$of(u"パーサーはすでに使用中です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"\u89e3\u6790\u4e2d\u306b{0} {1}\u3092\u5909\u66f4\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"解析中に{0} {1}を変更できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"\u81ea\u5df1\u539f\u56e0\u306f\u8a31\u53ef\u3055\u308c\u307e\u305b\u3093"_s)
+			$of(u"自己原因は許可されません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"\u30db\u30b9\u30c8\u304c\u6307\u5b9a\u3055\u308c\u3066\u3044\u306a\u3044\u5834\u5408\u306fUserinfo\u3092\u6307\u5b9a\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"ホストが指定されていない場合はUserinfoを指定できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_PORT_IF_NO_HOST),
-			$of(u"\u30db\u30b9\u30c8\u304c\u6307\u5b9a\u3055\u308c\u3066\u3044\u306a\u3044\u5834\u5408\u306f\u30dd\u30fc\u30c8\u3092\u6307\u5b9a\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"ホストが指定されていない場合はポートを指定できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"\u554f\u5408\u305b\u6587\u5b57\u5217\u306f\u30d1\u30b9\u304a\u3088\u3073\u554f\u5408\u305b\u6587\u5b57\u5217\u5185\u306b\u6307\u5b9a\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"問合せ文字列はパスおよび問合せ文字列内に指定できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"\u30d5\u30e9\u30b0\u30e1\u30f3\u30c8\u306f\u30d1\u30b9\u3068\u30d5\u30e9\u30b0\u30e1\u30f3\u30c8\u306e\u4e21\u65b9\u306b\u6307\u5b9a\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"フラグメントはパスとフラグメントの両方に指定できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"URI\u306f\u7a7a\u306e\u30d1\u30e9\u30e1\u30fc\u30bf\u3092\u4f7f\u7528\u3057\u3066\u521d\u671f\u5316\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"URIは空のパラメータを使用して初期化できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_METHOD_NOT_SUPPORTED),
-			$of(u"\u30e1\u30bd\u30c3\u30c9\u306f\u307e\u3060\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093 "_s)
+			$of(u"メソッドはまだサポートされていません "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"IncrementalSAXSource_Filter\u306f\u73fe\u5728\u306f\u518d\u8d77\u52d5\u53ef\u80fd\u3067\u306f\u3042\u308a\u307e\u305b\u3093"_s)
+			$of(u"IncrementalSAXSource_Filterは現在は再起動可能ではありません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader\u306fstartParse\u30ea\u30af\u30a8\u30b9\u30c8\u3088\u308a\u524d\u306b\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"XMLReaderはstartParseリクエストより前にできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"\u8ef8\u30c8\u30e9\u30d0\u30fc\u30b5\u6a5f\u80fd\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093: {0}"_s)
+			$of(u"軸トラバーサ機能はサポートされていません: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
-			$of(u"null PrintWriter\u306b\u3088\u3063\u3066ListingErrorHandler\u304c\u4f5c\u6210\u3055\u308c\u307e\u3057\u305f\u3002"_s)
+			$of(u"null PrintWriterによってListingErrorHandlerが作成されました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_SYSTEMID_UNKNOWN),
-			$of(u"\u4e0d\u660e\u306aSystemId"_s)
+			$of(u"不明なSystemId"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_LOCATION_UNKNOWN),
-			$of(u"\u30a8\u30e9\u30fc\u306e\u5834\u6240\u304c\u4e0d\u660e\u3067\u3059"_s)
+			$of(u"エラーの場所が不明です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\u63a5\u982d\u8f9e\u306f\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u306b\u89e3\u6c7a\u3055\u308c\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059: {0}"_s)
+			$of(u"接頭辞はネームスペースに解決される必要があります: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"createDocument()\u306fXPathContext\u3067\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"createDocument()はXPathContextでサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"\u5c5e\u6027\u306e\u5b50\u306b\u6240\u6709\u8005\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"属性の子に所有者ドキュメントがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"\u5c5e\u6027\u306e\u5b50\u306b\u6240\u6709\u8005\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u8981\u7d20\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"属性の子に所有者ドキュメント要素がありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"\u8b66\u544a: \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u8981\u7d20\u306e\u524d\u306b\u30c6\u30ad\u30b9\u30c8\u3092\u51fa\u529b\u3067\u304d\u307e\u305b\u3093\u3002  \u7121\u8996\u3057\u307e\u3059..."_s)
+			$of(u"警告: ドキュメント要素の前にテキストを出力できません。  無視します..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"DOM\u306b\u8907\u6570\u306e\u30eb\u30fc\u30c8\u3092\u6301\u3064\u3053\u3068\u306f\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"DOMに複数のルートを持つことはできません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ARG_LOCALNAME_NULL),
-			$of(u"\u5f15\u6570\'localName\'\u306fnull\u3067\u3059"_s)
+			$of(u"引数\'localName\'はnullです"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ARG_LOCALNAME_INVALID),
-			$of(u"QNAME\u306eLocalname\u306f\u6709\u52b9\u306aNCName\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059"_s)
+			$of(u"QNAMEのLocalnameは有効なNCNameである必要があります"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ARG_PREFIX_INVALID),
-			$of(u"QNAME\u306e\u63a5\u982d\u8f9e\u306f\u6709\u52b9\u306aNCName\u3067\u3042\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059"_s)
+			$of(u"QNAMEの接頭辞は有効なNCNameである必要があります"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NAME_CANT_START_WITH_COLON),
-			$of(u"\u540d\u524d\u306e\u5148\u982d\u3092\u30b3\u30ed\u30f3\u306b\u3059\u308b\u3053\u3068\u306f\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"名前の先頭をコロンにすることはできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage\u306e\u30d1\u30e9\u30e1\u30fc\u30bf\u304c\u7bc4\u56f2\u5916\u3067\u3059"_s)
+			$of(u"createMessageのパラメータが範囲外です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"messageFormat\u306e\u547c\u51fa\u3057\u4e2d\u306b\u4f8b\u5916\u304c\u30b9\u30ed\u30fc\u3055\u308c\u307e\u3057\u305f"_s)
+			$of(u"messageFormatの呼出し中に例外がスローされました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\u884c\u756a\u53f7"_s)
+			$of(u"行番号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\u5217\u756a\u53f7"_s)
+			$of(u"列番号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"\u30b7\u30ea\u30a2\u30e9\u30a4\u30b6\u30fb\u30af\u30e9\u30b9\'\'{0}\'\'\u306forg.xml.sax.ContentHandler\u3092\u5b9f\u88c5\u3057\u307e\u305b\u3093\u3002"_s)
+			$of(u"シリアライザ・クラス\'\'{0}\'\'はorg.xml.sax.ContentHandlerを実装しません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"\u30ea\u30bd\u30fc\u30b9[ {0} ]\u306f\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f\u3002\n {1}"_s)
+			$of(u"リソース[ {0} ]は見つかりませんでした。\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"\u30ea\u30bd\u30fc\u30b9[ {0} ]\u3092\u30ed\u30fc\u30c9\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f: {1} \n {2} \t {3}"_s)
+			$of(u"リソース[ {0} ]をロードできませんでした: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"\u30d0\u30c3\u30d5\u30a1\u30fb\u30b5\u30a4\u30ba<=0"_s)
+			$of(u"バッファ・サイズ<=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u7121\u52b9\u306aUTF-16\u30b5\u30ed\u30b2\u30fc\u30c8\u304c\u691c\u51fa\u3055\u308c\u307e\u3057\u305f: {0}\u3002"_s)
+			$of(u"無効なUTF-16サロゲートが検出されました: {0}。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_OIERROR),
-			$of(u"IO\u30a8\u30e9\u30fc"_s)
+			$of(u"IOエラー"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"\u5b50\u30ce\u30fc\u30c9\u306e\u5f8c\u307e\u305f\u306f\u8981\u7d20\u304c\u751f\u6210\u3055\u308c\u308b\u524d\u306b\u5c5e\u6027{0}\u3092\u8ffd\u52a0\u3067\u304d\u307e\u305b\u3093\u3002\u5c5e\u6027\u306f\u7121\u8996\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"子ノードの後または要素が生成される前に属性{0}を追加できません。属性は無視されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_NAMESPACE_PREFIX),
-			$of(u"\u63a5\u982d\u8f9e\'\'{0}\'\'\u306e\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u304c\u5ba3\u8a00\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"接頭辞\'\'{0}\'\'のネームスペースが宣言されていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_STRAY_ATTRIBUTE),
-			$of(u"\u5c5e\u6027\'\'{0}\'\'\u304c\u8981\u7d20\u306e\u5916\u5074\u306b\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"属性\'\'{0}\'\'が要素の外側にあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_STRAY_NAMESPACE),
-			$of(u"\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u5ba3\u8a00\'\'{0}\'\'=\'\'{1}\'\'\u304c\u8981\u7d20\u306e\u5916\u5074\u306b\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"ネームスペース宣言\'\'{0}\'\'=\'\'{1}\'\'が要素の外側にあります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"\'\'{0}\'\'\u3092\u30ed\u30fc\u30c9\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f(CLASSPATH\u3092\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044)\u3002\u73fe\u5728\u306f\u5358\u306b\u30c7\u30d5\u30a9\u30eb\u30c8\u3092\u4f7f\u7528\u3057\u3066\u3044\u307e\u3059"_s)
+			$of(u"\'\'{0}\'\'をロードできませんでした(CLASSPATHを確認してください)。現在は単にデフォルトを使用しています"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_ILLEGAL_CHARACTER),
-			$of(u"{1}\u306e\u6307\u5b9a\u3055\u308c\u305f\u51fa\u529b\u30a8\u30f3\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u3067\u793a\u3055\u308c\u306a\u3044\u6574\u6570\u5024{0}\u306e\u6587\u5b57\u3092\u51fa\u529b\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"{1}の指定された出力エンコーディングで示されない整数値{0}の文字を出力しようとしました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_ja::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"\u51fa\u529b\u30e1\u30bd\u30c3\u30c9\'\'{1}\'\'\u306e\u30d7\u30ed\u30d1\u30c6\u30a3\u30fb\u30d5\u30a1\u30a4\u30eb\'\'{0}\'\'\u3092\u30ed\u30fc\u30c9\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f(CLASSPATH\u3092\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044)"_s)
+			$of(u"出力メソッド\'\'{1}\'\'のプロパティ・ファイル\'\'{0}\'\'をロードできませんでした(CLASSPATHを確認してください)"_s)
 		})
 	}));
 }

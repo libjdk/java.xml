@@ -147,23 +147,23 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_STYLESHEET_ERR),
-			$of(u"S\'ha definit m\u00e9s d\'un full d\'estils en el mateix fitxer."_s)
+			$of(u"S\'ha definit més d\'un full d\'estils en el mateix fitxer."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_REDEF_ERR),
-			$of(u"La plantilla \'\'{0}\'\' ja est\u00e0 definida en aquest full d\'\'estils."_s)
+			$of(u"La plantilla \'\'{0}\'\' ja està definida en aquest full d\'\'estils."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TEMPLATE_UNDEF_ERR),
-			$of(u"La plantilla \'\'{0}\'\' no est\u00e0 definida en aquest full d\'\'estils."_s)
+			$of(u"La plantilla \'\'{0}\'\' no està definida en aquest full d\'\'estils."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_REDEF_ERR),
-			$of(u"La variable \'\'{0}\'\' s\'\'ha definit m\u00e9s d\'\'una vegada en el mateix \u00e0mbit."_s)
+			$of(u"La variable \'\'{0}\'\' s\'\'ha definit més d\'\'una vegada en el mateix àmbit."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::VARIABLE_UNDEF_ERR),
-			$of(u"La variable o el par\u00e0metre \'\'{0}\'\' no s\'\'ha definit."_s)
+			$of(u"La variable o el paràmetre \'\'{0}\'\' no s\'\'ha definit."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CLASS_NOT_FOUND_ERR),
@@ -171,11 +171,11 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::METHOD_NOT_FOUND_ERR),
-			$of(u"No s\'\'ha trobat el m\u00e8tode extern \'\'{0}\'\' (ha de ser public)."_s)
+			$of(u"No s\'\'ha trobat el mètode extern \'\'{0}\'\' (ha de ser public)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ARGUMENT_CONVERSION_ERR),
-			$of(u"No s\'\'ha pogut convertir l\'\'argument o tipus de retorn a la crida del m\u00e8tode \'\'{0}\'\'"_s)
+			$of(u"No s\'\'ha pogut convertir l\'\'argument o tipus de retorn a la crida del mètode \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_NOT_FOUND_ERR),
@@ -183,7 +183,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INVALID_URI_ERR),
-			$of(u"L\'\'URI \'\'{0}\'\' no \u00e9s v\u00e0lid."_s)
+			$of(u"L\'\'URI \'\'{0}\'\' no és vàlid."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FILE_ACCESS_ERR),
@@ -199,7 +199,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FUNCTION_RESOLVE_ERR),
-			$of(u"No s\'\'ha pogut resoldre la crida de la funci\u00f3 \'\'{0}\'\'."_s)
+			$of(u"No s\'\'ha pogut resoldre la crida de la funció \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NEED_LITERAL_ERR),
@@ -207,7 +207,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XPATH_PARSER_ERR),
-			$of(u"S\'\'ha produ\u00eft un error en analitzar l\'\'expressi\u00f3 XPath \'\'{0}\'\'."_s)
+			$of(u"S\'\'ha produït un error en analitzar l\'\'expressió XPath \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::REQUIRED_ATTR_ERR),
@@ -215,11 +215,11 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHAR_ERR),
-			$of(u"L\'\'expressi\u00f3 XPath cont\u00e9 el car\u00e0cter no perm\u00e8s \'\'{0}\'\'."_s)
+			$of(u"L\'\'expressió XPath conté el caràcter no permès \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_PI_ERR),
-			$of(u"La instrucci\u00f3 de processament t\u00e9 el nom no perm\u00e8s \'\'{0}\'\'."_s)
+			$of(u"La instrucció de processament té el nom no permès \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_ATTRIBUTE_ERR),
@@ -239,47 +239,47 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYMBOLS_REDEF_ERR),
-			$of(u"El formatatge decimal \'\'{0}\'\' ja est\u00e0 definit."_s)
+			$of(u"El formatatge decimal \'\'{0}\'\' ja està definit."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSL_VERSION_ERR),
-			$of(u"XSLTC no d\u00f3na suport a la versi\u00f3 XSL \'\'{0}\'\'."_s)
+			$of(u"XSLTC no dóna suport a la versió XSL \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CIRCULAR_VARIABLE_ERR),
-			$of(u"Hi ha una refer\u00e8ncia de variable/par\u00e0metre circular a \'\'{0}\'\'."_s)
+			$of(u"Hi ha una referència de variable/paràmetre circular a \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_BINARY_OP_ERR),
-			$of(u"L\'operador de l\'expressi\u00f3 bin\u00e0ria \u00e9s desconegut."_s)
+			$of(u"L\'operador de l\'expressió binària és desconegut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ARG_ERR),
-			$of(u"La crida de funci\u00f3 t\u00e9 arguments no permesos."_s)
+			$of(u"La crida de funció té arguments no permesos."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DOCUMENT_ARG_ERR),
-			$of(u"El segon argument de la funci\u00f3 document() ha de ser un conjunt de nodes."_s)
+			$of(u"El segon argument de la funció document() ha de ser un conjunt de nodes."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_WHEN_ERR),
-			$of(u"Es necessita com a m\u00ednim un element <xsl:when> a <xsl:choose>."_s)
+			$of(u"Es necessita com a mínim un element <xsl:when> a <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MULTIPLE_OTHERWISE_ERR),
-			$of(u"Nom\u00e9s es permet un element <xsl:otherwise> a <xsl:choose>."_s)
+			$of(u"Només es permet un element <xsl:otherwise> a <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_OTHERWISE_ERR),
-			$of(u"<xsl:otherwise> nom\u00e9s es pot utilitzar dins de <xsl:choose>."_s)
+			$of(u"<xsl:otherwise> només es pot utilitzar dins de <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_WHEN_ERR),
-			$of(u"<xsl:when> nom\u00e9s es pot utilitzar dins de <xsl:choose>."_s)
+			$of(u"<xsl:when> només es pot utilitzar dins de <xsl:choose>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WHEN_ELEMENT_ERR),
-			$of(u"A <xsl:choose> nom\u00e9s es permeten els elements <xsl:when> i <xsl:otherwise>."_s)
+			$of(u"A <xsl:choose> només es permeten els elements <xsl:when> i <xsl:otherwise>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNNAMED_ATTRIBSET_ERR),
@@ -287,7 +287,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CHILD_ERR),
-			$of(u"L\'element subordinat no \u00e9s perm\u00e8s."_s)
+			$of(u"L\'element subordinat no és permès."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_ELEM_NAME_ERR),
@@ -307,23 +307,23 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::INTERNAL_ERR),
-			$of(u"S\'\'ha produ\u00eft un error intern d\'\'XSLTC irrecuperable: \'\'{0}\'\'"_s)
+			$of(u"S\'\'ha produït un error intern d\'\'XSLTC irrecuperable: \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_XSL_ERR),
-			$of(u"L\'\'element d\'\'XSL \'\'{0}\'\' no t\u00e9 suport."_s)
+			$of(u"L\'\'element d\'\'XSL \'\'{0}\'\' no té suport."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_EXT_ERR),
-			$of(u"No es reconeix l\'\'extensi\u00f3 d\'\'XSLTC \'\'{0}\'\'."_s)
+			$of(u"No es reconeix l\'\'extensió d\'\'XSLTC \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_URI_ERR),
-			$of(u"El document d\'entrada no \u00e9s un full d\'estils (l\'espai de noms XSL no s\'ha declarat en l\'element arrel)."_s)
+			$of(u"El document d\'entrada no és un full d\'estils (l\'espai de noms XSL no s\'ha declarat en l\'element arrel)."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::MISSING_XSLT_TARGET_ERR),
-			$of(u"No s\'\'ha trobat la destinaci\u00f3 \'\'{0}\'\' del full d\'\'estils."_s)
+			$of(u"No s\'\'ha trobat la destinació \'\'{0}\'\' del full d\'\'estils."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ACCESSING_XSLT_TARGET_ERR),
@@ -335,7 +335,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NOT_STYLESHEET_ERR),
-			$of(u"El document d\'entrada no cont\u00e9 cap full d\'estils XSL."_s)
+			$of(u"El document d\'entrada no conté cap full d\'estils XSL."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ELEMENT_PARSE_ERR),
@@ -347,11 +347,11 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::OUTPUT_VERSION_ERR),
-			$of(u"La versi\u00f3 del document XML de sortida ha de ser 1.0"_s)
+			$of(u"La versió del document XML de sortida ha de ser 1.0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_RELAT_OP_ERR),
-			$of(u"L\'operador de l\'expressi\u00f3 relacional \u00e9s desconegut."_s)
+			$of(u"L\'operador de l\'expressió relacional és desconegut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ATTRIBSET_UNDEF_ERR),
@@ -363,7 +363,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNKNOWN_SIG_TYPE_ERR),
-			$of(u"El tipus de dades de la signatura de la classe \'\'{0}\'\' \u00e9s desconegut."_s)
+			$of(u"El tipus de dades de la signatura de la classe \'\'{0}\'\' és desconegut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::DATA_CONVERSION_ERR),
@@ -371,11 +371,11 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_TRANSLET_CLASS_ERR),
-			$of(u"Templates no cont\u00e9 cap definici\u00f3 de classe translet."_s)
+			$of(u"Templates no conté cap definició de classe translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_MAIN_TRANSLET_ERR),
-			$of(u"Templates no cont\u00e9 cap classe amb el nom \'\'{0}\'\'."_s)
+			$of(u"Templates no conté cap classe amb el nom \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_CLASS_ERR),
@@ -383,7 +383,7 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSLET_OBJECT_ERR),
-			$of(u"La classe translet s\'\'ha carregat, per\u00f2 no es pot crear la inst\u00e0ncia translet."_s)
+			$of(u"La classe translet s\'\'ha carregat, però no es pot crear la instància translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ERROR_LISTENER_NULL_ERR),
@@ -391,11 +391,11 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_SOURCE_ERR),
-			$of(u"XSLTC nom\u00e9s d\u00f3na suport a StreamSource, SAXSource i DOMSource."_s)
+			$of(u"XSLTC només dóna suport a StreamSource, SAXSource i DOMSource."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_SOURCE_ERR),
-			$of(u"L\'\'objecte source donat a \'\'{0}\'\' no t\u00e9 contingut."_s)
+			$of(u"L\'\'objecte source donat a \'\'{0}\'\' no té contingut."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_COMPILE_ERR),
@@ -411,19 +411,19 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_TRANSLET_ERR),
-			$of(u"Transformer no cont\u00e9 cap objecte translet."_s)
+			$of(u"Transformer no conté cap objecte translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_HANDLER_ERR),
-			$of(u"No s\'ha definit cap manejador de sortida per al resultat de transformaci\u00f3."_s)
+			$of(u"No s\'ha definit cap manejador de sortida per al resultat de transformació."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_NO_RESULT_ERR),
-			$of(u"L\'\'objecte result donat a \'\'{0}\'\' no \u00e9s v\u00e0lid."_s)
+			$of(u"L\'\'objecte result donat a \'\'{0}\'\' no és vàlid."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::JAXP_UNKNOWN_PROP_ERR),
-			$of(u"S\'\'ha intentat accedir a una propietat Transformer \'\'{0}\'\' no v\u00e0lida."_s)
+			$of(u"S\'\'ha intentat accedir a una propietat Transformer \'\'{0}\'\' no vàlida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SAX2DOM_ADAPTER_ERR),
@@ -431,32 +431,32 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::XSLTC_SOURCE_ERR),
-			$of(u"S\'ha cridat XSLTCSource.build() sense que s\'hagu\u00e9s establert la identificaci\u00f3 del sistema."_s)
+			$of(u"S\'ha cridat XSLTCSource.build() sense que s\'hagués establert la identificació del sistema."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_STDIN_ERR),
-			$of(u"L\'opci\u00f3 -i s\'ha d\'utilitzar amb l\'opci\u00f3 -o."_s)
+			$of(u"L\'opció -i s\'ha d\'utilitzar amb l\'opció -o."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILE_USAGE_STR),
-			$of(u"RESUM\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <sortida>]\n      [-d <directori>] [-j <fitxer_jar>] [-p <paquet>]\n      [-n] [-x] [-s] [-u] [-v] [-h] { <full_estils> |  -i }\n\nOPCIONS\n   -o <sortida>    assigna el nom <sortida> al translet\n generat. Per defecte, el nom de translet\n s\'obt\u00e9 del nom de <full_estils>. Aquesta opci\u00f3\n no es t\u00e9 en compte si es compilen diversos fulls d\'estils.\n   -d <directori> especifica un directori de destinaci\u00f3 per al translet\n   -j <fitxer_jar>   empaqueta les classes translet en un fitxer jar del nom\n                  especificat com a <fitxer_jar>\n   -p <paquet> especifica un prefix de nom de paquet per a totes les classes\n                  translet generades.\n -n habilita l\'inlining (com a mitjana, el funcionament per defecte\n \u00e9s millor).\n   -x            habilita la sortida de missatges de depuraci\u00f3 addicionals\n   -s inhabilita la crida de System.exit\n   -u             interpreta els arguments <full_estils> com URL\n -i obliga el compilador a llegir "
-				"el full d\'estils des de l\'entrada est\u00e0ndard\n   -v imprimeix la versi\u00f3 del compilador\n   -h             imprimeix aquesta sent\u00e8ncia d\'\u00fas.\n"_s)
+			$of(u"RESUM\n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile [-o <sortida>]\n      [-d <directori>] [-j <fitxer_jar>] [-p <paquet>]\n      [-n] [-x] [-s] [-u] [-v] [-h] { <full_estils> |  -i }\n\nOPCIONS\n   -o <sortida>    assigna el nom <sortida> al translet\n generat. Per defecte, el nom de translet\n s\'obté del nom de <full_estils>. Aquesta opció\n no es té en compte si es compilen diversos fulls d\'estils.\n   -d <directori> especifica un directori de destinació per al translet\n   -j <fitxer_jar>   empaqueta les classes translet en un fitxer jar del nom\n                  especificat com a <fitxer_jar>\n   -p <paquet> especifica un prefix de nom de paquet per a totes les classes\n                  translet generades.\n -n habilita l\'inlining (com a mitjana, el funcionament per defecte\n és millor).\n   -x            habilita la sortida de missatges de depuració addicionals\n   -s inhabilita la crida de System.exit\n   -u             interpreta els arguments <full_estils> com URL\n -i obliga el compilador a llegir "
+				"el full d\'estils des de l\'entrada estàndard\n   -v imprimeix la versió del compilador\n   -h             imprimeix aquesta sentència d\'ús.\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_USAGE_STR),
-			$of(u"RESUM \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <fitxer_jar>]\n      [-x] [-s] [-n <iteracions>] {-u <url_document> | <document>}\n      <classe> [<par\u00e0m1>=<valor1> ...]\n\n   utilitza la <classe> translet per transformar un document XML\n   especificat com a <document>. La <classe> translet es troba\n   o b\u00e9 a la CLASSPATH de l\'usuari o b\u00e9 al <fitxer_jar> que es pot especificar opcionalment.\nOPCIONS\n   -j <fitxer_jar>    especifica un fitxer jar des del qual es pot carregar el translet\n   -x habilita la sortida de missatges de depuraci\u00f3 addicionals\n   -s              inhabilita la crida de System.exit\n   -n <iteracions> executa la transformaci\u00f3 el nombre de vegades <iteracions> i\n               mostra informaci\u00f3 de perfil\n   -u <url_document> especifica el document d\'entrada XML com una URL\n"_s)
+			$of(u"RESUM \n   java com.sun.org.apache.xalan.internal.xsltc.cmdline.Transform [-j <fitxer_jar>]\n      [-x] [-s] [-n <iteracions>] {-u <url_document> | <document>}\n      <classe> [<paràm1>=<valor1> ...]\n\n   utilitza la <classe> translet per transformar un document XML\n   especificat com a <document>. La <classe> translet es troba\n   o bé a la CLASSPATH de l\'usuari o bé al <fitxer_jar> que es pot especificar opcionalment.\nOPCIONS\n   -j <fitxer_jar>    especifica un fitxer jar des del qual es pot carregar el translet\n   -x habilita la sortida de missatges de depuració addicionals\n   -s              inhabilita la crida de System.exit\n   -n <iteracions> executa la transformació el nombre de vegades <iteracions> i\n               mostra informació de perfil\n   -u <url_document> especifica el document d\'entrada XML com una URL\n"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::STRAY_SORT_ERR),
-			$of(u"<xsl:sort> nom\u00e9s es pot utilitzar amb <xsl:for-each> o <xsl:apply-templates>."_s)
+			$of(u"<xsl:sort> només es pot utilitzar amb <xsl:for-each> o <xsl:apply-templates>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::UNSUPPORTED_ENCODING),
-			$of(u"Aquesta JVM no d\u00f3na suport a la codificaci\u00f3 de sortida \'\'{0}\'\'."_s)
+			$of(u"Aquesta JVM no dóna suport a la codificació de sortida \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::SYNTAX_ERR),
-			$of(u"S\'\'ha produ\u00eft un error de sintaxi a \'\'{0}\'\'."_s)
+			$of(u"S\'\'ha produït un error de sintaxi a \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CONSTRUCTOR_NOT_FOUND),
@@ -464,31 +464,31 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::NO_JAVA_FUNCT_THIS_REF),
-			$of(u"El primer argument de la funci\u00f3 Java no static \'\'{0}\'\' no \u00e9s una refer\u00e8ncia d\'\'objecte v\u00e0lida."_s)
+			$of(u"El primer argument de la funció Java no static \'\'{0}\'\' no és una referència d\'\'objecte vàlida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_ERR),
-			$of(u"S\'\'ha produ\u00eft un error en comprovar el tipus de l\'\'expressi\u00f3 \'\'{0}\'\'."_s)
+			$of(u"S\'\'ha produït un error en comprovar el tipus de l\'\'expressió \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TYPE_CHECK_UNK_LOC_ERR),
-			$of(u"S\'ha produ\u00eft un error en comprovar el tipus d\'expressi\u00f3 en una ubicaci\u00f3 desconeguda."_s)
+			$of(u"S\'ha produït un error en comprovar el tipus d\'expressió en una ubicació desconeguda."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::ILLEGAL_CMDLINE_OPTION_ERR),
-			$of(u"L\'\'opci\u00f3 de l\u00ednia d\'\'ordres \'\'{0}\'\' no \u00e9s v\u00e0lida."_s)
+			$of(u"L\'\'opció de línia d\'\'ordres \'\'{0}\'\' no és vàlida."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::CMDLINE_OPT_MISSING_ARG_ERR),
-			$of(u"A l\'\'opci\u00f3 de l\u00ednia d\'\'ordres \'\'{0}\'\' li falta un argument obligatori."_s)
+			$of(u"A l\'\'opció de línia d\'\'ordres \'\'{0}\'\' li falta un argument obligatori."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WARNING_PLUS_WRAPPED_MSG),
-			$of(u"AV\u00cdS: \'\'{0}\'\'\n       :{1}"_s)
+			$of(u"AVÍS: \'\'{0}\'\'\n       :{1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::WARNING_MSG),
-			$of(u"AV\u00cdS: \'\'{0}\'\'"_s)
+			$of(u"AVÍS: \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::FATAL_ERR_PLUS_WRAPPED_MSG),
@@ -508,15 +508,15 @@ $ObjectArray2* ErrorMessages_ca::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_TRANSLET_STR),
-			$of(u"Transformaci\u00f3 mitjan\u00e7ant translet \'\'{0}\'\' "_s)
+			$of(u"Transformació mitjançant translet \'\'{0}\'\' "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::TRANSFORM_WITH_JAR_STR),
-			$of(u"Transformaci\u00f3 mitjan\u00e7ant translet \'\'{0}\'\' des del fitxer jar \'\'{1}\'\'"_s)
+			$of(u"Transformació mitjançant translet \'\'{0}\'\' des del fitxer jar \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COULD_NOT_CREATE_TRANS_FACT),
-			$of(u"No s\'\'ha pogut crear una inst\u00e0ncia de la classe TransformerFactory \'\'{0}\'\'."_s)
+			$of(u"No s\'\'ha pogut crear una instància de la classe TransformerFactory \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($ErrorMsg::COMPILER_ERROR_KEY),

@@ -73,15 +73,15 @@ $ObjectArray2* ErrorMessages_fr::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),
-			$of(u"Erreur interne d\'\'ex\u00e9cution dans \'\'{0}\'\'"_s)
+			$of(u"Erreur interne d\'\'exécution dans \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"Erreur d\'ex\u00e9cution de <xsl:copy>."_s)
+			$of(u"Erreur d\'exécution de <xsl:copy>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"Conversion de \'\'{0}\'\' \u00e0 \'\'{1}\'\' non valide."_s)
+			$of(u"Conversion de \'\'{0}\'\' à \'\'{1}\'\' non valide."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
@@ -89,7 +89,7 @@ $ObjectArray2* ErrorMessages_fr::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"Type d\'argument inconnu dans l\'expression d\'\u00e9galit\u00e9."_s)
+			$of(u"Type d\'argument inconnu dans l\'expression d\'égalité."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
@@ -97,39 +97,39 @@ $ObjectArray2* ErrorMessages_fr::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"Tentative de formatage du nombre \'\'{0}\'\' \u00e0 l\'\'aide du mod\u00e8le \'\'{1}\'\'."_s)
+			$of(u"Tentative de formatage du nombre \'\'{0}\'\' à l\'\'aide du modèle \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
-			$of(u"Impossible de cloner l\'\'it\u00e9rateur \'\'{0}\'\'."_s)
+			$of(u"Impossible de cloner l\'\'itérateur \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"It\u00e9rateur de l\'\'axe \'\'{0}\'\' non pris en charge."_s)
+			$of(u"Itérateur de l\'\'axe \'\'{0}\'\' non pris en charge."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"It\u00e9rateur de l\'\'axe saisi \'\'{0}\'\' non pris en charge."_s)
+			$of(u"Itérateur de l\'\'axe saisi \'\'{0}\'\' non pris en charge."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"Attribut \'\'{0}\'\' en dehors de l\'\'\u00e9l\u00e9ment."_s)
+			$of(u"Attribut \'\'{0}\'\' en dehors de l\'\'élément."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"La d\u00e9claration d\'\'espace de noms \'\'{0}\'\'=\'\'{1}\'\' est \u00e0 l\'\'ext\u00e9rieur de l\'\'\u00e9l\u00e9ment."_s)
+			$of(u"La déclaration d\'\'espace de noms \'\'{0}\'\'=\'\'{1}\'\' est à l\'\'extérieur de l\'\'élément."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"L\'\'espace de noms du pr\u00e9fixe \'\'{0}\'\' n\'\'a pas \u00e9t\u00e9 d\u00e9clar\u00e9."_s)
+			$of(u"L\'\'espace de noms du préfixe \'\'{0}\'\' n\'\'a pas été déclaré."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
-			$of(u"DOMAdapter cr\u00e9\u00e9 avec le mauvais type de DOM source."_s)
+			$of(u"DOMAdapter créé avec le mauvais type de DOM source."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"L\'analyseur SAX que vous utilisez ne g\u00e8re pas les \u00e9v\u00e9nements de d\u00e9claration DTD."_s)
+			$of(u"L\'analyseur SAX que vous utilisez ne gère pas les événements de déclaration DTD."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
@@ -137,11 +137,11 @@ $ObjectArray2* ErrorMessages_fr::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"Impossible de r\u00e9soudre la r\u00e9f\u00e9rence d\'\'URI \'\'{0}\'\'."_s)
+			$of(u"Impossible de résoudre la référence d\'\'URI \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_XSL_ERR),
-			$of(u"El\u00e9ment XSL \'\'{0}\'\' non pris en charge"_s)
+			$of(u"Elément XSL \'\'{0}\'\' non pris en charge"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
@@ -149,23 +149,23 @@ $ObjectArray2* ErrorMessages_fr::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"Le translet sp\u00e9cifi\u00e9, \'\'{0}\'\', a \u00e9t\u00e9 cr\u00e9\u00e9 \u00e0 l\'\'aide d\'\'une version de XSLTC plus r\u00e9cente que la version de l\'\'ex\u00e9cution XSLTC utilis\u00e9e. Vous devez recompiler la feuille de style ou utiliser une version plus r\u00e9cente de XSLTC pour ex\u00e9cuter ce translet."_s)
+			$of(u"Le translet spécifié, \'\'{0}\'\', a été créé à l\'\'aide d\'\'une version de XSLTC plus récente que la version de l\'\'exécution XSLTC utilisée. Vous devez recompiler la feuille de style ou utiliser une version plus récente de XSLTC pour exécuter ce translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
-			$of(u"Un attribut dont la valeur doit \u00eatre un QName avait la valeur \'\'{0}\'\'"_s)
+			$of(u"Un attribut dont la valeur doit être un QName avait la valeur \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_NCNAME_ERR),
-			$of(u"Un attribut dont la valeur doit \u00eatre un NCName avait la valeur \'\'{0}\'\'"_s)
+			$of(u"Un attribut dont la valeur doit être un NCName avait la valeur \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"L\'\'utilisation de la fonction d\'\'extension \'\'{0}\'\' n\'\'est pas autoris\u00e9e lorsque la fonctionnalit\u00e9 de traitement s\u00e9curis\u00e9 est d\u00e9finie sur True."_s)
+			$of(u"L\'\'utilisation de la fonction d\'\'extension \'\'{0}\'\' n\'\'est pas autorisée lorsque la fonctionnalité de traitement sécurisé est définie sur True."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"L\'\'utilisation de l\'\'\u00e9l\u00e9ment d\'\'extension \'\'{0}\'\' n\'\'est pas autoris\u00e9e lorsque la fonctionnalit\u00e9 de traitement s\u00e9curis\u00e9 est d\u00e9finie sur True."_s)
+			$of(u"L\'\'utilisation de l\'\'élément d\'\'extension \'\'{0}\'\' n\'\'est pas autorisée lorsque la fonctionnalité de traitement sécurisé est définie sur True."_s)
 		})
 	});
 }

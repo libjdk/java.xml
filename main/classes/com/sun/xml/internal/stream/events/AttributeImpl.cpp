@@ -221,9 +221,9 @@ $String* AttributeImpl::toString() {
 	if (var$0 && $nc($($nc(this->fQName)->getPrefix()))->length() > 0) {
 		$var($String, var$4, $$str({$($nc(this->fQName)->getPrefix()), ":"_s}));
 		$var($String, var$3, $$concat(var$4, $($nc(this->fQName)->getLocalPart())));
-		$var($String, var$2, $$concat(var$3, "=\'"));
+		$var($String, var$2, $$concat(var$3, "=\'"_s));
 		$var($String, var$1, $$concat(var$2, this->fValue));
-		return $concat(var$1, "\'");
+		return $concat(var$1, "\'"_s);
 	} else {
 		return $str({$($nc(this->fQName)->getLocalPart()), "=\'"_s, this->fValue, "\'"_s});
 	}

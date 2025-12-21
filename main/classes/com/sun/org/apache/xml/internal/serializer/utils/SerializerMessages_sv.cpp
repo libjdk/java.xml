@@ -109,11 +109,11 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 	$var($ObjectArray2, contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($MsgKey::BAD_MSGKEY),
-			$of(u"Meddelandenyckeln \'\'{0}\'\' \u00e4r inte i meddelandeklassen \'\'{1}\'\'"_s)
+			$of(u"Meddelandenyckeln \'\'{0}\'\' är inte i meddelandeklassen \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::BAD_MSGFORMAT),
-			$of(u"Formatet p\u00e5 meddelandet \'\'{0}\'\' i meddelandeklassen \'\'{1}\'\' underk\u00e4ndes."_s)
+			$of(u"Formatet på meddelandet \'\'{0}\'\' i meddelandeklassen \'\'{1}\'\' underkändes."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SERIALIZER_NOT_CONTENTHANDLER),
@@ -121,7 +121,7 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"Resursen [ {0} ] kunde inte h\u00e4mtas.\n {1}"_s)
+			$of(u"Resursen [ {0} ] kunde inte hämtas.\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_RESOURCE_COULD_NOT_LOAD),
@@ -133,7 +133,7 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Ogiltigt UTF-16-surrogat uppt\u00e4ckt: {0} ?"_s)
+			$of(u"Ogiltigt UTF-16-surrogat upptäckt: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_OIERROR),
@@ -141,31 +141,31 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Kan inte l\u00e4gga till attributet {0} efter underordnade noder eller innan ett element har skapats. Attributet ignoreras."_s)
+			$of(u"Kan inte lägga till attributet {0} efter underordnade noder eller innan ett element har skapats. Attributet ignoreras."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NAMESPACE_PREFIX),
-			$of(u"Namnrymd f\u00f6r prefix \'\'{0}\'\' har inte deklarerats."_s)
+			$of(u"Namnrymd för prefix \'\'{0}\'\' har inte deklarerats."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRAY_ATTRIBUTE),
-			$of(u"Attributet \'\'{0}\'\' finns utanf\u00f6r elementet."_s)
+			$of(u"Attributet \'\'{0}\'\' finns utanför elementet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRAY_NAMESPACE),
-			$of(u"Namnrymdsdeklarationen \'\'{0}\'\'=\'\'{1}\'\' finns utanf\u00f6r element."_s)
+			$of(u"Namnrymdsdeklarationen \'\'{0}\'\'=\'\'{1}\'\' finns utanför element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"Kunde inte ladda \'\'{0}\'\' (kontrollera CLASSPATH), anv\u00e4nder nu enbart standardv\u00e4rden"_s)
+			$of(u"Kunde inte ladda \'\'{0}\'\' (kontrollera CLASSPATH), använder nu enbart standardvärden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ILLEGAL_CHARACTER),
-			$of(u"F\u00f6rs\u00f6k att skriva utdatatecken med integralv\u00e4rdet {0} som inte \u00e4r representerat i angiven utdatakodning av {1}."_s)
+			$of(u"Försök att skriva utdatatecken med integralvärdet {0} som inte är representerat i angiven utdatakodning av {1}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Kunde inte ladda egenskapsfilen \'\'{0}\'\' f\u00f6r utdatametoden \'\'{1}\'\' (kontrollera CLASSPATH)"_s)
+			$of(u"Kunde inte ladda egenskapsfilen \'\'{0}\'\' för utdatametoden \'\'{1}\'\' (kontrollera CLASSPATH)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_INVALID_PORT),
@@ -173,39 +173,39 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PORT_WHEN_HOST_NULL),
-			$of(u"Port kan inte st\u00e4llas in n\u00e4r v\u00e4rd \u00e4r null"_s)
+			$of(u"Port kan inte ställas in när värd är null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"V\u00e4rd \u00e4r inte en v\u00e4lformulerad adress"_s)
+			$of(u"Värd är inte en välformulerad adress"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"Schemat \u00e4r inte likformigt."_s)
+			$of(u"Schemat är inte likformigt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"Kan inte st\u00e4lla in schema fr\u00e5n null-str\u00e4ng"_s)
+			$of(u"Kan inte ställa in schema från null-sträng"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"S\u00f6kv\u00e4gen inneh\u00e5ller en ogiltig escape-sekvens"_s)
+			$of(u"Sökvägen innehåller en ogiltig escape-sekvens"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PATH_INVALID_CHAR),
-			$of(u"S\u00f6kv\u00e4gen inneh\u00e5ller ett ogiltigt tecken: {0}"_s)
+			$of(u"Sökvägen innehåller ett ogiltigt tecken: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_INVALID_CHAR),
-			$of(u"Fragment inneh\u00e5ller ett ogiltigt tecken"_s)
+			$of(u"Fragment innehåller ett ogiltigt tecken"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"Fragment kan inte st\u00e4llas in n\u00e4r s\u00f6kv\u00e4g \u00e4r null"_s)
+			$of(u"Fragment kan inte ställas in när sökväg är null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Fragment kan bara st\u00e4llas in f\u00f6r en allm\u00e4n URI"_s)
+			$of(u"Fragment kan bara ställas in för en allmän URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_SCHEME_IN_URI),
@@ -217,51 +217,51 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Fragment kan inte anges i b\u00e5de s\u00f6kv\u00e4gen och fragmentet"_s)
+			$of(u"Fragment kan inte anges i både sökvägen och fragmentet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"Fr\u00e5gestr\u00e4ng kan inte anges i b\u00e5de s\u00f6kv\u00e4gen och fr\u00e5gestr\u00e4ngen"_s)
+			$of(u"Frågesträng kan inte anges i både sökvägen och frågesträngen"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_PORT_IF_NO_HOST),
-			$of(u"Port f\u00e5r inte anges om v\u00e4rden inte \u00e4r angiven"_s)
+			$of(u"Port får inte anges om värden inte är angiven"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Anv\u00e4ndarinfo f\u00e5r inte anges om v\u00e4rden inte \u00e4r angiven"_s)
+			$of(u"Användarinfo får inte anges om värden inte är angiven"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_XML_VERSION_NOT_SUPPORTED),
-			$of(u"Varning:  Versionen av utdatadokumentet som beg\u00e4rts \u00e4r \'\'{0}\'\'.  Den h\u00e4r versionen av XML st\u00f6ds inte.  Versionen av utdatadokumentet kommer att vara \'\'1.0\'\'."_s)
+			$of(u"Varning:  Versionen av utdatadokumentet som begärts är \'\'{0}\'\'.  Den här versionen av XML stöds inte.  Versionen av utdatadokumentet kommer att vara \'\'1.0\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_REQUIRED),
-			$of(u"Schema kr\u00e4vs!"_s)
+			$of(u"Schema krävs!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FACTORY_PROPERTY_MISSING),
-			$of(u"Egenskapsobjektet som \u00f6verf\u00f6rts till SerializerFactory har ingen \'\'{0}\'\'-egenskap."_s)
+			$of(u"Egenskapsobjektet som överförts till SerializerFactory har ingen \'\'{0}\'\'-egenskap."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"Varning: Kodningen \'\'{0}\'\' st\u00f6ds inte av Java runtime."_s)
+			$of(u"Varning: Kodningen \'\'{0}\'\' stöds inte av Java runtime."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_FOUND),
-			$of(u"Parametern \'\'{0}\'\' k\u00e4nns inte igen."_s)
+			$of(u"Parametern \'\'{0}\'\' känns inte igen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_SUPPORTED),
-			$of(u"Parametern \'\'{0}\'\' k\u00e4nns igen men det beg\u00e4rda v\u00e4rdet kan inte anges."_s)
+			$of(u"Parametern \'\'{0}\'\' känns igen men det begärda värdet kan inte anges."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRING_TOO_LONG),
-			$of(u"Resultatstr\u00e4ngen \u00e4r f\u00f6r l\u00e5ng och ryms inte i DOMString: \'\'{0}\'\'."_s)
+			$of(u"Resultatsträngen är för lång och ryms inte i DOMString: \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_TYPE_MISMATCH_ERR),
-			$of(u"V\u00e4rdetypen f\u00f6r detta parameternamn \u00e4r inkompatibelt med f\u00f6rv\u00e4ntad v\u00e4rdetyp. "_s)
+			$of(u"Värdetypen för detta parameternamn är inkompatibelt med förväntad värdetyp. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_OUTPUT_SPECIFIED),
@@ -269,7 +269,7 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNSUPPORTED_ENCODING),
-			$of(u"En kodning som inte st\u00f6ds har p\u00e5tr\u00e4ffats."_s)
+			$of(u"En kodning som inte stöds har påträffats."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNABLE_TO_SERIALIZE_NODE),
@@ -277,15 +277,15 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_CDATA_SECTIONS_SPLIT),
-			$of(u"CDATA-sektionen inneh\u00e5ller en eller flera avslutningsmark\u00f6rer (\']]>\')."_s)
+			$of(u"CDATA-sektionen innehåller en eller flera avslutningsmarkörer (\']]>\')."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WARNING_WF_NOT_CHECKED),
-			$of(u"En instans av Well-Formedness-kontrollen kunde inte skapas. Parametern well-formed har angetts till sant men Well-Formedness-kontrollen kan inte utf\u00f6ras."_s)
+			$of(u"En instans av Well-Formedness-kontrollen kunde inte skapas. Parametern well-formed har angetts till sant men Well-Formedness-kontrollen kan inte utföras."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER),
-			$of(u"Noden \'\'{0}\'\' inneh\u00e5ller ogiltiga XML-tecken."_s)
+			$of(u"Noden \'\'{0}\'\' innehåller ogiltiga XML-tecken."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_COMMENT),
@@ -297,11 +297,11 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_CDATA),
-			$of(u"Ett ogiltigt XML-tecken (Unicode: 0x{0}) hittades i inneh\u00e5llet i CDATASection."_s)
+			$of(u"Ett ogiltigt XML-tecken (Unicode: 0x{0}) hittades i innehållet i CDATASection."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_TEXT),
-			$of(u"Ett ogiltigt XML-tecken (Unicode: 0x{0}) hittades i teckendatainneh\u00e5llet f\u00f6r noden."_s)
+			$of(u"Ett ogiltigt XML-tecken (Unicode: 0x{0}) hittades i teckendatainnehållet för noden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_NODE_NAME),
@@ -309,19 +309,19 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_DASH_IN_COMMENT),
-			$of(u"Str\u00e4ngen \"--\" \u00e4r inte till\u00e5ten inom kommentarer."_s)
+			$of(u"Strängen \"--\" är inte tillåten inom kommentarer."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_LT_IN_ATTVAL),
-			$of(u"Attributv\u00e4rdet \"{1}\" som associeras med elementtyp \"{0}\" f\u00e5r inte inneh\u00e5lla n\u00e5got \'\'<\'\'-tecken."_s)
+			$of(u"Attributvärdet \"{1}\" som associeras med elementtyp \"{0}\" får inte innehålla något \'\'<\'\'-tecken."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_UNPARSED_ENT),
-			$of(u"Den otolkade enhetsreferensen \"&{0};\" \u00e4r inte till\u00e5ten."_s)
+			$of(u"Den otolkade enhetsreferensen \"&{0};\" är inte tillåten."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_EXTERNAL_ENT),
-			$of(u"Den externa enhetsreferensen \"&{0};\" till\u00e5ts inte i ett attributv\u00e4rde."_s)
+			$of(u"Den externa enhetsreferensen \"&{0};\" tillåts inte i ett attributvärde."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NS_PREFIX_CANNOT_BE_BOUND),
@@ -329,23 +329,23 @@ $ObjectArray2* SerializerMessages_sv::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ELEMENT_NAME),
-			$of(u"Det lokala namnet p\u00e5 elementet \"{0}\" \u00e4r null."_s)
+			$of(u"Det lokala namnet på elementet \"{0}\" är null."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ATTR_NAME),
-			$of(u"Det lokala namnet p\u00e5 attributet \"{0}\" \u00e4r null."_s)
+			$of(u"Det lokala namnet på attributet \"{0}\" är null."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ELEM_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"Ers\u00e4ttningstexten f\u00f6r enhetsnoden \"{0}\" inneh\u00e5ller elementnoden \"{1}\" med ett obundet prefix, \"{2}\"."_s)
+			$of(u"Ersättningstexten för enhetsnoden \"{0}\" innehåller elementnoden \"{1}\" med ett obundet prefix, \"{2}\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ATTR_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"Ers\u00e4ttningstexten f\u00f6r enhetsnoden \"{0}\" inneh\u00e5ller attributnoden \"{1}\" med ett obundet prefix, \"{2}\"."_s)
+			$of(u"Ersättningstexten för enhetsnoden \"{0}\" innehåller attributnoden \"{1}\" med ett obundet prefix, \"{2}\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WRITING_INTERNAL_SUBSET),
-			$of(u"Ett fel intr\u00e4ffade vid skrivning till den interna delm\u00e4ngden."_s)
+			$of(u"Ett fel inträffade vid skrivning till den interna delmängden."_s)
 		})
 	}));
 	return contents;

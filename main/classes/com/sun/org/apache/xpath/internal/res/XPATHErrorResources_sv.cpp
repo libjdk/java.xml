@@ -664,7 +664,7 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CURRENT_NOT_ALLOWED_IN_MATCH),
-			$of(u"Funktionen current() \u00e4r inte till\u00e5ten i ett matchningsm\u00f6nster!"_s)
+			$of(u"Funktionen current() är inte tillåten i ett matchningsmönster!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CURRENT_TAKES_NO_ARGS),
@@ -676,39 +676,39 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CONTEXT_CAN_NOT_BE_NULL),
-			$of(u"Kontexten kan inte vara null n\u00e4r \u00e5tg\u00e4rden \u00e4r kontextberoende."_s)
+			$of(u"Kontexten kan inte vara null när åtgärden är kontextberoende."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CONTEXT_HAS_NO_OWNERDOC),
-			$of(u"context har inget \u00e4gardokument!"_s)
+			$of(u"context har inget ägardokument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_LOCALNAME_HAS_TOO_MANY_ARGS),
-			$of(u"local-name() har f\u00f6r m\u00e5nga argument."_s)
+			$of(u"local-name() har för många argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NAMESPACEURI_HAS_TOO_MANY_ARGS),
-			$of(u"namespace-uri() har f\u00f6r m\u00e5nga argument."_s)
+			$of(u"namespace-uri() har för många argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NORMALIZESPACE_HAS_TOO_MANY_ARGS),
-			$of(u"normalize-space() har f\u00f6r m\u00e5nga argument."_s)
+			$of(u"normalize-space() har för många argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NUMBER_HAS_TOO_MANY_ARGS),
-			$of(u"number() har f\u00f6r m\u00e5nga argument."_s)
+			$of(u"number() har för många argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NAME_HAS_TOO_MANY_ARGS),
-			$of(u"name() har f\u00f6r m\u00e5nga argument."_s)
+			$of(u"name() har för många argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_STRING_HAS_TOO_MANY_ARGS),
-			$of(u"string() har f\u00f6r m\u00e5nga argument."_s)
+			$of(u"string() har för många argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_STRINGLENGTH_HAS_TOO_MANY_ARGS),
-			$of(u"string-length() har f\u00f6r m\u00e5nga argument."_s)
+			$of(u"string-length() har för många argument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_TRANSLATE_TAKES_3_ARGS),
@@ -720,19 +720,19 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NAMESPACEAXIS_NOT_IMPLEMENTED),
-			$of(u"namnrymdsaxeln \u00e4r inte implementerad \u00e4n!"_s)
+			$of(u"namnrymdsaxeln är inte implementerad än!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_UNKNOWN_AXIS),
-			$of(u"ok\u00e4nd axel: {0}"_s)
+			$of(u"okänd axel: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_UNKNOWN_MATCH_OPERATION),
-			$of(u"ok\u00e4nd matchnings\u00e5tg\u00e4rd!"_s)
+			$of(u"okänd matchningsåtgärd!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_INCORRECT_ARG_LENGTH),
-			$of(u"Felaktig argumentl\u00e4ngd p\u00e5 nodtest f\u00f6r processing-instruction()!"_s)
+			$of(u"Felaktig argumentlängd på nodtest för processing-instruction()!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANT_CONVERT_TO_NUMBER),
@@ -752,27 +752,27 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_MATCH_PATTERN),
-			$of(u"F\u00f6rv\u00e4ntat matchningsm\u00f6nster i getMatchScore!"_s)
+			$of(u"Förväntat matchningsmönster i getMatchScore!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_COULDNOT_GET_VAR_NAMED),
-			$of(u"Kunde inte h\u00e4mta variabeln {0}"_s)
+			$of(u"Kunde inte hämta variabeln {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_UNKNOWN_OPCODE),
-			$of(u"FEL! Ok\u00e4nd op-kod: {0}"_s)
+			$of(u"FEL! Okänd op-kod: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXTRA_ILLEGAL_TOKENS),
-			$of(u"Extra otill\u00e5tna tecken: {0}"_s)
+			$of(u"Extra otillåtna tecken: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_DOUBLE_QUOTE),
-			$of(u"Litteral omges av fel sorts citattecken... dubbla citattecken f\u00f6rv\u00e4ntade!"_s)
+			$of(u"Litteral omges av fel sorts citattecken... dubbla citattecken förväntade!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_SINGLE_QUOTE),
-			$of(u"Litteral omges av fel sorts citattecken... enkla citattecken f\u00f6rv\u00e4ntade!"_s)
+			$of(u"Litteral omges av fel sorts citattecken... enkla citattecken förväntade!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EMPTY_EXPRESSION),
@@ -780,39 +780,39 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_BUT_FOUND),
-			$of(u"F\u00f6rv\u00e4ntade {0}, men hittade: {1}"_s)
+			$of(u"Förväntade {0}, men hittade: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_INCORRECT_PROGRAMMER_ASSERTION),
-			$of(u"Programmerarens utsaga \u00e4r inte korrekt! - {0}"_s)
+			$of(u"Programmerarens utsaga är inte korrekt! - {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_BOOLEAN_ARG_NO_LONGER_OPTIONAL),
-			$of(u"Argumentet boolean(...) \u00e4r inte l\u00e4ngre valfritt med 19990709 XPath-utkast."_s)
+			$of(u"Argumentet boolean(...) är inte längre valfritt med 19990709 XPath-utkast."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_FOUND_COMMA_BUT_NO_PRECEDING_ARG),
-			$of(u"Hittade \',\' utan f\u00f6reg\u00e5ende argument!"_s)
+			$of(u"Hittade \',\' utan föregående argument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_FOUND_COMMA_BUT_NO_FOLLOWING_ARG),
-			$of(u"Hittade \',\' utan efterf\u00f6ljande argument!"_s)
+			$of(u"Hittade \',\' utan efterföljande argument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_PREDICATE_ILLEGAL_SYNTAX),
-			$of(u"\'..[predikat]\' eller \'.[predikat]\' \u00e4r otill\u00e5ten syntax. Anv\u00e4nd \'self::node()[predikat]\' ist\u00e4llet."_s)
+			$of(u"\'..[predikat]\' eller \'.[predikat]\' är otillåten syntax. Använd \'self::node()[predikat]\' istället."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_ILLEGAL_AXIS_NAME),
-			$of(u"otill\u00e5tet axelnamn: {0}"_s)
+			$of(u"otillåtet axelnamn: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_UNKNOWN_NODETYPE),
-			$of(u"Ok\u00e4nd nodtyp: {0}"_s)
+			$of(u"Okänd nodtyp: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_PATTERN_LITERAL_NEEDS_BE_QUOTED),
-			$of(u"M\u00f6nsterlitteralen ({0}) m\u00e5ste omges av citattecken!"_s)
+			$of(u"Mönsterlitteralen ({0}) måste omges av citattecken!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_COULDNOT_BE_FORMATTED_TO_NUMBER),
@@ -832,15 +832,15 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_ERROR_OCCURED),
-			$of(u"Ett fel har intr\u00e4ffat!"_s)
+			$of(u"Ett fel har inträffat!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"VariableReference angiven f\u00f6r variabel som \u00e4r utanf\u00f6r kontext eller som saknar definition! Namn = {0}"_s)
+			$of(u"VariableReference angiven för variabel som är utanför kontext eller som saknar definition! Namn = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_AXES_NOT_ALLOWED),
-			$of(u"Endast underordnade:: och attribut::-axlar \u00e4r till\u00e5tna i matchningsm\u00f6nster! Regelvidriga axlar = {0}"_s)
+			$of(u"Endast underordnade:: och attribut::-axlar är tillåtna i matchningsmönster! Regelvidriga axlar = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_KEY_HAS_TOO_MANY_ARGS),
@@ -856,11 +856,11 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_UNSUPPORTED_ENCODING),
-			$of(u"Kodning utan st\u00f6d: {0}"_s)
+			$of(u"Kodning utan stöd: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_PROBLEM_IN_DTM_NEXTSIBLING),
-			$of(u"Problem intr\u00e4ffade i DTM i getNextSibling... f\u00f6rs\u00f6ker \u00e5terskapa"_s)
+			$of(u"Problem inträffade i DTM i getNextSibling... försöker återskapa"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANNOT_WRITE_TO_EMPTYNODELISTIMPL),
@@ -868,15 +868,15 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_SETDOMFACTORY_NOT_SUPPORTED),
-			$of(u"setDOMFactory st\u00f6ds inte i XPathContext!"_s)
+			$of(u"setDOMFactory stöds inte i XPathContext!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_PREFIX_MUST_RESOLVE),
-			$of(u"Prefix m\u00e5ste matchas till en namnrymd: {0}"_s)
+			$of(u"Prefix måste matchas till en namnrymd: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_PARSE_NOT_SUPPORTED),
-			$of(u"tolkning (InputSource-k\u00e4lla) st\u00f6ds inte i XPathContext! Kan inte \u00f6ppna {0}"_s)
+			$of(u"tolkning (InputSource-källa) stöds inte i XPathContext! Kan inte öppna {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_SAX_API_NOT_HANDLED),
@@ -904,7 +904,7 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Ogiltigt UTF-16-surrogat uppt\u00e4ckt: {0} ?"_s)
+			$of(u"Ogiltigt UTF-16-surrogat upptäckt: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_OIERROR),
@@ -912,7 +912,7 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANNOT_CREATE_URL),
-			$of(u"Kan inte skapa URL f\u00f6r: {0}"_s)
+			$of(u"Kan inte skapa URL för: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_XPATH_READOBJECT),
@@ -928,11 +928,11 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NODESET_NOT_MUTABLE),
-			$of(u"Detta NodeSet \u00e4r of\u00f6r\u00e4nderligt"_s)
+			$of(u"Detta NodeSet är oföränderligt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NODESETDTM_NOT_MUTABLE),
-			$of(u"Detta NodeSetDTM \u00e4r of\u00f6r\u00e4nderligt"_s)
+			$of(u"Detta NodeSetDTM är oföränderligt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_VAR_NOT_RESOLVABLE),
@@ -940,11 +940,11 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NULL_ERROR_HANDLER),
-			$of(u"Felhanterare med v\u00e4rde null"_s)
+			$of(u"Felhanterare med värde null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_PROG_ASSERT_UNKNOWN_OPCODE),
-			$of(u"Programmerarens utsaga: ok\u00e4nd op-kod: {0}"_s)
+			$of(u"Programmerarens utsaga: okänd op-kod: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_ZERO_OR_ONE),
@@ -952,31 +952,31 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"rtf() st\u00f6ds inte av XRTreeFragSelectWrapper"_s)
+			$of(u"rtf() stöds inte av XRTreeFragSelectWrapper"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"asNodeIterator() st\u00f6ds inte av XRTreeFragSelectWrapper"_s)
+			$of(u"asNodeIterator() stöds inte av XRTreeFragSelectWrapper"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_DETACH_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"detach() st\u00f6ds inte av XRTreeFragSelectWrapper"_s)
+			$of(u"detach() stöds inte av XRTreeFragSelectWrapper"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NUM_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"num() st\u00f6ds inte av XRTreeFragSelectWrapper"_s)
+			$of(u"num() stöds inte av XRTreeFragSelectWrapper"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_XSTR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"xstr() st\u00f6ds inte av XRTreeFragSelectWrapper"_s)
+			$of(u"xstr() stöds inte av XRTreeFragSelectWrapper"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_STR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"str() st\u00f6ds inte av XRTreeFragSelectWrapper"_s)
+			$of(u"str() stöds inte av XRTreeFragSelectWrapper"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS),
-			$of(u"fsb() st\u00f6ds inte f\u00f6r XStringForChars"_s)
+			$of(u"fsb() stöds inte för XStringForChars"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_COULD_NOT_FIND_VAR),
@@ -984,11 +984,11 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING),
-			$of(u"XStringForChars kan inte ta emot en str\u00e4ng f\u00f6r argument"_s)
+			$of(u"XStringForChars kan inte ta emot en sträng för argument"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_FASTSTRINGBUFFER_CANNOT_BE_NULL),
-			$of(u"FastStringBuffer-argumentet f\u00e5r inte vara null"_s)
+			$of(u"FastStringBuffer-argumentet får inte vara null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_TWO_OR_THREE),
@@ -996,15 +996,15 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_VARIABLE_ACCESSED_BEFORE_BIND),
-			$of(u"\u00c5tkomst till variabel innan den \u00e4r bunden!"_s)
+			$of(u"Åtkomst till variabel innan den är bunden!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_FSB_CANNOT_TAKE_STRING),
-			$of(u"XStringForFSB kan inte ta emot en str\u00e4ng f\u00f6r argument!"_s)
+			$of(u"XStringForFSB kan inte ta emot en sträng för argument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_SETTING_WALKER_ROOT_TO_NULL),
-			$of(u"\n !!!! Fel! Anger roten f\u00f6r en \'\'walker\'\' som null!!!"_s)
+			$of(u"\n !!!! Fel! Anger roten för en \'\'walker\'\' som null!!!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NODESETDTM_CANNOT_ITERATE),
@@ -1016,11 +1016,11 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NODESETDTM_CANNOT_INDEX),
-			$of(u"Detta NodeSetDTM kan inte utf\u00f6ra funktioner som indexerar eller r\u00e4knar!"_s)
+			$of(u"Detta NodeSetDTM kan inte utföra funktioner som indexerar eller räknar!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NODESET_CANNOT_INDEX),
-			$of(u"Detta NodeSet kan inte utf\u00f6ra funktioner som indexerar eller r\u00e4knar!"_s)
+			$of(u"Detta NodeSet kan inte utföra funktioner som indexerar eller räknar!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANNOT_CALL_SETSHOULDCACHENODE),
@@ -1028,59 +1028,59 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_ONLY_ALLOWS),
-			$of(u"{0} till\u00e5ter endast {1} argument"_s)
+			$of(u"{0} tillåter endast {1} argument"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_UNKNOWN_STEP),
-			$of(u"Programmerarens utsaga i getNextStepPos: ok\u00e4nt stepType: {0}"_s)
+			$of(u"Programmerarens utsaga i getNextStepPos: okänt stepType: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_REL_LOC_PATH),
-			$of(u"En relativ s\u00f6kv\u00e4g f\u00f6rv\u00e4ntades efter tecknet \'/\' eller \'//\'."_s)
+			$of(u"En relativ sökväg förväntades efter tecknet \'/\' eller \'//\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_LOC_PATH),
-			$of(u"En s\u00f6kv\u00e4g f\u00f6rv\u00e4ntades, men f\u00f6ljande tecken p\u00e5tr\u00e4ffades: {0}"_s)
+			$of(u"En sökväg förväntades, men följande tecken påträffades: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_LOC_PATH_AT_END_EXPR),
-			$of(u"En s\u00f6kv\u00e4g f\u00f6rv\u00e4ntades, men slutet av XPath-uttrycket hittades ist\u00e4llet."_s)
+			$of(u"En sökväg förväntades, men slutet av XPath-uttrycket hittades istället."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_LOC_STEP),
-			$of(u"Ett platssteg f\u00f6rv\u00e4ntades efter tecknet \'/\' eller \'//\'."_s)
+			$of(u"Ett platssteg förväntades efter tecknet \'/\' eller \'//\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_NODE_TEST),
-			$of(u"Ett nodtest som matchar antingen NCName:* eller QName f\u00f6rv\u00e4ntades."_s)
+			$of(u"Ett nodtest som matchar antingen NCName:* eller QName förväntades."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_STEP_PATTERN),
-			$of(u"Ett stegm\u00f6nster f\u00f6rv\u00e4ntades, men \'/\' p\u00e5tr\u00e4ffades."_s)
+			$of(u"Ett stegmönster förväntades, men \'/\' påträffades."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXPECTED_REL_PATH_PATTERN),
-			$of(u"Ett m\u00f6nster f\u00f6r relativ s\u00f6kv\u00e4g f\u00f6rv\u00e4ntades."_s)
+			$of(u"Ett mönster för relativ sökväg förväntades."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANT_CONVERT_TO_BOOLEAN),
-			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' inneh\u00e5ller XPathResultType {1} som inte kan konverteras till booleskt v\u00e4rde."_s)
+			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' innehåller XPathResultType {1} som inte kan konverteras till booleskt värde."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANT_CONVERT_TO_SINGLENODE),
-			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' inneh\u00e5ller XPathResultType {1} som inte kan konverteras till enskild nod. Metoden getSingleNodeValue anv\u00e4nds endast till typ ANY_UNORDERED_NODE_TYPE och FIRST_ORDERED_NODE_TYPE."_s)
+			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' innehåller XPathResultType {1} som inte kan konverteras till enskild nod. Metoden getSingleNodeValue används endast till typ ANY_UNORDERED_NODE_TYPE och FIRST_ORDERED_NODE_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANT_GET_SNAPSHOT_LENGTH),
-			$of(u"Metoden getSnapshotLength kan inte anropas vid XPathResult fr\u00e5n XPath-uttrycket \'\'{0}\'\' eftersom XPathResultType \u00e4r {1}. Metoden anv\u00e4nds endast till typ UNORDERED_NODE_SNAPSHOT_TYPE och ORDERED_NODE_SNAPSHOT_TYPE."_s)
+			$of(u"Metoden getSnapshotLength kan inte anropas vid XPathResult från XPath-uttrycket \'\'{0}\'\' eftersom XPathResultType är {1}. Metoden används endast till typ UNORDERED_NODE_SNAPSHOT_TYPE och ORDERED_NODE_SNAPSHOT_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NON_ITERATOR_TYPE),
-			$of(u"Metoden iterateNext kan inte anropas vid XPathResult fr\u00e5n XPath-uttrycket \'\'{0}\'\' eftersom XPathResultType \u00e4r {1}. Metoden anv\u00e4nds endast till typ UNORDERED_NODE_ITERATOR_TYPE och ORDERED_NODE_ITERATOR_TYPE."_s)
+			$of(u"Metoden iterateNext kan inte anropas vid XPathResult från XPath-uttrycket \'\'{0}\'\' eftersom XPathResultType är {1}. Metoden används endast till typ UNORDERED_NODE_ITERATOR_TYPE och ORDERED_NODE_ITERATOR_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_DOC_MUTATED),
-			$of(u"Dokumentet har muterats sedan resultatet genererades. Iteratorn \u00e4r ogiltig."_s)
+			$of(u"Dokumentet har muterats sedan resultatet genererades. Iteratorn är ogiltig."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_INVALID_XPATH_TYPE),
@@ -1092,55 +1092,55 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_INCOMPATIBLE_TYPES),
-			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' inneh\u00e5ller XPathResultType {1} som inte kan tvingas till angiven XPathResultType {2}."_s)
+			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' innehåller XPathResultType {1} som inte kan tvingas till angiven XPathResultType {2}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NULL_RESOLVER),
-			$of(u"Kan inte matcha prefix med prefixmatchning som \u00e4r null."_s)
+			$of(u"Kan inte matcha prefix med prefixmatchning som är null."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANT_CONVERT_TO_STRING),
-			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' inneh\u00e5ller XPathResultType {1} som inte kan konverteras till en str\u00e4ng."_s)
+			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' innehåller XPathResultType {1} som inte kan konverteras till en sträng."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NON_SNAPSHOT_TYPE),
-			$of(u"Metoden snapshotItem kan inte anropas vid XPathResult fr\u00e5n XPath-uttrycket \'\'{0}\'\' eftersom XPathResultType \u00e4r {1}. Metoden anv\u00e4nds endast till typ UNORDERED_NODE_SNAPSHOT_TYPE och ORDERED_NODE_SNAPSHOT_TYPE."_s)
+			$of(u"Metoden snapshotItem kan inte anropas vid XPathResult från XPath-uttrycket \'\'{0}\'\' eftersom XPathResultType är {1}. Metoden används endast till typ UNORDERED_NODE_SNAPSHOT_TYPE och ORDERED_NODE_SNAPSHOT_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_WRONG_DOCUMENT),
-			$of(u"Kontextnoden tillh\u00f6r inte dokumentet som \u00e4r bundet till denna XPathEvaluator."_s)
+			$of(u"Kontextnoden tillhör inte dokumentet som är bundet till denna XPathEvaluator."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_WRONG_NODETYPE),
-			$of(u"Kontextnodtypen st\u00f6ds inte."_s)
+			$of(u"Kontextnodtypen stöds inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_XPATH_ERROR),
-			$of(u"Ok\u00e4nt fel i XPath."_s)
+			$of(u"Okänt fel i XPath."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_CANT_CONVERT_XPATHRESULTTYPE_TO_NUMBER),
-			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' inneh\u00e5ller XPathResultType {1} som inte kan konverteras till ett tal."_s)
+			$of(u"XPathResult i XPath-uttrycket \'\'{0}\'\' innehåller XPathResultType {1} som inte kan konverteras till ett tal."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED),
-			$of(u"Till\u00e4ggsfunktion: \'\'{0}\'\' kan inte anropas om funktionen XMLConstants.FEATURE_SECURE_PROCESSING anges som true."_s)
+			$of(u"Tilläggsfunktion: \'\'{0}\'\' kan inte anropas om funktionen XMLConstants.FEATURE_SECURE_PROCESSING anges som true."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_RESOLVE_VARIABLE_RETURNS_NULL),
-			$of(u"resolveVariable f\u00f6r variabeln {0} returnerar null"_s)
+			$of(u"resolveVariable för variabeln {0} returnerar null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_UNSUPPORTED_RETURN_TYPE),
-			$of(u"Det finns inget st\u00f6d f\u00f6r returtypen: {0}"_s)
+			$of(u"Det finns inget stöd för returtypen: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"K\u00e4lla och/eller returtyp f\u00e5r inte vara null"_s)
+			$of(u"Källa och/eller returtyp får inte vara null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"K\u00e4lla och/eller returtyp f\u00e5r inte vara null"_s)
+			$of(u"Källa och/eller returtyp får inte vara null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_ARG_CANNOT_BE_NULL),
@@ -1156,55 +1156,55 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_FEATURE_NAME_NULL),
-			$of(u"F\u00f6rs\u00f6ker ange en funktion med null-namn: {0}#setFeature( null, {1})"_s)
+			$of(u"Försöker ange en funktion med null-namn: {0}#setFeature( null, {1})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_FEATURE_UNKNOWN),
-			$of(u"F\u00f6rs\u00f6ker ange en ok\u00e4nd funktion \"{0}\":{1}#setFeature({0},{2})"_s)
+			$of(u"Försöker ange en okänd funktion \"{0}\":{1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_GETTING_NULL_FEATURE),
-			$of(u"F\u00f6rs\u00f6ker h\u00e4mta en funktion med null-namn: {0}#getFeature(null)"_s)
+			$of(u"Försöker hämta en funktion med null-namn: {0}#getFeature(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_GETTING_UNKNOWN_FEATURE),
-			$of(u"F\u00f6rs\u00f6ker h\u00e4mta en ok\u00e4nd funktion \"{0}\":{1}#getFeature({0})"_s)
+			$of(u"Försöker hämta en okänd funktion \"{0}\":{1}#getFeature({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: Kan inte ange funktionen som false om s\u00e4kerhetshanteraren anv\u00e4nds: {1}#setFeature({0},{2})"_s)
+			$of(u"FEATURE_SECURE_PROCESSING: Kan inte ange funktionen som false om säkerhetshanteraren används: {1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NULL_XPATH_FUNCTION_RESOLVER),
-			$of(u"F\u00f6rs\u00f6ker ange nullv\u00e4rde f\u00f6r XPathFunctionResolver:{0}#setXPathFunctionResolver(null)"_s)
+			$of(u"Försöker ange nullvärde för XPathFunctionResolver:{0}#setXPathFunctionResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::ER_NULL_XPATH_VARIABLE_RESOLVER),
-			$of(u"F\u00f6rs\u00f6ker ange nullv\u00e4rde f\u00f6r XPathVariableResolver:{0}#setXPathVariableResolver(null)"_s)
+			$of(u"Försöker ange nullvärde för XPathVariableResolver:{0}#setXPathVariableResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_LOCALE_NAME_NOT_HANDLED),
-			$of(u"spr\u00e5kkonventionsnamnet i funktionen format-number har \u00e4nnu inte hanterats!"_s)
+			$of(u"språkkonventionsnamnet i funktionen format-number har ännu inte hanterats!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_PROPERTY_NOT_SUPPORTED),
-			$of(u"XSL-egenskapen st\u00f6ds inte: {0}"_s)
+			$of(u"XSL-egenskapen stöds inte: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_DONT_DO_ANYTHING_WITH_NS),
-			$of(u"G\u00f6r f\u00f6r n\u00e4rvarande inte n\u00e5gonting med namnrymden {0} i egenskap: {1}"_s)
+			$of(u"Gör för närvarande inte någonting med namnrymden {0} i egenskap: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_SECURITY_EXCEPTION),
-			$of(u"SecurityException vid f\u00f6rs\u00f6k att f\u00e5 \u00e5tkomst till XSL-systemegenskap: {0}"_s)
+			$of(u"SecurityException vid försök att få åtkomst till XSL-systemegenskap: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_QUO_NO_LONGER_DEFINED),
-			$of(u"Gammal syntax: quo(...) definieras inte l\u00e4ngre i XPath."_s)
+			$of(u"Gammal syntax: quo(...) definieras inte längre i XPath."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_NEED_DERIVED_OBJECT_TO_IMPLEMENT_NODETEST),
-			$of(u"XPath beh\u00f6ver ett h\u00e4rledningsobjekt f\u00f6r att implementera nodeTest!"_s)
+			$of(u"XPath behöver ett härledningsobjekt för att implementera nodeTest!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_FUNCTION_TOKEN_NOT_FOUND),
@@ -1216,19 +1216,19 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_CANNOT_MAKE_URL_FROM),
-			$of(u"Kan inte skapa URL fr\u00e5n: {0}"_s)
+			$of(u"Kan inte skapa URL från: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_EXPAND_ENTITIES_NOT_SUPPORTED),
-			$of(u"Alternativet -E st\u00f6ds inte i DTM-parser"_s)
+			$of(u"Alternativet -E stöds inte i DTM-parser"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"VariableReference angiven f\u00f6r variabel som \u00e4r utanf\u00f6r kontext eller som saknar definition! Namn = {0}"_s)
+			$of(u"VariableReference angiven för variabel som är utanför kontext eller som saknar definition! Namn = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_sv::WG_UNSUPPORTED_ENCODING),
-			$of(u"Kodning utan st\u00f6d: {0}"_s)
+			$of(u"Kodning utan stöd: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1244,11 +1244,11 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"Parameter f\u00f6r createMessage ligger utanf\u00f6r gr\u00e4nsv\u00e4rdet"_s)
+			$of(u"Parameter för createMessage ligger utanför gränsvärdet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Undantag utl\u00f6st vid messageFormat-anrop"_s)
+			$of(u"Undantag utlöst vid messageFormat-anrop"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
@@ -1272,7 +1272,7 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("xsldone"_s),
-			$of(u"XSLProcessor: utf\u00f6rd"_s)
+			$of(u"XSLProcessor: utförd"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xpath_option"_s),
@@ -1288,7 +1288,7 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("optionMatch"_s),
-			$of(u"   [-match matchningsm\u00f6nster (f\u00f6r matchningsdiagnostik)]"_s)
+			$of(u"   [-match matchningsmönster (för matchningsdiagnostik)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionAnyExpr"_s),
@@ -1296,7 +1296,7 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
-			$of(u"XSL-processen utf\u00f6rdes inte."_s)
+			$of(u"XSL-processen utfördes inte."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg2"_s),
@@ -1304,11 +1304,11 @@ void clinit$XPATHErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"Kontrollera klass\u00f6kv\u00e4gen."_s)
+			$of(u"Kontrollera klassökvägen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"Om du inte har IBMs XML Parser f\u00f6r Java kan du ladda ned den fr\u00e5n"_s)
+			$of(u"Om du inte har IBMs XML Parser för Java kan du ladda ned den från"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),

@@ -73,99 +73,99 @@ $ObjectArray2* ErrorMessages_zh_TW::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),
-			$of(u"\'\'{0}\'\' \u4e2d\u7684\u57f7\u884c\u968e\u6bb5\u5167\u90e8\u932f\u8aa4"_s)
+			$of(u"\'\'{0}\'\' 中的執行階段內部錯誤"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"\u57f7\u884c <xsl:copy> \u6642\u767c\u751f\u57f7\u884c\u968e\u6bb5\u932f\u8aa4"_s)
+			$of(u"執行 <xsl:copy> 時發生執行階段錯誤"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"\u5f9e \'\'{0}\'\' \u81f3 \'\'{1}\'\' \u7684\u8f49\u63db\u7121\u6548\u3002"_s)
+			$of(u"從 \'\'{0}\'\' 至 \'\'{1}\'\' 的轉換無效。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"XSLTC \u4e0d\u652f\u63f4\u5916\u90e8\u51fd\u6578 \'\'{0}\'\'\u3002"_s)
+			$of(u"XSLTC 不支援外部函數 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"\u76f8\u7b49\u6027\u8868\u793a\u5f0f\u4e2d\u7684\u5f15\u6578\u985e\u578b\u4e0d\u660e\u3002"_s)
+			$of(u"相等性表示式中的引數類型不明。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"\u547c\u53eb \'\'{1}\'\' \u4e2d\u7684\u5f15\u6578\u985e\u578b \'\'{0}\'\' \u7121\u6548"_s)
+			$of(u"呼叫 \'\'{1}\'\' 中的引數類型 \'\'{0}\'\' 無效"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"\u5617\u8a66\u4f7f\u7528\u6a23\u5f0f \'\'{1}\'\' \u683c\u5f0f\u5316\u6578\u5b57 \'\'{0}\'\'\u3002"_s)
+			$of(u"嘗試使用樣式 \'\'{1}\'\' 格式化數字 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
-			$of(u"\u7121\u6cd5\u8907\u88fd\u91cd\u8907\u7a0b\u5f0f \'\'{0}\'\'\u3002"_s)
+			$of(u"無法複製重複程式 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"\u4e0d\u652f\u63f4\u8ef8 \'\'{0}\'\' \u7684\u91cd\u8907\u7a0b\u5f0f\u3002"_s)
+			$of(u"不支援軸 \'\'{0}\'\' 的重複程式。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"\u4e0d\u652f\u63f4\u985e\u578b\u8ef8 \'\'{0}\'\' \u7684\u91cd\u8907\u7a0b\u5f0f\u3002"_s)
+			$of(u"不支援類型軸 \'\'{0}\'\' 的重複程式。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"\u5c6c\u6027 \'\'{0}\'\' \u5728\u5143\u7d20\u4e4b\u5916\u3002"_s)
+			$of(u"屬性 \'\'{0}\'\' 在元素之外。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"\u547d\u540d\u7a7a\u9593\u5ba3\u544a \'\'{0}\'\'=\'\'{1}\'\' \u8d85\u51fa\u5143\u7d20\u5916\u3002"_s)
+			$of(u"命名空間宣告 \'\'{0}\'\'=\'\'{1}\'\' 超出元素外。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"\u5b57\u9996 \'\'{0}\'\' \u7684\u547d\u540d\u7a7a\u9593\u5c1a\u672a\u5ba3\u544a\u3002"_s)
+			$of(u"字首 \'\'{0}\'\' 的命名空間尚未宣告。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
-			$of(u"\u4f7f\u7528\u932f\u8aa4\u7684\u4f86\u6e90 DOM \u985e\u578b\u5efa\u7acb DOMAdapter\u3002"_s)
+			$of(u"使用錯誤的來源 DOM 類型建立 DOMAdapter。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"\u60a8\u6b63\u5728\u4f7f\u7528\u7684 SAX \u5256\u6790\u5668\u4e0d\u6703\u8655\u7406 DTD \u5ba3\u544a\u4e8b\u4ef6\u3002"_s)
+			$of(u"您正在使用的 SAX 剖析器不會處理 DTD 宣告事件。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"\u60a8\u6b63\u5728\u4f7f\u7528\u7684 SAX \u5256\u6790\u5668\u4e0d\u652f\u63f4 XML \u547d\u540d\u7a7a\u9593\u3002"_s)
+			$of(u"您正在使用的 SAX 剖析器不支援 XML 命名空間。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"\u7121\u6cd5\u89e3\u6790 URI \u53c3\u7167 \'\'{0}\'\'\u3002"_s)
+			$of(u"無法解析 URI 參照 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_XSL_ERR),
-			$of(u"\u4e0d\u652f\u63f4\u7684 XSL \u5143\u7d20 \'\'{0}\'\'"_s)
+			$of(u"不支援的 XSL 元素 \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
-			$of(u"\u7121\u6cd5\u8fa8\u8b58\u7684 XSLTC \u64f4\u5145\u5957\u4ef6 \'\'{0}\'\'"_s)
+			$of(u"無法辨識的 XSLTC 擴充套件 \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"\u5efa\u7acb\u6307\u5b9a translet \'\'{0}\'\' \u7684 XSLTC \u7248\u672c\u6bd4\u4f7f\u7528\u4e2d XSLTC \u57f7\u884c\u968e\u6bb5\u7684\u7248\u672c\u8f03\u65b0\u3002\u60a8\u5fc5\u9808\u91cd\u65b0\u7de8\u8b6f\u6a23\u5f0f\u8868\uff0c\u6216\u4f7f\u7528\u8f03\u65b0\u7684 XSLTC \u7248\u672c\u4f86\u57f7\u884c\u6b64 translet\u3002"_s)
+			$of(u"建立指定 translet \'\'{0}\'\' 的 XSLTC 版本比使用中 XSLTC 執行階段的版本較新。您必須重新編譯樣式表，或使用較新的 XSLTC 版本來執行此 translet。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
-			$of(u"\u503c\u5fc5\u9808\u70ba QName \u7684\u5c6c\u6027\uff0c\u5177\u6709\u503c \'\'{0}\'\'"_s)
+			$of(u"值必須為 QName 的屬性，具有值 \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_NCNAME_ERR),
-			$of(u"\u503c\u5fc5\u9808\u70ba NCName \u7684\u5c6c\u6027\uff0c\u5177\u6709\u503c \'\'{0}\'\'"_s)
+			$of(u"值必須為 NCName 的屬性，具有值 \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"\u7576\u5b89\u5168\u8655\u7406\u529f\u80fd\u8a2d\u70ba\u771f\u6642\uff0c\u4e0d\u5141\u8a31\u4f7f\u7528\u64f4\u5145\u5957\u4ef6\u51fd\u6578 \'\'{0}\'\'\u3002"_s)
+			$of(u"當安全處理功能設為真時，不允許使用擴充套件函數 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"\u7576\u5b89\u5168\u8655\u7406\u529f\u80fd\u8a2d\u70ba\u771f\u6642\uff0c\u4e0d\u5141\u8a31\u4f7f\u7528\u64f4\u5145\u5957\u4ef6\u5143\u7d20 \'\'{0}\'\'\u3002"_s)
+			$of(u"當安全處理功能設為真時，不允許使用擴充套件元素 \'\'{0}\'\'。"_s)
 		})
 	});
 }

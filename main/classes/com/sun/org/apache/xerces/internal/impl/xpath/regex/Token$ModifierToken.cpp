@@ -93,9 +93,9 @@ $String* Token$ModifierToken::toString(int32_t options) {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$3, $$str({"(?"_s, (this->add == 0 ? ""_s : $($REUtil::createOptionString(this->add)))}));
 	$var($String, var$2, $$concat(var$3, (this->mask == 0 ? ""_s : $($REUtil::createOptionString(this->mask)))));
-	$var($String, var$1, $$concat(var$2, ":"));
+	$var($String, var$1, $$concat(var$2, ":"_s));
 	$var($String, var$0, $$concat(var$1, $($nc(this->child)->toString(options))));
-	return $concat(var$0, ")");
+	return $concat(var$0, ")"_s);
 }
 
 Token$ModifierToken::Token$ModifierToken() {

@@ -664,7 +664,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CURRENT_NOT_ALLOWED_IN_MATCH),
-			$of(u"La funzione current() non \u00e8 consentita in un pattern di corrispondenza."_s)
+			$of(u"La funzione current() non è consentita in un pattern di corrispondenza."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CURRENT_TAKES_NO_ARGS),
@@ -672,11 +672,11 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_DOCUMENT_REPLACED),
-			$of(u"L\'implementazione della funzione document() \u00e8 stata sostituita da com.sun.org.apache.xalan.internal.xslt.FuncDocument."_s)
+			$of(u"L\'implementazione della funzione document() è stata sostituita da com.sun.org.apache.xalan.internal.xslt.FuncDocument."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CONTEXT_CAN_NOT_BE_NULL),
-			$of(u"Il contesto non pu\u00f2 essere nullo quando l\'operazione dipende dal contesto."_s)
+			$of(u"Il contesto non può essere nullo quando l\'operazione dipende dal contesto."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CONTEXT_HAS_NO_OWNERDOC),
@@ -720,7 +720,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NAMESPACEAXIS_NOT_IMPLEMENTED),
-			$of(u"l\'asse dello spazio di nomi non \u00e8 ancora implementato."_s)
+			$of(u"l\'asse dello spazio di nomi non è ancora implementato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_UNKNOWN_AXIS),
@@ -732,7 +732,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_INCORRECT_ARG_LENGTH),
-			$of(u"La lunghezza degli argomenti del testo del nodo processing-instruction() \u00e8 errata."_s)
+			$of(u"La lunghezza degli argomenti del testo del nodo processing-instruction() è errata."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANT_CONVERT_TO_NUMBER),
@@ -752,7 +752,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_MATCH_PATTERN),
-			$of(u"\u00c8 previsto un pattern di corrispondenza in getMatchScore."_s)
+			$of(u"È previsto un pattern di corrispondenza in getMatchScore."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_COULDNOT_GET_VAR_NAMED),
@@ -772,7 +772,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_SINGLE_QUOTE),
-			$of(u"valore non tra apici... \u00e8 previsto un apice."_s)
+			$of(u"valore non tra apici... è previsto un apice."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EMPTY_EXPRESSION),
@@ -784,23 +784,23 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_INCORRECT_PROGRAMMER_ASSERTION),
-			$of(u"L\'\'asserzione del programmatore \u00e8 errata - {0}"_s)
+			$of(u"L\'\'asserzione del programmatore è errata - {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_BOOLEAN_ARG_NO_LONGER_OPTIONAL),
-			$of(u"L\'argomento boolean(...) non \u00e8 pi\u00f9 facoltativo nella bozza XPath 19990709."_s)
+			$of(u"L\'argomento boolean(...) non è più facoltativo nella bozza XPath 19990709."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_FOUND_COMMA_BUT_NO_PRECEDING_ARG),
-			$of(u"\u00c8 stata trovata la virgola (\',\'), ma non l\'argomento che la precede."_s)
+			$of(u"È stata trovata la virgola (\',\'), ma non l\'argomento che la precede."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_FOUND_COMMA_BUT_NO_FOLLOWING_ARG),
-			$of(u"\u00c8 stata trovata la virgola (\',\'), ma non l\'argomento che la segue."_s)
+			$of(u"È stata trovata la virgola (\',\'), ma non l\'argomento che la segue."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_PREDICATE_ILLEGAL_SYNTAX),
-			$of(u"\'..[predicate]\' o \'.[predicate]\' \u00e8 una sintassi non valida.  Utilizzare \'self::node()[predicate]\'."_s)
+			$of(u"\'..[predicate]\' o \'.[predicate]\' è una sintassi non valida.  Utilizzare \'self::node()[predicate]\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_ILLEGAL_AXIS_NAME),
@@ -824,7 +824,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_DIDNOT_FIND_XPATH_SELECT_EXP),
-			$of(u"Errore. L\'espressione di selezione dell\'xpath (-select) non \u00e8 stata trovata."_s)
+			$of(u"Errore. L\'espressione di selezione dell\'xpath (-select) non è stata trovata."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_COULDNOT_FIND_ENDOP_AFTER_OPLOCATIONPATH),
@@ -832,11 +832,11 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_ERROR_OCCURED),
-			$of(u"Si \u00e8 verificato un errore."_s)
+			$of(u"Si è verificato un errore."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"Il valore di VariableReference specificato per la variabile \u00e8 fuori contesto o senza definizione. Nome = {0}"_s)
+			$of(u"Il valore di VariableReference specificato per la variabile è fuori contesto o senza definizione. Nome = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_AXES_NOT_ALLOWED),
@@ -860,7 +860,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_PROBLEM_IN_DTM_NEXTSIBLING),
-			$of(u"Si \u00e8 verificato un problema in DTM in getNextSibling... Tentativo di recupero in corso."_s)
+			$of(u"Si è verificato un problema in DTM in getNextSibling... Tentativo di recupero in corso."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANNOT_WRITE_TO_EMPTYNODELISTIMPL),
@@ -888,11 +888,11 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_DTM_CANNOT_HANDLE_NODES),
-			$of(u"DTMLiaison non pu\u00f2 gestire i nodi di tipo {0}"_s)
+			$of(u"DTMLiaison non può gestire i nodi di tipo {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_XERCES_CANNOT_HANDLE_NODES),
-			$of(u"DOM2Helper non pu\u00f2 gestire i nodi di tipo {0}"_s)
+			$of(u"DOM2Helper non può gestire i nodi di tipo {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_XERCES_PARSE_ERROR_DETAILS),
@@ -984,11 +984,11 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING),
-			$of(u"XStringForChars non pu\u00f2 avere una stringa per un argomento"_s)
+			$of(u"XStringForChars non può avere una stringa per un argomento"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_FASTSTRINGBUFFER_CANNOT_BE_NULL),
-			$of(u"L\'argomento FastStringBuffer non pu\u00f2 essere nullo"_s)
+			$of(u"L\'argomento FastStringBuffer non può essere nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_TWO_OR_THREE),
@@ -1000,7 +1000,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_FSB_CANNOT_TAKE_STRING),
-			$of(u"XStringForFSB non pu\u00f2 avere una stringa per un argomento"_s)
+			$of(u"XStringForFSB non può avere una stringa per un argomento"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_SETTING_WALKER_ROOT_TO_NULL),
@@ -1008,19 +1008,19 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NODESETDTM_CANNOT_ITERATE),
-			$of(u"Questo NodeSetDTM non pu\u00f2 eseguire un\'iterazione a un nodo precedente."_s)
+			$of(u"Questo NodeSetDTM non può eseguire un\'iterazione a un nodo precedente."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NODESET_CANNOT_ITERATE),
-			$of(u"Questo NodeSet non pu\u00f2 eseguire un\'iterazione a un nodo precedente."_s)
+			$of(u"Questo NodeSet non può eseguire un\'iterazione a un nodo precedente."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NODESETDTM_CANNOT_INDEX),
-			$of(u"Questo NodeSetDTM non pu\u00f2 eseguire l\'indicizzazione o il conteggio delle funzioni."_s)
+			$of(u"Questo NodeSetDTM non può eseguire l\'indicizzazione o il conteggio delle funzioni."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NODESET_CANNOT_INDEX),
-			$of(u"Questo NodeSet non pu\u00f2 eseguire l\'indicizzazione o il conteggio delle funzioni."_s)
+			$of(u"Questo NodeSet non può eseguire l\'indicizzazione o il conteggio delle funzioni."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANNOT_CALL_SETSHOULDCACHENODE),
@@ -1036,51 +1036,51 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_REL_LOC_PATH),
-			$of(u"\u00c8 previsto un percorso di posizione relativa dopo il token \'/\' o \'//\'."_s)
+			$of(u"È previsto un percorso di posizione relativa dopo il token \'/\' o \'//\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_LOC_PATH),
-			$of(u"\u00c8 previsto un percorso di posizione, ma \u00e8 stato trovato il seguente token:  {0}"_s)
+			$of(u"È previsto un percorso di posizione, ma è stato trovato il seguente token:  {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_LOC_PATH_AT_END_EXPR),
-			$of(u"\u00c8 previsto un percorso di posizione, ma \u00e8 stata trovata la fine dell\'espressione XPath."_s)
+			$of(u"È previsto un percorso di posizione, ma è stata trovata la fine dell\'espressione XPath."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_LOC_STEP),
-			$of(u"\u00c8 previsto un passo di posizione dopo il token \'/\' o \'//\'."_s)
+			$of(u"È previsto un passo di posizione dopo il token \'/\' o \'//\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_NODE_TEST),
-			$of(u"\u00c8 previsto un test del nodo che corrisponda a NCName:* o a QName."_s)
+			$of(u"È previsto un test del nodo che corrisponda a NCName:* o a QName."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_STEP_PATTERN),
-			$of(u"\u00c8 previsto un pattern di passo, ma \u00e8 stato trovato \'/\'."_s)
+			$of(u"È previsto un pattern di passo, ma è stato trovato \'/\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXPECTED_REL_PATH_PATTERN),
-			$of(u"\u00c8 previsto un pattern di percorso relativo."_s)
+			$of(u"È previsto un pattern di percorso relativo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANT_CONVERT_TO_BOOLEAN),
-			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non pu\u00f2 essere convertito in un valore booleano."_s)
+			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non può essere convertito in un valore booleano."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANT_CONVERT_TO_SINGLENODE),
-			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non pu\u00f2 essere convertito in un nodo singolo. Il metodo getSingleNodeValue \u00e8 valido solo per i tipi ANY_UNORDERED_NODE_TYPE e FIRST_ORDERED_NODE_TYPE."_s)
+			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non può essere convertito in un nodo singolo. Il metodo getSingleNodeValue è valido solo per i tipi ANY_UNORDERED_NODE_TYPE e FIRST_ORDERED_NODE_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANT_GET_SNAPSHOT_LENGTH),
-			$of(u"Impossibile richiamare il metodo getSnapshotLength nell\'\'XPathResult dell\'\'espressione XPath \'\'{0}\'\' poich\u00e9 il valore di XPathResultType \u00e8 {1}. Questo metodo \u00e8 valido solo per i tipi UNORDERED_NODE_SNAPSHOT_TYPE e ORDERED_NODE_SNAPSHOT_TYPE."_s)
+			$of(u"Impossibile richiamare il metodo getSnapshotLength nell\'\'XPathResult dell\'\'espressione XPath \'\'{0}\'\' poiché il valore di XPathResultType è {1}. Questo metodo è valido solo per i tipi UNORDERED_NODE_SNAPSHOT_TYPE e ORDERED_NODE_SNAPSHOT_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NON_ITERATOR_TYPE),
-			$of(u"Impossibile richiamare il metodo iterateNext nell\'\'XPathResult dell\'\'espressione XPath \'\'{0}\'\' poich\u00e9 il valore di XPathResultType \u00e8 {1}. Questo metodo \u00e8 valido solo per i tipi UNORDERED_NODE_ITERATOR_TYPE e ORDERED_NODE_ITERATOR_TYPE."_s)
+			$of(u"Impossibile richiamare il metodo iterateNext nell\'\'XPathResult dell\'\'espressione XPath \'\'{0}\'\' poiché il valore di XPathResultType è {1}. Questo metodo è valido solo per i tipi UNORDERED_NODE_ITERATOR_TYPE e ORDERED_NODE_ITERATOR_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_DOC_MUTATED),
-			$of(u"Il documento \u00e8 cambiato da quando \u00e8 stato restituito l\'ultimo risultato. L\'iteratore non \u00e8 valido."_s)
+			$of(u"Il documento è cambiato da quando è stato restituito l\'ultimo risultato. L\'iteratore non è valido."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_INVALID_XPATH_TYPE),
@@ -1092,7 +1092,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_INCOMPATIBLE_TYPES),
-			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non pu\u00f2 essere convertito forzatamente nel valore XPathResultType {2}."_s)
+			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non può essere convertito forzatamente nel valore XPathResultType {2}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NULL_RESOLVER),
@@ -1100,11 +1100,11 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANT_CONVERT_TO_STRING),
-			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non pu\u00f2 essere convertito in una stringa."_s)
+			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non può essere convertito in una stringa."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NON_SNAPSHOT_TYPE),
-			$of(u"Impossibile richiamare il metodo snapshotItem nell\'\'XPathResult dell\'\'espressione XPath \'\'{0}\'\' poich\u00e9 il valore di XPathResultType \u00e8 {1}. Questo metodo \u00e8 valido solo per i tipi UNORDERED_NODE_SNAPSHOT_TYPE e ORDERED_NODE_SNAPSHOT_TYPE."_s)
+			$of(u"Impossibile richiamare il metodo snapshotItem nell\'\'XPathResult dell\'\'espressione XPath \'\'{0}\'\' poiché il valore di XPathResultType è {1}. Questo metodo è valido solo per i tipi UNORDERED_NODE_SNAPSHOT_TYPE e ORDERED_NODE_SNAPSHOT_TYPE."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_WRONG_DOCUMENT),
@@ -1112,7 +1112,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_WRONG_NODETYPE),
-			$of(u"Il tipo di nodo di contesto non \u00e8 supportato."_s)
+			$of(u"Il tipo di nodo di contesto non è supportato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_XPATH_ERROR),
@@ -1120,11 +1120,11 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_CANT_CONVERT_XPATHRESULTTYPE_TO_NUMBER),
-			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non pu\u00f2 essere convertito in un numero."_s)
+			$of(u"XPathResult dell\'\'espressione XPath \'\'{0}\'\' a un valore di XPathResultType pari a {1} che non può essere convertito in un numero."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED),
-			$of(u"Impossibile richiamare la funzione di estensione \'\'{0}\'\' se la funzione XMLConstants.FEATURE_SECURE_PROCESSING \u00e8 impostata su true."_s)
+			$of(u"Impossibile richiamare la funzione di estensione \'\'{0}\'\' se la funzione XMLConstants.FEATURE_SECURE_PROCESSING è impostata su true."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_RESOLVE_VARIABLE_RETURNS_NULL),
@@ -1136,23 +1136,23 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"Il tipo di origine e/o restituito non pu\u00f2 essere nullo"_s)
+			$of(u"Il tipo di origine e/o restituito non può essere nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"Il tipo di origine e/o restituito non pu\u00f2 essere nullo"_s)
+			$of(u"Il tipo di origine e/o restituito non può essere nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_ARG_CANNOT_BE_NULL),
-			$of(u"L\'\'argomento {0} non pu\u00f2 essere nullo"_s)
+			$of(u"L\'\'argomento {0} non può essere nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_OBJECT_MODEL_NULL),
-			$of(u"{0}#isObjectModelSupported( String objectModel ) non pu\u00f2 essere richiamato se objectModel == null"_s)
+			$of(u"{0}#isObjectModelSupported( String objectModel ) non può essere richiamato se objectModel == null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_OBJECT_MODEL_EMPTY),
-			$of(u"{0}#isObjectModelSupported( String objectModel ) non pu\u00f2 essere richiamato se objectModel == \"\""_s)
+			$of(u"{0}#isObjectModelSupported( String objectModel ) non può essere richiamato se objectModel == \"\""_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_FEATURE_NAME_NULL),
@@ -1172,7 +1172,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: impossibile impostare la funzione su false se \u00e8 presente Security Manager: {1}#setFeature({0},{2})"_s)
+			$of(u"FEATURE_SECURE_PROCESSING: impossibile impostare la funzione su false se è presente Security Manager: {1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::ER_NULL_XPATH_FUNCTION_RESOLVER),
@@ -1184,23 +1184,23 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_LOCALE_NAME_NOT_HANDLED),
-			$of(u"il nome di impostazioni nazionali nella funzione format-number non \u00e8 ancora gestito."_s)
+			$of(u"il nome di impostazioni nazionali nella funzione format-number non è ancora gestito."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_PROPERTY_NOT_SUPPORTED),
-			$of(u"Propriet\u00e0 XSL non supportata: {0}"_s)
+			$of(u"Proprietà XSL non supportata: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_DONT_DO_ANYTHING_WITH_NS),
-			$of(u"Non effettuare alcuna operazione sullo spazio di nomi {0} nella propriet\u00e0: {1}"_s)
+			$of(u"Non effettuare alcuna operazione sullo spazio di nomi {0} nella proprietà: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_SECURITY_EXCEPTION),
-			$of(u"SecurityException nel tentativo di accedere alla propriet\u00e0 di sistema XSL {0}"_s)
+			$of(u"SecurityException nel tentativo di accedere alla proprietà di sistema XSL {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_QUO_NO_LONGER_DEFINED),
-			$of(u"Sintassi obsoleta: quo(...) non \u00e8 pi\u00f9 definito nell\'XPath."_s)
+			$of(u"Sintassi obsoleta: quo(...) non è più definito nell\'XPath."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_NEED_DERIVED_OBJECT_TO_IMPLEMENT_NODETEST),
@@ -1224,7 +1224,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"Il valore di VariableReference specificato per la variabile \u00e8 fuori contesto o senza definizione. Nome = {0}"_s)
+			$of(u"Il valore di VariableReference specificato per la variabile è fuori contesto o senza definizione. Nome = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_it::WG_UNSUPPORTED_ENCODING),
@@ -1260,7 +1260,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("yes"_s),
-			$of(u"s\u00ec"_s)
+			$of(u"sì"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
@@ -1292,7 +1292,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("optionAnyExpr"_s),
-			$of(u"In alternativa, un\'espressione xpath eseguir\u00e0 il dump della diagnostica."_s)
+			$of(u"In alternativa, un\'espressione xpath eseguirà il dump della diagnostica."_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
@@ -1308,7 +1308,7 @@ void clinit$XPATHErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"Se non \u00e8 disponibile un parser XML di IBM per Java, \u00e8 possibile scaricarlo da"_s)
+			$of(u"Se non è disponibile un parser XML di IBM per Java, è possibile scaricarlo da"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),

@@ -1006,9 +1006,9 @@ void XMLSerializer::checkUnboundNamespacePrefixedNode($Node* node) {
 			if ($nc(this->fNSBinder)->getURI(prefix) == nullptr && prefix != nullptr) {
 				$var($String, var$3, $$str({"The replacement text of the entity node \'"_s, $(node->getNodeName()), "\' contains an element node \'"_s}));
 				$var($String, var$2, $$concat(var$3, $(child->getNodeName())));
-				$var($String, var$1, $$concat(var$2, "\' with an undeclared prefix \'"));
+				$var($String, var$1, $$concat(var$2, "\' with an undeclared prefix \'"_s));
 				$var($String, var$0, $$concat(var$1, prefix));
-				fatalError($$concat(var$0, "\'."));
+				fatalError($$concat(var$0, "\'."_s));
 			}
 			if (child->getNodeType() == $Node::ELEMENT_NODE) {
 				$var($NamedNodeMap, attrs, child->getAttributes());
@@ -1018,11 +1018,11 @@ void XMLSerializer::checkUnboundNamespacePrefixedNode($Node* node) {
 					if ($nc(this->fNSBinder)->getURI(attrPrefix) == nullptr && attrPrefix != nullptr) {
 						$var($String, var$9, $$str({"The replacement text of the entity node \'"_s, $(node->getNodeName()), "\' contains an element node \'"_s}));
 						$var($String, var$8, $$concat(var$9, $(child->getNodeName())));
-						$var($String, var$7, $$concat(var$8, "\' with an attribute \'"));
+						$var($String, var$7, $$concat(var$8, "\' with an attribute \'"_s));
 						$var($String, var$6, $$concat(var$7, $($nc($(attrs->item(i)))->getNodeName())));
-						$var($String, var$5, $$concat(var$6, "\' an undeclared prefix \'"));
+						$var($String, var$5, $$concat(var$6, "\' an undeclared prefix \'"_s));
 						$var($String, var$4, $$concat(var$5, attrPrefix));
-						fatalError($$concat(var$4, "\'."));
+						fatalError($$concat(var$4, "\'."_s));
 					}
 				}
 			}

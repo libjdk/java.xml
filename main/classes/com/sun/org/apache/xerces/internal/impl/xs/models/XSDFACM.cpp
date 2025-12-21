@@ -557,7 +557,7 @@ void XSDFACM::dumpTree($CMNode* nodeCur, int32_t level) {
 			{
 				$var($String, var$1, $$str({"Leaf: (pos="_s, $$str($nc(($cast($XSCMLeaf, nodeCur)))->getPosition()), "), (elemIndex="_s}));
 				$var($String, var$0, $$concat(var$1, $(($cast($XSCMLeaf, nodeCur))->getLeaf())));
-				$nc($System::out)->print($$concat(var$0, ") "));
+				$nc($System::out)->print($$concat(var$0, ") "_s));
 				if (nodeCur->isNullable()) {
 					$nc($System::out)->print(" Nullable "_s);
 				}

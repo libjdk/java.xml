@@ -141,11 +141,11 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Impossibile aggiungere l\'\'attributo {0} dopo i nodi figlio o prima che sia prodotto un elemento. L\'\'attributo verr\u00e0 ignorato."_s)
+			$of(u"Impossibile aggiungere l\'\'attributo {0} dopo i nodi figlio o prima che sia prodotto un elemento. L\'\'attributo verrà ignorato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NAMESPACE_PREFIX),
-			$of(u"Lo spazio di nomi per il prefisso \'\'{0}\'\' non \u00e8 stato dichiarato."_s)
+			$of(u"Lo spazio di nomi per il prefisso \'\'{0}\'\' non è stato dichiarato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRAY_ATTRIBUTE),
@@ -165,7 +165,7 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Impossibile caricare il file delle propriet\u00e0 \'\'{0}\'\' per il metodo di emissione \'\'{1}\'\' (verificare CLASSPATH)"_s)
+			$of(u"Impossibile caricare il file delle proprietà \'\'{0}\'\' per il metodo di emissione \'\'{1}\'\' (verificare CLASSPATH)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_INVALID_PORT),
@@ -173,15 +173,15 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PORT_WHEN_HOST_NULL),
-			$of(u"La porta non pu\u00f2 essere impostata se l\'host \u00e8 nullo"_s)
+			$of(u"La porta non può essere impostata se l\'host è nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"Host non \u00e8 un indirizzo corretto"_s)
+			$of(u"Host non è un indirizzo corretto"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"Lo schema non \u00e8 conforme."_s)
+			$of(u"Lo schema non è conforme."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_FROM_NULL_STRING),
@@ -201,11 +201,11 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"Il frammento non pu\u00f2 essere impostato se il percorso \u00e8 nullo"_s)
+			$of(u"Il frammento non può essere impostato se il percorso è nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Il frammento pu\u00f2 essere impostato solo per un URI generico"_s)
+			$of(u"Il frammento può essere impostato solo per un URI generico"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_SCHEME_IN_URI),
@@ -217,59 +217,59 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Il frammento non pu\u00f2 essere specificato sia nel percorso che nel frammento"_s)
+			$of(u"Il frammento non può essere specificato sia nel percorso che nel frammento"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"La stringa di query non pu\u00f2 essere specificata nella stringa di percorso e query."_s)
+			$of(u"La stringa di query non può essere specificata nella stringa di percorso e query."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_PORT_IF_NO_HOST),
-			$of(u"La porta non pu\u00f2 essere specificata se l\'host non \u00e8 specificato"_s)
+			$of(u"La porta non può essere specificata se l\'host non è specificato"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Userinfo non pu\u00f2 essere specificato se l\'host non \u00e8 specificato"_s)
+			$of(u"Userinfo non può essere specificato se l\'host non è specificato"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_XML_VERSION_NOT_SUPPORTED),
-			$of(u"Avvertenza: la versione del documento di output deve essere \'\'{0}\'\'. Questa versione di XML non \u00e8 supportata. La versione del documento di output sar\u00e0 \'\'1.0\'\'."_s)
+			$of(u"Avvertenza: la versione del documento di output deve essere \'\'{0}\'\'. Questa versione di XML non è supportata. La versione del documento di output sarà \'\'1.0\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_REQUIRED),
-			$of(u"Lo schema \u00e8 obbligatorio."_s)
+			$of(u"Lo schema è obbligatorio."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FACTORY_PROPERTY_MISSING),
-			$of(u"L\'\'oggetto Properties passato a SerializerFactory non dispone di una propriet\u00e0 \'\'{0}\'\'."_s)
+			$of(u"L\'\'oggetto Properties passato a SerializerFactory non dispone di una proprietà \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"Avvertenza: la codifica \'\'{0}\'\' non \u00e8 supportata da Java Runtime."_s)
+			$of(u"Avvertenza: la codifica \'\'{0}\'\' non è supportata da Java Runtime."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_FOUND),
-			$of(u"Il parametro {0} non \u00e8 riconosciuto."_s)
+			$of(u"Il parametro {0} non è riconosciuto."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_SUPPORTED),
-			$of(u"Il parametro \'\'{0}\'\' \u00e8 stato riconosciuto, ma non \u00e8 possibile impostare il valore richiesto."_s)
+			$of(u"Il parametro \'\'{0}\'\' è stato riconosciuto, ma non è possibile impostare il valore richiesto."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRING_TOO_LONG),
-			$of(u"La stringa risultante \u00e8 troppo lunga per adattarsi in DOMString: \'\'{0}\'\'."_s)
+			$of(u"La stringa risultante è troppo lunga per adattarsi in DOMString: \'\'{0}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_TYPE_MISMATCH_ERR),
-			$of(u"Il tipo di valore per questo nome parametro non \u00e8 compatibile con il tipo di valore previsto. "_s)
+			$of(u"Il tipo di valore per questo nome parametro non è compatibile con il tipo di valore previsto. "_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_OUTPUT_SPECIFIED),
-			$of(u"La destinazione di output per i dati da scrivere \u00e8 nulla."_s)
+			$of(u"La destinazione di output per i dati da scrivere è nulla."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNSUPPORTED_ENCODING),
-			$of(u"\u00c8 stata rilevata una codifica non supportata."_s)
+			$of(u"È stata rilevata una codifica non supportata."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNABLE_TO_SERIALIZE_NODE),
@@ -277,11 +277,11 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_CDATA_SECTIONS_SPLIT),
-			$of(u"La sezione CDATA contiene uno o pi\u00f9 indicatori di fine \']]>\'."_s)
+			$of(u"La sezione CDATA contiene uno o più indicatori di fine \']]>\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WARNING_WF_NOT_CHECKED),
-			$of(u"Impossibile creare un\'istanza dello strumento di controllo della correttezza del formato. Il parametro con formato valido \u00e8 impostato su true, ma non \u00e8 possibile eseguire il controllo della correttezza del formato."_s)
+			$of(u"Impossibile creare un\'istanza dello strumento di controllo della correttezza del formato. Il parametro con formato valido è impostato su true, ma non è possibile eseguire il controllo della correttezza del formato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER),
@@ -289,27 +289,27 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_COMMENT),
-			$of(u"\u00c8 stato trovato un carattere XML non valido (Unicode: 0x{0}) nel commento."_s)
+			$of(u"È stato trovato un carattere XML non valido (Unicode: 0x{0}) nel commento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_PI),
-			$of(u"\u00c8 stato trovato un carattere XML non valido (Unicode: 0x{0}) nei dati dell\'\'istruzione di elaborazione."_s)
+			$of(u"È stato trovato un carattere XML non valido (Unicode: 0x{0}) nei dati dell\'\'istruzione di elaborazione."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_CDATA),
-			$of(u"\u00c8 stato trovato un carattere XML non valido (Unicode: 0x{0}) nei contenuti della sezione CDATA."_s)
+			$of(u"È stato trovato un carattere XML non valido (Unicode: 0x{0}) nei contenuti della sezione CDATA."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_TEXT),
-			$of(u"\u00c8 stato trovato un carattere XML non valido (Unicode: 0x{0}) nel contenuto dei dati carattere del nodo."_s)
+			$of(u"È stato trovato un carattere XML non valido (Unicode: 0x{0}) nel contenuto dei dati carattere del nodo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_NODE_NAME),
-			$of(u"\u00c8 stato trovato un carattere o caratteri XML non validi nel nodo {0} denominato \'\'{1}\'\'."_s)
+			$of(u"È stato trovato un carattere o caratteri XML non validi nel nodo {0} denominato \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_DASH_IN_COMMENT),
-			$of(u"La stringa \"--\" non \u00e8 consentita nei commenti."_s)
+			$of(u"La stringa \"--\" non è consentita nei commenti."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_LT_IN_ATTVAL),
@@ -317,11 +317,11 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_UNPARSED_ENT),
-			$of(u"Il riferimento di entit\u00e0 non analizzata \"&{0};\" non \u00e8 consentito."_s)
+			$of(u"Il riferimento di entità non analizzata \"&{0};\" non è consentito."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_EXTERNAL_ENT),
-			$of(u"Il riferimento di entit\u00e0 esterna \"&{0};\" non \u00e8 consentito in un valore di attributo."_s)
+			$of(u"Il riferimento di entità esterna \"&{0};\" non è consentito in un valore di attributo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NS_PREFIX_CANNOT_BE_BOUND),
@@ -329,23 +329,23 @@ $ObjectArray2* SerializerMessages_it::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ELEMENT_NAME),
-			$of(u"Il nome locale dell\'\'elemento \"{0}\" \u00e8 nullo."_s)
+			$of(u"Il nome locale dell\'\'elemento \"{0}\" è nullo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ATTR_NAME),
-			$of(u"Il nome locale dell\'\'attributo \"{0}\" \u00e8 nullo."_s)
+			$of(u"Il nome locale dell\'\'attributo \"{0}\" è nullo."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ELEM_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"Il testo di sostituzione del nodo entit\u00e0 \"{0}\" contiene un nodo elemento \"{1}\" con un prefisso non associato \"{2}\"."_s)
+			$of(u"Il testo di sostituzione del nodo entità \"{0}\" contiene un nodo elemento \"{1}\" con un prefisso non associato \"{2}\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ATTR_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"Il testo di sostituzione del nodo entit\u00e0 \"{0}\" contiene un nodo attributo \"{1}\" con un prefisso non associato \"{2}\"."_s)
+			$of(u"Il testo di sostituzione del nodo entità \"{0}\" contiene un nodo attributo \"{1}\" con un prefisso non associato \"{2}\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WRITING_INTERNAL_SUBSET),
-			$of(u"Si \u00e8 verificato un errore durante la scrittura del subset interno."_s)
+			$of(u"Si è verificato un errore durante la scrittura del subset interno."_s)
 		})
 	}));
 	return contents;

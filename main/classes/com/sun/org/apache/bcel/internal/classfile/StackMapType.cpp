@@ -130,7 +130,7 @@ $String* StackMapType::toString() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"(type="_s, $($Const::getItemName(this->type))}));
 	$var($String, var$0, $$concat(var$1, $(printIndex())));
-	return $concat(var$0, ")");
+	return $concat(var$0, ")"_s);
 }
 
 StackMapType* StackMapType::copy() {

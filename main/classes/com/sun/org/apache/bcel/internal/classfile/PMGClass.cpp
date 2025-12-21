@@ -130,7 +130,7 @@ $String* PMGClass::toString() {
 	$useLocalCurrentObjectStackCache();
 	$var($String, var$1, $$str({"PMGClass("_s, $(getPMGName()), ", "_s}));
 	$var($String, var$0, $$concat(var$1, $(getPMGClassName())));
-	return $concat(var$0, ")");
+	return $concat(var$0, ")"_s);
 }
 
 $Attribute* PMGClass::copy($ConstantPool* _constant_pool) {

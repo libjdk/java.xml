@@ -348,9 +348,9 @@ void DFAContentModel::dumpTree($CMNode* nodeCur, int32_t level) {
 	} else if (nodeCur->type() == $XMLContentSpec::CONTENTSPECNODE_LEAF) {
 		$var($String, var$3, $$str({"Leaf: (pos="_s, $$str($nc(($cast($CMLeaf, nodeCur)))->getPosition()), "), "_s}));
 		$var($String, var$2, $$concat(var$3, $(($cast($CMLeaf, nodeCur))->getElement())));
-		$var($String, var$1, $$concat(var$2, "(elemIndex="));
+		$var($String, var$1, $$concat(var$2, "(elemIndex="_s));
 		$var($String, var$0, $$concat(var$1, $(($cast($CMLeaf, nodeCur))->getElement())));
-		$nc($System::out)->print($$concat(var$0, ") "));
+		$nc($System::out)->print($$concat(var$0, ") "_s));
 		if (nodeCur->isNullable()) {
 			$nc($System::out)->print(" Nullable "_s);
 		}

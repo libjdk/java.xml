@@ -377,7 +377,7 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_DEFAULT_IMPL),
-			$of(u"Aucune impl\u00e9mentation par d\u00e9faut trouv\u00e9e "_s)
+			$of(u"Aucune implémentation par défaut trouvée "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
@@ -385,7 +385,7 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"D\u00e9calage sup\u00e9rieur \u00e0 l\'emplacement"_s)
+			$of(u"Décalage supérieur à l\'emplacement"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COROUTINE_NOT_AVAIL),
@@ -393,7 +393,7 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager a re\u00e7u la demande co_exit()"_s)
+			$of(u"CoroutineManager a reçu la demande co_exit()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COJOINROUTINESET_FAILED),
@@ -401,11 +401,11 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COROUTINE_PARAM),
-			$of(u"Erreur de param\u00e8tre de coroutine ({0})"_s)
+			$of(u"Erreur de paramètre de coroutine ({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\nINATTENDU : r\u00e9ponses doTerminate de l\'\'analyseur - {0}"_s)
+			$of(u"\nINATTENDU : réponses doTerminate de l\'\'analyseur - {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_PARSE_CALL_WHILE_PARSING),
@@ -413,15 +413,15 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Erreur : it\u00e9rateur saisi pour l\'\'axe {0} non impl\u00e9ment\u00e9"_s)
+			$of(u"Erreur : itérateur saisi pour l\'\'axe {0} non implémenté"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Erreur : it\u00e9rateur pour l\'\'axe {0} non impl\u00e9ment\u00e9 "_s)
+			$of(u"Erreur : itérateur pour l\'\'axe {0} non implémenté "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"Clone d\'it\u00e9rateur non pris en charge"_s)
+			$of(u"Clone d\'itérateur non pris en charge"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_UNKNOWN_AXIS_TYPE),
@@ -441,11 +441,11 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NODE_NON_NULL),
-			$of(u"Le noeud doit \u00eatre non NULL pour getDTMHandleFromNode"_s)
+			$of(u"Le noeud doit être non NULL pour getDTMHandleFromNode"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"Impossible de r\u00e9soudre le noeud sur un descripteur"_s)
+			$of(u"Impossible de résoudre le noeud sur un descripteur"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_STARTPARSE_WHILE_PARSING),
@@ -453,7 +453,7 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse n\u00e9cessite un SAXParser non NULL"_s)
+			$of(u"startParse nécessite un SAXParser non NULL"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COULD_NOT_INIT_PARSER),
@@ -461,63 +461,63 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_EXCEPTION_CREATING_POOL),
-			$of(u"exception lors de la cr\u00e9ation de l\'instance du pool"_s)
+			$of(u"exception lors de la création de l\'instance du pool"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"Le chemin d\'acc\u00e8s contient une s\u00e9quence d\'\u00e9chappement non valide"_s)
+			$of(u"Le chemin d\'accès contient une séquence d\'échappement non valide"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_SCHEME_REQUIRED),
-			$of(u"Mod\u00e8le obligatoire."_s)
+			$of(u"Modèle obligatoire."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_SCHEME_IN_URI),
-			$of(u"Mod\u00e8le introuvable dans l\'\'URI: {0}"_s)
+			$of(u"Modèle introuvable dans l\'\'URI: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_SCHEME_INURI),
-			$of(u"Mod\u00e8le introuvable dans l\'URI"_s)
+			$of(u"Modèle introuvable dans l\'URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_PATH_INVALID_CHAR),
-			$of(u"Le chemin contient un caract\u00e8re non valide : {0}"_s)
+			$of(u"Le chemin contient un caractère non valide : {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"Impossible de d\u00e9finir le mod\u00e8le \u00e0 partir de la cha\u00eene NULL"_s)
+			$of(u"Impossible de définir le modèle à partir de la chaîne NULL"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"Le mod\u00e8le n\'est pas conforme."_s)
+			$of(u"Le modèle n\'est pas conforme."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"Le format de l\'adresse de l\'h\u00f4te n\'est pas correct"_s)
+			$of(u"Le format de l\'adresse de l\'hôte n\'est pas correct"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_PORT_WHEN_HOST_NULL),
-			$of(u"Impossible de d\u00e9finir le port quand l\'h\u00f4te est NULL"_s)
+			$of(u"Impossible de définir le port quand l\'hôte est NULL"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_INVALID_PORT),
-			$of(u"Num\u00e9ro de port non valide"_s)
+			$of(u"Numéro de port non valide"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Le fragment ne peut \u00eatre d\u00e9fini que pour un URI g\u00e9n\u00e9rique"_s)
+			$of(u"Le fragment ne peut être défini que pour un URI générique"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"Impossible de d\u00e9finir le fragment quand le chemin d\'acc\u00e8s est NULL"_s)
+			$of(u"Impossible de définir le fragment quand le chemin d\'accès est NULL"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_FRAG_INVALID_CHAR),
-			$of(u"Le fragment contient un caract\u00e8re non valide"_s)
+			$of(u"Le fragment contient un caractère non valide"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_PARSER_IN_USE),
-			$of(u"L\'analyseur est d\u00e9j\u00e0 utilis\u00e9"_s)
+			$of(u"L\'analyseur est déjà utilisé"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CANNOT_CHANGE_WHILE_PARSING),
@@ -525,35 +525,35 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"Causalit\u00e9 circulaire non autoris\u00e9e"_s)
+			$of(u"Causalité circulaire non autorisée"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Userinfo peut ne pas \u00eatre sp\u00e9cifi\u00e9 si l\'h\u00f4te ne l\'est pas"_s)
+			$of(u"Userinfo peut ne pas être spécifié si l\'hôte ne l\'est pas"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_PORT_IF_NO_HOST),
-			$of(u"Le port peut ne pas \u00eatre sp\u00e9cifi\u00e9 si l\'h\u00f4te ne l\'est pas"_s)
+			$of(u"Le port peut ne pas être spécifié si l\'hôte ne l\'est pas"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"La cha\u00eene de requ\u00eate ne doit pas figurer dans un chemin et une cha\u00eene de requ\u00eate"_s)
+			$of(u"La chaîne de requête ne doit pas figurer dans un chemin et une chaîne de requête"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Le fragment ne doit pas \u00eatre indiqu\u00e9 \u00e0 la fois dans le chemin et dans le fragment"_s)
+			$of(u"Le fragment ne doit pas être indiqué à la fois dans le chemin et dans le fragment"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"Impossible d\'initialiser l\'URI avec des param\u00e8tres vides"_s)
+			$of(u"Impossible d\'initialiser l\'URI avec des paramètres vides"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_METHOD_NOT_SUPPORTED),
-			$of(u"La m\u00e9thode n\'est pas encore prise en charge "_s)
+			$of(u"La méthode n\'est pas encore prise en charge "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"IncrementalSAXSource_Filter ne peut actuellement pas \u00eatre red\u00e9marr\u00e9"_s)
+			$of(u"IncrementalSAXSource_Filter ne peut actuellement pas être redémarré"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
@@ -565,11 +565,11 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
-			$of(u"ListingErrorHandler cr\u00e9\u00e9 avec PrintWriter NULL."_s)
+			$of(u"ListingErrorHandler créé avec PrintWriter NULL."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_SYSTEMID_UNKNOWN),
-			$of(u"ID syst\u00e8me inconnu"_s)
+			$of(u"ID système inconnu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_LOCATION_UNKNOWN),
@@ -577,7 +577,7 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_PREFIX_MUST_RESOLVE),
-			$of(u"Le pr\u00e9fixe doit \u00eatre r\u00e9solu en espace de noms : {0}"_s)
+			$of(u"Le préfixe doit être résolu en espace de noms : {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CREATEDOCUMENT_NOT_SUPPORTED),
@@ -585,15 +585,15 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"L\'enfant de l\'attribut ne poss\u00e8de pas de document propri\u00e9taire."_s)
+			$of(u"L\'enfant de l\'attribut ne possède pas de document propriétaire."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"L\'enfant de l\'attribut ne poss\u00e8de pas d\'\u00e9l\u00e9ment de document propri\u00e9taire."_s)
+			$of(u"L\'enfant de l\'attribut ne possède pas d\'élément de document propriétaire."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"Avertissement : impossible de g\u00e9n\u00e9rer une sortie du texte avant l\'\u00e9l\u00e9ment de document. Non pris en compte..."_s)
+			$of(u"Avertissement : impossible de générer une sortie du texte avant l\'élément de document. Non pris en compte..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
@@ -605,11 +605,11 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_ARG_LOCALNAME_INVALID),
-			$of(u"Le nom local du QName doit \u00eatre un NCName valide"_s)
+			$of(u"Le nom local du QName doit être un NCName valide"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_ARG_PREFIX_INVALID),
-			$of(u"Le pr\u00e9fixe du QName doit \u00eatre un NCName valide"_s)
+			$of(u"Le préfixe du QName doit être un NCName valide"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NAME_CANT_START_WITH_COLON),
@@ -617,23 +617,23 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"Le param\u00e8tre createMessage \u00e9tait hors limites"_s)
+			$of(u"Le paramètre createMessage était hors limites"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Exception g\u00e9n\u00e9r\u00e9e pendant l\'appel messageFormat"_s)
+			$of(u"Exception générée pendant l\'appel messageFormat"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"Ligne n\u00b0"_s)
+			$of(u"Ligne n°"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"Colonne n\u00b0"_s)
+			$of(u"Colonne n°"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"La classe de serializer \'\'{0}\'\' n\'\'impl\u00e9mente pas org.xml.sax.ContentHandler."_s)
+			$of(u"La classe de serializer \'\'{0}\'\' n\'\'implémente pas org.xml.sax.ContentHandler."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_RESOURCE_COULD_NOT_FIND),
@@ -649,7 +649,7 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Substitut UTF-16 non valide d\u00e9tect\u00e9 : {0} ?"_s)
+			$of(u"Substitut UTF-16 non valide détecté : {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_OIERROR),
@@ -657,31 +657,31 @@ void clinit$XMLErrorResources_fr($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Impossible d\'\'ajouter l\'\'attribut {0} apr\u00e8s des noeuds enfant ou avant la production d\'\'un \u00e9l\u00e9ment. L\'\'attribut est ignor\u00e9."_s)
+			$of(u"Impossible d\'\'ajouter l\'\'attribut {0} après des noeuds enfant ou avant la production d\'\'un élément. L\'\'attribut est ignoré."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_NAMESPACE_PREFIX),
-			$of(u"L\'\'espace de noms du pr\u00e9fixe \'\'{0}\'\' n\'\'a pas \u00e9t\u00e9 d\u00e9clar\u00e9."_s)
+			$of(u"L\'\'espace de noms du préfixe \'\'{0}\'\' n\'\'a pas été déclaré."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_STRAY_ATTRIBUTE),
-			$of(u"Attribut \'\'{0}\'\' \u00e0 l\'\'ext\u00e9rieur de l\'\'\u00e9l\u00e9ment."_s)
+			$of(u"Attribut \'\'{0}\'\' à l\'\'extérieur de l\'\'élément."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_STRAY_NAMESPACE),
-			$of(u"La d\u00e9claration d\'\'espace de noms \'\'{0}\'\'=\'\'{1}\'\' est \u00e0 l\'\'ext\u00e9rieur de l\'\'\u00e9l\u00e9ment."_s)
+			$of(u"La déclaration d\'\'espace de noms \'\'{0}\'\'=\'\'{1}\'\' est à l\'\'extérieur de l\'\'élément."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"Impossible de charger \'\'{0}\'\' (v\u00e9rifier CLASSPATH), les valeurs par d\u00e9faut sont donc employ\u00e9es"_s)
+			$of(u"Impossible de charger \'\'{0}\'\' (vérifier CLASSPATH), les valeurs par défaut sont donc employées"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_ILLEGAL_CHARACTER),
-			$of(u"Tentative de sortie d\'\'un caract\u00e8re avec une valeur enti\u00e8re {0}, non repr\u00e9sent\u00e9 dans l\'\'encodage de sortie sp\u00e9cifi\u00e9 pour {1}."_s)
+			$of(u"Tentative de sortie d\'\'un caractère avec une valeur entière {0}, non représenté dans l\'\'encodage de sortie spécifié pour {1}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_fr::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Impossible de charger le fichier de propri\u00e9t\u00e9s \'\'{0}\'\' pour la m\u00e9thode de sortie \'\'{1}\'\' (v\u00e9rifier CLASSPATH)"_s)
+			$of(u"Impossible de charger le fichier de propriétés \'\'{0}\'\' pour la méthode de sortie \'\'{1}\'\' (vérifier CLASSPATH)"_s)
 		})
 	}));
 }

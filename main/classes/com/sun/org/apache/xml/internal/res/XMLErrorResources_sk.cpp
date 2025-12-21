@@ -361,31 +361,31 @@ void clinit$XMLErrorResources_sk($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Funkcia nie je podporovan\u00e1!"_s)
+			$of(u"Funkcia nie je podporovaná!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"Nie je mo\u017en\u00e9 prep\u00edsa\u0165 pr\u00ed\u010dinu"_s)
+			$of(u"Nie je možné prepísať príčinu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_DEFAULT_IMPL),
-			$of(u"Nebola n\u00e1jden\u00e1 \u017eiadna predvolen\u00e1 implement\u00e1cia "_s)
+			$of(u"Nebola nájdená žiadna predvolená implementácia "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0}) nie je moment\u00e1lne podporovan\u00fd"_s)
+			$of(u"ChunkedIntArray({0}) nie je momentálne podporovaný"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"Offset v\u00e4\u010d\u0161\u00ed, ne\u017e z\u00e1suvka"_s)
+			$of(u"Offset väčší, než zásuvka"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Korutina nie je dostupn\u00e1, id={0}"_s)
+			$of(u"Korutina nie je dostupná, id={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager obdr\u017eal po\u017eiadavku co_exit()"_s)
+			$of(u"CoroutineManager obdržal požiadavku co_exit()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_COJOINROUTINESET_FAILED),
@@ -397,199 +397,199 @@ void clinit$XMLErrorResources_sk($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\nNEO\u010cAK\u00c1VAN\u00c9: Analyz\u00e1tor doTerminate odpoved\u00e1 {0}"_s)
+			$of(u"\nNEOČAKÁVANÉ: Analyzátor doTerminate odpovedá {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"syntaktick\u00fd analyz\u00e1tor nem\u00f4\u017ee by\u0165 volan\u00fd po\u010das vykon\u00e1vania anal\u00fdzy"_s)
+			$of(u"syntaktický analyzátor nemôže byť volaný počas vykonávania analýzy"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Chyba: nap\u00edsan\u00fd iter\u00e1tor pre os {0} nie je implementovan\u00fd"_s)
+			$of(u"Chyba: napísaný iterátor pre os {0} nie je implementovaný"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Chyba: iter\u00e1tor pre os {0} nie je implementovan\u00fd "_s)
+			$of(u"Chyba: iterátor pre os {0} nie je implementovaný "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"Klon iter\u00e1tora nie je podporovan\u00fd"_s)
+			$of(u"Klon iterátora nie je podporovaný"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"Nezn\u00e1my typ pret\u00ednania os\u00ed: {0}"_s)
+			$of(u"Neznámy typ pretínania osí: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_AXIS_NOT_SUPPORTED),
-			$of(u"Pret\u00ednanie os\u00ed nie je podporovan\u00e9: {0}"_s)
+			$of(u"Pretínanie osí nie je podporované: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_DTMIDS_AVAIL),
-			$of(u"\u017diadne \u010fal\u0161ie DTM ID nie s\u00fa dostupn\u00e9"_s)
+			$of(u"Žiadne ďalšie DTM ID nie sú dostupné"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NOT_SUPPORTED),
-			$of(u"Nie je podporovan\u00e9: {0}"_s)
+			$of(u"Nie je podporované: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NODE_NON_NULL),
-			$of(u"Pre getDTMHandleFromNode mus\u00ed by\u0165 uzol nenulov\u00fd"_s)
+			$of(u"Pre getDTMHandleFromNode musí byť uzol nenulový"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_COULD_NOT_RESOLVE_NODE),
-			$of(u"Nebolo mo\u017en\u00e9 ur\u010di\u0165 uzol na spracovanie"_s)
+			$of(u"Nebolo možné určiť uzol na spracovanie"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"startParse nem\u00f4\u017ee by\u0165 volan\u00fd po\u010das vykon\u00e1vania anal\u00fdzy"_s)
+			$of(u"startParse nemôže byť volaný počas vykonávania analýzy"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse potrebuje nenulov\u00fd SAXParser"_s)
+			$of(u"startParse potrebuje nenulový SAXParser"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_COULD_NOT_INIT_PARSER),
-			$of(u"nebolo mo\u017en\u00e9 inicializova\u0165 syntaktick\u00fd analyz\u00e1tor pomocou"_s)
+			$of(u"nebolo možné inicializovať syntaktický analyzátor pomocou"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_EXCEPTION_CREATING_POOL),
-			$of(u"v\u00fdnimka vytv\u00e1rania novej in\u0161tancie oblasti"_s)
+			$of(u"výnimka vytvárania novej inštancie oblasti"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"Cesta obsahuje neplatn\u00fa \u00fanikov\u00fa sekvenciu"_s)
+			$of(u"Cesta obsahuje neplatnú únikovú sekvenciu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_SCHEME_REQUIRED),
-			$of(u"Je po\u017eadovan\u00e1 sch\u00e9ma!"_s)
+			$of(u"Je požadovaná schéma!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_SCHEME_IN_URI),
-			$of(u"V URI sa nena\u0161la \u017eiadna sch\u00e9ma: {0}"_s)
+			$of(u"V URI sa nenašla žiadna schéma: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_SCHEME_INURI),
-			$of(u"V URI nebola n\u00e1jden\u00e1 \u017eiadna sch\u00e9ma"_s)
+			$of(u"V URI nebola nájdená žiadna schéma"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_PATH_INVALID_CHAR),
-			$of(u"Cesta obsahuje neplatn\u00fd znak: {0}"_s)
+			$of(u"Cesta obsahuje neplatný znak: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"Nie je mo\u017en\u00e9 stanovi\u0165 sch\u00e9mu z nulov\u00e9ho re\u0165azca"_s)
+			$of(u"Nie je možné stanoviť schému z nulového reťazca"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"Nezhodn\u00e1 sch\u00e9ma."_s)
+			$of(u"Nezhodná schéma."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"Hostite\u013e nie je spr\u00e1vne form\u00e1tovan\u00e1 adresa"_s)
+			$of(u"Hostiteľ nie je správne formátovaná adresa"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_PORT_WHEN_HOST_NULL),
-			$of(u"Nem\u00f4\u017ee by\u0165 stanoven\u00fd port, ak je hostite\u013e null"_s)
+			$of(u"Nemôže byť stanovený port, ak je hostiteľ null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_INVALID_PORT),
-			$of(u"Neplatn\u00e9 \u010d\u00edslo portu"_s)
+			$of(u"Neplatné číslo portu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Fragment m\u00f4\u017ee by\u0165 stanoven\u00fd len pre v\u0161eobecn\u00e9 URI"_s)
+			$of(u"Fragment môže byť stanovený len pre všeobecné URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"Ak je cesta nulov\u00e1, nem\u00f4\u017ee by\u0165 stanoven\u00fd fragment"_s)
+			$of(u"Ak je cesta nulová, nemôže byť stanovený fragment"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_FRAG_INVALID_CHAR),
-			$of(u"Fragment obsahuje neplatn\u00fd znak"_s)
+			$of(u"Fragment obsahuje neplatný znak"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_PARSER_IN_USE),
-			$of(u"Syntaktick\u00fd analyz\u00e1tor je u\u017e pou\u017e\u00edvan\u00fd"_s)
+			$of(u"Syntaktický analyzátor je už používaný"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"Nie je mo\u017en\u00e9 zmeni\u0165 {0} {1} po\u010das vykon\u00e1vania anal\u00fdzy"_s)
+			$of(u"Nie je možné zmeniť {0} {1} počas vykonávania analýzy"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"Samozapr\u00ed\u010dinenie nie je povolen\u00e9"_s)
+			$of(u"Samozapríčinenie nie je povolené"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Ak nebol zadan\u00fd hostite\u013e, mo\u017eno nebolo zadan\u00e9 userinfo"_s)
+			$of(u"Ak nebol zadaný hostiteľ, možno nebolo zadané userinfo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_PORT_IF_NO_HOST),
-			$of(u"Ak nebol zadan\u00fd hostite\u013e, mo\u017eno nebol zadan\u00fd port"_s)
+			$of(u"Ak nebol zadaný hostiteľ, možno nebol zadaný port"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"Re\u0165azec dotazu nem\u00f4\u017ee by\u0165 zadan\u00fd v ceste a re\u0165azci dotazu"_s)
+			$of(u"Reťazec dotazu nemôže byť zadaný v ceste a reťazci dotazu"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Fragment nem\u00f4\u017ee by\u0165 zadan\u00fd v ceste, ani vo fragmente"_s)
+			$of(u"Fragment nemôže byť zadaný v ceste, ani vo fragmente"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"Nie je mo\u017en\u00e9 inicializova\u0165 URI s pr\u00e1zdnymi parametrami"_s)
+			$of(u"Nie je možné inicializovať URI s prázdnymi parametrami"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_METHOD_NOT_SUPPORTED),
-			$of(u"Met\u00f3da e\u0161te nie je podporovan\u00e1 "_s)
+			$of(u"Metóda ešte nie je podporovaná "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"IncrementalSAXSource_Filter nie je moment\u00e1lne re\u0161tartovate\u013en\u00fd"_s)
+			$of(u"IncrementalSAXSource_Filter nie je momentálne reštartovateľný"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader nepredch\u00e1dza po\u017eiadavke na startParse"_s)
+			$of(u"XMLReader nepredchádza požiadavke na startParse"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"Pret\u00ednanie os\u00ed nie je podporovan\u00e9: {0}"_s)
+			$of(u"Pretínanie osí nie je podporované: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
-			$of(u"ListingErrorHandler vytvoren\u00fd s nulov\u00fdm PrintWriter!"_s)
+			$of(u"ListingErrorHandler vytvorený s nulovým PrintWriter!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_SYSTEMID_UNKNOWN),
-			$of(u"Nezn\u00e1me SystemId"_s)
+			$of(u"Neznáme SystemId"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_LOCATION_UNKNOWN),
-			$of(u"Nezn\u00e1me miesto v\u00fdskytu chyby"_s)
+			$of(u"Neznáme miesto výskytu chyby"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_PREFIX_MUST_RESOLVE),
-			$of(u"Predpona sa mus\u00ed rozl\u00ed\u0161i\u0165 do n\u00e1zvov\u00e9ho priestoru: {0}"_s)
+			$of(u"Predpona sa musí rozlíšiť do názvového priestoru: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"createDocument() nie je podporovan\u00e9 XPathContext!"_s)
+			$of(u"createDocument() nie je podporované XPathContext!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"Potomok atrib\u00fatu nem\u00e1 dokument vlastn\u00edka!"_s)
+			$of(u"Potomok atribútu nemá dokument vlastníka!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"Potomok atrib\u00fatu nem\u00e1 s\u00fa\u010das\u0165 dokumentu vlastn\u00edka!"_s)
+			$of(u"Potomok atribútu nemá súčasť dokumentu vlastníka!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"Upozornenie: nemo\u017eno vypusti\u0165 text pred elementom dokumentu!  Ignorovanie..."_s)
+			$of(u"Upozornenie: nemožno vypustiť text pred elementom dokumentu!  Ignorovanie..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"Nie je mo\u017en\u00e9 ma\u0165 viac, ne\u017e jeden kore\u0148 DOM!"_s)
+			$of(u"Nie je možné mať viac, než jeden koreň DOM!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_ARG_LOCALNAME_NULL),
@@ -597,19 +597,19 @@ void clinit$XMLErrorResources_sk($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_ARG_LOCALNAME_INVALID),
-			$of(u"Lok\u00e1lny n\u00e1zov v QNAME by mal by\u0165 platn\u00fdm NCName"_s)
+			$of(u"Lokálny názov v QNAME by mal byť platným NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_ARG_PREFIX_INVALID),
-			$of(u"Predpona v QNAME by mala by\u0165 platn\u00fdm NCName"_s)
+			$of(u"Predpona v QNAME by mala byť platným NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"Parameter na createMessage bol mimo ohrani\u010denia"_s)
+			$of(u"Parameter na createMessage bol mimo ohraničenia"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"V\u00fdnimka po\u010das volania messageFormat"_s)
+			$of(u"Výnimka počas volania messageFormat"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
@@ -617,27 +617,27 @@ void clinit$XMLErrorResources_sk($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"St\u013apec #"_s)
+			$of(u"Stĺpec #"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"Trieda serializ\u00e1tora \'\'{0}\'\' neimplementuje org.xml.sax.ContentHandler."_s)
+			$of(u"Trieda serializátora \'\'{0}\'\' neimplementuje org.xml.sax.ContentHandler."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"Prostriedok [ {0} ] nemohol by\u0165 n\u00e1jden\u00fd.\n {1}"_s)
+			$of(u"Prostriedok [ {0} ] nemohol byť nájdený.\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"Prostriedok [ {0} ] sa nedal na\u010d\u00edta\u0165: {1} \n {2} \t {3}"_s)
+			$of(u"Prostriedok [ {0} ] sa nedal načítať: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"Ve\u013ekos\u0165 vyrovn\u00e1vacej pam\u00e4te <=0"_s)
+			$of(u"Veľkosť vyrovnávacej pamäte <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Bolo zisten\u00e9 neplatn\u00e9 nahradenie UTF-16: {0} ?"_s)
+			$of(u"Bolo zistené neplatné nahradenie UTF-16: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_OIERROR),
@@ -645,27 +645,27 @@ void clinit$XMLErrorResources_sk($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Nie je mo\u017en\u00e9 prida\u0165 atrib\u00fat {0} po uzloch potomka alebo pred vytvoren\u00edm elementu.  Atrib\u00fat bude ignorovan\u00fd."_s)
+			$of(u"Nie je možné pridať atribút {0} po uzloch potomka alebo pred vytvorením elementu.  Atribút bude ignorovaný."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_NAMESPACE_PREFIX),
-			$of(u"N\u00e1zvov\u00fd priestor pre predponu \'\'{0}\'\' nebol deklarovan\u00fd."_s)
+			$of(u"Názvový priestor pre predponu \'\'{0}\'\' nebol deklarovaný."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_STRAY_ATTRIBUTE),
-			$of(u"Atrib\u00fat \'\'{0}\'\' je mimo elementu."_s)
+			$of(u"Atribút \'\'{0}\'\' je mimo elementu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_STRAY_NAMESPACE),
-			$of(u"Deklar\u00e1cia n\u00e1zvov\u00e9ho priestoru \'\'{0}\'\'=\'\'{1}\'\' je mimo elementu."_s)
+			$of(u"Deklarácia názvového priestoru \'\'{0}\'\'=\'\'{1}\'\' je mimo elementu."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"Nedalo sa na\u010d\u00edta\u0165 \'\'{0}\'\' (skontrolujte CLASSPATH), pou\u017e\u00edvaj\u00fa sa predvolen\u00e9 hodnoty"_s)
+			$of(u"Nedalo sa načítať \'\'{0}\'\' (skontrolujte CLASSPATH), používajú sa predvolené hodnoty"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sk::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Nedal sa na\u010d\u00edta\u0165 s\u00fabor vlastnost\u00ed \'\'{0}\'\' pre v\u00fdstupn\u00fa met\u00f3du \'\'{1}\'\' (skontrolujte CLASSPATH)"_s)
+			$of(u"Nedal sa načítať súbor vlastností \'\'{0}\'\' pre výstupnú metódu \'\'{1}\'\' (skontrolujte CLASSPATH)"_s)
 		})
 	}));
 }

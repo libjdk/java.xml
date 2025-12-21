@@ -77,15 +77,15 @@ $ObjectArray2* ErrorMessages_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"Laufzeitfehler beim Ausf\u00fchren von <xsl:copy>."_s)
+			$of(u"Laufzeitfehler beim Ausführen von <xsl:copy>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"Ung\u00fcltige Konvertierung von \"{0}\" in \"{1}\"."_s)
+			$of(u"Ungültige Konvertierung von \"{0}\" in \"{1}\"."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"Externe Funktion \"{0}\" nicht unterst\u00fctzt von XSLTC."_s)
+			$of(u"Externe Funktion \"{0}\" nicht unterstützt von XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
@@ -93,7 +93,7 @@ $ObjectArray2* ErrorMessages_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"Ung\u00fcltiger Argumenttyp \"{0}\" in Aufruf von \"{1}\""_s)
+			$of(u"Ungültiger Argumenttyp \"{0}\" in Aufruf von \"{1}\""_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
@@ -105,23 +105,23 @@ $ObjectArray2* ErrorMessages_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"Iterator f\u00fcr Achse \"{0}\" nicht unterst\u00fctzt."_s)
+			$of(u"Iterator für Achse \"{0}\" nicht unterstützt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"Iterator f\u00fcr typisierte Achse \"{0}\" nicht unterst\u00fctzt."_s)
+			$of(u"Iterator für typisierte Achse \"{0}\" nicht unterstützt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"Attribut \"{0}\" au\u00dferhalb des Elements."_s)
+			$of(u"Attribut \"{0}\" außerhalb des Elements."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"Namespace-Deklaration {0}={1} au\u00dferhalb des Elements."_s)
+			$of(u"Namespace-Deklaration {0}={1} außerhalb des Elements."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
-			$of(u"Namespace f\u00fcr Pr\u00e4fix \"{0}\" wurde nicht deklariert."_s)
+			$of(u"Namespace für Präfix \"{0}\" wurde nicht deklariert."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DOM_ADAPTER_INIT_ERR),
@@ -133,15 +133,15 @@ $ObjectArray2* ErrorMessages_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"Der verwendete SAX-Parser unterst\u00fctzt keine XML-Namespaces."_s)
+			$of(u"Der verwendete SAX-Parser unterstützt keine XML-Namespaces."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
-			$of(u"URI-Referenz \"{0}\" konnte nicht aufgel\u00f6st werden."_s)
+			$of(u"URI-Referenz \"{0}\" konnte nicht aufgelöst werden."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_XSL_ERR),
-			$of(u"Nicht unterst\u00fctztes XSL-Element \"{0}\""_s)
+			$of(u"Nicht unterstütztes XSL-Element \"{0}\""_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
@@ -149,7 +149,7 @@ $ObjectArray2* ErrorMessages_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"Das angegebene Translet \"{0}\" wurde mit einer neueren Version von XSLTC als die verwendete Version der XSLTC-Laufzeit erstellt. Sie m\u00fcssen das Stylesheet neu kompilieren oder eine aktuellere Version von XSLTC verwenden, um dieses Translet auszuf\u00fchren."_s)
+			$of(u"Das angegebene Translet \"{0}\" wurde mit einer neueren Version von XSLTC als die verwendete Version der XSLTC-Laufzeit erstellt. Sie müssen das Stylesheet neu kompilieren oder eine aktuellere Version von XSLTC verwenden, um dieses Translet auszuführen."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
@@ -161,11 +161,11 @@ $ObjectArray2* ErrorMessages_de::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"Verwendung der Erweiterungsfunktion \"{0}\" ist nicht zul\u00e4ssig, wenn das Feature f\u00fcr die sichere Verarbeitung auf \"true\" gesetzt ist."_s)
+			$of(u"Verwendung der Erweiterungsfunktion \"{0}\" ist nicht zulässig, wenn das Feature für die sichere Verarbeitung auf \"true\" gesetzt ist."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"Verwendung des Erweiterungselements \"{0}\" ist nicht zul\u00e4ssig, wenn das Feature f\u00fcr die sichere Verarbeitung auf \"true\" gesetzt ist."_s)
+			$of(u"Verwendung des Erweiterungselements \"{0}\" ist nicht zulässig, wenn das Feature für die sichere Verarbeitung auf \"true\" gesetzt ist."_s)
 		})
 	});
 }

@@ -672,579 +672,579 @@ void clinit$XPATHErrorResources_zh_CN($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CURRENT_NOT_ALLOWED_IN_MATCH),
-			$of(u"\u5339\u914d\u6a21\u5f0f\u4e2d\u4e0d\u5141\u8bb8\u4f7f\u7528 current() \u51fd\u6570!"_s)
+			$of(u"匹配模式中不允许使用 current() 函数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CURRENT_TAKES_NO_ARGS),
-			$of(u"current() \u51fd\u6570\u4e0d\u63a5\u53d7\u53c2\u6570!"_s)
+			$of(u"current() 函数不接受参数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_DOCUMENT_REPLACED),
-			$of(u"document() \u51fd\u6570\u5b9e\u73b0\u5df2\u66ff\u6362\u4e3a com.sun.org.apache.xalan.internal.xslt.FuncDocument!"_s)
+			$of(u"document() 函数实现已替换为 com.sun.org.apache.xalan.internal.xslt.FuncDocument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CONTEXT_CAN_NOT_BE_NULL),
-			$of(u"\u8be5\u64cd\u4f5c\u4e0e\u4e0a\u4e0b\u6587\u76f8\u5173\u65f6, \u4e0a\u4e0b\u6587\u4e0d\u80fd\u4e3a\u7a7a\u503c\u3002"_s)
+			$of(u"该操作与上下文相关时, 上下文不能为空值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CONTEXT_HAS_NO_OWNERDOC),
-			$of(u"\u4e0a\u4e0b\u6587\u6ca1\u6709\u6240\u6709\u8005\u6587\u6863!"_s)
+			$of(u"上下文没有所有者文档!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_LOCALNAME_HAS_TOO_MANY_ARGS),
-			$of(u"local-name() \u5177\u6709\u592a\u591a\u53c2\u6570\u3002"_s)
+			$of(u"local-name() 具有太多参数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NAMESPACEURI_HAS_TOO_MANY_ARGS),
-			$of(u"namespace-uri() \u5177\u6709\u592a\u591a\u53c2\u6570\u3002"_s)
+			$of(u"namespace-uri() 具有太多参数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NORMALIZESPACE_HAS_TOO_MANY_ARGS),
-			$of(u"normalize-space() \u5177\u6709\u592a\u591a\u53c2\u6570\u3002"_s)
+			$of(u"normalize-space() 具有太多参数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NUMBER_HAS_TOO_MANY_ARGS),
-			$of(u"number() \u5177\u6709\u592a\u591a\u53c2\u6570\u3002"_s)
+			$of(u"number() 具有太多参数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NAME_HAS_TOO_MANY_ARGS),
-			$of(u"name() \u5177\u6709\u592a\u591a\u53c2\u6570\u3002"_s)
+			$of(u"name() 具有太多参数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_STRING_HAS_TOO_MANY_ARGS),
-			$of(u"string() \u5177\u6709\u592a\u591a\u53c2\u6570\u3002"_s)
+			$of(u"string() 具有太多参数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_STRINGLENGTH_HAS_TOO_MANY_ARGS),
-			$of(u"string-length() \u5177\u6709\u592a\u591a\u53c2\u6570\u3002"_s)
+			$of(u"string-length() 具有太多参数。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_TRANSLATE_TAKES_3_ARGS),
-			$of(u"translate() \u51fd\u6570\u91c7\u7528\u4e09\u4e2a\u53c2\u6570!"_s)
+			$of(u"translate() 函数采用三个参数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNPARSEDENTITYURI_TAKES_1_ARG),
-			$of(u"unparsed-entity-uri \u51fd\u6570\u5e94\u91c7\u7528\u4e00\u4e2a\u53c2\u6570!"_s)
+			$of(u"unparsed-entity-uri 函数应采用一个参数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NAMESPACEAXIS_NOT_IMPLEMENTED),
-			$of(u"\u5c1a\u672a\u5b9e\u73b0\u540d\u79f0\u7a7a\u95f4\u8f74!"_s)
+			$of(u"尚未实现名称空间轴!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNKNOWN_AXIS),
-			$of(u"\u8f74\u672a\u77e5: {0}"_s)
+			$of(u"轴未知: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNKNOWN_MATCH_OPERATION),
-			$of(u"\u5339\u914d\u64cd\u4f5c\u672a\u77e5!"_s)
+			$of(u"匹配操作未知!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_INCORRECT_ARG_LENGTH),
-			$of(u"processing-instruction() \u8282\u70b9\u6d4b\u8bd5\u7684\u53c2\u6570\u957f\u5ea6\u4e0d\u6b63\u786e!"_s)
+			$of(u"processing-instruction() 节点测试的参数长度不正确!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_TO_NUMBER),
-			$of(u"\u65e0\u6cd5\u5c06{0}\u8f6c\u6362\u4e3a\u6570\u5b57"_s)
+			$of(u"无法将{0}转换为数字"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_TO_NODELIST),
-			$of(u"\u65e0\u6cd5\u5c06{0}\u8f6c\u6362\u4e3a NodeList!"_s)
+			$of(u"无法将{0}转换为 NodeList!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_TO_MUTABLENODELIST),
-			$of(u"\u65e0\u6cd5\u5c06{0}\u8f6c\u6362\u4e3a NodeSetDTM!"_s)
+			$of(u"无法将{0}转换为 NodeSetDTM!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_TO_TYPE),
-			$of(u"\u65e0\u6cd5\u5c06{0}\u8f6c\u6362\u4e3a type#{1}"_s)
+			$of(u"无法将{0}转换为 type#{1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_MATCH_PATTERN),
-			$of(u"getMatchScore \u4e2d\u9700\u8981\u5339\u914d\u6a21\u5f0f!"_s)
+			$of(u"getMatchScore 中需要匹配模式!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COULDNOT_GET_VAR_NAMED),
-			$of(u"\u65e0\u6cd5\u83b7\u53d6\u540d\u4e3a{0}\u7684\u53d8\u91cf"_s)
+			$of(u"无法获取名为{0}的变量"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNKNOWN_OPCODE),
-			$of(u"\u9519\u8bef! \u64cd\u4f5c\u7801\u672a\u77e5: {0}"_s)
+			$of(u"错误! 操作码未知: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXTRA_ILLEGAL_TOKENS),
-			$of(u"\u9644\u52a0\u975e\u6cd5\u6807\u8bb0: {0}"_s)
+			$of(u"附加非法标记: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_DOUBLE_QUOTE),
-			$of(u"\u9519\u8bef\u5f15\u7528\u7684\u6587\u5b57... \u9700\u8981\u53cc\u5f15\u53f7!"_s)
+			$of(u"错误引用的文字... 需要双引号!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_SINGLE_QUOTE),
-			$of(u"\u9519\u8bef\u5f15\u7528\u7684\u6587\u5b57... \u9700\u8981\u5355\u5f15\u53f7!"_s)
+			$of(u"错误引用的文字... 需要单引号!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EMPTY_EXPRESSION),
-			$of(u"\u7a7a\u8868\u8fbe\u5f0f!"_s)
+			$of(u"空表达式!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_BUT_FOUND),
-			$of(u"\u9700\u8981{0}, \u4f46\u627e\u5230: {1}"_s)
+			$of(u"需要{0}, 但找到: {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_INCORRECT_PROGRAMMER_ASSERTION),
-			$of(u"\u7a0b\u5e8f\u5458\u65ad\u8a00\u9519\u8bef! - {0}"_s)
+			$of(u"程序员断言错误! - {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_BOOLEAN_ARG_NO_LONGER_OPTIONAL),
-			$of(u"\u5728 19990709 XPath \u8349\u7a3f\u4e2d, boolean(...) \u53c2\u6570\u4e0d\u518d\u662f\u53ef\u9009\u7684\u3002"_s)
+			$of(u"在 19990709 XPath 草稿中, boolean(...) 参数不再是可选的。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FOUND_COMMA_BUT_NO_PRECEDING_ARG),
-			$of(u"\u5df2\u627e\u5230 \',\', \u4f46\u524d\u9762\u6ca1\u6709\u53c2\u6570!"_s)
+			$of(u"已找到 \',\', 但前面没有参数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FOUND_COMMA_BUT_NO_FOLLOWING_ARG),
-			$of(u"\u5df2\u627e\u5230 \',\', \u4f46\u540e\u9762\u6ca1\u6709\u53c2\u6570!"_s)
+			$of(u"已找到 \',\', 但后面没有参数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_PREDICATE_ILLEGAL_SYNTAX),
-			$of(u"\'..[predicate]\' \u6216 \'.[predicate]\' \u662f\u975e\u6cd5\u8bed\u6cd5\u3002\u8bf7\u6539\u7528 \'self::node()[predicate]\'\u3002"_s)
+			$of(u"\'..[predicate]\' 或 \'.[predicate]\' 是非法语法。请改用 \'self::node()[predicate]\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_PREDICATE_TOO_MANY_OPEN),
-			$of(u"\u5bf9 {1} \u4e2d\u7684 {0} \u8fdb\u884c\u8bed\u6cd5\u5206\u6790\u65f6\u5806\u6808\u6ea2\u51fa\u3002\u672a\u7ed3\u675f\u7684\u8c13\u8bcd\u592a\u591a ({2})\u3002"_s)
+			$of(u"对 {1} 中的 {0} 进行语法分析时堆栈溢出。未结束的谓词太多 ({2})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COMPILATION_TOO_MANY_OPERATION),
-			$of(u"\u7f16\u8bd1\u8868\u8fbe\u5f0f\u65f6\u5806\u6808\u6ea2\u51fa\u3002\u8fd0\u7b97\u592a\u591a ({0})\u3002"_s)
+			$of(u"编译表达式时堆栈溢出。运算太多 ({0})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_ILLEGAL_AXIS_NAME),
-			$of(u"\u975e\u6cd5\u8f74\u540d\u79f0: {0}"_s)
+			$of(u"非法轴名称: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNKNOWN_NODETYPE),
-			$of(u"\u672a\u77e5\u8282\u70b9\u7c7b\u578b: {0}"_s)
+			$of(u"未知节点类型: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_PATTERN_LITERAL_NEEDS_BE_QUOTED),
-			$of(u"\u9700\u8981\u7528\u5f15\u53f7\u5c06\u6a21\u5f0f\u6587\u5b57 ({0}) \u5f15\u8d77\u6765!"_s)
+			$of(u"需要用引号将模式文字 ({0}) 引起来!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COULDNOT_BE_FORMATTED_TO_NUMBER),
-			$of(u"\u65e0\u6cd5\u5c06{0}\u7684\u683c\u5f0f\u8bbe\u7f6e\u4e3a\u6570\u5b57!"_s)
+			$of(u"无法将{0}的格式设置为数字!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COULDNOT_CREATE_XMLPROCESSORLIAISON),
-			$of(u"\u65e0\u6cd5\u521b\u5efa XML TransformerFactory Liaison: {0}"_s)
+			$of(u"无法创建 XML TransformerFactory Liaison: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_DIDNOT_FIND_XPATH_SELECT_EXP),
-			$of(u"\u9519\u8bef! \u627e\u4e0d\u5230 xpath \u9009\u62e9\u8868\u8fbe\u5f0f (-select)\u3002"_s)
+			$of(u"错误! 找不到 xpath 选择表达式 (-select)。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COULDNOT_FIND_ENDOP_AFTER_OPLOCATIONPATH),
-			$of(u"\u9519\u8bef! \u5728 OP_LOCATIONPATH \u540e\u627e\u4e0d\u5230 ENDOP"_s)
+			$of(u"错误! 在 OP_LOCATIONPATH 后找不到 ENDOP"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_ERROR_OCCURED),
-			$of(u"\u51fa\u73b0\u9519\u8bef!"_s)
+			$of(u"出现错误!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"\u4e3a\u53d8\u91cf\u7ed9\u5b9a\u7684 VariableReference \u8131\u79bb\u4e0a\u4e0b\u6587\u6216\u6ca1\u6709\u5b9a\u4e49! \u540d\u79f0 = {0}"_s)
+			$of(u"为变量给定的 VariableReference 脱离上下文或没有定义! 名称 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_AXES_NOT_ALLOWED),
-			$of(u"\u5339\u914d\u6a21\u5f0f\u4e2d\u4ec5\u5141\u8bb8\u4f7f\u7528 child:: \u548c attribute:: \u8f74\u3002\u8fdd\u89c4\u8f74 = {0}"_s)
+			$of(u"匹配模式中仅允许使用 child:: 和 attribute:: 轴。违规轴 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_KEY_HAS_TOO_MANY_ARGS),
-			$of(u"key() \u7684\u53c2\u6570\u6570\u76ee\u4e0d\u6b63\u786e\u3002"_s)
+			$of(u"key() 的参数数目不正确。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COUNT_TAKES_1_ARG),
-			$of(u"count \u51fd\u6570\u5e94\u91c7\u7528\u4e00\u4e2a\u53c2\u6570!"_s)
+			$of(u"count 函数应采用一个参数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COULDNOT_FIND_FUNCTION),
-			$of(u"\u627e\u4e0d\u5230\u51fd\u6570: {0}"_s)
+			$of(u"找不到函数: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNSUPPORTED_ENCODING),
-			$of(u"\u4e0d\u652f\u6301\u7f16\u7801: {0}"_s)
+			$of(u"不支持编码: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_PROBLEM_IN_DTM_NEXTSIBLING),
-			$of(u"getNextSibling \u65f6 DTM \u4e2d\u51fa\u73b0\u95ee\u9898... \u6b63\u5728\u5c1d\u8bd5\u6062\u590d"_s)
+			$of(u"getNextSibling 时 DTM 中出现问题... 正在尝试恢复"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANNOT_WRITE_TO_EMPTYNODELISTIMPL),
-			$of(u"\u7a0b\u5e8f\u5458\u9519\u8bef: \u65e0\u6cd5\u5199\u5165 EmptyNodeList\u3002"_s)
+			$of(u"程序员错误: 无法写入 EmptyNodeList。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_SETDOMFACTORY_NOT_SUPPORTED),
-			$of(u"XPathContext \u4e0d\u652f\u6301 setDOMFactory!"_s)
+			$of(u"XPathContext 不支持 setDOMFactory!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\u524d\u7f00\u5fc5\u987b\u89e3\u6790\u4e3a\u540d\u79f0\u7a7a\u95f4: {0}"_s)
+			$of(u"前缀必须解析为名称空间: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_PARSE_NOT_SUPPORTED),
-			$of(u"XPathContext \u4e2d\u4e0d\u652f\u6301 parse (InputSource source)! \u65e0\u6cd5\u6253\u5f00{0}"_s)
+			$of(u"XPathContext 中不支持 parse (InputSource source)! 无法打开{0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_SAX_API_NOT_HANDLED),
-			$of(u"DTM \u672a\u5904\u7406 SAX API characters(char ch[]...!"_s)
+			$of(u"DTM 未处理 SAX API characters(char ch[]...!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_IGNORABLE_WHITESPACE_NOT_HANDLED),
-			$of(u"DTM \u672a\u5904\u7406 ignorableWhitespace(char ch[]...!"_s)
+			$of(u"DTM 未处理 ignorableWhitespace(char ch[]...!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_DTM_CANNOT_HANDLE_NODES),
-			$of(u"DTMLiaison \u65e0\u6cd5\u5904\u7406{0}\u7c7b\u578b\u7684\u8282\u70b9"_s)
+			$of(u"DTMLiaison 无法处理{0}类型的节点"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_XERCES_CANNOT_HANDLE_NODES),
-			$of(u"DOM2Helper \u65e0\u6cd5\u5904\u7406{0}\u7c7b\u578b\u7684\u8282\u70b9"_s)
+			$of(u"DOM2Helper 无法处理{0}类型的节点"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_XERCES_PARSE_ERROR_DETAILS),
-			$of(u"DOM2Helper.parse \u9519\u8bef: SystemID - \u7b2c {0} \u884c - {1}"_s)
+			$of(u"DOM2Helper.parse 错误: SystemID - 第 {0} 行 - {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_XERCES_PARSE_ERROR),
-			$of(u"DOM2Helper.parse \u9519\u8bef"_s)
+			$of(u"DOM2Helper.parse 错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u68c0\u6d4b\u5230\u65e0\u6548\u7684 UTF-16 \u4ee3\u7406: {0}?"_s)
+			$of(u"检测到无效的 UTF-16 代理: {0}?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_OIERROR),
-			$of(u"IO \u9519\u8bef"_s)
+			$of(u"IO 错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANNOT_CREATE_URL),
-			$of(u"\u65e0\u6cd5\u4e3a{0}\u521b\u5efa url"_s)
+			$of(u"无法为{0}创建 url"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_XPATH_READOBJECT),
-			$of(u"\u5728 XPath.readObject \u4e2d: {0}"_s)
+			$of(u"在 XPath.readObject 中: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FUNCTION_TOKEN_NOT_FOUND),
-			$of(u"\u627e\u4e0d\u5230\u51fd\u6570\u6807\u8bb0\u3002"_s)
+			$of(u"找不到函数标记。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANNOT_DEAL_XPATH_TYPE),
-			$of(u"\u65e0\u6cd5\u5904\u7406 XPath \u7c7b\u578b: {0}"_s)
+			$of(u"无法处理 XPath 类型: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NODESET_NOT_MUTABLE),
-			$of(u"\u6b64 NodeSet \u4e0d\u53ef\u53d8"_s)
+			$of(u"此 NodeSet 不可变"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NODESETDTM_NOT_MUTABLE),
-			$of(u"\u6b64 NodeSetDTM \u4e0d\u53ef\u53d8"_s)
+			$of(u"此 NodeSetDTM 不可变"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_VAR_NOT_RESOLVABLE),
-			$of(u"\u65e0\u6cd5\u89e3\u6790\u53d8\u91cf: {0}"_s)
+			$of(u"无法解析变量: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NULL_ERROR_HANDLER),
-			$of(u"\u7a7a\u9519\u8bef\u5904\u7406\u7a0b\u5e8f"_s)
+			$of(u"空错误处理程序"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_PROG_ASSERT_UNKNOWN_OPCODE),
-			$of(u"\u7a0b\u5e8f\u5458\u65ad\u8a00: \u64cd\u4f5c\u7801\u672a\u77e5: {0}"_s)
+			$of(u"程序员断言: 操作码未知: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_ZERO_OR_ONE),
-			$of(u"0 \u6216 1"_s)
+			$of(u"0 或 1"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper \u4e0d\u652f\u6301 rtf()"_s)
+			$of(u"XRTreeFragSelectWrapper 不支持 rtf()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper \u4e0d\u652f\u6301 asNodeIterator()"_s)
+			$of(u"XRTreeFragSelectWrapper 不支持 asNodeIterator()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_DETACH_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper \u4e0d\u652f\u6301 detach()"_s)
+			$of(u"XRTreeFragSelectWrapper 不支持 detach()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NUM_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper \u4e0d\u652f\u6301 num()"_s)
+			$of(u"XRTreeFragSelectWrapper 不支持 num()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_XSTR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper \u4e0d\u652f\u6301 xstr()"_s)
+			$of(u"XRTreeFragSelectWrapper 不支持 xstr()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_STR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"XRTreeFragSelectWrapper \u4e0d\u652f\u6301 str()"_s)
+			$of(u"XRTreeFragSelectWrapper 不支持 str()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS),
-			$of(u"XStringForChars \u4e0d\u652f\u6301 fsb()"_s)
+			$of(u"XStringForChars 不支持 fsb()"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_COULD_NOT_FIND_VAR),
-			$of(u"\u627e\u4e0d\u5230\u540d\u4e3a{0}\u7684\u53d8\u91cf"_s)
+			$of(u"找不到名为{0}的变量"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING),
-			$of(u"XStringForChars \u65e0\u6cd5\u91c7\u7528\u5b57\u7b26\u4e32\u4f5c\u4e3a\u53c2\u6570"_s)
+			$of(u"XStringForChars 无法采用字符串作为参数"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FASTSTRINGBUFFER_CANNOT_BE_NULL),
-			$of(u"FastStringBuffer \u53c2\u6570\u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"FastStringBuffer 参数不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_TWO_OR_THREE),
-			$of(u"2 \u6216 3"_s)
+			$of(u"2 或 3"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_VARIABLE_ACCESSED_BEFORE_BIND),
-			$of(u"\u5df2\u5728\u7ed1\u5b9a\u53d8\u91cf\u524d\u8bbf\u95ee\u6b64\u53d8\u91cf!"_s)
+			$of(u"已在绑定变量前访问此变量!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FSB_CANNOT_TAKE_STRING),
-			$of(u"XStringForFSB \u65e0\u6cd5\u91c7\u7528\u5b57\u7b26\u4e32\u4f5c\u4e3a\u53c2\u6570!"_s)
+			$of(u"XStringForFSB 无法采用字符串作为参数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_SETTING_WALKER_ROOT_TO_NULL),
-			$of(u"\n !!!! \u9519\u8bef! \u5c06 walker \u7684\u6839\u8bbe\u7f6e\u4e3a\u7a7a\u503c!!!"_s)
+			$of(u"\n !!!! 错误! 将 walker 的根设置为空值!!!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NODESETDTM_CANNOT_ITERATE),
-			$of(u"\u6b64 NodeSetDTM \u65e0\u6cd5\u8fed\u4ee3\u5230\u4e0a\u4e00\u4e2a\u8282\u70b9!"_s)
+			$of(u"此 NodeSetDTM 无法迭代到上一个节点!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NODESET_CANNOT_ITERATE),
-			$of(u"\u6b64 NodeSet \u65e0\u6cd5\u8fed\u4ee3\u5230\u4e0a\u4e00\u4e2a\u8282\u70b9!"_s)
+			$of(u"此 NodeSet 无法迭代到上一个节点!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NODESETDTM_CANNOT_INDEX),
-			$of(u"\u6b64 NodeSetDTM \u65e0\u6cd5\u6267\u884c indexing \u6216 counting \u51fd\u6570!"_s)
+			$of(u"此 NodeSetDTM 无法执行 indexing 或 counting 函数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NODESET_CANNOT_INDEX),
-			$of(u"\u6b64 NodeSet \u65e0\u6cd5\u6267\u884c indexing \u6216 counting \u51fd\u6570!"_s)
+			$of(u"此 NodeSet 无法执行 indexing 或 counting 函数!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANNOT_CALL_SETSHOULDCACHENODE),
-			$of(u"\u65e0\u6cd5\u5728\u8c03\u7528 nextNode \u4e4b\u540e\u8c03\u7528 setShouldCacheNodes!"_s)
+			$of(u"无法在调用 nextNode 之后调用 setShouldCacheNodes!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_ONLY_ALLOWS),
-			$of(u"{0}\u4ec5\u5141\u8bb8\u4f7f\u7528{1}\u53c2\u6570"_s)
+			$of(u"{0}仅允许使用{1}参数"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNKNOWN_STEP),
-			$of(u"getNextStepPos \u4e2d\u7684\u7a0b\u5e8f\u5458\u65ad\u8a00: stepType \u672a\u77e5: {0}"_s)
+			$of(u"getNextStepPos 中的程序员断言: stepType 未知: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_REL_LOC_PATH),
-			$of(u"\u76f8\u5bf9\u4f4d\u7f6e\u8def\u5f84\u5e94\u4f4d\u4e8e \'/\' \u6216 \'//\' \u6807\u8bb0\u4e4b\u540e\u3002"_s)
+			$of(u"相对位置路径应位于 \'/\' 或 \'//\' 标记之后。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_LOC_PATH),
-			$of(u"\u9700\u8981\u4f4d\u7f6e\u8def\u5f84, \u4f46\u9047\u5230\u4ee5\u4e0b\u6807\u8bb0: {0}"_s)
+			$of(u"需要位置路径, 但遇到以下标记: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_LOC_PATH_AT_END_EXPR),
-			$of(u"\u9700\u8981\u4f4d\u7f6e\u8def\u5f84, \u4f46\u627e\u5230 XPath \u8868\u8fbe\u5f0f\u7684\u672b\u5c3e\u3002"_s)
+			$of(u"需要位置路径, 但找到 XPath 表达式的末尾。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_LOC_STEP),
-			$of(u"\u4f4d\u7f6e\u6b65\u9aa4\u5e94\u4f4d\u4e8e \'/\' \u6216 \'//\' \u6807\u8bb0\u4e4b\u540e\u3002"_s)
+			$of(u"位置步骤应位于 \'/\' 或 \'//\' 标记之后。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_NODE_TEST),
-			$of(u"\u9700\u8981\u4e0e NCName:* \u6216 QName \u5339\u914d\u7684\u8282\u70b9\u6d4b\u8bd5\u3002"_s)
+			$of(u"需要与 NCName:* 或 QName 匹配的节点测试。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_STEP_PATTERN),
-			$of(u"\u9700\u8981\u6b65\u9aa4\u6a21\u5f0f, \u4f46\u9047\u5230 \'/\'\u3002"_s)
+			$of(u"需要步骤模式, 但遇到 \'/\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXPECTED_REL_PATH_PATTERN),
-			$of(u"\u9700\u8981\u76f8\u5bf9\u8def\u5f84\u6a21\u5f0f\u3002"_s)
+			$of(u"需要相对路径模式。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_TO_BOOLEAN),
-			$of(u"XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u5177\u6709{1}\u7c7b\u578b\u7684 XPathResultType, \u65e0\u6cd5\u5c06\u6b64 XPathResultType \u8f6c\u6362\u4e3a boolean\u3002"_s)
+			$of(u"XPath 表达式 \'\'{0}\'\' 的 XPathResult 具有{1}类型的 XPathResultType, 无法将此 XPathResultType 转换为 boolean。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_TO_SINGLENODE),
-			$of(u"XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u5177\u6709{1}\u7c7b\u578b\u7684 XPathResultType, \u65e0\u6cd5\u5c06\u6b64 XPathResultType \u8f6c\u6362\u4e3a\u5355\u4e00\u8282\u70b9\u3002\u65b9\u6cd5 getSingleNodeValue \u4ec5\u9002\u7528\u4e8e\u7c7b\u578b ANY_UNORDERED_NODE_TYPE \u548c FIRST_ORDERED_NODE_TYPE\u3002"_s)
+			$of(u"XPath 表达式 \'\'{0}\'\' 的 XPathResult 具有{1}类型的 XPathResultType, 无法将此 XPathResultType 转换为单一节点。方法 getSingleNodeValue 仅适用于类型 ANY_UNORDERED_NODE_TYPE 和 FIRST_ORDERED_NODE_TYPE。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_GET_SNAPSHOT_LENGTH),
-			$of(u"\u65e0\u6cd5\u5728 XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u4e2d\u8c03\u7528\u65b9\u6cd5 getSnapshotLength, \u8fd9\u662f\u56e0\u4e3a\u5176 XPathResultType \u4e3a{1}\u3002\u6b64\u65b9\u6cd5\u4ec5\u9002\u7528\u4e8e\u7c7b\u578b UNORDERED_NODE_SNAPSHOT_TYPE \u548c ORDERED_NODE_SNAPSHOT_TYPE\u3002"_s)
+			$of(u"无法在 XPath 表达式 \'\'{0}\'\' 的 XPathResult 中调用方法 getSnapshotLength, 这是因为其 XPathResultType 为{1}。此方法仅适用于类型 UNORDERED_NODE_SNAPSHOT_TYPE 和 ORDERED_NODE_SNAPSHOT_TYPE。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NON_ITERATOR_TYPE),
-			$of(u"\u65e0\u6cd5\u5728 XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u4e2d\u8c03\u7528\u65b9\u6cd5 iterateNext, \u8fd9\u662f\u56e0\u4e3a\u5176 XPathResultType \u4e3a{1}\u3002\u6b64\u65b9\u6cd5\u4ec5\u9002\u7528\u4e8e\u7c7b\u578b UNORDERED_NODE_ITERATOR_TYPE \u548c ORDERED_NODE_ITERATOR_TYPE\u3002"_s)
+			$of(u"无法在 XPath 表达式 \'\'{0}\'\' 的 XPathResult 中调用方法 iterateNext, 这是因为其 XPathResultType 为{1}。此方法仅适用于类型 UNORDERED_NODE_ITERATOR_TYPE 和 ORDERED_NODE_ITERATOR_TYPE。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_DOC_MUTATED),
-			$of(u"\u7531\u4e8e\u5df2\u8fd4\u56de\u7ed3\u679c, \u6587\u6863\u53d1\u751f\u53d8\u66f4\u3002\u8fed\u4ee3\u5668\u65e0\u6548\u3002"_s)
+			$of(u"由于已返回结果, 文档发生变更。迭代器无效。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_INVALID_XPATH_TYPE),
-			$of(u"XPath \u7c7b\u578b\u53c2\u6570\u65e0\u6548: {0}"_s)
+			$of(u"XPath 类型参数无效: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EMPTY_XPATH_RESULT),
-			$of(u"\u7a7a XPath \u7ed3\u679c\u5bf9\u8c61"_s)
+			$of(u"空 XPath 结果对象"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_INCOMPATIBLE_TYPES),
-			$of(u"XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u5177\u6709{1}\u7c7b\u578b\u7684 XPathResultType, \u65e0\u6cd5\u5c06\u6b64 XPathResultType \u5f3a\u5236\u4e3a{2}\u7c7b\u578b\u7684\u6307\u5b9a XPathResultType\u3002"_s)
+			$of(u"XPath 表达式 \'\'{0}\'\' 的 XPathResult 具有{1}类型的 XPathResultType, 无法将此 XPathResultType 强制为{2}类型的指定 XPathResultType。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NULL_RESOLVER),
-			$of(u"\u65e0\u6cd5\u4f7f\u7528\u7a7a\u524d\u7f00\u89e3\u6790\u5668\u89e3\u6790\u524d\u7f00\u3002"_s)
+			$of(u"无法使用空前缀解析器解析前缀。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_TO_STRING),
-			$of(u"XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u5177\u6709{1}\u7c7b\u578b\u7684 XPathResultType, \u65e0\u6cd5\u5c06\u6b64 XPathResultType \u8f6c\u6362\u4e3a\u5b57\u7b26\u4e32\u3002"_s)
+			$of(u"XPath 表达式 \'\'{0}\'\' 的 XPathResult 具有{1}类型的 XPathResultType, 无法将此 XPathResultType 转换为字符串。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NON_SNAPSHOT_TYPE),
-			$of(u"\u65e0\u6cd5\u5728 XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u4e2d\u8c03\u7528\u65b9\u6cd5 snapshotItem, \u8fd9\u662f\u56e0\u4e3a\u5176 XPathResultType \u4e3a{1}\u3002\u6b64\u65b9\u6cd5\u4ec5\u9002\u7528\u4e8e\u7c7b\u578b UNORDERED_NODE_SNAPSHOT_TYPE \u548c ORDERED_NODE_SNAPSHOT_TYPE\u3002"_s)
+			$of(u"无法在 XPath 表达式 \'\'{0}\'\' 的 XPathResult 中调用方法 snapshotItem, 这是因为其 XPathResultType 为{1}。此方法仅适用于类型 UNORDERED_NODE_SNAPSHOT_TYPE 和 ORDERED_NODE_SNAPSHOT_TYPE。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_WRONG_DOCUMENT),
-			$of(u"\u4e0a\u4e0b\u6587\u8282\u70b9\u4e0d\u5c5e\u4e8e\u7ed1\u5b9a\u5230\u6b64 XPathEvaluator \u7684\u6587\u6863\u3002"_s)
+			$of(u"上下文节点不属于绑定到此 XPathEvaluator 的文档。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_WRONG_NODETYPE),
-			$of(u"\u4e0d\u652f\u6301\u4e0a\u4e0b\u6587\u8282\u70b9\u7c7b\u578b\u3002"_s)
+			$of(u"不支持上下文节点类型。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_XPATH_ERROR),
-			$of(u"XPath \u4e2d\u5b58\u5728\u672a\u77e5\u9519\u8bef\u3002"_s)
+			$of(u"XPath 中存在未知错误。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_CANT_CONVERT_XPATHRESULTTYPE_TO_NUMBER),
-			$of(u"XPath \u8868\u8fbe\u5f0f \'\'{0}\'\' \u7684 XPathResult \u5177\u6709{1}\u7c7b\u578b\u7684 XPathResultType, \u65e0\u6cd5\u5c06\u6b64 XPathResultType \u8f6c\u6362\u4e3a\u6570\u5b57"_s)
+			$of(u"XPath 表达式 \'\'{0}\'\' 的 XPathResult 具有{1}类型的 XPathResultType, 无法将此 XPathResultType 转换为数字"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED),
-			$of(u"\u5f53 XMLConstants.FEATURE_SECURE_PROCESSING \u529f\u80fd\u8bbe\u7f6e\u4e3a\u201c\u771f\u201d\u65f6, \u4e0d\u80fd\u8c03\u7528\u6269\u5c55\u51fd\u6570 \'\'{0}\'\'\u3002"_s)
+			$of(u"当 XMLConstants.FEATURE_SECURE_PROCESSING 功能设置为“真”时, 不能调用扩展函数 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_RESOLVE_VARIABLE_RETURNS_NULL),
-			$of(u"\u53d8\u91cf{0}\u7684 resolveVariable \u8fd4\u56de\u7a7a\u503c"_s)
+			$of(u"变量{0}的 resolveVariable 返回空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_UNSUPPORTED_RETURN_TYPE),
-			$of(u"\u4e0d\u652f\u6301\u8be5\u8fd4\u56de\u7c7b\u578b: {0}"_s)
+			$of(u"不支持该返回类型: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"\u6e90\u548c/\u6216\u8fd4\u56de\u7c7b\u578b\u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"源和/或返回类型不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"\u6e90\u548c/\u6216\u8fd4\u56de\u7c7b\u578b\u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"源和/或返回类型不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_ARG_CANNOT_BE_NULL),
-			$of(u"{0}\u53c2\u6570\u4e0d\u80fd\u4e3a\u7a7a\u503c"_s)
+			$of(u"{0}参数不能为空值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_OBJECT_MODEL_NULL),
-			$of(u"\u4e0d\u80fd\u5728 objectModel == \u7a7a\u503c\u7684\u60c5\u51b5\u4e0b\u8c03\u7528 {0}#isObjectModelSupported(String objectModel)"_s)
+			$of(u"不能在 objectModel == 空值的情况下调用 {0}#isObjectModelSupported(String objectModel)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_OBJECT_MODEL_EMPTY),
-			$of(u"\u4e0d\u80fd\u5728 objectModel == \"\" \u7684\u60c5\u51b5\u4e0b\u8c03\u7528 {0}#isObjectModelSupported(String objectModel)"_s)
+			$of(u"不能在 objectModel == \"\" 的情况下调用 {0}#isObjectModelSupported(String objectModel)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FEATURE_NAME_NULL),
-			$of(u"\u5c1d\u8bd5\u8bbe\u7f6e\u5177\u6709\u7a7a\u540d\u79f0\u7684\u529f\u80fd: {0}#setFeature(null, {1})"_s)
+			$of(u"尝试设置具有空名称的功能: {0}#setFeature(null, {1})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_FEATURE_UNKNOWN),
-			$of(u"\u5c1d\u8bd5\u8bbe\u7f6e\u672a\u77e5\u529f\u80fd \"{0}\":{1}#setFeature({0},{2})"_s)
+			$of(u"尝试设置未知功能 \"{0}\":{1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_GETTING_NULL_FEATURE),
-			$of(u"\u5c1d\u8bd5\u83b7\u53d6\u5177\u6709\u7a7a\u540d\u79f0\u7684\u529f\u80fd: {0}#getFeature(null)"_s)
+			$of(u"尝试获取具有空名称的功能: {0}#getFeature(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_GETTING_UNKNOWN_FEATURE),
-			$of(u"\u5c1d\u8bd5\u83b7\u53d6\u672a\u77e5\u529f\u80fd \"{0}\":{1}#getFeature({0})"_s)
+			$of(u"尝试获取未知功能 \"{0}\":{1}#getFeature({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: \u5b58\u5728 Security Manager \u65f6, \u65e0\u6cd5\u5c06\u6b64\u529f\u80fd\u8bbe\u7f6e\u4e3a\u201c\u5047\u201d: {1}#setFeature({0},{2})"_s)
+			$of(u"FEATURE_SECURE_PROCESSING: 存在 Security Manager 时, 无法将此功能设置为“假”: {1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NULL_XPATH_FUNCTION_RESOLVER),
-			$of(u"\u5c1d\u8bd5\u8bbe\u7f6e\u7a7a XPathFunctionResolver:{0}#setXPathFunctionResolver(null)"_s)
+			$of(u"尝试设置空 XPathFunctionResolver:{0}#setXPathFunctionResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::ER_NULL_XPATH_VARIABLE_RESOLVER),
-			$of(u"\u5c1d\u8bd5\u8bbe\u7f6e\u7a7a XPathVariableResolver:{0}#setXPathVariableResolver(null)"_s)
+			$of(u"尝试设置空 XPathVariableResolver:{0}#setXPathVariableResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_LOCALE_NAME_NOT_HANDLED),
-			$of(u"\u5c1a\u672a\u5904\u7406 format-number \u51fd\u6570\u4e2d\u7684\u533a\u57df\u8bbe\u7f6e\u540d\u79f0!"_s)
+			$of(u"尚未处理 format-number 函数中的区域设置名称!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_PROPERTY_NOT_SUPPORTED),
-			$of(u"\u4e0d\u652f\u6301 XSL \u5c5e\u6027: {0}"_s)
+			$of(u"不支持 XSL 属性: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_DONT_DO_ANYTHING_WITH_NS),
-			$of(u"\u76ee\u524d\u4e0d\u8981\u4f7f\u7528\u5c5e\u6027{1}\u4e2d\u7684\u540d\u79f0\u7a7a\u95f4{0}\u6267\u884c\u4efb\u4f55\u64cd\u4f5c"_s)
+			$of(u"目前不要使用属性{1}中的名称空间{0}执行任何操作"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_SECURITY_EXCEPTION),
-			$of(u"\u5c1d\u8bd5\u8bbf\u95ee XSL \u7cfb\u7edf\u5c5e\u6027\u65f6\u51fa\u73b0 SecurityException: {0}"_s)
+			$of(u"尝试访问 XSL 系统属性时出现 SecurityException: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_QUO_NO_LONGER_DEFINED),
-			$of(u"\u65e7\u8bed\u6cd5: XPath \u4e2d\u4e0d\u518d\u5b9a\u4e49 quo(...)\u3002"_s)
+			$of(u"旧语法: XPath 中不再定义 quo(...)。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_NEED_DERIVED_OBJECT_TO_IMPLEMENT_NODETEST),
-			$of(u"XPath \u9700\u8981\u6d3e\u751f\u5bf9\u8c61\u624d\u80fd\u5b9e\u73b0 nodeTest!"_s)
+			$of(u"XPath 需要派生对象才能实现 nodeTest!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_FUNCTION_TOKEN_NOT_FOUND),
-			$of(u"\u627e\u4e0d\u5230\u51fd\u6570\u6807\u8bb0\u3002"_s)
+			$of(u"找不到函数标记。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_COULDNOT_FIND_FUNCTION),
-			$of(u"\u627e\u4e0d\u5230\u51fd\u6570: {0}"_s)
+			$of(u"找不到函数: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_CANNOT_MAKE_URL_FROM),
-			$of(u"\u65e0\u6cd5\u6839\u636e{0}\u751f\u6210 URL"_s)
+			$of(u"无法根据{0}生成 URL"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_EXPAND_ENTITIES_NOT_SUPPORTED),
-			$of(u"DTM \u89e3\u6790\u5668\u4e0d\u652f\u6301 -E \u9009\u9879"_s)
+			$of(u"DTM 解析器不支持 -E 选项"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"\u4e3a\u53d8\u91cf\u7ed9\u5b9a\u7684 VariableReference \u8131\u79bb\u4e0a\u4e0b\u6587\u6216\u6ca1\u6709\u5b9a\u4e49! \u540d\u79f0 = {0}"_s)
+			$of(u"为变量给定的 VariableReference 脱离上下文或没有定义! 名称 = {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_zh_CN::WG_UNSUPPORTED_ENCODING),
-			$of(u"\u4e0d\u652f\u6301\u7f16\u7801: {0}"_s)
+			$of(u"不支持编码: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1260,15 +1260,15 @@ void clinit$XPATHErrorResources_zh_CN($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage \u7684\u53c2\u6570\u8d85\u51fa\u8303\u56f4"_s)
+			$of(u"createMessage 的参数超出范围"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"\u8c03\u7528 messageFormat \u65f6\u629b\u51fa\u5f02\u5e38\u9519\u8bef"_s)
+			$of(u"调用 messageFormat 时抛出异常错误"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
-			$of(u">>>>>>> Xalan \u7248\u672c "_s)
+			$of(u">>>>>>> Xalan 版本 "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version2"_s),
@@ -1276,23 +1276,23 @@ void clinit$XPATHErrorResources_zh_CN($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("yes"_s),
-			$of(u"\u662f"_s)
+			$of(u"是"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\u884c\u53f7"_s)
+			$of(u"行号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\u5217\u53f7"_s)
+			$of(u"列号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xsldone"_s),
-			$of(u"XSLProcessor: \u5b8c\u6210"_s)
+			$of(u"XSLProcessor: 完成"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xpath_option"_s),
-			$of(u"xpath \u9009\u9879: "_s)
+			$of(u"xpath 选项: "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionIN"_s),
@@ -1308,27 +1308,27 @@ void clinit$XPATHErrorResources_zh_CN($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("optionAnyExpr"_s),
-			$of(u"\u6216\u8005\u4ec5 xpath \u8868\u8fbe\u5f0f\u6267\u884c\u8bca\u65ad\u8f6c\u50a8"_s)
+			$of(u"或者仅 xpath 表达式执行诊断转储"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
-			$of(u"XSL \u8fdb\u7a0b\u672a\u6210\u529f\u3002"_s)
+			$of(u"XSL 进程未成功。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg2"_s),
-			$of(u"** \u627e\u4e0d\u5230\u89e3\u6790\u5668 **"_s)
+			$of(u"** 找不到解析器 **"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"\u8bf7\u68c0\u67e5\u60a8\u7684\u7c7b\u8def\u5f84\u3002"_s)
+			$of(u"请检查您的类路径。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"\u5982\u679c\u6ca1\u6709 IBM \u63d0\u4f9b\u7684 XML Parser for Java, \u5219\u53ef\u4ee5\u4ece"_s)
+			$of(u"如果没有 IBM 提供的 XML Parser for Java, 则可以从"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),
-			$of(u"IBM AlphaWorks \u8fdb\u884c\u4e0b\u8f7d, \u7f51\u5740\u4e3a: http://www.alphaworks.ibm.com/formula/xml"_s)
+			$of(u"IBM AlphaWorks 进行下载, 网址为: http://www.alphaworks.ibm.com/formula/xml"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("gtone"_s),

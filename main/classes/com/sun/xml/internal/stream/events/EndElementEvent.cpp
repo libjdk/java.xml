@@ -247,7 +247,7 @@ $String* EndElementEvent::nameAsString() {
 	if ($nc(this->fQName)->getPrefix() != nullptr) {
 		$var($String, var$2, $$str({"[\'"_s, $($nc(this->fQName)->getNamespaceURI()), "\']:"_s}));
 		$var($String, var$1, $$concat(var$2, $($nc(this->fQName)->getPrefix())));
-		$var($String, var$0, $$concat(var$1, ":"));
+		$var($String, var$0, $$concat(var$1, ":"_s));
 		return $concat(var$0, $($nc(this->fQName)->getLocalPart()));
 	} else {
 		$var($String, var$3, $$str({"[\'"_s, $($nc(this->fQName)->getNamespaceURI()), "\']:"_s}));

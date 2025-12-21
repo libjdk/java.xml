@@ -163,7 +163,7 @@ $ObjectType* FieldOrMethod::getLoadClassType($ConstantPoolGen* cpg) {
 	}
 	$var($String, var$1, $$str({$($nc($of(rt))->getClass()->getCanonicalName()), " "_s}));
 	$var($String, var$0, $$concat(var$1, $(rt->getSignature())));
-	$throwNew($ClassGenException, $$concat(var$0, " does not represent an ObjectType"));
+	$throwNew($ClassGenException, $$concat(var$0, " does not represent an ObjectType"_s));
 }
 
 FieldOrMethod::FieldOrMethod() {

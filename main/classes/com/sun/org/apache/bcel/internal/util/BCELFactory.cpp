@@ -226,12 +226,12 @@ void BCELFactory::visitLocalVariableInstruction($LocalVariableInstruction* i) {
 	if (opcode == $Const::IINC) {
 		$var($String, var$1, $$str({"il.append(new IINC("_s, $$str(i->getIndex()), ", "_s}));
 		$var($String, var$0, $$concat(var$1, $$str($nc(($cast($IINC, i)))->getIncrement())));
-		$nc(this->_out)->println($$concat(var$0, "));"));
+		$nc(this->_out)->println($$concat(var$0, "));"_s));
 	} else {
 		$var($String, kind, (opcode < $Const::ISTORE) ? "Load"_s : "Store"_s);
 		$var($String, var$3, $$str({"il.append(_factory.create"_s, kind, "("_s, $($BCELifier::printType(type)), ", "_s}));
 		$var($String, var$2, $$concat(var$3, $$str(i->getIndex())));
-		$nc(this->_out)->println($$concat(var$2, "));"));
+		$nc(this->_out)->println($$concat(var$2, "));"_s));
 	}
 }
 
@@ -252,7 +252,7 @@ void BCELFactory::visitFieldInstruction($FieldInstruction* i) {
 	$var($String, var$1, $$str({"il.append(_factory.createFieldAccess(\""_s, class_name, "\", \""_s, field_name, "\", "_s, $($BCELifier::printType(type)), ", "_s, BCELFactory::CONSTANT_PREFIX}));
 	$init($Locale);
 	$var($String, var$0, $$concat(var$1, $($nc($($Const::getOpcodeName(opcode)))->toUpperCase($Locale::ENGLISH))));
-	$nc(this->_out)->println($$concat(var$0, "));"));
+	$nc(this->_out)->println($$concat(var$0, "));"_s));
 }
 
 void BCELFactory::visitInvokeInstruction($InvokeInstruction* i) {
@@ -264,11 +264,11 @@ void BCELFactory::visitInvokeInstruction($InvokeInstruction* i) {
 	$var($TypeArray, arg_types, i->getArgumentTypes(this->_cp));
 	$var($String, var$4, $$str({"il.append(_factory.createInvoke(\""_s, class_name, "\", \""_s, method_name, "\", "_s, $($BCELifier::printType(type)), ", "_s}));
 	$var($String, var$3, $$concat(var$4, $($BCELifier::printArgumentTypes(arg_types))));
-	$var($String, var$2, $$concat(var$3, ", "));
+	$var($String, var$2, $$concat(var$3, ", "_s));
 	$var($String, var$1, $$concat(var$2, BCELFactory::CONSTANT_PREFIX));
 	$init($Locale);
 	$var($String, var$0, $$concat(var$1, $($nc($($Const::getOpcodeName(opcode)))->toUpperCase($Locale::ENGLISH))));
-	$nc(this->_out)->println($$concat(var$0, "));"));
+	$nc(this->_out)->println($$concat(var$0, "));"_s));
 }
 
 void BCELFactory::visitAllocationInstruction($AllocationInstruction* i) {
@@ -443,11 +443,11 @@ void BCELFactory::updateExceptionHandlers() {
 				$var($String, type, ($nc(h)->getCatchType() == nullptr) ? "null"_s : $BCELifier::printType($(static_cast<$Type*>($nc(h)->getCatchType()))));
 				$var($String, var$5, $$str({"    method.addExceptionHandler(ih_"_s, $$str($nc($($nc(h)->getStartPC()))->getPosition()), ", ih_"_s}));
 				$var($String, var$4, $$concat(var$5, $$str($nc($(h->getEndPC()))->getPosition())));
-				$var($String, var$3, $$concat(var$4, ", ih_"));
+				$var($String, var$3, $$concat(var$4, ", ih_"_s));
 				$var($String, var$2, $$concat(var$3, $$str($nc($(h->getHandlerPC()))->getPosition())));
-				$var($String, var$1, $$concat(var$2, ", "));
+				$var($String, var$1, $$concat(var$2, ", "_s));
 				$var($String, var$0, $$concat(var$1, type));
-				$nc(this->_out)->println($$concat(var$0, ");"));
+				$nc(this->_out)->println($$concat(var$0, ");"_s));
 			}
 		}
 	}

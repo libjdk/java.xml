@@ -369,11 +369,11 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_FUNCTION_NOT_SUPPORTED),
-			$of(u"Funktionen st\u00f6ds inte!"_s)
+			$of(u"Funktionen stöds inte!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CANNOT_OVERWRITE_CAUSE),
-			$of(u"Orsak kan inte skrivas \u00f6ver"_s)
+			$of(u"Orsak kan inte skrivas över"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_DEFAULT_IMPL),
@@ -381,67 +381,67 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CHUNKEDINTARRAY_NOT_SUPPORTED),
-			$of(u"ChunkedIntArray({0}) underst\u00f6ds f\u00f6r n\u00e4rvarande inte"_s)
+			$of(u"ChunkedIntArray({0}) understöds för närvarande inte"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"Offset st\u00f6rre \u00e4n plats"_s)
+			$of(u"Offset större än plats"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COROUTINE_NOT_AVAIL),
-			$of(u"Sidorutin \u00e4r inte tillg\u00e4nglig, id={0}"_s)
+			$of(u"Sidorutin är inte tillgänglig, id={0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COROUTINE_CO_EXIT),
-			$of(u"CoroutineManager har tagit emot co_exit()-beg\u00e4ran"_s)
+			$of(u"CoroutineManager har tagit emot co_exit()-begäran"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COJOINROUTINESET_FAILED),
-			$of(u"co_joinCoroutineSet() utf\u00f6rdes inte"_s)
+			$of(u"co_joinCoroutineSet() utfördes inte"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COROUTINE_PARAM),
-			$of(u"Parameterfel f\u00f6r sidorutin ({0})"_s)
+			$of(u"Parameterfel för sidorutin ({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_PARSER_DOTERMINATE_ANSWERS),
-			$of(u"\nUNEXPECTED: Parsersvar {0} f\u00f6r doTerminate"_s)
+			$of(u"\nUNEXPECTED: Parsersvar {0} för doTerminate"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"parse f\u00e5r inte anropas medan tolkning sker"_s)
+			$of(u"parse får inte anropas medan tolkning sker"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Fel: typad iterator f\u00f6r axeln {0} har inte implementerats"_s)
+			$of(u"Fel: typad iterator för axeln {0} har inte implementerats"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Fel: iterator f\u00f6r axeln {0} har inte implementerats "_s)
+			$of(u"Fel: iterator för axeln {0} har inte implementerats "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ITERATOR_CLONE_NOT_SUPPORTED),
-			$of(u"Iteratorklon underst\u00f6ds inte"_s)
+			$of(u"Iteratorklon understöds inte"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_UNKNOWN_AXIS_TYPE),
-			$of(u"Ok\u00e4nd axeltraverstyp: {0}"_s)
+			$of(u"Okänd axeltraverstyp: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_AXIS_NOT_SUPPORTED),
-			$of(u"Axeltravers underst\u00f6ds inte: {0}"_s)
+			$of(u"Axeltravers understöds inte: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_DTMIDS_AVAIL),
-			$of(u"Inga fler DTM-id:n \u00e4r tillg\u00e4ngliga"_s)
+			$of(u"Inga fler DTM-id:n är tillgängliga"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NOT_SUPPORTED),
-			$of(u"Underst\u00f6ds inte: {0}"_s)
+			$of(u"Understöds inte: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NODE_NON_NULL),
-			$of(u"Nod m\u00e5ste vara icke-null f\u00f6r getDTMHandleFromNode"_s)
+			$of(u"Nod måste vara icke-null för getDTMHandleFromNode"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COULD_NOT_RESOLVE_NODE),
@@ -449,11 +449,11 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"startParse f\u00e5r inte anropas medan tolkning sker"_s)
+			$of(u"startParse får inte anropas medan tolkning sker"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_STARTPARSE_NEEDS_SAXPARSER),
-			$of(u"startParse beh\u00f6ver en SAXParser som \u00e4r icke-null"_s)
+			$of(u"startParse behöver en SAXParser som är icke-null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COULD_NOT_INIT_PARSER),
@@ -461,15 +461,15 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_EXCEPTION_CREATING_POOL),
-			$of(u"undantag skapar ny instans f\u00f6r pool"_s)
+			$of(u"undantag skapar ny instans för pool"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"S\u00f6kv\u00e4gen inneh\u00e5ller en ogiltig escape-sekvens"_s)
+			$of(u"Sökvägen innehåller en ogiltig escape-sekvens"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_SCHEME_REQUIRED),
-			$of(u"Schema kr\u00e4vs!"_s)
+			$of(u"Schema krävs!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_SCHEME_IN_URI),
@@ -481,23 +481,23 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_PATH_INVALID_CHAR),
-			$of(u"S\u00f6kv\u00e4gen inneh\u00e5ller ett ogiltigt tecken: {0}"_s)
+			$of(u"Sökvägen innehåller ett ogiltigt tecken: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"Kan inte st\u00e4lla in schema fr\u00e5n null-str\u00e4ng"_s)
+			$of(u"Kan inte ställa in schema från null-sträng"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"Schemat \u00e4r inte likformigt."_s)
+			$of(u"Schemat är inte likformigt."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"V\u00e4rd \u00e4r inte en v\u00e4lformulerad adress"_s)
+			$of(u"Värd är inte en välformulerad adress"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_PORT_WHEN_HOST_NULL),
-			$of(u"Port kan inte st\u00e4llas in n\u00e4r v\u00e4rd \u00e4r null"_s)
+			$of(u"Port kan inte ställas in när värd är null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_INVALID_PORT),
@@ -505,43 +505,43 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Fragment kan bara st\u00e4llas in f\u00f6r en allm\u00e4n URI"_s)
+			$of(u"Fragment kan bara ställas in för en allmän URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"Fragment kan inte st\u00e4llas in n\u00e4r s\u00f6kv\u00e4g \u00e4r null"_s)
+			$of(u"Fragment kan inte ställas in när sökväg är null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_FRAG_INVALID_CHAR),
-			$of(u"Fragment inneh\u00e5ller ett ogiltigt tecken"_s)
+			$of(u"Fragment innehåller ett ogiltigt tecken"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_PARSER_IN_USE),
-			$of(u"Parser anv\u00e4nds redan"_s)
+			$of(u"Parser används redan"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CANNOT_CHANGE_WHILE_PARSING),
-			$of(u"Kan inte \u00e4ndra {0} {1} medan tolkning sker"_s)
+			$of(u"Kan inte ändra {0} {1} medan tolkning sker"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_SELF_CAUSATION_NOT_PERMITTED),
-			$of(u"Sj\u00e4lvorsakande inte till\u00e5ten"_s)
+			$of(u"Självorsakande inte tillåten"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Anv\u00e4ndarinfo f\u00e5r inte anges om v\u00e4rden inte \u00e4r angiven"_s)
+			$of(u"Användarinfo får inte anges om värden inte är angiven"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_PORT_IF_NO_HOST),
-			$of(u"Port f\u00e5r inte anges om v\u00e4rden inte \u00e4r angiven"_s)
+			$of(u"Port får inte anges om värden inte är angiven"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"Fr\u00e5gestr\u00e4ng kan inte anges i b\u00e5de s\u00f6kv\u00e4gen och fr\u00e5gestr\u00e4ngen"_s)
+			$of(u"Frågesträng kan inte anges i både sökvägen och frågesträngen"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Fragment kan inte anges i b\u00e5de s\u00f6kv\u00e4gen och fragmentet"_s)
+			$of(u"Fragment kan inte anges i både sökvägen och fragmentet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CANNOT_INIT_URI_EMPTY_PARMS),
@@ -549,19 +549,19 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_METHOD_NOT_SUPPORTED),
-			$of(u"Metoden st\u00f6ds \u00e4nnu inte "_s)
+			$of(u"Metoden stöds ännu inte "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_INCRSAXSRCFILTER_NOT_RESTARTABLE),
-			$of(u"IncrementalSAXSource_Filter kan f\u00f6r n\u00e4rvarande inte startas om"_s)
+			$of(u"IncrementalSAXSource_Filter kan för närvarande inte startas om"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_XMLRDR_NOT_BEFORE_STARTPARSE),
-			$of(u"XMLReader inte f\u00f6re startParse-beg\u00e4ran"_s)
+			$of(u"XMLReader inte före startParse-begäran"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_AXIS_TRAVERSER_NOT_SUPPORTED),
-			$of(u"Axeltravers underst\u00f6ds inte: {0}"_s)
+			$of(u"Axeltravers understöds inte: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ERRORHANDLER_CREATED_WITH_NULL_PRINTWRITER),
@@ -569,59 +569,59 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_SYSTEMID_UNKNOWN),
-			$of(u"SystemId ok\u00e4nt"_s)
+			$of(u"SystemId okänt"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_LOCATION_UNKNOWN),
-			$of(u"Platsen f\u00f6r felet \u00e4r ok\u00e4nd"_s)
+			$of(u"Platsen för felet är okänd"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_PREFIX_MUST_RESOLVE),
-			$of(u"Prefix m\u00e5ste matchas till en namnrymd: {0}"_s)
+			$of(u"Prefix måste matchas till en namnrymd: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CREATEDOCUMENT_NOT_SUPPORTED),
-			$of(u"createDocument() st\u00f6ds inte i XPathContext!"_s)
+			$of(u"createDocument() stöds inte i XPathContext!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CHILD_HAS_NO_OWNER_DOCUMENT),
-			$of(u"Underordnat attribut har inget \u00e4gardokument!"_s)
+			$of(u"Underordnat attribut har inget ägardokument!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CHILD_HAS_NO_OWNER_DOCUMENT_ELEMENT),
-			$of(u"Underordnat attribut har inget \u00e4gardokumentelement!"_s)
+			$of(u"Underordnat attribut har inget ägardokumentelement!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CANT_OUTPUT_TEXT_BEFORE_DOC),
-			$of(u"Varning: utdatatext kan inte skrivas ut f\u00f6re dokumentelement! Ignoreras..."_s)
+			$of(u"Varning: utdatatext kan inte skrivas ut före dokumentelement! Ignoreras..."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"En DOM kan inte ha fler \u00e4n en rot!"_s)
+			$of(u"En DOM kan inte ha fler än en rot!"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ARG_LOCALNAME_NULL),
-			$of(u"Argumentet \'localName\' \u00e4r null"_s)
+			$of(u"Argumentet \'localName\' är null"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ARG_LOCALNAME_INVALID),
-			$of(u"Localname i QNAME b\u00f6r vara giltigt NCName"_s)
+			$of(u"Localname i QNAME bör vara giltigt NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ARG_PREFIX_INVALID),
-			$of(u"Prefix i QNAME b\u00f6r vara giltigt NCName"_s)
+			$of(u"Prefix i QNAME bör vara giltigt NCName"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NAME_CANT_START_WITH_COLON),
-			$of(u"Namnet kan inte b\u00f6rja med kolon"_s)
+			$of(u"Namnet kan inte börja med kolon"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"Parameter f\u00f6r createMessage ligger utanf\u00f6r gr\u00e4nsv\u00e4rdet"_s)
+			$of(u"Parameter för createMessage ligger utanför gränsvärdet"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"Undantag utl\u00f6st vid messageFormat-anrop"_s)
+			$of(u"Undantag utlöst vid messageFormat-anrop"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
@@ -637,7 +637,7 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"Resursen [ {0} ] kunde inte h\u00e4mtas.\n {1}"_s)
+			$of(u"Resursen [ {0} ] kunde inte hämtas.\n {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_RESOURCE_COULD_NOT_LOAD),
@@ -649,7 +649,7 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_INVALID_UTF16_SURROGATE),
-			$of(u"Ogiltigt UTF-16-surrogat uppt\u00e4ckt: {0} ?"_s)
+			$of(u"Ogiltigt UTF-16-surrogat upptäckt: {0} ?"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_OIERROR),
@@ -657,31 +657,31 @@ void clinit$XMLErrorResources_sv($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Kan inte l\u00e4gga till attributet {0} efter underordnade noder eller innan ett element har skapats. Attributet ignoreras."_s)
+			$of(u"Kan inte lägga till attributet {0} efter underordnade noder eller innan ett element har skapats. Attributet ignoreras."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_NAMESPACE_PREFIX),
-			$of(u"Namnrymd f\u00f6r prefix \'\'{0}\'\' har inte deklarerats."_s)
+			$of(u"Namnrymd för prefix \'\'{0}\'\' har inte deklarerats."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_STRAY_ATTRIBUTE),
-			$of(u"Attributet \'\'{0}\'\' finns utanf\u00f6r elementet."_s)
+			$of(u"Attributet \'\'{0}\'\' finns utanför elementet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_STRAY_NAMESPACE),
-			$of(u"Namnrymdsdeklarationen \'\'{0}\'\'=\'\'{1}\'\' finns utanf\u00f6r element."_s)
+			$of(u"Namnrymdsdeklarationen \'\'{0}\'\'=\'\'{1}\'\' finns utanför element."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"Kunde inte ladda \'\'{0}\'\' (kontrollera CLASSPATH), anv\u00e4nder nu enbart standardv\u00e4rden"_s)
+			$of(u"Kunde inte ladda \'\'{0}\'\' (kontrollera CLASSPATH), använder nu enbart standardvärden"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_ILLEGAL_CHARACTER),
-			$of(u"F\u00f6rs\u00f6k att skriva utdatatecken med integralv\u00e4rdet {0} som inte \u00e4r representerat i angiven utdatakodning av {1}."_s)
+			$of(u"Försök att skriva utdatatecken med integralvärdet {0} som inte är representerat i angiven utdatakodning av {1}."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_sv::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Kunde inte ladda egenskapsfilen \'\'{0}\'\' f\u00f6r utdatametoden \'\'{1}\'\' (kontrollera CLASSPATH)"_s)
+			$of(u"Kunde inte ladda egenskapsfilen \'\'{0}\'\' för utdatametoden \'\'{1}\'\' (kontrollera CLASSPATH)"_s)
 		})
 	}));
 }

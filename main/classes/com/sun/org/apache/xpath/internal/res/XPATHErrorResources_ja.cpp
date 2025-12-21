@@ -672,579 +672,579 @@ void clinit$XPATHErrorResources_ja($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CURRENT_NOT_ALLOWED_IN_MATCH),
-			$of(u"current()\u95a2\u6570\u306f\u4e00\u81f4\u30d1\u30bf\u30fc\u30f3\u3067\u306f\u8a31\u53ef\u3055\u308c\u307e\u305b\u3093\u3002"_s)
+			$of(u"current()関数は一致パターンでは許可されません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CURRENT_TAKES_NO_ARGS),
-			$of(u"current()\u95a2\u6570\u306f\u5f15\u6570\u3092\u53d7\u3051\u5165\u308c\u307e\u305b\u3093\u3002"_s)
+			$of(u"current()関数は引数を受け入れません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_DOCUMENT_REPLACED),
-			$of(u"document()\u95a2\u6570\u306e\u5b9f\u88c5\u306fcom.sun.org.apache.xalan.internal.xslt.FuncDocument\u306b\u3088\u3063\u3066\u7f6e\u63db\u3055\u308c\u307e\u3057\u305f\u3002"_s)
+			$of(u"document()関数の実装はcom.sun.org.apache.xalan.internal.xslt.FuncDocumentによって置換されました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CONTEXT_CAN_NOT_BE_NULL),
-			$of(u"\u64cd\u4f5c\u304c\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u306b\u4f9d\u5b58\u3057\u3066\u3044\u308b\u5834\u5408\u3001\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u3092null\u306b\u3059\u308b\u3053\u3068\u306f\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"操作がコンテキストに依存している場合、コンテキストをnullにすることはできません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CONTEXT_HAS_NO_OWNERDOC),
-			$of(u"\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u306b\u6240\u6709\u8005\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"コンテキストに所有者ドキュメントがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_LOCALNAME_HAS_TOO_MANY_ARGS),
-			$of(u"local-name()\u306e\u5f15\u6570\u304c\u591a\u3059\u304e\u307e\u3059\u3002"_s)
+			$of(u"local-name()の引数が多すぎます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NAMESPACEURI_HAS_TOO_MANY_ARGS),
-			$of(u"namespace-uri()\u306e\u5f15\u6570\u304c\u591a\u3059\u304e\u307e\u3059\u3002"_s)
+			$of(u"namespace-uri()の引数が多すぎます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NORMALIZESPACE_HAS_TOO_MANY_ARGS),
-			$of(u"normalize-space()\u306e\u5f15\u6570\u304c\u591a\u3059\u304e\u307e\u3059\u3002"_s)
+			$of(u"normalize-space()の引数が多すぎます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NUMBER_HAS_TOO_MANY_ARGS),
-			$of(u"number()\u306e\u5f15\u6570\u304c\u591a\u3059\u304e\u307e\u3059\u3002"_s)
+			$of(u"number()の引数が多すぎます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NAME_HAS_TOO_MANY_ARGS),
-			$of(u"name()\u306e\u5f15\u6570\u304c\u591a\u3059\u304e\u307e\u3059\u3002"_s)
+			$of(u"name()の引数が多すぎます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_STRING_HAS_TOO_MANY_ARGS),
-			$of(u"string()\u306e\u5f15\u6570\u304c\u591a\u3059\u304e\u307e\u3059\u3002"_s)
+			$of(u"string()の引数が多すぎます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_STRINGLENGTH_HAS_TOO_MANY_ARGS),
-			$of(u"string-length()\u306e\u5f15\u6570\u304c\u591a\u3059\u304e\u307e\u3059\u3002"_s)
+			$of(u"string-length()の引数が多すぎます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_TRANSLATE_TAKES_3_ARGS),
-			$of(u"translate()\u95a2\u6570\u306f3\u3064\u306e\u5f15\u6570\u3092\u53d6\u308a\u307e\u3059\u3002"_s)
+			$of(u"translate()関数は3つの引数を取ります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNPARSEDENTITYURI_TAKES_1_ARG),
-			$of(u"unparsed-entity-uri\u95a2\u6570\u306f\u5f15\u6570\u30921\u3064\u53d6\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"unparsed-entity-uri関数は引数を1つ取る必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NAMESPACEAXIS_NOT_IMPLEMENTED),
-			$of(u"namespace\u8ef8\u306f\u307e\u3060\u5b9f\u88c5\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"namespace軸はまだ実装されていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNKNOWN_AXIS),
-			$of(u"\u4e0d\u660e\u306a\u8ef8\u3067\u3059: {0}"_s)
+			$of(u"不明な軸です: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNKNOWN_MATCH_OPERATION),
-			$of(u"\u4e0d\u660e\u306a\u4e00\u81f4\u64cd\u4f5c\u3067\u3059\u3002"_s)
+			$of(u"不明な一致操作です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_INCORRECT_ARG_LENGTH),
-			$of(u"processing-instruction()\u30ce\u30fc\u30c9\u30fb\u30c6\u30b9\u30c8\u306e\u5f15\u6570\u306e\u9577\u3055\u304c\u4e0d\u6b63\u3067\u3059\u3002"_s)
+			$of(u"processing-instruction()ノード・テストの引数の長さが不正です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_TO_NUMBER),
-			$of(u"{0}\u3092\u6570\u5024\u306b\u5909\u63db\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"{0}を数値に変換できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_TO_NODELIST),
-			$of(u"{0}\u3092NodeList\u306b\u5909\u63db\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"{0}をNodeListに変換できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_TO_MUTABLENODELIST),
-			$of(u"{0}\u3092NodeSetDTM\u306b\u5909\u63db\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"{0}をNodeSetDTMに変換できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_TO_TYPE),
-			$of(u"{0}\u3092type#{1}\u306b\u5909\u63db\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"{0}をtype#{1}に変換できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_MATCH_PATTERN),
-			$of(u"getMatchScore\u306b\u4e00\u81f4\u30d1\u30bf\u30fc\u30f3\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"getMatchScoreに一致パターンが必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COULDNOT_GET_VAR_NAMED),
-			$of(u"\u540d\u524d{0}\u306e\u5909\u6570\u3092\u53d6\u5f97\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"名前{0}の変数を取得できませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNKNOWN_OPCODE),
-			$of(u"\u30a8\u30e9\u30fc\u3002\u4e0d\u660e\u306a\u64cd\u4f5c\u30b3\u30fc\u30c9: {0}"_s)
+			$of(u"エラー。不明な操作コード: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXTRA_ILLEGAL_TOKENS),
-			$of(u"\u4f59\u5206\u306e\u4e0d\u6b63\u306a\u30c8\u30fc\u30af\u30f3: {0}"_s)
+			$of(u"余分の不正なトークン: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_DOUBLE_QUOTE),
-			$of(u"\u30ea\u30c6\u30e9\u30eb\u306e\u5f15\u7528\u7b26\u304c\u4e0d\u6b63\u3067\u3059... \u4e8c\u91cd\u5f15\u7528\u7b26\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"リテラルの引用符が不正です... 二重引用符が必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_SINGLE_QUOTE),
-			$of(u"\u30ea\u30c6\u30e9\u30eb\u306e\u5f15\u7528\u7b26\u304c\u4e0d\u6b63\u3067\u3059... \u4e00\u91cd\u5f15\u7528\u7b26\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"リテラルの引用符が不正です... 一重引用符が必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EMPTY_EXPRESSION),
-			$of(u"\u5f0f\u304c\u7a7a\u3067\u3059\u3002"_s)
+			$of(u"式が空です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_BUT_FOUND),
-			$of(u"{0}\u3067\u306f\u306a\u304f{1}\u304c\u691c\u51fa\u3055\u308c\u307e\u3057\u305f"_s)
+			$of(u"{0}ではなく{1}が検出されました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_INCORRECT_PROGRAMMER_ASSERTION),
-			$of(u"\u30d7\u30ed\u30b0\u30e9\u30de\u30fb\u30a2\u30b5\u30fc\u30b7\u30e7\u30f3\u304c\u4e0d\u6b63\u3067\u3059\u3002- {0}"_s)
+			$of(u"プログラマ・アサーションが不正です。- {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_BOOLEAN_ARG_NO_LONGER_OPTIONAL),
-			$of(u"boolean(...)\u5f15\u6570\u306f\u300119990709 XPath\u30c9\u30e9\u30d5\u30c8\u306b\u3088\u3063\u3066\u30aa\u30d7\u30b7\u30e7\u30f3\u3067\u306a\u304f\u306a\u308a\u307e\u3057\u305f\u3002"_s)
+			$of(u"boolean(...)引数は、19990709 XPathドラフトによってオプションでなくなりました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FOUND_COMMA_BUT_NO_PRECEDING_ARG),
-			$of(u"\',\'\u304c\u898b\u3064\u304b\u308a\u307e\u3057\u305f\u304c\u524d\u306b\u5f15\u6570\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"\',\'が見つかりましたが前に引数がありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FOUND_COMMA_BUT_NO_FOLLOWING_ARG),
-			$of(u"\',\'\u304c\u898b\u3064\u304b\u308a\u307e\u3057\u305f\u304c\u5f8c\u308d\u306b\u5f15\u6570\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"\',\'が見つかりましたが後ろに引数がありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_PREDICATE_ILLEGAL_SYNTAX),
-			$of(u"\'..[predicate]\'\u307e\u305f\u306f\'.[predicate]\'\u306f\u4e0d\u6b63\u306a\u69cb\u6587\u3067\u3059\u3002\u304b\u308f\u308a\u306b\'self::node()[predicate]\'\u3092\u4f7f\u7528\u3057\u3066\u304f\u3060\u3055\u3044\u3002"_s)
+			$of(u"\'..[predicate]\'または\'.[predicate]\'は不正な構文です。かわりに\'self::node()[predicate]\'を使用してください。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_PREDICATE_TOO_MANY_OPEN),
-			$of(u"{1}\u3067{0}\u3092\u89e3\u6790\u4e2d\u306b\u30b9\u30bf\u30c3\u30af\u30fb\u30aa\u30fc\u30d0\u30fc\u30d5\u30ed\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002\u30aa\u30fc\u30d7\u30f3\u8ff0\u8a9e\u304c\u591a\u3059\u304e\u307e\u3059({2})\u3002"_s)
+			$of(u"{1}で{0}を解析中にスタック・オーバーフローが発生しました。オープン述語が多すぎます({2})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COMPILATION_TOO_MANY_OPERATION),
-			$of(u"\u5f0f\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u4e2d\u306b\u30b9\u30bf\u30c3\u30af\u30fb\u30aa\u30fc\u30d0\u30fc\u30d5\u30ed\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002\u64cd\u4f5c\u304c\u591a\u3059\u304e\u307e\u3059({0})\u3002"_s)
+			$of(u"式のコンパイル中にスタック・オーバーフローが発生しました。操作が多すぎます({0})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_ILLEGAL_AXIS_NAME),
-			$of(u"\u4e0d\u6b63\u306a\u8ef8\u540d: {0}"_s)
+			$of(u"不正な軸名: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNKNOWN_NODETYPE),
-			$of(u"\u4e0d\u660e\u306anodetype: {0}"_s)
+			$of(u"不明なnodetype: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_PATTERN_LITERAL_NEEDS_BE_QUOTED),
-			$of(u"\u30d1\u30bf\u30fc\u30f3\u30fb\u30ea\u30c6\u30e9\u30eb({0})\u306b\u5f15\u7528\u7b26\u3092\u4ed8\u3051\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"パターン・リテラル({0})に引用符を付ける必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COULDNOT_BE_FORMATTED_TO_NUMBER),
-			$of(u"{0}\u3092\u6570\u5024\u306b\u30d5\u30a9\u30fc\u30de\u30c3\u30c8\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"{0}を数値にフォーマットできませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COULDNOT_CREATE_XMLPROCESSORLIAISON),
-			$of(u"XML TransformerFactory Liaison\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f: {0}"_s)
+			$of(u"XML TransformerFactory Liaisonを作成できませんでした: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_DIDNOT_FIND_XPATH_SELECT_EXP),
-			$of(u"\u30a8\u30e9\u30fc\u3002xpath\u9078\u629e\u5f0f(-select)\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"エラー。xpath選択式(-select)が見つかりませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COULDNOT_FIND_ENDOP_AFTER_OPLOCATIONPATH),
-			$of(u"\u30a8\u30e9\u30fc\u3002OP_LOCATIONPATH\u306e\u5f8c\u306bENDOP\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"エラー。OP_LOCATIONPATHの後にENDOPが見つかりませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_ERROR_OCCURED),
-			$of(u"\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"エラーが発生しました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"\u5909\u6570\u306b\u6307\u5b9a\u3057\u305fVariableReference\u304c\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u7bc4\u56f2\u5916\u304b\u5b9a\u7fa9\u304c\u3042\u308a\u307e\u305b\u3093\u3002\u540d\u524d= {0}"_s)
+			$of(u"変数に指定したVariableReferenceがコンテキスト範囲外か定義がありません。名前= {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_AXES_NOT_ALLOWED),
-			$of(u"\u4e00\u81f4\u30d1\u30bf\u30fc\u30f3\u3067\u306f\u3001child::\u8ef8\u3068attribute::\u8ef8\u306e\u307f\u304c\u8a31\u53ef\u3055\u308c\u307e\u3059\u3002\u554f\u984c\u3068\u306a\u308b\u8ef8= {0}"_s)
+			$of(u"一致パターンでは、child::軸とattribute::軸のみが許可されます。問題となる軸= {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_KEY_HAS_TOO_MANY_ARGS),
-			$of(u"key()\u304c\u6301\u3064\u5f15\u6570\u306e\u6570\u304c\u4e0d\u6b63\u3067\u3059\u3002"_s)
+			$of(u"key()が持つ引数の数が不正です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COUNT_TAKES_1_ARG),
-			$of(u"\u30ab\u30a6\u30f3\u30c8\u95a2\u6570\u306f\u5f15\u6570\u30921\u3064\u53d6\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002"_s)
+			$of(u"カウント関数は引数を1つ取る必要があります。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COULDNOT_FIND_FUNCTION),
-			$of(u"\u95a2\u6570{0}\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"関数{0}が見つかりませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNSUPPORTED_ENCODING),
-			$of(u"\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u306a\u3044\u30a8\u30f3\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u3067\u3059: {0}"_s)
+			$of(u"サポートされていないエンコーディングです: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_PROBLEM_IN_DTM_NEXTSIBLING),
-			$of(u"getNextSibling\u306eDTM\u3067\u554f\u984c\u304c\u767a\u751f\u3057\u307e\u3057\u305f...\u5fa9\u5143\u306e\u8a66\u884c\u4e2d\u3067\u3059"_s)
+			$of(u"getNextSiblingのDTMで問題が発生しました...復元の試行中です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANNOT_WRITE_TO_EMPTYNODELISTIMPL),
-			$of(u"\u30d7\u30ed\u30b0\u30e9\u30de\u30fb\u30a8\u30e9\u30fc: EmptyNodeList\u306b\u66f8\u304d\u8fbc\u3081\u307e\u305b\u3093\u3002"_s)
+			$of(u"プログラマ・エラー: EmptyNodeListに書き込めません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_SETDOMFACTORY_NOT_SUPPORTED),
-			$of(u"setDOMFactory\u306fXPathContext\u3067\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"setDOMFactoryはXPathContextでサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_PREFIX_MUST_RESOLVE),
-			$of(u"\u63a5\u982d\u8f9e\u306f\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9\u306b\u89e3\u6c7a\u3055\u308c\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059: {0}"_s)
+			$of(u"接頭辞はネームスペースに解決される必要があります: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_PARSE_NOT_SUPPORTED),
-			$of(u"\u89e3\u6790(InputSource\u30bd\u30fc\u30b9)\u306fXPathContext\u3067\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002{0}\u3092\u958b\u3051\u307e\u305b\u3093"_s)
+			$of(u"解析(InputSourceソース)はXPathContextでサポートされていません。{0}を開けません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_SAX_API_NOT_HANDLED),
-			$of(u"SAX API characters(char ch[]...\u306fDTM\u306b\u3088\u3063\u3066\u51e6\u7406\u3055\u308c\u307e\u305b\u3093\u3002"_s)
+			$of(u"SAX API characters(char ch[]...はDTMによって処理されません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_IGNORABLE_WHITESPACE_NOT_HANDLED),
-			$of(u"ignorableWhitespace(char ch[]...\u306fDTM\u306b\u3088\u3063\u3066\u51e6\u7406\u3055\u308c\u307e\u305b\u3093\u3002"_s)
+			$of(u"ignorableWhitespace(char ch[]...はDTMによって処理されません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_DTM_CANNOT_HANDLE_NODES),
-			$of(u"DTMLiaison\u306f\u30bf\u30a4\u30d7{0}\u306e\u30ce\u30fc\u30c9\u3092\u51e6\u7406\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"DTMLiaisonはタイプ{0}のノードを処理できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_XERCES_CANNOT_HANDLE_NODES),
-			$of(u"DOM2Helper\u306f{0}\u30bf\u30a4\u30d7\u306e\u30ce\u30fc\u30c9\u3092\u51e6\u7406\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"DOM2Helperは{0}タイプのノードを処理できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_XERCES_PARSE_ERROR_DETAILS),
-			$of(u"DOM2Helper.parse\u30a8\u30e9\u30fc: SystemID - {0} \u884c - {1}"_s)
+			$of(u"DOM2Helper.parseエラー: SystemID - {0} 行 - {1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_XERCES_PARSE_ERROR),
-			$of(u"DOM2Helper.parse\u30a8\u30e9\u30fc"_s)
+			$of(u"DOM2Helper.parseエラー"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u7121\u52b9\u306aUTF-16\u30b5\u30ed\u30b2\u30fc\u30c8\u304c\u691c\u51fa\u3055\u308c\u307e\u3057\u305f: {0}\u3002"_s)
+			$of(u"無効なUTF-16サロゲートが検出されました: {0}。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_OIERROR),
-			$of(u"IO\u30a8\u30e9\u30fc"_s)
+			$of(u"IOエラー"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANNOT_CREATE_URL),
-			$of(u"{0}\u306eURL\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"{0}のURLを作成できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_XPATH_READOBJECT),
-			$of(u"XPath.readObject\u5185: {0}"_s)
+			$of(u"XPath.readObject内: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FUNCTION_TOKEN_NOT_FOUND),
-			$of(u"\u95a2\u6570\u30c8\u30fc\u30af\u30f3\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"関数トークンが見つかりません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANNOT_DEAL_XPATH_TYPE),
-			$of(u"XPath\u30bf\u30a4\u30d7\u3092\u51e6\u7406\u3067\u304d\u307e\u305b\u3093: {0}"_s)
+			$of(u"XPathタイプを処理できません: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NODESET_NOT_MUTABLE),
-			$of(u"\u3053\u306eNodeSet\u306f\u53ef\u5909\u3067\u306f\u3042\u308a\u307e\u305b\u3093"_s)
+			$of(u"このNodeSetは可変ではありません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NODESETDTM_NOT_MUTABLE),
-			$of(u"\u3053\u306eNodeSetDTM\u306f\u53ef\u5909\u3067\u306f\u3042\u308a\u307e\u305b\u3093"_s)
+			$of(u"このNodeSetDTMは可変ではありません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_VAR_NOT_RESOLVABLE),
-			$of(u"\u5909\u6570\u3092\u89e3\u6c7a\u3067\u304d\u307e\u305b\u3093: {0}"_s)
+			$of(u"変数を解決できません: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NULL_ERROR_HANDLER),
-			$of(u"Null\u306e\u30a8\u30e9\u30fc\u30fb\u30cf\u30f3\u30c9\u30e9"_s)
+			$of(u"Nullのエラー・ハンドラ"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_PROG_ASSERT_UNKNOWN_OPCODE),
-			$of(u"\u30d7\u30ed\u30b0\u30e9\u30de\u306e\u30a2\u30b5\u30fc\u30b7\u30e7\u30f3: \u4e0d\u660e\u306aopcode: {0}"_s)
+			$of(u"プログラマのアサーション: 不明なopcode: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_ZERO_OR_ONE),
-			$of(u"0\u307e\u305f\u306f1"_s)
+			$of(u"0または1"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"rtf()\u306fXRTreeFragSelectWrapper\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"rtf()はXRTreeFragSelectWrapperによってサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_RTF_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"asNodeIterator()\u306fXRTreeFragSelectWrapper\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"asNodeIterator()はXRTreeFragSelectWrapperによってサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_DETACH_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"detach()\u306fXRTreeFragSelectWrapper\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"detach()はXRTreeFragSelectWrapperによってサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NUM_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"num()\u306fXRTreeFragSelectWrapper\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"num()はXRTreeFragSelectWrapperによってサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_XSTR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"xstr()\u306fXRTreeFragSelectWrapper\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"xstr()はXRTreeFragSelectWrapperによってサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_STR_NOT_SUPPORTED_XRTREEFRAGSELECTWRAPPER),
-			$of(u"str()\u306fXRTreeFragSelectWrapper\u306b\u3088\u3063\u3066\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"str()はXRTreeFragSelectWrapperによってサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS),
-			$of(u"fsb()\u306fXStringForChars\u7528\u306b\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"fsb()はXStringForChars用にサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_COULD_NOT_FIND_VAR),
-			$of(u"\u540d\u524d{0}\u306e\u5909\u6570\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"名前{0}の変数が見つかりませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING),
-			$of(u"XStringForChars\u306f\u5f15\u6570\u306b\u3064\u3044\u3066\u6587\u5b57\u5217\u3092\u53d6\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"XStringForCharsは引数について文字列を取ることができません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FASTSTRINGBUFFER_CANNOT_BE_NULL),
-			$of(u"FastStringBuffer\u5f15\u6570\u306fnull\u306b\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"FastStringBuffer引数はnullにできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_TWO_OR_THREE),
-			$of(u"2\u307e\u305f\u306f3"_s)
+			$of(u"2または3"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_VARIABLE_ACCESSED_BEFORE_BIND),
-			$of(u"\u5909\u6570\u304c\u30d0\u30a4\u30f3\u30c9\u3055\u308c\u308b\u524d\u306b\u30a2\u30af\u30bb\u30b9\u3055\u308c\u307e\u3057\u305f\u3002"_s)
+			$of(u"変数がバインドされる前にアクセスされました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FSB_CANNOT_TAKE_STRING),
-			$of(u"XStringForFSB\u306f\u5f15\u6570\u306b\u3064\u3044\u3066\u6587\u5b57\u5217\u3092\u53d6\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"XStringForFSBは引数について文字列を取ることができません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_SETTING_WALKER_ROOT_TO_NULL),
-			$of(u"\n \u30a8\u30e9\u30fc\u3002\u30a6\u30a9\u30fc\u30ab\u306e\u30eb\u30fc\u30c8\u3092null\u306b\u8a2d\u5b9a\u3057\u3066\u3044\u307e\u3059\u3002"_s)
+			$of(u"\n エラー。ウォーカのルートをnullに設定しています。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NODESETDTM_CANNOT_ITERATE),
-			$of(u"\u3053\u306eNodeSetDTM\u306f\u524d\u306e\u30ce\u30fc\u30c9\u3092\u53cd\u5fa9\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"このNodeSetDTMは前のノードを反復できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NODESET_CANNOT_ITERATE),
-			$of(u"\u3053\u306eNodeSet\u306f\u524d\u306e\u30ce\u30fc\u30c9\u3092\u53cd\u5fa9\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"このNodeSetは前のノードを反復できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NODESETDTM_CANNOT_INDEX),
-			$of(u"\u3053\u306eNodeSetDTM\u306f\u7d22\u5f15\u4ed8\u3051\u307e\u305f\u306f\u30ab\u30a6\u30f3\u30c8\u6a5f\u80fd\u3092\u5b9f\u884c\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"このNodeSetDTMは索引付けまたはカウント機能を実行できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NODESET_CANNOT_INDEX),
-			$of(u"\u3053\u306eNodeSet\u306f\u7d22\u5f15\u4ed8\u3051\u307e\u305f\u306f\u30ab\u30a6\u30f3\u30c8\u6a5f\u80fd\u3092\u5b9f\u884c\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"このNodeSetは索引付けまたはカウント機能を実行できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANNOT_CALL_SETSHOULDCACHENODE),
-			$of(u"nextNode\u3092\u547c\u3073\u51fa\u3057\u305f\u5f8c\u306bsetShouldCacheNodes\u3092\u547c\u3073\u51fa\u305b\u307e\u305b\u3093\u3002"_s)
+			$of(u"nextNodeを呼び出した後にsetShouldCacheNodesを呼び出せません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_ONLY_ALLOWS),
-			$of(u"{0}\u306f{1}\u500b\u306e\u5f15\u6570\u306e\u307f\u8a31\u53ef\u3057\u307e\u3059"_s)
+			$of(u"{0}は{1}個の引数のみ許可します"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNKNOWN_STEP),
-			$of(u"getNextStepPos\u3067\u306e\u30d7\u30ed\u30b0\u30e9\u30de\u306e\u30a2\u30b5\u30fc\u30b7\u30e7\u30f3: \u4e0d\u660e\u306astepType: {0}"_s)
+			$of(u"getNextStepPosでのプログラマのアサーション: 不明なstepType: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_REL_LOC_PATH),
-			$of(u"\'/\'\u307e\u305f\u306f\'//\'\u30c8\u30fc\u30af\u30f3\u306e\u5f8c\u306b\u76f8\u5bfe\u30ed\u30b1\u30fc\u30b7\u30e7\u30f3\u30fb\u30d1\u30b9\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"\'/\'または\'//\'トークンの後に相対ロケーション・パスが必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_LOC_PATH),
-			$of(u"\u30ed\u30b1\u30fc\u30b7\u30e7\u30f3\u30fb\u30d1\u30b9\u304c\u5fc5\u8981\u3067\u3059\u304c\u3001\u6b21\u306e\u30c8\u30fc\u30af\u30f3\u304c\u691c\u51fa\u3055\u308c\u307e\u3057\u305f:  {0}"_s)
+			$of(u"ロケーション・パスが必要ですが、次のトークンが検出されました:  {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_LOC_PATH_AT_END_EXPR),
-			$of(u"\u30ed\u30b1\u30fc\u30b7\u30e7\u30f3\u30fb\u30d1\u30b9\u304c\u5fc5\u8981\u3067\u3059\u304c\u3001\u304b\u308f\u308a\u306bXPath\u5f0f\u306e\u7d42\u308f\u308a\u304c\u691c\u51fa\u3055\u308c\u307e\u3057\u305f\u3002"_s)
+			$of(u"ロケーション・パスが必要ですが、かわりにXPath式の終わりが検出されました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_LOC_STEP),
-			$of(u"\'/\'\u307e\u305f\u306f\'//\'\u30c8\u30fc\u30af\u30f3\u306e\u5f8c\u306b\u30ed\u30b1\u30fc\u30b7\u30e7\u30f3\u30fb\u30b9\u30c6\u30c3\u30d7\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"\'/\'または\'//\'トークンの後にロケーション・ステップが必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_NODE_TEST),
-			$of(u"NCName:*\u307e\u305f\u306fQName\u306b\u4e00\u81f4\u3059\u308b\u30ce\u30fc\u30c9\u30fb\u30c6\u30b9\u30c8\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"NCName:*またはQNameに一致するノード・テストがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_STEP_PATTERN),
-			$of(u"\u30b9\u30c6\u30c3\u30d7\u30fb\u30d1\u30bf\u30fc\u30f3\u304c\u5fc5\u8981\u3067\u3059\u304c\u3001\'/\'\u304c\u691c\u51fa\u3055\u308c\u307e\u3057\u305f\u3002"_s)
+			$of(u"ステップ・パターンが必要ですが、\'/\'が検出されました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXPECTED_REL_PATH_PATTERN),
-			$of(u"\u76f8\u5bfe\u30d1\u30b9\u30fb\u30d1\u30bf\u30fc\u30f3\u304c\u3042\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"相対パス・パターンがありません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_TO_BOOLEAN),
-			$of(u"XPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u306f\u3001boolean\u306b\u5909\u63db\u3067\u304d\u306a\u3044{1}\u306eXPathResultType\u3067\u3059\u3002"_s)
+			$of(u"XPath式\'\'{0}\'\'のXPathResultは、booleanに変換できない{1}のXPathResultTypeです。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_TO_SINGLENODE),
-			$of(u"XPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u306f\u3001\u5358\u4e00\u30ce\u30fc\u30c9\u306b\u5909\u63db\u3067\u304d\u306a\u3044{1}\u306eXPathResultType\u3067\u3059\u3002\u30e1\u30bd\u30c3\u30c9getSingleNodeValue\u306f\u3001ANY_UNORDERED_NODE_TYPE\u30bf\u30a4\u30d7\u304a\u3088\u3073FIRST_ORDERED_NODE_TYPE\u30bf\u30a4\u30d7\u306b\u306e\u307f\u9069\u7528\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"XPath式\'\'{0}\'\'のXPathResultは、単一ノードに変換できない{1}のXPathResultTypeです。メソッドgetSingleNodeValueは、ANY_UNORDERED_NODE_TYPEタイプおよびFIRST_ORDERED_NODE_TYPEタイプにのみ適用されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_GET_SNAPSHOT_LENGTH),
-			$of(u"XPathResultType\u304c{1}\u306e\u305f\u3081\u3001\u30e1\u30bd\u30c3\u30c9getSnapshotLength\u306fXPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u3067\u547c\u3073\u51fa\u3059\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093\u3002\u3053\u306e\u30e1\u30bd\u30c3\u30c9\u306f\u3001UNORDERED_NODE_SNAPSHOT_TYPE\u30bf\u30a4\u30d7\u304a\u3088\u3073ORDERED_NODE_SNAPSHOT_TYPE\u30bf\u30a4\u30d7\u306b\u306e\u307f\u9069\u7528\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"XPathResultTypeが{1}のため、メソッドgetSnapshotLengthはXPath式\'\'{0}\'\'のXPathResultで呼び出すことができません。このメソッドは、UNORDERED_NODE_SNAPSHOT_TYPEタイプおよびORDERED_NODE_SNAPSHOT_TYPEタイプにのみ適用されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NON_ITERATOR_TYPE),
-			$of(u"XPathResultType\u304c{1}\u306e\u305f\u3081\u3001\u30e1\u30bd\u30c3\u30c9iterateNext\u306fXPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u3067\u547c\u3073\u51fa\u3059\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093\u3002\u3053\u306e\u30e1\u30bd\u30c3\u30c9\u306f\u3001UNORDERED_NODE_ITERATOR_TYPE\u30bf\u30a4\u30d7\u304a\u3088\u3073ORDERED_NODE_ITERATOR_TYPE\u30bf\u30a4\u30d7\u306b\u306e\u307f\u9069\u7528\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"XPathResultTypeが{1}のため、メソッドiterateNextはXPath式\'\'{0}\'\'のXPathResultで呼び出すことができません。このメソッドは、UNORDERED_NODE_ITERATOR_TYPEタイプおよびORDERED_NODE_ITERATOR_TYPEタイプにのみ適用されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_DOC_MUTATED),
-			$of(u"\u7d50\u679c\u304c\u8fd4\u3055\u308c\u305f\u5f8c\u306b\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u304c\u5909\u66f4\u3055\u308c\u307e\u3057\u305f\u3002\u30a4\u30c6\u30ec\u30fc\u30bf\u304c\u7121\u52b9\u3067\u3059\u3002"_s)
+			$of(u"結果が返された後にドキュメントが変更されました。イテレータが無効です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_INVALID_XPATH_TYPE),
-			$of(u"XPath\u30bf\u30a4\u30d7\u306e\u5f15\u6570{0}\u304c\u7121\u52b9\u3067\u3059"_s)
+			$of(u"XPathタイプの引数{0}が無効です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EMPTY_XPATH_RESULT),
-			$of(u"XPath\u7d50\u679c\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u304c\u7a7a\u3067\u3059"_s)
+			$of(u"XPath結果オブジェクトが空です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_INCOMPATIBLE_TYPES),
-			$of(u"XPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u306f\u3001{2}\u306e\u6307\u5b9a\u3055\u308c\u305fXPathResultType\u306b\u5f37\u5236\u5909\u63db\u3067\u304d\u306a\u3044{1}\u306eXPathResultType\u3092\u6301\u3061\u307e\u3059\u3002"_s)
+			$of(u"XPath式\'\'{0}\'\'のXPathResultは、{2}の指定されたXPathResultTypeに強制変換できない{1}のXPathResultTypeを持ちます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NULL_RESOLVER),
-			$of(u"null\u63a5\u982d\u8f9e\u30ea\u30be\u30eb\u30d0\u3067\u63a5\u982d\u8f9e\u3092\u89e3\u6c7a\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"null接頭辞リゾルバで接頭辞を解決できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_TO_STRING),
-			$of(u"XPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u306f\u3001\u6587\u5b57\u5217\u306b\u5909\u63db\u3067\u304d\u306a\u3044{1}\u306eXPathResultType\u3092\u6301\u3061\u307e\u3059\u3002"_s)
+			$of(u"XPath式\'\'{0}\'\'のXPathResultは、文字列に変換できない{1}のXPathResultTypeを持ちます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NON_SNAPSHOT_TYPE),
-			$of(u"XPathResultType\u304c{1}\u306e\u305f\u3081\u3001\u30e1\u30bd\u30c3\u30c9snapshotItem\u306fXPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u3067\u547c\u3073\u51fa\u3059\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093\u3002\u3053\u306e\u30e1\u30bd\u30c3\u30c9\u306f\u3001UNORDERED_NODE_SNAPSHOT_TYPE\u30bf\u30a4\u30d7\u304a\u3088\u3073ORDERED_NODE_SNAPSHOT_TYPE\u30bf\u30a4\u30d7\u306b\u306e\u307f\u9069\u7528\u3055\u308c\u307e\u3059\u3002"_s)
+			$of(u"XPathResultTypeが{1}のため、メソッドsnapshotItemはXPath式\'\'{0}\'\'のXPathResultで呼び出すことができません。このメソッドは、UNORDERED_NODE_SNAPSHOT_TYPEタイプおよびORDERED_NODE_SNAPSHOT_TYPEタイプにのみ適用されます。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_WRONG_DOCUMENT),
-			$of(u"\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u30fb\u30ce\u30fc\u30c9\u306f\u3001\u3053\u306eXPathEvaluator\u306b\u30d0\u30a4\u30f3\u30c9\u3055\u308c\u305f\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306b\u5c5e\u3057\u307e\u305b\u3093\u3002"_s)
+			$of(u"コンテキスト・ノードは、このXPathEvaluatorにバインドされたドキュメントに属しません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_WRONG_NODETYPE),
-			$of(u"\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u30fb\u30ce\u30fc\u30c9\u30fb\u30bf\u30a4\u30d7\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"コンテキスト・ノード・タイプはサポートされていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_XPATH_ERROR),
-			$of(u"XPath\u306b\u4e0d\u660e\u306a\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002"_s)
+			$of(u"XPathに不明なエラーが発生しました。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_CANT_CONVERT_XPATHRESULTTYPE_TO_NUMBER),
-			$of(u"XPath\u5f0f\'\'{0}\'\'\u306eXPathResult\u306f\u3001\u6570\u5024\u306b\u5909\u63db\u3067\u304d\u306a\u3044{1}\u306eXPathResultType\u3092\u6301\u3061\u307e\u3059"_s)
+			$of(u"XPath式\'\'{0}\'\'のXPathResultは、数値に変換できない{1}のXPathResultTypeを持ちます"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_EXTENSION_FUNCTION_CANNOT_BE_INVOKED),
-			$of(u"\u62e1\u5f35\u95a2\u6570: XMLConstants.FEATURE_SECURE_PROCESSING\u6a5f\u80fd\u304ctrue\u306b\u8a2d\u5b9a\u3055\u308c\u308b\u3068\'\'{0}\'\'\u3092\u8d77\u52d5\u3067\u304d\u307e\u305b\u3093\u3002"_s)
+			$of(u"拡張関数: XMLConstants.FEATURE_SECURE_PROCESSING機能がtrueに設定されると\'\'{0}\'\'を起動できません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_RESOLVE_VARIABLE_RETURNS_NULL),
-			$of(u"\u5909\u6570{0}\u306eresolveVariable\u304cnull\u3092\u8fd4\u3057\u3066\u3044\u307e\u3059"_s)
+			$of(u"変数{0}のresolveVariableがnullを返しています"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_UNSUPPORTED_RETURN_TYPE),
-			$of(u"\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u306a\u3044\u623b\u308a\u578b: {0}"_s)
+			$of(u"サポートされていない戻り型: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"\u30bd\u30fc\u30b9\u30fb\u30bf\u30a4\u30d7\u307e\u305f\u306f\u623b\u308a\u578b\u306fnull\u306b\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"ソース・タイプまたは戻り型はnullにできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_SOURCE_RETURN_TYPE_CANNOT_BE_NULL),
-			$of(u"\u30bd\u30fc\u30b9\u30fb\u30bf\u30a4\u30d7\u307e\u305f\u306f\u623b\u308a\u578b\u306fnull\u306b\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"ソース・タイプまたは戻り型はnullにできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_ARG_CANNOT_BE_NULL),
-			$of(u"{0}\u5f15\u6570\u306fnull\u306b\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"{0}引数はnullにできません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_OBJECT_MODEL_NULL),
-			$of(u"{0}#isObjectModelSupported( String objectModel )\u306fobjectModel == null\u3067\u547c\u3073\u51fa\u305b\u307e\u305b\u3093"_s)
+			$of(u"{0}#isObjectModelSupported( String objectModel )はobjectModel == nullで呼び出せません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_OBJECT_MODEL_EMPTY),
-			$of(u"{0}#isObjectModelSupported( String objectModel )\u306fobjectModel == \"\"\u3067\u547c\u3073\u51fa\u305b\u307e\u305b\u3093"_s)
+			$of(u"{0}#isObjectModelSupported( String objectModel )はobjectModel == \"\"で呼び出せません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FEATURE_NAME_NULL),
-			$of(u"\u6a5f\u80fd\u306bnull\u306e\u540d\u524d\u3092\u8a2d\u5b9a\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f: {0}#setFeature( null, {1})"_s)
+			$of(u"機能にnullの名前を設定しようとしました: {0}#setFeature( null, {1})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_FEATURE_UNKNOWN),
-			$of(u"\u4e0d\u660e\u306a\u6a5f\u80fd\"{0}\"\u3092\u8a2d\u5b9a\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f: {1}#setFeature({0},{2})"_s)
+			$of(u"不明な機能\"{0}\"を設定しようとしました: {1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_GETTING_NULL_FEATURE),
-			$of(u"null\u540d\u306e\u6a5f\u80fd\u3092\u53d6\u5f97\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f: {0}#getFeature(null)"_s)
+			$of(u"null名の機能を取得しようとしました: {0}#getFeature(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_GETTING_UNKNOWN_FEATURE),
-			$of(u"\u4e0d\u660e\u306a\u6a5f\u80fd\"{0}\"\u3092\u53d6\u5f97\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f: {1}#getFeature({0})"_s)
+			$of(u"不明な機能\"{0}\"を取得しようとしました: {1}#getFeature({0})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_SECUREPROCESSING_FEATURE),
-			$of(u"FEATURE_SECURE_PROCESSING: \u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u30fb\u30de\u30cd\u30fc\u30b8\u30e3\u304c\u5b58\u5728\u3059\u308b\u3068\u304d\u3001\u6a5f\u80fd\u3092false\u306b\u8a2d\u5b9a\u3067\u304d\u307e\u305b\u3093: {1}#setFeature({0},{2})"_s)
+			$of(u"FEATURE_SECURE_PROCESSING: セキュリティ・マネージャが存在するとき、機能をfalseに設定できません: {1}#setFeature({0},{2})"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NULL_XPATH_FUNCTION_RESOLVER),
-			$of(u"null\u306eXPathFunctionResolver\u3092\u8a2d\u5b9a\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f: {0}#setXPathFunctionResolver(null)"_s)
+			$of(u"nullのXPathFunctionResolverを設定しようとしました: {0}#setXPathFunctionResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::ER_NULL_XPATH_VARIABLE_RESOLVER),
-			$of(u"null\u306eXPathVariableResolver\u3092\u8a2d\u5b9a\u3057\u3088\u3046\u3068\u3057\u307e\u3057\u305f: {0}#setXPathVariableResolver(null)"_s)
+			$of(u"nullのXPathVariableResolverを設定しようとしました: {0}#setXPathVariableResolver(null)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_LOCALE_NAME_NOT_HANDLED),
-			$of(u"format-number\u95a2\u6570\u306e\u30ed\u30b1\u30fc\u30eb\u540d\u304c\u672a\u51e6\u7406\u3067\u3059\u3002"_s)
+			$of(u"format-number関数のロケール名が未処理です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_PROPERTY_NOT_SUPPORTED),
-			$of(u"XSL\u30d7\u30ed\u30d1\u30c6\u30a3\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093: {0}"_s)
+			$of(u"XSLプロパティはサポートされていません: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_DONT_DO_ANYTHING_WITH_NS),
-			$of(u"\u30d7\u30ed\u30d1\u30c6\u30a3{1}\u5185\u306e\u30cd\u30fc\u30e0\u30b9\u30da\u30fc\u30b9{0}\u3067\u306f\u73fe\u5728\u4f55\u3082\u5b9f\u884c\u3057\u306a\u3044\u3067\u304f\u3060\u3055\u3044"_s)
+			$of(u"プロパティ{1}内のネームスペース{0}では現在何も実行しないでください"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_SECURITY_EXCEPTION),
-			$of(u"XSL\u30b7\u30b9\u30c6\u30e0\u30fb\u30d7\u30ed\u30d1\u30c6\u30a3{0}\u306b\u30a2\u30af\u30bb\u30b9\u3057\u3088\u3046\u3068\u3057\u305f\u3068\u304d\u306bSecurityException\u304c\u767a\u751f\u3057\u307e\u3057\u305f"_s)
+			$of(u"XSLシステム・プロパティ{0}にアクセスしようとしたときにSecurityExceptionが発生しました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_QUO_NO_LONGER_DEFINED),
-			$of(u"\u53e4\u3044\u69cb\u6587: quo(...)\u306fXPath\u3067\u306f\u73fe\u5728\u5b9a\u7fa9\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002"_s)
+			$of(u"古い構文: quo(...)はXPathでは現在定義されていません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_NEED_DERIVED_OBJECT_TO_IMPLEMENT_NODETEST),
-			$of(u"XPath\u306b\u306fnodeTest\u3092\u5b9f\u88c5\u3059\u308b\u305f\u3081\u306e\u5c0e\u51fa\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u304c\u5fc5\u8981\u3067\u3059\u3002"_s)
+			$of(u"XPathにはnodeTestを実装するための導出オブジェクトが必要です。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_FUNCTION_TOKEN_NOT_FOUND),
-			$of(u"\u95a2\u6570\u30c8\u30fc\u30af\u30f3\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3002"_s)
+			$of(u"関数トークンが見つかりません。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_COULDNOT_FIND_FUNCTION),
-			$of(u"\u95a2\u6570{0}\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f"_s)
+			$of(u"関数{0}が見つかりませんでした"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_CANNOT_MAKE_URL_FROM),
-			$of(u"{0}\u304b\u3089URL\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093"_s)
+			$of(u"{0}からURLを作成できません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_EXPAND_ENTITIES_NOT_SUPPORTED),
-			$of(u"-E\u30aa\u30d7\u30b7\u30e7\u30f3\u306fDTM\u30d1\u30fc\u30b5\u30fc\u3067\u306f\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u305b\u3093"_s)
+			$of(u"-EオプションはDTMパーサーではサポートされていません"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_ILLEGAL_VARIABLE_REFERENCE),
-			$of(u"\u5909\u6570\u306b\u6307\u5b9a\u3057\u305fVariableReference\u304c\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u7bc4\u56f2\u5916\u304b\u5b9a\u7fa9\u304c\u3042\u308a\u307e\u305b\u3093\u3002\u540d\u524d= {0}"_s)
+			$of(u"変数に指定したVariableReferenceがコンテキスト範囲外か定義がありません。名前= {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XPATHErrorResources_ja::WG_UNSUPPORTED_ENCODING),
-			$of(u"\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u306a\u3044\u30a8\u30f3\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u3067\u3059: {0}"_s)
+			$of(u"サポートされていないエンコーディングです: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("ui_language"_s),
@@ -1260,15 +1260,15 @@ void clinit$XPATHErrorResources_ja($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
-			$of(u"createMessage\u306e\u30d1\u30e9\u30e1\u30fc\u30bf\u304c\u7bc4\u56f2\u5916\u3067\u3059"_s)
+			$of(u"createMessageのパラメータが範囲外です"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("FORMAT_FAILED"_s),
-			$of(u"messageFormat\u306e\u547c\u51fa\u3057\u4e2d\u306b\u4f8b\u5916\u304c\u30b9\u30ed\u30fc\u3055\u308c\u307e\u3057\u305f"_s)
+			$of(u"messageFormatの呼出し中に例外がスローされました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version"_s),
-			$of(u">>>>>>> Xalan\u30d0\u30fc\u30b8\u30e7\u30f3 "_s)
+			$of(u">>>>>>> Xalanバージョン "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("version2"_s),
@@ -1280,19 +1280,19 @@ void clinit$XPATHErrorResources_ja($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("line"_s),
-			$of(u"\u884c\u756a\u53f7"_s)
+			$of(u"行番号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("column"_s),
-			$of(u"\u5217\u756a\u53f7"_s)
+			$of(u"列番号"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xsldone"_s),
-			$of(u"XSLProcessor: \u5b8c\u4e86\u3057\u307e\u3057\u305f"_s)
+			$of(u"XSLProcessor: 完了しました"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("xpath_option"_s),
-			$of(u"xpath\u30aa\u30d7\u30b7\u30e7\u30f3: "_s)
+			$of(u"xpathオプション: "_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionIN"_s),
@@ -1304,31 +1304,31 @@ void clinit$XPATHErrorResources_ja($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of("optionMatch"_s),
-			$of(u"   [-match match pattern (\u4e00\u81f4\u8a3a\u65ad\u7528)]"_s)
+			$of(u"   [-match match pattern (一致診断用)]"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("optionAnyExpr"_s),
-			$of(u"\u307e\u305f\u306f\u3001xpath\u5f0f\u304c\u8a3a\u65ad\u30c0\u30f3\u30d7\u3092\u5b9f\u884c\u3057\u307e\u3059"_s)
+			$of(u"または、xpath式が診断ダンプを実行します"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg1"_s),
-			$of(u"XSL\u30d7\u30ed\u30bb\u30b9\u306f\u6210\u529f\u3057\u307e\u305b\u3093\u3067\u3057\u305f\u3002"_s)
+			$of(u"XSLプロセスは成功しませんでした。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg2"_s),
-			$of(u"** \u30d1\u30fc\u30b5\u30fc\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f **"_s)
+			$of(u"** パーサーが見つかりませんでした **"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg3"_s),
-			$of(u"\u30af\u30e9\u30b9\u30d1\u30b9\u3092\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002"_s)
+			$of(u"クラスパスを確認してください。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg4"_s),
-			$of(u"IBM\u306eJava\u7528XML\u30d1\u30fc\u30b5\u30fc\u304c\u306a\u3044\u5834\u5408\u3001\u6b21\u306e\u30b5\u30a4\u30c8\u304b\u3089\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3067\u304d\u307e\u3059"_s)
+			$of(u"IBMのJava用XMLパーサーがない場合、次のサイトからダウンロードできます"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("noParsermsg5"_s),
-			$of(u"IBM\u306eAlphaWorks: http://www.alphaworks.ibm.com/formula/xml"_s)
+			$of(u"IBMのAlphaWorks: http://www.alphaworks.ibm.com/formula/xml"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("gtone"_s),

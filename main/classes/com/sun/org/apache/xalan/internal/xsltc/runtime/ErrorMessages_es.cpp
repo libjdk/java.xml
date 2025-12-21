@@ -73,31 +73,31 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 	return $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_INTERNAL_ERR),
-			$of(u"Error interno de tiempo de ejecuci\u00f3n en \'\'{0}\'\'"_s)
+			$of(u"Error interno de tiempo de ejecución en \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::RUN_TIME_COPY_ERR),
-			$of(u"Error de tiempo de ejecuci\u00f3n al ejecutar <xsl:copy>."_s)
+			$of(u"Error de tiempo de ejecución al ejecutar <xsl:copy>."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::DATA_CONVERSION_ERR),
-			$of(u"Conversi\u00f3n no v\u00e1lida de \'\'{0}\'\' a \'\'{1}\'\'."_s)
+			$of(u"Conversión no válida de \'\'{0}\'\' a \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EXTERNAL_FUNC_ERR),
-			$of(u"Funci\u00f3n externa \'\'{0}\'\' no soportada por XSLTC."_s)
+			$of(u"Función externa \'\'{0}\'\' no soportada por XSLTC."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::EQUALITY_EXPR_ERR),
-			$of(u"Tipo de argumento desconocido en la expresi\u00f3n de igualdad."_s)
+			$of(u"Tipo de argumento desconocido en la expresión de igualdad."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_ARGUMENT_ERR),
-			$of(u"Tipo de argumento \'\'{0}\'\' no v\u00e1lido en la llamada a \'\'{1}\'\'"_s)
+			$of(u"Tipo de argumento \'\'{0}\'\' no válido en la llamada a \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::FORMAT_NUMBER_ERR),
-			$of(u"Intentando formatear n\u00famero \'\'{0}\'\' mediante el patr\u00f3n \'\'{1}\'\'."_s)
+			$of(u"Intentando formatear número \'\'{0}\'\' mediante el patrón \'\'{1}\'\'."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::ITERATOR_CLONE_ERR),
@@ -105,19 +105,19 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::AXIS_SUPPORT_ERR),
-			$of(u"El iterador para el eje \'\'{0}\'\' no est\u00e1 soportado."_s)
+			$of(u"El iterador para el eje \'\'{0}\'\' no está soportado."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::TYPED_AXIS_SUPPORT_ERR),
-			$of(u"El iterador para el eje introducido \'\'{0}\'\' no est\u00e1 soportado."_s)
+			$of(u"El iterador para el eje introducido \'\'{0}\'\' no está soportado."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_ATTRIBUTE_ERR),
-			$of(u"El atributo \'\'{0}\'\' est\u00e1 fuera del elemento."_s)
+			$of(u"El atributo \'\'{0}\'\' está fuera del elemento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::STRAY_NAMESPACE_ERR),
-			$of(u"Declaraci\u00f3n del espacio de nombres \'\'{0}\'\'=\'\'{1}\'\' fuera del elemento."_s)
+			$of(u"Declaración del espacio de nombres \'\'{0}\'\'=\'\'{1}\'\' fuera del elemento."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACE_PREFIX_ERR),
@@ -129,11 +129,11 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::PARSER_DTD_SUPPORT_ERR),
-			$of(u"El analizador SAX que est\u00e1 utilizando no maneja los eventos de declaraci\u00f3n DTD."_s)
+			$of(u"El analizador SAX que está utilizando no maneja los eventos de declaración DTD."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::NAMESPACES_SUPPORT_ERR),
-			$of(u"El analizador SAX que est\u00e1 utilizando no soporta los espacios de nombres XML."_s)
+			$of(u"El analizador SAX que está utilizando no soporta los espacios de nombres XML."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::CANT_RESOLVE_RELATIVE_URI_ERR),
@@ -145,27 +145,27 @@ $ObjectArray2* ErrorMessages_es::getContents() {
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNSUPPORTED_EXT_ERR),
-			$of(u"Extensi\u00f3n \'\'{0}\'\' de XSLTC no reconocida"_s)
+			$of(u"Extensión \'\'{0}\'\' de XSLTC no reconocida"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNKNOWN_TRANSLET_VERSION_ERR),
-			$of(u"El translet especificado, \'\'{0}\'\' se ha creado con una versi\u00f3n de XSLTC m\u00e1s reciente que la versi\u00f3n del tiempo de ejecuci\u00f3n de XSLTC que se est\u00e1 utilizando. Debe volver a compilar la hoja de estilo o utilizar una versi\u00f3n m\u00e1s reciente de XSLTC para ejecutar este translet."_s)
+			$of(u"El translet especificado, \'\'{0}\'\' se ha creado con una versión de XSLTC más reciente que la versión del tiempo de ejecución de XSLTC que se está utilizando. Debe volver a compilar la hoja de estilo o utilizar una versión más reciente de XSLTC para ejecutar este translet."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_QNAME_ERR),
-			$of(u"Un atributo cuyo valor debe ser un QName ten\u00eda el valor \'\'{0}\'\'"_s)
+			$of(u"Un atributo cuyo valor debe ser un QName tenía el valor \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::INVALID_NCNAME_ERR),
-			$of(u"Un atributo cuyo valor debe ser un NCName ten\u00eda el valor \'\'{0}\'\'"_s)
+			$of(u"Un atributo cuyo valor debe ser un NCName tenía el valor \'\'{0}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_FUNCTION_ERR),
-			$of(u"El uso de la funci\u00f3n de extensi\u00f3n \'\'{0}\'\' no est\u00e1 permitido cuando la funci\u00f3n de procesamiento seguro se ha definido en true."_s)
+			$of(u"El uso de la función de extensión \'\'{0}\'\' no está permitido cuando la función de procesamiento seguro se ha definido en true."_s)
 		}),
 		$$new($ObjectArray, {
 			$of($BasisLibrary::UNALLOWED_EXTENSION_ELEMENT_ERR),
-			$of(u"El uso del elemento de extensi\u00f3n \'\'{0}\'\' no est\u00e1 permitido cuando la funci\u00f3n de procesamiento seguro se ha definido en true."_s)
+			$of(u"El uso del elemento de extensión \'\'{0}\'\' no está permitido cuando la función de procesamiento seguro se ha definido en true."_s)
 		})
 	});
 }

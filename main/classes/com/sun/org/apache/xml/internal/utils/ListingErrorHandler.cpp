@@ -239,7 +239,7 @@ void ListingErrorHandler::logExceptionLocation($PrintWriter* pw$renamed, $Throwa
 		$var($String, id, (locator->getPublicId() != locator->getPublicId()) ? locator->getPublicId() : (nullptr != locator->getSystemId()) ? locator->getSystemId() : "SystemId-Unknown"_s);
 		$var($String, var$1, $$str({id, ":Line="_s, $$str(locator->getLineNumber()), ";Column="_s}));
 		$var($String, var$0, $$concat(var$1, $$str(locator->getColumnNumber())));
-		$nc(pw)->print($$concat(var$0, ": "));
+		$nc(pw)->print($$concat(var$0, ": "_s));
 		pw->println($$str({"exception:"_s, $($nc(exception)->getMessage())}));
 		pw->println($$str({"root-cause:"_s, ((nullptr != cause) ? $(cause->getMessage()) : "null"_s)}));
 		logSourceLine(pw, locator);

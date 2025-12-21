@@ -330,7 +330,7 @@ void SchemaDOM::traverse($Node* node, int32_t depth) {
 		for (int32_t i = 0; i < $nc(attrs)->getLength(); ++i) {
 			$var($String, var$1, $$str({"  "_s, $($nc(($cast($Attr, $(attrs->item(i)))))->getName()), "=\""_s}));
 			$var($String, var$0, $$concat(var$1, $($nc(($cast($Attr, $(attrs->item(i)))))->getValue())));
-			$nc($System::out)->print($$concat(var$0, "\""));
+			$nc($System::out)->print($$concat(var$0, "\""_s));
 		}
 	}
 	if ($nc(node)->hasChildNodes()) {

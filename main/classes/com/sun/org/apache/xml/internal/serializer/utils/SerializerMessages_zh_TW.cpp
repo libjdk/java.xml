@@ -109,243 +109,243 @@ $ObjectArray2* SerializerMessages_zh_TW::getContents() {
 	$var($ObjectArray2, contents, $new($ObjectArray2, {
 		$$new($ObjectArray, {
 			$of($MsgKey::BAD_MSGKEY),
-			$of(u"\u8a0a\u606f\u7d22\u5f15\u9375 \'\'{0}\'\' \u7684\u8a0a\u606f\u985e\u5225\u4e0d\u662f \'\'{1}\'\'"_s)
+			$of(u"訊息索引鍵 \'\'{0}\'\' 的訊息類別不是 \'\'{1}\'\'"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::BAD_MSGFORMAT),
-			$of(u"\u8a0a\u606f\u985e\u5225 \'\'{1}\'\' \u4e2d\u7684\u8a0a\u606f \'\'{0}\'\' \u683c\u5f0f\u4e0d\u6b63\u78ba\u3002"_s)
+			$of(u"訊息類別 \'\'{1}\'\' 中的訊息 \'\'{0}\'\' 格式不正確。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SERIALIZER_NOT_CONTENTHANDLER),
-			$of(u"serializer \u985e\u5225 \'\'{0}\'\' \u4e0d\u5be6\u884c org.xml.sax.ContentHandler\u3002"_s)
+			$of(u"serializer 類別 \'\'{0}\'\' 不實行 org.xml.sax.ContentHandler。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_RESOURCE_COULD_NOT_FIND),
-			$of(u"\u627e\u4e0d\u5230\u8cc7\u6e90 [ {0} ]\u3002\n{1}"_s)
+			$of(u"找不到資源 [ {0} ]。\n{1}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_RESOURCE_COULD_NOT_LOAD),
-			$of(u"\u7121\u6cd5\u8f09\u5165\u8cc7\u6e90 [ {0} ]: {1} \n {2} \t {3}"_s)
+			$of(u"無法載入資源 [ {0} ]: {1} \n {2} \t {3}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_BUFFER_SIZE_LESSTHAN_ZERO),
-			$of(u"\u7de9\u885d\u5340\u5927\u5c0f <=0"_s)
+			$of(u"緩衝區大小 <=0"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_INVALID_UTF16_SURROGATE),
-			$of(u"\u5075\u6e2c\u5230\u7121\u6548\u7684 UTF-16 \u4ee3\u7406: {0}\uff1f"_s)
+			$of(u"偵測到無效的 UTF-16 代理: {0}？"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_OIERROR),
-			$of(u"IO \u932f\u8aa4"_s)
+			$of(u"IO 錯誤"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"\u5728\u7522\u751f\u5b50\u9805\u7bc0\u9ede\u4e4b\u5f8c\uff0c\u6216\u5728\u7522\u751f\u5143\u7d20\u4e4b\u524d\uff0c\u4e0d\u53ef\u65b0\u589e\u5c6c\u6027 {0}\u3002\u5c6c\u6027\u6703\u88ab\u5ffd\u7565\u3002"_s)
+			$of(u"在產生子項節點之後，或在產生元素之前，不可新增屬性 {0}。屬性會被忽略。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NAMESPACE_PREFIX),
-			$of(u"\u5b57\u9996 \'\'{0}\'\' \u7684\u547d\u540d\u7a7a\u9593\u5c1a\u672a\u5ba3\u544a\u3002"_s)
+			$of(u"字首 \'\'{0}\'\' 的命名空間尚未宣告。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRAY_ATTRIBUTE),
-			$of(u"\u5c6c\u6027 \'\'{0}\'\' \u5728\u5143\u7d20\u4e4b\u5916\u3002"_s)
+			$of(u"屬性 \'\'{0}\'\' 在元素之外。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRAY_NAMESPACE),
-			$of(u"\u547d\u540d\u7a7a\u9593\u5ba3\u544a \'\'{0}\'\'=\'\'{1}\'\' \u8d85\u51fa\u5143\u7d20\u5916\u3002"_s)
+			$of(u"命名空間宣告 \'\'{0}\'\'=\'\'{1}\'\' 超出元素外。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_COULD_NOT_LOAD_RESOURCE),
-			$of(u"\u7121\u6cd5\u8f09\u5165 \'\'{0}\'\' (\u6aa2\u67e5 CLASSPATH)\uff0c\u76ee\u524d\u53ea\u4f7f\u7528\u9810\u8a2d\u503c"_s)
+			$of(u"無法載入 \'\'{0}\'\' (檢查 CLASSPATH)，目前只使用預設值"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ILLEGAL_CHARACTER),
-			$of(u"\u5617\u8a66\u8f38\u51fa\u6574\u6578\u503c {0} \u7684\u5b57\u5143\uff0c\u4f46\u662f\u5b83\u4e0d\u662f\u4ee5\u6307\u5b9a\u7684 {1} \u8f38\u51fa\u7de8\u78bc\u5448\u73fe\u3002"_s)
+			$of(u"嘗試輸出整數值 {0} 的字元，但是它不是以指定的 {1} 輸出編碼呈現。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"\u7121\u6cd5\u8f09\u5165\u8f38\u51fa\u65b9\u6cd5 \'\'{1}\'\' \u7684\u5c6c\u6027\u6a94 \'\'{0}\'\' (\u6aa2\u67e5 CLASSPATH)"_s)
+			$of(u"無法載入輸出方法 \'\'{1}\'\' 的屬性檔 \'\'{0}\'\' (檢查 CLASSPATH)"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_INVALID_PORT),
-			$of(u"\u7121\u6548\u7684\u9023\u63a5\u57e0\u865f\u78bc"_s)
+			$of(u"無效的連接埠號碼"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PORT_WHEN_HOST_NULL),
-			$of(u"\u4e3b\u6a5f\u70ba\u7a7a\u503c\u6642\uff0c\u7121\u6cd5\u8a2d\u5b9a\u9023\u63a5\u57e0"_s)
+			$of(u"主機為空值時，無法設定連接埠"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"\u4e3b\u6a5f\u6c92\u6709\u5b8c\u6574\u7684\u4f4d\u5740"_s)
+			$of(u"主機沒有完整的位址"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"\u914d\u7f6e\u4e0d\u4e00\u81f4\u3002"_s)
+			$of(u"配置不一致。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_FROM_NULL_STRING),
-			$of(u"\u7121\u6cd5\u5f9e\u7a7a\u503c\u5b57\u4e32\u8a2d\u5b9a\u914d\u7f6e"_s)
+			$of(u"無法從空值字串設定配置"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE),
-			$of(u"\u8def\u5f91\u5305\u542b\u7121\u6548\u7684\u9041\u96e2\u5e8f\u5217"_s)
+			$of(u"路徑包含無效的遁離序列"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_PATH_INVALID_CHAR),
-			$of(u"\u8def\u5f91\u5305\u542b\u7121\u6548\u7684\u5b57\u5143: {0}"_s)
+			$of(u"路徑包含無效的字元: {0}"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_INVALID_CHAR),
-			$of(u"\u7247\u6bb5\u5305\u542b\u7121\u6548\u7684\u5b57\u5143"_s)
+			$of(u"片段包含無效的字元"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"\u8def\u5f91\u70ba\u7a7a\u503c\u6642\uff0c\u7121\u6cd5\u8a2d\u5b9a\u7247\u6bb5"_s)
+			$of(u"路徑為空值時，無法設定片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"\u53ea\u80fd\u5c0d\u4e00\u822c URI \u8a2d\u5b9a\u7247\u6bb5"_s)
+			$of(u"只能對一般 URI 設定片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_SCHEME_IN_URI),
-			$of(u"\u5728 URI \u627e\u4e0d\u5230\u914d\u7f6e"_s)
+			$of(u"在 URI 找不到配置"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_CANNOT_INIT_URI_EMPTY_PARMS),
-			$of(u"\u7121\u6cd5\u4ee5\u7a7a\u767d\u53c3\u6578\u8d77\u59cb\u8a2d\u5b9a URI"_s)
+			$of(u"無法以空白參數起始設定 URI"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"\u8def\u5f91\u548c\u7247\u6bb5\u4e0d\u80fd\u540c\u6642\u6307\u5b9a\u7247\u6bb5"_s)
+			$of(u"路徑和片段不能同時指定片段"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"\u5728\u8def\u5f91\u53ca\u67e5\u8a62\u5b57\u4e32\u4e2d\u4e0d\u53ef\u6307\u5b9a\u67e5\u8a62\u5b57\u4e32"_s)
+			$of(u"在路徑及查詢字串中不可指定查詢字串"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_PORT_IF_NO_HOST),
-			$of(u"\u5982\u679c\u6c92\u6709\u6307\u5b9a\u4e3b\u6a5f\uff0c\u4e0d\u53ef\u6307\u5b9a\u9023\u63a5\u57e0"_s)
+			$of(u"如果沒有指定主機，不可指定連接埠"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"\u5982\u679c\u6c92\u6709\u6307\u5b9a\u4e3b\u6a5f\uff0c\u4e0d\u53ef\u6307\u5b9a Userinfo"_s)
+			$of(u"如果沒有指定主機，不可指定 Userinfo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_XML_VERSION_NOT_SUPPORTED),
-			$of(u"\u8b66\u544a:  \u8981\u6c42\u7684\u8f38\u51fa\u6587\u4ef6\u7248\u672c\u70ba \'\'{0}\'\'\u3002\u4e0d\u652f\u63f4\u6b64\u7248\u672c\u7684 XML\u3002\u8f38\u51fa\u6587\u4ef6\u7684\u7248\u672c\u5c07\u6703\u662f \'\'1.0\'\'\u3002"_s)
+			$of(u"警告:  要求的輸出文件版本為 \'\'{0}\'\'。不支援此版本的 XML。輸出文件的版本將會是 \'\'1.0\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_SCHEME_REQUIRED),
-			$of(u"\u914d\u7f6e\u662f\u5fc5\u8981\u9805\u76ee\uff01"_s)
+			$of(u"配置是必要項目！"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FACTORY_PROPERTY_MISSING),
-			$of(u"\u50b3\u905e\u7d66 SerializerFactory \u7684 Properties \u7269\u4ef6\u6c92\u6709 \'\'{0}\'\' \u5c6c\u6027\u3002"_s)
+			$of(u"傳遞給 SerializerFactory 的 Properties 物件沒有 \'\'{0}\'\' 屬性。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ENCODING_NOT_SUPPORTED),
-			$of(u"\u8b66\u544a:  Java Runtime \u4e0d\u652f\u63f4\u7de8\u78bc \'\'{0}\'\'\u3002"_s)
+			$of(u"警告:  Java Runtime 不支援編碼 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_FOUND),
-			$of(u"\u7121\u6cd5\u8fa8\u8b58\u53c3\u6578 \'\'{0}\'\'\u3002"_s)
+			$of(u"無法辨識參數 \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_FEATURE_NOT_SUPPORTED),
-			$of(u"\u53ef\u8fa8\u8b58\u53c3\u6578 \'\'{0}\'\'\uff0c\u4f46\u7121\u6cd5\u8a2d\u5b9a\u8981\u6c42\u7684\u503c\u3002"_s)
+			$of(u"可辨識參數 \'\'{0}\'\'，但無法設定要求的值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_STRING_TOO_LONG),
-			$of(u"\u7d50\u679c\u5b57\u4e32\u592a\u9577\uff0c\u7121\u6cd5\u7d0d\u5165 DOMString: \'\'{0}\'\'\u3002"_s)
+			$of(u"結果字串太長，無法納入 DOMString: \'\'{0}\'\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_TYPE_MISMATCH_ERR),
-			$of(u"\u6b64\u53c3\u6578\u540d\u7a31\u7684\u503c\u985e\u578b\u8207\u9810\u671f\u7684\u503c\u985e\u578b\u4e0d\u76f8\u5bb9\u3002"_s)
+			$of(u"此參數名稱的值類型與預期的值類型不相容。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NO_OUTPUT_SPECIFIED),
-			$of(u"\u4f9b\u5beb\u5165\u8cc7\u6599\u7684\u8f38\u51fa\u76ee\u7684\u5730\u70ba\u7a7a\u503c\u3002"_s)
+			$of(u"供寫入資料的輸出目的地為空值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNSUPPORTED_ENCODING),
-			$of(u"\u767c\u73fe\u4e0d\u652f\u63f4\u7684\u7de8\u78bc\u3002"_s)
+			$of(u"發現不支援的編碼。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_UNABLE_TO_SERIALIZE_NODE),
-			$of(u"\u7121\u6cd5\u5e8f\u5217\u5316\u6b64\u7bc0\u9ede\u3002"_s)
+			$of(u"無法序列化此節點。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_CDATA_SECTIONS_SPLIT),
-			$of(u"CDATA \u6bb5\u843d\u5305\u542b\u4e00\u6216\u591a\u500b\u7d42\u6b62\u6a19\u8a18 \']]>\'\u3002"_s)
+			$of(u"CDATA 段落包含一或多個終止標記 \']]>\'。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WARNING_WF_NOT_CHECKED),
-			$of(u"\u7121\u6cd5\u5efa\u7acb Well-Formedness \u6aa2\u67e5\u7a0b\u5f0f\u57f7\u884c\u8655\u7406\u3002well-formed \u53c3\u6578\u8a2d\u70ba true\uff0c\u4f46\u7121\u6cd5\u57f7\u884c well-formedness \u6aa2\u67e5\u3002"_s)
+			$of(u"無法建立 Well-Formedness 檢查程式執行處理。well-formed 參數設為 true，但無法執行 well-formedness 檢查。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER),
-			$of(u"\u7bc0\u9ede \'\'{0}\'\' \u5305\u542b\u7121\u6548\u7684 XML \u5b57\u5143\u3002"_s)
+			$of(u"節點 \'\'{0}\'\' 包含無效的 XML 字元。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_COMMENT),
-			$of(u"\u5728\u8a3b\u89e3\u4e2d\u627e\u5230\u7121\u6548\u7684 XML \u5b57\u5143 (Unicode: 0x{0})\u3002"_s)
+			$of(u"在註解中找到無效的 XML 字元 (Unicode: 0x{0})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_PI),
-			$of(u"\u5728\u8655\u7406\u7684\u6307\u793a\u8cc7\u6599\u4e2d\u767c\u73fe\u7121\u6548\u7684 XML \u5b57\u5143 (Unicode: 0x{0})\u3002"_s)
+			$of(u"在處理的指示資料中發現無效的 XML 字元 (Unicode: 0x{0})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_CDATA),
-			$of(u"\u5728 CDATASection \u7684\u5167\u5bb9\u4e2d\u767c\u73fe\u7121\u6548\u7684 XML \u5b57\u5143 (Unicode: 0x{0})\u3002"_s)
+			$of(u"在 CDATASection 的內容中發現無效的 XML 字元 (Unicode: 0x{0})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_TEXT),
-			$of(u"\u5728\u7bc0\u9ede\u7684\u5b57\u5143\u8cc7\u6599\u5167\u5bb9\u4e2d\u767c\u73fe\u7121\u6548\u7684 XML \u5b57\u5143 (Unicode: 0x{0})\u3002"_s)
+			$of(u"在節點的字元資料內容中發現無效的 XML 字元 (Unicode: 0x{0})。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_INVALID_CHARACTER_IN_NODE_NAME),
-			$of(u"\u5728\u540d\u7a31\u70ba \'\'{1}\'\' \u7684 {0} \u7bc0\u9ede\u4e2d\u767c\u73fe\u7121\u6548\u7684 XML \u5b57\u5143\u3002"_s)
+			$of(u"在名稱為 \'\'{1}\'\' 的 {0} 節點中發現無效的 XML 字元。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_DASH_IN_COMMENT),
-			$of(u"\u8a3b\u89e3\u4e0d\u5141\u8a31\u5b57\u4e32 \"--\"\u3002"_s)
+			$of(u"註解不允許字串 \"--\"。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_LT_IN_ATTVAL),
-			$of(u"\u95dc\u806f\u5143\u7d20\u985e\u578b \"{0}\" \u4e4b\u5c6c\u6027 \"{1}\" \u7684\u503c\u4e0d\u53ef\u5305\u542b \'\'<\'\' \u5b57\u5143\u3002"_s)
+			$of(u"關聯元素類型 \"{0}\" 之屬性 \"{1}\" 的值不可包含 \'\'<\'\' 字元。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_UNPARSED_ENT),
-			$of(u"\u4e0d\u5141\u8a31\u672a\u5256\u6790\u7684\u5be6\u9ad4\u53c3\u7167 \"&{0};\"\u3002"_s)
+			$of(u"不允許未剖析的實體參照 \"&{0};\"。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WF_REF_TO_EXTERNAL_ENT),
-			$of(u"\u5c6c\u6027\u503c\u4e0d\u5141\u8a31\u53c3\u7167\u5916\u90e8\u5be6\u9ad4 \"&{0};\"\u3002"_s)
+			$of(u"屬性值不允許參照外部實體 \"&{0};\"。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NS_PREFIX_CANNOT_BE_BOUND),
-			$of(u"\u7121\u6cd5\u5c07\u524d\u7f6e\u78bc \"{0}\" \u9023\u7d50\u81f3\u547d\u540d\u7a7a\u9593 \"{1}\"\u3002"_s)
+			$of(u"無法將前置碼 \"{0}\" 連結至命名空間 \"{1}\"。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ELEMENT_NAME),
-			$of(u"\u5143\u7d20 \"{0}\" \u7684\u5340\u57df\u540d\u7a31\u70ba\u7a7a\u503c\u3002"_s)
+			$of(u"元素 \"{0}\" 的區域名稱為空值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_NULL_LOCAL_ATTR_NAME),
-			$of(u"\u5c6c\u6027 \"{0}\" \u7684\u5340\u57df\u540d\u7a31\u70ba\u7a7a\u503c\u3002"_s)
+			$of(u"屬性 \"{0}\" 的區域名稱為空值。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ELEM_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"\u5be6\u9ad4\u7bc0\u9ede \"{0}\" \u7684\u53d6\u4ee3\u6587\u5b57\u5305\u542b\u5177\u6709\u672a\u9023\u7d50\u524d\u7f6e\u78bc \"{2}\" \u7684\u5143\u7d20\u7bc0\u9ede \"{1}\"\u3002"_s)
+			$of(u"實體節點 \"{0}\" 的取代文字包含具有未連結前置碼 \"{2}\" 的元素節點 \"{1}\"。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_ATTR_UNBOUND_PREFIX_IN_ENTREF),
-			$of(u"\u5be6\u9ad4\u7bc0\u9ede \"{0}\" \u7684\u53d6\u4ee3\u6587\u5b57\u5305\u542b\u5177\u6709\u672a\u9023\u7d50\u524d\u7f6e\u78bc \"{2}\" \u7684\u5c6c\u6027\u7bc0\u9ede \"{1}\"\u3002"_s)
+			$of(u"實體節點 \"{0}\" 的取代文字包含具有未連結前置碼 \"{2}\" 的屬性節點 \"{1}\"。"_s)
 		}),
 		$$new($ObjectArray, {
 			$of($MsgKey::ER_WRITING_INTERNAL_SUBSET),
-			$of(u"\u5beb\u5165\u5167\u90e8\u5b50\u96c6\u6642\u767c\u751f\u932f\u8aa4\u3002"_s)
+			$of(u"寫入內部子集時發生錯誤。"_s)
 		})
 	}));
 	return contents;

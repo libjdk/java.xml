@@ -385,7 +385,7 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_OFFSET_BIGGER_THAN_SLOT),
-			$of(u"Offset pi\u00f9 grande dello slot"_s)
+			$of(u"Offset più grande dello slot"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_COROUTINE_NOT_AVAIL),
@@ -409,15 +409,15 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NO_PARSE_CALL_WHILE_PARSING),
-			$of(u"impossibile richiamare parse mentre \u00e8 in corso un\'analisi"_s)
+			$of(u"impossibile richiamare parse mentre è in corso un\'analisi"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_TYPED_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Errore: l\'\'iteratore con tipo per l\'\'asse {0} non \u00e8 implementato"_s)
+			$of(u"Errore: l\'\'iteratore con tipo per l\'\'asse {0} non è implementato"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_ITERATOR_AXIS_NOT_IMPLEMENTED),
-			$of(u"Errore: l\'\'iteratore per l\'\'asse {0} non \u00e8 implementato "_s)
+			$of(u"Errore: l\'\'iteratore per l\'\'asse {0} non è implementato "_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_ITERATOR_CLONE_NOT_SUPPORTED),
@@ -449,7 +449,7 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_STARTPARSE_WHILE_PARSING),
-			$of(u"impossibile richiamare startParse mentre \u00e8 in corso un\'analisi"_s)
+			$of(u"impossibile richiamare startParse mentre è in corso un\'analisi"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_STARTPARSE_NEEDS_SAXPARSER),
@@ -469,7 +469,7 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_SCHEME_REQUIRED),
-			$of(u"Lo schema \u00e8 obbligatorio."_s)
+			$of(u"Lo schema è obbligatorio."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NO_SCHEME_IN_URI),
@@ -489,15 +489,15 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_SCHEME_NOT_CONFORMANT),
-			$of(u"Lo schema non \u00e8 conforme."_s)
+			$of(u"Lo schema non è conforme."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_HOST_ADDRESS_NOT_WELLFORMED),
-			$of(u"Host non \u00e8 un indirizzo corretto"_s)
+			$of(u"Host non è un indirizzo corretto"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_PORT_WHEN_HOST_NULL),
-			$of(u"La porta non pu\u00f2 essere impostata se l\'host \u00e8 nullo"_s)
+			$of(u"La porta non può essere impostata se l\'host è nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_INVALID_PORT),
@@ -505,11 +505,11 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_FRAG_FOR_GENERIC_URI),
-			$of(u"Il frammento pu\u00f2 essere impostato solo per un URI generico"_s)
+			$of(u"Il frammento può essere impostato solo per un URI generico"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_FRAG_WHEN_PATH_NULL),
-			$of(u"Il frammento non pu\u00f2 essere impostato se il percorso \u00e8 nullo"_s)
+			$of(u"Il frammento non può essere impostato se il percorso è nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_FRAG_INVALID_CHAR),
@@ -517,7 +517,7 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_PARSER_IN_USE),
-			$of(u"Parser gi\u00e0 in uso"_s)
+			$of(u"Parser già in uso"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_CANNOT_CHANGE_WHILE_PARSING),
@@ -529,19 +529,19 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NO_USERINFO_IF_NO_HOST),
-			$of(u"Userinfo non pu\u00f2 essere specificato se l\'host non \u00e8 specificato"_s)
+			$of(u"Userinfo non può essere specificato se l\'host non è specificato"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NO_PORT_IF_NO_HOST),
-			$of(u"La porta non pu\u00f2 essere specificata se l\'host non \u00e8 specificato"_s)
+			$of(u"La porta non può essere specificata se l\'host non è specificato"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NO_QUERY_STRING_IN_PATH),
-			$of(u"La stringa di query non pu\u00f2 essere specificata nella stringa di percorso e query."_s)
+			$of(u"La stringa di query non può essere specificata nella stringa di percorso e query."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NO_FRAGMENT_STRING_IN_PATH),
-			$of(u"Il frammento non pu\u00f2 essere specificato sia nel percorso che nel frammento"_s)
+			$of(u"Il frammento non può essere specificato sia nel percorso che nel frammento"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_CANNOT_INIT_URI_EMPTY_PARMS),
@@ -597,11 +597,11 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_CANT_HAVE_MORE_THAN_ONE_ROOT),
-			$of(u"Non possono esistere pi\u00f9 radici in un DOM."_s)
+			$of(u"Non possono esistere più radici in un DOM."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_ARG_LOCALNAME_NULL),
-			$of(u"L\'argomento \'localName\' \u00e8 nullo"_s)
+			$of(u"L\'argomento \'localName\' è nullo"_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_ARG_LOCALNAME_INVALID),
@@ -613,7 +613,7 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NAME_CANT_START_WITH_COLON),
-			$of(u"Il nome non pu\u00f2 iniziare con i due punti"_s)
+			$of(u"Il nome non può iniziare con i due punti"_s)
 		}),
 		$$new($ObjectArray, {
 			$of("BAD_CODE"_s),
@@ -657,11 +657,11 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_ILLEGAL_ATTRIBUTE_POSITION),
-			$of(u"Impossibile aggiungere l\'\'attributo {0} dopo i nodi figlio o prima che sia prodotto un elemento. L\'\'attributo verr\u00e0 ignorato."_s)
+			$of(u"Impossibile aggiungere l\'\'attributo {0} dopo i nodi figlio o prima che sia prodotto un elemento. L\'\'attributo verrà ignorato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_NAMESPACE_PREFIX),
-			$of(u"Lo spazio di nomi per il prefisso \'\'{0}\'\' non \u00e8 stato dichiarato."_s)
+			$of(u"Lo spazio di nomi per il prefisso \'\'{0}\'\' non è stato dichiarato."_s)
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_STRAY_ATTRIBUTE),
@@ -681,7 +681,7 @@ void clinit$XMLErrorResources_it($Class* class$) {
 		}),
 		$$new($ObjectArray, {
 			$of(XMLErrorResources_it::ER_COULD_NOT_LOAD_METHOD_PROPERTY),
-			$of(u"Impossibile caricare il file delle propriet\u00e0 \'\'{0}\'\' per il metodo di emissione \'\'{1}\'\' (verificare CLASSPATH)"_s)
+			$of(u"Impossibile caricare il file delle proprietà \'\'{0}\'\' per il metodo di emissione \'\'{1}\'\' (verificare CLASSPATH)"_s)
 		})
 	}));
 }
