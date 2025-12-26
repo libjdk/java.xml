@@ -529,7 +529,7 @@ $SerializationHandler* AbstractTranslet::openOutputHandler($String* filename, bo
 		$nc(handler)->startDocument();
 		return handler;
 	} catch ($Exception& e) {
-		$throwNew($TransletException, e);
+		$throwNew($TransletException, $cast($Exception, e));
 	}
 	$shouldNotReachHere();
 }
@@ -571,7 +571,7 @@ void AbstractTranslet::characters($String* string, $SerializationHandler* handle
 		try {
 			$nc(handler)->characters(string);
 		} catch ($Exception& e) {
-			$throwNew($TransletException, e);
+			$throwNew($TransletException, $cast($Exception, e));
 		}
 	}
 }

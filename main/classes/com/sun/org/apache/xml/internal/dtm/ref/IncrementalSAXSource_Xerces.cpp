@@ -270,7 +270,7 @@ void IncrementalSAXSource_Xerces::startParse($InputSource* source) {
 	try {
 		ok = parseSomeSetup(source);
 	} catch ($Exception& ex) {
-		$throwNew($SAXException, ex);
+		$throwNew($SAXException, $cast($Exception, ex));
 	}
 	if (!ok) {
 		$init($XMLErrorResources);
@@ -294,7 +294,7 @@ $Object* IncrementalSAXSource_Xerces::deliverMoreNodes(bool parsemore) {
 	} catch ($IOException& ex) {
 		$assign(arg, ex);
 	} catch ($Exception& ex) {
-		$assign(arg, $new($SAXException, ex));
+		$assign(arg, $new($SAXException, $cast($Exception, ex)));
 	}
 	return $of(arg);
 }

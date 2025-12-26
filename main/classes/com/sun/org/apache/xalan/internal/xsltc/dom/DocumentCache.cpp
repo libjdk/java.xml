@@ -123,7 +123,7 @@ void DocumentCache::init$(int32_t size) {
 	try {
 		$set(this, _dtmManager, $XSLTCDTMManager::createNewDTMManagerInstance());
 	} catch ($Exception& e) {
-		$throwNew($SAXException, e);
+		$throwNew($SAXException, $cast($Exception, e));
 	}
 }
 

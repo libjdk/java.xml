@@ -601,7 +601,7 @@ bool SchemaParsingConfig::parse(bool complete) {
 		} catch ($RuntimeException& ex) {
 			$throw(ex);
 		} catch ($Exception& ex) {
-			$throwNew($XNIException, ex);
+			$throwNew($XNIException, $cast($Exception, ex));
 		}
 	}
 	try {
@@ -613,7 +613,7 @@ bool SchemaParsingConfig::parse(bool complete) {
 	} catch ($RuntimeException& ex) {
 		$throw(ex);
 	} catch ($Exception& ex) {
-		$throwNew($XNIException, ex);
+		$throwNew($XNIException, $cast($Exception, ex));
 	}
 	$shouldNotReachHere();
 }
@@ -640,7 +640,7 @@ void SchemaParsingConfig::parse($XMLInputSource* source) {
 			} catch ($RuntimeException& ex) {
 				$throw(ex);
 			} catch ($Exception& ex) {
-				$throwNew($XNIException, ex);
+				$throwNew($XNIException, $cast($Exception, ex));
 			}
 		} catch ($Throwable& var$1) {
 			$assign(var$0, var$1);

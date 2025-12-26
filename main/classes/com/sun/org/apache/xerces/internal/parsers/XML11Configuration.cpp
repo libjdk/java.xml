@@ -797,7 +797,7 @@ void XML11Configuration::parse($XMLInputSource* source) {
 			} catch ($RuntimeException& ex) {
 				$throw(ex);
 			} catch ($Exception& ex) {
-				$throwNew($XNIException, ex);
+				$throwNew($XNIException, $cast($Exception, ex));
 			}
 		} catch ($Throwable& var$1) {
 			$assign(var$0, var$1);
@@ -836,7 +836,7 @@ bool XML11Configuration::parse(bool complete) {
 		} catch ($RuntimeException& ex) {
 			$throw(ex);
 		} catch ($Exception& ex) {
-			$throwNew($XNIException, ex);
+			$throwNew($XNIException, $cast($Exception, ex));
 		}
 	}
 	try {
@@ -846,7 +846,7 @@ bool XML11Configuration::parse(bool complete) {
 	} catch ($RuntimeException& ex) {
 		$throw(ex);
 	} catch ($Exception& ex) {
-		$throwNew($XNIException, ex);
+		$throwNew($XNIException, $cast($Exception, ex));
 	}
 	$shouldNotReachHere();
 }

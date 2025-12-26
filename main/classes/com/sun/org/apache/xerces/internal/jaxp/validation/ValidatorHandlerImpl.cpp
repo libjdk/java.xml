@@ -809,7 +809,7 @@ void ValidatorHandlerImpl::validate($Source* source, $Result* result) {
 						}
 						$JdkXmlUtils::catalogFeaturesConfig2Reader(this->fComponentManager, reader);
 					} catch ($Exception& e) {
-						$throwNew($FactoryConfigurationError, e);
+						$throwNew($FactoryConfigurationError, $cast($Exception, e));
 					}
 				}
 				try {

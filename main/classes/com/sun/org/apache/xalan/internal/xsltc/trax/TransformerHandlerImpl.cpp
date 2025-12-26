@@ -247,7 +247,7 @@ void TransformerHandlerImpl::startDocument() {
 		try {
 			$assign(dtmManager, $nc($($nc(this->_transformer)->getTransformerFactory()))->createNewDTMManagerInstance());
 		} catch ($Exception& e) {
-			$throwNew($SAXException, e);
+			$throwNew($SAXException, $cast($Exception, e));
 		}
 		$var($DTMWSFilter, wsFilter, nullptr);
 		if (this->_translet != nullptr && $instanceOf($StripFilter, this->_translet)) {

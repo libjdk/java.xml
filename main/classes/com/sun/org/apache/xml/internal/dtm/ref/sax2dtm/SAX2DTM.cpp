@@ -946,7 +946,7 @@ void SAX2DTM::unparsedEntityDecl($String* name, $String* publicId, $String* syst
 	try {
 		$assign(systemId, $SystemIDResolver::getAbsoluteURI(systemId, $(getDocumentBaseURI())));
 	} catch ($Exception& e) {
-		$throwNew($SAXException, e);
+		$throwNew($SAXException, $cast($Exception, e));
 	}
 	$nc(this->m_entities)->add(publicId);
 	$nc(this->m_entities)->add(systemId);

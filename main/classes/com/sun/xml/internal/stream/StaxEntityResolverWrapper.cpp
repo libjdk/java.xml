@@ -81,9 +81,9 @@ $StaxXMLInputSource* StaxEntityResolverWrapper::resolveEntity($XMLResourceIdenti
 		$assign(object, $nc(this->fStaxResolver)->resolveEntity(var$0, var$1, $(resourceIdentifier->getBaseSystemId()), nullptr));
 		return getStaxInputSource(object);
 	} catch ($XMLStreamException& streamException) {
-		$throwNew($XNIException, streamException);
+		$throwNew($XNIException, $cast($Exception, streamException));
 	} catch ($CatalogException& streamException) {
-		$throwNew($XNIException, streamException);
+		$throwNew($XNIException, $cast($Exception, streamException));
 	}
 	$shouldNotReachHere();
 }

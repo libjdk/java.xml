@@ -283,7 +283,7 @@ void DOMBuilder::startElement($String* ns, $String* localName, $String* name, $A
 		$nc(this->m_elemStack)->push(elem);
 		$set(this, m_currentNode, elem);
 	} catch ($Exception& de) {
-		$throwNew($SAXException, de);
+		$throwNew($SAXException, $cast($Exception, de));
 	}
 }
 

@@ -437,7 +437,7 @@ $Object* FactoryFinder::newInstance($Class* type, $String* className, $ClassLoad
 	} catch ($ClassNotFoundException& x) {
 		$throwNew($FactoryConfigurationError, $$str({"Provider "_s, className, " not found"_s}), static_cast<$Exception*>(x));
 	} catch ($Exception& x) {
-		$throwNew($FactoryConfigurationError, $$str({"Provider "_s, className, " could not be instantiated: "_s, x}), x);
+		$throwNew($FactoryConfigurationError, $$str({"Provider "_s, className, " could not be instantiated: "_s, x}), $cast($Exception, x));
 	}
 	$shouldNotReachHere();
 }

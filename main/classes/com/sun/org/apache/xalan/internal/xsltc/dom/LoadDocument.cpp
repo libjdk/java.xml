@@ -141,7 +141,7 @@ $DTMAxisIterator* LoadDocument::documentF(Object$* arg1, $DTMAxisIterator* arg2,
 			$throwNew($IllegalArgumentException, err);
 		}
 	} catch ($Exception& e) {
-		$throwNew($TransletException, e);
+		$throwNew($TransletException, $cast($Exception, e));
 	}
 	$shouldNotReachHere();
 }
@@ -182,7 +182,7 @@ $DTMAxisIterator* LoadDocument::documentF(Object$* arg, $String* xslURI$renamed,
 			$throwNew($IllegalArgumentException, err);
 		}
 	} catch ($Exception& e) {
-		$throwNew($TransletException, e);
+		$throwNew($TransletException, $cast($Exception, e));
 	}
 	$shouldNotReachHere();
 }

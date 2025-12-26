@@ -1355,7 +1355,7 @@ void SAXImpl::copy(int32_t node, $SerializationHandler* handler, bool isChild) {
 			}
 		}
 	} catch ($Exception& e) {
-		$throwNew($TransletException, e);
+		$throwNew($TransletException, $cast($Exception, e));
 	}
 }
 
@@ -1366,7 +1366,7 @@ void SAXImpl::copyPI(int32_t node, $SerializationHandler* handler) {
 	try {
 		$nc(handler)->processingInstruction(target, value);
 	} catch ($Exception& e) {
-		$throwNew($TransletException, e);
+		$throwNew($TransletException, $cast($Exception, e));
 	}
 }
 
@@ -1432,7 +1432,7 @@ $String* SAXImpl::shallowCopy(int32_t node, $SerializationHandler* handler) {
 			}
 		}
 	} catch ($Exception& e) {
-		$throwNew($TransletException, e);
+		$throwNew($TransletException, $cast($Exception, e));
 	}
 	$shouldNotReachHere();
 }
