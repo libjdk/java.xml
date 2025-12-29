@@ -1,5 +1,6 @@
 #ifndef _java$xml_
 #define _java$xml_
+//$ dependency java.base:17.35
 
 #include <java/lang/def.h>
 
