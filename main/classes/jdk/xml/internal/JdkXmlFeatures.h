@@ -4,7 +4,6 @@
 //$ extends java.lang.Object
 
 #include <java/lang/Array.h>
-#include <javax/xml/XMLConstants.h>
 
 #pragma push_macro("CATALOG_FEATURES")
 #undef CATALOG_FEATURES

@@ -3,7 +3,7 @@
 //$ class com.sun.org.apache.xerces.internal.impl.xs.models.CMNodeFactory
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
+#include <java/lang/Object.h>
 
 #pragma push_macro("DEBUG")
 #undef DEBUG

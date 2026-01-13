@@ -4,10 +4,8 @@
 //$ extends com.sun.org.apache.xerces.internal.parsers.BasicParserConfiguration
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLPullParserConfiguration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/BasicParserConfiguration.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLPullParserConfiguration.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("ALLOW_JAVA_ENCODINGS")
 #undef ALLOW_JAVA_ENCODINGS

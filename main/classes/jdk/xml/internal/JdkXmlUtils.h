@@ -3,8 +3,7 @@
 //$ class jdk.xml.internal.JdkXmlUtils
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
-#include <javax/xml/XMLConstants.h>
+#include <java/lang/Object.h>
 
 #pragma push_macro("CATALOG_DEFER")
 #undef CATALOG_DEFER

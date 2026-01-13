@@ -4,11 +4,8 @@
 //$ extends javax.xml.parsers.DocumentBuilder
 //$ implements com.sun.org.apache.xerces.internal.jaxp.JAXPConstants
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/JAXPConstants.h>
-#include <javax/xml/XMLConstants.h>
 #include <javax/xml/parsers/DocumentBuilder.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("ACCESS_EXTERNAL_DTD")
 #undef ACCESS_EXTERNAL_DTD

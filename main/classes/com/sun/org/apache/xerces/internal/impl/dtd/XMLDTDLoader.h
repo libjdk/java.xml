@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDProcessor
 //$ implements com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDProcessor.h>
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarLoader.h>
 #include <java/lang/Array.h>

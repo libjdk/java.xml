@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl
 //$ extends javax.xml.stream.XMLStreamReader
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <java/lang/Array.h>
 #include <javax/xml/stream/XMLStreamReader.h>
 

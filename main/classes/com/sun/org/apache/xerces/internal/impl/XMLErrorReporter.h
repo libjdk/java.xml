@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.impl.XMLErrorReporter
 //$ extends com.sun.org.apache.xerces.internal.xni.parser.XMLComponent
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <java/lang/Array.h>
 

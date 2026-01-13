@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.parsers.AbstractDOMParser
 //$ extends com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/AbstractXMLDocumentParser.h>
 #include <java/lang/Array.h>
 

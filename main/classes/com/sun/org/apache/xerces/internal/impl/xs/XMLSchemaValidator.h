@@ -4,14 +4,11 @@
 //$ extends com.sun.org.apache.xerces.internal.xni.parser.XMLComponent
 //$ implements com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator,com.sun.org.apache.xerces.internal.impl.RevalidationHandler,com.sun.org.apache.xerces.internal.impl.xs.XSElementDeclHelper
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/RevalidationHandler.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/XSElementDeclHelper.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/identity/FieldActivator.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <java/lang/Array.h>
-#include <javax/xml/XMLConstants.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("ALLOW_JAVA_ENCODINGS")
 #undef ALLOW_JAVA_ENCODINGS

@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOMParser
 //$ extends com.sun.org.apache.xerces.internal.impl.xs.opti.DefaultXMLDocumentHandler
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/opti/DefaultXMLDocumentHandler.h>
 
 #pragma push_macro("ERROR_REPORTER")

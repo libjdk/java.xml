@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.parsers.BasicParserConfiguration
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLPullParserConfiguration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/BasicParserConfiguration.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLPullParserConfiguration.h>
 

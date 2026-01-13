@@ -3,7 +3,6 @@
 //$ class com.sun.xml.internal.stream.XMLEntityStorage
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <java/lang/Array.h>
 
 #pragma push_macro("ERROR_REPORTER")

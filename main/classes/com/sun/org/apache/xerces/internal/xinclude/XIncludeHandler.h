@@ -4,12 +4,10 @@
 //$ extends com.sun.org.apache.xerces.internal.xni.parser.XMLComponent
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentFilter,com.sun.org.apache.xerces.internal.xni.parser.XMLDTDFilter
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDFilter.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentFilter.h>
 #include <java/lang/Array.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("ALLOW_UE_AND_NOTATION_EVENTS")
 #undef ALLOW_UE_AND_NOTATION_EVENTS

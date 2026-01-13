@@ -238,7 +238,7 @@ public:
 	virtual $String* toString() override;
 	static const int8_t DOCHANDLE_SHIFT = 22;
 	static const int32_t NODEHANDLE_MASK = 8388607; // (1 << (DOCHANDLE_SHIFT + 1)) - 1
-	static const int32_t DOCHANDLE_MASK = -8388608; // (-1) - NODEHANDLE_MASK
+	static const int32_t DOCHANDLE_MASK = -8388608; // -1 - NODEHANDLE_MASK
 	int32_t m_docHandle = 0;
 	int32_t m_docElement = 0;
 	int32_t currentParent = 0;

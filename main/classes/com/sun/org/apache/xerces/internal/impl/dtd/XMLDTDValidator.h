@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.xni.parser.XMLComponent
 //$ implements com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidatorFilter,com.sun.org.apache.xerces.internal.impl.RevalidationHandler
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/RevalidationHandler.h>
 #include <com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidatorFilter.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>

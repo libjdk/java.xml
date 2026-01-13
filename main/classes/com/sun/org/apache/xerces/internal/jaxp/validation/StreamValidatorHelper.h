@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.jaxp.validation.StreamValidatorHelper
 //$ extends com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHelper
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHelper.h>
 
 #pragma push_macro("ENTITY_RESOLVER")

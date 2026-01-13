@@ -3,7 +3,7 @@
 //$ interface com.sun.org.apache.xalan.internal.xsltc.runtime.Constants
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xml/internal/dtm/DTM.h>
+#include <java/lang/Object.h>
 
 #pragma push_macro("ANY")
 #undef ANY
@@ -11,28 +11,18 @@
 #undef ATTRIBUTE
 #pragma push_macro("COMMENT")
 #undef COMMENT
-#pragma push_macro("COMMENT_NODE")
-#undef COMMENT_NODE
 #pragma push_macro("ELEMENT")
 #undef ELEMENT
-#pragma push_macro("ELEMENT_NODE")
-#undef ELEMENT_NODE
 #pragma push_macro("EMPTYSTRING")
 #undef EMPTYSTRING
 #pragma push_macro("NAMESPACE_FEATURE")
 #undef NAMESPACE_FEATURE
 #pragma push_macro("PROCESSING_INSTRUCTION")
 #undef PROCESSING_INSTRUCTION
-#pragma push_macro("PROCESSING_INSTRUCTION_NODE")
-#undef PROCESSING_INSTRUCTION_NODE
 #pragma push_macro("ROOT")
 #undef ROOT
-#pragma push_macro("ROOT_NODE")
-#undef ROOT_NODE
 #pragma push_macro("TEXT")
 #undef TEXT
-#pragma push_macro("TEXT_NODE")
-#undef TEXT_NODE
 #pragma push_macro("XMLNS_PREFIX")
 #undef XMLNS_PREFIX
 #pragma push_macro("XMLNS_STRING")
@@ -58,11 +48,11 @@ class Constants : public ::java::lang::Object {
 public:
 	static const int32_t ANY = (-1);
 	static const int32_t ATTRIBUTE = (-2);
-	static const int32_t ROOT = ::com::sun::org::apache::xml::internal::dtm::DTM::ROOT_NODE;
-	static const int32_t TEXT = ::com::sun::org::apache::xml::internal::dtm::DTM::TEXT_NODE;
-	static const int32_t ELEMENT = ::com::sun::org::apache::xml::internal::dtm::DTM::ELEMENT_NODE;
-	static const int32_t COMMENT = ::com::sun::org::apache::xml::internal::dtm::DTM::COMMENT_NODE;
-	static const int32_t PROCESSING_INSTRUCTION = ::com::sun::org::apache::xml::internal::dtm::DTM::PROCESSING_INSTRUCTION_NODE;
+	static const int32_t ROOT = 0; // DTM.ROOT_NODE
+	static const int32_t TEXT = 3; // DTM.TEXT_NODE
+	static const int32_t ELEMENT = 1; // DTM.ELEMENT_NODE
+	static const int32_t COMMENT = 8; // DTM.COMMENT_NODE
+	static const int32_t PROCESSING_INSTRUCTION = 7; // DTM.PROCESSING_INSTRUCTION_NODE
 	static $String* XSLT_URI;
 	static $String* NAMESPACE_FEATURE;
 	static $String* EMPTYSTRING;
@@ -84,17 +74,12 @@ public:
 #pragma pop_macro("ANY")
 #pragma pop_macro("ATTRIBUTE")
 #pragma pop_macro("COMMENT")
-#pragma pop_macro("COMMENT_NODE")
 #pragma pop_macro("ELEMENT")
-#pragma pop_macro("ELEMENT_NODE")
 #pragma pop_macro("EMPTYSTRING")
 #pragma pop_macro("NAMESPACE_FEATURE")
 #pragma pop_macro("PROCESSING_INSTRUCTION")
-#pragma pop_macro("PROCESSING_INSTRUCTION_NODE")
 #pragma pop_macro("ROOT")
-#pragma pop_macro("ROOT_NODE")
 #pragma pop_macro("TEXT")
-#pragma pop_macro("TEXT_NODE")
 #pragma pop_macro("XMLNS_PREFIX")
 #pragma pop_macro("XMLNS_STRING")
 #pragma pop_macro("XMLNS_URI")

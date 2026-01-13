@@ -4,14 +4,11 @@
 //$ extends com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarLoader
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLComponent,com.sun.org.apache.xerces.internal.impl.xs.XSElementDeclHelper,com.sun.org.apache.xerces.internal.xs.XSLoader,org.w3c.dom.DOMConfiguration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/xs/XSElementDeclHelper.h>
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarLoader.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSLoader.h>
 #include <java/lang/Array.h>
-#include <javax/xml/XMLConstants.h>
-#include <jdk/xml/internal/JdkConstants.h>
 #include <org/w3c/dom/DOMConfiguration.h>
 
 #pragma push_macro("ACCESS_EXTERNAL_DTD")

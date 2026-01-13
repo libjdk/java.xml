@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHelper
 //$ implements com.sun.org.apache.xerces.internal.impl.validation.EntityState
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/validation/EntityState.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHelper.h>
 #include <java/lang/Array.h>

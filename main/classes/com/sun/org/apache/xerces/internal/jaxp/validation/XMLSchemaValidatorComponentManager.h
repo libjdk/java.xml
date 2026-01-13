@@ -3,10 +3,8 @@
 //$ class com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaValidatorComponentManager
 //$ extends com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/util/ParserConfigurationSettings.h>
 #include <java/lang/Array.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("DISALLOW_DOCTYPE_DECL_FEATURE")
 #undef DISALLOW_DOCTYPE_DECL_FEATURE

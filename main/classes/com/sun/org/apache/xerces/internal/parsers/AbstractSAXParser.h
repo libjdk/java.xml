@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser
 //$ implements com.sun.org.apache.xerces.internal.xs.PSVIProvider,org.xml.sax.Parser,org.xml.sax.XMLReader
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/AbstractXMLDocumentParser.h>
 #include <com/sun/org/apache/xerces/internal/xs/PSVIProvider.h>
 #include <java/lang/Array.h>

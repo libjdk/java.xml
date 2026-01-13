@@ -3,10 +3,8 @@
 //$ class com.sun.org.apache.xerces.internal.parsers.DOMParser
 //$ extends com.sun.org.apache.xerces.internal.parsers.AbstractDOMParser
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/AbstractDOMParser.h>
 #include <java/lang/Array.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("RECOGNIZED_FEATURES")
 #undef RECOGNIZED_FEATURES

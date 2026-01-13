@@ -68,7 +68,6 @@ namespace com {
 					namespace internal {
 						namespace xsltc {
 							namespace compiler {
-								class Constants;
 								class Parser;
 								class QName;
 								class SymbolTable;

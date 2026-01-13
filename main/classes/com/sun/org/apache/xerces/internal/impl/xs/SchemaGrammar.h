@@ -6,7 +6,6 @@
 
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XSGrammar.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSNamespaceItem.h>
-#include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <java/lang/Array.h>
 
 #pragma push_macro("BASICSET_COUNT")
@@ -29,8 +28,6 @@
 #undef REDEFINED_GROUP_INIT_SIZE
 #pragma push_macro("SG_XSI")
 #undef SG_XSI
-#pragma push_macro("SIMPLE_TYPE")
-#undef SIMPLE_TYPE
 
 namespace com {
 	namespace sun {
@@ -178,6 +175,7 @@ namespace com {
 							class XSNamedMap;
 							class XSNotationDeclaration;
 							class XSObjectList;
+							class XSTypeDefinition;
 						}
 					}
 				}
@@ -355,7 +353,7 @@ public:
 	static ::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar$BuiltinSchemaGrammar* SG_SchemaNSExtended;
 	static ::com::sun::org::apache::xerces::internal::impl::dv::XSSimpleType* fAnySimpleType;
 	static ::com::sun::org::apache::xerces::internal::impl::xs::SchemaGrammar$BuiltinSchemaGrammar* SG_XSI;
-	static const int16_t MAX_COMP_IDX = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition::SIMPLE_TYPE;
+	static const int16_t MAX_COMP_IDX = 16; // XSTypeDefinition.SIMPLE_TYPE
 	static $booleans* GLOBAL_COMP;
 	$Array<::com::sun::org::apache::xerces::internal::xs::XSNamedMap>* fComponents = nullptr;
 	$Array<::com::sun::org::apache::xerces::internal::xs::datatypes::ObjectList>* fComponentsExt = nullptr;
@@ -382,6 +380,5 @@ public:
 #pragma pop_macro("MAX_COMP_IDX")
 #pragma pop_macro("REDEFINED_GROUP_INIT_SIZE")
 #pragma pop_macro("SG_XSI")
-#pragma pop_macro("SIMPLE_TYPE")
 
 #endif // _com_sun_org_apache_xerces_internal_impl_xs_SchemaGrammar_h_

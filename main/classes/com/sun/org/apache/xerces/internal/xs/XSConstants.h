@@ -183,8 +183,8 @@ public:
 	static const int16_t DERIVATION_SUBSTITUTION = 4;
 	static const int16_t DERIVATION_UNION = 8;
 	static const int16_t DERIVATION_LIST = 16;
-	static const int16_t DERIVATION_EXTENSION_RESTRICTION_SUBSTITION = 7; // ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_EXTENSION | ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_RESTRICTION | ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_SUBSTITUTION
-	static const int16_t DERIVATION_ALL = 31; // ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_SUBSTITUTION | ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_EXTENSION | ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_RESTRICTION | ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_LIST | ::com::sun::org::apache::xerces::internal::xs::XSConstants::DERIVATION_UNION
+	static const int16_t DERIVATION_EXTENSION_RESTRICTION_SUBSTITION = 7; // XSConstants.DERIVATION_EXTENSION | XSConstants.DERIVATION_RESTRICTION | XSConstants.DERIVATION_SUBSTITUTION
+	static const int16_t DERIVATION_ALL = 31; // XSConstants.DERIVATION_SUBSTITUTION | XSConstants.DERIVATION_EXTENSION | XSConstants.DERIVATION_RESTRICTION | XSConstants.DERIVATION_LIST | XSConstants.DERIVATION_UNION
 	static const int16_t SCOPE_ABSENT = 0;
 	static const int16_t SCOPE_GLOBAL = 1;
 	static const int16_t SCOPE_LOCAL = 2;

@@ -104,7 +104,7 @@ public:
 	static const int32_t IDENT_DTM_NODE_BITS = 16;
 	static const int32_t IDENT_NODE_DEFAULT = 65535; // (1 << IDENT_DTM_NODE_BITS) - 1
 	static const int32_t IDENT_DTM_DEFAULT = ~IDENT_NODE_DEFAULT;
-	static const int32_t IDENT_MAX_DTMS = 65536; // ((int32_t)((uint64_t)(int64_t)IDENT_DTM_DEFAULT >> IDENT_DTM_NODE_BITS)) + 1
+	static const int32_t IDENT_MAX_DTMS = 65536; // (IDENT_DTM_DEFAULT >>> IDENT_DTM_NODE_BITS) + 1
 };
 
 						} // dtm

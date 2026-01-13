@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl
 //$ extends com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl.h>
 #include <java/lang/Array.h>
 

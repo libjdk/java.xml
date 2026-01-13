@@ -3,13 +3,10 @@
 //$ class com.sun.org.apache.xalan.internal.xsltc.dom.NodeCounter
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xml/internal/dtm/DTM.h>
 #include <java/lang/Array.h>
 
 #pragma push_macro("END")
 #undef END
-#pragma push_macro("NULL")
-#undef NULL
 
 namespace com {
 	namespace sun {
@@ -83,7 +80,7 @@ public:
 	virtual ::com::sun::org::apache::xalan::internal::xsltc::dom::NodeCounter* setStartNode(int32_t node) {return nullptr;}
 	void setTokens($String* format);
 	virtual ::com::sun::org::apache::xalan::internal::xsltc::dom::NodeCounter* setValue(double value);
-	static const int32_t END = ::com::sun::org::apache::xml::internal::dtm::DTM::NULL;
+	static const int32_t END = -1; // DTM.NULL
 	int32_t _node = 0;
 	int32_t _nodeType = 0;
 	double _value = 0.0;
@@ -119,6 +116,5 @@ public:
 } // com
 
 #pragma pop_macro("END")
-#pragma pop_macro("NULL")
 
 #endif // _com_sun_org_apache_xalan_internal_xsltc_dom_NodeCounter_h_

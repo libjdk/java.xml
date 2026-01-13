@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.parsers.SAXParser
 //$ extends com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.h>
 #include <java/lang/Array.h>
 

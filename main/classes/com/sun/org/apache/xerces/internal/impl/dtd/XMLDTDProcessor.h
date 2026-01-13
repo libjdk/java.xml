@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.xni.parser.XMLComponent
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLDTDFilter,com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelFilter
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDContentModelFilter.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDTDFilter.h>

@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.impl.dtd.XML11DTDValidator
 //$ extends com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator.h>
 
 #pragma push_macro("DTD_VALIDATOR_PROPERTY")

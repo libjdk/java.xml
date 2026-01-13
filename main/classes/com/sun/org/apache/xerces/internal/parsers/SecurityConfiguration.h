@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration
 //$ extends com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/XIncludeAwareParserConfiguration.h>
 
 #pragma push_macro("SECURITY_MANAGER_PROPERTY")

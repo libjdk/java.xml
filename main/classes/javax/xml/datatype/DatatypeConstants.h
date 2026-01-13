@@ -3,7 +3,7 @@
 //$ class javax.xml.datatype.DatatypeConstants
 //$ extends java.lang.Object
 
-#include <java/lang/Integer.h>
+#include <java/lang/Object.h>
 
 #pragma push_macro("APRIL")
 #undef APRIL
@@ -63,8 +63,6 @@
 #undef MINUTES
 #pragma push_macro("MIN_TIMEZONE_OFFSET")
 #undef MIN_TIMEZONE_OFFSET
-#pragma push_macro("MIN_VALUE")
-#undef MIN_VALUE
 #pragma push_macro("MONTHS")
 #undef MONTHS
 #pragma push_macro("NOVEMBER")
@@ -120,7 +118,7 @@ public:
 	static const int32_t EQUAL = 0;
 	static const int32_t GREATER = 1;
 	static const int32_t INDETERMINATE = 2;
-	static const int32_t FIELD_UNDEFINED = ::java::lang::Integer::MIN_VALUE;
+	static const int32_t FIELD_UNDEFINED = 0x80000000; // Integer.MIN_VALUE
 	static ::javax::xml::datatype::DatatypeConstants$Field* YEARS;
 	static ::javax::xml::datatype::DatatypeConstants$Field* MONTHS;
 	static ::javax::xml::datatype::DatatypeConstants$Field* DAYS;
@@ -138,7 +136,7 @@ public:
 	static ::javax::xml::namespace$::QName* DURATION;
 	static ::javax::xml::namespace$::QName* DURATION_DAYTIME;
 	static ::javax::xml::namespace$::QName* DURATION_YEARMONTH;
-	static const int32_t MAX_TIMEZONE_OFFSET = -840; // (-14) * 60
+	static const int32_t MAX_TIMEZONE_OFFSET = -840; // -14 * 60
 	static const int32_t MIN_TIMEZONE_OFFSET = 840; // 14 * 60
 };
 
@@ -175,7 +173,6 @@ public:
 #pragma pop_macro("MAY")
 #pragma pop_macro("MINUTES")
 #pragma pop_macro("MIN_TIMEZONE_OFFSET")
-#pragma pop_macro("MIN_VALUE")
 #pragma pop_macro("MONTHS")
 #pragma pop_macro("NOVEMBER")
 #pragma pop_macro("OCTOBER")

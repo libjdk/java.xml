@@ -3,9 +3,7 @@
 //$ class com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <java/lang/Array.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("ALLOW_JAVA_ENCODINGS")
 #undef ALLOW_JAVA_ENCODINGS

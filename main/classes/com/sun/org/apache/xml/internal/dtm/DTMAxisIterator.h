@@ -3,13 +3,10 @@
 //$ interface com.sun.org.apache.xml.internal.dtm.DTMAxisIterator
 //$ extends java.lang.Cloneable
 
-#include <com/sun/org/apache/xml/internal/dtm/DTM.h>
 #include <java/lang/Cloneable.h>
 
 #pragma push_macro("END")
 #undef END
-#pragma push_macro("NULL")
-#undef NULL
 
 namespace com {
 	namespace sun {
@@ -34,7 +31,7 @@ public:
 	virtual void setMark() {}
 	virtual void setRestartable(bool isRestartable) {}
 	virtual ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator* setStartNode(int32_t node) {return nullptr;}
-	static const int32_t END = ::com::sun::org::apache::xml::internal::dtm::DTM::NULL;
+	static const int32_t END = -1; // DTM.NULL
 };
 
 						} // dtm
@@ -46,6 +43,5 @@ public:
 } // com
 
 #pragma pop_macro("END")
-#pragma pop_macro("NULL")
 
 #endif // _com_sun_org_apache_xml_internal_dtm_DTMAxisIterator_h_

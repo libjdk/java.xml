@@ -3,8 +3,7 @@
 //$ class com.sun.org.apache.xerces.internal.impl.PropertyManager
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
-#include <jdk/xml/internal/JdkConstants.h>
+#include <java/lang/Object.h>
 
 #pragma push_macro("CONTEXT_READER")
 #undef CONTEXT_READER

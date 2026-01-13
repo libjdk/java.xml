@@ -4,11 +4,9 @@
 //$ extends com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLPullParserConfiguration,com.sun.org.apache.xerces.internal.parsers.XML11Configurable
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/XML11Configurable.h>
 #include <com/sun/org/apache/xerces/internal/util/ParserConfigurationSettings.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLPullParserConfiguration.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("ALLOW_JAVA_ENCODINGS")
 #undef ALLOW_JAVA_ENCODINGS

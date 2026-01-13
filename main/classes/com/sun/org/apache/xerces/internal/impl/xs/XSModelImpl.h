@@ -6,7 +6,6 @@
 
 #include <com/sun/org/apache/xerces/internal/xs/XSModel.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSNamespaceItemList.h>
-#include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <java/lang/Array.h>
 #include <java/util/AbstractList.h>
 
@@ -14,8 +13,6 @@
 #undef GLOBAL_COMP
 #pragma push_macro("MAX_COMP_IDX")
 #undef MAX_COMP_IDX
-#pragma push_macro("SIMPLE_TYPE")
-#undef SIMPLE_TYPE
 
 namespace com {
 	namespace sun {
@@ -85,6 +82,7 @@ namespace com {
 							class XSNamespaceItem;
 							class XSNotationDeclaration;
 							class XSObjectList;
+							class XSTypeDefinition;
 						}
 					}
 				}
@@ -179,7 +177,7 @@ public:
 	virtual $ObjectArray* toArray($ObjectArray* a) override;
 	void toArray0($ObjectArray* a);
 	virtual $String* toString() override;
-	static const int16_t MAX_COMP_IDX = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition::SIMPLE_TYPE;
+	static const int16_t MAX_COMP_IDX = 16; // XSTypeDefinition.SIMPLE_TYPE
 	static $booleans* GLOBAL_COMP;
 	int32_t fGrammarCount = 0;
 	$StringArray* fNamespaces = nullptr;
@@ -204,6 +202,5 @@ public:
 
 #pragma pop_macro("GLOBAL_COMP")
 #pragma pop_macro("MAX_COMP_IDX")
-#pragma pop_macro("SIMPLE_TYPE")
 
 #endif // _com_sun_org_apache_xerces_internal_impl_xs_XSModelImpl_h_

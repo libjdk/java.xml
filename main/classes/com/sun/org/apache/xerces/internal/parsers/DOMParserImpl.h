@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.parsers.AbstractDOMParser
 //$ implements org.w3c.dom.ls.LSParser,org.w3c.dom.DOMConfiguration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/AbstractDOMParser.h>
 #include <org/w3c/dom/DOMConfiguration.h>
 #include <org/w3c/dom/ls/LSParser.h>

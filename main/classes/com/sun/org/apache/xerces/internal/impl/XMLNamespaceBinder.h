@@ -4,7 +4,6 @@
 //$ extends com.sun.org.apache.xerces.internal.xni.parser.XMLComponent
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentFilter
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponent.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentFilter.h>
 #include <java/lang/Array.h>

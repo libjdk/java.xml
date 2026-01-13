@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.jaxp.SchemaValidatorConfiguration
 //$ extends com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager.h>
 
 #pragma push_macro("ERROR_REPORTER")

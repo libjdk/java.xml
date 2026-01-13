@@ -4,7 +4,6 @@
 //$ extends javax.xml.validation.Validator
 //$ implements com.sun.org.apache.xerces.internal.xs.PSVIProvider
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/xs/PSVIProvider.h>
 #include <javax/xml/validation/Validator.h>
 

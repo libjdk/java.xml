@@ -7,7 +7,6 @@
 #include <com/sun/org/apache/xpath/internal/ExpressionOwner.h>
 #include <java/io/Serializable.h>
 #include <java/lang/Array.h>
-#include <java/lang/Double.h>
 
 #pragma push_macro("DEBUG_MATCHES")
 #undef DEBUG_MATCHES

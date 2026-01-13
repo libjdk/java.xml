@@ -3,10 +3,8 @@
 //$ class com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory
 //$ extends javax.xml.validation.SchemaFactory
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <java/lang/Array.h>
 #include <javax/xml/validation/SchemaFactory.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("JAXP_SOURCE_FEATURE_PREFIX")
 #undef JAXP_SOURCE_FEATURE_PREFIX

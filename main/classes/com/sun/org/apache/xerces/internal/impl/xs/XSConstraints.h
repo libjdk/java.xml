@@ -3,13 +3,10 @@
 //$ class com.sun.org.apache.xerces.internal.impl.xs.XSConstraints
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/xs/SchemaSymbols.h>
 #include <java/lang/Array.h>
 
 #pragma push_macro("ELEMENT_PARTICLE_COMPARATOR")
 #undef ELEMENT_PARTICLE_COMPARATOR
-#pragma push_macro("OCCURRENCE_UNBOUNDED")
-#undef OCCURRENCE_UNBOUNDED
 #pragma push_macro("OCCURRENCE_UNKNOWN")
 #undef OCCURRENCE_UNKNOWN
 #pragma push_macro("STRING_TYPE")
@@ -191,7 +188,7 @@ public:
 	static bool particleValidRestriction(::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl* dParticle, ::com::sun::org::apache::xerces::internal::impl::xs::SubstitutionGroupHandler* dSGHandler, ::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl* bParticle, ::com::sun::org::apache::xerces::internal::impl::xs::SubstitutionGroupHandler* bSGHandler, bool checkWCOccurrence);
 	static ::java::util::List* removePointlessChildren(::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl* p);
 	static void reportSchemaError(::com::sun::org::apache::xerces::internal::impl::XMLErrorReporter* errorReporter, ::com::sun::org::apache::xerces::internal::impl::xs::util::SimpleLocator* loc, $String* key, $ObjectArray* args);
-	static const int32_t OCCURRENCE_UNKNOWN = -2; // ::com::sun::org::apache::xerces::internal::impl::xs::SchemaSymbols::OCCURRENCE_UNBOUNDED - 1
+	static const int32_t OCCURRENCE_UNKNOWN = -2; // SchemaSymbols.OCCURRENCE_UNBOUNDED - 1
 	static ::com::sun::org::apache::xerces::internal::impl::dv::XSSimpleType* STRING_TYPE;
 	static ::com::sun::org::apache::xerces::internal::impl::xs::XSParticleDecl* fEmptyParticle;
 	static ::java::util::Comparator* ELEMENT_PARTICLE_COMPARATOR;
@@ -207,7 +204,6 @@ public:
 } // com
 
 #pragma pop_macro("ELEMENT_PARTICLE_COMPARATOR")
-#pragma pop_macro("OCCURRENCE_UNBOUNDED")
 #pragma pop_macro("OCCURRENCE_UNKNOWN")
 #pragma pop_macro("STRING_TYPE")
 

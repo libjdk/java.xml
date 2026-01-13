@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.parsers.StandardParserConfiguration
 //$ extends com.sun.org.apache.xerces.internal.parsers.DTDConfiguration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/DTDConfiguration.h>
 
 #pragma push_macro("GENERATE_SYNTHETIC_ANNOTATIONS")

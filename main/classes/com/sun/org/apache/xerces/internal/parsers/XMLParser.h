@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.parsers.XMLParser
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <java/lang/Array.h>
 
 #pragma push_macro("ENTITY_RESOLVER")

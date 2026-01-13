@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
 //$ extends javax.xml.parsers.SAXParserFactory
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <javax/xml/parsers/SAXParserFactory.h>
 
 #pragma push_macro("NAMESPACES_FEATURE")

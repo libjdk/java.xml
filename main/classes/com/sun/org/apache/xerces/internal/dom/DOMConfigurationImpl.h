@@ -4,10 +4,8 @@
 //$ extends com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration,org.w3c.dom.DOMConfiguration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/util/ParserConfigurationSettings.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration.h>
-#include <jdk/xml/internal/JdkConstants.h>
 #include <org/w3c/dom/DOMConfiguration.h>
 
 #pragma push_macro("BALANCE_SYNTAX_TREES")

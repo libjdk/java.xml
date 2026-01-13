@@ -4,11 +4,9 @@
 //$ extends javax.xml.parsers.SAXParser
 //$ implements com.sun.org.apache.xerces.internal.jaxp.JAXPConstants,com.sun.org.apache.xerces.internal.xs.PSVIProvider
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/JAXPConstants.h>
 #include <com/sun/org/apache/xerces/internal/xs/PSVIProvider.h>
 #include <javax/xml/parsers/SAXParser.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("NAMESPACES_FEATURE")
 #undef NAMESPACES_FEATURE

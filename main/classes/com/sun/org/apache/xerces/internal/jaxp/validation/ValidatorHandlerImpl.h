@@ -4,14 +4,12 @@
 //$ extends javax.xml.validation.ValidatorHandler
 //$ implements org.xml.sax.DTDHandler,com.sun.org.apache.xerces.internal.impl.validation.EntityState,com.sun.org.apache.xerces.internal.xs.PSVIProvider,com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHelper,com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/validation/EntityState.h>
 #include <com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHelper.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLDocumentHandler.h>
 #include <com/sun/org/apache/xerces/internal/xs/PSVIProvider.h>
 #include <java/lang/Array.h>
 #include <javax/xml/validation/ValidatorHandler.h>
-#include <jdk/xml/internal/JdkConstants.h>
 #include <org/xml/sax/DTDHandler.h>
 
 #pragma push_macro("ERROR_REPORTER")

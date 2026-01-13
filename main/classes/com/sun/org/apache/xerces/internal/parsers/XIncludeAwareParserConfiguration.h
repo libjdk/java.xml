@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration
 //$ extends com.sun.org.apache.xerces.internal.parsers.XML11Configuration
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/parsers/XML11Configuration.h>
 
 #pragma push_macro("ALLOW_UE_AND_NOTATION_EVENTS")

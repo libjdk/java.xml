@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.impl.XMLVersionDetector
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <java/lang/Array.h>
 
 #pragma push_macro("ENTITY_MANAGER")

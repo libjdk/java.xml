@@ -3,7 +3,6 @@
 //$ class com.sun.org.apache.xerces.internal.impl.XMLEntityScanner
 //$ extends com.sun.org.apache.xerces.internal.xni.XMLLocator
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/xni/XMLLocator.h>
 #include <java/lang/Array.h>
 

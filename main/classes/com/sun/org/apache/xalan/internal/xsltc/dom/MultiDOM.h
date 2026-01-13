@@ -6,8 +6,6 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/DOM.h>
 #include <java/lang/Array.h>
 
-#pragma push_macro("FIRST_TYPE")
-#undef FIRST_TYPE
 #pragma push_macro("INITIAL_SIZE")
 #undef INITIAL_SIZE
 #pragma push_macro("NO_TYPE")
@@ -160,7 +158,7 @@ public:
 	virtual void setFilter(::com::sun::org::apache::xalan::internal::xsltc::StripFilter* filter) override;
 	virtual void setupMapping($StringArray* names, $StringArray* uris, $ints* types, $StringArray* namespaces) override;
 	virtual $String* shallowCopy(int32_t node, ::com::sun::org::apache::xml::internal::serializer::SerializationHandler* handler) override;
-	static const int32_t NO_TYPE = -2; // ::com::sun::org::apache::xalan::internal::xsltc::DOM::FIRST_TYPE - 2
+	static const int32_t NO_TYPE = -2; // DOM.FIRST_TYPE - 2
 	static const int32_t INITIAL_SIZE = 4;
 	$Array<::com::sun::org::apache::xalan::internal::xsltc::DOM>* _adapters = nullptr;
 	::com::sun::org::apache::xalan::internal::xsltc::dom::DOMAdapter* _main = nullptr;
@@ -179,7 +177,6 @@ public:
 	} // sun
 } // com
 
-#pragma pop_macro("FIRST_TYPE")
 #pragma pop_macro("INITIAL_SIZE")
 #pragma pop_macro("NO_TYPE")
 

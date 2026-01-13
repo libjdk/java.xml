@@ -16,8 +16,6 @@
 #undef JJK_DEBUG
 #pragma push_macro("NOTPROCESSED")
 #undef NOTPROCESSED
-#pragma push_macro("NULL")
-#undef NULL
 #pragma push_macro("ROOTNODE")
 #undef ROOTNODE
 
@@ -218,7 +216,7 @@ public:
 	static const int32_t DEFAULT_BLOCKSIZE = 512;
 	static const int32_t DEFAULT_NUMBLOCKS = 32;
 	static const int32_t DEFAULT_NUMBLOCKS_SMALL = 4;
-	static const int32_t NOTPROCESSED = -2; // ::com::sun::org::apache::xml::internal::dtm::DTM::NULL - 1
+	static const int32_t NOTPROCESSED = -2; // DTM.NULL - 1
 	::com::sun::org::apache::xml::internal::dtm::DTMManager* m_mgr = nullptr;
 	::com::sun::org::apache::xml::internal::dtm::ref::DTMManagerDefault* m_mgrDefault = nullptr;
 	::com::sun::org::apache::xml::internal::utils::SuballocatedIntVector* m_dtmIdent = nullptr;
@@ -246,7 +244,6 @@ public:
 #pragma pop_macro("DEFAULT_NUMBLOCKS_SMALL")
 #pragma pop_macro("JJK_DEBUG")
 #pragma pop_macro("NOTPROCESSED")
-#pragma pop_macro("NULL")
 #pragma pop_macro("ROOTNODE")
 
 #endif // _com_sun_org_apache_xml_internal_dtm_ref_DTMDefaultBase_h_

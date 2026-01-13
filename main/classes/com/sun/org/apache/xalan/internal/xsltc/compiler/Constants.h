@@ -3,7 +3,6 @@
 //$ interface com.sun.org.apache.xalan.internal.xsltc.compiler.Constants
 //$ extends java.lang.Object
 
-#include <com/sun/org/apache/bcel/internal/Const.h>
 #include <java/lang/Array.h>
 
 #pragma push_macro("AASTORE")
@@ -634,12 +633,12 @@ public:
 	static $String* MULTI_DOM_CLASS;
 	static $String* MULTI_DOM_SIG;
 	static $String* STRING;
-	static const int32_t ACC_PUBLIC = com::sun::org::apache::bcel::internal::Const::ACC_PUBLIC;
-	static const int32_t ACC_SUPER = com::sun::org::apache::bcel::internal::Const::ACC_SUPER;
-	static const int32_t ACC_FINAL = com::sun::org::apache::bcel::internal::Const::ACC_FINAL;
-	static const int32_t ACC_PRIVATE = com::sun::org::apache::bcel::internal::Const::ACC_PRIVATE;
-	static const int32_t ACC_PROTECTED = com::sun::org::apache::bcel::internal::Const::ACC_PROTECTED;
-	static const int32_t ACC_STATIC = com::sun::org::apache::bcel::internal::Const::ACC_STATIC;
+	static const int32_t ACC_PUBLIC = 1; // com.sun.org.apache.bcel.internal.Const.ACC_PUBLIC
+	static const int32_t ACC_SUPER = 32; // com.sun.org.apache.bcel.internal.Const.ACC_SUPER
+	static const int32_t ACC_FINAL = 16; // com.sun.org.apache.bcel.internal.Const.ACC_FINAL
+	static const int32_t ACC_PRIVATE = 2; // com.sun.org.apache.bcel.internal.Const.ACC_PRIVATE
+	static const int32_t ACC_PROTECTED = 4; // com.sun.org.apache.bcel.internal.Const.ACC_PROTECTED
+	static const int32_t ACC_STATIC = 8; // com.sun.org.apache.bcel.internal.Const.ACC_STATIC
 	static $String* MODULE_SIG;
 	static $String* CLASS_SIG;
 	static $String* STRING_SIG;

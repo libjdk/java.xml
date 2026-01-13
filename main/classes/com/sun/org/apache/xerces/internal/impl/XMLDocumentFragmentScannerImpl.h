@@ -4,13 +4,11 @@
 //$ extends com.sun.org.apache.xerces.internal.impl.XMLScanner
 //$ implements com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner,com.sun.org.apache.xerces.internal.impl.XMLEntityHandler,com.sun.xml.internal.stream.XMLBufferListener
 
-#include <com/sun/org/apache/xerces/internal/impl/Constants.h>
 #include <com/sun/org/apache/xerces/internal/impl/XMLEntityHandler.h>
 #include <com/sun/org/apache/xerces/internal/impl/XMLScanner.h>
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLDocumentScanner.h>
 #include <com/sun/xml/internal/stream/XMLBufferListener.h>
 #include <java/lang/Array.h>
-#include <jdk/xml/internal/JdkConstants.h>
 
 #pragma push_macro("CDATA")
 #undef CDATA
