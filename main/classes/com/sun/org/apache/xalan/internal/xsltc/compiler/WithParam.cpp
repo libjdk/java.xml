@@ -109,17 +109,17 @@ $FieldInfo _WithParam_FieldInfo_[] = {
 };
 
 $MethodInfo _WithParam_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(WithParam::*)()>(&WithParam::init$))},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"getEscapedName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(WithParam::*)()>(&WithParam::getEscapedName))},
-	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;", nullptr, $PUBLIC, $method(static_cast<$QName*(WithParam::*)()>(&WithParam::getName))},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"releaseResultTree", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(static_cast<void(WithParam::*)($ClassGenerator*,$MethodGenerator*)>(&WithParam::releaseResultTree))},
-	{"setDoParameterOptimization", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(WithParam::*)(bool)>(&WithParam::setDoParameterOptimization))},
-	{"setName", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC, $method(static_cast<void(WithParam::*)($QName*)>(&WithParam::setName))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"translateValue", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(static_cast<void(WithParam::*)($ClassGenerator*,$MethodGenerator*)>(&WithParam::translateValue))},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "()V", nullptr, 0, $method(WithParam, init$, void)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(WithParam, display, void, int32_t)},
+	{"getEscapedName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(WithParam, getEscapedName, $String*)},
+	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;", nullptr, $PUBLIC, $method(WithParam, getName, $QName*)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(WithParam, parseContents, void, $Parser*)},
+	{"releaseResultTree", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(WithParam, releaseResultTree, void, $ClassGenerator*, $MethodGenerator*)},
+	{"setDoParameterOptimization", "(Z)V", nullptr, $PUBLIC, $method(WithParam, setDoParameterOptimization, void, bool)},
+	{"setName", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC, $method(WithParam, setName, void, $QName*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(WithParam, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"translateValue", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(WithParam, translateValue, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(WithParam, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

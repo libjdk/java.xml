@@ -35,20 +35,20 @@ $FieldInfo _DTMAxisIteratorBase_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMAxisIteratorBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTMAxisIteratorBase::*)()>(&DTMAxisIteratorBase::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"getStartNode", "()I", nullptr, $PUBLIC},
-	{"includeSelf", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"isDocOrdered", "()Z", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"resetPosition", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PROTECTED | $FINAL, $method(static_cast<$DTMAxisIterator*(DTMAxisIteratorBase::*)()>(&DTMAxisIteratorBase::resetPosition))},
-	{"returnNode", "(I)I", nullptr, $PROTECTED | $FINAL, $method(static_cast<int32_t(DTMAxisIteratorBase::*)(int32_t)>(&DTMAxisIteratorBase::returnNode))},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTMAxisIteratorBase, init$, void)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, cloneIterator, $DTMAxisIterator*)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, getAxis, int32_t)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, getLast, int32_t)},
+	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, getNodeByPosition, int32_t, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, getPosition, int32_t)},
+	{"getStartNode", "()I", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, getStartNode, int32_t)},
+	{"includeSelf", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, includeSelf, $DTMAxisIterator*)},
+	{"isDocOrdered", "()Z", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, isDocOrdered, bool)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, isReverse, bool)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, reset, $DTMAxisIterator*)},
+	{"resetPosition", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PROTECTED | $FINAL, $method(DTMAxisIteratorBase, resetPosition, $DTMAxisIterator*)},
+	{"returnNode", "(I)I", nullptr, $PROTECTED | $FINAL, $method(DTMAxisIteratorBase, returnNode, int32_t, int32_t)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DTMAxisIteratorBase, setRestartable, void, bool)},
 	{}
 };
 

@@ -32,12 +32,12 @@ $FieldInfo _Token$ModifierToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$ModifierToken_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;II)V", nullptr, 0, $method(static_cast<void(Token$ModifierToken::*)($Token*,int32_t,int32_t)>(&Token$ModifierToken::init$))},
-	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0},
-	{"getOptions", "()I", nullptr, 0},
-	{"getOptionsMask", "()I", nullptr, 0},
-	{"size", "()I", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;II)V", nullptr, 0, $method(Token$ModifierToken, init$, void, $Token*, int32_t, int32_t)},
+	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0, $virtualMethod(Token$ModifierToken, getChild, $Token*, int32_t)},
+	{"getOptions", "()I", nullptr, 0, $virtualMethod(Token$ModifierToken, getOptions, int32_t)},
+	{"getOptionsMask", "()I", nullptr, 0, $virtualMethod(Token$ModifierToken, getOptionsMask, int32_t)},
+	{"size", "()I", nullptr, 0, $virtualMethod(Token$ModifierToken, size, int32_t)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$ModifierToken, toString, $String*, int32_t)},
 	{}
 };
 

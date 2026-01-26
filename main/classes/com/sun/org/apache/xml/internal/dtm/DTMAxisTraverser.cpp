@@ -14,11 +14,11 @@ namespace com {
 						namespace dtm {
 
 $MethodInfo _DTMAxisTraverser_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTMAxisTraverser::*)()>(&DTMAxisTraverser::init$))},
-	{"first", "(I)I", nullptr, $PUBLIC},
-	{"first", "(II)I", nullptr, $PUBLIC},
-	{"next", "(II)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"next", "(III)I", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTMAxisTraverser, init$, void)},
+	{"first", "(I)I", nullptr, $PUBLIC, $virtualMethod(DTMAxisTraverser, first, int32_t, int32_t)},
+	{"first", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMAxisTraverser, first, int32_t, int32_t, int32_t)},
+	{"next", "(II)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMAxisTraverser, next, int32_t, int32_t, int32_t)},
+	{"next", "(III)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMAxisTraverser, next, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

@@ -22,8 +22,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _DUP2_X1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DUP2_X1::*)()>(&DUP2_X1::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DUP2_X1, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(DUP2_X1, accept, void, $Visitor*)},
 	{}
 };
 

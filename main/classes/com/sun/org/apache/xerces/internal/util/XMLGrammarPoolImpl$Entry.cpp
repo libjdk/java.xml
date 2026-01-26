@@ -29,8 +29,8 @@ $FieldInfo _XMLGrammarPoolImpl$Entry_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLGrammarPoolImpl$Entry_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;Lcom/sun/org/apache/xerces/internal/util/XMLGrammarPoolImpl$Entry;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLGrammarPoolImpl$Entry::*)(int32_t,$XMLGrammarDescription*,$Grammar*,XMLGrammarPoolImpl$Entry*)>(&XMLGrammarPoolImpl$Entry::init$))},
-	{"clear", "()V", nullptr, $PROTECTED, $method(static_cast<void(XMLGrammarPoolImpl$Entry::*)()>(&XMLGrammarPoolImpl$Entry::clear))},
+	{"<init>", "(ILcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;Lcom/sun/org/apache/xerces/internal/util/XMLGrammarPoolImpl$Entry;)V", nullptr, $PROTECTED, $method(XMLGrammarPoolImpl$Entry, init$, void, int32_t, $XMLGrammarDescription*, $Grammar*, XMLGrammarPoolImpl$Entry*)},
+	{"clear", "()V", nullptr, $PROTECTED, $method(XMLGrammarPoolImpl$Entry, clear, void)},
 	{}
 };
 

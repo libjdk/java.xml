@@ -32,10 +32,10 @@ $FieldInfo _XSNamedMapImpl$1$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XSNamedMapImpl$1$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl$1;)V", nullptr, 0, $method(static_cast<void(XSNamedMapImpl$1$1::*)($XSNamedMapImpl$1*)>(&XSNamedMapImpl$1$1::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Ljava/util/Map$Entry;", "()Ljava/util/Map$Entry<Ljavax/xml/namespace/QName;Lcom/sun/org/apache/xerces/internal/xs/XSObject;>;", $PUBLIC},
-	{"remove", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl$1;)V", nullptr, 0, $method(XSNamedMapImpl$1$1, init$, void, $XSNamedMapImpl$1*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XSNamedMapImpl$1$1, hasNext, bool)},
+	{"next", "()Ljava/util/Map$Entry;", "()Ljava/util/Map$Entry<Ljavax/xml/namespace/QName;Lcom/sun/org/apache/xerces/internal/xs/XSObject;>;", $PUBLIC, $virtualMethod(XSNamedMapImpl$1$1, next, $Object*)},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(XSNamedMapImpl$1$1, remove, void)},
 	{}
 };
 

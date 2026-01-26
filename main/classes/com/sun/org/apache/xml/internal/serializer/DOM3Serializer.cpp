@@ -7,6 +7,9 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $DOMErrorHandler = ::org::w3c::dom::DOMErrorHandler;
+using $Node = ::org::w3c::dom::Node;
+using $LSSerializerFilter = ::org::w3c::dom::ls::LSSerializerFilter;
 
 namespace com {
 	namespace sun {
@@ -17,12 +20,12 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _DOM3Serializer_MethodInfo_[] = {
-	{"getErrorHandler", "()Lorg/w3c/dom/DOMErrorHandler;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNodeFilter", "()Lorg/w3c/dom/ls/LSSerializerFilter;", nullptr, $PUBLIC | $ABSTRACT},
-	{"serializeDOM3", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
-	{"setErrorHandler", "(Lorg/w3c/dom/DOMErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setNewLine", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setNodeFilter", "(Lorg/w3c/dom/ls/LSSerializerFilter;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getErrorHandler", "()Lorg/w3c/dom/DOMErrorHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOM3Serializer, getErrorHandler, $DOMErrorHandler*)},
+	{"getNodeFilter", "()Lorg/w3c/dom/ls/LSSerializerFilter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOM3Serializer, getNodeFilter, $LSSerializerFilter*)},
+	{"serializeDOM3", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOM3Serializer, serializeDOM3, void, $Node*), "java.io.IOException"},
+	{"setErrorHandler", "(Lorg/w3c/dom/DOMErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOM3Serializer, setErrorHandler, void, $DOMErrorHandler*)},
+	{"setNewLine", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOM3Serializer, setNewLine, void, $String*)},
+	{"setNodeFilter", "(Lorg/w3c/dom/ls/LSSerializerFilter;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOM3Serializer, setNodeFilter, void, $LSSerializerFilter*)},
 	{}
 };
 

@@ -29,13 +29,13 @@ $FieldInfo _UriSuffix_FieldInfo_[] = {
 };
 
 $MethodInfo _UriSuffix_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(UriSuffix::*)($String*,$String*,$String*)>(&UriSuffix::init$))},
-	{"getURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(UriSuffix::*)()>(&UriSuffix::getURI))},
-	{"getURISuffix", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(UriSuffix::*)()>(&UriSuffix::getURISuffix))},
-	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(UriSuffix::*)($String*)>(&UriSuffix::setURI))},
-	{"setURISuffix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(UriSuffix::*)($String*)>(&UriSuffix::setURISuffix))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(UriSuffix, init$, void, $String*, $String*, $String*)},
+	{"getURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(UriSuffix, getURI, $String*)},
+	{"getURISuffix", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(UriSuffix, getURISuffix, $String*)},
+	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(UriSuffix, match, $String*, $String*, int32_t)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(UriSuffix, match, $String*, $String*)},
+	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(UriSuffix, setURI, void, $String*)},
+	{"setURISuffix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(UriSuffix, setURISuffix, void, $String*)},
 	{}
 };
 

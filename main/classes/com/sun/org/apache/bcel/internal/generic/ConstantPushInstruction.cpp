@@ -7,6 +7,7 @@
 using $PushInstruction = ::com::sun::org::apache::bcel::internal::generic::PushInstruction;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Number = ::java::lang::Number;
 
 namespace com {
 	namespace sun {
@@ -20,7 +21,7 @@ $MethodInfo _ConstantPushInstruction_MethodInfo_[] = {
 	{"*clone", "()Ljava/lang/Object;", nullptr, $PROTECTED | $NATIVE},
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
-	{"getValue", "()Ljava/lang/Number;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getValue", "()Ljava/lang/Number;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ConstantPushInstruction, getValue, $Number*)},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}

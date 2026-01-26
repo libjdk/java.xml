@@ -23,17 +23,17 @@ $FieldInfo _StringToStringTable_FieldInfo_[] = {
 };
 
 $MethodInfo _StringToStringTable_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringToStringTable::*)()>(&StringToStringTable::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(StringToStringTable::*)(int32_t)>(&StringToStringTable::init$))},
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringToStringTable::*)($String*)>(&StringToStringTable::contains))},
-	{"containsValue", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringToStringTable::*)($String*)>(&StringToStringTable::containsValue))},
-	{"elementAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringToStringTable::*)(int32_t)>(&StringToStringTable::elementAt))},
-	{"get", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringToStringTable::*)($String*)>(&StringToStringTable::get))},
-	{"getByValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringToStringTable::*)($String*)>(&StringToStringTable::getByValue))},
-	{"getIgnoreCase", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringToStringTable::*)($String*)>(&StringToStringTable::getIgnoreCase))},
-	{"getLength", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToStringTable::*)()>(&StringToStringTable::getLength))},
-	{"put", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringToStringTable::*)($String*,$String*)>(&StringToStringTable::put))},
-	{"remove", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringToStringTable::*)($String*)>(&StringToStringTable::remove))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StringToStringTable, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(StringToStringTable, init$, void, int32_t)},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, contains, bool, $String*)},
+	{"containsValue", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, containsValue, bool, $String*)},
+	{"elementAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, elementAt, $String*, int32_t)},
+	{"get", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, get, $String*, $String*)},
+	{"getByValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, getByValue, $String*, $String*)},
+	{"getIgnoreCase", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, getIgnoreCase, $String*, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, getLength, int32_t)},
+	{"put", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, put, void, $String*, $String*)},
+	{"remove", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(StringToStringTable, remove, void, $String*)},
 	{}
 };
 

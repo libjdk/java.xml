@@ -29,22 +29,22 @@ $FieldInfo _Arg_FieldInfo_[] = {
 };
 
 $MethodInfo _Arg_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Arg::*)()>(&Arg::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/QName;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(Arg::*)($QName*,$String*,bool)>(&Arg::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/QName;Lcom/sun/org/apache/xpath/internal/objects/XObject;)V", nullptr, $PUBLIC, $method(static_cast<void(Arg::*)($QName*,$XObject*)>(&Arg::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/QName;Lcom/sun/org/apache/xpath/internal/objects/XObject;Z)V", nullptr, $PUBLIC, $method(static_cast<void(Arg::*)($QName*,$XObject*,bool)>(&Arg::init$))},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getExpression", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getQName", "()Lcom/sun/org/apache/xml/internal/utils/QName;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$QName*(Arg::*)()>(&Arg::getQName))},
-	{"getVal", "()Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$XObject*(Arg::*)()>(&Arg::getVal))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"isFromWithParam", "()Z", nullptr, $PUBLIC},
-	{"isVisible", "()Z", nullptr, $PUBLIC},
-	{"setExpression", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setIsVisible", "(Z)V", nullptr, $PUBLIC},
-	{"setQName", "(Lcom/sun/org/apache/xml/internal/utils/QName;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(Arg::*)($QName*)>(&Arg::setQName))},
-	{"setVal", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(Arg::*)($XObject*)>(&Arg::setVal))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Arg, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/QName;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(Arg, init$, void, $QName*, $String*, bool)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/QName;Lcom/sun/org/apache/xpath/internal/objects/XObject;)V", nullptr, $PUBLIC, $method(Arg, init$, void, $QName*, $XObject*)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/QName;Lcom/sun/org/apache/xpath/internal/objects/XObject;Z)V", nullptr, $PUBLIC, $method(Arg, init$, void, $QName*, $XObject*, bool)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(Arg, detach, void)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(Arg, equals, bool, Object$*)},
+	{"getExpression", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Arg, getExpression, $String*)},
+	{"getQName", "()Lcom/sun/org/apache/xml/internal/utils/QName;", nullptr, $PUBLIC | $FINAL, $method(Arg, getQName, $QName*)},
+	{"getVal", "()Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $FINAL, $method(Arg, getVal, $XObject*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(Arg, hashCode, int32_t)},
+	{"isFromWithParam", "()Z", nullptr, $PUBLIC, $virtualMethod(Arg, isFromWithParam, bool)},
+	{"isVisible", "()Z", nullptr, $PUBLIC, $virtualMethod(Arg, isVisible, bool)},
+	{"setExpression", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(Arg, setExpression, void, $String*)},
+	{"setIsVisible", "(Z)V", nullptr, $PUBLIC, $virtualMethod(Arg, setIsVisible, void, bool)},
+	{"setQName", "(Lcom/sun/org/apache/xml/internal/utils/QName;)V", nullptr, $PUBLIC | $FINAL, $method(Arg, setQName, void, $QName*)},
+	{"setVal", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)V", nullptr, $PUBLIC | $FINAL, $method(Arg, setVal, void, $XObject*)},
 	{}
 };
 

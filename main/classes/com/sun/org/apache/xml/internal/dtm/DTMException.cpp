@@ -21,9 +21,9 @@ $FieldInfo _DTMException_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMException::*)($String*)>(&DTMException::init$))},
-	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMException::*)($Throwable*)>(&DTMException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMException::*)($String*,$Throwable*)>(&DTMException::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DTMException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(DTMException, init$, void, $Throwable*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(DTMException, init$, void, $String*, $Throwable*)},
 	{}
 };
 

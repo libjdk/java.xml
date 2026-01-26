@@ -54,19 +54,19 @@ $FieldInfo _Encodings_FieldInfo_[] = {
 };
 
 $MethodInfo _Encodings_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Encodings::*)()>(&Encodings::init$))},
-	{"convertJava2MimeEncoding", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&Encodings::convertJava2MimeEncoding))},
-	{"convertMime2JavaEncoding", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&Encodings::convertMime2JavaEncoding))},
-	{"getEncodingInfo", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, $STATIC, $method(static_cast<$EncodingInfo*(*)($String*)>(&Encodings::getEncodingInfo))},
-	{"getLastPrintable", "()I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)()>(&Encodings::getLastPrintable))},
-	{"getMimeEncoding", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Encodings::getMimeEncoding))},
-	{"getWriter", "(Ljava/io/OutputStream;Ljava/lang/String;)Ljava/io/Writer;", nullptr, $STATIC, $method(static_cast<$Writer*(*)($OutputStream*,$String*)>(&Encodings::getWriter)), "java.io.UnsupportedEncodingException"},
-	{"isHighUTF16Surrogate", "(C)Z", nullptr, $STATIC, $method(static_cast<bool(*)(char16_t)>(&Encodings::isHighUTF16Surrogate))},
-	{"isLowUTF16Surrogate", "(C)Z", nullptr, $STATIC, $method(static_cast<bool(*)(char16_t)>(&Encodings::isLowUTF16Surrogate))},
-	{"isRecognizedEncoding", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&Encodings::isRecognizedEncoding))},
-	{"toCodePoint", "(CC)I", nullptr, $STATIC, $method(static_cast<int32_t(*)(char16_t,char16_t)>(&Encodings::toCodePoint))},
-	{"toCodePoint", "(C)I", nullptr, $STATIC, $method(static_cast<int32_t(*)(char16_t)>(&Encodings::toCodePoint))},
-	{"toUpperCaseFast", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&Encodings::toUpperCaseFast))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Encodings, init$, void)},
+	{"convertJava2MimeEncoding", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(Encodings, convertJava2MimeEncoding, $String*, $String*)},
+	{"convertMime2JavaEncoding", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Encodings, convertMime2JavaEncoding, $String*, $String*)},
+	{"getEncodingInfo", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, $STATIC, $staticMethod(Encodings, getEncodingInfo, $EncodingInfo*, $String*)},
+	{"getLastPrintable", "()I", nullptr, $PUBLIC | $STATIC, $staticMethod(Encodings, getLastPrintable, int32_t)},
+	{"getMimeEncoding", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Encodings, getMimeEncoding, $String*, $String*)},
+	{"getWriter", "(Ljava/io/OutputStream;Ljava/lang/String;)Ljava/io/Writer;", nullptr, $STATIC, $staticMethod(Encodings, getWriter, $Writer*, $OutputStream*, $String*), "java.io.UnsupportedEncodingException"},
+	{"isHighUTF16Surrogate", "(C)Z", nullptr, $STATIC, $staticMethod(Encodings, isHighUTF16Surrogate, bool, char16_t)},
+	{"isLowUTF16Surrogate", "(C)Z", nullptr, $STATIC, $staticMethod(Encodings, isLowUTF16Surrogate, bool, char16_t)},
+	{"isRecognizedEncoding", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(Encodings, isRecognizedEncoding, bool, $String*)},
+	{"toCodePoint", "(CC)I", nullptr, $STATIC, $staticMethod(Encodings, toCodePoint, int32_t, char16_t, char16_t)},
+	{"toCodePoint", "(C)I", nullptr, $STATIC, $staticMethod(Encodings, toCodePoint, int32_t, char16_t)},
+	{"toUpperCaseFast", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(Encodings, toUpperCaseFast, $String*, $String*)},
 	{}
 };
 

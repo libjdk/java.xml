@@ -52,6 +52,7 @@ using $ConstantString = ::com::sun::org::apache::bcel::internal::classfile::Cons
 using $ConstantUtf8 = ::com::sun::org::apache::bcel::internal::classfile::ConstantUtf8;
 using $BCELComparator = ::com::sun::org::apache::bcel::internal::util::BCELComparator;
 using $DataInput = ::java::io::DataInput;
+using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CloneNotSupportedException = ::java::lang::CloneNotSupportedException;
 using $Cloneable = ::java::lang::Cloneable;
@@ -77,17 +78,17 @@ $FieldInfo _Constant_FieldInfo_[] = {
 $MethodInfo _Constant_MethodInfo_[] = {
 	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC | $ABSTRACT},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
-	{"<init>", "(B)V", nullptr, 0, $method(static_cast<void(Constant::*)(int8_t)>(&Constant::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/Constant;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getComparator", "()Lcom/sun/org/apache/bcel/internal/util/BCELComparator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$BCELComparator*(*)()>(&Constant::getComparator))},
-	{"getTag", "()B", nullptr, $PUBLIC | $FINAL, $method(static_cast<int8_t(Constant::*)()>(&Constant::getTag))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"readConstant", "(Ljava/io/DataInput;)Lcom/sun/org/apache/bcel/internal/classfile/Constant;", nullptr, $PUBLIC | $STATIC, $method(static_cast<Constant*(*)($DataInput*)>(&Constant::readConstant)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"setComparator", "(Lcom/sun/org/apache/bcel/internal/util/BCELComparator;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($BCELComparator*)>(&Constant::setComparator))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(B)V", nullptr, 0, $method(Constant, init$, void, int8_t)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(Constant, clone, $Object*)},
+	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/Constant;", nullptr, $PUBLIC, $virtualMethod(Constant, copy, Constant*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Constant, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(Constant, equals, bool, Object$*)},
+	{"getComparator", "()Lcom/sun/org/apache/bcel/internal/util/BCELComparator;", nullptr, $PUBLIC | $STATIC, $staticMethod(Constant, getComparator, $BCELComparator*)},
+	{"getTag", "()B", nullptr, $PUBLIC | $FINAL, $method(Constant, getTag, int8_t)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(Constant, hashCode, int32_t)},
+	{"readConstant", "(Ljava/io/DataInput;)Lcom/sun/org/apache/bcel/internal/classfile/Constant;", nullptr, $PUBLIC | $STATIC, $staticMethod(Constant, readConstant, Constant*, $DataInput*), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"setComparator", "(Lcom/sun/org/apache/bcel/internal/util/BCELComparator;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(Constant, setComparator, void, $BCELComparator*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Constant, toString, $String*)},
 	{}
 };
 

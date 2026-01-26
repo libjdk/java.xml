@@ -32,10 +32,10 @@ $FieldInfo _XPath$Axis_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath$Axis_MethodInfo_[] = {
-	{"<init>", "(S)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Axis::*)(int16_t)>(&XPath$Axis::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Axis;)V", nullptr, $PROTECTED, $method(static_cast<void(XPath$Axis::*)(XPath$Axis*)>(&XPath$Axis::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(S)V", nullptr, $PUBLIC, $method(XPath$Axis, init$, void, int16_t)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Axis;)V", nullptr, $PROTECTED, $method(XPath$Axis, init$, void, XPath$Axis*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPath$Axis, clone, $Object*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPath$Axis, toString, $String*)},
 	{}
 };
 

@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _I2B_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(I2B::*)()>(&I2B::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(I2B, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(I2B, accept, void, $Visitor*)},
 	{}
 };
 

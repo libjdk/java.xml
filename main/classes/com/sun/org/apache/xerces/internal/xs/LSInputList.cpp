@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $LSInput = ::org::w3c::dom::ls::LSInput;
 
 namespace com {
 	namespace sun {
@@ -15,8 +16,8 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _LSInputList_MethodInfo_[] = {
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInputList, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInputList, item, $LSInput*, int32_t)},
 	{}
 };
 

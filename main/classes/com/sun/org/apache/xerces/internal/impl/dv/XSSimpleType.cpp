@@ -29,6 +29,9 @@
 #undef WS_PRESERVE
 #undef WS_REPLACE
 
+using $ValidatedInfo = ::com::sun::org::apache::xerces::internal::impl::dv::ValidatedInfo;
+using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
+using $XSFacets = ::com::sun::org::apache::xerces::internal::impl::dv::XSFacets;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -70,14 +73,14 @@ $FieldInfo _XSSimpleType_FieldInfo_[] = {
 };
 
 $MethodInfo _XSSimpleType_MethodInfo_[] = {
-	{"applyFacets", "(Lcom/sun/org/apache/xerces/internal/impl/dv/XSFacets;SSLcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeFacetException"},
-	{"getPrimitiveKind", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getWhitespace", "()S", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.DatatypeException"},
-	{"isEqual", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isIDType", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"validate", "(Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"validate", "(Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"applyFacets", "(Lcom/sun/org/apache/xerces/internal/impl/dv/XSFacets;SSLcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, applyFacets, void, $XSFacets*, int16_t, int16_t, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeFacetException"},
+	{"getPrimitiveKind", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, getPrimitiveKind, int16_t)},
+	{"getWhitespace", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, getWhitespace, int16_t), "com.sun.org.apache.xerces.internal.impl.dv.DatatypeException"},
+	{"isEqual", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, isEqual, bool, Object$*, Object$*)},
+	{"isIDType", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, isIDType, bool)},
+	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, validate, $Object*, $String*, $ValidationContext*, $ValidatedInfo*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"validate", "(Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, validate, $Object*, Object$*, $ValidationContext*, $ValidatedInfo*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"validate", "(Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleType, validate, void, $ValidationContext*, $ValidatedInfo*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
 	{}
 };
 

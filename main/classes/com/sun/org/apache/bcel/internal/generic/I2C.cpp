@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _I2C_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(I2C::*)()>(&I2C::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(I2C, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(I2C, accept, void, $Visitor*)},
 	{}
 };
 

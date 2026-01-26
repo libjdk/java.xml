@@ -38,21 +38,21 @@ $FieldInfo _SymbolHash_FieldInfo_[] = {
 };
 
 $MethodInfo _SymbolHash_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SymbolHash::*)()>(&SymbolHash::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SymbolHash::*)(int32_t)>(&SymbolHash::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"get", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getEntries", "()[Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getValues", "([Ljava/lang/Object;I)I", nullptr, $PUBLIC},
-	{"hash", "(Ljava/lang/Object;)I", nullptr, $PROTECTED},
-	{"hash0", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(static_cast<int32_t(SymbolHash::*)($String*)>(&SymbolHash::hash0))},
-	{"makeClone", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash;", nullptr, $PUBLIC},
-	{"put", "(Ljava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC},
-	{"rebalance", "()V", nullptr, $PROTECTED},
-	{"rehash", "()V", nullptr, $PROTECTED},
-	{"rehashCommon", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(SymbolHash::*)(int32_t)>(&SymbolHash::rehashCommon))},
-	{"search", "(Ljava/lang/Object;I)Lcom/sun/org/apache/xerces/internal/util/SymbolHash$Entry;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SymbolHash, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(SymbolHash, init$, void, int32_t)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(SymbolHash, clear, void)},
+	{"get", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SymbolHash, get, $Object*, Object$*)},
+	{"getEntries", "()[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SymbolHash, getEntries, $ObjectArray*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(SymbolHash, getLength, int32_t)},
+	{"getValues", "([Ljava/lang/Object;I)I", nullptr, $PUBLIC, $virtualMethod(SymbolHash, getValues, int32_t, $ObjectArray*, int32_t)},
+	{"hash", "(Ljava/lang/Object;)I", nullptr, $PROTECTED, $virtualMethod(SymbolHash, hash, int32_t, Object$*)},
+	{"hash0", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(SymbolHash, hash0, int32_t, $String*)},
+	{"makeClone", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash;", nullptr, $PUBLIC, $virtualMethod(SymbolHash, makeClone, SymbolHash*)},
+	{"put", "(Ljava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(SymbolHash, put, void, Object$*, Object$*)},
+	{"rebalance", "()V", nullptr, $PROTECTED, $virtualMethod(SymbolHash, rebalance, void)},
+	{"rehash", "()V", nullptr, $PROTECTED, $virtualMethod(SymbolHash, rehash, void)},
+	{"rehashCommon", "(I)V", nullptr, $PRIVATE, $method(SymbolHash, rehashCommon, void, int32_t)},
+	{"search", "(Ljava/lang/Object;I)Lcom/sun/org/apache/xerces/internal/util/SymbolHash$Entry;", nullptr, $PROTECTED, $virtualMethod(SymbolHash, search, $SymbolHash$Entry*, Object$*, int32_t)},
 	{}
 };
 

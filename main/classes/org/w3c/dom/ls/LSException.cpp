@@ -24,7 +24,7 @@ $FieldInfo _LSException_FieldInfo_[] = {
 };
 
 $MethodInfo _LSException_MethodInfo_[] = {
-	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(LSException::*)(int16_t,$String*)>(&LSException::init$))},
+	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(LSException, init$, void, int16_t, $String*)},
 	{}
 };
 

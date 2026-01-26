@@ -52,15 +52,15 @@ $FieldInfo _MatchGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _MatchGenerator_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(static_cast<void(MatchGenerator::*)(int32_t,$Type*,$TypeArray*,$StringArray*,$String*,$String*,$InstructionList*,$ConstantPoolGen*)>(&MatchGenerator::init$))},
-	{"getHandlerIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(MatchGenerator::*)()>(&MatchGenerator::getHandlerIndex))},
-	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(MatchGenerator::*)()>(&MatchGenerator::getIteratorIndex))},
-	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"loadCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"loadDOM", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"setDomIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(MatchGenerator::*)(int32_t)>(&MatchGenerator::setDomIndex))},
-	{"setIteratorIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(MatchGenerator::*)(int32_t)>(&MatchGenerator::setIteratorIndex))},
-	{"storeCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(MatchGenerator, init$, void, int32_t, $Type*, $TypeArray*, $StringArray*, $String*, $String*, $InstructionList*, $ConstantPoolGen*)},
+	{"getHandlerIndex", "()I", nullptr, $PUBLIC, $method(MatchGenerator, getHandlerIndex, int32_t)},
+	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(MatchGenerator, getIteratorIndex, int32_t)},
+	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(MatchGenerator, getLocalIndex, int32_t, $String*)},
+	{"loadCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(MatchGenerator, loadCurrentNode, $Instruction*)},
+	{"loadDOM", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(MatchGenerator, loadDOM, $Instruction*)},
+	{"setDomIndex", "(I)V", nullptr, $PUBLIC, $method(MatchGenerator, setDomIndex, void, int32_t)},
+	{"setIteratorIndex", "(I)V", nullptr, $PUBLIC, $method(MatchGenerator, setIteratorIndex, void, int32_t)},
+	{"storeCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(MatchGenerator, storeCurrentNode, $Instruction*)},
 	{}
 };
 

@@ -28,8 +28,8 @@ namespace com {
 							namespace validation {
 
 $MethodInfo _JAXPValidationMessageFormatter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(JAXPValidationMessageFormatter::*)()>(&JAXPValidationMessageFormatter::init$))},
-	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($Locale*,$String*,$ObjectArray*)>(&JAXPValidationMessageFormatter::formatMessage)), "java.util.MissingResourceException"},
+	{"<init>", "()V", nullptr, 0, $method(JAXPValidationMessageFormatter, init$, void)},
+	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(JAXPValidationMessageFormatter, formatMessage, $String*, $Locale*, $String*, $ObjectArray*), "java.util.MissingResourceException"},
 	{}
 };
 

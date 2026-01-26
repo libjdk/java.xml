@@ -30,10 +30,10 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _IFGE_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(IFGE::*)()>(&IFGE::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(IFGE::*)($InstructionHandle*)>(&IFGE::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(IFGE, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(IFGE, init$, void, $InstructionHandle*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(IFGE, accept, void, $Visitor*)},
+	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC, $virtualMethod(IFGE, negate, $IfInstruction*)},
 	{}
 };
 

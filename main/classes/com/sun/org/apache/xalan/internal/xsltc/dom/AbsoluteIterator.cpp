@@ -34,14 +34,14 @@ $FieldInfo _AbsoluteIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _AbsoluteIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(AbsoluteIterator::*)($DTMAxisIterator*)>(&AbsoluteIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(AbsoluteIterator, init$, void, $DTMAxisIterator*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(AbsoluteIterator, cloneIterator, $DTMAxisIterator*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(AbsoluteIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(AbsoluteIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(AbsoluteIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(AbsoluteIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(AbsoluteIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(AbsoluteIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

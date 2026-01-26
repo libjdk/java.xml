@@ -32,14 +32,14 @@ $FieldInfo _XNull_FieldInfo_[] = {
 };
 
 $MethodInfo _XNull_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XNull::*)()>(&XNull::init$))},
-	{"bool", "()Z", nullptr, $PUBLIC},
-	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC},
-	{"getType", "()I", nullptr, $PUBLIC},
-	{"getTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"num", "()D", nullptr, $PUBLIC},
-	{"rtf", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC},
-	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XNull, init$, void)},
+	{"bool", "()Z", nullptr, $PUBLIC, $virtualMethod(XNull, bool$, bool)},
+	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC, $virtualMethod(XNull, equals, bool, $XObject*)},
+	{"getType", "()I", nullptr, $PUBLIC, $virtualMethod(XNull, getType, int32_t)},
+	{"getTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XNull, getTypeString, $String*)},
+	{"num", "()D", nullptr, $PUBLIC, $virtualMethod(XNull, num, double)},
+	{"rtf", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(XNull, rtf, int32_t, $XPathContext*)},
+	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XNull, str, $String*)},
 	{}
 };
 

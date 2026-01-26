@@ -62,8 +62,8 @@ $FieldInfo _XResourceBundle_FieldInfo_[] = {
 };
 
 $MethodInfo _XResourceBundle_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XResourceBundle::*)()>(&XResourceBundle::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XResourceBundle, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XResourceBundle, getContents, $ObjectArray2*)},
 	{}
 };
 

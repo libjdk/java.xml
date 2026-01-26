@@ -30,9 +30,9 @@ $FieldInfo _NSInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _NSInfo_MethodInfo_[] = {
-	{"<init>", "(ZZ)V", nullptr, $PUBLIC, $method(static_cast<void(NSInfo::*)(bool,bool)>(&NSInfo::init$))},
-	{"<init>", "(ZZI)V", nullptr, $PUBLIC, $method(static_cast<void(NSInfo::*)(bool,bool,int32_t)>(&NSInfo::init$))},
-	{"<init>", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(NSInfo::*)($String*,bool)>(&NSInfo::init$))},
+	{"<init>", "(ZZ)V", nullptr, $PUBLIC, $method(NSInfo, init$, void, bool, bool)},
+	{"<init>", "(ZZI)V", nullptr, $PUBLIC, $method(NSInfo, init$, void, bool, bool, int32_t)},
+	{"<init>", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(NSInfo, init$, void, $String*, bool)},
 	{}
 };
 

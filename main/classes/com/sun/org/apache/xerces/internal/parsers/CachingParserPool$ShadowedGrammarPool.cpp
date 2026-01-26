@@ -31,12 +31,12 @@ $FieldInfo _CachingParserPool$ShadowedGrammarPool_FieldInfo_[] = {
 };
 
 $MethodInfo _CachingParserPool$ShadowedGrammarPool_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(CachingParserPool$ShadowedGrammarPool::*)($XMLGrammarPool*)>(&CachingParserPool$ShadowedGrammarPool::init$))},
-	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC},
-	{"containsGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC},
-	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(CachingParserPool$ShadowedGrammarPool, init$, void, $XMLGrammarPool*)},
+	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$ShadowedGrammarPool, cacheGrammars, void, $String*, $GrammarArray*)},
+	{"containsGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$ShadowedGrammarPool, containsGrammar, bool, $XMLGrammarDescription*)},
+	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$ShadowedGrammarPool, getGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$ShadowedGrammarPool, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$ShadowedGrammarPool, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
 	{}
 };
 

@@ -75,10 +75,10 @@ $FieldInfo _ElemDesc_FieldInfo_[] = {
 };
 
 $MethodInfo _ElemDesc_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(ElemDesc::*)(int32_t)>(&ElemDesc::init$))},
-	{"is", "(I)Z", nullptr, 0},
-	{"isAttrFlagSet", "(Ljava/lang/String;I)Z", nullptr, 0},
-	{"setAttr", "(Ljava/lang/String;I)V", nullptr, 0},
+	{"<init>", "(I)V", nullptr, 0, $method(ElemDesc, init$, void, int32_t)},
+	{"is", "(I)Z", nullptr, 0, $virtualMethod(ElemDesc, is, bool, int32_t)},
+	{"isAttrFlagSet", "(Ljava/lang/String;I)Z", nullptr, 0, $virtualMethod(ElemDesc, isAttrFlagSet, bool, $String*, int32_t)},
+	{"setAttr", "(Ljava/lang/String;I)V", nullptr, 0, $virtualMethod(ElemDesc, setAttr, void, $String*, int32_t)},
 	{}
 };
 

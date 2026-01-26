@@ -30,12 +30,12 @@ $FieldInfo _DurationYearMonthImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DurationYearMonthImpl_MethodInfo_[] = {
-	{"<init>", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;)V", nullptr, $PUBLIC, $method(static_cast<void(DurationYearMonthImpl::*)(bool,$BigInteger*,$BigInteger*)>(&DurationYearMonthImpl::init$))},
-	{"<init>", "(ZII)V", nullptr, $PROTECTED, $method(static_cast<void(DurationYearMonthImpl::*)(bool,int32_t,int32_t)>(&DurationYearMonthImpl::init$))},
-	{"<init>", "(J)V", nullptr, $PROTECTED, $method(static_cast<void(DurationYearMonthImpl::*)(int64_t)>(&DurationYearMonthImpl::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(DurationYearMonthImpl::*)($String*)>(&DurationYearMonthImpl::init$))},
-	{"convertToCanonicalYearMonth", "()V", nullptr, $PRIVATE, $method(static_cast<void(DurationYearMonthImpl::*)()>(&DurationYearMonthImpl::convertToCanonicalYearMonth))},
-	{"getValue", "()I", nullptr, $PUBLIC},
+	{"<init>", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;)V", nullptr, $PUBLIC, $method(DurationYearMonthImpl, init$, void, bool, $BigInteger*, $BigInteger*)},
+	{"<init>", "(ZII)V", nullptr, $PROTECTED, $method(DurationYearMonthImpl, init$, void, bool, int32_t, int32_t)},
+	{"<init>", "(J)V", nullptr, $PROTECTED, $method(DurationYearMonthImpl, init$, void, int64_t)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $method(DurationYearMonthImpl, init$, void, $String*)},
+	{"convertToCanonicalYearMonth", "()V", nullptr, $PRIVATE, $method(DurationYearMonthImpl, convertToCanonicalYearMonth, void)},
+	{"getValue", "()I", nullptr, $PUBLIC, $virtualMethod(DurationYearMonthImpl, getValue, int32_t)},
 	{}
 };
 

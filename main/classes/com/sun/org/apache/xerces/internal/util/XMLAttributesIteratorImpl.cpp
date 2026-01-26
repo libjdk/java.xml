@@ -33,11 +33,11 @@ $MethodInfo _XMLAttributesIteratorImpl_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLAttributesIteratorImpl::*)()>(&XMLAttributesIteratorImpl::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Lcom/sun/org/apache/xerces/internal/util/XMLAttributesImpl$Attribute;", nullptr, $PUBLIC},
-	{"remove", "()V", nullptr, $PUBLIC},
-	{"removeAllAttributes", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLAttributesIteratorImpl, init$, void)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLAttributesIteratorImpl, hasNext, bool)},
+	{"next", "()Lcom/sun/org/apache/xerces/internal/util/XMLAttributesImpl$Attribute;", nullptr, $PUBLIC, $virtualMethod(XMLAttributesIteratorImpl, next, $Object*)},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(XMLAttributesIteratorImpl, remove, void)},
+	{"removeAllAttributes", "()V", nullptr, $PUBLIC, $virtualMethod(XMLAttributesIteratorImpl, removeAllAttributes, void)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

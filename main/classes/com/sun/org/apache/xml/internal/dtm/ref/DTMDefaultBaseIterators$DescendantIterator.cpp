@@ -35,11 +35,11 @@ $FieldInfo _DTMDefaultBaseIterators$DescendantIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$DescendantIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$DescendantIterator::*)($DTMDefaultBaseIterators*)>(&DTMDefaultBaseIterators$DescendantIterator::init$))},
-	{"isDescendant", "(I)Z", nullptr, $PROTECTED},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$DescendantIterator, init$, void, $DTMDefaultBaseIterators*)},
+	{"isDescendant", "(I)Z", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseIterators$DescendantIterator, isDescendant, bool, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$DescendantIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$DescendantIterator, reset, $DTMAxisIterator*)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$DescendantIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

@@ -40,10 +40,10 @@ $FieldInfo _RealExpr_FieldInfo_[] = {
 };
 
 $MethodInfo _RealExpr_MethodInfo_[] = {
-	{"<init>", "(D)V", nullptr, $PUBLIC, $method(static_cast<void(RealExpr::*)(double)>(&RealExpr::init$))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(D)V", nullptr, $PUBLIC, $method(RealExpr, init$, void, double)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(RealExpr, toString, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(RealExpr, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(RealExpr, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

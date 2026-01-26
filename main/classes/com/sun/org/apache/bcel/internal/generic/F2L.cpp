@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _F2L_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(F2L::*)()>(&F2L::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(F2L, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(F2L, accept, void, $Visitor*)},
 	{}
 };
 

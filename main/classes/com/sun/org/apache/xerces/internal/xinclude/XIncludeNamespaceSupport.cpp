@@ -25,11 +25,11 @@ $FieldInfo _XIncludeNamespaceSupport_FieldInfo_[] = {
 };
 
 $MethodInfo _XIncludeNamespaceSupport_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XIncludeNamespaceSupport::*)()>(&XIncludeNamespaceSupport::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(XIncludeNamespaceSupport::*)($NamespaceContext*)>(&XIncludeNamespaceSupport::init$))},
-	{"getURIFromIncludeParent", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"pushContext", "()V", nullptr, $PUBLIC},
-	{"setContextInvalid", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XIncludeNamespaceSupport, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(XIncludeNamespaceSupport, init$, void, $NamespaceContext*)},
+	{"getURIFromIncludeParent", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XIncludeNamespaceSupport, getURIFromIncludeParent, $String*, $String*)},
+	{"pushContext", "()V", nullptr, $PUBLIC, $virtualMethod(XIncludeNamespaceSupport, pushContext, void)},
+	{"setContextInvalid", "()V", nullptr, $PUBLIC, $virtualMethod(XIncludeNamespaceSupport, setContextInvalid, void)},
 	{}
 };
 

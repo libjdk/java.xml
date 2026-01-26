@@ -30,13 +30,13 @@ $FieldInfo _StAXEvent2SAX$1_FieldInfo_[] = {
 };
 
 $MethodInfo _StAXEvent2SAX$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/StAXEvent2SAX;Ljavax/xml/stream/events/XMLEvent;)V", "()V", 0, $method(static_cast<void(StAXEvent2SAX$1::*)($StAXEvent2SAX*,$XMLEvent*)>(&StAXEvent2SAX$1::init$))},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/StAXEvent2SAX;Ljavax/xml/stream/events/XMLEvent;)V", "()V", 0, $method(StAXEvent2SAX$1, init$, void, $StAXEvent2SAX*, $XMLEvent*)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(StAXEvent2SAX$1, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXEvent2SAX$1, getEncoding, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(StAXEvent2SAX$1, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXEvent2SAX$1, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXEvent2SAX$1, getSystemId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXEvent2SAX$1, getXMLVersion, $String*)},
 	{}
 };
 

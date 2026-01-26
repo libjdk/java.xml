@@ -57,8 +57,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo MultiHashtable$$Lambda$lambda$put$0::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MultiHashtable$$Lambda$lambda$put$0::*)()>(&MultiHashtable$$Lambda$lambda$put$0::init$))},
-	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MultiHashtable$$Lambda$lambda$put$0, init$, void)},
+	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(MultiHashtable$$Lambda$lambda$put$0, apply, $Object*, Object$*)},
 	{}
 };
 $ClassInfo MultiHashtable$$Lambda$lambda$put$0::classInfo$ = {
@@ -83,11 +83,11 @@ $FieldInfo _MultiHashtable_FieldInfo_[] = {
 };
 
 $MethodInfo _MultiHashtable_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MultiHashtable::*)()>(&MultiHashtable::init$))},
-	{"lambda$put$0", "(Ljava/lang/Object;)Ljava/util/Set;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$Set*(*)(Object$*)>(&MultiHashtable::lambda$put$0))},
-	{"makeUnmodifiable", "()V", nullptr, $PUBLIC, $method(static_cast<void(MultiHashtable::*)()>(&MultiHashtable::makeUnmodifiable))},
-	{"maps", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "(TK;TV;)TV;", $PUBLIC, $method(static_cast<$Object*(MultiHashtable::*)(Object$*,Object$*)>(&MultiHashtable::maps))},
-	{"put", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;", "(TK;TV;)Ljava/util/Set<TV;>;", $PUBLIC, $method(static_cast<$Set*(MultiHashtable::*)(Object$*,Object$*)>(&MultiHashtable::put))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MultiHashtable, init$, void)},
+	{"lambda$put$0", "(Ljava/lang/Object;)Ljava/util/Set;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(MultiHashtable, lambda$put$0, $Set*, Object$*)},
+	{"makeUnmodifiable", "()V", nullptr, $PUBLIC, $method(MultiHashtable, makeUnmodifiable, void)},
+	{"maps", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "(TK;TV;)TV;", $PUBLIC, $method(MultiHashtable, maps, $Object*, Object$*, Object$*)},
+	{"put", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;", "(TK;TV;)Ljava/util/Set<TV;>;", $PUBLIC, $method(MultiHashtable, put, $Set*, Object$*, Object$*)},
 	{}
 };
 

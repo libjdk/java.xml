@@ -32,12 +32,12 @@ $FieldInfo _SchemaDOMImplementation_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaDOMImplementation_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(SchemaDOMImplementation::*)()>(&SchemaDOMImplementation::init$))},
-	{"createDocument", "(Ljava/lang/String;Ljava/lang/String;Lorg/w3c/dom/DocumentType;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"createDocumentType", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/DocumentType;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DOMImplementation*(*)()>(&SchemaDOMImplementation::getDOMImplementation))},
-	{"getFeature", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(SchemaDOMImplementation, init$, void)},
+	{"createDocument", "(Ljava/lang/String;Ljava/lang/String;Lorg/w3c/dom/DocumentType;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $virtualMethod(SchemaDOMImplementation, createDocument, $Document*, $String*, $String*, $DocumentType*), "org.w3c.dom.DOMException"},
+	{"createDocumentType", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/DocumentType;", nullptr, $PUBLIC, $virtualMethod(SchemaDOMImplementation, createDocumentType, $DocumentType*, $String*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $staticMethod(SchemaDOMImplementation, getDOMImplementation, $DOMImplementation*)},
+	{"getFeature", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaDOMImplementation, getFeature, $Object*, $String*, $String*)},
+	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(SchemaDOMImplementation, hasFeature, bool, $String*, $String*)},
 	{}
 };
 

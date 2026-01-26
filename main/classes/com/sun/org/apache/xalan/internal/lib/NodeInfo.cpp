@@ -26,15 +26,15 @@ namespace com {
 						namespace lib {
 
 $MethodInfo _NodeInfo_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NodeInfo::*)()>(&NodeInfo::init$))},
-	{"columnNumber", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)($ExpressionContext*)>(&NodeInfo::columnNumber))},
-	{"columnNumber", "(Lorg/w3c/dom/NodeList;)I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)($NodeList*)>(&NodeInfo::columnNumber))},
-	{"lineNumber", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)($ExpressionContext*)>(&NodeInfo::lineNumber))},
-	{"lineNumber", "(Lorg/w3c/dom/NodeList;)I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)($NodeList*)>(&NodeInfo::lineNumber))},
-	{"publicId", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($ExpressionContext*)>(&NodeInfo::publicId))},
-	{"publicId", "(Lorg/w3c/dom/NodeList;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($NodeList*)>(&NodeInfo::publicId))},
-	{"systemId", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($ExpressionContext*)>(&NodeInfo::systemId))},
-	{"systemId", "(Lorg/w3c/dom/NodeList;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($NodeList*)>(&NodeInfo::systemId))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NodeInfo, init$, void)},
+	{"columnNumber", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)I", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, columnNumber, int32_t, $ExpressionContext*)},
+	{"columnNumber", "(Lorg/w3c/dom/NodeList;)I", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, columnNumber, int32_t, $NodeList*)},
+	{"lineNumber", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)I", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, lineNumber, int32_t, $ExpressionContext*)},
+	{"lineNumber", "(Lorg/w3c/dom/NodeList;)I", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, lineNumber, int32_t, $NodeList*)},
+	{"publicId", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, publicId, $String*, $ExpressionContext*)},
+	{"publicId", "(Lorg/w3c/dom/NodeList;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, publicId, $String*, $NodeList*)},
+	{"systemId", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, systemId, $String*, $ExpressionContext*)},
+	{"systemId", "(Lorg/w3c/dom/NodeList;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(NodeInfo, systemId, $String*, $NodeList*)},
 	{}
 };
 

@@ -29,16 +29,16 @@ $FieldInfo _QName_FieldInfo_[] = {
 };
 
 $MethodInfo _QName_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(QName::*)($String*,$String*,$String*)>(&QName::init$))},
-	{"clearNamespace", "()V", nullptr, $PUBLIC, $method(static_cast<void(QName::*)()>(&QName::clearNamespace))},
-	{"dump", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(QName::*)()>(&QName::dump))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getLocalPart", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(QName::*)()>(&QName::getLocalPart))},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(QName::*)()>(&QName::getNamespace))},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(QName::*)()>(&QName::getPrefix))},
-	{"getStringRep", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(QName::*)()>(&QName::getStringRep))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(QName, init$, void, $String*, $String*, $String*)},
+	{"clearNamespace", "()V", nullptr, $PUBLIC, $method(QName, clearNamespace, void)},
+	{"dump", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(QName, dump, $String*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(QName, equals, bool, Object$*)},
+	{"getLocalPart", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(QName, getLocalPart, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(QName, getNamespace, $String*)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(QName, getPrefix, $String*)},
+	{"getStringRep", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(QName, getStringRep, $String*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(QName, hashCode, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(QName, toString, $String*)},
 	{}
 };
 

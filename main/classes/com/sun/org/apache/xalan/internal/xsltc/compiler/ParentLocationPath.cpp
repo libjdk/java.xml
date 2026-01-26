@@ -107,18 +107,18 @@ $FieldInfo _ParentLocationPath_FieldInfo_[] = {
 };
 
 $MethodInfo _ParentLocationPath_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/RelativeLocationPath;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;)V", nullptr, $PUBLIC, $method(static_cast<void(ParentLocationPath::*)($RelativeLocationPath*,$Expression*)>(&ParentLocationPath::init$))},
-	{"checkAxisMismatch", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(ParentLocationPath::*)()>(&ParentLocationPath::checkAxisMismatch))},
-	{"enableNodeOrdering", "()V", nullptr, $PUBLIC, $method(static_cast<void(ParentLocationPath::*)()>(&ParentLocationPath::enableNodeOrdering))},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getPath", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/RelativeLocationPath;", nullptr, $PUBLIC, $method(static_cast<$RelativeLocationPath*(ParentLocationPath::*)()>(&ParentLocationPath::getPath))},
-	{"getStep", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC, $method(static_cast<$Expression*(ParentLocationPath::*)()>(&ParentLocationPath::getStep))},
-	{"setAxis", "(I)V", nullptr, $PUBLIC},
-	{"setParser", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"translateStep", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(static_cast<void(ParentLocationPath::*)($ClassGenerator*,$MethodGenerator*)>(&ParentLocationPath::translateStep))},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/RelativeLocationPath;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;)V", nullptr, $PUBLIC, $method(ParentLocationPath, init$, void, $RelativeLocationPath*, $Expression*)},
+	{"checkAxisMismatch", "()Z", nullptr, $PUBLIC, $method(ParentLocationPath, checkAxisMismatch, bool)},
+	{"enableNodeOrdering", "()V", nullptr, $PUBLIC, $method(ParentLocationPath, enableNodeOrdering, void)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(ParentLocationPath, getAxis, int32_t)},
+	{"getPath", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/RelativeLocationPath;", nullptr, $PUBLIC, $method(ParentLocationPath, getPath, $RelativeLocationPath*)},
+	{"getStep", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC, $method(ParentLocationPath, getStep, $Expression*)},
+	{"setAxis", "(I)V", nullptr, $PUBLIC, $virtualMethod(ParentLocationPath, setAxis, void, int32_t)},
+	{"setParser", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(ParentLocationPath, setParser, void, $Parser*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParentLocationPath, toString, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(ParentLocationPath, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"translateStep", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(ParentLocationPath, translateStep, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(ParentLocationPath, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

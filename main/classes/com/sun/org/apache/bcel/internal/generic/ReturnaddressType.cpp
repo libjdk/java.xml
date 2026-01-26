@@ -30,11 +30,11 @@ $FieldInfo _ReturnaddressType_FieldInfo_[] = {
 };
 
 $MethodInfo _ReturnaddressType_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(ReturnaddressType::*)()>(&ReturnaddressType::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(ReturnaddressType::*)($InstructionHandle*)>(&ReturnaddressType::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getTarget", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(ReturnaddressType, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(ReturnaddressType, init$, void, $InstructionHandle*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(ReturnaddressType, equals, bool, Object$*)},
+	{"getTarget", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $virtualMethod(ReturnaddressType, getTarget, $InstructionHandle*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(ReturnaddressType, hashCode, int32_t)},
 	{}
 };
 

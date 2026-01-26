@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
 #include <jcpp.h>
 
+using $XSElementDecl = ::com::sun::org::apache::xerces::internal::impl::xs::XSElementDecl;
+using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,7 +19,7 @@ namespace com {
 							namespace xs {
 
 $MethodInfo _XSElementDeclHelper_MethodInfo_[] = {
-	{"getGlobalElementDecl", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getGlobalElementDecl", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclHelper, getGlobalElementDecl, $XSElementDecl*, $QName*)},
 	{}
 };
 

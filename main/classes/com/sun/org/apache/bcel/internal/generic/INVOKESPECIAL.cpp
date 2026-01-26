@@ -47,11 +47,11 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _INVOKESPECIAL_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(INVOKESPECIAL::*)()>(&INVOKESPECIAL::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(INVOKESPECIAL::*)(int32_t)>(&INVOKESPECIAL::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(INVOKESPECIAL, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(INVOKESPECIAL, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(INVOKESPECIAL, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(INVOKESPECIAL, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(INVOKESPECIAL, getExceptions, $ClassArray*)},
 	{}
 };
 

@@ -15,8 +15,8 @@ namespace com {
 							namespace validation {
 
 $MethodInfo _EntityState_MethodInfo_[] = {
-	{"isEntityDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isEntityUnparsed", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"isEntityDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityState, isEntityDeclared, bool, $String*)},
+	{"isEntityUnparsed", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityState, isEntityUnparsed, bool, $String*)},
 	{}
 };
 

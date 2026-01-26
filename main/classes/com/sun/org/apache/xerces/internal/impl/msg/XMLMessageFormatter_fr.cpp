@@ -40,8 +40,8 @@ $FieldInfo _XMLMessageFormatter_fr_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLMessageFormatter_fr_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLMessageFormatter_fr::*)()>(&XMLMessageFormatter_fr::init$))},
-	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "java.util.MissingResourceException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLMessageFormatter_fr, init$, void)},
+	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLMessageFormatter_fr, formatMessage, $String*, $Locale*, $String*, $ObjectArray*), "java.util.MissingResourceException"},
 	{}
 };
 

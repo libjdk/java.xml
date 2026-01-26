@@ -22,9 +22,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _StackInstruction_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(StackInstruction::*)()>(&StackInstruction::init$))},
-	{"<init>", "(S)V", nullptr, $PROTECTED, $method(static_cast<void(StackInstruction::*)(int16_t)>(&StackInstruction::init$))},
-	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(StackInstruction, init$, void)},
+	{"<init>", "(S)V", nullptr, $PROTECTED, $method(StackInstruction, init$, void, int16_t)},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $virtualMethod(StackInstruction, getType, $Type*, $ConstantPoolGen*)},
 	{}
 };
 

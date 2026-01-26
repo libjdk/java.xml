@@ -29,19 +29,19 @@ $FieldInfo _ArrayNodeListIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _ArrayNodeListIterator_MethodInfo_[] = {
-	{"<init>", "([I)V", nullptr, $PUBLIC, $method(static_cast<void(ArrayNodeListIterator::*)($ints*)>(&ArrayNodeListIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"getStartNode", "()I", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "([I)V", nullptr, $PUBLIC, $method(ArrayNodeListIterator, init$, void, $ints*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, cloneIterator, $DTMAxisIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, getLast, int32_t)},
+	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, getNodeByPosition, int32_t, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, getPosition, int32_t)},
+	{"getStartNode", "()I", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, getStartNode, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(ArrayNodeListIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

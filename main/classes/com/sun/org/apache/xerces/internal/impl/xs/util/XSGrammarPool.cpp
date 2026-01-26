@@ -40,10 +40,10 @@ namespace com {
 								namespace util {
 
 $MethodInfo _XSGrammarPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSGrammarPool::*)()>(&XSGrammarPool::init$))},
-	{"toXSModel", "()Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC},
-	{"toXSModel", "(S)Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC},
-	{"toXSModel", "([Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;S)Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSGrammarPool, init$, void)},
+	{"toXSModel", "()Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC, $virtualMethod(XSGrammarPool, toXSModel, $XSModel*)},
+	{"toXSModel", "(S)Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC, $virtualMethod(XSGrammarPool, toXSModel, $XSModel*, int16_t)},
+	{"toXSModel", "([Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;S)Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PROTECTED, $virtualMethod(XSGrammarPool, toXSModel, $XSModel*, $SchemaGrammarArray*, int16_t)},
 	{}
 };
 

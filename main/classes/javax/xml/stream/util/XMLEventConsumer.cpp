@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 
 namespace javax {
 	namespace xml {
@@ -12,7 +13,7 @@ namespace javax {
 			namespace util {
 
 $MethodInfo _XMLEventConsumer_MethodInfo_[] = {
-	{"add", "(Ljavax/xml/stream/events/XMLEvent;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
+	{"add", "(Ljavax/xml/stream/events/XMLEvent;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLEventConsumer, add, void, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
 	{}
 };
 

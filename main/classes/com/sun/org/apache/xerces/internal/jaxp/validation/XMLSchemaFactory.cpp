@@ -204,21 +204,21 @@ $FieldInfo _XMLSchemaFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaFactory::*)()>(&XMLSchemaFactory::init$))},
-	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC},
-	{"isSchemaLanguageSupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"newSchema", "([Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"newSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"newSchema", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $method(static_cast<$Schema*(XMLSchemaFactory::*)($XMLGrammarPool*)>(&XMLSchemaFactory::newSchema)), "org.xml.sax.SAXException"},
-	{"propagateFeatures", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/AbstractXMLSchema;)V", nullptr, $PRIVATE, $method(static_cast<void(XMLSchemaFactory::*)($AbstractXMLSchema*)>(&XMLSchemaFactory::propagateFeatures))},
-	{"propagateProperties", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/AbstractXMLSchema;)V", nullptr, $PRIVATE, $method(static_cast<void(XMLSchemaFactory::*)($AbstractXMLSchema*)>(&XMLSchemaFactory::propagateProperties))},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSchemaFactory, init$, void)},
+	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, getErrorHandler, $ErrorHandler*)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, getFeature, bool, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, getProperty, $Object*, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, getResourceResolver, $LSResourceResolver*)},
+	{"isSchemaLanguageSupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, isSchemaLanguageSupported, bool, $String*)},
+	{"newSchema", "([Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, newSchema, $Schema*, $SourceArray*), "org.xml.sax.SAXException"},
+	{"newSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, newSchema, $Schema*), "org.xml.sax.SAXException"},
+	{"newSchema", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $method(XMLSchemaFactory, newSchema, $Schema*, $XMLGrammarPool*), "org.xml.sax.SAXException"},
+	{"propagateFeatures", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/AbstractXMLSchema;)V", nullptr, $PRIVATE, $method(XMLSchemaFactory, propagateFeatures, void, $AbstractXMLSchema*)},
+	{"propagateProperties", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/AbstractXMLSchema;)V", nullptr, $PRIVATE, $method(XMLSchemaFactory, propagateProperties, void, $AbstractXMLSchema*)},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, setErrorHandler, void, $ErrorHandler*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, setFeature, void, $String*, bool), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, setProperty, void, $String*, Object$*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory, setResourceResolver, void, $LSResourceResolver*)},
 	{}
 };
 

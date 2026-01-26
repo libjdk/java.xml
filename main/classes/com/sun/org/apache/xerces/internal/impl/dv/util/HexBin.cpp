@@ -28,9 +28,9 @@ $FieldInfo _HexBin_FieldInfo_[] = {
 };
 
 $MethodInfo _HexBin_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(HexBin::*)()>(&HexBin::init$))},
-	{"decode", "(Ljava/lang/String;)[B", nullptr, $PUBLIC | $STATIC, $method(static_cast<$bytes*(*)($String*)>(&HexBin::decode))},
-	{"encode", "([B)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($bytes*)>(&HexBin::encode))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(HexBin, init$, void)},
+	{"decode", "(Ljava/lang/String;)[B", nullptr, $PUBLIC | $STATIC, $staticMethod(HexBin, decode, $bytes*, $String*)},
+	{"encode", "([B)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(HexBin, encode, $String*, $bytes*)},
 	{}
 };
 

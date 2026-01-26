@@ -32,8 +32,8 @@ $FieldInfo _XResources_zh_CN_FieldInfo_[] = {
 };
 
 $MethodInfo _XResources_zh_CN_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XResources_zh_CN::*)()>(&XResources_zh_CN::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XResources_zh_CN, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XResources_zh_CN, getContents, $ObjectArray2*)},
 	{}
 };
 

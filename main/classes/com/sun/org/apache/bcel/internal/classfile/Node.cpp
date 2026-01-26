@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/classfile/Visitor.h>
 #include <jcpp.h>
 
+using $Visitor = ::com::sun::org::apache::bcel::internal::classfile::Visitor;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _Node_MethodInfo_[] = {
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Node, accept, void, $Visitor*)},
 	{}
 };
 

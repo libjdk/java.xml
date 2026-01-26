@@ -27,9 +27,9 @@ $FieldInfo _DTMDefaultBaseIterators$InternalAxisIteratorBase_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$InternalAxisIteratorBase_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$InternalAxisIteratorBase::*)($DTMDefaultBaseIterators*)>(&DTMDefaultBaseIterators$InternalAxisIteratorBase::init$))},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$InternalAxisIteratorBase, init$, void, $DTMDefaultBaseIterators*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$InternalAxisIteratorBase, gotoMark, void)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$InternalAxisIteratorBase, setMark, void)},
 	{}
 };
 

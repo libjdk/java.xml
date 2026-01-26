@@ -49,15 +49,15 @@ $FieldInfo _SAXImpl$NodeValueIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXImpl$NodeValueIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;ILjava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(SAXImpl$NodeValueIterator::*)($SAXImpl*,$DTMAxisIterator*,int32_t,$String*,bool)>(&SAXImpl$NodeValueIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;ILjava/lang/String;Z)V", nullptr, $PUBLIC, $method(SAXImpl$NodeValueIterator, init$, void, $SAXImpl*, $DTMAxisIterator*, int32_t, $String*, bool)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, cloneIterator, $DTMAxisIterator*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NodeValueIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

@@ -30,9 +30,9 @@ $FieldInfo _FuncExtFunction$ArgExtOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncExtFunction$ArgExtOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/functions/FuncExtFunction;Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, 0, $method(static_cast<void(FuncExtFunction$ArgExtOwner::*)($FuncExtFunction*,$Expression*)>(&FuncExtFunction$ArgExtOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/functions/FuncExtFunction;Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, 0, $method(FuncExtFunction$ArgExtOwner, init$, void, $FuncExtFunction*, $Expression*)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction$ArgExtOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction$ArgExtOwner, setExpression, void, $Expression*)},
 	{}
 };
 

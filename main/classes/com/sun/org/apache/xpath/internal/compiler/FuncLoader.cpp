@@ -29,9 +29,9 @@ $FieldInfo _FuncLoader_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncLoader_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(FuncLoader::*)($String*,int32_t)>(&FuncLoader::init$))},
-	{"getFunction", "()Lcom/sun/org/apache/xpath/internal/functions/Function;", nullptr, 0, nullptr, "javax.xml.transform.TransformerException"},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(FuncLoader, init$, void, $String*, int32_t)},
+	{"getFunction", "()Lcom/sun/org/apache/xpath/internal/functions/Function;", nullptr, 0, $virtualMethod(FuncLoader, getFunction, $Function*), "javax.xml.transform.TransformerException"},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FuncLoader, getName, $String*)},
 	{}
 };
 

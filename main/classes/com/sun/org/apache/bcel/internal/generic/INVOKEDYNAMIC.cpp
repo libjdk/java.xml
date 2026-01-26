@@ -68,15 +68,15 @@ $CompoundAttribute _INVOKEDYNAMIC_MethodAnnotations_getClassName4[] = {
 };
 
 $MethodInfo _INVOKEDYNAMIC_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(INVOKEDYNAMIC::*)()>(&INVOKEDYNAMIC::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(INVOKEDYNAMIC::*)(int32_t)>(&INVOKEDYNAMIC::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getClassName", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC | $DEPRECATED, nullptr, nullptr, nullptr, _INVOKEDYNAMIC_MethodAnnotations_getClassName4},
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC},
-	{"getReferenceType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;", nullptr, $PUBLIC},
-	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(INVOKEDYNAMIC, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(INVOKEDYNAMIC, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(INVOKEDYNAMIC, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(INVOKEDYNAMIC, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getClassName", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(INVOKEDYNAMIC, getClassName, $String*, $ConstantPoolGen*), nullptr, nullptr, _INVOKEDYNAMIC_MethodAnnotations_getClassName4},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(INVOKEDYNAMIC, getExceptions, $ClassArray*)},
+	{"getReferenceType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;", nullptr, $PUBLIC, $virtualMethod(INVOKEDYNAMIC, getReferenceType, $ReferenceType*, $ConstantPoolGen*)},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, $virtualMethod(INVOKEDYNAMIC, initFromFile, void, $ByteSequence*, bool), "java.io.IOException"},
+	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(INVOKEDYNAMIC, toString, $String*, $ConstantPool*)},
 	{}
 };
 

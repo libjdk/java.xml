@@ -24,17 +24,17 @@ $FieldInfo _XMLStringBuffer_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStringBuffer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringBuffer::*)()>(&XMLStringBuffer::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringBuffer::*)(int32_t)>(&XMLStringBuffer::init$))},
-	{"<init>", "(C)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringBuffer::*)(char16_t)>(&XMLStringBuffer::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringBuffer::*)($String*)>(&XMLStringBuffer::init$))},
-	{"<init>", "([CII)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringBuffer::*)($chars*,int32_t,int32_t)>(&XMLStringBuffer::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringBuffer::*)($XMLString*)>(&XMLStringBuffer::init$))},
-	{"append", "(C)V", nullptr, $PUBLIC},
-	{"append", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"append", "([CII)V", nullptr, $PUBLIC},
-	{"append", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLStringBuffer, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(XMLStringBuffer, init$, void, int32_t)},
+	{"<init>", "(C)V", nullptr, $PUBLIC, $method(XMLStringBuffer, init$, void, char16_t)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLStringBuffer, init$, void, $String*)},
+	{"<init>", "([CII)V", nullptr, $PUBLIC, $method(XMLStringBuffer, init$, void, $chars*, int32_t, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC, $method(XMLStringBuffer, init$, void, $XMLString*)},
+	{"append", "(C)V", nullptr, $PUBLIC, $virtualMethod(XMLStringBuffer, append, void, char16_t)},
+	{"append", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLStringBuffer, append, void, $String*)},
+	{"append", "([CII)V", nullptr, $PUBLIC, $virtualMethod(XMLStringBuffer, append, void, $chars*, int32_t, int32_t)},
+	{"append", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC, $virtualMethod(XMLStringBuffer, append, void, $XMLString*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLStringBuffer, clear, void)},
 	{}
 };
 

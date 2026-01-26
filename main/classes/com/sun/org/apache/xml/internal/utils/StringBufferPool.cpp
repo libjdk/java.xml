@@ -24,9 +24,9 @@ $FieldInfo _StringBufferPool_FieldInfo_[] = {
 };
 
 $MethodInfo _StringBufferPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringBufferPool::*)()>(&StringBufferPool::init$))},
-	{"free", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;)V", nullptr, $PUBLIC | $STATIC | $SYNCHRONIZED, $method(static_cast<void(*)($FastStringBuffer*)>(&StringBufferPool::free))},
-	{"get", "()Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;", nullptr, $PUBLIC | $STATIC | $SYNCHRONIZED, $method(static_cast<$FastStringBuffer*(*)()>(&StringBufferPool::get))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StringBufferPool, init$, void)},
+	{"free", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;)V", nullptr, $PUBLIC | $STATIC | $SYNCHRONIZED, $staticMethod(StringBufferPool, free, void, $FastStringBuffer*)},
+	{"get", "()Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;", nullptr, $PUBLIC | $STATIC | $SYNCHRONIZED, $staticMethod(StringBufferPool, get, $FastStringBuffer*)},
 	{}
 };
 

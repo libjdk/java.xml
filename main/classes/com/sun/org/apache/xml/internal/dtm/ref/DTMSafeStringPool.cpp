@@ -18,11 +18,11 @@ namespace com {
 							namespace ref {
 
 $MethodInfo _DTMSafeStringPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTMSafeStringPool::*)()>(&DTMSafeStringPool::init$))},
-	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&DTMSafeStringPool::_main))},
-	{"indexToString", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, nullptr, "java.lang.ArrayIndexOutOfBoundsException"},
-	{"removeAllElements", "()V", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"stringToIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTMSafeStringPool, init$, void)},
+	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(DTMSafeStringPool, _main, void, $StringArray*)},
+	{"indexToString", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(DTMSafeStringPool, indexToString, $String*, int32_t), "java.lang.ArrayIndexOutOfBoundsException"},
+	{"removeAllElements", "()V", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(DTMSafeStringPool, removeAllElements, void)},
+	{"stringToIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(DTMSafeStringPool, stringToIndex, int32_t, $String*)},
 	{}
 };
 

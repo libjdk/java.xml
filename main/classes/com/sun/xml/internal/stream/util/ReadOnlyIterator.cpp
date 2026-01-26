@@ -23,11 +23,11 @@ $FieldInfo _ReadOnlyIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _ReadOnlyIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ReadOnlyIterator::*)()>(&ReadOnlyIterator::init$))},
-	{"<init>", "(Ljava/util/Iterator;)V", "(Ljava/util/Iterator<TT;>;)V", $PUBLIC, $method(static_cast<void(ReadOnlyIterator::*)($Iterator*)>(&ReadOnlyIterator::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Ljava/lang/Object;", "()TT;", $PUBLIC},
-	{"remove", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ReadOnlyIterator, init$, void)},
+	{"<init>", "(Ljava/util/Iterator;)V", "(Ljava/util/Iterator<TT;>;)V", $PUBLIC, $method(ReadOnlyIterator, init$, void, $Iterator*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(ReadOnlyIterator, hasNext, bool)},
+	{"next", "()Ljava/lang/Object;", "()TT;", $PUBLIC, $virtualMethod(ReadOnlyIterator, next, $Object*)},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(ReadOnlyIterator, remove, void)},
 	{}
 };
 

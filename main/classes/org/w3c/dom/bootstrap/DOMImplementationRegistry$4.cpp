@@ -25,8 +25,8 @@ $FieldInfo _DOMImplementationRegistry$4_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMImplementationRegistry$4_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/ClassLoader;Ljava/lang/String;)V", "()V", 0, $method(static_cast<void(DOMImplementationRegistry$4::*)($ClassLoader*,$String*)>(&DOMImplementationRegistry$4::init$))},
-	{"run", "()Ljava/io/InputStream;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/ClassLoader;Ljava/lang/String;)V", "()V", 0, $method(DOMImplementationRegistry$4, init$, void, $ClassLoader*, $String*)},
+	{"run", "()Ljava/io/InputStream;", nullptr, $PUBLIC, $virtualMethod(DOMImplementationRegistry$4, run, $Object*)},
 	{}
 };
 

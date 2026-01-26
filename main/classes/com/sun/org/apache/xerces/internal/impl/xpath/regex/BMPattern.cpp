@@ -27,14 +27,14 @@ $FieldInfo _BMPattern_FieldInfo_[] = {
 };
 
 $MethodInfo _BMPattern_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(BMPattern::*)($String*,bool)>(&BMPattern::init$))},
-	{"<init>", "(Ljava/lang/String;IZ)V", nullptr, $PUBLIC, $method(static_cast<void(BMPattern::*)($String*,int32_t,bool)>(&BMPattern::init$))},
-	{"matches", "(Ljava/text/CharacterIterator;II)I", nullptr, $PUBLIC},
-	{"matches", "(Ljava/lang/String;II)I", nullptr, $PUBLIC},
-	{"matches", "([CII)I", nullptr, $PUBLIC},
-	{"matchesIgnoreCase", "(Ljava/text/CharacterIterator;II)I", nullptr, 0},
-	{"matchesIgnoreCase", "(Ljava/lang/String;II)I", nullptr, 0},
-	{"matchesIgnoreCase", "([CII)I", nullptr, 0},
+	{"<init>", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(BMPattern, init$, void, $String*, bool)},
+	{"<init>", "(Ljava/lang/String;IZ)V", nullptr, $PUBLIC, $method(BMPattern, init$, void, $String*, int32_t, bool)},
+	{"matches", "(Ljava/text/CharacterIterator;II)I", nullptr, $PUBLIC, $virtualMethod(BMPattern, matches, int32_t, $CharacterIterator*, int32_t, int32_t)},
+	{"matches", "(Ljava/lang/String;II)I", nullptr, $PUBLIC, $virtualMethod(BMPattern, matches, int32_t, $String*, int32_t, int32_t)},
+	{"matches", "([CII)I", nullptr, $PUBLIC, $virtualMethod(BMPattern, matches, int32_t, $chars*, int32_t, int32_t)},
+	{"matchesIgnoreCase", "(Ljava/text/CharacterIterator;II)I", nullptr, 0, $virtualMethod(BMPattern, matchesIgnoreCase, int32_t, $CharacterIterator*, int32_t, int32_t)},
+	{"matchesIgnoreCase", "(Ljava/lang/String;II)I", nullptr, 0, $virtualMethod(BMPattern, matchesIgnoreCase, int32_t, $String*, int32_t, int32_t)},
+	{"matchesIgnoreCase", "([CII)I", nullptr, 0, $virtualMethod(BMPattern, matchesIgnoreCase, int32_t, $chars*, int32_t, int32_t)},
 	{}
 };
 

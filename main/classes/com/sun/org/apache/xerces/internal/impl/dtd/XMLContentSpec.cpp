@@ -57,16 +57,16 @@ $FieldInfo _XMLContentSpec_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLContentSpec_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLContentSpec::*)()>(&XMLContentSpec::init$))},
-	{"<init>", "(SLjava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLContentSpec::*)(int16_t,Object$*,Object$*)>(&XMLContentSpec::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLContentSpec::*)(XMLContentSpec*)>(&XMLContentSpec::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec$Provider;I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLContentSpec::*)($XMLContentSpec$Provider*,int32_t)>(&XMLContentSpec::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"setValues", "(SLjava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC},
-	{"setValues", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec;)V", nullptr, $PUBLIC},
-	{"setValues", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec$Provider;I)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLContentSpec, init$, void)},
+	{"<init>", "(SLjava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(XMLContentSpec, init$, void, int16_t, Object$*, Object$*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec;)V", nullptr, $PUBLIC, $method(XMLContentSpec, init$, void, XMLContentSpec*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec$Provider;I)V", nullptr, $PUBLIC, $method(XMLContentSpec, init$, void, $XMLContentSpec$Provider*, int32_t)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLContentSpec, clear, void)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XMLContentSpec, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XMLContentSpec, hashCode, int32_t)},
+	{"setValues", "(SLjava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(XMLContentSpec, setValues, void, int16_t, Object$*, Object$*)},
+	{"setValues", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec;)V", nullptr, $PUBLIC, $virtualMethod(XMLContentSpec, setValues, void, XMLContentSpec*)},
+	{"setValues", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec$Provider;I)V", nullptr, $PUBLIC, $virtualMethod(XMLContentSpec, setValues, void, $XMLContentSpec$Provider*, int32_t)},
 	{}
 };
 

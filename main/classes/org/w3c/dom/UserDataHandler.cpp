@@ -12,6 +12,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace org {
 	namespace w3c {
@@ -27,7 +28,7 @@ $FieldInfo _UserDataHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _UserDataHandler_MethodInfo_[] = {
-	{"handle", "(SLjava/lang/String;Ljava/lang/Object;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"handle", "(SLjava/lang/String;Ljava/lang/Object;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(UserDataHandler, handle, void, int16_t, $String*, Object$*, $Node*, $Node*)},
 	{}
 };
 

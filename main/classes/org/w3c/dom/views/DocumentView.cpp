@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $AbstractView = ::org::w3c::dom::views::AbstractView;
 
 namespace org {
 	namespace w3c {
@@ -12,7 +13,7 @@ namespace org {
 			namespace views {
 
 $MethodInfo _DocumentView_MethodInfo_[] = {
-	{"getDefaultView", "()Lorg/w3c/dom/views/AbstractView;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDefaultView", "()Lorg/w3c/dom/views/AbstractView;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentView, getDefaultView, $AbstractView*)},
 	{}
 };
 

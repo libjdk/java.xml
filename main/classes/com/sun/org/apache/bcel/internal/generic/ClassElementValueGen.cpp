@@ -39,14 +39,14 @@ $FieldInfo _ClassElementValueGen_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassElementValueGen_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PROTECTED, $method(static_cast<void(ClassElementValueGen::*)(int32_t,$ConstantPoolGen*)>(&ClassElementValueGen::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassElementValueGen::*)($ObjectType*,$ConstantPoolGen*)>(&ClassElementValueGen::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ClassElementValue;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;Z)V", nullptr, $PUBLIC, $method(static_cast<void(ClassElementValueGen::*)($ClassElementValue*,$ConstantPoolGen*,bool)>(&ClassElementValueGen::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getClassString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getElementValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC},
-	{"getIndex", "()I", nullptr, $PUBLIC},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PROTECTED, $method(ClassElementValueGen, init$, void, int32_t, $ConstantPoolGen*)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(ClassElementValueGen, init$, void, $ObjectType*, $ConstantPoolGen*)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ClassElementValue;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;Z)V", nullptr, $PUBLIC, $method(ClassElementValueGen, init$, void, $ClassElementValue*, $ConstantPoolGen*, bool)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ClassElementValueGen, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getClassString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ClassElementValueGen, getClassString, $String*)},
+	{"getElementValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC, $virtualMethod(ClassElementValueGen, getElementValue, $ElementValue*)},
+	{"getIndex", "()I", nullptr, $PUBLIC, $virtualMethod(ClassElementValueGen, getIndex, int32_t)},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ClassElementValueGen, stringifyValue, $String*)},
 	{}
 };
 

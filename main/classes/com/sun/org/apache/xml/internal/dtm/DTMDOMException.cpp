@@ -22,8 +22,8 @@ $FieldInfo _DTMDOMException_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDOMException_MethodInfo_[] = {
-	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDOMException::*)(int16_t,$String*)>(&DTMDOMException::init$))},
-	{"<init>", "(S)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDOMException::*)(int16_t)>(&DTMDOMException::init$))},
+	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(DTMDOMException, init$, void, int16_t, $String*)},
+	{"<init>", "(S)V", nullptr, $PUBLIC, $method(DTMDOMException, init$, void, int16_t)},
 	{}
 };
 

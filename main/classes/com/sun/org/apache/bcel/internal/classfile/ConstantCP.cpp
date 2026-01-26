@@ -31,16 +31,16 @@ $FieldInfo _ConstantCP_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantCP_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantCP;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantCP::*)(ConstantCP*)>(&ConstantCP::init$))},
-	{"<init>", "(BLjava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(ConstantCP::*)(int8_t,$DataInput*)>(&ConstantCP::init$)), "java.io.IOException"},
-	{"<init>", "(BII)V", nullptr, $PROTECTED, $method(static_cast<void(ConstantCP::*)(int8_t,int32_t,int32_t)>(&ConstantCP::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, nullptr, "java.io.IOException"},
-	{"getClass", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getClassIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(ConstantCP::*)()>(&ConstantCP::getClassIndex))},
-	{"getNameAndTypeIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(ConstantCP::*)()>(&ConstantCP::getNameAndTypeIndex))},
-	{"setClassIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ConstantCP::*)(int32_t)>(&ConstantCP::setClassIndex))},
-	{"setNameAndTypeIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ConstantCP::*)(int32_t)>(&ConstantCP::setNameAndTypeIndex))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantCP;)V", nullptr, $PUBLIC, $method(ConstantCP, init$, void, ConstantCP*)},
+	{"<init>", "(BLjava/io/DataInput;)V", nullptr, 0, $method(ConstantCP, init$, void, int8_t, $DataInput*), "java.io.IOException"},
+	{"<init>", "(BII)V", nullptr, $PROTECTED, $method(ConstantCP, init$, void, int8_t, int32_t, int32_t)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(ConstantCP, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getClass", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ConstantCP, getClass, $String*, $ConstantPool*)},
+	{"getClassIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(ConstantCP, getClassIndex, int32_t)},
+	{"getNameAndTypeIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(ConstantCP, getNameAndTypeIndex, int32_t)},
+	{"setClassIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(ConstantCP, setClassIndex, void, int32_t)},
+	{"setNameAndTypeIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(ConstantCP, setNameAndTypeIndex, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ConstantCP, toString, $String*)},
 	{}
 };
 

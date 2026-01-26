@@ -37,12 +37,12 @@ $FieldInfo _DTMStringPool_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMStringPool_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(DTMStringPool::*)(int32_t)>(&DTMStringPool::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTMStringPool::*)()>(&DTMStringPool::init$))},
-	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&DTMStringPool::_main))},
-	{"indexToString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "java.lang.IndexOutOfBoundsException"},
-	{"removeAllElements", "()V", nullptr, $PUBLIC},
-	{"stringToIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(DTMStringPool, init$, void, int32_t)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTMStringPool, init$, void)},
+	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(DTMStringPool, _main, void, $StringArray*)},
+	{"indexToString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DTMStringPool, indexToString, $String*, int32_t), "java.lang.IndexOutOfBoundsException"},
+	{"removeAllElements", "()V", nullptr, $PUBLIC, $virtualMethod(DTMStringPool, removeAllElements, void)},
+	{"stringToIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(DTMStringPool, stringToIndex, int32_t, $String*)},
 	{}
 };
 

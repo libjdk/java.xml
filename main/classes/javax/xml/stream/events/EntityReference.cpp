@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $EntityDeclaration = ::javax::xml::stream::events::EntityDeclaration;
 
 namespace javax {
 	namespace xml {
@@ -12,8 +13,8 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _EntityReference_MethodInfo_[] = {
-	{"getDeclaration", "()Ljavax/xml/stream/events/EntityDeclaration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDeclaration", "()Ljavax/xml/stream/events/EntityDeclaration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityReference, getDeclaration, $EntityDeclaration*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityReference, getName, $String*)},
 	{}
 };
 

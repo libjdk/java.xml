@@ -22,18 +22,18 @@ $FieldInfo _XMLLocatorWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLLocatorWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLLocatorWrapper::*)()>(&XMLLocatorWrapper::init$))},
-	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLocator", "()Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;", nullptr, $PUBLIC, $method(static_cast<$XMLLocator*(XMLLocatorWrapper::*)()>(&XMLLocatorWrapper::getLocator))},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setLocator", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLLocatorWrapper::*)($XMLLocator*)>(&XMLLocatorWrapper::setLocator))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLLocatorWrapper, init$, void)},
+	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getBaseSystemId, $String*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getEncoding, $String*)},
+	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getExpandedSystemId, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getLineNumber, int32_t)},
+	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getLiteralSystemId, $String*)},
+	{"getLocator", "()Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;", nullptr, $PUBLIC, $method(XMLLocatorWrapper, getLocator, $XMLLocator*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getPublicId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLLocatorWrapper, getXMLVersion, $String*)},
+	{"setLocator", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", nullptr, $PUBLIC, $method(XMLLocatorWrapper, setLocator, void, $XMLLocator*)},
 	{}
 };
 

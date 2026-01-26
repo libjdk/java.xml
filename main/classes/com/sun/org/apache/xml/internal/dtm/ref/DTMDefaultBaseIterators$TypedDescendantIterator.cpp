@@ -34,8 +34,8 @@ $FieldInfo _DTMDefaultBaseIterators$TypedDescendantIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$TypedDescendantIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$TypedDescendantIterator::*)($DTMDefaultBaseIterators*,int32_t)>(&DTMDefaultBaseIterators$TypedDescendantIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$TypedDescendantIterator, init$, void, $DTMDefaultBaseIterators*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$TypedDescendantIterator, next, int32_t)},
 	{}
 };
 

@@ -20,9 +20,9 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _AnyAtomicDV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(AnyAtomicDV::*)()>(&AnyAtomicDV::init$))},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getAllowedFacets", "()S", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(AnyAtomicDV, init$, void)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AnyAtomicDV, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getAllowedFacets", "()S", nullptr, $PUBLIC, $virtualMethod(AnyAtomicDV, getAllowedFacets, int16_t)},
 	{}
 };
 

@@ -148,7 +148,7 @@ $FieldInfo _OpCodes_FieldInfo_[] = {
 };
 
 $MethodInfo _OpCodes_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(OpCodes::*)()>(&OpCodes::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(OpCodes, init$, void)},
 	{}
 };
 

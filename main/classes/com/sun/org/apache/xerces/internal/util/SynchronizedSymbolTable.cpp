@@ -22,13 +22,13 @@ $FieldInfo _SynchronizedSymbolTable_FieldInfo_[] = {
 };
 
 $MethodInfo _SynchronizedSymbolTable_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(SynchronizedSymbolTable::*)($SymbolTable*)>(&SynchronizedSymbolTable::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SynchronizedSymbolTable::*)()>(&SynchronizedSymbolTable::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SynchronizedSymbolTable::*)(int32_t)>(&SynchronizedSymbolTable::init$))},
-	{"addSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"addSymbol", "([CII)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"containsSymbol", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"containsSymbol", "([CII)Z", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(SynchronizedSymbolTable, init$, void, $SymbolTable*)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SynchronizedSymbolTable, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(SynchronizedSymbolTable, init$, void, int32_t)},
+	{"addSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SynchronizedSymbolTable, addSymbol, $String*, $String*)},
+	{"addSymbol", "([CII)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SynchronizedSymbolTable, addSymbol, $String*, $chars*, int32_t, int32_t)},
+	{"containsSymbol", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(SynchronizedSymbolTable, containsSymbol, bool, $String*)},
+	{"containsSymbol", "([CII)Z", nullptr, $PUBLIC, $virtualMethod(SynchronizedSymbolTable, containsSymbol, bool, $chars*, int32_t, int32_t)},
 	{}
 };
 

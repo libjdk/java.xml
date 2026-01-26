@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _FieldGen$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(FieldGen$1::*)()>(&FieldGen$1::init$))},
-	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(FieldGen$1, init$, void)},
+	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(FieldGen$1, equals, bool, Object$*, Object$*)},
+	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(FieldGen$1, hashCode, int32_t, Object$*)},
 	{}
 };
 

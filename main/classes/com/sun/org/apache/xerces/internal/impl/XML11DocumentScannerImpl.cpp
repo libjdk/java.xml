@@ -52,21 +52,21 @@ $FieldInfo _XML11DocumentScannerImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11DocumentScannerImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11DocumentScannerImpl::*)()>(&XML11DocumentScannerImpl::init$))},
-	{"getVersionNotSupportedKey", "()Ljava/lang/String;", nullptr, $PROTECTED},
-	{"isInvalid", "(I)Z", nullptr, $PROTECTED},
-	{"isInvalidLiteral", "(I)Z", nullptr, $PROTECTED},
-	{"isUnchangedByNormalization", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)I", nullptr, $PROTECTED},
-	{"isValidNCName", "(I)Z", nullptr, $PROTECTED},
-	{"isValidNameChar", "(I)Z", nullptr, $PROTECTED},
-	{"isValidNameStartChar", "(I)Z", nullptr, $PROTECTED},
-	{"isValidNameStartHighSurrogate", "(I)Z", nullptr, $PROTECTED},
-	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PROTECTED},
-	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;I)V", nullptr, $PROTECTED},
-	{"scanAttributeValue", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;Lcom/sun/org/apache/xerces/internal/xni/XMLString;Ljava/lang/String;ZLjava/lang/String;Z)Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanContent", "(Lcom/sun/org/apache/xerces/internal/util/XMLStringBuffer;)I", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanPubidLiteral", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"versionSupported", "(Ljava/lang/String;)Z", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11DocumentScannerImpl, init$, void)},
+	{"getVersionNotSupportedKey", "()Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, getVersionNotSupportedKey, $String*)},
+	{"isInvalid", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, isInvalid, bool, int32_t)},
+	{"isInvalidLiteral", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, isInvalidLiteral, bool, int32_t)},
+	{"isUnchangedByNormalization", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)I", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, isUnchangedByNormalization, int32_t, $XMLString*)},
+	{"isValidNCName", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, isValidNCName, bool, int32_t)},
+	{"isValidNameChar", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, isValidNameChar, bool, int32_t)},
+	{"isValidNameStartChar", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, isValidNameStartChar, bool, int32_t)},
+	{"isValidNameStartHighSurrogate", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, isValidNameStartHighSurrogate, bool, int32_t)},
+	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, normalizeWhitespace, void, $XMLString*)},
+	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;I)V", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, normalizeWhitespace, void, $XMLString*, int32_t)},
+	{"scanAttributeValue", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;Lcom/sun/org/apache/xerces/internal/xni/XMLString;Ljava/lang/String;ZLjava/lang/String;Z)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, scanAttributeValue, bool, $XMLString*, $XMLString*, $String*, bool, $String*, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanContent", "(Lcom/sun/org/apache/xerces/internal/util/XMLStringBuffer;)I", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, scanContent, int32_t, $XMLStringBuffer*), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanPubidLiteral", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, scanPubidLiteral, bool, $XMLString*), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"versionSupported", "(Ljava/lang/String;)Z", nullptr, $PROTECTED, $virtualMethod(XML11DocumentScannerImpl, versionSupported, bool, $String*)},
 	{}
 };
 

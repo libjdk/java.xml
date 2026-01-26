@@ -26,10 +26,10 @@ $FieldInfo _XMLSchema_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchema_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchema::*)($XMLGrammarPool*)>(&XMLSchema::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Z)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchema::*)($XMLGrammarPool*,bool)>(&XMLSchema::init$))},
-	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC},
-	{"isFullyComposed", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(XMLSchema, init$, void, $XMLGrammarPool*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Z)V", nullptr, $PUBLIC, $method(XMLSchema, init$, void, $XMLGrammarPool*, bool)},
+	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC, $virtualMethod(XMLSchema, getGrammarPool, $XMLGrammarPool*)},
+	{"isFullyComposed", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLSchema, isFullyComposed, bool)},
 	{}
 };
 

@@ -36,16 +36,16 @@ $FieldInfo _ErrorHandlerWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _ErrorHandlerWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ErrorHandlerWrapper::*)()>(&ErrorHandlerWrapper::init$))},
-	{"<init>", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC, $method(static_cast<void(ErrorHandlerWrapper::*)($ErrorHandler*)>(&ErrorHandlerWrapper::init$))},
-	{"createSAXParseException", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)Lorg/xml/sax/SAXParseException;", nullptr, $PROTECTED | $STATIC, $method(static_cast<$SAXParseException*(*)($XMLParseException*)>(&ErrorHandlerWrapper::createSAXParseException))},
-	{"createXMLParseException", "(Lorg/xml/sax/SAXParseException;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;", nullptr, $PROTECTED | $STATIC, $method(static_cast<$XMLParseException*(*)($SAXParseException*)>(&ErrorHandlerWrapper::createXMLParseException))},
-	{"createXNIException", "(Lorg/xml/sax/SAXException;)Lcom/sun/org/apache/xerces/internal/xni/XNIException;", nullptr, $PROTECTED | $STATIC, $method(static_cast<$XNIException*(*)($SAXException*)>(&ErrorHandlerWrapper::createXNIException))},
-	{"error", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"fatalError", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC},
-	{"warning", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ErrorHandlerWrapper, init$, void)},
+	{"<init>", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC, $method(ErrorHandlerWrapper, init$, void, $ErrorHandler*)},
+	{"createSAXParseException", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)Lorg/xml/sax/SAXParseException;", nullptr, $PROTECTED | $STATIC, $staticMethod(ErrorHandlerWrapper, createSAXParseException, $SAXParseException*, $XMLParseException*)},
+	{"createXMLParseException", "(Lorg/xml/sax/SAXParseException;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;", nullptr, $PROTECTED | $STATIC, $staticMethod(ErrorHandlerWrapper, createXMLParseException, $XMLParseException*, $SAXParseException*)},
+	{"createXNIException", "(Lorg/xml/sax/SAXException;)Lcom/sun/org/apache/xerces/internal/xni/XNIException;", nullptr, $PROTECTED | $STATIC, $staticMethod(ErrorHandlerWrapper, createXNIException, $XNIException*, $SAXException*)},
+	{"error", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper, error, void, $String*, $String*, $XMLParseException*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"fatalError", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper, fatalError, void, $String*, $String*, $XMLParseException*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper, getErrorHandler, $ErrorHandler*)},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper, setErrorHandler, void, $ErrorHandler*)},
+	{"warning", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper, warning, void, $String*, $String*, $XMLParseException*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

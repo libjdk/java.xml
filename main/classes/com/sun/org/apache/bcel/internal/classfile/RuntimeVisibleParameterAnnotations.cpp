@@ -24,7 +24,7 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _RuntimeVisibleParameterAnnotations_MethodInfo_[] = {
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(RuntimeVisibleParameterAnnotations::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&RuntimeVisibleParameterAnnotations::init$)), "java.io.IOException"},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(RuntimeVisibleParameterAnnotations, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
 	{}
 };
 

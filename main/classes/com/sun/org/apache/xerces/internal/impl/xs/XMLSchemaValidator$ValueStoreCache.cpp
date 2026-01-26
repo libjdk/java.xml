@@ -74,16 +74,16 @@ $FieldInfo _XMLSchemaValidator$ValueStoreCache_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidator$ValueStoreCache_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$ValueStoreCache::*)($XMLSchemaValidator*)>(&XMLSchemaValidator$ValueStoreCache::init$))},
-	{"endDocument", "()V", nullptr, $PUBLIC},
-	{"endElement", "()V", nullptr, $PUBLIC},
-	{"getGlobalValueStoreFor", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;)Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator$ValueStoreBase;", nullptr, $PUBLIC},
-	{"getValueStoreFor", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;I)Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator$ValueStoreBase;", nullptr, $PUBLIC},
-	{"initValueStoresFor", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/FieldActivator;)V", nullptr, $PUBLIC},
-	{"startDocument", "()V", nullptr, $PUBLIC},
-	{"startElement", "()V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"transplant", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;I)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$ValueStoreCache, init$, void, $XMLSchemaValidator*)},
+	{"endDocument", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, endDocument, void)},
+	{"endElement", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, endElement, void)},
+	{"getGlobalValueStoreFor", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;)Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator$ValueStoreBase;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, getGlobalValueStoreFor, $XMLSchemaValidator$ValueStoreBase*, $IdentityConstraint*)},
+	{"getValueStoreFor", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;I)Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator$ValueStoreBase;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, getValueStoreFor, $XMLSchemaValidator$ValueStoreBase*, $IdentityConstraint*, int32_t)},
+	{"initValueStoresFor", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/FieldActivator;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, initValueStoresFor, void, $XSElementDecl*, $FieldActivator*)},
+	{"startDocument", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, startDocument, void)},
+	{"startElement", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, startElement, void)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, toString, $String*)},
+	{"transplant", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;I)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$ValueStoreCache, transplant, void, $IdentityConstraint*, int32_t)},
 	{}
 };
 

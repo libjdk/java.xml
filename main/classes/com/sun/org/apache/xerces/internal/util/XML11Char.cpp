@@ -44,21 +44,21 @@ $FieldInfo _XML11Char_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11Char_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11Char::*)()>(&XML11Char::init$))},
-	{"isXML11Content", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11Content))},
-	{"isXML11InternalEntityContent", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11InternalEntityContent))},
-	{"isXML11Invalid", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11Invalid))},
-	{"isXML11NCName", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11NCName))},
-	{"isXML11NCNameStart", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11NCNameStart))},
-	{"isXML11Name", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11Name))},
-	{"isXML11NameHighSurrogate", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11NameHighSurrogate))},
-	{"isXML11NameStart", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11NameStart))},
-	{"isXML11Space", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11Space))},
-	{"isXML11Valid", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11Valid))},
-	{"isXML11ValidLiteral", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&XML11Char::isXML11ValidLiteral))},
-	{"isXML11ValidNCName", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&XML11Char::isXML11ValidNCName))},
-	{"isXML11ValidName", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&XML11Char::isXML11ValidName))},
-	{"isXML11ValidNmtoken", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&XML11Char::isXML11ValidNmtoken))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11Char, init$, void)},
+	{"isXML11Content", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11Content, bool, int32_t)},
+	{"isXML11InternalEntityContent", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11InternalEntityContent, bool, int32_t)},
+	{"isXML11Invalid", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11Invalid, bool, int32_t)},
+	{"isXML11NCName", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11NCName, bool, int32_t)},
+	{"isXML11NCNameStart", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11NCNameStart, bool, int32_t)},
+	{"isXML11Name", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11Name, bool, int32_t)},
+	{"isXML11NameHighSurrogate", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11NameHighSurrogate, bool, int32_t)},
+	{"isXML11NameStart", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11NameStart, bool, int32_t)},
+	{"isXML11Space", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11Space, bool, int32_t)},
+	{"isXML11Valid", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11Valid, bool, int32_t)},
+	{"isXML11ValidLiteral", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11ValidLiteral, bool, int32_t)},
+	{"isXML11ValidNCName", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11ValidNCName, bool, $String*)},
+	{"isXML11ValidName", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11ValidName, bool, $String*)},
+	{"isXML11ValidNmtoken", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XML11Char, isXML11ValidNmtoken, bool, $String*)},
 	{}
 };
 

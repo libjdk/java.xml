@@ -15,7 +15,7 @@ namespace com {
 							namespace grammars {
 
 $MethodInfo _XMLDTDDescription_MethodInfo_[] = {
-	{"getRootName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getRootName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDTDDescription, getRootName, $String*)},
 	{}
 };
 

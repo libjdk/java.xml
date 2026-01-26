@@ -25,9 +25,9 @@ $MethodInfo _IfInstruction_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(IfInstruction::*)()>(&IfInstruction::init$))},
-	{"<init>", "(SLcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PROTECTED, $method(static_cast<void(IfInstruction::*)(int16_t,$InstructionHandle*)>(&IfInstruction::init$))},
-	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, 0, $method(IfInstruction, init$, void)},
+	{"<init>", "(SLcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PROTECTED, $method(IfInstruction, init$, void, int16_t, $InstructionHandle*)},
+	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IfInstruction, negate, IfInstruction*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

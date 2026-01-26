@@ -68,8 +68,8 @@ $MethodInfo _DeferredProcessingInstructionImpl_MethodInfo_[] = {
 	{"*hasAttributes", "()Z", nullptr, $PUBLIC},
 	{"*hasChildNodes", "()Z", nullptr, $PUBLIC},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl;I)V", nullptr, 0, $method(static_cast<void(DeferredProcessingInstructionImpl::*)($DeferredDocumentImpl*,int32_t)>(&DeferredProcessingInstructionImpl::init$))},
-	{"getNodeIndex", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl;I)V", nullptr, 0, $method(DeferredProcessingInstructionImpl, init$, void, $DeferredDocumentImpl*, int32_t)},
+	{"getNodeIndex", "()I", nullptr, $PUBLIC, $virtualMethod(DeferredProcessingInstructionImpl, getNodeIndex, int32_t)},
 	{"*insertBefore", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
 	{"*isDefaultNamespace", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
 	{"*isEqualNode", "(Lorg/w3c/dom/Node;)Z", nullptr, $PUBLIC},
@@ -84,7 +84,7 @@ $MethodInfo _DeferredProcessingInstructionImpl_MethodInfo_[] = {
 	{"*setPrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
 	{"*setTextContent", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
 	{"*setUserData", "(Ljava/lang/String;Ljava/lang/Object;Lorg/w3c/dom/UserDataHandler;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"synchronizeData", "()V", nullptr, $PROTECTED},
+	{"synchronizeData", "()V", nullptr, $PROTECTED, $virtualMethod(DeferredProcessingInstructionImpl, synchronizeData, void)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

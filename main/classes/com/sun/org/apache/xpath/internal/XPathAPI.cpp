@@ -42,16 +42,16 @@ namespace com {
 					namespace internal {
 
 $MethodInfo _XPathAPI_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathAPI::*)()>(&XPathAPI::init$))},
-	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XObject*(*)($Node*,$String*)>(&XPathAPI::eval)), "javax.xml.transform.TransformerException"},
-	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XObject*(*)($Node*,$String*,$Node*)>(&XPathAPI::eval)), "javax.xml.transform.TransformerException"},
-	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XObject*(*)($Node*,$String*,$PrefixResolver*)>(&XPathAPI::eval)), "javax.xml.transform.TransformerException"},
-	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeIterator*(*)($Node*,$String*)>(&XPathAPI::selectNodeIterator)), "javax.xml.transform.TransformerException"},
-	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeIterator*(*)($Node*,$String*,$Node*)>(&XPathAPI::selectNodeIterator)), "javax.xml.transform.TransformerException"},
-	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($Node*,$String*)>(&XPathAPI::selectNodeList)), "javax.xml.transform.TransformerException"},
-	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($Node*,$String*,$Node*)>(&XPathAPI::selectNodeList)), "javax.xml.transform.TransformerException"},
-	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Node*(*)($Node*,$String*)>(&XPathAPI::selectSingleNode)), "javax.xml.transform.TransformerException"},
-	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Node*(*)($Node*,$String*,$Node*)>(&XPathAPI::selectSingleNode)), "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPathAPI, init$, void)},
+	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, eval, $XObject*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, eval, $XObject*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
+	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, eval, $XObject*, $Node*, $String*, $PrefixResolver*), "javax.xml.transform.TransformerException"},
+	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, selectNodeIterator, $NodeIterator*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, selectNodeIterator, $NodeIterator*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
+	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, selectNodeList, $NodeList*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, selectNodeList, $NodeList*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
+	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, selectSingleNode, $Node*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathAPI, selectSingleNode, $Node*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

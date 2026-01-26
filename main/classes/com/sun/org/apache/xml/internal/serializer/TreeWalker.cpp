@@ -66,14 +66,14 @@ $FieldInfo _TreeWalker_FieldInfo_[] = {
 };
 
 $MethodInfo _TreeWalker_MethodInfo_[] = {
-	{"<init>", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $method(static_cast<void(TreeWalker::*)($ContentHandler*)>(&TreeWalker::init$))},
-	{"<init>", "(Lorg/xml/sax/ContentHandler;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(TreeWalker::*)($ContentHandler*,$String*)>(&TreeWalker::init$))},
-	{"dispatachChars", "(Lorg/w3c/dom/Node;)V", nullptr, $PRIVATE | $FINAL, $method(static_cast<void(TreeWalker::*)($Node*)>(&TreeWalker::dispatachChars)), "org.xml.sax.SAXException"},
-	{"endNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PROTECTED, $method(static_cast<void(TreeWalker::*)($Node*)>(&TreeWalker::endNode)), "org.xml.sax.SAXException"},
-	{"getContentHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC, $method(static_cast<$ContentHandler*(TreeWalker::*)()>(&TreeWalker::getContentHandler))},
-	{"startNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PROTECTED, $method(static_cast<void(TreeWalker::*)($Node*)>(&TreeWalker::startNode)), "org.xml.sax.SAXException"},
-	{"traverse", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(static_cast<void(TreeWalker::*)($Node*)>(&TreeWalker::traverse)), "org.xml.sax.SAXException"},
-	{"traverse", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(static_cast<void(TreeWalker::*)($Node*,$Node*)>(&TreeWalker::traverse)), "org.xml.sax.SAXException"},
+	{"<init>", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $method(TreeWalker, init$, void, $ContentHandler*)},
+	{"<init>", "(Lorg/xml/sax/ContentHandler;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(TreeWalker, init$, void, $ContentHandler*, $String*)},
+	{"dispatachChars", "(Lorg/w3c/dom/Node;)V", nullptr, $PRIVATE | $FINAL, $method(TreeWalker, dispatachChars, void, $Node*), "org.xml.sax.SAXException"},
+	{"endNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PROTECTED, $method(TreeWalker, endNode, void, $Node*), "org.xml.sax.SAXException"},
+	{"getContentHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC, $method(TreeWalker, getContentHandler, $ContentHandler*)},
+	{"startNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PROTECTED, $method(TreeWalker, startNode, void, $Node*), "org.xml.sax.SAXException"},
+	{"traverse", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(TreeWalker, traverse, void, $Node*), "org.xml.sax.SAXException"},
+	{"traverse", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(TreeWalker, traverse, void, $Node*, $Node*), "org.xml.sax.SAXException"},
 	{}
 };
 

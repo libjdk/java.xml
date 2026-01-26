@@ -33,8 +33,8 @@ $FieldInfo _FuncNot_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncNot_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncNot::*)()>(&FuncNot::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncNot, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncNot, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

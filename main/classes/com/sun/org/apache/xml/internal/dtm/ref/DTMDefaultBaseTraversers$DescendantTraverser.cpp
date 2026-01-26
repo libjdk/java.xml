@@ -28,15 +28,15 @@ $FieldInfo _DTMDefaultBaseTraversers$DescendantTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$DescendantTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$DescendantTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$DescendantTraverser::init$))},
-	{"axisHasBeenProcessed", "(I)Z", nullptr, $PROTECTED},
-	{"first", "(II)I", nullptr, $PUBLIC},
-	{"getFirstPotential", "(I)I", nullptr, $PROTECTED},
-	{"getSubtreeRoot", "(I)I", nullptr, $PROTECTED},
-	{"isAfterAxis", "(II)Z", nullptr, $PROTECTED},
-	{"isDescendant", "(II)Z", nullptr, $PROTECTED},
-	{"next", "(II)I", nullptr, $PUBLIC},
-	{"next", "(III)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$DescendantTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"axisHasBeenProcessed", "(I)Z", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, axisHasBeenProcessed, bool, int32_t)},
+	{"first", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, first, int32_t, int32_t, int32_t)},
+	{"getFirstPotential", "(I)I", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, getFirstPotential, int32_t, int32_t)},
+	{"getSubtreeRoot", "(I)I", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, getSubtreeRoot, int32_t, int32_t)},
+	{"isAfterAxis", "(II)Z", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, isAfterAxis, bool, int32_t, int32_t)},
+	{"isDescendant", "(II)Z", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, isDescendant, bool, int32_t, int32_t)},
+	{"next", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, next, int32_t, int32_t, int32_t)},
+	{"next", "(III)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$DescendantTraverser, next, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

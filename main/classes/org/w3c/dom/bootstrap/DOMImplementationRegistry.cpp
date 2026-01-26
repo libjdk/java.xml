@@ -78,16 +78,16 @@ $FieldInfo _DOMImplementationRegistry_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMImplementationRegistry_MethodInfo_[] = {
-	{"<init>", "(Ljava/util/List;)V", "(Ljava/util/List<Lorg/w3c/dom/DOMImplementationSource;>;)V", $PRIVATE, $method(static_cast<void(DOMImplementationRegistry::*)($List*)>(&DOMImplementationRegistry::init$))},
-	{"addSource", "(Lorg/w3c/dom/DOMImplementationSource;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMImplementationRegistry::*)($DOMImplementationSource*)>(&DOMImplementationRegistry::addSource))},
-	{"getClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$ClassLoader*(*)()>(&DOMImplementationRegistry::getClassLoader))},
-	{"getContextClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$ClassLoader*(*)()>(&DOMImplementationRegistry::getContextClassLoader))},
-	{"getDOMImplementation", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC, $method(static_cast<$DOMImplementation*(DOMImplementationRegistry::*)($String*)>(&DOMImplementationRegistry::getDOMImplementation))},
-	{"getDOMImplementationList", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementationList;", nullptr, $PUBLIC, $method(static_cast<$DOMImplementationList*(DOMImplementationRegistry::*)($String*)>(&DOMImplementationRegistry::getDOMImplementationList))},
-	{"getResourceAsStream", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$InputStream*(*)($ClassLoader*,$String*)>(&DOMImplementationRegistry::getResourceAsStream))},
-	{"getServiceValue", "(Ljava/lang/ClassLoader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($ClassLoader*)>(&DOMImplementationRegistry::getServiceValue))},
-	{"getSystemProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&DOMImplementationRegistry::getSystemProperty))},
-	{"newInstance", "()Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DOMImplementationRegistry*(*)()>(&DOMImplementationRegistry::newInstance)), "java.lang.ClassNotFoundException,java.lang.InstantiationException,java.lang.IllegalAccessException,java.lang.ClassCastException"},
+	{"<init>", "(Ljava/util/List;)V", "(Ljava/util/List<Lorg/w3c/dom/DOMImplementationSource;>;)V", $PRIVATE, $method(DOMImplementationRegistry, init$, void, $List*)},
+	{"addSource", "(Lorg/w3c/dom/DOMImplementationSource;)V", nullptr, $PUBLIC, $method(DOMImplementationRegistry, addSource, void, $DOMImplementationSource*)},
+	{"getClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC, $staticMethod(DOMImplementationRegistry, getClassLoader, $ClassLoader*)},
+	{"getContextClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC, $staticMethod(DOMImplementationRegistry, getContextClassLoader, $ClassLoader*)},
+	{"getDOMImplementation", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC, $method(DOMImplementationRegistry, getDOMImplementation, $DOMImplementation*, $String*)},
+	{"getDOMImplementationList", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementationList;", nullptr, $PUBLIC, $method(DOMImplementationRegistry, getDOMImplementationList, $DOMImplementationList*, $String*)},
+	{"getResourceAsStream", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PRIVATE | $STATIC, $staticMethod(DOMImplementationRegistry, getResourceAsStream, $InputStream*, $ClassLoader*, $String*)},
+	{"getServiceValue", "(Ljava/lang/ClassLoader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(DOMImplementationRegistry, getServiceValue, $String*, $ClassLoader*)},
+	{"getSystemProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(DOMImplementationRegistry, getSystemProperty, $String*, $String*)},
+	{"newInstance", "()Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;", nullptr, $PUBLIC | $STATIC, $staticMethod(DOMImplementationRegistry, newInstance, DOMImplementationRegistry*), "java.lang.ClassNotFoundException,java.lang.InstantiationException,java.lang.IllegalAccessException,java.lang.ClassCastException"},
 	{}
 };
 

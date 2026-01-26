@@ -165,13 +165,13 @@ $FieldInfo _BaseSchemaDVFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _BaseSchemaDVFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(BaseSchemaDVFactory::*)()>(&BaseSchemaDVFactory::init$))},
-	{"createBuiltInTypes", "(Lcom/sun/org/apache/xerces/internal/util/SymbolHash;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl;)V", nullptr, $PROTECTED | $STATIC, $method(static_cast<void(*)($SymbolHash*,$XSSimpleTypeDecl*)>(&BaseSchemaDVFactory::createBuiltInTypes))},
-	{"createTypeList", "(Ljava/lang/String;Ljava/lang/String;SLcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC},
-	{"createTypeRestriction", "(Ljava/lang/String;Ljava/lang/String;SLcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC},
-	{"createTypeUnion", "(Ljava/lang/String;Ljava/lang/String;S[Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC},
-	{"newXSSimpleTypeDecl", "()Lcom/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl;", nullptr, $PUBLIC},
-	{"setDeclPool", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSDeclarationPool;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(BaseSchemaDVFactory, init$, void)},
+	{"createBuiltInTypes", "(Lcom/sun/org/apache/xerces/internal/util/SymbolHash;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl;)V", nullptr, $PROTECTED | $STATIC, $staticMethod(BaseSchemaDVFactory, createBuiltInTypes, void, $SymbolHash*, $XSSimpleTypeDecl*)},
+	{"createTypeList", "(Ljava/lang/String;Ljava/lang/String;SLcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC, $virtualMethod(BaseSchemaDVFactory, createTypeList, $XSSimpleType*, $String*, $String*, int16_t, $XSSimpleType*, $XSObjectList*)},
+	{"createTypeRestriction", "(Ljava/lang/String;Ljava/lang/String;SLcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC, $virtualMethod(BaseSchemaDVFactory, createTypeRestriction, $XSSimpleType*, $String*, $String*, int16_t, $XSSimpleType*, $XSObjectList*)},
+	{"createTypeUnion", "(Ljava/lang/String;Ljava/lang/String;S[Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC, $virtualMethod(BaseSchemaDVFactory, createTypeUnion, $XSSimpleType*, $String*, $String*, int16_t, $XSSimpleTypeArray*, $XSObjectList*)},
+	{"newXSSimpleTypeDecl", "()Lcom/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl;", nullptr, $PUBLIC, $virtualMethod(BaseSchemaDVFactory, newXSSimpleTypeDecl, $XSSimpleTypeDecl*)},
+	{"setDeclPool", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSDeclarationPool;)V", nullptr, $PUBLIC, $virtualMethod(BaseSchemaDVFactory, setDeclPool, void, $XSDeclarationPool*)},
 	{}
 };
 

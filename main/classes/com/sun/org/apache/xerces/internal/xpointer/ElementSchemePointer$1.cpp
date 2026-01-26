@@ -33,8 +33,8 @@ $FieldInfo _ElementSchemePointer$1_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementSchemePointer$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(static_cast<void(ElementSchemePointer$1::*)($ElementSchemePointer*,$SymbolTable*)>(&ElementSchemePointer$1::init$))},
-	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer$Tokens;I)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(ElementSchemePointer$1, init$, void, $ElementSchemePointer*, $SymbolTable*)},
+	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer$Tokens;I)V", nullptr, $PROTECTED, $virtualMethod(ElementSchemePointer$1, addToken, void, $ElementSchemePointer$Tokens*, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

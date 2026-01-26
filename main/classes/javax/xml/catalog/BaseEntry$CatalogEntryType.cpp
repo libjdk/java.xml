@@ -51,12 +51,12 @@ $FieldInfo _BaseEntry$CatalogEntryType_FieldInfo_[] = {
 };
 
 $MethodInfo _BaseEntry$CatalogEntryType_MethodInfo_[] = {
-	{"$values", "()[Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$BaseEntry$CatalogEntryTypeArray*(*)()>(&BaseEntry$CatalogEntryType::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(BaseEntry$CatalogEntryType::*)($String*,int32_t,$String*)>(&BaseEntry$CatalogEntryType::init$))},
-	{"getType", "(Ljava/lang/String;)Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<BaseEntry$CatalogEntryType*(*)($String*)>(&BaseEntry$CatalogEntryType::getType))},
-	{"isType", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(static_cast<bool(BaseEntry$CatalogEntryType::*)($String*)>(&BaseEntry$CatalogEntryType::isType))},
-	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<BaseEntry$CatalogEntryType*(*)($String*)>(&BaseEntry$CatalogEntryType::valueOf))},
-	{"values", "()[Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$BaseEntry$CatalogEntryTypeArray*(*)()>(&BaseEntry$CatalogEntryType::values))},
+	{"$values", "()[Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(BaseEntry$CatalogEntryType, $values, $BaseEntry$CatalogEntryTypeArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(BaseEntry$CatalogEntryType, init$, void, $String*, int32_t, $String*)},
+	{"getType", "(Ljava/lang/String;)Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC | $STATIC, $staticMethod(BaseEntry$CatalogEntryType, getType, BaseEntry$CatalogEntryType*, $String*)},
+	{"isType", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(BaseEntry$CatalogEntryType, isType, bool, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC | $STATIC, $staticMethod(BaseEntry$CatalogEntryType, valueOf, BaseEntry$CatalogEntryType*, $String*)},
+	{"values", "()[Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC | $STATIC, $staticMethod(BaseEntry$CatalogEntryType, values, $BaseEntry$CatalogEntryTypeArray*)},
 	{}
 };
 

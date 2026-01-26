@@ -34,18 +34,18 @@ $FieldInfo _Match_FieldInfo_[] = {
 };
 
 $MethodInfo _Match_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Match::*)()>(&Match::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"getBeginning", "(I)I", nullptr, $PUBLIC},
-	{"getCapturedText", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getEnd", "(I)I", nullptr, $PUBLIC},
-	{"getNumberOfGroups", "()I", nullptr, $PUBLIC},
-	{"setBeginning", "(II)V", nullptr, $PROTECTED},
-	{"setEnd", "(II)V", nullptr, $PROTECTED},
-	{"setNumberOfGroups", "(I)V", nullptr, $PROTECTED},
-	{"setSource", "(Ljava/text/CharacterIterator;)V", nullptr, $PROTECTED},
-	{"setSource", "(Ljava/lang/String;)V", nullptr, $PROTECTED},
-	{"setSource", "([C)V", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Match, init$, void)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(Match, clone, $Object*)},
+	{"getBeginning", "(I)I", nullptr, $PUBLIC, $virtualMethod(Match, getBeginning, int32_t, int32_t)},
+	{"getCapturedText", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Match, getCapturedText, $String*, int32_t)},
+	{"getEnd", "(I)I", nullptr, $PUBLIC, $virtualMethod(Match, getEnd, int32_t, int32_t)},
+	{"getNumberOfGroups", "()I", nullptr, $PUBLIC, $virtualMethod(Match, getNumberOfGroups, int32_t)},
+	{"setBeginning", "(II)V", nullptr, $PROTECTED, $virtualMethod(Match, setBeginning, void, int32_t, int32_t)},
+	{"setEnd", "(II)V", nullptr, $PROTECTED, $virtualMethod(Match, setEnd, void, int32_t, int32_t)},
+	{"setNumberOfGroups", "(I)V", nullptr, $PROTECTED, $virtualMethod(Match, setNumberOfGroups, void, int32_t)},
+	{"setSource", "(Ljava/text/CharacterIterator;)V", nullptr, $PROTECTED, $virtualMethod(Match, setSource, void, $CharacterIterator*)},
+	{"setSource", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $virtualMethod(Match, setSource, void, $String*)},
+	{"setSource", "([C)V", nullptr, $PROTECTED, $virtualMethod(Match, setSource, void, $chars*)},
 	{}
 };
 

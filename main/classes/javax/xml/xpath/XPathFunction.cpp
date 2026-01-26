@@ -5,13 +5,14 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $List = ::java::util::List;
 
 namespace javax {
 	namespace xml {
 		namespace xpath {
 
 $MethodInfo _XPathFunction_MethodInfo_[] = {
-	{"evaluate", "(Ljava/util/List;)Ljava/lang/Object;", "(Ljava/util/List<*>;)Ljava/lang/Object;", $PUBLIC | $ABSTRACT, nullptr, "javax.xml.xpath.XPathFunctionException"},
+	{"evaluate", "(Ljava/util/List;)Ljava/lang/Object;", "(Ljava/util/List<*>;)Ljava/lang/Object;", $PUBLIC | $ABSTRACT, $virtualMethod(XPathFunction, evaluate, $Object*, $List*), "javax.xml.xpath.XPathFunctionException"},
 	{}
 };
 

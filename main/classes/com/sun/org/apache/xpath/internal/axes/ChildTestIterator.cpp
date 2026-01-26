@@ -40,13 +40,13 @@ $FieldInfo _ChildTestIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _ChildTestIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(ChildTestIterator::*)($Compiler*,int32_t,int32_t)>(&ChildTestIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisTraverser;)V", nullptr, $PUBLIC, $method(static_cast<void(ChildTestIterator::*)($DTMAxisTraverser*)>(&ChildTestIterator::init$))},
-	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PROTECTED},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(ChildTestIterator, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisTraverser;)V", nullptr, $PUBLIC, $method(ChildTestIterator, init$, void, $DTMAxisTraverser*)},
+	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, $virtualMethod(ChildTestIterator, cloneWithReset, $DTMIterator*), "java.lang.CloneNotSupportedException"},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(ChildTestIterator, detach, void)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(ChildTestIterator, getAxis, int32_t)},
+	{"getNextNode", "()I", nullptr, $PROTECTED, $virtualMethod(ChildTestIterator, getNextNode, int32_t)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(ChildTestIterator, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

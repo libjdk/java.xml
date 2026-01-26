@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSLoader.h>
 #include <jcpp.h>
 
+using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
+using $XSLoader = ::com::sun::org::apache::xerces::internal::xs::XSLoader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,8 +18,8 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSImplementation_MethodInfo_[] = {
-	{"createXSLoader", "(Lcom/sun/org/apache/xerces/internal/xs/StringList;)Lcom/sun/org/apache/xerces/internal/xs/XSLoader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException"},
-	{"getRecognizedVersions", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT},
+	{"createXSLoader", "(Lcom/sun/org/apache/xerces/internal/xs/StringList;)Lcom/sun/org/apache/xerces/internal/xs/XSLoader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSImplementation, createXSLoader, $XSLoader*, $StringList*), "com.sun.org.apache.xerces.internal.xs.XSException"},
+	{"getRecognizedVersions", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSImplementation, getRecognizedVersions, $StringList*)},
 	{}
 };
 

@@ -37,14 +37,14 @@ $FieldInfo _ArrayType_FieldInfo_[] = {
 };
 
 $MethodInfo _ArrayType_MethodInfo_[] = {
-	{"<init>", "(BI)V", nullptr, $PUBLIC, $method(static_cast<void(ArrayType::*)(int8_t,int32_t)>(&ArrayType::init$))},
-	{"<init>", "(Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(ArrayType::*)($String*,int32_t)>(&ArrayType::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/Type;I)V", nullptr, $PUBLIC, $method(static_cast<void(ArrayType::*)($Type*,int32_t)>(&ArrayType::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getBasicType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $method(static_cast<$Type*(ArrayType::*)()>(&ArrayType::getBasicType))},
-	{"getDimensions", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ArrayType::*)()>(&ArrayType::getDimensions))},
-	{"getElementType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $method(static_cast<$Type*(ArrayType::*)()>(&ArrayType::getElementType))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
+	{"<init>", "(BI)V", nullptr, $PUBLIC, $method(ArrayType, init$, void, int8_t, int32_t)},
+	{"<init>", "(Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(ArrayType, init$, void, $String*, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/Type;I)V", nullptr, $PUBLIC, $method(ArrayType, init$, void, $Type*, int32_t)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(ArrayType, equals, bool, Object$*)},
+	{"getBasicType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $method(ArrayType, getBasicType, $Type*)},
+	{"getDimensions", "()I", nullptr, $PUBLIC, $method(ArrayType, getDimensions, int32_t)},
+	{"getElementType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $method(ArrayType, getElementType, $Type*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(ArrayType, hashCode, int32_t)},
 	{}
 };
 

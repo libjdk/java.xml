@@ -29,10 +29,10 @@ $FieldInfo _NamespaceSupport$Prefixes_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceSupport$Prefixes_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/dom3/NamespaceSupport;[Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(NamespaceSupport$Prefixes::*)($NamespaceSupport*,$StringArray*,int32_t)>(&NamespaceSupport$Prefixes::init$))},
-	{"hasMoreElements", "()Z", nullptr, $PUBLIC},
-	{"nextElement", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/dom3/NamespaceSupport;[Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(NamespaceSupport$Prefixes, init$, void, $NamespaceSupport*, $StringArray*, int32_t)},
+	{"hasMoreElements", "()Z", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport$Prefixes, hasMoreElements, bool)},
+	{"nextElement", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport$Prefixes, nextElement, $Object*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport$Prefixes, toString, $String*)},
 	{}
 };
 

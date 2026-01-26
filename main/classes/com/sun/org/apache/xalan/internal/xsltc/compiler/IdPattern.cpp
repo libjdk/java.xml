@@ -17,7 +17,7 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _IdPattern_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(IdPattern::*)($String*)>(&IdPattern::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(IdPattern, init$, void, $String*)},
 	{}
 };
 

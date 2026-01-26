@@ -27,10 +27,10 @@ $FieldInfo _XMLConfigurationException_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLConfigurationException_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLConfigurationException::*)($Status*,$String*)>(&XMLConfigurationException::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLConfigurationException::*)($Status*,$String*,$String*)>(&XMLConfigurationException::init$))},
-	{"getIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "()Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLConfigurationException, init$, void, $Status*, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLConfigurationException, init$, void, $Status*, $String*, $String*)},
+	{"getIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLConfigurationException, getIdentifier, $String*)},
+	{"getType", "()Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PUBLIC, $virtualMethod(XMLConfigurationException, getType, $Status*)},
 	{}
 };
 

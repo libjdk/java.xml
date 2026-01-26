@@ -24,9 +24,9 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _Utility$JavaReader_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/Reader;)V", nullptr, $PUBLIC, $method(static_cast<void(Utility$JavaReader::*)($Reader*)>(&Utility$JavaReader::init$))},
-	{"read", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"read", "([CII)I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Ljava/io/Reader;)V", nullptr, $PUBLIC, $method(Utility$JavaReader, init$, void, $Reader*)},
+	{"read", "()I", nullptr, $PUBLIC, $virtualMethod(Utility$JavaReader, read, int32_t), "java.io.IOException"},
+	{"read", "([CII)I", nullptr, $PUBLIC, $virtualMethod(Utility$JavaReader, read, int32_t, $chars*, int32_t, int32_t), "java.io.IOException"},
 	{}
 };
 

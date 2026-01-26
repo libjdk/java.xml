@@ -81,8 +81,8 @@ $FieldInfo CatalogFeatures$$Lambda$lambda$setProperties$0::fieldInfos[2] = {
 	{}
 };
 $MethodInfo CatalogFeatures$$Lambda$lambda$setProperties$0::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/catalog/CatalogFeatures;)V", nullptr, $PUBLIC, $method(static_cast<void(CatalogFeatures$$Lambda$lambda$setProperties$0::*)(CatalogFeatures*)>(&CatalogFeatures$$Lambda$lambda$setProperties$0::init$))},
-	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/catalog/CatalogFeatures;)V", nullptr, $PUBLIC, $method(CatalogFeatures$$Lambda$lambda$setProperties$0, init$, void, CatalogFeatures*)},
+	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(CatalogFeatures$$Lambda$lambda$setProperties$0, accept, void, Object$*)},
 	{}
 };
 $ClassInfo CatalogFeatures$$Lambda$lambda$setProperties$0::classInfo$ = {
@@ -117,17 +117,17 @@ $FieldInfo _CatalogFeatures_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogFeatures_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(CatalogFeatures::*)()>(&CatalogFeatures::init$))},
-	{"<init>", "(Ljavax/xml/catalog/CatalogFeatures$Builder;)V", nullptr, 0, $method(static_cast<void(CatalogFeatures::*)($CatalogFeatures$Builder*)>(&CatalogFeatures::init$))},
-	{"builder", "()Ljavax/xml/catalog/CatalogFeatures$Builder;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$CatalogFeatures$Builder*(*)()>(&CatalogFeatures::builder))},
-	{"defaults", "()Ljavax/xml/catalog/CatalogFeatures;", nullptr, $PUBLIC | $STATIC, $method(static_cast<CatalogFeatures*(*)()>(&CatalogFeatures::defaults))},
-	{"get", "(Ljavax/xml/catalog/CatalogFeatures$Feature;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemProperty", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljava/lang/String;)Z", nullptr, $PRIVATE, $method(static_cast<bool(CatalogFeatures::*)($CatalogFeatures$Feature*,$String*)>(&CatalogFeatures::getSystemProperty))},
-	{"init", "()V", nullptr, $PRIVATE, $method(static_cast<void(CatalogFeatures::*)()>(&CatalogFeatures::init))},
-	{"lambda$setProperties$0", "(Ljava/util/Map$Entry;)V", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<void(CatalogFeatures::*)($Map$Entry*)>(&CatalogFeatures::lambda$setProperties$0))},
-	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(static_cast<void(CatalogFeatures::*)()>(&CatalogFeatures::readSystemProperties))},
-	{"setProperties", "(Ljavax/xml/catalog/CatalogFeatures$Builder;)V", nullptr, $PRIVATE, $method(static_cast<void(CatalogFeatures::*)($CatalogFeatures$Builder*)>(&CatalogFeatures::setProperties))},
-	{"setProperty", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljavax/xml/catalog/CatalogFeatures$State;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(CatalogFeatures::*)($CatalogFeatures$Feature*,$CatalogFeatures$State*,$String*)>(&CatalogFeatures::setProperty))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(CatalogFeatures, init$, void)},
+	{"<init>", "(Ljavax/xml/catalog/CatalogFeatures$Builder;)V", nullptr, 0, $method(CatalogFeatures, init$, void, $CatalogFeatures$Builder*)},
+	{"builder", "()Ljavax/xml/catalog/CatalogFeatures$Builder;", nullptr, $PUBLIC | $STATIC, $staticMethod(CatalogFeatures, builder, $CatalogFeatures$Builder*)},
+	{"defaults", "()Ljavax/xml/catalog/CatalogFeatures;", nullptr, $PUBLIC | $STATIC, $staticMethod(CatalogFeatures, defaults, CatalogFeatures*)},
+	{"get", "(Ljavax/xml/catalog/CatalogFeatures$Feature;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CatalogFeatures, get, $String*, $CatalogFeatures$Feature*)},
+	{"getSystemProperty", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljava/lang/String;)Z", nullptr, $PRIVATE, $method(CatalogFeatures, getSystemProperty, bool, $CatalogFeatures$Feature*, $String*)},
+	{"init", "()V", nullptr, $PRIVATE, $method(CatalogFeatures, init, void)},
+	{"lambda$setProperties$0", "(Ljava/util/Map$Entry;)V", nullptr, $PRIVATE | $SYNTHETIC, $method(CatalogFeatures, lambda$setProperties$0, void, $Map$Entry*)},
+	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(CatalogFeatures, readSystemProperties, void)},
+	{"setProperties", "(Ljavax/xml/catalog/CatalogFeatures$Builder;)V", nullptr, $PRIVATE, $method(CatalogFeatures, setProperties, void, $CatalogFeatures$Builder*)},
+	{"setProperty", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljavax/xml/catalog/CatalogFeatures$State;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(CatalogFeatures, setProperty, void, $CatalogFeatures$Feature*, $CatalogFeatures$State*, $String*)},
 	{}
 };
 

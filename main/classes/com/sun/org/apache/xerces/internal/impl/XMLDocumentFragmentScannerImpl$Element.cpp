@@ -26,7 +26,7 @@ $FieldInfo _XMLDocumentFragmentScannerImpl$Element_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentFragmentScannerImpl$Element_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl$Element;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLDocumentFragmentScannerImpl$Element::*)($QName*,XMLDocumentFragmentScannerImpl$Element*)>(&XMLDocumentFragmentScannerImpl$Element::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl$Element;)V", nullptr, $PUBLIC, $method(XMLDocumentFragmentScannerImpl$Element, init$, void, $QName*, XMLDocumentFragmentScannerImpl$Element*)},
 	{}
 };
 

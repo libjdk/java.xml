@@ -27,15 +27,15 @@ $FieldInfo _RegularExpression$CharArrayTarget_FieldInfo_[] = {
 };
 
 $MethodInfo _RegularExpression$CharArrayTarget_MethodInfo_[] = {
-	{"<init>", "([C)V", nullptr, 0, $method(static_cast<void(RegularExpression$CharArrayTarget::*)($chars*)>(&RegularExpression$CharArrayTarget::init$))},
-	{"charAt", "(I)C", nullptr, 0},
-	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $FINAL},
-	{"regionMatches", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharArrayTarget::*)(int32_t,int32_t,$String*,int32_t)>(&RegularExpression$CharArrayTarget::regionMatches))},
-	{"regionMatches", "(ZIIII)Z", nullptr, $FINAL},
-	{"regionMatches", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharArrayTarget::*)(int32_t,int32_t,int32_t,int32_t)>(&RegularExpression$CharArrayTarget::regionMatches))},
-	{"regionMatchesIgnoreCase", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharArrayTarget::*)(int32_t,int32_t,$String*,int32_t)>(&RegularExpression$CharArrayTarget::regionMatchesIgnoreCase))},
-	{"regionMatchesIgnoreCase", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharArrayTarget::*)(int32_t,int32_t,int32_t,int32_t)>(&RegularExpression$CharArrayTarget::regionMatchesIgnoreCase))},
-	{"resetTarget", "([C)V", nullptr, $FINAL, $method(static_cast<void(RegularExpression$CharArrayTarget::*)($chars*)>(&RegularExpression$CharArrayTarget::resetTarget))},
+	{"<init>", "([C)V", nullptr, 0, $method(RegularExpression$CharArrayTarget, init$, void, $chars*)},
+	{"charAt", "(I)C", nullptr, 0, $virtualMethod(RegularExpression$CharArrayTarget, charAt, char16_t, int32_t)},
+	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $FINAL, $virtualMethod(RegularExpression$CharArrayTarget, regionMatches, bool, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatches", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharArrayTarget, regionMatches, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatches", "(ZIIII)Z", nullptr, $FINAL, $virtualMethod(RegularExpression$CharArrayTarget, regionMatches, bool, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"regionMatches", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharArrayTarget, regionMatches, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"regionMatchesIgnoreCase", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharArrayTarget, regionMatchesIgnoreCase, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatchesIgnoreCase", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharArrayTarget, regionMatchesIgnoreCase, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"resetTarget", "([C)V", nullptr, $FINAL, $method(RegularExpression$CharArrayTarget, resetTarget, void, $chars*)},
 	{}
 };
 

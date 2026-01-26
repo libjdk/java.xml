@@ -50,13 +50,13 @@ $FieldInfo _FunctionPattern_FieldInfo_[] = {
 };
 
 $MethodInfo _FunctionPattern_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;II)V", nullptr, $PUBLIC, $method(static_cast<void(FunctionPattern::*)($Expression*,int32_t,int32_t)>(&FunctionPattern::init$))},
-	{"calcScore", "()V", nullptr, $PUBLIC | $FINAL},
-	{"callSubtreeVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PROTECTED},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;I)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;ILcom/sun/org/apache/xml/internal/dtm/DTM;I)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;II)V", nullptr, $PUBLIC, $method(FunctionPattern, init$, void, $Expression*, int32_t, int32_t)},
+	{"calcScore", "()V", nullptr, $PUBLIC | $FINAL, $virtualMethod(FunctionPattern, calcScore, void)},
+	{"callSubtreeVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PROTECTED, $virtualMethod(FunctionPattern, callSubtreeVisitors, void, $XPathVisitor*)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;I)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FunctionPattern, execute, $XObject*, $XPathContext*, int32_t), "javax.xml.transform.TransformerException"},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;ILcom/sun/org/apache/xml/internal/dtm/DTM;I)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FunctionPattern, execute, $XObject*, $XPathContext*, int32_t, $DTM*, int32_t), "javax.xml.transform.TransformerException"},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FunctionPattern, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FunctionPattern, fixupVariables, void, $List*, int32_t)},
 	{}
 };
 

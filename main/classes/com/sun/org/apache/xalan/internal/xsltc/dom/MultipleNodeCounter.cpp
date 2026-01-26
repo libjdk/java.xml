@@ -42,11 +42,11 @@ $FieldInfo _MultipleNodeCounter_FieldInfo_[] = {
 };
 
 $MethodInfo _MultipleNodeCounter_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(MultipleNodeCounter::*)($Translet*,$DOM*,$DTMAxisIterator*)>(&MultipleNodeCounter::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Z)V", nullptr, $PUBLIC, $method(static_cast<void(MultipleNodeCounter::*)($Translet*,$DOM*,$DTMAxisIterator*,bool)>(&MultipleNodeCounter::init$))},
-	{"getCounter", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getDefaultNodeCounter", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeCounter;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeCounter*(*)($Translet*,$DOM*,$DTMAxisIterator*)>(&MultipleNodeCounter::getDefaultNodeCounter))},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeCounter;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(MultipleNodeCounter, init$, void, $Translet*, $DOM*, $DTMAxisIterator*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Z)V", nullptr, $PUBLIC, $method(MultipleNodeCounter, init$, void, $Translet*, $DOM*, $DTMAxisIterator*, bool)},
+	{"getCounter", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MultipleNodeCounter, getCounter, $String*)},
+	{"getDefaultNodeCounter", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeCounter;", nullptr, $PUBLIC | $STATIC, $staticMethod(MultipleNodeCounter, getDefaultNodeCounter, $NodeCounter*, $Translet*, $DOM*, $DTMAxisIterator*)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeCounter;", nullptr, $PUBLIC, $virtualMethod(MultipleNodeCounter, setStartNode, $NodeCounter*, int32_t)},
 	{}
 };
 

@@ -30,9 +30,9 @@ $FieldInfo _DTMDefaultBaseTraversers$NamespaceDeclsTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$NamespaceDeclsTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$NamespaceDeclsTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$NamespaceDeclsTraverser::init$))},
-	{"next", "(II)I", nullptr, $PUBLIC},
-	{"next", "(III)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$NamespaceDeclsTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"next", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$NamespaceDeclsTraverser, next, int32_t, int32_t, int32_t)},
+	{"next", "(III)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$NamespaceDeclsTraverser, next, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

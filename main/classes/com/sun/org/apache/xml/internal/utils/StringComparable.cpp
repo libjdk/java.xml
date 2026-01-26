@@ -47,15 +47,15 @@ $FieldInfo _StringComparable_FieldInfo_[] = {
 };
 
 $MethodInfo _StringComparable_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/util/Locale;Ljava/text/Collator;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(StringComparable::*)($String*,$Locale*,$Collator*,$String*)>(&StringComparable::init$))},
-	{"compareTo", "(Lcom/sun/org/apache/xml/internal/utils/StringComparable;)I", nullptr, $PUBLIC},
-	{"compareTo", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
-	{"getCaseDiff", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PRIVATE | $FINAL, $method(static_cast<int32_t(StringComparable::*)($String*,$String*)>(&StringComparable::getCaseDiff))},
-	{"getComparator", "(Ljava/lang/String;Ljava/util/Locale;Ljava/text/Collator;Ljava/lang/String;)Ljava/lang/Comparable;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$Comparable*(*)($String*,$Locale*,$Collator*,$String*)>(&StringComparable::getComparator))},
-	{"getElement", "(I)I", nullptr, $PRIVATE | $FINAL, $method(static_cast<int32_t(StringComparable::*)(int32_t)>(&StringComparable::getElement))},
-	{"getFirstCaseDiff", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)[I", nullptr, $PRIVATE | $FINAL, $method(static_cast<$ints*(StringComparable::*)($String*,$String*,$Locale*)>(&StringComparable::getFirstCaseDiff))},
-	{"getMask", "(I)I", nullptr, $PRIVATE | $STATIC | $FINAL, $method(static_cast<int32_t(*)(int32_t)>(&StringComparable::getMask))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "(Ljava/lang/String;Ljava/util/Locale;Ljava/text/Collator;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(StringComparable, init$, void, $String*, $Locale*, $Collator*, $String*)},
+	{"compareTo", "(Lcom/sun/org/apache/xml/internal/utils/StringComparable;)I", nullptr, $PUBLIC, $virtualMethod(StringComparable, compareTo, int32_t, StringComparable*)},
+	{"compareTo", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(StringComparable, compareTo, int32_t, Object$*)},
+	{"getCaseDiff", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PRIVATE | $FINAL, $method(StringComparable, getCaseDiff, int32_t, $String*, $String*)},
+	{"getComparator", "(Ljava/lang/String;Ljava/util/Locale;Ljava/text/Collator;Ljava/lang/String;)Ljava/lang/Comparable;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(StringComparable, getComparator, $Comparable*, $String*, $Locale*, $Collator*, $String*)},
+	{"getElement", "(I)I", nullptr, $PRIVATE | $FINAL, $method(StringComparable, getElement, int32_t, int32_t)},
+	{"getFirstCaseDiff", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)[I", nullptr, $PRIVATE | $FINAL, $method(StringComparable, getFirstCaseDiff, $ints*, $String*, $String*, $Locale*)},
+	{"getMask", "(I)I", nullptr, $PRIVATE | $STATIC | $FINAL, $staticMethod(StringComparable, getMask, int32_t, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $virtualMethod(StringComparable, toString, $String*)},
 	{}
 };
 

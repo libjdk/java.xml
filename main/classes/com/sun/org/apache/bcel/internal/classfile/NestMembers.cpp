@@ -36,17 +36,17 @@ $FieldInfo _NestMembers_FieldInfo_[] = {
 };
 
 $MethodInfo _NestMembers_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/NestMembers;)V", nullptr, $PUBLIC, $method(static_cast<void(NestMembers::*)(NestMembers*)>(&NestMembers::init$))},
-	{"<init>", "(II[ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(NestMembers::*)(int32_t,int32_t,$ints*,$ConstantPool*)>(&NestMembers::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(NestMembers::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&NestMembers::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getClassNames", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$StringArray*(NestMembers::*)()>(&NestMembers::getClassNames))},
-	{"getClasses", "()[I", nullptr, $PUBLIC, $method(static_cast<$ints*(NestMembers::*)()>(&NestMembers::getClasses))},
-	{"getNumberClasses", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(NestMembers::*)()>(&NestMembers::getNumberClasses))},
-	{"setClasses", "([I)V", nullptr, $PUBLIC, $method(static_cast<void(NestMembers::*)($ints*)>(&NestMembers::setClasses))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/NestMembers;)V", nullptr, $PUBLIC, $method(NestMembers, init$, void, NestMembers*)},
+	{"<init>", "(II[ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(NestMembers, init$, void, int32_t, int32_t, $ints*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(NestMembers, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(NestMembers, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(NestMembers, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(NestMembers, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getClassNames", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(NestMembers, getClassNames, $StringArray*)},
+	{"getClasses", "()[I", nullptr, $PUBLIC, $method(NestMembers, getClasses, $ints*)},
+	{"getNumberClasses", "()I", nullptr, $PUBLIC, $method(NestMembers, getNumberClasses, int32_t)},
+	{"setClasses", "([I)V", nullptr, $PUBLIC, $method(NestMembers, setClasses, void, $ints*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NestMembers, toString, $String*)},
 	{}
 };
 

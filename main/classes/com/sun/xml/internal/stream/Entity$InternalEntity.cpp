@@ -21,13 +21,13 @@ $FieldInfo _Entity$InternalEntity_FieldInfo_[] = {
 };
 
 $MethodInfo _Entity$InternalEntity_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Entity$InternalEntity::*)()>(&Entity$InternalEntity::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(Entity$InternalEntity::*)($String*,$String*,bool)>(&Entity$InternalEntity::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"isExternal", "()Z", nullptr, $PUBLIC | $FINAL},
-	{"isUnparsed", "()Z", nullptr, $PUBLIC | $FINAL},
-	{"setValues", "(Lcom/sun/xml/internal/stream/Entity;)V", nullptr, $PUBLIC},
-	{"setValues", "(Lcom/sun/xml/internal/stream/Entity$InternalEntity;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Entity$InternalEntity, init$, void)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(Entity$InternalEntity, init$, void, $String*, $String*, bool)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(Entity$InternalEntity, clear, void)},
+	{"isExternal", "()Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(Entity$InternalEntity, isExternal, bool)},
+	{"isUnparsed", "()Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(Entity$InternalEntity, isUnparsed, bool)},
+	{"setValues", "(Lcom/sun/xml/internal/stream/Entity;)V", nullptr, $PUBLIC, $virtualMethod(Entity$InternalEntity, setValues, void, $Entity*)},
+	{"setValues", "(Lcom/sun/xml/internal/stream/Entity$InternalEntity;)V", nullptr, $PUBLIC, $virtualMethod(Entity$InternalEntity, setValues, void, Entity$InternalEntity*)},
 	{}
 };
 

@@ -69,12 +69,12 @@ $FieldInfo _XPathResultImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathResultImpl_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class;)V", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class<TT;>;)V", $PUBLIC, $method(static_cast<void(XPathResultImpl::*)($XObject*,$Class*)>(&XPathResultImpl::init$)), "javax.xml.transform.TransformerException"},
-	{"classToInternalType", "(Ljava/lang/Class;)I", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)I", $STATIC, $method(static_cast<int32_t(*)($Class*)>(&XPathResultImpl::classToInternalType))},
-	{"getResult", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)V", nullptr, $PRIVATE, $method(static_cast<void(XPathResultImpl::*)($XObject*)>(&XPathResultImpl::getResult)), "javax.xml.transform.TransformerException"},
-	{"getValue", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class<TT;>;)TT;", $STATIC, $method(static_cast<$Object*(*)($XObject*,$Class*)>(&XPathResultImpl::getValue)), "javax.xml.transform.TransformerException"},
-	{"type", "()Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC},
-	{"value", "()Ljava/lang/Object;", "()TT;", $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class;)V", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class<TT;>;)V", $PUBLIC, $method(XPathResultImpl, init$, void, $XObject*, $Class*), "javax.xml.transform.TransformerException"},
+	{"classToInternalType", "(Ljava/lang/Class;)I", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)I", $STATIC, $staticMethod(XPathResultImpl, classToInternalType, int32_t, $Class*)},
+	{"getResult", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)V", nullptr, $PRIVATE, $method(XPathResultImpl, getResult, void, $XObject*), "javax.xml.transform.TransformerException"},
+	{"getValue", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class<TT;>;)TT;", $STATIC, $staticMethod(XPathResultImpl, getValue, $Object*, $XObject*, $Class*), "javax.xml.transform.TransformerException"},
+	{"type", "()Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC, $virtualMethod(XPathResultImpl, type, $XPathEvaluationResult$XPathResultType*)},
+	{"value", "()Ljava/lang/Object;", "()TT;", $PUBLIC, $virtualMethod(XPathResultImpl, value, $Object*)},
 	{}
 };
 

@@ -11,8 +11,8 @@ namespace org {
 			namespace ext {
 
 $MethodInfo _Locator2_MethodInfo_[] = {
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Locator2, getEncoding, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Locator2, getXMLVersion, $String*)},
 	{}
 };
 

@@ -31,11 +31,11 @@ $FieldInfo _ClassElementValue_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassElementValue_MethodInfo_[] = {
-	{"<init>", "(IILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassElementValue::*)(int32_t,int32_t,$ConstantPool*)>(&ClassElementValue::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getClassString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getIndex", "()I", nullptr, $PUBLIC},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(IILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ClassElementValue, init$, void, int32_t, int32_t, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ClassElementValue, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getClassString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ClassElementValue, getClassString, $String*)},
+	{"getIndex", "()I", nullptr, $PUBLIC, $virtualMethod(ClassElementValue, getIndex, int32_t)},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ClassElementValue, stringifyValue, $String*)},
 	{}
 };
 

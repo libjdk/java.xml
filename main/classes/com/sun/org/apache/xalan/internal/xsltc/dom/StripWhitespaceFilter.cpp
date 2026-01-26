@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/DOM.h>
 #include <jcpp.h>
 
+using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,7 +17,7 @@ namespace com {
 							namespace dom {
 
 $MethodInfo _StripWhitespaceFilter_MethodInfo_[] = {
-	{"stripSpace", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;II)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"stripSpace", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;II)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StripWhitespaceFilter, stripSpace, bool, $DOM*, int32_t, int32_t)},
 	{}
 };
 

@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ISUB_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ISUB::*)()>(&ISUB::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ISUB, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ISUB, accept, void, $Visitor*)},
 	{}
 };
 

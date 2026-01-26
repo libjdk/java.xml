@@ -485,8 +485,8 @@ $FieldInfo _InstructionConst_FieldInfo_[] = {
 };
 
 $MethodInfo _InstructionConst_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(InstructionConst::*)()>(&InstructionConst::init$))},
-	{"getInstruction", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Instruction*(*)(int32_t)>(&InstructionConst::getInstruction))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(InstructionConst, init$, void)},
+	{"getInstruction", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $STATIC, $staticMethod(InstructionConst, getInstruction, $Instruction*, int32_t)},
 	{}
 };
 

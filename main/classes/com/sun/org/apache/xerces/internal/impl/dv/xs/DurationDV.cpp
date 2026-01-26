@@ -64,15 +64,15 @@ $FieldInfo _DurationDV_FieldInfo_[] = {
 };
 
 $MethodInfo _DurationDV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DurationDV::*)()>(&DurationDV::init$))},
-	{"addDuration", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;", nullptr, $PRIVATE, $method(static_cast<$AbstractDateTimeDV$DateTimeData*(DurationDV::*)($AbstractDateTimeDV$DateTimeData*,$AbstractDateTimeDV$DateTimeData*,$AbstractDateTimeDV$DateTimeData*)>(&DurationDV::addDuration))},
-	{"compareDates", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Z)S", nullptr, $PROTECTED},
-	{"compareResults", "(SSZ)S", nullptr, $PRIVATE, $method(static_cast<int16_t(DurationDV::*)(int16_t,int16_t,bool)>(&DurationDV::compareResults))},
-	{"dateToString", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Ljava/lang/String;", nullptr, $PROTECTED},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getDuration", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Ljavax/xml/datatype/Duration;", nullptr, $PROTECTED},
-	{"parse", "(Ljava/lang/String;I)Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.xs.SchemaDateTimeException"},
-	{"parseSecond", "(Ljava/lang/String;II)D", nullptr, $PROTECTED, nullptr, "java.lang.NumberFormatException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DurationDV, init$, void)},
+	{"addDuration", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;", nullptr, $PRIVATE, $method(DurationDV, addDuration, $AbstractDateTimeDV$DateTimeData*, $AbstractDateTimeDV$DateTimeData*, $AbstractDateTimeDV$DateTimeData*, $AbstractDateTimeDV$DateTimeData*)},
+	{"compareDates", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;Z)S", nullptr, $PROTECTED, $virtualMethod(DurationDV, compareDates, int16_t, $AbstractDateTimeDV$DateTimeData*, $AbstractDateTimeDV$DateTimeData*, bool)},
+	{"compareResults", "(SSZ)S", nullptr, $PRIVATE, $method(DurationDV, compareResults, int16_t, int16_t, int16_t, bool)},
+	{"dateToString", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(DurationDV, dateToString, $String*, $AbstractDateTimeDV$DateTimeData*)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DurationDV, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getDuration", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Ljavax/xml/datatype/Duration;", nullptr, $PROTECTED, $virtualMethod(DurationDV, getDuration, $Duration*, $AbstractDateTimeDV$DateTimeData*)},
+	{"parse", "(Ljava/lang/String;I)Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;", nullptr, $PROTECTED, $virtualMethod(DurationDV, parse, $AbstractDateTimeDV$DateTimeData*, $String*, int32_t), "com.sun.org.apache.xerces.internal.impl.dv.xs.SchemaDateTimeException"},
+	{"parseSecond", "(Ljava/lang/String;II)D", nullptr, $PROTECTED, $virtualMethod(DurationDV, parseSecond, double, $String*, int32_t, int32_t), "java.lang.NumberFormatException"},
 	{}
 };
 

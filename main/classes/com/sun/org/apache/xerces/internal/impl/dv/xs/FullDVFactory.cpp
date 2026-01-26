@@ -92,10 +92,10 @@ $FieldInfo _FullDVFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _FullDVFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FullDVFactory::*)()>(&FullDVFactory::init$))},
-	{"createBuiltInTypes", "(Lcom/sun/org/apache/xerces/internal/util/SymbolHash;)V", nullptr, $STATIC, $method(static_cast<void(*)($SymbolHash*)>(&FullDVFactory::createBuiltInTypes))},
-	{"getBuiltInType", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC},
-	{"getBuiltInTypes", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FullDVFactory, init$, void)},
+	{"createBuiltInTypes", "(Lcom/sun/org/apache/xerces/internal/util/SymbolHash;)V", nullptr, $STATIC, $staticMethod(FullDVFactory, createBuiltInTypes, void, $SymbolHash*)},
+	{"getBuiltInType", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC, $virtualMethod(FullDVFactory, getBuiltInType, $XSSimpleType*, $String*)},
+	{"getBuiltInTypes", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash;", nullptr, $PUBLIC, $virtualMethod(FullDVFactory, getBuiltInTypes, $SymbolHash*)},
 	{}
 };
 

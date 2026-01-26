@@ -44,14 +44,14 @@ $FieldInfo _DupFilterIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DupFilterIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(DupFilterIterator::*)($DTMAxisIterator*)>(&DupFilterIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(DupFilterIterator, init$, void, $DTMAxisIterator*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DupFilterIterator, cloneIterator, $DTMAxisIterator*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(DupFilterIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(DupFilterIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DupFilterIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(DupFilterIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DupFilterIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DupFilterIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

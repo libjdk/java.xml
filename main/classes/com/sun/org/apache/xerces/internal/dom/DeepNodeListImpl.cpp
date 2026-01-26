@@ -41,11 +41,11 @@ $FieldInfo _DeepNodeListImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DeepNodeListImpl_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DeepNodeListImpl::*)($NodeImpl*,$String*)>(&DeepNodeListImpl::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DeepNodeListImpl::*)($NodeImpl*,$String*,$String*)>(&DeepNodeListImpl::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"nextMatchingElementAfter", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DeepNodeListImpl, init$, void, $NodeImpl*, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DeepNodeListImpl, init$, void, $NodeImpl*, $String*, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(DeepNodeListImpl, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DeepNodeListImpl, item, $Node*, int32_t)},
+	{"nextMatchingElementAfter", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PROTECTED, $virtualMethod(DeepNodeListImpl, nextMatchingElementAfter, $Node*, $Node*)},
 	{}
 };
 

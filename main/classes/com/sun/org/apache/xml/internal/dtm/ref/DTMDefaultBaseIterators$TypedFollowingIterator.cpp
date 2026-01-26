@@ -36,8 +36,8 @@ $FieldInfo _DTMDefaultBaseIterators$TypedFollowingIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$TypedFollowingIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$TypedFollowingIterator::*)($DTMDefaultBaseIterators*,int32_t)>(&DTMDefaultBaseIterators$TypedFollowingIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$TypedFollowingIterator, init$, void, $DTMDefaultBaseIterators*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$TypedFollowingIterator, next, int32_t)},
 	{}
 };
 

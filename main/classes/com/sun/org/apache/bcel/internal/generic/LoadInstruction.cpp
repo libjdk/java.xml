@@ -30,9 +30,9 @@ $MethodInfo _LoadInstruction_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "(SS)V", nullptr, 0, $method(static_cast<void(LoadInstruction::*)(int16_t,int16_t)>(&LoadInstruction::init$))},
-	{"<init>", "(SSI)V", nullptr, $PROTECTED, $method(static_cast<void(LoadInstruction::*)(int16_t,int16_t,int32_t)>(&LoadInstruction::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "(SS)V", nullptr, 0, $method(LoadInstruction, init$, void, int16_t, int16_t)},
+	{"<init>", "(SSI)V", nullptr, $PROTECTED, $method(LoadInstruction, init$, void, int16_t, int16_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(LoadInstruction, accept, void, $Visitor*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{"*produceStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC},
 	{}

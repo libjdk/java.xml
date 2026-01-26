@@ -30,8 +30,8 @@ $FieldInfo _FilteredStepIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _FilteredStepIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xalan/internal/xsltc/dom/Filter;)V", nullptr, $PUBLIC, $method(static_cast<void(FilteredStepIterator::*)($DTMAxisIterator*,$DTMAxisIterator*,$Filter*)>(&FilteredStepIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xalan/internal/xsltc/dom/Filter;)V", nullptr, $PUBLIC, $method(FilteredStepIterator, init$, void, $DTMAxisIterator*, $DTMAxisIterator*, $Filter*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(FilteredStepIterator, next, int32_t)},
 	{}
 };
 

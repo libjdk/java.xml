@@ -73,17 +73,17 @@ $FieldInfo _XMLSecurityManager$Limit_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSecurityManager$Limit_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$XMLSecurityManager$LimitArray*(*)()>(&XMLSecurityManager$Limit::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V", $PRIVATE, $method(static_cast<void(XMLSecurityManager$Limit::*)($String*,int32_t,$String*,$String*,$String*,int32_t,int32_t)>(&XMLSecurityManager$Limit::init$))},
-	{"apiProperty", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XMLSecurityManager$Limit::*)()>(&XMLSecurityManager$Limit::apiProperty))},
-	{"defaultValue", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLSecurityManager$Limit::*)()>(&XMLSecurityManager$Limit::defaultValue))},
-	{"getState", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC, $method(static_cast<$JdkProperty$State*(XMLSecurityManager$Limit::*)($String*)>(&XMLSecurityManager$Limit::getState))},
-	{"is", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(static_cast<bool(XMLSecurityManager$Limit::*)($String*)>(&XMLSecurityManager$Limit::is))},
-	{"key", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XMLSecurityManager$Limit::*)()>(&XMLSecurityManager$Limit::key))},
-	{"secureValue", "()I", nullptr, 0, $method(static_cast<int32_t(XMLSecurityManager$Limit::*)()>(&XMLSecurityManager$Limit::secureValue))},
-	{"systemProperty", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XMLSecurityManager$Limit::*)()>(&XMLSecurityManager$Limit::systemProperty))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLSecurityManager$Limit*(*)($String*)>(&XMLSecurityManager$Limit::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLSecurityManager$LimitArray*(*)()>(&XMLSecurityManager$Limit::values))},
+	{"$values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XMLSecurityManager$Limit, $values, $XMLSecurityManager$LimitArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V", $PRIVATE, $method(XMLSecurityManager$Limit, init$, void, $String*, int32_t, $String*, $String*, $String*, int32_t, int32_t)},
+	{"apiProperty", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSecurityManager$Limit, apiProperty, $String*)},
+	{"defaultValue", "()I", nullptr, $PUBLIC, $method(XMLSecurityManager$Limit, defaultValue, int32_t)},
+	{"getState", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC, $method(XMLSecurityManager$Limit, getState, $JdkProperty$State*, $String*)},
+	{"is", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(XMLSecurityManager$Limit, is, bool, $String*)},
+	{"key", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSecurityManager$Limit, key, $String*)},
+	{"secureValue", "()I", nullptr, 0, $method(XMLSecurityManager$Limit, secureValue, int32_t)},
+	{"systemProperty", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSecurityManager$Limit, systemProperty, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityManager$Limit, valueOf, XMLSecurityManager$Limit*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityManager$Limit;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityManager$Limit, values, $XMLSecurityManager$LimitArray*)},
 	{}
 };
 

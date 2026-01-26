@@ -12,8 +12,8 @@ namespace com {
 				namespace stream {
 
 $MethodInfo _XMLBufferListener_MethodInfo_[] = {
-	{"refresh", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"refresh", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"refresh", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLBufferListener, refresh, void)},
+	{"refresh", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLBufferListener, refresh, void, int32_t)},
 	{}
 };
 

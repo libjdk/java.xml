@@ -14,7 +14,7 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ExceptionThrower_MethodInfo_[] = {
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC | $ABSTRACT},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC | $ABSTRACT, $virtualMethod(ExceptionThrower, getExceptions, $ClassArray*)},
 	{}
 };
 

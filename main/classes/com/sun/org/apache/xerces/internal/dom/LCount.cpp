@@ -45,8 +45,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo LCount$$Lambda$lambda$lookup$0::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(LCount$$Lambda$lambda$lookup$0::*)()>(&LCount$$Lambda$lambda$lookup$0::init$))},
-	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(LCount$$Lambda$lambda$lookup$0, init$, void)},
+	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(LCount$$Lambda$lambda$lookup$0, apply, $Object*, Object$*)},
 	{}
 };
 $ClassInfo LCount$$Lambda$lambda$lookup$0::classInfo$ = {
@@ -73,9 +73,9 @@ $FieldInfo _LCount_FieldInfo_[] = {
 };
 
 $MethodInfo _LCount_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(LCount::*)()>(&LCount::init$))},
-	{"lambda$lookup$0", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/dom/LCount;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<LCount*(*)($String*)>(&LCount::lambda$lookup$0))},
-	{"lookup", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/dom/LCount;", nullptr, $STATIC, $method(static_cast<LCount*(*)($String*)>(&LCount::lookup))},
+	{"<init>", "()V", nullptr, 0, $method(LCount, init$, void)},
+	{"lambda$lookup$0", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/dom/LCount;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(LCount, lambda$lookup$0, LCount*, $String*)},
+	{"lookup", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/dom/LCount;", nullptr, $STATIC, $staticMethod(LCount, lookup, LCount*, $String*)},
 	{}
 };
 

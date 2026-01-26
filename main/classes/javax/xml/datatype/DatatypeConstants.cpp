@@ -97,7 +97,7 @@ $FieldInfo _DatatypeConstants_FieldInfo_[] = {
 };
 
 $MethodInfo _DatatypeConstants_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(DatatypeConstants::*)()>(&DatatypeConstants::init$))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(DatatypeConstants, init$, void)},
 	{}
 };
 

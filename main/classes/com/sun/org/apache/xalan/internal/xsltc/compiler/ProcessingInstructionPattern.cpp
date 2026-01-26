@@ -91,13 +91,13 @@ $FieldInfo _ProcessingInstructionPattern_FieldInfo_[] = {
 };
 
 $MethodInfo _ProcessingInstructionPattern_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ProcessingInstructionPattern::*)($String*)>(&ProcessingInstructionPattern::init$))},
-	{"getDefaultPriority", "()D", nullptr, $PUBLIC},
-	{"isWildcard", "()Z", nullptr, $PUBLIC},
-	{"reduceKernelPattern", "()V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ProcessingInstructionPattern, init$, void, $String*)},
+	{"getDefaultPriority", "()D", nullptr, $PUBLIC, $virtualMethod(ProcessingInstructionPattern, getDefaultPriority, double)},
+	{"isWildcard", "()Z", nullptr, $PUBLIC, $virtualMethod(ProcessingInstructionPattern, isWildcard, bool)},
+	{"reduceKernelPattern", "()V", nullptr, $PUBLIC, $virtualMethod(ProcessingInstructionPattern, reduceKernelPattern, void)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ProcessingInstructionPattern, toString, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(ProcessingInstructionPattern, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(ProcessingInstructionPattern, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

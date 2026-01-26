@@ -45,16 +45,16 @@ $FieldInfo _ASCIIReader_FieldInfo_[] = {
 };
 
 $MethodInfo _ASCIIReader_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/InputStream;Lcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(ASCIIReader::*)($InputStream*,$MessageFormatter*,$Locale*)>(&ASCIIReader::init$))},
-	{"<init>", "(Ljava/io/InputStream;ILcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(ASCIIReader::*)($InputStream*,int32_t,$MessageFormatter*,$Locale*)>(&ASCIIReader::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"mark", "(I)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"markSupported", "()Z", nullptr, $PUBLIC},
-	{"read", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"read", "([CII)I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"ready", "()Z", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"reset", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"skip", "(J)J", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Ljava/io/InputStream;Lcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(ASCIIReader, init$, void, $InputStream*, $MessageFormatter*, $Locale*)},
+	{"<init>", "(Ljava/io/InputStream;ILcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(ASCIIReader, init$, void, $InputStream*, int32_t, $MessageFormatter*, $Locale*)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, close, void), "java.io.IOException"},
+	{"mark", "(I)V", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, mark, void, int32_t), "java.io.IOException"},
+	{"markSupported", "()Z", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, markSupported, bool)},
+	{"read", "()I", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, read, int32_t), "java.io.IOException"},
+	{"read", "([CII)I", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, read, int32_t, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"ready", "()Z", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, ready, bool), "java.io.IOException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, reset, void), "java.io.IOException"},
+	{"skip", "(J)J", nullptr, $PUBLIC, $virtualMethod(ASCIIReader, skip, int64_t, int64_t), "java.io.IOException"},
 	{}
 };
 

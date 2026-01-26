@@ -10,6 +10,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace org {
 	namespace w3c {
@@ -24,12 +25,12 @@ $FieldInfo _MutationEvent_FieldInfo_[] = {
 };
 
 $MethodInfo _MutationEvent_MethodInfo_[] = {
-	{"getAttrChange", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAttrName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNewValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPrevValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getRelatedNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"initMutationEvent", "(Ljava/lang/String;ZZLorg/w3c/dom/Node;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAttrChange", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MutationEvent, getAttrChange, int16_t)},
+	{"getAttrName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MutationEvent, getAttrName, $String*)},
+	{"getNewValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MutationEvent, getNewValue, $String*)},
+	{"getPrevValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MutationEvent, getPrevValue, $String*)},
+	{"getRelatedNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MutationEvent, getRelatedNode, $Node*)},
+	{"initMutationEvent", "(Ljava/lang/String;ZZLorg/w3c/dom/Node;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MutationEvent, initMutationEvent, void, $String*, bool, bool, $Node*, $String*, $String*, $String*, int16_t)},
 	{}
 };
 

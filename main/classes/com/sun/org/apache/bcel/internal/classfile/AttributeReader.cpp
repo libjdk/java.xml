@@ -5,6 +5,9 @@
 #include <java/io/DataInputStream.h>
 #include <jcpp.h>
 
+using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
+using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
+using $DataInputStream = ::java::io::DataInputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -23,7 +26,7 @@ $CompoundAttribute _AttributeReader_Annotations_[] = {
 };
 
 $MethodInfo _AttributeReader_MethodInfo_[] = {
-	{"createAttribute", "(IILjava/io/DataInputStream;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC | $ABSTRACT},
+	{"createAttribute", "(IILjava/io/DataInputStream;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributeReader, createAttribute, $Attribute*, int32_t, int32_t, $DataInputStream*, $ConstantPool*)},
 	{}
 };
 

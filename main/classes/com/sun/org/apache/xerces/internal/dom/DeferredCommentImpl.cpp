@@ -68,8 +68,8 @@ $MethodInfo _DeferredCommentImpl_MethodInfo_[] = {
 	{"*hasAttributes", "()Z", nullptr, $PUBLIC},
 	{"*hasChildNodes", "()Z", nullptr, $PUBLIC},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl;I)V", nullptr, 0, $method(static_cast<void(DeferredCommentImpl::*)($DeferredDocumentImpl*,int32_t)>(&DeferredCommentImpl::init$))},
-	{"getNodeIndex", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl;I)V", nullptr, 0, $method(DeferredCommentImpl, init$, void, $DeferredDocumentImpl*, int32_t)},
+	{"getNodeIndex", "()I", nullptr, $PUBLIC, $virtualMethod(DeferredCommentImpl, getNodeIndex, int32_t)},
 	{"*insertBefore", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
 	{"*isDefaultNamespace", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
 	{"*isEqualNode", "(Lorg/w3c/dom/Node;)Z", nullptr, $PUBLIC},
@@ -84,7 +84,7 @@ $MethodInfo _DeferredCommentImpl_MethodInfo_[] = {
 	{"*setPrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
 	{"*setTextContent", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
 	{"*setUserData", "(Ljava/lang/String;Ljava/lang/Object;Lorg/w3c/dom/UserDataHandler;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"synchronizeData", "()V", nullptr, $PROTECTED},
+	{"synchronizeData", "()V", nullptr, $PROTECTED, $virtualMethod(DeferredCommentImpl, synchronizeData, void)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

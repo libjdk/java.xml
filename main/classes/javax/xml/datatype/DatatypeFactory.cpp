@@ -35,6 +35,7 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $NullPointerException = ::java::lang::NullPointerException;
 using $BigDecimal = ::java::math::BigDecimal;
 using $BigInteger = ::java::math::BigInteger;
+using $GregorianCalendar = ::java::util::GregorianCalendar;
 using $Matcher = ::java::util::regex::Matcher;
 using $Pattern = ::java::util::regex::Pattern;
 using $DatatypeConstants = ::javax::xml::datatype::DatatypeConstants;
@@ -55,31 +56,31 @@ $FieldInfo _DatatypeFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _DatatypeFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(DatatypeFactory::*)()>(&DatatypeFactory::init$))},
-	{"newDefaultInstance", "()Ljavax/xml/datatype/DatatypeFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DatatypeFactory*(*)()>(&DatatypeFactory::newDefaultInstance))},
-	{"newDuration", "(Ljava/lang/String;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newDuration", "(J)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newDuration", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigDecimal;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newDuration", "(ZIIIIII)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationDayTime", "(Ljava/lang/String;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationDayTime", "(J)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationDayTime", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationDayTime", "(ZIIII)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationYearMonth", "(Ljava/lang/String;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationYearMonth", "(J)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationYearMonth", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newDurationYearMonth", "(ZII)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"newInstance", "()Ljavax/xml/datatype/DatatypeFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DatatypeFactory*(*)()>(&DatatypeFactory::newInstance)), "javax.xml.datatype.DatatypeConfigurationException"},
-	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/datatype/DatatypeFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DatatypeFactory*(*)($String*,$ClassLoader*)>(&DatatypeFactory::newInstance)), "javax.xml.datatype.DatatypeConfigurationException"},
-	{"newXMLGregorianCalendar", "()Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newXMLGregorianCalendar", "(Ljava/lang/String;)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newXMLGregorianCalendar", "(Ljava/util/GregorianCalendar;)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newXMLGregorianCalendar", "(Ljava/math/BigInteger;IIIIILjava/math/BigDecimal;I)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newXMLGregorianCalendar", "(IIIIIIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC},
-	{"newXMLGregorianCalendarDate", "(IIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC},
-	{"newXMLGregorianCalendarTime", "(IIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC},
-	{"newXMLGregorianCalendarTime", "(IIILjava/math/BigDecimal;I)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC},
-	{"newXMLGregorianCalendarTime", "(IIIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(DatatypeFactory, init$, void)},
+	{"newDefaultInstance", "()Ljavax/xml/datatype/DatatypeFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DatatypeFactory, newDefaultInstance, DatatypeFactory*)},
+	{"newDuration", "(Ljava/lang/String;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeFactory, newDuration, $Duration*, $String*)},
+	{"newDuration", "(J)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeFactory, newDuration, $Duration*, int64_t)},
+	{"newDuration", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigDecimal;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeFactory, newDuration, $Duration*, bool, $BigInteger*, $BigInteger*, $BigInteger*, $BigInteger*, $BigInteger*, $BigDecimal*)},
+	{"newDuration", "(ZIIIIII)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDuration, $Duration*, bool, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t)},
+	{"newDurationDayTime", "(Ljava/lang/String;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationDayTime, $Duration*, $String*)},
+	{"newDurationDayTime", "(J)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationDayTime, $Duration*, int64_t)},
+	{"newDurationDayTime", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationDayTime, $Duration*, bool, $BigInteger*, $BigInteger*, $BigInteger*, $BigInteger*)},
+	{"newDurationDayTime", "(ZIIII)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationDayTime, $Duration*, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"newDurationYearMonth", "(Ljava/lang/String;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationYearMonth, $Duration*, $String*)},
+	{"newDurationYearMonth", "(J)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationYearMonth, $Duration*, int64_t)},
+	{"newDurationYearMonth", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationYearMonth, $Duration*, bool, $BigInteger*, $BigInteger*)},
+	{"newDurationYearMonth", "(ZII)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newDurationYearMonth, $Duration*, bool, int32_t, int32_t)},
+	{"newInstance", "()Ljavax/xml/datatype/DatatypeFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DatatypeFactory, newInstance, DatatypeFactory*), "javax.xml.datatype.DatatypeConfigurationException"},
+	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/datatype/DatatypeFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DatatypeFactory, newInstance, DatatypeFactory*, $String*, $ClassLoader*), "javax.xml.datatype.DatatypeConfigurationException"},
+	{"newXMLGregorianCalendar", "()Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeFactory, newXMLGregorianCalendar, $XMLGregorianCalendar*)},
+	{"newXMLGregorianCalendar", "(Ljava/lang/String;)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeFactory, newXMLGregorianCalendar, $XMLGregorianCalendar*, $String*)},
+	{"newXMLGregorianCalendar", "(Ljava/util/GregorianCalendar;)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeFactory, newXMLGregorianCalendar, $XMLGregorianCalendar*, $GregorianCalendar*)},
+	{"newXMLGregorianCalendar", "(Ljava/math/BigInteger;IIIIILjava/math/BigDecimal;I)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeFactory, newXMLGregorianCalendar, $XMLGregorianCalendar*, $BigInteger*, int32_t, int32_t, int32_t, int32_t, int32_t, $BigDecimal*, int32_t)},
+	{"newXMLGregorianCalendar", "(IIIIIIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newXMLGregorianCalendar, $XMLGregorianCalendar*, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t)},
+	{"newXMLGregorianCalendarDate", "(IIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newXMLGregorianCalendarDate, $XMLGregorianCalendar*, int32_t, int32_t, int32_t, int32_t)},
+	{"newXMLGregorianCalendarTime", "(IIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newXMLGregorianCalendarTime, $XMLGregorianCalendar*, int32_t, int32_t, int32_t, int32_t)},
+	{"newXMLGregorianCalendarTime", "(IIILjava/math/BigDecimal;I)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newXMLGregorianCalendarTime, $XMLGregorianCalendar*, int32_t, int32_t, int32_t, $BigDecimal*, int32_t)},
+	{"newXMLGregorianCalendarTime", "(IIIII)Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC, $virtualMethod(DatatypeFactory, newXMLGregorianCalendarTime, $XMLGregorianCalendar*, int32_t, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

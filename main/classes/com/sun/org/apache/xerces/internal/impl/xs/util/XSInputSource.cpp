@@ -29,12 +29,12 @@ $FieldInfo _XSInputSource_FieldInfo_[] = {
 };
 
 $MethodInfo _XSInputSource_MethodInfo_[] = {
-	{"<init>", "([Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC, $method(static_cast<void(XSInputSource::*)($SchemaGrammarArray*)>(&XSInputSource::init$))},
-	{"<init>", "([Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(static_cast<void(XSInputSource::*)($XSObjectArray*)>(&XSInputSource::init$))},
-	{"getComponents", "()[Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $method(static_cast<$XSObjectArray*(XSInputSource::*)()>(&XSInputSource::getComponents))},
-	{"getGrammars", "()[Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PUBLIC, $method(static_cast<$SchemaGrammarArray*(XSInputSource::*)()>(&XSInputSource::getGrammars))},
-	{"setComponents", "([Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(static_cast<void(XSInputSource::*)($XSObjectArray*)>(&XSInputSource::setComponents))},
-	{"setGrammars", "([Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC, $method(static_cast<void(XSInputSource::*)($SchemaGrammarArray*)>(&XSInputSource::setGrammars))},
+	{"<init>", "([Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC, $method(XSInputSource, init$, void, $SchemaGrammarArray*)},
+	{"<init>", "([Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(XSInputSource, init$, void, $XSObjectArray*)},
+	{"getComponents", "()[Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $method(XSInputSource, getComponents, $XSObjectArray*)},
+	{"getGrammars", "()[Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PUBLIC, $method(XSInputSource, getGrammars, $SchemaGrammarArray*)},
+	{"setComponents", "([Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(XSInputSource, setComponents, void, $XSObjectArray*)},
+	{"setGrammars", "([Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC, $method(XSInputSource, setGrammars, void, $SchemaGrammarArray*)},
 	{}
 };
 

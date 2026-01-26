@@ -50,8 +50,8 @@ namespace com {
 								namespace traversers {
 
 $MethodInfo _XSDKeyrefTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;)V", nullptr, $PUBLIC, $method(static_cast<void(XSDKeyrefTraverser::*)($XSDHandler*,$XSAttributeChecker*)>(&XSDKeyrefTraverser::init$))},
-	{"traverse", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, 0},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;)V", nullptr, $PUBLIC, $method(XSDKeyrefTraverser, init$, void, $XSDHandler*, $XSAttributeChecker*)},
+	{"traverse", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, 0, $virtualMethod(XSDKeyrefTraverser, traverse, void, $Element*, $XSElementDecl*, $XSDocumentInfo*, $SchemaGrammar*)},
 	{}
 };
 

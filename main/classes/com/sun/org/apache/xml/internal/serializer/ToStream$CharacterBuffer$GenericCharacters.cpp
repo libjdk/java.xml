@@ -23,9 +23,9 @@ $FieldInfo _ToStream$CharacterBuffer$GenericCharacters_FieldInfo_[] = {
 };
 
 $MethodInfo _ToStream$CharacterBuffer$GenericCharacters_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream$CharacterBuffer;)V", nullptr, $PRIVATE, $method(static_cast<void(ToStream$CharacterBuffer$GenericCharacters::*)($ToStream$CharacterBuffer*)>(&ToStream$CharacterBuffer$GenericCharacters::init$))},
-	{"flush", "(Z)Z", nullptr, $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
-	{"toChars", "()[C", nullptr, $ABSTRACT},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream$CharacterBuffer;)V", nullptr, $PRIVATE, $method(ToStream$CharacterBuffer$GenericCharacters, init$, void, $ToStream$CharacterBuffer*)},
+	{"flush", "(Z)Z", nullptr, $ABSTRACT, $virtualMethod(ToStream$CharacterBuffer$GenericCharacters, flush, bool, bool), "org.xml.sax.SAXException"},
+	{"toChars", "()[C", nullptr, $ABSTRACT, $virtualMethod(ToStream$CharacterBuffer$GenericCharacters, toChars, $chars*)},
 	{}
 };
 

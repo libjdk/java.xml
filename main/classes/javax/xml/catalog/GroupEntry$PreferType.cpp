@@ -27,11 +27,11 @@ $FieldInfo _GroupEntry$PreferType_FieldInfo_[] = {
 };
 
 $MethodInfo _GroupEntry$PreferType_MethodInfo_[] = {
-	{"$values", "()[Ljavax/xml/catalog/GroupEntry$PreferType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$GroupEntry$PreferTypeArray*(*)()>(&GroupEntry$PreferType::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(GroupEntry$PreferType::*)($String*,int32_t,$String*)>(&GroupEntry$PreferType::init$))},
-	{"prefer", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(static_cast<bool(GroupEntry$PreferType::*)($String*)>(&GroupEntry$PreferType::prefer))},
-	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/GroupEntry$PreferType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<GroupEntry$PreferType*(*)($String*)>(&GroupEntry$PreferType::valueOf))},
-	{"values", "()[Ljavax/xml/catalog/GroupEntry$PreferType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$GroupEntry$PreferTypeArray*(*)()>(&GroupEntry$PreferType::values))},
+	{"$values", "()[Ljavax/xml/catalog/GroupEntry$PreferType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(GroupEntry$PreferType, $values, $GroupEntry$PreferTypeArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(GroupEntry$PreferType, init$, void, $String*, int32_t, $String*)},
+	{"prefer", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(GroupEntry$PreferType, prefer, bool, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/GroupEntry$PreferType;", nullptr, $PUBLIC | $STATIC, $staticMethod(GroupEntry$PreferType, valueOf, GroupEntry$PreferType*, $String*)},
+	{"values", "()[Ljavax/xml/catalog/GroupEntry$PreferType;", nullptr, $PUBLIC | $STATIC, $staticMethod(GroupEntry$PreferType, values, $GroupEntry$PreferTypeArray*)},
 	{}
 };
 

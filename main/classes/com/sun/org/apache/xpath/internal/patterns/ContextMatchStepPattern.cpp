@@ -49,9 +49,9 @@ $FieldInfo _ContextMatchStepPattern_FieldInfo_[] = {
 };
 
 $MethodInfo _ContextMatchStepPattern_MethodInfo_[] = {
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(ContextMatchStepPattern::*)(int32_t,int32_t)>(&ContextMatchStepPattern::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"executeRelativePathPattern", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(ContextMatchStepPattern, init$, void, int32_t, int32_t)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(ContextMatchStepPattern, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"executeRelativePathPattern", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(ContextMatchStepPattern, executeRelativePathPattern, $XObject*, $XPathContext*, $StepPattern*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

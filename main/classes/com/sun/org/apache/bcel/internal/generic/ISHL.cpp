@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ISHL_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ISHL::*)()>(&ISHL::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ISHL, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ISHL, accept, void, $Visitor*)},
 	{}
 };
 

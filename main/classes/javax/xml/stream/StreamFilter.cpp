@@ -5,13 +5,14 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
 
 namespace javax {
 	namespace xml {
 		namespace stream {
 
 $MethodInfo _StreamFilter_MethodInfo_[] = {
-	{"accept", "(Ljavax/xml/stream/XMLStreamReader;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"accept", "(Ljavax/xml/stream/XMLStreamReader;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StreamFilter, accept, bool, $XMLStreamReader*)},
 	{}
 };
 

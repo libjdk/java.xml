@@ -57,15 +57,15 @@ $FieldInfo _Module_FieldInfo_[] = {
 };
 
 $MethodInfo _Module_MethodInfo_[] = {
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(Module::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&Module::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getExportsTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleExports;", nullptr, $PUBLIC, $method(static_cast<$ModuleExportsArray*(Module::*)()>(&Module::getExportsTable))},
-	{"getOpensTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleOpens;", nullptr, $PUBLIC, $method(static_cast<$ModuleOpensArray*(Module::*)()>(&Module::getOpensTable))},
-	{"getProvidesTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleProvides;", nullptr, $PUBLIC, $method(static_cast<$ModuleProvidesArray*(Module::*)()>(&Module::getProvidesTable))},
-	{"getRequiresTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleRequires;", nullptr, $PUBLIC, $method(static_cast<$ModuleRequiresArray*(Module::*)()>(&Module::getRequiresTable))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(Module, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(Module, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(Module, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(Module, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getExportsTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleExports;", nullptr, $PUBLIC, $method(Module, getExportsTable, $ModuleExportsArray*)},
+	{"getOpensTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleOpens;", nullptr, $PUBLIC, $method(Module, getOpensTable, $ModuleOpensArray*)},
+	{"getProvidesTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleProvides;", nullptr, $PUBLIC, $method(Module, getProvidesTable, $ModuleProvidesArray*)},
+	{"getRequiresTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ModuleRequires;", nullptr, $PUBLIC, $method(Module, getRequiresTable, $ModuleRequiresArray*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Module, toString, $String*)},
 	{}
 };
 

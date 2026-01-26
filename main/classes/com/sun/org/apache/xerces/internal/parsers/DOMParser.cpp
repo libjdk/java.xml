@@ -130,22 +130,22 @@ $FieldInfo _DOMParser_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMParser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMParser::*)($XMLParserConfiguration*)>(&DOMParser::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMParser::*)()>(&DOMParser::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMParser::*)($SymbolTable*)>(&DOMParser::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMParser::*)($SymbolTable*,$XMLGrammarPool*)>(&DOMParser::init$))},
-	{"getEntityResolver", "()Lorg/xml/sax/EntityResolver;", nullptr, $PUBLIC},
-	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getXMLParserConfiguration", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;", nullptr, $PUBLIC},
-	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setProperty0", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PUBLIC, $method(DOMParser, init$, void, $XMLParserConfiguration*)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMParser, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(DOMParser, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(DOMParser, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"getEntityResolver", "()Lorg/xml/sax/EntityResolver;", nullptr, $PUBLIC, $virtualMethod(DOMParser, getEntityResolver, $EntityResolver*)},
+	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC, $virtualMethod(DOMParser, getErrorHandler, $ErrorHandler*)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(DOMParser, getFeature, bool, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DOMParser, getProperty, $Object*, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getXMLParserConfiguration", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;", nullptr, $PUBLIC, $virtualMethod(DOMParser, getXMLParserConfiguration, $XMLParserConfiguration*)},
+	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(DOMParser, parse, void, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $virtualMethod(DOMParser, parse, void, $InputSource*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC, $virtualMethod(DOMParser, setEntityResolver, void, $EntityResolver*)},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC, $virtualMethod(DOMParser, setErrorHandler, void, $ErrorHandler*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(DOMParser, setFeature, void, $String*, bool), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(DOMParser, setProperty, void, $String*, Object$*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setProperty0", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(DOMParser, setProperty0, void, $String*, Object$*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
 	{}
 };
 

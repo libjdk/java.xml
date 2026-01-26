@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $BigDecimal = ::java::math::BigDecimal;
+using $BigInteger = ::java::math::BigInteger;
 
 namespace com {
 	namespace sun {
@@ -17,12 +19,12 @@ namespace com {
 							namespace datatypes {
 
 $MethodInfo _XSDecimal_MethodInfo_[] = {
-	{"getBigDecimal", "()Ljava/math/BigDecimal;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getBigInteger", "()Ljava/math/BigInteger;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.NumberFormatException"},
-	{"getByte", "()B", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.NumberFormatException"},
-	{"getInt", "()I", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.NumberFormatException"},
-	{"getLong", "()J", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.NumberFormatException"},
-	{"getShort", "()S", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.NumberFormatException"},
+	{"getBigDecimal", "()Ljava/math/BigDecimal;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDecimal, getBigDecimal, $BigDecimal*)},
+	{"getBigInteger", "()Ljava/math/BigInteger;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDecimal, getBigInteger, $BigInteger*), "java.lang.NumberFormatException"},
+	{"getByte", "()B", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDecimal, getByte, int8_t), "java.lang.NumberFormatException"},
+	{"getInt", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDecimal, getInt, int32_t), "java.lang.NumberFormatException"},
+	{"getLong", "()J", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDecimal, getLong, int64_t), "java.lang.NumberFormatException"},
+	{"getShort", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDecimal, getShort, int16_t), "java.lang.NumberFormatException"},
 	{}
 };
 

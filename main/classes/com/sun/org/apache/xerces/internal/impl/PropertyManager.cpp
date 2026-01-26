@@ -107,15 +107,15 @@ $FieldInfo _PropertyManager_FieldInfo_[] = {
 };
 
 $MethodInfo _PropertyManager_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(PropertyManager::*)(int32_t)>(&PropertyManager::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(PropertyManager::*)(PropertyManager*)>(&PropertyManager::init$))},
-	{"containsProperty", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"getProperties", "()Ljava/util/HashMap;", "()Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;", $PRIVATE, $method(static_cast<$HashMap*(PropertyManager::*)()>(&PropertyManager::getProperties))},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"initConfigurableReaderProperties", "()V", nullptr, $PRIVATE, $method(static_cast<void(PropertyManager::*)()>(&PropertyManager::initConfigurableReaderProperties))},
-	{"initWriterProps", "()V", nullptr, $PRIVATE, $method(static_cast<void(PropertyManager::*)()>(&PropertyManager::initWriterProps))},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(PropertyManager, init$, void, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(PropertyManager, init$, void, PropertyManager*)},
+	{"containsProperty", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(PropertyManager, containsProperty, bool, $String*)},
+	{"getProperties", "()Ljava/util/HashMap;", "()Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;", $PRIVATE, $method(PropertyManager, getProperties, $HashMap*)},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(PropertyManager, getProperty, $Object*, $String*)},
+	{"initConfigurableReaderProperties", "()V", nullptr, $PRIVATE, $method(PropertyManager, initConfigurableReaderProperties, void)},
+	{"initWriterProps", "()V", nullptr, $PRIVATE, $method(PropertyManager, initWriterProps, void)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(PropertyManager, setProperty, void, $String*, Object$*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(PropertyManager, toString, $String*)},
 	{}
 };
 

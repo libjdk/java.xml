@@ -25,9 +25,9 @@ namespace com {
 						namespace lib {
 
 $MethodInfo _ExsltBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExsltBase::*)()>(&ExsltBase::init$))},
-	{"toNumber", "(Lorg/w3c/dom/Node;)D", nullptr, $PROTECTED | $STATIC, $method(static_cast<double(*)($Node*)>(&ExsltBase::toNumber))},
-	{"toString", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PROTECTED | $STATIC, $method(static_cast<$String*(*)($Node*)>(&ExsltBase::toString))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExsltBase, init$, void)},
+	{"toNumber", "(Lorg/w3c/dom/Node;)D", nullptr, $PROTECTED | $STATIC, $staticMethod(ExsltBase, toNumber, double, $Node*)},
+	{"toString", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PROTECTED | $STATIC, $staticMethod(ExsltBase, toString, $String*, $Node*)},
 	{}
 };
 

@@ -22,15 +22,15 @@ $FieldInfo _IntStack_FieldInfo_[] = {
 };
 
 $MethodInfo _IntStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(IntStack::*)()>(&IntStack::init$))},
-	{"clear", "()V", nullptr, $PUBLIC, $method(static_cast<void(IntStack::*)()>(&IntStack::clear))},
-	{"elementAt", "(I)I", nullptr, $PUBLIC, $method(static_cast<int32_t(IntStack::*)(int32_t)>(&IntStack::elementAt))},
-	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(IntStack::*)(int32_t)>(&IntStack::ensureCapacity))},
-	{"peek", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(IntStack::*)()>(&IntStack::peek))},
-	{"pop", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(IntStack::*)()>(&IntStack::pop))},
-	{"print", "()V", nullptr, $PUBLIC, $method(static_cast<void(IntStack::*)()>(&IntStack::print))},
-	{"push", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(IntStack::*)(int32_t)>(&IntStack::push))},
-	{"size", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(IntStack::*)()>(&IntStack::size))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(IntStack, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $method(IntStack, clear, void)},
+	{"elementAt", "(I)I", nullptr, $PUBLIC, $method(IntStack, elementAt, int32_t, int32_t)},
+	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(IntStack, ensureCapacity, void, int32_t)},
+	{"peek", "()I", nullptr, $PUBLIC, $method(IntStack, peek, int32_t)},
+	{"pop", "()I", nullptr, $PUBLIC, $method(IntStack, pop, int32_t)},
+	{"print", "()V", nullptr, $PUBLIC, $method(IntStack, print, void)},
+	{"push", "(I)V", nullptr, $PUBLIC, $method(IntStack, push, void, int32_t)},
+	{"size", "()I", nullptr, $PUBLIC, $method(IntStack, size, int32_t)},
 	{}
 };
 

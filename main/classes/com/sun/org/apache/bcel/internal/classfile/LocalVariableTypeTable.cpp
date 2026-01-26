@@ -37,17 +37,17 @@ $FieldInfo _LocalVariableTypeTable_FieldInfo_[] = {
 };
 
 $MethodInfo _LocalVariableTypeTable_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/LocalVariableTypeTable;)V", nullptr, $PUBLIC, $method(static_cast<void(LocalVariableTypeTable::*)(LocalVariableTypeTable*)>(&LocalVariableTypeTable::init$))},
-	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(LocalVariableTypeTable::*)(int32_t,int32_t,$LocalVariableArray*,$ConstantPool*)>(&LocalVariableTypeTable::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(LocalVariableTypeTable::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&LocalVariableTypeTable::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, nullptr, "java.io.IOException"},
-	{"getLocalVariable", "(I)Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$LocalVariable*(LocalVariableTypeTable::*)(int32_t)>(&LocalVariableTypeTable::getLocalVariable))},
-	{"getLocalVariableTypeTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$LocalVariableArray*(LocalVariableTypeTable::*)()>(&LocalVariableTypeTable::getLocalVariableTypeTable))},
-	{"getTableLength", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(LocalVariableTypeTable::*)()>(&LocalVariableTypeTable::getTableLength))},
-	{"setLocalVariableTable", "([Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(LocalVariableTypeTable::*)($LocalVariableArray*)>(&LocalVariableTypeTable::setLocalVariableTable))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/LocalVariableTypeTable;)V", nullptr, $PUBLIC, $method(LocalVariableTypeTable, init$, void, LocalVariableTypeTable*)},
+	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(LocalVariableTypeTable, init$, void, int32_t, int32_t, $LocalVariableArray*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(LocalVariableTypeTable, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(LocalVariableTypeTable, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(LocalVariableTypeTable, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(LocalVariableTypeTable, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getLocalVariable", "(I)Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;", nullptr, $PUBLIC | $FINAL, $method(LocalVariableTypeTable, getLocalVariable, $LocalVariable*, int32_t)},
+	{"getLocalVariableTypeTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;", nullptr, $PUBLIC | $FINAL, $method(LocalVariableTypeTable, getLocalVariableTypeTable, $LocalVariableArray*)},
+	{"getTableLength", "()I", nullptr, $PUBLIC | $FINAL, $method(LocalVariableTypeTable, getTableLength, int32_t)},
+	{"setLocalVariableTable", "([Lcom/sun/org/apache/bcel/internal/classfile/LocalVariable;)V", nullptr, $PUBLIC | $FINAL, $method(LocalVariableTypeTable, setLocalVariableTable, void, $LocalVariableArray*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $virtualMethod(LocalVariableTypeTable, toString, $String*)},
 	{}
 };
 

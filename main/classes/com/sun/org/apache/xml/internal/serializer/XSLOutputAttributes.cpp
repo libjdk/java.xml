@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $List = ::java::util::List;
 
 namespace com {
 	namespace sun {
@@ -15,29 +16,29 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _XSLOutputAttributes_MethodInfo_[] = {
-	{"getDoctypePublic", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDoctypeSystem", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getIndent", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getIndentAmount", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMediaType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getOmitXMLDeclaration", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getOutputProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getOutputPropertyDefault", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getStandalone", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setCdataSectionElements", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", $PUBLIC | $ABSTRACT},
-	{"setDoctype", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDoctypePublic", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDoctypeSystem", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setIndent", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setMediaType", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setOmitXMLDeclaration", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setOutputProperty", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setOutputPropertyDefault", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setStandalone", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setVersion", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDoctypePublic", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getDoctypePublic, $String*)},
+	{"getDoctypeSystem", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getDoctypeSystem, $String*)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getEncoding, $String*)},
+	{"getIndent", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getIndent, bool)},
+	{"getIndentAmount", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getIndentAmount, int32_t)},
+	{"getMediaType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getMediaType, $String*)},
+	{"getOmitXMLDeclaration", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getOmitXMLDeclaration, bool)},
+	{"getOutputProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getOutputProperty, $String*, $String*)},
+	{"getOutputPropertyDefault", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getOutputPropertyDefault, $String*, $String*)},
+	{"getStandalone", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getStandalone, $String*)},
+	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, getVersion, $String*)},
+	{"setCdataSectionElements", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setCdataSectionElements, void, $List*)},
+	{"setDoctype", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setDoctype, void, $String*, $String*)},
+	{"setDoctypePublic", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setDoctypePublic, void, $String*)},
+	{"setDoctypeSystem", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setDoctypeSystem, void, $String*)},
+	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setEncoding, void, $String*)},
+	{"setIndent", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setIndent, void, bool)},
+	{"setMediaType", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setMediaType, void, $String*)},
+	{"setOmitXMLDeclaration", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setOmitXMLDeclaration, void, bool)},
+	{"setOutputProperty", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setOutputProperty, void, $String*, $String*)},
+	{"setOutputPropertyDefault", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setOutputPropertyDefault, void, $String*, $String*)},
+	{"setStandalone", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setStandalone, void, $String*)},
+	{"setVersion", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSLOutputAttributes, setVersion, void, $String*)},
 	{}
 };
 

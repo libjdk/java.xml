@@ -31,9 +31,9 @@ $FieldInfo _FunctionPattern$FunctionOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _FunctionPattern$FunctionOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/patterns/FunctionPattern;)V", nullptr, 0, $method(static_cast<void(FunctionPattern$FunctionOwner::*)($FunctionPattern*)>(&FunctionPattern$FunctionOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/patterns/FunctionPattern;)V", nullptr, 0, $method(FunctionPattern$FunctionOwner, init$, void, $FunctionPattern*)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FunctionPattern$FunctionOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FunctionPattern$FunctionOwner, setExpression, void, $Expression*)},
 	{}
 };
 

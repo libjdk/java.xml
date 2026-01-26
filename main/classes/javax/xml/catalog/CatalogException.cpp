@@ -17,8 +17,8 @@ $FieldInfo _CatalogException_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(CatalogException::*)($String*)>(&CatalogException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(CatalogException::*)($String*,$Throwable*)>(&CatalogException::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(CatalogException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(CatalogException, init$, void, $String*, $Throwable*)},
 	{}
 };
 

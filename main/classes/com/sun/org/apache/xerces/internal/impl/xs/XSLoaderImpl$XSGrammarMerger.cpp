@@ -55,14 +55,14 @@ namespace com {
 							namespace xs {
 
 $MethodInfo _XSLoaderImpl$XSGrammarMerger_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSLoaderImpl$XSGrammarMerger::*)()>(&XSLoaderImpl$XSGrammarMerger::init$))},
-	{"containsGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC},
-	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"mergeSchemaGrammars", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PRIVATE, $method(static_cast<void(XSLoaderImpl$XSGrammarMerger::*)($SchemaGrammar*,$SchemaGrammar*)>(&XSLoaderImpl$XSGrammarMerger::mergeSchemaGrammars))},
-	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"toSchemaGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PRIVATE, $method(static_cast<$SchemaGrammar*(XSLoaderImpl$XSGrammarMerger::*)($Grammar*)>(&XSLoaderImpl$XSGrammarMerger::toSchemaGrammar))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSLoaderImpl$XSGrammarMerger, init$, void)},
+	{"containsGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC, $virtualMethod(XSLoaderImpl$XSGrammarMerger, containsGrammar, bool, $XMLGrammarDescription*)},
+	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XSLoaderImpl$XSGrammarMerger, getGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"mergeSchemaGrammars", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PRIVATE, $method(XSLoaderImpl$XSGrammarMerger, mergeSchemaGrammars, void, $SchemaGrammar*, $SchemaGrammar*)},
+	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $virtualMethod(XSLoaderImpl$XSGrammarMerger, putGrammar, void, $Grammar*)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XSLoaderImpl$XSGrammarMerger, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XSLoaderImpl$XSGrammarMerger, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
+	{"toSchemaGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PRIVATE, $method(XSLoaderImpl$XSGrammarMerger, toSchemaGrammar, $SchemaGrammar*, $Grammar*)},
 	{}
 };
 

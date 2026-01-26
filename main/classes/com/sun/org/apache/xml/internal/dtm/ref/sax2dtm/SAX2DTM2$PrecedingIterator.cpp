@@ -58,14 +58,14 @@ $FieldInfo _SAX2DTM2$PrecedingIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2DTM2$PrecedingIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2DTM2$PrecedingIterator::*)($SAX2DTM2*)>(&SAX2DTM2$PrecedingIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;)V", nullptr, $PUBLIC, $method(SAX2DTM2$PrecedingIterator, init$, void, $SAX2DTM2*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$PrecedingIterator, cloneIterator, $DTMAxisIterator*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$PrecedingIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$PrecedingIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$PrecedingIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$PrecedingIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$PrecedingIterator, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$PrecedingIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

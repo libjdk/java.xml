@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
+using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
 
 namespace org {
 	namespace w3c {
@@ -13,19 +15,19 @@ namespace org {
 			namespace traversal {
 
 $MethodInfo _TreeWalker_MethodInfo_[] = {
-	{"firstChild", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCurrentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFilter", "()Lorg/w3c/dom/traversal/NodeFilter;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getRoot", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"lastChild", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"nextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"nextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"parentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"previousNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"previousSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setCurrentNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"firstChild", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, firstChild, $Node*)},
+	{"getCurrentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, getCurrentNode, $Node*)},
+	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, getExpandEntityReferences, bool)},
+	{"getFilter", "()Lorg/w3c/dom/traversal/NodeFilter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, getFilter, $NodeFilter*)},
+	{"getRoot", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, getRoot, $Node*)},
+	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, getWhatToShow, int32_t)},
+	{"lastChild", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, lastChild, $Node*)},
+	{"nextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, nextNode, $Node*)},
+	{"nextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, nextSibling, $Node*)},
+	{"parentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, parentNode, $Node*)},
+	{"previousNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, previousNode, $Node*)},
+	{"previousSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, previousSibling, $Node*)},
+	{"setCurrentNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TreeWalker, setCurrentNode, void, $Node*), "org.w3c.dom.DOMException"},
 	{}
 };
 

@@ -24,7 +24,7 @@ $FieldInfo _CoreDOMImplementationImpl$RevalidationHandlerHolder_FieldInfo_[] = {
 };
 
 $MethodInfo _CoreDOMImplementationImpl$RevalidationHandlerHolder_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/RevalidationHandler;)V", nullptr, 0, $method(static_cast<void(CoreDOMImplementationImpl$RevalidationHandlerHolder::*)($RevalidationHandler*)>(&CoreDOMImplementationImpl$RevalidationHandlerHolder::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/RevalidationHandler;)V", nullptr, 0, $method(CoreDOMImplementationImpl$RevalidationHandlerHolder, init$, void, $RevalidationHandler*)},
 	{}
 };
 

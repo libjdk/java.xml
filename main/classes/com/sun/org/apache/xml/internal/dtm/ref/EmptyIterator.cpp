@@ -26,20 +26,20 @@ $FieldInfo _EmptyIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _EmptyIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(EmptyIterator::*)()>(&EmptyIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $FINAL},
-	{"getInstance", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DTMAxisIterator*(*)()>(&EmptyIterator::getInstance))},
-	{"getLast", "()I", nullptr, $PUBLIC | $FINAL},
-	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC | $FINAL},
-	{"getPosition", "()I", nullptr, $PUBLIC | $FINAL},
-	{"getStartNode", "()I", nullptr, $PUBLIC | $FINAL},
-	{"gotoMark", "()V", nullptr, $PUBLIC | $FINAL},
-	{"isReverse", "()Z", nullptr, $PUBLIC | $FINAL},
-	{"next", "()I", nullptr, $PUBLIC | $FINAL},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $FINAL},
-	{"setMark", "()V", nullptr, $PUBLIC | $FINAL},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC | $FINAL},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(EmptyIterator, init$, void)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, cloneIterator, $DTMAxisIterator*)},
+	{"getInstance", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $STATIC, $staticMethod(EmptyIterator, getInstance, $DTMAxisIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, getLast, int32_t)},
+	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, getNodeByPosition, int32_t, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, getPosition, int32_t)},
+	{"getStartNode", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, getStartNode, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC | $FINAL, $virtualMethod(EmptyIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

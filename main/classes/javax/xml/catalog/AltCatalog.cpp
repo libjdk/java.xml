@@ -31,11 +31,11 @@ $FieldInfo _AltCatalog_FieldInfo_[] = {
 };
 
 $MethodInfo _AltCatalog_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(AltCatalog::*)($BaseEntry$CatalogEntryType*,$String*)>(&AltCatalog::init$))},
-	{"getCatalogId", "()Ljava/lang/String;", nullptr, 0},
-	{"getCatalogURI", "()Ljava/net/URI;", nullptr, 0},
-	{"matchURI", "(Ljava/lang/String;I)Ljava/net/URI;", nullptr, $PUBLIC},
-	{"setCatalog", "(Ljava/lang/String;)V", nullptr, 0},
+	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljava/lang/String;)V", nullptr, 0, $method(AltCatalog, init$, void, $BaseEntry$CatalogEntryType*, $String*)},
+	{"getCatalogId", "()Ljava/lang/String;", nullptr, 0, $virtualMethod(AltCatalog, getCatalogId, $String*)},
+	{"getCatalogURI", "()Ljava/net/URI;", nullptr, 0, $virtualMethod(AltCatalog, getCatalogURI, $URI*)},
+	{"matchURI", "(Ljava/lang/String;I)Ljava/net/URI;", nullptr, $PUBLIC, $virtualMethod(AltCatalog, matchURI, $URI*, $String*, int32_t)},
+	{"setCatalog", "(Ljava/lang/String;)V", nullptr, 0, $virtualMethod(AltCatalog, setCatalog, void, $String*)},
 	{}
 };
 

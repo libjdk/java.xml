@@ -832,22 +832,22 @@ $FieldInfo _Const_FieldInfo_[] = {
 };
 
 $MethodInfo _Const_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(Const::*)()>(&Const::init$))},
-	{"getAccessName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getAccessName))},
-	{"getAttributeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getAttributeName))},
-	{"getClassTypeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getClassTypeName))},
-	{"getConstantName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getConstantName))},
-	{"getConsumeStack", "(I)I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)(int32_t)>(&Const::getConsumeStack))},
-	{"getInterfacesImplementedByArrays", "()Ljava/lang/Iterable;", "()Ljava/lang/Iterable<Ljava/lang/String;>;", $PUBLIC | $STATIC, $method(static_cast<$Iterable*(*)()>(&Const::getInterfacesImplementedByArrays))},
-	{"getItemName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getItemName))},
-	{"getMethodHandleName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getMethodHandleName))},
-	{"getNoOfOperands", "(I)S", nullptr, $PUBLIC | $STATIC, $method(static_cast<int16_t(*)(int32_t)>(&Const::getNoOfOperands))},
-	{"getOpcodeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getOpcodeName))},
-	{"getOperandType", "(II)S", nullptr, $PUBLIC | $STATIC, $method(static_cast<int16_t(*)(int32_t,int32_t)>(&Const::getOperandType))},
-	{"getOperandTypeCount", "(I)J", nullptr, $PUBLIC | $STATIC, $method(static_cast<int64_t(*)(int32_t)>(&Const::getOperandTypeCount))},
-	{"getProduceStack", "(I)I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)(int32_t)>(&Const::getProduceStack))},
-	{"getShortTypeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getShortTypeName))},
-	{"getTypeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Const::getTypeName))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(Const, init$, void)},
+	{"getAccessName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getAccessName, $String*, int32_t)},
+	{"getAttributeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getAttributeName, $String*, int32_t)},
+	{"getClassTypeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getClassTypeName, $String*, int32_t)},
+	{"getConstantName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getConstantName, $String*, int32_t)},
+	{"getConsumeStack", "(I)I", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getConsumeStack, int32_t, int32_t)},
+	{"getInterfacesImplementedByArrays", "()Ljava/lang/Iterable;", "()Ljava/lang/Iterable<Ljava/lang/String;>;", $PUBLIC | $STATIC, $staticMethod(Const, getInterfacesImplementedByArrays, $Iterable*)},
+	{"getItemName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getItemName, $String*, int32_t)},
+	{"getMethodHandleName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getMethodHandleName, $String*, int32_t)},
+	{"getNoOfOperands", "(I)S", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getNoOfOperands, int16_t, int32_t)},
+	{"getOpcodeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getOpcodeName, $String*, int32_t)},
+	{"getOperandType", "(II)S", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getOperandType, int16_t, int32_t, int32_t)},
+	{"getOperandTypeCount", "(I)J", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getOperandTypeCount, int64_t, int32_t)},
+	{"getProduceStack", "(I)I", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getProduceStack, int32_t, int32_t)},
+	{"getShortTypeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getShortTypeName, $String*, int32_t)},
+	{"getTypeName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Const, getTypeName, $String*, int32_t)},
 	{}
 };
 

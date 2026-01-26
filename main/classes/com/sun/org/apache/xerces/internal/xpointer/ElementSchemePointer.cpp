@@ -75,22 +75,22 @@ $FieldInfo _ElementSchemePointer_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementSchemePointer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ElementSchemePointer::*)()>(&ElementSchemePointer::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(ElementSchemePointer::*)($SymbolTable*)>(&ElementSchemePointer::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, $PUBLIC, $method(static_cast<void(ElementSchemePointer::*)($SymbolTable*,$XMLErrorReporter*)>(&ElementSchemePointer::init$))},
-	{"checkMatch", "()Z", nullptr, $PROTECTED, $method(static_cast<bool(ElementSchemePointer::*)()>(&ElementSchemePointer::checkMatch))},
-	{"getSchemeData", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSchemeName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"init", "()V", nullptr, $PROTECTED, $method(static_cast<void(ElementSchemePointer::*)()>(&ElementSchemePointer::init))},
-	{"initErrorReporter", "()V", nullptr, $PROTECTED, $method(static_cast<void(ElementSchemePointer::*)()>(&ElementSchemePointer::initErrorReporter))},
-	{"isChildFragmentResolved", "()Z", nullptr, $PUBLIC},
-	{"isFragmentResolved", "()Z", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"matchChildSequence", "(Lcom/sun/org/apache/xerces/internal/xni/QName;I)Z", nullptr, $PROTECTED, $method(static_cast<bool(ElementSchemePointer::*)($QName*,int32_t)>(&ElementSchemePointer::matchChildSequence)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"parseXPointer", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"reportError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PROTECTED, $method(static_cast<void(ElementSchemePointer::*)($String*,$ObjectArray*)>(&ElementSchemePointer::reportError)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"resolveXPointer", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;I)Z", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"setSchemeData", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setSchemeName", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ElementSchemePointer, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(ElementSchemePointer, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, $PUBLIC, $method(ElementSchemePointer, init$, void, $SymbolTable*, $XMLErrorReporter*)},
+	{"checkMatch", "()Z", nullptr, $PROTECTED, $method(ElementSchemePointer, checkMatch, bool)},
+	{"getSchemeData", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, getSchemeData, $String*)},
+	{"getSchemeName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, getSchemeName, $String*)},
+	{"init", "()V", nullptr, $PROTECTED, $method(ElementSchemePointer, init, void)},
+	{"initErrorReporter", "()V", nullptr, $PROTECTED, $method(ElementSchemePointer, initErrorReporter, void)},
+	{"isChildFragmentResolved", "()Z", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, isChildFragmentResolved, bool)},
+	{"isFragmentResolved", "()Z", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, isFragmentResolved, bool), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"matchChildSequence", "(Lcom/sun/org/apache/xerces/internal/xni/QName;I)Z", nullptr, $PROTECTED, $method(ElementSchemePointer, matchChildSequence, bool, $QName*, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"parseXPointer", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, parseXPointer, void, $String*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"reportError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PROTECTED, $method(ElementSchemePointer, reportError, void, $String*, $ObjectArray*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"resolveXPointer", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;I)Z", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, resolveXPointer, bool, $QName*, $XMLAttributes*, $Augmentations*, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"setSchemeData", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, setSchemeData, void, $String*)},
+	{"setSchemeName", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ElementSchemePointer, setSchemeName, void, $String*)},
 	{}
 };
 

@@ -59,22 +59,22 @@ $FieldInfo _AttributeMap_FieldInfo_[] = {
 };
 
 $MethodInfo _AttributeMap_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ElementImpl;Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(AttributeMap::*)($ElementImpl*,$NamedNodeMapImpl*)>(&AttributeMap::init$))},
-	{"addItem", "(Lorg/w3c/dom/Node;)I", nullptr, $PROTECTED | $FINAL},
-	{"cloneContent", "(Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;)V", nullptr, $PROTECTED},
-	{"cloneMap", "(Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;)Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;", nullptr, $PUBLIC},
-	{"internalRemoveNamedItem", "(Ljava/lang/String;Z)Lorg/w3c/dom/Node;", nullptr, $PROTECTED | $FINAL, $method(static_cast<$Node*(AttributeMap::*)($String*,bool)>(&AttributeMap::internalRemoveNamedItem))},
-	{"internalRemoveNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;Z)Lorg/w3c/dom/Node;", nullptr, $PROTECTED | $FINAL, $method(static_cast<$Node*(AttributeMap::*)($String*,$String*,bool)>(&AttributeMap::internalRemoveNamedItemNS))},
-	{"moveSpecifiedAttributes", "(Lcom/sun/org/apache/xerces/internal/dom/AttributeMap;)V", nullptr, 0},
-	{"reconcileDefaults", "(Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;)V", nullptr, $PROTECTED},
-	{"remove", "(Lcom/sun/org/apache/xerces/internal/dom/AttrImpl;IZ)Lorg/w3c/dom/Node;", nullptr, $PRIVATE | $FINAL, $method(static_cast<$Node*(AttributeMap::*)($AttrImpl*,int32_t,bool)>(&AttributeMap::remove))},
-	{"removeItem", "(Lorg/w3c/dom/Node;Z)Lorg/w3c/dom/Node;", nullptr, $PROTECTED, nullptr, "org.w3c.dom.DOMException"},
-	{"removeNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"removeNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"safeRemoveNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, 0},
-	{"safeRemoveNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, 0},
-	{"setNamedItem", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"setNamedItemNS", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ElementImpl;Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;)V", nullptr, $PROTECTED, $method(AttributeMap, init$, void, $ElementImpl*, $NamedNodeMapImpl*)},
+	{"addItem", "(Lorg/w3c/dom/Node;)I", nullptr, $PROTECTED | $FINAL, $virtualMethod(AttributeMap, addItem, int32_t, $Node*)},
+	{"cloneContent", "(Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;)V", nullptr, $PROTECTED, $virtualMethod(AttributeMap, cloneContent, void, $NamedNodeMapImpl*)},
+	{"cloneMap", "(Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;)Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;", nullptr, $PUBLIC, $virtualMethod(AttributeMap, cloneMap, $NamedNodeMapImpl*, $NodeImpl*)},
+	{"internalRemoveNamedItem", "(Ljava/lang/String;Z)Lorg/w3c/dom/Node;", nullptr, $PROTECTED | $FINAL, $method(AttributeMap, internalRemoveNamedItem, $Node*, $String*, bool)},
+	{"internalRemoveNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;Z)Lorg/w3c/dom/Node;", nullptr, $PROTECTED | $FINAL, $method(AttributeMap, internalRemoveNamedItemNS, $Node*, $String*, $String*, bool)},
+	{"moveSpecifiedAttributes", "(Lcom/sun/org/apache/xerces/internal/dom/AttributeMap;)V", nullptr, 0, $virtualMethod(AttributeMap, moveSpecifiedAttributes, void, AttributeMap*)},
+	{"reconcileDefaults", "(Lcom/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl;)V", nullptr, $PROTECTED, $virtualMethod(AttributeMap, reconcileDefaults, void, $NamedNodeMapImpl*)},
+	{"remove", "(Lcom/sun/org/apache/xerces/internal/dom/AttrImpl;IZ)Lorg/w3c/dom/Node;", nullptr, $PRIVATE | $FINAL, $method(AttributeMap, remove, $Node*, $AttrImpl*, int32_t, bool)},
+	{"removeItem", "(Lorg/w3c/dom/Node;Z)Lorg/w3c/dom/Node;", nullptr, $PROTECTED, $virtualMethod(AttributeMap, removeItem, $Node*, $Node*, bool), "org.w3c.dom.DOMException"},
+	{"removeNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(AttributeMap, removeNamedItem, $Node*, $String*), "org.w3c.dom.DOMException"},
+	{"removeNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(AttributeMap, removeNamedItemNS, $Node*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"safeRemoveNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, 0, $virtualMethod(AttributeMap, safeRemoveNamedItem, $Node*, $String*)},
+	{"safeRemoveNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, 0, $virtualMethod(AttributeMap, safeRemoveNamedItemNS, $Node*, $String*, $String*)},
+	{"setNamedItem", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(AttributeMap, setNamedItem, $Node*, $Node*), "org.w3c.dom.DOMException"},
+	{"setNamedItemNS", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(AttributeMap, setNamedItemNS, $Node*, $Node*), "org.w3c.dom.DOMException"},
 	{}
 };
 

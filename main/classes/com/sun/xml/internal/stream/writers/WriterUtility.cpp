@@ -66,16 +66,16 @@ $FieldInfo _WriterUtility_FieldInfo_[] = {
 };
 
 $MethodInfo _WriterUtility_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(WriterUtility::*)()>(&WriterUtility::init$))},
-	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(static_cast<void(WriterUtility::*)($Writer*)>(&WriterUtility::init$))},
-	{"getDefaultEncoder", "()Ljava/nio/charset/CharsetEncoder;", nullptr, $PRIVATE, $method(static_cast<$CharsetEncoder*(WriterUtility::*)()>(&WriterUtility::getDefaultEncoder))},
-	{"getEscapeCharacters", "()Z", nullptr, $PUBLIC},
-	{"setEscapeCharacters", "(Z)V", nullptr, $PUBLIC},
-	{"setWriter", "(Ljava/io/Writer;)V", nullptr, $PUBLIC},
-	{"writeXMLAttributeValue", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"writeXMLContent", "([CII)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"writeXMLContent", "([CIIZ)V", nullptr, $PRIVATE, $method(static_cast<void(WriterUtility::*)($chars*,int32_t,int32_t,bool)>(&WriterUtility::writeXMLContent)), "java.io.IOException"},
-	{"writeXMLContent", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(WriterUtility, init$, void)},
+	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(WriterUtility, init$, void, $Writer*)},
+	{"getDefaultEncoder", "()Ljava/nio/charset/CharsetEncoder;", nullptr, $PRIVATE, $method(WriterUtility, getDefaultEncoder, $CharsetEncoder*)},
+	{"getEscapeCharacters", "()Z", nullptr, $PUBLIC, $virtualMethod(WriterUtility, getEscapeCharacters, bool)},
+	{"setEscapeCharacters", "(Z)V", nullptr, $PUBLIC, $virtualMethod(WriterUtility, setEscapeCharacters, void, bool)},
+	{"setWriter", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $virtualMethod(WriterUtility, setWriter, void, $Writer*)},
+	{"writeXMLAttributeValue", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(WriterUtility, writeXMLAttributeValue, void, $String*), "java.io.IOException"},
+	{"writeXMLContent", "([CII)V", nullptr, $PUBLIC, $virtualMethod(WriterUtility, writeXMLContent, void, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"writeXMLContent", "([CIIZ)V", nullptr, $PRIVATE, $method(WriterUtility, writeXMLContent, void, $chars*, int32_t, int32_t, bool), "java.io.IOException"},
+	{"writeXMLContent", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(WriterUtility, writeXMLContent, void, $String*), "java.io.IOException"},
 	{}
 };
 

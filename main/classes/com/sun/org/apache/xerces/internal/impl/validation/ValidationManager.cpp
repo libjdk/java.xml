@@ -33,14 +33,14 @@ $FieldInfo _ValidationManager_FieldInfo_[] = {
 };
 
 $MethodInfo _ValidationManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ValidationManager::*)()>(&ValidationManager::init$))},
-	{"addValidationState", "(Lcom/sun/org/apache/xerces/internal/impl/validation/ValidationState;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ValidationManager::*)($ValidationState*)>(&ValidationManager::addValidationState))},
-	{"isCachedDTD", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ValidationManager::*)()>(&ValidationManager::isCachedDTD))},
-	{"isGrammarFound", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ValidationManager::*)()>(&ValidationManager::isGrammarFound))},
-	{"reset", "()V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ValidationManager::*)()>(&ValidationManager::reset))},
-	{"setCachedDTD", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ValidationManager::*)(bool)>(&ValidationManager::setCachedDTD))},
-	{"setEntityState", "(Lcom/sun/org/apache/xerces/internal/impl/validation/EntityState;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ValidationManager::*)($EntityState*)>(&ValidationManager::setEntityState))},
-	{"setGrammarFound", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ValidationManager::*)(bool)>(&ValidationManager::setGrammarFound))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ValidationManager, init$, void)},
+	{"addValidationState", "(Lcom/sun/org/apache/xerces/internal/impl/validation/ValidationState;)V", nullptr, $PUBLIC | $FINAL, $method(ValidationManager, addValidationState, void, $ValidationState*)},
+	{"isCachedDTD", "()Z", nullptr, $PUBLIC | $FINAL, $method(ValidationManager, isCachedDTD, bool)},
+	{"isGrammarFound", "()Z", nullptr, $PUBLIC | $FINAL, $method(ValidationManager, isGrammarFound, bool)},
+	{"reset", "()V", nullptr, $PUBLIC | $FINAL, $method(ValidationManager, reset, void)},
+	{"setCachedDTD", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(ValidationManager, setCachedDTD, void, bool)},
+	{"setEntityState", "(Lcom/sun/org/apache/xerces/internal/impl/validation/EntityState;)V", nullptr, $PUBLIC | $FINAL, $method(ValidationManager, setEntityState, void, $EntityState*)},
+	{"setGrammarFound", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(ValidationManager, setGrammarFound, void, bool)},
 	{}
 };
 

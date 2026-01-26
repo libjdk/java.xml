@@ -31,15 +31,15 @@ $FieldInfo _XSCMLeaf_FieldInfo_[] = {
 };
 
 $MethodInfo _XSCMLeaf_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/Object;II)V", nullptr, $PUBLIC, $method(static_cast<void(XSCMLeaf::*)(int32_t,Object$*,int32_t,int32_t)>(&XSCMLeaf::init$))},
-	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"getLeaf", "()Ljava/lang/Object;", nullptr, $FINAL, $method(static_cast<$Object*(XSCMLeaf::*)()>(&XSCMLeaf::getLeaf))},
-	{"getParticleId", "()I", nullptr, $FINAL, $method(static_cast<int32_t(XSCMLeaf::*)()>(&XSCMLeaf::getParticleId))},
-	{"getPosition", "()I", nullptr, $FINAL, $method(static_cast<int32_t(XSCMLeaf::*)()>(&XSCMLeaf::getPosition))},
-	{"isNullable", "()Z", nullptr, $PUBLIC},
-	{"setPosition", "(I)V", nullptr, $FINAL, $method(static_cast<void(XSCMLeaf::*)(int32_t)>(&XSCMLeaf::setPosition))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILjava/lang/Object;II)V", nullptr, $PUBLIC, $method(XSCMLeaf, init$, void, int32_t, Object$*, int32_t, int32_t)},
+	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(XSCMLeaf, calcFirstPos, void, $CMStateSet*)},
+	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(XSCMLeaf, calcLastPos, void, $CMStateSet*)},
+	{"getLeaf", "()Ljava/lang/Object;", nullptr, $FINAL, $method(XSCMLeaf, getLeaf, $Object*)},
+	{"getParticleId", "()I", nullptr, $FINAL, $method(XSCMLeaf, getParticleId, int32_t)},
+	{"getPosition", "()I", nullptr, $FINAL, $method(XSCMLeaf, getPosition, int32_t)},
+	{"isNullable", "()Z", nullptr, $PUBLIC, $virtualMethod(XSCMLeaf, isNullable, bool)},
+	{"setPosition", "(I)V", nullptr, $FINAL, $method(XSCMLeaf, setPosition, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSCMLeaf, toString, $String*)},
 	{}
 };
 

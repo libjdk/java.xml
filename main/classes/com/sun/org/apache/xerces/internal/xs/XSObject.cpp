@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSNamespaceItem.h>
 #include <jcpp.h>
 
+using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,10 +16,10 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSObject_MethodInfo_[] = {
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getType", "()S", nullptr, $PUBLIC | $ABSTRACT},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSObject, getName, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSObject, getNamespace, $String*)},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSObject, getNamespaceItem, $XSNamespaceItem*)},
+	{"getType", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSObject, getType, int16_t)},
 	{}
 };
 

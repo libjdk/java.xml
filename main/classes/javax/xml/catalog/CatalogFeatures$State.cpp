@@ -33,11 +33,11 @@ $FieldInfo _CatalogFeatures$State_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogFeatures$State_MethodInfo_[] = {
-	{"$values", "()[Ljavax/xml/catalog/CatalogFeatures$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$CatalogFeatures$StateArray*(*)()>(&CatalogFeatures$State::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(CatalogFeatures$State::*)($String*,int32_t,$String*)>(&CatalogFeatures$State::init$))},
-	{"literal", "()Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(CatalogFeatures$State::*)()>(&CatalogFeatures$State::literal))},
-	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/CatalogFeatures$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<CatalogFeatures$State*(*)($String*)>(&CatalogFeatures$State::valueOf))},
-	{"values", "()[Ljavax/xml/catalog/CatalogFeatures$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$CatalogFeatures$StateArray*(*)()>(&CatalogFeatures$State::values))},
+	{"$values", "()[Ljavax/xml/catalog/CatalogFeatures$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(CatalogFeatures$State, $values, $CatalogFeatures$StateArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(CatalogFeatures$State, init$, void, $String*, int32_t, $String*)},
+	{"literal", "()Ljava/lang/String;", nullptr, 0, $method(CatalogFeatures$State, literal, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/CatalogFeatures$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(CatalogFeatures$State, valueOf, CatalogFeatures$State*, $String*)},
+	{"values", "()[Ljavax/xml/catalog/CatalogFeatures$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(CatalogFeatures$State, values, $CatalogFeatures$StateArray*)},
 	{}
 };
 

@@ -46,14 +46,14 @@ $FieldInfo _UnionPattern_FieldInfo_[] = {
 };
 
 $MethodInfo _UnionPattern_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(UnionPattern::*)()>(&UnionPattern::init$))},
-	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"canTraverseOutsideSubtree", "()Z", nullptr, $PUBLIC},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getPatterns", "()[Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;", nullptr, $PUBLIC},
-	{"setPatterns", "([Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(UnionPattern, init$, void)},
+	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(UnionPattern, callVisitors, void, $ExpressionOwner*, $XPathVisitor*)},
+	{"canTraverseOutsideSubtree", "()Z", nullptr, $PUBLIC, $virtualMethod(UnionPattern, canTraverseOutsideSubtree, bool)},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(UnionPattern, deepEquals, bool, $Expression*)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(UnionPattern, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(UnionPattern, fixupVariables, void, $List*, int32_t)},
+	{"getPatterns", "()[Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;", nullptr, $PUBLIC, $virtualMethod(UnionPattern, getPatterns, $StepPatternArray*)},
+	{"setPatterns", "([Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;)V", nullptr, $PUBLIC, $virtualMethod(UnionPattern, setPatterns, void, $StepPatternArray*)},
 	{}
 };
 

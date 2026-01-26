@@ -278,7 +278,7 @@ $FieldInfo _JdkConstants_FieldInfo_[] = {
 };
 
 $MethodInfo _JdkConstants_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(JdkConstants::*)()>(&JdkConstants::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(JdkConstants, init$, void)},
 	{}
 };
 

@@ -16,8 +16,8 @@ namespace com {
 						namespace impl {
 
 $MethodInfo _XML11NamespaceBinder_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11NamespaceBinder::*)()>(&XML11NamespaceBinder::init$))},
-	{"prefixBoundToNullURI", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11NamespaceBinder, init$, void)},
+	{"prefixBoundToNullURI", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PROTECTED, $virtualMethod(XML11NamespaceBinder, prefixBoundToNullURI, bool, $String*, $String*)},
 	{}
 };
 

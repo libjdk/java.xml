@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <jcpp.h>
 
+using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
+using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,7 +18,7 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _TypedInstruction_MethodInfo_[] = {
-	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypedInstruction, getType, $Type*, $ConstantPoolGen*)},
 	{}
 };
 

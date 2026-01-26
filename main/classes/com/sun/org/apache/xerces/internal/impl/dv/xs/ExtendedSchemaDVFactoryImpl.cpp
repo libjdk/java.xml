@@ -40,10 +40,10 @@ $FieldInfo _ExtendedSchemaDVFactoryImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _ExtendedSchemaDVFactoryImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExtendedSchemaDVFactoryImpl::*)()>(&ExtendedSchemaDVFactoryImpl::init$))},
-	{"createBuiltInTypes", "()V", nullptr, $STATIC, $method(static_cast<void(*)()>(&ExtendedSchemaDVFactoryImpl::createBuiltInTypes))},
-	{"getBuiltInType", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC},
-	{"getBuiltInTypes", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExtendedSchemaDVFactoryImpl, init$, void)},
+	{"createBuiltInTypes", "()V", nullptr, $STATIC, $staticMethod(ExtendedSchemaDVFactoryImpl, createBuiltInTypes, void)},
+	{"getBuiltInType", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;", nullptr, $PUBLIC, $virtualMethod(ExtendedSchemaDVFactoryImpl, getBuiltInType, $XSSimpleType*, $String*)},
+	{"getBuiltInTypes", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash;", nullptr, $PUBLIC, $virtualMethod(ExtendedSchemaDVFactoryImpl, getBuiltInTypes, $SymbolHash*)},
 	{}
 };
 

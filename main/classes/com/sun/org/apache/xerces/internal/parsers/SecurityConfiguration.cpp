@@ -36,10 +36,10 @@ $FieldInfo _SecurityConfiguration_FieldInfo_[] = {
 };
 
 $MethodInfo _SecurityConfiguration_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SecurityConfiguration::*)()>(&SecurityConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(SecurityConfiguration::*)($SymbolTable*)>(&SecurityConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(SecurityConfiguration::*)($SymbolTable*,$XMLGrammarPool*)>(&SecurityConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(SecurityConfiguration::*)($SymbolTable*,$XMLGrammarPool*,$XMLComponentManager*)>(&SecurityConfiguration::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SecurityConfiguration, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(SecurityConfiguration, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(SecurityConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(SecurityConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*, $XMLComponentManager*)},
 	{}
 };
 

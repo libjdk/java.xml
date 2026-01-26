@@ -32,9 +32,9 @@ $FieldInfo _DTMDefaultBaseTraversers$AncestorTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$AncestorTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$AncestorTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$AncestorTraverser::init$))},
-	{"next", "(II)I", nullptr, $PUBLIC},
-	{"next", "(III)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$AncestorTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"next", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$AncestorTraverser, next, int32_t, int32_t, int32_t)},
+	{"next", "(III)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$AncestorTraverser, next, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

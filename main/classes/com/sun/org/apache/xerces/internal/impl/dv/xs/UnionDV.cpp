@@ -25,9 +25,9 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _UnionDV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(UnionDV::*)()>(&UnionDV::init$))},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getAllowedFacets", "()S", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(UnionDV, init$, void)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(UnionDV, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getAllowedFacets", "()S", nullptr, $PUBLIC, $virtualMethod(UnionDV, getAllowedFacets, int16_t)},
 	{}
 };
 

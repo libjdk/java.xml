@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/classfile/JavaClass.h>
 #include <jcpp.h>
 
+using $JavaClass = ::com::sun::org::apache::bcel::internal::classfile::JavaClass;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,12 +16,12 @@ namespace com {
 						namespace util {
 
 $MethodInfo _Repository_MethodInfo_[] = {
-	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"findClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC | $ABSTRACT},
-	{"loadClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.ClassNotFoundException"},
-	{"loadClass", "(Ljava/lang/Class;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", "(Ljava/lang/Class<*>;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", $PUBLIC | $ABSTRACT, nullptr, "java.lang.ClassNotFoundException"},
-	{"removeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"storeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Repository, clear, void)},
+	{"findClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Repository, findClass, $JavaClass*, $String*)},
+	{"loadClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Repository, loadClass, $JavaClass*, $String*), "java.lang.ClassNotFoundException"},
+	{"loadClass", "(Ljava/lang/Class;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", "(Ljava/lang/Class<*>;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", $PUBLIC | $ABSTRACT, $virtualMethod(Repository, loadClass, $JavaClass*, $Class*), "java.lang.ClassNotFoundException"},
+	{"removeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Repository, removeClass, void, $JavaClass*)},
+	{"storeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Repository, storeClass, void, $JavaClass*)},
 	{}
 };
 

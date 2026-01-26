@@ -30,8 +30,8 @@ $FieldInfo _XMLSchemaValidator$KeyValueStore_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidator$KeyValueStore_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/UniqueOrKey;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$KeyValueStore::*)($XMLSchemaValidator*,$UniqueOrKey*)>(&XMLSchemaValidator$KeyValueStore::init$))},
-	{"checkDuplicateValues", "()V", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/UniqueOrKey;)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$KeyValueStore, init$, void, $XMLSchemaValidator*, $UniqueOrKey*)},
+	{"checkDuplicateValues", "()V", nullptr, $PROTECTED, $virtualMethod(XMLSchemaValidator$KeyValueStore, checkDuplicateValues, void)},
 	{}
 };
 

@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSTerm.h>
 #include <jcpp.h>
 
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $XSTerm = ::com::sun::org::apache::xerces::internal::xs::XSTerm;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,11 +18,11 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSParticle_MethodInfo_[] = {
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMaxOccurs", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMaxOccursUnbounded", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMinOccurs", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTerm", "()Lcom/sun/org/apache/xerces/internal/xs/XSTerm;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSParticle, getAnnotations, $XSObjectList*)},
+	{"getMaxOccurs", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSParticle, getMaxOccurs, int32_t)},
+	{"getMaxOccursUnbounded", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSParticle, getMaxOccursUnbounded, bool)},
+	{"getMinOccurs", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSParticle, getMinOccurs, int32_t)},
+	{"getTerm", "()Lcom/sun/org/apache/xerces/internal/xs/XSTerm;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSParticle, getTerm, $XSTerm*)},
 	{}
 };
 

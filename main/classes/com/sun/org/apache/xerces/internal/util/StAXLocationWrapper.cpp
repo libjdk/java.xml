@@ -22,18 +22,18 @@ $FieldInfo _StAXLocationWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _StAXLocationWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StAXLocationWrapper::*)()>(&StAXLocationWrapper::init$))},
-	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLocation", "()Ljavax/xml/stream/Location;", nullptr, $PUBLIC, $method(static_cast<$Location*(StAXLocationWrapper::*)()>(&StAXLocationWrapper::getLocation))},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setLocation", "(Ljavax/xml/stream/Location;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXLocationWrapper::*)($Location*)>(&StAXLocationWrapper::setLocation))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StAXLocationWrapper, init$, void)},
+	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getBaseSystemId, $String*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getEncoding, $String*)},
+	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getExpandedSystemId, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getLineNumber, int32_t)},
+	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getLiteralSystemId, $String*)},
+	{"getLocation", "()Ljavax/xml/stream/Location;", nullptr, $PUBLIC, $method(StAXLocationWrapper, getLocation, $Location*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getPublicId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXLocationWrapper, getXMLVersion, $String*)},
+	{"setLocation", "(Ljavax/xml/stream/Location;)V", nullptr, $PUBLIC, $method(StAXLocationWrapper, setLocation, void, $Location*)},
 	{}
 };
 

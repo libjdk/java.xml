@@ -46,10 +46,10 @@ $FieldInfo _FuncSubstring_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncSubstring_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncSubstring::*)()>(&FuncSubstring::init$))},
-	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncSubstring, init$, void)},
+	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, $virtualMethod(FuncSubstring, checkNumberArgs, void, int32_t), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncSubstring, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, $virtualMethod(FuncSubstring, reportWrongNumberArgs, void), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
 	{}
 };
 

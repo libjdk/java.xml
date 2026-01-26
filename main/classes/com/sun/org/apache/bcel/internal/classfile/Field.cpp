@@ -47,18 +47,18 @@ $FieldInfo _Field_FieldInfo_[] = {
 };
 
 $MethodInfo _Field_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/Field;)V", nullptr, $PUBLIC, $method(static_cast<void(Field::*)(Field*)>(&Field::init$))},
-	{"<init>", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(Field::*)($DataInput*,$ConstantPool*)>(&Field::init$)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"<init>", "(III[Lcom/sun/org/apache/bcel/internal/classfile/Attribute;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(Field::*)(int32_t,int32_t,int32_t,$AttributeArray*,$ConstantPool*)>(&Field::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Field;", nullptr, $PUBLIC, $method(static_cast<Field*(Field::*)($ConstantPool*)>(&Field::copy))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getComparator", "()Lcom/sun/org/apache/bcel/internal/util/BCELComparator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$BCELComparator*(*)()>(&Field::getComparator))},
-	{"getConstantValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantValue;", nullptr, $PUBLIC, $method(static_cast<$ConstantValue*(Field::*)()>(&Field::getConstantValue))},
-	{"getType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $method(static_cast<$Type*(Field::*)()>(&Field::getType))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"setComparator", "(Lcom/sun/org/apache/bcel/internal/util/BCELComparator;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($BCELComparator*)>(&Field::setComparator))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/Field;)V", nullptr, $PUBLIC, $method(Field, init$, void, Field*)},
+	{"<init>", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(Field, init$, void, $DataInput*, $ConstantPool*), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"<init>", "(III[Lcom/sun/org/apache/bcel/internal/classfile/Attribute;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(Field, init$, void, int32_t, int32_t, int32_t, $AttributeArray*, $ConstantPool*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(Field, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Field;", nullptr, $PUBLIC, $method(Field, copy, Field*, $ConstantPool*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(Field, equals, bool, Object$*)},
+	{"getComparator", "()Lcom/sun/org/apache/bcel/internal/util/BCELComparator;", nullptr, $PUBLIC | $STATIC, $staticMethod(Field, getComparator, $BCELComparator*)},
+	{"getConstantValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantValue;", nullptr, $PUBLIC, $method(Field, getConstantValue, $ConstantValue*)},
+	{"getType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $method(Field, getType, $Type*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(Field, hashCode, int32_t)},
+	{"setComparator", "(Lcom/sun/org/apache/bcel/internal/util/BCELComparator;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(Field, setComparator, void, $BCELComparator*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Field, toString, $String*)},
 	{}
 };
 

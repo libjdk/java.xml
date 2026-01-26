@@ -116,18 +116,18 @@ $FieldInfo _EqualityExpr_FieldInfo_[] = {
 };
 
 $MethodInfo _EqualityExpr_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;)V", nullptr, $PUBLIC, $method(static_cast<void(EqualityExpr::*)(int32_t,$Expression*,$Expression*)>(&EqualityExpr::init$))},
-	{"getLeft", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC, $method(static_cast<$Expression*(EqualityExpr::*)()>(&EqualityExpr::getLeft))},
-	{"getOp", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(EqualityExpr::*)()>(&EqualityExpr::getOp))},
-	{"getRight", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC, $method(static_cast<$Expression*(EqualityExpr::*)()>(&EqualityExpr::getRight))},
-	{"hasLastCall", "()Z", nullptr, $PUBLIC},
-	{"hasPositionCall", "()Z", nullptr, $PUBLIC},
-	{"setParser", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"swapArguments", "()V", nullptr, $PRIVATE, $method(static_cast<void(EqualityExpr::*)()>(&EqualityExpr::swapArguments))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"translateDesynthesized", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;)V", nullptr, $PUBLIC, $method(EqualityExpr, init$, void, int32_t, $Expression*, $Expression*)},
+	{"getLeft", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC, $method(EqualityExpr, getLeft, $Expression*)},
+	{"getOp", "()Z", nullptr, $PUBLIC, $method(EqualityExpr, getOp, bool)},
+	{"getRight", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC, $method(EqualityExpr, getRight, $Expression*)},
+	{"hasLastCall", "()Z", nullptr, $PUBLIC, $virtualMethod(EqualityExpr, hasLastCall, bool)},
+	{"hasPositionCall", "()Z", nullptr, $PUBLIC, $virtualMethod(EqualityExpr, hasPositionCall, bool)},
+	{"setParser", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(EqualityExpr, setParser, void, $Parser*)},
+	{"swapArguments", "()V", nullptr, $PRIVATE, $method(EqualityExpr, swapArguments, void)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EqualityExpr, toString, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(EqualityExpr, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"translateDesynthesized", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(EqualityExpr, translateDesynthesized, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(EqualityExpr, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

@@ -38,20 +38,20 @@ $FieldInfo _MethodType_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodType_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(static_cast<void(MethodType::*)($Type*)>(&MethodType::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(static_cast<void(MethodType::*)($Type*,$Type*)>(&MethodType::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(static_cast<void(MethodType::*)($Type*,$Type*,$Type*)>(&MethodType::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(static_cast<void(MethodType::*)($Type*,$Type*,$Type*,$Type*)>(&MethodType::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Ljava/util/List;)V", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;>;)V", $PUBLIC, $method(static_cast<void(MethodType::*)($Type*,$List*)>(&MethodType::init$))},
-	{"argsCount", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(MethodType::*)()>(&MethodType::argsCount))},
-	{"argsType", "()Ljava/util/List;", "()Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;>;", $PUBLIC, $method(static_cast<$List*(MethodType::*)()>(&MethodType::argsType))},
-	{"distanceTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)I", nullptr, $PUBLIC},
-	{"identicalTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)Z", nullptr, $PUBLIC},
-	{"resultType", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $method(static_cast<$Type*(MethodType::*)()>(&MethodType::resultType))},
-	{"toJCType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
-	{"toSignature", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toSignature", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(MethodType::*)($String*)>(&MethodType::toSignature))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(MethodType, init$, void, $Type*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(MethodType, init$, void, $Type*, $Type*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(MethodType, init$, void, $Type*, $Type*, $Type*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)V", nullptr, $PUBLIC, $method(MethodType, init$, void, $Type*, $Type*, $Type*, $Type*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Ljava/util/List;)V", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;>;)V", $PUBLIC, $method(MethodType, init$, void, $Type*, $List*)},
+	{"argsCount", "()I", nullptr, $PUBLIC, $method(MethodType, argsCount, int32_t)},
+	{"argsType", "()Ljava/util/List;", "()Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;>;", $PUBLIC, $method(MethodType, argsType, $List*)},
+	{"distanceTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)I", nullptr, $PUBLIC, $virtualMethod(MethodType, distanceTo, int32_t, $Type*)},
+	{"identicalTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;)Z", nullptr, $PUBLIC, $virtualMethod(MethodType, identicalTo, bool, $Type*)},
+	{"resultType", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $method(MethodType, resultType, $Type*)},
+	{"toJCType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $virtualMethod(MethodType, toJCType, $1Type*)},
+	{"toSignature", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MethodType, toSignature, $String*)},
+	{"toSignature", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(MethodType, toSignature, $String*, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MethodType, toString, $String*)},
 	{}
 };
 

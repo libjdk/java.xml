@@ -38,10 +38,10 @@ $FieldInfo _ChildIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _ChildIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(ChildIterator::*)($Compiler*,int32_t,int32_t)>(&ChildIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"asNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"nextNode", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(ChildIterator, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"asNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(ChildIterator, asNode, int32_t, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(ChildIterator, getAxis, int32_t)},
+	{"nextNode", "()I", nullptr, $PUBLIC, $virtualMethod(ChildIterator, nextNode, int32_t)},
 	{}
 };
 

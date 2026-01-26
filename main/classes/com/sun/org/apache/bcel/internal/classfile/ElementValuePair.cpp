@@ -33,12 +33,12 @@ $FieldInfo _ElementValuePair_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementValuePair_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ElementValuePair::*)(int32_t,$ElementValue*,$ConstantPool*)>(&ElementValuePair::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"getNameIndex", "()I", nullptr, $PUBLIC},
-	{"getNameString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$ElementValue*(ElementValuePair::*)()>(&ElementValuePair::getValue))},
-	{"toShortString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ElementValuePair, init$, void, int32_t, $ElementValue*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PROTECTED, $virtualMethod(ElementValuePair, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getNameIndex", "()I", nullptr, $PUBLIC, $virtualMethod(ElementValuePair, getNameIndex, int32_t)},
+	{"getNameString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementValuePair, getNameString, $String*)},
+	{"getValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $FINAL, $method(ElementValuePair, getValue, $ElementValue*)},
+	{"toShortString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementValuePair, toShortString, $String*)},
 	{}
 };
 

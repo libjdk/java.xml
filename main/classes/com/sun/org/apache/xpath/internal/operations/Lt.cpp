@@ -29,8 +29,8 @@ $FieldInfo _Lt_FieldInfo_[] = {
 };
 
 $MethodInfo _Lt_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Lt::*)()>(&Lt::init$))},
-	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Lt, init$, void)},
+	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(Lt, operate, $XObject*, $XObject*, $XObject*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

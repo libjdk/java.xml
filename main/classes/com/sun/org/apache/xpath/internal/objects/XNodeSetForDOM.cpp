@@ -37,13 +37,13 @@ $FieldInfo _XNodeSetForDOM_FieldInfo_[] = {
 };
 
 $MethodInfo _XNodeSetForDOM_MethodInfo_[] = {
-	{"<init>", "(Lorg/w3c/dom/Node;Lcom/sun/org/apache/xml/internal/dtm/DTMManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XNodeSetForDOM::*)($Node*,$DTMManager*)>(&XNodeSetForDOM::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/objects/XNodeSet;)V", nullptr, $PUBLIC, $method(static_cast<void(XNodeSetForDOM::*)($XNodeSet*)>(&XNodeSetForDOM::init$))},
-	{"<init>", "(Lorg/w3c/dom/NodeList;Lcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(static_cast<void(XNodeSetForDOM::*)($NodeList*,$XPathContext*)>(&XNodeSetForDOM::init$))},
-	{"<init>", "(Lorg/w3c/dom/traversal/NodeIterator;Lcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(static_cast<void(XNodeSetForDOM::*)($NodeIterator*,$XPathContext*)>(&XNodeSetForDOM::init$))},
-	{"nodelist", "()Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"nodeset", "()Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/w3c/dom/Node;Lcom/sun/org/apache/xml/internal/dtm/DTMManager;)V", nullptr, $PUBLIC, $method(XNodeSetForDOM, init$, void, $Node*, $DTMManager*)},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/objects/XNodeSet;)V", nullptr, $PUBLIC, $method(XNodeSetForDOM, init$, void, $XNodeSet*)},
+	{"<init>", "(Lorg/w3c/dom/NodeList;Lcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(XNodeSetForDOM, init$, void, $NodeList*, $XPathContext*)},
+	{"<init>", "(Lorg/w3c/dom/traversal/NodeIterator;Lcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(XNodeSetForDOM, init$, void, $NodeIterator*, $XPathContext*)},
+	{"nodelist", "()Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC, $virtualMethod(XNodeSetForDOM, nodelist, $NodeList*), "javax.xml.transform.TransformerException"},
+	{"nodeset", "()Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC, $virtualMethod(XNodeSetForDOM, nodeset, $NodeIterator*), "javax.xml.transform.TransformerException"},
+	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XNodeSetForDOM, object, $Object*)},
 	{}
 };
 

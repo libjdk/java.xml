@@ -102,14 +102,14 @@ $FieldInfo _XSLTCDTMManager_FieldInfo_[] = {
 };
 
 $MethodInfo _XSLTCDTMManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSLTCDTMManager::*)()>(&XSLTCDTMManager::init$))},
-	{"createNewDTMManagerInstance", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XSLTCDTMManager*(*)()>(&XSLTCDTMManager::createNewDTMManagerInstance))},
-	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC},
-	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC},
-	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC},
-	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZIZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC},
-	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZIZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC},
-	{"newInstance", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XSLTCDTMManager*(*)()>(&XSLTCDTMManager::newInstance))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSLTCDTMManager, init$, void)},
+	{"createNewDTMManagerInstance", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;", nullptr, $PUBLIC | $STATIC, $staticMethod(XSLTCDTMManager, createNewDTMManagerInstance, XSLTCDTMManager*)},
+	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC, $virtualMethod(XSLTCDTMManager, getDTM, $DTM*, $Source*, bool, $DTMWSFilter*, bool, bool)},
+	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC, $virtualMethod(XSLTCDTMManager, getDTM, $DTM*, $Source*, bool, $DTMWSFilter*, bool, bool, bool)},
+	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC, $virtualMethod(XSLTCDTMManager, getDTM, $DTM*, $Source*, bool, $DTMWSFilter*, bool, bool, bool, bool)},
+	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZIZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC, $virtualMethod(XSLTCDTMManager, getDTM, $DTM*, $Source*, bool, $DTMWSFilter*, bool, bool, bool, int32_t, bool)},
+	{"getDTM", "(Ljavax/xml/transform/Source;ZLcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;ZZZIZZ)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC, $virtualMethod(XSLTCDTMManager, getDTM, $DTM*, $Source*, bool, $DTMWSFilter*, bool, bool, bool, int32_t, bool, bool)},
+	{"newInstance", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;", nullptr, $PUBLIC | $STATIC, $staticMethod(XSLTCDTMManager, newInstance, XSLTCDTMManager*)},
 	{}
 };
 

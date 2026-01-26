@@ -83,14 +83,14 @@ $FieldInfo _DocumentCache_FieldInfo_[] = {
 };
 
 $MethodInfo _DocumentCache_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache::*)(int32_t)>(&DocumentCache::init$)), "org.xml.sax.SAXException"},
-	{"<init>", "(ILcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;)V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache::*)(int32_t,$XSLTCDTMManager*)>(&DocumentCache::init$)), "org.xml.sax.SAXException"},
-	{"getLastModified", "(Ljava/lang/String;)J", nullptr, $PRIVATE | $FINAL, $method(static_cast<int64_t(DocumentCache::*)($String*)>(&DocumentCache::getLastModified))},
-	{"getStatistics", "(Ljava/io/PrintWriter;)V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache::*)($PrintWriter*)>(&DocumentCache::getStatistics))},
-	{"insertDocument", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache$CachedDocument;)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(static_cast<void(DocumentCache::*)($String*,$DocumentCache$CachedDocument*)>(&DocumentCache::insertDocument))},
-	{"lookupDocument", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache$CachedDocument;", nullptr, $PRIVATE, $method(static_cast<$DocumentCache$CachedDocument*(DocumentCache::*)($String*)>(&DocumentCache::lookupDocument))},
-	{"replaceDocument", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache$CachedDocument;)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(static_cast<void(DocumentCache::*)($String*,$DocumentCache$CachedDocument*)>(&DocumentCache::replaceDocument))},
-	{"retrieveDocument", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;)Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(DocumentCache, init$, void, int32_t), "org.xml.sax.SAXException"},
+	{"<init>", "(ILcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;)V", nullptr, $PUBLIC, $method(DocumentCache, init$, void, int32_t, $XSLTCDTMManager*), "org.xml.sax.SAXException"},
+	{"getLastModified", "(Ljava/lang/String;)J", nullptr, $PRIVATE | $FINAL, $method(DocumentCache, getLastModified, int64_t, $String*)},
+	{"getStatistics", "(Ljava/io/PrintWriter;)V", nullptr, $PUBLIC, $method(DocumentCache, getStatistics, void, $PrintWriter*)},
+	{"insertDocument", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache$CachedDocument;)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(DocumentCache, insertDocument, void, $String*, $DocumentCache$CachedDocument*)},
+	{"lookupDocument", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache$CachedDocument;", nullptr, $PRIVATE, $method(DocumentCache, lookupDocument, $DocumentCache$CachedDocument*, $String*)},
+	{"replaceDocument", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache$CachedDocument;)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(DocumentCache, replaceDocument, void, $String*, $DocumentCache$CachedDocument*)},
+	{"retrieveDocument", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;)Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC, $virtualMethod(DocumentCache, retrieveDocument, $DOM*, $String*, $String*, $Translet*)},
 	{}
 };
 

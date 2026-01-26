@@ -22,7 +22,11 @@
 
 using $ObjectFactory = ::com::sun::org::apache::xerces::internal::utils::ObjectFactory;
 using $Method = ::com::sun::org::apache::xml::internal::serialize::Method;
+using $OutputFormat = ::com::sun::org::apache::xml::internal::serialize::OutputFormat;
+using $Serializer = ::com::sun::org::apache::xml::internal::serialize::Serializer;
 using $SerializerFactoryImpl = ::com::sun::org::apache::xml::internal::serialize::SerializerFactoryImpl;
+using $OutputStream = ::java::io::OutputStream;
+using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $Exception = ::java::lang::Exception;
@@ -55,13 +59,13 @@ $FieldInfo _SerializerFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _SerializerFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SerializerFactory::*)()>(&SerializerFactory::init$))},
-	{"getSerializerFactory", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serialize/SerializerFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SerializerFactory*(*)($String*)>(&SerializerFactory::getSerializerFactory))},
-	{"getSupportedMethod", "()Ljava/lang/String;", nullptr, $PROTECTED | $ABSTRACT},
-	{"makeSerializer", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC | $ABSTRACT},
-	{"makeSerializer", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC | $ABSTRACT},
-	{"makeSerializer", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.UnsupportedEncodingException"},
-	{"registerSerializerFactory", "(Lcom/sun/org/apache/xml/internal/serialize/SerializerFactory;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)(SerializerFactory*)>(&SerializerFactory::registerSerializerFactory))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SerializerFactory, init$, void)},
+	{"getSerializerFactory", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serialize/SerializerFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SerializerFactory, getSerializerFactory, SerializerFactory*, $String*)},
+	{"getSupportedMethod", "()Ljava/lang/String;", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(SerializerFactory, getSupportedMethod, $String*)},
+	{"makeSerializer", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerFactory, makeSerializer, $Serializer*, $OutputFormat*)},
+	{"makeSerializer", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerFactory, makeSerializer, $Serializer*, $Writer*, $OutputFormat*)},
+	{"makeSerializer", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerFactory, makeSerializer, $Serializer*, $OutputStream*, $OutputFormat*), "java.io.UnsupportedEncodingException"},
+	{"registerSerializerFactory", "(Lcom/sun/org/apache/xml/internal/serialize/SerializerFactory;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(SerializerFactory, registerSerializerFactory, void, SerializerFactory*)},
 	{}
 };
 

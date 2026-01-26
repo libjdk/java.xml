@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Templates = ::javax::xml::transform::Templates;
 
 namespace javax {
 	namespace xml {
@@ -12,9 +13,9 @@ namespace javax {
 			namespace sax {
 
 $MethodInfo _TemplatesHandler_MethodInfo_[] = {
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTemplates", "()Ljavax/xml/transform/Templates;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TemplatesHandler, getSystemId, $String*)},
+	{"getTemplates", "()Ljavax/xml/transform/Templates;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TemplatesHandler, getTemplates, $Templates*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TemplatesHandler, setSystemId, void, $String*)},
 	{}
 };
 

@@ -11,8 +11,8 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _ProcessingInstruction_MethodInfo_[] = {
-	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTarget", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ProcessingInstruction, getData, $String*)},
+	{"getTarget", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ProcessingInstruction, getTarget, $String*)},
 	{}
 };
 

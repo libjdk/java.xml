@@ -46,10 +46,10 @@ $FieldInfo _XMLParser_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLParser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLParser::*)($XMLParserConfiguration*)>(&XMLParser::init$))},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotSupportedException,org.xml.sax.SAXNotRecognizedException"},
-	{"parse", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
-	{"reset", "()V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PROTECTED, $method(XMLParser, init$, void, $XMLParserConfiguration*)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XMLParser, getFeature, bool, $String*), "org.xml.sax.SAXNotSupportedException,org.xml.sax.SAXNotRecognizedException"},
+	{"parse", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC, $virtualMethod(XMLParser, parse, void, $XMLInputSource*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"reset", "()V", nullptr, $PROTECTED, $virtualMethod(XMLParser, reset, void), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

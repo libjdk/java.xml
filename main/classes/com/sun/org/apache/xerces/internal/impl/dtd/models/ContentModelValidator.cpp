@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/QName.h>
 #include <jcpp.h>
 
+using $QNameArray = $Array<::com::sun::org::apache::xerces::internal::xni::QName>;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,7 +18,7 @@ namespace com {
 								namespace models {
 
 $MethodInfo _ContentModelValidator_MethodInfo_[] = {
-	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC | $ABSTRACT},
+	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContentModelValidator, validate, int32_t, $QNameArray*, int32_t, int32_t)},
 	{}
 };
 

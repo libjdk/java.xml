@@ -26,13 +26,13 @@ $FieldInfo _NodeSequence$IteratorCache_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeSequence$IteratorCache_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(NodeSequence$IteratorCache::*)()>(&NodeSequence$IteratorCache::init$))},
-	{"getVector", "()Lcom/sun/org/apache/xml/internal/utils/NodeVector;", nullptr, $PRIVATE, $method(static_cast<$NodeVector*(NodeSequence$IteratorCache::*)()>(&NodeSequence$IteratorCache::getVector))},
-	{"increaseUseCount", "()V", nullptr, $PRIVATE, $method(static_cast<void(NodeSequence$IteratorCache::*)()>(&NodeSequence$IteratorCache::increaseUseCount))},
-	{"isComplete", "()Z", nullptr, $PRIVATE, $method(static_cast<bool(NodeSequence$IteratorCache::*)()>(&NodeSequence$IteratorCache::isComplete))},
-	{"setCacheComplete", "(Z)V", nullptr, $PRIVATE, $method(static_cast<void(NodeSequence$IteratorCache::*)(bool)>(&NodeSequence$IteratorCache::setCacheComplete))},
-	{"setVector", "(Lcom/sun/org/apache/xml/internal/utils/NodeVector;)V", nullptr, $PRIVATE, $method(static_cast<void(NodeSequence$IteratorCache::*)($NodeVector*)>(&NodeSequence$IteratorCache::setVector))},
-	{"useCount", "()I", nullptr, $PRIVATE, $method(static_cast<int32_t(NodeSequence$IteratorCache::*)()>(&NodeSequence$IteratorCache::useCount))},
+	{"<init>", "()V", nullptr, 0, $method(NodeSequence$IteratorCache, init$, void)},
+	{"getVector", "()Lcom/sun/org/apache/xml/internal/utils/NodeVector;", nullptr, $PRIVATE, $method(NodeSequence$IteratorCache, getVector, $NodeVector*)},
+	{"increaseUseCount", "()V", nullptr, $PRIVATE, $method(NodeSequence$IteratorCache, increaseUseCount, void)},
+	{"isComplete", "()Z", nullptr, $PRIVATE, $method(NodeSequence$IteratorCache, isComplete, bool)},
+	{"setCacheComplete", "(Z)V", nullptr, $PRIVATE, $method(NodeSequence$IteratorCache, setCacheComplete, void, bool)},
+	{"setVector", "(Lcom/sun/org/apache/xml/internal/utils/NodeVector;)V", nullptr, $PRIVATE, $method(NodeSequence$IteratorCache, setVector, void, $NodeVector*)},
+	{"useCount", "()I", nullptr, $PRIVATE, $method(NodeSequence$IteratorCache, useCount, int32_t)},
 	{}
 };
 

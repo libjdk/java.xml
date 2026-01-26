@@ -33,9 +33,9 @@ $FieldInfo _Equals_FieldInfo_[] = {
 };
 
 $MethodInfo _Equals_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Equals::*)()>(&Equals::init$))},
-	{"bool", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Z", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Equals, init$, void)},
+	{"bool", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Z", nullptr, $PUBLIC, $virtualMethod(Equals, bool$, bool, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(Equals, operate, $XObject*, $XObject*, $XObject*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

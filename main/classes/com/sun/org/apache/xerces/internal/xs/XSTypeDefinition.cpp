@@ -24,13 +24,13 @@ $FieldInfo _XSTypeDefinition_FieldInfo_[] = {
 };
 
 $MethodInfo _XSTypeDefinition_MethodInfo_[] = {
-	{"derivedFrom", "(Ljava/lang/String;Ljava/lang/String;S)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"derivedFromType", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;S)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAnonymous", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getBaseType", "()Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFinal", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTypeCategory", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"isFinal", "(S)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"derivedFrom", "(Ljava/lang/String;Ljava/lang/String;S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSTypeDefinition, derivedFrom, bool, $String*, $String*, int16_t)},
+	{"derivedFromType", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSTypeDefinition, derivedFromType, bool, XSTypeDefinition*, int16_t)},
+	{"getAnonymous", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSTypeDefinition, getAnonymous, bool)},
+	{"getBaseType", "()Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSTypeDefinition, getBaseType, XSTypeDefinition*)},
+	{"getFinal", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSTypeDefinition, getFinal, int16_t)},
+	{"getTypeCategory", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSTypeDefinition, getTypeCategory, int16_t)},
+	{"isFinal", "(S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSTypeDefinition, isFinal, bool, int16_t)},
 	{}
 };
 

@@ -105,11 +105,11 @@ $FieldInfo _Util_FieldInfo_[] = {
 };
 
 $MethodInfo _Util_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Util::*)()>(&Util::init$))},
-	{"baseName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&Util::baseName))},
-	{"getInputSource", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/XSLTC;Ljavax/xml/transform/Source;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$InputSource*(*)($XSLTC*,$Source*)>(&Util::getInputSource)), "javax.xml.transform.TransformerConfigurationException"},
-	{"noExtName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&Util::noExtName))},
-	{"toJavaName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&Util::toJavaName))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Util, init$, void)},
+	{"baseName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Util, baseName, $String*, $String*)},
+	{"getInputSource", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/XSLTC;Ljavax/xml/transform/Source;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC | $STATIC, $staticMethod(Util, getInputSource, $InputSource*, $XSLTC*, $Source*), "javax.xml.transform.TransformerConfigurationException"},
+	{"noExtName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Util, noExtName, $String*, $String*)},
+	{"toJavaName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Util, toJavaName, $String*, $String*)},
 	{}
 };
 

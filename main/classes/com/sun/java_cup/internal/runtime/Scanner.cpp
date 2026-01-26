@@ -3,6 +3,7 @@
 #include <com/sun/java_cup/internal/runtime/Symbol.h>
 #include <jcpp.h>
 
+using $Symbol = ::com::sun::java_cup::internal::runtime::Symbol;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -13,7 +14,7 @@ namespace com {
 				namespace runtime {
 
 $MethodInfo _Scanner_MethodInfo_[] = {
-	{"next_token", "()Lcom/sun/java_cup/internal/runtime/Symbol;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.Exception"},
+	{"next_token", "()Lcom/sun/java_cup/internal/runtime/Symbol;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Scanner, next_token, $Symbol*), "java.lang.Exception"},
 	{}
 };
 

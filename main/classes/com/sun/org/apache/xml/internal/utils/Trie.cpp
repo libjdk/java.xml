@@ -28,9 +28,9 @@ $FieldInfo _Trie_FieldInfo_[] = {
 };
 
 $MethodInfo _Trie_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Trie::*)()>(&Trie::init$))},
-	{"get", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"put", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Trie, init$, void)},
+	{"get", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(Trie, get, $Object*, $String*)},
+	{"put", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(Trie, put, $Object*, $String*, Object$*)},
 	{}
 };
 

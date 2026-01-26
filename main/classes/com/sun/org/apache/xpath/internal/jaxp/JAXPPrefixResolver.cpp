@@ -31,11 +31,11 @@ $FieldInfo _JAXPPrefixResolver_FieldInfo_[] = {
 };
 
 $MethodInfo _JAXPPrefixResolver_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/namespace/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPPrefixResolver::*)($NamespaceContext*)>(&JAXPPrefixResolver::init$))},
-	{"getBaseIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceForPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceForPrefix", "(Ljava/lang/String;Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"handlesNullPrefixes", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/namespace/NamespaceContext;)V", nullptr, $PUBLIC, $method(JAXPPrefixResolver, init$, void, $NamespaceContext*)},
+	{"getBaseIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(JAXPPrefixResolver, getBaseIdentifier, $String*)},
+	{"getNamespaceForPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(JAXPPrefixResolver, getNamespaceForPrefix, $String*, $String*)},
+	{"getNamespaceForPrefix", "(Ljava/lang/String;Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(JAXPPrefixResolver, getNamespaceForPrefix, $String*, $String*, $Node*)},
+	{"handlesNullPrefixes", "()Z", nullptr, $PUBLIC, $virtualMethod(JAXPPrefixResolver, handlesNullPrefixes, bool)},
 	{}
 };
 

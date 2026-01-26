@@ -8,6 +8,10 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $ContentHandler = ::org::xml::sax::ContentHandler;
+using $DTDHandler = ::org::xml::sax::DTDHandler;
+using $InputSource = ::org::xml::sax::InputSource;
+using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace com {
 	namespace sun {
@@ -19,11 +23,11 @@ namespace com {
 							namespace ref {
 
 $MethodInfo _IncrementalSAXSource_MethodInfo_[] = {
-	{"deliverMoreNodes", "(Z)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"startParse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
+	{"deliverMoreNodes", "(Z)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IncrementalSAXSource, deliverMoreNodes, $Object*, bool)},
+	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IncrementalSAXSource, setContentHandler, void, $ContentHandler*)},
+	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IncrementalSAXSource, setDTDHandler, void, $DTDHandler*)},
+	{"setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IncrementalSAXSource, setLexicalHandler, void, $LexicalHandler*)},
+	{"startParse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IncrementalSAXSource, startParse, void, $InputSource*), "org.xml.sax.SAXException"},
 	{}
 };
 

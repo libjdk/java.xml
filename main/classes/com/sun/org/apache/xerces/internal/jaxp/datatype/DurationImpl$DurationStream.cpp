@@ -25,8 +25,8 @@ $FieldInfo _DurationImpl$DurationStream_FieldInfo_[] = {
 };
 
 $MethodInfo _DurationImpl$DurationStream_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(DurationImpl$DurationStream::*)($String*)>(&DurationImpl$DurationStream::init$))},
-	{"readResolve", "()Ljava/lang/Object;", nullptr, $PRIVATE, $method(static_cast<$Object*(DurationImpl$DurationStream::*)()>(&DurationImpl$DurationStream::readResolve)), "java.io.ObjectStreamException"},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(DurationImpl$DurationStream, init$, void, $String*)},
+	{"readResolve", "()Ljava/lang/Object;", nullptr, $PRIVATE, $method(DurationImpl$DurationStream, readResolve, $Object*), "java.io.ObjectStreamException"},
 	{}
 };
 

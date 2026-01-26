@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Result = ::javax::xml::transform::Result;
+using $Source = ::javax::xml::transform::Source;
 
 namespace com {
 	namespace sun {
@@ -17,7 +19,7 @@ namespace com {
 							namespace validation {
 
 $MethodInfo _ValidatorHelper_MethodInfo_[] = {
-	{"validate", "(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
+	{"validate", "(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ValidatorHelper, validate, void, $Source*, $Result*), "org.xml.sax.SAXException,java.io.IOException"},
 	{}
 };
 

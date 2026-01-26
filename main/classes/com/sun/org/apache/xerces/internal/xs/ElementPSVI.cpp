@@ -5,6 +5,9 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSNotationDeclaration.h>
 #include <jcpp.h>
 
+using $XSElementDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSElementDeclaration;
+using $XSModel = ::com::sun::org::apache::xerces::internal::xs::XSModel;
+using $XSNotationDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSNotationDeclaration;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,10 +20,10 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _ElementPSVI_MethodInfo_[] = {
-	{"getElementDeclaration", "()Lcom/sun/org/apache/xerces/internal/xs/XSElementDeclaration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNil", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSNotationDeclaration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSchemaInformation", "()Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getElementDeclaration", "()Lcom/sun/org/apache/xerces/internal/xs/XSElementDeclaration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementPSVI, getElementDeclaration, $XSElementDeclaration*)},
+	{"getNil", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementPSVI, getNil, bool)},
+	{"getNotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSNotationDeclaration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementPSVI, getNotation, $XSNotationDeclaration*)},
+	{"getSchemaInformation", "()Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementPSVI, getSchemaInformation, $XSModel*)},
 	{}
 };
 

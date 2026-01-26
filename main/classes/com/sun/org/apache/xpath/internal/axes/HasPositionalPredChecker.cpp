@@ -53,10 +53,10 @@ $FieldInfo _HasPositionalPredChecker_FieldInfo_[] = {
 };
 
 $MethodInfo _HasPositionalPredChecker_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(HasPositionalPredChecker::*)()>(&HasPositionalPredChecker::init$))},
-	{"check", "(Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($LocPathIterator*)>(&HasPositionalPredChecker::check))},
-	{"visitFunction", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/functions/Function;)Z", nullptr, $PUBLIC},
-	{"visitPredicate", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(HasPositionalPredChecker, init$, void)},
+	{"check", "(Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(HasPositionalPredChecker, check, bool, $LocPathIterator*)},
+	{"visitFunction", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/functions/Function;)Z", nullptr, $PUBLIC, $virtualMethod(HasPositionalPredChecker, visitFunction, bool, $ExpressionOwner*, $Function*)},
+	{"visitPredicate", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(HasPositionalPredChecker, visitPredicate, bool, $ExpressionOwner*, $Expression*)},
 	{}
 };
 

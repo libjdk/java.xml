@@ -18,8 +18,8 @@ $FieldInfo _XPathFactoryConfigurationException_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathFactoryConfigurationException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryConfigurationException::*)($String*)>(&XPathFactoryConfigurationException::init$))},
-	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryConfigurationException::*)($Throwable*)>(&XPathFactoryConfigurationException::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryConfigurationException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(XPathFactoryConfigurationException, init$, void, $Throwable*)},
 	{}
 };
 

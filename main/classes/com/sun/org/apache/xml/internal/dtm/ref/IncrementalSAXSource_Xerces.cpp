@@ -107,18 +107,18 @@ $FieldInfo _IncrementalSAXSource_Xerces_FieldInfo_[] = {
 };
 
 $MethodInfo _IncrementalSAXSource_Xerces_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(IncrementalSAXSource_Xerces::*)()>(&IncrementalSAXSource_Xerces::init$)), "java.lang.NoSuchMethodException"},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/parsers/SAXParser;)V", nullptr, $PUBLIC, $method(static_cast<void(IncrementalSAXSource_Xerces::*)($SAXParser*)>(&IncrementalSAXSource_Xerces::init$)), "java.lang.NoSuchMethodException"},
-	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $method(static_cast<void(*)($StringArray*)>(&IncrementalSAXSource_Xerces::_main)), nullptr, nullptr, _IncrementalSAXSource_Xerces_MethodAnnotations__main2},
-	{"createIncrementalSAXSource", "()Lcom/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$IncrementalSAXSource*(*)()>(&IncrementalSAXSource_Xerces::createIncrementalSAXSource))},
-	{"createIncrementalSAXSource", "(Lcom/sun/org/apache/xerces/internal/parsers/SAXParser;)Lcom/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$IncrementalSAXSource*(*)($SAXParser*)>(&IncrementalSAXSource_Xerces::createIncrementalSAXSource))},
-	{"deliverMoreNodes", "(Z)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"parseSome", "()Z", nullptr, $PRIVATE, $method(static_cast<bool(IncrementalSAXSource_Xerces::*)()>(&IncrementalSAXSource_Xerces::parseSome)), "org.xml.sax.SAXException,java.io.IOException,java.lang.IllegalAccessException,java.lang.reflect.InvocationTargetException"},
-	{"parseSomeSetup", "(Lorg/xml/sax/InputSource;)Z", nullptr, $PRIVATE, $method(static_cast<bool(IncrementalSAXSource_Xerces::*)($InputSource*)>(&IncrementalSAXSource_Xerces::parseSomeSetup)), "org.xml.sax.SAXException,java.io.IOException,java.lang.IllegalAccessException,java.lang.reflect.InvocationTargetException,java.lang.InstantiationException"},
-	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC},
-	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC},
-	{"setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC},
-	{"startParse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(IncrementalSAXSource_Xerces, init$, void), "java.lang.NoSuchMethodException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/parsers/SAXParser;)V", nullptr, $PUBLIC, $method(IncrementalSAXSource_Xerces, init$, void, $SAXParser*), "java.lang.NoSuchMethodException"},
+	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $staticMethod(IncrementalSAXSource_Xerces, _main, void, $StringArray*), nullptr, nullptr, _IncrementalSAXSource_Xerces_MethodAnnotations__main2},
+	{"createIncrementalSAXSource", "()Lcom/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource;", nullptr, $PUBLIC | $STATIC, $staticMethod(IncrementalSAXSource_Xerces, createIncrementalSAXSource, $IncrementalSAXSource*)},
+	{"createIncrementalSAXSource", "(Lcom/sun/org/apache/xerces/internal/parsers/SAXParser;)Lcom/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource;", nullptr, $PUBLIC | $STATIC, $staticMethod(IncrementalSAXSource_Xerces, createIncrementalSAXSource, $IncrementalSAXSource*, $SAXParser*)},
+	{"deliverMoreNodes", "(Z)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(IncrementalSAXSource_Xerces, deliverMoreNodes, $Object*, bool)},
+	{"parseSome", "()Z", nullptr, $PRIVATE, $method(IncrementalSAXSource_Xerces, parseSome, bool), "org.xml.sax.SAXException,java.io.IOException,java.lang.IllegalAccessException,java.lang.reflect.InvocationTargetException"},
+	{"parseSomeSetup", "(Lorg/xml/sax/InputSource;)Z", nullptr, $PRIVATE, $method(IncrementalSAXSource_Xerces, parseSomeSetup, bool, $InputSource*), "org.xml.sax.SAXException,java.io.IOException,java.lang.IllegalAccessException,java.lang.reflect.InvocationTargetException,java.lang.InstantiationException"},
+	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $virtualMethod(IncrementalSAXSource_Xerces, setContentHandler, void, $ContentHandler*)},
+	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC, $virtualMethod(IncrementalSAXSource_Xerces, setDTDHandler, void, $DTDHandler*)},
+	{"setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC, $virtualMethod(IncrementalSAXSource_Xerces, setLexicalHandler, void, $LexicalHandler*)},
+	{"startParse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $virtualMethod(IncrementalSAXSource_Xerces, startParse, void, $InputSource*), "org.xml.sax.SAXException"},
 	{}
 };
 

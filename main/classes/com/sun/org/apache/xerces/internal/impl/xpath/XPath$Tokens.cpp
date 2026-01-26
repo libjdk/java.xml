@@ -152,16 +152,16 @@ $FieldInfo _XPath$Tokens_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath$Tokens_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Tokens::*)($SymbolTable*)>(&XPath$Tokens::init$))},
-	{"addToken", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Tokens::*)($String*)>(&XPath$Tokens::addToken))},
-	{"addToken", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Tokens::*)(int32_t)>(&XPath$Tokens::addToken))},
-	{"dumpTokens", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Tokens::*)()>(&XPath$Tokens::dumpTokens))},
-	{"getTokenString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XPath$Tokens::*)(int32_t)>(&XPath$Tokens::getTokenString))},
-	{"hasMore", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(XPath$Tokens::*)()>(&XPath$Tokens::hasMore))},
-	{"nextToken", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(XPath$Tokens::*)()>(&XPath$Tokens::nextToken)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"nextTokenAsString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XPath$Tokens::*)()>(&XPath$Tokens::nextTokenAsString)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"peekToken", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(XPath$Tokens::*)()>(&XPath$Tokens::peekToken)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"rewind", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Tokens::*)()>(&XPath$Tokens::rewind))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(XPath$Tokens, init$, void, $SymbolTable*)},
+	{"addToken", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPath$Tokens, addToken, void, $String*)},
+	{"addToken", "(I)V", nullptr, $PUBLIC, $method(XPath$Tokens, addToken, void, int32_t)},
+	{"dumpTokens", "()V", nullptr, $PUBLIC, $method(XPath$Tokens, dumpTokens, void)},
+	{"getTokenString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $method(XPath$Tokens, getTokenString, $String*, int32_t)},
+	{"hasMore", "()Z", nullptr, $PUBLIC, $method(XPath$Tokens, hasMore, bool)},
+	{"nextToken", "()I", nullptr, $PUBLIC, $method(XPath$Tokens, nextToken, int32_t), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"nextTokenAsString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(XPath$Tokens, nextTokenAsString, $String*), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"peekToken", "()I", nullptr, $PUBLIC, $method(XPath$Tokens, peekToken, int32_t), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"rewind", "()V", nullptr, $PUBLIC, $method(XPath$Tokens, rewind, void)},
 	{}
 };
 

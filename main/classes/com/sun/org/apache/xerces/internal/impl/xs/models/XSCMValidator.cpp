@@ -8,9 +8,12 @@
 #undef FIRST_ERROR
 #undef SUBSEQUENT_ERROR
 
+using $SubstitutionGroupHandler = ::com::sun::org::apache::xerces::internal::impl::xs::SubstitutionGroupHandler;
+using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $List = ::java::util::List;
 
 namespace com {
 	namespace sun {
@@ -29,15 +32,15 @@ $FieldInfo _XSCMValidator_FieldInfo_[] = {
 };
 
 $MethodInfo _XSCMValidator_MethodInfo_[] = {
-	{"checkMinMaxBounds", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC | $ABSTRACT},
-	{"checkUniqueParticleAttribution", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
-	{"endContentModel", "([I)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTermName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"occurenceInfo", "([I)[I", nullptr, $PUBLIC | $ABSTRACT},
-	{"oneTransition", "(Lcom/sun/org/apache/xerces/internal/xni/QName;[ILcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"startContentModel", "()[I", nullptr, $PUBLIC | $ABSTRACT},
-	{"whatCanGoHere", "([I)Ljava/util/List;", "([I)Ljava/util/List<Ljava/lang/Object;>;", $PUBLIC | $ABSTRACT},
+	{"checkMinMaxBounds", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, checkMinMaxBounds, $List*)},
+	{"checkUniqueParticleAttribution", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, checkUniqueParticleAttribution, bool, $SubstitutionGroupHandler*), "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
+	{"endContentModel", "([I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, endContentModel, bool, $ints*)},
+	{"getTermName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, getTermName, $String*, int32_t)},
+	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, isCompactedForUPA, bool)},
+	{"occurenceInfo", "([I)[I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, occurenceInfo, $ints*, $ints*)},
+	{"oneTransition", "(Lcom/sun/org/apache/xerces/internal/xni/QName;[ILcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, oneTransition, $Object*, $QName*, $ints*, $SubstitutionGroupHandler*)},
+	{"startContentModel", "()[I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, startContentModel, $ints*)},
+	{"whatCanGoHere", "([I)Ljava/util/List;", "([I)Ljava/util/List<Ljava/lang/Object;>;", $PUBLIC | $ABSTRACT, $virtualMethod(XSCMValidator, whatCanGoHere, $List*, $ints*)},
 	{}
 };
 

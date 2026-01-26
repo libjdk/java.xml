@@ -33,12 +33,12 @@ $FieldInfo _XSCMUniOp_FieldInfo_[] = {
 };
 
 $MethodInfo _XSCMUniOp_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PUBLIC, $method(static_cast<void(XSCMUniOp::*)(int32_t,$CMNode*)>(&XSCMUniOp::init$))},
-	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"getChild", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $FINAL, $method(static_cast<$CMNode*(XSCMUniOp::*)()>(&XSCMUniOp::getChild))},
-	{"isNullable", "()Z", nullptr, $PUBLIC},
-	{"setUserData", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PUBLIC, $method(XSCMUniOp, init$, void, int32_t, $CMNode*)},
+	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(XSCMUniOp, calcFirstPos, void, $CMStateSet*)},
+	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(XSCMUniOp, calcLastPos, void, $CMStateSet*)},
+	{"getChild", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $FINAL, $method(XSCMUniOp, getChild, $CMNode*)},
+	{"isNullable", "()Z", nullptr, $PUBLIC, $virtualMethod(XSCMUniOp, isNullable, bool)},
+	{"setUserData", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(XSCMUniOp, setUserData, void, Object$*)},
 	{}
 };
 

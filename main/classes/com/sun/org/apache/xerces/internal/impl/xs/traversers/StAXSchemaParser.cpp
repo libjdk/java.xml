@@ -116,22 +116,22 @@ $FieldInfo _StAXSchemaParser_FieldInfo_[] = {
 };
 
 $MethodInfo _StAXSchemaParser_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StAXSchemaParser::*)()>(&StAXSchemaParser::init$))},
-	{"addNamespaceDeclarations", "()V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)()>(&StAXSchemaParser::addNamespaceDeclarations))},
-	{"fillDeclaredPrefixes", "(Ljavax/xml/stream/events/StartElement;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($StartElement*)>(&StAXSchemaParser::fillDeclaredPrefixes))},
-	{"fillDeclaredPrefixes", "(Ljavax/xml/stream/events/EndElement;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($EndElement*)>(&StAXSchemaParser::fillDeclaredPrefixes))},
-	{"fillDeclaredPrefixes", "(Ljava/util/Iterator;)V", "(Ljava/util/Iterator<Ljavax/xml/stream/events/Namespace;>;)V", $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($Iterator*)>(&StAXSchemaParser::fillDeclaredPrefixes))},
-	{"fillDeclaredPrefixes", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($XMLStreamReader*)>(&StAXSchemaParser::fillDeclaredPrefixes))},
-	{"fillProcessingInstruction", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($String*)>(&StAXSchemaParser::fillProcessingInstruction))},
-	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljavax/xml/namespace/QName;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($QName*,$1QName*)>(&StAXSchemaParser::fillQName))},
-	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $FINAL, $method(static_cast<void(StAXSchemaParser::*)($QName*,$String*,$String*,$String*)>(&StAXSchemaParser::fillQName))},
-	{"fillXMLAttributes", "(Ljavax/xml/stream/events/StartElement;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($StartElement*)>(&StAXSchemaParser::fillXMLAttributes))},
-	{"fillXMLAttributes", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($XMLStreamReader*)>(&StAXSchemaParser::fillXMLAttributes))},
-	{"getDocument", "()Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $method(static_cast<$Document*(StAXSchemaParser::*)()>(&StAXSchemaParser::getDocument))},
-	{"parse", "(Ljavax/xml/stream/XMLEventReader;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXSchemaParser::*)($XMLEventReader*)>(&StAXSchemaParser::parse)), "javax.xml.stream.XMLStreamException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"parse", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXSchemaParser::*)($XMLStreamReader*)>(&StAXSchemaParser::parse)), "javax.xml.stream.XMLStreamException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOMParser;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXSchemaParser::*)($SchemaDOMParser*,$SymbolTable*)>(&StAXSchemaParser::reset))},
-	{"sendCharactersToSchemaParser", "(Ljava/lang/String;Z)V", nullptr, $PRIVATE, $method(static_cast<void(StAXSchemaParser::*)($String*,bool)>(&StAXSchemaParser::sendCharactersToSchemaParser))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StAXSchemaParser, init$, void)},
+	{"addNamespaceDeclarations", "()V", nullptr, $PRIVATE, $method(StAXSchemaParser, addNamespaceDeclarations, void)},
+	{"fillDeclaredPrefixes", "(Ljavax/xml/stream/events/StartElement;)V", nullptr, $PRIVATE, $method(StAXSchemaParser, fillDeclaredPrefixes, void, $StartElement*)},
+	{"fillDeclaredPrefixes", "(Ljavax/xml/stream/events/EndElement;)V", nullptr, $PRIVATE, $method(StAXSchemaParser, fillDeclaredPrefixes, void, $EndElement*)},
+	{"fillDeclaredPrefixes", "(Ljava/util/Iterator;)V", "(Ljava/util/Iterator<Ljavax/xml/stream/events/Namespace;>;)V", $PRIVATE, $method(StAXSchemaParser, fillDeclaredPrefixes, void, $Iterator*)},
+	{"fillDeclaredPrefixes", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(StAXSchemaParser, fillDeclaredPrefixes, void, $XMLStreamReader*)},
+	{"fillProcessingInstruction", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(StAXSchemaParser, fillProcessingInstruction, void, $String*)},
+	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljavax/xml/namespace/QName;)V", nullptr, $PRIVATE, $method(StAXSchemaParser, fillQName, void, $QName*, $1QName*)},
+	{"fillQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $FINAL, $method(StAXSchemaParser, fillQName, void, $QName*, $String*, $String*, $String*)},
+	{"fillXMLAttributes", "(Ljavax/xml/stream/events/StartElement;)V", nullptr, $PRIVATE, $method(StAXSchemaParser, fillXMLAttributes, void, $StartElement*)},
+	{"fillXMLAttributes", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(StAXSchemaParser, fillXMLAttributes, void, $XMLStreamReader*)},
+	{"getDocument", "()Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $method(StAXSchemaParser, getDocument, $Document*)},
+	{"parse", "(Ljavax/xml/stream/XMLEventReader;)V", nullptr, $PUBLIC, $method(StAXSchemaParser, parse, void, $XMLEventReader*), "javax.xml.stream.XMLStreamException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"parse", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PUBLIC, $method(StAXSchemaParser, parse, void, $XMLStreamReader*), "javax.xml.stream.XMLStreamException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOMParser;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(StAXSchemaParser, reset, void, $SchemaDOMParser*, $SymbolTable*)},
+	{"sendCharactersToSchemaParser", "(Ljava/lang/String;Z)V", nullptr, $PRIVATE, $method(StAXSchemaParser, sendCharactersToSchemaParser, void, $String*, bool)},
 	{}
 };
 

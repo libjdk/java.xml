@@ -38,19 +38,19 @@ $FieldInfo _PMGClass_FieldInfo_[] = {
 };
 
 $MethodInfo _PMGClass_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/PMGClass;)V", nullptr, $PUBLIC, $method(static_cast<void(PMGClass::*)(PMGClass*)>(&PMGClass::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(PMGClass::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&PMGClass::init$)), "java.io.IOException"},
-	{"<init>", "(IIIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(PMGClass::*)(int32_t,int32_t,int32_t,int32_t,$ConstantPool*)>(&PMGClass::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getPMGClassIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(PMGClass::*)()>(&PMGClass::getPMGClassIndex))},
-	{"getPMGClassName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(PMGClass::*)()>(&PMGClass::getPMGClassName))},
-	{"getPMGIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(PMGClass::*)()>(&PMGClass::getPMGIndex))},
-	{"getPMGName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(PMGClass::*)()>(&PMGClass::getPMGName))},
-	{"setPMGClassIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(PMGClass::*)(int32_t)>(&PMGClass::setPMGClassIndex))},
-	{"setPMGIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(PMGClass::*)(int32_t)>(&PMGClass::setPMGIndex))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/PMGClass;)V", nullptr, $PUBLIC, $method(PMGClass, init$, void, PMGClass*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(PMGClass, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"<init>", "(IIIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(PMGClass, init$, void, int32_t, int32_t, int32_t, int32_t, $ConstantPool*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(PMGClass, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(PMGClass, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(PMGClass, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getPMGClassIndex", "()I", nullptr, $PUBLIC, $method(PMGClass, getPMGClassIndex, int32_t)},
+	{"getPMGClassName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(PMGClass, getPMGClassName, $String*)},
+	{"getPMGIndex", "()I", nullptr, $PUBLIC, $method(PMGClass, getPMGIndex, int32_t)},
+	{"getPMGName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(PMGClass, getPMGName, $String*)},
+	{"setPMGClassIndex", "(I)V", nullptr, $PUBLIC, $method(PMGClass, setPMGClassIndex, void, int32_t)},
+	{"setPMGIndex", "(I)V", nullptr, $PUBLIC, $method(PMGClass, setPMGIndex, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(PMGClass, toString, $String*)},
 	{}
 };
 

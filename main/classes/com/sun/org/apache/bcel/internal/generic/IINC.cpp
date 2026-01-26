@@ -47,17 +47,17 @@ $FieldInfo _IINC_FieldInfo_[] = {
 };
 
 $MethodInfo _IINC_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(IINC::*)()>(&IINC::init$))},
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(IINC::*)(int32_t,int32_t)>(&IINC::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getIncrement", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(IINC::*)()>(&IINC::getIncrement))},
-	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
-	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"setIncrement", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(IINC::*)(int32_t)>(&IINC::setIncrement))},
-	{"setIndex", "(I)V", nullptr, $PUBLIC | $FINAL},
-	{"setWide", "()V", nullptr, $PRIVATE, $method(static_cast<void(IINC::*)()>(&IINC::setWide))},
-	{"toString", "(Z)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(IINC, init$, void)},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(IINC, init$, void, int32_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(IINC, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(IINC, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getIncrement", "()I", nullptr, $PUBLIC | $FINAL, $method(IINC, getIncrement, int32_t)},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $virtualMethod(IINC, getType, $Type*, $ConstantPoolGen*)},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, $virtualMethod(IINC, initFromFile, void, $ByteSequence*, bool), "java.io.IOException"},
+	{"setIncrement", "(I)V", nullptr, $PUBLIC | $FINAL, $method(IINC, setIncrement, void, int32_t)},
+	{"setIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(IINC, setIndex, void, int32_t)},
+	{"setWide", "()V", nullptr, $PRIVATE, $method(IINC, setWide, void)},
+	{"toString", "(Z)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(IINC, toString, $String*, bool)},
 	{}
 };
 

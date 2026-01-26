@@ -25,9 +25,9 @@ $FieldInfo _Op$ChildOp_FieldInfo_[] = {
 };
 
 $MethodInfo _Op$ChildOp_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(Op$ChildOp::*)(int32_t)>(&Op$ChildOp::init$))},
-	{"getChild", "()Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;", nullptr, 0},
-	{"setChild", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;)V", nullptr, 0},
+	{"<init>", "(I)V", nullptr, 0, $method(Op$ChildOp, init$, void, int32_t)},
+	{"getChild", "()Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;", nullptr, 0, $virtualMethod(Op$ChildOp, getChild, $Op*)},
+	{"setChild", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;)V", nullptr, 0, $virtualMethod(Op$ChildOp, setChild, void, $Op*)},
 	{}
 };
 

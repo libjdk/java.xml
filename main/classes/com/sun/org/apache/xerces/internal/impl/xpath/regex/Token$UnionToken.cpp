@@ -91,8 +91,8 @@ $FieldInfo Token$UnionToken$$Lambda$lambda$toString$0::fieldInfos[3] = {
 	{}
 };
 $MethodInfo Token$UnionToken$$Lambda$lambda$toString$0::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/StringBuilder;I)V", nullptr, $PUBLIC, $method(static_cast<void(Token$UnionToken$$Lambda$lambda$toString$0::*)($StringBuilder*,int32_t)>(&Token$UnionToken$$Lambda$lambda$toString$0::init$))},
-	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/StringBuilder;I)V", nullptr, $PUBLIC, $method(Token$UnionToken$$Lambda$lambda$toString$0, init$, void, $StringBuilder*, int32_t)},
+	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(Token$UnionToken$$Lambda$lambda$toString$0, accept, void, Object$*)},
 	{}
 };
 $ClassInfo Token$UnionToken$$Lambda$lambda$toString$0::classInfo$ = {
@@ -117,14 +117,14 @@ $FieldInfo _Token$UnionToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$UnionToken_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(Token$UnionToken::*)(int32_t)>(&Token$UnionToken::init$))},
-	{"addChild", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0},
-	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0},
-	{"lambda$toString$0", "(Ljava/lang/StringBuilder;ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<void(*)($StringBuilder*,int32_t,$Token*)>(&Token$UnionToken::lambda$toString$0))},
-	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(static_cast<void(Token$UnionToken::*)($ObjectInputStream*)>(&Token$UnionToken::readObject)), "java.io.IOException,java.lang.ClassNotFoundException"},
-	{"size", "()I", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"writeObject", "(Ljava/io/ObjectOutputStream;)V", nullptr, $PRIVATE, $method(static_cast<void(Token$UnionToken::*)($ObjectOutputStream*)>(&Token$UnionToken::writeObject)), "java.io.IOException"},
+	{"<init>", "(I)V", nullptr, 0, $method(Token$UnionToken, init$, void, int32_t)},
+	{"addChild", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $virtualMethod(Token$UnionToken, addChild, void, $Token*)},
+	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0, $virtualMethod(Token$UnionToken, getChild, $Token*, int32_t)},
+	{"lambda$toString$0", "(Ljava/lang/StringBuilder;ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(Token$UnionToken, lambda$toString$0, void, $StringBuilder*, int32_t, $Token*)},
+	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(Token$UnionToken, readObject, void, $ObjectInputStream*), "java.io.IOException,java.lang.ClassNotFoundException"},
+	{"size", "()I", nullptr, 0, $virtualMethod(Token$UnionToken, size, int32_t)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$UnionToken, toString, $String*, int32_t)},
+	{"writeObject", "(Ljava/io/ObjectOutputStream;)V", nullptr, $PRIVATE, $method(Token$UnionToken, writeObject, void, $ObjectOutputStream*), "java.io.IOException"},
 	{}
 };
 

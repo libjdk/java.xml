@@ -109,14 +109,14 @@ $FieldInfo _XPathImplUtil_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathImplUtil_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XPathImplUtil::*)()>(&XPathImplUtil::init$))},
-	{"eval", "(Ljava/lang/Object;Lcom/sun/org/apache/xpath/internal/XPath;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, 0, nullptr, "javax.xml.transform.TransformerException"},
-	{"getDocument", "(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;", nullptr, 0, nullptr, "javax.xml.xpath.XPathExpressionException"},
-	{"getResultAsType", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljavax/xml/namespace/QName;)Ljava/lang/Object;", nullptr, 0, nullptr, "javax.xml.transform.TransformerException"},
-	{"getXPathResult", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class<TT;>;)TT;", 0, nullptr, "javax.xml.transform.TransformerException"},
-	{"isSupported", "(Ljavax/xml/namespace/QName;)V", nullptr, 0},
-	{"isSupportedClassType", "(Ljava/lang/Class;)V", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)V", 0},
-	{"requireNonNull", "(Ljava/lang/Object;Ljava/lang/String;)V", "<T:Ljava/lang/Object;>(TT;Ljava/lang/String;)V", 0},
+	{"<init>", "()V", nullptr, 0, $method(XPathImplUtil, init$, void)},
+	{"eval", "(Ljava/lang/Object;Lcom/sun/org/apache/xpath/internal/XPath;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, 0, $virtualMethod(XPathImplUtil, eval, $XObject*, Object$*, $XPath*), "javax.xml.transform.TransformerException"},
+	{"getDocument", "(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;", nullptr, 0, $virtualMethod(XPathImplUtil, getDocument, $Document*, $InputSource*), "javax.xml.xpath.XPathExpressionException"},
+	{"getResultAsType", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljavax/xml/namespace/QName;)Ljava/lang/Object;", nullptr, 0, $virtualMethod(XPathImplUtil, getResultAsType, $Object*, $XObject*, $QName*), "javax.xml.transform.TransformerException"},
+	{"getXPathResult", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Lcom/sun/org/apache/xpath/internal/objects/XObject;Ljava/lang/Class<TT;>;)TT;", 0, $virtualMethod(XPathImplUtil, getXPathResult, $Object*, $XObject*, $Class*), "javax.xml.transform.TransformerException"},
+	{"isSupported", "(Ljavax/xml/namespace/QName;)V", nullptr, 0, $virtualMethod(XPathImplUtil, isSupported, void, $QName*)},
+	{"isSupportedClassType", "(Ljava/lang/Class;)V", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)V", 0, $virtualMethod(XPathImplUtil, isSupportedClassType, void, $Class*)},
+	{"requireNonNull", "(Ljava/lang/Object;Ljava/lang/String;)V", "<T:Ljava/lang/Object;>(TT;Ljava/lang/String;)V", 0, $virtualMethod(XPathImplUtil, requireNonNull, void, Object$*, $String*)},
 	{}
 };
 

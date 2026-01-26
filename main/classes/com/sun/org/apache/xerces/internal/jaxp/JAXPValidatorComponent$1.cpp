@@ -36,8 +36,8 @@ $FieldInfo _JAXPValidatorComponent$1_FieldInfo_[] = {
 };
 
 $MethodInfo _JAXPValidatorComponent$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent;)V", nullptr, 0, $method(static_cast<void(JAXPValidatorComponent$1::*)($JAXPValidatorComponent*)>(&JAXPValidatorComponent$1::init$))},
-	{"getErrorHandler", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler;", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent;)V", nullptr, 0, $method(JAXPValidatorComponent$1, init$, void, $JAXPValidatorComponent*)},
+	{"getErrorHandler", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler;", nullptr, $PROTECTED, $virtualMethod(JAXPValidatorComponent$1, getErrorHandler, $XMLErrorHandler*)},
 	{}
 };
 

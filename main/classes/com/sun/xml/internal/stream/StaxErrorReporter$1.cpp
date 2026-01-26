@@ -25,13 +25,13 @@ $FieldInfo _StaxErrorReporter$1_FieldInfo_[] = {
 };
 
 $MethodInfo _StaxErrorReporter$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/xml/internal/stream/StaxErrorReporter;Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", "()V", 0, $method(static_cast<void(StaxErrorReporter$1::*)($StaxErrorReporter*,$XMLLocator*)>(&StaxErrorReporter$1::init$))},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLocationURI", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/xml/internal/stream/StaxErrorReporter;Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", "()V", 0, $method(StaxErrorReporter$1, init$, void, $StaxErrorReporter*, $XMLLocator*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter$1, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter$1, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter$1, getLineNumber, int32_t)},
+	{"getLocationURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter$1, getLocationURI, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter$1, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter$1, getSystemId, $String*)},
 	{}
 };
 

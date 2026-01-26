@@ -41,9 +41,9 @@ $FieldInfo _UnionPathIterator$iterOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _UnionPathIterator$iterOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/UnionPathIterator;I)V", nullptr, 0, $method(static_cast<void(UnionPathIterator$iterOwner::*)($UnionPathIterator*,int32_t)>(&UnionPathIterator$iterOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/UnionPathIterator;I)V", nullptr, 0, $method(UnionPathIterator$iterOwner, init$, void, $UnionPathIterator*, int32_t)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator$iterOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator$iterOwner, setExpression, void, $Expression*)},
 	{}
 };
 

@@ -30,14 +30,14 @@ $FieldInfo _ConstantMethodType_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantMethodType_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantMethodType;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantMethodType::*)(ConstantMethodType*)>(&ConstantMethodType::init$))},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(ConstantMethodType::*)($DataInput*)>(&ConstantMethodType::init$)), "java.io.IOException"},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantMethodType::*)(int32_t)>(&ConstantMethodType::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getDescriptorIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ConstantMethodType::*)()>(&ConstantMethodType::getDescriptorIndex))},
-	{"setDescriptorIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantMethodType::*)(int32_t)>(&ConstantMethodType::setDescriptorIndex))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantMethodType;)V", nullptr, $PUBLIC, $method(ConstantMethodType, init$, void, ConstantMethodType*)},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(ConstantMethodType, init$, void, $DataInput*), "java.io.IOException"},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(ConstantMethodType, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ConstantMethodType, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ConstantMethodType, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getDescriptorIndex", "()I", nullptr, $PUBLIC, $method(ConstantMethodType, getDescriptorIndex, int32_t)},
+	{"setDescriptorIndex", "(I)V", nullptr, $PUBLIC, $method(ConstantMethodType, setDescriptorIndex, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ConstantMethodType, toString, $String*)},
 	{}
 };
 

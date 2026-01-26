@@ -26,11 +26,11 @@ $FieldInfo _RegularExpression$StringTarget_FieldInfo_[] = {
 };
 
 $MethodInfo _RegularExpression$StringTarget_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(RegularExpression$StringTarget::*)($String*)>(&RegularExpression$StringTarget::init$))},
-	{"charAt", "(I)C", nullptr, $FINAL},
-	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $FINAL},
-	{"regionMatches", "(ZIIII)Z", nullptr, $FINAL},
-	{"resetTarget", "(Ljava/lang/String;)V", nullptr, $FINAL, $method(static_cast<void(RegularExpression$StringTarget::*)($String*)>(&RegularExpression$StringTarget::resetTarget))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(RegularExpression$StringTarget, init$, void, $String*)},
+	{"charAt", "(I)C", nullptr, $FINAL, $virtualMethod(RegularExpression$StringTarget, charAt, char16_t, int32_t)},
+	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $FINAL, $virtualMethod(RegularExpression$StringTarget, regionMatches, bool, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatches", "(ZIIII)Z", nullptr, $FINAL, $virtualMethod(RegularExpression$StringTarget, regionMatches, bool, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"resetTarget", "(Ljava/lang/String;)V", nullptr, $FINAL, $method(RegularExpression$StringTarget, resetTarget, void, $String*)},
 	{}
 };
 

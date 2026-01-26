@@ -30,9 +30,9 @@ $FieldInfo _Mult_FieldInfo_[] = {
 };
 
 $MethodInfo _Mult_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Mult::*)()>(&Mult::init$))},
-	{"num", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)D", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Mult, init$, void)},
+	{"num", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)D", nullptr, $PUBLIC, $virtualMethod(Mult, num, double, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(Mult, operate, $XObject*, $XObject*, $XObject*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

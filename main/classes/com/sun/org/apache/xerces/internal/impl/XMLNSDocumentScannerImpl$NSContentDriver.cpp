@@ -35,9 +35,9 @@ $FieldInfo _XMLNSDocumentScannerImpl$NSContentDriver_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLNSDocumentScannerImpl$NSContentDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLNSDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLNSDocumentScannerImpl$NSContentDriver::*)($XMLNSDocumentScannerImpl*)>(&XMLNSDocumentScannerImpl$NSContentDriver::init$))},
-	{"reconfigurePipeline", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLNSDocumentScannerImpl$NSContentDriver::*)()>(&XMLNSDocumentScannerImpl$NSContentDriver::reconfigurePipeline))},
-	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLNSDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(XMLNSDocumentScannerImpl$NSContentDriver, init$, void, $XMLNSDocumentScannerImpl*)},
+	{"reconfigurePipeline", "()V", nullptr, $PRIVATE, $method(XMLNSDocumentScannerImpl$NSContentDriver, reconfigurePipeline, void)},
+	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLNSDocumentScannerImpl$NSContentDriver, scanRootElementHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

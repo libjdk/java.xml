@@ -23,11 +23,11 @@ namespace com {
 						namespace util {
 
 $MethodInfo _ErrorHandlerProxy_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ErrorHandlerProxy::*)()>(&ErrorHandlerProxy::init$))},
-	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"getErrorHandler", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler;", nullptr, $PROTECTED | $ABSTRACT},
-	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ErrorHandlerProxy, init$, void)},
+	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerProxy, error, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerProxy, fatalError, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"getErrorHandler", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler;", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(ErrorHandlerProxy, getErrorHandler, $XMLErrorHandler*)},
+	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerProxy, warning, void, $SAXParseException*), "org.xml.sax.SAXException"},
 	{}
 };
 

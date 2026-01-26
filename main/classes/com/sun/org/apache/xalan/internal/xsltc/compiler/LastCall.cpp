@@ -53,10 +53,10 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _LastCall_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC, $method(static_cast<void(LastCall::*)($QName*)>(&LastCall::init$))},
-	{"hasLastCall", "()Z", nullptr, $PUBLIC},
-	{"hasPositionCall", "()Z", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC, $method(LastCall, init$, void, $QName*)},
+	{"hasLastCall", "()Z", nullptr, $PUBLIC, $virtualMethod(LastCall, hasLastCall, bool)},
+	{"hasPositionCall", "()Z", nullptr, $PUBLIC, $virtualMethod(LastCall, hasPositionCall, bool)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(LastCall, translate, void, $ClassGenerator*, $MethodGenerator*)},
 	{}
 };
 

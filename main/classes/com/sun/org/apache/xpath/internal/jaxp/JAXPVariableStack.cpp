@@ -42,8 +42,8 @@ $FieldInfo _JAXPVariableStack_FieldInfo_[] = {
 };
 
 $MethodInfo _JAXPVariableStack_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathVariableResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPVariableStack::*)($XPathVariableResolver*)>(&JAXPVariableStack::init$))},
-	{"getVariableOrParam", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lcom/sun/org/apache/xml/internal/utils/QName;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException,java.lang.IllegalArgumentException"},
+	{"<init>", "(Ljavax/xml/xpath/XPathVariableResolver;)V", nullptr, $PUBLIC, $method(JAXPVariableStack, init$, void, $XPathVariableResolver*)},
+	{"getVariableOrParam", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lcom/sun/org/apache/xml/internal/utils/QName;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(JAXPVariableStack, getVariableOrParam, $XObject*, $XPathContext*, $QName*), "javax.xml.transform.TransformerException,java.lang.IllegalArgumentException"},
 	{}
 };
 

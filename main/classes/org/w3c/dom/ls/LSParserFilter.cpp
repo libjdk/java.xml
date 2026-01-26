@@ -1,6 +1,7 @@
 #include <org/w3c/dom/ls/LSParserFilter.h>
 
 #include <org/w3c/dom/Element.h>
+#include <org/w3c/dom/Node.h>
 #include <jcpp.h>
 
 #undef FILTER_ACCEPT
@@ -11,6 +12,8 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Element = ::org::w3c::dom::Element;
+using $Node = ::org::w3c::dom::Node;
 
 namespace org {
 	namespace w3c {
@@ -26,9 +29,9 @@ $FieldInfo _LSParserFilter_FieldInfo_[] = {
 };
 
 $MethodInfo _LSParserFilter_MethodInfo_[] = {
-	{"acceptNode", "(Lorg/w3c/dom/Node;)S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"startElement", "(Lorg/w3c/dom/Element;)S", nullptr, $PUBLIC | $ABSTRACT},
+	{"acceptNode", "(Lorg/w3c/dom/Node;)S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParserFilter, acceptNode, int16_t, $Node*)},
+	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParserFilter, getWhatToShow, int32_t)},
+	{"startElement", "(Lorg/w3c/dom/Element;)S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParserFilter, startElement, int16_t, $Element*)},
 	{}
 };
 

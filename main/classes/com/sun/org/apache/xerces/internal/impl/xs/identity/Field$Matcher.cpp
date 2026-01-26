@@ -56,11 +56,11 @@ $FieldInfo _Field$Matcher_FieldInfo_[] = {
 };
 
 $MethodInfo _Field$Matcher_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Field;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Field$XPath;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/ValueStore;)V", nullptr, $PUBLIC, $method(static_cast<void(Field$Matcher::*)($Field*,$Field$XPath*,$ValueStore*)>(&Field$Matcher::init$))},
-	{"convertToPrimitiveKind", "(S)S", nullptr, $PRIVATE, $method(static_cast<int16_t(Field$Matcher::*)(int16_t)>(&Field$Matcher::convertToPrimitiveKind))},
-	{"convertToPrimitiveKind", "(Lcom/sun/org/apache/xerces/internal/xs/ShortList;)Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PRIVATE, $method(static_cast<$ShortList*(Field$Matcher::*)($ShortList*)>(&Field$Matcher::convertToPrimitiveKind))},
-	{"handleContent", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PROTECTED},
-	{"matched", "(Ljava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;Z)V", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Field;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Field$XPath;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/ValueStore;)V", nullptr, $PUBLIC, $method(Field$Matcher, init$, void, $Field*, $Field$XPath*, $ValueStore*)},
+	{"convertToPrimitiveKind", "(S)S", nullptr, $PRIVATE, $method(Field$Matcher, convertToPrimitiveKind, int16_t, int16_t)},
+	{"convertToPrimitiveKind", "(Lcom/sun/org/apache/xerces/internal/xs/ShortList;)Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PRIVATE, $method(Field$Matcher, convertToPrimitiveKind, $ShortList*, $ShortList*)},
+	{"handleContent", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PROTECTED, $virtualMethod(Field$Matcher, handleContent, void, $XSTypeDefinition*, bool, Object$*, int16_t, $ShortList*)},
+	{"matched", "(Ljava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;Z)V", nullptr, $PROTECTED, $virtualMethod(Field$Matcher, matched, void, Object$*, int16_t, $ShortList*, bool)},
 	{}
 };
 

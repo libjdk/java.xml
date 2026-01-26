@@ -104,8 +104,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo XPath$$Lambda$lambda$toString$0::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPath$$Lambda$lambda$toString$0::*)()>(&XPath$$Lambda$lambda$toString$0::init$))},
-	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPath$$Lambda$lambda$toString$0, init$, void)},
+	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPath$$Lambda$lambda$toString$0, apply, $Object*, Object$*)},
 	{}
 };
 $ClassInfo XPath$$Lambda$lambda$toString$0::classInfo$ = {
@@ -132,16 +132,16 @@ $FieldInfo _XPath_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath::*)($String*,$SymbolTable*,$NamespaceContext*)>(&XPath::init$)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"buildLocationPath", "(Ljava/util/ArrayList;)Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", "(Ljava/util/ArrayList<Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Step;>;)Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", $PRIVATE, $method(static_cast<$XPath$LocationPath*(XPath::*)($ArrayList*)>(&XPath::buildLocationPath)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"check", "(Z)V", nullptr, $PRIVATE | $STATIC, $method(static_cast<void(*)(bool)>(&XPath::check)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"getLocationPath", "()Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", nullptr, $PUBLIC},
-	{"getLocationPaths", "()[Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", nullptr, $PUBLIC},
-	{"lambda$toString$0", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($XPath$LocationPath*)>(&XPath::lambda$toString$0))},
-	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&XPath::main)), "java.lang.Exception"},
-	{"parseExpression", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)[Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", nullptr, $PRIVATE, $method(static_cast<$XPath$LocationPathArray*(XPath::*)($NamespaceContext*)>(&XPath::parseExpression)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"parseNodeTest", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;", nullptr, $PRIVATE, $method(static_cast<$XPath$NodeTest*(XPath::*)(int32_t,$XPath$Tokens*,$NamespaceContext*)>(&XPath::parseNodeTest)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(XPath, init$, void, $String*, $SymbolTable*, $NamespaceContext*), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"buildLocationPath", "(Ljava/util/ArrayList;)Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", "(Ljava/util/ArrayList<Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Step;>;)Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", $PRIVATE, $method(XPath, buildLocationPath, $XPath$LocationPath*, $ArrayList*), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"check", "(Z)V", nullptr, $PRIVATE | $STATIC, $staticMethod(XPath, check, void, bool), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"getLocationPath", "()Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", nullptr, $PUBLIC, $virtualMethod(XPath, getLocationPath, $XPath$LocationPath*)},
+	{"getLocationPaths", "()[Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", nullptr, $PUBLIC, $virtualMethod(XPath, getLocationPaths, $XPath$LocationPathArray*)},
+	{"lambda$toString$0", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPath, lambda$toString$0, $String*, $XPath$LocationPath*)},
+	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(XPath, main, void, $StringArray*), "java.lang.Exception"},
+	{"parseExpression", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)[Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;", nullptr, $PRIVATE, $method(XPath, parseExpression, $XPath$LocationPathArray*, $NamespaceContext*), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"parseNodeTest", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;", nullptr, $PRIVATE, $method(XPath, parseNodeTest, $XPath$NodeTest*, int32_t, $XPath$Tokens*, $NamespaceContext*), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPath, toString, $String*)},
 	{}
 };
 

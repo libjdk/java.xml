@@ -40,7 +40,7 @@ $FieldInfo _XMLSymbols_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSymbols_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSymbols::*)()>(&XMLSymbols::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSymbols, init$, void)},
 	{}
 };
 

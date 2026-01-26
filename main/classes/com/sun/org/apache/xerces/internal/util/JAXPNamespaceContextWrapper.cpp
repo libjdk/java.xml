@@ -52,22 +52,22 @@ $FieldInfo _JAXPNamespaceContextWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _JAXPNamespaceContextWrapper_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($SymbolTable*)>(&JAXPNamespaceContextWrapper::init$))},
-	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
-	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC},
-	{"getDeclaredPrefixes", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC, $method(static_cast<$List*(JAXPNamespaceContextWrapper::*)()>(&JAXPNamespaceContextWrapper::getDeclaredPrefixes))},
-	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC, $method(static_cast<$NamespaceContext*(JAXPNamespaceContextWrapper::*)()>(&JAXPNamespaceContextWrapper::getNamespaceContext))},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSymbolTable", "()Lcom/sun/org/apache/xerces/internal/util/SymbolTable;", nullptr, $PUBLIC, $method(static_cast<$SymbolTable*(JAXPNamespaceContextWrapper::*)()>(&JAXPNamespaceContextWrapper::getSymbolTable))},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"popContext", "()V", nullptr, $PUBLIC},
-	{"pushContext", "()V", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setDeclaredPrefixes", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($List*)>(&JAXPNamespaceContextWrapper::setDeclaredPrefixes))},
-	{"setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($NamespaceContext*)>(&JAXPNamespaceContextWrapper::setNamespaceContext))},
-	{"setSymbolTable", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPNamespaceContextWrapper::*)($SymbolTable*)>(&JAXPNamespaceContextWrapper::setSymbolTable))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(JAXPNamespaceContextWrapper, init$, void, $SymbolTable*)},
+	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, declarePrefix, bool, $String*, $String*)},
+	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, getAllPrefixes, $Enumeration*)},
+	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, getDeclaredPrefixAt, $String*, int32_t)},
+	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, getDeclaredPrefixCount, int32_t)},
+	{"getDeclaredPrefixes", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC, $method(JAXPNamespaceContextWrapper, getDeclaredPrefixes, $List*)},
+	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC, $method(JAXPNamespaceContextWrapper, getNamespaceContext, $NamespaceContext*)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, getPrefix, $String*, $String*)},
+	{"getSymbolTable", "()Lcom/sun/org/apache/xerces/internal/util/SymbolTable;", nullptr, $PUBLIC, $method(JAXPNamespaceContextWrapper, getSymbolTable, $SymbolTable*)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, getURI, $String*, $String*)},
+	{"popContext", "()V", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, popContext, void)},
+	{"pushContext", "()V", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, pushContext, void)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(JAXPNamespaceContextWrapper, reset, void)},
+	{"setDeclaredPrefixes", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", $PUBLIC, $method(JAXPNamespaceContextWrapper, setDeclaredPrefixes, void, $List*)},
+	{"setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", nullptr, $PUBLIC, $method(JAXPNamespaceContextWrapper, setNamespaceContext, void, $NamespaceContext*)},
+	{"setSymbolTable", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(JAXPNamespaceContextWrapper, setSymbolTable, void, $SymbolTable*)},
 	{}
 };
 

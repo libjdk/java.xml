@@ -29,8 +29,8 @@ $FieldInfo _Gte_FieldInfo_[] = {
 };
 
 $MethodInfo _Gte_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Gte::*)()>(&Gte::init$))},
-	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Gte, init$, void)},
+	{"operate", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;Lcom/sun/org/apache/xpath/internal/objects/XObject;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(Gte, operate, $XObject*, $XObject*, $XObject*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

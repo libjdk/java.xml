@@ -45,14 +45,14 @@ $FieldInfo _LiteralExpr_FieldInfo_[] = {
 };
 
 $MethodInfo _LiteralExpr_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(LiteralExpr::*)($String*)>(&LiteralExpr::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(LiteralExpr::*)($String*,$String*)>(&LiteralExpr::init$))},
-	{"contextDependent", "()Z", nullptr, $PROTECTED},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PROTECTED, $method(static_cast<$String*(LiteralExpr::*)()>(&LiteralExpr::getNamespace))},
-	{"getValue", "()Ljava/lang/String;", nullptr, $PROTECTED, $method(static_cast<$String*(LiteralExpr::*)()>(&LiteralExpr::getValue))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(LiteralExpr, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(LiteralExpr, init$, void, $String*, $String*)},
+	{"contextDependent", "()Z", nullptr, $PROTECTED, $virtualMethod(LiteralExpr, contextDependent, bool)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PROTECTED, $method(LiteralExpr, getNamespace, $String*)},
+	{"getValue", "()Ljava/lang/String;", nullptr, $PROTECTED, $method(LiteralExpr, getValue, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LiteralExpr, toString, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(LiteralExpr, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(LiteralExpr, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

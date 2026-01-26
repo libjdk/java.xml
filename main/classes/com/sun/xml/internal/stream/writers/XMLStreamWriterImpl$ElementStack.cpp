@@ -29,13 +29,13 @@ $FieldInfo _XMLStreamWriterImpl$ElementStack_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStreamWriterImpl$ElementStack_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamWriterImpl$ElementStack::*)($XMLStreamWriterImpl*)>(&XMLStreamWriterImpl$ElementStack::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"empty", "()Z", nullptr, $PUBLIC},
-	{"peek", "()Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC},
-	{"pop", "()Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC},
-	{"push", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;)Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC},
-	{"push", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;)V", nullptr, $PUBLIC, $method(XMLStreamWriterImpl$ElementStack, init$, void, $XMLStreamWriterImpl*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$ElementStack, clear, void)},
+	{"empty", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$ElementStack, empty, bool)},
+	{"peek", "()Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$ElementStack, peek, $XMLStreamWriterImpl$ElementState*)},
+	{"pop", "()Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$ElementStack, pop, $XMLStreamWriterImpl$ElementState*)},
+	{"push", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;)Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$ElementStack, push, $XMLStreamWriterImpl$ElementState*, $XMLStreamWriterImpl$ElementState*)},
+	{"push", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl$ElementState;", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$ElementStack, push, $XMLStreamWriterImpl$ElementState*, $String*, $String*, $String*, $String*, bool)},
 	{}
 };
 

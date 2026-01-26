@@ -18,9 +18,9 @@ namespace com {
 							namespace runtime {
 
 $MethodInfo _MessageHandler_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MessageHandler::*)()>(&MessageHandler::init$))},
-	{"displayMessage", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MessageHandler, init$, void)},
+	{"displayMessage", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(MessageHandler, displayMessage, void, $String*)},
+	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC, $virtualMethod(MessageHandler, getErrorListener, $ErrorListener*)},
 	{}
 };
 

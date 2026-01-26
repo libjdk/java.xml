@@ -36,8 +36,8 @@ $FieldInfo _XSMessageFormatter_FieldInfo_[] = {
 };
 
 $MethodInfo _XSMessageFormatter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSMessageFormatter::*)()>(&XSMessageFormatter::init$))},
-	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "java.util.MissingResourceException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSMessageFormatter, init$, void)},
+	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSMessageFormatter, formatMessage, $String*, $Locale*, $String*, $ObjectArray*), "java.util.MissingResourceException"},
 	{}
 };
 

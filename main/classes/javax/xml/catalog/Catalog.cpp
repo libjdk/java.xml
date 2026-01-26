@@ -5,16 +5,17 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Stream = ::java::util::stream::Stream;
 
 namespace javax {
 	namespace xml {
 		namespace catalog {
 
 $MethodInfo _Catalog_MethodInfo_[] = {
-	{"catalogs", "()Ljava/util/stream/Stream;", "()Ljava/util/stream/Stream<Ljavax/xml/catalog/Catalog;>;", $PUBLIC | $ABSTRACT},
-	{"matchPublic", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"matchSystem", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"matchURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"catalogs", "()Ljava/util/stream/Stream;", "()Ljava/util/stream/Stream<Ljavax/xml/catalog/Catalog;>;", $PUBLIC | $ABSTRACT, $virtualMethod(Catalog, catalogs, $Stream*)},
+	{"matchPublic", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Catalog, matchPublic, $String*, $String*)},
+	{"matchSystem", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Catalog, matchSystem, $String*, $String*)},
+	{"matchURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Catalog, matchURI, $String*, $String*)},
 	{}
 };
 

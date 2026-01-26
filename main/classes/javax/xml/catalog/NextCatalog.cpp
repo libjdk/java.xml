@@ -18,8 +18,8 @@ namespace javax {
 		namespace catalog {
 
 $MethodInfo _NextCatalog_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(NextCatalog::*)($String*,$String*)>(&NextCatalog::init$))},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(NextCatalog, init$, void, $String*, $String*)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NextCatalog, match, $String*, $String*)},
 	{}
 };
 

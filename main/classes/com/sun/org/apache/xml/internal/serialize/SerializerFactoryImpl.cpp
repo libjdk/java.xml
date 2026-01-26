@@ -59,12 +59,12 @@ $FieldInfo _SerializerFactoryImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _SerializerFactoryImpl_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(SerializerFactoryImpl::*)($String*)>(&SerializerFactoryImpl::init$))},
-	{"getSerializer", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PRIVATE, $method(static_cast<$Serializer*(SerializerFactoryImpl::*)($OutputFormat*)>(&SerializerFactoryImpl::getSerializer))},
-	{"getSupportedMethod", "()Ljava/lang/String;", nullptr, $PROTECTED},
-	{"makeSerializer", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC},
-	{"makeSerializer", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC},
-	{"makeSerializer", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC, nullptr, "java.io.UnsupportedEncodingException"},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(SerializerFactoryImpl, init$, void, $String*)},
+	{"getSerializer", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PRIVATE, $method(SerializerFactoryImpl, getSerializer, $Serializer*, $OutputFormat*)},
+	{"getSupportedMethod", "()Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(SerializerFactoryImpl, getSupportedMethod, $String*)},
+	{"makeSerializer", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC, $virtualMethod(SerializerFactoryImpl, makeSerializer, $Serializer*, $OutputFormat*)},
+	{"makeSerializer", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC, $virtualMethod(SerializerFactoryImpl, makeSerializer, $Serializer*, $Writer*, $OutputFormat*)},
+	{"makeSerializer", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)Lcom/sun/org/apache/xml/internal/serialize/Serializer;", nullptr, $PUBLIC, $virtualMethod(SerializerFactoryImpl, makeSerializer, $Serializer*, $OutputStream*, $OutputFormat*), "java.io.UnsupportedEncodingException"},
 	{}
 };
 

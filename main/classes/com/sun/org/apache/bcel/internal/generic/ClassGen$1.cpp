@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ClassGen$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ClassGen$1::*)()>(&ClassGen$1::init$))},
-	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(ClassGen$1, init$, void)},
+	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(ClassGen$1, equals, bool, Object$*, Object$*)},
+	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(ClassGen$1, hashCode, int32_t, Object$*)},
 	{}
 };
 

@@ -26,13 +26,13 @@ $FieldInfo _AbstractSAXParser$LocatorProxy_FieldInfo_[] = {
 };
 
 $MethodInfo _AbstractSAXParser$LocatorProxy_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/parsers/AbstractSAXParser;Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", nullptr, $PUBLIC, $method(static_cast<void(AbstractSAXParser$LocatorProxy::*)($AbstractSAXParser*,$XMLLocator*)>(&AbstractSAXParser$LocatorProxy::init$))},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/parsers/AbstractSAXParser;Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", nullptr, $PUBLIC, $method(AbstractSAXParser$LocatorProxy, init$, void, $AbstractSAXParser*, $XMLLocator*)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$LocatorProxy, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$LocatorProxy, getEncoding, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$LocatorProxy, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$LocatorProxy, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$LocatorProxy, getSystemId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$LocatorProxy, getXMLVersion, $String*)},
 	{}
 };
 

@@ -29,11 +29,11 @@ $FieldInfo _NamespaceContextWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceContextWrapper_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/NamespaceSupport;)V", nullptr, $PUBLIC, $method(static_cast<void(NamespaceContextWrapper::*)($NamespaceSupport*)>(&NamespaceContextWrapper::init$))},
-	{"getNamespaceContext", "()Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/Iterator;", "(Ljava/lang/String;)Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/NamespaceSupport;)V", nullptr, $PUBLIC, $method(NamespaceContextWrapper, init$, void, $NamespaceSupport*)},
+	{"getNamespaceContext", "()Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;", nullptr, $PUBLIC, $virtualMethod(NamespaceContextWrapper, getNamespaceContext, $NamespaceContext*)},
+	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceContextWrapper, getNamespaceURI, $String*, $String*)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceContextWrapper, getPrefix, $String*, $String*)},
+	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/Iterator;", "(Ljava/lang/String;)Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(NamespaceContextWrapper, getPrefixes, $Iterator*, $String*)},
 	{}
 };
 

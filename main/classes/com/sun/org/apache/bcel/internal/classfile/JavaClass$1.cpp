@@ -23,9 +23,9 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _JavaClass$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(JavaClass$1::*)()>(&JavaClass$1::init$))},
-	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(JavaClass$1, init$, void)},
+	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(JavaClass$1, equals, bool, Object$*, Object$*)},
+	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(JavaClass$1, hashCode, int32_t, Object$*)},
 	{}
 };
 

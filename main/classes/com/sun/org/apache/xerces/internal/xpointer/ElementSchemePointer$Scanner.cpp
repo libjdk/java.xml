@@ -53,10 +53,10 @@ $FieldInfo _ElementSchemePointer$Scanner_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementSchemePointer$Scanner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(static_cast<void(ElementSchemePointer$Scanner::*)($ElementSchemePointer*,$SymbolTable*)>(&ElementSchemePointer$Scanner::init$))},
-	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer$Tokens;I)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanExpr", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer$Tokens;Ljava/lang/String;II)Z", nullptr, $PRIVATE, $method(static_cast<bool(ElementSchemePointer$Scanner::*)($SymbolTable*,$ElementSchemePointer$Tokens*,$String*,int32_t,int32_t)>(&ElementSchemePointer$Scanner::scanExpr)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanNCName", "(Ljava/lang/String;II)I", nullptr, $PRIVATE, $method(static_cast<int32_t(ElementSchemePointer$Scanner::*)($String*,int32_t,int32_t)>(&ElementSchemePointer$Scanner::scanNCName))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(ElementSchemePointer$Scanner, init$, void, $ElementSchemePointer*, $SymbolTable*)},
+	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer$Tokens;I)V", nullptr, $PROTECTED, $virtualMethod(ElementSchemePointer$Scanner, addToken, void, $ElementSchemePointer$Tokens*, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanExpr", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer$Tokens;Ljava/lang/String;II)Z", nullptr, $PRIVATE, $method(ElementSchemePointer$Scanner, scanExpr, bool, $SymbolTable*, $ElementSchemePointer$Tokens*, $String*, int32_t, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanNCName", "(Ljava/lang/String;II)I", nullptr, $PRIVATE, $method(ElementSchemePointer$Scanner, scanNCName, int32_t, $String*, int32_t, int32_t)},
 	{}
 };
 

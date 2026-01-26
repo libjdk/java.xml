@@ -30,9 +30,9 @@ $FieldInfo _TransformerImpl$MessageHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _TransformerImpl$MessageHandler_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/transform/ErrorListener;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerImpl$MessageHandler::*)($ErrorListener*)>(&TransformerImpl$MessageHandler::init$))},
-	{"displayMessage", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/transform/ErrorListener;)V", nullptr, $PUBLIC, $method(TransformerImpl$MessageHandler, init$, void, $ErrorListener*)},
+	{"displayMessage", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(TransformerImpl$MessageHandler, displayMessage, void, $String*)},
+	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC, $virtualMethod(TransformerImpl$MessageHandler, getErrorListener, $ErrorListener*)},
 	{}
 };
 

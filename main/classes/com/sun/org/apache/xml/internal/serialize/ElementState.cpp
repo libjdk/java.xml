@@ -37,7 +37,7 @@ $FieldInfo _ElementState_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementState_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ElementState::*)()>(&ElementState::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ElementState, init$, void)},
 	{}
 };
 

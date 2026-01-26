@@ -33,9 +33,9 @@ $FieldInfo _FilterExprWalker$filterExprOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _FilterExprWalker$filterExprOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/FilterExprWalker;)V", nullptr, 0, $method(static_cast<void(FilterExprWalker$filterExprOwner::*)($FilterExprWalker*)>(&FilterExprWalker$filterExprOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/FilterExprWalker;)V", nullptr, 0, $method(FilterExprWalker$filterExprOwner, init$, void, $FilterExprWalker*)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker$filterExprOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker$filterExprOwner, setExpression, void, $Expression*)},
 	{}
 };
 

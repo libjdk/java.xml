@@ -30,9 +30,9 @@ $FieldInfo _DTMDefaultBaseTraversers$PrecedingSiblingTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$PrecedingSiblingTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$PrecedingSiblingTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$PrecedingSiblingTraverser::init$))},
-	{"next", "(II)I", nullptr, $PUBLIC},
-	{"next", "(III)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$PrecedingSiblingTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"next", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$PrecedingSiblingTraverser, next, int32_t, int32_t, int32_t)},
+	{"next", "(III)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$PrecedingSiblingTraverser, next, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

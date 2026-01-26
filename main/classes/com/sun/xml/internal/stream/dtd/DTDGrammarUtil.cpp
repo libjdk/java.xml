@@ -85,22 +85,22 @@ $FieldInfo _DTDGrammarUtil_FieldInfo_[] = {
 };
 
 $MethodInfo _DTDGrammarUtil_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(DTDGrammarUtil::*)($SymbolTable*)>(&DTDGrammarUtil::init$))},
-	{"<init>", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/DTDGrammar;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(DTDGrammarUtil::*)($DTDGrammar*,$SymbolTable*)>(&DTDGrammarUtil::init$))},
-	{"<init>", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/DTDGrammar;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(DTDGrammarUtil::*)($DTDGrammar*,$SymbolTable*,$NamespaceContext*)>(&DTDGrammarUtil::init$))},
-	{"addDTDDefaultAttrs", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"endCDATA", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"endElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"ensureStackCapacity", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(DTDGrammarUtil::*)(int32_t)>(&DTDGrammarUtil::ensureStackCapacity))},
-	{"getAttributeTypeName", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/XMLAttributeDecl;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(DTDGrammarUtil::*)($XMLAttributeDecl*)>(&DTDGrammarUtil::getAttributeTypeName))},
-	{"handleEndElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"handleStartElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"isIgnorableWhiteSpace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)Z", nullptr, $PUBLIC},
-	{"isInElementContent", "()Z", nullptr, $PUBLIC},
-	{"normalizeAttrValue", "(Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;I)Z", nullptr, $PRIVATE, $method(static_cast<bool(DTDGrammarUtil::*)($XMLAttributes*,int32_t)>(&DTDGrammarUtil::normalizeAttrValue))},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"startCDATA", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"startElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(DTDGrammarUtil, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/DTDGrammar;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(DTDGrammarUtil, init$, void, $DTDGrammar*, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/DTDGrammar;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(DTDGrammarUtil, init$, void, $DTDGrammar*, $SymbolTable*, $NamespaceContext*)},
+	{"addDTDDefaultAttrs", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, addDTDDefaultAttrs, void, $QName*, $XMLAttributes*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"endCDATA", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, endCDATA, void, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"endElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, endElement, void, $QName*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"ensureStackCapacity", "(I)V", nullptr, $PRIVATE, $method(DTDGrammarUtil, ensureStackCapacity, void, int32_t)},
+	{"getAttributeTypeName", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/XMLAttributeDecl;)Ljava/lang/String;", nullptr, $PRIVATE, $method(DTDGrammarUtil, getAttributeTypeName, $String*, $XMLAttributeDecl*)},
+	{"handleEndElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PROTECTED, $virtualMethod(DTDGrammarUtil, handleEndElement, void, $QName*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"handleStartElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PROTECTED, $virtualMethod(DTDGrammarUtil, handleStartElement, void, $QName*, $XMLAttributes*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"isIgnorableWhiteSpace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)Z", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, isIgnorableWhiteSpace, bool, $XMLString*)},
+	{"isInElementContent", "()Z", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, isInElementContent, bool)},
+	{"normalizeAttrValue", "(Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;I)Z", nullptr, $PRIVATE, $method(DTDGrammarUtil, normalizeAttrValue, bool, $XMLAttributes*, int32_t)},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, reset, void, $XMLComponentManager*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"startCDATA", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, startCDATA, void, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"startElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarUtil, startElement, void, $QName*, $XMLAttributes*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

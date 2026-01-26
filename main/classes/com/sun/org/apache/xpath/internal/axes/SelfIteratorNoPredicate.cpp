@@ -33,11 +33,11 @@ $FieldInfo _SelfIteratorNoPredicate_FieldInfo_[] = {
 };
 
 $MethodInfo _SelfIteratorNoPredicate_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(SelfIteratorNoPredicate::*)($Compiler*,int32_t,int32_t)>(&SelfIteratorNoPredicate::init$)), "javax.xml.transform.TransformerException"},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SelfIteratorNoPredicate::*)()>(&SelfIteratorNoPredicate::init$)), "javax.xml.transform.TransformerException"},
-	{"asNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC},
-	{"nextNode", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(SelfIteratorNoPredicate, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SelfIteratorNoPredicate, init$, void), "javax.xml.transform.TransformerException"},
+	{"asNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(SelfIteratorNoPredicate, asNode, int32_t, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(SelfIteratorNoPredicate, getLastPos, int32_t, $XPathContext*)},
+	{"nextNode", "()I", nullptr, $PUBLIC, $virtualMethod(SelfIteratorNoPredicate, nextNode, int32_t)},
 	{}
 };
 

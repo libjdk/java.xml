@@ -33,14 +33,14 @@ $FieldInfo _XSNamedMapImpl$XSNamedMapEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _XSNamedMapImpl$XSNamedMapEntry_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/namespace/QName;Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(static_cast<void(XSNamedMapImpl$XSNamedMapEntry::*)($QName*,$XSObject*)>(&XSNamedMapImpl$XSNamedMapEntry::init$))},
-	{"equals", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry;)Z", nullptr, $PUBLIC, $method(static_cast<bool(XSNamedMapImpl$XSNamedMapEntry::*)(XSNamedMapImpl$XSNamedMapEntry*)>(&XSNamedMapImpl$XSNamedMapEntry::equals))},
-	{"getKey", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"setValue", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $method(static_cast<$XSObject*(XSNamedMapImpl$XSNamedMapEntry::*)($XSObject*)>(&XSNamedMapImpl$XSNamedMapEntry::setValue))},
-	{"setValue", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/namespace/QName;Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(XSNamedMapImpl$XSNamedMapEntry, init$, void, $QName*, $XSObject*)},
+	{"equals", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry;)Z", nullptr, $PUBLIC, $method(XSNamedMapImpl$XSNamedMapEntry, equals, bool, XSNamedMapImpl$XSNamedMapEntry*)},
+	{"getKey", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(XSNamedMapImpl$XSNamedMapEntry, getKey, $Object*)},
+	{"getValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $virtualMethod(XSNamedMapImpl$XSNamedMapEntry, getValue, $Object*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XSNamedMapImpl$XSNamedMapEntry, hashCode, int32_t)},
+	{"setValue", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $method(XSNamedMapImpl$XSNamedMapEntry, setValue, $XSObject*, $XSObject*)},
+	{"setValue", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSNamedMapImpl$XSNamedMapEntry, setValue, $Object*, Object$*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSNamedMapImpl$XSNamedMapEntry, toString, $String*)},
 	{}
 };
 

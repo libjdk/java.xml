@@ -34,13 +34,13 @@ $FieldInfo _XMLSchemaValidator$XSIErrorReporter_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidator$XSIErrorReporter_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLSchemaValidator$XSIErrorReporter::*)($XMLSchemaValidator*)>(&XMLSchemaValidator$XSIErrorReporter::init$))},
-	{"mergeContext", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$StringArray*(XMLSchemaValidator$XSIErrorReporter::*)()>(&XMLSchemaValidator$XSIErrorReporter::mergeContext))},
-	{"popContext", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$StringArray*(XMLSchemaValidator$XSIErrorReporter::*)()>(&XMLSchemaValidator$XSIErrorReporter::popContext))},
-	{"pushContext", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$XSIErrorReporter::*)()>(&XMLSchemaValidator$XSIErrorReporter::pushContext))},
-	{"reportError", "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;S)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$XSIErrorReporter::*)($String*,$String*,$ObjectArray*,int16_t)>(&XMLSchemaValidator$XSIErrorReporter::reportError)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"reportError", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;S)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$XSIErrorReporter::*)($XMLLocator*,$String*,$String*,$ObjectArray*,int16_t)>(&XMLSchemaValidator$XSIErrorReporter::reportError)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$XSIErrorReporter::*)($XMLErrorReporter*)>(&XMLSchemaValidator$XSIErrorReporter::reset))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;)V", nullptr, $PROTECTED, $method(XMLSchemaValidator$XSIErrorReporter, init$, void, $XMLSchemaValidator*)},
+	{"mergeContext", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSchemaValidator$XSIErrorReporter, mergeContext, $StringArray*)},
+	{"popContext", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSchemaValidator$XSIErrorReporter, popContext, $StringArray*)},
+	{"pushContext", "()V", nullptr, $PUBLIC, $method(XMLSchemaValidator$XSIErrorReporter, pushContext, void)},
+	{"reportError", "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;S)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$XSIErrorReporter, reportError, void, $String*, $String*, $ObjectArray*, int16_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"reportError", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;S)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$XSIErrorReporter, reportError, void, $XMLLocator*, $String*, $String*, $ObjectArray*, int16_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$XSIErrorReporter, reset, void, $XMLErrorReporter*)},
 	{}
 };
 

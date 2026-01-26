@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace com {
 	namespace sun {
@@ -15,7 +16,7 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _NodeConsumer_MethodInfo_[] = {
-	{"setOriginatingNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"setOriginatingNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeConsumer, setOriginatingNode, void, $Node*)},
 	{}
 };
 

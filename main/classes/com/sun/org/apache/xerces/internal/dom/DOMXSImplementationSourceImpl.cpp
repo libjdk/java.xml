@@ -32,9 +32,9 @@ namespace com {
 						namespace dom {
 
 $MethodInfo _DOMXSImplementationSourceImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMXSImplementationSourceImpl::*)()>(&DOMXSImplementationSourceImpl::init$))},
-	{"getDOMImplementation", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC},
-	{"getDOMImplementationList", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementationList;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMXSImplementationSourceImpl, init$, void)},
+	{"getDOMImplementation", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC, $virtualMethod(DOMXSImplementationSourceImpl, getDOMImplementation, $DOMImplementation*, $String*)},
+	{"getDOMImplementationList", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementationList;", nullptr, $PUBLIC, $virtualMethod(DOMXSImplementationSourceImpl, getDOMImplementationList, $DOMImplementationList*, $String*)},
 	{}
 };
 

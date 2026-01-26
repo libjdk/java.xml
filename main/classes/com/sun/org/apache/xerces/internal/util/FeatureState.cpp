@@ -39,10 +39,10 @@ $FieldInfo _FeatureState_FieldInfo_[] = {
 };
 
 $MethodInfo _FeatureState_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Z)V", nullptr, $PUBLIC, $method(static_cast<void(FeatureState::*)($Status*,bool)>(&FeatureState::init$))},
-	{"is", "(Z)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC | $STATIC, $method(static_cast<FeatureState*(*)(bool)>(&FeatureState::is))},
-	{"isExceptional", "()Z", nullptr, $PUBLIC},
-	{"of", "(Lcom/sun/org/apache/xerces/internal/util/Status;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC | $STATIC, $method(static_cast<FeatureState*(*)($Status*)>(&FeatureState::of))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Z)V", nullptr, $PUBLIC, $method(FeatureState, init$, void, $Status*, bool)},
+	{"is", "(Z)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC | $STATIC, $staticMethod(FeatureState, is, FeatureState*, bool)},
+	{"isExceptional", "()Z", nullptr, $PUBLIC, $virtualMethod(FeatureState, isExceptional, bool)},
+	{"of", "(Lcom/sun/org/apache/xerces/internal/util/Status;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC | $STATIC, $staticMethod(FeatureState, of, FeatureState*, $Status*)},
 	{}
 };
 

@@ -23,8 +23,8 @@ $FieldInfo _Parameter_FieldInfo_[] = {
 };
 
 $MethodInfo _Parameter_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(Parameter::*)($String*,Object$*)>(&Parameter::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;Z)V", nullptr, $PUBLIC, $method(static_cast<void(Parameter::*)($String*,Object$*,bool)>(&Parameter::init$))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(Parameter, init$, void, $String*, Object$*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;Z)V", nullptr, $PUBLIC, $method(Parameter, init$, void, $String*, Object$*, bool)},
 	{}
 };
 

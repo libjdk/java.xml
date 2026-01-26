@@ -13,11 +13,11 @@ namespace com {
 					namespace internal {
 
 $MethodInfo _ExpressionNode_MethodInfo_[] = {
-	{"exprAddChild", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"exprGetChild", "(I)Lcom/sun/org/apache/xpath/internal/ExpressionNode;", nullptr, $PUBLIC | $ABSTRACT},
-	{"exprGetNumChildren", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"exprGetParent", "()Lcom/sun/org/apache/xpath/internal/ExpressionNode;", nullptr, $PUBLIC | $ABSTRACT},
-	{"exprSetParent", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"exprAddChild", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExpressionNode, exprAddChild, void, ExpressionNode*, int32_t)},
+	{"exprGetChild", "(I)Lcom/sun/org/apache/xpath/internal/ExpressionNode;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExpressionNode, exprGetChild, ExpressionNode*, int32_t)},
+	{"exprGetNumChildren", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExpressionNode, exprGetNumChildren, int32_t)},
+	{"exprGetParent", "()Lcom/sun/org/apache/xpath/internal/ExpressionNode;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExpressionNode, exprGetParent, ExpressionNode*)},
+	{"exprSetParent", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExpressionNode, exprSetParent, void, ExpressionNode*)},
 	{}
 };
 

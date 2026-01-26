@@ -45,22 +45,22 @@ $FieldInfo _BitArray_FieldInfo_[] = {
 };
 
 $MethodInfo _BitArray_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(BitArray::*)()>(&BitArray::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(BitArray::*)(int32_t)>(&BitArray::init$))},
-	{"<init>", "(I[I)V", nullptr, $PUBLIC, $method(static_cast<void(BitArray::*)(int32_t,$ints*)>(&BitArray::init$))},
-	{"cloneArray", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/BitArray;", nullptr, $PUBLIC},
-	{"data", "()[I", nullptr, $PUBLIC | $FINAL, $method(static_cast<$ints*(BitArray::*)()>(&BitArray::data))},
-	{"getBit", "(I)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(BitArray::*)(int32_t)>(&BitArray::getBit))},
-	{"getBitNumber", "(I)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(BitArray::*)(int32_t)>(&BitArray::getBitNumber))},
-	{"getMask", "()I", nullptr, $PUBLIC},
-	{"getNextBit", "(I)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(BitArray::*)(int32_t)>(&BitArray::getNextBit))},
-	{"merge", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/BitArray;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/BitArray;", nullptr, $PUBLIC | $FINAL, $method(static_cast<BitArray*(BitArray::*)(BitArray*)>(&BitArray::merge))},
-	{"readExternal", "(Ljava/io/ObjectInput;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException,java.lang.ClassNotFoundException"},
-	{"resize", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(BitArray::*)(int32_t)>(&BitArray::resize))},
-	{"setBit", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(BitArray::*)(int32_t)>(&BitArray::setBit))},
-	{"setMask", "(I)V", nullptr, $PUBLIC},
-	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(BitArray::*)()>(&BitArray::size))},
-	{"writeExternal", "(Ljava/io/ObjectOutput;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(BitArray, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(BitArray, init$, void, int32_t)},
+	{"<init>", "(I[I)V", nullptr, $PUBLIC, $method(BitArray, init$, void, int32_t, $ints*)},
+	{"cloneArray", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/BitArray;", nullptr, $PUBLIC, $virtualMethod(BitArray, cloneArray, BitArray*)},
+	{"data", "()[I", nullptr, $PUBLIC | $FINAL, $method(BitArray, data, $ints*)},
+	{"getBit", "(I)Z", nullptr, $PUBLIC | $FINAL, $method(BitArray, getBit, bool, int32_t)},
+	{"getBitNumber", "(I)I", nullptr, $PUBLIC | $FINAL, $method(BitArray, getBitNumber, int32_t, int32_t)},
+	{"getMask", "()I", nullptr, $PUBLIC, $virtualMethod(BitArray, getMask, int32_t)},
+	{"getNextBit", "(I)I", nullptr, $PUBLIC | $FINAL, $method(BitArray, getNextBit, int32_t, int32_t)},
+	{"merge", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/BitArray;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/BitArray;", nullptr, $PUBLIC | $FINAL, $method(BitArray, merge, BitArray*, BitArray*)},
+	{"readExternal", "(Ljava/io/ObjectInput;)V", nullptr, $PUBLIC, $virtualMethod(BitArray, readExternal, void, $ObjectInput*), "java.io.IOException,java.lang.ClassNotFoundException"},
+	{"resize", "(I)V", nullptr, $PUBLIC | $FINAL, $method(BitArray, resize, void, int32_t)},
+	{"setBit", "(I)V", nullptr, $PUBLIC | $FINAL, $method(BitArray, setBit, void, int32_t)},
+	{"setMask", "(I)V", nullptr, $PUBLIC, $virtualMethod(BitArray, setMask, void, int32_t)},
+	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(BitArray, size, int32_t)},
+	{"writeExternal", "(Ljava/io/ObjectOutput;)V", nullptr, $PUBLIC, $virtualMethod(BitArray, writeExternal, void, $ObjectOutput*), "java.io.IOException"},
 	{}
 };
 

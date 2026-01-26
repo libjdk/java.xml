@@ -31,14 +31,14 @@ $FieldInfo _XMLStreamReaderImpl$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStreamReaderImpl$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl;)V", nullptr, 0, $method(static_cast<void(XMLStreamReaderImpl$1::*)($XMLStreamReaderImpl*)>(&XMLStreamReaderImpl$1::init$))},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLocationURI", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl;)V", nullptr, 0, $method(XMLStreamReaderImpl$1, init$, void, $XMLStreamReaderImpl*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl$1, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl$1, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl$1, getLineNumber, int32_t)},
+	{"getLocationURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl$1, getLocationURI, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl$1, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl$1, getSystemId, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl$1, toString, $String*)},
 	{}
 };
 

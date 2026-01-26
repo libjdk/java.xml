@@ -10,11 +10,11 @@ namespace org {
 		namespace dom {
 
 $MethodInfo _NameList_MethodInfo_[] = {
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"containsNS", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaceURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NameList, contains, bool, $String*)},
+	{"containsNS", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NameList, containsNS, bool, $String*, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NameList, getLength, int32_t)},
+	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NameList, getName, $String*, int32_t)},
+	{"getNamespaceURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NameList, getNamespaceURI, $String*, int32_t)},
 	{}
 };
 

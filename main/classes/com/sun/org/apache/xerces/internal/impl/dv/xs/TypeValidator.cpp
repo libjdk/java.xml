@@ -39,18 +39,18 @@ $FieldInfo _TypeValidator_FieldInfo_[] = {
 };
 
 $MethodInfo _TypeValidator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(TypeValidator::*)()>(&TypeValidator::init$))},
-	{"checkExtraRules", "(Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getAllowedFacets", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCodePointLength", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(static_cast<int32_t(TypeValidator::*)($String*)>(&TypeValidator::getCodePointLength))},
-	{"getDataLength", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"getDigit", "(C)I", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<int32_t(*)(char16_t)>(&TypeValidator::getDigit))},
-	{"getFractionDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"getTotalDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"isDigit", "(C)Z", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<bool(*)(char16_t)>(&TypeValidator::isDigit))},
-	{"isIdentical", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(TypeValidator, init$, void)},
+	{"checkExtraRules", "(Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, $virtualMethod(TypeValidator, checkExtraRules, void, Object$*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(TypeValidator, compare, int32_t, Object$*, Object$*)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeValidator, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getAllowedFacets", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeValidator, getAllowedFacets, int16_t)},
+	{"getCodePointLength", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(TypeValidator, getCodePointLength, int32_t, $String*)},
+	{"getDataLength", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(TypeValidator, getDataLength, int32_t, Object$*)},
+	{"getDigit", "(C)I", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(TypeValidator, getDigit, int32_t, char16_t)},
+	{"getFractionDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(TypeValidator, getFractionDigits, int32_t, Object$*)},
+	{"getTotalDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(TypeValidator, getTotalDigits, int32_t, Object$*)},
+	{"isDigit", "(C)Z", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(TypeValidator, isDigit, bool, char16_t)},
+	{"isIdentical", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(TypeValidator, isIdentical, bool, Object$*, Object$*)},
 	{}
 };
 

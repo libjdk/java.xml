@@ -25,15 +25,15 @@ $FieldInfo _NamedEvent_FieldInfo_[] = {
 };
 
 $MethodInfo _NamedEvent_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NamedEvent::*)()>(&NamedEvent::init$))},
-	{"<init>", "(Ljavax/xml/namespace/QName;)V", nullptr, $PUBLIC, $method(static_cast<void(NamedEvent::*)($QName*)>(&NamedEvent::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(NamedEvent::*)($String*,$String*,$String*)>(&NamedEvent::init$))},
-	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"nameAsString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setName", "(Ljavax/xml/namespace/QName;)V", nullptr, $PUBLIC},
-	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NamedEvent, init$, void)},
+	{"<init>", "(Ljavax/xml/namespace/QName;)V", nullptr, $PUBLIC, $method(NamedEvent, init$, void, $QName*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(NamedEvent, init$, void, $String*, $String*, $String*)},
+	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(NamedEvent, getName, $QName*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamedEvent, getNamespace, $String*)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamedEvent, getPrefix, $String*)},
+	{"nameAsString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamedEvent, nameAsString, $String*)},
+	{"setName", "(Ljavax/xml/namespace/QName;)V", nullptr, $PUBLIC, $virtualMethod(NamedEvent, setName, void, $QName*)},
+	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, $virtualMethod(NamedEvent, writeAsEncodedUnicodeEx, void, $Writer*), "java.io.IOException"},
 	{}
 };
 

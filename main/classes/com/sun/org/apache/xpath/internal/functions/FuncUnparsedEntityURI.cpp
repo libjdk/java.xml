@@ -32,8 +32,8 @@ $FieldInfo _FuncUnparsedEntityURI_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncUnparsedEntityURI_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncUnparsedEntityURI::*)()>(&FuncUnparsedEntityURI::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncUnparsedEntityURI, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncUnparsedEntityURI, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

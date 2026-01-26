@@ -31,15 +31,15 @@ namespace com {
 							namespace utils {
 
 $MethodInfo _SystemIDResolver_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SystemIDResolver::*)()>(&SystemIDResolver::init$))},
-	{"getAbsolutePathFromRelativePath", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&SystemIDResolver::getAbsolutePathFromRelativePath))},
-	{"getAbsoluteURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&SystemIDResolver::getAbsoluteURI))},
-	{"getAbsoluteURI", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$String*)>(&SystemIDResolver::getAbsoluteURI)), "javax.xml.transform.TransformerException"},
-	{"getAbsoluteURIFromRelative", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&SystemIDResolver::getAbsoluteURIFromRelative))},
-	{"isAbsolutePath", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&SystemIDResolver::isAbsolutePath))},
-	{"isAbsoluteURI", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&SystemIDResolver::isAbsoluteURI))},
-	{"isWindowsAbsolutePath", "(Ljava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)($String*)>(&SystemIDResolver::isWindowsAbsolutePath))},
-	{"replaceChars", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&SystemIDResolver::replaceChars))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SystemIDResolver, init$, void)},
+	{"getAbsolutePathFromRelativePath", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(SystemIDResolver, getAbsolutePathFromRelativePath, $String*, $String*)},
+	{"getAbsoluteURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SystemIDResolver, getAbsoluteURI, $String*, $String*)},
+	{"getAbsoluteURI", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SystemIDResolver, getAbsoluteURI, $String*, $String*, $String*), "javax.xml.transform.TransformerException"},
+	{"getAbsoluteURIFromRelative", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SystemIDResolver, getAbsoluteURIFromRelative, $String*, $String*)},
+	{"isAbsolutePath", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(SystemIDResolver, isAbsolutePath, bool, $String*)},
+	{"isAbsoluteURI", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(SystemIDResolver, isAbsoluteURI, bool, $String*)},
+	{"isWindowsAbsolutePath", "(Ljava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(SystemIDResolver, isWindowsAbsolutePath, bool, $String*)},
+	{"replaceChars", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(SystemIDResolver, replaceChars, $String*, $String*)},
 	{}
 };
 

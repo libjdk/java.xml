@@ -36,10 +36,10 @@ $FieldInfo _FeaturePropertyBase$State_FieldInfo_[] = {
 };
 
 $MethodInfo _FeaturePropertyBase$State_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$FeaturePropertyBase$StateArray*(*)()>(&FeaturePropertyBase$State::$values))},
-	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(static_cast<void(FeaturePropertyBase$State::*)($String*,int32_t)>(&FeaturePropertyBase$State::init$))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<FeaturePropertyBase$State*(*)($String*)>(&FeaturePropertyBase$State::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$FeaturePropertyBase$StateArray*(*)()>(&FeaturePropertyBase$State::values))},
+	{"$values", "()[Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(FeaturePropertyBase$State, $values, $FeaturePropertyBase$StateArray*)},
+	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(FeaturePropertyBase$State, init$, void, $String*, int32_t)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(FeaturePropertyBase$State, valueOf, FeaturePropertyBase$State*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(FeaturePropertyBase$State, values, $FeaturePropertyBase$StateArray*)},
 	{}
 };
 

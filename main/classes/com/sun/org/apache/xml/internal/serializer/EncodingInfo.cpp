@@ -28,12 +28,12 @@ $FieldInfo _EncodingInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _EncodingInfo_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(EncodingInfo::*)($String*,$String*)>(&EncodingInfo::init$))},
-	{"inEncoding", "(CLjava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)(char16_t,$String*)>(&EncodingInfo::inEncoding))},
-	{"inEncoding", "(CCLjava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)(char16_t,char16_t,$String*)>(&EncodingInfo::inEncoding))},
-	{"inEncoding", "(C[B)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)(char16_t,$bytes*)>(&EncodingInfo::inEncoding))},
-	{"isInEncoding", "(C)Z", nullptr, $PUBLIC, $method(static_cast<bool(EncodingInfo::*)(char16_t)>(&EncodingInfo::isInEncoding))},
-	{"isInEncoding", "(CC)Z", nullptr, $PUBLIC, $method(static_cast<bool(EncodingInfo::*)(char16_t,char16_t)>(&EncodingInfo::isInEncoding))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(EncodingInfo, init$, void, $String*, $String*)},
+	{"inEncoding", "(CLjava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(EncodingInfo, inEncoding, bool, char16_t, $String*)},
+	{"inEncoding", "(CCLjava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(EncodingInfo, inEncoding, bool, char16_t, char16_t, $String*)},
+	{"inEncoding", "(C[B)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(EncodingInfo, inEncoding, bool, char16_t, $bytes*)},
+	{"isInEncoding", "(C)Z", nullptr, $PUBLIC, $method(EncodingInfo, isInEncoding, bool, char16_t)},
+	{"isInEncoding", "(CC)Z", nullptr, $PUBLIC, $method(EncodingInfo, isInEncoding, bool, char16_t, char16_t)},
 	{}
 };
 

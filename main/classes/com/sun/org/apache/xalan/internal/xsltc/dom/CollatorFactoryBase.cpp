@@ -29,9 +29,9 @@ $FieldInfo _CollatorFactoryBase_FieldInfo_[] = {
 };
 
 $MethodInfo _CollatorFactoryBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CollatorFactoryBase::*)()>(&CollatorFactoryBase::init$))},
-	{"getCollator", "(Ljava/lang/String;Ljava/lang/String;)Ljava/text/Collator;", nullptr, $PUBLIC},
-	{"getCollator", "(Ljava/util/Locale;)Ljava/text/Collator;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CollatorFactoryBase, init$, void)},
+	{"getCollator", "(Ljava/lang/String;Ljava/lang/String;)Ljava/text/Collator;", nullptr, $PUBLIC, $virtualMethod(CollatorFactoryBase, getCollator, $Collator*, $String*, $String*)},
+	{"getCollator", "(Ljava/util/Locale;)Ljava/text/Collator;", nullptr, $PUBLIC, $virtualMethod(CollatorFactoryBase, getCollator, $Collator*, $Locale*)},
 	{}
 };
 

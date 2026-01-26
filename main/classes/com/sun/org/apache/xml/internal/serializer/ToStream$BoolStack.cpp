@@ -24,19 +24,19 @@ $FieldInfo _ToStream$BoolStack_FieldInfo_[] = {
 };
 
 $MethodInfo _ToStream$BoolStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ToStream$BoolStack::*)()>(&ToStream$BoolStack::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ToStream$BoolStack::*)(int32_t)>(&ToStream$BoolStack::init$))},
-	{"clear", "()V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ToStream$BoolStack::*)()>(&ToStream$BoolStack::clear))},
-	{"grow", "()V", nullptr, $PRIVATE, $method(static_cast<void(ToStream$BoolStack::*)()>(&ToStream$BoolStack::grow))},
-	{"isEmpty", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(ToStream$BoolStack::*)()>(&ToStream$BoolStack::isEmpty))},
-	{"peek", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ToStream$BoolStack::*)()>(&ToStream$BoolStack::peek))},
-	{"peekOrFalse", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ToStream$BoolStack::*)()>(&ToStream$BoolStack::peekOrFalse))},
-	{"peekOrTrue", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ToStream$BoolStack::*)()>(&ToStream$BoolStack::peekOrTrue))},
-	{"pop", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ToStream$BoolStack::*)()>(&ToStream$BoolStack::pop))},
-	{"popAndTop", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ToStream$BoolStack::*)()>(&ToStream$BoolStack::popAndTop))},
-	{"push", "(Z)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(ToStream$BoolStack::*)(bool)>(&ToStream$BoolStack::push))},
-	{"setTop", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ToStream$BoolStack::*)(bool)>(&ToStream$BoolStack::setTop))},
-	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(ToStream$BoolStack::*)()>(&ToStream$BoolStack::size))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ToStream$BoolStack, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(ToStream$BoolStack, init$, void, int32_t)},
+	{"clear", "()V", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, clear, void)},
+	{"grow", "()V", nullptr, $PRIVATE, $method(ToStream$BoolStack, grow, void)},
+	{"isEmpty", "()Z", nullptr, $PUBLIC, $method(ToStream$BoolStack, isEmpty, bool)},
+	{"peek", "()Z", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, peek, bool)},
+	{"peekOrFalse", "()Z", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, peekOrFalse, bool)},
+	{"peekOrTrue", "()Z", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, peekOrTrue, bool)},
+	{"pop", "()Z", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, pop, bool)},
+	{"popAndTop", "()Z", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, popAndTop, bool)},
+	{"push", "(Z)Z", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, push, bool, bool)},
+	{"setTop", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, setTop, void, bool)},
+	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(ToStream$BoolStack, size, int32_t)},
 	{}
 };
 

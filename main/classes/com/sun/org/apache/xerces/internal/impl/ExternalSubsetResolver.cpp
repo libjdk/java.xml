@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <jcpp.h>
 
+using $XMLDTDDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLDTDDescription;
+using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,7 +18,7 @@ namespace com {
 						namespace impl {
 
 $MethodInfo _ExternalSubsetResolver_MethodInfo_[] = {
-	{"getExternalSubset", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLDTDDescription;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"getExternalSubset", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLDTDDescription;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExternalSubsetResolver, getExternalSubset, $XMLInputSource*, $XMLDTDDescription*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
 	{}
 };
 

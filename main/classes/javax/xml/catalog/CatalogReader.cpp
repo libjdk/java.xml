@@ -105,11 +105,11 @@ $MethodInfo _CatalogReader_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "(Ljavax/xml/catalog/Catalog;Ljavax/xml/parsers/SAXParser;)V", nullptr, $PUBLIC, $method(static_cast<void(CatalogReader::*)($Catalog*,$SAXParser*)>(&CatalogReader::init$))},
-	{"endElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"resolve", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC},
-	{"startElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "(Ljavax/xml/catalog/Catalog;Ljavax/xml/parsers/SAXParser;)V", nullptr, $PUBLIC, $method(CatalogReader, init$, void, $Catalog*, $SAXParser*)},
+	{"endElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(CatalogReader, endElement, void, $String*, $String*, $String*), "org.xml.sax.SAXException"},
+	{"resolve", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC, $virtualMethod(CatalogReader, resolve, $Source*, $String*, $String*), "javax.xml.transform.TransformerException"},
+	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $virtualMethod(CatalogReader, resolveEntity, $InputSource*, $String*, $String*)},
+	{"startElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, $virtualMethod(CatalogReader, startElement, void, $String*, $String*, $String*, $Attributes*), "org.xml.sax.SAXException"},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

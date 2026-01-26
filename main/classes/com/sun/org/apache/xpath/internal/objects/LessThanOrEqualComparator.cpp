@@ -18,9 +18,9 @@ namespace com {
 						namespace objects {
 
 $MethodInfo _LessThanOrEqualComparator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(LessThanOrEqualComparator::*)()>(&LessThanOrEqualComparator::init$))},
-	{"compareNumbers", "(DD)Z", nullptr, 0},
-	{"compareStrings", "(Lcom/sun/org/apache/xml/internal/utils/XMLString;Lcom/sun/org/apache/xml/internal/utils/XMLString;)Z", nullptr, 0},
+	{"<init>", "()V", nullptr, 0, $method(LessThanOrEqualComparator, init$, void)},
+	{"compareNumbers", "(DD)Z", nullptr, 0, $virtualMethod(LessThanOrEqualComparator, compareNumbers, bool, double, double)},
+	{"compareStrings", "(Lcom/sun/org/apache/xml/internal/utils/XMLString;Lcom/sun/org/apache/xml/internal/utils/XMLString;)Z", nullptr, 0, $virtualMethod(LessThanOrEqualComparator, compareStrings, bool, $XMLString*, $XMLString*)},
 	{}
 };
 

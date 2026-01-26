@@ -11,7 +11,7 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _Comment_MethodInfo_[] = {
-	{"getText", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getText", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Comment, getText, $String*)},
 	{}
 };
 

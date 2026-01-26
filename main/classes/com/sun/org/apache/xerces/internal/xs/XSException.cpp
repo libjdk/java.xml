@@ -27,7 +27,7 @@ $FieldInfo _XSException_FieldInfo_[] = {
 };
 
 $MethodInfo _XSException_MethodInfo_[] = {
-	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XSException::*)(int16_t,$String*)>(&XSException::init$))},
+	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(XSException, init$, void, int16_t, $String*)},
 	{}
 };
 

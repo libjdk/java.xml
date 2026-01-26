@@ -31,10 +31,10 @@ $FieldInfo _ChunkedIntArray$ChunksVector_FieldInfo_[] = {
 };
 
 $MethodInfo _ChunkedIntArray$ChunksVector_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/ChunkedIntArray;)V", nullptr, 0, $method(static_cast<void(ChunkedIntArray$ChunksVector::*)($ChunkedIntArray*)>(&ChunkedIntArray$ChunksVector::init$))},
-	{"addElement", "([I)V", nullptr, 0},
-	{"elementAt", "(I)[I", nullptr, $FINAL, $method(static_cast<$ints*(ChunkedIntArray$ChunksVector::*)(int32_t)>(&ChunkedIntArray$ChunksVector::elementAt))},
-	{"size", "()I", nullptr, $FINAL, $method(static_cast<int32_t(ChunkedIntArray$ChunksVector::*)()>(&ChunkedIntArray$ChunksVector::size))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/ChunkedIntArray;)V", nullptr, 0, $method(ChunkedIntArray$ChunksVector, init$, void, $ChunkedIntArray*)},
+	{"addElement", "([I)V", nullptr, 0, $virtualMethod(ChunkedIntArray$ChunksVector, addElement, void, $ints*)},
+	{"elementAt", "(I)[I", nullptr, $FINAL, $method(ChunkedIntArray$ChunksVector, elementAt, $ints*, int32_t)},
+	{"size", "()I", nullptr, $FINAL, $method(ChunkedIntArray$ChunksVector, size, int32_t)},
 	{}
 };
 

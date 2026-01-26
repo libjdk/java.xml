@@ -8,6 +8,10 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $DOMConfiguration = ::org::w3c::dom::DOMConfiguration;
+using $Node = ::org::w3c::dom::Node;
+using $LSOutput = ::org::w3c::dom::ls::LSOutput;
+using $LSSerializerFilter = ::org::w3c::dom::ls::LSSerializerFilter;
 
 namespace org {
 	namespace w3c {
@@ -15,14 +19,14 @@ namespace org {
 			namespace ls {
 
 $MethodInfo _LSSerializer_MethodInfo_[] = {
-	{"getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFilter", "()Lorg/w3c/dom/ls/LSSerializerFilter;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNewLine", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setFilter", "(Lorg/w3c/dom/ls/LSSerializerFilter;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setNewLine", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"write", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/ls/LSOutput;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.ls.LSException"},
-	{"writeToString", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
-	{"writeToURI", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.ls.LSException"},
+	{"getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, getDomConfig, $DOMConfiguration*)},
+	{"getFilter", "()Lorg/w3c/dom/ls/LSSerializerFilter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, getFilter, $LSSerializerFilter*)},
+	{"getNewLine", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, getNewLine, $String*)},
+	{"setFilter", "(Lorg/w3c/dom/ls/LSSerializerFilter;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, setFilter, void, $LSSerializerFilter*)},
+	{"setNewLine", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, setNewLine, void, $String*)},
+	{"write", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/ls/LSOutput;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, write, bool, $Node*, $LSOutput*), "org.w3c.dom.ls.LSException"},
+	{"writeToString", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, writeToString, $String*, $Node*), "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
+	{"writeToURI", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializer, writeToURI, bool, $Node*, $String*), "org.w3c.dom.ls.LSException"},
 	{}
 };
 

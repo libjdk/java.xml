@@ -17,9 +17,9 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _OutputPropertyUtils_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(OutputPropertyUtils::*)()>(&OutputPropertyUtils::init$))},
-	{"getBooleanProperty", "(Ljava/lang/String;Ljava/util/Properties;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*,$Properties*)>(&OutputPropertyUtils::getBooleanProperty))},
-	{"getIntProperty", "(Ljava/lang/String;Ljava/util/Properties;)I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)($String*,$Properties*)>(&OutputPropertyUtils::getIntProperty))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(OutputPropertyUtils, init$, void)},
+	{"getBooleanProperty", "(Ljava/lang/String;Ljava/util/Properties;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(OutputPropertyUtils, getBooleanProperty, bool, $String*, $Properties*)},
+	{"getIntProperty", "(Ljava/lang/String;Ljava/util/Properties;)I", nullptr, $PUBLIC | $STATIC, $staticMethod(OutputPropertyUtils, getIntProperty, int32_t, $String*, $Properties*)},
 	{}
 };
 

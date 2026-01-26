@@ -31,10 +31,10 @@ $FieldInfo _Token$ConcatToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$ConcatToken_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(static_cast<void(Token$ConcatToken::*)($Token*,$Token*)>(&Token$ConcatToken::init$))},
-	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0},
-	{"size", "()I", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(Token$ConcatToken, init$, void, $Token*, $Token*)},
+	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0, $virtualMethod(Token$ConcatToken, getChild, $Token*, int32_t)},
+	{"size", "()I", nullptr, 0, $virtualMethod(Token$ConcatToken, size, int32_t)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$ConcatToken, toString, $String*, int32_t)},
 	{}
 };
 

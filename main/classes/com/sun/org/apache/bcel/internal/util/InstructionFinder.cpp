@@ -112,18 +112,18 @@ $FieldInfo _InstructionFinder_FieldInfo_[] = {
 };
 
 $MethodInfo _InstructionFinder_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, $PUBLIC, $method(static_cast<void(InstructionFinder::*)($InstructionList*)>(&InstructionFinder::init$))},
-	{"compilePattern", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&InstructionFinder::compilePattern))},
-	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$InstructionList*(InstructionFinder::*)()>(&InstructionFinder::getInstructionList))},
-	{"getMatch", "(II)[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PRIVATE, $method(static_cast<$InstructionHandleArray*(InstructionFinder::*)(int32_t,int32_t)>(&InstructionFinder::getMatch))},
-	{"makeChar", "(S)C", nullptr, $PRIVATE | $STATIC, $method(static_cast<char16_t(*)(int16_t)>(&InstructionFinder::makeChar))},
-	{"mapName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&InstructionFinder::mapName))},
-	{"precompile", "(SSS)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)(int16_t,int16_t,int16_t)>(&InstructionFinder::precompile))},
-	{"reread", "()V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(InstructionFinder::*)()>(&InstructionFinder::reread))},
-	{"search", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator;", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(static_cast<$Iterator*(InstructionFinder::*)($String*,$InstructionHandle*,$InstructionFinder$CodeConstraint*)>(&InstructionFinder::search))},
-	{"search", "(Ljava/lang/String;)Ljava/util/Iterator;", "(Ljava/lang/String;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(static_cast<$Iterator*(InstructionFinder::*)($String*)>(&InstructionFinder::search))},
-	{"search", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Ljava/util/Iterator;", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(static_cast<$Iterator*(InstructionFinder::*)($String*,$InstructionHandle*)>(&InstructionFinder::search))},
-	{"search", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator;", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(static_cast<$Iterator*(InstructionFinder::*)($String*,$InstructionFinder$CodeConstraint*)>(&InstructionFinder::search))},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, $PUBLIC, $method(InstructionFinder, init$, void, $InstructionList*)},
+	{"compilePattern", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(InstructionFinder, compilePattern, $String*, $String*)},
+	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC | $FINAL, $method(InstructionFinder, getInstructionList, $InstructionList*)},
+	{"getMatch", "(II)[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PRIVATE, $method(InstructionFinder, getMatch, $InstructionHandleArray*, int32_t, int32_t)},
+	{"makeChar", "(S)C", nullptr, $PRIVATE | $STATIC, $staticMethod(InstructionFinder, makeChar, char16_t, int16_t)},
+	{"mapName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(InstructionFinder, mapName, $String*, $String*)},
+	{"precompile", "(SSS)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(InstructionFinder, precompile, $String*, int16_t, int16_t, int16_t)},
+	{"reread", "()V", nullptr, $PUBLIC | $FINAL, $method(InstructionFinder, reread, void)},
+	{"search", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator;", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(InstructionFinder, search, $Iterator*, $String*, $InstructionHandle*, $InstructionFinder$CodeConstraint*)},
+	{"search", "(Ljava/lang/String;)Ljava/util/Iterator;", "(Ljava/lang/String;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(InstructionFinder, search, $Iterator*, $String*)},
+	{"search", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Ljava/util/Iterator;", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(InstructionFinder, search, $Iterator*, $String*, $InstructionHandle*)},
+	{"search", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator;", "(Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator<[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;>;", $PUBLIC | $FINAL, $method(InstructionFinder, search, $Iterator*, $String*, $InstructionFinder$CodeConstraint*)},
 	{}
 };
 

@@ -10,9 +10,9 @@ namespace org {
 		namespace dom {
 
 $MethodInfo _ProcessingInstruction_MethodInfo_[] = {
-	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTarget", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ProcessingInstruction, getData, $String*)},
+	{"getTarget", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ProcessingInstruction, getTarget, $String*)},
+	{"setData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ProcessingInstruction, setData, void, $String*), "org.w3c.dom.DOMException"},
 	{}
 };
 

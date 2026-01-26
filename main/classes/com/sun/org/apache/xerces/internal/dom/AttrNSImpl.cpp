@@ -44,19 +44,19 @@ $FieldInfo _AttrNSImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _AttrNSImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(AttrNSImpl::*)()>(&AttrNSImpl::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(AttrNSImpl::*)($CoreDocumentImpl*,$String*,$String*)>(&AttrNSImpl::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(AttrNSImpl::*)($CoreDocumentImpl*,$String*,$String*,$String*)>(&AttrNSImpl::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(AttrNSImpl::*)($CoreDocumentImpl*,$String*)>(&AttrNSImpl::init$))},
-	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTypeName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTypeNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isDerivedFrom", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, $PUBLIC},
-	{"rename", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, 0},
-	{"setName", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(AttrNSImpl::*)($String*,$String*)>(&AttrNSImpl::setName))},
-	{"setPrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(AttrNSImpl, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(AttrNSImpl, init$, void, $CoreDocumentImpl*, $String*, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(AttrNSImpl, init$, void, $CoreDocumentImpl*, $String*, $String*, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(AttrNSImpl, init$, void, $CoreDocumentImpl*, $String*)},
+	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttrNSImpl, getLocalName, $String*)},
+	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttrNSImpl, getNamespaceURI, $String*)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttrNSImpl, getPrefix, $String*)},
+	{"getTypeName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttrNSImpl, getTypeName, $String*)},
+	{"getTypeNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttrNSImpl, getTypeNamespace, $String*)},
+	{"isDerivedFrom", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, $PUBLIC, $virtualMethod(AttrNSImpl, isDerivedFrom, bool, $String*, $String*, int32_t)},
+	{"rename", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, 0, $virtualMethod(AttrNSImpl, rename, void, $String*, $String*)},
+	{"setName", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(AttrNSImpl, setName, void, $String*, $String*)},
+	{"setPrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(AttrNSImpl, setPrefix, void, $String*), "org.w3c.dom.DOMException"},
 	{}
 };
 

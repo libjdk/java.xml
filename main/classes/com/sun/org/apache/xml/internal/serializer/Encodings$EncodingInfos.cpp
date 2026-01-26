@@ -64,17 +64,17 @@ $FieldInfo _Encodings$EncodingInfos_FieldInfo_[] = {
 };
 
 $MethodInfo _Encodings$EncodingInfos_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(Encodings$EncodingInfos::*)()>(&Encodings$EncodingInfos::init$))},
-	{"findCharsetNameFor", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(Encodings$EncodingInfos::*)($String*)>(&Encodings$EncodingInfos::findCharsetNameFor))},
-	{"findCharsetNameFor", "(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(Encodings$EncodingInfos::*)($String*,$StringArray*)>(&Encodings$EncodingInfos::findCharsetNameFor))},
-	{"findEncoding", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, 0, $method(static_cast<$EncodingInfo*(Encodings$EncodingInfos::*)($String*)>(&Encodings$EncodingInfos::findEncoding))},
-	{"getEncodingFromJavaKey", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, 0, $method(static_cast<$EncodingInfo*(Encodings$EncodingInfos::*)($String*)>(&Encodings$EncodingInfos::getEncodingFromJavaKey))},
-	{"getEncodingFromMimeKey", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, 0, $method(static_cast<$EncodingInfo*(Encodings$EncodingInfos::*)($String*)>(&Encodings$EncodingInfos::getEncodingFromMimeKey))},
-	{"loadEncodingInfo", "()V", nullptr, $PRIVATE, $method(static_cast<void(Encodings$EncodingInfos::*)()>(&Encodings$EncodingInfos::loadEncodingInfo))},
-	{"loadProperties", "()Ljava/util/Properties;", nullptr, $PRIVATE, $method(static_cast<$Properties*(Encodings$EncodingInfos::*)()>(&Encodings$EncodingInfos::loadProperties)), "java.net.MalformedURLException,java.io.IOException"},
-	{"openEncodingsFileStream", "()Ljava/io/InputStream;", nullptr, $PRIVATE, $method(static_cast<$InputStream*(Encodings$EncodingInfos::*)()>(&Encodings$EncodingInfos::openEncodingsFileStream)), "java.net.MalformedURLException,java.io.IOException"},
-	{"parseMimeTypes", "(Ljava/lang/String;)[Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$StringArray*(Encodings$EncodingInfos::*)($String*)>(&Encodings$EncodingInfos::parseMimeTypes))},
-	{"putEncoding", "(Ljava/lang/String;Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;)V", nullptr, 0, $method(static_cast<void(Encodings$EncodingInfos::*)($String*,$EncodingInfo*)>(&Encodings$EncodingInfos::putEncoding))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(Encodings$EncodingInfos, init$, void)},
+	{"findCharsetNameFor", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(Encodings$EncodingInfos, findCharsetNameFor, $String*, $String*)},
+	{"findCharsetNameFor", "(Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(Encodings$EncodingInfos, findCharsetNameFor, $String*, $String*, $StringArray*)},
+	{"findEncoding", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, 0, $method(Encodings$EncodingInfos, findEncoding, $EncodingInfo*, $String*)},
+	{"getEncodingFromJavaKey", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, 0, $method(Encodings$EncodingInfos, getEncodingFromJavaKey, $EncodingInfo*, $String*)},
+	{"getEncodingFromMimeKey", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;", nullptr, 0, $method(Encodings$EncodingInfos, getEncodingFromMimeKey, $EncodingInfo*, $String*)},
+	{"loadEncodingInfo", "()V", nullptr, $PRIVATE, $method(Encodings$EncodingInfos, loadEncodingInfo, void)},
+	{"loadProperties", "()Ljava/util/Properties;", nullptr, $PRIVATE, $method(Encodings$EncodingInfos, loadProperties, $Properties*), "java.net.MalformedURLException,java.io.IOException"},
+	{"openEncodingsFileStream", "()Ljava/io/InputStream;", nullptr, $PRIVATE, $method(Encodings$EncodingInfos, openEncodingsFileStream, $InputStream*), "java.net.MalformedURLException,java.io.IOException"},
+	{"parseMimeTypes", "(Ljava/lang/String;)[Ljava/lang/String;", nullptr, $PRIVATE, $method(Encodings$EncodingInfos, parseMimeTypes, $StringArray*, $String*)},
+	{"putEncoding", "(Ljava/lang/String;Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;)V", nullptr, 0, $method(Encodings$EncodingInfos, putEncoding, void, $String*, $EncodingInfo*)},
 	{}
 };
 

@@ -36,8 +36,8 @@ $FieldInfo _XPointerHandler$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XPointerHandler$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(static_cast<void(XPointerHandler$1::*)($XPointerHandler*,$SymbolTable*)>(&XPointerHandler$1::init$))},
-	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler$Tokens;I)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(XPointerHandler$1, init$, void, $XPointerHandler*, $SymbolTable*)},
+	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler$Tokens;I)V", nullptr, $PROTECTED, $virtualMethod(XPointerHandler$1, addToken, void, $XPointerHandler$Tokens*, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

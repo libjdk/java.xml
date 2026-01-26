@@ -29,19 +29,19 @@ $FieldInfo _AttList_FieldInfo_[] = {
 };
 
 $MethodInfo _AttList_MethodInfo_[] = {
-	{"<init>", "(Lorg/w3c/dom/NamedNodeMap;)V", nullptr, $PUBLIC, $method(static_cast<void(AttList::*)($NamedNodeMap*)>(&AttList::init$))},
-	{"getIndex", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getQName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/w3c/dom/NamedNodeMap;)V", nullptr, $PUBLIC, $method(AttList, init$, void, $NamedNodeMap*)},
+	{"getIndex", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(AttList, getIndex, int32_t, $String*, $String*)},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(AttList, getIndex, int32_t, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(AttList, getLength, int32_t)},
+	{"getLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getLocalName, $String*, int32_t)},
+	{"getQName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getQName, $String*, int32_t)},
+	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getType, $String*, int32_t)},
+	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getType, $String*, $String*)},
+	{"getType", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getType, $String*, $String*, $String*)},
+	{"getURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getURI, $String*, int32_t)},
+	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getValue, $String*, int32_t)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getValue, $String*, $String*)},
+	{"getValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttList, getValue, $String*, $String*, $String*)},
 	{}
 };
 

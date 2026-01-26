@@ -44,11 +44,11 @@ $FieldInfo _WalkingIteratorSorted_FieldInfo_[] = {
 };
 
 $MethodInfo _WalkingIteratorSorted_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(WalkingIteratorSorted::*)($PrefixResolver*)>(&WalkingIteratorSorted::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;IIZ)V", nullptr, 0, $method(static_cast<void(WalkingIteratorSorted::*)($Compiler*,int32_t,int32_t,bool)>(&WalkingIteratorSorted::init$)), "javax.xml.transform.TransformerException"},
-	{"canBeWalkedInNaturalDocOrderStatic", "()Z", nullptr, 0},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"isDocOrdered", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)V", nullptr, $PUBLIC, $method(WalkingIteratorSorted, init$, void, $PrefixResolver*)},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;IIZ)V", nullptr, 0, $method(WalkingIteratorSorted, init$, void, $Compiler*, int32_t, int32_t, bool), "javax.xml.transform.TransformerException"},
+	{"canBeWalkedInNaturalDocOrderStatic", "()Z", nullptr, 0, $virtualMethod(WalkingIteratorSorted, canBeWalkedInNaturalDocOrderStatic, bool)},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(WalkingIteratorSorted, fixupVariables, void, $List*, int32_t)},
+	{"isDocOrdered", "()Z", nullptr, $PUBLIC, $virtualMethod(WalkingIteratorSorted, isDocOrdered, bool)},
 	{}
 };
 

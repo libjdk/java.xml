@@ -22,13 +22,13 @@ $FieldInfo _LocatorProxy_FieldInfo_[] = {
 };
 
 $MethodInfo _LocatorProxy_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", nullptr, $PUBLIC, $method(static_cast<void(LocatorProxy::*)($XMLLocator*)>(&LocatorProxy::init$))},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)V", nullptr, $PUBLIC, $method(LocatorProxy, init$, void, $XMLLocator*)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocatorProxy, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorProxy, getEncoding, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocatorProxy, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorProxy, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorProxy, getSystemId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorProxy, getXMLVersion, $String*)},
 	{}
 };
 

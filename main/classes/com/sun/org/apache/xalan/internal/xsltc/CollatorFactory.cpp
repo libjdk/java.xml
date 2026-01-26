@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Collator = ::java::text::Collator;
+using $Locale = ::java::util::Locale;
 
 namespace com {
 	namespace sun {
@@ -16,8 +18,8 @@ namespace com {
 						namespace xsltc {
 
 $MethodInfo _CollatorFactory_MethodInfo_[] = {
-	{"getCollator", "(Ljava/lang/String;Ljava/lang/String;)Ljava/text/Collator;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCollator", "(Ljava/util/Locale;)Ljava/text/Collator;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getCollator", "(Ljava/lang/String;Ljava/lang/String;)Ljava/text/Collator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CollatorFactory, getCollator, $Collator*, $String*, $String*)},
+	{"getCollator", "(Ljava/util/Locale;)Ljava/text/Collator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CollatorFactory, getCollator, $Collator*, $Locale*)},
 	{}
 };
 

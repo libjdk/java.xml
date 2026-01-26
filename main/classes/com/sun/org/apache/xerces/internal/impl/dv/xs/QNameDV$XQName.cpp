@@ -5,11 +5,11 @@
 #include <javax/xml/namespace/QName.h>
 #include <jcpp.h>
 
-using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
+using $1QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
-using $1QName = ::javax::xml::namespace$::QName;
+using $QName = ::javax::xml::namespace$::QName;
 
 namespace com {
 	namespace sun {
@@ -25,11 +25,11 @@ $MethodInfo _QNameDV$XQName_MethodInfo_[] = {
 	{"*clone", "()Ljava/lang/Object;", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(QNameDV$XQName::*)($String*,$String*,$String*,$String*)>(&QNameDV$XQName::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getJAXPQName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getXNIQName", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(QNameDV$XQName, init$, void, $String*, $String*, $String*, $String*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(QNameDV$XQName, equals, bool, Object$*)},
+	{"getJAXPQName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(QNameDV$XQName, getJAXPQName, $QName*)},
+	{"getXNIQName", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(QNameDV$XQName, getXNIQName, $1QName*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(QNameDV$XQName, toString, $String*)},
 	{}
 };
 
@@ -59,25 +59,25 @@ $Object* allocate$QNameDV$XQName($Class* clazz) {
 }
 
 $Object* QNameDV$XQName::clone() {
-	 return this->$QName::clone();
+	 return this->$1QName::clone();
 }
 
 int32_t QNameDV$XQName::hashCode() {
-	 return this->$QName::hashCode();
+	 return this->$1QName::hashCode();
 }
 
 void QNameDV$XQName::finalize() {
-	this->$QName::finalize();
+	this->$1QName::finalize();
 }
 
 void QNameDV$XQName::init$($String* prefix, $String* localpart, $String* rawname, $String* uri) {
-	$QName::init$();
+	$1QName::init$();
 	setValues(prefix, localpart, rawname, uri);
 }
 
 bool QNameDV$XQName::equals(Object$* object) {
-	if ($instanceOf($QName, object)) {
-		$var($QName, qname, $cast($QName, object));
+	if ($instanceOf($1QName, object)) {
+		$var($1QName, qname, $cast($1QName, object));
 		return this->uri == $nc(qname)->uri && this->localpart == qname->localpart;
 	}
 	return false;
@@ -89,11 +89,11 @@ $String* QNameDV$XQName::toString() {
 	}
 }
 
-$1QName* QNameDV$XQName::getJAXPQName() {
-	return $new($1QName, this->uri, this->localpart, this->prefix);
+$QName* QNameDV$XQName::getJAXPQName() {
+	return $new($QName, this->uri, this->localpart, this->prefix);
 }
 
-$QName* QNameDV$XQName::getXNIQName() {
+$1QName* QNameDV$XQName::getXNIQName() {
 	return this;
 }
 

@@ -28,13 +28,13 @@ $FieldInfo _DTMXRTreeFrag_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMXRTreeFrag_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMXRTreeFrag::*)(int32_t,$XPathContext*)>(&DTMXRTreeFrag::init$))},
-	{"destruct", "()V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(DTMXRTreeFrag::*)()>(&DTMXRTreeFrag::destruct))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $FINAL},
-	{"getDTM", "()Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $FINAL, $method(static_cast<$DTM*(DTMXRTreeFrag::*)()>(&DTMXRTreeFrag::getDTM))},
-	{"getDTMIdentity", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(DTMXRTreeFrag::*)()>(&DTMXRTreeFrag::getDTMIdentity))},
-	{"getXPathContext", "()Lcom/sun/org/apache/xpath/internal/XPathContext;", nullptr, $FINAL, $method(static_cast<$XPathContext*(DTMXRTreeFrag::*)()>(&DTMXRTreeFrag::getXPathContext))},
-	{"hashCode", "()I", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "(ILcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(DTMXRTreeFrag, init$, void, int32_t, $XPathContext*)},
+	{"destruct", "()V", nullptr, $PUBLIC | $FINAL, $method(DTMXRTreeFrag, destruct, void)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(DTMXRTreeFrag, equals, bool, Object$*)},
+	{"getDTM", "()Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $FINAL, $method(DTMXRTreeFrag, getDTM, $DTM*)},
+	{"getDTMIdentity", "()I", nullptr, $PUBLIC | $FINAL, $method(DTMXRTreeFrag, getDTMIdentity, int32_t)},
+	{"getXPathContext", "()Lcom/sun/org/apache/xpath/internal/XPathContext;", nullptr, $FINAL, $method(DTMXRTreeFrag, getXPathContext, $XPathContext*)},
+	{"hashCode", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(DTMXRTreeFrag, hashCode, int32_t)},
 	{}
 };
 

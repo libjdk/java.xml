@@ -14,15 +14,15 @@ namespace com {
 						namespace xsltc {
 
 $MethodInfo _DOMEnhancedForDTM_MethodInfo_[] = {
-	{"getDocumentURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getElementById", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getExpandedTypeID2", "(I)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMapping", "([Ljava/lang/String;[Ljava/lang/String;[I)[S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaceMapping", "([Ljava/lang/String;)[S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getReverseMapping", "([Ljava/lang/String;[Ljava/lang/String;[I)[I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getReverseNamespaceMapping", "([Ljava/lang/String;)[S", nullptr, $PUBLIC | $ABSTRACT},
-	{"hasDOMSource", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDocumentURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDocumentURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, getDocumentURI, $String*)},
+	{"getElementById", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, getElementById, int32_t, $String*)},
+	{"getExpandedTypeID2", "(I)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, getExpandedTypeID2, int32_t, int32_t)},
+	{"getMapping", "([Ljava/lang/String;[Ljava/lang/String;[I)[S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, getMapping, $shorts*, $StringArray*, $StringArray*, $ints*)},
+	{"getNamespaceMapping", "([Ljava/lang/String;)[S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, getNamespaceMapping, $shorts*, $StringArray*)},
+	{"getReverseMapping", "([Ljava/lang/String;[Ljava/lang/String;[I)[I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, getReverseMapping, $ints*, $StringArray*, $StringArray*, $ints*)},
+	{"getReverseNamespaceMapping", "([Ljava/lang/String;)[S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, getReverseNamespaceMapping, $shorts*, $StringArray*)},
+	{"hasDOMSource", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, hasDOMSource, bool)},
+	{"setDocumentURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMEnhancedForDTM, setDocumentURI, void, $String*)},
 	{}
 };
 

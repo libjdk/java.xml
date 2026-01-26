@@ -31,10 +31,10 @@ $FieldInfo _XSSimpleTypeDecl$3_FieldInfo_[] = {
 };
 
 $MethodInfo _XSSimpleTypeDecl$3_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl;)V", nullptr, 0, $method(static_cast<void(XSSimpleTypeDecl$3::*)($XSSimpleTypeDecl*)>(&XSSimpleTypeDecl$3::init$))},
-	{"contains", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl;)V", nullptr, 0, $method(XSSimpleTypeDecl$3, init$, void, $XSSimpleTypeDecl*)},
+	{"contains", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$3, contains, bool, Object$*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$3, getLength, int32_t)},
+	{"item", "(I)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$3, item, $Object*, int32_t)},
 	{}
 };
 

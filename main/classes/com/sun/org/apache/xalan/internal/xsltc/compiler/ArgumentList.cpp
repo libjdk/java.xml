@@ -24,8 +24,8 @@ $FieldInfo _ArgumentList_FieldInfo_[] = {
 };
 
 $MethodInfo _ArgumentList_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/ArgumentList;)V", nullptr, $PUBLIC, $method(static_cast<void(ArgumentList::*)($Expression*,ArgumentList*)>(&ArgumentList::init$))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/ArgumentList;)V", nullptr, $PUBLIC, $method(ArgumentList, init$, void, $Expression*, ArgumentList*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ArgumentList, toString, $String*)},
 	{}
 };
 

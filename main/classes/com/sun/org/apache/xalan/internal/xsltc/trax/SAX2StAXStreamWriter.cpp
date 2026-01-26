@@ -36,20 +36,20 @@ $FieldInfo _SAX2StAXStreamWriter_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2StAXStreamWriter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAX2StAXStreamWriter::*)()>(&SAX2StAXStreamWriter::init$))},
-	{"<init>", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2StAXStreamWriter::*)($XMLStreamWriter*)>(&SAX2StAXStreamWriter::init$))},
-	{"characters", "([CII)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"comment", "([CII)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"endCDATA", "()V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"endDocument", "()V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"endElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"getStreamWriter", "()Ljavax/xml/stream/XMLStreamWriter;", nullptr, $PUBLIC},
-	{"ignorableWhitespace", "([CII)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"processingInstruction", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"setStreamWriter", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC},
-	{"startDocument", "()V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"startElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"writeStartDocument", "()V", nullptr, 0, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAX2StAXStreamWriter, init$, void)},
+	{"<init>", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC, $method(SAX2StAXStreamWriter, init$, void, $XMLStreamWriter*)},
+	{"characters", "([CII)V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, characters, void, $chars*, int32_t, int32_t), "org.xml.sax.SAXException"},
+	{"comment", "([CII)V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, comment, void, $chars*, int32_t, int32_t), "org.xml.sax.SAXException"},
+	{"endCDATA", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, endCDATA, void), "org.xml.sax.SAXException"},
+	{"endDocument", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, endDocument, void), "org.xml.sax.SAXException"},
+	{"endElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, endElement, void, $String*, $String*, $String*), "org.xml.sax.SAXException"},
+	{"getStreamWriter", "()Ljavax/xml/stream/XMLStreamWriter;", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, getStreamWriter, $XMLStreamWriter*)},
+	{"ignorableWhitespace", "([CII)V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, ignorableWhitespace, void, $chars*, int32_t, int32_t), "org.xml.sax.SAXException"},
+	{"processingInstruction", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, processingInstruction, void, $String*, $String*), "org.xml.sax.SAXException"},
+	{"setStreamWriter", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, setStreamWriter, void, $XMLStreamWriter*)},
+	{"startDocument", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, startDocument, void), "org.xml.sax.SAXException"},
+	{"startElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, $virtualMethod(SAX2StAXStreamWriter, startElement, void, $String*, $String*, $String*, $Attributes*), "org.xml.sax.SAXException"},
+	{"writeStartDocument", "()V", nullptr, 0, $virtualMethod(SAX2StAXStreamWriter, writeStartDocument, void), "org.xml.sax.SAXException"},
 	{}
 };
 

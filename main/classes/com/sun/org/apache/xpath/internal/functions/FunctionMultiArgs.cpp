@@ -50,15 +50,15 @@ $FieldInfo _FunctionMultiArgs_FieldInfo_[] = {
 };
 
 $MethodInfo _FunctionMultiArgs_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FunctionMultiArgs::*)()>(&FunctionMultiArgs::init$))},
-	{"callArgVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"canTraverseOutsideSubtree", "()Z", nullptr, $PUBLIC},
-	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getArgs", "()[Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"setArg", "(Lcom/sun/org/apache/xpath/internal/Expression;I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FunctionMultiArgs, init$, void)},
+	{"callArgVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs, callArgVisitors, void, $XPathVisitor*)},
+	{"canTraverseOutsideSubtree", "()Z", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs, canTraverseOutsideSubtree, bool)},
+	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs, checkNumberArgs, void, int32_t), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs, deepEquals, bool, $Expression*)},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FunctionMultiArgs, fixupVariables, void, $List*, int32_t)},
+	{"getArgs", "()[Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs, getArgs, $ExpressionArray*)},
+	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, $virtualMethod(FunctionMultiArgs, reportWrongNumberArgs, void), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"setArg", "(Lcom/sun/org/apache/xpath/internal/Expression;I)V", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs, setArg, void, $Expression*, int32_t), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
 	{}
 };
 

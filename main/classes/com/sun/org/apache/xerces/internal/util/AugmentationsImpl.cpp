@@ -27,13 +27,13 @@ $FieldInfo _AugmentationsImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _AugmentationsImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(AugmentationsImpl::*)()>(&AugmentationsImpl::init$))},
-	{"getItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC},
-	{"putItem", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"removeAllItems", "()V", nullptr, $PUBLIC},
-	{"removeItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(AugmentationsImpl, init$, void)},
+	{"getItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl, getItem, $Object*, $String*)},
+	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC, $virtualMethod(AugmentationsImpl, keys, $Enumeration*)},
+	{"putItem", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl, putItem, $Object*, $String*, Object$*)},
+	{"removeAllItems", "()V", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl, removeAllItems, void)},
+	{"removeItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl, removeItem, $Object*, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl, toString, $String*)},
 	{}
 };
 

@@ -127,7 +127,7 @@ $FieldInfo _sym_FieldInfo_[] = {
 };
 
 $MethodInfo _sym_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(sym::*)()>(&sym::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(sym, init$, void)},
 	{}
 };
 

@@ -38,9 +38,9 @@ $FieldInfo _XML11NSDocumentScannerImpl$NS11ContentDriver_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11NSDocumentScannerImpl$NS11ContentDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XML11NSDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XML11NSDocumentScannerImpl$NS11ContentDriver::*)($XML11NSDocumentScannerImpl*)>(&XML11NSDocumentScannerImpl$NS11ContentDriver::init$))},
-	{"reconfigurePipeline", "()V", nullptr, $PRIVATE, $method(static_cast<void(XML11NSDocumentScannerImpl$NS11ContentDriver::*)()>(&XML11NSDocumentScannerImpl$NS11ContentDriver::reconfigurePipeline))},
-	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XML11NSDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(XML11NSDocumentScannerImpl$NS11ContentDriver, init$, void, $XML11NSDocumentScannerImpl*)},
+	{"reconfigurePipeline", "()V", nullptr, $PRIVATE, $method(XML11NSDocumentScannerImpl$NS11ContentDriver, reconfigurePipeline, void)},
+	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XML11NSDocumentScannerImpl$NS11ContentDriver, scanRootElementHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

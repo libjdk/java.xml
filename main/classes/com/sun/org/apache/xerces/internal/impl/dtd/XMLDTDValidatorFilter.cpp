@@ -15,8 +15,8 @@ namespace com {
 							namespace dtd {
 
 $MethodInfo _XMLDTDValidatorFilter_MethodInfo_[] = {
-	{"hasGrammar", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"validate", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"hasGrammar", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDTDValidatorFilter, hasGrammar, bool)},
+	{"validate", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDTDValidatorFilter, validate, bool)},
 	{}
 };
 

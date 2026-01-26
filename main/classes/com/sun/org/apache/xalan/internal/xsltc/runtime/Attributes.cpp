@@ -24,13 +24,13 @@ $FieldInfo _Attributes_FieldInfo_[] = {
 };
 
 $MethodInfo _Attributes_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;I)V", nullptr, $PUBLIC, $method(static_cast<void(Attributes::*)($DOM*,int32_t)>(&Attributes::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;I)V", nullptr, $PUBLIC, $method(Attributes, init$, void, $DOM*, int32_t)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(Attributes, getLength, int32_t)},
+	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Attributes, getName, $String*, int32_t)},
+	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Attributes, getType, $String*, int32_t)},
+	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Attributes, getType, $String*, $String*)},
+	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Attributes, getValue, $String*, int32_t)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Attributes, getValue, $String*, $String*)},
 	{}
 };
 

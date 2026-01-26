@@ -28,16 +28,16 @@ $FieldInfo _ClonedNodeListIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _ClonedNodeListIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/CachedNodeListIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(ClonedNodeListIterator::*)($CachedNodeListIterator*)>(&ClonedNodeListIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/CachedNodeListIterator;)V", nullptr, $PUBLIC, $method(ClonedNodeListIterator, init$, void, $CachedNodeListIterator*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, cloneIterator, $DTMAxisIterator*)},
+	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, getNodeByPosition, int32_t, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, getPosition, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(ClonedNodeListIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

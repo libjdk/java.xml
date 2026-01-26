@@ -26,6 +26,9 @@
 #undef VARIETY_LIST
 #undef VARIETY_UNION
 
+using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
+using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -63,26 +66,26 @@ $FieldInfo _XSSimpleTypeDefinition_FieldInfo_[] = {
 };
 
 $MethodInfo _XSSimpleTypeDefinition_MethodInfo_[] = {
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getBounded", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getBuiltInKind", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDefinedFacets", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFacet", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFacets", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFinite", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFixedFacets", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getItemType", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLexicalEnumeration", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLexicalFacetValue", "(S)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLexicalPattern", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMemberTypes", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMultiValueFacets", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNumeric", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getOrdered", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPrimitiveType", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getVariety", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"isDefinedFacet", "(S)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isFixedFacet", "(S)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getAnnotations, $XSObjectList*)},
+	{"getBounded", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getBounded, bool)},
+	{"getBuiltInKind", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getBuiltInKind, int16_t)},
+	{"getDefinedFacets", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getDefinedFacets, int16_t)},
+	{"getFacet", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getFacet, $XSObject*, int32_t)},
+	{"getFacets", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getFacets, $XSObjectList*)},
+	{"getFinite", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getFinite, bool)},
+	{"getFixedFacets", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getFixedFacets, int16_t)},
+	{"getItemType", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getItemType, XSSimpleTypeDefinition*)},
+	{"getLexicalEnumeration", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getLexicalEnumeration, $StringList*)},
+	{"getLexicalFacetValue", "(S)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getLexicalFacetValue, $String*, int16_t)},
+	{"getLexicalPattern", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getLexicalPattern, $StringList*)},
+	{"getMemberTypes", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getMemberTypes, $XSObjectList*)},
+	{"getMultiValueFacets", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getMultiValueFacets, $XSObjectList*)},
+	{"getNumeric", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getNumeric, bool)},
+	{"getOrdered", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getOrdered, int16_t)},
+	{"getPrimitiveType", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getPrimitiveType, XSSimpleTypeDefinition*)},
+	{"getVariety", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, getVariety, int16_t)},
+	{"isDefinedFacet", "(S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, isDefinedFacet, bool, int16_t)},
+	{"isFixedFacet", "(S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSSimpleTypeDefinition, isFixedFacet, bool, int16_t)},
 	{}
 };
 

@@ -30,13 +30,13 @@ $FieldInfo _RewriteUri_FieldInfo_[] = {
 };
 
 $MethodInfo _RewriteUri_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(RewriteUri::*)($String*,$String*,$String*)>(&RewriteUri::init$))},
-	{"getRewritePrefix", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(static_cast<$URL*(RewriteUri::*)()>(&RewriteUri::getRewritePrefix))},
-	{"getURIStartString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(RewriteUri::*)()>(&RewriteUri::getURIStartString))},
-	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setRewritePrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(RewriteUri::*)($String*)>(&RewriteUri::setRewritePrefix))},
-	{"setURIStartString", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(RewriteUri::*)($String*)>(&RewriteUri::setURIStartString))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(RewriteUri, init$, void, $String*, $String*, $String*)},
+	{"getRewritePrefix", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(RewriteUri, getRewritePrefix, $URL*)},
+	{"getURIStartString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(RewriteUri, getURIStartString, $String*)},
+	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(RewriteUri, match, $String*, $String*, int32_t)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(RewriteUri, match, $String*, $String*)},
+	{"setRewritePrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(RewriteUri, setRewritePrefix, void, $String*)},
+	{"setURIStartString", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(RewriteUri, setURIStartString, void, $String*)},
 	{}
 };
 

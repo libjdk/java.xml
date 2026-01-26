@@ -23,9 +23,9 @@ $FieldInfo _XPathException_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathException::*)()>(&XPathException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathException::*)($String*)>(&XPathException::init$))},
-	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPathException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathException, init$, void, $String*)},
+	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPathException, getKey, $String*)},
 	{}
 };
 

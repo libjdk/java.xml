@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace com {
 	namespace sun {
@@ -15,10 +16,10 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _PrefixResolver_MethodInfo_[] = {
-	{"getBaseIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaceForPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaceForPrefix", "(Ljava/lang/String;Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"handlesNullPrefixes", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getBaseIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PrefixResolver, getBaseIdentifier, $String*)},
+	{"getNamespaceForPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PrefixResolver, getNamespaceForPrefix, $String*, $String*)},
+	{"getNamespaceForPrefix", "(Ljava/lang/String;Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PrefixResolver, getNamespaceForPrefix, $String*, $String*, $Node*)},
+	{"handlesNullPrefixes", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PrefixResolver, handlesNullPrefixes, bool)},
 	{}
 };
 

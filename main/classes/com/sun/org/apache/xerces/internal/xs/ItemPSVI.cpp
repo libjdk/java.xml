@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/ShortList.h>
 #include <com/sun/org/apache/xerces/internal/xs/StringList.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSValue.h>
 #include <jcpp.h>
 
@@ -13,6 +14,11 @@
 #undef VALIDITY_NOTKNOWN
 #undef VALIDITY_VALID
 
+using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
+using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
+using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
+using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
+using $XSValue = ::com::sun::org::apache::xerces::internal::xs::XSValue;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -57,22 +63,22 @@ $FieldInfo _ItemPSVI_FieldInfo_[] = {
 };
 
 $MethodInfo _ItemPSVI_MethodInfo_[] = {
-	{"constant", "()Lcom/sun/org/apache/xerces/internal/xs/ItemPSVI;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getActualNormalizedValue", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _ItemPSVI_MethodAnnotations_getActualNormalizedValue1},
-	{"getActualNormalizedValueType", "()S", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _ItemPSVI_MethodAnnotations_getActualNormalizedValueType2},
-	{"getErrorCodes", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getErrorMessages", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getIsSchemaSpecified", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _ItemPSVI_MethodAnnotations_getItemValueTypes6},
-	{"getMemberTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSchemaDefault", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSchemaNormalizedValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, nullptr, nullptr, _ItemPSVI_MethodAnnotations_getSchemaNormalizedValue9},
-	{"getSchemaValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValidationAttempted", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValidationContext", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValidity", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"isConstant", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"constant", "()Lcom/sun/org/apache/xerces/internal/xs/ItemPSVI;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, constant, ItemPSVI*)},
+	{"getActualNormalizedValue", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(ItemPSVI, getActualNormalizedValue, $Object*), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _ItemPSVI_MethodAnnotations_getActualNormalizedValue1},
+	{"getActualNormalizedValueType", "()S", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(ItemPSVI, getActualNormalizedValueType, int16_t), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _ItemPSVI_MethodAnnotations_getActualNormalizedValueType2},
+	{"getErrorCodes", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getErrorCodes, $StringList*)},
+	{"getErrorMessages", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getErrorMessages, $StringList*)},
+	{"getIsSchemaSpecified", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getIsSchemaSpecified, bool)},
+	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(ItemPSVI, getItemValueTypes, $ShortList*), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _ItemPSVI_MethodAnnotations_getItemValueTypes6},
+	{"getMemberTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getMemberTypeDefinition, $XSSimpleTypeDefinition*)},
+	{"getSchemaDefault", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getSchemaDefault, $String*)},
+	{"getSchemaNormalizedValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(ItemPSVI, getSchemaNormalizedValue, $String*), nullptr, nullptr, _ItemPSVI_MethodAnnotations_getSchemaNormalizedValue9},
+	{"getSchemaValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getSchemaValue, $XSValue*)},
+	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getTypeDefinition, $XSTypeDefinition*)},
+	{"getValidationAttempted", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getValidationAttempted, int16_t)},
+	{"getValidationContext", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getValidationContext, $String*)},
+	{"getValidity", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, getValidity, int16_t)},
+	{"isConstant", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ItemPSVI, isConstant, bool)},
 	{}
 };
 

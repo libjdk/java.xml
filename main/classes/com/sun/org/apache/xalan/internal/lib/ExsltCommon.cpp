@@ -29,9 +29,9 @@ namespace com {
 						namespace lib {
 
 $MethodInfo _ExsltCommon_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExsltCommon::*)()>(&ExsltCommon::init$))},
-	{"nodeSet", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/Object;)Lcom/sun/org/apache/xpath/internal/NodeSet;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeSet*(*)($ExpressionContext*,Object$*)>(&ExsltCommon::nodeSet))},
-	{"objectType", "(Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(Object$*)>(&ExsltCommon::objectType))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExsltCommon, init$, void)},
+	{"nodeSet", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/Object;)Lcom/sun/org/apache/xpath/internal/NodeSet;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltCommon, nodeSet, $NodeSet*, $ExpressionContext*, Object$*)},
+	{"objectType", "(Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltCommon, objectType, $String*, Object$*)},
 	{}
 };
 

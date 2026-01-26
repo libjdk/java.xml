@@ -8,6 +8,9 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Document = ::org::w3c::dom::Document;
+using $DocumentFragment = ::org::w3c::dom::DocumentFragment;
+using $Element = ::org::w3c::dom::Element;
 
 namespace com {
 	namespace sun {
@@ -23,9 +26,9 @@ $CompoundAttribute _DOMSerializer_Annotations_[] = {
 };
 
 $MethodInfo _DOMSerializer_MethodInfo_[] = {
-	{"serialize", "(Lorg/w3c/dom/Element;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
-	{"serialize", "(Lorg/w3c/dom/Document;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
-	{"serialize", "(Lorg/w3c/dom/DocumentFragment;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
+	{"serialize", "(Lorg/w3c/dom/Element;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMSerializer, serialize, void, $Element*), "java.io.IOException"},
+	{"serialize", "(Lorg/w3c/dom/Document;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMSerializer, serialize, void, $Document*), "java.io.IOException"},
+	{"serialize", "(Lorg/w3c/dom/DocumentFragment;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMSerializer, serialize, void, $DocumentFragment*), "java.io.IOException"},
 	{}
 };
 

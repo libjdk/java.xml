@@ -18,10 +18,10 @@ $FieldInfo _SchemaFactoryConfigurationError_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaFactoryConfigurationError_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryConfigurationError::*)()>(&SchemaFactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryConfigurationError::*)($String*)>(&SchemaFactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryConfigurationError::*)($Throwable*)>(&SchemaFactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryConfigurationError::*)($String*,$Throwable*)>(&SchemaFactoryConfigurationError::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaFactoryConfigurationError, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryConfigurationError, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(SchemaFactoryConfigurationError, init$, void, $Throwable*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(SchemaFactoryConfigurationError, init$, void, $String*, $Throwable*)},
 	{}
 };
 

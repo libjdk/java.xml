@@ -85,9 +85,9 @@ $FieldInfo _XMLDocumentScannerImpl$DTDDriver_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentScannerImpl$DTDDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLDocumentScannerImpl$DTDDriver::*)($XMLDocumentScannerImpl*)>(&XMLDocumentScannerImpl$DTDDriver::init$))},
-	{"dispatch", "(Z)Z", nullptr, $PUBLIC, $method(static_cast<bool(XMLDocumentScannerImpl$DTDDriver::*)(bool)>(&XMLDocumentScannerImpl$DTDDriver::dispatch)), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(XMLDocumentScannerImpl$DTDDriver, init$, void, $XMLDocumentScannerImpl*)},
+	{"dispatch", "(Z)Z", nullptr, $PUBLIC, $method(XMLDocumentScannerImpl$DTDDriver, dispatch, bool, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XMLDocumentScannerImpl$DTDDriver, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

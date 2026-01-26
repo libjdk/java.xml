@@ -33,11 +33,11 @@ $FieldInfo _MalformedByteSequenceException_FieldInfo_[] = {
 };
 
 $MethodInfo _MalformedByteSequenceException_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(MalformedByteSequenceException::*)($MessageFormatter*,$Locale*,$String*,$String*,$ObjectArray*)>(&MalformedByteSequenceException::init$))},
-	{"getArguments", "()[Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getDomain", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(MalformedByteSequenceException, init$, void, $MessageFormatter*, $Locale*, $String*, $String*, $ObjectArray*)},
+	{"getArguments", "()[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(MalformedByteSequenceException, getArguments, $ObjectArray*)},
+	{"getDomain", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MalformedByteSequenceException, getDomain, $String*)},
+	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MalformedByteSequenceException, getKey, $String*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MalformedByteSequenceException, getMessage, $String*)},
 	{}
 };
 

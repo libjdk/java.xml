@@ -45,19 +45,19 @@ $FieldInfo _NodeIteratorImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeIteratorImpl_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DocumentImpl;Lorg/w3c/dom/Node;ILorg/w3c/dom/traversal/NodeFilter;Z)V", nullptr, $PUBLIC, $method(static_cast<void(NodeIteratorImpl::*)($DocumentImpl*,$Node*,int32_t,$NodeFilter*,bool)>(&NodeIteratorImpl::init$))},
-	{"acceptNode", "(Lorg/w3c/dom/Node;)Z", nullptr, 0},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC},
-	{"getFilter", "()Lorg/w3c/dom/traversal/NodeFilter;", nullptr, $PUBLIC},
-	{"getRoot", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getWhatToShow", "()I", nullptr, $PUBLIC},
-	{"matchNodeOrParent", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, 0},
-	{"nextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"nextNode", "(Lorg/w3c/dom/Node;Z)Lorg/w3c/dom/Node;", nullptr, 0},
-	{"previousNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"previousNode", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, 0},
-	{"removeNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DocumentImpl;Lorg/w3c/dom/Node;ILorg/w3c/dom/traversal/NodeFilter;Z)V", nullptr, $PUBLIC, $method(NodeIteratorImpl, init$, void, $DocumentImpl*, $Node*, int32_t, $NodeFilter*, bool)},
+	{"acceptNode", "(Lorg/w3c/dom/Node;)Z", nullptr, 0, $virtualMethod(NodeIteratorImpl, acceptNode, bool, $Node*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, detach, void)},
+	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, getExpandEntityReferences, bool)},
+	{"getFilter", "()Lorg/w3c/dom/traversal/NodeFilter;", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, getFilter, $NodeFilter*)},
+	{"getRoot", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, getRoot, $Node*)},
+	{"getWhatToShow", "()I", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, getWhatToShow, int32_t)},
+	{"matchNodeOrParent", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, 0, $virtualMethod(NodeIteratorImpl, matchNodeOrParent, $Node*, $Node*)},
+	{"nextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, nextNode, $Node*)},
+	{"nextNode", "(Lorg/w3c/dom/Node;Z)Lorg/w3c/dom/Node;", nullptr, 0, $virtualMethod(NodeIteratorImpl, nextNode, $Node*, $Node*, bool)},
+	{"previousNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, previousNode, $Node*)},
+	{"previousNode", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, 0, $virtualMethod(NodeIteratorImpl, previousNode, $Node*, $Node*)},
+	{"removeNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $virtualMethod(NodeIteratorImpl, removeNode, void, $Node*)},
 	{}
 };
 

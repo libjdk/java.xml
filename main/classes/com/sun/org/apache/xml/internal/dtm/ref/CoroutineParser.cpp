@@ -7,9 +7,14 @@
 #include <org/xml/sax/ext/LexicalHandler.h>
 #include <jcpp.h>
 
+using $CoroutineManager = ::com::sun::org::apache::xml::internal::dtm::ref::CoroutineManager;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $ContentHandler = ::org::xml::sax::ContentHandler;
+using $InputSource = ::org::xml::sax::InputSource;
+using $XMLReader = ::org::xml::sax::XMLReader;
+using $LexicalHandler = ::org::xml::sax::ext::LexicalHandler;
 
 namespace com {
 	namespace sun {
@@ -26,14 +31,14 @@ $CompoundAttribute _CoroutineParser_Annotations_[] = {
 };
 
 $MethodInfo _CoroutineParser_MethodInfo_[] = {
-	{"doMore", "(ZI)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"doParse", "(Lorg/xml/sax/InputSource;I)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"doTerminate", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCoroutineManager", "()Lcom/sun/org/apache/xml/internal/dtm/ref/CoroutineManager;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getParserCoroutineID", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"init", "(Lcom/sun/org/apache/xml/internal/dtm/ref/CoroutineManager;ILorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setLexHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"doMore", "(ZI)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, doMore, $Object*, bool, int32_t)},
+	{"doParse", "(Lorg/xml/sax/InputSource;I)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, doParse, $Object*, $InputSource*, int32_t)},
+	{"doTerminate", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, doTerminate, void, int32_t)},
+	{"getCoroutineManager", "()Lcom/sun/org/apache/xml/internal/dtm/ref/CoroutineManager;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, getCoroutineManager, $CoroutineManager*)},
+	{"getParserCoroutineID", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, getParserCoroutineID, int32_t)},
+	{"init", "(Lcom/sun/org/apache/xml/internal/dtm/ref/CoroutineManager;ILorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, init, void, $CoroutineManager*, int32_t, $XMLReader*)},
+	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, setContentHandler, void, $ContentHandler*)},
+	{"setLexHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CoroutineParser, setLexHandler, void, $LexicalHandler*)},
 	{}
 };
 

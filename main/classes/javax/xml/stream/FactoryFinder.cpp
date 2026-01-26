@@ -87,8 +87,8 @@ $FieldInfo FactoryFinder$$Lambda$lambda$newInstance$0::fieldInfos[3] = {
 	{}
 };
 $MethodInfo FactoryFinder$$Lambda$lambda$newInstance$0::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryFinder$$Lambda$lambda$newInstance$0::*)($Class*,$ClassLoader*)>(&FactoryFinder$$Lambda$lambda$newInstance$0::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(FactoryFinder$$Lambda$lambda$newInstance$0, init$, void, $Class*, $ClassLoader*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FactoryFinder$$Lambda$lambda$newInstance$0, get, $Object*)},
 	{}
 };
 $ClassInfo FactoryFinder$$Lambda$lambda$newInstance$0::classInfo$ = {
@@ -127,8 +127,8 @@ $FieldInfo FactoryFinder$$Lambda$lambda$find$1$1::fieldInfos[2] = {
 	{}
 };
 $MethodInfo FactoryFinder$$Lambda$lambda$find$1$1::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryFinder$$Lambda$lambda$find$1$1::*)($String*)>(&FactoryFinder$$Lambda$lambda$find$1$1::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(FactoryFinder$$Lambda$lambda$find$1$1, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FactoryFinder$$Lambda$lambda$find$1$1, get, $Object*)},
 	{}
 };
 $ClassInfo FactoryFinder$$Lambda$lambda$find$1$1::classInfo$ = {
@@ -167,8 +167,8 @@ $FieldInfo FactoryFinder$$Lambda$lambda$find$2$2::fieldInfos[2] = {
 	{}
 };
 $MethodInfo FactoryFinder$$Lambda$lambda$find$2$2::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryFinder$$Lambda$lambda$find$2$2::*)($String*)>(&FactoryFinder$$Lambda$lambda$find$2$2::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(FactoryFinder$$Lambda$lambda$find$2$2, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FactoryFinder$$Lambda$lambda$find$2$2, get, $Object*)},
 	{}
 };
 $ClassInfo FactoryFinder$$Lambda$lambda$find$2$2::classInfo$ = {
@@ -207,8 +207,8 @@ $FieldInfo FactoryFinder$$Lambda$lambda$find$3$3::fieldInfos[2] = {
 	{}
 };
 $MethodInfo FactoryFinder$$Lambda$lambda$find$3$3::methodInfos[3] = {
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryFinder$$Lambda$lambda$find$3$3::*)($File*)>(&FactoryFinder$$Lambda$lambda$find$3$3::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(FactoryFinder$$Lambda$lambda$find$3$3, init$, void, $File*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FactoryFinder$$Lambda$lambda$find$3$3, get, $Object*)},
 	{}
 };
 $ClassInfo FactoryFinder$$Lambda$lambda$find$3$3::classInfo$ = {
@@ -250,8 +250,8 @@ $FieldInfo FactoryFinder$$Lambda$lambda$find$5$4::fieldInfos[3] = {
 	{}
 };
 $MethodInfo FactoryFinder$$Lambda$lambda$find$5$4::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryFinder$$Lambda$lambda$find$5$4::*)($String*,$String*)>(&FactoryFinder$$Lambda$lambda$find$5$4::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(FactoryFinder$$Lambda$lambda$find$5$4, init$, void, $String*, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FactoryFinder$$Lambda$lambda$find$5$4, get, $Object*)},
 	{}
 };
 $ClassInfo FactoryFinder$$Lambda$lambda$find$5$4::classInfo$ = {
@@ -290,8 +290,8 @@ $FieldInfo FactoryFinder$$Lambda$lambda$find$6$5::fieldInfos[2] = {
 	{}
 };
 $MethodInfo FactoryFinder$$Lambda$lambda$find$6$5::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryFinder$$Lambda$lambda$find$6$5::*)($String*)>(&FactoryFinder$$Lambda$lambda$find$6$5::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(FactoryFinder$$Lambda$lambda$find$6$5, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FactoryFinder$$Lambda$lambda$find$6$5, get, $Object*)},
 	{}
 };
 $ClassInfo FactoryFinder$$Lambda$lambda$find$6$5::classInfo$ = {
@@ -318,20 +318,20 @@ $FieldInfo _FactoryFinder_FieldInfo_[] = {
 };
 
 $MethodInfo _FactoryFinder_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(FactoryFinder::*)()>(&FactoryFinder::init$))},
-	{"dPrint", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $method(static_cast<void(*)($Supplier*)>(&FactoryFinder::dPrint))},
-	{"find", "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;)TT;", $STATIC, $method(static_cast<$Object*(*)($Class*,$String*)>(&FactoryFinder::find)), "javax.xml.stream.FactoryConfigurationError"},
-	{"find", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/String;)TT;", $STATIC, $method(static_cast<$Object*(*)($Class*,$String*,$ClassLoader*,$String*)>(&FactoryFinder::find)), "javax.xml.stream.FactoryConfigurationError"},
-	{"findServiceProvider", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/ClassLoader;)TT;", $PRIVATE | $STATIC, $method(static_cast<$Object*(*)($Class*,$ClassLoader*)>(&FactoryFinder::findServiceProvider))},
-	{"getProviderClass", "(Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)Ljava/lang/Class;", "(Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)Ljava/lang/Class<*>;", $PRIVATE | $STATIC, $method(static_cast<$Class*(*)($String*,$ClassLoader*,bool,bool)>(&FactoryFinder::getProviderClass)), "java.lang.ClassNotFoundException"},
-	{"lambda$find$1", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&FactoryFinder::lambda$find$1))},
-	{"lambda$find$2", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&FactoryFinder::lambda$find$2))},
-	{"lambda$find$3", "(Ljava/io/File;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($File*)>(&FactoryFinder::lambda$find$3))},
-	{"lambda$find$5", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*,$String*)>(&FactoryFinder::lambda$find$5))},
-	{"lambda$find$6", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&FactoryFinder::lambda$find$6))},
-	{"lambda$newInstance$0", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($Class*,$ClassLoader*)>(&FactoryFinder::lambda$newInstance$0))},
-	{"newInstance", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/ClassLoader;Z)TT;", $STATIC, $method(static_cast<$Object*(*)($Class*,$String*,$ClassLoader*,bool)>(&FactoryFinder::newInstance)), "javax.xml.stream.FactoryConfigurationError"},
-	{"newInstance", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)TT;", $STATIC, $method(static_cast<$Object*(*)($Class*,$String*,$ClassLoader*,bool,bool)>(&FactoryFinder::newInstance)), "javax.xml.stream.FactoryConfigurationError"},
+	{"<init>", "()V", nullptr, 0, $method(FactoryFinder, init$, void)},
+	{"dPrint", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $staticMethod(FactoryFinder, dPrint, void, $Supplier*)},
+	{"find", "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;)TT;", $STATIC, $staticMethod(FactoryFinder, find, $Object*, $Class*, $String*), "javax.xml.stream.FactoryConfigurationError"},
+	{"find", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/String;)TT;", $STATIC, $staticMethod(FactoryFinder, find, $Object*, $Class*, $String*, $ClassLoader*, $String*), "javax.xml.stream.FactoryConfigurationError"},
+	{"findServiceProvider", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/ClassLoader;)TT;", $PRIVATE | $STATIC, $staticMethod(FactoryFinder, findServiceProvider, $Object*, $Class*, $ClassLoader*)},
+	{"getProviderClass", "(Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)Ljava/lang/Class;", "(Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)Ljava/lang/Class<*>;", $PRIVATE | $STATIC, $staticMethod(FactoryFinder, getProviderClass, $Class*, $String*, $ClassLoader*, bool, bool), "java.lang.ClassNotFoundException"},
+	{"lambda$find$1", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(FactoryFinder, lambda$find$1, $String*, $String*)},
+	{"lambda$find$2", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(FactoryFinder, lambda$find$2, $String*, $String*)},
+	{"lambda$find$3", "(Ljava/io/File;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(FactoryFinder, lambda$find$3, $String*, $File*)},
+	{"lambda$find$5", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(FactoryFinder, lambda$find$5, $String*, $String*, $String*)},
+	{"lambda$find$6", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(FactoryFinder, lambda$find$6, $String*, $String*)},
+	{"lambda$newInstance$0", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(FactoryFinder, lambda$newInstance$0, $String*, $Class*, $ClassLoader*)},
+	{"newInstance", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/ClassLoader;Z)TT;", $STATIC, $staticMethod(FactoryFinder, newInstance, $Object*, $Class*, $String*, $ClassLoader*, bool), "javax.xml.stream.FactoryConfigurationError"},
+	{"newInstance", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/ClassLoader;ZZ)TT;", $STATIC, $staticMethod(FactoryFinder, newInstance, $Object*, $Class*, $String*, $ClassLoader*, bool, bool), "javax.xml.stream.FactoryConfigurationError"},
 	{}
 };
 

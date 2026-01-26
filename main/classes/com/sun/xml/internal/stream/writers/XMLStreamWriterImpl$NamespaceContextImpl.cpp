@@ -36,10 +36,10 @@ $FieldInfo _XMLStreamWriterImpl$NamespaceContextImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStreamWriterImpl$NamespaceContextImpl_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;)V", nullptr, 0, $method(static_cast<void(XMLStreamWriterImpl$NamespaceContextImpl::*)($XMLStreamWriterImpl*)>(&XMLStreamWriterImpl$NamespaceContextImpl::init$))},
-	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/Iterator;", "(Ljava/lang/String;)Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC},
+	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;)V", nullptr, 0, $method(XMLStreamWriterImpl$NamespaceContextImpl, init$, void, $XMLStreamWriterImpl*)},
+	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$NamespaceContextImpl, getNamespaceURI, $String*, $String*)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$NamespaceContextImpl, getPrefix, $String*, $String*)},
+	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/Iterator;", "(Ljava/lang/String;)Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(XMLStreamWriterImpl$NamespaceContextImpl, getPrefixes, $Iterator*, $String*)},
 	{}
 };
 

@@ -31,10 +31,10 @@ $FieldInfo _XIncludeHandler$UnparsedEntity_FieldInfo_[] = {
 };
 
 $MethodInfo _XIncludeHandler$UnparsedEntity_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(XIncludeHandler$UnparsedEntity::*)()>(&XIncludeHandler$UnparsedEntity::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"isDuplicate", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(XIncludeHandler$UnparsedEntity, init$, void)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XIncludeHandler$UnparsedEntity, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XIncludeHandler$UnparsedEntity, hashCode, int32_t)},
+	{"isDuplicate", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XIncludeHandler$UnparsedEntity, isDuplicate, bool, Object$*)},
 	{}
 };
 

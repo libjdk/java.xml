@@ -75,16 +75,16 @@ $FieldInfo _NodeSortRecord_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeSortRecord_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(NodeSortRecord::*)(int32_t)>(&NodeSortRecord::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NodeSortRecord::*)()>(&NodeSortRecord::init$))},
-	{"compareDocOrder", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecord;)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(NodeSortRecord::*)(NodeSortRecord*)>(&NodeSortRecord::compareDocOrder))},
-	{"compareTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecord;)I", nullptr, $PUBLIC},
-	{"extractValueFromDOM", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;IILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCollator", "()[Ljava/text/Collator;", nullptr, $PUBLIC},
-	{"getNode", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(NodeSortRecord::*)()>(&NodeSortRecord::getNode))},
-	{"initialize", "(IILcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xalan/internal/xsltc/dom/SortSettings;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(NodeSortRecord::*)(int32_t,int32_t,$DOM*,$SortSettings*)>(&NodeSortRecord::initialize)), "com.sun.org.apache.xalan.internal.xsltc.TransletException"},
-	{"numericValue", "(I)Ljava/lang/Double;", nullptr, $PRIVATE | $FINAL, $method(static_cast<$Double*(NodeSortRecord::*)(int32_t)>(&NodeSortRecord::numericValue))},
-	{"stringValue", "(I)Ljava/lang/Comparable;", nullptr, $PRIVATE | $FINAL, $method(static_cast<$Comparable*(NodeSortRecord::*)(int32_t)>(&NodeSortRecord::stringValue))},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(NodeSortRecord, init$, void, int32_t)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NodeSortRecord, init$, void)},
+	{"compareDocOrder", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecord;)I", nullptr, $PUBLIC | $FINAL, $method(NodeSortRecord, compareDocOrder, int32_t, NodeSortRecord*)},
+	{"compareTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecord;)I", nullptr, $PUBLIC, $virtualMethod(NodeSortRecord, compareTo, int32_t, NodeSortRecord*)},
+	{"extractValueFromDOM", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;IILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeSortRecord, extractValueFromDOM, $String*, $DOM*, int32_t, int32_t, $AbstractTranslet*, int32_t)},
+	{"getCollator", "()[Ljava/text/Collator;", nullptr, $PUBLIC, $virtualMethod(NodeSortRecord, getCollator, $CollatorArray*)},
+	{"getNode", "()I", nullptr, $PUBLIC | $FINAL, $method(NodeSortRecord, getNode, int32_t)},
+	{"initialize", "(IILcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xalan/internal/xsltc/dom/SortSettings;)V", nullptr, $PUBLIC | $FINAL, $method(NodeSortRecord, initialize, void, int32_t, int32_t, $DOM*, $SortSettings*), "com.sun.org.apache.xalan.internal.xsltc.TransletException"},
+	{"numericValue", "(I)Ljava/lang/Double;", nullptr, $PRIVATE | $FINAL, $method(NodeSortRecord, numericValue, $Double*, int32_t)},
+	{"stringValue", "(I)Ljava/lang/Comparable;", nullptr, $PRIVATE | $FINAL, $method(NodeSortRecord, stringValue, $Comparable*, int32_t)},
 	{}
 };
 

@@ -50,10 +50,10 @@ $FieldInfo _AnyURIDV_FieldInfo_[] = {
 };
 
 $MethodInfo _AnyURIDV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(AnyURIDV::*)()>(&AnyURIDV::init$))},
-	{"encode", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&AnyURIDV::encode))},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getAllowedFacets", "()S", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(AnyURIDV, init$, void)},
+	{"encode", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(AnyURIDV, encode, $String*, $String*)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AnyURIDV, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getAllowedFacets", "()S", nullptr, $PUBLIC, $virtualMethod(AnyURIDV, getAllowedFacets, int16_t)},
 	{}
 };
 

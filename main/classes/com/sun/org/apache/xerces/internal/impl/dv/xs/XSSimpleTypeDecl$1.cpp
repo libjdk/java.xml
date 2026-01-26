@@ -20,19 +20,19 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _XSSimpleTypeDecl$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XSSimpleTypeDecl$1::*)()>(&XSSimpleTypeDecl$1::init$))},
-	{"addId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"addIdRef", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"getLocale", "()Ljava/util/Locale;", nullptr, $PUBLIC},
-	{"getSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isEntityDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"isEntityUnparsed", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"isIdDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"needExtraChecking", "()Z", nullptr, $PUBLIC},
-	{"needFacetChecking", "()Z", nullptr, $PUBLIC},
-	{"needToNormalize", "()Z", nullptr, $PUBLIC},
-	{"useNamespaces", "()Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(XSSimpleTypeDecl$1, init$, void)},
+	{"addId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, addId, void, $String*)},
+	{"addIdRef", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, addIdRef, void, $String*)},
+	{"getLocale", "()Ljava/util/Locale;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, getLocale, $Locale*)},
+	{"getSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, getSymbol, $String*, $String*)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, getURI, $String*, $String*)},
+	{"isEntityDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, isEntityDeclared, bool, $String*)},
+	{"isEntityUnparsed", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, isEntityUnparsed, bool, $String*)},
+	{"isIdDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, isIdDeclared, bool, $String*)},
+	{"needExtraChecking", "()Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, needExtraChecking, bool)},
+	{"needFacetChecking", "()Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, needFacetChecking, bool)},
+	{"needToNormalize", "()Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, needToNormalize, bool)},
+	{"useNamespaces", "()Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$1, useNamespaces, bool)},
 	{}
 };
 

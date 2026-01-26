@@ -26,15 +26,15 @@ $FieldInfo _ConfigurableValidationState_FieldInfo_[] = {
 };
 
 $MethodInfo _ConfigurableValidationState_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ConfigurableValidationState::*)()>(&ConfigurableValidationState::init$))},
-	{"addId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"addIdRef", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"checkIDRefID", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC},
-	{"isEntityDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"isEntityUnparsed", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"isIdDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"setIdIdrefChecking", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(ConfigurableValidationState::*)(bool)>(&ConfigurableValidationState::setIdIdrefChecking))},
-	{"setUnparsedEntityChecking", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(ConfigurableValidationState::*)(bool)>(&ConfigurableValidationState::setUnparsedEntityChecking))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ConfigurableValidationState, init$, void)},
+	{"addId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ConfigurableValidationState, addId, void, $String*)},
+	{"addIdRef", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ConfigurableValidationState, addIdRef, void, $String*)},
+	{"checkIDRefID", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(ConfigurableValidationState, checkIDRefID, $Iterator*)},
+	{"isEntityDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(ConfigurableValidationState, isEntityDeclared, bool, $String*)},
+	{"isEntityUnparsed", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(ConfigurableValidationState, isEntityUnparsed, bool, $String*)},
+	{"isIdDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(ConfigurableValidationState, isIdDeclared, bool, $String*)},
+	{"setIdIdrefChecking", "(Z)V", nullptr, $PUBLIC, $method(ConfigurableValidationState, setIdIdrefChecking, void, bool)},
+	{"setUnparsedEntityChecking", "(Z)V", nullptr, $PUBLIC, $method(ConfigurableValidationState, setUnparsedEntityChecking, void, bool)},
 	{}
 };
 

@@ -26,9 +26,9 @@ $FieldInfo _BasisLibrary$3_FieldInfo_[] = {
 };
 
 $MethodInfo _BasisLibrary$3_MethodInfo_[] = {
-	{"<init>", "(Lorg/w3c/dom/Node;)V", "()V", 0, $method(static_cast<void(BasisLibrary$3::*)($Node*)>(&BasisLibrary$3::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/w3c/dom/Node;)V", "()V", 0, $method(BasisLibrary$3, init$, void, $Node*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(BasisLibrary$3, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(BasisLibrary$3, item, $Node*, int32_t)},
 	{}
 };
 

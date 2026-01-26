@@ -36,9 +36,9 @@ $FieldInfo _XSNamedMapImpl$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XSNamedMapImpl$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl;I[Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry;)V", nullptr, 0, $method(static_cast<void(XSNamedMapImpl$1::*)($XSNamedMapImpl*,int32_t,$XSNamedMapImpl$XSNamedMapEntryArray*)>(&XSNamedMapImpl$1::init$))},
-	{"iterator", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/util/Map$Entry<Ljavax/xml/namespace/QName;Lcom/sun/org/apache/xerces/internal/xs/XSObject;>;>;", $PUBLIC},
-	{"size", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl;I[Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSNamedMapImpl$XSNamedMapEntry;)V", nullptr, 0, $method(XSNamedMapImpl$1, init$, void, $XSNamedMapImpl*, int32_t, $XSNamedMapImpl$XSNamedMapEntryArray*)},
+	{"iterator", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/util/Map$Entry<Ljavax/xml/namespace/QName;Lcom/sun/org/apache/xerces/internal/xs/XSObject;>;>;", $PUBLIC, $virtualMethod(XSNamedMapImpl$1, iterator, $Iterator*)},
+	{"size", "()I", nullptr, $PUBLIC, $virtualMethod(XSNamedMapImpl$1, size, int32_t)},
 	{}
 };
 

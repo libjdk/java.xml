@@ -47,22 +47,22 @@ $FieldInfo _DecimalDV$XDecimal_FieldInfo_[] = {
 };
 
 $MethodInfo _DecimalDV$XDecimal_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(DecimalDV$XDecimal::*)($String*)>(&DecimalDV$XDecimal::init$)), "java.lang.NumberFormatException"},
-	{"<init>", "(Ljava/lang/String;Z)V", nullptr, 0, $method(static_cast<void(DecimalDV$XDecimal::*)($String*,bool)>(&DecimalDV$XDecimal::init$)), "java.lang.NumberFormatException"},
-	{"compareTo", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV$XDecimal;)I", nullptr, $PUBLIC, $method(static_cast<int32_t(DecimalDV$XDecimal::*)(DecimalDV$XDecimal*)>(&DecimalDV$XDecimal::compareTo))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getBigDecimal", "()Ljava/math/BigDecimal;", nullptr, $PUBLIC},
-	{"getBigInteger", "()Ljava/math/BigInteger;", nullptr, $PUBLIC, nullptr, "java.lang.NumberFormatException"},
-	{"getByte", "()B", nullptr, $PUBLIC, nullptr, "java.lang.NumberFormatException"},
-	{"getInt", "()I", nullptr, $PUBLIC, nullptr, "java.lang.NumberFormatException"},
-	{"getLong", "()J", nullptr, $PUBLIC, nullptr, "java.lang.NumberFormatException"},
-	{"getShort", "()S", nullptr, $PUBLIC, nullptr, "java.lang.NumberFormatException"},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"initD", "(Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(DecimalDV$XDecimal::*)($String*)>(&DecimalDV$XDecimal::initD)), "java.lang.NumberFormatException"},
-	{"initI", "(Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(DecimalDV$XDecimal::*)($String*)>(&DecimalDV$XDecimal::initI)), "java.lang.NumberFormatException"},
-	{"intComp", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV$XDecimal;)I", nullptr, $PRIVATE, $method(static_cast<int32_t(DecimalDV$XDecimal::*)(DecimalDV$XDecimal*)>(&DecimalDV$XDecimal::intComp))},
-	{"makeCanonical", "()V", nullptr, $PRIVATE, $method(static_cast<void(DecimalDV$XDecimal::*)()>(&DecimalDV$XDecimal::makeCanonical))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(DecimalDV$XDecimal, init$, void, $String*), "java.lang.NumberFormatException"},
+	{"<init>", "(Ljava/lang/String;Z)V", nullptr, 0, $method(DecimalDV$XDecimal, init$, void, $String*, bool), "java.lang.NumberFormatException"},
+	{"compareTo", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV$XDecimal;)I", nullptr, $PUBLIC, $method(DecimalDV$XDecimal, compareTo, int32_t, DecimalDV$XDecimal*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, equals, bool, Object$*)},
+	{"getBigDecimal", "()Ljava/math/BigDecimal;", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, getBigDecimal, $BigDecimal*)},
+	{"getBigInteger", "()Ljava/math/BigInteger;", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, getBigInteger, $BigInteger*), "java.lang.NumberFormatException"},
+	{"getByte", "()B", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, getByte, int8_t), "java.lang.NumberFormatException"},
+	{"getInt", "()I", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, getInt, int32_t), "java.lang.NumberFormatException"},
+	{"getLong", "()J", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, getLong, int64_t), "java.lang.NumberFormatException"},
+	{"getShort", "()S", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, getShort, int16_t), "java.lang.NumberFormatException"},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(DecimalDV$XDecimal, hashCode, int32_t)},
+	{"initD", "(Ljava/lang/String;)V", nullptr, 0, $method(DecimalDV$XDecimal, initD, void, $String*), "java.lang.NumberFormatException"},
+	{"initI", "(Ljava/lang/String;)V", nullptr, 0, $method(DecimalDV$XDecimal, initI, void, $String*), "java.lang.NumberFormatException"},
+	{"intComp", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV$XDecimal;)I", nullptr, $PRIVATE, $method(DecimalDV$XDecimal, intComp, int32_t, DecimalDV$XDecimal*)},
+	{"makeCanonical", "()V", nullptr, $PRIVATE, $method(DecimalDV$XDecimal, makeCanonical, void)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(DecimalDV$XDecimal, toString, $String*)},
 	{}
 };
 

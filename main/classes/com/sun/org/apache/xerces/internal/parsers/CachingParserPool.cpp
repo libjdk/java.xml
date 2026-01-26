@@ -47,13 +47,13 @@ $FieldInfo _CachingParserPool_FieldInfo_[] = {
 };
 
 $MethodInfo _CachingParserPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CachingParserPool::*)()>(&CachingParserPool::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(CachingParserPool::*)($SymbolTable*,$XMLGrammarPool*)>(&CachingParserPool::init$))},
-	{"createDOMParser", "()Lcom/sun/org/apache/xerces/internal/parsers/DOMParser;", nullptr, $PUBLIC},
-	{"createSAXParser", "()Lcom/sun/org/apache/xerces/internal/parsers/SAXParser;", nullptr, $PUBLIC},
-	{"getSymbolTable", "()Lcom/sun/org/apache/xerces/internal/util/SymbolTable;", nullptr, $PUBLIC},
-	{"getXMLGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC},
-	{"setShadowSymbolTable", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CachingParserPool, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(CachingParserPool, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"createDOMParser", "()Lcom/sun/org/apache/xerces/internal/parsers/DOMParser;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool, createDOMParser, $DOMParser*)},
+	{"createSAXParser", "()Lcom/sun/org/apache/xerces/internal/parsers/SAXParser;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool, createSAXParser, $SAXParser*)},
+	{"getSymbolTable", "()Lcom/sun/org/apache/xerces/internal/util/SymbolTable;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool, getSymbolTable, $SymbolTable*)},
+	{"getXMLGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool, getXMLGrammarPool, $XMLGrammarPool*)},
+	{"setShadowSymbolTable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(CachingParserPool, setShadowSymbolTable, void, bool)},
 	{}
 };
 

@@ -83,7 +83,7 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LoadInstruction = ::com::sun::org::apache::bcel::internal::generic::LoadInstruction;
 using $LocalVariableInstruction = ::com::sun::org::apache::bcel::internal::generic::LocalVariableInstruction;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
 using $QName = ::com::sun::org::apache::xalan::internal::xsltc::compiler::QName;
@@ -95,7 +95,7 @@ using $XSLTC = ::com::sun::org::apache::xalan::internal::xsltc::compiler::XSLTC;
 using $ClassGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ClassGenerator;
 using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ErrorMsg;
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -132,20 +132,20 @@ $FieldInfo _Whitespace_FieldInfo_[] = {
 };
 
 $MethodInfo _Whitespace_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Whitespace::*)()>(&Whitespace::init$))},
-	{"compileDefault", "(ILcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", nullptr, $PRIVATE | $STATIC, $method(static_cast<void(*)(int32_t,$ClassGenerator*)>(&Whitespace::compileDefault))},
-	{"compilePredicate", "(Ljava/util/List;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", $PRIVATE | $STATIC, $method(static_cast<void(*)($List*,int32_t,$ClassGenerator*)>(&Whitespace::compilePredicate))},
-	{"compilePreserveSpace", "([Lcom/sun/org/apache/bcel/internal/generic/BranchHandle;ILcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($BranchHandleArray*,int32_t,$InstructionList*)>(&Whitespace::compilePreserveSpace))},
-	{"compileStripSpace", "([Lcom/sun/org/apache/bcel/internal/generic/BranchHandle;ILcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($BranchHandleArray*,int32_t,$InstructionList*)>(&Whitespace::compileStripSpace))},
-	{"findContradictingRule", "(Ljava/util/List;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;", $PRIVATE | $STATIC, $method(static_cast<$Whitespace$WhitespaceRule*(*)($List*,$Whitespace$WhitespaceRule*)>(&Whitespace::findContradictingRule))},
-	{"getRules", "()Ljava/util/List;", "()Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;", $PUBLIC, $method(static_cast<$List*(Whitespace::*)()>(&Whitespace::getRules))},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"partition", "(Ljava/util/List;II)I", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;II)I", $PRIVATE | $STATIC, $method(static_cast<int32_t(*)($List*,int32_t,int32_t)>(&Whitespace::partition))},
-	{"prioritizeRules", "(Ljava/util/List;)I", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;)I", $PRIVATE | $STATIC, $method(static_cast<int32_t(*)($List*)>(&Whitespace::prioritizeRules))},
-	{"quicksort", "(Ljava/util/List;II)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;II)V", $PRIVATE | $STATIC, $method(static_cast<void(*)($List*,int32_t,int32_t)>(&Whitespace::quicksort))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"translateRules", "(Ljava/util/List;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)I", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)I", $PUBLIC | $STATIC, $method(static_cast<int32_t(*)($List*,$ClassGenerator*)>(&Whitespace::translateRules))},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "()V", nullptr, 0, $method(Whitespace, init$, void)},
+	{"compileDefault", "(ILcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", nullptr, $PRIVATE | $STATIC, $staticMethod(Whitespace, compileDefault, void, int32_t, $ClassGenerator*)},
+	{"compilePredicate", "(Ljava/util/List;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", $PRIVATE | $STATIC, $staticMethod(Whitespace, compilePredicate, void, $List*, int32_t, $ClassGenerator*)},
+	{"compilePreserveSpace", "([Lcom/sun/org/apache/bcel/internal/generic/BranchHandle;ILcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(Whitespace, compilePreserveSpace, void, $BranchHandleArray*, int32_t, $InstructionList*)},
+	{"compileStripSpace", "([Lcom/sun/org/apache/bcel/internal/generic/BranchHandle;ILcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(Whitespace, compileStripSpace, void, $BranchHandleArray*, int32_t, $InstructionList*)},
+	{"findContradictingRule", "(Ljava/util/List;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;", $PRIVATE | $STATIC, $staticMethod(Whitespace, findContradictingRule, $Whitespace$WhitespaceRule*, $List*, $Whitespace$WhitespaceRule*)},
+	{"getRules", "()Ljava/util/List;", "()Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;", $PUBLIC, $method(Whitespace, getRules, $List*)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(Whitespace, parseContents, void, $Parser*)},
+	{"partition", "(Ljava/util/List;II)I", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;II)I", $PRIVATE | $STATIC, $staticMethod(Whitespace, partition, int32_t, $List*, int32_t, int32_t)},
+	{"prioritizeRules", "(Ljava/util/List;)I", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;)I", $PRIVATE | $STATIC, $staticMethod(Whitespace, prioritizeRules, int32_t, $List*)},
+	{"quicksort", "(Ljava/util/List;II)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;II)V", $PRIVATE | $STATIC, $staticMethod(Whitespace, quicksort, void, $List*, int32_t, int32_t)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(Whitespace, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"translateRules", "(Ljava/util/List;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)I", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;>;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)I", $PUBLIC | $STATIC, $staticMethod(Whitespace, translateRules, int32_t, $List*, $ClassGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(Whitespace, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 
@@ -330,13 +330,13 @@ void Whitespace::compilePredicate($List* rules, int32_t defaultAction, $ClassGen
 	$var($InstructionList, il, $new($InstructionList));
 	$var($XSLTC, xsltc, $nc($(classGen->getParser()))->getXSLTC());
 	int32_t var$0 = $Constants::ACC_PUBLIC | $Constants::ACC_FINAL;
-	$init($Type);
-	$var($Type, var$1, static_cast<$Type*>($Type::BOOLEAN));
+	$init($1Type);
+	$var($1Type, var$1, static_cast<$1Type*>($1Type::BOOLEAN));
 	$init($Constants);
 	$var($TypeArray, var$2, $new($TypeArray, {
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),
-		static_cast<$Type*>($Type::INT),
-		static_cast<$Type*>($Type::INT)
+		static_cast<$1Type*>($1Type::INT),
+		static_cast<$1Type*>($1Type::INT)
 	}));
 	$var($StringArray, var$3, $new($StringArray, {
 		"dom"_s,
@@ -405,13 +405,13 @@ void Whitespace::compileDefault(int32_t defaultAction, $ClassGenerator* classGen
 	$var($InstructionList, il, $new($InstructionList));
 	$var($XSLTC, xsltc, $nc($(classGen->getParser()))->getXSLTC());
 	int32_t var$0 = $Constants::ACC_PUBLIC | $Constants::ACC_FINAL;
-	$init($Type);
-	$var($Type, var$1, static_cast<$Type*>($Type::BOOLEAN));
+	$init($1Type);
+	$var($1Type, var$1, static_cast<$1Type*>($1Type::BOOLEAN));
 	$init($Constants);
 	$var($TypeArray, var$2, $new($TypeArray, {
 		$($Util::getJCRefType($Constants::DOM_INTF_SIG)),
-		static_cast<$Type*>($Type::INT),
-		static_cast<$Type*>($Type::INT)
+		static_cast<$1Type*>($1Type::INT),
+		static_cast<$1Type*>($1Type::INT)
 	}));
 	$var($StringArray, var$3, $new($StringArray, {
 		"dom"_s,
@@ -471,9 +471,9 @@ int32_t Whitespace::partition($List* rules, int32_t p, int32_t r) {
 	}
 }
 
-$1Type* Whitespace::typeCheck($SymbolTable* stable) {
-	$init($1Type);
-	return $1Type::Void;
+$Type* Whitespace::typeCheck($SymbolTable* stable) {
+	$init($Type);
+	return $Type::Void;
 }
 
 void Whitespace::translate($ClassGenerator* classGen, $MethodGenerator* methodGen) {

@@ -26,8 +26,8 @@ $FieldInfo _LocaleUtility_FieldInfo_[] = {
 };
 
 $MethodInfo _LocaleUtility_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(LocaleUtility::*)()>(&LocaleUtility::init$))},
-	{"langToLocale", "(Ljava/lang/String;)Ljava/util/Locale;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Locale*(*)($String*)>(&LocaleUtility::langToLocale))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(LocaleUtility, init$, void)},
+	{"langToLocale", "(Ljava/lang/String;)Ljava/util/Locale;", nullptr, $PUBLIC | $STATIC, $staticMethod(LocaleUtility, langToLocale, $Locale*, $String*)},
 	{}
 };
 

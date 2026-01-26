@@ -33,10 +33,10 @@ $FieldInfo _CatalogImpl$1_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogImpl$1_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/catalog/CatalogImpl;)V", nullptr, 0, $method(static_cast<void(CatalogImpl$1::*)($CatalogImpl*)>(&CatalogImpl$1::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Ljavax/xml/catalog/Catalog;", nullptr, $PUBLIC},
-	{"nextCatalog", "()Ljavax/xml/catalog/Catalog;", nullptr, $PRIVATE, $method(static_cast<$Catalog*(CatalogImpl$1::*)()>(&CatalogImpl$1::nextCatalog))},
+	{"<init>", "(Ljavax/xml/catalog/CatalogImpl;)V", nullptr, 0, $method(CatalogImpl$1, init$, void, $CatalogImpl*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(CatalogImpl$1, hasNext, bool)},
+	{"next", "()Ljavax/xml/catalog/Catalog;", nullptr, $PUBLIC, $virtualMethod(CatalogImpl$1, next, $Object*)},
+	{"nextCatalog", "()Ljavax/xml/catalog/Catalog;", nullptr, $PRIVATE, $method(CatalogImpl$1, nextCatalog, $Catalog*)},
 	{}
 };
 

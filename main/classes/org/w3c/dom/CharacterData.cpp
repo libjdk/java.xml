@@ -10,14 +10,14 @@ namespace org {
 		namespace dom {
 
 $MethodInfo _CharacterData_MethodInfo_[] = {
-	{"appendData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"deleteData", "(II)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"insertData", "(ILjava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"replaceData", "(IILjava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"setData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"substringData", "(II)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"appendData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, appendData, void, $String*), "org.w3c.dom.DOMException"},
+	{"deleteData", "(II)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, deleteData, void, int32_t, int32_t), "org.w3c.dom.DOMException"},
+	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, getData, $String*), "org.w3c.dom.DOMException"},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, getLength, int32_t)},
+	{"insertData", "(ILjava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, insertData, void, int32_t, $String*), "org.w3c.dom.DOMException"},
+	{"replaceData", "(IILjava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, replaceData, void, int32_t, int32_t, $String*), "org.w3c.dom.DOMException"},
+	{"setData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, setData, void, $String*), "org.w3c.dom.DOMException"},
+	{"substringData", "(II)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CharacterData, substringData, $String*, int32_t, int32_t), "org.w3c.dom.DOMException"},
 	{}
 };
 

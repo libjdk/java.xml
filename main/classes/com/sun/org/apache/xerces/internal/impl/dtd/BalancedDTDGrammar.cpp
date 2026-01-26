@@ -51,19 +51,19 @@ $FieldInfo _BalancedDTDGrammar_FieldInfo_[] = {
 };
 
 $MethodInfo _BalancedDTDGrammar_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDDescription;)V", nullptr, $PUBLIC, $method(static_cast<void(BalancedDTDGrammar::*)($SymbolTable*,$XMLDTDDescription*)>(&BalancedDTDGrammar::init$))},
-	{"addContentSpecNodes", "(II)I", nullptr, $PRIVATE, $method(static_cast<int32_t(BalancedDTDGrammar::*)(int32_t,int32_t)>(&BalancedDTDGrammar::addContentSpecNodes))},
-	{"addContentSpecToElement", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLElementDecl;)V", nullptr, $PROTECTED | $FINAL},
-	{"addToCurrentGroup", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(BalancedDTDGrammar::*)(int32_t)>(&BalancedDTDGrammar::addToCurrentGroup))},
-	{"element", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"endDTD", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"endGroup", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"initializeContentModelStacks", "()V", nullptr, $PRIVATE, $method(static_cast<void(BalancedDTDGrammar::*)()>(&BalancedDTDGrammar::initializeContentModelStacks))},
-	{"occurrence", "(SLcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"pcdata", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"separator", "(SLcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"startContentModel", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"startGroup", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDDescription;)V", nullptr, $PUBLIC, $method(BalancedDTDGrammar, init$, void, $SymbolTable*, $XMLDTDDescription*)},
+	{"addContentSpecNodes", "(II)I", nullptr, $PRIVATE, $method(BalancedDTDGrammar, addContentSpecNodes, int32_t, int32_t, int32_t)},
+	{"addContentSpecToElement", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLElementDecl;)V", nullptr, $PROTECTED | $FINAL, $virtualMethod(BalancedDTDGrammar, addContentSpecToElement, void, $XMLElementDecl*)},
+	{"addToCurrentGroup", "(I)V", nullptr, $PRIVATE, $method(BalancedDTDGrammar, addToCurrentGroup, void, int32_t)},
+	{"element", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, element, void, $String*, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"endDTD", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, endDTD, void, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"endGroup", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, endGroup, void, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"initializeContentModelStacks", "()V", nullptr, $PRIVATE, $method(BalancedDTDGrammar, initializeContentModelStacks, void)},
+	{"occurrence", "(SLcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, occurrence, void, int16_t, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"pcdata", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, pcdata, void, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"separator", "(SLcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, separator, void, int16_t, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"startContentModel", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, startContentModel, void, $String*, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"startGroup", "(Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BalancedDTDGrammar, startGroup, void, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

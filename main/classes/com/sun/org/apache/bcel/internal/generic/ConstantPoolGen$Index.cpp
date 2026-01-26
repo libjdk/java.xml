@@ -22,7 +22,7 @@ $FieldInfo _ConstantPoolGen$Index_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantPoolGen$Index_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(ConstantPoolGen$Index::*)(int32_t)>(&ConstantPoolGen$Index::init$))},
+	{"<init>", "(I)V", nullptr, 0, $method(ConstantPoolGen$Index, init$, void, int32_t)},
 	{}
 };
 

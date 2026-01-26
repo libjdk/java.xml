@@ -41,18 +41,18 @@ $FieldInfo _AttributeListImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _AttributeListImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(AttributeListImpl::*)()>(&AttributeListImpl::init$))},
-	{"<init>", "(Lorg/xml/sax/AttributeList;)V", nullptr, $PUBLIC, $method(static_cast<void(AttributeListImpl::*)($AttributeList*)>(&AttributeListImpl::init$))},
-	{"addAttribute", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"removeAttribute", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setAttributeList", "(Lorg/xml/sax/AttributeList;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(AttributeListImpl, init$, void)},
+	{"<init>", "(Lorg/xml/sax/AttributeList;)V", nullptr, $PUBLIC, $method(AttributeListImpl, init$, void, $AttributeList*)},
+	{"addAttribute", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, addAttribute, void, $String*, $String*, $String*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, clear, void)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, getLength, int32_t)},
+	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, getName, $String*, int32_t)},
+	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, getType, $String*, int32_t)},
+	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, getType, $String*, $String*)},
+	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, getValue, $String*, int32_t)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, getValue, $String*, $String*)},
+	{"removeAttribute", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, removeAttribute, void, $String*)},
+	{"setAttributeList", "(Lorg/xml/sax/AttributeList;)V", nullptr, $PUBLIC, $virtualMethod(AttributeListImpl, setAttributeList, void, $AttributeList*)},
 	{}
 };
 

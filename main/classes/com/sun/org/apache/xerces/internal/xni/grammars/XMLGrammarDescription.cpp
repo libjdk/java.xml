@@ -25,7 +25,7 @@ $FieldInfo _XMLGrammarDescription_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLGrammarDescription_MethodInfo_[] = {
-	{"getGrammarType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getGrammarType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGrammarDescription, getGrammarType, $String*)},
 	{}
 };
 

@@ -40,16 +40,16 @@ $FieldInfo _XSEmptyCM_FieldInfo_[] = {
 };
 
 $MethodInfo _XSEmptyCM_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSEmptyCM::*)()>(&XSEmptyCM::init$))},
-	{"checkMinMaxBounds", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC},
-	{"checkUniqueParticleAttribution", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Z", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
-	{"endContentModel", "([I)Z", nullptr, $PUBLIC},
-	{"getTermName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC},
-	{"occurenceInfo", "([I)[I", nullptr, $PUBLIC},
-	{"oneTransition", "(Lcom/sun/org/apache/xerces/internal/xni/QName;[ILcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"startContentModel", "()[I", nullptr, $PUBLIC},
-	{"whatCanGoHere", "([I)Ljava/util/List;", "([I)Ljava/util/List<Ljava/lang/Object;>;", $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSEmptyCM, init$, void)},
+	{"checkMinMaxBounds", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(XSEmptyCM, checkMinMaxBounds, $List*)},
+	{"checkUniqueParticleAttribution", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Z", nullptr, $PUBLIC, $virtualMethod(XSEmptyCM, checkUniqueParticleAttribution, bool, $SubstitutionGroupHandler*), "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
+	{"endContentModel", "([I)Z", nullptr, $PUBLIC, $virtualMethod(XSEmptyCM, endContentModel, bool, $ints*)},
+	{"getTermName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSEmptyCM, getTermName, $String*, int32_t)},
+	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC, $virtualMethod(XSEmptyCM, isCompactedForUPA, bool)},
+	{"occurenceInfo", "([I)[I", nullptr, $PUBLIC, $virtualMethod(XSEmptyCM, occurenceInfo, $ints*, $ints*)},
+	{"oneTransition", "(Lcom/sun/org/apache/xerces/internal/xni/QName;[ILcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSEmptyCM, oneTransition, $Object*, $QName*, $ints*, $SubstitutionGroupHandler*)},
+	{"startContentModel", "()[I", nullptr, $PUBLIC, $virtualMethod(XSEmptyCM, startContentModel, $ints*)},
+	{"whatCanGoHere", "([I)Ljava/util/List;", "([I)Ljava/util/List<Ljava/lang/Object;>;", $PUBLIC, $virtualMethod(XSEmptyCM, whatCanGoHere, $List*, $ints*)},
 	{}
 };
 

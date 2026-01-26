@@ -15,12 +15,12 @@ namespace com {
 					namespace events {
 
 $MethodInfo _DummyEvent$DummyLocation_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DummyEvent$DummyLocation::*)()>(&DummyEvent$DummyLocation::init$))},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DummyEvent$DummyLocation, init$, void)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(DummyEvent$DummyLocation, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(DummyEvent$DummyLocation, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(DummyEvent$DummyLocation, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DummyEvent$DummyLocation, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DummyEvent$DummyLocation, getSystemId, $String*)},
 	{}
 };
 

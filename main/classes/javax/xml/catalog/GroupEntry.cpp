@@ -108,8 +108,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo GroupEntry$$Lambda$lambda$loadDelegateCatalogs$0::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$0::*)()>(&GroupEntry$$Lambda$lambda$loadDelegateCatalogs$0::init$))},
-	{"test", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$0, init$, void)},
+	{"test", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$0, test, bool, Object$*)},
 	{}
 };
 $ClassInfo GroupEntry$$Lambda$lambda$loadDelegateCatalogs$0::classInfo$ = {
@@ -141,8 +141,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo GroupEntry$$Lambda$lambda$loadDelegateCatalogs$1$1::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$1$1::*)()>(&GroupEntry$$Lambda$lambda$loadDelegateCatalogs$1$1::init$))},
-	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$1$1, init$, void)},
+	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$1$1, apply, $Object*, Object$*)},
 	{}
 };
 $ClassInfo GroupEntry$$Lambda$lambda$loadDelegateCatalogs$1$1::classInfo$ = {
@@ -184,8 +184,8 @@ $FieldInfo GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2::fieldInfos[3] = {
 	{}
 };
 $MethodInfo GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/catalog/GroupEntry;Ljavax/xml/catalog/CatalogImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2::*)(GroupEntry*,$CatalogImpl*)>(&GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2::init$))},
-	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/catalog/GroupEntry;Ljavax/xml/catalog/CatalogImpl;)V", nullptr, $PUBLIC, $method(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2, init$, void, GroupEntry*, $CatalogImpl*)},
+	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2, accept, void, Object$*)},
 	{}
 };
 $ClassInfo GroupEntry$$Lambda$lambda$loadDelegateCatalogs$2$2::classInfo$ = {
@@ -224,26 +224,26 @@ $FieldInfo _GroupEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _GroupEntry_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljavax/xml/catalog/CatalogImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(GroupEntry::*)($BaseEntry$CatalogEntryType*,$CatalogImpl*)>(&GroupEntry::init$))},
-	{"<init>", "(Ljava/lang/String;[Ljava/lang/String;)V", nullptr, $PUBLIC | $TRANSIENT, $method(static_cast<void(GroupEntry::*)($String*,$StringArray*)>(&GroupEntry::init$))},
-	{"<init>", "(Ljavax/xml/catalog/CatalogImpl;Ljava/lang/String;[Ljava/lang/String;)V", nullptr, $PUBLIC | $TRANSIENT, $method(static_cast<void(GroupEntry::*)($CatalogImpl*,$String*,$StringArray*)>(&GroupEntry::init$))},
-	{"addEntry", "(Ljavax/xml/catalog/BaseEntry;)V", nullptr, $PUBLIC},
-	{"getLoadedCatalog", "(Ljava/lang/String;)Ljavax/xml/catalog/CatalogImpl;", nullptr, 0},
-	{"isCircular", "(Ljavax/xml/catalog/CatalogImpl;Ljava/lang/String;)Z", nullptr, 0},
-	{"isPreferPublic", "()Z", nullptr, $PUBLIC},
-	{"lambda$loadDelegateCatalogs$0", "(Ljavax/xml/catalog/BaseEntry;)Z", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<bool(*)($BaseEntry*)>(&GroupEntry::lambda$loadDelegateCatalogs$0))},
-	{"lambda$loadDelegateCatalogs$1", "(Ljavax/xml/catalog/BaseEntry;)Ljavax/xml/catalog/AltCatalog;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$AltCatalog*(*)($BaseEntry*)>(&GroupEntry::lambda$loadDelegateCatalogs$1))},
-	{"lambda$loadDelegateCatalogs$2", "(Ljavax/xml/catalog/CatalogImpl;Ljavax/xml/catalog/AltCatalog;)V", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<void(GroupEntry::*)($CatalogImpl*,$AltCatalog*)>(&GroupEntry::lambda$loadDelegateCatalogs$2))},
-	{"loadDelegateCatalog", "(Ljavax/xml/catalog/CatalogImpl;Ljava/net/URI;)Ljavax/xml/catalog/Catalog;", nullptr, 0},
-	{"loadDelegateCatalogs", "(Ljavax/xml/catalog/CatalogImpl;)V", nullptr, 0},
-	{"matchDelegate", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(GroupEntry::*)($BaseEntry$CatalogEntryType*,$String*)>(&GroupEntry::matchDelegate))},
-	{"matchPublic", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"matchSystem", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"matchURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setCatalog", "(Ljavax/xml/catalog/CatalogImpl;)V", nullptr, 0},
-	{"setPrefer", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(GroupEntry::*)($String*)>(&GroupEntry::setPrefer))},
-	{"verifyCatalogFile", "(Ljavax/xml/catalog/CatalogImpl;Ljava/net/URI;)Z", nullptr, $FINAL, $method(static_cast<bool(GroupEntry::*)($CatalogImpl*,$URI*)>(&GroupEntry::verifyCatalogFile))},
+	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljavax/xml/catalog/CatalogImpl;)V", nullptr, $PUBLIC, $method(GroupEntry, init$, void, $BaseEntry$CatalogEntryType*, $CatalogImpl*)},
+	{"<init>", "(Ljava/lang/String;[Ljava/lang/String;)V", nullptr, $PUBLIC | $TRANSIENT, $method(GroupEntry, init$, void, $String*, $StringArray*)},
+	{"<init>", "(Ljavax/xml/catalog/CatalogImpl;Ljava/lang/String;[Ljava/lang/String;)V", nullptr, $PUBLIC | $TRANSIENT, $method(GroupEntry, init$, void, $CatalogImpl*, $String*, $StringArray*)},
+	{"addEntry", "(Ljavax/xml/catalog/BaseEntry;)V", nullptr, $PUBLIC, $virtualMethod(GroupEntry, addEntry, void, $BaseEntry*)},
+	{"getLoadedCatalog", "(Ljava/lang/String;)Ljavax/xml/catalog/CatalogImpl;", nullptr, 0, $virtualMethod(GroupEntry, getLoadedCatalog, $CatalogImpl*, $String*)},
+	{"isCircular", "(Ljavax/xml/catalog/CatalogImpl;Ljava/lang/String;)Z", nullptr, 0, $virtualMethod(GroupEntry, isCircular, bool, $CatalogImpl*, $String*)},
+	{"isPreferPublic", "()Z", nullptr, $PUBLIC, $virtualMethod(GroupEntry, isPreferPublic, bool)},
+	{"lambda$loadDelegateCatalogs$0", "(Ljavax/xml/catalog/BaseEntry;)Z", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(GroupEntry, lambda$loadDelegateCatalogs$0, bool, $BaseEntry*)},
+	{"lambda$loadDelegateCatalogs$1", "(Ljavax/xml/catalog/BaseEntry;)Ljavax/xml/catalog/AltCatalog;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(GroupEntry, lambda$loadDelegateCatalogs$1, $AltCatalog*, $BaseEntry*)},
+	{"lambda$loadDelegateCatalogs$2", "(Ljavax/xml/catalog/CatalogImpl;Ljavax/xml/catalog/AltCatalog;)V", nullptr, $PRIVATE | $SYNTHETIC, $method(GroupEntry, lambda$loadDelegateCatalogs$2, void, $CatalogImpl*, $AltCatalog*)},
+	{"loadDelegateCatalog", "(Ljavax/xml/catalog/CatalogImpl;Ljava/net/URI;)Ljavax/xml/catalog/Catalog;", nullptr, 0, $virtualMethod(GroupEntry, loadDelegateCatalog, $Catalog*, $CatalogImpl*, $URI*)},
+	{"loadDelegateCatalogs", "(Ljavax/xml/catalog/CatalogImpl;)V", nullptr, 0, $virtualMethod(GroupEntry, loadDelegateCatalogs, void, $CatalogImpl*)},
+	{"matchDelegate", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(GroupEntry, matchDelegate, $String*, $BaseEntry$CatalogEntryType*, $String*)},
+	{"matchPublic", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(GroupEntry, matchPublic, $String*, $String*)},
+	{"matchSystem", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(GroupEntry, matchSystem, $String*, $String*)},
+	{"matchURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(GroupEntry, matchURI, $String*, $String*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(GroupEntry, reset, void)},
+	{"setCatalog", "(Ljavax/xml/catalog/CatalogImpl;)V", nullptr, 0, $virtualMethod(GroupEntry, setCatalog, void, $CatalogImpl*)},
+	{"setPrefer", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(GroupEntry, setPrefer, void, $String*)},
+	{"verifyCatalogFile", "(Ljavax/xml/catalog/CatalogImpl;Ljava/net/URI;)Z", nullptr, $FINAL, $method(GroupEntry, verifyCatalogFile, bool, $CatalogImpl*, $URI*)},
 	{}
 };
 

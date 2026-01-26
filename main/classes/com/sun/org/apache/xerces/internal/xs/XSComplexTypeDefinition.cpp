@@ -11,6 +11,10 @@
 #undef CONTENTTYPE_MIXED
 #undef CONTENTTYPE_SIMPLE
 
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $XSParticle = ::com::sun::org::apache::xerces::internal::xs::XSParticle;
+using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
+using $XSWildcard = ::com::sun::org::apache::xerces::internal::xs::XSWildcard;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -32,16 +36,16 @@ $FieldInfo _XSComplexTypeDefinition_FieldInfo_[] = {
 };
 
 $MethodInfo _XSComplexTypeDefinition_MethodInfo_[] = {
-	{"getAbstract", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAttributeUses", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAttributeWildcard", "()Lcom/sun/org/apache/xerces/internal/xs/XSWildcard;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getContentType", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDerivationMethod", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getParticle", "()Lcom/sun/org/apache/xerces/internal/xs/XSParticle;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getProhibitedSubstitutions", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSimpleType", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isProhibitedSubstitution", "(S)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAbstract", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getAbstract, bool)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getAnnotations, $XSObjectList*)},
+	{"getAttributeUses", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getAttributeUses, $XSObjectList*)},
+	{"getAttributeWildcard", "()Lcom/sun/org/apache/xerces/internal/xs/XSWildcard;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getAttributeWildcard, $XSWildcard*)},
+	{"getContentType", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getContentType, int16_t)},
+	{"getDerivationMethod", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getDerivationMethod, int16_t)},
+	{"getParticle", "()Lcom/sun/org/apache/xerces/internal/xs/XSParticle;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getParticle, $XSParticle*)},
+	{"getProhibitedSubstitutions", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getProhibitedSubstitutions, int16_t)},
+	{"getSimpleType", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, getSimpleType, $XSSimpleTypeDefinition*)},
+	{"isProhibitedSubstitution", "(S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSComplexTypeDefinition, isProhibitedSubstitution, bool, int16_t)},
 	{}
 };
 

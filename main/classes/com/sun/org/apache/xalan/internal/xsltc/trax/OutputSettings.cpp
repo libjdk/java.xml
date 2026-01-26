@@ -31,8 +31,8 @@ $FieldInfo _OutputSettings_FieldInfo_[] = {
 };
 
 $MethodInfo _OutputSettings_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(OutputSettings::*)()>(&OutputSettings::init$))},
-	{"getProperties", "()Ljava/util/Properties;", nullptr, $PUBLIC, $method(static_cast<$Properties*(OutputSettings::*)()>(&OutputSettings::getProperties))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(OutputSettings, init$, void)},
+	{"getProperties", "()Ljava/util/Properties;", nullptr, $PUBLIC, $method(OutputSettings, getProperties, $Properties*)},
 	{}
 };
 

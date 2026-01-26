@@ -37,15 +37,15 @@ $FieldInfo _ReverseAxesWalker_FieldInfo_[] = {
 };
 
 $MethodInfo _ReverseAxesWalker_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;I)V", nullptr, 0, $method(static_cast<void(ReverseAxesWalker::*)($LocPathIterator*,int32_t)>(&ReverseAxesWalker::init$))},
-	{"countProximityPosition", "(I)V", nullptr, $PROTECTED},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PROTECTED},
-	{"getProximityPosition", "(I)I", nullptr, $PROTECTED},
-	{"isDocOrdered", "()Z", nullptr, $PUBLIC},
-	{"isReverseAxes", "()Z", nullptr, $PUBLIC},
-	{"setRoot", "(I)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;I)V", nullptr, 0, $method(ReverseAxesWalker, init$, void, $LocPathIterator*, int32_t)},
+	{"countProximityPosition", "(I)V", nullptr, $PROTECTED, $virtualMethod(ReverseAxesWalker, countProximityPosition, void, int32_t)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(ReverseAxesWalker, detach, void)},
+	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(ReverseAxesWalker, getLastPos, int32_t, $XPathContext*)},
+	{"getNextNode", "()I", nullptr, $PROTECTED, $virtualMethod(ReverseAxesWalker, getNextNode, int32_t)},
+	{"getProximityPosition", "(I)I", nullptr, $PROTECTED, $virtualMethod(ReverseAxesWalker, getProximityPosition, int32_t, int32_t)},
+	{"isDocOrdered", "()Z", nullptr, $PUBLIC, $virtualMethod(ReverseAxesWalker, isDocOrdered, bool)},
+	{"isReverseAxes", "()Z", nullptr, $PUBLIC, $virtualMethod(ReverseAxesWalker, isReverseAxes, bool)},
+	{"setRoot", "(I)V", nullptr, $PUBLIC, $virtualMethod(ReverseAxesWalker, setRoot, void, int32_t)},
 	{}
 };
 

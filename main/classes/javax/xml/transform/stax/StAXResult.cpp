@@ -29,12 +29,12 @@ $FieldInfo _StAXResult_FieldInfo_[] = {
 };
 
 $MethodInfo _StAXResult_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/XMLEventWriter;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXResult::*)($XMLEventWriter*)>(&StAXResult::init$))},
-	{"<init>", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXResult::*)($XMLStreamWriter*)>(&StAXResult::init$))},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLEventWriter", "()Ljavax/xml/stream/XMLEventWriter;", nullptr, $PUBLIC},
-	{"getXMLStreamWriter", "()Ljavax/xml/stream/XMLStreamWriter;", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/stream/XMLEventWriter;)V", nullptr, $PUBLIC, $method(StAXResult, init$, void, $XMLEventWriter*)},
+	{"<init>", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC, $method(StAXResult, init$, void, $XMLStreamWriter*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StAXResult, getSystemId, $String*)},
+	{"getXMLEventWriter", "()Ljavax/xml/stream/XMLEventWriter;", nullptr, $PUBLIC, $virtualMethod(StAXResult, getXMLEventWriter, $XMLEventWriter*)},
+	{"getXMLStreamWriter", "()Ljavax/xml/stream/XMLStreamWriter;", nullptr, $PUBLIC, $virtualMethod(StAXResult, getXMLStreamWriter, $XMLStreamWriter*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StAXResult, setSystemId, void, $String*)},
 	{}
 };
 

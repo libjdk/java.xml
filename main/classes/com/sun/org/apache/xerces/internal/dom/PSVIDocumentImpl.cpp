@@ -67,17 +67,17 @@ $FieldInfo _PSVIDocumentImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _PSVIDocumentImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(PSVIDocumentImpl::*)()>(&PSVIDocumentImpl::init$))},
-	{"<init>", "(Lorg/w3c/dom/DocumentType;)V", nullptr, $PUBLIC, $method(static_cast<void(PSVIDocumentImpl::*)($DocumentType*)>(&PSVIDocumentImpl::init$))},
-	{"cloneNode", "(Z)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"createAttributeNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"createAttributeNS", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"createElementNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"createElementNS", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", nullptr, $PUBLIC},
-	{"getImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC},
-	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(static_cast<void(PSVIDocumentImpl::*)($ObjectInputStream*)>(&PSVIDocumentImpl::readObject)), "java.io.IOException,java.lang.ClassNotFoundException"},
-	{"writeObject", "(Ljava/io/ObjectOutputStream;)V", nullptr, $PRIVATE, $method(static_cast<void(PSVIDocumentImpl::*)($ObjectOutputStream*)>(&PSVIDocumentImpl::writeObject)), "java.io.IOException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(PSVIDocumentImpl, init$, void)},
+	{"<init>", "(Lorg/w3c/dom/DocumentType;)V", nullptr, $PUBLIC, $method(PSVIDocumentImpl, init$, void, $DocumentType*)},
+	{"cloneNode", "(Z)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(PSVIDocumentImpl, cloneNode, $Node*, bool)},
+	{"createAttributeNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;", nullptr, $PUBLIC, $virtualMethod(PSVIDocumentImpl, createAttributeNS, $Attr*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"createAttributeNS", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;", nullptr, $PUBLIC, $virtualMethod(PSVIDocumentImpl, createAttributeNS, $Attr*, $String*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"createElementNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;", nullptr, $PUBLIC, $virtualMethod(PSVIDocumentImpl, createElementNS, $Element*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"createElementNS", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Element;", nullptr, $PUBLIC, $virtualMethod(PSVIDocumentImpl, createElementNS, $Element*, $String*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", nullptr, $PUBLIC, $virtualMethod(PSVIDocumentImpl, getDomConfig, $DOMConfiguration*)},
+	{"getImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC, $virtualMethod(PSVIDocumentImpl, getImplementation, $DOMImplementation*)},
+	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(PSVIDocumentImpl, readObject, void, $ObjectInputStream*), "java.io.IOException,java.lang.ClassNotFoundException"},
+	{"writeObject", "(Ljava/io/ObjectOutputStream;)V", nullptr, $PRIVATE, $method(PSVIDocumentImpl, writeObject, void, $ObjectOutputStream*), "java.io.IOException"},
 	{}
 };
 

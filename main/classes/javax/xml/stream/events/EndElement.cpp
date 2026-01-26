@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Iterator = ::java::util::Iterator;
+using $QName = ::javax::xml::namespace$::QName;
 
 namespace javax {
 	namespace xml {
@@ -13,8 +15,8 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _EndElement_MethodInfo_[] = {
-	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaces", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljavax/xml/stream/events/Namespace;>;", $PUBLIC | $ABSTRACT},
+	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EndElement, getName, $QName*)},
+	{"getNamespaces", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljavax/xml/stream/events/Namespace;>;", $PUBLIC | $ABSTRACT, $virtualMethod(EndElement, getNamespaces, $Iterator*)},
 	{}
 };
 

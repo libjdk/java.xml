@@ -221,8 +221,8 @@ $FieldInfo _parser_actions_FieldInfo_[] = {
 };
 
 $MethodInfo _parser_actions_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/XPathParser;)V", nullptr, 0, $method(static_cast<void(parser_actions::*)($XPathParser*)>(&parser_actions::init$))},
-	{"parser_do_action", "(ILcom/sun/java_cup/internal/runtime/lr_parser;Ljava/util/Stack;I)Lcom/sun/java_cup/internal/runtime/Symbol;", "(ILcom/sun/java_cup/internal/runtime/lr_parser;Ljava/util/Stack<Lcom/sun/java_cup/internal/runtime/Symbol;>;I)Lcom/sun/java_cup/internal/runtime/Symbol;", $PUBLIC | $FINAL, $method(static_cast<$Symbol*(parser_actions::*)(int32_t,$lr_parser*,$Stack*,int32_t)>(&parser_actions::parser_do_action)), "java.lang.Exception"},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/XPathParser;)V", nullptr, 0, $method(parser_actions, init$, void, $XPathParser*)},
+	{"parser_do_action", "(ILcom/sun/java_cup/internal/runtime/lr_parser;Ljava/util/Stack;I)Lcom/sun/java_cup/internal/runtime/Symbol;", "(ILcom/sun/java_cup/internal/runtime/lr_parser;Ljava/util/Stack<Lcom/sun/java_cup/internal/runtime/Symbol;>;I)Lcom/sun/java_cup/internal/runtime/Symbol;", $PUBLIC | $FINAL, $method(parser_actions, parser_do_action, $Symbol*, int32_t, $lr_parser*, $Stack*, int32_t), "java.lang.Exception"},
 	{}
 };
 

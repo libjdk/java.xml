@@ -32,13 +32,13 @@ $FieldInfo _XMLDocumentFragmentScannerImpl$ElementStack2_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentFragmentScannerImpl$ElementStack2_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLDocumentFragmentScannerImpl$ElementStack2::*)($XMLDocumentFragmentScannerImpl*)>(&XMLDocumentFragmentScannerImpl$ElementStack2::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"getNext", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"matchElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Z", nullptr, $PUBLIC},
-	{"nextElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"popElement", "()I", nullptr, $PUBLIC},
-	{"resize", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl;)V", nullptr, $PUBLIC, $method(XMLDocumentFragmentScannerImpl$ElementStack2, init$, void, $XMLDocumentFragmentScannerImpl*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack2, clear, void)},
+	{"getNext", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack2, getNext, $QName*)},
+	{"matchElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Z", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack2, matchElement, bool, $QName*)},
+	{"nextElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack2, nextElement, $QName*)},
+	{"popElement", "()I", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack2, popElement, int32_t)},
+	{"resize", "()V", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack2, resize, void)},
 	{}
 };
 

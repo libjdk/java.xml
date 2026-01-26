@@ -11,12 +11,12 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _EntityDeclaration_MethodInfo_[] = {
-	{"getBaseURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNotationName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getReplacementText", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getBaseURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityDeclaration, getBaseURI, $String*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityDeclaration, getName, $String*)},
+	{"getNotationName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityDeclaration, getNotationName, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityDeclaration, getPublicId, $String*)},
+	{"getReplacementText", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityDeclaration, getReplacementText, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EntityDeclaration, getSystemId, $String*)},
 	{}
 };
 

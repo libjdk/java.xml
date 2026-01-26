@@ -32,13 +32,13 @@ $FieldInfo _TypeCheckError_FieldInfo_[] = {
 };
 
 $MethodInfo _TypeCheckError_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)V", nullptr, $PUBLIC, $method(static_cast<void(TypeCheckError::*)($SyntaxTreeNode*)>(&TypeCheckError::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg;)V", nullptr, $PUBLIC, $method(static_cast<void(TypeCheckError::*)($ErrorMsg*)>(&TypeCheckError::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(TypeCheckError::*)($String*,Object$*)>(&TypeCheckError::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(TypeCheckError::*)($String*,Object$*,Object$*)>(&TypeCheckError::init$))},
-	{"getErrorMsg", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg;", nullptr, $PUBLIC},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)V", nullptr, $PUBLIC, $method(TypeCheckError, init$, void, $SyntaxTreeNode*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg;)V", nullptr, $PUBLIC, $method(TypeCheckError, init$, void, $ErrorMsg*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(TypeCheckError, init$, void, $String*, Object$*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(TypeCheckError, init$, void, $String*, Object$*, Object$*)},
+	{"getErrorMsg", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg;", nullptr, $PUBLIC, $virtualMethod(TypeCheckError, getErrorMsg, $ErrorMsg*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TypeCheckError, getMessage, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TypeCheckError, toString, $String*)},
 	{}
 };
 

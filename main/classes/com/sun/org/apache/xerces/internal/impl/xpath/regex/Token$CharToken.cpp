@@ -31,10 +31,10 @@ $FieldInfo _Token$CharToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$CharToken_MethodInfo_[] = {
-	{"<init>", "(II)V", nullptr, 0, $method(static_cast<void(Token$CharToken::*)(int32_t,int32_t)>(&Token$CharToken::init$))},
-	{"getChar", "()I", nullptr, 0},
-	{"match", "(I)Z", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(II)V", nullptr, 0, $method(Token$CharToken, init$, void, int32_t, int32_t)},
+	{"getChar", "()I", nullptr, 0, $virtualMethod(Token$CharToken, getChar, int32_t)},
+	{"match", "(I)Z", nullptr, 0, $virtualMethod(Token$CharToken, match, bool, int32_t)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$CharToken, toString, $String*, int32_t)},
 	{}
 };
 

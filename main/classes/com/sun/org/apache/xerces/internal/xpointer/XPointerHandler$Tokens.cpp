@@ -49,15 +49,15 @@ $FieldInfo _XPointerHandler$Tokens_FieldInfo_[] = {
 };
 
 $MethodInfo _XPointerHandler$Tokens_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(static_cast<void(XPointerHandler$Tokens::*)($XPointerHandler*,$SymbolTable*)>(&XPointerHandler$Tokens::init$))},
-	{"addToken", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(XPointerHandler$Tokens::*)($String*)>(&XPointerHandler$Tokens::addToken))},
-	{"addToken", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(XPointerHandler$Tokens::*)(int32_t)>(&XPointerHandler$Tokens::addToken))},
-	{"getTokenString", "(I)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(XPointerHandler$Tokens::*)(int32_t)>(&XPointerHandler$Tokens::getTokenString))},
-	{"hasMore", "()Z", nullptr, $PRIVATE, $method(static_cast<bool(XPointerHandler$Tokens::*)()>(&XPointerHandler$Tokens::hasMore))},
-	{"nextToken", "()I", nullptr, $PRIVATE, $method(static_cast<int32_t(XPointerHandler$Tokens::*)()>(&XPointerHandler$Tokens::nextToken)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"nextTokenAsString", "()Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(XPointerHandler$Tokens::*)()>(&XPointerHandler$Tokens::nextTokenAsString)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"peekToken", "()I", nullptr, $PRIVATE, $method(static_cast<int32_t(XPointerHandler$Tokens::*)()>(&XPointerHandler$Tokens::peekToken)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"rewind", "()V", nullptr, $PRIVATE, $method(static_cast<void(XPointerHandler$Tokens::*)()>(&XPointerHandler$Tokens::rewind))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, init$, void, $XPointerHandler*, $SymbolTable*)},
+	{"addToken", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, addToken, void, $String*)},
+	{"addToken", "(I)V", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, addToken, void, int32_t)},
+	{"getTokenString", "(I)Ljava/lang/String;", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, getTokenString, $String*, int32_t)},
+	{"hasMore", "()Z", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, hasMore, bool)},
+	{"nextToken", "()I", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, nextToken, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"nextTokenAsString", "()Ljava/lang/String;", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, nextTokenAsString, $String*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"peekToken", "()I", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, peekToken, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"rewind", "()V", nullptr, $PRIVATE, $method(XPointerHandler$Tokens, rewind, void)},
 	{}
 };
 

@@ -37,12 +37,12 @@ $FieldInfo _XMLSecurityPropertyManager$Property_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSecurityPropertyManager$Property_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityPropertyManager$Property;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$XMLSecurityPropertyManager$PropertyArray*(*)()>(&XMLSecurityPropertyManager$Property::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(XMLSecurityPropertyManager$Property::*)($String*,int32_t,$String*,$String*)>(&XMLSecurityPropertyManager$Property::init$))},
-	{"defaultValue", "()Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(XMLSecurityPropertyManager$Property::*)()>(&XMLSecurityPropertyManager$Property::defaultValue))},
-	{"equalsName", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(static_cast<bool(XMLSecurityPropertyManager$Property::*)($String*)>(&XMLSecurityPropertyManager$Property::equalsName))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityPropertyManager$Property;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLSecurityPropertyManager$Property*(*)($String*)>(&XMLSecurityPropertyManager$Property::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityPropertyManager$Property;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLSecurityPropertyManager$PropertyArray*(*)()>(&XMLSecurityPropertyManager$Property::values))},
+	{"$values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityPropertyManager$Property;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XMLSecurityPropertyManager$Property, $values, $XMLSecurityPropertyManager$PropertyArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(XMLSecurityPropertyManager$Property, init$, void, $String*, int32_t, $String*, $String*)},
+	{"defaultValue", "()Ljava/lang/String;", nullptr, 0, $method(XMLSecurityPropertyManager$Property, defaultValue, $String*)},
+	{"equalsName", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager$Property, equalsName, bool, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityPropertyManager$Property;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityPropertyManager$Property, valueOf, XMLSecurityPropertyManager$Property*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xalan/internal/utils/XMLSecurityPropertyManager$Property;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityPropertyManager$Property, values, $XMLSecurityPropertyManager$PropertyArray*)},
 	{}
 };
 

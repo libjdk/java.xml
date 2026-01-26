@@ -23,12 +23,12 @@ $FieldInfo _DeferredDocumentImpl$IntVector_FieldInfo_[] = {
 };
 
 $MethodInfo _DeferredDocumentImpl$IntVector_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DeferredDocumentImpl$IntVector::*)()>(&DeferredDocumentImpl$IntVector::init$))},
-	{"addElement", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(DeferredDocumentImpl$IntVector::*)(int32_t)>(&DeferredDocumentImpl$IntVector::addElement))},
-	{"elementAt", "(I)I", nullptr, $PUBLIC, $method(static_cast<int32_t(DeferredDocumentImpl$IntVector::*)(int32_t)>(&DeferredDocumentImpl$IntVector::elementAt))},
-	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(DeferredDocumentImpl$IntVector::*)(int32_t)>(&DeferredDocumentImpl$IntVector::ensureCapacity))},
-	{"removeAllElements", "()V", nullptr, $PUBLIC, $method(static_cast<void(DeferredDocumentImpl$IntVector::*)()>(&DeferredDocumentImpl$IntVector::removeAllElements))},
-	{"size", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(DeferredDocumentImpl$IntVector::*)()>(&DeferredDocumentImpl$IntVector::size))},
+	{"<init>", "()V", nullptr, 0, $method(DeferredDocumentImpl$IntVector, init$, void)},
+	{"addElement", "(I)V", nullptr, $PUBLIC, $method(DeferredDocumentImpl$IntVector, addElement, void, int32_t)},
+	{"elementAt", "(I)I", nullptr, $PUBLIC, $method(DeferredDocumentImpl$IntVector, elementAt, int32_t, int32_t)},
+	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(DeferredDocumentImpl$IntVector, ensureCapacity, void, int32_t)},
+	{"removeAllElements", "()V", nullptr, $PUBLIC, $method(DeferredDocumentImpl$IntVector, removeAllElements, void)},
+	{"size", "()I", nullptr, $PUBLIC, $method(DeferredDocumentImpl$IntVector, size, int32_t)},
 	{}
 };
 

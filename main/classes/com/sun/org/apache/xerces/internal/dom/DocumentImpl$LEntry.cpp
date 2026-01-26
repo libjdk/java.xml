@@ -29,7 +29,7 @@ $FieldInfo _DocumentImpl$LEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _DocumentImpl$LEntry_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DocumentImpl;Ljava/lang/String;Lorg/w3c/dom/events/EventListener;Z)V", nullptr, 0, $method(static_cast<void(DocumentImpl$LEntry::*)($DocumentImpl*,$String*,$EventListener*,bool)>(&DocumentImpl$LEntry::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DocumentImpl;Ljava/lang/String;Lorg/w3c/dom/events/EventListener;Z)V", nullptr, 0, $method(DocumentImpl$LEntry, init$, void, $DocumentImpl*, $String*, $EventListener*, bool)},
 	{}
 };
 

@@ -29,11 +29,11 @@ $FieldInfo _TemplatesImpl$TransletClassLoader_FieldInfo_[] = {
 };
 
 $MethodInfo _TemplatesImpl$TransletClassLoader_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, 0, $method(static_cast<void(TemplatesImpl$TransletClassLoader::*)($ClassLoader*)>(&TemplatesImpl$TransletClassLoader::init$))},
-	{"<init>", "(Ljava/lang/ClassLoader;Ljava/util/Map;)V", "(Ljava/lang/ClassLoader;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;)V", 0, $method(static_cast<void(TemplatesImpl$TransletClassLoader::*)($ClassLoader*,$Map*)>(&TemplatesImpl$TransletClassLoader::init$))},
-	{"defineClass", "([B)Ljava/lang/Class;", "([B)Ljava/lang/Class<*>;", 0, $method(static_cast<$Class*(TemplatesImpl$TransletClassLoader::*)($bytes*)>(&TemplatesImpl$TransletClassLoader::defineClass))},
-	{"defineClass", "([BLjava/security/ProtectionDomain;)Ljava/lang/Class;", "([BLjava/security/ProtectionDomain;)Ljava/lang/Class<*>;", 0, $method(static_cast<$Class*(TemplatesImpl$TransletClassLoader::*)($bytes*,$ProtectionDomain*)>(&TemplatesImpl$TransletClassLoader::defineClass))},
-	{"loadClass", "(Ljava/lang/String;)Ljava/lang/Class;", "(Ljava/lang/String;)Ljava/lang/Class<*>;", $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
+	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, 0, $method(TemplatesImpl$TransletClassLoader, init$, void, $ClassLoader*)},
+	{"<init>", "(Ljava/lang/ClassLoader;Ljava/util/Map;)V", "(Ljava/lang/ClassLoader;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<*>;>;)V", 0, $method(TemplatesImpl$TransletClassLoader, init$, void, $ClassLoader*, $Map*)},
+	{"defineClass", "([B)Ljava/lang/Class;", "([B)Ljava/lang/Class<*>;", 0, $method(TemplatesImpl$TransletClassLoader, defineClass, $Class*, $bytes*)},
+	{"defineClass", "([BLjava/security/ProtectionDomain;)Ljava/lang/Class;", "([BLjava/security/ProtectionDomain;)Ljava/lang/Class<*>;", 0, $method(TemplatesImpl$TransletClassLoader, defineClass, $Class*, $bytes*, $ProtectionDomain*)},
+	{"loadClass", "(Ljava/lang/String;)Ljava/lang/Class;", "(Ljava/lang/String;)Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(TemplatesImpl$TransletClassLoader, loadClass, $Class*, $String*), "java.lang.ClassNotFoundException"},
 	{}
 };
 

@@ -28,11 +28,11 @@ $MethodInfo _MutableAttrListImpl_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MutableAttrListImpl::*)()>(&MutableAttrListImpl::init$))},
-	{"<init>", "(Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, $method(static_cast<void(MutableAttrListImpl::*)($Attributes*)>(&MutableAttrListImpl::init$))},
-	{"addAttribute", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"addAttributes", "(Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC},
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MutableAttrListImpl, init$, void)},
+	{"<init>", "(Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, $method(MutableAttrListImpl, init$, void, $Attributes*)},
+	{"addAttribute", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(MutableAttrListImpl, addAttribute, void, $String*, $String*, $String*, $String*, $String*)},
+	{"addAttributes", "(Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, $virtualMethod(MutableAttrListImpl, addAttributes, void, $Attributes*)},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(MutableAttrListImpl, contains, bool, $String*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

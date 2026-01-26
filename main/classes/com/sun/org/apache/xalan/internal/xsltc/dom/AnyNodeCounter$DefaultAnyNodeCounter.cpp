@@ -29,8 +29,8 @@ namespace com {
 							namespace dom {
 
 $MethodInfo _AnyNodeCounter$DefaultAnyNodeCounter_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(AnyNodeCounter$DefaultAnyNodeCounter::*)($Translet*,$DOM*,$DTMAxisIterator*)>(&AnyNodeCounter$DefaultAnyNodeCounter::init$))},
-	{"getCounter", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(AnyNodeCounter$DefaultAnyNodeCounter, init$, void, $Translet*, $DOM*, $DTMAxisIterator*)},
+	{"getCounter", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AnyNodeCounter$DefaultAnyNodeCounter, getCounter, $String*)},
 	{}
 };
 

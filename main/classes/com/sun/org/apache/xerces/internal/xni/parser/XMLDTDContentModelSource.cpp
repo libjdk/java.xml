@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLDTDContentModelHandler.h>
 #include <jcpp.h>
 
+using $XMLDTDContentModelHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDTDContentModelHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,8 +17,8 @@ namespace com {
 							namespace parser {
 
 $MethodInfo _XMLDTDContentModelSource_MethodInfo_[] = {
-	{"getDTDContentModelHandler", "()Lcom/sun/org/apache/xerces/internal/xni/XMLDTDContentModelHandler;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDTDContentModelHandler", "(Lcom/sun/org/apache/xerces/internal/xni/XMLDTDContentModelHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDTDContentModelHandler", "()Lcom/sun/org/apache/xerces/internal/xni/XMLDTDContentModelHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDTDContentModelSource, getDTDContentModelHandler, $XMLDTDContentModelHandler*)},
+	{"setDTDContentModelHandler", "(Lcom/sun/org/apache/xerces/internal/xni/XMLDTDContentModelHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDTDContentModelSource, setDTDContentModelHandler, void, $XMLDTDContentModelHandler*)},
 	{}
 };
 

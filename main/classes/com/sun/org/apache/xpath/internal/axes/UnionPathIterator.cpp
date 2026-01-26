@@ -88,22 +88,22 @@ $FieldInfo _UnionPathIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _UnionPathIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(UnionPathIterator::*)()>(&UnionPathIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;I)V", nullptr, $PUBLIC, $method(static_cast<void(UnionPathIterator::*)($Compiler*,int32_t)>(&UnionPathIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"addIterator", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC},
-	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"createDTMIterator", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;I)Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;", nullptr, $PROTECTED, nullptr, "javax.xml.transform.TransformerException"},
-	{"createUnionIterator", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;I)Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$LocPathIterator*(*)($Compiler*,int32_t)>(&UnionPathIterator::createUnionIterator)), "javax.xml.transform.TransformerException"},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getAnalysisBits", "()I", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"loadLocationPaths", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, $PROTECTED, nullptr, "javax.xml.transform.TransformerException"},
-	{"nextNode", "()I", nullptr, $PUBLIC},
-	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(static_cast<void(UnionPathIterator::*)($ObjectInputStream*)>(&UnionPathIterator::readObject)), "java.io.IOException,java.lang.ClassNotFoundException"},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(UnionPathIterator, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;I)V", nullptr, $PUBLIC, $method(UnionPathIterator, init$, void, $Compiler*, int32_t), "javax.xml.transform.TransformerException"},
+	{"addIterator", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, addIterator, void, $DTMIterator*)},
+	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, callVisitors, void, $ExpressionOwner*, $XPathVisitor*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, clone, $Object*), "java.lang.CloneNotSupportedException"},
+	{"createDTMIterator", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;I)Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;", nullptr, $PROTECTED, $virtualMethod(UnionPathIterator, createDTMIterator, $LocPathIterator*, $Compiler*, int32_t), "javax.xml.transform.TransformerException"},
+	{"createUnionIterator", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;I)Lcom/sun/org/apache/xpath/internal/axes/LocPathIterator;", nullptr, $PUBLIC | $STATIC, $staticMethod(UnionPathIterator, createUnionIterator, $LocPathIterator*, $Compiler*, int32_t), "javax.xml.transform.TransformerException"},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, deepEquals, bool, $Expression*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, detach, void)},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(UnionPathIterator, fixupVariables, void, $List*, int32_t)},
+	{"getAnalysisBits", "()I", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, getAnalysisBits, int32_t)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, getAxis, int32_t)},
+	{"loadLocationPaths", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, $PROTECTED, $virtualMethod(UnionPathIterator, loadLocationPaths, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"nextNode", "()I", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, nextNode, int32_t)},
+	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(UnionPathIterator, readObject, void, $ObjectInputStream*), "java.io.IOException,java.lang.ClassNotFoundException"},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(UnionPathIterator, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

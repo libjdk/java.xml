@@ -35,11 +35,11 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _TABLESWITCH_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(TABLESWITCH::*)()>(&TABLESWITCH::init$))},
-	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(TABLESWITCH::*)($ints*,$InstructionHandleArray*,$InstructionHandle*)>(&TABLESWITCH::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, 0, $method(TABLESWITCH, init$, void)},
+	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(TABLESWITCH, init$, void, $ints*, $InstructionHandleArray*, $InstructionHandle*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(TABLESWITCH, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(TABLESWITCH, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, $virtualMethod(TABLESWITCH, initFromFile, void, $ByteSequence*, bool), "java.io.IOException"},
 	{}
 };
 

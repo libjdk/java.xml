@@ -36,10 +36,10 @@ $FieldInfo _XMLSecurityPropertyManager$State_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSecurityPropertyManager$State_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$XMLSecurityPropertyManager$StateArray*(*)()>(&XMLSecurityPropertyManager$State::$values))},
-	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(static_cast<void(XMLSecurityPropertyManager$State::*)($String*,int32_t)>(&XMLSecurityPropertyManager$State::init$))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLSecurityPropertyManager$State*(*)($String*)>(&XMLSecurityPropertyManager$State::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLSecurityPropertyManager$StateArray*(*)()>(&XMLSecurityPropertyManager$State::values))},
+	{"$values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XMLSecurityPropertyManager$State, $values, $XMLSecurityPropertyManager$StateArray*)},
+	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(XMLSecurityPropertyManager$State, init$, void, $String*, int32_t)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityPropertyManager$State, valueOf, XMLSecurityPropertyManager$State*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityPropertyManager$State, values, $XMLSecurityPropertyManager$StateArray*)},
 	{}
 };
 

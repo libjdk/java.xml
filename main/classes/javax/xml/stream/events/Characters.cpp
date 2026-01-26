@@ -11,10 +11,10 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _Characters_MethodInfo_[] = {
-	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isCData", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isIgnorableWhiteSpace", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isWhiteSpace", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Characters, getData, $String*)},
+	{"isCData", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Characters, isCData, bool)},
+	{"isIgnorableWhiteSpace", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Characters, isIgnorableWhiteSpace, bool)},
+	{"isWhiteSpace", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Characters, isWhiteSpace, bool)},
 	{}
 };
 

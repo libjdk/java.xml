@@ -4,6 +4,8 @@
 #include <java/io/Reader.h>
 #include <jcpp.h>
 
+using $InputStream = ::java::io::InputStream;
+using $Reader = ::java::io::Reader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -13,22 +15,22 @@ namespace org {
 			namespace ls {
 
 $MethodInfo _LSInput_MethodInfo_[] = {
-	{"getBaseURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getByteStream", "()Ljava/io/InputStream;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCertifiedText", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCharacterStream", "()Ljava/io/Reader;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getStringData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setBaseURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setByteStream", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setCertifiedText", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setCharacterStream", "(Ljava/io/Reader;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setPublicId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setStringData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getBaseURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getBaseURI, $String*)},
+	{"getByteStream", "()Ljava/io/InputStream;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getByteStream, $InputStream*)},
+	{"getCertifiedText", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getCertifiedText, bool)},
+	{"getCharacterStream", "()Ljava/io/Reader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getCharacterStream, $Reader*)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getEncoding, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getPublicId, $String*)},
+	{"getStringData", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getStringData, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, getSystemId, $String*)},
+	{"setBaseURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setBaseURI, void, $String*)},
+	{"setByteStream", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setByteStream, void, $InputStream*)},
+	{"setCertifiedText", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setCertifiedText, void, bool)},
+	{"setCharacterStream", "(Ljava/io/Reader;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setCharacterStream, void, $Reader*)},
+	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setEncoding, void, $String*)},
+	{"setPublicId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setPublicId, void, $String*)},
+	{"setStringData", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setStringData, void, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSInput, setSystemId, void, $String*)},
 	{}
 };
 

@@ -37,9 +37,9 @@ $FieldInfo _NodeSortRecordGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeSortRecordGenerator_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(static_cast<void(NodeSortRecordGenerator::*)($String*,$String*,$String*,int32_t,$StringArray*,$Stylesheet*)>(&NodeSortRecordGenerator::init$))},
-	{"isExternal", "()Z", nullptr, $PUBLIC},
-	{"loadTranslet", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(NodeSortRecordGenerator, init$, void, $String*, $String*, $String*, int32_t, $StringArray*, $Stylesheet*)},
+	{"isExternal", "()Z", nullptr, $PUBLIC, $virtualMethod(NodeSortRecordGenerator, isExternal, bool)},
+	{"loadTranslet", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(NodeSortRecordGenerator, loadTranslet, $Instruction*)},
 	{}
 };
 

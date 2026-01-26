@@ -29,11 +29,11 @@ $FieldInfo _XSDAbstractParticleTraverser$ParticleArray_FieldInfo_[] = {
 };
 
 $MethodInfo _XSDAbstractParticleTraverser$ParticleArray_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(XSDAbstractParticleTraverser$ParticleArray::*)()>(&XSDAbstractParticleTraverser$ParticleArray::init$))},
-	{"addParticle", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)V", nullptr, 0},
-	{"getParticleCount", "()I", nullptr, 0},
-	{"popContext", "()[Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;", nullptr, 0},
-	{"pushContext", "()V", nullptr, 0},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(XSDAbstractParticleTraverser$ParticleArray, init$, void)},
+	{"addParticle", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)V", nullptr, 0, $virtualMethod(XSDAbstractParticleTraverser$ParticleArray, addParticle, void, $XSParticleDecl*)},
+	{"getParticleCount", "()I", nullptr, 0, $virtualMethod(XSDAbstractParticleTraverser$ParticleArray, getParticleCount, int32_t)},
+	{"popContext", "()[Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;", nullptr, 0, $virtualMethod(XSDAbstractParticleTraverser$ParticleArray, popContext, $XSParticleDeclArray*)},
+	{"pushContext", "()V", nullptr, 0, $virtualMethod(XSDAbstractParticleTraverser$ParticleArray, pushContext, void)},
 	{}
 };
 

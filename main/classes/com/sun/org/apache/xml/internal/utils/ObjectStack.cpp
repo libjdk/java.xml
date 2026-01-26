@@ -20,18 +20,18 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _ObjectStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ObjectStack::*)()>(&ObjectStack::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ObjectStack::*)(int32_t)>(&ObjectStack::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/ObjectStack;)V", nullptr, $PUBLIC, $method(static_cast<void(ObjectStack::*)(ObjectStack*)>(&ObjectStack::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"empty", "()Z", nullptr, $PUBLIC},
-	{"peek", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"peek", "(I)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"pop", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"push", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"quickPop", "(I)V", nullptr, $PUBLIC},
-	{"search", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"setTop", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ObjectStack, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(ObjectStack, init$, void, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/ObjectStack;)V", nullptr, $PUBLIC, $method(ObjectStack, init$, void, ObjectStack*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ObjectStack, clone, $Object*), "java.lang.CloneNotSupportedException"},
+	{"empty", "()Z", nullptr, $PUBLIC, $virtualMethod(ObjectStack, empty, bool)},
+	{"peek", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ObjectStack, peek, $Object*)},
+	{"peek", "(I)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ObjectStack, peek, $Object*, int32_t)},
+	{"pop", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ObjectStack, pop, $Object*)},
+	{"push", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ObjectStack, push, $Object*, Object$*)},
+	{"quickPop", "(I)V", nullptr, $PUBLIC, $virtualMethod(ObjectStack, quickPop, void, int32_t)},
+	{"search", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(ObjectStack, search, int32_t, Object$*)},
+	{"setTop", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(ObjectStack, setTop, void, Object$*)},
 	{}
 };
 

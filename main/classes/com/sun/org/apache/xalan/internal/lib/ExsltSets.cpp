@@ -30,13 +30,13 @@ namespace com {
 						namespace lib {
 
 $MethodInfo _ExsltSets_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExsltSets::*)()>(&ExsltSets::init$))},
-	{"difference", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*,$NodeList*)>(&ExsltSets::difference))},
-	{"distinct", "(Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*)>(&ExsltSets::distinct))},
-	{"hasSameNode", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($NodeList*,$NodeList*)>(&ExsltSets::hasSameNode))},
-	{"intersection", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*,$NodeList*)>(&ExsltSets::intersection))},
-	{"leading", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*,$NodeList*)>(&ExsltSets::leading))},
-	{"trailing", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*,$NodeList*)>(&ExsltSets::trailing))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExsltSets, init$, void)},
+	{"difference", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltSets, difference, $NodeList*, $NodeList*, $NodeList*)},
+	{"distinct", "(Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltSets, distinct, $NodeList*, $NodeList*)},
+	{"hasSameNode", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltSets, hasSameNode, bool, $NodeList*, $NodeList*)},
+	{"intersection", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltSets, intersection, $NodeList*, $NodeList*, $NodeList*)},
+	{"leading", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltSets, leading, $NodeList*, $NodeList*, $NodeList*)},
+	{"trailing", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltSets, trailing, $NodeList*, $NodeList*, $NodeList*)},
 	{}
 };
 

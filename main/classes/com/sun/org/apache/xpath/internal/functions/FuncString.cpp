@@ -29,8 +29,8 @@ $FieldInfo _FuncString_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncString_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncString::*)()>(&FuncString::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncString, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncString, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

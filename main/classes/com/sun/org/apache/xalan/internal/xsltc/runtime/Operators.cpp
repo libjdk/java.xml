@@ -35,9 +35,9 @@ $FieldInfo _Operators_FieldInfo_[] = {
 };
 
 $MethodInfo _Operators_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Operators::*)()>(&Operators::init$))},
-	{"getOpNames", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$String*(*)(int32_t)>(&Operators::getOpNames))},
-	{"swapOp", "(I)I", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<int32_t(*)(int32_t)>(&Operators::swapOp))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Operators, init$, void)},
+	{"getOpNames", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(Operators, getOpNames, $String*, int32_t)},
+	{"swapOp", "(I)I", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(Operators, swapOp, int32_t, int32_t)},
 	{}
 };
 

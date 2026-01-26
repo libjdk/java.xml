@@ -24,8 +24,8 @@ namespace com {
 								namespace util {
 
 $MethodInfo _XS10TypeHelper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(XS10TypeHelper::*)()>(&XS10TypeHelper::init$))},
-	{"getSchemaTypeName", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($XSTypeDefinition*)>(&XS10TypeHelper::getSchemaTypeName))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(XS10TypeHelper, init$, void)},
+	{"getSchemaTypeName", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(XS10TypeHelper, getSchemaTypeName, $String*, $XSTypeDefinition*)},
 	{}
 };
 

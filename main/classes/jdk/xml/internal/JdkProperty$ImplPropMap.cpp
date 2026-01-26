@@ -48,17 +48,17 @@ $FieldInfo _JdkProperty$ImplPropMap_FieldInfo_[] = {
 };
 
 $MethodInfo _JdkProperty$ImplPropMap_MethodInfo_[] = {
-	{"$values", "()[Ljdk/xml/internal/JdkProperty$ImplPropMap;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$JdkProperty$ImplPropMapArray*(*)()>(&JdkProperty$ImplPropMap::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(JdkProperty$ImplPropMap::*)($String*,int32_t,$String*,$String*,$String*,bool,$String*,$String*)>(&JdkProperty$ImplPropMap::init$))},
-	{"getState", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC, $method(static_cast<$JdkProperty$State*(JdkProperty$ImplPropMap::*)($String*)>(&JdkProperty$ImplPropMap::getState))},
-	{"is", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(static_cast<bool(JdkProperty$ImplPropMap::*)($String*)>(&JdkProperty$ImplPropMap::is))},
-	{"isNameDiffer", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(JdkProperty$ImplPropMap::*)()>(&JdkProperty$ImplPropMap::isNameDiffer))},
-	{"qName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(JdkProperty$ImplPropMap::*)()>(&JdkProperty$ImplPropMap::qName))},
-	{"qNameOld", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(JdkProperty$ImplPropMap::*)()>(&JdkProperty$ImplPropMap::qNameOld))},
-	{"systemProperty", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(JdkProperty$ImplPropMap::*)()>(&JdkProperty$ImplPropMap::systemProperty))},
-	{"systemPropertyOld", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(JdkProperty$ImplPropMap::*)()>(&JdkProperty$ImplPropMap::systemPropertyOld))},
-	{"valueOf", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$ImplPropMap;", nullptr, $PUBLIC | $STATIC, $method(static_cast<JdkProperty$ImplPropMap*(*)($String*)>(&JdkProperty$ImplPropMap::valueOf))},
-	{"values", "()[Ljdk/xml/internal/JdkProperty$ImplPropMap;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$JdkProperty$ImplPropMapArray*(*)()>(&JdkProperty$ImplPropMap::values))},
+	{"$values", "()[Ljdk/xml/internal/JdkProperty$ImplPropMap;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(JdkProperty$ImplPropMap, $values, $JdkProperty$ImplPropMapArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(JdkProperty$ImplPropMap, init$, void, $String*, int32_t, $String*, $String*, $String*, bool, $String*, $String*)},
+	{"getState", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC, $method(JdkProperty$ImplPropMap, getState, $JdkProperty$State*, $String*)},
+	{"is", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(JdkProperty$ImplPropMap, is, bool, $String*)},
+	{"isNameDiffer", "()Z", nullptr, $PUBLIC, $method(JdkProperty$ImplPropMap, isNameDiffer, bool)},
+	{"qName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(JdkProperty$ImplPropMap, qName, $String*)},
+	{"qNameOld", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(JdkProperty$ImplPropMap, qNameOld, $String*)},
+	{"systemProperty", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(JdkProperty$ImplPropMap, systemProperty, $String*)},
+	{"systemPropertyOld", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(JdkProperty$ImplPropMap, systemPropertyOld, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$ImplPropMap;", nullptr, $PUBLIC | $STATIC, $staticMethod(JdkProperty$ImplPropMap, valueOf, JdkProperty$ImplPropMap*, $String*)},
+	{"values", "()[Ljdk/xml/internal/JdkProperty$ImplPropMap;", nullptr, $PUBLIC | $STATIC, $staticMethod(JdkProperty$ImplPropMap, values, $JdkProperty$ImplPropMapArray*)},
 	{}
 };
 

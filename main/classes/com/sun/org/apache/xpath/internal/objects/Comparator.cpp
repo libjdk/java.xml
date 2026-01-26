@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <jcpp.h>
 
+using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,9 +16,9 @@ namespace com {
 						namespace objects {
 
 $MethodInfo _Comparator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Comparator::*)()>(&Comparator::init$))},
-	{"compareNumbers", "(DD)Z", nullptr, $ABSTRACT},
-	{"compareStrings", "(Lcom/sun/org/apache/xml/internal/utils/XMLString;Lcom/sun/org/apache/xml/internal/utils/XMLString;)Z", nullptr, $ABSTRACT},
+	{"<init>", "()V", nullptr, 0, $method(Comparator, init$, void)},
+	{"compareNumbers", "(DD)Z", nullptr, $ABSTRACT, $virtualMethod(Comparator, compareNumbers, bool, double, double)},
+	{"compareStrings", "(Lcom/sun/org/apache/xml/internal/utils/XMLString;Lcom/sun/org/apache/xml/internal/utils/XMLString;)Z", nullptr, $ABSTRACT, $virtualMethod(Comparator, compareStrings, bool, $XMLString*, $XMLString*)},
 	{}
 };
 

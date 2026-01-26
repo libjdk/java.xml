@@ -42,20 +42,20 @@ $FieldInfo _XML11DTDScannerImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11DTDScannerImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11DTDScannerImpl::*)()>(&XML11DTDScannerImpl::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;Lcom/sun/org/apache/xerces/internal/impl/XMLEntityManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XML11DTDScannerImpl::*)($SymbolTable*,$XMLErrorReporter*,$XMLEntityManager*)>(&XML11DTDScannerImpl::init$))},
-	{"getVersionNotSupportedKey", "()Ljava/lang/String;", nullptr, $PROTECTED},
-	{"isInvalid", "(I)Z", nullptr, $PROTECTED},
-	{"isInvalidLiteral", "(I)Z", nullptr, $PROTECTED},
-	{"isUnchangedByNormalization", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)I", nullptr, $PROTECTED},
-	{"isValidNCName", "(I)Z", nullptr, $PROTECTED},
-	{"isValidNameChar", "(I)Z", nullptr, $PROTECTED},
-	{"isValidNameStartChar", "(I)Z", nullptr, $PROTECTED},
-	{"isValidNameStartHighSurrogate", "(I)Z", nullptr, $PROTECTED},
-	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PROTECTED},
-	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;I)V", nullptr, $PROTECTED},
-	{"scanPubidLiteral", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"versionSupported", "(Ljava/lang/String;)Z", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11DTDScannerImpl, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;Lcom/sun/org/apache/xerces/internal/impl/XMLEntityManager;)V", nullptr, $PUBLIC, $method(XML11DTDScannerImpl, init$, void, $SymbolTable*, $XMLErrorReporter*, $XMLEntityManager*)},
+	{"getVersionNotSupportedKey", "()Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, getVersionNotSupportedKey, $String*)},
+	{"isInvalid", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, isInvalid, bool, int32_t)},
+	{"isInvalidLiteral", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, isInvalidLiteral, bool, int32_t)},
+	{"isUnchangedByNormalization", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)I", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, isUnchangedByNormalization, int32_t, $XMLString*)},
+	{"isValidNCName", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, isValidNCName, bool, int32_t)},
+	{"isValidNameChar", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, isValidNameChar, bool, int32_t)},
+	{"isValidNameStartChar", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, isValidNameStartChar, bool, int32_t)},
+	{"isValidNameStartHighSurrogate", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, isValidNameStartHighSurrogate, bool, int32_t)},
+	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, normalizeWhitespace, void, $XMLString*)},
+	{"normalizeWhitespace", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;I)V", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, normalizeWhitespace, void, $XMLString*, int32_t)},
+	{"scanPubidLiteral", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, scanPubidLiteral, bool, $XMLString*), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"versionSupported", "(Ljava/lang/String;)Z", nullptr, $PROTECTED, $virtualMethod(XML11DTDScannerImpl, versionSupported, bool, $String*)},
 	{}
 };
 

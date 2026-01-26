@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/dv/ValidationContext.h>
 #include <jcpp.h>
 
+using $ValidationContext = ::com::sun::org::apache::xerces::internal::impl::dv::ValidationContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,7 +17,7 @@ namespace com {
 							namespace dv {
 
 $MethodInfo _DatatypeValidator_MethodInfo_[] = {
-	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DatatypeValidator, validate, void, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
 	{}
 };
 

@@ -53,18 +53,18 @@ $FieldInfo _XSAllCM_FieldInfo_[] = {
 };
 
 $MethodInfo _XSAllCM_MethodInfo_[] = {
-	{"<init>", "(ZI)V", nullptr, $PUBLIC, $method(static_cast<void(XSAllCM::*)(bool,int32_t)>(&XSAllCM::init$))},
-	{"addElement", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Z)V", nullptr, $PUBLIC},
-	{"checkMinMaxBounds", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC},
-	{"checkUniqueParticleAttribution", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Z", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
-	{"endContentModel", "([I)Z", nullptr, $PUBLIC},
-	{"findMatchingDecl", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, 0},
-	{"getTermName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC},
-	{"occurenceInfo", "([I)[I", nullptr, $PUBLIC},
-	{"oneTransition", "(Lcom/sun/org/apache/xerces/internal/xni/QName;[ILcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"startContentModel", "()[I", nullptr, $PUBLIC},
-	{"whatCanGoHere", "([I)Ljava/util/List;", "([I)Ljava/util/List<Ljava/lang/Object;>;", $PUBLIC},
+	{"<init>", "(ZI)V", nullptr, $PUBLIC, $method(XSAllCM, init$, void, bool, int32_t)},
+	{"addElement", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Z)V", nullptr, $PUBLIC, $virtualMethod(XSAllCM, addElement, void, $XSElementDecl*, bool)},
+	{"checkMinMaxBounds", "()Ljava/util/List;", "()Ljava/util/List<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(XSAllCM, checkMinMaxBounds, $List*)},
+	{"checkUniqueParticleAttribution", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Z", nullptr, $PUBLIC, $virtualMethod(XSAllCM, checkUniqueParticleAttribution, bool, $SubstitutionGroupHandler*), "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
+	{"endContentModel", "([I)Z", nullptr, $PUBLIC, $virtualMethod(XSAllCM, endContentModel, bool, $ints*)},
+	{"findMatchingDecl", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, 0, $virtualMethod(XSAllCM, findMatchingDecl, $Object*, $QName*, $SubstitutionGroupHandler*)},
+	{"getTermName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSAllCM, getTermName, $String*, int32_t)},
+	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC, $virtualMethod(XSAllCM, isCompactedForUPA, bool)},
+	{"occurenceInfo", "([I)[I", nullptr, $PUBLIC, $virtualMethod(XSAllCM, occurenceInfo, $ints*, $ints*)},
+	{"oneTransition", "(Lcom/sun/org/apache/xerces/internal/xni/QName;[ILcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSAllCM, oneTransition, $Object*, $QName*, $ints*, $SubstitutionGroupHandler*)},
+	{"startContentModel", "()[I", nullptr, $PUBLIC, $virtualMethod(XSAllCM, startContentModel, $ints*)},
+	{"whatCanGoHere", "([I)Ljava/util/List;", "([I)Ljava/util/List<Ljava/lang/Object;>;", $PUBLIC, $virtualMethod(XSAllCM, whatCanGoHere, $List*, $ints*)},
 	{}
 };
 

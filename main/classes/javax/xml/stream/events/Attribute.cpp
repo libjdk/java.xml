@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $QName = ::javax::xml::namespace$::QName;
 
 namespace javax {
 	namespace xml {
@@ -12,10 +13,10 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _Attribute_MethodInfo_[] = {
-	{"getDTDType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isSpecified", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDTDType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attribute, getDTDType, $String*)},
+	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attribute, getName, $QName*)},
+	{"getValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attribute, getValue, $String*)},
+	{"isSpecified", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attribute, isSpecified, bool)},
 	{}
 };
 

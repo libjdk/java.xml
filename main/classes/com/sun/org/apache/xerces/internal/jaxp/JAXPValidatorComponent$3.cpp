@@ -20,13 +20,13 @@ namespace com {
 						namespace jaxp {
 
 $MethodInfo _JAXPValidatorComponent$3_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(JAXPValidatorComponent$3::*)()>(&JAXPValidatorComponent$3::init$))},
-	{"getAttributeTypeInfo", "(I)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC},
-	{"getAttributeTypeInfo", "(Ljava/lang/String;)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC},
-	{"getAttributeTypeInfo", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC},
-	{"getElementTypeInfo", "()Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC},
-	{"isIdAttribute", "(I)Z", nullptr, $PUBLIC},
-	{"isSpecified", "(I)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(JAXPValidatorComponent$3, init$, void)},
+	{"getAttributeTypeInfo", "(I)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$3, getAttributeTypeInfo, $TypeInfo*, int32_t)},
+	{"getAttributeTypeInfo", "(Ljava/lang/String;)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$3, getAttributeTypeInfo, $TypeInfo*, $String*)},
+	{"getAttributeTypeInfo", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$3, getAttributeTypeInfo, $TypeInfo*, $String*, $String*)},
+	{"getElementTypeInfo", "()Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$3, getElementTypeInfo, $TypeInfo*)},
+	{"isIdAttribute", "(I)Z", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$3, isIdAttribute, bool, int32_t)},
+	{"isSpecified", "(I)Z", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$3, isSpecified, bool, int32_t)},
 	{}
 };
 

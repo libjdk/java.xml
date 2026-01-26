@@ -70,21 +70,21 @@ $FieldInfo _SAXParserFactoryImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXParserFactoryImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAXParserFactoryImpl::*)()>(&SAXParserFactoryImpl::init$))},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getFromFeatures", "(Ljava/lang/String;)Z", nullptr, $PRIVATE, $method(static_cast<bool(SAXParserFactoryImpl::*)($String*)>(&SAXParserFactoryImpl::getFromFeatures))},
-	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC},
-	{"isNamespaceAware", "()Z", nullptr, $PUBLIC},
-	{"isValidating", "()Z", nullptr, $PUBLIC},
-	{"isXIncludeAware", "()Z", nullptr, $PUBLIC},
-	{"newSAXParser", "()Ljavax/xml/parsers/SAXParser;", nullptr, $PUBLIC, nullptr, "javax.xml.parsers.ParserConfigurationException"},
-	{"newSAXParserImpl", "()Lcom/sun/org/apache/xerces/internal/jaxp/SAXParserImpl;", nullptr, $PRIVATE, $method(static_cast<$SAXParserImpl*(SAXParserFactoryImpl::*)()>(&SAXParserFactoryImpl::newSAXParserImpl)), "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"putInFeatures", "(Ljava/lang/String;Z)V", nullptr, $PRIVATE, $method(static_cast<void(SAXParserFactoryImpl::*)($String*,bool)>(&SAXParserFactoryImpl::putInFeatures))},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setNamespaceAware", "(Z)V", nullptr, $PUBLIC},
-	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC},
-	{"setValidating", "(Z)V", nullptr, $PUBLIC},
-	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAXParserFactoryImpl, init$, void)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, getFeature, bool, $String*), "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getFromFeatures", "(Ljava/lang/String;)Z", nullptr, $PRIVATE, $method(SAXParserFactoryImpl, getFromFeatures, bool, $String*)},
+	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, getSchema, $Schema*)},
+	{"isNamespaceAware", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, isNamespaceAware, bool)},
+	{"isValidating", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, isValidating, bool)},
+	{"isXIncludeAware", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, isXIncludeAware, bool)},
+	{"newSAXParser", "()Ljavax/xml/parsers/SAXParser;", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, newSAXParser, $SAXParser*), "javax.xml.parsers.ParserConfigurationException"},
+	{"newSAXParserImpl", "()Lcom/sun/org/apache/xerces/internal/jaxp/SAXParserImpl;", nullptr, $PRIVATE, $method(SAXParserFactoryImpl, newSAXParserImpl, $SAXParserImpl*), "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"putInFeatures", "(Ljava/lang/String;Z)V", nullptr, $PRIVATE, $method(SAXParserFactoryImpl, putInFeatures, void, $String*, bool)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, setFeature, void, $String*, bool), "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setNamespaceAware", "(Z)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, setNamespaceAware, void, bool)},
+	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, setSchema, void, $Schema*)},
+	{"setValidating", "(Z)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, setValidating, void, bool)},
+	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactoryImpl, setXIncludeAware, void, bool)},
 	{}
 };
 

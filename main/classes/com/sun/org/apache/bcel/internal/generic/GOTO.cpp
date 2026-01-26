@@ -41,12 +41,12 @@ $MethodInfo _GOTO_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(GOTO::*)()>(&GOTO::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(GOTO::*)($InstructionHandle*)>(&GOTO::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, 0, $method(GOTO, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(GOTO, init$, void, $InstructionHandle*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(GOTO, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(GOTO, dump, void, $DataOutputStream*), "java.io.IOException"},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"updatePosition", "(II)I", nullptr, $PROTECTED},
+	{"updatePosition", "(II)I", nullptr, $PROTECTED, $virtualMethod(GOTO, updatePosition, int32_t, int32_t, int32_t)},
 	{}
 };
 

@@ -27,8 +27,8 @@ $FieldInfo _DTMDefaultBaseTraversers$AllFromNodeTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$AllFromNodeTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$AllFromNodeTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$AllFromNodeTraverser::init$))},
-	{"next", "(II)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$AllFromNodeTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"next", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$AllFromNodeTraverser, next, int32_t, int32_t, int32_t)},
 	{}
 };
 

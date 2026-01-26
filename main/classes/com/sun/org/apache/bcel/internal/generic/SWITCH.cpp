@@ -40,13 +40,13 @@ $FieldInfo _SWITCH_FieldInfo_[] = {
 };
 
 $MethodInfo _SWITCH_MethodInfo_[] = {
-	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)V", nullptr, $PUBLIC, $method(static_cast<void(SWITCH::*)($ints*,$InstructionHandleArray*,$InstructionHandle*,int32_t)>(&SWITCH::init$))},
-	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(SWITCH::*)($ints*,$InstructionHandleArray*,$InstructionHandle*)>(&SWITCH::init$))},
-	{"fillup", "(ILcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PRIVATE, $method(static_cast<void(SWITCH::*)(int32_t,$InstructionHandle*)>(&SWITCH::fillup))},
-	{"getInstruction", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(static_cast<$Instruction*(SWITCH::*)()>(&SWITCH::getInstruction))},
-	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC},
-	{"matchIsOrdered", "(I)Z", nullptr, $PRIVATE, $method(static_cast<bool(SWITCH::*)(int32_t)>(&SWITCH::matchIsOrdered))},
-	{"sort", "(II)V", nullptr, $PRIVATE, $method(static_cast<void(SWITCH::*)(int32_t,int32_t)>(&SWITCH::sort))},
+	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)V", nullptr, $PUBLIC, $method(SWITCH, init$, void, $ints*, $InstructionHandleArray*, $InstructionHandle*, int32_t)},
+	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(SWITCH, init$, void, $ints*, $InstructionHandleArray*, $InstructionHandle*)},
+	{"fillup", "(ILcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PRIVATE, $method(SWITCH, fillup, void, int32_t, $InstructionHandle*)},
+	{"getInstruction", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(SWITCH, getInstruction, $Instruction*)},
+	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC, $virtualMethod(SWITCH, getInstructionList, $InstructionList*)},
+	{"matchIsOrdered", "(I)Z", nullptr, $PRIVATE, $method(SWITCH, matchIsOrdered, bool, int32_t)},
+	{"sort", "(II)V", nullptr, $PRIVATE, $method(SWITCH, sort, void, int32_t, int32_t)},
 	{}
 };
 

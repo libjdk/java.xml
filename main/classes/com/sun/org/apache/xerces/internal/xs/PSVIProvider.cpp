@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/ElementPSVI.h>
 #include <jcpp.h>
 
+using $AttributePSVI = ::com::sun::org::apache::xerces::internal::xs::AttributePSVI;
+using $ElementPSVI = ::com::sun::org::apache::xerces::internal::xs::ElementPSVI;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,9 +18,9 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _PSVIProvider_MethodInfo_[] = {
-	{"getAttributePSVI", "(I)Lcom/sun/org/apache/xerces/internal/xs/AttributePSVI;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAttributePSVIByName", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xs/AttributePSVI;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getElementPSVI", "()Lcom/sun/org/apache/xerces/internal/xs/ElementPSVI;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAttributePSVI", "(I)Lcom/sun/org/apache/xerces/internal/xs/AttributePSVI;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PSVIProvider, getAttributePSVI, $AttributePSVI*, int32_t)},
+	{"getAttributePSVIByName", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xs/AttributePSVI;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PSVIProvider, getAttributePSVIByName, $AttributePSVI*, $String*, $String*)},
+	{"getElementPSVI", "()Lcom/sun/org/apache/xerces/internal/xs/ElementPSVI;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PSVIProvider, getElementPSVI, $ElementPSVI*)},
 	{}
 };
 

@@ -31,9 +31,9 @@ $FieldInfo _Function2Args$Arg1Owner_FieldInfo_[] = {
 };
 
 $MethodInfo _Function2Args$Arg1Owner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/functions/Function2Args;)V", nullptr, 0, $method(static_cast<void(Function2Args$Arg1Owner::*)($Function2Args*)>(&Function2Args$Arg1Owner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/functions/Function2Args;)V", nullptr, 0, $method(Function2Args$Arg1Owner, init$, void, $Function2Args*)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(Function2Args$Arg1Owner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(Function2Args$Arg1Owner, setExpression, void, $Expression*)},
 	{}
 };
 

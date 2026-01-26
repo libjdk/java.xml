@@ -54,21 +54,21 @@ $FieldInfo _ElementNSImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementNSImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(ElementNSImpl::*)()>(&ElementNSImpl::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(ElementNSImpl::*)($CoreDocumentImpl*,$String*,$String*)>(&ElementNSImpl::init$)), "org.w3c.dom.DOMException"},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(ElementNSImpl::*)($CoreDocumentImpl*,$String*,$String*,$String*)>(&ElementNSImpl::init$)), "org.w3c.dom.DOMException"},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(ElementNSImpl::*)($CoreDocumentImpl*,$String*)>(&ElementNSImpl::init$))},
-	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTypeName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTypeNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLBaseAttribute", "()Lorg/w3c/dom/Attr;", nullptr, $PROTECTED},
-	{"isDerivedFrom", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, $PUBLIC},
-	{"rename", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, 0},
-	{"setName", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(ElementNSImpl::*)($String*,$String*)>(&ElementNSImpl::setName))},
-	{"setPrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"setType", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(ElementNSImpl, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(ElementNSImpl, init$, void, $CoreDocumentImpl*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(ElementNSImpl, init$, void, $CoreDocumentImpl*, $String*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(ElementNSImpl, init$, void, $CoreDocumentImpl*, $String*)},
+	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, getLocalName, $String*)},
+	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, getNamespaceURI, $String*)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, getPrefix, $String*)},
+	{"getTypeName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, getTypeName, $String*)},
+	{"getTypeNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, getTypeNamespace, $String*)},
+	{"getXMLBaseAttribute", "()Lorg/w3c/dom/Attr;", nullptr, $PROTECTED, $virtualMethod(ElementNSImpl, getXMLBaseAttribute, $Attr*)},
+	{"isDerivedFrom", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, isDerivedFrom, bool, $String*, $String*, int32_t)},
+	{"rename", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, 0, $virtualMethod(ElementNSImpl, rename, void, $String*, $String*)},
+	{"setName", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(ElementNSImpl, setName, void, $String*, $String*)},
+	{"setPrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, setPrefix, void, $String*), "org.w3c.dom.DOMException"},
+	{"setType", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;)V", nullptr, $PUBLIC, $virtualMethod(ElementNSImpl, setType, void, $XSTypeDefinition*)},
 	{}
 };
 

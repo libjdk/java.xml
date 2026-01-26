@@ -35,14 +35,14 @@ $FieldInfo _DTDGrammarBucket_FieldInfo_[] = {
 };
 
 $MethodInfo _DTDGrammarBucket_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTDGrammarBucket::*)()>(&DTDGrammarBucket::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"getActiveGrammar", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;", nullptr, 0},
-	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;", nullptr, $PUBLIC},
-	{"getStandalone", "()Z", nullptr, 0},
-	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;)V", nullptr, $PUBLIC},
-	{"setActiveGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;)V", nullptr, 0},
-	{"setStandalone", "(Z)V", nullptr, 0},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTDGrammarBucket, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarBucket, clear, void)},
+	{"getActiveGrammar", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;", nullptr, 0, $virtualMethod(DTDGrammarBucket, getActiveGrammar, $DTDGrammar*)},
+	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;", nullptr, $PUBLIC, $virtualMethod(DTDGrammarBucket, getGrammar, $DTDGrammar*, $XMLGrammarDescription*)},
+	{"getStandalone", "()Z", nullptr, 0, $virtualMethod(DTDGrammarBucket, getStandalone, bool)},
+	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;)V", nullptr, $PUBLIC, $virtualMethod(DTDGrammarBucket, putGrammar, void, $DTDGrammar*)},
+	{"setActiveGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;)V", nullptr, 0, $virtualMethod(DTDGrammarBucket, setActiveGrammar, void, $DTDGrammar*)},
+	{"setStandalone", "(Z)V", nullptr, 0, $virtualMethod(DTDGrammarBucket, setStandalone, void, bool)},
 	{}
 };
 

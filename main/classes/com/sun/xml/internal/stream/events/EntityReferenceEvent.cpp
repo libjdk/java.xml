@@ -50,11 +50,11 @@ $MethodInfo _EntityReferenceEvent_MethodInfo_[] = {
 	{"*getLocation", "()Ljavax/xml/stream/Location;", nullptr, $PUBLIC},
 	{"*getSchemaType", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(EntityReferenceEvent::*)()>(&EntityReferenceEvent::init$))},
-	{"<init>", "(Ljava/lang/String;Ljavax/xml/stream/events/EntityDeclaration;)V", nullptr, $PUBLIC, $method(static_cast<void(EntityReferenceEvent::*)($String*,$EntityDeclaration*)>(&EntityReferenceEvent::init$))},
-	{"getDeclaration", "()Ljavax/xml/stream/events/EntityDeclaration;", nullptr, $PUBLIC},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"init", "()V", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(EntityReferenceEvent, init$, void)},
+	{"<init>", "(Ljava/lang/String;Ljavax/xml/stream/events/EntityDeclaration;)V", nullptr, $PUBLIC, $method(EntityReferenceEvent, init$, void, $String*, $EntityDeclaration*)},
+	{"getDeclaration", "()Ljavax/xml/stream/events/EntityDeclaration;", nullptr, $PUBLIC, $virtualMethod(EntityReferenceEvent, getDeclaration, $EntityDeclaration*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EntityReferenceEvent, getName, $String*)},
+	{"init", "()V", nullptr, $PROTECTED, $virtualMethod(EntityReferenceEvent, init, void)},
 	{"*isAttribute", "()Z", nullptr, $PUBLIC},
 	{"*isCharacters", "()Z", nullptr, $PUBLIC},
 	{"*isEndDocument", "()Z", nullptr, $PUBLIC},
@@ -64,9 +64,9 @@ $MethodInfo _EntityReferenceEvent_MethodInfo_[] = {
 	{"*isProcessingInstruction", "()Z", nullptr, $PUBLIC},
 	{"*isStartDocument", "()Z", nullptr, $PUBLIC},
 	{"*isStartElement", "()Z", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EntityReferenceEvent, toString, $String*)},
 	{"*writeAsEncodedUnicode", "(Ljava/io/Writer;)V", nullptr, $PUBLIC},
-	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, $virtualMethod(EntityReferenceEvent, writeAsEncodedUnicodeEx, void, $Writer*), "java.io.IOException"},
 	{}
 };
 

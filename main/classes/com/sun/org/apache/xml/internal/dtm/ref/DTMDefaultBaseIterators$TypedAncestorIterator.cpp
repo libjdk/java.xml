@@ -46,8 +46,8 @@ $FieldInfo _DTMDefaultBaseIterators$TypedAncestorIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$TypedAncestorIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$TypedAncestorIterator::*)($DTMDefaultBaseIterators*,int32_t)>(&DTMDefaultBaseIterators$TypedAncestorIterator::init$))},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$TypedAncestorIterator, init$, void, $DTMDefaultBaseIterators*, int32_t)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$TypedAncestorIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

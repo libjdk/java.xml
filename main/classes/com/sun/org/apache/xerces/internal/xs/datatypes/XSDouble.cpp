@@ -15,7 +15,7 @@ namespace com {
 							namespace datatypes {
 
 $MethodInfo _XSDouble_MethodInfo_[] = {
-	{"getValue", "()D", nullptr, $PUBLIC | $ABSTRACT},
+	{"getValue", "()D", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDouble, getValue, double)},
 	{}
 };
 

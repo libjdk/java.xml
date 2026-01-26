@@ -5,17 +5,18 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Element = ::org::w3c::dom::Element;
 
 namespace org {
 	namespace w3c {
 		namespace dom {
 
 $MethodInfo _ElementTraversal_MethodInfo_[] = {
-	{"getChildElementCount", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFirstElementChild", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLastElementChild", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNextElementSibling", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPreviousElementSibling", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getChildElementCount", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementTraversal, getChildElementCount, int32_t)},
+	{"getFirstElementChild", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementTraversal, getFirstElementChild, $Element*)},
+	{"getLastElementChild", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementTraversal, getLastElementChild, $Element*)},
+	{"getNextElementSibling", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementTraversal, getNextElementSibling, $Element*)},
+	{"getPreviousElementSibling", "()Lorg/w3c/dom/Element;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementTraversal, getPreviousElementSibling, $Element*)},
 	{}
 };
 

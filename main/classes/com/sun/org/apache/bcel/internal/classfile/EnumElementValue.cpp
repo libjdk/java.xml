@@ -35,13 +35,13 @@ $FieldInfo _EnumElementValue_FieldInfo_[] = {
 };
 
 $MethodInfo _EnumElementValue_MethodInfo_[] = {
-	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(EnumElementValue::*)(int32_t,int32_t,int32_t,$ConstantPool*)>(&EnumElementValue::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getEnumTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getEnumValueString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTypeIndex", "()I", nullptr, $PUBLIC},
-	{"getValueIndex", "()I", nullptr, $PUBLIC},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(EnumElementValue, init$, void, int32_t, int32_t, int32_t, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(EnumElementValue, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getEnumTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EnumElementValue, getEnumTypeString, $String*)},
+	{"getEnumValueString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EnumElementValue, getEnumValueString, $String*)},
+	{"getTypeIndex", "()I", nullptr, $PUBLIC, $virtualMethod(EnumElementValue, getTypeIndex, int32_t)},
+	{"getValueIndex", "()I", nullptr, $PUBLIC, $virtualMethod(EnumElementValue, getValueIndex, int32_t)},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EnumElementValue, stringifyValue, $String*)},
 	{}
 };
 

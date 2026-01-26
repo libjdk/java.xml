@@ -3,6 +3,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSModel.h>
 #include <jcpp.h>
 
+using $XSGrammarArray = $Array<::com::sun::org::apache::xerces::internal::xni::grammars::XSGrammar>;
+using $XSModel = ::com::sun::org::apache::xerces::internal::xs::XSModel;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,8 +18,8 @@ namespace com {
 							namespace grammars {
 
 $MethodInfo _XSGrammar_MethodInfo_[] = {
-	{"toXSModel", "()Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC | $ABSTRACT},
-	{"toXSModel", "([Lcom/sun/org/apache/xerces/internal/xni/grammars/XSGrammar;)Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC | $ABSTRACT},
+	{"toXSModel", "()Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammar, toXSModel, $XSModel*)},
+	{"toXSModel", "([Lcom/sun/org/apache/xerces/internal/xni/grammars/XSGrammar;)Lcom/sun/org/apache/xerces/internal/xs/XSModel;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammar, toXSModel, $XSModel*, $XSGrammarArray*)},
 	{}
 };
 

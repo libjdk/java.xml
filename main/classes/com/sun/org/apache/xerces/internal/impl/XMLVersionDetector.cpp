@@ -82,11 +82,11 @@ $FieldInfo _XMLVersionDetector_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLVersionDetector_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLVersionDetector::*)()>(&XMLVersionDetector::init$))},
-	{"determineDocVersion", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)S", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"fixupCurrentEntity", "(Lcom/sun/org/apache/xerces/internal/impl/XMLEntityManager;[CI)V", nullptr, $PRIVATE, $method(static_cast<void(XMLVersionDetector::*)($XMLEntityManager*,$chars*,int32_t)>(&XMLVersionDetector::fixupCurrentEntity))},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"startDocumentParsing", "(Lcom/sun/org/apache/xerces/internal/impl/XMLEntityHandler;S)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLVersionDetector, init$, void)},
+	{"determineDocVersion", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)S", nullptr, $PUBLIC, $virtualMethod(XMLVersionDetector, determineDocVersion, int16_t, $XMLInputSource*), "java.io.IOException"},
+	{"fixupCurrentEntity", "(Lcom/sun/org/apache/xerces/internal/impl/XMLEntityManager;[CI)V", nullptr, $PRIVATE, $method(XMLVersionDetector, fixupCurrentEntity, void, $XMLEntityManager*, $chars*, int32_t)},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $virtualMethod(XMLVersionDetector, reset, void, $XMLComponentManager*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"startDocumentParsing", "(Lcom/sun/org/apache/xerces/internal/impl/XMLEntityHandler;S)V", nullptr, $PUBLIC, $virtualMethod(XMLVersionDetector, startDocumentParsing, void, $XMLEntityHandler*, int16_t)},
 	{}
 };
 

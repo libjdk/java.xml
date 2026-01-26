@@ -19,9 +19,9 @@ namespace com {
 							namespace validation {
 
 $MethodInfo _XMLSchemaFactory$XMLGrammarPoolImplExtension_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaFactory$XMLGrammarPoolImplExtension::*)()>(&XMLSchemaFactory$XMLGrammarPoolImplExtension::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaFactory$XMLGrammarPoolImplExtension::*)(int32_t)>(&XMLSchemaFactory$XMLGrammarPoolImplExtension::init$))},
-	{"getGrammarCount", "()I", nullptr, 0},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSchemaFactory$XMLGrammarPoolImplExtension, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(XMLSchemaFactory$XMLGrammarPoolImplExtension, init$, void, int32_t)},
+	{"getGrammarCount", "()I", nullptr, 0, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolImplExtension, getGrammarCount, int32_t)},
 	{}
 };
 

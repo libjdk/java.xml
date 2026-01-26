@@ -45,11 +45,11 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _INVOKESTATIC_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(INVOKESTATIC::*)()>(&INVOKESTATIC::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(INVOKESTATIC::*)(int32_t)>(&INVOKESTATIC::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(INVOKESTATIC, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(INVOKESTATIC, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(INVOKESTATIC, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(INVOKESTATIC, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(INVOKESTATIC, getExceptions, $ClassArray*)},
 	{}
 };
 

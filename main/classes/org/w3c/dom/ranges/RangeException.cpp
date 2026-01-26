@@ -24,7 +24,7 @@ $FieldInfo _RangeException_FieldInfo_[] = {
 };
 
 $MethodInfo _RangeException_MethodInfo_[] = {
-	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(RangeException::*)(int16_t,$String*)>(&RangeException::init$))},
+	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(RangeException, init$, void, int16_t, $String*)},
 	{}
 };
 

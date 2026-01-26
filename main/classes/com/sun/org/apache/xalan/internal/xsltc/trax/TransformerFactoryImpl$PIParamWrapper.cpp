@@ -25,7 +25,7 @@ $FieldInfo _TransformerFactoryImpl$PIParamWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _TransformerFactoryImpl$PIParamWrapper_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerFactoryImpl$PIParamWrapper::*)($String*,$String*,$String*)>(&TransformerFactoryImpl$PIParamWrapper::init$))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(TransformerFactoryImpl$PIParamWrapper, init$, void, $String*, $String*, $String*)},
 	{}
 };
 

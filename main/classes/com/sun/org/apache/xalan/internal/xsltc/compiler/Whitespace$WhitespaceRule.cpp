@@ -31,13 +31,13 @@ $FieldInfo _Whitespace$WhitespaceRule_FieldInfo_[] = {
 };
 
 $MethodInfo _Whitespace$WhitespaceRule_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(Whitespace$WhitespaceRule::*)(int32_t,$String*,int32_t)>(&Whitespace$WhitespaceRule::init$))},
-	{"compareTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;)I", nullptr, $PUBLIC, $method(static_cast<int32_t(Whitespace$WhitespaceRule::*)(Whitespace$WhitespaceRule*)>(&Whitespace$WhitespaceRule::compareTo))},
-	{"getAction", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(Whitespace$WhitespaceRule::*)()>(&Whitespace$WhitespaceRule::getAction))},
-	{"getElement", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(Whitespace$WhitespaceRule::*)()>(&Whitespace$WhitespaceRule::getElement))},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(Whitespace$WhitespaceRule::*)()>(&Whitespace$WhitespaceRule::getNamespace))},
-	{"getPriority", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(Whitespace$WhitespaceRule::*)()>(&Whitespace$WhitespaceRule::getPriority))},
-	{"getStrength", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(Whitespace$WhitespaceRule::*)()>(&Whitespace$WhitespaceRule::getStrength))},
+	{"<init>", "(ILjava/lang/String;I)V", nullptr, $PUBLIC, $method(Whitespace$WhitespaceRule, init$, void, int32_t, $String*, int32_t)},
+	{"compareTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Whitespace$WhitespaceRule;)I", nullptr, $PUBLIC, $method(Whitespace$WhitespaceRule, compareTo, int32_t, Whitespace$WhitespaceRule*)},
+	{"getAction", "()I", nullptr, $PUBLIC, $method(Whitespace$WhitespaceRule, getAction, int32_t)},
+	{"getElement", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(Whitespace$WhitespaceRule, getElement, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(Whitespace$WhitespaceRule, getNamespace, $String*)},
+	{"getPriority", "()I", nullptr, $PUBLIC, $method(Whitespace$WhitespaceRule, getPriority, int32_t)},
+	{"getStrength", "()I", nullptr, $PUBLIC, $method(Whitespace$WhitespaceRule, getStrength, int32_t)},
 	{}
 };
 

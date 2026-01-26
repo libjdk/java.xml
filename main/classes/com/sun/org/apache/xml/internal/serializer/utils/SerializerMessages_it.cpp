@@ -81,8 +81,8 @@ namespace com {
 							namespace utils {
 
 $MethodInfo _SerializerMessages_it_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SerializerMessages_it::*)()>(&SerializerMessages_it::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SerializerMessages_it, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SerializerMessages_it, getContents, $ObjectArray2*)},
 	{}
 };
 

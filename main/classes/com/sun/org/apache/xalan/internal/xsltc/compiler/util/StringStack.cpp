@@ -24,10 +24,10 @@ $FieldInfo _StringStack_FieldInfo_[] = {
 };
 
 $MethodInfo _StringStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringStack::*)()>(&StringStack::init$))},
-	{"peekString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(StringStack::*)()>(&StringStack::peekString))},
-	{"popString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(StringStack::*)()>(&StringStack::popString))},
-	{"pushString", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(StringStack::*)($String*)>(&StringStack::pushString))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StringStack, init$, void)},
+	{"peekString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(StringStack, peekString, $String*)},
+	{"popString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(StringStack, popString, $String*)},
+	{"pushString", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(StringStack, pushString, $String*, $String*)},
 	{}
 };
 

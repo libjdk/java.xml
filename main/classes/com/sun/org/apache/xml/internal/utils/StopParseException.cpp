@@ -22,7 +22,7 @@ $FieldInfo _StopParseException_FieldInfo_[] = {
 };
 
 $MethodInfo _StopParseException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(StopParseException::*)()>(&StopParseException::init$))},
+	{"<init>", "()V", nullptr, 0, $method(StopParseException, init$, void)},
 	{}
 };
 

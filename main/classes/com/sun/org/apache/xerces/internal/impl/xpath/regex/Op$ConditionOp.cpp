@@ -28,7 +28,7 @@ $FieldInfo _Op$ConditionOp_FieldInfo_[] = {
 };
 
 $MethodInfo _Op$ConditionOp_MethodInfo_[] = {
-	{"<init>", "(IILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;)V", nullptr, 0, $method(static_cast<void(Op$ConditionOp::*)(int32_t,int32_t,$Op*,$Op*,$Op*)>(&Op$ConditionOp::init$))},
+	{"<init>", "(IILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;)V", nullptr, 0, $method(Op$ConditionOp, init$, void, int32_t, int32_t, $Op*, $Op*, $Op*)},
 	{}
 };
 

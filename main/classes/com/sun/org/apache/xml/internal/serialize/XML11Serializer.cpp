@@ -81,18 +81,18 @@ $FieldInfo _XML11Serializer_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11Serializer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11Serializer::*)()>(&XML11Serializer::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(static_cast<void(XML11Serializer::*)($OutputFormat*)>(&XML11Serializer::init$))},
-	{"<init>", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(static_cast<void(XML11Serializer::*)($Writer*,$OutputFormat*)>(&XML11Serializer::init$))},
-	{"<init>", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(static_cast<void(XML11Serializer::*)($OutputStream*,$OutputFormat*)>(&XML11Serializer::init$))},
-	{"characters", "([CII)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"printCDATAText", "(Ljava/lang/String;)V", nullptr, $PROTECTED | $FINAL, nullptr, "java.io.IOException"},
-	{"printEscaped", "(Ljava/lang/String;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"printText", "(Ljava/lang/String;ZZ)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"printText", "([CIIZZ)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"printXMLChar", "(I)V", nullptr, $PROTECTED | $FINAL, nullptr, "java.io.IOException"},
-	{"reset", "()Z", nullptr, $PUBLIC},
-	{"surrogates", "(IIZ)V", nullptr, $PROTECTED | $FINAL, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11Serializer, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(XML11Serializer, init$, void, $OutputFormat*)},
+	{"<init>", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(XML11Serializer, init$, void, $Writer*, $OutputFormat*)},
+	{"<init>", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(XML11Serializer, init$, void, $OutputStream*, $OutputFormat*)},
+	{"characters", "([CII)V", nullptr, $PUBLIC, $virtualMethod(XML11Serializer, characters, void, $chars*, int32_t, int32_t), "org.xml.sax.SAXException"},
+	{"printCDATAText", "(Ljava/lang/String;)V", nullptr, $PROTECTED | $FINAL, $virtualMethod(XML11Serializer, printCDATAText, void, $String*), "java.io.IOException"},
+	{"printEscaped", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $virtualMethod(XML11Serializer, printEscaped, void, $String*), "java.io.IOException"},
+	{"printText", "(Ljava/lang/String;ZZ)V", nullptr, $PROTECTED, $virtualMethod(XML11Serializer, printText, void, $String*, bool, bool), "java.io.IOException"},
+	{"printText", "([CIIZZ)V", nullptr, $PROTECTED, $virtualMethod(XML11Serializer, printText, void, $chars*, int32_t, int32_t, bool, bool), "java.io.IOException"},
+	{"printXMLChar", "(I)V", nullptr, $PROTECTED | $FINAL, $virtualMethod(XML11Serializer, printXMLChar, void, int32_t), "java.io.IOException"},
+	{"reset", "()Z", nullptr, $PUBLIC, $virtualMethod(XML11Serializer, reset, bool)},
+	{"surrogates", "(IIZ)V", nullptr, $PROTECTED | $FINAL, $virtualMethod(XML11Serializer, surrogates, void, int32_t, int32_t, bool), "java.io.IOException"},
 	{}
 };
 

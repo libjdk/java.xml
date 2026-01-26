@@ -86,20 +86,20 @@ $FieldInfo _BCELifier_FieldInfo_[] = {
 };
 
 $MethodInfo _BCELifier_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;Ljava/io/OutputStream;)V", nullptr, $PUBLIC, $method(static_cast<void(BCELifier::*)($JavaClass*,$OutputStream*)>(&BCELifier::init$))},
-	{"getJavaClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $STATIC, $method(static_cast<$JavaClass*(*)($String*)>(&BCELifier::getJavaClass)), "java.lang.ClassNotFoundException,java.io.IOException"},
-	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&BCELifier::main)), "java.lang.Exception"},
-	{"printArgumentTypes", "([Lcom/sun/org/apache/bcel/internal/generic/Type;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($TypeArray*)>(&BCELifier::printArgumentTypes))},
-	{"printCreate", "()V", nullptr, $PRIVATE, $method(static_cast<void(BCELifier::*)()>(&BCELifier::printCreate))},
-	{"printFlags", "(I)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)(int32_t)>(&BCELifier::printFlags))},
-	{"printFlags", "(ILcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t,$BCELifier$FLAGS*)>(&BCELifier::printFlags))},
-	{"printMain", "()V", nullptr, $PRIVATE, $method(static_cast<void(BCELifier::*)()>(&BCELifier::printMain))},
-	{"printType", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($Type*)>(&BCELifier::printType))},
-	{"printType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&BCELifier::printType))},
-	{"start", "()V", nullptr, $PUBLIC},
-	{"visitField", "(Lcom/sun/org/apache/bcel/internal/classfile/Field;)V", nullptr, $PUBLIC},
-	{"visitJavaClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC},
-	{"visitMethod", "(Lcom/sun/org/apache/bcel/internal/classfile/Method;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;Ljava/io/OutputStream;)V", nullptr, $PUBLIC, $method(BCELifier, init$, void, $JavaClass*, $OutputStream*)},
+	{"getJavaClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $STATIC, $staticMethod(BCELifier, getJavaClass, $JavaClass*, $String*), "java.lang.ClassNotFoundException,java.io.IOException"},
+	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(BCELifier, main, void, $StringArray*), "java.lang.Exception"},
+	{"printArgumentTypes", "([Lcom/sun/org/apache/bcel/internal/generic/Type;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(BCELifier, printArgumentTypes, $String*, $TypeArray*)},
+	{"printCreate", "()V", nullptr, $PRIVATE, $method(BCELifier, printCreate, void)},
+	{"printFlags", "(I)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(BCELifier, printFlags, $String*, int32_t)},
+	{"printFlags", "(ILcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(BCELifier, printFlags, $String*, int32_t, $BCELifier$FLAGS*)},
+	{"printMain", "()V", nullptr, $PRIVATE, $method(BCELifier, printMain, void)},
+	{"printType", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(BCELifier, printType, $String*, $Type*)},
+	{"printType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(BCELifier, printType, $String*, $String*)},
+	{"start", "()V", nullptr, $PUBLIC, $virtualMethod(BCELifier, start, void)},
+	{"visitField", "(Lcom/sun/org/apache/bcel/internal/classfile/Field;)V", nullptr, $PUBLIC, $virtualMethod(BCELifier, visitField, void, $Field*)},
+	{"visitJavaClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC, $virtualMethod(BCELifier, visitJavaClass, void, $JavaClass*)},
+	{"visitMethod", "(Lcom/sun/org/apache/bcel/internal/classfile/Method;)V", nullptr, $PUBLIC, $virtualMethod(BCELifier, visitMethod, void, $Method*)},
 	{}
 };
 

@@ -30,8 +30,8 @@ $FieldInfo _XSAnnotationInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _XSAnnotationInfo_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;III)V", nullptr, 0, $method(static_cast<void(XSAnnotationInfo::*)($String*,int32_t,int32_t,int32_t)>(&XSAnnotationInfo::init$))},
-	{"<init>", "(Ljava/lang/String;Lorg/w3c/dom/Element;)V", nullptr, 0, $method(static_cast<void(XSAnnotationInfo::*)($String*,$Element*)>(&XSAnnotationInfo::init$))},
+	{"<init>", "(Ljava/lang/String;III)V", nullptr, 0, $method(XSAnnotationInfo, init$, void, $String*, int32_t, int32_t, int32_t)},
+	{"<init>", "(Ljava/lang/String;Lorg/w3c/dom/Element;)V", nullptr, 0, $method(XSAnnotationInfo, init$, void, $String*, $Element*)},
 	{}
 };
 

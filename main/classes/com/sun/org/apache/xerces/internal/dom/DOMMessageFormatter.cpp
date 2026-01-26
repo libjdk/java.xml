@@ -43,11 +43,11 @@ $FieldInfo _DOMMessageFormatter_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMMessageFormatter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DOMMessageFormatter::*)()>(&DOMMessageFormatter::init$))},
-	{"formatMessage", "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$String*,$ObjectArray*)>(&DOMMessageFormatter::formatMessage)), "java.util.MissingResourceException"},
-	{"getResourceBundle", "(Ljava/lang/String;)Ljava/util/ResourceBundle;", nullptr, $STATIC, $method(static_cast<$ResourceBundle*(*)($String*)>(&DOMMessageFormatter::getResourceBundle))},
-	{"init", "()V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)()>(&DOMMessageFormatter::init))},
-	{"setLocale", "(Ljava/util/Locale;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($Locale*)>(&DOMMessageFormatter::setLocale))},
+	{"<init>", "()V", nullptr, 0, $method(DOMMessageFormatter, init$, void)},
+	{"formatMessage", "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(DOMMessageFormatter, formatMessage, $String*, $String*, $String*, $ObjectArray*), "java.util.MissingResourceException"},
+	{"getResourceBundle", "(Ljava/lang/String;)Ljava/util/ResourceBundle;", nullptr, $STATIC, $staticMethod(DOMMessageFormatter, getResourceBundle, $ResourceBundle*, $String*)},
+	{"init", "()V", nullptr, $PUBLIC | $STATIC, $staticMethod(DOMMessageFormatter, init, void)},
+	{"setLocale", "(Ljava/util/Locale;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(DOMMessageFormatter, setLocale, void, $Locale*)},
 	{}
 };
 

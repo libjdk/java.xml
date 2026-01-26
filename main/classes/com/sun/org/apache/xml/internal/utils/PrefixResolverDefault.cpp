@@ -30,11 +30,11 @@ $FieldInfo _PrefixResolverDefault_FieldInfo_[] = {
 };
 
 $MethodInfo _PrefixResolverDefault_MethodInfo_[] = {
-	{"<init>", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(static_cast<void(PrefixResolverDefault::*)($Node*)>(&PrefixResolverDefault::init$))},
-	{"getBaseIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceForPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceForPrefix", "(Ljava/lang/String;Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"handlesNullPrefixes", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(PrefixResolverDefault, init$, void, $Node*)},
+	{"getBaseIdentifier", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(PrefixResolverDefault, getBaseIdentifier, $String*)},
+	{"getNamespaceForPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(PrefixResolverDefault, getNamespaceForPrefix, $String*, $String*)},
+	{"getNamespaceForPrefix", "(Ljava/lang/String;Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(PrefixResolverDefault, getNamespaceForPrefix, $String*, $String*, $Node*)},
+	{"handlesNullPrefixes", "()Z", nullptr, $PUBLIC, $virtualMethod(PrefixResolverDefault, handlesNullPrefixes, bool)},
 	{}
 };
 

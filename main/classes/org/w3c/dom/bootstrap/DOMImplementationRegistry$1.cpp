@@ -28,9 +28,9 @@ $FieldInfo _DOMImplementationRegistry$1_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMImplementationRegistry$1_MethodInfo_[] = {
-	{"<init>", "(Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;Ljava/util/List;)V", "()V", 0, $method(static_cast<void(DOMImplementationRegistry$1::*)($DOMImplementationRegistry*,$List*)>(&DOMImplementationRegistry$1::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;Ljava/util/List;)V", "()V", 0, $method(DOMImplementationRegistry$1, init$, void, $DOMImplementationRegistry*, $List*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(DOMImplementationRegistry$1, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC, $virtualMethod(DOMImplementationRegistry$1, item, $DOMImplementation*, int32_t)},
 	{}
 };
 

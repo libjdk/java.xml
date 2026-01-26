@@ -28,15 +28,15 @@ $FieldInfo _DOMOutputImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMOutputImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DOMOutputImpl::*)()>(&DOMOutputImpl::init$))},
-	{"getByteStream", "()Ljava/io/OutputStream;", nullptr, $PUBLIC},
-	{"getCharacterStream", "()Ljava/io/Writer;", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setByteStream", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC},
-	{"setCharacterStream", "(Ljava/io/Writer;)V", nullptr, $PUBLIC},
-	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(DOMOutputImpl, init$, void)},
+	{"getByteStream", "()Ljava/io/OutputStream;", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, getByteStream, $OutputStream*)},
+	{"getCharacterStream", "()Ljava/io/Writer;", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, getCharacterStream, $Writer*)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, getEncoding, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, getSystemId, $String*)},
+	{"setByteStream", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, setByteStream, void, $OutputStream*)},
+	{"setCharacterStream", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, setCharacterStream, void, $Writer*)},
+	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, setEncoding, void, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(DOMOutputImpl, setSystemId, void, $String*)},
 	{}
 };
 

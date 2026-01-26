@@ -39,12 +39,12 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _DecimalDV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DecimalDV::*)()>(&DecimalDV::init$))},
-	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC | $FINAL},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getAllowedFacets", "()S", nullptr, $PUBLIC | $FINAL},
-	{"getFractionDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $FINAL},
-	{"getTotalDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DecimalDV, init$, void)},
+	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC | $FINAL, $virtualMethod(DecimalDV, compare, int32_t, Object$*, Object$*)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DecimalDV, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getAllowedFacets", "()S", nullptr, $PUBLIC | $FINAL, $virtualMethod(DecimalDV, getAllowedFacets, int16_t)},
+	{"getFractionDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $FINAL, $virtualMethod(DecimalDV, getFractionDigits, int32_t, Object$*)},
+	{"getTotalDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $FINAL, $virtualMethod(DecimalDV, getTotalDigits, int32_t, Object$*)},
 	{}
 };
 

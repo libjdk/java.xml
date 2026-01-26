@@ -26,7 +26,7 @@ $FieldInfo _NamespaceMappings$MappingRecord_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceMappings$MappingRecord_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings;Ljava/lang/String;Ljava/lang/String;I)V", nullptr, 0, $method(static_cast<void(NamespaceMappings$MappingRecord::*)($NamespaceMappings*,$String*,$String*,int32_t)>(&NamespaceMappings$MappingRecord::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings;Ljava/lang/String;Ljava/lang/String;I)V", nullptr, 0, $method(NamespaceMappings$MappingRecord, init$, void, $NamespaceMappings*, $String*, $String*, int32_t)},
 	{}
 };
 

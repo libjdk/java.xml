@@ -39,14 +39,14 @@ $FieldInfo _DOM3SerializerImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOM3SerializerImpl_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/SerializationHandler;)V", nullptr, $PUBLIC, $method(static_cast<void(DOM3SerializerImpl::*)($SerializationHandler*)>(&DOM3SerializerImpl::init$))},
-	{"getErrorHandler", "()Lorg/w3c/dom/DOMErrorHandler;", nullptr, $PUBLIC},
-	{"getNodeFilter", "()Lorg/w3c/dom/ls/LSSerializerFilter;", nullptr, $PUBLIC},
-	{"serializeDOM3", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"setErrorHandler", "(Lorg/w3c/dom/DOMErrorHandler;)V", nullptr, $PUBLIC},
-	{"setNewLine", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setNodeFilter", "(Lorg/w3c/dom/ls/LSSerializerFilter;)V", nullptr, $PUBLIC},
-	{"setSerializationHandler", "(Lcom/sun/org/apache/xml/internal/serializer/SerializationHandler;)V", nullptr, $PUBLIC, $method(static_cast<void(DOM3SerializerImpl::*)($SerializationHandler*)>(&DOM3SerializerImpl::setSerializationHandler))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/SerializationHandler;)V", nullptr, $PUBLIC, $method(DOM3SerializerImpl, init$, void, $SerializationHandler*)},
+	{"getErrorHandler", "()Lorg/w3c/dom/DOMErrorHandler;", nullptr, $PUBLIC, $virtualMethod(DOM3SerializerImpl, getErrorHandler, $DOMErrorHandler*)},
+	{"getNodeFilter", "()Lorg/w3c/dom/ls/LSSerializerFilter;", nullptr, $PUBLIC, $virtualMethod(DOM3SerializerImpl, getNodeFilter, $LSSerializerFilter*)},
+	{"serializeDOM3", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $virtualMethod(DOM3SerializerImpl, serializeDOM3, void, $Node*), "java.io.IOException"},
+	{"setErrorHandler", "(Lorg/w3c/dom/DOMErrorHandler;)V", nullptr, $PUBLIC, $virtualMethod(DOM3SerializerImpl, setErrorHandler, void, $DOMErrorHandler*)},
+	{"setNewLine", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(DOM3SerializerImpl, setNewLine, void, $String*)},
+	{"setNodeFilter", "(Lorg/w3c/dom/ls/LSSerializerFilter;)V", nullptr, $PUBLIC, $virtualMethod(DOM3SerializerImpl, setNodeFilter, void, $LSSerializerFilter*)},
+	{"setSerializationHandler", "(Lcom/sun/org/apache/xml/internal/serializer/SerializationHandler;)V", nullptr, $PUBLIC, $method(DOM3SerializerImpl, setSerializationHandler, void, $SerializationHandler*)},
 	{}
 };
 

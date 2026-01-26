@@ -67,8 +67,8 @@ $FieldInfo _XMLDocumentScannerImpl$PrologDriver_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentScannerImpl$PrologDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLDocumentScannerImpl$PrologDriver::*)($XMLDocumentScannerImpl*)>(&XMLDocumentScannerImpl$PrologDriver::init$))},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(XMLDocumentScannerImpl$PrologDriver, init$, void, $XMLDocumentScannerImpl*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XMLDocumentScannerImpl$PrologDriver, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

@@ -65,16 +65,16 @@ $FieldInfo _CMNodeFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _CMNodeFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CMNodeFactory::*)()>(&CMNodeFactory::init$))},
-	{"getCMBinOpNode", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC},
-	{"getCMLeafNode", "(ILjava/lang/Object;II)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC},
-	{"getCMRepeatingLeafNode", "(ILjava/lang/Object;IIII)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC},
-	{"getCMUniOpNode", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC},
-	{"nodeCountCheck", "()V", nullptr, $PUBLIC},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"resetNodeCount", "()V", nullptr, $PUBLIC},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CMNodeFactory, init$, void)},
+	{"getCMBinOpNode", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, getCMBinOpNode, $CMNode*, int32_t, $CMNode*, $CMNode*)},
+	{"getCMLeafNode", "(ILjava/lang/Object;II)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, getCMLeafNode, $CMNode*, int32_t, Object$*, int32_t, int32_t)},
+	{"getCMRepeatingLeafNode", "(ILjava/lang/Object;IIII)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, getCMRepeatingLeafNode, $CMNode*, int32_t, Object$*, int32_t, int32_t, int32_t, int32_t)},
+	{"getCMUniOpNode", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, getCMUniOpNode, $CMNode*, int32_t, $CMNode*)},
+	{"nodeCountCheck", "()V", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, nodeCountCheck, void)},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, reset, void, $XMLComponentManager*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, reset, void)},
+	{"resetNodeCount", "()V", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, resetNodeCount, void)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(CMNodeFactory, setProperty, void, $String*, Object$*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
 	{}
 };
 

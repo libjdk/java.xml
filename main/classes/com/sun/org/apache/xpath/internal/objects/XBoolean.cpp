@@ -39,15 +39,15 @@ $FieldInfo _XBoolean_FieldInfo_[] = {
 };
 
 $MethodInfo _XBoolean_MethodInfo_[] = {
-	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(XBoolean::*)(bool)>(&XBoolean::init$))},
-	{"<init>", "(Ljava/lang/Boolean;)V", nullptr, $PUBLIC, $method(static_cast<void(XBoolean::*)($Boolean*)>(&XBoolean::init$))},
-	{"bool", "()Z", nullptr, $PUBLIC},
-	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC},
-	{"getType", "()I", nullptr, $PUBLIC},
-	{"getTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"num", "()D", nullptr, $PUBLIC},
-	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(XBoolean, init$, void, bool)},
+	{"<init>", "(Ljava/lang/Boolean;)V", nullptr, $PUBLIC, $method(XBoolean, init$, void, $Boolean*)},
+	{"bool", "()Z", nullptr, $PUBLIC, $virtualMethod(XBoolean, bool$, bool)},
+	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC, $virtualMethod(XBoolean, equals, bool, $XObject*)},
+	{"getType", "()I", nullptr, $PUBLIC, $virtualMethod(XBoolean, getType, int32_t)},
+	{"getTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XBoolean, getTypeString, $String*)},
+	{"num", "()D", nullptr, $PUBLIC, $virtualMethod(XBoolean, num, double)},
+	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XBoolean, object, $Object*)},
+	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XBoolean, str, $String*)},
 	{}
 };
 

@@ -44,14 +44,14 @@ $FieldInfo _FunctionDef1Arg_FieldInfo_[] = {
 };
 
 $MethodInfo _FunctionDef1Arg_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FunctionDef1Arg::*)()>(&FunctionDef1Arg::init$))},
-	{"Arg0IsNodesetExpr", "()Z", nullptr, $PUBLIC},
-	{"canTraverseOutsideSubtree", "()Z", nullptr, $PUBLIC},
-	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"getArg0AsNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PROTECTED, nullptr, "javax.xml.transform.TransformerException"},
-	{"getArg0AsNumber", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)D", nullptr, $PROTECTED, nullptr, "javax.xml.transform.TransformerException"},
-	{"getArg0AsString", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PROTECTED, nullptr, "javax.xml.transform.TransformerException"},
-	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FunctionDef1Arg, init$, void)},
+	{"Arg0IsNodesetExpr", "()Z", nullptr, $PUBLIC, $virtualMethod(FunctionDef1Arg, Arg0IsNodesetExpr, bool)},
+	{"canTraverseOutsideSubtree", "()Z", nullptr, $PUBLIC, $virtualMethod(FunctionDef1Arg, canTraverseOutsideSubtree, bool)},
+	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, $virtualMethod(FunctionDef1Arg, checkNumberArgs, void, int32_t), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"getArg0AsNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PROTECTED, $virtualMethod(FunctionDef1Arg, getArg0AsNode, int32_t, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"getArg0AsNumber", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)D", nullptr, $PROTECTED, $virtualMethod(FunctionDef1Arg, getArg0AsNumber, double, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"getArg0AsString", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PROTECTED, $virtualMethod(FunctionDef1Arg, getArg0AsString, $XMLString*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, $virtualMethod(FunctionDef1Arg, reportWrongNumberArgs, void), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
 	{}
 };
 

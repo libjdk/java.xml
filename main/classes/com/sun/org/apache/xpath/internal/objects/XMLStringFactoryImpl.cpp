@@ -34,12 +34,12 @@ $FieldInfo _XMLStringFactoryImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStringFactoryImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringFactoryImpl::*)()>(&XMLStringFactoryImpl::init$))},
-	{"emptystr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
-	{"getFactory", "()Lcom/sun/org/apache/xml/internal/utils/XMLStringFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLStringFactory*(*)()>(&XMLStringFactoryImpl::getFactory))},
-	{"newstr", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
-	{"newstr", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;II)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
-	{"newstr", "([CII)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLStringFactoryImpl, init$, void)},
+	{"emptystr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryImpl, emptystr, $XMLString*)},
+	{"getFactory", "()Lcom/sun/org/apache/xml/internal/utils/XMLStringFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLStringFactoryImpl, getFactory, $XMLStringFactory*)},
+	{"newstr", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryImpl, newstr, $XMLString*, $String*)},
+	{"newstr", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;II)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryImpl, newstr, $XMLString*, $FastStringBuffer*, int32_t, int32_t)},
+	{"newstr", "([CII)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryImpl, newstr, $XMLString*, $chars*, int32_t, int32_t)},
 	{}
 };
 

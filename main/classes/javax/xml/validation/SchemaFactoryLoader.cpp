@@ -5,14 +5,15 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $SchemaFactory = ::javax::xml::validation::SchemaFactory;
 
 namespace javax {
 	namespace xml {
 		namespace validation {
 
 $MethodInfo _SchemaFactoryLoader_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(SchemaFactoryLoader::*)()>(&SchemaFactoryLoader::init$))},
-	{"newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(SchemaFactoryLoader, init$, void)},
+	{"newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactoryLoader, newFactory, $SchemaFactory*, $String*)},
 	{}
 };
 

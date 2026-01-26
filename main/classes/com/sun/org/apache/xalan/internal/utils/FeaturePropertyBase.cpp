@@ -40,18 +40,18 @@ $FieldInfo _FeaturePropertyBase_FieldInfo_[] = {
 };
 
 $MethodInfo _FeaturePropertyBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FeaturePropertyBase::*)()>(&FeaturePropertyBase::init$))},
-	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getIndex", "(Ljava/lang/Class;Ljava/lang/String;)I", "<E:Ljava/lang/Enum<TE;>;>(Ljava/lang/Class<TE;>;Ljava/lang/String;)I", $PUBLIC},
-	{"getSystemProperty", "(Ljava/lang/Enum;Ljava/lang/String;)V", "(Ljava/lang/Enum<*>;Ljava/lang/String;)V", 0},
-	{"getValue", "(Ljava/lang/Enum;)Ljava/lang/String;", "(Ljava/lang/Enum<*>;)Ljava/lang/String;", $PUBLIC},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValueAsString", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValueByIndex", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setValue", "(Ljava/lang/Enum;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/String;)V", "(Ljava/lang/Enum<*>;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/String;)V", $PUBLIC},
-	{"setValue", "(ILcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setValue", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"setValue", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Z)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FeaturePropertyBase, init$, void)},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(FeaturePropertyBase, getIndex, int32_t, $String*)},
+	{"getIndex", "(Ljava/lang/Class;Ljava/lang/String;)I", "<E:Ljava/lang/Enum<TE;>;>(Ljava/lang/Class<TE;>;Ljava/lang/String;)I", $PUBLIC, $virtualMethod(FeaturePropertyBase, getIndex, int32_t, $Class*, $String*)},
+	{"getSystemProperty", "(Ljava/lang/Enum;Ljava/lang/String;)V", "(Ljava/lang/Enum<*>;Ljava/lang/String;)V", 0, $virtualMethod(FeaturePropertyBase, getSystemProperty, void, $Enum*, $String*)},
+	{"getValue", "(Ljava/lang/Enum;)Ljava/lang/String;", "(Ljava/lang/Enum<*>;)Ljava/lang/String;", $PUBLIC, $virtualMethod(FeaturePropertyBase, getValue, $String*, $Enum*)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FeaturePropertyBase, getValue, $String*, $String*)},
+	{"getValueAsString", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FeaturePropertyBase, getValueAsString, $String*, $String*)},
+	{"getValueByIndex", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FeaturePropertyBase, getValueByIndex, $String*, int32_t)},
+	{"setValue", "(Ljava/lang/Enum;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/String;)V", "(Ljava/lang/Enum<*>;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/String;)V", $PUBLIC, $virtualMethod(FeaturePropertyBase, setValue, void, $Enum*, $FeaturePropertyBase$State*, $String*)},
+	{"setValue", "(ILcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(FeaturePropertyBase, setValue, void, int32_t, $FeaturePropertyBase$State*, $String*)},
+	{"setValue", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(FeaturePropertyBase, setValue, bool, $String*, $FeaturePropertyBase$State*, Object$*)},
+	{"setValue", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/utils/FeaturePropertyBase$State;Z)Z", nullptr, $PUBLIC, $virtualMethod(FeaturePropertyBase, setValue, bool, $String*, $FeaturePropertyBase$State*, bool)},
 	{}
 };
 

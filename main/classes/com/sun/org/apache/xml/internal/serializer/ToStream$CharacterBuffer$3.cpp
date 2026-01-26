@@ -41,9 +41,9 @@ $FieldInfo _ToStream$CharacterBuffer$3_FieldInfo_[] = {
 };
 
 $MethodInfo _ToStream$CharacterBuffer$3_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream$CharacterBuffer;[CII)V", nullptr, 0, $method(static_cast<void(ToStream$CharacterBuffer$3::*)($ToStream$CharacterBuffer*,$chars*,int32_t,int32_t)>(&ToStream$CharacterBuffer$3::init$))},
-	{"flush", "(Z)Z", nullptr, 0, nullptr, "org.xml.sax.SAXException"},
-	{"toChars", "()[C", nullptr, 0},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream$CharacterBuffer;[CII)V", nullptr, 0, $method(ToStream$CharacterBuffer$3, init$, void, $ToStream$CharacterBuffer*, $chars*, int32_t, int32_t)},
+	{"flush", "(Z)Z", nullptr, 0, $virtualMethod(ToStream$CharacterBuffer$3, flush, bool, bool), "org.xml.sax.SAXException"},
+	{"toChars", "()[C", nullptr, 0, $virtualMethod(ToStream$CharacterBuffer$3, toChars, $chars*)},
 	{}
 };
 

@@ -84,13 +84,13 @@ $FieldInfo _IntegratedParserConfiguration_FieldInfo_[] = {
 };
 
 $MethodInfo _IntegratedParserConfiguration_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(IntegratedParserConfiguration::*)()>(&IntegratedParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(IntegratedParserConfiguration::*)($SymbolTable*)>(&IntegratedParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(IntegratedParserConfiguration::*)($SymbolTable*,$XMLGrammarPool*)>(&IntegratedParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(IntegratedParserConfiguration::*)($SymbolTable*,$XMLGrammarPool*,$XMLComponentManager*)>(&IntegratedParserConfiguration::init$))},
-	{"configurePipeline", "()V", nullptr, $PROTECTED},
-	{"createDTDValidator", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator;", nullptr, $PROTECTED},
-	{"createDocumentScanner", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLDocumentScanner;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(IntegratedParserConfiguration, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(IntegratedParserConfiguration, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(IntegratedParserConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(IntegratedParserConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*, $XMLComponentManager*)},
+	{"configurePipeline", "()V", nullptr, $PROTECTED, $virtualMethod(IntegratedParserConfiguration, configurePipeline, void)},
+	{"createDTDValidator", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator;", nullptr, $PROTECTED, $virtualMethod(IntegratedParserConfiguration, createDTDValidator, $XMLDTDValidator*)},
+	{"createDocumentScanner", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLDocumentScanner;", nullptr, $PROTECTED, $virtualMethod(IntegratedParserConfiguration, createDocumentScanner, $XMLDocumentScanner*)},
 	{}
 };
 

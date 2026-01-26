@@ -22,16 +22,16 @@ $FieldInfo _LocatorWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _LocatorWrapper_MethodInfo_[] = {
-	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(static_cast<void(LocatorWrapper::*)($Locator*)>(&LocatorWrapper::init$))},
-	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(LocatorWrapper, init$, void, $Locator*)},
+	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getBaseSystemId, $String*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getEncoding, $String*)},
+	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getExpandedSystemId, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getLineNumber, int32_t)},
+	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getLiteralSystemId, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getPublicId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorWrapper, getXMLVersion, $String*)},
 	{}
 };
 

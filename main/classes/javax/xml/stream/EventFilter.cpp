@@ -5,13 +5,14 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
 
 namespace javax {
 	namespace xml {
 		namespace stream {
 
 $MethodInfo _EventFilter_MethodInfo_[] = {
-	{"accept", "(Ljavax/xml/stream/events/XMLEvent;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"accept", "(Ljavax/xml/stream/events/XMLEvent;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EventFilter, accept, bool, $XMLEvent*)},
 	{}
 };
 

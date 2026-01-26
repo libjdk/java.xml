@@ -17,9 +17,9 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _RelativeLocationPath_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(RelativeLocationPath::*)()>(&RelativeLocationPath::init$))},
-	{"getAxis", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"setAxis", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, 0, $method(RelativeLocationPath, init$, void)},
+	{"getAxis", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(RelativeLocationPath, getAxis, int32_t)},
+	{"setAxis", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(RelativeLocationPath, setAxis, void, int32_t)},
 	{}
 };
 

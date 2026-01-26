@@ -69,20 +69,20 @@ $FieldInfo _FilterExprIteratorSimple_FieldInfo_[] = {
 };
 
 $MethodInfo _FilterExprIteratorSimple_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FilterExprIteratorSimple::*)()>(&FilterExprIteratorSimple::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $method(static_cast<void(FilterExprIteratorSimple::*)($Expression*)>(&FilterExprIteratorSimple::init$))},
-	{"callPredicateVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"executeFilterExpr", "(ILcom/sun/org/apache/xpath/internal/XPathContext;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;ZILcom/sun/org/apache/xpath/internal/Expression;)Lcom/sun/org/apache/xpath/internal/objects/XNodeSet;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XNodeSet*(*)(int32_t,$XPathContext*,$PrefixResolver*,bool,int32_t,$Expression*)>(&FilterExprIteratorSimple::executeFilterExpr)), "com.sun.org.apache.xml.internal.utils.WrappedRuntimeException"},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getAnalysisBits", "()I", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getInnerExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"isDocOrdered", "()Z", nullptr, $PUBLIC},
-	{"nextNode", "()I", nullptr, $PUBLIC},
-	{"setInnerExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FilterExprIteratorSimple, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $method(FilterExprIteratorSimple, init$, void, $Expression*)},
+	{"callPredicateVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, callPredicateVisitors, void, $XPathVisitor*)},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, deepEquals, bool, $Expression*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, detach, void)},
+	{"executeFilterExpr", "(ILcom/sun/org/apache/xpath/internal/XPathContext;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;ZILcom/sun/org/apache/xpath/internal/Expression;)Lcom/sun/org/apache/xpath/internal/objects/XNodeSet;", nullptr, $PUBLIC | $STATIC, $staticMethod(FilterExprIteratorSimple, executeFilterExpr, $XNodeSet*, int32_t, $XPathContext*, $PrefixResolver*, bool, int32_t, $Expression*), "com.sun.org.apache.xml.internal.utils.WrappedRuntimeException"},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FilterExprIteratorSimple, fixupVariables, void, $List*, int32_t)},
+	{"getAnalysisBits", "()I", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, getAnalysisBits, int32_t)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, getAxis, int32_t)},
+	{"getInnerExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, getInnerExpression, $Expression*)},
+	{"isDocOrdered", "()Z", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, isDocOrdered, bool)},
+	{"nextNode", "()I", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, nextNode, int32_t)},
+	{"setInnerExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, setInnerExpression, void, $Expression*)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprIteratorSimple, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

@@ -29,9 +29,9 @@ $FieldInfo _CatalogFeatures$Builder_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogFeatures$Builder_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(CatalogFeatures$Builder::*)()>(&CatalogFeatures$Builder::init$))},
-	{"build", "()Ljavax/xml/catalog/CatalogFeatures;", nullptr, $PUBLIC},
-	{"with", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljava/lang/String;)Ljavax/xml/catalog/CatalogFeatures$Builder;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(CatalogFeatures$Builder, init$, void)},
+	{"build", "()Ljavax/xml/catalog/CatalogFeatures;", nullptr, $PUBLIC, $virtualMethod(CatalogFeatures$Builder, build, $CatalogFeatures*)},
+	{"with", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljava/lang/String;)Ljavax/xml/catalog/CatalogFeatures$Builder;", nullptr, $PUBLIC, $virtualMethod(CatalogFeatures$Builder, with, CatalogFeatures$Builder*, $CatalogFeatures$Feature*, $String*)},
 	{}
 };
 

@@ -20,8 +20,8 @@ $FieldInfo _Result_FieldInfo_[] = {
 };
 
 $MethodInfo _Result_MethodInfo_[] = {
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Result, getSystemId, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Result, setSystemId, void, $String*)},
 	{}
 };
 

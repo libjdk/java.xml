@@ -9,26 +9,31 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $ContentHandler = ::org::xml::sax::ContentHandler;
+using $DTDHandler = ::org::xml::sax::DTDHandler;
+using $EntityResolver = ::org::xml::sax::EntityResolver;
+using $ErrorHandler = ::org::xml::sax::ErrorHandler;
+using $InputSource = ::org::xml::sax::InputSource;
 
 namespace org {
 	namespace xml {
 		namespace sax {
 
 $MethodInfo _XMLReader_MethodInfo_[] = {
-	{"getContentHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDTDHandler", "()Lorg/xml/sax/DTDHandler;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEntityResolver", "()Lorg/xml/sax/EntityResolver;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException,org.xml.sax.SAXException"},
-	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException,org.xml.sax.SAXException"},
-	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getContentHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, getContentHandler, $ContentHandler*)},
+	{"getDTDHandler", "()Lorg/xml/sax/DTDHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, getDTDHandler, $DTDHandler*)},
+	{"getEntityResolver", "()Lorg/xml/sax/EntityResolver;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, getEntityResolver, $EntityResolver*)},
+	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, getErrorHandler, $ErrorHandler*)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, getFeature, bool, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, getProperty, $Object*, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, parse, void, $InputSource*), "java.io.IOException,org.xml.sax.SAXException"},
+	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, parse, void, $String*), "java.io.IOException,org.xml.sax.SAXException"},
+	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, setContentHandler, void, $ContentHandler*)},
+	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, setDTDHandler, void, $DTDHandler*)},
+	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, setEntityResolver, void, $EntityResolver*)},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, setErrorHandler, void, $ErrorHandler*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, setFeature, void, $String*, bool), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLReader, setProperty, void, $String*, Object$*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
 	{}
 };
 

@@ -103,17 +103,17 @@ $FieldInfo _RelationalExpr_FieldInfo_[] = {
 };
 
 $MethodInfo _RelationalExpr_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;)V", nullptr, $PUBLIC, $method(static_cast<void(RelationalExpr::*)(int32_t,$Expression*,$Expression*)>(&RelationalExpr::init$))},
-	{"hasLastCall", "()Z", nullptr, $PUBLIC},
-	{"hasNodeArgs", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(RelationalExpr::*)()>(&RelationalExpr::hasNodeArgs))},
-	{"hasNodeSetArgs", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(RelationalExpr::*)()>(&RelationalExpr::hasNodeSetArgs))},
-	{"hasPositionCall", "()Z", nullptr, $PUBLIC},
-	{"hasReferenceArgs", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(RelationalExpr::*)()>(&RelationalExpr::hasReferenceArgs))},
-	{"setParser", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"translateDesynthesized", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;)V", nullptr, $PUBLIC, $method(RelationalExpr, init$, void, int32_t, $Expression*, $Expression*)},
+	{"hasLastCall", "()Z", nullptr, $PUBLIC, $virtualMethod(RelationalExpr, hasLastCall, bool)},
+	{"hasNodeArgs", "()Z", nullptr, $PUBLIC, $method(RelationalExpr, hasNodeArgs, bool)},
+	{"hasNodeSetArgs", "()Z", nullptr, $PUBLIC, $method(RelationalExpr, hasNodeSetArgs, bool)},
+	{"hasPositionCall", "()Z", nullptr, $PUBLIC, $virtualMethod(RelationalExpr, hasPositionCall, bool)},
+	{"hasReferenceArgs", "()Z", nullptr, $PUBLIC, $method(RelationalExpr, hasReferenceArgs, bool)},
+	{"setParser", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(RelationalExpr, setParser, void, $Parser*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(RelationalExpr, toString, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(RelationalExpr, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"translateDesynthesized", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(RelationalExpr, translateDesynthesized, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(RelationalExpr, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

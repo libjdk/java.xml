@@ -35,8 +35,8 @@ $FieldInfo _MixedContentModel_FieldInfo_[] = {
 };
 
 $MethodInfo _MixedContentModel_MethodInfo_[] = {
-	{"<init>", "([Lcom/sun/org/apache/xerces/internal/xni/QName;[IIIZ)V", nullptr, $PUBLIC, $method(static_cast<void(MixedContentModel::*)($QNameArray*,$ints*,int32_t,int32_t,bool)>(&MixedContentModel::init$))},
-	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC},
+	{"<init>", "([Lcom/sun/org/apache/xerces/internal/xni/QName;[IIIZ)V", nullptr, $PUBLIC, $method(MixedContentModel, init$, void, $QNameArray*, $ints*, int32_t, int32_t, bool)},
+	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC, $virtualMethod(MixedContentModel, validate, int32_t, $QNameArray*, int32_t, int32_t)},
 	{}
 };
 

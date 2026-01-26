@@ -10,10 +10,10 @@ namespace org {
 		namespace dom {
 
 $MethodInfo _Text_MethodInfo_[] = {
-	{"getWholeText", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isElementContentWhitespace", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"replaceWholeText", "(Ljava/lang/String;)Lorg/w3c/dom/Text;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"splitText", "(I)Lorg/w3c/dom/Text;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"getWholeText", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Text, getWholeText, $String*)},
+	{"isElementContentWhitespace", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Text, isElementContentWhitespace, bool)},
+	{"replaceWholeText", "(Ljava/lang/String;)Lorg/w3c/dom/Text;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Text, replaceWholeText, Text*, $String*), "org.w3c.dom.DOMException"},
+	{"splitText", "(I)Lorg/w3c/dom/Text;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Text, splitText, Text*, int32_t), "org.w3c.dom.DOMException"},
 	{}
 };
 

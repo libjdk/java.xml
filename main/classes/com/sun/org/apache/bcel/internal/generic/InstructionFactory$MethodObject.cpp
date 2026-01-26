@@ -28,7 +28,7 @@ $FieldInfo _InstructionFactory$MethodObject_FieldInfo_[] = {
 };
 
 $MethodInfo _InstructionFactory$MethodObject_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;)V", nullptr, 0, $method(static_cast<void(InstructionFactory$MethodObject::*)($String*,$String*,$Type*,$TypeArray*)>(&InstructionFactory$MethodObject::init$))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;)V", nullptr, 0, $method(InstructionFactory$MethodObject, init$, void, $String*, $String*, $Type*, $TypeArray*)},
 	{}
 };
 

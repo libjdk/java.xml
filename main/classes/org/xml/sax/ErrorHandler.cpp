@@ -5,15 +5,16 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $SAXParseException = ::org::xml::sax::SAXParseException;
 
 namespace org {
 	namespace xml {
 		namespace sax {
 
 $MethodInfo _ErrorHandler_MethodInfo_[] = {
-	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
-	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
-	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
+	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ErrorHandler, error, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ErrorHandler, fatalError, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ErrorHandler, warning, void, $SAXParseException*), "org.xml.sax.SAXException"},
 	{}
 };
 

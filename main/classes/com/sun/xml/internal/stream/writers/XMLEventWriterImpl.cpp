@@ -68,16 +68,16 @@ $FieldInfo _XMLEventWriterImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLEventWriterImpl_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLEventWriterImpl::*)($XMLStreamWriter*)>(&XMLEventWriterImpl::init$))},
-	{"add", "(Ljavax/xml/stream/XMLEventReader;)V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"add", "(Ljavax/xml/stream/events/XMLEvent;)V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"flush", "()V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"setDefaultNamespace", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"setPrefix", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
+	{"<init>", "(Ljavax/xml/stream/XMLStreamWriter;)V", nullptr, $PUBLIC, $method(XMLEventWriterImpl, init$, void, $XMLStreamWriter*)},
+	{"add", "(Ljavax/xml/stream/XMLEventReader;)V", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, add, void, $XMLEventReader*), "javax.xml.stream.XMLStreamException"},
+	{"add", "(Ljavax/xml/stream/events/XMLEvent;)V", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, add, void, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, close, void), "javax.xml.stream.XMLStreamException"},
+	{"flush", "()V", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, flush, void), "javax.xml.stream.XMLStreamException"},
+	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, getNamespaceContext, $NamespaceContext*)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, getPrefix, $String*, $String*), "javax.xml.stream.XMLStreamException"},
+	{"setDefaultNamespace", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, setDefaultNamespace, void, $String*), "javax.xml.stream.XMLStreamException"},
+	{"setNamespaceContext", "(Ljavax/xml/namespace/NamespaceContext;)V", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, setNamespaceContext, void, $NamespaceContext*), "javax.xml.stream.XMLStreamException"},
+	{"setPrefix", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLEventWriterImpl, setPrefix, void, $String*, $String*), "javax.xml.stream.XMLStreamException"},
 	{}
 };
 

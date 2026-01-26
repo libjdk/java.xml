@@ -37,15 +37,15 @@ $FieldInfo _StAXInputSource_FieldInfo_[] = {
 };
 
 $MethodInfo _StAXInputSource_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXInputSource::*)($XMLStreamReader*)>(&StAXInputSource::init$))},
-	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;Z)V", nullptr, $PUBLIC, $method(static_cast<void(StAXInputSource::*)($XMLStreamReader*,bool)>(&StAXInputSource::init$))},
-	{"<init>", "(Ljavax/xml/stream/XMLEventReader;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXInputSource::*)($XMLEventReader*)>(&StAXInputSource::init$))},
-	{"<init>", "(Ljavax/xml/stream/XMLEventReader;Z)V", nullptr, $PUBLIC, $method(static_cast<void(StAXInputSource::*)($XMLEventReader*,bool)>(&StAXInputSource::init$))},
-	{"getEventReaderSystemId", "(Ljavax/xml/stream/XMLEventReader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($XMLEventReader*)>(&StAXInputSource::getEventReaderSystemId))},
-	{"getXMLEventReader", "()Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC, $method(static_cast<$XMLEventReader*(StAXInputSource::*)()>(&StAXInputSource::getXMLEventReader))},
-	{"getXMLStreamReader", "()Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC, $method(static_cast<$XMLStreamReader*(StAXInputSource::*)()>(&StAXInputSource::getXMLStreamReader))},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"shouldConsumeRemainingContent", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(StAXInputSource::*)()>(&StAXInputSource::shouldConsumeRemainingContent))},
+	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PUBLIC, $method(StAXInputSource, init$, void, $XMLStreamReader*)},
+	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;Z)V", nullptr, $PUBLIC, $method(StAXInputSource, init$, void, $XMLStreamReader*, bool)},
+	{"<init>", "(Ljavax/xml/stream/XMLEventReader;)V", nullptr, $PUBLIC, $method(StAXInputSource, init$, void, $XMLEventReader*)},
+	{"<init>", "(Ljavax/xml/stream/XMLEventReader;Z)V", nullptr, $PUBLIC, $method(StAXInputSource, init$, void, $XMLEventReader*, bool)},
+	{"getEventReaderSystemId", "(Ljavax/xml/stream/XMLEventReader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(StAXInputSource, getEventReaderSystemId, $String*, $XMLEventReader*)},
+	{"getXMLEventReader", "()Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC, $method(StAXInputSource, getXMLEventReader, $XMLEventReader*)},
+	{"getXMLStreamReader", "()Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC, $method(StAXInputSource, getXMLStreamReader, $XMLStreamReader*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StAXInputSource, setSystemId, void, $String*)},
+	{"shouldConsumeRemainingContent", "()Z", nullptr, $PUBLIC, $method(StAXInputSource, shouldConsumeRemainingContent, bool)},
 	{}
 };
 

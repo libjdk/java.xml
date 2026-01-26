@@ -52,15 +52,15 @@ $FieldInfo _ConstantValue_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantValue_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantValue;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantValue::*)(ConstantValue*)>(&ConstantValue::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(ConstantValue::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&ConstantValue::init$)), "java.io.IOException"},
-	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantValue::*)(int32_t,int32_t,int32_t,$ConstantPool*)>(&ConstantValue::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getConstantValueIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ConstantValue::*)()>(&ConstantValue::getConstantValueIndex))},
-	{"setConstantValueIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantValue::*)(int32_t)>(&ConstantValue::setConstantValueIndex))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantValue;)V", nullptr, $PUBLIC, $method(ConstantValue, init$, void, ConstantValue*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(ConstantValue, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ConstantValue, init$, void, int32_t, int32_t, int32_t, $ConstantPool*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ConstantValue, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(ConstantValue, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ConstantValue, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getConstantValueIndex", "()I", nullptr, $PUBLIC, $method(ConstantValue, getConstantValueIndex, int32_t)},
+	{"setConstantValueIndex", "(I)V", nullptr, $PUBLIC, $method(ConstantValue, setConstantValueIndex, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ConstantValue, toString, $String*)},
 	{}
 };
 

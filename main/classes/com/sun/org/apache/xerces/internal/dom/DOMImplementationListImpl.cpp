@@ -30,10 +30,10 @@ $FieldInfo _DOMImplementationListImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMImplementationListImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMImplementationListImpl::*)()>(&DOMImplementationListImpl::init$))},
-	{"<init>", "(Ljava/util/List;)V", "(Ljava/util/List<Lorg/w3c/dom/DOMImplementation;>;)V", $PUBLIC, $method(static_cast<void(DOMImplementationListImpl::*)($List*)>(&DOMImplementationListImpl::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMImplementationListImpl, init$, void)},
+	{"<init>", "(Ljava/util/List;)V", "(Ljava/util/List<Lorg/w3c/dom/DOMImplementation;>;)V", $PUBLIC, $method(DOMImplementationListImpl, init$, void, $List*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(DOMImplementationListImpl, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC, $virtualMethod(DOMImplementationListImpl, item, $DOMImplementation*, int32_t)},
 	{}
 };
 

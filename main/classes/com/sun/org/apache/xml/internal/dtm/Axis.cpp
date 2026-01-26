@@ -64,10 +64,10 @@ $FieldInfo _Axis_FieldInfo_[] = {
 };
 
 $MethodInfo _Axis_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Axis::*)()>(&Axis::init$))},
-	{"getNames", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Axis::getNames))},
-	{"getNamesLength", "()I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)()>(&Axis::getNamesLength))},
-	{"isReverse", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&Axis::isReverse))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Axis, init$, void)},
+	{"getNames", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Axis, getNames, $String*, int32_t)},
+	{"getNamesLength", "()I", nullptr, $PUBLIC | $STATIC, $staticMethod(Axis, getNamesLength, int32_t)},
+	{"isReverse", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(Axis, isReverse, bool, int32_t)},
 	{}
 };
 

@@ -45,17 +45,17 @@ $FieldInfo _MultiDOM$AxisIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _MultiDOM$AxisIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiDOM;II)V", nullptr, $PUBLIC, $method(static_cast<void(MultiDOM$AxisIterator::*)($MultiDOM*,int32_t,int32_t)>(&MultiDOM$AxisIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiDOM;II)V", nullptr, $PUBLIC, $method(MultiDOM$AxisIterator, init$, void, $MultiDOM*, int32_t, int32_t)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, cloneIterator, $DTMAxisIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, getLast, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, getPosition, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MultiDOM$AxisIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

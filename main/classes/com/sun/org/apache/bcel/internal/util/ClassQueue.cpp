@@ -25,11 +25,11 @@ $FieldInfo _ClassQueue_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassQueue_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ClassQueue::*)()>(&ClassQueue::init$))},
-	{"dequeue", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC},
-	{"empty", "()Z", nullptr, $PUBLIC},
-	{"enqueue", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ClassQueue, init$, void)},
+	{"dequeue", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $virtualMethod(ClassQueue, dequeue, $JavaClass*)},
+	{"empty", "()Z", nullptr, $PUBLIC, $virtualMethod(ClassQueue, empty, bool)},
+	{"enqueue", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC, $virtualMethod(ClassQueue, enqueue, void, $JavaClass*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ClassQueue, toString, $String*)},
 	{}
 };
 

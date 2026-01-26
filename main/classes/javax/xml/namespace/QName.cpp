@@ -25,16 +25,16 @@ $FieldInfo _QName_FieldInfo_[] = {
 };
 
 $MethodInfo _QName_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(QName::*)($String*,$String*)>(&QName::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(QName::*)($String*,$String*,$String*)>(&QName::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(QName::*)($String*)>(&QName::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $FINAL},
-	{"getLocalPart", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC | $FINAL},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $STATIC, $method(static_cast<QName*(*)($String*)>(&QName::valueOf))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(QName, init$, void, $String*, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(QName, init$, void, $String*, $String*, $String*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(QName, init$, void, $String*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(QName, equals, bool, Object$*)},
+	{"getLocalPart", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(QName, getLocalPart, $String*)},
+	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(QName, getNamespaceURI, $String*)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(QName, getPrefix, $String*)},
+	{"hashCode", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(QName, hashCode, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(QName, toString, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $STATIC, $staticMethod(QName, valueOf, QName*, $String*)},
 	{}
 };
 

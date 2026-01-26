@@ -71,9 +71,9 @@ $MethodInfo _ArithmeticInstruction_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ArithmeticInstruction::*)()>(&ArithmeticInstruction::init$))},
-	{"<init>", "(S)V", nullptr, $PROTECTED, $method(static_cast<void(ArithmeticInstruction::*)(int16_t)>(&ArithmeticInstruction::init$))},
-	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(ArithmeticInstruction, init$, void)},
+	{"<init>", "(S)V", nullptr, $PROTECTED, $method(ArithmeticInstruction, init$, void, int16_t)},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $virtualMethod(ArithmeticInstruction, getType, $Type*, $ConstantPoolGen*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{"*produceStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC},
 	{}

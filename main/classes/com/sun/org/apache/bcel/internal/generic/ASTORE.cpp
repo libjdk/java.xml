@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ASTORE_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ASTORE::*)()>(&ASTORE::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ASTORE::*)(int32_t)>(&ASTORE::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(ASTORE, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(ASTORE, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ASTORE, accept, void, $Visitor*)},
 	{}
 };
 

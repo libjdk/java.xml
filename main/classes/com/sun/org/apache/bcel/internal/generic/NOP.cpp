@@ -22,8 +22,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _NOP_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NOP::*)()>(&NOP::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NOP, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(NOP, accept, void, $Visitor*)},
 	{}
 };
 

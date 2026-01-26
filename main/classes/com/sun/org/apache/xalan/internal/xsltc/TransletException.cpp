@@ -23,9 +23,9 @@ $FieldInfo _TransletException_FieldInfo_[] = {
 };
 
 $MethodInfo _TransletException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(TransletException::*)()>(&TransletException::init$))},
-	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(TransletException::*)($Exception*)>(&TransletException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(TransletException::*)($String*)>(&TransletException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(TransletException, init$, void)},
+	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(TransletException, init$, void, $Exception*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(TransletException, init$, void, $String*)},
 	{}
 };
 

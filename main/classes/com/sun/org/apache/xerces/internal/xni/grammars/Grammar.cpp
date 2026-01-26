@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription.h>
 #include <jcpp.h>
 
+using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,7 +17,7 @@ namespace com {
 							namespace grammars {
 
 $MethodInfo _Grammar_MethodInfo_[] = {
-	{"getGrammarDescription", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getGrammarDescription", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Grammar, getGrammarDescription, $XMLGrammarDescription*)},
 	{}
 };
 

@@ -44,17 +44,17 @@ $FieldInfo _XMLSecurityPropertyManager_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSecurityPropertyManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSecurityPropertyManager::*)()>(&XMLSecurityPropertyManager::init$))},
-	{"find", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XMLSecurityPropertyManager::*)($String*)>(&XMLSecurityPropertyManager::find))},
-	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLSecurityPropertyManager::*)($String*)>(&XMLSecurityPropertyManager::getIndex))},
-	{"getSystemProperty", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$Property;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(XMLSecurityPropertyManager::*)($XMLSecurityPropertyManager$Property*,$String*)>(&XMLSecurityPropertyManager::getSystemProperty))},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XMLSecurityPropertyManager::*)($String*)>(&XMLSecurityPropertyManager::getValue))},
-	{"getValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$Property;)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XMLSecurityPropertyManager::*)($XMLSecurityPropertyManager$Property*)>(&XMLSecurityPropertyManager::getValue))},
-	{"getValueByIndex", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(XMLSecurityPropertyManager::*)(int32_t)>(&XMLSecurityPropertyManager::getValueByIndex))},
-	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLSecurityPropertyManager::*)()>(&XMLSecurityPropertyManager::readSystemProperties))},
-	{"setValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $method(static_cast<bool(XMLSecurityPropertyManager::*)($String*,$XMLSecurityPropertyManager$State*,Object$*)>(&XMLSecurityPropertyManager::setValue))},
-	{"setValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$Property;Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSecurityPropertyManager::*)($XMLSecurityPropertyManager$Property*,$XMLSecurityPropertyManager$State*,$String*)>(&XMLSecurityPropertyManager::setValue))},
-	{"setValue", "(ILcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSecurityPropertyManager::*)(int32_t,$XMLSecurityPropertyManager$State*,$String*)>(&XMLSecurityPropertyManager::setValue))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, init$, void)},
+	{"find", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, find, $String*, $String*)},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, getIndex, int32_t, $String*)},
+	{"getSystemProperty", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$Property;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(XMLSecurityPropertyManager, getSystemProperty, void, $XMLSecurityPropertyManager$Property*, $String*)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, getValue, $String*, $String*)},
+	{"getValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$Property;)Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, getValue, $String*, $XMLSecurityPropertyManager$Property*)},
+	{"getValueByIndex", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, getValueByIndex, $String*, int32_t)},
+	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(XMLSecurityPropertyManager, readSystemProperties, void)},
+	{"setValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, setValue, bool, $String*, $XMLSecurityPropertyManager$State*, Object$*)},
+	{"setValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$Property;Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, setValue, void, $XMLSecurityPropertyManager$Property*, $XMLSecurityPropertyManager$State*, $String*)},
+	{"setValue", "(ILcom/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager$State;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, setValue, void, int32_t, $XMLSecurityPropertyManager$State*, $String*)},
 	{}
 };
 

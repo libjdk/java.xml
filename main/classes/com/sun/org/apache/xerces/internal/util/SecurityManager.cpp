@@ -36,14 +36,14 @@ $FieldInfo _SecurityManager_FieldInfo_[] = {
 };
 
 $MethodInfo _SecurityManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SecurityManager::*)()>(&SecurityManager::init$))},
-	{"getElementAttrLimit", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(SecurityManager::*)()>(&SecurityManager::getElementAttrLimit))},
-	{"getEntityExpansionLimit", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(SecurityManager::*)()>(&SecurityManager::getEntityExpansionLimit))},
-	{"getMaxOccurNodeLimit", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(SecurityManager::*)()>(&SecurityManager::getMaxOccurNodeLimit))},
-	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(static_cast<void(SecurityManager::*)()>(&SecurityManager::readSystemProperties))},
-	{"setElementAttrLimit", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SecurityManager::*)(int32_t)>(&SecurityManager::setElementAttrLimit))},
-	{"setEntityExpansionLimit", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SecurityManager::*)(int32_t)>(&SecurityManager::setEntityExpansionLimit))},
-	{"setMaxOccurNodeLimit", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SecurityManager::*)(int32_t)>(&SecurityManager::setMaxOccurNodeLimit))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SecurityManager, init$, void)},
+	{"getElementAttrLimit", "()I", nullptr, $PUBLIC, $method(SecurityManager, getElementAttrLimit, int32_t)},
+	{"getEntityExpansionLimit", "()I", nullptr, $PUBLIC, $method(SecurityManager, getEntityExpansionLimit, int32_t)},
+	{"getMaxOccurNodeLimit", "()I", nullptr, $PUBLIC, $method(SecurityManager, getMaxOccurNodeLimit, int32_t)},
+	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(SecurityManager, readSystemProperties, void)},
+	{"setElementAttrLimit", "(I)V", nullptr, $PUBLIC, $method(SecurityManager, setElementAttrLimit, void, int32_t)},
+	{"setEntityExpansionLimit", "(I)V", nullptr, $PUBLIC, $method(SecurityManager, setEntityExpansionLimit, void, int32_t)},
+	{"setMaxOccurNodeLimit", "(I)V", nullptr, $PUBLIC, $method(SecurityManager, setMaxOccurNodeLimit, void, int32_t)},
 	{}
 };
 

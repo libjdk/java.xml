@@ -36,15 +36,15 @@ $FieldInfo _ModuleMainClass_FieldInfo_[] = {
 };
 
 $MethodInfo _ModuleMainClass_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ModuleMainClass;)V", nullptr, $PUBLIC, $method(static_cast<void(ModuleMainClass::*)(ModuleMainClass*)>(&ModuleMainClass::init$))},
-	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ModuleMainClass::*)(int32_t,int32_t,int32_t,$ConstantPool*)>(&ModuleMainClass::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(ModuleMainClass::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&ModuleMainClass::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getHostClassIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ModuleMainClass::*)()>(&ModuleMainClass::getHostClassIndex))},
-	{"setHostClassIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ModuleMainClass::*)(int32_t)>(&ModuleMainClass::setHostClassIndex))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ModuleMainClass;)V", nullptr, $PUBLIC, $method(ModuleMainClass, init$, void, ModuleMainClass*)},
+	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ModuleMainClass, init$, void, int32_t, int32_t, int32_t, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(ModuleMainClass, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ModuleMainClass, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(ModuleMainClass, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ModuleMainClass, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getHostClassIndex", "()I", nullptr, $PUBLIC, $method(ModuleMainClass, getHostClassIndex, int32_t)},
+	{"setHostClassIndex", "(I)V", nullptr, $PUBLIC, $method(ModuleMainClass, setHostClassIndex, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ModuleMainClass, toString, $String*)},
 	{}
 };
 

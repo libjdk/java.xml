@@ -5,13 +5,14 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $QName = ::javax::xml::namespace$::QName;
 
 namespace javax {
 	namespace xml {
 		namespace xpath {
 
 $MethodInfo _XPathVariableResolver_MethodInfo_[] = {
-	{"resolveVariable", "(Ljavax/xml/namespace/QName;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
+	{"resolveVariable", "(Ljavax/xml/namespace/QName;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPathVariableResolver, resolveVariable, $Object*, $QName*)},
 	{}
 };
 

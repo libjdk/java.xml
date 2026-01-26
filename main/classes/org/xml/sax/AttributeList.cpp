@@ -22,12 +22,12 @@ $CompoundAttribute _AttributeList_Annotations_[] = {
 };
 
 $MethodInfo _AttributeList_MethodInfo_[] = {
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributeList, getLength, int32_t)},
+	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributeList, getName, $String*, int32_t)},
+	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributeList, getType, $String*, int32_t)},
+	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributeList, getType, $String*, $String*)},
+	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributeList, getValue, $String*, int32_t)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributeList, getValue, $String*, $String*)},
 	{}
 };
 

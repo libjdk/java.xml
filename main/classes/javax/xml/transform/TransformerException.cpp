@@ -85,8 +85,8 @@ $FieldInfo TransformerException$$Lambda$lambda$getLocationAsString$0::fieldInfos
 	{}
 };
 $MethodInfo TransformerException$$Lambda$lambda$getLocationAsString$0::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerException$$Lambda$lambda$getLocationAsString$0::*)(TransformerException*)>(&TransformerException$$Lambda$lambda$getLocationAsString$0::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, $method(TransformerException$$Lambda$lambda$getLocationAsString$0, init$, void, TransformerException*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(TransformerException$$Lambda$lambda$getLocationAsString$0, run, $Object*)},
 	{}
 };
 $ClassInfo TransformerException$$Lambda$lambda$getLocationAsString$0::classInfo$ = {
@@ -111,24 +111,24 @@ $FieldInfo _TransformerException_FieldInfo_[] = {
 };
 
 $MethodInfo _TransformerException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerException::*)($String*)>(&TransformerException::init$))},
-	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerException::*)($Throwable*)>(&TransformerException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerException::*)($String*,$Throwable*)>(&TransformerException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerException::*)($String*,$SourceLocator*)>(&TransformerException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerException::*)($String*,$SourceLocator*,$Throwable*)>(&TransformerException::init$))},
-	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
-	{"getException", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
-	{"getLocationAsString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLocationString", "()Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(TransformerException::*)()>(&TransformerException::getLocationString))},
-	{"getLocator", "()Ljavax/xml/transform/SourceLocator;", nullptr, $PUBLIC},
-	{"getMessageAndLocation", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNonPrivDomain", "()Ljava/security/ProtectionDomain;", nullptr, $PRIVATE, $method(static_cast<$ProtectionDomain*(TransformerException::*)()>(&TransformerException::getNonPrivDomain))},
-	{"initCause", "(Ljava/lang/Throwable;)Ljava/lang/Throwable;", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"lambda$getLocationAsString$0", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<$String*(TransformerException::*)()>(&TransformerException::lambda$getLocationAsString$0))},
-	{"printStackTrace", "()V", nullptr, $PUBLIC},
-	{"printStackTrace", "(Ljava/io/PrintStream;)V", nullptr, $PUBLIC},
-	{"printStackTrace", "(Ljava/io/PrintWriter;)V", nullptr, $PUBLIC},
-	{"setLocator", "(Ljavax/xml/transform/SourceLocator;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(TransformerException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(TransformerException, init$, void, $Throwable*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(TransformerException, init$, void, $String*, $Throwable*)},
+	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;)V", nullptr, $PUBLIC, $method(TransformerException, init$, void, $String*, $SourceLocator*)},
+	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(TransformerException, init$, void, $String*, $SourceLocator*, $Throwable*)},
+	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(TransformerException, getCause, $Throwable*)},
+	{"getException", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(TransformerException, getException, $Throwable*)},
+	{"getLocationAsString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TransformerException, getLocationAsString, $String*)},
+	{"getLocationString", "()Ljava/lang/String;", nullptr, $PRIVATE, $method(TransformerException, getLocationString, $String*)},
+	{"getLocator", "()Ljavax/xml/transform/SourceLocator;", nullptr, $PUBLIC, $virtualMethod(TransformerException, getLocator, $SourceLocator*)},
+	{"getMessageAndLocation", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TransformerException, getMessageAndLocation, $String*)},
+	{"getNonPrivDomain", "()Ljava/security/ProtectionDomain;", nullptr, $PRIVATE, $method(TransformerException, getNonPrivDomain, $ProtectionDomain*)},
+	{"initCause", "(Ljava/lang/Throwable;)Ljava/lang/Throwable;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(TransformerException, initCause, $Throwable*, $Throwable*)},
+	{"lambda$getLocationAsString$0", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(TransformerException, lambda$getLocationAsString$0, $String*)},
+	{"printStackTrace", "()V", nullptr, $PUBLIC, $virtualMethod(TransformerException, printStackTrace, void)},
+	{"printStackTrace", "(Ljava/io/PrintStream;)V", nullptr, $PUBLIC, $virtualMethod(TransformerException, printStackTrace, void, $PrintStream*)},
+	{"printStackTrace", "(Ljava/io/PrintWriter;)V", nullptr, $PUBLIC, $virtualMethod(TransformerException, printStackTrace, void, $PrintWriter*)},
+	{"setLocator", "(Ljavax/xml/transform/SourceLocator;)V", nullptr, $PUBLIC, $virtualMethod(TransformerException, setLocator, void, $SourceLocator*)},
 	{}
 };
 

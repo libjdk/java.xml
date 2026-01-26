@@ -43,12 +43,12 @@ $FieldInfo _OneStepIteratorForward_FieldInfo_[] = {
 };
 
 $MethodInfo _OneStepIteratorForward_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(OneStepIteratorForward::*)($Compiler*,int32_t,int32_t)>(&OneStepIteratorForward::init$)), "javax.xml.transform.TransformerException"},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(OneStepIteratorForward::*)(int32_t)>(&OneStepIteratorForward::init$))},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PROTECTED},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(OneStepIteratorForward, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(OneStepIteratorForward, init$, void, int32_t)},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(OneStepIteratorForward, deepEquals, bool, $Expression*)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(OneStepIteratorForward, getAxis, int32_t)},
+	{"getNextNode", "()I", nullptr, $PROTECTED, $virtualMethod(OneStepIteratorForward, getNextNode, int32_t)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(OneStepIteratorForward, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

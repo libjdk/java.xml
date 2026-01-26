@@ -30,15 +30,15 @@ $FieldInfo _XMLSchemaFactory$XMLGrammarPoolWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaFactory$XMLGrammarPoolWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XMLSchemaFactory$XMLGrammarPoolWrapper::*)()>(&XMLSchemaFactory$XMLGrammarPoolWrapper::init$))},
-	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, 0},
-	{"lockPool", "()V", nullptr, $PUBLIC},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"setGrammarPool", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, 0},
-	{"unlockPool", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(XMLSchemaFactory$XMLGrammarPoolWrapper, init$, void)},
+	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, cacheGrammars, void, $String*, $GrammarArray*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, clear, void)},
+	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, 0, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, getGrammarPool, $XMLGrammarPool*)},
+	{"lockPool", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, lockPool, void)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
+	{"setGrammarPool", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, 0, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, setGrammarPool, void, $XMLGrammarPool*)},
+	{"unlockPool", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaFactory$XMLGrammarPoolWrapper, unlockPool, void)},
 	{}
 };
 

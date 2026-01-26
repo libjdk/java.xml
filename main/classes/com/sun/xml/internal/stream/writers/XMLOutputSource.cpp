@@ -13,7 +13,7 @@ namespace com {
 					namespace writers {
 
 $MethodInfo _XMLOutputSource_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLOutputSource::*)()>(&XMLOutputSource::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLOutputSource, init$, void)},
 	{}
 };
 

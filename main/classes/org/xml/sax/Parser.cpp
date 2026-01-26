@@ -12,6 +12,12 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NamedAttribute = ::java::lang::NamedAttribute;
+using $Locale = ::java::util::Locale;
+using $DTDHandler = ::org::xml::sax::DTDHandler;
+using $DocumentHandler = ::org::xml::sax::DocumentHandler;
+using $EntityResolver = ::org::xml::sax::EntityResolver;
+using $ErrorHandler = ::org::xml::sax::ErrorHandler;
+using $InputSource = ::org::xml::sax::InputSource;
 
 namespace org {
 	namespace xml {
@@ -28,13 +34,13 @@ $CompoundAttribute _Parser_Annotations_[] = {
 };
 
 $MethodInfo _Parser_MethodInfo_[] = {
-	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDocumentHandler", "(Lorg/xml/sax/DocumentHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setLocale", "(Ljava/util/Locale;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
+	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Parser, parse, void, $InputSource*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Parser, parse, void, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"setDTDHandler", "(Lorg/xml/sax/DTDHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Parser, setDTDHandler, void, $DTDHandler*)},
+	{"setDocumentHandler", "(Lorg/xml/sax/DocumentHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Parser, setDocumentHandler, void, $DocumentHandler*)},
+	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Parser, setEntityResolver, void, $EntityResolver*)},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Parser, setErrorHandler, void, $ErrorHandler*)},
+	{"setLocale", "(Ljava/util/Locale;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Parser, setLocale, void, $Locale*), "org.xml.sax.SAXException"},
 	{}
 };
 

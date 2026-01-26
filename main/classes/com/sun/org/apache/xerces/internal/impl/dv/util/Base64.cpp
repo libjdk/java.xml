@@ -43,14 +43,14 @@ $FieldInfo _Base64_FieldInfo_[] = {
 };
 
 $MethodInfo _Base64_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Base64::*)()>(&Base64::init$))},
-	{"decode", "(Ljava/lang/String;)[B", nullptr, $PUBLIC | $STATIC, $method(static_cast<$bytes*(*)($String*)>(&Base64::decode))},
-	{"encode", "([B)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($bytes*)>(&Base64::encode))},
-	{"isBase64", "(C)Z", nullptr, $PROTECTED | $STATIC, $method(static_cast<bool(*)(char16_t)>(&Base64::isBase64))},
-	{"isData", "(C)Z", nullptr, $PROTECTED | $STATIC, $method(static_cast<bool(*)(char16_t)>(&Base64::isData))},
-	{"isPad", "(C)Z", nullptr, $PROTECTED | $STATIC, $method(static_cast<bool(*)(char16_t)>(&Base64::isPad))},
-	{"isWhiteSpace", "(C)Z", nullptr, $PROTECTED | $STATIC, $method(static_cast<bool(*)(char16_t)>(&Base64::isWhiteSpace))},
-	{"removeWhiteSpace", "([C)I", nullptr, $PROTECTED | $STATIC, $method(static_cast<int32_t(*)($chars*)>(&Base64::removeWhiteSpace))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Base64, init$, void)},
+	{"decode", "(Ljava/lang/String;)[B", nullptr, $PUBLIC | $STATIC, $staticMethod(Base64, decode, $bytes*, $String*)},
+	{"encode", "([B)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Base64, encode, $String*, $bytes*)},
+	{"isBase64", "(C)Z", nullptr, $PROTECTED | $STATIC, $staticMethod(Base64, isBase64, bool, char16_t)},
+	{"isData", "(C)Z", nullptr, $PROTECTED | $STATIC, $staticMethod(Base64, isData, bool, char16_t)},
+	{"isPad", "(C)Z", nullptr, $PROTECTED | $STATIC, $staticMethod(Base64, isPad, bool, char16_t)},
+	{"isWhiteSpace", "(C)Z", nullptr, $PROTECTED | $STATIC, $staticMethod(Base64, isWhiteSpace, bool, char16_t)},
+	{"removeWhiteSpace", "([C)I", nullptr, $PROTECTED | $STATIC, $staticMethod(Base64, removeWhiteSpace, int32_t, $chars*)},
 	{}
 };
 

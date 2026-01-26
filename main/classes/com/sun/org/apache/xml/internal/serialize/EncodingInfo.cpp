@@ -43,12 +43,12 @@ $FieldInfo _EncodingInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _EncodingInfo_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(EncodingInfo::*)($String*,$String*,int32_t)>(&EncodingInfo::init$))},
-	{"getIANAName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getWriter", "(Ljava/io/OutputStream;)Ljava/io/Writer;", nullptr, $PUBLIC, nullptr, "java.io.UnsupportedEncodingException"},
-	{"isPrintable", "(C)Z", nullptr, $PUBLIC},
-	{"isPrintable0", "(C)Z", nullptr, $PRIVATE, $method(static_cast<bool(EncodingInfo::*)(char16_t)>(&EncodingInfo::isPrintable0))},
-	{"testJavaEncodingName", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($String*)>(&EncodingInfo::testJavaEncodingName)), "java.io.UnsupportedEncodingException"},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(EncodingInfo, init$, void, $String*, $String*, int32_t)},
+	{"getIANAName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EncodingInfo, getIANAName, $String*)},
+	{"getWriter", "(Ljava/io/OutputStream;)Ljava/io/Writer;", nullptr, $PUBLIC, $virtualMethod(EncodingInfo, getWriter, $Writer*, $OutputStream*), "java.io.UnsupportedEncodingException"},
+	{"isPrintable", "(C)Z", nullptr, $PUBLIC, $virtualMethod(EncodingInfo, isPrintable, bool, char16_t)},
+	{"isPrintable0", "(C)Z", nullptr, $PRIVATE, $method(EncodingInfo, isPrintable0, bool, char16_t)},
+	{"testJavaEncodingName", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(EncodingInfo, testJavaEncodingName, void, $String*), "java.io.UnsupportedEncodingException"},
 	{}
 };
 

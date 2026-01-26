@@ -6,14 +6,16 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Properties = ::java::util::Properties;
+using $Transformer = ::javax::xml::transform::Transformer;
 
 namespace javax {
 	namespace xml {
 		namespace transform {
 
 $MethodInfo _Templates_MethodInfo_[] = {
-	{"getOutputProperties", "()Ljava/util/Properties;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
+	{"getOutputProperties", "()Ljava/util/Properties;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Templates, getOutputProperties, $Properties*)},
+	{"newTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Templates, newTransformer, $Transformer*), "javax.xml.transform.TransformerConfigurationException"},
 	{}
 };
 

@@ -40,8 +40,8 @@ $FieldInfo _SAXImpl$TypedNamespaceIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXImpl$TypedNamespaceIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;I)V", nullptr, $PUBLIC, $method(static_cast<void(SAXImpl$TypedNamespaceIterator::*)($SAXImpl*,int32_t)>(&SAXImpl$TypedNamespaceIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;I)V", nullptr, $PUBLIC, $method(SAXImpl$TypedNamespaceIterator, init$, void, $SAXImpl*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAXImpl$TypedNamespaceIterator, next, int32_t)},
 	{}
 };
 

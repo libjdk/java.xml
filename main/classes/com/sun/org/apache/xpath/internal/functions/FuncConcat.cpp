@@ -39,10 +39,10 @@ $FieldInfo _FuncConcat_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncConcat_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncConcat::*)()>(&FuncConcat::init$))},
-	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncConcat, init$, void)},
+	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, $virtualMethod(FuncConcat, checkNumberArgs, void, int32_t), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncConcat, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, $virtualMethod(FuncConcat, reportWrongNumberArgs, void), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
 	{}
 };
 

@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Event = ::org::w3c::dom::events::Event;
+using $EventListener = ::org::w3c::dom::events::EventListener;
 
 namespace org {
 	namespace w3c {
@@ -13,9 +15,9 @@ namespace org {
 			namespace events {
 
 $MethodInfo _EventTarget_MethodInfo_[] = {
-	{"addEventListener", "(Ljava/lang/String;Lorg/w3c/dom/events/EventListener;Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"dispatchEvent", "(Lorg/w3c/dom/events/Event;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.events.EventException"},
-	{"removeEventListener", "(Ljava/lang/String;Lorg/w3c/dom/events/EventListener;Z)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"addEventListener", "(Ljava/lang/String;Lorg/w3c/dom/events/EventListener;Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EventTarget, addEventListener, void, $String*, $EventListener*, bool)},
+	{"dispatchEvent", "(Lorg/w3c/dom/events/Event;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EventTarget, dispatchEvent, bool, $Event*), "org.w3c.dom.events.EventException"},
+	{"removeEventListener", "(Ljava/lang/String;Lorg/w3c/dom/events/EventListener;Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EventTarget, removeEventListener, void, $String*, $EventListener*, bool)},
 	{}
 };
 

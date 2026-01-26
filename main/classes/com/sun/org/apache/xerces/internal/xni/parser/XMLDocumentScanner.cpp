@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <jcpp.h>
 
+using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,9 +17,9 @@ namespace com {
 							namespace parser {
 
 $MethodInfo _XMLDocumentScanner_MethodInfo_[] = {
-	{"next", "()I", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
-	{"scanDocument", "(Z)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"setInputSource", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
+	{"next", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDocumentScanner, next, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"scanDocument", "(Z)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDocumentScanner, scanDocument, bool, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"setInputSource", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDocumentScanner, setInputSource, void, $XMLInputSource*), "java.io.IOException"},
 	{}
 };
 

@@ -28,12 +28,12 @@ $FieldInfo _ToStream$WritertoStringBuffer_FieldInfo_[] = {
 };
 
 $MethodInfo _ToStream$WritertoStringBuffer_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream;Ljava/lang/StringBuffer;)V", nullptr, 0, $method(static_cast<void(ToStream$WritertoStringBuffer::*)($ToStream*,$StringBuffer*)>(&ToStream$WritertoStringBuffer::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"flush", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "([CII)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "(I)V", nullptr, $PUBLIC},
-	{"write", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream;Ljava/lang/StringBuffer;)V", nullptr, 0, $method(ToStream$WritertoStringBuffer, init$, void, $ToStream*, $StringBuffer*)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(ToStream$WritertoStringBuffer, close, void), "java.io.IOException"},
+	{"flush", "()V", nullptr, $PUBLIC, $virtualMethod(ToStream$WritertoStringBuffer, flush, void), "java.io.IOException"},
+	{"write", "([CII)V", nullptr, $PUBLIC, $virtualMethod(ToStream$WritertoStringBuffer, write, void, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"write", "(I)V", nullptr, $PUBLIC, $virtualMethod(ToStream$WritertoStringBuffer, write, void, int32_t)},
+	{"write", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ToStream$WritertoStringBuffer, write, void, $String*)},
 	{}
 };
 

@@ -5,9 +5,17 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSComplexTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSNamedMap.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
+#include <com/sun/org/apache/xerces/internal/xs/XSTypeDefinition.h>
 #include <com/sun/org/apache/xerces/internal/xs/XSValue.h>
 #include <jcpp.h>
 
+using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
+using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
+using $XSComplexTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSComplexTypeDefinition;
+using $XSNamedMap = ::com::sun::org::apache::xerces::internal::xs::XSNamedMap;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $XSTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSTypeDefinition;
+using $XSValue = ::com::sun::org::apache::xerces::internal::xs::XSValue;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -41,25 +49,25 @@ $CompoundAttribute _XSElementDeclaration_MethodAnnotations_getItemValueTypes10[]
 };
 
 $MethodInfo _XSElementDeclaration_MethodInfo_[] = {
-	{"getAbstract", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getActualVC", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSElementDeclaration_MethodAnnotations_getActualVC1},
-	{"getActualVCType", "()S", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSElementDeclaration_MethodAnnotations_getActualVCType2},
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getConstraintType", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getConstraintValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, nullptr, nullptr, _XSElementDeclaration_MethodAnnotations_getConstraintValue6},
-	{"getDisallowedSubstitutions", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEnclosingCTDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSComplexTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getIdentityConstraints", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamedMap;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSElementDeclaration_MethodAnnotations_getItemValueTypes10},
-	{"getNillable", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getScope", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSubstitutionGroupAffiliation", "()Lcom/sun/org/apache/xerces/internal/xs/XSElementDeclaration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSubstitutionGroupExclusions", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValueConstraintValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isDisallowedSubstitution", "(S)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isSubstitutionGroupExclusion", "(S)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAbstract", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getAbstract, bool)},
+	{"getActualVC", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSElementDeclaration, getActualVC, $Object*), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSElementDeclaration_MethodAnnotations_getActualVC1},
+	{"getActualVCType", "()S", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSElementDeclaration, getActualVCType, int16_t), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSElementDeclaration_MethodAnnotations_getActualVCType2},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getAnnotation, $XSAnnotation*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getAnnotations, $XSObjectList*)},
+	{"getConstraintType", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getConstraintType, int16_t)},
+	{"getConstraintValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSElementDeclaration, getConstraintValue, $String*), nullptr, nullptr, _XSElementDeclaration_MethodAnnotations_getConstraintValue6},
+	{"getDisallowedSubstitutions", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getDisallowedSubstitutions, int16_t)},
+	{"getEnclosingCTDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSComplexTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getEnclosingCTDefinition, $XSComplexTypeDefinition*)},
+	{"getIdentityConstraints", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamedMap;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getIdentityConstraints, $XSNamedMap*)},
+	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSElementDeclaration, getItemValueTypes, $ShortList*), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSElementDeclaration_MethodAnnotations_getItemValueTypes10},
+	{"getNillable", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getNillable, bool)},
+	{"getScope", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getScope, int16_t)},
+	{"getSubstitutionGroupAffiliation", "()Lcom/sun/org/apache/xerces/internal/xs/XSElementDeclaration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getSubstitutionGroupAffiliation, XSElementDeclaration*)},
+	{"getSubstitutionGroupExclusions", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getSubstitutionGroupExclusions, int16_t)},
+	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getTypeDefinition, $XSTypeDefinition*)},
+	{"getValueConstraintValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, getValueConstraintValue, $XSValue*)},
+	{"isDisallowedSubstitution", "(S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, isDisallowedSubstitution, bool, int16_t)},
+	{"isSubstitutionGroupExclusion", "(S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSElementDeclaration, isSubstitutionGroupExclusion, bool, int16_t)},
 	{}
 };
 

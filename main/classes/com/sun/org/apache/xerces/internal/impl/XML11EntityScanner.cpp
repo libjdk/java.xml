@@ -43,19 +43,19 @@ namespace com {
 						namespace impl {
 
 $MethodInfo _XML11EntityScanner_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11EntityScanner::*)()>(&XML11EntityScanner::init$))},
-	{"peekChar", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"scanChar", "(Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)I", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"scanContent", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)I", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"scanData", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/XMLStringBuffer;I)Z", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"scanLiteral", "(ILcom/sun/org/apache/xerces/internal/xni/XMLString;Z)I", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"scanNCName", "()Ljava/lang/String;", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"scanName", "(Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)Ljava/lang/String;", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"scanNmtoken", "()Ljava/lang/String;", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"scanQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)Z", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"skipChar", "(ILcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)Z", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"skipSpaces", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"skipString", "(Ljava/lang/String;)Z", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11EntityScanner, init$, void)},
+	{"peekChar", "()I", nullptr, $PUBLIC, $virtualMethod(XML11EntityScanner, peekChar, int32_t), "java.io.IOException"},
+	{"scanChar", "(Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)I", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanChar, int32_t, $XMLScanner$NameType*), "java.io.IOException"},
+	{"scanContent", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)I", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanContent, int32_t, $XMLString*), "java.io.IOException"},
+	{"scanData", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/XMLStringBuffer;I)Z", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanData, bool, $String*, $XMLStringBuffer*, int32_t), "java.io.IOException"},
+	{"scanLiteral", "(ILcom/sun/org/apache/xerces/internal/xni/XMLString;Z)I", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanLiteral, int32_t, int32_t, $XMLString*, bool), "java.io.IOException"},
+	{"scanNCName", "()Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanNCName, $String*), "java.io.IOException"},
+	{"scanName", "(Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanName, $String*, $XMLScanner$NameType*), "java.io.IOException"},
+	{"scanNmtoken", "()Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanNmtoken, $String*), "java.io.IOException"},
+	{"scanQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)Z", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, scanQName, bool, $QName*, $XMLScanner$NameType*), "java.io.IOException"},
+	{"skipChar", "(ILcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;)Z", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, skipChar, bool, int32_t, $XMLScanner$NameType*), "java.io.IOException"},
+	{"skipSpaces", "()Z", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, skipSpaces, bool), "java.io.IOException"},
+	{"skipString", "(Ljava/lang/String;)Z", nullptr, $PROTECTED, $virtualMethod(XML11EntityScanner, skipString, bool, $String*), "java.io.IOException"},
 	{}
 };
 

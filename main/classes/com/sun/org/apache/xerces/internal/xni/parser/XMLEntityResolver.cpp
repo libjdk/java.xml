@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xerces/internal/xni/parser/XMLInputSource.h>
 #include <jcpp.h>
 
+using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
+using $XMLInputSource = ::com::sun::org::apache::xerces::internal::xni::parser::XMLInputSource;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,7 +19,7 @@ namespace com {
 							namespace parser {
 
 $MethodInfo _XMLEntityResolver_MethodInfo_[] = {
-	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLEntityResolver, resolveEntity, $XMLInputSource*, $XMLResourceIdentifier*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
 	{}
 };
 

@@ -21,9 +21,9 @@ $FieldInfo _ClassFormatException_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassFormatException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ClassFormatException::*)()>(&ClassFormatException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassFormatException::*)($String*)>(&ClassFormatException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassFormatException::*)($String*,$Throwable*)>(&ClassFormatException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ClassFormatException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ClassFormatException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(ClassFormatException, init$, void, $String*, $Throwable*)},
 	{}
 };
 

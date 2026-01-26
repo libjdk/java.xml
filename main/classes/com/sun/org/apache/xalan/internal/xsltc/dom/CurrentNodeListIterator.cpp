@@ -44,19 +44,19 @@ $FieldInfo _CurrentNodeListIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _CurrentNodeListIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xalan/internal/xsltc/dom/CurrentNodeListFilter;ILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)V", nullptr, $PUBLIC, $method(static_cast<void(CurrentNodeListIterator::*)($DTMAxisIterator*,$CurrentNodeListFilter*,int32_t,$AbstractTranslet*)>(&CurrentNodeListIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;ZLcom/sun/org/apache/xalan/internal/xsltc/dom/CurrentNodeListFilter;ILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)V", nullptr, $PUBLIC, $method(static_cast<void(CurrentNodeListIterator::*)($DTMAxisIterator*,bool,$CurrentNodeListFilter*,int32_t,$AbstractTranslet*)>(&CurrentNodeListIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"computePositionOfLast", "()I", nullptr, $PRIVATE, $method(static_cast<int32_t(CurrentNodeListIterator::*)()>(&CurrentNodeListIterator::computePositionOfLast))},
-	{"forceNaturalOrder", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $method(static_cast<$DTMAxisIterator*(CurrentNodeListIterator::*)()>(&CurrentNodeListIterator::forceNaturalOrder))},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xalan/internal/xsltc/dom/CurrentNodeListFilter;ILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)V", nullptr, $PUBLIC, $method(CurrentNodeListIterator, init$, void, $DTMAxisIterator*, $CurrentNodeListFilter*, int32_t, $AbstractTranslet*)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;ZLcom/sun/org/apache/xalan/internal/xsltc/dom/CurrentNodeListFilter;ILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)V", nullptr, $PUBLIC, $method(CurrentNodeListIterator, init$, void, $DTMAxisIterator*, bool, $CurrentNodeListFilter*, int32_t, $AbstractTranslet*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, cloneIterator, $DTMAxisIterator*)},
+	{"computePositionOfLast", "()I", nullptr, $PRIVATE, $method(CurrentNodeListIterator, computePositionOfLast, int32_t)},
+	{"forceNaturalOrder", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $method(CurrentNodeListIterator, forceNaturalOrder, $DTMAxisIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, getLast, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(CurrentNodeListIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

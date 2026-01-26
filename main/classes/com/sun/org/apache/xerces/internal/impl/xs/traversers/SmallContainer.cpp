@@ -27,9 +27,9 @@ $FieldInfo _SmallContainer_FieldInfo_[] = {
 };
 
 $MethodInfo _SmallContainer_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(SmallContainer::*)(int32_t)>(&SmallContainer::init$))},
-	{"get", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;", nullptr, 0},
-	{"put", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;)V", nullptr, 0},
+	{"<init>", "(I)V", nullptr, 0, $method(SmallContainer, init$, void, int32_t)},
+	{"get", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;", nullptr, 0, $virtualMethod(SmallContainer, get, $OneAttr*, $String*)},
+	{"put", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;)V", nullptr, 0, $virtualMethod(SmallContainer, put, void, $String*, $OneAttr*)},
 	{}
 };
 

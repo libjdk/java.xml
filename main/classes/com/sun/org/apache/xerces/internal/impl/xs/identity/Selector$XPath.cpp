@@ -36,8 +36,8 @@ namespace com {
 								namespace identity {
 
 $MethodInfo _Selector$XPath_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(Selector$XPath::*)($String*,$SymbolTable*,$NamespaceContext*)>(&Selector$XPath::init$)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"normalize", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&Selector$XPath::normalize))},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(Selector$XPath, init$, void, $String*, $SymbolTable*, $NamespaceContext*), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"normalize", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(Selector$XPath, normalize, $String*, $String*)},
 	{}
 };
 

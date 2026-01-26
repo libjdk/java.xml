@@ -29,12 +29,12 @@ $FieldInfo _SystemEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _SystemEntry_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SystemEntry::*)($String*,$String*,$String*)>(&SystemEntry::init$))},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(SystemEntry::*)()>(&SystemEntry::getSystemId))},
-	{"getURI", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(static_cast<$URL*(SystemEntry::*)()>(&SystemEntry::getURI))},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SystemEntry::*)($String*)>(&SystemEntry::setSystemId))},
-	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SystemEntry::*)($String*)>(&SystemEntry::setURI))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SystemEntry, init$, void, $String*, $String*, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(SystemEntry, getSystemId, $String*)},
+	{"getURI", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(SystemEntry, getURI, $URL*)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SystemEntry, match, $String*, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SystemEntry, setSystemId, void, $String*)},
+	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SystemEntry, setURI, void, $String*)},
 	{}
 };
 

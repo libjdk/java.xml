@@ -14,7 +14,12 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Source = ::javax::xml::transform::Source;
+using $Templates = ::javax::xml::transform::Templates;
 using $TransformerFactory = ::javax::xml::transform::TransformerFactory;
+using $TemplatesHandler = ::javax::xml::transform::sax::TemplatesHandler;
+using $TransformerHandler = ::javax::xml::transform::sax::TransformerHandler;
+using $XMLFilter = ::org::xml::sax::XMLFilter;
 
 namespace javax {
 	namespace xml {
@@ -28,13 +33,13 @@ $FieldInfo _SAXTransformerFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXTransformerFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(SAXTransformerFactory::*)()>(&SAXTransformerFactory::init$))},
-	{"newTemplatesHandler", "()Ljavax/xml/transform/sax/TemplatesHandler;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"newTransformerHandler", "(Ljavax/xml/transform/Source;)Ljavax/xml/transform/sax/TransformerHandler;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"newTransformerHandler", "(Ljavax/xml/transform/Templates;)Ljavax/xml/transform/sax/TransformerHandler;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"newTransformerHandler", "()Ljavax/xml/transform/sax/TransformerHandler;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"newXMLFilter", "(Ljavax/xml/transform/Source;)Lorg/xml/sax/XMLFilter;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"newXMLFilter", "(Ljavax/xml/transform/Templates;)Lorg/xml/sax/XMLFilter;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(SAXTransformerFactory, init$, void)},
+	{"newTemplatesHandler", "()Ljavax/xml/transform/sax/TemplatesHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXTransformerFactory, newTemplatesHandler, $TemplatesHandler*), "javax.xml.transform.TransformerConfigurationException"},
+	{"newTransformerHandler", "(Ljavax/xml/transform/Source;)Ljavax/xml/transform/sax/TransformerHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXTransformerFactory, newTransformerHandler, $TransformerHandler*, $Source*), "javax.xml.transform.TransformerConfigurationException"},
+	{"newTransformerHandler", "(Ljavax/xml/transform/Templates;)Ljavax/xml/transform/sax/TransformerHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXTransformerFactory, newTransformerHandler, $TransformerHandler*, $Templates*), "javax.xml.transform.TransformerConfigurationException"},
+	{"newTransformerHandler", "()Ljavax/xml/transform/sax/TransformerHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXTransformerFactory, newTransformerHandler, $TransformerHandler*), "javax.xml.transform.TransformerConfigurationException"},
+	{"newXMLFilter", "(Ljavax/xml/transform/Source;)Lorg/xml/sax/XMLFilter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXTransformerFactory, newXMLFilter, $XMLFilter*, $Source*), "javax.xml.transform.TransformerConfigurationException"},
+	{"newXMLFilter", "(Ljavax/xml/transform/Templates;)Lorg/xml/sax/XMLFilter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXTransformerFactory, newXMLFilter, $XMLFilter*, $Templates*), "javax.xml.transform.TransformerConfigurationException"},
 	{}
 };
 

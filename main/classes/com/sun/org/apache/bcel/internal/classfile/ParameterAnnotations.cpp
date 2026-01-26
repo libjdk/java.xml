@@ -33,14 +33,14 @@ $FieldInfo _ParameterAnnotations_FieldInfo_[] = {
 };
 
 $MethodInfo _ParameterAnnotations_MethodInfo_[] = {
-	{"<init>", "(BIILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(ParameterAnnotations::*)(int8_t,int32_t,int32_t,$DataInput*,$ConstantPool*)>(&ParameterAnnotations::init$)), "java.io.IOException"},
-	{"<init>", "(BII[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ParameterAnnotations::*)(int8_t,int32_t,int32_t,$ParameterAnnotationEntryArray*,$ConstantPool*)>(&ParameterAnnotations::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getParameterAnnotationEntries", "()[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;", nullptr, $PUBLIC},
-	{"getParameterAnnotationTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$ParameterAnnotationEntryArray*(ParameterAnnotations::*)()>(&ParameterAnnotations::getParameterAnnotationTable))},
-	{"setParameterAnnotationTable", "([Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(ParameterAnnotations::*)($ParameterAnnotationEntryArray*)>(&ParameterAnnotations::setParameterAnnotationTable))},
+	{"<init>", "(BIILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(ParameterAnnotations, init$, void, int8_t, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"<init>", "(BII[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ParameterAnnotations, init$, void, int8_t, int32_t, int32_t, $ParameterAnnotationEntryArray*, $ConstantPool*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ParameterAnnotations, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(ParameterAnnotations, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ParameterAnnotations, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getParameterAnnotationEntries", "()[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;", nullptr, $PUBLIC, $virtualMethod(ParameterAnnotations, getParameterAnnotationEntries, $ParameterAnnotationEntryArray*)},
+	{"getParameterAnnotationTable", "()[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;", nullptr, $PUBLIC | $FINAL, $method(ParameterAnnotations, getParameterAnnotationTable, $ParameterAnnotationEntryArray*)},
+	{"setParameterAnnotationTable", "([Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;)V", nullptr, $PUBLIC | $FINAL, $method(ParameterAnnotations, setParameterAnnotationTable, void, $ParameterAnnotationEntryArray*)},
 	{}
 };
 

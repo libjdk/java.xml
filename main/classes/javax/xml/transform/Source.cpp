@@ -12,9 +12,9 @@ namespace javax {
 		namespace transform {
 
 $MethodInfo _Source_MethodInfo_[] = {
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isEmpty", "()Z", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Source, getSystemId, $String*)},
+	{"isEmpty", "()Z", nullptr, $PUBLIC, $virtualMethod(Source, isEmpty, bool)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Source, setSystemId, void, $String*)},
 	{}
 };
 

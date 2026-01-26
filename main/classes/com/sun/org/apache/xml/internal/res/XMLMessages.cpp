@@ -38,11 +38,11 @@ $FieldInfo _XMLMessages_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLMessages_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLMessages::*)()>(&XMLMessages::init$))},
-	{"createMsg", "(Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$String*(*)($ResourceBundle*,$String*,$ObjectArray*)>(&XMLMessages::createMsg))},
-	{"createXMLMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$String*(*)($String*,$ObjectArray*)>(&XMLMessages::createXMLMessage))},
-	{"getLocale", "()Ljava/util/Locale;", nullptr, $PUBLIC},
-	{"setLocale", "(Ljava/util/Locale;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLMessages, init$, void)},
+	{"createMsg", "(Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(XMLMessages, createMsg, $String*, $ResourceBundle*, $String*, $ObjectArray*)},
+	{"createXMLMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(XMLMessages, createXMLMessage, $String*, $String*, $ObjectArray*)},
+	{"getLocale", "()Ljava/util/Locale;", nullptr, $PUBLIC, $virtualMethod(XMLMessages, getLocale, $Locale*)},
+	{"setLocale", "(Ljava/util/Locale;)V", nullptr, $PUBLIC, $virtualMethod(XMLMessages, setLocale, void, $Locale*)},
 	{}
 };
 

@@ -22,8 +22,8 @@ namespace com {
 						namespace xinclude {
 
 $MethodInfo _XInclude11TextReader_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Lcom/sun/org/apache/xerces/internal/xinclude/XIncludeHandler;I)V", nullptr, $PUBLIC, $method(static_cast<void(XInclude11TextReader::*)($XMLInputSource*,$XIncludeHandler*,int32_t)>(&XInclude11TextReader::init$)), "java.io.IOException"},
-	{"isValid", "(I)Z", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Lcom/sun/org/apache/xerces/internal/xinclude/XIncludeHandler;I)V", nullptr, $PUBLIC, $method(XInclude11TextReader, init$, void, $XMLInputSource*, $XIncludeHandler*, int32_t), "java.io.IOException"},
+	{"isValid", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XInclude11TextReader, isValid, bool, int32_t)},
 	{}
 };
 

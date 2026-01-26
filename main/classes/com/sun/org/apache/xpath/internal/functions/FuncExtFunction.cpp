@@ -67,20 +67,20 @@ $FieldInfo _FuncExtFunction_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncExtFunction_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(FuncExtFunction::*)($String*,$String*,Object$*)>(&FuncExtFunction::init$))},
-	{"callArgVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"exprSetParent", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)V", nullptr, $PUBLIC},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getArg", "(I)Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"getArgCount", "()I", nullptr, $PUBLIC},
-	{"getFunctionName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getMethodKey", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"setArg", "(Lcom/sun/org/apache/xpath/internal/Expression;I)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(FuncExtFunction, init$, void, $String*, $String*, Object$*)},
+	{"callArgVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, callArgVisitors, void, $XPathVisitor*)},
+	{"checkNumberArgs", "(I)V", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, checkNumberArgs, void, int32_t), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"exprSetParent", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)V", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, exprSetParent, void, $ExpressionNode*)},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FuncExtFunction, fixupVariables, void, $List*, int32_t)},
+	{"getArg", "(I)Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, getArg, $Expression*, int32_t)},
+	{"getArgCount", "()I", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, getArgCount, int32_t)},
+	{"getFunctionName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, getFunctionName, $String*)},
+	{"getMethodKey", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, getMethodKey, $Object*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, getNamespace, $String*)},
+	{"reportWrongNumberArgs", "()V", nullptr, $PROTECTED, $virtualMethod(FuncExtFunction, reportWrongNumberArgs, void), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"setArg", "(Lcom/sun/org/apache/xpath/internal/Expression;I)V", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, setArg, void, $Expression*, int32_t), "com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException"},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FuncExtFunction, toString, $String*)},
 	{}
 };
 

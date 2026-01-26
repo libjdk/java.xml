@@ -10,12 +10,12 @@ namespace org {
 		namespace dom {
 
 $MethodInfo _Entity_MethodInfo_[] = {
-	{"getInputEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNotationName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getXmlEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getXmlVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getInputEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, getInputEncoding, $String*)},
+	{"getNotationName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, getNotationName, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, getSystemId, $String*)},
+	{"getXmlEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, getXmlEncoding, $String*)},
+	{"getXmlVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, getXmlVersion, $String*)},
 	{}
 };
 

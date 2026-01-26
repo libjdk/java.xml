@@ -27,7 +27,7 @@ $FieldInfo _DTDGrammar$ChildrenList_FieldInfo_[] = {
 };
 
 $MethodInfo _DTDGrammar$ChildrenList_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTDGrammar$ChildrenList::*)()>(&DTDGrammar$ChildrenList::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTDGrammar$ChildrenList, init$, void)},
 	{}
 };
 

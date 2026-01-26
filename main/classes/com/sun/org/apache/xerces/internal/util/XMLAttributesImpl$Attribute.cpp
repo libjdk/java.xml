@@ -36,7 +36,7 @@ $FieldInfo _XMLAttributesImpl$Attribute_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLAttributesImpl$Attribute_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XMLAttributesImpl$Attribute::*)()>(&XMLAttributesImpl$Attribute::init$))},
+	{"<init>", "()V", nullptr, 0, $method(XMLAttributesImpl$Attribute, init$, void)},
 	{}
 };
 

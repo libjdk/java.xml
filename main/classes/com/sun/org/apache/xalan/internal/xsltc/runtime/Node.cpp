@@ -22,7 +22,7 @@ $FieldInfo _Node_FieldInfo_[] = {
 };
 
 $MethodInfo _Node_MethodInfo_[] = {
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(Node::*)(int32_t,int32_t)>(&Node::init$))},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(Node, init$, void, int32_t, int32_t)},
 	{}
 };
 

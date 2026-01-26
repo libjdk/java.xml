@@ -24,8 +24,8 @@ $FieldInfo _TargetLostException_FieldInfo_[] = {
 };
 
 $MethodInfo _TargetLostException_MethodInfo_[] = {
-	{"<init>", "([Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(TargetLostException::*)($InstructionHandleArray*,$String*)>(&TargetLostException::init$))},
-	{"getTargets", "()[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $method(static_cast<$InstructionHandleArray*(TargetLostException::*)()>(&TargetLostException::getTargets))},
+	{"<init>", "([Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Ljava/lang/String;)V", nullptr, 0, $method(TargetLostException, init$, void, $InstructionHandleArray*, $String*)},
+	{"getTargets", "()[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $method(TargetLostException, getTargets, $InstructionHandleArray*)},
 	{}
 };
 

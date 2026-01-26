@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xpath/internal/Expression.h>
 #include <jcpp.h>
 
+using $Expression = ::com::sun::org::apache::xpath::internal::Expression;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -14,8 +15,8 @@ namespace com {
 					namespace internal {
 
 $MethodInfo _ExpressionOwner_MethodInfo_[] = {
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExpressionOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExpressionOwner, setExpression, void, $Expression*)},
 	{}
 };
 

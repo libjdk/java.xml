@@ -28,8 +28,8 @@ $FieldInfo _XIntPool_FieldInfo_[] = {
 };
 
 $MethodInfo _XIntPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XIntPool::*)()>(&XIntPool::init$))},
-	{"getXInt", "(I)Lcom/sun/org/apache/xerces/internal/impl/xs/util/XInt;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$XInt*(XIntPool::*)(int32_t)>(&XIntPool::getXInt))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XIntPool, init$, void)},
+	{"getXInt", "(I)Lcom/sun/org/apache/xerces/internal/impl/xs/util/XInt;", nullptr, $PUBLIC | $FINAL, $method(XIntPool, getXInt, $XInt*, int32_t)},
 	{}
 };
 

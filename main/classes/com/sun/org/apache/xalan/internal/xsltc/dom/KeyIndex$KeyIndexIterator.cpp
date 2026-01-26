@@ -55,15 +55,15 @@ $FieldInfo _KeyIndex$KeyIndexIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _KeyIndex$KeyIndexIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/KeyIndex;Ljava/lang/String;Z)V", nullptr, 0, $method(static_cast<void(KeyIndex$KeyIndexIterator::*)($KeyIndex*,$String*,bool)>(&KeyIndex$KeyIndexIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/KeyIndex;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Z)V", nullptr, 0, $method(static_cast<void(KeyIndex$KeyIndexIterator::*)($KeyIndex*,$DTMAxisIterator*,bool)>(&KeyIndex$KeyIndexIterator::init$))},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC},
-	{"init", "()V", nullptr, $PROTECTED},
-	{"lookupNodes", "(ILjava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/util/IntegerArray;", nullptr, $PROTECTED},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/KeyIndex;Ljava/lang/String;Z)V", nullptr, 0, $method(KeyIndex$KeyIndexIterator, init$, void, $KeyIndex*, $String*, bool)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/KeyIndex;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Z)V", nullptr, 0, $method(KeyIndex$KeyIndexIterator, init$, void, $KeyIndex*, $DTMAxisIterator*, bool)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator, getLast, int32_t)},
+	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator, getNodeByPosition, int32_t, int32_t)},
+	{"init", "()V", nullptr, $PROTECTED, $virtualMethod(KeyIndex$KeyIndexIterator, init, void)},
+	{"lookupNodes", "(ILjava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/util/IntegerArray;", nullptr, $PROTECTED, $virtualMethod(KeyIndex$KeyIndexIterator, lookupNodes, $IntegerArray*, int32_t, $String*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator, reset, $DTMAxisIterator*)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

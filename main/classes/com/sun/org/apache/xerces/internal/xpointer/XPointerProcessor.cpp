@@ -9,6 +9,9 @@
 #undef EVENT_ELEMENT_END
 #undef EVENT_ELEMENT_START
 
+using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
+using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
+using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -29,10 +32,10 @@ $FieldInfo _XPointerProcessor_FieldInfo_[] = {
 };
 
 $MethodInfo _XPointerProcessor_MethodInfo_[] = {
-	{"isFragmentResolved", "()Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"isXPointerResolved", "()Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"parseXPointer", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"resolveXPointer", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;I)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"isFragmentResolved", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPointerProcessor, isFragmentResolved, bool), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"isXPointerResolved", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPointerProcessor, isXPointerResolved, bool), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"parseXPointer", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPointerProcessor, parseXPointer, void, $String*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"resolveXPointer", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPointerProcessor, resolveXPointer, bool, $QName*, $XMLAttributes*, $Augmentations*, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

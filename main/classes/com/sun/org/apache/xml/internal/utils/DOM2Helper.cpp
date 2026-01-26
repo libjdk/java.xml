@@ -27,14 +27,14 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _DOM2Helper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(DOM2Helper::*)()>(&DOM2Helper::init$))},
-	{"getLocalNameOfNode", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($Node*)>(&DOM2Helper::getLocalNameOfNode))},
-	{"getLocalNameOfNodeFallback", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($Node*)>(&DOM2Helper::getLocalNameOfNodeFallback))},
-	{"getNamespaceOfNode", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($Node*)>(&DOM2Helper::getNamespaceOfNode))},
-	{"getParentOfNode", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Node*(*)($Node*)>(&DOM2Helper::getParentOfNode))},
-	{"isNodeAfter", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($Node*,$Node*)>(&DOM2Helper::isNodeAfter))},
-	{"isNodeAfterSibling", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)($Node*,$Node*,$Node*)>(&DOM2Helper::isNodeAfterSibling))},
-	{"isNodeTheSame", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($Node*,$Node*)>(&DOM2Helper::isNodeTheSame))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(DOM2Helper, init$, void)},
+	{"getLocalNameOfNode", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(DOM2Helper, getLocalNameOfNode, $String*, $Node*)},
+	{"getLocalNameOfNodeFallback", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(DOM2Helper, getLocalNameOfNodeFallback, $String*, $Node*)},
+	{"getNamespaceOfNode", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(DOM2Helper, getNamespaceOfNode, $String*, $Node*)},
+	{"getParentOfNode", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $STATIC, $staticMethod(DOM2Helper, getParentOfNode, $Node*, $Node*)},
+	{"isNodeAfter", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(DOM2Helper, isNodeAfter, bool, $Node*, $Node*)},
+	{"isNodeAfterSibling", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(DOM2Helper, isNodeAfterSibling, bool, $Node*, $Node*, $Node*)},
+	{"isNodeTheSame", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(DOM2Helper, isNodeTheSame, bool, $Node*, $Node*)},
 	{}
 };
 

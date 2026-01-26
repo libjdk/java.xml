@@ -16,7 +16,7 @@ namespace com {
 						namespace res {
 
 $MethodInfo _XMLErrorResources_en_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLErrorResources_en::*)()>(&XMLErrorResources_en::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLErrorResources_en, init$, void)},
 	{}
 };
 

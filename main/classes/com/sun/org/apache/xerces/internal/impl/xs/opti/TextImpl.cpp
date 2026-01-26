@@ -41,13 +41,13 @@ $FieldInfo _TextImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _TextImpl_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/StringBuffer;Lcom/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM;II)V", nullptr, $PUBLIC, $method(static_cast<void(TextImpl::*)($StringBuffer*,$SchemaDOM*,int32_t,int32_t)>(&TextImpl::init$))},
-	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getNextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getParentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getPreviousSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"substringData", "(II)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
+	{"<init>", "(Ljava/lang/StringBuffer;Lcom/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM;II)V", nullptr, $PUBLIC, $method(TextImpl, init$, void, $StringBuffer*, $SchemaDOM*, int32_t, int32_t)},
+	{"getData", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TextImpl, getData, $String*), "org.w3c.dom.DOMException"},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(TextImpl, getLength, int32_t)},
+	{"getNextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(TextImpl, getNextSibling, $Node*)},
+	{"getParentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(TextImpl, getParentNode, $Node*)},
+	{"getPreviousSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(TextImpl, getPreviousSibling, $Node*)},
+	{"substringData", "(II)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TextImpl, substringData, $String*, int32_t, int32_t), "org.w3c.dom.DOMException"},
 	{}
 };
 

@@ -22,10 +22,10 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _ConstantInterfaceMethodref_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantInterfaceMethodref;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantInterfaceMethodref::*)(ConstantInterfaceMethodref*)>(&ConstantInterfaceMethodref::init$))},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(ConstantInterfaceMethodref::*)($DataInput*)>(&ConstantInterfaceMethodref::init$)), "java.io.IOException"},
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantInterfaceMethodref::*)(int32_t,int32_t)>(&ConstantInterfaceMethodref::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantInterfaceMethodref;)V", nullptr, $PUBLIC, $method(ConstantInterfaceMethodref, init$, void, ConstantInterfaceMethodref*)},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(ConstantInterfaceMethodref, init$, void, $DataInput*), "java.io.IOException"},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(ConstantInterfaceMethodref, init$, void, int32_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ConstantInterfaceMethodref, accept, void, $Visitor*)},
 	{}
 };
 

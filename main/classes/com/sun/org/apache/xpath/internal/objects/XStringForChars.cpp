@@ -42,18 +42,18 @@ $FieldInfo _XStringForChars_FieldInfo_[] = {
 };
 
 $MethodInfo _XStringForChars_MethodInfo_[] = {
-	{"<init>", "([CII)V", nullptr, $PUBLIC, $method(static_cast<void(XStringForChars::*)($chars*,int32_t,int32_t)>(&XStringForChars::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(XStringForChars::*)($String*)>(&XStringForChars::init$))},
-	{"appendToFsb", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;)V", nullptr, $PUBLIC},
-	{"charAt", "(I)C", nullptr, $PUBLIC},
-	{"dispatchAsComment", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"dispatchCharactersEvents", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"fsb", "()Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;", nullptr, $PUBLIC},
-	{"getChars", "(II[CI)V", nullptr, $PUBLIC},
-	{"hasString", "()Z", nullptr, $PUBLIC},
-	{"length", "()I", nullptr, $PUBLIC},
-	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "([CII)V", nullptr, $PUBLIC, $method(XStringForChars, init$, void, $chars*, int32_t, int32_t)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(XStringForChars, init$, void, $String*)},
+	{"appendToFsb", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;)V", nullptr, $PUBLIC, $virtualMethod(XStringForChars, appendToFsb, void, $FastStringBuffer*)},
+	{"charAt", "(I)C", nullptr, $PUBLIC, $virtualMethod(XStringForChars, charAt, char16_t, int32_t)},
+	{"dispatchAsComment", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC, $virtualMethod(XStringForChars, dispatchAsComment, void, $LexicalHandler*), "org.xml.sax.SAXException"},
+	{"dispatchCharactersEvents", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $virtualMethod(XStringForChars, dispatchCharactersEvents, void, $ContentHandler*), "org.xml.sax.SAXException"},
+	{"fsb", "()Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;", nullptr, $PUBLIC, $virtualMethod(XStringForChars, fsb, $FastStringBuffer*)},
+	{"getChars", "(II[CI)V", nullptr, $PUBLIC, $virtualMethod(XStringForChars, getChars, void, int32_t, int32_t, $chars*, int32_t)},
+	{"hasString", "()Z", nullptr, $PUBLIC, $virtualMethod(XStringForChars, hasString, bool)},
+	{"length", "()I", nullptr, $PUBLIC, $virtualMethod(XStringForChars, length, int32_t)},
+	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XStringForChars, object, $Object*)},
+	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XStringForChars, str, $String*)},
 	{}
 };
 

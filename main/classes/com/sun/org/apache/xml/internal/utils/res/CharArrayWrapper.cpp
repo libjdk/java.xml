@@ -21,9 +21,9 @@ $FieldInfo _CharArrayWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _CharArrayWrapper_MethodInfo_[] = {
-	{"<init>", "([C)V", nullptr, $PUBLIC, $method(static_cast<void(CharArrayWrapper::*)($chars*)>(&CharArrayWrapper::init$))},
-	{"getChar", "(I)C", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
+	{"<init>", "([C)V", nullptr, $PUBLIC, $method(CharArrayWrapper, init$, void, $chars*)},
+	{"getChar", "(I)C", nullptr, $PUBLIC, $virtualMethod(CharArrayWrapper, getChar, char16_t, int32_t)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(CharArrayWrapper, getLength, int32_t)},
 	{}
 };
 

@@ -25,7 +25,7 @@ $FieldInfo _XMLStreamWriterImpl$Attribute_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStreamWriterImpl$Attribute_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(XMLStreamWriterImpl$Attribute::*)($XMLStreamWriterImpl*,$String*)>(&XMLStreamWriterImpl$Attribute::init$))},
+	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;Ljava/lang/String;)V", nullptr, 0, $method(XMLStreamWriterImpl$Attribute, init$, void, $XMLStreamWriterImpl*, $String*)},
 	{}
 };
 

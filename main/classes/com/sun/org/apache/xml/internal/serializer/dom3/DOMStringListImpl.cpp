@@ -29,13 +29,13 @@ $FieldInfo _DOMStringListImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMStringListImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DOMStringListImpl::*)()>(&DOMStringListImpl::init$))},
-	{"<init>", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", 0, $method(static_cast<void(DOMStringListImpl::*)($List*)>(&DOMStringListImpl::init$))},
-	{"<init>", "([Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(DOMStringListImpl::*)($StringArray*)>(&DOMStringListImpl::init$))},
-	{"add", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMStringListImpl::*)($String*)>(&DOMStringListImpl::add))},
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(DOMStringListImpl, init$, void)},
+	{"<init>", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", 0, $method(DOMStringListImpl, init$, void, $List*)},
+	{"<init>", "([Ljava/lang/String;)V", nullptr, 0, $method(DOMStringListImpl, init$, void, $StringArray*)},
+	{"add", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DOMStringListImpl, add, void, $String*)},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(DOMStringListImpl, contains, bool, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(DOMStringListImpl, getLength, int32_t)},
+	{"item", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMStringListImpl, item, $String*, int32_t)},
 	{}
 };
 

@@ -40,11 +40,11 @@ $FieldInfo _XMLSecurityManager$NameMap_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSecurityManager$NameMap_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$NameMap;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$XMLSecurityManager$NameMapArray*(*)()>(&XMLSecurityManager$NameMap::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(XMLSecurityManager$NameMap::*)($String*,int32_t,$String*,$String*)>(&XMLSecurityManager$NameMap::init$))},
-	{"getOldName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(XMLSecurityManager$NameMap::*)($String*)>(&XMLSecurityManager$NameMap::getOldName))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$NameMap;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLSecurityManager$NameMap*(*)($String*)>(&XMLSecurityManager$NameMap::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$NameMap;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLSecurityManager$NameMapArray*(*)()>(&XMLSecurityManager$NameMap::values))},
+	{"$values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$NameMap;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XMLSecurityManager$NameMap, $values, $XMLSecurityManager$NameMapArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(XMLSecurityManager$NameMap, init$, void, $String*, int32_t, $String*, $String*)},
+	{"getOldName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(XMLSecurityManager$NameMap, getOldName, $String*, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$NameMap;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityManager$NameMap, valueOf, XMLSecurityManager$NameMap*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$NameMap;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLSecurityManager$NameMap, values, $XMLSecurityManager$NameMapArray*)},
 	{}
 };
 

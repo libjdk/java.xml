@@ -28,13 +28,13 @@ $FieldInfo _ReadOnlyGrammarPool_FieldInfo_[] = {
 };
 
 $MethodInfo _ReadOnlyGrammarPool_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ReadOnlyGrammarPool::*)($XMLGrammarPool*)>(&ReadOnlyGrammarPool::init$))},
-	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"lockPool", "()V", nullptr, $PUBLIC},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"unlockPool", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(ReadOnlyGrammarPool, init$, void, $XMLGrammarPool*)},
+	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $virtualMethod(ReadOnlyGrammarPool, cacheGrammars, void, $String*, $GrammarArray*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(ReadOnlyGrammarPool, clear, void)},
+	{"lockPool", "()V", nullptr, $PUBLIC, $virtualMethod(ReadOnlyGrammarPool, lockPool, void)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(ReadOnlyGrammarPool, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(ReadOnlyGrammarPool, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
+	{"unlockPool", "()V", nullptr, $PUBLIC, $virtualMethod(ReadOnlyGrammarPool, unlockPool, void)},
 	{}
 };
 

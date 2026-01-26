@@ -61,18 +61,18 @@ $FieldInfo _TestGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _TestGenerator_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(static_cast<void(TestGenerator::*)(int32_t,$Type*,$TypeArray*,$StringArray*,$String*,$String*,$InstructionList*,$ConstantPoolGen*)>(&TestGenerator::init$))},
-	{"getHandlerIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(TestGenerator::*)()>(&TestGenerator::getHandlerIndex))},
-	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(TestGenerator::*)()>(&TestGenerator::getIteratorIndex))},
-	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"loadContextNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"loadCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"loadDOM", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"loadIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"setDomIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(TestGenerator::*)(int32_t)>(&TestGenerator::setDomIndex))},
-	{"storeContextNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"storeCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"storeIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(TestGenerator, init$, void, int32_t, $Type*, $TypeArray*, $StringArray*, $String*, $String*, $InstructionList*, $ConstantPoolGen*)},
+	{"getHandlerIndex", "()I", nullptr, $PUBLIC, $method(TestGenerator, getHandlerIndex, int32_t)},
+	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(TestGenerator, getIteratorIndex, int32_t)},
+	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(TestGenerator, getLocalIndex, int32_t, $String*)},
+	{"loadContextNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(TestGenerator, loadContextNode, $Instruction*)},
+	{"loadCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(TestGenerator, loadCurrentNode, $Instruction*)},
+	{"loadDOM", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(TestGenerator, loadDOM, $Instruction*)},
+	{"loadIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(TestGenerator, loadIterator, $Instruction*)},
+	{"setDomIndex", "(I)V", nullptr, $PUBLIC, $method(TestGenerator, setDomIndex, void, int32_t)},
+	{"storeContextNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(TestGenerator, storeContextNode, $Instruction*)},
+	{"storeCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(TestGenerator, storeCurrentNode, $Instruction*)},
+	{"storeIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(TestGenerator, storeIterator, $Instruction*)},
 	{}
 };
 

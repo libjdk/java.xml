@@ -50,17 +50,17 @@ $FieldInfo _Unknown_FieldInfo_[] = {
 };
 
 $MethodInfo _Unknown_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/Unknown;)V", nullptr, $PUBLIC, $method(static_cast<void(Unknown::*)(Unknown*)>(&Unknown::init$))},
-	{"<init>", "(II[BLcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(Unknown::*)(int32_t,int32_t,$bytes*,$ConstantPool*)>(&Unknown::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(Unknown::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&Unknown::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getBytes", "()[B", nullptr, $PUBLIC, $method(static_cast<$bytes*(Unknown::*)()>(&Unknown::getBytes))},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getUnknownAttributes", "()[Lcom/sun/org/apache/bcel/internal/classfile/Unknown;", nullptr, $STATIC, $method(static_cast<$UnknownArray*(*)()>(&Unknown::getUnknownAttributes))},
-	{"setBytes", "([B)V", nullptr, $PUBLIC, $method(static_cast<void(Unknown::*)($bytes*)>(&Unknown::setBytes))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/Unknown;)V", nullptr, $PUBLIC, $method(Unknown, init$, void, Unknown*)},
+	{"<init>", "(II[BLcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(Unknown, init$, void, int32_t, int32_t, $bytes*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(Unknown, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(Unknown, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(Unknown, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(Unknown, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getBytes", "()[B", nullptr, $PUBLIC, $method(Unknown, getBytes, $bytes*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Unknown, getName, $String*)},
+	{"getUnknownAttributes", "()[Lcom/sun/org/apache/bcel/internal/classfile/Unknown;", nullptr, $STATIC, $staticMethod(Unknown, getUnknownAttributes, $UnknownArray*)},
+	{"setBytes", "([B)V", nullptr, $PUBLIC, $method(Unknown, setBytes, void, $bytes*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Unknown, toString, $String*)},
 	{}
 };
 

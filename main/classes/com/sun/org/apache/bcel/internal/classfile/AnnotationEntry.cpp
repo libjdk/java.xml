@@ -59,21 +59,21 @@ $FieldInfo _AnnotationEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _AnnotationEntry_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Z)V", nullptr, $PUBLIC, $method(static_cast<void(AnnotationEntry::*)(int32_t,$ConstantPool*,bool)>(&AnnotationEntry::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"addElementNameValuePair", "(Lcom/sun/org/apache/bcel/internal/classfile/ElementValuePair;)V", nullptr, $PUBLIC},
-	{"createAnnotationEntries", "([Lcom/sun/org/apache/bcel/internal/classfile/Attribute;)[Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$AnnotationEntryArray*(*)($AttributeArray*)>(&AnnotationEntry::createAnnotationEntries))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getAnnotationType", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getAnnotationTypeIndex", "()I", nullptr, $PUBLIC},
-	{"getConstantPool", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;", nullptr, $PUBLIC},
-	{"getElementValuePairs", "()[Lcom/sun/org/apache/bcel/internal/classfile/ElementValuePair;", nullptr, $PUBLIC},
-	{"getNumElementValuePairs", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(AnnotationEntry::*)()>(&AnnotationEntry::getNumElementValuePairs))},
-	{"getTypeIndex", "()I", nullptr, $PUBLIC},
-	{"isRuntimeVisible", "()Z", nullptr, $PUBLIC},
-	{"read", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Z)Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC | $STATIC, $method(static_cast<AnnotationEntry*(*)($DataInput*,$ConstantPool*,bool)>(&AnnotationEntry::read)), "java.io.IOException"},
-	{"toShortString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Z)V", nullptr, $PUBLIC, $method(AnnotationEntry, init$, void, int32_t, $ConstantPool*, bool)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, accept, void, $Visitor*)},
+	{"addElementNameValuePair", "(Lcom/sun/org/apache/bcel/internal/classfile/ElementValuePair;)V", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, addElementNameValuePair, void, $ElementValuePair*)},
+	{"createAnnotationEntries", "([Lcom/sun/org/apache/bcel/internal/classfile/Attribute;)[Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC | $STATIC, $staticMethod(AnnotationEntry, createAnnotationEntries, $AnnotationEntryArray*, $AttributeArray*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getAnnotationType", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, getAnnotationType, $String*)},
+	{"getAnnotationTypeIndex", "()I", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, getAnnotationTypeIndex, int32_t)},
+	{"getConstantPool", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, getConstantPool, $ConstantPool*)},
+	{"getElementValuePairs", "()[Lcom/sun/org/apache/bcel/internal/classfile/ElementValuePair;", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, getElementValuePairs, $ElementValuePairArray*)},
+	{"getNumElementValuePairs", "()I", nullptr, $PUBLIC | $FINAL, $method(AnnotationEntry, getNumElementValuePairs, int32_t)},
+	{"getTypeIndex", "()I", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, getTypeIndex, int32_t)},
+	{"isRuntimeVisible", "()Z", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, isRuntimeVisible, bool)},
+	{"read", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Z)Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC | $STATIC, $staticMethod(AnnotationEntry, read, AnnotationEntry*, $DataInput*, $ConstantPool*, bool), "java.io.IOException"},
+	{"toShortString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, toShortString, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AnnotationEntry, toString, $String*)},
 	{}
 };
 

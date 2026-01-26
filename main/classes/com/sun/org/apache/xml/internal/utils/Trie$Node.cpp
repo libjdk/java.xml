@@ -26,7 +26,7 @@ $FieldInfo _Trie$Node_FieldInfo_[] = {
 };
 
 $MethodInfo _Trie$Node_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/Trie;)V", nullptr, 0, $method(static_cast<void(Trie$Node::*)($Trie*)>(&Trie$Node::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/Trie;)V", nullptr, 0, $method(Trie$Node, init$, void, $Trie*)},
 	{}
 };
 

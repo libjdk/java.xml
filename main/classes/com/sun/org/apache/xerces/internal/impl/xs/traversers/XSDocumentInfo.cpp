@@ -82,19 +82,19 @@ $FieldInfo _XSDocumentInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _XSDocumentInfo_MethodInfo_[] = {
-	{"<init>", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(static_cast<void(XSDocumentInfo::*)($Element*,$XSAttributeChecker*,$SymbolTable*)>(&XSDocumentInfo::init$)), "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
-	{"addAllowedNS", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"addAnnotation", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAnnotationInfo;)V", nullptr, 0},
-	{"backupNSSupport", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaNamespaceSupport;)V", nullptr, 0},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAnnotationInfo;", nullptr, 0},
-	{"getSchemaAttrs", "()[Ljava/lang/Object;", nullptr, 0},
-	{"initNamespaceSupport", "(Lorg/w3c/dom/Element;)V", nullptr, $PRIVATE, $method(static_cast<void(XSDocumentInfo::*)($Element*)>(&XSDocumentInfo::initNamespaceSupport))},
-	{"isAllowedNS", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"needReportTNSError", "(Ljava/lang/String;)Z", nullptr, $FINAL, $method(static_cast<bool(XSDocumentInfo::*)($String*)>(&XSDocumentInfo::needReportTNSError))},
-	{"removeAnnotations", "()V", nullptr, 0},
-	{"restoreNSSupport", "()V", nullptr, 0},
-	{"returnSchemaAttrs", "()V", nullptr, 0},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(XSDocumentInfo, init$, void, $Element*, $XSAttributeChecker*, $SymbolTable*), "com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaException"},
+	{"addAllowedNS", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XSDocumentInfo, addAllowedNS, void, $String*)},
+	{"addAnnotation", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAnnotationInfo;)V", nullptr, 0, $virtualMethod(XSDocumentInfo, addAnnotation, void, $XSAnnotationInfo*)},
+	{"backupNSSupport", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaNamespaceSupport;)V", nullptr, 0, $virtualMethod(XSDocumentInfo, backupNSSupport, void, $SchemaNamespaceSupport*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAnnotationInfo;", nullptr, 0, $virtualMethod(XSDocumentInfo, getAnnotations, $XSAnnotationInfo*)},
+	{"getSchemaAttrs", "()[Ljava/lang/Object;", nullptr, 0, $virtualMethod(XSDocumentInfo, getSchemaAttrs, $ObjectArray*)},
+	{"initNamespaceSupport", "(Lorg/w3c/dom/Element;)V", nullptr, $PRIVATE, $method(XSDocumentInfo, initNamespaceSupport, void, $Element*)},
+	{"isAllowedNS", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XSDocumentInfo, isAllowedNS, bool, $String*)},
+	{"needReportTNSError", "(Ljava/lang/String;)Z", nullptr, $FINAL, $method(XSDocumentInfo, needReportTNSError, bool, $String*)},
+	{"removeAnnotations", "()V", nullptr, 0, $virtualMethod(XSDocumentInfo, removeAnnotations, void)},
+	{"restoreNSSupport", "()V", nullptr, 0, $virtualMethod(XSDocumentInfo, restoreNSSupport, void)},
+	{"returnSchemaAttrs", "()V", nullptr, 0, $virtualMethod(XSDocumentInfo, returnSchemaAttrs, void)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSDocumentInfo, toString, $String*)},
 	{}
 };
 

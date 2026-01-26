@@ -35,8 +35,8 @@ $FieldInfo _XPointerMessageFormatter_FieldInfo_[] = {
 };
 
 $MethodInfo _XPointerMessageFormatter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XPointerMessageFormatter::*)()>(&XPointerMessageFormatter::init$))},
-	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "java.util.MissingResourceException"},
+	{"<init>", "()V", nullptr, 0, $method(XPointerMessageFormatter, init$, void)},
+	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPointerMessageFormatter, formatMessage, $String*, $Locale*, $String*, $ObjectArray*), "java.util.MissingResourceException"},
 	{}
 };
 

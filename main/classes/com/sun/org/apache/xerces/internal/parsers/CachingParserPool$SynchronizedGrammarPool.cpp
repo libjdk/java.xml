@@ -29,13 +29,13 @@ $FieldInfo _CachingParserPool$SynchronizedGrammarPool_FieldInfo_[] = {
 };
 
 $MethodInfo _CachingParserPool$SynchronizedGrammarPool_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(CachingParserPool$SynchronizedGrammarPool::*)($XMLGrammarPool*)>(&CachingParserPool$SynchronizedGrammarPool::init$))},
-	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"lockPool", "()V", nullptr, $PUBLIC},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"unlockPool", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(CachingParserPool$SynchronizedGrammarPool, init$, void, $XMLGrammarPool*)},
+	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$SynchronizedGrammarPool, cacheGrammars, void, $String*, $GrammarArray*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$SynchronizedGrammarPool, clear, void)},
+	{"lockPool", "()V", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$SynchronizedGrammarPool, lockPool, void)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$SynchronizedGrammarPool, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$SynchronizedGrammarPool, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
+	{"unlockPool", "()V", nullptr, $PUBLIC, $virtualMethod(CachingParserPool$SynchronizedGrammarPool, unlockPool, void)},
 	{}
 };
 

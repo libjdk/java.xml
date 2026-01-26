@@ -38,10 +38,10 @@ $FieldInfo _SlotAllocator_FieldInfo_[] = {
 };
 
 $MethodInfo _SlotAllocator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(SlotAllocator::*)()>(&SlotAllocator::init$))},
-	{"allocateSlot", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)I", nullptr, $PUBLIC, $method(static_cast<int32_t(SlotAllocator::*)($Type*)>(&SlotAllocator::allocateSlot))},
-	{"initialize", "([Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PUBLIC, $method(static_cast<void(SlotAllocator::*)($LocalVariableGenArray*)>(&SlotAllocator::initialize))},
-	{"releaseSlot", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PUBLIC, $method(static_cast<void(SlotAllocator::*)($LocalVariableGen*)>(&SlotAllocator::releaseSlot))},
+	{"<init>", "()V", nullptr, 0, $method(SlotAllocator, init$, void)},
+	{"allocateSlot", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)I", nullptr, $PUBLIC, $method(SlotAllocator, allocateSlot, int32_t, $Type*)},
+	{"initialize", "([Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PUBLIC, $method(SlotAllocator, initialize, void, $LocalVariableGenArray*)},
+	{"releaseSlot", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PUBLIC, $method(SlotAllocator, releaseSlot, void, $LocalVariableGen*)},
 	{}
 };
 

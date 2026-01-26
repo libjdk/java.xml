@@ -25,8 +25,8 @@ $FieldInfo _Op$StringOp_FieldInfo_[] = {
 };
 
 $MethodInfo _Op$StringOp_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/String;)V", nullptr, 0, $method(static_cast<void(Op$StringOp::*)(int32_t,$String*)>(&Op$StringOp::init$))},
-	{"getString", "()Ljava/lang/String;", nullptr, 0},
+	{"<init>", "(ILjava/lang/String;)V", nullptr, 0, $method(Op$StringOp, init$, void, int32_t, $String*)},
+	{"getString", "()Ljava/lang/String;", nullptr, 0, $virtualMethod(Op$StringOp, getString, $String*)},
 	{}
 };
 

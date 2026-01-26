@@ -27,7 +27,7 @@ $FieldInfo _DocumentImpl$EnclosingAttr_FieldInfo_[] = {
 };
 
 $MethodInfo _DocumentImpl$EnclosingAttr_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DocumentImpl;)V", nullptr, 0, $method(static_cast<void(DocumentImpl$EnclosingAttr::*)($DocumentImpl*)>(&DocumentImpl$EnclosingAttr::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DocumentImpl;)V", nullptr, 0, $method(DocumentImpl$EnclosingAttr, init$, void, $DocumentImpl*)},
 	{}
 };
 

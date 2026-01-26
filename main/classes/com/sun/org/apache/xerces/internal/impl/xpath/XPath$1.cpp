@@ -45,8 +45,8 @@ $FieldInfo _XPath$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(static_cast<void(XPath$1::*)($XPath*,$SymbolTable*)>(&XPath$1::init$))},
-	{"addToken", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;I)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, 0, $method(XPath$1, init$, void, $XPath*, $SymbolTable*)},
+	{"addToken", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;I)V", nullptr, $PROTECTED, $virtualMethod(XPath$1, addToken, void, $XPath$Tokens*, int32_t), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
 	{}
 };
 

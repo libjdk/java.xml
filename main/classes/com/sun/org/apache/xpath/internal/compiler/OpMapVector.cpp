@@ -23,10 +23,10 @@ $FieldInfo _OpMapVector_FieldInfo_[] = {
 };
 
 $MethodInfo _OpMapVector_MethodInfo_[] = {
-	{"<init>", "(III)V", nullptr, $PUBLIC, $method(static_cast<void(OpMapVector::*)(int32_t,int32_t,int32_t)>(&OpMapVector::init$))},
-	{"elementAt", "(I)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(OpMapVector::*)(int32_t)>(&OpMapVector::elementAt))},
-	{"setElementAt", "(II)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(OpMapVector::*)(int32_t,int32_t)>(&OpMapVector::setElementAt))},
-	{"setToSize", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(OpMapVector::*)(int32_t)>(&OpMapVector::setToSize))},
+	{"<init>", "(III)V", nullptr, $PUBLIC, $method(OpMapVector, init$, void, int32_t, int32_t, int32_t)},
+	{"elementAt", "(I)I", nullptr, $PUBLIC | $FINAL, $method(OpMapVector, elementAt, int32_t, int32_t)},
+	{"setElementAt", "(II)V", nullptr, $PUBLIC | $FINAL, $method(OpMapVector, setElementAt, void, int32_t, int32_t)},
+	{"setToSize", "(I)V", nullptr, $PUBLIC | $FINAL, $method(OpMapVector, setToSize, void, int32_t)},
 	{}
 };
 

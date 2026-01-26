@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSAttributeDeclaration.h>
 #include <jcpp.h>
 
+using $XSAttributeDeclaration = ::com::sun::org::apache::xerces::internal::xs::XSAttributeDeclaration;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _AttributePSVI_MethodInfo_[] = {
-	{"getAttributeDeclaration", "()Lcom/sun/org/apache/xerces/internal/xs/XSAttributeDeclaration;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAttributeDeclaration", "()Lcom/sun/org/apache/xerces/internal/xs/XSAttributeDeclaration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AttributePSVI, getAttributeDeclaration, $XSAttributeDeclaration*)},
 	{}
 };
 

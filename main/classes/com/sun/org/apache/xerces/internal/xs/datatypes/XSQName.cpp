@@ -4,8 +4,10 @@
 #include <javax/xml/namespace/QName.h>
 #include <jcpp.h>
 
+using $1QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $QName = ::javax::xml::namespace$::QName;
 
 namespace com {
 	namespace sun {
@@ -17,8 +19,8 @@ namespace com {
 							namespace datatypes {
 
 $MethodInfo _XSQName_MethodInfo_[] = {
-	{"getJAXPQName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getXNIQName", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getJAXPQName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSQName, getJAXPQName, $QName*)},
+	{"getXNIQName", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSQName, getXNIQName, $1QName*)},
 	{}
 };
 

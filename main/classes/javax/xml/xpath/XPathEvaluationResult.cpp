@@ -6,14 +6,15 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $XPathEvaluationResult$XPathResultType = ::javax::xml::xpath::XPathEvaluationResult$XPathResultType;
 
 namespace javax {
 	namespace xml {
 		namespace xpath {
 
 $MethodInfo _XPathEvaluationResult_MethodInfo_[] = {
-	{"type", "()Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC | $ABSTRACT},
-	{"value", "()Ljava/lang/Object;", "()TT;", $PUBLIC | $ABSTRACT},
+	{"type", "()Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPathEvaluationResult, type, $XPathEvaluationResult$XPathResultType*)},
+	{"value", "()Ljava/lang/Object;", "()TT;", $PUBLIC | $ABSTRACT, $virtualMethod(XPathEvaluationResult, value, $Object*)},
 	{}
 };
 

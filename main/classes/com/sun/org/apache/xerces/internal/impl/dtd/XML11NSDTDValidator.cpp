@@ -50,9 +50,9 @@ $FieldInfo _XML11NSDTDValidator_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11NSDTDValidator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11NSDTDValidator::*)()>(&XML11NSDTDValidator::init$))},
-	{"endNamespaceScope", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;Z)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"startNamespaceScope", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PROTECTED | $FINAL, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11NSDTDValidator, init$, void)},
+	{"endNamespaceScope", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;Z)V", nullptr, $PROTECTED, $virtualMethod(XML11NSDTDValidator, endNamespaceScope, void, $QName*, $Augmentations*, bool), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"startNamespaceScope", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V", nullptr, $PROTECTED | $FINAL, $virtualMethod(XML11NSDTDValidator, startNamespaceScope, void, $QName*, $XMLAttributes*, $Augmentations*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

@@ -22,10 +22,10 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _ConstantFieldref_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantFieldref;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantFieldref::*)(ConstantFieldref*)>(&ConstantFieldref::init$))},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(ConstantFieldref::*)($DataInput*)>(&ConstantFieldref::init$)), "java.io.IOException"},
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantFieldref::*)(int32_t,int32_t)>(&ConstantFieldref::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantFieldref;)V", nullptr, $PUBLIC, $method(ConstantFieldref, init$, void, ConstantFieldref*)},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(ConstantFieldref, init$, void, $DataInput*), "java.io.IOException"},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(ConstantFieldref, init$, void, int32_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ConstantFieldref, accept, void, $Visitor*)},
 	{}
 };
 

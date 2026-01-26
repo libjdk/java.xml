@@ -63,9 +63,9 @@ namespace com {
 						namespace objects {
 
 $MethodInfo _XObjectFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XObjectFactory::*)()>(&XObjectFactory::init$))},
-	{"create", "(Ljava/lang/Object;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XObject*(*)(Object$*)>(&XObjectFactory::create))},
-	{"create", "(Ljava/lang/Object;Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XObject*(*)(Object$*,$XPathContext*)>(&XObjectFactory::create))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XObjectFactory, init$, void)},
+	{"create", "(Ljava/lang/Object;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $staticMethod(XObjectFactory, create, $XObject*, Object$*)},
+	{"create", "(Ljava/lang/Object;Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $staticMethod(XObjectFactory, create, $XObject*, Object$*, $XPathContext*)},
 	{}
 };
 

@@ -12,6 +12,10 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $LSInput = ::org::w3c::dom::ls::LSInput;
+using $LSOutput = ::org::w3c::dom::ls::LSOutput;
+using $LSParser = ::org::w3c::dom::ls::LSParser;
+using $LSSerializer = ::org::w3c::dom::ls::LSSerializer;
 
 namespace org {
 	namespace w3c {
@@ -25,10 +29,10 @@ $FieldInfo _DOMImplementationLS_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMImplementationLS_MethodInfo_[] = {
-	{"createLSInput", "()Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT},
-	{"createLSOutput", "()Lorg/w3c/dom/ls/LSOutput;", nullptr, $PUBLIC | $ABSTRACT},
-	{"createLSParser", "(SLjava/lang/String;)Lorg/w3c/dom/ls/LSParser;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"createLSSerializer", "()Lorg/w3c/dom/ls/LSSerializer;", nullptr, $PUBLIC | $ABSTRACT},
+	{"createLSInput", "()Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMImplementationLS, createLSInput, $LSInput*)},
+	{"createLSOutput", "()Lorg/w3c/dom/ls/LSOutput;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMImplementationLS, createLSOutput, $LSOutput*)},
+	{"createLSParser", "(SLjava/lang/String;)Lorg/w3c/dom/ls/LSParser;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMImplementationLS, createLSParser, $LSParser*, int16_t, $String*), "org.w3c.dom.DOMException"},
+	{"createLSSerializer", "()Lorg/w3c/dom/ls/LSSerializer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMImplementationLS, createLSSerializer, $LSSerializer*)},
 	{}
 };
 

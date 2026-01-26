@@ -30,9 +30,9 @@ $FieldInfo _Attribute_FieldInfo_[] = {
 };
 
 $MethodInfo _Attribute_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Attribute::*)()>(&Attribute::init$))},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(Attribute, init$, void)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(Attribute, display, void, int32_t)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(Attribute, parseContents, void, $Parser*)},
 	{}
 };
 

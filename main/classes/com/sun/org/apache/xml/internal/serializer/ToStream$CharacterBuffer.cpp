@@ -40,14 +40,14 @@ $FieldInfo _ToStream$CharacterBuffer_FieldInfo_[] = {
 };
 
 $MethodInfo _ToStream$CharacterBuffer_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream;)V", nullptr, $PRIVATE, $method(static_cast<void(ToStream$CharacterBuffer::*)($ToStream*)>(&ToStream$CharacterBuffer::init$))},
-	{"addEntityReference", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"addRawText", "([CII)V", nullptr, $PUBLIC},
-	{"addText", "([CII)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"flush", "(Z)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"isAnyCharactersBuffered", "()Z", nullptr, $PUBLIC},
-	{"toChars", "()[C", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToStream;)V", nullptr, $PRIVATE, $method(ToStream$CharacterBuffer, init$, void, $ToStream*)},
+	{"addEntityReference", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ToStream$CharacterBuffer, addEntityReference, void, $String*)},
+	{"addRawText", "([CII)V", nullptr, $PUBLIC, $virtualMethod(ToStream$CharacterBuffer, addRawText, void, $chars*, int32_t, int32_t)},
+	{"addText", "([CII)V", nullptr, $PUBLIC, $virtualMethod(ToStream$CharacterBuffer, addText, void, $chars*, int32_t, int32_t)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(ToStream$CharacterBuffer, clear, void)},
+	{"flush", "(Z)V", nullptr, $PUBLIC, $virtualMethod(ToStream$CharacterBuffer, flush, void, bool), "org.xml.sax.SAXException"},
+	{"isAnyCharactersBuffered", "()Z", nullptr, $PUBLIC, $virtualMethod(ToStream$CharacterBuffer, isAnyCharactersBuffered, bool)},
+	{"toChars", "()[C", nullptr, $PUBLIC, $virtualMethod(ToStream$CharacterBuffer, toChars, $chars*)},
 	{}
 };
 

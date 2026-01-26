@@ -49,12 +49,12 @@ $FieldInfo _Selector$Matcher_FieldInfo_[] = {
 };
 
 $MethodInfo _Selector$Matcher_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Selector;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Selector$XPath;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/FieldActivator;I)V", nullptr, $PUBLIC, $method(static_cast<void(Selector$Matcher::*)($Selector*,$Selector$XPath*,$FieldActivator*,int32_t)>(&Selector$Matcher::init$))},
-	{"endElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PUBLIC},
-	{"getIdentityConstraint", "()Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;", nullptr, $PUBLIC},
-	{"getInitialDepth", "()I", nullptr, $PUBLIC},
-	{"startDocumentFragment", "()V", nullptr, $PUBLIC},
-	{"startElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Selector;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Selector$XPath;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/FieldActivator;I)V", nullptr, $PUBLIC, $method(Selector$Matcher, init$, void, $Selector*, $Selector$XPath*, $FieldActivator*, int32_t)},
+	{"endElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PUBLIC, $virtualMethod(Selector$Matcher, endElement, void, $QName*, $XSTypeDefinition*, bool, Object$*, int16_t, $ShortList*)},
+	{"getIdentityConstraint", "()Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;", nullptr, $PUBLIC, $virtualMethod(Selector$Matcher, getIdentityConstraint, $IdentityConstraint*)},
+	{"getInitialDepth", "()I", nullptr, $PUBLIC, $virtualMethod(Selector$Matcher, getInitialDepth, int32_t)},
+	{"startDocumentFragment", "()V", nullptr, $PUBLIC, $virtualMethod(Selector$Matcher, startDocumentFragment, void)},
+	{"startElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC, $virtualMethod(Selector$Matcher, startElement, void, $QName*, $XMLAttributes*)},
 	{}
 };
 

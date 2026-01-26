@@ -47,8 +47,8 @@ $FieldInfo _XSFacets_FieldInfo_[] = {
 };
 
 $MethodInfo _XSFacets_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSFacets::*)()>(&XSFacets::init$))},
-	{"reset", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSFacets, init$, void)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(XSFacets, reset, void)},
 	{}
 };
 

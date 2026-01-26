@@ -78,18 +78,18 @@ $FieldInfo _ClassParser_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassParser_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/InputStream;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassParser::*)($InputStream*,$String*)>(&ClassParser::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassParser::*)($String*)>(&ClassParser::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassParser::*)($String*,$String*)>(&ClassParser::init$))},
-	{"parse", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $method(static_cast<$JavaClass*(ClassParser::*)()>(&ClassParser::parse)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readAttributes", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readAttributes)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readClassInfo", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readClassInfo)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readConstantPool", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readConstantPool)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readFields", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readFields)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readID", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readID)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readInterfaces", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readInterfaces)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readMethods", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readMethods)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
-	{"readVersion", "()V", nullptr, $PRIVATE, $method(static_cast<void(ClassParser::*)()>(&ClassParser::readVersion)), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"<init>", "(Ljava/io/InputStream;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ClassParser, init$, void, $InputStream*, $String*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ClassParser, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ClassParser, init$, void, $String*, $String*)},
+	{"parse", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $method(ClassParser, parse, $JavaClass*), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readAttributes", "()V", nullptr, $PRIVATE, $method(ClassParser, readAttributes, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readClassInfo", "()V", nullptr, $PRIVATE, $method(ClassParser, readClassInfo, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readConstantPool", "()V", nullptr, $PRIVATE, $method(ClassParser, readConstantPool, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readFields", "()V", nullptr, $PRIVATE, $method(ClassParser, readFields, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readID", "()V", nullptr, $PRIVATE, $method(ClassParser, readID, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readInterfaces", "()V", nullptr, $PRIVATE, $method(ClassParser, readInterfaces, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readMethods", "()V", nullptr, $PRIVATE, $method(ClassParser, readMethods, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
+	{"readVersion", "()V", nullptr, $PRIVATE, $method(ClassParser, readVersion, void), "java.io.IOException,com.sun.org.apache.bcel.internal.classfile.ClassFormatException"},
 	{}
 };
 

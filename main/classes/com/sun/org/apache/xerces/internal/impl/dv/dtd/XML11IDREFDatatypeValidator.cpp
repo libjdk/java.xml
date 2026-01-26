@@ -24,8 +24,8 @@ namespace com {
 								namespace dtd {
 
 $MethodInfo _XML11IDREFDatatypeValidator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11IDREFDatatypeValidator::*)()>(&XML11IDREFDatatypeValidator::init$))},
-	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11IDREFDatatypeValidator, init$, void)},
+	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, $virtualMethod(XML11IDREFDatatypeValidator, validate, void, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
 	{}
 };
 

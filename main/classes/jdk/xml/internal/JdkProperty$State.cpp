@@ -37,11 +37,11 @@ $FieldInfo _JdkProperty$State_FieldInfo_[] = {
 };
 
 $MethodInfo _JdkProperty$State_MethodInfo_[] = {
-	{"$values", "()[Ljdk/xml/internal/JdkProperty$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$JdkProperty$StateArray*(*)()>(&JdkProperty$State::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(JdkProperty$State::*)($String*,int32_t,$String*)>(&JdkProperty$State::init$))},
-	{"literal", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(JdkProperty$State::*)()>(&JdkProperty$State::literal))},
-	{"valueOf", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<JdkProperty$State*(*)($String*)>(&JdkProperty$State::valueOf))},
-	{"values", "()[Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$JdkProperty$StateArray*(*)()>(&JdkProperty$State::values))},
+	{"$values", "()[Ljdk/xml/internal/JdkProperty$State;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(JdkProperty$State, $values, $JdkProperty$StateArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(JdkProperty$State, init$, void, $String*, int32_t, $String*)},
+	{"literal", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(JdkProperty$State, literal, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(JdkProperty$State, valueOf, JdkProperty$State*, $String*)},
+	{"values", "()[Ljdk/xml/internal/JdkProperty$State;", nullptr, $PUBLIC | $STATIC, $staticMethod(JdkProperty$State, values, $JdkProperty$StateArray*)},
 	{}
 };
 

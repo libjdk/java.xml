@@ -5,8 +5,11 @@
 #include <javax/xml/transform/SourceLocator.h>
 #include <jcpp.h>
 
+using $PrefixResolver = ::com::sun::org::apache::xml::internal::utils::PrefixResolver;
+using $XPath = ::com::sun::org::apache::xpath::internal::XPath;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $SourceLocator = ::javax::xml::transform::SourceLocator;
 
 namespace com {
 	namespace sun {
@@ -16,7 +19,7 @@ namespace com {
 					namespace internal {
 
 $MethodInfo _XPathFactory_MethodInfo_[] = {
-	{"create", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;I)Lcom/sun/org/apache/xpath/internal/XPath;", nullptr, $PUBLIC | $ABSTRACT},
+	{"create", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;I)Lcom/sun/org/apache/xpath/internal/XPath;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPathFactory, create, $XPath*, $String*, $SourceLocator*, $PrefixResolver*, int32_t)},
 	{}
 };
 

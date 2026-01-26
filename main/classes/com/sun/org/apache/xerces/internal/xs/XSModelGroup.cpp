@@ -8,6 +8,8 @@
 #undef COMPOSITOR_CHOICE
 #undef COMPOSITOR_SEQUENCE
 
+using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -28,10 +30,10 @@ $FieldInfo _XSModelGroup_FieldInfo_[] = {
 };
 
 $MethodInfo _XSModelGroup_MethodInfo_[] = {
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCompositor", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getParticles", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSModelGroup, getAnnotation, $XSAnnotation*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSModelGroup, getAnnotations, $XSObjectList*)},
+	{"getCompositor", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSModelGroup, getCompositor, int16_t)},
+	{"getParticles", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSModelGroup, getParticles, $XSObjectList*)},
 	{}
 };
 

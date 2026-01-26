@@ -36,11 +36,11 @@ $FieldInfo _WriterOutputBuffer_FieldInfo_[] = {
 };
 
 $MethodInfo _WriterOutputBuffer_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(static_cast<void(WriterOutputBuffer::*)($Writer*)>(&WriterOutputBuffer::init$))},
-	{"append", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC},
-	{"append", "([CII)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC},
-	{"append", "(C)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC},
-	{"close", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(WriterOutputBuffer, init$, void, $Writer*)},
+	{"append", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC, $virtualMethod(WriterOutputBuffer, append, $OutputBuffer*, $String*)},
+	{"append", "([CII)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC, $virtualMethod(WriterOutputBuffer, append, $OutputBuffer*, $chars*, int32_t, int32_t)},
+	{"append", "(C)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC, $virtualMethod(WriterOutputBuffer, append, $OutputBuffer*, char16_t)},
+	{"close", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(WriterOutputBuffer, close, $String*)},
 	{}
 };
 

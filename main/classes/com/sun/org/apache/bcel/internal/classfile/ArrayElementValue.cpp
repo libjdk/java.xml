@@ -30,12 +30,12 @@ $FieldInfo _ArrayElementValue_FieldInfo_[] = {
 };
 
 $MethodInfo _ArrayElementValue_MethodInfo_[] = {
-	{"<init>", "(I[Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ArrayElementValue::*)(int32_t,$ElementValueArray*,$ConstantPool*)>(&ArrayElementValue::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getElementValuesArray", "()[Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC},
-	{"getElementValuesArraySize", "()I", nullptr, $PUBLIC},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(I[Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ArrayElementValue, init$, void, int32_t, $ElementValueArray*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ArrayElementValue, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getElementValuesArray", "()[Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC, $virtualMethod(ArrayElementValue, getElementValuesArray, $ElementValueArray*)},
+	{"getElementValuesArraySize", "()I", nullptr, $PUBLIC, $virtualMethod(ArrayElementValue, getElementValuesArraySize, int32_t)},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ArrayElementValue, stringifyValue, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ArrayElementValue, toString, $String*)},
 	{}
 };
 

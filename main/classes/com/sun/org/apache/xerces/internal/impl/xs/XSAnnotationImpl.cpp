@@ -59,15 +59,15 @@ $FieldInfo _XSAnnotationImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XSAnnotationImpl_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC, $method(static_cast<void(XSAnnotationImpl::*)($String*,$SchemaGrammar*)>(&XSAnnotationImpl::init$))},
-	{"getAnnotationString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"getType", "()S", nullptr, $PUBLIC},
-	{"writeAnnotation", "(Ljava/lang/Object;S)Z", nullptr, $PUBLIC},
-	{"writeToDOM", "(Lorg/w3c/dom/Node;S)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(static_cast<void(XSAnnotationImpl::*)($Node*,int16_t)>(&XSAnnotationImpl::writeToDOM))},
-	{"writeToSAX", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(static_cast<void(XSAnnotationImpl::*)($ContentHandler*)>(&XSAnnotationImpl::writeToSAX))},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC, $method(XSAnnotationImpl, init$, void, $String*, $SchemaGrammar*)},
+	{"getAnnotationString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSAnnotationImpl, getAnnotationString, $String*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSAnnotationImpl, getName, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSAnnotationImpl, getNamespace, $String*)},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(XSAnnotationImpl, getNamespaceItem, $XSNamespaceItem*)},
+	{"getType", "()S", nullptr, $PUBLIC, $virtualMethod(XSAnnotationImpl, getType, int16_t)},
+	{"writeAnnotation", "(Ljava/lang/Object;S)Z", nullptr, $PUBLIC, $virtualMethod(XSAnnotationImpl, writeAnnotation, bool, Object$*, int16_t)},
+	{"writeToDOM", "(Lorg/w3c/dom/Node;S)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(XSAnnotationImpl, writeToDOM, void, $Node*, int16_t)},
+	{"writeToSAX", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(XSAnnotationImpl, writeToSAX, void, $ContentHandler*)},
 	{}
 };
 

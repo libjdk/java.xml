@@ -55,21 +55,21 @@ $FieldInfo _SimpleElementValue_FieldInfo_[] = {
 };
 
 $MethodInfo _SimpleElementValue_MethodInfo_[] = {
-	{"<init>", "(IILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(SimpleElementValue::*)(int32_t,int32_t,$ConstantPool*)>(&SimpleElementValue::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getIndex", "()I", nullptr, $PUBLIC},
-	{"getValueBoolean", "()Z", nullptr, $PUBLIC},
-	{"getValueByte", "()B", nullptr, $PUBLIC},
-	{"getValueChar", "()C", nullptr, $PUBLIC},
-	{"getValueDouble", "()D", nullptr, $PUBLIC},
-	{"getValueFloat", "()F", nullptr, $PUBLIC},
-	{"getValueInt", "()I", nullptr, $PUBLIC},
-	{"getValueLong", "()J", nullptr, $PUBLIC},
-	{"getValueShort", "()S", nullptr, $PUBLIC},
-	{"getValueString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setIndex", "(I)V", nullptr, $PUBLIC},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(IILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(SimpleElementValue, init$, void, int32_t, int32_t, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getIndex", "()I", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getIndex, int32_t)},
+	{"getValueBoolean", "()Z", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueBoolean, bool)},
+	{"getValueByte", "()B", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueByte, int8_t)},
+	{"getValueChar", "()C", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueChar, char16_t)},
+	{"getValueDouble", "()D", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueDouble, double)},
+	{"getValueFloat", "()F", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueFloat, float)},
+	{"getValueInt", "()I", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueInt, int32_t)},
+	{"getValueLong", "()J", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueLong, int64_t)},
+	{"getValueShort", "()S", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueShort, int16_t)},
+	{"getValueString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, getValueString, $String*)},
+	{"setIndex", "(I)V", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, setIndex, void, int32_t)},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, stringifyValue, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SimpleElementValue, toString, $String*)},
 	{}
 };
 

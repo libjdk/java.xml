@@ -49,19 +49,19 @@ $FieldInfo _DOMValidatorHelper$DOMNamespaceContext_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMValidatorHelper$DOMNamespaceContext_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/DOMValidatorHelper;)V", nullptr, 0, $method(static_cast<void(DOMValidatorHelper$DOMNamespaceContext::*)($DOMValidatorHelper*)>(&DOMValidatorHelper$DOMNamespaceContext::init$))},
-	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"declarePrefix0", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(DOMValidatorHelper$DOMNamespaceContext::*)($String*,$String*)>(&DOMValidatorHelper$DOMNamespaceContext::declarePrefix0))},
-	{"fillNamespaceContext", "()V", nullptr, $PRIVATE, $method(static_cast<void(DOMValidatorHelper$DOMNamespaceContext::*)()>(&DOMValidatorHelper$DOMNamespaceContext::fillNamespaceContext))},
-	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
-	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURI0", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(DOMValidatorHelper$DOMNamespaceContext::*)($String*)>(&DOMValidatorHelper$DOMNamespaceContext::getURI0))},
-	{"popContext", "()V", nullptr, $PUBLIC},
-	{"pushContext", "()V", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/DOMValidatorHelper;)V", nullptr, 0, $method(DOMValidatorHelper$DOMNamespaceContext, init$, void, $DOMValidatorHelper*)},
+	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, declarePrefix, bool, $String*, $String*)},
+	{"declarePrefix0", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(DOMValidatorHelper$DOMNamespaceContext, declarePrefix0, void, $String*, $String*)},
+	{"fillNamespaceContext", "()V", nullptr, $PRIVATE, $method(DOMValidatorHelper$DOMNamespaceContext, fillNamespaceContext, void)},
+	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, getAllPrefixes, $Enumeration*)},
+	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, getDeclaredPrefixAt, $String*, int32_t)},
+	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, getDeclaredPrefixCount, int32_t)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, getPrefix, $String*, $String*)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, getURI, $String*, $String*)},
+	{"getURI0", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(DOMValidatorHelper$DOMNamespaceContext, getURI0, $String*, $String*)},
+	{"popContext", "()V", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, popContext, void)},
+	{"pushContext", "()V", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, pushContext, void)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(DOMValidatorHelper$DOMNamespaceContext, reset, void)},
 	{}
 };
 

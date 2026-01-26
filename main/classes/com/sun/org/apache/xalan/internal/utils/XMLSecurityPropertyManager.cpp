@@ -29,9 +29,9 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _XMLSecurityPropertyManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSecurityPropertyManager::*)()>(&XMLSecurityPropertyManager::init$))},
-	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLSecurityPropertyManager::*)()>(&XMLSecurityPropertyManager::readSystemProperties))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSecurityPropertyManager, init$, void)},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(XMLSecurityPropertyManager, getIndex, int32_t, $String*)},
+	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(XMLSecurityPropertyManager, readSystemProperties, void)},
 	{}
 };
 

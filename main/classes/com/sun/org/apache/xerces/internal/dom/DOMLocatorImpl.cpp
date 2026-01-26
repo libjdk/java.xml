@@ -27,17 +27,17 @@ $FieldInfo _DOMLocatorImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMLocatorImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMLocatorImpl::*)()>(&DOMLocatorImpl::init$))},
-	{"<init>", "(IILjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMLocatorImpl::*)(int32_t,int32_t,$String*)>(&DOMLocatorImpl::init$))},
-	{"<init>", "(IIILjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMLocatorImpl::*)(int32_t,int32_t,int32_t,$String*)>(&DOMLocatorImpl::init$))},
-	{"<init>", "(IIILorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMLocatorImpl::*)(int32_t,int32_t,int32_t,$Node*,$String*)>(&DOMLocatorImpl::init$))},
-	{"<init>", "(IIILorg/w3c/dom/Node;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(DOMLocatorImpl::*)(int32_t,int32_t,int32_t,$Node*,$String*,int32_t)>(&DOMLocatorImpl::init$))},
-	{"getByteOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getRelatedNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getUri", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getUtf16Offset", "()I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMLocatorImpl, init$, void)},
+	{"<init>", "(IILjava/lang/String;)V", nullptr, $PUBLIC, $method(DOMLocatorImpl, init$, void, int32_t, int32_t, $String*)},
+	{"<init>", "(IIILjava/lang/String;)V", nullptr, $PUBLIC, $method(DOMLocatorImpl, init$, void, int32_t, int32_t, int32_t, $String*)},
+	{"<init>", "(IIILorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DOMLocatorImpl, init$, void, int32_t, int32_t, int32_t, $Node*, $String*)},
+	{"<init>", "(IIILorg/w3c/dom/Node;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(DOMLocatorImpl, init$, void, int32_t, int32_t, int32_t, $Node*, $String*, int32_t)},
+	{"getByteOffset", "()I", nullptr, $PUBLIC, $virtualMethod(DOMLocatorImpl, getByteOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(DOMLocatorImpl, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(DOMLocatorImpl, getLineNumber, int32_t)},
+	{"getRelatedNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DOMLocatorImpl, getRelatedNode, $Node*)},
+	{"getUri", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMLocatorImpl, getUri, $String*)},
+	{"getUtf16Offset", "()I", nullptr, $PUBLIC, $virtualMethod(DOMLocatorImpl, getUtf16Offset, int32_t)},
 	{}
 };
 

@@ -48,15 +48,15 @@ namespace com {
 						namespace lib {
 
 $MethodInfo _Extensions_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(Extensions::*)()>(&Extensions::init$))},
-	{"difference", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*,$NodeList*)>(&Extensions::difference))},
-	{"distinct", "(Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*)>(&Extensions::distinct))},
-	{"evaluate", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XObject*(*)($ExpressionContext*,$String*)>(&Extensions::evaluate)), "org.xml.sax.SAXNotSupportedException"},
-	{"hasSameNodes", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($NodeList*,$NodeList*)>(&Extensions::hasSameNodes))},
-	{"intersection", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($NodeList*,$NodeList*)>(&Extensions::intersection))},
-	{"nodeset", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/Object;)Lcom/sun/org/apache/xpath/internal/NodeSet;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeSet*(*)($ExpressionContext*,Object$*)>(&Extensions::nodeset))},
-	{"tokenize", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($String*,$String*)>(&Extensions::tokenize))},
-	{"tokenize", "(Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($String*)>(&Extensions::tokenize))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(Extensions, init$, void)},
+	{"difference", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, difference, $NodeList*, $NodeList*, $NodeList*)},
+	{"distinct", "(Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, distinct, $NodeList*, $NodeList*)},
+	{"evaluate", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, evaluate, $XObject*, $ExpressionContext*, $String*), "org.xml.sax.SAXNotSupportedException"},
+	{"hasSameNodes", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, hasSameNodes, bool, $NodeList*, $NodeList*)},
+	{"intersection", "(Lorg/w3c/dom/NodeList;Lorg/w3c/dom/NodeList;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, intersection, $NodeList*, $NodeList*, $NodeList*)},
+	{"nodeset", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/Object;)Lcom/sun/org/apache/xpath/internal/NodeSet;", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, nodeset, $NodeSet*, $ExpressionContext*, Object$*)},
+	{"tokenize", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, tokenize, $NodeList*, $String*, $String*)},
+	{"tokenize", "(Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(Extensions, tokenize, $NodeList*, $String*)},
 	{}
 };
 

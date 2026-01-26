@@ -30,13 +30,13 @@ $FieldInfo _ToHTMLStream$Trie_FieldInfo_[] = {
 };
 
 $MethodInfo _ToHTMLStream$Trie_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ToHTMLStream$Trie::*)()>(&ToHTMLStream$Trie::init$))},
-	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(ToHTMLStream$Trie::*)(bool)>(&ToHTMLStream$Trie::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToHTMLStream$Trie;)V", nullptr, $PUBLIC, $method(static_cast<void(ToHTMLStream$Trie::*)(ToHTMLStream$Trie*)>(&ToHTMLStream$Trie::init$))},
-	{"get", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"get2", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getLongestKeyLength", "()I", nullptr, $PUBLIC},
-	{"put", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ToHTMLStream$Trie, init$, void)},
+	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(ToHTMLStream$Trie, init$, void, bool)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToHTMLStream$Trie;)V", nullptr, $PUBLIC, $method(ToHTMLStream$Trie, init$, void, ToHTMLStream$Trie*)},
+	{"get", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ToHTMLStream$Trie, get, $Object*, $String*)},
+	{"get2", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ToHTMLStream$Trie, get2, $Object*, $String*)},
+	{"getLongestKeyLength", "()I", nullptr, $PUBLIC, $virtualMethod(ToHTMLStream$Trie, getLongestKeyLength, int32_t)},
+	{"put", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ToHTMLStream$Trie, put, $Object*, $String*, Object$*)},
 	{}
 };
 

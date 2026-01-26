@@ -40,11 +40,11 @@ $FieldInfo _EntityResolverWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _EntityResolverWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(EntityResolverWrapper::*)()>(&EntityResolverWrapper::init$))},
-	{"<init>", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(EntityResolverWrapper::*)($EntityResolver*)>(&EntityResolverWrapper::init$))},
-	{"getEntityResolver", "()Lorg/xml/sax/EntityResolver;", nullptr, $PUBLIC},
-	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
-	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(EntityResolverWrapper, init$, void)},
+	{"<init>", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC, $method(EntityResolverWrapper, init$, void, $EntityResolver*)},
+	{"getEntityResolver", "()Lorg/xml/sax/EntityResolver;", nullptr, $PUBLIC, $virtualMethod(EntityResolverWrapper, getEntityResolver, $EntityResolver*)},
+	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC, $virtualMethod(EntityResolverWrapper, resolveEntity, $XMLInputSource*, $XMLResourceIdentifier*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC, $virtualMethod(EntityResolverWrapper, setEntityResolver, void, $EntityResolver*)},
 	{}
 };
 

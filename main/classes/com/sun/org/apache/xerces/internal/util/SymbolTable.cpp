@@ -43,22 +43,22 @@ $FieldInfo _SymbolTable_FieldInfo_[] = {
 };
 
 $MethodInfo _SymbolTable_MethodInfo_[] = {
-	{"<init>", "(IF)V", nullptr, $PUBLIC, $method(static_cast<void(SymbolTable::*)(int32_t,float)>(&SymbolTable::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SymbolTable::*)(int32_t)>(&SymbolTable::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SymbolTable::*)()>(&SymbolTable::init$))},
-	{"addSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"addSymbol", "([CII)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"addSymbol0", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(SymbolTable::*)($String*,int32_t,int32_t)>(&SymbolTable::addSymbol0))},
-	{"addSymbol0", "([CIIII)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(SymbolTable::*)($chars*,int32_t,int32_t,int32_t,int32_t)>(&SymbolTable::addSymbol0))},
-	{"containsSymbol", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"containsSymbol", "([CII)Z", nullptr, $PUBLIC},
-	{"hash", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"hash", "([CII)I", nullptr, $PUBLIC},
-	{"hash0", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(static_cast<int32_t(SymbolTable::*)($String*)>(&SymbolTable::hash0))},
-	{"hash0", "([CII)I", nullptr, $PRIVATE, $method(static_cast<int32_t(SymbolTable::*)($chars*,int32_t,int32_t)>(&SymbolTable::hash0))},
-	{"rebalance", "()V", nullptr, $PROTECTED},
-	{"rehash", "()V", nullptr, $PROTECTED},
-	{"rehashCommon", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(SymbolTable::*)(int32_t)>(&SymbolTable::rehashCommon))},
+	{"<init>", "(IF)V", nullptr, $PUBLIC, $method(SymbolTable, init$, void, int32_t, float)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(SymbolTable, init$, void, int32_t)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SymbolTable, init$, void)},
+	{"addSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SymbolTable, addSymbol, $String*, $String*)},
+	{"addSymbol", "([CII)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SymbolTable, addSymbol, $String*, $chars*, int32_t, int32_t)},
+	{"addSymbol0", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PRIVATE, $method(SymbolTable, addSymbol0, $String*, $String*, int32_t, int32_t)},
+	{"addSymbol0", "([CIIII)Ljava/lang/String;", nullptr, $PRIVATE, $method(SymbolTable, addSymbol0, $String*, $chars*, int32_t, int32_t, int32_t, int32_t)},
+	{"containsSymbol", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(SymbolTable, containsSymbol, bool, $String*)},
+	{"containsSymbol", "([CII)Z", nullptr, $PUBLIC, $virtualMethod(SymbolTable, containsSymbol, bool, $chars*, int32_t, int32_t)},
+	{"hash", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(SymbolTable, hash, int32_t, $String*)},
+	{"hash", "([CII)I", nullptr, $PUBLIC, $virtualMethod(SymbolTable, hash, int32_t, $chars*, int32_t, int32_t)},
+	{"hash0", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(SymbolTable, hash0, int32_t, $String*)},
+	{"hash0", "([CII)I", nullptr, $PRIVATE, $method(SymbolTable, hash0, int32_t, $chars*, int32_t, int32_t)},
+	{"rebalance", "()V", nullptr, $PROTECTED, $virtualMethod(SymbolTable, rebalance, void)},
+	{"rehash", "()V", nullptr, $PROTECTED, $virtualMethod(SymbolTable, rehash, void)},
+	{"rehashCommon", "(I)V", nullptr, $PRIVATE, $method(SymbolTable, rehashCommon, void, int32_t)},
 	{}
 };
 

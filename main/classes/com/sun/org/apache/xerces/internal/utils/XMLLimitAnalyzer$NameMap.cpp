@@ -40,11 +40,11 @@ $FieldInfo _XMLLimitAnalyzer$NameMap_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLLimitAnalyzer$NameMap_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLLimitAnalyzer$NameMap;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$XMLLimitAnalyzer$NameMapArray*(*)()>(&XMLLimitAnalyzer$NameMap::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(XMLLimitAnalyzer$NameMap::*)($String*,int32_t,$String*,$String*)>(&XMLLimitAnalyzer$NameMap::init$))},
-	{"getOldName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(XMLLimitAnalyzer$NameMap::*)($String*)>(&XMLLimitAnalyzer$NameMap::getOldName))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/utils/XMLLimitAnalyzer$NameMap;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLLimitAnalyzer$NameMap*(*)($String*)>(&XMLLimitAnalyzer$NameMap::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLLimitAnalyzer$NameMap;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLLimitAnalyzer$NameMapArray*(*)()>(&XMLLimitAnalyzer$NameMap::values))},
+	{"$values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLLimitAnalyzer$NameMap;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XMLLimitAnalyzer$NameMap, $values, $XMLLimitAnalyzer$NameMapArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V", "(Ljava/lang/String;Ljava/lang/String;)V", $PRIVATE, $method(XMLLimitAnalyzer$NameMap, init$, void, $String*, int32_t, $String*, $String*)},
+	{"getOldName", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(XMLLimitAnalyzer$NameMap, getOldName, $String*, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/utils/XMLLimitAnalyzer$NameMap;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLLimitAnalyzer$NameMap, valueOf, XMLLimitAnalyzer$NameMap*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xerces/internal/utils/XMLLimitAnalyzer$NameMap;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLLimitAnalyzer$NameMap, values, $XMLLimitAnalyzer$NameMapArray*)},
 	{}
 };
 

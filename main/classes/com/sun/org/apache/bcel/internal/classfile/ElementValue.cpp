@@ -34,6 +34,7 @@ using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::Consta
 using $EnumElementValue = ::com::sun::org::apache::bcel::internal::classfile::EnumElementValue;
 using $SimpleElementValue = ::com::sun::org::apache::bcel::internal::classfile::SimpleElementValue;
 using $DataInput = ::java::io::DataInput;
+using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
@@ -67,15 +68,15 @@ $FieldInfo _ElementValue_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementValue_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PROTECTED, $method(static_cast<void(ElementValue::*)(int32_t,$ConstantPool*)>(&ElementValue::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
-	{"getConstantPool", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;", nullptr, $FINAL, $method(static_cast<$ConstantPool*(ElementValue::*)()>(&ElementValue::getConstantPool))},
-	{"getElementValueType", "()I", nullptr, $PUBLIC},
-	{"getType", "()I", nullptr, $FINAL, $method(static_cast<int32_t(ElementValue::*)()>(&ElementValue::getType))},
-	{"readElementValue", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $STATIC, $method(static_cast<ElementValue*(*)($DataInput*,$ConstantPool*)>(&ElementValue::readElementValue)), "java.io.IOException"},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"toShortString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PROTECTED, $method(ElementValue, init$, void, int32_t, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementValue, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getConstantPool", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;", nullptr, $FINAL, $method(ElementValue, getConstantPool, $ConstantPool*)},
+	{"getElementValueType", "()I", nullptr, $PUBLIC, $virtualMethod(ElementValue, getElementValueType, int32_t)},
+	{"getType", "()I", nullptr, $FINAL, $method(ElementValue, getType, int32_t)},
+	{"readElementValue", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $STATIC, $staticMethod(ElementValue, readElementValue, ElementValue*, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementValue, stringifyValue, $String*)},
+	{"toShortString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementValue, toShortString, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementValue, toString, $String*)},
 	{}
 };
 

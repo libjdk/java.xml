@@ -22,10 +22,10 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _HexBinaryDV$XHex_MethodInfo_[] = {
-	{"<init>", "([B)V", nullptr, $PUBLIC, $method(static_cast<void(HexBinaryDV$XHex::*)($bytes*)>(&HexBinaryDV$XHex::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "([B)V", nullptr, $PUBLIC, $method(HexBinaryDV$XHex, init$, void, $bytes*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(HexBinaryDV$XHex, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(HexBinaryDV$XHex, hashCode, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(HexBinaryDV$XHex, toString, $String*)},
 	{}
 };
 

@@ -31,10 +31,10 @@ $FieldInfo _Token$StringToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$StringToken_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/String;I)V", nullptr, 0, $method(static_cast<void(Token$StringToken::*)(int32_t,$String*,int32_t)>(&Token$StringToken::init$))},
-	{"getReferenceNumber", "()I", nullptr, 0},
-	{"getString", "()Ljava/lang/String;", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILjava/lang/String;I)V", nullptr, 0, $method(Token$StringToken, init$, void, int32_t, $String*, int32_t)},
+	{"getReferenceNumber", "()I", nullptr, 0, $virtualMethod(Token$StringToken, getReferenceNumber, int32_t)},
+	{"getString", "()Ljava/lang/String;", nullptr, 0, $virtualMethod(Token$StringToken, getString, $String*)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$StringToken, toString, $String*, int32_t)},
 	{}
 };
 

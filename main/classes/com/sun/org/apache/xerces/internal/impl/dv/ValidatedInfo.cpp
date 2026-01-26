@@ -57,19 +57,19 @@ $FieldInfo _ValidatedInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _ValidatedInfo_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ValidatedInfo::*)()>(&ValidatedInfo::init$))},
-	{"convertToPrimitiveKind", "(S)S", nullptr, $PRIVATE | $STATIC, $method(static_cast<int16_t(*)(int16_t)>(&ValidatedInfo::convertToPrimitiveKind))},
-	{"copyFrom", "(Lcom/sun/org/apache/xerces/internal/xs/XSValue;)V", nullptr, $PUBLIC},
-	{"getActualValue", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getActualValueType", "()S", nullptr, $PUBLIC},
-	{"getListValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC},
-	{"getMemberTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC},
-	{"getMemberTypeDefinitions", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC},
-	{"getNormalizedValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC},
-	{"isComparable", "(Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(ValidatedInfo*,ValidatedInfo*)>(&ValidatedInfo::isComparable))},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"stringValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ValidatedInfo, init$, void)},
+	{"convertToPrimitiveKind", "(S)S", nullptr, $PRIVATE | $STATIC, $staticMethod(ValidatedInfo, convertToPrimitiveKind, int16_t, int16_t)},
+	{"copyFrom", "(Lcom/sun/org/apache/xerces/internal/xs/XSValue;)V", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, copyFrom, void, $XSValue*)},
+	{"getActualValue", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, getActualValue, $Object*)},
+	{"getActualValueType", "()S", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, getActualValueType, int16_t)},
+	{"getListValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, getListValueTypes, $ShortList*)},
+	{"getMemberTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, getMemberTypeDefinition, $XSSimpleTypeDefinition*)},
+	{"getMemberTypeDefinitions", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, getMemberTypeDefinitions, $XSObjectList*)},
+	{"getNormalizedValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, getNormalizedValue, $String*)},
+	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, getTypeDefinition, $XSSimpleTypeDefinition*)},
+	{"isComparable", "(Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(ValidatedInfo, isComparable, bool, ValidatedInfo*, ValidatedInfo*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, reset, void)},
+	{"stringValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ValidatedInfo, stringValue, $String*)},
 	{}
 };
 

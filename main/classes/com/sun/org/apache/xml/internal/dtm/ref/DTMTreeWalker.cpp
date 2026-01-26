@@ -51,16 +51,16 @@ $FieldInfo _DTMTreeWalker_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMTreeWalker_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTMTreeWalker::*)()>(&DTMTreeWalker::init$))},
-	{"<init>", "(Lorg/xml/sax/ContentHandler;Lcom/sun/org/apache/xml/internal/dtm/DTM;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMTreeWalker::*)($ContentHandler*,$DTM*)>(&DTMTreeWalker::init$))},
-	{"dispatachChars", "(I)V", nullptr, $PRIVATE | $FINAL, $method(static_cast<void(DTMTreeWalker::*)(int32_t)>(&DTMTreeWalker::dispatachChars)), "org.xml.sax.SAXException"},
-	{"endNode", "(I)V", nullptr, $PROTECTED, nullptr, "org.xml.sax.SAXException"},
-	{"getcontentHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC},
-	{"setDTM", "(Lcom/sun/org/apache/xml/internal/dtm/DTM;)V", nullptr, $PUBLIC},
-	{"setcontentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC},
-	{"startNode", "(I)V", nullptr, $PROTECTED, nullptr, "org.xml.sax.SAXException"},
-	{"traverse", "(I)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"traverse", "(II)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTMTreeWalker, init$, void)},
+	{"<init>", "(Lorg/xml/sax/ContentHandler;Lcom/sun/org/apache/xml/internal/dtm/DTM;)V", nullptr, $PUBLIC, $method(DTMTreeWalker, init$, void, $ContentHandler*, $DTM*)},
+	{"dispatachChars", "(I)V", nullptr, $PRIVATE | $FINAL, $method(DTMTreeWalker, dispatachChars, void, int32_t), "org.xml.sax.SAXException"},
+	{"endNode", "(I)V", nullptr, $PROTECTED, $virtualMethod(DTMTreeWalker, endNode, void, int32_t), "org.xml.sax.SAXException"},
+	{"getcontentHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC, $virtualMethod(DTMTreeWalker, getcontentHandler, $ContentHandler*)},
+	{"setDTM", "(Lcom/sun/org/apache/xml/internal/dtm/DTM;)V", nullptr, $PUBLIC, $virtualMethod(DTMTreeWalker, setDTM, void, $DTM*)},
+	{"setcontentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $virtualMethod(DTMTreeWalker, setcontentHandler, void, $ContentHandler*)},
+	{"startNode", "(I)V", nullptr, $PROTECTED, $virtualMethod(DTMTreeWalker, startNode, void, int32_t), "org.xml.sax.SAXException"},
+	{"traverse", "(I)V", nullptr, $PUBLIC, $virtualMethod(DTMTreeWalker, traverse, void, int32_t), "org.xml.sax.SAXException"},
+	{"traverse", "(II)V", nullptr, $PUBLIC, $virtualMethod(DTMTreeWalker, traverse, void, int32_t, int32_t), "org.xml.sax.SAXException"},
 	{}
 };
 

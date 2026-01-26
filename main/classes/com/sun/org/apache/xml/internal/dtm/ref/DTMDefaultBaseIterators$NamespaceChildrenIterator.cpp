@@ -41,9 +41,9 @@ $FieldInfo _DTMDefaultBaseIterators$NamespaceChildrenIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$NamespaceChildrenIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$NamespaceChildrenIterator::*)($DTMDefaultBaseIterators*,int32_t)>(&DTMDefaultBaseIterators$NamespaceChildrenIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$NamespaceChildrenIterator, init$, void, $DTMDefaultBaseIterators*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$NamespaceChildrenIterator, next, int32_t)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$NamespaceChildrenIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

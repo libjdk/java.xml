@@ -74,10 +74,10 @@ $FieldInfo _UseAttributeSets_FieldInfo_[] = {
 };
 
 $MethodInfo _UseAttributeSets_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $method(static_cast<void(UseAttributeSets::*)($String*,$Parser*)>(&UseAttributeSets::init$))},
-	{"addAttributeSets", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(UseAttributeSets::*)($String*)>(&UseAttributeSets::addAttributeSets))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $method(UseAttributeSets, init$, void, $String*, $Parser*)},
+	{"addAttributeSets", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(UseAttributeSets, addAttributeSets, void, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(UseAttributeSets, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(UseAttributeSets, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

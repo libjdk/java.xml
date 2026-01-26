@@ -42,9 +42,9 @@ $FieldInfo _SAXImpl$NamespaceAttributeIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXImpl$NamespaceAttributeIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;I)V", nullptr, $PUBLIC, $method(static_cast<void(SAXImpl$NamespaceAttributeIterator::*)($SAXImpl*,int32_t)>(&SAXImpl$NamespaceAttributeIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;I)V", nullptr, $PUBLIC, $method(SAXImpl$NamespaceAttributeIterator, init$, void, $SAXImpl*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceAttributeIterator, next, int32_t)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceAttributeIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

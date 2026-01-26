@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _RETURN_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(RETURN::*)()>(&RETURN::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(RETURN, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(RETURN, accept, void, $Visitor*)},
 	{}
 };
 

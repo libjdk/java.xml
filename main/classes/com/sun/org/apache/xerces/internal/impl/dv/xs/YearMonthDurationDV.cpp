@@ -40,9 +40,9 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _YearMonthDurationDV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(YearMonthDurationDV::*)()>(&YearMonthDurationDV::init$))},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getDuration", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Ljavax/xml/datatype/Duration;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, 0, $method(YearMonthDurationDV, init$, void)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(YearMonthDurationDV, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getDuration", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/AbstractDateTimeDV$DateTimeData;)Ljavax/xml/datatype/Duration;", nullptr, $PROTECTED, $virtualMethod(YearMonthDurationDV, getDuration, $Duration*, $AbstractDateTimeDV$DateTimeData*)},
 	{}
 };
 

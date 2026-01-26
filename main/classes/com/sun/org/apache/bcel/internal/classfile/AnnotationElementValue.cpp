@@ -31,11 +31,11 @@ $FieldInfo _AnnotationElementValue_FieldInfo_[] = {
 };
 
 $MethodInfo _AnnotationElementValue_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(AnnotationElementValue::*)(int32_t,$AnnotationEntry*,$ConstantPool*)>(&AnnotationElementValue::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getAnnotationEntry", "()Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(AnnotationElementValue, init$, void, int32_t, $AnnotationEntry*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(AnnotationElementValue, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getAnnotationEntry", "()Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC, $virtualMethod(AnnotationElementValue, getAnnotationEntry, $AnnotationEntry*)},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AnnotationElementValue, stringifyValue, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AnnotationElementValue, toString, $String*)},
 	{}
 };
 

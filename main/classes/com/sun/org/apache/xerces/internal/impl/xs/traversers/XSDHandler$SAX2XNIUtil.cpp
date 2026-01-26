@@ -28,9 +28,9 @@ namespace com {
 								namespace traversers {
 
 $MethodInfo _XSDHandler$SAX2XNIUtil_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(XSDHandler$SAX2XNIUtil::*)()>(&XSDHandler$SAX2XNIUtil::init$))},
-	{"createXMLParseException0", "(Lorg/xml/sax/SAXParseException;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLParseException*(*)($SAXParseException*)>(&XSDHandler$SAX2XNIUtil::createXMLParseException0))},
-	{"createXNIException0", "(Lorg/xml/sax/SAXException;)Lcom/sun/org/apache/xerces/internal/xni/XNIException;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XNIException*(*)($SAXException*)>(&XSDHandler$SAX2XNIUtil::createXNIException0))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(XSDHandler$SAX2XNIUtil, init$, void)},
+	{"createXMLParseException0", "(Lorg/xml/sax/SAXParseException;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;", nullptr, $PUBLIC | $STATIC, $staticMethod(XSDHandler$SAX2XNIUtil, createXMLParseException0, $XMLParseException*, $SAXParseException*)},
+	{"createXNIException0", "(Lorg/xml/sax/SAXException;)Lcom/sun/org/apache/xerces/internal/xni/XNIException;", nullptr, $PUBLIC | $STATIC, $staticMethod(XSDHandler$SAX2XNIUtil, createXNIException0, $XNIException*, $SAXException*)},
 	{}
 };
 

@@ -30,9 +30,9 @@ $FieldInfo _XSLMessages_FieldInfo_[] = {
 };
 
 $MethodInfo _XSLMessages_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSLMessages::*)()>(&XSLMessages::init$))},
-	{"createMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$ObjectArray*)>(&XSLMessages::createMessage))},
-	{"createWarning", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$ObjectArray*)>(&XSLMessages::createWarning))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSLMessages, init$, void)},
+	{"createMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(XSLMessages, createMessage, $String*, $String*, $ObjectArray*)},
+	{"createWarning", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(XSLMessages, createWarning, $String*, $String*, $ObjectArray*)},
 	{}
 };
 

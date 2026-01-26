@@ -32,13 +32,13 @@ $FieldInfo _ErrorHandlerAdaptor_FieldInfo_[] = {
 };
 
 $MethodInfo _ErrorHandlerAdaptor_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ErrorHandlerAdaptor::*)()>(&ErrorHandlerAdaptor::init$))},
-	{"error", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC},
-	{"fatalError", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC},
-	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PROTECTED | $ABSTRACT},
-	{"hadError", "()Z", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"warning", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ErrorHandlerAdaptor, init$, void)},
+	{"error", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerAdaptor, error, void, $String*, $String*, $XMLParseException*)},
+	{"fatalError", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerAdaptor, fatalError, void, $String*, $String*, $XMLParseException*)},
+	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(ErrorHandlerAdaptor, getErrorHandler, $ErrorHandler*)},
+	{"hadError", "()Z", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerAdaptor, hadError, bool)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerAdaptor, reset, void)},
+	{"warning", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerAdaptor, warning, void, $String*, $String*, $XMLParseException*)},
 	{}
 };
 

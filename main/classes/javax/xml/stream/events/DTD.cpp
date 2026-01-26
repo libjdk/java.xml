@@ -7,6 +7,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $List = ::java::util::List;
 
 namespace javax {
 	namespace xml {
@@ -14,10 +15,10 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _DTD_MethodInfo_[] = {
-	{"getDocumentTypeDeclaration", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEntities", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/EntityDeclaration;>;", $PUBLIC | $ABSTRACT},
-	{"getNotations", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/NotationDeclaration;>;", $PUBLIC | $ABSTRACT},
-	{"getProcessedDTD", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDocumentTypeDeclaration", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTD, getDocumentTypeDeclaration, $String*)},
+	{"getEntities", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/EntityDeclaration;>;", $PUBLIC | $ABSTRACT, $virtualMethod(DTD, getEntities, $List*)},
+	{"getNotations", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/NotationDeclaration;>;", $PUBLIC | $ABSTRACT, $virtualMethod(DTD, getNotations, $List*)},
+	{"getProcessedDTD", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTD, getProcessedDTD, $Object*)},
 	{}
 };
 

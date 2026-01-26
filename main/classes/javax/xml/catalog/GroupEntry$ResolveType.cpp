@@ -34,12 +34,12 @@ $FieldInfo _GroupEntry$ResolveType_FieldInfo_[] = {
 };
 
 $MethodInfo _GroupEntry$ResolveType_MethodInfo_[] = {
-	{"$values", "()[Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$GroupEntry$ResolveTypeArray*(*)()>(&GroupEntry$ResolveType::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(GroupEntry$ResolveType::*)($String*,int32_t,$String*)>(&GroupEntry$ResolveType::init$))},
-	{"getType", "(Ljava/lang/String;)Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<GroupEntry$ResolveType*(*)($String*)>(&GroupEntry$ResolveType::getType))},
-	{"isType", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(static_cast<bool(GroupEntry$ResolveType::*)($String*)>(&GroupEntry$ResolveType::isType))},
-	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<GroupEntry$ResolveType*(*)($String*)>(&GroupEntry$ResolveType::valueOf))},
-	{"values", "()[Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$GroupEntry$ResolveTypeArray*(*)()>(&GroupEntry$ResolveType::values))},
+	{"$values", "()[Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(GroupEntry$ResolveType, $values, $GroupEntry$ResolveTypeArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(GroupEntry$ResolveType, init$, void, $String*, int32_t, $String*)},
+	{"getType", "(Ljava/lang/String;)Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PUBLIC | $STATIC, $staticMethod(GroupEntry$ResolveType, getType, GroupEntry$ResolveType*, $String*)},
+	{"isType", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(GroupEntry$ResolveType, isType, bool, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PUBLIC | $STATIC, $staticMethod(GroupEntry$ResolveType, valueOf, GroupEntry$ResolveType*, $String*)},
+	{"values", "()[Ljavax/xml/catalog/GroupEntry$ResolveType;", nullptr, $PUBLIC | $STATIC, $staticMethod(GroupEntry$ResolveType, values, $GroupEntry$ResolveTypeArray*)},
 	{}
 };
 

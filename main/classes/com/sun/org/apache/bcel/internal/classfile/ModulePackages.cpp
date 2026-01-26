@@ -36,17 +36,17 @@ $FieldInfo _ModulePackages_FieldInfo_[] = {
 };
 
 $MethodInfo _ModulePackages_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ModulePackages;)V", nullptr, $PUBLIC, $method(static_cast<void(ModulePackages::*)(ModulePackages*)>(&ModulePackages::init$))},
-	{"<init>", "(II[ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ModulePackages::*)(int32_t,int32_t,$ints*,$ConstantPool*)>(&ModulePackages::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(ModulePackages::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&ModulePackages::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getNumberOfPackages", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ModulePackages::*)()>(&ModulePackages::getNumberOfPackages))},
-	{"getPackageIndexTable", "()[I", nullptr, $PUBLIC, $method(static_cast<$ints*(ModulePackages::*)()>(&ModulePackages::getPackageIndexTable))},
-	{"getPackageNames", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$StringArray*(ModulePackages::*)()>(&ModulePackages::getPackageNames))},
-	{"setPackageIndexTable", "([I)V", nullptr, $PUBLIC, $method(static_cast<void(ModulePackages::*)($ints*)>(&ModulePackages::setPackageIndexTable))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ModulePackages;)V", nullptr, $PUBLIC, $method(ModulePackages, init$, void, ModulePackages*)},
+	{"<init>", "(II[ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ModulePackages, init$, void, int32_t, int32_t, $ints*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(ModulePackages, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ModulePackages, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(ModulePackages, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ModulePackages, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getNumberOfPackages", "()I", nullptr, $PUBLIC, $method(ModulePackages, getNumberOfPackages, int32_t)},
+	{"getPackageIndexTable", "()[I", nullptr, $PUBLIC, $method(ModulePackages, getPackageIndexTable, $ints*)},
+	{"getPackageNames", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(ModulePackages, getPackageNames, $StringArray*)},
+	{"setPackageIndexTable", "([I)V", nullptr, $PUBLIC, $method(ModulePackages, setPackageIndexTable, void, $ints*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ModulePackages, toString, $String*)},
 	{}
 };
 

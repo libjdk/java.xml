@@ -22,16 +22,16 @@ $FieldInfo _NodeIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeIterator_MethodInfo_[] = {
-	{"cloneIterator", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLast", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPosition", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"gotoMark", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"isReverse", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"next", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"reset", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setMark", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT},
+	{"cloneIterator", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, cloneIterator, NodeIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, getLast, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, getPosition, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, reset, NodeIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, setStartNode, NodeIterator*, int32_t)},
 	{}
 };
 

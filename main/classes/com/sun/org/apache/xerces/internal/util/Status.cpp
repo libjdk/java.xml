@@ -38,12 +38,12 @@ $FieldInfo _Status_FieldInfo_[] = {
 };
 
 $MethodInfo _Status_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$StatusArray*(*)()>(&Status::$values))},
-	{"<init>", "(Ljava/lang/String;ISZ)V", "(SZ)V", $PRIVATE, $method(static_cast<void(Status::*)($String*,int32_t,int16_t,bool)>(&Status::init$))},
-	{"getType", "()S", nullptr, $PUBLIC, $method(static_cast<int16_t(Status::*)()>(&Status::getType))},
-	{"isExceptional", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(Status::*)()>(&Status::isExceptional))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PUBLIC | $STATIC, $method(static_cast<Status*(*)($String*)>(&Status::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$StatusArray*(*)()>(&Status::values))},
+	{"$values", "()[Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(Status, $values, $StatusArray*)},
+	{"<init>", "(Ljava/lang/String;ISZ)V", "(SZ)V", $PRIVATE, $method(Status, init$, void, $String*, int32_t, int16_t, bool)},
+	{"getType", "()S", nullptr, $PUBLIC, $method(Status, getType, int16_t)},
+	{"isExceptional", "()Z", nullptr, $PUBLIC, $method(Status, isExceptional, bool)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PUBLIC | $STATIC, $staticMethod(Status, valueOf, Status*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xerces/internal/util/Status;", nullptr, $PUBLIC | $STATIC, $staticMethod(Status, values, $StatusArray*)},
 	{}
 };
 

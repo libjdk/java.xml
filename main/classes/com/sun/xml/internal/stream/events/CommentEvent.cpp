@@ -47,10 +47,10 @@ $MethodInfo _CommentEvent_MethodInfo_[] = {
 	{"*getLocation", "()Ljavax/xml/stream/Location;", nullptr, $PUBLIC},
 	{"*getSchemaType", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CommentEvent::*)()>(&CommentEvent::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(CommentEvent::*)($String*)>(&CommentEvent::init$))},
-	{"getText", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"init", "()V", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CommentEvent, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(CommentEvent, init$, void, $String*)},
+	{"getText", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CommentEvent, getText, $String*)},
+	{"init", "()V", nullptr, $PROTECTED, $virtualMethod(CommentEvent, init, void)},
 	{"*isAttribute", "()Z", nullptr, $PUBLIC},
 	{"*isCharacters", "()Z", nullptr, $PUBLIC},
 	{"*isEndDocument", "()Z", nullptr, $PUBLIC},
@@ -60,9 +60,9 @@ $MethodInfo _CommentEvent_MethodInfo_[] = {
 	{"*isProcessingInstruction", "()Z", nullptr, $PUBLIC},
 	{"*isStartDocument", "()Z", nullptr, $PUBLIC},
 	{"*isStartElement", "()Z", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CommentEvent, toString, $String*)},
 	{"*writeAsEncodedUnicode", "(Ljava/io/Writer;)V", nullptr, $PUBLIC},
-	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, $virtualMethod(CommentEvent, writeAsEncodedUnicodeEx, void, $Writer*), "java.io.IOException"},
 	{}
 };
 

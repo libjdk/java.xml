@@ -65,17 +65,17 @@ $FieldInfo _TestSeq_FieldInfo_[] = {
 };
 
 $MethodInfo _TestSeq_MethodInfo_[] = {
-	{"<init>", "(Ljava/util/List;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/LocationPathPattern;>;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", $PUBLIC, $method(static_cast<void(TestSeq::*)($List*,$Mode*)>(&TestSeq::init$))},
-	{"<init>", "(Ljava/util/List;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/LocationPathPattern;>;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", $PUBLIC, $method(static_cast<void(TestSeq::*)($List*,int32_t,$Mode*)>(&TestSeq::init$))},
-	{"compile", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $method(static_cast<$InstructionHandle*(TestSeq::*)($ClassGenerator*,$MethodGenerator*,$InstructionHandle*)>(&TestSeq::compile))},
-	{"findTemplates", "(Ljava/util/Map;)V", "(Ljava/util/Map<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Template;Ljava/lang/Object;>;)V", $PUBLIC, $method(static_cast<void(TestSeq::*)($Map*)>(&TestSeq::findTemplates))},
-	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC, $method(static_cast<$InstructionList*(TestSeq::*)()>(&TestSeq::getInstructionList))},
-	{"getPattern", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/LocationPathPattern;", nullptr, $PRIVATE, $method(static_cast<$LocationPathPattern*(TestSeq::*)(int32_t)>(&TestSeq::getPattern))},
-	{"getPosition", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(TestSeq::*)()>(&TestSeq::getPosition))},
-	{"getPriority", "()D", nullptr, $PUBLIC, $method(static_cast<double(TestSeq::*)()>(&TestSeq::getPriority))},
-	{"getTemplateHandle", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Template;)Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PRIVATE, $method(static_cast<$InstructionHandle*(TestSeq::*)($Template*)>(&TestSeq::getTemplateHandle))},
-	{"reduce", "()V", nullptr, $PUBLIC, $method(static_cast<void(TestSeq::*)()>(&TestSeq::reduce))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/util/List;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/LocationPathPattern;>;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", $PUBLIC, $method(TestSeq, init$, void, $List*, $Mode*)},
+	{"<init>", "(Ljava/util/List;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", "(Ljava/util/List<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/LocationPathPattern;>;ILcom/sun/org/apache/xalan/internal/xsltc/compiler/Mode;)V", $PUBLIC, $method(TestSeq, init$, void, $List*, int32_t, $Mode*)},
+	{"compile", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $method(TestSeq, compile, $InstructionHandle*, $ClassGenerator*, $MethodGenerator*, $InstructionHandle*)},
+	{"findTemplates", "(Ljava/util/Map;)V", "(Ljava/util/Map<Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Template;Ljava/lang/Object;>;)V", $PUBLIC, $method(TestSeq, findTemplates, void, $Map*)},
+	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC, $method(TestSeq, getInstructionList, $InstructionList*)},
+	{"getPattern", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/LocationPathPattern;", nullptr, $PRIVATE, $method(TestSeq, getPattern, $LocationPathPattern*, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $method(TestSeq, getPosition, int32_t)},
+	{"getPriority", "()D", nullptr, $PUBLIC, $method(TestSeq, getPriority, double)},
+	{"getTemplateHandle", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Template;)Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PRIVATE, $method(TestSeq, getTemplateHandle, $InstructionHandle*, $Template*)},
+	{"reduce", "()V", nullptr, $PUBLIC, $method(TestSeq, reduce, void)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TestSeq, toString, $String*)},
 	{}
 };
 

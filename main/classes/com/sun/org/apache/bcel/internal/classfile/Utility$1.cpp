@@ -19,8 +19,8 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _Utility$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Utility$1::*)()>(&Utility$1::init$))},
-	{"initialValue", "()Ljava/lang/Integer;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, 0, $method(Utility$1, init$, void)},
+	{"initialValue", "()Ljava/lang/Integer;", nullptr, $PROTECTED, $virtualMethod(Utility$1, initialValue, $Object*)},
 	{}
 };
 

@@ -41,15 +41,15 @@ $FieldInfo _ChunkedIntArray_FieldInfo_[] = {
 };
 
 $MethodInfo _ChunkedIntArray_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(ChunkedIntArray::*)(int32_t)>(&ChunkedIntArray::init$))},
-	{"appendSlot", "(IIII)I", nullptr, 0, $method(static_cast<int32_t(ChunkedIntArray::*)(int32_t,int32_t,int32_t,int32_t)>(&ChunkedIntArray::appendSlot))},
-	{"discardLast", "()V", nullptr, 0, $method(static_cast<void(ChunkedIntArray::*)()>(&ChunkedIntArray::discardLast))},
-	{"readEntry", "(II)I", nullptr, 0, $method(static_cast<int32_t(ChunkedIntArray::*)(int32_t,int32_t)>(&ChunkedIntArray::readEntry)), "java.lang.ArrayIndexOutOfBoundsException"},
-	{"readSlot", "(I[I)V", nullptr, 0, $method(static_cast<void(ChunkedIntArray::*)(int32_t,$ints*)>(&ChunkedIntArray::readSlot))},
-	{"slotsUsed", "()I", nullptr, 0, $method(static_cast<int32_t(ChunkedIntArray::*)()>(&ChunkedIntArray::slotsUsed))},
-	{"specialFind", "(II)I", nullptr, 0, $method(static_cast<int32_t(ChunkedIntArray::*)(int32_t,int32_t)>(&ChunkedIntArray::specialFind))},
-	{"writeEntry", "(III)V", nullptr, 0, $method(static_cast<void(ChunkedIntArray::*)(int32_t,int32_t,int32_t)>(&ChunkedIntArray::writeEntry)), "java.lang.ArrayIndexOutOfBoundsException"},
-	{"writeSlot", "(IIIII)V", nullptr, 0, $method(static_cast<void(ChunkedIntArray::*)(int32_t,int32_t,int32_t,int32_t,int32_t)>(&ChunkedIntArray::writeSlot))},
+	{"<init>", "(I)V", nullptr, 0, $method(ChunkedIntArray, init$, void, int32_t)},
+	{"appendSlot", "(IIII)I", nullptr, 0, $method(ChunkedIntArray, appendSlot, int32_t, int32_t, int32_t, int32_t, int32_t)},
+	{"discardLast", "()V", nullptr, 0, $method(ChunkedIntArray, discardLast, void)},
+	{"readEntry", "(II)I", nullptr, 0, $method(ChunkedIntArray, readEntry, int32_t, int32_t, int32_t), "java.lang.ArrayIndexOutOfBoundsException"},
+	{"readSlot", "(I[I)V", nullptr, 0, $method(ChunkedIntArray, readSlot, void, int32_t, $ints*)},
+	{"slotsUsed", "()I", nullptr, 0, $method(ChunkedIntArray, slotsUsed, int32_t)},
+	{"specialFind", "(II)I", nullptr, 0, $method(ChunkedIntArray, specialFind, int32_t, int32_t, int32_t)},
+	{"writeEntry", "(III)V", nullptr, 0, $method(ChunkedIntArray, writeEntry, void, int32_t, int32_t, int32_t), "java.lang.ArrayIndexOutOfBoundsException"},
+	{"writeSlot", "(IIIII)V", nullptr, 0, $method(ChunkedIntArray, writeSlot, void, int32_t, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

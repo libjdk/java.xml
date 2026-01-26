@@ -42,11 +42,11 @@ $FieldInfo _SAX2DTM2$DescendantIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2DTM2$DescendantIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2DTM2$DescendantIterator::*)($SAX2DTM2*)>(&SAX2DTM2$DescendantIterator::init$))},
-	{"isDescendant", "(I)Z", nullptr, $PROTECTED | $FINAL, $method(static_cast<bool(SAX2DTM2$DescendantIterator::*)(int32_t)>(&SAX2DTM2$DescendantIterator::isDescendant))},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;)V", nullptr, $PUBLIC, $method(SAX2DTM2$DescendantIterator, init$, void, $SAX2DTM2*)},
+	{"isDescendant", "(I)Z", nullptr, $PROTECTED | $FINAL, $method(SAX2DTM2$DescendantIterator, isDescendant, bool, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$DescendantIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$DescendantIterator, reset, $DTMAxisIterator*)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$DescendantIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

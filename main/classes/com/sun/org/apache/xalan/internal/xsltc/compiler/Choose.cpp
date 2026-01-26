@@ -85,9 +85,9 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _Choose_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Choose::*)()>(&Choose::init$))},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(Choose, init$, void)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(Choose, display, void, int32_t)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(Choose, translate, void, $ClassGenerator*, $MethodGenerator*)},
 	{}
 };
 

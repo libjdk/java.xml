@@ -38,11 +38,11 @@ $FieldInfo _ElementDefinitionImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementDefinitionImpl_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ElementDefinitionImpl::*)($CoreDocumentImpl*,$String*)>(&ElementDefinitionImpl::init$))},
-	{"cloneNode", "(Z)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getAttributes", "()Lorg/w3c/dom/NamedNodeMap;", nullptr, $PUBLIC},
-	{"getNodeName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNodeType", "()S", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ElementDefinitionImpl, init$, void, $CoreDocumentImpl*, $String*)},
+	{"cloneNode", "(Z)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(ElementDefinitionImpl, cloneNode, $Node*, bool)},
+	{"getAttributes", "()Lorg/w3c/dom/NamedNodeMap;", nullptr, $PUBLIC, $virtualMethod(ElementDefinitionImpl, getAttributes, $NamedNodeMap*)},
+	{"getNodeName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ElementDefinitionImpl, getNodeName, $String*)},
+	{"getNodeType", "()S", nullptr, $PUBLIC, $virtualMethod(ElementDefinitionImpl, getNodeType, int16_t)},
 	{}
 };
 

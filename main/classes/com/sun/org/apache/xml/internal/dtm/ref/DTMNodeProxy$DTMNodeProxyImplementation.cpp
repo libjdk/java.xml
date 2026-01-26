@@ -27,11 +27,11 @@ namespace com {
 							namespace ref {
 
 $MethodInfo _DTMNodeProxy$DTMNodeProxyImplementation_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DTMNodeProxy$DTMNodeProxyImplementation::*)()>(&DTMNodeProxy$DTMNodeProxyImplementation::init$))},
-	{"createDocument", "(Ljava/lang/String;Ljava/lang/String;Lorg/w3c/dom/DocumentType;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC},
-	{"createDocumentType", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/DocumentType;", nullptr, $PUBLIC},
-	{"getFeature", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(DTMNodeProxy$DTMNodeProxyImplementation, init$, void)},
+	{"createDocument", "(Ljava/lang/String;Ljava/lang/String;Lorg/w3c/dom/DocumentType;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $virtualMethod(DTMNodeProxy$DTMNodeProxyImplementation, createDocument, $Document*, $String*, $String*, $DocumentType*)},
+	{"createDocumentType", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/DocumentType;", nullptr, $PUBLIC, $virtualMethod(DTMNodeProxy$DTMNodeProxyImplementation, createDocumentType, $DocumentType*, $String*, $String*, $String*)},
+	{"getFeature", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DTMNodeProxy$DTMNodeProxyImplementation, getFeature, $Object*, $String*, $String*)},
+	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(DTMNodeProxy$DTMNodeProxyImplementation, hasFeature, bool, $String*, $String*)},
 	{}
 };
 

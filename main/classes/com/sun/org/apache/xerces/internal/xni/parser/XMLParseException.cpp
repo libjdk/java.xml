@@ -35,16 +35,16 @@ $FieldInfo _XMLParseException_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLParseException_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLParseException::*)($XMLLocator*,$String*)>(&XMLParseException::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLParseException::*)($XMLLocator*,$String*,$Exception*)>(&XMLParseException::init$))},
-	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLParseException, init$, void, $XMLLocator*, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(XMLParseException, init$, void, $XMLLocator*, $String*, $Exception*)},
+	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLParseException, getBaseSystemId, $String*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(XMLParseException, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLParseException, getColumnNumber, int32_t)},
+	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLParseException, getExpandedSystemId, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLParseException, getLineNumber, int32_t)},
+	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLParseException, getLiteralSystemId, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLParseException, getPublicId, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLParseException, toString, $String*)},
 	{}
 };
 

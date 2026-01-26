@@ -123,16 +123,16 @@ $FieldInfo _Output_FieldInfo_[] = {
 };
 
 $MethodInfo _Output_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Output::*)()>(&Output::init$))},
-	{"disable", "()V", nullptr, $PUBLIC, $method(static_cast<void(Output::*)()>(&Output::disable))},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"enabled", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(Output::*)()>(&Output::enabled))},
-	{"getCdata", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(Output::*)()>(&Output::getCdata))},
-	{"getOutputMethod", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(Output::*)()>(&Output::getOutputMethod))},
-	{"mergeOutput", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Output;)V", nullptr, $PUBLIC, $method(static_cast<void(Output::*)(Output*)>(&Output::mergeOutput))},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"transferAttribute", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Output;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(Output::*)(Output*,$String*)>(&Output::transferAttribute))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(Output, init$, void)},
+	{"disable", "()V", nullptr, $PUBLIC, $method(Output, disable, void)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(Output, display, void, int32_t)},
+	{"enabled", "()Z", nullptr, $PUBLIC, $method(Output, enabled, bool)},
+	{"getCdata", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(Output, getCdata, $String*)},
+	{"getOutputMethod", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(Output, getOutputMethod, $String*)},
+	{"mergeOutput", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Output;)V", nullptr, $PUBLIC, $method(Output, mergeOutput, void, Output*)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(Output, parseContents, void, $Parser*)},
+	{"transferAttribute", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Output;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(Output, transferAttribute, void, Output*, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(Output, translate, void, $ClassGenerator*, $MethodGenerator*)},
 	{}
 };
 

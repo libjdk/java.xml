@@ -5,6 +5,9 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition.h>
 #include <jcpp.h>
 
+using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,13 +20,13 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSValue_MethodInfo_[] = {
-	{"getActualValue", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getActualValueType", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getListValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMemberTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMemberTypeDefinitions", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNormalizedValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getActualValue", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSValue, getActualValue, $Object*)},
+	{"getActualValueType", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSValue, getActualValueType, int16_t)},
+	{"getListValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSValue, getListValueTypes, $ShortList*)},
+	{"getMemberTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSValue, getMemberTypeDefinition, $XSSimpleTypeDefinition*)},
+	{"getMemberTypeDefinitions", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSValue, getMemberTypeDefinitions, $XSObjectList*)},
+	{"getNormalizedValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSValue, getNormalizedValue, $String*)},
+	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSValue, getTypeDefinition, $XSSimpleTypeDefinition*)},
 	{}
 };
 

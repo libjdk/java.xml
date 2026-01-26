@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <jcpp.h>
 
+using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,10 +16,10 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _NamedAndTyped_MethodInfo_[] = {
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setName", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setType", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamedAndTyped, getName, $String*)},
+	{"getType", "()Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamedAndTyped, getType, $Type*)},
+	{"setName", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamedAndTyped, setName, void, $String*)},
+	{"setType", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamedAndTyped, setType, void, $Type*)},
 	{}
 };
 

@@ -25,7 +25,7 @@ $FieldInfo _MethodGen$BranchTarget_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodGen$BranchTarget_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)V", nullptr, 0, $method(static_cast<void(MethodGen$BranchTarget::*)($InstructionHandle*,int32_t)>(&MethodGen$BranchTarget::init$))},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)V", nullptr, 0, $method(MethodGen$BranchTarget, init$, void, $InstructionHandle*, int32_t)},
 	{}
 };
 

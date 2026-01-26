@@ -22,11 +22,11 @@ $FieldInfo _ShadowedSymbolTable_FieldInfo_[] = {
 };
 
 $MethodInfo _ShadowedSymbolTable_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(ShadowedSymbolTable::*)($SymbolTable*)>(&ShadowedSymbolTable::init$))},
-	{"addSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"addSymbol", "([CII)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"hash", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"hash", "([CII)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(ShadowedSymbolTable, init$, void, $SymbolTable*)},
+	{"addSymbol", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ShadowedSymbolTable, addSymbol, $String*, $String*)},
+	{"addSymbol", "([CII)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ShadowedSymbolTable, addSymbol, $String*, $chars*, int32_t, int32_t)},
+	{"hash", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(ShadowedSymbolTable, hash, int32_t, $String*)},
+	{"hash", "([CII)I", nullptr, $PUBLIC, $virtualMethod(ShadowedSymbolTable, hash, int32_t, $chars*, int32_t, int32_t)},
 	{}
 };
 

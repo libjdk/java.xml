@@ -20,13 +20,13 @@ $FieldInfo _TransformerFactoryConfigurationError_FieldInfo_[] = {
 };
 
 $MethodInfo _TransformerFactoryConfigurationError_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(TransformerFactoryConfigurationError::*)()>(&TransformerFactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerFactoryConfigurationError::*)($String*)>(&TransformerFactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerFactoryConfigurationError::*)($Exception*)>(&TransformerFactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/Exception;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerFactoryConfigurationError::*)($Exception*,$String*)>(&TransformerFactoryConfigurationError::init$))},
-	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
-	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(TransformerFactoryConfigurationError, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(TransformerFactoryConfigurationError, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(TransformerFactoryConfigurationError, init$, void, $Exception*)},
+	{"<init>", "(Ljava/lang/Exception;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(TransformerFactoryConfigurationError, init$, void, $Exception*, $String*)},
+	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(TransformerFactoryConfigurationError, getCause, $Throwable*)},
+	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC, $virtualMethod(TransformerFactoryConfigurationError, getException, $Exception*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(TransformerFactoryConfigurationError, getMessage, $String*)},
 	{}
 };
 

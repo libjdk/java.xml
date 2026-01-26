@@ -28,7 +28,7 @@ $FieldInfo _ExpandedNameTable$HashEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _ExpandedNameTable$HashEntry_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/ExtendedType;IILcom/sun/org/apache/xml/internal/dtm/ref/ExpandedNameTable$HashEntry;)V", nullptr, $PROTECTED, $method(static_cast<void(ExpandedNameTable$HashEntry::*)($ExtendedType*,int32_t,int32_t,ExpandedNameTable$HashEntry*)>(&ExpandedNameTable$HashEntry::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/ExtendedType;IILcom/sun/org/apache/xml/internal/dtm/ref/ExpandedNameTable$HashEntry;)V", nullptr, $PROTECTED, $method(ExpandedNameTable$HashEntry, init$, void, $ExtendedType*, int32_t, int32_t, ExpandedNameTable$HashEntry*)},
 	{}
 };
 

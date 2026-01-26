@@ -45,17 +45,17 @@ $FieldInfo _XPathContext$XPathExpressionContext_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathContext$XPathExpressionContext_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathContext$XPathExpressionContext::*)($XPathContext*)>(&XPathContext$XPathExpressionContext::init$))},
-	{"getContextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getContextNodes", "()Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC},
-	{"getDTMManager", "()Lcom/sun/org/apache/xml/internal/dtm/DTMManager;", nullptr, $PUBLIC},
-	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC},
-	{"getVariableOrParam", "(Lcom/sun/org/apache/xml/internal/utils/QName;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $FINAL, nullptr, "javax.xml.transform.TransformerException"},
-	{"getXPathContext", "()Lcom/sun/org/apache/xpath/internal/XPathContext;", nullptr, $PUBLIC},
-	{"overrideDefaultParser", "()Z", nullptr, $PUBLIC},
-	{"setOverrideDefaultParser", "(Z)V", nullptr, $PUBLIC},
-	{"toNumber", "(Lorg/w3c/dom/Node;)D", nullptr, $PUBLIC},
-	{"toString", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)V", nullptr, $PUBLIC, $method(XPathContext$XPathExpressionContext, init$, void, $XPathContext*)},
+	{"getContextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, getContextNode, $Node*)},
+	{"getContextNodes", "()Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, getContextNodes, $NodeIterator*)},
+	{"getDTMManager", "()Lcom/sun/org/apache/xml/internal/dtm/DTMManager;", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, getDTMManager, $DTMManager*)},
+	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, getErrorListener, $ErrorListener*)},
+	{"getVariableOrParam", "(Lcom/sun/org/apache/xml/internal/utils/QName;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $FINAL, $virtualMethod(XPathContext$XPathExpressionContext, getVariableOrParam, $XObject*, $QName*), "javax.xml.transform.TransformerException"},
+	{"getXPathContext", "()Lcom/sun/org/apache/xpath/internal/XPathContext;", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, getXPathContext, $XPathContext*)},
+	{"overrideDefaultParser", "()Z", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, overrideDefaultParser, bool)},
+	{"setOverrideDefaultParser", "(Z)V", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, setOverrideDefaultParser, void, bool)},
+	{"toNumber", "(Lorg/w3c/dom/Node;)D", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, toNumber, double, $Node*)},
+	{"toString", "(Lorg/w3c/dom/Node;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPathContext$XPathExpressionContext, toString, $String*, $Node*)},
 	{}
 };
 

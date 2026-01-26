@@ -137,10 +137,10 @@ $FieldInfo _CodeHTML_FieldInfo_[] = {
 };
 
 $MethodInfo _CodeHTML_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;[Lcom/sun/org/apache/bcel/internal/classfile/Method;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Lcom/sun/org/apache/bcel/internal/util/ConstantHTML;)V", nullptr, 0, $method(static_cast<void(CodeHTML::*)($String*,$String*,$MethodArray*,$ConstantPool*,$ConstantHTML*)>(&CodeHTML::init$)), "java.io.IOException"},
-	{"codeToHTML", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;I)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(CodeHTML::*)($ByteSequence*,int32_t)>(&CodeHTML::codeToHTML)), "java.io.IOException"},
-	{"findGotos", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Lcom/sun/org/apache/bcel/internal/classfile/Code;)V", nullptr, $PRIVATE, $method(static_cast<void(CodeHTML::*)($ByteSequence*,$Code*)>(&CodeHTML::findGotos)), "java.io.IOException"},
-	{"writeMethod", "(Lcom/sun/org/apache/bcel/internal/classfile/Method;I)V", nullptr, $PRIVATE, $method(static_cast<void(CodeHTML::*)($Method*,int32_t)>(&CodeHTML::writeMethod)), "java.io.IOException"},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;[Lcom/sun/org/apache/bcel/internal/classfile/Method;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Lcom/sun/org/apache/bcel/internal/util/ConstantHTML;)V", nullptr, 0, $method(CodeHTML, init$, void, $String*, $String*, $MethodArray*, $ConstantPool*, $ConstantHTML*), "java.io.IOException"},
+	{"codeToHTML", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;I)Ljava/lang/String;", nullptr, $PRIVATE, $method(CodeHTML, codeToHTML, $String*, $ByteSequence*, int32_t), "java.io.IOException"},
+	{"findGotos", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Lcom/sun/org/apache/bcel/internal/classfile/Code;)V", nullptr, $PRIVATE, $method(CodeHTML, findGotos, void, $ByteSequence*, $Code*), "java.io.IOException"},
+	{"writeMethod", "(Lcom/sun/org/apache/bcel/internal/classfile/Method;I)V", nullptr, $PRIVATE, $method(CodeHTML, writeMethod, void, $Method*, int32_t), "java.io.IOException"},
 	{}
 };
 

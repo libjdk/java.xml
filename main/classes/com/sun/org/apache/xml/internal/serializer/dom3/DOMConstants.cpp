@@ -107,7 +107,7 @@ $FieldInfo _DOMConstants_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMConstants_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMConstants::*)()>(&DOMConstants::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMConstants, init$, void)},
 	{}
 };
 

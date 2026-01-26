@@ -16,7 +16,7 @@ namespace com {
 						namespace res {
 
 $MethodInfo _XSLTErrorResources_en_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSLTErrorResources_en::*)()>(&XSLTErrorResources_en::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSLTErrorResources_en, init$, void)},
 	{}
 };
 

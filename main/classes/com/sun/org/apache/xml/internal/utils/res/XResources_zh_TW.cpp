@@ -32,8 +32,8 @@ $FieldInfo _XResources_zh_TW_FieldInfo_[] = {
 };
 
 $MethodInfo _XResources_zh_TW_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XResources_zh_TW::*)()>(&XResources_zh_TW::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XResources_zh_TW, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XResources_zh_TW, getContents, $ObjectArray2*)},
 	{}
 };
 

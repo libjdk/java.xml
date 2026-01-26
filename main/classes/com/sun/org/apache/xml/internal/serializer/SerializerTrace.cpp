@@ -19,6 +19,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Attributes = ::org::xml::sax::Attributes;
 
 namespace com {
 	namespace sun {
@@ -45,12 +46,12 @@ $FieldInfo _SerializerTrace_FieldInfo_[] = {
 };
 
 $MethodInfo _SerializerTrace_MethodInfo_[] = {
-	{"fireGenerateEvent", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"fireGenerateEvent", "(ILjava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"fireGenerateEvent", "(I[CII)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"fireGenerateEvent", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"fireGenerateEvent", "(ILjava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"hasTraceListeners", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"fireGenerateEvent", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerTrace, fireGenerateEvent, void, int32_t)},
+	{"fireGenerateEvent", "(ILjava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerTrace, fireGenerateEvent, void, int32_t, $String*, $Attributes*)},
+	{"fireGenerateEvent", "(I[CII)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerTrace, fireGenerateEvent, void, int32_t, $chars*, int32_t, int32_t)},
+	{"fireGenerateEvent", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerTrace, fireGenerateEvent, void, int32_t, $String*, $String*)},
+	{"fireGenerateEvent", "(ILjava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerTrace, fireGenerateEvent, void, int32_t, $String*)},
+	{"hasTraceListeners", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializerTrace, hasTraceListeners, bool)},
 	{}
 };
 

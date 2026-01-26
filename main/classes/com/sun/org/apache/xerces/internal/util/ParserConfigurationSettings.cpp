@@ -58,20 +58,20 @@ $FieldInfo _ParserConfigurationSettings_FieldInfo_[] = {
 };
 
 $MethodInfo _ParserConfigurationSettings_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ParserConfigurationSettings::*)()>(&ParserConfigurationSettings::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(ParserConfigurationSettings::*)($XMLComponentManager*)>(&ParserConfigurationSettings::init$))},
-	{"addRecognizedFeatures", "([Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"addRecognizedProperties", "([Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"checkFeature", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"checkProperty", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"getFeature", "(Ljava/lang/String;Z)Z", nullptr, $PUBLIC | $FINAL},
-	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"getProperty", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $FINAL},
-	{"getPropertyState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ParserConfigurationSettings, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(ParserConfigurationSettings, init$, void, $XMLComponentManager*)},
+	{"addRecognizedFeatures", "([Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, addRecognizedFeatures, void, $StringArray*)},
+	{"addRecognizedProperties", "([Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, addRecognizedProperties, void, $StringArray*)},
+	{"checkFeature", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PROTECTED, $virtualMethod(ParserConfigurationSettings, checkFeature, $FeatureState*, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"checkProperty", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PROTECTED, $virtualMethod(ParserConfigurationSettings, checkProperty, $PropertyState*, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, getFeature, bool, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"getFeature", "(Ljava/lang/String;Z)Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(ParserConfigurationSettings, getFeature, bool, $String*, bool)},
+	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, getFeatureState, $FeatureState*, $String*)},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, getProperty, $Object*, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"getProperty", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $FINAL, $virtualMethod(ParserConfigurationSettings, getProperty, $Object*, $String*, Object$*)},
+	{"getPropertyState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, getPropertyState, $PropertyState*, $String*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, setFeature, void, $String*, bool), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(ParserConfigurationSettings, setProperty, void, $String*, Object$*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
 	{}
 };
 

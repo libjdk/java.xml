@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/XMLDocumentHandler.h>
 #include <jcpp.h>
 
+using $XMLDocumentHandler = ::com::sun::org::apache::xerces::internal::xni::XMLDocumentHandler;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,8 +17,8 @@ namespace com {
 							namespace parser {
 
 $MethodInfo _XMLDocumentSource_MethodInfo_[] = {
-	{"getDocumentHandler", "()Lcom/sun/org/apache/xerces/internal/xni/XMLDocumentHandler;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDocumentHandler", "(Lcom/sun/org/apache/xerces/internal/xni/XMLDocumentHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDocumentHandler", "()Lcom/sun/org/apache/xerces/internal/xni/XMLDocumentHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDocumentSource, getDocumentHandler, $XMLDocumentHandler*)},
+	{"setDocumentHandler", "(Lcom/sun/org/apache/xerces/internal/xni/XMLDocumentHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDocumentSource, setDocumentHandler, void, $XMLDocumentHandler*)},
 	{}
 };
 

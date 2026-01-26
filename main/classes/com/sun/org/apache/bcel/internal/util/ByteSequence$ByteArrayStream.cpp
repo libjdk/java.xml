@@ -18,9 +18,9 @@ namespace com {
 						namespace util {
 
 $MethodInfo _ByteSequence$ByteArrayStream_MethodInfo_[] = {
-	{"<init>", "([B)V", nullptr, 0, $method(static_cast<void(ByteSequence$ByteArrayStream::*)($bytes*)>(&ByteSequence$ByteArrayStream::init$))},
-	{"getPosition", "()I", nullptr, 0, $method(static_cast<int32_t(ByteSequence$ByteArrayStream::*)()>(&ByteSequence$ByteArrayStream::getPosition))},
-	{"unreadByte", "()V", nullptr, 0, $method(static_cast<void(ByteSequence$ByteArrayStream::*)()>(&ByteSequence$ByteArrayStream::unreadByte))},
+	{"<init>", "([B)V", nullptr, 0, $method(ByteSequence$ByteArrayStream, init$, void, $bytes*)},
+	{"getPosition", "()I", nullptr, 0, $method(ByteSequence$ByteArrayStream, getPosition, int32_t)},
+	{"unreadByte", "()V", nullptr, 0, $method(ByteSequence$ByteArrayStream, unreadByte, void)},
 	{}
 };
 

@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Event = ::org::w3c::dom::events::Event;
 
 namespace org {
 	namespace w3c {
@@ -12,7 +13,7 @@ namespace org {
 			namespace events {
 
 $MethodInfo _DocumentEvent_MethodInfo_[] = {
-	{"createEvent", "(Ljava/lang/String;)Lorg/w3c/dom/events/Event;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"createEvent", "(Ljava/lang/String;)Lorg/w3c/dom/events/Event;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentEvent, createEvent, $Event*, $String*), "org.w3c.dom.DOMException"},
 	{}
 };
 

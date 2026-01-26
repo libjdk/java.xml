@@ -26,9 +26,9 @@ $FieldInfo _AbstractSAXParser$2_FieldInfo_[] = {
 };
 
 $MethodInfo _AbstractSAXParser$2_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/parsers/AbstractSAXParser;)V", nullptr, 0, $method(static_cast<void(AbstractSAXParser$2::*)($AbstractSAXParser*)>(&AbstractSAXParser$2::init$))},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/parsers/AbstractSAXParser;)V", nullptr, 0, $method(AbstractSAXParser$2, init$, void, $AbstractSAXParser*)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$2, getEncoding, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AbstractSAXParser$2, getXMLVersion, $String*)},
 	{}
 };
 

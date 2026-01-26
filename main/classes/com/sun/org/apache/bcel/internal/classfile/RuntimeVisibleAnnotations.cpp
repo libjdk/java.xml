@@ -28,9 +28,9 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _RuntimeVisibleAnnotations_MethodInfo_[] = {
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(RuntimeVisibleAnnotations::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&RuntimeVisibleAnnotations::init$)), "java.io.IOException"},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, nullptr, "java.io.IOException"},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(RuntimeVisibleAnnotations, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(RuntimeVisibleAnnotations, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(RuntimeVisibleAnnotations, dump, void, $DataOutputStream*), "java.io.IOException"},
 	{}
 };
 

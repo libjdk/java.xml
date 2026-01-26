@@ -2,6 +2,7 @@
 
 #include <org/w3c/dom/DOMConfiguration.h>
 #include <org/w3c/dom/Document.h>
+#include <org/w3c/dom/Node.h>
 #include <org/w3c/dom/ls/LSInput.h>
 #include <org/w3c/dom/ls/LSParserFilter.h>
 #include <jcpp.h>
@@ -15,6 +16,11 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $DOMConfiguration = ::org::w3c::dom::DOMConfiguration;
+using $Document = ::org::w3c::dom::Document;
+using $Node = ::org::w3c::dom::Node;
+using $LSInput = ::org::w3c::dom::ls::LSInput;
+using $LSParserFilter = ::org::w3c::dom::ls::LSParserFilter;
 
 namespace org {
 	namespace w3c {
@@ -31,15 +37,15 @@ $FieldInfo _LSParser_FieldInfo_[] = {
 };
 
 $MethodInfo _LSParser_MethodInfo_[] = {
-	{"abort", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAsync", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getBusy", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFilter", "()Lorg/w3c/dom/ls/LSParserFilter;", nullptr, $PUBLIC | $ABSTRACT},
-	{"parse", "(Lorg/w3c/dom/ls/LSInput;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
-	{"parseURI", "(Ljava/lang/String;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
-	{"parseWithContext", "(Lorg/w3c/dom/ls/LSInput;Lorg/w3c/dom/Node;S)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
-	{"setFilter", "(Lorg/w3c/dom/ls/LSParserFilter;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"abort", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, abort, void)},
+	{"getAsync", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, getAsync, bool)},
+	{"getBusy", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, getBusy, bool)},
+	{"getDomConfig", "()Lorg/w3c/dom/DOMConfiguration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, getDomConfig, $DOMConfiguration*)},
+	{"getFilter", "()Lorg/w3c/dom/ls/LSParserFilter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, getFilter, $LSParserFilter*)},
+	{"parse", "(Lorg/w3c/dom/ls/LSInput;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, parse, $Document*, $LSInput*), "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
+	{"parseURI", "(Ljava/lang/String;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, parseURI, $Document*, $String*), "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
+	{"parseWithContext", "(Lorg/w3c/dom/ls/LSInput;Lorg/w3c/dom/Node;S)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, parseWithContext, $Node*, $LSInput*, $Node*, int16_t), "org.w3c.dom.DOMException,org.w3c.dom.ls.LSException"},
+	{"setFilter", "(Lorg/w3c/dom/ls/LSParserFilter;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSParser, setFilter, void, $LSParserFilter*)},
 	{}
 };
 

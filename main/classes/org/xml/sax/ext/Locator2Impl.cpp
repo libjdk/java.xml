@@ -32,12 +32,12 @@ $MethodInfo _Locator2Impl_MethodInfo_[] = {
 	{"*getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{"*getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Locator2Impl::*)()>(&Locator2Impl::init$))},
-	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(static_cast<void(Locator2Impl::*)($Locator*)>(&Locator2Impl::init$))},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setXMLVersion", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Locator2Impl, init$, void)},
+	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(Locator2Impl, init$, void, $Locator*)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Locator2Impl, getEncoding, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Locator2Impl, getXMLVersion, $String*)},
+	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(Locator2Impl, setEncoding, void, $String*)},
+	{"setXMLVersion", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(Locator2Impl, setXMLVersion, void, $String*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

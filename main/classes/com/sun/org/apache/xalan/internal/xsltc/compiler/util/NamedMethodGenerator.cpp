@@ -47,10 +47,10 @@ $FieldInfo _NamedMethodGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _NamedMethodGenerator_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(static_cast<void(NamedMethodGenerator::*)(int32_t,$Type*,$TypeArray*,$StringArray*,$String*,$String*,$InstructionList*,$ConstantPoolGen*)>(&NamedMethodGenerator::init$))},
-	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"loadParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(static_cast<$Instruction*(NamedMethodGenerator::*)(int32_t)>(&NamedMethodGenerator::loadParameter))},
-	{"storeParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(static_cast<$Instruction*(NamedMethodGenerator::*)(int32_t)>(&NamedMethodGenerator::storeParameter))},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(NamedMethodGenerator, init$, void, int32_t, $Type*, $TypeArray*, $StringArray*, $String*, $String*, $InstructionList*, $ConstantPoolGen*)},
+	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(NamedMethodGenerator, getLocalIndex, int32_t, $String*)},
+	{"loadParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(NamedMethodGenerator, loadParameter, $Instruction*, int32_t)},
+	{"storeParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(NamedMethodGenerator, storeParameter, $Instruction*, int32_t)},
 	{}
 };
 

@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _FNEG_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FNEG::*)()>(&FNEG::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FNEG, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(FNEG, accept, void, $Visitor*)},
 	{}
 };
 

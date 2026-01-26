@@ -39,8 +39,8 @@ $FieldInfo _ConstantUtf8$Cache_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantUtf8$Cache_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(ConstantUtf8$Cache::*)()>(&ConstantUtf8$Cache::init$))},
-	{"isEnabled", "()Z", nullptr, $STATIC, $method(static_cast<bool(*)()>(&ConstantUtf8$Cache::isEnabled))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(ConstantUtf8$Cache, init$, void)},
+	{"isEnabled", "()Z", nullptr, $STATIC, $staticMethod(ConstantUtf8$Cache, isEnabled, bool)},
 	{}
 };
 

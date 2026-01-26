@@ -28,10 +28,10 @@ $FieldInfo _OutlineableChunkStart_FieldInfo_[] = {
 };
 
 $MethodInfo _OutlineableChunkStart_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(OutlineableChunkStart::*)()>(&OutlineableChunkStart::init$))},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "(Z)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(OutlineableChunkStart, init$, void)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(OutlineableChunkStart, getName, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(OutlineableChunkStart, toString, $String*)},
+	{"toString", "(Z)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(OutlineableChunkStart, toString, $String*, bool)},
 	{}
 };
 

@@ -24,9 +24,9 @@ $FieldInfo _WrappedRuntimeException_FieldInfo_[] = {
 };
 
 $MethodInfo _WrappedRuntimeException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(WrappedRuntimeException::*)($Exception*)>(&WrappedRuntimeException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(WrappedRuntimeException::*)($String*,$Exception*)>(&WrappedRuntimeException::init$))},
-	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC, $method(static_cast<$Exception*(WrappedRuntimeException::*)()>(&WrappedRuntimeException::getException))},
+	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(WrappedRuntimeException, init$, void, $Exception*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(WrappedRuntimeException, init$, void, $String*, $Exception*)},
+	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC, $method(WrappedRuntimeException, getException, $Exception*)},
 	{}
 };
 

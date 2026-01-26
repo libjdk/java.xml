@@ -30,10 +30,10 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _IF_ICMPEQ_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(IF_ICMPEQ::*)()>(&IF_ICMPEQ::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(IF_ICMPEQ::*)($InstructionHandle*)>(&IF_ICMPEQ::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(IF_ICMPEQ, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(IF_ICMPEQ, init$, void, $InstructionHandle*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(IF_ICMPEQ, accept, void, $Visitor*)},
+	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC, $virtualMethod(IF_ICMPEQ, negate, $IfInstruction*)},
 	{}
 };
 

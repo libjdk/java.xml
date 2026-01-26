@@ -22,8 +22,8 @@ $FieldInfo _DVFactoryException_FieldInfo_[] = {
 };
 
 $MethodInfo _DVFactoryException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DVFactoryException::*)()>(&DVFactoryException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DVFactoryException::*)($String*)>(&DVFactoryException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DVFactoryException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DVFactoryException, init$, void, $String*)},
 	{}
 };
 

@@ -43,16 +43,16 @@ $FieldInfo _UCSReader_FieldInfo_[] = {
 };
 
 $MethodInfo _UCSReader_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/InputStream;S)V", nullptr, $PUBLIC, $method(static_cast<void(UCSReader::*)($InputStream*,int16_t)>(&UCSReader::init$))},
-	{"<init>", "(Ljava/io/InputStream;IS)V", nullptr, $PUBLIC, $method(static_cast<void(UCSReader::*)($InputStream*,int32_t,int16_t)>(&UCSReader::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"mark", "(I)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"markSupported", "()Z", nullptr, $PUBLIC},
-	{"read", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"read", "([CII)I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"ready", "()Z", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"reset", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"skip", "(J)J", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Ljava/io/InputStream;S)V", nullptr, $PUBLIC, $method(UCSReader, init$, void, $InputStream*, int16_t)},
+	{"<init>", "(Ljava/io/InputStream;IS)V", nullptr, $PUBLIC, $method(UCSReader, init$, void, $InputStream*, int32_t, int16_t)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(UCSReader, close, void), "java.io.IOException"},
+	{"mark", "(I)V", nullptr, $PUBLIC, $virtualMethod(UCSReader, mark, void, int32_t), "java.io.IOException"},
+	{"markSupported", "()Z", nullptr, $PUBLIC, $virtualMethod(UCSReader, markSupported, bool)},
+	{"read", "()I", nullptr, $PUBLIC, $virtualMethod(UCSReader, read, int32_t), "java.io.IOException"},
+	{"read", "([CII)I", nullptr, $PUBLIC, $virtualMethod(UCSReader, read, int32_t, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"ready", "()Z", nullptr, $PUBLIC, $virtualMethod(UCSReader, ready, bool), "java.io.IOException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(UCSReader, reset, void), "java.io.IOException"},
+	{"skip", "(J)J", nullptr, $PUBLIC, $virtualMethod(UCSReader, skip, int64_t, int64_t), "java.io.IOException"},
 	{}
 };
 

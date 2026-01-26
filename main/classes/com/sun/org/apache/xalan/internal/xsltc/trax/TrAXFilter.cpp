@@ -54,13 +54,13 @@ $FieldInfo _TrAXFilter_FieldInfo_[] = {
 };
 
 $MethodInfo _TrAXFilter_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/transform/Templates;)V", nullptr, $PUBLIC, $method(static_cast<void(TrAXFilter::*)($Templates*)>(&TrAXFilter::init$)), "javax.xml.transform.TransformerConfigurationException"},
-	{"createParent", "()V", nullptr, $PRIVATE, $method(static_cast<void(TrAXFilter::*)()>(&TrAXFilter::createParent)), "org.xml.sax.SAXException"},
-	{"getTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC},
-	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC},
-	{"setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/transform/Templates;)V", nullptr, $PUBLIC, $method(TrAXFilter, init$, void, $Templates*), "javax.xml.transform.TransformerConfigurationException"},
+	{"createParent", "()V", nullptr, $PRIVATE, $method(TrAXFilter, createParent, void), "org.xml.sax.SAXException"},
+	{"getTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC, $virtualMethod(TrAXFilter, getTransformer, $Transformer*)},
+	{"parse", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $virtualMethod(TrAXFilter, parse, void, $InputSource*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"parse", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(TrAXFilter, parse, void, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $virtualMethod(TrAXFilter, setContentHandler, void, $ContentHandler*)},
+	{"setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", nullptr, $PUBLIC, $virtualMethod(TrAXFilter, setErrorListener, void, $ErrorListener*)},
 	{}
 };
 

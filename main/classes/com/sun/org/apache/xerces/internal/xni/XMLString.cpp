@@ -22,15 +22,15 @@ $FieldInfo _XMLString_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLString_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLString::*)()>(&XMLString::init$))},
-	{"<init>", "([CII)V", nullptr, $PUBLIC, $method(static_cast<void(XMLString::*)($chars*,int32_t,int32_t)>(&XMLString::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLString::*)(XMLString*)>(&XMLString::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"equals", "([CII)Z", nullptr, $PUBLIC},
-	{"equals", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"setValues", "([CII)V", nullptr, $PUBLIC},
-	{"setValues", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLString, init$, void)},
+	{"<init>", "([CII)V", nullptr, $PUBLIC, $method(XMLString, init$, void, $chars*, int32_t, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC, $method(XMLString, init$, void, XMLString*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLString, clear, void)},
+	{"equals", "([CII)Z", nullptr, $PUBLIC, $virtualMethod(XMLString, equals, bool, $chars*, int32_t, int32_t)},
+	{"equals", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XMLString, equals, bool, $String*)},
+	{"setValues", "([CII)V", nullptr, $PUBLIC, $virtualMethod(XMLString, setValues, void, $chars*, int32_t, int32_t)},
+	{"setValues", "(Lcom/sun/org/apache/xerces/internal/xni/XMLString;)V", nullptr, $PUBLIC, $virtualMethod(XMLString, setValues, void, XMLString*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLString, toString, $String*)},
 	{}
 };
 

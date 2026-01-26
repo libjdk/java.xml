@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/classfile/ConstantPool.h>
 #include <jcpp.h>
 
+using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _ConstantObject_MethodInfo_[] = {
-	{"getConstantValue", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getConstantValue", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ConstantObject, getConstantValue, $Object*, $ConstantPool*)},
 	{}
 };
 

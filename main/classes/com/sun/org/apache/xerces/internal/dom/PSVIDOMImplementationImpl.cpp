@@ -34,10 +34,10 @@ $FieldInfo _PSVIDOMImplementationImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _PSVIDOMImplementationImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(PSVIDOMImplementationImpl::*)()>(&PSVIDOMImplementationImpl::init$))},
-	{"createDocument", "(Lorg/w3c/dom/DocumentType;)Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;", nullptr, $PROTECTED},
-	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DOMImplementation*(*)()>(&PSVIDOMImplementationImpl::getDOMImplementation))},
-	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(PSVIDOMImplementationImpl, init$, void)},
+	{"createDocument", "(Lorg/w3c/dom/DocumentType;)Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;", nullptr, $PROTECTED, $virtualMethod(PSVIDOMImplementationImpl, createDocument, $CoreDocumentImpl*, $DocumentType*)},
+	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $staticMethod(PSVIDOMImplementationImpl, getDOMImplementation, $DOMImplementation*)},
+	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(PSVIDOMImplementationImpl, hasFeature, bool, $String*, $String*)},
 	{}
 };
 

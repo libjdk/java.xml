@@ -20,13 +20,13 @@ $FieldInfo _Entity_FieldInfo_[] = {
 };
 
 $MethodInfo _Entity_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Entity::*)()>(&Entity::init$))},
-	{"<init>", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(Entity::*)($String*,bool)>(&Entity::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"isEntityDeclInExternalSubset", "()Z", nullptr, $PUBLIC},
-	{"isExternal", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isUnparsed", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"setValues", "(Lcom/sun/xml/internal/stream/Entity;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Entity, init$, void)},
+	{"<init>", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(Entity, init$, void, $String*, bool)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(Entity, clear, void)},
+	{"isEntityDeclInExternalSubset", "()Z", nullptr, $PUBLIC, $virtualMethod(Entity, isEntityDeclInExternalSubset, bool)},
+	{"isExternal", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, isExternal, bool)},
+	{"isUnparsed", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Entity, isUnparsed, bool)},
+	{"setValues", "(Lcom/sun/xml/internal/stream/Entity;)V", nullptr, $PUBLIC, $virtualMethod(Entity, setValues, void, Entity*)},
 	{}
 };
 

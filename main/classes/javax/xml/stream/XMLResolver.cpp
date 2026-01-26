@@ -10,7 +10,7 @@ namespace javax {
 		namespace stream {
 
 $MethodInfo _XMLResolver_MethodInfo_[] = {
-	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
+	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLResolver, resolveEntity, $Object*, $String*, $String*, $String*, $String*), "javax.xml.stream.XMLStreamException"},
 	{}
 };
 

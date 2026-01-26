@@ -73,15 +73,15 @@ $FieldInfo _XMLDocumentFragmentScannerImpl$FragmentContentDriver_FieldInfo_[] = 
 };
 
 $MethodInfo _XMLDocumentFragmentScannerImpl$FragmentContentDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLDocumentFragmentScannerImpl$FragmentContentDriver::*)($XMLDocumentFragmentScannerImpl*)>(&XMLDocumentFragmentScannerImpl$FragmentContentDriver::init$))},
-	{"decideSubState", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"elementDepthIsZeroHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"endOfFileHook", "(Ljava/io/EOFException;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanForDoctypeHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"startOfContent", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLDocumentFragmentScannerImpl$FragmentContentDriver::*)()>(&XMLDocumentFragmentScannerImpl$FragmentContentDriver::startOfContent)), "java.io.IOException"},
-	{"startOfMarkup", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLDocumentFragmentScannerImpl$FragmentContentDriver::*)()>(&XMLDocumentFragmentScannerImpl$FragmentContentDriver::startOfMarkup)), "java.io.IOException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl;)V", nullptr, $PROTECTED, $method(XMLDocumentFragmentScannerImpl$FragmentContentDriver, init$, void, $XMLDocumentFragmentScannerImpl*)},
+	{"decideSubState", "()V", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$FragmentContentDriver, decideSubState, void), "java.io.IOException"},
+	{"elementDepthIsZeroHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLDocumentFragmentScannerImpl$FragmentContentDriver, elementDepthIsZeroHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"endOfFileHook", "(Ljava/io/EOFException;)V", nullptr, $PROTECTED, $virtualMethod(XMLDocumentFragmentScannerImpl$FragmentContentDriver, endOfFileHook, void, $EOFException*), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$FragmentContentDriver, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanForDoctypeHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLDocumentFragmentScannerImpl$FragmentContentDriver, scanForDoctypeHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLDocumentFragmentScannerImpl$FragmentContentDriver, scanRootElementHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"startOfContent", "()V", nullptr, $PRIVATE, $method(XMLDocumentFragmentScannerImpl$FragmentContentDriver, startOfContent, void), "java.io.IOException"},
+	{"startOfMarkup", "()V", nullptr, $PRIVATE, $method(XMLDocumentFragmentScannerImpl$FragmentContentDriver, startOfMarkup, void), "java.io.IOException"},
 	{}
 };
 

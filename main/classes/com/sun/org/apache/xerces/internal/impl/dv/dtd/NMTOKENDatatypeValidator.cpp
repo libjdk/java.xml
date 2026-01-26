@@ -22,8 +22,8 @@ namespace com {
 								namespace dtd {
 
 $MethodInfo _NMTOKENDatatypeValidator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NMTOKENDatatypeValidator::*)()>(&NMTOKENDatatypeValidator::init$))},
-	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NMTOKENDatatypeValidator, init$, void)},
+	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, $virtualMethod(NMTOKENDatatypeValidator, validate, void, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
 	{}
 };
 

@@ -22,8 +22,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _IMPDEP1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(IMPDEP1::*)()>(&IMPDEP1::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(IMPDEP1, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(IMPDEP1, accept, void, $Visitor*)},
 	{}
 };
 

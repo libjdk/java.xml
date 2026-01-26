@@ -8,6 +8,7 @@
 #undef THRESHOLD
 
 using $LargeContainer = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::LargeContainer;
+using $OneAttr = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::OneAttr;
 using $SmallContainer = ::com::sun::org::apache::xerces::internal::impl::xs::traversers::SmallContainer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
@@ -31,10 +32,10 @@ $FieldInfo _Container_FieldInfo_[] = {
 };
 
 $MethodInfo _Container_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Container::*)()>(&Container::init$))},
-	{"get", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;", nullptr, $ABSTRACT},
-	{"getContainer", "(I)Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/Container;", nullptr, $STATIC, $method(static_cast<Container*(*)(int32_t)>(&Container::getContainer))},
-	{"put", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;)V", nullptr, $ABSTRACT},
+	{"<init>", "()V", nullptr, 0, $method(Container, init$, void)},
+	{"get", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;", nullptr, $ABSTRACT, $virtualMethod(Container, get, $OneAttr*, $String*)},
+	{"getContainer", "(I)Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/Container;", nullptr, $STATIC, $staticMethod(Container, getContainer, Container*, int32_t)},
+	{"put", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/OneAttr;)V", nullptr, $ABSTRACT, $virtualMethod(Container, put, void, $String*, $OneAttr*)},
 	{}
 };
 

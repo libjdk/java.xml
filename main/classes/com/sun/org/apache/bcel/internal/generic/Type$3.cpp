@@ -19,8 +19,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _Type$3_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Type$3::*)()>(&Type$3::init$))},
-	{"initialValue", "()Ljava/lang/Integer;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, 0, $method(Type$3, init$, void)},
+	{"initialValue", "()Ljava/lang/Integer;", nullptr, $PROTECTED, $virtualMethod(Type$3, initialValue, $Object*)},
 	{}
 };
 

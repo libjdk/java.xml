@@ -33,16 +33,16 @@ $FieldInfo _MatchingIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _MatchingIterator_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(MatchingIterator::*)(int32_t,$DTMAxisIterator*)>(&MatchingIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(MatchingIterator, init$, void, int32_t, $DTMAxisIterator*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, cloneIterator, $DTMAxisIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, getLast, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, getPosition, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MatchingIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

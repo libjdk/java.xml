@@ -33,13 +33,13 @@ $FieldInfo _FloatDV$XFloat_FieldInfo_[] = {
 };
 
 $MethodInfo _FloatDV$XFloat_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(FloatDV$XFloat::*)($String*)>(&FloatDV$XFloat::init$)), "java.lang.NumberFormatException"},
-	{"compareTo", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/FloatDV$XFloat;)I", nullptr, $PRIVATE, $method(static_cast<int32_t(FloatDV$XFloat::*)(FloatDV$XFloat*)>(&FloatDV$XFloat::compareTo))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getValue", "()F", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"isIdentical", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/FloatDV$XFloat;)Z", nullptr, $PUBLIC, $method(static_cast<bool(FloatDV$XFloat::*)(FloatDV$XFloat*)>(&FloatDV$XFloat::isIdentical))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(FloatDV$XFloat, init$, void, $String*), "java.lang.NumberFormatException"},
+	{"compareTo", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/FloatDV$XFloat;)I", nullptr, $PRIVATE, $method(FloatDV$XFloat, compareTo, int32_t, FloatDV$XFloat*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(FloatDV$XFloat, equals, bool, Object$*)},
+	{"getValue", "()F", nullptr, $PUBLIC, $virtualMethod(FloatDV$XFloat, getValue, float)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(FloatDV$XFloat, hashCode, int32_t)},
+	{"isIdentical", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/FloatDV$XFloat;)Z", nullptr, $PUBLIC, $method(FloatDV$XFloat, isIdentical, bool, FloatDV$XFloat*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(FloatDV$XFloat, toString, $String*)},
 	{}
 };
 

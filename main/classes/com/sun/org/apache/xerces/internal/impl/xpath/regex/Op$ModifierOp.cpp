@@ -27,9 +27,9 @@ $FieldInfo _Op$ModifierOp_FieldInfo_[] = {
 };
 
 $MethodInfo _Op$ModifierOp_MethodInfo_[] = {
-	{"<init>", "(III)V", nullptr, 0, $method(static_cast<void(Op$ModifierOp::*)(int32_t,int32_t,int32_t)>(&Op$ModifierOp::init$))},
-	{"getData", "()I", nullptr, 0},
-	{"getData2", "()I", nullptr, 0},
+	{"<init>", "(III)V", nullptr, 0, $method(Op$ModifierOp, init$, void, int32_t, int32_t, int32_t)},
+	{"getData", "()I", nullptr, 0, $virtualMethod(Op$ModifierOp, getData, int32_t)},
+	{"getData2", "()I", nullptr, 0, $virtualMethod(Op$ModifierOp, getData2, int32_t)},
 	{}
 };
 

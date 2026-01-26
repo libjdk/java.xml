@@ -25,8 +25,8 @@ $FieldInfo _Op$CharOp_FieldInfo_[] = {
 };
 
 $MethodInfo _Op$CharOp_MethodInfo_[] = {
-	{"<init>", "(II)V", nullptr, 0, $method(static_cast<void(Op$CharOp::*)(int32_t,int32_t)>(&Op$CharOp::init$))},
-	{"getData", "()I", nullptr, 0},
+	{"<init>", "(II)V", nullptr, 0, $method(Op$CharOp, init$, void, int32_t, int32_t)},
+	{"getData", "()I", nullptr, 0, $virtualMethod(Op$CharOp, getData, int32_t)},
 	{}
 };
 

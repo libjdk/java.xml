@@ -13,6 +13,8 @@
 #undef CONTEXT_REDEFINE
 #undef CONTEXT_XSITYPE
 
+using $QName = ::com::sun::org::apache::xerces::internal::xni::QName;
+using $XMLAttributes = ::com::sun::org::apache::xerces::internal::xni::XMLAttributes;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -39,12 +41,12 @@ $FieldInfo _XMLSchemaDescription_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaDescription_MethodInfo_[] = {
-	{"getAttributes", "()Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getContextType", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEnclosingElementName", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLocationHints", "()[Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTargetNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTriggeringComponent", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAttributes", "()Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLSchemaDescription, getAttributes, $XMLAttributes*)},
+	{"getContextType", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLSchemaDescription, getContextType, int16_t)},
+	{"getEnclosingElementName", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLSchemaDescription, getEnclosingElementName, $QName*)},
+	{"getLocationHints", "()[Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLSchemaDescription, getLocationHints, $StringArray*)},
+	{"getTargetNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLSchemaDescription, getTargetNamespace, $String*)},
+	{"getTriggeringComponent", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLSchemaDescription, getTriggeringComponent, $QName*)},
 	{}
 };
 

@@ -36,9 +36,9 @@ $FieldInfo _FuncNormalizeSpace_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncNormalizeSpace_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncNormalizeSpace::*)()>(&FuncNormalizeSpace::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"executeCharsToContentHandler", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException,org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncNormalizeSpace, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncNormalizeSpace, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"executeCharsToContentHandler", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $virtualMethod(FuncNormalizeSpace, executeCharsToContentHandler, void, $XPathContext*, $ContentHandler*), "javax.xml.transform.TransformerException,org.xml.sax.SAXException"},
 	{}
 };
 

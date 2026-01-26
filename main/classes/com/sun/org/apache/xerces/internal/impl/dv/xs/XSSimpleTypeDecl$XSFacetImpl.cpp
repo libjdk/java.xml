@@ -46,18 +46,18 @@ $FieldInfo _XSSimpleTypeDecl$XSFacetImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XSSimpleTypeDecl$XSFacetImpl_MethodInfo_[] = {
-	{"<init>", "(SLjava/lang/String;ILjava/lang/Object;ZLcom/sun/org/apache/xerces/internal/xs/XSAnnotation;)V", nullptr, $PUBLIC, $method(static_cast<void(XSSimpleTypeDecl$XSFacetImpl::*)(int16_t,$String*,int32_t,Object$*,bool,$XSAnnotation*)>(&XSSimpleTypeDecl$XSFacetImpl::init$))},
-	{"getActualFacetValue", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC},
-	{"getFacetKind", "()S", nullptr, $PUBLIC},
-	{"getFixed", "()Z", nullptr, $PUBLIC},
-	{"getIntFacetValue", "()I", nullptr, $PUBLIC},
-	{"getLexicalFacetValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"getType", "()S", nullptr, $PUBLIC},
+	{"<init>", "(SLjava/lang/String;ILjava/lang/Object;ZLcom/sun/org/apache/xerces/internal/xs/XSAnnotation;)V", nullptr, $PUBLIC, $method(XSSimpleTypeDecl$XSFacetImpl, init$, void, int16_t, $String*, int32_t, Object$*, bool, $XSAnnotation*)},
+	{"getActualFacetValue", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getActualFacetValue, $Object*)},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getAnnotation, $XSAnnotation*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getAnnotations, $XSObjectList*)},
+	{"getFacetKind", "()S", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getFacetKind, int16_t)},
+	{"getFixed", "()Z", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getFixed, bool)},
+	{"getIntFacetValue", "()I", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getIntFacetValue, int32_t)},
+	{"getLexicalFacetValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getLexicalFacetValue, $String*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getName, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getNamespace, $String*)},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getNamespaceItem, $XSNamespaceItem*)},
+	{"getType", "()S", nullptr, $PUBLIC, $virtualMethod(XSSimpleTypeDecl$XSFacetImpl, getType, int16_t)},
 	{}
 };
 

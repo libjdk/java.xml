@@ -17,8 +17,8 @@ $FieldInfo _ParserConfigurationException_FieldInfo_[] = {
 };
 
 $MethodInfo _ParserConfigurationException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ParserConfigurationException::*)()>(&ParserConfigurationException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ParserConfigurationException::*)($String*)>(&ParserConfigurationException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ParserConfigurationException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ParserConfigurationException, init$, void, $String*)},
 	{}
 };
 

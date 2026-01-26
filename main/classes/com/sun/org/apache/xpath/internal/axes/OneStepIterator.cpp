@@ -56,20 +56,20 @@ $FieldInfo _OneStepIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _OneStepIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(OneStepIterator::*)($Compiler*,int32_t,int32_t)>(&OneStepIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;I)V", nullptr, $PUBLIC, $method(static_cast<void(OneStepIterator::*)($DTMAxisIterator*,int32_t)>(&OneStepIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"countProximityPosition", "(I)V", nullptr, $PROTECTED},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PROTECTED},
-	{"getProximityPosition", "(I)I", nullptr, $PROTECTED},
-	{"isReverseAxes", "()Z", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(OneStepIterator, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;I)V", nullptr, $PUBLIC, $method(OneStepIterator, init$, void, $DTMAxisIterator*, int32_t), "javax.xml.transform.TransformerException"},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, clone, $Object*), "java.lang.CloneNotSupportedException"},
+	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, cloneWithReset, $DTMIterator*), "java.lang.CloneNotSupportedException"},
+	{"countProximityPosition", "(I)V", nullptr, $PROTECTED, $virtualMethod(OneStepIterator, countProximityPosition, void, int32_t)},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, deepEquals, bool, $Expression*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, detach, void)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, getAxis, int32_t)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, getLength, int32_t)},
+	{"getNextNode", "()I", nullptr, $PROTECTED, $virtualMethod(OneStepIterator, getNextNode, int32_t)},
+	{"getProximityPosition", "(I)I", nullptr, $PROTECTED, $virtualMethod(OneStepIterator, getProximityPosition, int32_t, int32_t)},
+	{"isReverseAxes", "()Z", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, isReverseAxes, bool)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, reset, void)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(OneStepIterator, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

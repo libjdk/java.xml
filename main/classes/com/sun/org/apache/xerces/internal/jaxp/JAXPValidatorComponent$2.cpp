@@ -43,8 +43,8 @@ $FieldInfo _JAXPValidatorComponent$2_FieldInfo_[] = {
 };
 
 $MethodInfo _JAXPValidatorComponent$2_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent;)V", nullptr, 0, $method(static_cast<void(JAXPValidatorComponent$2::*)($JAXPValidatorComponent*)>(&JAXPValidatorComponent$2::init$))},
-	{"resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent;)V", nullptr, 0, $method(JAXPValidatorComponent$2, init$, void, $JAXPValidatorComponent*)},
+	{"resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$2, resolveResource, $LSInput*, $String*, $String*, $String*, $String*, $String*)},
 	{}
 };
 

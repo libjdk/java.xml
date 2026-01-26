@@ -34,8 +34,8 @@ $FieldInfo _TemplatesImpl$3_FieldInfo_[] = {
 };
 
 $MethodInfo _TemplatesImpl$3_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl;)V", nullptr, 0, $method(static_cast<void(TemplatesImpl$3::*)($TemplatesImpl*)>(&TemplatesImpl$3::init$))},
-	{"run", "()Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl$TransletClassLoader;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl;)V", nullptr, 0, $method(TemplatesImpl$3, init$, void, $TemplatesImpl*)},
+	{"run", "()Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl$TransletClassLoader;", nullptr, $PUBLIC, $virtualMethod(TemplatesImpl$3, run, $Object*)},
 	{}
 };
 

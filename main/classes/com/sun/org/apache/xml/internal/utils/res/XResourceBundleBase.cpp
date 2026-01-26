@@ -17,9 +17,9 @@ namespace com {
 							namespace res {
 
 $MethodInfo _XResourceBundleBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XResourceBundleBase::*)()>(&XResourceBundleBase::init$))},
-	{"getMessageKey", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getWarningKey", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XResourceBundleBase, init$, void)},
+	{"getMessageKey", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XResourceBundleBase, getMessageKey, $String*, int32_t)},
+	{"getWarningKey", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XResourceBundleBase, getWarningKey, $String*, int32_t)},
 	{}
 };
 

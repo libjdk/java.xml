@@ -17,7 +17,7 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _RelativePathPattern_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(RelativePathPattern::*)()>(&RelativePathPattern::init$))},
+	{"<init>", "()V", nullptr, 0, $method(RelativePathPattern, init$, void)},
 	{}
 };
 

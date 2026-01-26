@@ -19,8 +19,14 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $Cloneable = ::java::lang::Cloneable;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $BigDecimal = ::java::math::BigDecimal;
+using $BigInteger = ::java::math::BigInteger;
 using $Arrays = ::java::util::Arrays;
+using $GregorianCalendar = ::java::util::GregorianCalendar;
+using $Locale = ::java::util::Locale;
+using $TimeZone = ::java::util::TimeZone;
 using $DatatypeConstants = ::javax::xml::datatype::DatatypeConstants;
+using $Duration = ::javax::xml::datatype::Duration;
+using $QName = ::javax::xml::namespace$::QName;
 
 namespace javax {
 	namespace xml {
@@ -28,45 +34,45 @@ namespace javax {
 
 $MethodInfo _XMLGregorianCalendar_MethodInfo_[] = {
 	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLGregorianCalendar::*)()>(&XMLGregorianCalendar::init$))},
-	{"add", "(Ljavax/xml/datatype/Duration;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"compare", "(Ljavax/xml/datatype/XMLGregorianCalendar;)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getDay", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEon", "()Ljava/math/BigInteger;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEonAndYear", "()Ljava/math/BigInteger;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFractionalSecond", "()Ljava/math/BigDecimal;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getHour", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMillisecond", "()I", nullptr, $PUBLIC},
-	{"getMinute", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMonth", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSecond", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTimeZone", "(I)Ljava/util/TimeZone;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTimezone", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getXMLSchemaType", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getYear", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"isValid", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"normalize", "()Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDay", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setFractionalSecond", "(Ljava/math/BigDecimal;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setHour", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setMillisecond", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setMinute", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setMonth", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setSecond", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setTime", "(III)V", nullptr, $PUBLIC},
-	{"setTime", "(IIILjava/math/BigDecimal;)V", nullptr, $PUBLIC},
-	{"setTime", "(IIII)V", nullptr, $PUBLIC},
-	{"setTimezone", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setYear", "(Ljava/math/BigInteger;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setYear", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"toGregorianCalendar", "()Ljava/util/GregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"toGregorianCalendar", "(Ljava/util/TimeZone;Ljava/util/Locale;Ljavax/xml/datatype/XMLGregorianCalendar;)Ljava/util/GregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toXMLFormat", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLGregorianCalendar, init$, void)},
+	{"add", "(Ljavax/xml/datatype/Duration;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, add, void, $Duration*)},
+	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, clear, void)},
+	{"compare", "(Ljavax/xml/datatype/XMLGregorianCalendar;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, compare, int32_t, XMLGregorianCalendar*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XMLGregorianCalendar, equals, bool, Object$*)},
+	{"getDay", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getDay, int32_t)},
+	{"getEon", "()Ljava/math/BigInteger;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getEon, $BigInteger*)},
+	{"getEonAndYear", "()Ljava/math/BigInteger;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getEonAndYear, $BigInteger*)},
+	{"getFractionalSecond", "()Ljava/math/BigDecimal;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getFractionalSecond, $BigDecimal*)},
+	{"getHour", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getHour, int32_t)},
+	{"getMillisecond", "()I", nullptr, $PUBLIC, $virtualMethod(XMLGregorianCalendar, getMillisecond, int32_t)},
+	{"getMinute", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getMinute, int32_t)},
+	{"getMonth", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getMonth, int32_t)},
+	{"getSecond", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getSecond, int32_t)},
+	{"getTimeZone", "(I)Ljava/util/TimeZone;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getTimeZone, $TimeZone*, int32_t)},
+	{"getTimezone", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getTimezone, int32_t)},
+	{"getXMLSchemaType", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getXMLSchemaType, $QName*)},
+	{"getYear", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, getYear, int32_t)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XMLGregorianCalendar, hashCode, int32_t)},
+	{"isValid", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, isValid, bool)},
+	{"normalize", "()Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, normalize, XMLGregorianCalendar*)},
+	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, reset, void)},
+	{"setDay", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setDay, void, int32_t)},
+	{"setFractionalSecond", "(Ljava/math/BigDecimal;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setFractionalSecond, void, $BigDecimal*)},
+	{"setHour", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setHour, void, int32_t)},
+	{"setMillisecond", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setMillisecond, void, int32_t)},
+	{"setMinute", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setMinute, void, int32_t)},
+	{"setMonth", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setMonth, void, int32_t)},
+	{"setSecond", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setSecond, void, int32_t)},
+	{"setTime", "(III)V", nullptr, $PUBLIC, $virtualMethod(XMLGregorianCalendar, setTime, void, int32_t, int32_t, int32_t)},
+	{"setTime", "(IIILjava/math/BigDecimal;)V", nullptr, $PUBLIC, $virtualMethod(XMLGregorianCalendar, setTime, void, int32_t, int32_t, int32_t, $BigDecimal*)},
+	{"setTime", "(IIII)V", nullptr, $PUBLIC, $virtualMethod(XMLGregorianCalendar, setTime, void, int32_t, int32_t, int32_t, int32_t)},
+	{"setTimezone", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setTimezone, void, int32_t)},
+	{"setYear", "(Ljava/math/BigInteger;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setYear, void, $BigInteger*)},
+	{"setYear", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, setYear, void, int32_t)},
+	{"toGregorianCalendar", "()Ljava/util/GregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, toGregorianCalendar, $GregorianCalendar*)},
+	{"toGregorianCalendar", "(Ljava/util/TimeZone;Ljava/util/Locale;Ljavax/xml/datatype/XMLGregorianCalendar;)Ljava/util/GregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, toGregorianCalendar, $GregorianCalendar*, $TimeZone*, $Locale*, XMLGregorianCalendar*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLGregorianCalendar, toString, $String*)},
+	{"toXMLFormat", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGregorianCalendar, toXMLFormat, $String*)},
 	{}
 };
 

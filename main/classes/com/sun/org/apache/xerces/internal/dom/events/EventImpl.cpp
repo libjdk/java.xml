@@ -32,17 +32,17 @@ $FieldInfo _EventImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _EventImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(EventImpl::*)()>(&EventImpl::init$))},
-	{"getBubbles", "()Z", nullptr, $PUBLIC},
-	{"getCancelable", "()Z", nullptr, $PUBLIC},
-	{"getCurrentTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC},
-	{"getEventPhase", "()S", nullptr, $PUBLIC},
-	{"getTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC},
-	{"getTimeStamp", "()J", nullptr, $PUBLIC},
-	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"initEvent", "(Ljava/lang/String;ZZ)V", nullptr, $PUBLIC},
-	{"preventDefault", "()V", nullptr, $PUBLIC},
-	{"stopPropagation", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(EventImpl, init$, void)},
+	{"getBubbles", "()Z", nullptr, $PUBLIC, $virtualMethod(EventImpl, getBubbles, bool)},
+	{"getCancelable", "()Z", nullptr, $PUBLIC, $virtualMethod(EventImpl, getCancelable, bool)},
+	{"getCurrentTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC, $virtualMethod(EventImpl, getCurrentTarget, $EventTarget*)},
+	{"getEventPhase", "()S", nullptr, $PUBLIC, $virtualMethod(EventImpl, getEventPhase, int16_t)},
+	{"getTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC, $virtualMethod(EventImpl, getTarget, $EventTarget*)},
+	{"getTimeStamp", "()J", nullptr, $PUBLIC, $virtualMethod(EventImpl, getTimeStamp, int64_t)},
+	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EventImpl, getType, $String*)},
+	{"initEvent", "(Ljava/lang/String;ZZ)V", nullptr, $PUBLIC, $virtualMethod(EventImpl, initEvent, void, $String*, bool, bool)},
+	{"preventDefault", "()V", nullptr, $PUBLIC, $virtualMethod(EventImpl, preventDefault, void)},
+	{"stopPropagation", "()V", nullptr, $PUBLIC, $virtualMethod(EventImpl, stopPropagation, void)},
 	{}
 };
 

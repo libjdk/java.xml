@@ -47,12 +47,12 @@ $FieldInfo _RegularExpression$Context_FieldInfo_[] = {
 };
 
 $MethodInfo _RegularExpression$Context_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(RegularExpression$Context::*)()>(&RegularExpression$Context::init$))},
-	{"reset", "(Ljava/text/CharacterIterator;III)V", nullptr, 0, $method(static_cast<void(RegularExpression$Context::*)($CharacterIterator*,int32_t,int32_t,int32_t)>(&RegularExpression$Context::reset))},
-	{"reset", "(Ljava/lang/String;III)V", nullptr, 0, $method(static_cast<void(RegularExpression$Context::*)($String*,int32_t,int32_t,int32_t)>(&RegularExpression$Context::reset))},
-	{"reset", "([CIII)V", nullptr, 0, $method(static_cast<void(RegularExpression$Context::*)($chars*,int32_t,int32_t,int32_t)>(&RegularExpression$Context::reset))},
-	{"resetCommon", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(RegularExpression$Context::*)(int32_t)>(&RegularExpression$Context::resetCommon))},
-	{"setInUse", "(Z)V", nullptr, $SYNCHRONIZED, $method(static_cast<void(RegularExpression$Context::*)(bool)>(&RegularExpression$Context::setInUse))},
+	{"<init>", "()V", nullptr, 0, $method(RegularExpression$Context, init$, void)},
+	{"reset", "(Ljava/text/CharacterIterator;III)V", nullptr, 0, $method(RegularExpression$Context, reset, void, $CharacterIterator*, int32_t, int32_t, int32_t)},
+	{"reset", "(Ljava/lang/String;III)V", nullptr, 0, $method(RegularExpression$Context, reset, void, $String*, int32_t, int32_t, int32_t)},
+	{"reset", "([CIII)V", nullptr, 0, $method(RegularExpression$Context, reset, void, $chars*, int32_t, int32_t, int32_t)},
+	{"resetCommon", "(I)V", nullptr, $PRIVATE, $method(RegularExpression$Context, resetCommon, void, int32_t)},
+	{"setInUse", "(Z)V", nullptr, $SYNCHRONIZED, $method(RegularExpression$Context, setInUse, void, bool)},
 	{}
 };
 

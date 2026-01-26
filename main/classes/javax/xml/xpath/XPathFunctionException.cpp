@@ -18,8 +18,8 @@ $FieldInfo _XPathFunctionException_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathFunctionException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFunctionException::*)($String*)>(&XPathFunctionException::init$))},
-	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFunctionException::*)($Throwable*)>(&XPathFunctionException::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFunctionException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(XPathFunctionException, init$, void, $Throwable*)},
 	{}
 };
 

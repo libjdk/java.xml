@@ -103,14 +103,14 @@ $FieldInfo _XIncludeAwareParserConfiguration_FieldInfo_[] = {
 };
 
 $MethodInfo _XIncludeAwareParserConfiguration_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XIncludeAwareParserConfiguration::*)()>(&XIncludeAwareParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(XIncludeAwareParserConfiguration::*)($SymbolTable*)>(&XIncludeAwareParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(XIncludeAwareParserConfiguration::*)($SymbolTable*,$XMLGrammarPool*)>(&XIncludeAwareParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XIncludeAwareParserConfiguration::*)($SymbolTable*,$XMLGrammarPool*,$XMLComponentManager*)>(&XIncludeAwareParserConfiguration::init$))},
-	{"configurePipeline", "()V", nullptr, $PROTECTED},
-	{"configureXML11Pipeline", "()V", nullptr, $PROTECTED},
-	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XIncludeAwareParserConfiguration, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(XIncludeAwareParserConfiguration, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(XIncludeAwareParserConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(XIncludeAwareParserConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*, $XMLComponentManager*)},
+	{"configurePipeline", "()V", nullptr, $PROTECTED, $virtualMethod(XIncludeAwareParserConfiguration, configurePipeline, void)},
+	{"configureXML11Pipeline", "()V", nullptr, $PROTECTED, $virtualMethod(XIncludeAwareParserConfiguration, configureXML11Pipeline, void)},
+	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC, $virtualMethod(XIncludeAwareParserConfiguration, getFeatureState, $FeatureState*, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(XIncludeAwareParserConfiguration, setFeature, void, $String*, bool), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
 	{}
 };
 

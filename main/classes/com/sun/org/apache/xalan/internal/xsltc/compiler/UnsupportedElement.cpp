@@ -73,13 +73,13 @@ $FieldInfo _UnsupportedElement_FieldInfo_[] = {
 };
 
 $MethodInfo _UnsupportedElement_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(UnsupportedElement::*)($String*,$String*,$String*,bool)>(&UnsupportedElement::init$))},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"processFallbacks", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PRIVATE, $method(static_cast<void(UnsupportedElement::*)($Parser*)>(&UnsupportedElement::processFallbacks))},
-	{"setErrorMessage", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg;)V", nullptr, $PUBLIC, $method(static_cast<void(UnsupportedElement::*)($ErrorMsg*)>(&UnsupportedElement::setErrorMessage))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(UnsupportedElement, init$, void, $String*, $String*, $String*, bool)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(UnsupportedElement, display, void, int32_t)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(UnsupportedElement, parseContents, void, $Parser*)},
+	{"processFallbacks", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PRIVATE, $method(UnsupportedElement, processFallbacks, void, $Parser*)},
+	{"setErrorMessage", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ErrorMsg;)V", nullptr, $PUBLIC, $method(UnsupportedElement, setErrorMessage, void, $ErrorMsg*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(UnsupportedElement, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(UnsupportedElement, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

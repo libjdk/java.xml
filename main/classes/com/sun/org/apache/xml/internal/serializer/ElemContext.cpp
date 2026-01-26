@@ -30,11 +30,11 @@ $FieldInfo _ElemContext_FieldInfo_[] = {
 };
 
 $MethodInfo _ElemContext_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ElemContext::*)()>(&ElemContext::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ElemContext;)V", nullptr, $PRIVATE, $method(static_cast<void(ElemContext::*)(ElemContext*)>(&ElemContext::init$))},
-	{"pop", "()Lcom/sun/org/apache/xml/internal/serializer/ElemContext;", nullptr, $FINAL, $method(static_cast<ElemContext*(ElemContext::*)()>(&ElemContext::pop))},
-	{"push", "()Lcom/sun/org/apache/xml/internal/serializer/ElemContext;", nullptr, $FINAL, $method(static_cast<ElemContext*(ElemContext::*)()>(&ElemContext::push))},
-	{"push", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/ElemContext;", nullptr, $FINAL, $method(static_cast<ElemContext*(ElemContext::*)($String*,$String*,$String*)>(&ElemContext::push))},
+	{"<init>", "()V", nullptr, 0, $method(ElemContext, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ElemContext;)V", nullptr, $PRIVATE, $method(ElemContext, init$, void, ElemContext*)},
+	{"pop", "()Lcom/sun/org/apache/xml/internal/serializer/ElemContext;", nullptr, $FINAL, $method(ElemContext, pop, ElemContext*)},
+	{"push", "()Lcom/sun/org/apache/xml/internal/serializer/ElemContext;", nullptr, $FINAL, $method(ElemContext, push, ElemContext*)},
+	{"push", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/ElemContext;", nullptr, $FINAL, $method(ElemContext, push, ElemContext*, $String*, $String*, $String*)},
 	{}
 };
 

@@ -44,12 +44,12 @@ $MethodInfo _ModuleExports_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(ModuleExports::*)($DataInput*)>(&ModuleExports::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/ModuleExports;", nullptr, $PUBLIC, $method(static_cast<ModuleExports*(ModuleExports::*)()>(&ModuleExports::copy))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $method(static_cast<void(ModuleExports::*)($DataOutputStream*)>(&ModuleExports::dump)), "java.io.IOException"},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(ModuleExports::*)($ConstantPool*)>(&ModuleExports::toString))},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(ModuleExports, init$, void, $DataInput*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ModuleExports, accept, void, $Visitor*)},
+	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/ModuleExports;", nullptr, $PUBLIC, $method(ModuleExports, copy, ModuleExports*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $method(ModuleExports, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ModuleExports, toString, $String*)},
+	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $method(ModuleExports, toString, $String*, $ConstantPool*)},
 	{}
 };
 

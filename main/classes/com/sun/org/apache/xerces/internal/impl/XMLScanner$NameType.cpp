@@ -47,11 +47,11 @@ $FieldInfo _XMLScanner$NameType_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLScanner$NameType_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$XMLScanner$NameTypeArray*(*)()>(&XMLScanner$NameType::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(static_cast<void(XMLScanner$NameType::*)($String*,int32_t,$String*)>(&XMLScanner$NameType::init$))},
-	{"literal", "()Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(XMLScanner$NameType::*)()>(&XMLScanner$NameType::literal))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLScanner$NameType*(*)($String*)>(&XMLScanner$NameType::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XMLScanner$NameTypeArray*(*)()>(&XMLScanner$NameType::values))},
+	{"$values", "()[Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XMLScanner$NameType, $values, $XMLScanner$NameTypeArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;)V", "(Ljava/lang/String;)V", $PRIVATE, $method(XMLScanner$NameType, init$, void, $String*, int32_t, $String*)},
+	{"literal", "()Ljava/lang/String;", nullptr, 0, $method(XMLScanner$NameType, literal, $String*)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLScanner$NameType, valueOf, XMLScanner$NameType*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/xerces/internal/impl/XMLScanner$NameType;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLScanner$NameType, values, $XMLScanner$NameTypeArray*)},
 	{}
 };
 

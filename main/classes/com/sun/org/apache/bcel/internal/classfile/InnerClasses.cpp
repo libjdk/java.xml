@@ -37,15 +37,15 @@ $FieldInfo _InnerClasses_FieldInfo_[] = {
 };
 
 $MethodInfo _InnerClasses_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/InnerClasses;)V", nullptr, $PUBLIC, $method(static_cast<void(InnerClasses::*)(InnerClasses*)>(&InnerClasses::init$))},
-	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/InnerClass;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(InnerClasses::*)(int32_t,int32_t,$InnerClassArray*,$ConstantPool*)>(&InnerClasses::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(InnerClasses::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&InnerClasses::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getInnerClasses", "()[Lcom/sun/org/apache/bcel/internal/classfile/InnerClass;", nullptr, $PUBLIC, $method(static_cast<$InnerClassArray*(InnerClasses::*)()>(&InnerClasses::getInnerClasses))},
-	{"setInnerClasses", "([Lcom/sun/org/apache/bcel/internal/classfile/InnerClass;)V", nullptr, $PUBLIC, $method(static_cast<void(InnerClasses::*)($InnerClassArray*)>(&InnerClasses::setInnerClasses))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/InnerClasses;)V", nullptr, $PUBLIC, $method(InnerClasses, init$, void, InnerClasses*)},
+	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/InnerClass;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(InnerClasses, init$, void, int32_t, int32_t, $InnerClassArray*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(InnerClasses, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(InnerClasses, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(InnerClasses, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(InnerClasses, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getInnerClasses", "()[Lcom/sun/org/apache/bcel/internal/classfile/InnerClass;", nullptr, $PUBLIC, $method(InnerClasses, getInnerClasses, $InnerClassArray*)},
+	{"setInnerClasses", "([Lcom/sun/org/apache/bcel/internal/classfile/InnerClass;)V", nullptr, $PUBLIC, $method(InnerClasses, setInnerClasses, void, $InnerClassArray*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(InnerClasses, toString, $String*)},
 	{}
 };
 

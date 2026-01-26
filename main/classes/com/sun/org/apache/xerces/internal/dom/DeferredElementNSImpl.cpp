@@ -81,8 +81,8 @@ $MethodInfo _DeferredElementNSImpl_MethodInfo_[] = {
 	{"*hasAttributes", "()Z", nullptr, $PUBLIC},
 	{"*hasChildNodes", "()Z", nullptr, $PUBLIC},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl;I)V", nullptr, 0, $method(static_cast<void(DeferredElementNSImpl::*)($DeferredDocumentImpl*,int32_t)>(&DeferredElementNSImpl::init$))},
-	{"getNodeIndex", "()I", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl;I)V", nullptr, 0, $method(DeferredElementNSImpl, init$, void, $DeferredDocumentImpl*, int32_t)},
+	{"getNodeIndex", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(DeferredElementNSImpl, getNodeIndex, int32_t)},
 	{"*insertBefore", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
 	{"*isDefaultNamespace", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
 	{"*isEqualNode", "(Lorg/w3c/dom/Node;)Z", nullptr, $PUBLIC},
@@ -97,8 +97,8 @@ $MethodInfo _DeferredElementNSImpl_MethodInfo_[] = {
 	{"*setPrefix", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
 	{"*setTextContent", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
 	{"*setUserData", "(Ljava/lang/String;Ljava/lang/Object;Lorg/w3c/dom/UserDataHandler;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"synchronizeChildren", "()V", nullptr, $PROTECTED | $FINAL},
-	{"synchronizeData", "()V", nullptr, $PROTECTED | $FINAL},
+	{"synchronizeChildren", "()V", nullptr, $PROTECTED | $FINAL, $virtualMethod(DeferredElementNSImpl, synchronizeChildren, void)},
+	{"synchronizeData", "()V", nullptr, $PROTECTED | $FINAL, $virtualMethod(DeferredElementNSImpl, synchronizeData, void)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

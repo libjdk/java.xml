@@ -37,16 +37,16 @@ $FieldInfo _CaseInsensitiveMap_FieldInfo_[] = {
 };
 
 $MethodInfo _CaseInsensitiveMap_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(CaseInsensitiveMap::*)()>(&CaseInsensitiveMap::init$))},
-	{"buildCaseInsensitiveMap", "()V", nullptr, $PRIVATE | $STATIC, $method(static_cast<void(*)()>(&CaseInsensitiveMap::buildCaseInsensitiveMap))},
-	{"contains", "([II)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)($ints*,int32_t)>(&CaseInsensitiveMap::contains))},
-	{"contains", "([III)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)($ints*,int32_t,int32_t)>(&CaseInsensitiveMap::contains))},
-	{"expandAndAdd", "([III)[I", nullptr, $PRIVATE | $STATIC, $method(static_cast<$ints*(*)($ints*,int32_t,int32_t)>(&CaseInsensitiveMap::expandAndAdd))},
-	{"expandMap", "([II)[I", nullptr, $PRIVATE | $STATIC, $method(static_cast<$ints*(*)($ints*,int32_t)>(&CaseInsensitiveMap::expandMap))},
-	{"get", "(I)[I", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ints*(*)(int32_t)>(&CaseInsensitiveMap::get))},
-	{"getMapping", "(I)[I", nullptr, $PRIVATE | $STATIC, $method(static_cast<$ints*(*)(int32_t)>(&CaseInsensitiveMap::getMapping))},
-	{"set", "(I[I)V", nullptr, $PRIVATE | $STATIC, $method(static_cast<void(*)(int32_t,$ints*)>(&CaseInsensitiveMap::set))},
-	{"updateMap", "(I[II[II)[I", nullptr, $PRIVATE | $STATIC, $method(static_cast<$ints*(*)(int32_t,$ints*,int32_t,$ints*,int32_t)>(&CaseInsensitiveMap::updateMap))},
+	{"<init>", "()V", nullptr, 0, $method(CaseInsensitiveMap, init$, void)},
+	{"buildCaseInsensitiveMap", "()V", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, buildCaseInsensitiveMap, void)},
+	{"contains", "([II)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, contains, bool, $ints*, int32_t)},
+	{"contains", "([III)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, contains, bool, $ints*, int32_t, int32_t)},
+	{"expandAndAdd", "([III)[I", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, expandAndAdd, $ints*, $ints*, int32_t, int32_t)},
+	{"expandMap", "([II)[I", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, expandMap, $ints*, $ints*, int32_t)},
+	{"get", "(I)[I", nullptr, $PUBLIC | $STATIC, $staticMethod(CaseInsensitiveMap, get, $ints*, int32_t)},
+	{"getMapping", "(I)[I", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, getMapping, $ints*, int32_t)},
+	{"set", "(I[I)V", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, set, void, int32_t, $ints*)},
+	{"updateMap", "(I[II[II)[I", nullptr, $PRIVATE | $STATIC, $staticMethod(CaseInsensitiveMap, updateMap, $ints*, int32_t, $ints*, int32_t, $ints*, int32_t)},
 	{}
 };
 

@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSNamespaceItem.h>
 #include <jcpp.h>
 
+using $XSNamespaceItem = ::com::sun::org::apache::xerces::internal::xs::XSNamespaceItem;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,8 +16,8 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSNamespaceItemList_MethodInfo_[] = {
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSNamespaceItemList, getLength, int32_t)},
+	{"item", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSNamespaceItemList, item, $XSNamespaceItem*, int32_t)},
 	{}
 };
 

@@ -4,6 +4,8 @@
 #include <java/io/Writer.h>
 #include <jcpp.h>
 
+using $OutputStream = ::java::io::OutputStream;
+using $Writer = ::java::io::Writer;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -13,14 +15,14 @@ namespace org {
 			namespace ls {
 
 $MethodInfo _LSOutput_MethodInfo_[] = {
-	{"getByteStream", "()Ljava/io/OutputStream;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCharacterStream", "()Ljava/io/Writer;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setByteStream", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setCharacterStream", "(Ljava/io/Writer;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getByteStream", "()Ljava/io/OutputStream;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, getByteStream, $OutputStream*)},
+	{"getCharacterStream", "()Ljava/io/Writer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, getCharacterStream, $Writer*)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, getEncoding, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, getSystemId, $String*)},
+	{"setByteStream", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, setByteStream, void, $OutputStream*)},
+	{"setCharacterStream", "(Ljava/io/Writer;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, setCharacterStream, void, $Writer*)},
+	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, setEncoding, void, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSOutput, setSystemId, void, $String*)},
 	{}
 };
 

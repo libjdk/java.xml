@@ -27,13 +27,13 @@ $FieldInfo _LocationImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _LocationImpl_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/Location;)V", nullptr, 0, $method(static_cast<void(LocationImpl::*)($Location*)>(&LocationImpl::init$))},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/stream/Location;)V", nullptr, 0, $method(LocationImpl, init$, void, $Location*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(LocationImpl, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocationImpl, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocationImpl, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocationImpl, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocationImpl, getSystemId, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocationImpl, toString, $String*)},
 	{}
 };
 

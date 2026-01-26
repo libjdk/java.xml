@@ -39,15 +39,15 @@ $FieldInfo _HTTPInputSource_FieldInfo_[] = {
 };
 
 $MethodInfo _HTTPInputSource_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(HTTPInputSource::*)($String*,$String*,$String*)>(&HTTPInputSource::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)V", nullptr, $PUBLIC, $method(static_cast<void(HTTPInputSource::*)($XMLResourceIdentifier*)>(&HTTPInputSource::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(HTTPInputSource::*)($String*,$String*,$String*,$InputStream*,$String*)>(&HTTPInputSource::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/Reader;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(HTTPInputSource::*)($String*,$String*,$String*,$Reader*,$String*)>(&HTTPInputSource::init$))},
-	{"getFollowHTTPRedirects", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(HTTPInputSource::*)()>(&HTTPInputSource::getFollowHTTPRedirects))},
-	{"getHTTPRequestProperties", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;", $PUBLIC, $method(static_cast<$Iterator*(HTTPInputSource::*)()>(&HTTPInputSource::getHTTPRequestProperties))},
-	{"getHTTPRequestProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(HTTPInputSource::*)($String*)>(&HTTPInputSource::getHTTPRequestProperty))},
-	{"setFollowHTTPRedirects", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(HTTPInputSource::*)(bool)>(&HTTPInputSource::setFollowHTTPRedirects))},
-	{"setHTTPRequestProperty", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(HTTPInputSource::*)($String*,$String*)>(&HTTPInputSource::setHTTPRequestProperty))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(HTTPInputSource, init$, void, $String*, $String*, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)V", nullptr, $PUBLIC, $method(HTTPInputSource, init$, void, $XMLResourceIdentifier*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(HTTPInputSource, init$, void, $String*, $String*, $String*, $InputStream*, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/Reader;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(HTTPInputSource, init$, void, $String*, $String*, $String*, $Reader*, $String*)},
+	{"getFollowHTTPRedirects", "()Z", nullptr, $PUBLIC, $method(HTTPInputSource, getFollowHTTPRedirects, bool)},
+	{"getHTTPRequestProperties", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;", $PUBLIC, $method(HTTPInputSource, getHTTPRequestProperties, $Iterator*)},
+	{"getHTTPRequestProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $method(HTTPInputSource, getHTTPRequestProperty, $String*, $String*)},
+	{"setFollowHTTPRedirects", "(Z)V", nullptr, $PUBLIC, $method(HTTPInputSource, setFollowHTTPRedirects, void, bool)},
+	{"setHTTPRequestProperty", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(HTTPInputSource, setHTTPRequestProperty, void, $String*, $String*)},
 	{}
 };
 

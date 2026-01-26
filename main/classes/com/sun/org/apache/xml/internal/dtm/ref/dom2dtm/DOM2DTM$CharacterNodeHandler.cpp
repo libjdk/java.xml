@@ -7,6 +7,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace com {
 	namespace sun {
@@ -19,7 +20,7 @@ namespace com {
 								namespace dom2dtm {
 
 $MethodInfo _DOM2DTM$CharacterNodeHandler_MethodInfo_[] = {
-	{"characters", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
+	{"characters", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOM2DTM$CharacterNodeHandler, characters, void, $Node*), "org.xml.sax.SAXException"},
 	{}
 };
 

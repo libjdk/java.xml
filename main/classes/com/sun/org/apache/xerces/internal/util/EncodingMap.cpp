@@ -29,9 +29,9 @@ $FieldInfo _EncodingMap_FieldInfo_[] = {
 };
 
 $MethodInfo _EncodingMap_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(EncodingMap::*)()>(&EncodingMap::init$))},
-	{"getIANA2JavaMapping", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&EncodingMap::getIANA2JavaMapping))},
-	{"getJava2IANAMapping", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&EncodingMap::getJava2IANAMapping))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(EncodingMap, init$, void)},
+	{"getIANA2JavaMapping", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(EncodingMap, getIANA2JavaMapping, $String*, $String*)},
+	{"getJava2IANAMapping", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(EncodingMap, getJava2IANAMapping, $String*, $String*)},
 	{}
 };
 

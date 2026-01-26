@@ -33,8 +33,8 @@ $FieldInfo _XSDFACM$Occurence_FieldInfo_[] = {
 };
 
 $MethodInfo _XSDFACM$Occurence_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMRepeatingLeaf;I)V", nullptr, $PUBLIC, $method(static_cast<void(XSDFACM$Occurence::*)($XSCMRepeatingLeaf*,int32_t)>(&XSDFACM$Occurence::init$))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMRepeatingLeaf;I)V", nullptr, $PUBLIC, $method(XSDFACM$Occurence, init$, void, $XSCMRepeatingLeaf*, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSDFACM$Occurence, toString, $String*)},
 	{}
 };
 

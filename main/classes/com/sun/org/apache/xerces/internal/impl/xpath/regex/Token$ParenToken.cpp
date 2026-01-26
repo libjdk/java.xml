@@ -34,11 +34,11 @@ $FieldInfo _Token$ParenToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$ParenToken_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;I)V", nullptr, 0, $method(static_cast<void(Token$ParenToken::*)(int32_t,$Token*,int32_t)>(&Token$ParenToken::init$))},
-	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0},
-	{"getParenNumber", "()I", nullptr, 0},
-	{"size", "()I", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;I)V", nullptr, 0, $method(Token$ParenToken, init$, void, int32_t, $Token*, int32_t)},
+	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0, $virtualMethod(Token$ParenToken, getChild, $Token*, int32_t)},
+	{"getParenNumber", "()I", nullptr, 0, $virtualMethod(Token$ParenToken, getParenNumber, int32_t)},
+	{"size", "()I", nullptr, 0, $virtualMethod(Token$ParenToken, size, int32_t)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$ParenToken, toString, $String*, int32_t)},
 	{}
 };
 

@@ -15,7 +15,7 @@ namespace com {
 							namespace datatypes {
 
 $MethodInfo _XSFloat_MethodInfo_[] = {
-	{"getValue", "()F", nullptr, $PUBLIC | $ABSTRACT},
+	{"getValue", "()F", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSFloat, getValue, float)},
 	{}
 };
 

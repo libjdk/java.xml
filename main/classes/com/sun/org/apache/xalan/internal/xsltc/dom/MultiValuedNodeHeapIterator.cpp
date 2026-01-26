@@ -43,16 +43,16 @@ $FieldInfo _MultiValuedNodeHeapIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _MultiValuedNodeHeapIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MultiValuedNodeHeapIterator::*)()>(&MultiValuedNodeHeapIterator::init$))},
-	{"addHeapNode", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;)V", nullptr, $PROTECTED},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"heapify", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(MultiValuedNodeHeapIterator::*)(int32_t)>(&MultiValuedNodeHeapIterator::heapify))},
-	{"init", "()V", nullptr, $PROTECTED},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MultiValuedNodeHeapIterator, init$, void)},
+	{"addHeapNode", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;)V", nullptr, $PROTECTED, $virtualMethod(MultiValuedNodeHeapIterator, addHeapNode, void, $MultiValuedNodeHeapIterator$HeapNode*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MultiValuedNodeHeapIterator, cloneIterator, $DTMAxisIterator*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(MultiValuedNodeHeapIterator, gotoMark, void)},
+	{"heapify", "(I)V", nullptr, $PRIVATE, $method(MultiValuedNodeHeapIterator, heapify, void, int32_t)},
+	{"init", "()V", nullptr, $PROTECTED, $virtualMethod(MultiValuedNodeHeapIterator, init, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(MultiValuedNodeHeapIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MultiValuedNodeHeapIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(MultiValuedNodeHeapIterator, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(MultiValuedNodeHeapIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

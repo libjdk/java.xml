@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xml/internal/utils/XMLString.h>
 #include <jcpp.h>
 
+using $FastStringBuffer = ::com::sun::org::apache::xml::internal::utils::FastStringBuffer;
+using $XMLString = ::com::sun::org::apache::xml::internal::utils::XMLString;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,11 +18,11 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _XMLStringFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringFactory::*)()>(&XMLStringFactory::init$))},
-	{"emptystr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newstr", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newstr", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;II)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newstr", "([CII)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLStringFactory, init$, void)},
+	{"emptystr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLStringFactory, emptystr, $XMLString*)},
+	{"newstr", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLStringFactory, newstr, $XMLString*, $String*)},
+	{"newstr", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;II)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLStringFactory, newstr, $XMLString*, $FastStringBuffer*, int32_t, int32_t)},
+	{"newstr", "([CII)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLStringFactory, newstr, $XMLString*, $chars*, int32_t, int32_t)},
 	{}
 };
 

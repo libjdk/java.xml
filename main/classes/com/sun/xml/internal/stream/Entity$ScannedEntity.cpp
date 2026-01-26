@@ -62,20 +62,20 @@ $FieldInfo _Entity$ScannedEntity_FieldInfo_[] = {
 };
 
 $MethodInfo _Entity$ScannedEntity_MethodInfo_[] = {
-	{"<init>", "(ZLjava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;Ljava/io/InputStream;Ljava/io/Reader;Ljava/lang/String;ZZZ)V", nullptr, $PUBLIC, $method(static_cast<void(Entity$ScannedEntity::*)(bool,$String*,$XMLResourceIdentifier*,$InputStream*,$Reader*,$String*,bool,bool,bool)>(&Entity$ScannedEntity::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getEncodingName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getEntityInputStream", "()Ljava/io/InputStream;", nullptr, $PUBLIC},
-	{"getEntityReader", "()Ljava/io/Reader;", nullptr, $PUBLIC},
-	{"getEntityVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isDeclaredEncoding", "()Z", nullptr, $PUBLIC},
-	{"isEncodingExternallySpecified", "()Z", nullptr, $PUBLIC},
-	{"isExternal", "()Z", nullptr, $PUBLIC | $FINAL},
-	{"isUnparsed", "()Z", nullptr, $PUBLIC | $FINAL},
-	{"setDeclaredEncoding", "(Z)V", nullptr, $PUBLIC},
-	{"setEncodingExternallySpecified", "(Z)V", nullptr, $PUBLIC},
-	{"setEntityVersion", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ZLjava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;Ljava/io/InputStream;Ljava/io/Reader;Ljava/lang/String;ZZZ)V", nullptr, $PUBLIC, $method(Entity$ScannedEntity, init$, void, bool, $String*, $XMLResourceIdentifier*, $InputStream*, $Reader*, $String*, bool, bool, bool)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, close, void), "java.io.IOException"},
+	{"getEncodingName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, getEncodingName, $String*)},
+	{"getEntityInputStream", "()Ljava/io/InputStream;", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, getEntityInputStream, $InputStream*)},
+	{"getEntityReader", "()Ljava/io/Reader;", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, getEntityReader, $Reader*)},
+	{"getEntityVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, getEntityVersion, $String*)},
+	{"isDeclaredEncoding", "()Z", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, isDeclaredEncoding, bool)},
+	{"isEncodingExternallySpecified", "()Z", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, isEncodingExternallySpecified, bool)},
+	{"isExternal", "()Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(Entity$ScannedEntity, isExternal, bool)},
+	{"isUnparsed", "()Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(Entity$ScannedEntity, isUnparsed, bool)},
+	{"setDeclaredEncoding", "(Z)V", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, setDeclaredEncoding, void, bool)},
+	{"setEncodingExternallySpecified", "(Z)V", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, setEncodingExternallySpecified, void, bool)},
+	{"setEntityVersion", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, setEntityVersion, void, $String*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Entity$ScannedEntity, toString, $String*)},
 	{}
 };
 

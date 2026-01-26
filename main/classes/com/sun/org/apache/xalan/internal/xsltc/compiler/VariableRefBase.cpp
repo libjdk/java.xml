@@ -43,14 +43,14 @@ $FieldInfo _VariableRefBase_FieldInfo_[] = {
 };
 
 $MethodInfo _VariableRefBase_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableBase;)V", nullptr, $PUBLIC, $method(static_cast<void(VariableRefBase::*)($VariableBase*)>(&VariableRefBase::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(VariableRefBase::*)()>(&VariableRefBase::init$))},
-	{"addParentDependency", "()V", nullptr, $PUBLIC},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getVariable", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableBase;", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableBase;)V", nullptr, $PUBLIC, $method(VariableRefBase, init$, void, $VariableBase*)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(VariableRefBase, init$, void)},
+	{"addParentDependency", "()V", nullptr, $PUBLIC, $virtualMethod(VariableRefBase, addParentDependency, void)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(VariableRefBase, equals, bool, Object$*)},
+	{"getVariable", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableBase;", nullptr, $PUBLIC, $virtualMethod(VariableRefBase, getVariable, $VariableBase*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(VariableRefBase, hashCode, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(VariableRefBase, toString, $String*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(VariableRefBase, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

@@ -99,8 +99,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::fieldIn
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::*)(SchemaFactoryFinder*)>(&SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0, init$, void, SchemaFactoryFinder*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::classInfo$ = {
@@ -139,8 +139,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::field
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::*)(SchemaFactoryFinder*)>(&SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1, init$, void, SchemaFactoryFinder*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::classInfo$ = {
@@ -179,8 +179,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::field
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::*)(SchemaFactoryFinder*)>(&SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2, init$, void, SchemaFactoryFinder*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::classInfo$ = {
@@ -222,8 +222,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$newFactory$3$3::fieldInfos[3] = {
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$newFactory$3$3::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$newFactory$3$3::*)($SchemaFactory*,$String*)>(&SchemaFactoryFinder$$Lambda$lambda$newFactory$3$3::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$newFactory$3$3, init$, void, $SchemaFactory*, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$newFactory$3$3, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$newFactory$3$3::classInfo$ = {
@@ -262,8 +262,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$newFactory$4$4::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$newFactory$4$4::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$newFactory$4$4::*)($String*)>(&SchemaFactoryFinder$$Lambda$lambda$newFactory$4$4::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$newFactory$4$4, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$newFactory$4$4, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$newFactory$4$4::classInfo$ = {
@@ -302,8 +302,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$5$5::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$5$5::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$5$5::*)($String*)>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$5$5::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$5$5, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$5$5, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$5$5::classInfo$ = {
@@ -342,8 +342,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$6$6::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$6$6::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$6$6::*)($String*)>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$6$6::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$6$6, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$6$6, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$6$6::classInfo$ = {
@@ -375,8 +375,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$7$7::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$7$7::*)()>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$7$7::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$7$7, init$, void)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$7$7, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$7$7::classInfo$ = {
@@ -415,8 +415,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8::*)($String*)>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$8$8::classInfo$ = {
@@ -455,8 +455,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$9$9::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$9$9::methodInfos[3] = {
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$9$9::*)($File*)>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$9$9::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$9$9, init$, void, $File*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$9$9, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$9$9::classInfo$ = {
@@ -495,8 +495,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$10$10::fieldInfos[2] =
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$10$10::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$10$10::*)($String*)>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$10$10::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$10$10, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$10$10, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$10$10::classInfo$ = {
@@ -528,8 +528,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$11$11::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$11$11::*)()>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$11$11::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$11$11, init$, void)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$11$11, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$11$11::classInfo$ = {
@@ -561,8 +561,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$12$12::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$_newFactory$12$12::*)()>(&SchemaFactoryFinder$$Lambda$lambda$_newFactory$12$12::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$_newFactory$12$12, init$, void)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$_newFactory$12$12, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$_newFactory$12$12::classInfo$ = {
@@ -601,8 +601,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13::fieldInfos[2
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13::*)($String*)>(&SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$13$13::classInfo$ = {
@@ -641,8 +641,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$14$14::fieldInfos[2
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$14$14::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$createInstance$14$14::*)($String*)>(&SchemaFactoryFinder$$Lambda$lambda$createInstance$14$14::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$createInstance$14$14, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$createInstance$14$14, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$14$14::classInfo$ = {
@@ -684,8 +684,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$15$15::fieldInfos[3
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$15$15::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$createInstance$15$15::*)($String*,$Class*)>(&SchemaFactoryFinder$$Lambda$lambda$createInstance$15$15::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$createInstance$15$15, init$, void, $String*, $Class*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$createInstance$15$15, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$15$15::classInfo$ = {
@@ -724,8 +724,8 @@ $FieldInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16::fieldInfos[2
 	{}
 };
 $MethodInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16::*)($Class*)>(&SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, init$, void, $Class*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16, get, $Object*)},
 	{}
 };
 $ClassInfo SchemaFactoryFinder$$Lambda$lambda$createInstance$16$16::classInfo$ = {
@@ -754,33 +754,33 @@ $FieldInfo _SchemaFactoryFinder_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaFactoryFinder_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaFactoryFinder::*)($ClassLoader*)>(&SchemaFactoryFinder::init$))},
-	{"_newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PRIVATE, $method(static_cast<$SchemaFactory*(SchemaFactoryFinder::*)($String*)>(&SchemaFactoryFinder::_newFactory))},
-	{"createClass", "(Ljava/lang/String;)Ljava/lang/Class;", "(Ljava/lang/String;)Ljava/lang/Class<*>;", $PRIVATE, $method(static_cast<$Class*(SchemaFactoryFinder::*)($String*)>(&SchemaFactoryFinder::createClass))},
-	{"createInstance", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, 0},
-	{"debugDisplayClassLoader", "()V", nullptr, $PRIVATE, $method(static_cast<void(SchemaFactoryFinder::*)()>(&SchemaFactoryFinder::debugDisplayClassLoader))},
-	{"debugPrintln", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $method(static_cast<void(*)($Supplier*)>(&SchemaFactoryFinder::debugPrintln))},
-	{"findServiceProvider", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PRIVATE, $method(static_cast<$SchemaFactory*(SchemaFactoryFinder::*)($String*)>(&SchemaFactoryFinder::findServiceProvider))},
-	{"isSchemaLanguageSupportedBy", "(Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;Ljava/security/AccessControlContext;)Z", nullptr, $PRIVATE, $method(static_cast<bool(SchemaFactoryFinder::*)($SchemaFactory*,$String*,$AccessControlContext*)>(&SchemaFactoryFinder::isSchemaLanguageSupportedBy))},
-	{"lambda$_newFactory$10", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SchemaFactoryFinder::lambda$_newFactory$10))},
-	{"lambda$_newFactory$11", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)()>(&SchemaFactoryFinder::lambda$_newFactory$11))},
-	{"lambda$_newFactory$12", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)()>(&SchemaFactoryFinder::lambda$_newFactory$12))},
-	{"lambda$_newFactory$5", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SchemaFactoryFinder::lambda$_newFactory$5))},
-	{"lambda$_newFactory$6", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SchemaFactoryFinder::lambda$_newFactory$6))},
-	{"lambda$_newFactory$7", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)()>(&SchemaFactoryFinder::lambda$_newFactory$7))},
-	{"lambda$_newFactory$8", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SchemaFactoryFinder::lambda$_newFactory$8))},
-	{"lambda$_newFactory$9", "(Ljava/io/File;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($File*)>(&SchemaFactoryFinder::lambda$_newFactory$9))},
-	{"lambda$createInstance$13", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SchemaFactoryFinder::lambda$createInstance$13))},
-	{"lambda$createInstance$14", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SchemaFactoryFinder::lambda$createInstance$14))},
-	{"lambda$createInstance$15", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*,$Class*)>(&SchemaFactoryFinder::lambda$createInstance$15))},
-	{"lambda$createInstance$16", "(Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($Class*)>(&SchemaFactoryFinder::lambda$createInstance$16))},
-	{"lambda$debugDisplayClassLoader$0", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<$String*(SchemaFactoryFinder::*)()>(&SchemaFactoryFinder::lambda$debugDisplayClassLoader$0))},
-	{"lambda$debugDisplayClassLoader$1", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<$String*(SchemaFactoryFinder::*)()>(&SchemaFactoryFinder::lambda$debugDisplayClassLoader$1))},
-	{"lambda$debugDisplayClassLoader$2", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<$String*(SchemaFactoryFinder::*)()>(&SchemaFactoryFinder::lambda$debugDisplayClassLoader$2))},
-	{"lambda$newFactory$3", "(Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($SchemaFactory*,$String*)>(&SchemaFactoryFinder::lambda$newFactory$3))},
-	{"lambda$newFactory$4", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SchemaFactoryFinder::lambda$newFactory$4))},
-	{"newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC},
-	{"which", "(Ljava/lang/Class;)Ljava/lang/String;", "(Ljava/lang/Class<*>;)Ljava/lang/String;", $PRIVATE | $STATIC, $method(static_cast<$String*(*)($Class*)>(&SchemaFactoryFinder::which))},
+	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(SchemaFactoryFinder, init$, void, $ClassLoader*)},
+	{"_newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PRIVATE, $method(SchemaFactoryFinder, _newFactory, $SchemaFactory*, $String*)},
+	{"createClass", "(Ljava/lang/String;)Ljava/lang/Class;", "(Ljava/lang/String;)Ljava/lang/Class<*>;", $PRIVATE, $method(SchemaFactoryFinder, createClass, $Class*, $String*)},
+	{"createInstance", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, 0, $virtualMethod(SchemaFactoryFinder, createInstance, $SchemaFactory*, $String*)},
+	{"debugDisplayClassLoader", "()V", nullptr, $PRIVATE, $method(SchemaFactoryFinder, debugDisplayClassLoader, void)},
+	{"debugPrintln", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $staticMethod(SchemaFactoryFinder, debugPrintln, void, $Supplier*)},
+	{"findServiceProvider", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PRIVATE, $method(SchemaFactoryFinder, findServiceProvider, $SchemaFactory*, $String*)},
+	{"isSchemaLanguageSupportedBy", "(Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;Ljava/security/AccessControlContext;)Z", nullptr, $PRIVATE, $method(SchemaFactoryFinder, isSchemaLanguageSupportedBy, bool, $SchemaFactory*, $String*, $AccessControlContext*)},
+	{"lambda$_newFactory$10", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$10, $String*, $String*)},
+	{"lambda$_newFactory$11", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$11, $String*)},
+	{"lambda$_newFactory$12", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$12, $String*)},
+	{"lambda$_newFactory$5", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$5, $String*, $String*)},
+	{"lambda$_newFactory$6", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$6, $String*, $String*)},
+	{"lambda$_newFactory$7", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$7, $String*)},
+	{"lambda$_newFactory$8", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$8, $String*, $String*)},
+	{"lambda$_newFactory$9", "(Ljava/io/File;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$_newFactory$9, $String*, $File*)},
+	{"lambda$createInstance$13", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$createInstance$13, $String*, $String*)},
+	{"lambda$createInstance$14", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$createInstance$14, $String*, $String*)},
+	{"lambda$createInstance$15", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$createInstance$15, $String*, $String*, $Class*)},
+	{"lambda$createInstance$16", "(Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$createInstance$16, $String*, $Class*)},
+	{"lambda$debugDisplayClassLoader$0", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(SchemaFactoryFinder, lambda$debugDisplayClassLoader$0, $String*)},
+	{"lambda$debugDisplayClassLoader$1", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(SchemaFactoryFinder, lambda$debugDisplayClassLoader$1, $String*)},
+	{"lambda$debugDisplayClassLoader$2", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(SchemaFactoryFinder, lambda$debugDisplayClassLoader$2, $String*)},
+	{"lambda$newFactory$3", "(Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$newFactory$3, $String*, $SchemaFactory*, $String*)},
+	{"lambda$newFactory$4", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SchemaFactoryFinder, lambda$newFactory$4, $String*, $String*)},
+	{"newFactory", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder, newFactory, $SchemaFactory*, $String*)},
+	{"which", "(Ljava/lang/Class;)Ljava/lang/String;", "(Ljava/lang/Class<*>;)Ljava/lang/String;", $PRIVATE | $STATIC, $staticMethod(SchemaFactoryFinder, which, $String*, $Class*)},
 	{}
 };
 

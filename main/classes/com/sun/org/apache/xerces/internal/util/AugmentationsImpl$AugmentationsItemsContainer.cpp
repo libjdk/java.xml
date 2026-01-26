@@ -9,6 +9,7 @@ using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Enumeration = ::java::util::Enumeration;
 
 namespace com {
 	namespace sun {
@@ -24,14 +25,14 @@ $FieldInfo _AugmentationsImpl$AugmentationsItemsContainer_FieldInfo_[] = {
 };
 
 $MethodInfo _AugmentationsImpl$AugmentationsItemsContainer_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl;)V", nullptr, 0, $method(static_cast<void(AugmentationsImpl$AugmentationsItemsContainer::*)($AugmentationsImpl*)>(&AugmentationsImpl$AugmentationsItemsContainer::init$))},
-	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"expand", "()Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl$AugmentationsItemsContainer;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isFull", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $ABSTRACT},
-	{"putItem", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"removeItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl;)V", nullptr, 0, $method(AugmentationsImpl$AugmentationsItemsContainer, init$, void, $AugmentationsImpl*)},
+	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AugmentationsImpl$AugmentationsItemsContainer, clear, void)},
+	{"expand", "()Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl$AugmentationsItemsContainer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AugmentationsImpl$AugmentationsItemsContainer, expand, AugmentationsImpl$AugmentationsItemsContainer*)},
+	{"getItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AugmentationsImpl$AugmentationsItemsContainer, getItem, $Object*, Object$*)},
+	{"isFull", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AugmentationsImpl$AugmentationsItemsContainer, isFull, bool)},
+	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $ABSTRACT, $virtualMethod(AugmentationsImpl$AugmentationsItemsContainer, keys, $Enumeration*)},
+	{"putItem", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AugmentationsImpl$AugmentationsItemsContainer, putItem, $Object*, Object$*, Object$*)},
+	{"removeItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(AugmentationsImpl$AugmentationsItemsContainer, removeItem, $Object*, Object$*)},
 	{}
 };
 

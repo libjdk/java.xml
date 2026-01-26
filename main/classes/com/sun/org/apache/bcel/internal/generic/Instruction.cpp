@@ -258,6 +258,7 @@ using $SIPUSH = ::com::sun::org::apache::bcel::internal::generic::SIPUSH;
 using $Select = ::com::sun::org::apache::bcel::internal::generic::Select;
 using $StoreInstruction = ::com::sun::org::apache::bcel::internal::generic::StoreInstruction;
 using $TABLESWITCH = ::com::sun::org::apache::bcel::internal::generic::TABLESWITCH;
+using $Visitor = ::com::sun::org::apache::bcel::internal::generic::Visitor;
 using $ByteSequence = ::com::sun::org::apache::bcel::internal::util::ByteSequence;
 using $DataOutputStream = ::java::io::DataOutputStream;
 using $PrintStream = ::java::io::PrintStream;
@@ -295,30 +296,30 @@ $FieldInfo _Instruction_FieldInfo_[] = {
 };
 
 $MethodInfo _Instruction_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Instruction::*)()>(&Instruction::init$))},
-	{"<init>", "(SS)V", nullptr, $PUBLIC, $method(static_cast<void(Instruction::*)(int16_t,int16_t)>(&Instruction::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC},
-	{"copy", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"dispose", "()V", nullptr, 0},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getComparator", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionComparator;", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $method(static_cast<$InstructionComparator*(*)()>(&Instruction::getComparator)), nullptr, nullptr, _Instruction_MethodAnnotations_getComparator8},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getOpcode", "()S", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"isValidByte", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&Instruction::isValidByte))},
-	{"isValidShort", "(I)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(int32_t)>(&Instruction::isValidShort))},
-	{"produceStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC},
-	{"readInstruction", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $STATIC, $method(static_cast<Instruction*(*)($ByteSequence*)>(&Instruction::readInstruction)), "java.io.IOException"},
-	{"setComparator", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionComparator;)V", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $method(static_cast<void(*)($InstructionComparator*)>(&Instruction::setComparator)), nullptr, nullptr, _Instruction_MethodAnnotations_setComparator18},
-	{"setLength", "(I)V", nullptr, $FINAL, $method(static_cast<void(Instruction::*)(int32_t)>(&Instruction::setLength))},
-	{"setOpcode", "(S)V", nullptr, 0},
-	{"toString", "(Z)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(Instruction, init$, void)},
+	{"<init>", "(SS)V", nullptr, $PUBLIC, $method(Instruction, init$, void, int16_t, int16_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Instruction, accept, void, $Visitor*)},
+	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC, $virtualMethod(Instruction, consumeStack, int32_t, $ConstantPoolGen*)},
+	{"copy", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(Instruction, copy, Instruction*)},
+	{"dispose", "()V", nullptr, 0, $virtualMethod(Instruction, dispose, void)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(Instruction, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(Instruction, equals, bool, Object$*)},
+	{"getComparator", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionComparator;", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $staticMethod(Instruction, getComparator, $InstructionComparator*), nullptr, nullptr, _Instruction_MethodAnnotations_getComparator8},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(Instruction, getLength, int32_t)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Instruction, getName, $String*)},
+	{"getOpcode", "()S", nullptr, $PUBLIC, $virtualMethod(Instruction, getOpcode, int16_t)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(Instruction, hashCode, int32_t)},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, $virtualMethod(Instruction, initFromFile, void, $ByteSequence*, bool), "java.io.IOException"},
+	{"isValidByte", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(Instruction, isValidByte, bool, int32_t)},
+	{"isValidShort", "(I)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(Instruction, isValidShort, bool, int32_t)},
+	{"produceStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC, $virtualMethod(Instruction, produceStack, int32_t, $ConstantPoolGen*)},
+	{"readInstruction", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $STATIC, $staticMethod(Instruction, readInstruction, Instruction*, $ByteSequence*), "java.io.IOException"},
+	{"setComparator", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionComparator;)V", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $staticMethod(Instruction, setComparator, void, $InstructionComparator*), nullptr, nullptr, _Instruction_MethodAnnotations_setComparator18},
+	{"setLength", "(I)V", nullptr, $FINAL, $method(Instruction, setLength, void, int32_t)},
+	{"setOpcode", "(S)V", nullptr, 0, $virtualMethod(Instruction, setOpcode, void, int16_t)},
+	{"toString", "(Z)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Instruction, toString, $String*, bool)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Instruction, toString, $String*)},
+	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Instruction, toString, $String*, $ConstantPool*)},
 	{}
 };
 

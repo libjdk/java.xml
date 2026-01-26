@@ -39,8 +39,8 @@ $FieldInfo _NewInstance_FieldInfo_[] = {
 };
 
 $MethodInfo _NewInstance_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(NewInstance::*)()>(&NewInstance::init$))},
-	{"newInstance", "(Ljava/lang/Class;Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/ClassLoader;Ljava/lang/String;)TT;", $STATIC, $method(static_cast<$Object*(*)($Class*,$ClassLoader*,$String*)>(&NewInstance::newInstance)), "java.lang.ClassNotFoundException,java.lang.IllegalAccessException,java.lang.InstantiationException"},
+	{"<init>", "()V", nullptr, 0, $method(NewInstance, init$, void)},
+	{"newInstance", "(Ljava/lang/Class;Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/ClassLoader;Ljava/lang/String;)TT;", $STATIC, $staticMethod(NewInstance, newInstance, $Object*, $Class*, $ClassLoader*, $String*), "java.lang.ClassNotFoundException,java.lang.IllegalAccessException,java.lang.InstantiationException"},
 	{}
 };
 

@@ -33,12 +33,12 @@ $FieldInfo _ClassSet_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassSet_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ClassSet::*)()>(&ClassSet::init$))},
-	{"add", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)Z", nullptr, $PUBLIC},
-	{"empty", "()Z", nullptr, $PUBLIC},
-	{"getClassNames", "()[Ljava/lang/String;", nullptr, $PUBLIC},
-	{"remove", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC},
-	{"toArray", "()[Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ClassSet, init$, void)},
+	{"add", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)Z", nullptr, $PUBLIC, $virtualMethod(ClassSet, add, bool, $JavaClass*)},
+	{"empty", "()Z", nullptr, $PUBLIC, $virtualMethod(ClassSet, empty, bool)},
+	{"getClassNames", "()[Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ClassSet, getClassNames, $StringArray*)},
+	{"remove", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC, $virtualMethod(ClassSet, remove, void, $JavaClass*)},
+	{"toArray", "()[Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $virtualMethod(ClassSet, toArray, $JavaClassArray*)},
 	{}
 };
 

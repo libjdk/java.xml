@@ -42,15 +42,15 @@ $FieldInfo _XSGroupDecl_FieldInfo_[] = {
 };
 
 $MethodInfo _XSGroupDecl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSGroupDecl::*)()>(&XSGroupDecl::init$))},
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC},
-	{"getModelGroup", "()Lcom/sun/org/apache/xerces/internal/xs/XSModelGroup;", nullptr, $PUBLIC},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"getType", "()S", nullptr, $PUBLIC},
-	{"setNamespaceItem", "(Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;)V", nullptr, 0},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSGroupDecl, init$, void)},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC, $virtualMethod(XSGroupDecl, getAnnotation, $XSAnnotation*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC, $virtualMethod(XSGroupDecl, getAnnotations, $XSObjectList*)},
+	{"getModelGroup", "()Lcom/sun/org/apache/xerces/internal/xs/XSModelGroup;", nullptr, $PUBLIC, $virtualMethod(XSGroupDecl, getModelGroup, $XSModelGroup*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSGroupDecl, getName, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSGroupDecl, getNamespace, $String*)},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(XSGroupDecl, getNamespaceItem, $XSNamespaceItem*)},
+	{"getType", "()S", nullptr, $PUBLIC, $virtualMethod(XSGroupDecl, getType, int16_t)},
+	{"setNamespaceItem", "(Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;)V", nullptr, 0, $virtualMethod(XSGroupDecl, setNamespaceItem, void, $XSNamespaceItem*)},
 	{}
 };
 

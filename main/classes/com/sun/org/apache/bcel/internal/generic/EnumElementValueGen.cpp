@@ -42,16 +42,16 @@ $FieldInfo _EnumElementValueGen_FieldInfo_[] = {
 };
 
 $MethodInfo _EnumElementValueGen_MethodInfo_[] = {
-	{"<init>", "(IILcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PROTECTED, $method(static_cast<void(EnumElementValueGen::*)(int32_t,int32_t,$ConstantPoolGen*)>(&EnumElementValueGen::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(static_cast<void(EnumElementValueGen::*)($ObjectType*,$String*,$ConstantPoolGen*)>(&EnumElementValueGen::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/EnumElementValue;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;Z)V", nullptr, $PUBLIC, $method(static_cast<void(EnumElementValueGen::*)($EnumElementValue*,$ConstantPoolGen*,bool)>(&EnumElementValueGen::init$))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getElementValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC},
-	{"getEnumTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getEnumValueString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTypeIndex", "()I", nullptr, $PUBLIC},
-	{"getValueIndex", "()I", nullptr, $PUBLIC},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(IILcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PROTECTED, $method(EnumElementValueGen, init$, void, int32_t, int32_t, $ConstantPoolGen*)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(EnumElementValueGen, init$, void, $ObjectType*, $String*, $ConstantPoolGen*)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/EnumElementValue;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;Z)V", nullptr, $PUBLIC, $method(EnumElementValueGen, init$, void, $EnumElementValue*, $ConstantPoolGen*, bool)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(EnumElementValueGen, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getElementValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC, $virtualMethod(EnumElementValueGen, getElementValue, $ElementValue*)},
+	{"getEnumTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EnumElementValueGen, getEnumTypeString, $String*)},
+	{"getEnumValueString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EnumElementValueGen, getEnumValueString, $String*)},
+	{"getTypeIndex", "()I", nullptr, $PUBLIC, $virtualMethod(EnumElementValueGen, getTypeIndex, int32_t)},
+	{"getValueIndex", "()I", nullptr, $PUBLIC, $virtualMethod(EnumElementValueGen, getValueIndex, int32_t)},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EnumElementValueGen, stringifyValue, $String*)},
 	{}
 };
 

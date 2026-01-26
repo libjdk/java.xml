@@ -30,14 +30,14 @@ $FieldInfo _SingletonIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SingletonIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SingletonIterator::*)()>(&SingletonIterator::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SingletonIterator::*)(int32_t)>(&SingletonIterator::init$))},
-	{"<init>", "(IZ)V", nullptr, $PUBLIC, $method(static_cast<void(SingletonIterator::*)(int32_t,bool)>(&SingletonIterator::init$))},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SingletonIterator, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(SingletonIterator, init$, void, int32_t)},
+	{"<init>", "(IZ)V", nullptr, $PUBLIC, $method(SingletonIterator, init$, void, int32_t, bool)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(SingletonIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SingletonIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SingletonIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(SingletonIterator, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SingletonIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

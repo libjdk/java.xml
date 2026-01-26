@@ -29,13 +29,13 @@ $FieldInfo _SystemSuffix_FieldInfo_[] = {
 };
 
 $MethodInfo _SystemSuffix_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SystemSuffix::*)($String*,$String*,$String*)>(&SystemSuffix::init$))},
-	{"getSystemIdSuffix", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(SystemSuffix::*)()>(&SystemSuffix::getSystemIdSuffix))},
-	{"getURI", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(static_cast<$URL*(SystemSuffix::*)()>(&SystemSuffix::getURI))},
-	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setSystemIdSuffix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SystemSuffix::*)($String*)>(&SystemSuffix::setSystemIdSuffix))},
-	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SystemSuffix::*)($String*)>(&SystemSuffix::setURI))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SystemSuffix, init$, void, $String*, $String*, $String*)},
+	{"getSystemIdSuffix", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(SystemSuffix, getSystemIdSuffix, $String*)},
+	{"getURI", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(SystemSuffix, getURI, $URL*)},
+	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SystemSuffix, match, $String*, $String*, int32_t)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SystemSuffix, match, $String*, $String*)},
+	{"setSystemIdSuffix", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SystemSuffix, setSystemIdSuffix, void, $String*)},
+	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SystemSuffix, setURI, void, $String*)},
 	{}
 };
 

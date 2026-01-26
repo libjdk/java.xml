@@ -83,15 +83,15 @@ $FieldInfo _IdKeyPattern_FieldInfo_[] = {
 };
 
 $MethodInfo _IdKeyPattern_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(IdKeyPattern::*)($String*,$String*)>(&IdKeyPattern::init$))},
-	{"getIndexName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getKernelPattern", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/StepPattern;", nullptr, $PUBLIC},
-	{"isWildcard", "()Z", nullptr, $PUBLIC},
-	{"reduceKernelPattern", "()V", nullptr, $PUBLIC},
-	{"setLeft", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/RelativePathPattern;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(IdKeyPattern, init$, void, $String*, $String*)},
+	{"getIndexName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, getIndexName, $String*)},
+	{"getKernelPattern", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/StepPattern;", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, getKernelPattern, $StepPattern*)},
+	{"isWildcard", "()Z", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, isWildcard, bool)},
+	{"reduceKernelPattern", "()V", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, reduceKernelPattern, void)},
+	{"setLeft", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/RelativePathPattern;)V", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, setLeft, void, $RelativePathPattern*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, toString, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(IdKeyPattern, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

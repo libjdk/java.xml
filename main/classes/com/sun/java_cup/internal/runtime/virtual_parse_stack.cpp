@@ -26,12 +26,12 @@ $FieldInfo _virtual_parse_stack_FieldInfo_[] = {
 };
 
 $MethodInfo _virtual_parse_stack_MethodInfo_[] = {
-	{"<init>", "(Ljava/util/Stack;)V", "(Ljava/util/Stack<Lcom/sun/java_cup/internal/runtime/Symbol;>;)V", $PUBLIC, $method(static_cast<void(virtual_parse_stack::*)($Stack*)>(&virtual_parse_stack::init$)), "java.lang.Exception"},
-	{"empty", "()Z", nullptr, $PUBLIC},
-	{"get_from_real", "()V", nullptr, $PROTECTED},
-	{"pop", "()V", nullptr, $PUBLIC, nullptr, "java.lang.Exception"},
-	{"push", "(I)V", nullptr, $PUBLIC},
-	{"top", "()I", nullptr, $PUBLIC, nullptr, "java.lang.Exception"},
+	{"<init>", "(Ljava/util/Stack;)V", "(Ljava/util/Stack<Lcom/sun/java_cup/internal/runtime/Symbol;>;)V", $PUBLIC, $method(virtual_parse_stack, init$, void, $Stack*), "java.lang.Exception"},
+	{"empty", "()Z", nullptr, $PUBLIC, $virtualMethod(virtual_parse_stack, empty, bool)},
+	{"get_from_real", "()V", nullptr, $PROTECTED, $virtualMethod(virtual_parse_stack, get_from_real, void)},
+	{"pop", "()V", nullptr, $PUBLIC, $virtualMethod(virtual_parse_stack, pop, void), "java.lang.Exception"},
+	{"push", "(I)V", nullptr, $PUBLIC, $virtualMethod(virtual_parse_stack, push, void, int32_t)},
+	{"top", "()I", nullptr, $PUBLIC, $virtualMethod(virtual_parse_stack, top, int32_t), "java.lang.Exception"},
 	{}
 };
 

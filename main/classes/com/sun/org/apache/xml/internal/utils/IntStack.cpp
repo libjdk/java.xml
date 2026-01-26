@@ -20,18 +20,18 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _IntStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(IntStack::*)()>(&IntStack::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(IntStack::*)(int32_t)>(&IntStack::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/IntStack;)V", nullptr, $PUBLIC, $method(static_cast<void(IntStack::*)(IntStack*)>(&IntStack::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"empty", "()Z", nullptr, $PUBLIC},
-	{"peek", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(IntStack::*)()>(&IntStack::peek))},
-	{"peek", "(I)I", nullptr, $PUBLIC},
-	{"pop", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(IntStack::*)()>(&IntStack::pop))},
-	{"push", "(I)I", nullptr, $PUBLIC},
-	{"quickPop", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(IntStack::*)(int32_t)>(&IntStack::quickPop))},
-	{"search", "(I)I", nullptr, $PUBLIC},
-	{"setTop", "(I)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(IntStack, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(IntStack, init$, void, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/IntStack;)V", nullptr, $PUBLIC, $method(IntStack, init$, void, IntStack*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(IntStack, clone, $Object*), "java.lang.CloneNotSupportedException"},
+	{"empty", "()Z", nullptr, $PUBLIC, $virtualMethod(IntStack, empty, bool)},
+	{"peek", "()I", nullptr, $PUBLIC | $FINAL, $method(IntStack, peek, int32_t)},
+	{"peek", "(I)I", nullptr, $PUBLIC, $virtualMethod(IntStack, peek, int32_t, int32_t)},
+	{"pop", "()I", nullptr, $PUBLIC | $FINAL, $method(IntStack, pop, int32_t)},
+	{"push", "(I)I", nullptr, $PUBLIC, $virtualMethod(IntStack, push, int32_t, int32_t)},
+	{"quickPop", "(I)V", nullptr, $PUBLIC | $FINAL, $method(IntStack, quickPop, void, int32_t)},
+	{"search", "(I)I", nullptr, $PUBLIC, $virtualMethod(IntStack, search, int32_t, int32_t)},
+	{"setTop", "(I)V", nullptr, $PUBLIC, $virtualMethod(IntStack, setTop, void, int32_t)},
 	{}
 };
 

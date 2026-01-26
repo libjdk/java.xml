@@ -20,8 +20,8 @@ namespace com {
 								namespace util {
 
 $MethodInfo _NodeSortRecordFactGenerator_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(static_cast<void(NodeSortRecordFactGenerator::*)($String*,$String*,$String*,int32_t,$StringArray*,$Stylesheet*)>(&NodeSortRecordFactGenerator::init$))},
-	{"isExternal", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(NodeSortRecordFactGenerator, init$, void, $String*, $String*, $String*, int32_t, $StringArray*, $Stylesheet*)},
+	{"isExternal", "()Z", nullptr, $PUBLIC, $virtualMethod(NodeSortRecordFactGenerator, isExternal, bool)},
 	{}
 };
 

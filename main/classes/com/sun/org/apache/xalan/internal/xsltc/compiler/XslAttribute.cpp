@@ -132,12 +132,12 @@ $FieldInfo _XslAttribute_FieldInfo_[] = {
 };
 
 $MethodInfo _XslAttribute_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XslAttribute::*)()>(&XslAttribute::init$))},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/AttributeValue;", nullptr, $PUBLIC, $method(static_cast<$AttributeValue*(XslAttribute::*)()>(&XslAttribute::getName))},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "()V", nullptr, 0, $method(XslAttribute, init$, void)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(XslAttribute, display, void, int32_t)},
+	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/AttributeValue;", nullptr, $PUBLIC, $method(XslAttribute, getName, $AttributeValue*)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(XslAttribute, parseContents, void, $Parser*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(XslAttribute, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(XslAttribute, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

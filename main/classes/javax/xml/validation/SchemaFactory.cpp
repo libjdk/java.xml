@@ -28,6 +28,8 @@ using $StreamSource = ::javax::xml::transform::stream::StreamSource;
 using $Schema = ::javax::xml::validation::Schema;
 using $SchemaFactoryFinder = ::javax::xml::validation::SchemaFactoryFinder;
 using $SecuritySupport = ::jdk::xml::internal::SecuritySupport;
+using $LSResourceResolver = ::org::w3c::dom::ls::LSResourceResolver;
+using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $SAXNotRecognizedException = ::org::xml::sax::SAXNotRecognizedException;
 
 namespace javax {
@@ -35,24 +37,24 @@ namespace javax {
 		namespace validation {
 
 $MethodInfo _SchemaFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(SchemaFactory::*)()>(&SchemaFactory::init$))},
-	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isSchemaLanguageSupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"newDefaultInstance", "()Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SchemaFactory*(*)()>(&SchemaFactory::newDefaultInstance))},
-	{"newInstance", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SchemaFactory*(*)($String*)>(&SchemaFactory::newInstance))},
-	{"newInstance", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SchemaFactory*(*)($String*,$String*,$ClassLoader*)>(&SchemaFactory::newInstance))},
-	{"newSchema", "(Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"newSchema", "(Ljava/io/File;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"newSchema", "(Ljava/net/URL;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"newSchema", "([Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
-	{"newSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(SchemaFactory, init$, void)},
+	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactory, getErrorHandler, $ErrorHandler*)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(SchemaFactory, getFeature, bool, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaFactory, getProperty, $Object*, $String*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactory, getResourceResolver, $LSResourceResolver*)},
+	{"isSchemaLanguageSupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactory, isSchemaLanguageSupported, bool, $String*)},
+	{"newDefaultInstance", "()Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SchemaFactory, newDefaultInstance, SchemaFactory*)},
+	{"newInstance", "(Ljava/lang/String;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SchemaFactory, newInstance, SchemaFactory*, $String*)},
+	{"newInstance", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SchemaFactory, newInstance, SchemaFactory*, $String*, $String*, $ClassLoader*)},
+	{"newSchema", "(Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(SchemaFactory, newSchema, $Schema*, $Source*), "org.xml.sax.SAXException"},
+	{"newSchema", "(Ljava/io/File;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(SchemaFactory, newSchema, $Schema*, $File*), "org.xml.sax.SAXException"},
+	{"newSchema", "(Ljava/net/URL;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(SchemaFactory, newSchema, $Schema*, $URL*), "org.xml.sax.SAXException"},
+	{"newSchema", "([Ljavax/xml/transform/Source;)Ljavax/xml/validation/Schema;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactory, newSchema, $Schema*, $SourceArray*), "org.xml.sax.SAXException"},
+	{"newSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactory, newSchema, $Schema*), "org.xml.sax.SAXException"},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactory, setErrorHandler, void, $ErrorHandler*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(SchemaFactory, setFeature, void, $String*, bool), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(SchemaFactory, setProperty, void, $String*, Object$*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SchemaFactory, setResourceResolver, void, $LSResourceResolver*)},
 	{}
 };
 

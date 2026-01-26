@@ -26,16 +26,16 @@ $FieldInfo _StringToStringTableVector_FieldInfo_[] = {
 };
 
 $MethodInfo _StringToStringTableVector_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringToStringTableVector::*)()>(&StringToStringTableVector::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(StringToStringTableVector::*)(int32_t)>(&StringToStringTableVector::init$))},
-	{"addElement", "(Lcom/sun/org/apache/xml/internal/utils/StringToStringTable;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringToStringTableVector::*)($StringToStringTable*)>(&StringToStringTableVector::addElement))},
-	{"contains", "(Lcom/sun/org/apache/xml/internal/utils/StringToStringTable;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringToStringTableVector::*)($StringToStringTable*)>(&StringToStringTableVector::contains))},
-	{"containsKey", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringToStringTableVector::*)($String*)>(&StringToStringTableVector::containsKey))},
-	{"elementAt", "(I)Lcom/sun/org/apache/xml/internal/utils/StringToStringTable;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$StringToStringTable*(StringToStringTableVector::*)(int32_t)>(&StringToStringTableVector::elementAt))},
-	{"get", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringToStringTableVector::*)($String*)>(&StringToStringTableVector::get))},
-	{"getLength", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToStringTableVector::*)()>(&StringToStringTableVector::getLength))},
-	{"removeLastElem", "()V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringToStringTableVector::*)()>(&StringToStringTableVector::removeLastElem))},
-	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToStringTableVector::*)()>(&StringToStringTableVector::size))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StringToStringTableVector, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(StringToStringTableVector, init$, void, int32_t)},
+	{"addElement", "(Lcom/sun/org/apache/xml/internal/utils/StringToStringTable;)V", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, addElement, void, $StringToStringTable*)},
+	{"contains", "(Lcom/sun/org/apache/xml/internal/utils/StringToStringTable;)Z", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, contains, bool, $StringToStringTable*)},
+	{"containsKey", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, containsKey, bool, $String*)},
+	{"elementAt", "(I)Lcom/sun/org/apache/xml/internal/utils/StringToStringTable;", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, elementAt, $StringToStringTable*, int32_t)},
+	{"get", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, get, $String*, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, getLength, int32_t)},
+	{"removeLastElem", "()V", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, removeLastElem, void)},
+	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(StringToStringTableVector, size, int32_t)},
 	{}
 };
 

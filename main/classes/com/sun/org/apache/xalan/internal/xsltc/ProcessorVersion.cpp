@@ -27,8 +27,8 @@ $FieldInfo _ProcessorVersion_FieldInfo_[] = {
 };
 
 $MethodInfo _ProcessorVersion_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ProcessorVersion::*)()>(&ProcessorVersion::init$))},
-	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&ProcessorVersion::main))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ProcessorVersion, init$, void)},
+	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(ProcessorVersion, main, void, $StringArray*)},
 	{}
 };
 

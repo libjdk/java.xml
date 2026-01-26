@@ -16,11 +16,11 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _XMLCharacterRecognizer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLCharacterRecognizer::*)()>(&XMLCharacterRecognizer::init$))},
-	{"isWhiteSpace", "(C)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)(char16_t)>(&XMLCharacterRecognizer::isWhiteSpace))},
-	{"isWhiteSpace", "([CII)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($chars*,int32_t,int32_t)>(&XMLCharacterRecognizer::isWhiteSpace))},
-	{"isWhiteSpace", "(Ljava/lang/StringBuffer;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($StringBuffer*)>(&XMLCharacterRecognizer::isWhiteSpace))},
-	{"isWhiteSpace", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&XMLCharacterRecognizer::isWhiteSpace))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLCharacterRecognizer, init$, void)},
+	{"isWhiteSpace", "(C)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLCharacterRecognizer, isWhiteSpace, bool, char16_t)},
+	{"isWhiteSpace", "([CII)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLCharacterRecognizer, isWhiteSpace, bool, $chars*, int32_t, int32_t)},
+	{"isWhiteSpace", "(Ljava/lang/StringBuffer;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLCharacterRecognizer, isWhiteSpace, bool, $StringBuffer*)},
+	{"isWhiteSpace", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLCharacterRecognizer, isWhiteSpace, bool, $String*)},
 	{}
 };
 

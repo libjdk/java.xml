@@ -21,7 +21,7 @@ $FieldInfo _WrongNumberArgsException_FieldInfo_[] = {
 };
 
 $MethodInfo _WrongNumberArgsException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(WrongNumberArgsException::*)($String*)>(&WrongNumberArgsException::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(WrongNumberArgsException, init$, void, $String*)},
 	{}
 };
 

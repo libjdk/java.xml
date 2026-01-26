@@ -21,7 +21,7 @@ $FieldInfo _AbortException_FieldInfo_[] = {
 };
 
 $MethodInfo _AbortException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(AbortException::*)()>(&AbortException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(AbortException, init$, void)},
 	{}
 };
 

@@ -16,10 +16,10 @@ namespace com {
 								namespace output {
 
 $MethodInfo _OutputBuffer_MethodInfo_[] = {
-	{"append", "(C)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC | $ABSTRACT},
-	{"append", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC | $ABSTRACT},
-	{"append", "([CII)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC | $ABSTRACT},
-	{"close", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"append", "(C)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(OutputBuffer, append, OutputBuffer*, char16_t)},
+	{"append", "(Ljava/lang/String;)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(OutputBuffer, append, OutputBuffer*, $String*)},
+	{"append", "([CII)Lcom/sun/org/apache/xalan/internal/xsltc/runtime/output/OutputBuffer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(OutputBuffer, append, OutputBuffer*, $chars*, int32_t, int32_t)},
+	{"close", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(OutputBuffer, close, $String*)},
 	{}
 };
 

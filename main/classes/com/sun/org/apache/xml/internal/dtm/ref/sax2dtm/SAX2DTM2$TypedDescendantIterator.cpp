@@ -43,8 +43,8 @@ $FieldInfo _SAX2DTM2$TypedDescendantIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2DTM2$TypedDescendantIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;I)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2DTM2$TypedDescendantIterator::*)($SAX2DTM2*,int32_t)>(&SAX2DTM2$TypedDescendantIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;I)V", nullptr, $PUBLIC, $method(SAX2DTM2$TypedDescendantIterator, init$, void, $SAX2DTM2*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$TypedDescendantIterator, next, int32_t)},
 	{}
 };
 

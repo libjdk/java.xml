@@ -48,13 +48,13 @@ $FieldInfo _MethodGenerator$LocalVariableRegistry_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodGenerator$LocalVariableRegistry_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PROTECTED, $method(static_cast<void(MethodGenerator$LocalVariableRegistry::*)($MethodGenerator*)>(&MethodGenerator$LocalVariableRegistry::init$))},
-	{"getLocals", "()[Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;", nullptr, $PRIVATE, $method(static_cast<$LocalVariableGenArray*(MethodGenerator$LocalVariableRegistry::*)()>(&MethodGenerator$LocalVariableRegistry::getLocals))},
-	{"lookUpByName", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;", nullptr, $PROTECTED},
-	{"lookupRegisteredLocalVariable", "(II)Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;", nullptr, $PROTECTED},
-	{"registerByName", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PROTECTED},
-	{"registerLocalVariable", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PROTECTED},
-	{"removeByNameTracking", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PROTECTED, $method(MethodGenerator$LocalVariableRegistry, init$, void, $MethodGenerator*)},
+	{"getLocals", "()[Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;", nullptr, $PRIVATE, $method(MethodGenerator$LocalVariableRegistry, getLocals, $LocalVariableGenArray*)},
+	{"lookUpByName", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;", nullptr, $PROTECTED, $virtualMethod(MethodGenerator$LocalVariableRegistry, lookUpByName, $LocalVariableGen*, $String*)},
+	{"lookupRegisteredLocalVariable", "(II)Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;", nullptr, $PROTECTED, $virtualMethod(MethodGenerator$LocalVariableRegistry, lookupRegisteredLocalVariable, $LocalVariableGen*, int32_t, int32_t)},
+	{"registerByName", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PROTECTED, $virtualMethod(MethodGenerator$LocalVariableRegistry, registerByName, void, $LocalVariableGen*)},
+	{"registerLocalVariable", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PROTECTED, $virtualMethod(MethodGenerator$LocalVariableRegistry, registerLocalVariable, void, $LocalVariableGen*)},
+	{"removeByNameTracking", "(Lcom/sun/org/apache/bcel/internal/generic/LocalVariableGen;)V", nullptr, $PROTECTED, $virtualMethod(MethodGenerator$LocalVariableRegistry, removeByNameTracking, void, $LocalVariableGen*)},
 	{}
 };
 

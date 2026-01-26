@@ -32,8 +32,8 @@ $FieldInfo _XPathFactoryFinder$2_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathFactoryFinder$2_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;Ljava/lang/String;Ljava/security/AccessControlContext;)V", "()V", 0, $method(static_cast<void(XPathFactoryFinder$2::*)($XPathFactoryFinder*,$String*,$AccessControlContext*)>(&XPathFactoryFinder$2::init$))},
-	{"run", "()Ljavax/xml/xpath/XPathFactory;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;Ljava/lang/String;Ljava/security/AccessControlContext;)V", "()V", 0, $method(XPathFactoryFinder$2, init$, void, $XPathFactoryFinder*, $String*, $AccessControlContext*)},
+	{"run", "()Ljavax/xml/xpath/XPathFactory;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$2, run, $Object*)},
 	{}
 };
 

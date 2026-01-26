@@ -20,12 +20,12 @@ $FieldInfo _TransformerConfigurationException_FieldInfo_[] = {
 };
 
 $MethodInfo _TransformerConfigurationException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(TransformerConfigurationException::*)()>(&TransformerConfigurationException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerConfigurationException::*)($String*)>(&TransformerConfigurationException::init$))},
-	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerConfigurationException::*)($Throwable*)>(&TransformerConfigurationException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerConfigurationException::*)($String*,$Throwable*)>(&TransformerConfigurationException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerConfigurationException::*)($String*,$SourceLocator*)>(&TransformerConfigurationException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(TransformerConfigurationException::*)($String*,$SourceLocator*,$Throwable*)>(&TransformerConfigurationException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(TransformerConfigurationException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(TransformerConfigurationException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(TransformerConfigurationException, init$, void, $Throwable*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(TransformerConfigurationException, init$, void, $String*, $Throwable*)},
+	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;)V", nullptr, $PUBLIC, $method(TransformerConfigurationException, init$, void, $String*, $SourceLocator*)},
+	{"<init>", "(Ljava/lang/String;Ljavax/xml/transform/SourceLocator;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(TransformerConfigurationException, init$, void, $String*, $SourceLocator*, $Throwable*)},
 	{}
 };
 

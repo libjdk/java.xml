@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _LLOAD_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(LLOAD::*)()>(&LLOAD::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(LLOAD::*)(int32_t)>(&LLOAD::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(LLOAD, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(LLOAD, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(LLOAD, accept, void, $Visitor*)},
 	{}
 };
 

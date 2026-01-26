@@ -63,17 +63,17 @@ namespace com {
 							namespace xs {
 
 $MethodInfo _SchemaGrammar$XSAnyType_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaGrammar$XSAnyType::*)()>(&SchemaGrammar$XSAnyType::init$))},
-	{"createAttrGrp", "()Lcom/sun/org/apache/xerces/internal/impl/xs/XSAttributeGroupDecl;", nullptr, $PRIVATE, $method(static_cast<$XSAttributeGroupDecl*(SchemaGrammar$XSAnyType::*)()>(&SchemaGrammar$XSAnyType::createAttrGrp))},
-	{"createParticle", "()Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;", nullptr, $PRIVATE, $method(static_cast<$XSParticleDecl*(SchemaGrammar$XSAnyType::*)()>(&SchemaGrammar$XSAnyType::createParticle))},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC},
-	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setContainsTypeID", "()V", nullptr, $PUBLIC},
-	{"setIsAbstractType", "()V", nullptr, $PUBLIC},
-	{"setIsAnonymous", "()V", nullptr, $PUBLIC},
-	{"setName", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;SSSSZLcom/sun/org/apache/xerces/internal/impl/xs/XSAttributeGroupDecl;Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaGrammar$XSAnyType, init$, void)},
+	{"createAttrGrp", "()Lcom/sun/org/apache/xerces/internal/impl/xs/XSAttributeGroupDecl;", nullptr, $PRIVATE, $method(SchemaGrammar$XSAnyType, createAttrGrp, $XSAttributeGroupDecl*)},
+	{"createParticle", "()Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;", nullptr, $PRIVATE, $method(SchemaGrammar$XSAnyType, createParticle, $XSParticleDecl*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, getAnnotations, $XSObjectList*)},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, getNamespaceItem, $XSNamespaceItem*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, reset, void)},
+	{"setContainsTypeID", "()V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, setContainsTypeID, void)},
+	{"setIsAbstractType", "()V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, setIsAbstractType, void)},
+	{"setIsAnonymous", "()V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, setIsAnonymous, void)},
+	{"setName", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, setName, void, $String*)},
+	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;SSSSZLcom/sun/org/apache/xerces/internal/impl/xs/XSAttributeGroupDecl;Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$XSAnyType, setValues, void, $String*, $String*, $XSTypeDefinition*, int16_t, int16_t, int16_t, int16_t, bool, $XSAttributeGroupDecl*, $XSSimpleType*, $XSParticleDecl*)},
 	{}
 };
 

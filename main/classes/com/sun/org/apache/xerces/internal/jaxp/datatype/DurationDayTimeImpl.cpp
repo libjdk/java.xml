@@ -33,12 +33,12 @@ $FieldInfo _DurationDayTimeImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DurationDayTimeImpl_MethodInfo_[] = {
-	{"<init>", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigDecimal;)V", nullptr, $PUBLIC, $method(static_cast<void(DurationDayTimeImpl::*)(bool,$BigInteger*,$BigInteger*,$BigInteger*,$BigDecimal*)>(&DurationDayTimeImpl::init$))},
-	{"<init>", "(ZIIII)V", nullptr, $PUBLIC, $method(static_cast<void(DurationDayTimeImpl::*)(bool,int32_t,int32_t,int32_t,int32_t)>(&DurationDayTimeImpl::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(DurationDayTimeImpl::*)($String*)>(&DurationDayTimeImpl::init$))},
-	{"<init>", "(J)V", nullptr, $PROTECTED, $method(static_cast<void(DurationDayTimeImpl::*)(int64_t)>(&DurationDayTimeImpl::init$))},
-	{"convertToCanonicalDayTime", "()V", nullptr, $PRIVATE, $method(static_cast<void(DurationDayTimeImpl::*)()>(&DurationDayTimeImpl::convertToCanonicalDayTime))},
-	{"getValue", "()F", nullptr, $PUBLIC},
+	{"<init>", "(ZLjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigDecimal;)V", nullptr, $PUBLIC, $method(DurationDayTimeImpl, init$, void, bool, $BigInteger*, $BigInteger*, $BigInteger*, $BigDecimal*)},
+	{"<init>", "(ZIIII)V", nullptr, $PUBLIC, $method(DurationDayTimeImpl, init$, void, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $method(DurationDayTimeImpl, init$, void, $String*)},
+	{"<init>", "(J)V", nullptr, $PROTECTED, $method(DurationDayTimeImpl, init$, void, int64_t)},
+	{"convertToCanonicalDayTime", "()V", nullptr, $PRIVATE, $method(DurationDayTimeImpl, convertToCanonicalDayTime, void)},
+	{"getValue", "()F", nullptr, $PUBLIC, $virtualMethod(DurationDayTimeImpl, getValue, float)},
 	{}
 };
 

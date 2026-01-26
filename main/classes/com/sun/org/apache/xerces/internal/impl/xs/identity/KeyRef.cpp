@@ -30,9 +30,9 @@ $FieldInfo _KeyRef_FieldInfo_[] = {
 };
 
 $MethodInfo _KeyRef_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/UniqueOrKey;)V", nullptr, $PUBLIC, $method(static_cast<void(KeyRef::*)($String*,$String*,$String*,$UniqueOrKey*)>(&KeyRef::init$))},
-	{"getKey", "()Lcom/sun/org/apache/xerces/internal/impl/xs/identity/UniqueOrKey;", nullptr, $PUBLIC},
-	{"getRefKey", "()Lcom/sun/org/apache/xerces/internal/xs/XSIDCDefinition;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/UniqueOrKey;)V", nullptr, $PUBLIC, $method(KeyRef, init$, void, $String*, $String*, $String*, $UniqueOrKey*)},
+	{"getKey", "()Lcom/sun/org/apache/xerces/internal/impl/xs/identity/UniqueOrKey;", nullptr, $PUBLIC, $virtualMethod(KeyRef, getKey, $UniqueOrKey*)},
+	{"getRefKey", "()Lcom/sun/org/apache/xerces/internal/xs/XSIDCDefinition;", nullptr, $PUBLIC, $virtualMethod(KeyRef, getRefKey, $XSIDCDefinition*)},
 	{}
 };
 

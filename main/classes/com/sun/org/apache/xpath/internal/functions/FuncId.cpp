@@ -52,9 +52,9 @@ $FieldInfo _FuncId_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncId_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncId::*)()>(&FuncId::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"getNodesByID", "(Lcom/sun/org/apache/xpath/internal/XPathContext;ILjava/lang/String;Lcom/sun/org/apache/xml/internal/utils/StringVector;Lcom/sun/org/apache/xpath/internal/NodeSetDTM;Z)Lcom/sun/org/apache/xml/internal/utils/StringVector;", nullptr, $PRIVATE, $method(static_cast<$StringVector*(FuncId::*)($XPathContext*,int32_t,$String*,$StringVector*,$NodeSetDTM*,bool)>(&FuncId::getNodesByID))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncId, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncId, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"getNodesByID", "(Lcom/sun/org/apache/xpath/internal/XPathContext;ILjava/lang/String;Lcom/sun/org/apache/xml/internal/utils/StringVector;Lcom/sun/org/apache/xpath/internal/NodeSetDTM;Z)Lcom/sun/org/apache/xml/internal/utils/StringVector;", nullptr, $PRIVATE, $method(FuncId, getNodesByID, $StringVector*, $XPathContext*, int32_t, $String*, $StringVector*, $NodeSetDTM*, bool)},
 	{}
 };
 

@@ -26,16 +26,16 @@ $FieldInfo _ErrorHandlerWrapper$1_FieldInfo_[] = {
 };
 
 $MethodInfo _ErrorHandlerWrapper$1_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;II)V", "()V", 0, $method(static_cast<void(ErrorHandlerWrapper$1::*)($String*,$String*,int32_t,int32_t)>(&ErrorHandlerWrapper$1::init$))},
-	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;II)V", "()V", 0, $method(ErrorHandlerWrapper$1, init$, void, $String*, $String*, int32_t, int32_t)},
+	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getBaseSystemId, $String*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getEncoding, $String*)},
+	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getExpandedSystemId, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getLineNumber, int32_t)},
+	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getLiteralSystemId, $String*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getPublicId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ErrorHandlerWrapper$1, getXMLVersion, $String*)},
 	{}
 };
 

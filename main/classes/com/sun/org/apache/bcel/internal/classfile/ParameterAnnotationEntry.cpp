@@ -47,11 +47,11 @@ $FieldInfo _ParameterAnnotationEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _ParameterAnnotationEntry_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(ParameterAnnotationEntry::*)($DataInput*,$ConstantPool*)>(&ParameterAnnotationEntry::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"createParameterAnnotationEntries", "([Lcom/sun/org/apache/bcel/internal/classfile/Attribute;)[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ParameterAnnotationEntryArray*(*)($AttributeArray*)>(&ParameterAnnotationEntry::createParameterAnnotationEntries))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getAnnotationEntries", "()[Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(ParameterAnnotationEntry, init$, void, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ParameterAnnotationEntry, accept, void, $Visitor*)},
+	{"createParameterAnnotationEntries", "([Lcom/sun/org/apache/bcel/internal/classfile/Attribute;)[Lcom/sun/org/apache/bcel/internal/classfile/ParameterAnnotationEntry;", nullptr, $PUBLIC | $STATIC, $staticMethod(ParameterAnnotationEntry, createParameterAnnotationEntries, $ParameterAnnotationEntryArray*, $AttributeArray*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ParameterAnnotationEntry, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getAnnotationEntries", "()[Lcom/sun/org/apache/bcel/internal/classfile/AnnotationEntry;", nullptr, $PUBLIC, $virtualMethod(ParameterAnnotationEntry, getAnnotationEntries, $AnnotationEntryArray*)},
 	{}
 };
 

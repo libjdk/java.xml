@@ -32,22 +32,22 @@ $FieldInfo _XMLWriter_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLWriter_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLWriter::*)($Writer*)>(&XMLWriter::init$))},
-	{"<init>", "(Ljava/io/Writer;I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLWriter::*)($Writer*,int32_t)>(&XMLWriter::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"conditionalWrite", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLWriter::*)()>(&XMLWriter::conditionalWrite)), "java.io.IOException"},
-	{"ensureOpen", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLWriter::*)()>(&XMLWriter::ensureOpen)), "java.io.IOException"},
-	{"flush", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getWriter", "()Ljava/io/Writer;", nullptr, $PROTECTED},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setWriter", "(Ljava/io/Writer;)V", nullptr, $PUBLIC},
-	{"setWriter", "(Ljava/io/Writer;I)V", nullptr, $PUBLIC},
-	{"write", "(I)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "([C)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "([CII)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "(Ljava/lang/String;II)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"writeBufferedData", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLWriter::*)()>(&XMLWriter::writeBufferedData)), "java.io.IOException"},
+	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(XMLWriter, init$, void, $Writer*)},
+	{"<init>", "(Ljava/io/Writer;I)V", nullptr, $PUBLIC, $method(XMLWriter, init$, void, $Writer*, int32_t)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, close, void), "java.io.IOException"},
+	{"conditionalWrite", "()V", nullptr, $PRIVATE, $method(XMLWriter, conditionalWrite, void), "java.io.IOException"},
+	{"ensureOpen", "()V", nullptr, $PRIVATE, $method(XMLWriter, ensureOpen, void), "java.io.IOException"},
+	{"flush", "()V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, flush, void), "java.io.IOException"},
+	{"getWriter", "()Ljava/io/Writer;", nullptr, $PROTECTED, $virtualMethod(XMLWriter, getWriter, $Writer*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, reset, void)},
+	{"setWriter", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, setWriter, void, $Writer*)},
+	{"setWriter", "(Ljava/io/Writer;I)V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, setWriter, void, $Writer*, int32_t)},
+	{"write", "(I)V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, write, void, int32_t), "java.io.IOException"},
+	{"write", "([C)V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, write, void, $chars*), "java.io.IOException"},
+	{"write", "([CII)V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, write, void, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"write", "(Ljava/lang/String;II)V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, write, void, $String*, int32_t, int32_t), "java.io.IOException"},
+	{"write", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLWriter, write, void, $String*), "java.io.IOException"},
+	{"writeBufferedData", "()V", nullptr, $PRIVATE, $method(XMLWriter, writeBufferedData, void), "java.io.IOException"},
 	{}
 };
 

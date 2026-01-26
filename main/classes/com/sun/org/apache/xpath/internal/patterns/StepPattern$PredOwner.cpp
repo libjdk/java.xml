@@ -30,9 +30,9 @@ $FieldInfo _StepPattern$PredOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _StepPattern$PredOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;I)V", nullptr, 0, $method(static_cast<void(StepPattern$PredOwner::*)($StepPattern*,int32_t)>(&StepPattern$PredOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/patterns/StepPattern;I)V", nullptr, 0, $method(StepPattern$PredOwner, init$, void, $StepPattern*, int32_t)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(StepPattern$PredOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(StepPattern$PredOwner, setExpression, void, $Expression*)},
 	{}
 };
 

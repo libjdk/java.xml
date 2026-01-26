@@ -75,16 +75,16 @@ $FieldInfo _DocumentBuilderFactoryImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DocumentBuilderFactoryImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DocumentBuilderFactoryImpl::*)()>(&DocumentBuilderFactoryImpl::init$))},
-	{"getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.IllegalArgumentException"},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "javax.xml.parsers.ParserConfigurationException"},
-	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC},
-	{"isXIncludeAware", "()Z", nullptr, $PUBLIC},
-	{"newDocumentBuilder", "()Ljavax/xml/parsers/DocumentBuilder;", nullptr, $PUBLIC, nullptr, "javax.xml.parsers.ParserConfigurationException"},
-	{"setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "java.lang.IllegalArgumentException"},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "javax.xml.parsers.ParserConfigurationException"},
-	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC},
-	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DocumentBuilderFactoryImpl, init$, void)},
+	{"getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, getAttribute, $Object*, $String*), "java.lang.IllegalArgumentException"},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, getFeature, bool, $String*), "javax.xml.parsers.ParserConfigurationException"},
+	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, getSchema, $Schema*)},
+	{"isXIncludeAware", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, isXIncludeAware, bool)},
+	{"newDocumentBuilder", "()Ljavax/xml/parsers/DocumentBuilder;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, newDocumentBuilder, $DocumentBuilder*), "javax.xml.parsers.ParserConfigurationException"},
+	{"setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, setAttribute, void, $String*, Object$*), "java.lang.IllegalArgumentException"},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, setFeature, void, $String*, bool), "javax.xml.parsers.ParserConfigurationException"},
+	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, setSchema, void, $Schema*)},
+	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactoryImpl, setXIncludeAware, void, bool)},
 	{}
 };
 

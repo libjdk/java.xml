@@ -39,11 +39,11 @@ $FieldInfo _StaxEntityResolverWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _StaxEntityResolverWrapper_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/XMLResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(StaxEntityResolverWrapper::*)($XMLResolver*)>(&StaxEntityResolverWrapper::init$))},
-	{"getStaxEntityResolver", "()Ljavax/xml/stream/XMLResolver;", nullptr, $PUBLIC},
-	{"getStaxInputSource", "(Ljava/lang/Object;)Lcom/sun/xml/internal/stream/StaxXMLInputSource;", nullptr, 0},
-	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/xml/internal/stream/StaxXMLInputSource;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
-	{"setStaxEntityResolver", "(Ljavax/xml/stream/XMLResolver;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/stream/XMLResolver;)V", nullptr, $PUBLIC, $method(StaxEntityResolverWrapper, init$, void, $XMLResolver*)},
+	{"getStaxEntityResolver", "()Ljavax/xml/stream/XMLResolver;", nullptr, $PUBLIC, $virtualMethod(StaxEntityResolverWrapper, getStaxEntityResolver, $XMLResolver*)},
+	{"getStaxInputSource", "(Ljava/lang/Object;)Lcom/sun/xml/internal/stream/StaxXMLInputSource;", nullptr, 0, $virtualMethod(StaxEntityResolverWrapper, getStaxInputSource, $StaxXMLInputSource*, Object$*)},
+	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/xml/internal/stream/StaxXMLInputSource;", nullptr, $PUBLIC, $virtualMethod(StaxEntityResolverWrapper, resolveEntity, $StaxXMLInputSource*, $XMLResourceIdentifier*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"setStaxEntityResolver", "(Ljavax/xml/stream/XMLResolver;)V", nullptr, $PUBLIC, $virtualMethod(StaxEntityResolverWrapper, setStaxEntityResolver, void, $XMLResolver*)},
 	{}
 };
 

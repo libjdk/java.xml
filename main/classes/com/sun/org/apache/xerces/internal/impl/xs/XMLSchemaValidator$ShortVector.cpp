@@ -24,14 +24,14 @@ $FieldInfo _XMLSchemaValidator$ShortVector_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidator$ShortVector_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$ShortVector::*)()>(&XMLSchemaValidator$ShortVector::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$ShortVector::*)(int32_t)>(&XMLSchemaValidator$ShortVector::init$))},
-	{"add", "(S)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$ShortVector::*)(int16_t)>(&XMLSchemaValidator$ShortVector::add))},
-	{"clear", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$ShortVector::*)()>(&XMLSchemaValidator$ShortVector::clear))},
-	{"contains", "(S)Z", nullptr, $PUBLIC, $method(static_cast<bool(XMLSchemaValidator$ShortVector::*)(int16_t)>(&XMLSchemaValidator$ShortVector::contains))},
-	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(XMLSchemaValidator$ShortVector::*)(int32_t)>(&XMLSchemaValidator$ShortVector::ensureCapacity))},
-	{"length", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLSchemaValidator$ShortVector::*)()>(&XMLSchemaValidator$ShortVector::length))},
-	{"valueAt", "(I)S", nullptr, $PUBLIC, $method(static_cast<int16_t(XMLSchemaValidator$ShortVector::*)(int32_t)>(&XMLSchemaValidator$ShortVector::valueAt))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSchemaValidator$ShortVector, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$ShortVector, init$, void, int32_t)},
+	{"add", "(S)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$ShortVector, add, void, int16_t)},
+	{"clear", "()V", nullptr, $PUBLIC, $method(XMLSchemaValidator$ShortVector, clear, void)},
+	{"contains", "(S)Z", nullptr, $PUBLIC, $method(XMLSchemaValidator$ShortVector, contains, bool, int16_t)},
+	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(XMLSchemaValidator$ShortVector, ensureCapacity, void, int32_t)},
+	{"length", "()I", nullptr, $PUBLIC, $method(XMLSchemaValidator$ShortVector, length, int32_t)},
+	{"valueAt", "(I)S", nullptr, $PUBLIC, $method(XMLSchemaValidator$ShortVector, valueAt, int16_t, int32_t)},
 	{}
 };
 

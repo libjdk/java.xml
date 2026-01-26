@@ -35,11 +35,11 @@ $FieldInfo _MethodGen$BranchStack_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodGen$BranchStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(MethodGen$BranchStack::*)()>(&MethodGen$BranchStack::init$))},
-	{"pop", "()Lcom/sun/org/apache/bcel/internal/generic/MethodGen$BranchTarget;", nullptr, $PUBLIC, $method(static_cast<$MethodGen$BranchTarget*(MethodGen$BranchStack::*)()>(&MethodGen$BranchStack::pop))},
-	{"push", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)V", nullptr, $PUBLIC, $method(static_cast<void(MethodGen$BranchStack::*)($InstructionHandle*,int32_t)>(&MethodGen$BranchStack::push))},
-	{"visit", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)Lcom/sun/org/apache/bcel/internal/generic/MethodGen$BranchTarget;", nullptr, $PRIVATE, $method(static_cast<$MethodGen$BranchTarget*(MethodGen$BranchStack::*)($InstructionHandle*,int32_t)>(&MethodGen$BranchStack::visit))},
-	{"visited", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Z", nullptr, $PRIVATE, $method(static_cast<bool(MethodGen$BranchStack::*)($InstructionHandle*)>(&MethodGen$BranchStack::visited))},
+	{"<init>", "()V", nullptr, 0, $method(MethodGen$BranchStack, init$, void)},
+	{"pop", "()Lcom/sun/org/apache/bcel/internal/generic/MethodGen$BranchTarget;", nullptr, $PUBLIC, $method(MethodGen$BranchStack, pop, $MethodGen$BranchTarget*)},
+	{"push", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)V", nullptr, $PUBLIC, $method(MethodGen$BranchStack, push, void, $InstructionHandle*, int32_t)},
+	{"visit", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;I)Lcom/sun/org/apache/bcel/internal/generic/MethodGen$BranchTarget;", nullptr, $PRIVATE, $method(MethodGen$BranchStack, visit, $MethodGen$BranchTarget*, $InstructionHandle*, int32_t)},
+	{"visited", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Z", nullptr, $PRIVATE, $method(MethodGen$BranchStack, visited, bool, $InstructionHandle*)},
 	{}
 };
 

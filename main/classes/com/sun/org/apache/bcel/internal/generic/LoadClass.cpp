@@ -5,6 +5,9 @@
 #include <com/sun/org/apache/bcel/internal/generic/Type.h>
 #include <jcpp.h>
 
+using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
+using $ObjectType = ::com::sun::org::apache::bcel::internal::generic::ObjectType;
+using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,8 +20,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _LoadClass_MethodInfo_[] = {
-	{"getLoadClassType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/ObjectType;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLoadClassType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/ObjectType;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LoadClass, getLoadClassType, $ObjectType*, $ConstantPoolGen*)},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LoadClass, getType, $Type*, $ConstantPoolGen*)},
 	{}
 };
 

@@ -38,12 +38,12 @@ $FieldInfo _DTMDefaultBaseIterators$SingletonIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$SingletonIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$SingletonIterator::*)($DTMDefaultBaseIterators*)>(&DTMDefaultBaseIterators$SingletonIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$SingletonIterator::*)($DTMDefaultBaseIterators*,int32_t)>(&DTMDefaultBaseIterators$SingletonIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;IZ)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$SingletonIterator::*)($DTMDefaultBaseIterators*,int32_t,bool)>(&DTMDefaultBaseIterators$SingletonIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$SingletonIterator, init$, void, $DTMDefaultBaseIterators*)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;I)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$SingletonIterator, init$, void, $DTMDefaultBaseIterators*, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;IZ)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$SingletonIterator, init$, void, $DTMDefaultBaseIterators*, int32_t, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$SingletonIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$SingletonIterator, reset, $DTMAxisIterator*)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$SingletonIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

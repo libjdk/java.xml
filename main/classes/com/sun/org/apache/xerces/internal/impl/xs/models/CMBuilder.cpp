@@ -71,18 +71,18 @@ $FieldInfo _CMBuilder_FieldInfo_[] = {
 };
 
 $MethodInfo _CMBuilder_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/models/CMNodeFactory;)V", nullptr, $PUBLIC, $method(static_cast<void(CMBuilder::*)($CMNodeFactory*)>(&CMBuilder::init$))},
-	{"buildCompactSyntaxTree", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(static_cast<$CMNode*(CMBuilder::*)($XSParticleDecl*)>(&CMBuilder::buildCompactSyntaxTree))},
-	{"buildCompactSyntaxTree2", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;II)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(static_cast<$CMNode*(CMBuilder::*)($XSParticleDecl*,int32_t,int32_t)>(&CMBuilder::buildCompactSyntaxTree2))},
-	{"buildSyntaxTree", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;ZZ)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(static_cast<$CMNode*(CMBuilder::*)($XSParticleDecl*,bool,bool)>(&CMBuilder::buildSyntaxTree))},
-	{"copyNode", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(static_cast<$CMNode*(CMBuilder::*)($CMNode*)>(&CMBuilder::copyNode))},
-	{"createAllCM", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMValidator;", nullptr, 0},
-	{"createDFACM", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;Z)Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMValidator;", nullptr, 0},
-	{"expandContentModel", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;IIZ)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(static_cast<$CMNode*(CMBuilder::*)($CMNode*,int32_t,int32_t,bool)>(&CMBuilder::expandContentModel))},
-	{"getContentModel", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSComplexTypeDecl;Z)Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMValidator;", nullptr, $PUBLIC},
-	{"multiNodes", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;IZ)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(static_cast<$CMNode*(CMBuilder::*)($CMNode*,int32_t,bool)>(&CMBuilder::multiNodes))},
-	{"setDeclPool", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSDeclarationPool;)V", nullptr, $PUBLIC},
-	{"useRepeatingLeafNodes", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)Z", nullptr, $PRIVATE, $method(static_cast<bool(CMBuilder::*)($XSParticleDecl*)>(&CMBuilder::useRepeatingLeafNodes))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/models/CMNodeFactory;)V", nullptr, $PUBLIC, $method(CMBuilder, init$, void, $CMNodeFactory*)},
+	{"buildCompactSyntaxTree", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(CMBuilder, buildCompactSyntaxTree, $CMNode*, $XSParticleDecl*)},
+	{"buildCompactSyntaxTree2", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;II)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(CMBuilder, buildCompactSyntaxTree2, $CMNode*, $XSParticleDecl*, int32_t, int32_t)},
+	{"buildSyntaxTree", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;ZZ)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(CMBuilder, buildSyntaxTree, $CMNode*, $XSParticleDecl*, bool, bool)},
+	{"copyNode", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(CMBuilder, copyNode, $CMNode*, $CMNode*)},
+	{"createAllCM", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMValidator;", nullptr, 0, $virtualMethod(CMBuilder, createAllCM, $XSCMValidator*, $XSParticleDecl*)},
+	{"createDFACM", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;Z)Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMValidator;", nullptr, 0, $virtualMethod(CMBuilder, createDFACM, $XSCMValidator*, $XSParticleDecl*, bool)},
+	{"expandContentModel", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;IIZ)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(CMBuilder, expandContentModel, $CMNode*, $CMNode*, int32_t, int32_t, bool)},
+	{"getContentModel", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSComplexTypeDecl;Z)Lcom/sun/org/apache/xerces/internal/impl/xs/models/XSCMValidator;", nullptr, $PUBLIC, $virtualMethod(CMBuilder, getContentModel, $XSCMValidator*, $XSComplexTypeDecl*, bool)},
+	{"multiNodes", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;IZ)Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $PRIVATE, $method(CMBuilder, multiNodes, $CMNode*, $CMNode*, int32_t, bool)},
+	{"setDeclPool", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSDeclarationPool;)V", nullptr, $PUBLIC, $virtualMethod(CMBuilder, setDeclPool, void, $XSDeclarationPool*)},
+	{"useRepeatingLeafNodes", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)Z", nullptr, $PRIVATE, $method(CMBuilder, useRepeatingLeafNodes, bool, $XSParticleDecl*)},
 	{}
 };
 

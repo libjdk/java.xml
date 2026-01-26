@@ -32,18 +32,18 @@ $FieldInfo _XSModelImpl$XSNamespaceItemListIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _XSModelImpl$XSNamespaceItemListIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSModelImpl;I)V", nullptr, $PUBLIC, $method(static_cast<void(XSModelImpl$XSNamespaceItemListIterator::*)($XSModelImpl*,int32_t)>(&XSModelImpl$XSNamespaceItemListIterator::init$))},
-	{"add", "(Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;)V", nullptr, $PUBLIC, $method(static_cast<void(XSModelImpl$XSNamespaceItemListIterator::*)($XSNamespaceItem*)>(&XSModelImpl$XSNamespaceItemListIterator::add))},
-	{"add", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"hasPrevious", "()Z", nullptr, $PUBLIC},
-	{"next", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"nextIndex", "()I", nullptr, $PUBLIC},
-	{"previous", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"previousIndex", "()I", nullptr, $PUBLIC},
-	{"remove", "()V", nullptr, $PUBLIC},
-	{"set", "(Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;)V", nullptr, $PUBLIC, $method(static_cast<void(XSModelImpl$XSNamespaceItemListIterator::*)($XSNamespaceItem*)>(&XSModelImpl$XSNamespaceItemListIterator::set))},
-	{"set", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSModelImpl;I)V", nullptr, $PUBLIC, $method(XSModelImpl$XSNamespaceItemListIterator, init$, void, $XSModelImpl*, int32_t)},
+	{"add", "(Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;)V", nullptr, $PUBLIC, $method(XSModelImpl$XSNamespaceItemListIterator, add, void, $XSNamespaceItem*)},
+	{"add", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, add, void, Object$*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, hasNext, bool)},
+	{"hasPrevious", "()Z", nullptr, $PUBLIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, hasPrevious, bool)},
+	{"next", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, next, $Object*)},
+	{"nextIndex", "()I", nullptr, $PUBLIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, nextIndex, int32_t)},
+	{"previous", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, previous, $Object*)},
+	{"previousIndex", "()I", nullptr, $PUBLIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, previousIndex, int32_t)},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, remove, void)},
+	{"set", "(Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;)V", nullptr, $PUBLIC, $method(XSModelImpl$XSNamespaceItemListIterator, set, void, $XSNamespaceItem*)},
+	{"set", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSModelImpl$XSNamespaceItemListIterator, set, void, Object$*)},
 	{}
 };
 

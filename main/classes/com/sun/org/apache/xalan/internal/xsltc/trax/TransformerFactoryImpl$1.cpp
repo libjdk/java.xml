@@ -28,8 +28,8 @@ $FieldInfo _TransformerFactoryImpl$1_FieldInfo_[] = {
 };
 
 $MethodInfo _TransformerFactoryImpl$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;Ljava/lang/String;)V", "()V", 0, $method(static_cast<void(TransformerFactoryImpl$1::*)($TransformerFactoryImpl*,$String*)>(&TransformerFactoryImpl$1::init$))},
-	{"accept", "(Ljava/io/File;Ljava/lang/String;)Z", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;Ljava/lang/String;)V", "()V", 0, $method(TransformerFactoryImpl$1, init$, void, $TransformerFactoryImpl*, $String*)},
+	{"accept", "(Ljava/io/File;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(TransformerFactoryImpl$1, accept, bool, $File*, $String*)},
 	{}
 };
 

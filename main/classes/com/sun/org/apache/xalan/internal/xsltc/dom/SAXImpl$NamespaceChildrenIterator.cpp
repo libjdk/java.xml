@@ -45,9 +45,9 @@ $FieldInfo _SAXImpl$NamespaceChildrenIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXImpl$NamespaceChildrenIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;I)V", nullptr, $PUBLIC, $method(static_cast<void(SAXImpl$NamespaceChildrenIterator::*)($SAXImpl*,int32_t)>(&SAXImpl$NamespaceChildrenIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;I)V", nullptr, $PUBLIC, $method(SAXImpl$NamespaceChildrenIterator, init$, void, $SAXImpl*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceChildrenIterator, next, int32_t)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceChildrenIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

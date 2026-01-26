@@ -5,15 +5,16 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $TransformerException = ::javax::xml::transform::TransformerException;
 
 namespace javax {
 	namespace xml {
 		namespace transform {
 
 $MethodInfo _ErrorListener_MethodInfo_[] = {
-	{"error", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerException"},
-	{"fatalError", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerException"},
-	{"warning", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerException"},
+	{"error", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ErrorListener, error, void, $TransformerException*), "javax.xml.transform.TransformerException"},
+	{"fatalError", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ErrorListener, fatalError, void, $TransformerException*), "javax.xml.transform.TransformerException"},
+	{"warning", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ErrorListener, warning, void, $TransformerException*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

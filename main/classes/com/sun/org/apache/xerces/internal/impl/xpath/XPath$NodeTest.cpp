@@ -35,12 +35,12 @@ $FieldInfo _XPath$NodeTest_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath$NodeTest_MethodInfo_[] = {
-	{"<init>", "(S)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$NodeTest::*)(int16_t)>(&XPath$NodeTest::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$NodeTest::*)($QName*)>(&XPath$NodeTest::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$NodeTest::*)($String*,$String*)>(&XPath$NodeTest::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$NodeTest::*)(XPath$NodeTest*)>(&XPath$NodeTest::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(S)V", nullptr, $PUBLIC, $method(XPath$NodeTest, init$, void, int16_t)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, $method(XPath$NodeTest, init$, void, $QName*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPath$NodeTest, init$, void, $String*, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;)V", nullptr, $PUBLIC, $method(XPath$NodeTest, init$, void, XPath$NodeTest*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPath$NodeTest, clone, $Object*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPath$NodeTest, toString, $String*)},
 	{}
 };
 

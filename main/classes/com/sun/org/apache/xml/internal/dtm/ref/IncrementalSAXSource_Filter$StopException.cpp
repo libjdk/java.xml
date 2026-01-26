@@ -26,7 +26,7 @@ $FieldInfo _IncrementalSAXSource_Filter$StopException_FieldInfo_[] = {
 };
 
 $MethodInfo _IncrementalSAXSource_Filter$StopException_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource_Filter;)V", nullptr, 0, $method(static_cast<void(IncrementalSAXSource_Filter$StopException::*)($IncrementalSAXSource_Filter*)>(&IncrementalSAXSource_Filter$StopException::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource_Filter;)V", nullptr, 0, $method(IncrementalSAXSource_Filter$StopException, init$, void, $IncrementalSAXSource_Filter*)},
 	{}
 };
 

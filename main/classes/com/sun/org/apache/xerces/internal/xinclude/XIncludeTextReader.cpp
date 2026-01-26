@@ -83,21 +83,21 @@ $FieldInfo _XIncludeTextReader_FieldInfo_[] = {
 };
 
 $MethodInfo _XIncludeTextReader_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Lcom/sun/org/apache/xerces/internal/xinclude/XIncludeHandler;I)V", nullptr, $PUBLIC, $method(static_cast<void(XIncludeTextReader::*)($XMLInputSource*,$XIncludeHandler*,int32_t)>(&XIncludeTextReader::init$)), "java.io.IOException"},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"consumeBOM", "(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"createASCIIReader", "(Ljava/io/InputStream;)Ljava/io/Reader;", nullptr, $PRIVATE, $method(static_cast<$Reader*(XIncludeTextReader::*)($InputStream*)>(&XIncludeTextReader::createASCIIReader))},
-	{"createLatin1Reader", "(Ljava/io/InputStream;)Ljava/io/Reader;", nullptr, $PRIVATE, $method(static_cast<$Reader*(XIncludeTextReader::*)($InputStream*)>(&XIncludeTextReader::createLatin1Reader))},
-	{"createUTF16Reader", "(Ljava/io/InputStream;Z)Ljava/io/Reader;", nullptr, $PRIVATE, $method(static_cast<$Reader*(XIncludeTextReader::*)($InputStream*,bool)>(&XIncludeTextReader::createUTF16Reader))},
-	{"createUTF8Reader", "(Ljava/io/InputStream;)Ljava/io/Reader;", nullptr, $PRIVATE, $method(static_cast<$Reader*(XIncludeTextReader::*)($InputStream*)>(&XIncludeTextReader::createUTF8Reader))},
-	{"getEncodingName", "(Ljava/io/InputStream;)Ljava/lang/String;", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"getEncodingName", "([B)Ljava/lang/String;", nullptr, $PROTECTED},
-	{"getReader", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Ljava/io/Reader;", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"isValid", "(I)Z", nullptr, $PROTECTED},
-	{"parse", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"setBufferSize", "(I)V", nullptr, $PROTECTED},
-	{"setErrorReporter", "(Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, $PUBLIC},
-	{"setInputSource", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Lcom/sun/org/apache/xerces/internal/xinclude/XIncludeHandler;I)V", nullptr, $PUBLIC, $method(XIncludeTextReader, init$, void, $XMLInputSource*, $XIncludeHandler*, int32_t), "java.io.IOException"},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(XIncludeTextReader, close, void), "java.io.IOException"},
+	{"consumeBOM", "(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XIncludeTextReader, consumeBOM, $String*, $InputStream*, $String*), "java.io.IOException"},
+	{"createASCIIReader", "(Ljava/io/InputStream;)Ljava/io/Reader;", nullptr, $PRIVATE, $method(XIncludeTextReader, createASCIIReader, $Reader*, $InputStream*)},
+	{"createLatin1Reader", "(Ljava/io/InputStream;)Ljava/io/Reader;", nullptr, $PRIVATE, $method(XIncludeTextReader, createLatin1Reader, $Reader*, $InputStream*)},
+	{"createUTF16Reader", "(Ljava/io/InputStream;Z)Ljava/io/Reader;", nullptr, $PRIVATE, $method(XIncludeTextReader, createUTF16Reader, $Reader*, $InputStream*, bool)},
+	{"createUTF8Reader", "(Ljava/io/InputStream;)Ljava/io/Reader;", nullptr, $PRIVATE, $method(XIncludeTextReader, createUTF8Reader, $Reader*, $InputStream*)},
+	{"getEncodingName", "(Ljava/io/InputStream;)Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XIncludeTextReader, getEncodingName, $String*, $InputStream*), "java.io.IOException"},
+	{"getEncodingName", "([B)Ljava/lang/String;", nullptr, $PROTECTED, $virtualMethod(XIncludeTextReader, getEncodingName, $String*, $bytes*)},
+	{"getReader", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Ljava/io/Reader;", nullptr, $PROTECTED, $virtualMethod(XIncludeTextReader, getReader, $Reader*, $XMLInputSource*), "java.io.IOException"},
+	{"isValid", "(I)Z", nullptr, $PROTECTED, $virtualMethod(XIncludeTextReader, isValid, bool, int32_t)},
+	{"parse", "()V", nullptr, $PUBLIC, $virtualMethod(XIncludeTextReader, parse, void), "java.io.IOException"},
+	{"setBufferSize", "(I)V", nullptr, $PROTECTED, $virtualMethod(XIncludeTextReader, setBufferSize, void, int32_t)},
+	{"setErrorReporter", "(Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, $PUBLIC, $virtualMethod(XIncludeTextReader, setErrorReporter, void, $XMLErrorReporter*)},
+	{"setInputSource", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC, $virtualMethod(XIncludeTextReader, setInputSource, void, $XMLInputSource*)},
 	{}
 };
 

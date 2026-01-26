@@ -33,12 +33,12 @@ $FieldInfo _CMBinOp_FieldInfo_[] = {
 };
 
 $MethodInfo _CMBinOp_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PUBLIC, $method(static_cast<void(CMBinOp::*)(int32_t,$CMNode*,$CMNode*)>(&CMBinOp::init$))},
-	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"getLeft", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $FINAL, $method(static_cast<$CMNode*(CMBinOp::*)()>(&CMBinOp::getLeft))},
-	{"getRight", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $FINAL, $method(static_cast<$CMNode*(CMBinOp::*)()>(&CMBinOp::getRight))},
-	{"isNullable", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PUBLIC, $method(CMBinOp, init$, void, int32_t, $CMNode*, $CMNode*)},
+	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(CMBinOp, calcFirstPos, void, $CMStateSet*)},
+	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(CMBinOp, calcLastPos, void, $CMStateSet*)},
+	{"getLeft", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $FINAL, $method(CMBinOp, getLeft, $CMNode*)},
+	{"getRight", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;", nullptr, $FINAL, $method(CMBinOp, getRight, $CMNode*)},
+	{"isNullable", "()Z", nullptr, $PUBLIC, $virtualMethod(CMBinOp, isNullable, bool)},
 	{}
 };
 

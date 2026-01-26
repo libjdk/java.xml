@@ -343,7 +343,7 @@ $FieldInfo _SchemaSymbols_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaSymbols_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaSymbols::*)()>(&SchemaSymbols::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaSymbols, init$, void)},
 	{}
 };
 

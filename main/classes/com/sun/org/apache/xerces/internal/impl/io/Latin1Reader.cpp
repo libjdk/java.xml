@@ -29,17 +29,17 @@ $FieldInfo _Latin1Reader_FieldInfo_[] = {
 };
 
 $MethodInfo _Latin1Reader_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC, $method(static_cast<void(Latin1Reader::*)($InputStream*)>(&Latin1Reader::init$))},
-	{"<init>", "(Ljava/io/InputStream;I)V", nullptr, $PUBLIC, $method(static_cast<void(Latin1Reader::*)($InputStream*,int32_t)>(&Latin1Reader::init$))},
-	{"<init>", "(Ljava/io/InputStream;[B)V", nullptr, $PUBLIC, $method(static_cast<void(Latin1Reader::*)($InputStream*,$bytes*)>(&Latin1Reader::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"mark", "(I)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"markSupported", "()Z", nullptr, $PUBLIC},
-	{"read", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"read", "([CII)I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"ready", "()Z", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"reset", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"skip", "(J)J", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC, $method(Latin1Reader, init$, void, $InputStream*)},
+	{"<init>", "(Ljava/io/InputStream;I)V", nullptr, $PUBLIC, $method(Latin1Reader, init$, void, $InputStream*, int32_t)},
+	{"<init>", "(Ljava/io/InputStream;[B)V", nullptr, $PUBLIC, $method(Latin1Reader, init$, void, $InputStream*, $bytes*)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, close, void), "java.io.IOException"},
+	{"mark", "(I)V", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, mark, void, int32_t), "java.io.IOException"},
+	{"markSupported", "()Z", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, markSupported, bool)},
+	{"read", "()I", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, read, int32_t), "java.io.IOException"},
+	{"read", "([CII)I", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, read, int32_t, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"ready", "()Z", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, ready, bool), "java.io.IOException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, reset, void), "java.io.IOException"},
+	{"skip", "(J)J", nullptr, $PUBLIC, $virtualMethod(Latin1Reader, skip, int64_t, int64_t), "java.io.IOException"},
 	{}
 };
 

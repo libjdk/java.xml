@@ -30,12 +30,12 @@ $FieldInfo _MethodGenerator$Chunk_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodGenerator$Chunk_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, 0, $method(static_cast<void(MethodGenerator$Chunk::*)($MethodGenerator*,$InstructionHandle*,$InstructionHandle*)>(&MethodGenerator$Chunk::init$))},
-	{"compareTo", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"getChunkEnd", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, 0},
-	{"getChunkSize", "()I", nullptr, 0},
-	{"getChunkStart", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, 0},
-	{"isAdjacentTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator$Chunk;)Z", nullptr, 0},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, 0, $method(MethodGenerator$Chunk, init$, void, $MethodGenerator*, $InstructionHandle*, $InstructionHandle*)},
+	{"compareTo", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(MethodGenerator$Chunk, compareTo, int32_t, Object$*)},
+	{"getChunkEnd", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, 0, $virtualMethod(MethodGenerator$Chunk, getChunkEnd, $InstructionHandle*)},
+	{"getChunkSize", "()I", nullptr, 0, $virtualMethod(MethodGenerator$Chunk, getChunkSize, int32_t)},
+	{"getChunkStart", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, 0, $virtualMethod(MethodGenerator$Chunk, getChunkStart, $InstructionHandle*)},
+	{"isAdjacentTo", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator$Chunk;)Z", nullptr, 0, $virtualMethod(MethodGenerator$Chunk, isAdjacentTo, bool, MethodGenerator$Chunk*)},
 	{}
 };
 

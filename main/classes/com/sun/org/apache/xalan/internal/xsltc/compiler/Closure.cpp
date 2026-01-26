@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/compiler/VariableRefBase.h>
 #include <jcpp.h>
 
+using $VariableRefBase = ::com::sun::org::apache::xalan::internal::xsltc::compiler::VariableRefBase;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,10 +17,10 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _Closure_MethodInfo_[] = {
-	{"addVariable", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableRefBase;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"getInnerClassName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getParentClosure", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Closure;", nullptr, $PUBLIC | $ABSTRACT},
-	{"inInnerClass", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"addVariable", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableRefBase;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Closure, addVariable, void, $VariableRefBase*)},
+	{"getInnerClassName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Closure, getInnerClassName, $String*)},
+	{"getParentClosure", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Closure;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Closure, getParentClosure, Closure*)},
+	{"inInnerClass", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Closure, inInnerClass, bool)},
 	{}
 };
 

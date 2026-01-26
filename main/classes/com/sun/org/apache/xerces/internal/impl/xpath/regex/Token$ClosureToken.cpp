@@ -31,14 +31,14 @@ $FieldInfo _Token$ClosureToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$ClosureToken_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(static_cast<void(Token$ClosureToken::*)(int32_t,$Token*)>(&Token$ClosureToken::init$))},
-	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0},
-	{"getMax", "()I", nullptr, $FINAL},
-	{"getMin", "()I", nullptr, $FINAL},
-	{"setMax", "(I)V", nullptr, $FINAL},
-	{"setMin", "(I)V", nullptr, $FINAL},
-	{"size", "()I", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(Token$ClosureToken, init$, void, int32_t, $Token*)},
+	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0, $virtualMethod(Token$ClosureToken, getChild, $Token*, int32_t)},
+	{"getMax", "()I", nullptr, $FINAL, $virtualMethod(Token$ClosureToken, getMax, int32_t)},
+	{"getMin", "()I", nullptr, $FINAL, $virtualMethod(Token$ClosureToken, getMin, int32_t)},
+	{"setMax", "(I)V", nullptr, $FINAL, $virtualMethod(Token$ClosureToken, setMax, void, int32_t)},
+	{"setMin", "(I)V", nullptr, $FINAL, $virtualMethod(Token$ClosureToken, setMin, void, int32_t)},
+	{"size", "()I", nullptr, 0, $virtualMethod(Token$ClosureToken, size, int32_t)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$ClosureToken, toString, $String*, int32_t)},
 	{}
 };
 

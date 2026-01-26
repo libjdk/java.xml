@@ -40,19 +40,19 @@ $FieldInfo _MethodParameter_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodParameter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MethodParameter::*)()>(&MethodParameter::init$))},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(MethodParameter::*)($DataInput*)>(&MethodParameter::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/MethodParameter;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(MethodParameter::*)($DataOutputStream*)>(&MethodParameter::dump)), "java.io.IOException"},
-	{"getAccessFlags", "()I", nullptr, $PUBLIC},
-	{"getNameIndex", "()I", nullptr, $PUBLIC},
-	{"getParameterName", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isFinal", "()Z", nullptr, $PUBLIC},
-	{"isMandated", "()Z", nullptr, $PUBLIC},
-	{"isSynthetic", "()Z", nullptr, $PUBLIC},
-	{"setAccessFlags", "(I)V", nullptr, $PUBLIC},
-	{"setNameIndex", "(I)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MethodParameter, init$, void)},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(MethodParameter, init$, void, $DataInput*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(MethodParameter, accept, void, $Visitor*)},
+	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/MethodParameter;", nullptr, $PUBLIC, $virtualMethod(MethodParameter, copy, MethodParameter*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $method(MethodParameter, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getAccessFlags", "()I", nullptr, $PUBLIC, $virtualMethod(MethodParameter, getAccessFlags, int32_t)},
+	{"getNameIndex", "()I", nullptr, $PUBLIC, $virtualMethod(MethodParameter, getNameIndex, int32_t)},
+	{"getParameterName", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MethodParameter, getParameterName, $String*, $ConstantPool*)},
+	{"isFinal", "()Z", nullptr, $PUBLIC, $virtualMethod(MethodParameter, isFinal, bool)},
+	{"isMandated", "()Z", nullptr, $PUBLIC, $virtualMethod(MethodParameter, isMandated, bool)},
+	{"isSynthetic", "()Z", nullptr, $PUBLIC, $virtualMethod(MethodParameter, isSynthetic, bool)},
+	{"setAccessFlags", "(I)V", nullptr, $PUBLIC, $virtualMethod(MethodParameter, setAccessFlags, void, int32_t)},
+	{"setNameIndex", "(I)V", nullptr, $PUBLIC, $virtualMethod(MethodParameter, setNameIndex, void, int32_t)},
 	{}
 };
 

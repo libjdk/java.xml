@@ -30,18 +30,18 @@ $FieldInfo _StreamResult_FieldInfo_[] = {
 };
 
 $MethodInfo _StreamResult_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StreamResult::*)()>(&StreamResult::init$))},
-	{"<init>", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC, $method(static_cast<void(StreamResult::*)($OutputStream*)>(&StreamResult::init$))},
-	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(static_cast<void(StreamResult::*)($Writer*)>(&StreamResult::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(StreamResult::*)($String*)>(&StreamResult::init$))},
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(StreamResult::*)($File*)>(&StreamResult::init$))},
-	{"getOutputStream", "()Ljava/io/OutputStream;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getWriter", "()Ljava/io/Writer;", nullptr, $PUBLIC},
-	{"setOutputStream", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/io/File;)V", nullptr, $PUBLIC},
-	{"setWriter", "(Ljava/io/Writer;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StreamResult, init$, void)},
+	{"<init>", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC, $method(StreamResult, init$, void, $OutputStream*)},
+	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(StreamResult, init$, void, $Writer*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(StreamResult, init$, void, $String*)},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(StreamResult, init$, void, $File*)},
+	{"getOutputStream", "()Ljava/io/OutputStream;", nullptr, $PUBLIC, $virtualMethod(StreamResult, getOutputStream, $OutputStream*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StreamResult, getSystemId, $String*)},
+	{"getWriter", "()Ljava/io/Writer;", nullptr, $PUBLIC, $virtualMethod(StreamResult, getWriter, $Writer*)},
+	{"setOutputStream", "(Ljava/io/OutputStream;)V", nullptr, $PUBLIC, $virtualMethod(StreamResult, setOutputStream, void, $OutputStream*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StreamResult, setSystemId, void, $String*)},
+	{"setSystemId", "(Ljava/io/File;)V", nullptr, $PUBLIC, $virtualMethod(StreamResult, setSystemId, void, $File*)},
+	{"setWriter", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $virtualMethod(StreamResult, setWriter, void, $Writer*)},
 	{}
 };
 

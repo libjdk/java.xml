@@ -37,11 +37,11 @@ $FieldInfo _FuncLast_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncLast_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncLast::*)()>(&FuncLast::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getCountOfContextNodeList", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"postCompileStep", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncLast, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncLast, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FuncLast, fixupVariables, void, $List*, int32_t)},
+	{"getCountOfContextNodeList", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(FuncLast, getCountOfContextNodeList, int32_t, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"postCompileStep", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;)V", nullptr, $PUBLIC, $virtualMethod(FuncLast, postCompileStep, void, $Compiler*)},
 	{}
 };
 

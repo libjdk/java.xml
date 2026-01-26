@@ -54,10 +54,10 @@ $FieldInfo _UnionChildIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _UnionChildIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(UnionChildIterator::*)()>(&UnionChildIterator::init$))},
-	{"acceptNode", "(I)S", nullptr, $PUBLIC},
-	{"addNodeTest", "(Lcom/sun/org/apache/xpath/internal/axes/PredicatedNodeTest;)V", nullptr, $PUBLIC},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(UnionChildIterator, init$, void)},
+	{"acceptNode", "(I)S", nullptr, $PUBLIC, $virtualMethod(UnionChildIterator, acceptNode, int16_t, int32_t)},
+	{"addNodeTest", "(Lcom/sun/org/apache/xpath/internal/axes/PredicatedNodeTest;)V", nullptr, $PUBLIC, $virtualMethod(UnionChildIterator, addNodeTest, void, $PredicatedNodeTest*)},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(UnionChildIterator, fixupVariables, void, $List*, int32_t)},
 	{}
 };
 

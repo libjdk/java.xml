@@ -24,10 +24,10 @@ $FieldInfo _DraconianErrorHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _DraconianErrorHandler_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(DraconianErrorHandler::*)()>(&DraconianErrorHandler::init$))},
-	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(DraconianErrorHandler, init$, void)},
+	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(DraconianErrorHandler, error, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(DraconianErrorHandler, fatalError, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(DraconianErrorHandler, warning, void, $SAXParseException*), "org.xml.sax.SAXException"},
 	{}
 };
 

@@ -40,17 +40,17 @@ $FieldInfo _EnclosingMethod_FieldInfo_[] = {
 };
 
 $MethodInfo _EnclosingMethod_MethodInfo_[] = {
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(EnclosingMethod::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&EnclosingMethod::init$)), "java.io.IOException"},
-	{"<init>", "(IIIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PRIVATE, $method(static_cast<void(EnclosingMethod::*)(int32_t,int32_t,int32_t,int32_t,$ConstantPool*)>(&EnclosingMethod::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, nullptr, "java.io.IOException"},
-	{"getEnclosingClass", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantClass;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$ConstantClass*(EnclosingMethod::*)()>(&EnclosingMethod::getEnclosingClass))},
-	{"getEnclosingClassIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(EnclosingMethod::*)()>(&EnclosingMethod::getEnclosingClassIndex))},
-	{"getEnclosingMethod", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantNameAndType;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$ConstantNameAndType*(EnclosingMethod::*)()>(&EnclosingMethod::getEnclosingMethod))},
-	{"getEnclosingMethodIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(EnclosingMethod::*)()>(&EnclosingMethod::getEnclosingMethodIndex))},
-	{"setEnclosingClassIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(EnclosingMethod::*)(int32_t)>(&EnclosingMethod::setEnclosingClassIndex))},
-	{"setEnclosingMethodIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(EnclosingMethod::*)(int32_t)>(&EnclosingMethod::setEnclosingMethodIndex))},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(EnclosingMethod, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"<init>", "(IIIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PRIVATE, $method(EnclosingMethod, init$, void, int32_t, int32_t, int32_t, int32_t, $ConstantPool*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(EnclosingMethod, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(EnclosingMethod, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(EnclosingMethod, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getEnclosingClass", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantClass;", nullptr, $PUBLIC | $FINAL, $method(EnclosingMethod, getEnclosingClass, $ConstantClass*)},
+	{"getEnclosingClassIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(EnclosingMethod, getEnclosingClassIndex, int32_t)},
+	{"getEnclosingMethod", "()Lcom/sun/org/apache/bcel/internal/classfile/ConstantNameAndType;", nullptr, $PUBLIC | $FINAL, $method(EnclosingMethod, getEnclosingMethod, $ConstantNameAndType*)},
+	{"getEnclosingMethodIndex", "()I", nullptr, $PUBLIC | $FINAL, $method(EnclosingMethod, getEnclosingMethodIndex, int32_t)},
+	{"setEnclosingClassIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(EnclosingMethod, setEnclosingClassIndex, void, int32_t)},
+	{"setEnclosingMethodIndex", "(I)V", nullptr, $PUBLIC | $FINAL, $method(EnclosingMethod, setEnclosingMethodIndex, void, int32_t)},
 	{}
 };
 

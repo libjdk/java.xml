@@ -27,8 +27,8 @@ $FieldInfo _DTMNamedNodeMap$DTMException_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMNamedNodeMap$DTMException_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMNamedNodeMap;SLjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMNamedNodeMap$DTMException::*)($DTMNamedNodeMap*,int16_t,$String*)>(&DTMNamedNodeMap$DTMException::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMNamedNodeMap;S)V", nullptr, $PUBLIC, $method(static_cast<void(DTMNamedNodeMap$DTMException::*)($DTMNamedNodeMap*,int16_t)>(&DTMNamedNodeMap$DTMException::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMNamedNodeMap;SLjava/lang/String;)V", nullptr, $PUBLIC, $method(DTMNamedNodeMap$DTMException, init$, void, $DTMNamedNodeMap*, int16_t, $String*)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMNamedNodeMap;S)V", nullptr, $PUBLIC, $method(DTMNamedNodeMap$DTMException, init$, void, $DTMNamedNodeMap*, int16_t)},
 	{}
 };
 

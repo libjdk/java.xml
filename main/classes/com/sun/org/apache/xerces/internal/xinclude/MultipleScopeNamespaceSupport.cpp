@@ -36,19 +36,19 @@ $FieldInfo _MultipleScopeNamespaceSupport_FieldInfo_[] = {
 };
 
 $MethodInfo _MultipleScopeNamespaceSupport_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MultipleScopeNamespaceSupport::*)()>(&MultipleScopeNamespaceSupport::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(MultipleScopeNamespaceSupport::*)($NamespaceContext*)>(&MultipleScopeNamespaceSupport::init$))},
-	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getScopeForContext", "(I)I", nullptr, $PUBLIC},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURI", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURI", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"popScope", "()V", nullptr, $PUBLIC},
-	{"pushScope", "()V", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MultipleScopeNamespaceSupport, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(MultipleScopeNamespaceSupport, init$, void, $NamespaceContext*)},
+	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getAllPrefixes, $Enumeration*)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getPrefix, $String*, $String*)},
+	{"getPrefix", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getPrefix, $String*, $String*, int32_t)},
+	{"getPrefix", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getPrefix, $String*, $String*, int32_t, int32_t)},
+	{"getScopeForContext", "(I)I", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getScopeForContext, int32_t, int32_t)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getURI, $String*, $String*)},
+	{"getURI", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getURI, $String*, $String*, int32_t)},
+	{"getURI", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, getURI, $String*, $String*, int32_t, int32_t)},
+	{"popScope", "()V", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, popScope, void)},
+	{"pushScope", "()V", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, pushScope, void)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(MultipleScopeNamespaceSupport, reset, void)},
 	{}
 };
 

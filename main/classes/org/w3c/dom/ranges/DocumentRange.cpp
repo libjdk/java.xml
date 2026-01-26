@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Range = ::org::w3c::dom::ranges::Range;
 
 namespace org {
 	namespace w3c {
@@ -12,7 +13,7 @@ namespace org {
 			namespace ranges {
 
 $MethodInfo _DocumentRange_MethodInfo_[] = {
-	{"createRange", "()Lorg/w3c/dom/ranges/Range;", nullptr, $PUBLIC | $ABSTRACT},
+	{"createRange", "()Lorg/w3c/dom/ranges/Range;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentRange, createRange, $Range*)},
 	{}
 };
 

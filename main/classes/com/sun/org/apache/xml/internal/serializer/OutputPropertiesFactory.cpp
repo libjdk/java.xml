@@ -71,9 +71,9 @@ $FieldInfo _OutputPropertiesFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _OutputPropertiesFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(OutputPropertiesFactory::*)()>(&OutputPropertiesFactory::init$))},
-	{"getDefaultMethodProperties", "(Ljava/lang/String;)Ljava/util/Properties;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$Properties*(*)($String*)>(&OutputPropertiesFactory::getDefaultMethodProperties))},
-	{"initProperties", "([Ljava/lang/String;[Ljava/lang/String;Ljava/util/Properties;)Ljava/util/Properties;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$Properties*(*)($StringArray*,$StringArray*,$Properties*)>(&OutputPropertiesFactory::initProperties))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(OutputPropertiesFactory, init$, void)},
+	{"getDefaultMethodProperties", "(Ljava/lang/String;)Ljava/util/Properties;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(OutputPropertiesFactory, getDefaultMethodProperties, $Properties*, $String*)},
+	{"initProperties", "([Ljava/lang/String;[Ljava/lang/String;Ljava/util/Properties;)Ljava/util/Properties;", nullptr, $PRIVATE | $STATIC, $staticMethod(OutputPropertiesFactory, initProperties, $Properties*, $StringArray*, $StringArray*, $Properties*)},
 	{}
 };
 

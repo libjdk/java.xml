@@ -36,17 +36,17 @@ $FieldInfo _ExceptionTable_FieldInfo_[] = {
 };
 
 $MethodInfo _ExceptionTable_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ExceptionTable;)V", nullptr, $PUBLIC, $method(static_cast<void(ExceptionTable::*)(ExceptionTable*)>(&ExceptionTable::init$))},
-	{"<init>", "(II[ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(ExceptionTable::*)(int32_t,int32_t,$ints*,$ConstantPool*)>(&ExceptionTable::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(ExceptionTable::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&ExceptionTable::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getExceptionIndexTable", "()[I", nullptr, $PUBLIC, $method(static_cast<$ints*(ExceptionTable::*)()>(&ExceptionTable::getExceptionIndexTable))},
-	{"getExceptionNames", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$StringArray*(ExceptionTable::*)()>(&ExceptionTable::getExceptionNames))},
-	{"getNumberOfExceptions", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ExceptionTable::*)()>(&ExceptionTable::getNumberOfExceptions))},
-	{"setExceptionIndexTable", "([I)V", nullptr, $PUBLIC, $method(static_cast<void(ExceptionTable::*)($ints*)>(&ExceptionTable::setExceptionIndexTable))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ExceptionTable;)V", nullptr, $PUBLIC, $method(ExceptionTable, init$, void, ExceptionTable*)},
+	{"<init>", "(II[ILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(ExceptionTable, init$, void, int32_t, int32_t, $ints*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(ExceptionTable, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ExceptionTable, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(ExceptionTable, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ExceptionTable, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getExceptionIndexTable", "()[I", nullptr, $PUBLIC, $method(ExceptionTable, getExceptionIndexTable, $ints*)},
+	{"getExceptionNames", "()[Ljava/lang/String;", nullptr, $PUBLIC, $method(ExceptionTable, getExceptionNames, $StringArray*)},
+	{"getNumberOfExceptions", "()I", nullptr, $PUBLIC, $method(ExceptionTable, getNumberOfExceptions, int32_t)},
+	{"setExceptionIndexTable", "([I)V", nullptr, $PUBLIC, $method(ExceptionTable, setExceptionIndexTable, void, $ints*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ExceptionTable, toString, $String*)},
 	{}
 };
 

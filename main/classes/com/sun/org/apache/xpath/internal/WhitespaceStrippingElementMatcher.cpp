@@ -4,8 +4,10 @@
 #include <org/w3c/dom/Element.h>
 #include <jcpp.h>
 
+using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Element = ::org::w3c::dom::Element;
 
 namespace com {
 	namespace sun {
@@ -15,8 +17,8 @@ namespace com {
 					namespace internal {
 
 $MethodInfo _WhitespaceStrippingElementMatcher_MethodInfo_[] = {
-	{"canStripWhiteSpace", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"shouldStripWhiteSpace", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lorg/w3c/dom/Element;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerException"},
+	{"canStripWhiteSpace", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(WhitespaceStrippingElementMatcher, canStripWhiteSpace, bool)},
+	{"shouldStripWhiteSpace", "(Lcom/sun/org/apache/xpath/internal/XPathContext;Lorg/w3c/dom/Element;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(WhitespaceStrippingElementMatcher, shouldStripWhiteSpace, bool, $XPathContext*, $Element*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

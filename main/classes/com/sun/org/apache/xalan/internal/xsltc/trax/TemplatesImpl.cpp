@@ -210,8 +210,8 @@ $FieldInfo TemplatesImpl$$Lambda$lambda$createModule$1::fieldInfos[4] = {
 	{}
 };
 $MethodInfo TemplatesImpl$$Lambda$lambda$createModule$1::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/ModuleLayer;Ljava/lang/module/Configuration;Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(static_cast<void(TemplatesImpl$$Lambda$lambda$createModule$1::*)($ModuleLayer*,$Configuration*,$ClassLoader*)>(&TemplatesImpl$$Lambda$lambda$createModule$1::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/ModuleLayer;Ljava/lang/module/Configuration;Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(TemplatesImpl$$Lambda$lambda$createModule$1, init$, void, $ModuleLayer*, $Configuration*, $ClassLoader*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(TemplatesImpl$$Lambda$lambda$createModule$1, run, $Object*)},
 	{}
 };
 $ClassInfo TemplatesImpl$$Lambda$lambda$createModule$1::classInfo$ = {
@@ -256,8 +256,8 @@ $FieldInfo TemplatesImpl$$Lambda$lambda$defineTransletClasses$2$1::fieldInfos[4]
 	{}
 };
 $MethodInfo TemplatesImpl$$Lambda$lambda$defineTransletClasses$2$1::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/Module;Ljava/lang/Module;Ljava/security/PermissionCollection;)V", nullptr, $PUBLIC, $method(static_cast<void(TemplatesImpl$$Lambda$lambda$defineTransletClasses$2$1::*)($Module*,$Module*,$PermissionCollection*)>(&TemplatesImpl$$Lambda$lambda$defineTransletClasses$2$1::init$))},
-	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/Module;Ljava/lang/Module;Ljava/security/PermissionCollection;)V", nullptr, $PUBLIC, $method(TemplatesImpl$$Lambda$lambda$defineTransletClasses$2$1, init$, void, $Module*, $Module*, $PermissionCollection*)},
+	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(TemplatesImpl$$Lambda$lambda$defineTransletClasses$2$1, accept, void, Object$*)},
 	{}
 };
 $ClassInfo TemplatesImpl$$Lambda$lambda$defineTransletClasses$2$1::classInfo$ = {
@@ -296,8 +296,8 @@ $FieldInfo TemplatesImpl$$Lambda$lambda$createModule$0$2::fieldInfos[2] = {
 	{}
 };
 $MethodInfo TemplatesImpl$$Lambda$lambda$createModule$0$2::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(static_cast<void(TemplatesImpl$$Lambda$lambda$createModule$0$2::*)($ClassLoader*)>(&TemplatesImpl$$Lambda$lambda$createModule$0$2::init$))},
-	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(TemplatesImpl$$Lambda$lambda$createModule$0$2, init$, void, $ClassLoader*)},
+	{"apply", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(TemplatesImpl$$Lambda$lambda$createModule$0$2, apply, $Object*, Object$*)},
 	{}
 };
 $ClassInfo TemplatesImpl$$Lambda$lambda$createModule$0$2::classInfo$ = {
@@ -340,31 +340,31 @@ $MethodInfo _TemplatesImpl_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "([[BLjava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(TemplatesImpl::*)($byteArray2*,$String*,$Properties*,int32_t,$TransformerFactoryImpl*)>(&TemplatesImpl::init$))},
-	{"<init>", "([Ljava/lang/Class;Ljava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", "([Ljava/lang/Class<*>;Ljava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", $PROTECTED, $method(static_cast<void(TemplatesImpl::*)($ClassArray*,$String*,$Properties*,int32_t,$TransformerFactoryImpl*)>(&TemplatesImpl::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(TemplatesImpl::*)()>(&TemplatesImpl::init$))},
-	{"createModule", "(Ljava/lang/module/ModuleDescriptor;Ljava/lang/ClassLoader;)Ljava/lang/Module;", nullptr, $PRIVATE, $method(static_cast<$Module*(TemplatesImpl::*)($ModuleDescriptor*,$ClassLoader*)>(&TemplatesImpl::createModule))},
-	{"defineTransletClasses", "()V", nullptr, $PRIVATE, $method(static_cast<void(TemplatesImpl::*)()>(&TemplatesImpl::defineTransletClasses)), "javax.xml.transform.TransformerConfigurationException"},
-	{"getOutputProperties", "()Ljava/util/Properties;", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"getStylesheetDOM", "()Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC, $method(static_cast<$DOM*(TemplatesImpl::*)()>(&TemplatesImpl::getStylesheetDOM))},
-	{"getTransletBytecodes", "()[[B", nullptr, $PRIVATE | $SYNCHRONIZED, $method(static_cast<$byteArray2*(TemplatesImpl::*)()>(&TemplatesImpl::getTransletBytecodes))},
-	{"getTransletClasses", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PRIVATE | $SYNCHRONIZED, $method(static_cast<$ClassArray*(TemplatesImpl::*)()>(&TemplatesImpl::getTransletClasses))},
-	{"getTransletIndex", "()I", nullptr, $PUBLIC | $SYNCHRONIZED, $method(static_cast<int32_t(TemplatesImpl::*)()>(&TemplatesImpl::getTransletIndex))},
-	{"getTransletInstance", "()Lcom/sun/org/apache/xalan/internal/xsltc/Translet;", nullptr, $PRIVATE, $method(static_cast<$Translet*(TemplatesImpl::*)()>(&TemplatesImpl::getTransletInstance)), "javax.xml.transform.TransformerConfigurationException"},
-	{"getTransletName", "()Ljava/lang/String;", nullptr, $PROTECTED | $SYNCHRONIZED, $method(static_cast<$String*(TemplatesImpl::*)()>(&TemplatesImpl::getTransletName))},
-	{"init", "(Ljava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", nullptr, $PRIVATE, $method(static_cast<void(TemplatesImpl::*)($String*,$Properties*,int32_t,$TransformerFactoryImpl*)>(&TemplatesImpl::init))},
-	{"lambda$createModule$0", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ClassLoader*(*)($ClassLoader*,$String*)>(&TemplatesImpl::lambda$createModule$0))},
-	{"lambda$createModule$1", "(Ljava/lang/ModuleLayer;Ljava/lang/module/Configuration;Ljava/lang/ClassLoader;)Ljava/lang/ModuleLayer;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ModuleLayer*(*)($ModuleLayer*,$Configuration*,$ClassLoader*)>(&TemplatesImpl::lambda$createModule$1))},
-	{"lambda$defineTransletClasses$2", "(Ljava/lang/Module;Ljava/lang/Module;Ljava/security/PermissionCollection;Ljava/lang/String;)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<void(*)($Module*,$Module*,$PermissionCollection*,$String*)>(&TemplatesImpl::lambda$defineTransletClasses$2))},
-	{"newTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $SYNCHRONIZED, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"overrideDefaultParser", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(TemplatesImpl::*)()>(&TemplatesImpl::overrideDefaultParser))},
-	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(static_cast<void(TemplatesImpl::*)($ObjectInputStream*)>(&TemplatesImpl::readObject)), "java.io.IOException,java.lang.ClassNotFoundException"},
-	{"setStylesheetDOM", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)V", nullptr, $PUBLIC, $method(static_cast<void(TemplatesImpl::*)($DOM*)>(&TemplatesImpl::setStylesheetDOM))},
-	{"setTransletBytecodes", "([[B)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(static_cast<void(TemplatesImpl::*)($byteArray2*)>(&TemplatesImpl::setTransletBytecodes))},
-	{"setTransletName", "(Ljava/lang/String;)V", nullptr, $PROTECTED | $SYNCHRONIZED, $method(static_cast<void(TemplatesImpl::*)($String*)>(&TemplatesImpl::setTransletName))},
-	{"setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", nullptr, $PUBLIC | $SYNCHRONIZED, $method(static_cast<void(TemplatesImpl::*)($URIResolver*)>(&TemplatesImpl::setURIResolver))},
+	{"<init>", "([[BLjava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", nullptr, $PROTECTED, $method(TemplatesImpl, init$, void, $byteArray2*, $String*, $Properties*, int32_t, $TransformerFactoryImpl*)},
+	{"<init>", "([Ljava/lang/Class;Ljava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", "([Ljava/lang/Class<*>;Ljava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", $PROTECTED, $method(TemplatesImpl, init$, void, $ClassArray*, $String*, $Properties*, int32_t, $TransformerFactoryImpl*)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(TemplatesImpl, init$, void)},
+	{"createModule", "(Ljava/lang/module/ModuleDescriptor;Ljava/lang/ClassLoader;)Ljava/lang/Module;", nullptr, $PRIVATE, $method(TemplatesImpl, createModule, $Module*, $ModuleDescriptor*, $ClassLoader*)},
+	{"defineTransletClasses", "()V", nullptr, $PRIVATE, $method(TemplatesImpl, defineTransletClasses, void), "javax.xml.transform.TransformerConfigurationException"},
+	{"getOutputProperties", "()Ljava/util/Properties;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(TemplatesImpl, getOutputProperties, $Properties*)},
+	{"getStylesheetDOM", "()Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC, $method(TemplatesImpl, getStylesheetDOM, $DOM*)},
+	{"getTransletBytecodes", "()[[B", nullptr, $PRIVATE | $SYNCHRONIZED, $method(TemplatesImpl, getTransletBytecodes, $byteArray2*)},
+	{"getTransletClasses", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PRIVATE | $SYNCHRONIZED, $method(TemplatesImpl, getTransletClasses, $ClassArray*)},
+	{"getTransletIndex", "()I", nullptr, $PUBLIC | $SYNCHRONIZED, $method(TemplatesImpl, getTransletIndex, int32_t)},
+	{"getTransletInstance", "()Lcom/sun/org/apache/xalan/internal/xsltc/Translet;", nullptr, $PRIVATE, $method(TemplatesImpl, getTransletInstance, $Translet*), "javax.xml.transform.TransformerConfigurationException"},
+	{"getTransletName", "()Ljava/lang/String;", nullptr, $PROTECTED | $SYNCHRONIZED, $method(TemplatesImpl, getTransletName, $String*)},
+	{"init", "(Ljava/lang/String;Ljava/util/Properties;ILcom/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl;)V", nullptr, $PRIVATE, $method(TemplatesImpl, init, void, $String*, $Properties*, int32_t, $TransformerFactoryImpl*)},
+	{"lambda$createModule$0", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(TemplatesImpl, lambda$createModule$0, $ClassLoader*, $ClassLoader*, $String*)},
+	{"lambda$createModule$1", "(Ljava/lang/ModuleLayer;Ljava/lang/module/Configuration;Ljava/lang/ClassLoader;)Ljava/lang/ModuleLayer;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(TemplatesImpl, lambda$createModule$1, $ModuleLayer*, $ModuleLayer*, $Configuration*, $ClassLoader*)},
+	{"lambda$defineTransletClasses$2", "(Ljava/lang/Module;Ljava/lang/Module;Ljava/security/PermissionCollection;Ljava/lang/String;)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(TemplatesImpl, lambda$defineTransletClasses$2, void, $Module*, $Module*, $PermissionCollection*, $String*)},
+	{"newTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(TemplatesImpl, newTransformer, $Transformer*), "javax.xml.transform.TransformerConfigurationException"},
+	{"overrideDefaultParser", "()Z", nullptr, $PUBLIC, $method(TemplatesImpl, overrideDefaultParser, bool)},
+	{"readObject", "(Ljava/io/ObjectInputStream;)V", nullptr, $PRIVATE, $method(TemplatesImpl, readObject, void, $ObjectInputStream*), "java.io.IOException,java.lang.ClassNotFoundException"},
+	{"setStylesheetDOM", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)V", nullptr, $PUBLIC, $method(TemplatesImpl, setStylesheetDOM, void, $DOM*)},
+	{"setTransletBytecodes", "([[B)V", nullptr, $PRIVATE | $SYNCHRONIZED, $method(TemplatesImpl, setTransletBytecodes, void, $byteArray2*)},
+	{"setTransletName", "(Ljava/lang/String;)V", nullptr, $PROTECTED | $SYNCHRONIZED, $method(TemplatesImpl, setTransletName, void, $String*)},
+	{"setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", nullptr, $PUBLIC | $SYNCHRONIZED, $method(TemplatesImpl, setURIResolver, void, $URIResolver*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"writeObject", "(Ljava/io/ObjectOutputStream;)V", nullptr, $PRIVATE, $method(static_cast<void(TemplatesImpl::*)($ObjectOutputStream*)>(&TemplatesImpl::writeObject)), "java.io.IOException"},
+	{"writeObject", "(Ljava/io/ObjectOutputStream;)V", nullptr, $PRIVATE, $method(TemplatesImpl, writeObject, void, $ObjectOutputStream*), "java.io.IOException"},
 	{}
 };
 

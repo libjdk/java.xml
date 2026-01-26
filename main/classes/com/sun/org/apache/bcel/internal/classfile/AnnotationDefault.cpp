@@ -36,13 +36,13 @@ $FieldInfo _AnnotationDefault_FieldInfo_[] = {
 };
 
 $MethodInfo _AnnotationDefault_MethodInfo_[] = {
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(AnnotationDefault::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&AnnotationDefault::init$)), "java.io.IOException"},
-	{"<init>", "(IILcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(AnnotationDefault::*)(int32_t,int32_t,$ElementValue*,$ConstantPool*)>(&AnnotationDefault::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, nullptr, "java.io.IOException"},
-	{"getDefaultValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$ElementValue*(AnnotationDefault::*)()>(&AnnotationDefault::getDefaultValue))},
-	{"setDefaultValue", "(Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(AnnotationDefault::*)($ElementValue*)>(&AnnotationDefault::setDefaultValue))},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(AnnotationDefault, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"<init>", "(IILcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(AnnotationDefault, init$, void, int32_t, int32_t, $ElementValue*, $ConstantPool*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(AnnotationDefault, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(AnnotationDefault, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(AnnotationDefault, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getDefaultValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $FINAL, $method(AnnotationDefault, getDefaultValue, $ElementValue*)},
+	{"setDefaultValue", "(Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;)V", nullptr, $PUBLIC | $FINAL, $method(AnnotationDefault, setDefaultValue, void, $ElementValue*)},
 	{}
 };
 

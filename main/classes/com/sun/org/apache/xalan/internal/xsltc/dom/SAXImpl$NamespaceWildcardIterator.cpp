@@ -52,13 +52,13 @@ $FieldInfo _SAXImpl$NamespaceWildcardIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXImpl$NamespaceWildcardIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;II)V", nullptr, $PUBLIC, $method(static_cast<void(SAXImpl$NamespaceWildcardIterator::*)($SAXImpl*,int32_t,int32_t)>(&SAXImpl$NamespaceWildcardIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl;II)V", nullptr, $PUBLIC, $method(SAXImpl$NamespaceWildcardIterator, init$, void, $SAXImpl*, int32_t, int32_t)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceWildcardIterator, cloneIterator, $DTMAxisIterator*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceWildcardIterator, gotoMark, void)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceWildcardIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceWildcardIterator, next, int32_t)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceWildcardIterator, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAXImpl$NamespaceWildcardIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

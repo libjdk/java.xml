@@ -23,10 +23,10 @@ $FieldInfo _CompilerException_FieldInfo_[] = {
 };
 
 $MethodInfo _CompilerException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CompilerException::*)()>(&CompilerException::init$))},
-	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(CompilerException::*)($Exception*)>(&CompilerException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(CompilerException::*)($String*)>(&CompilerException::init$))},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CompilerException, init$, void)},
+	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(CompilerException, init$, void, $Exception*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(CompilerException, init$, void, $String*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CompilerException, getMessage, $String*)},
 	{}
 };
 

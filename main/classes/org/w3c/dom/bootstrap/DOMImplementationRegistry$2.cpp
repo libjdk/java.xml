@@ -18,8 +18,8 @@ namespace org {
 			namespace bootstrap {
 
 $MethodInfo _DOMImplementationRegistry$2_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DOMImplementationRegistry$2::*)()>(&DOMImplementationRegistry$2::init$))},
-	{"run", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(DOMImplementationRegistry$2, init$, void)},
+	{"run", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC, $virtualMethod(DOMImplementationRegistry$2, run, $Object*)},
 	{}
 };
 

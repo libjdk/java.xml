@@ -74,11 +74,11 @@ $FieldInfo _ElemDesc_FieldInfo_[] = {
 };
 
 $MethodInfo _ElemDesc_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(ElemDesc::*)(int32_t)>(&ElemDesc::init$))},
-	{"getFlags", "()I", nullptr, 0, $method(static_cast<int32_t(ElemDesc::*)()>(&ElemDesc::getFlags))},
-	{"is", "(I)Z", nullptr, $PRIVATE, $method(static_cast<bool(ElemDesc::*)(int32_t)>(&ElemDesc::is))},
-	{"isAttrFlagSet", "(Ljava/lang/String;I)Z", nullptr, $PUBLIC, $method(static_cast<bool(ElemDesc::*)($String*,int32_t)>(&ElemDesc::isAttrFlagSet))},
-	{"setAttr", "(Ljava/lang/String;I)V", nullptr, 0, $method(static_cast<void(ElemDesc::*)($String*,int32_t)>(&ElemDesc::setAttr))},
+	{"<init>", "(I)V", nullptr, 0, $method(ElemDesc, init$, void, int32_t)},
+	{"getFlags", "()I", nullptr, 0, $method(ElemDesc, getFlags, int32_t)},
+	{"is", "(I)Z", nullptr, $PRIVATE, $method(ElemDesc, is, bool, int32_t)},
+	{"isAttrFlagSet", "(Ljava/lang/String;I)Z", nullptr, $PUBLIC, $method(ElemDesc, isAttrFlagSet, bool, $String*, int32_t)},
+	{"setAttr", "(Ljava/lang/String;I)V", nullptr, 0, $method(ElemDesc, setAttr, void, $String*, int32_t)},
 	{}
 };
 

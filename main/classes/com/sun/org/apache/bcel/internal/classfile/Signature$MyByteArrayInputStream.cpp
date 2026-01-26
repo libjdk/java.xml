@@ -18,9 +18,9 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _Signature$MyByteArrayInputStream_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(Signature$MyByteArrayInputStream::*)($String*)>(&Signature$MyByteArrayInputStream::init$))},
-	{"getData", "()Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(Signature$MyByteArrayInputStream::*)()>(&Signature$MyByteArrayInputStream::getData))},
-	{"unread", "()V", nullptr, 0, $method(static_cast<void(Signature$MyByteArrayInputStream::*)()>(&Signature$MyByteArrayInputStream::unread))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(Signature$MyByteArrayInputStream, init$, void, $String*)},
+	{"getData", "()Ljava/lang/String;", nullptr, 0, $method(Signature$MyByteArrayInputStream, getData, $String*)},
+	{"unread", "()V", nullptr, 0, $method(Signature$MyByteArrayInputStream, unread, void)},
 	{}
 };
 

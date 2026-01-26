@@ -31,15 +31,15 @@ $FieldInfo _NamedNodeMapImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _NamedNodeMapImpl_MethodInfo_[] = {
-	{"<init>", "([Lorg/w3c/dom/Attr;)V", nullptr, $PUBLIC, $method(static_cast<void(NamedNodeMapImpl::*)($AttrArray*)>(&NamedNodeMapImpl::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"removeNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"removeNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"setNamedItem", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"setNamedItemNS", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
+	{"<init>", "([Lorg/w3c/dom/Attr;)V", nullptr, $PUBLIC, $method(NamedNodeMapImpl, init$, void, $AttrArray*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, getLength, int32_t)},
+	{"getNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, getNamedItem, $Node*, $String*)},
+	{"getNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, getNamedItemNS, $Node*, $String*, $String*)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, item, $Node*, int32_t)},
+	{"removeNamedItem", "(Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, removeNamedItem, $Node*, $String*), "org.w3c.dom.DOMException"},
+	{"removeNamedItemNS", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, removeNamedItemNS, $Node*, $String*, $String*), "org.w3c.dom.DOMException"},
+	{"setNamedItem", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, setNamedItem, $Node*, $Node*), "org.w3c.dom.DOMException"},
+	{"setNamedItemNS", "(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(NamedNodeMapImpl, setNamedItemNS, $Node*, $Node*), "org.w3c.dom.DOMException"},
 	{}
 };
 

@@ -18,6 +18,7 @@ using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $Package = ::java::lang::Package;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
+using $DocumentBuilder = ::javax::xml::parsers::DocumentBuilder;
 using $FactoryFinder = ::javax::xml::parsers::FactoryFinder;
 using $Schema = ::javax::xml::validation::Schema;
 
@@ -37,35 +38,35 @@ $FieldInfo _DocumentBuilderFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _DocumentBuilderFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(DocumentBuilderFactory::*)()>(&DocumentBuilderFactory::init$))},
-	{"getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.IllegalArgumentException"},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.parsers.ParserConfigurationException"},
-	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC},
-	{"isCoalescing", "()Z", nullptr, $PUBLIC},
-	{"isExpandEntityReferences", "()Z", nullptr, $PUBLIC},
-	{"isIgnoringComments", "()Z", nullptr, $PUBLIC},
-	{"isIgnoringElementContentWhitespace", "()Z", nullptr, $PUBLIC},
-	{"isNamespaceAware", "()Z", nullptr, $PUBLIC},
-	{"isValidating", "()Z", nullptr, $PUBLIC},
-	{"isXIncludeAware", "()Z", nullptr, $PUBLIC},
-	{"makeNSAware", "(Ljavax/xml/parsers/DocumentBuilderFactory;)Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PRIVATE | $STATIC, $method(static_cast<DocumentBuilderFactory*(*)(DocumentBuilderFactory*)>(&DocumentBuilderFactory::makeNSAware))},
-	{"newDefaultInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DocumentBuilderFactory*(*)()>(&DocumentBuilderFactory::newDefaultInstance))},
-	{"newDefaultNSInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DocumentBuilderFactory*(*)()>(&DocumentBuilderFactory::newDefaultNSInstance))},
-	{"newDocumentBuilder", "()Ljavax/xml/parsers/DocumentBuilder;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.parsers.ParserConfigurationException"},
-	{"newInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DocumentBuilderFactory*(*)()>(&DocumentBuilderFactory::newInstance))},
-	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DocumentBuilderFactory*(*)($String*,$ClassLoader*)>(&DocumentBuilderFactory::newInstance))},
-	{"newNSInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DocumentBuilderFactory*(*)()>(&DocumentBuilderFactory::newNSInstance))},
-	{"newNSInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<DocumentBuilderFactory*(*)($String*,$ClassLoader*)>(&DocumentBuilderFactory::newNSInstance))},
-	{"setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.IllegalArgumentException"},
-	{"setCoalescing", "(Z)V", nullptr, $PUBLIC},
-	{"setExpandEntityReferences", "(Z)V", nullptr, $PUBLIC},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.parsers.ParserConfigurationException"},
-	{"setIgnoringComments", "(Z)V", nullptr, $PUBLIC},
-	{"setIgnoringElementContentWhitespace", "(Z)V", nullptr, $PUBLIC},
-	{"setNamespaceAware", "(Z)V", nullptr, $PUBLIC},
-	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC},
-	{"setValidating", "(Z)V", nullptr, $PUBLIC},
-	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(DocumentBuilderFactory, init$, void)},
+	{"getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilderFactory, getAttribute, $Object*, $String*), "java.lang.IllegalArgumentException"},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilderFactory, getFeature, bool, $String*), "javax.xml.parsers.ParserConfigurationException"},
+	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, getSchema, $Schema*)},
+	{"isCoalescing", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, isCoalescing, bool)},
+	{"isExpandEntityReferences", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, isExpandEntityReferences, bool)},
+	{"isIgnoringComments", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, isIgnoringComments, bool)},
+	{"isIgnoringElementContentWhitespace", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, isIgnoringElementContentWhitespace, bool)},
+	{"isNamespaceAware", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, isNamespaceAware, bool)},
+	{"isValidating", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, isValidating, bool)},
+	{"isXIncludeAware", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, isXIncludeAware, bool)},
+	{"makeNSAware", "(Ljavax/xml/parsers/DocumentBuilderFactory;)Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PRIVATE | $STATIC, $staticMethod(DocumentBuilderFactory, makeNSAware, DocumentBuilderFactory*, DocumentBuilderFactory*)},
+	{"newDefaultInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DocumentBuilderFactory, newDefaultInstance, DocumentBuilderFactory*)},
+	{"newDefaultNSInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DocumentBuilderFactory, newDefaultNSInstance, DocumentBuilderFactory*)},
+	{"newDocumentBuilder", "()Ljavax/xml/parsers/DocumentBuilder;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilderFactory, newDocumentBuilder, $DocumentBuilder*), "javax.xml.parsers.ParserConfigurationException"},
+	{"newInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DocumentBuilderFactory, newInstance, DocumentBuilderFactory*)},
+	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DocumentBuilderFactory, newInstance, DocumentBuilderFactory*, $String*, $ClassLoader*)},
+	{"newNSInstance", "()Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DocumentBuilderFactory, newNSInstance, DocumentBuilderFactory*)},
+	{"newNSInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/DocumentBuilderFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(DocumentBuilderFactory, newNSInstance, DocumentBuilderFactory*, $String*, $ClassLoader*)},
+	{"setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilderFactory, setAttribute, void, $String*, Object$*), "java.lang.IllegalArgumentException"},
+	{"setCoalescing", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setCoalescing, void, bool)},
+	{"setExpandEntityReferences", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setExpandEntityReferences, void, bool)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilderFactory, setFeature, void, $String*, bool), "javax.xml.parsers.ParserConfigurationException"},
+	{"setIgnoringComments", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setIgnoringComments, void, bool)},
+	{"setIgnoringElementContentWhitespace", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setIgnoringElementContentWhitespace, void, bool)},
+	{"setNamespaceAware", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setNamespaceAware, void, bool)},
+	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setSchema, void, $Schema*)},
+	{"setValidating", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setValidating, void, bool)},
+	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilderFactory, setXIncludeAware, void, bool)},
 	{}
 };
 

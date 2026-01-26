@@ -41,8 +41,8 @@ $FieldInfo _SimpleContentModel_FieldInfo_[] = {
 };
 
 $MethodInfo _SimpleContentModel_MethodInfo_[] = {
-	{"<init>", "(SLcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, $method(static_cast<void(SimpleContentModel::*)(int16_t,$QName*,$QName*)>(&SimpleContentModel::init$))},
-	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC},
+	{"<init>", "(SLcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, $method(SimpleContentModel, init$, void, int16_t, $QName*, $QName*)},
+	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC, $virtualMethod(SimpleContentModel, validate, int32_t, $QNameArray*, int32_t, int32_t)},
 	{}
 };
 

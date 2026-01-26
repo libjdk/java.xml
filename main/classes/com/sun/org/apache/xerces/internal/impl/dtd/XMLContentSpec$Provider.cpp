@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec.h>
 #include <jcpp.h>
 
+using $XMLContentSpec = ::com::sun::org::apache::xerces::internal::impl::dtd::XMLContentSpec;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $InnerClassInfo = ::java::lang::InnerClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -17,7 +18,7 @@ namespace com {
 							namespace dtd {
 
 $MethodInfo _XMLContentSpec$Provider_MethodInfo_[] = {
-	{"getContentSpec", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getContentSpec", "(ILcom/sun/org/apache/xerces/internal/impl/dtd/XMLContentSpec;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLContentSpec$Provider, getContentSpec, bool, int32_t, $XMLContentSpec*)},
 	{}
 };
 

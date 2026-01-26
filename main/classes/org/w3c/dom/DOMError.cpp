@@ -10,6 +10,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $DOMLocator = ::org::w3c::dom::DOMLocator;
 
 namespace org {
 	namespace w3c {
@@ -23,12 +24,12 @@ $FieldInfo _DOMError_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMError_MethodInfo_[] = {
-	{"getLocation", "()Lorg/w3c/dom/DOMLocator;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getRelatedData", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getRelatedException", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSeverity", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLocation", "()Lorg/w3c/dom/DOMLocator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMError, getLocation, $DOMLocator*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMError, getMessage, $String*)},
+	{"getRelatedData", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMError, getRelatedData, $Object*)},
+	{"getRelatedException", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMError, getRelatedException, $Object*)},
+	{"getSeverity", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMError, getSeverity, int16_t)},
+	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMError, getType, $String*)},
 	{}
 };
 

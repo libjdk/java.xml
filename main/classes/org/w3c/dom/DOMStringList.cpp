@@ -10,9 +10,9 @@ namespace org {
 		namespace dom {
 
 $MethodInfo _DOMStringList_MethodInfo_[] = {
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMStringList, contains, bool, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMStringList, getLength, int32_t)},
+	{"item", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMStringList, item, $String*, int32_t)},
 	{}
 };
 

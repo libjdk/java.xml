@@ -76,12 +76,12 @@ $FieldInfo _CatalogResolverImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogResolverImpl_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/catalog/Catalog;)V", nullptr, $PUBLIC, $method(static_cast<void(CatalogResolverImpl::*)($Catalog*)>(&CatalogResolverImpl::init$))},
-	{"resolve", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC},
-	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC},
-	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PUBLIC},
-	{"resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC},
-	{"setEntityResolver", "(Ljavax/xml/transform/sax/SAXSource;)V", nullptr, $PRIVATE, $method(static_cast<void(CatalogResolverImpl::*)($SAXSource*)>(&CatalogResolverImpl::setEntityResolver))},
+	{"<init>", "(Ljavax/xml/catalog/Catalog;)V", nullptr, $PUBLIC, $method(CatalogResolverImpl, init$, void, $Catalog*)},
+	{"resolve", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC, $virtualMethod(CatalogResolverImpl, resolve, $Source*, $String*, $String*)},
+	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $virtualMethod(CatalogResolverImpl, resolveEntity, $InputSource*, $String*, $String*)},
+	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PUBLIC, $virtualMethod(CatalogResolverImpl, resolveEntity, $Object*, $String*, $String*, $String*, $String*)},
+	{"resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC, $virtualMethod(CatalogResolverImpl, resolveResource, $LSInput*, $String*, $String*, $String*, $String*, $String*)},
+	{"setEntityResolver", "(Ljavax/xml/transform/sax/SAXSource;)V", nullptr, $PRIVATE, $method(CatalogResolverImpl, setEntityResolver, void, $SAXSource*)},
 	{}
 };
 

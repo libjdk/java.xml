@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xpath/internal/XPathContext.h>
 #include <jcpp.h>
 
+using $XPathContext = ::com::sun::org::apache::xpath::internal::XPathContext;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,8 +16,8 @@ namespace com {
 						namespace axes {
 
 $MethodInfo _SubContextList_MethodInfo_[] = {
-	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getProximityPosition", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SubContextList, getLastPos, int32_t, $XPathContext*)},
+	{"getProximityPosition", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SubContextList, getProximityPosition, int32_t, $XPathContext*)},
 	{}
 };
 

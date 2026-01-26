@@ -690,7 +690,7 @@ $FieldInfo _Constants_FieldInfo_[] = {
 };
 
 $MethodInfo _Constants_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Constants::*)()>(&Constants::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Constants, init$, void)},
 	{}
 };
 

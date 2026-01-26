@@ -54,14 +54,14 @@ $FieldInfo _StylesheetPIHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _StylesheetPIHandler_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(StylesheetPIHandler::*)($String*,$String*,$String*,$String*)>(&StylesheetPIHandler::init$))},
-	{"getAssociatedStylesheet", "()Ljavax/xml/transform/Source;", nullptr, $PUBLIC},
-	{"getBaseId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURIResolver", "()Ljavax/xml/transform/URIResolver;", nullptr, $PUBLIC},
-	{"processingInstruction", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"setBaseId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", nullptr, $PUBLIC},
-	{"startElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(StylesheetPIHandler, init$, void, $String*, $String*, $String*, $String*)},
+	{"getAssociatedStylesheet", "()Ljavax/xml/transform/Source;", nullptr, $PUBLIC, $virtualMethod(StylesheetPIHandler, getAssociatedStylesheet, $Source*)},
+	{"getBaseId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StylesheetPIHandler, getBaseId, $String*)},
+	{"getURIResolver", "()Ljavax/xml/transform/URIResolver;", nullptr, $PUBLIC, $virtualMethod(StylesheetPIHandler, getURIResolver, $URIResolver*)},
+	{"processingInstruction", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StylesheetPIHandler, processingInstruction, void, $String*, $String*), "org.xml.sax.SAXException"},
+	{"setBaseId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StylesheetPIHandler, setBaseId, void, $String*)},
+	{"setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", nullptr, $PUBLIC, $virtualMethod(StylesheetPIHandler, setURIResolver, void, $URIResolver*)},
+	{"startElement", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC, $virtualMethod(StylesheetPIHandler, startElement, void, $String*, $String*, $String*, $Attributes*), "org.xml.sax.SAXException"},
 	{}
 };
 

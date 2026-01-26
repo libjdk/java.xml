@@ -49,11 +49,11 @@ $MethodInfo _PUTFIELD_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(PUTFIELD::*)()>(&PUTFIELD::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(PUTFIELD::*)(int32_t)>(&PUTFIELD::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC},
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(PUTFIELD, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(PUTFIELD, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(PUTFIELD, accept, void, $Visitor*)},
+	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC, $virtualMethod(PUTFIELD, consumeStack, int32_t, $ConstantPoolGen*)},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(PUTFIELD, getExceptions, $ClassArray*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

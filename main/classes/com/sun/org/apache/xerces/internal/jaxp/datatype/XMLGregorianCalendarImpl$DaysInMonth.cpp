@@ -23,7 +23,7 @@ $FieldInfo _XMLGregorianCalendarImpl$DaysInMonth_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLGregorianCalendarImpl$DaysInMonth_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLGregorianCalendarImpl$DaysInMonth::*)()>(&XMLGregorianCalendarImpl$DaysInMonth::init$))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$DaysInMonth, init$, void)},
 	{}
 };
 

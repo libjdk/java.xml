@@ -28,17 +28,17 @@ $FieldInfo _DOMResult_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMResult_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMResult::*)()>(&DOMResult::init$))},
-	{"<init>", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMResult::*)($Node*)>(&DOMResult::init$))},
-	{"<init>", "(Lorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMResult::*)($Node*,$String*)>(&DOMResult::init$))},
-	{"<init>", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMResult::*)($Node*,$Node*)>(&DOMResult::init$))},
-	{"<init>", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMResult::*)($Node*,$Node*,$String*)>(&DOMResult::init$))},
-	{"getNextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setNextSibling", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC},
-	{"setNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMResult, init$, void)},
+	{"<init>", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(DOMResult, init$, void, $Node*)},
+	{"<init>", "(Lorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DOMResult, init$, void, $Node*, $String*)},
+	{"<init>", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(DOMResult, init$, void, $Node*, $Node*)},
+	{"<init>", "(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DOMResult, init$, void, $Node*, $Node*, $String*)},
+	{"getNextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DOMResult, getNextSibling, $Node*)},
+	{"getNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DOMResult, getNode, $Node*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMResult, getSystemId, $String*)},
+	{"setNextSibling", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $virtualMethod(DOMResult, setNextSibling, void, $Node*)},
+	{"setNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $virtualMethod(DOMResult, setNode, void, $Node*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(DOMResult, setSystemId, void, $String*)},
 	{}
 };
 

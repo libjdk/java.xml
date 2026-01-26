@@ -16,7 +16,7 @@ namespace com {
 						namespace impl {
 
 $MethodInfo _XMLDocumentFragmentScannerImpl$Driver_MethodInfo_[] = {
-	{"next", "()I", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"next", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLDocumentFragmentScannerImpl$Driver, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

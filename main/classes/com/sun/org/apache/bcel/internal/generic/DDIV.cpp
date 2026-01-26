@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _DDIV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DDIV::*)()>(&DDIV::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DDIV, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(DDIV, accept, void, $Visitor*)},
 	{}
 };
 

@@ -35,9 +35,9 @@ $FieldInfo _FilterExprIterator$filterExprOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _FilterExprIterator$filterExprOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/FilterExprIterator;)V", nullptr, 0, $method(static_cast<void(FilterExprIterator$filterExprOwner::*)($FilterExprIterator*)>(&FilterExprIterator$filterExprOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/FilterExprIterator;)V", nullptr, 0, $method(FilterExprIterator$filterExprOwner, init$, void, $FilterExprIterator*)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator$filterExprOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator$filterExprOwner, setExpression, void, $Expression*)},
 	{}
 };
 

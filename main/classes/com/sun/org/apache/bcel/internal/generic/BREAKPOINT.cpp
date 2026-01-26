@@ -22,8 +22,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _BREAKPOINT_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(BREAKPOINT::*)()>(&BREAKPOINT::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(BREAKPOINT, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(BREAKPOINT, accept, void, $Visitor*)},
 	{}
 };
 

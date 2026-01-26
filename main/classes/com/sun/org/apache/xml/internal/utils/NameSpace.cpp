@@ -23,7 +23,7 @@ $FieldInfo _NameSpace_FieldInfo_[] = {
 };
 
 $MethodInfo _NameSpace_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(NameSpace::*)($String*,$String*)>(&NameSpace::init$))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(NameSpace, init$, void, $String*, $String*)},
 	{}
 };
 

@@ -33,9 +33,9 @@ $FieldInfo _And_FieldInfo_[] = {
 };
 
 $MethodInfo _And_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(And::*)()>(&And::init$))},
-	{"bool", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Z", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(And, init$, void)},
+	{"bool", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Z", nullptr, $PUBLIC, $virtualMethod(And, bool$, bool, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(And, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

@@ -4,6 +4,9 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription.h>
 #include <jcpp.h>
 
+using $GrammarArray = $Array<::com::sun::org::apache::xerces::internal::xni::grammars::Grammar>;
+using $Grammar = ::com::sun::org::apache::xerces::internal::xni::grammars::Grammar;
+using $XMLGrammarDescription = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarDescription;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,12 +20,12 @@ namespace com {
 							namespace grammars {
 
 $MethodInfo _XMLGrammarPool_MethodInfo_[] = {
-	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"lockPool", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"unlockPool", "()V", nullptr, $PUBLIC | $ABSTRACT},
+	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGrammarPool, cacheGrammars, void, $String*, $GrammarArray*)},
+	{"clear", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGrammarPool, clear, void)},
+	{"lockPool", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGrammarPool, lockPool, void)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGrammarPool, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGrammarPool, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
+	{"unlockPool", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLGrammarPool, unlockPool, void)},
 	{}
 };
 

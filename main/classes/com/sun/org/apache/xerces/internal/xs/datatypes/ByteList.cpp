@@ -15,10 +15,10 @@ namespace com {
 							namespace datatypes {
 
 $MethodInfo _ByteList_MethodInfo_[] = {
-	{"contains", "(B)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)B", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException"},
-	{"toByteArray", "()[B", nullptr, $PUBLIC | $ABSTRACT},
+	{"contains", "(B)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ByteList, contains, bool, int8_t)},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ByteList, getLength, int32_t)},
+	{"item", "(I)B", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ByteList, item, int8_t, int32_t), "com.sun.org.apache.xerces.internal.xs.XSException"},
+	{"toByteArray", "()[B", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ByteList, toByteArray, $bytes*)},
 	{}
 };
 

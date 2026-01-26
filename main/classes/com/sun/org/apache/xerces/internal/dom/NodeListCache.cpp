@@ -27,7 +27,7 @@ $FieldInfo _NodeListCache_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeListCache_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ParentNode;)V", nullptr, 0, $method(static_cast<void(NodeListCache::*)($ParentNode*)>(&NodeListCache::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ParentNode;)V", nullptr, 0, $method(NodeListCache, init$, void, $ParentNode*)},
 	{}
 };
 

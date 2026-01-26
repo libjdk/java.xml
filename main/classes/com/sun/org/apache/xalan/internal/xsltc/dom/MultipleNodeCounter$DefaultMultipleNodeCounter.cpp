@@ -24,7 +24,7 @@ namespace com {
 							namespace dom {
 
 $MethodInfo _MultipleNodeCounter$DefaultMultipleNodeCounter_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(MultipleNodeCounter$DefaultMultipleNodeCounter::*)($Translet*,$DOM*,$DTMAxisIterator*)>(&MultipleNodeCounter$DefaultMultipleNodeCounter::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(MultipleNodeCounter$DefaultMultipleNodeCounter, init$, void, $Translet*, $DOM*, $DTMAxisIterator*)},
 	{}
 };
 

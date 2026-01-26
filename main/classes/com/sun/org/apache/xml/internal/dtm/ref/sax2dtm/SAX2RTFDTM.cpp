@@ -68,15 +68,15 @@ $FieldInfo _SAX2RTFDTM_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2RTFDTM_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMManager;Ljavax/xml/transform/Source;ILcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;Lcom/sun/org/apache/xml/internal/utils/XMLStringFactory;Z)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2RTFDTM::*)($DTMManager*,$Source*,int32_t,$DTMWSFilter*,$XMLStringFactory*,bool)>(&SAX2RTFDTM::init$))},
-	{"_documentRoot", "(I)I", nullptr, $PROTECTED},
-	{"endDocument", "()V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"getDocument", "()I", nullptr, $PUBLIC},
-	{"getDocumentRoot", "(I)I", nullptr, $PUBLIC},
-	{"isTreeIncomplete", "()Z", nullptr, $PUBLIC},
-	{"popRewindMark", "()Z", nullptr, $PUBLIC},
-	{"pushRewindMark", "()V", nullptr, $PUBLIC},
-	{"startDocument", "()V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMManager;Ljavax/xml/transform/Source;ILcom/sun/org/apache/xml/internal/dtm/DTMWSFilter;Lcom/sun/org/apache/xml/internal/utils/XMLStringFactory;Z)V", nullptr, $PUBLIC, $method(SAX2RTFDTM, init$, void, $DTMManager*, $Source*, int32_t, $DTMWSFilter*, $XMLStringFactory*, bool)},
+	{"_documentRoot", "(I)I", nullptr, $PROTECTED, $virtualMethod(SAX2RTFDTM, _documentRoot, int32_t, int32_t)},
+	{"endDocument", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2RTFDTM, endDocument, void), "org.xml.sax.SAXException"},
+	{"getDocument", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2RTFDTM, getDocument, int32_t)},
+	{"getDocumentRoot", "(I)I", nullptr, $PUBLIC, $virtualMethod(SAX2RTFDTM, getDocumentRoot, int32_t, int32_t)},
+	{"isTreeIncomplete", "()Z", nullptr, $PUBLIC, $virtualMethod(SAX2RTFDTM, isTreeIncomplete, bool)},
+	{"popRewindMark", "()Z", nullptr, $PUBLIC, $virtualMethod(SAX2RTFDTM, popRewindMark, bool)},
+	{"pushRewindMark", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2RTFDTM, pushRewindMark, void)},
+	{"startDocument", "()V", nullptr, $PUBLIC, $virtualMethod(SAX2RTFDTM, startDocument, void), "org.xml.sax.SAXException"},
 	{}
 };
 

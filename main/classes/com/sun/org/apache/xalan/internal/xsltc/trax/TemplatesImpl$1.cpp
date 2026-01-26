@@ -35,8 +35,8 @@ $FieldInfo _TemplatesImpl$1_FieldInfo_[] = {
 };
 
 $MethodInfo _TemplatesImpl$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl;Ljava/lang/module/ModuleDescriptor;Ljava/net/URI;)V", nullptr, 0, $method(static_cast<void(TemplatesImpl$1::*)($TemplatesImpl*,$ModuleDescriptor*,$URI*)>(&TemplatesImpl$1::init$))},
-	{"open", "()Ljava/lang/module/ModuleReader;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl;Ljava/lang/module/ModuleDescriptor;Ljava/net/URI;)V", nullptr, 0, $method(TemplatesImpl$1, init$, void, $TemplatesImpl*, $ModuleDescriptor*, $URI*)},
+	{"open", "()Ljava/lang/module/ModuleReader;", nullptr, $PUBLIC, $virtualMethod(TemplatesImpl$1, open, $ModuleReader*)},
 	{}
 };
 

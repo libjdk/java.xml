@@ -5,14 +5,15 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace org {
 	namespace w3c {
 		namespace dom {
 
 $MethodInfo _NodeList_MethodInfo_[] = {
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeList, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeList, item, $Node*, int32_t)},
 	{}
 };
 

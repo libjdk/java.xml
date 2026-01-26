@@ -35,10 +35,10 @@ $FieldInfo _CustomStringPool_FieldInfo_[] = {
 };
 
 $MethodInfo _CustomStringPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CustomStringPool::*)()>(&CustomStringPool::init$))},
-	{"indexToString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "java.lang.IndexOutOfBoundsException"},
-	{"removeAllElements", "()V", nullptr, $PUBLIC},
-	{"stringToIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CustomStringPool, init$, void)},
+	{"indexToString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CustomStringPool, indexToString, $String*, int32_t), "java.lang.IndexOutOfBoundsException"},
+	{"removeAllElements", "()V", nullptr, $PUBLIC, $virtualMethod(CustomStringPool, removeAllElements, void)},
+	{"stringToIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(CustomStringPool, stringToIndex, int32_t, $String*)},
 	{}
 };
 

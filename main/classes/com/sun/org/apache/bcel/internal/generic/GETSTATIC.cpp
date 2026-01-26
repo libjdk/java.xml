@@ -48,11 +48,11 @@ $MethodInfo _GETSTATIC_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(GETSTATIC::*)()>(&GETSTATIC::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(GETSTATIC::*)(int32_t)>(&GETSTATIC::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC},
-	{"produceStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(GETSTATIC, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(GETSTATIC, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(GETSTATIC, accept, void, $Visitor*)},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(GETSTATIC, getExceptions, $ClassArray*)},
+	{"produceStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC, $virtualMethod(GETSTATIC, produceStack, int32_t, $ConstantPoolGen*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

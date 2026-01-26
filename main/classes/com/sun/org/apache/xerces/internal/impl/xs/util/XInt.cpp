@@ -23,11 +23,11 @@ $FieldInfo _XInt_FieldInfo_[] = {
 };
 
 $MethodInfo _XInt_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, 0, $method(static_cast<void(XInt::*)(int32_t)>(&XInt::init$))},
-	{"equals", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XInt;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(XInt::*)(XInt*)>(&XInt::equals))},
-	{"intValue", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(XInt::*)()>(&XInt::intValue))},
-	{"shortValue", "()S", nullptr, $PUBLIC | $FINAL, $method(static_cast<int16_t(XInt::*)()>(&XInt::shortValue))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(I)V", nullptr, 0, $method(XInt, init$, void, int32_t)},
+	{"equals", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XInt;)Z", nullptr, $PUBLIC | $FINAL, $method(XInt, equals, bool, XInt*)},
+	{"intValue", "()I", nullptr, $PUBLIC | $FINAL, $method(XInt, intValue, int32_t)},
+	{"shortValue", "()S", nullptr, $PUBLIC | $FINAL, $method(XInt, shortValue, int16_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XInt, toString, $String*)},
 	{}
 };
 

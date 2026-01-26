@@ -38,14 +38,14 @@ $FieldInfo _XMLGregorianCalendarImpl$Parser_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLGregorianCalendarImpl$Parser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(XMLGregorianCalendarImpl$Parser::*)($XMLGregorianCalendarImpl*,$String*,$String*)>(&XMLGregorianCalendarImpl$Parser::init$))},
-	{"parse", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLGregorianCalendarImpl$Parser::*)()>(&XMLGregorianCalendarImpl$Parser::parse)), "java.lang.IllegalArgumentException"},
-	{"parseBigDecimal", "()Ljava/math/BigDecimal;", nullptr, $PRIVATE, $method(static_cast<$BigDecimal*(XMLGregorianCalendarImpl$Parser::*)()>(&XMLGregorianCalendarImpl$Parser::parseBigDecimal)), "java.lang.IllegalArgumentException"},
-	{"parseInt", "(II)I", nullptr, $PRIVATE, $method(static_cast<int32_t(XMLGregorianCalendarImpl$Parser::*)(int32_t,int32_t)>(&XMLGregorianCalendarImpl$Parser::parseInt)), "java.lang.IllegalArgumentException"},
-	{"parseYear", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLGregorianCalendarImpl$Parser::*)()>(&XMLGregorianCalendarImpl$Parser::parseYear)), "java.lang.IllegalArgumentException"},
-	{"peek", "()C", nullptr, $PRIVATE, $method(static_cast<char16_t(XMLGregorianCalendarImpl$Parser::*)()>(&XMLGregorianCalendarImpl$Parser::peek)), "java.lang.IllegalArgumentException"},
-	{"read", "()C", nullptr, $PRIVATE, $method(static_cast<char16_t(XMLGregorianCalendarImpl$Parser::*)()>(&XMLGregorianCalendarImpl$Parser::read)), "java.lang.IllegalArgumentException"},
-	{"skip", "(C)V", nullptr, $PRIVATE, $method(static_cast<void(XMLGregorianCalendarImpl$Parser::*)(char16_t)>(&XMLGregorianCalendarImpl$Parser::skip)), "java.lang.IllegalArgumentException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$Parser, init$, void, $XMLGregorianCalendarImpl*, $String*, $String*)},
+	{"parse", "()V", nullptr, $PUBLIC, $method(XMLGregorianCalendarImpl$Parser, parse, void), "java.lang.IllegalArgumentException"},
+	{"parseBigDecimal", "()Ljava/math/BigDecimal;", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$Parser, parseBigDecimal, $BigDecimal*), "java.lang.IllegalArgumentException"},
+	{"parseInt", "(II)I", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$Parser, parseInt, int32_t, int32_t, int32_t), "java.lang.IllegalArgumentException"},
+	{"parseYear", "()V", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$Parser, parseYear, void), "java.lang.IllegalArgumentException"},
+	{"peek", "()C", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$Parser, peek, char16_t), "java.lang.IllegalArgumentException"},
+	{"read", "()C", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$Parser, read, char16_t), "java.lang.IllegalArgumentException"},
+	{"skip", "(C)V", nullptr, $PRIVATE, $method(XMLGregorianCalendarImpl$Parser, skip, void, char16_t), "java.lang.IllegalArgumentException"},
 	{}
 };
 

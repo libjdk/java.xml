@@ -27,8 +27,8 @@ $FieldInfo _ConstantUtf8$Cache$1_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantUtf8$Cache$1_MethodInfo_[] = {
-	{"<init>", "(IFZ)V", nullptr, 0, $method(static_cast<void(ConstantUtf8$Cache$1::*)(int32_t,float,bool)>(&ConstantUtf8$Cache$1::init$))},
-	{"removeEldestEntry", "(Ljava/util/Map$Entry;)Z", "(Ljava/util/Map$Entry<Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/classfile/ConstantUtf8;>;)Z", $PROTECTED},
+	{"<init>", "(IFZ)V", nullptr, 0, $method(ConstantUtf8$Cache$1, init$, void, int32_t, float, bool)},
+	{"removeEldestEntry", "(Ljava/util/Map$Entry;)Z", "(Ljava/util/Map$Entry<Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/classfile/ConstantUtf8;>;)Z", $PROTECTED, $virtualMethod(ConstantUtf8$Cache$1, removeEldestEntry, bool, $Map$Entry*)},
 	{}
 };
 

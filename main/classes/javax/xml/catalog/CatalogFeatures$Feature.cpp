@@ -34,15 +34,15 @@ $FieldInfo _CatalogFeatures$Feature_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogFeatures$Feature_MethodInfo_[] = {
-	{"$values", "()[Ljavax/xml/catalog/CatalogFeatures$Feature;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$CatalogFeatures$FeatureArray*(*)()>(&CatalogFeatures$Feature::$values))},
-	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Z)V", "(Ljava/lang/String;Ljava/lang/String;Z)V", $PRIVATE, $method(static_cast<void(CatalogFeatures$Feature::*)($String*,int32_t,$String*,$String*,bool)>(&CatalogFeatures$Feature::init$))},
-	{"defaultValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(CatalogFeatures$Feature::*)()>(&CatalogFeatures$Feature::defaultValue))},
-	{"equalsPropertyName", "(Ljava/lang/String;)Z", nullptr, 0, $method(static_cast<bool(CatalogFeatures$Feature::*)($String*)>(&CatalogFeatures$Feature::equalsPropertyName))},
-	{"getPropertyName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(CatalogFeatures$Feature::*)()>(&CatalogFeatures$Feature::getPropertyName))},
-	{"getValue", "()Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(CatalogFeatures$Feature::*)()>(&CatalogFeatures$Feature::getValue))},
-	{"hasSystemProperty", "()Z", nullptr, 0, $method(static_cast<bool(CatalogFeatures$Feature::*)()>(&CatalogFeatures$Feature::hasSystemProperty))},
-	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/CatalogFeatures$Feature;", nullptr, $PUBLIC | $STATIC, $method(static_cast<CatalogFeatures$Feature*(*)($String*)>(&CatalogFeatures$Feature::valueOf))},
-	{"values", "()[Ljavax/xml/catalog/CatalogFeatures$Feature;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$CatalogFeatures$FeatureArray*(*)()>(&CatalogFeatures$Feature::values))},
+	{"$values", "()[Ljavax/xml/catalog/CatalogFeatures$Feature;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(CatalogFeatures$Feature, $values, $CatalogFeatures$FeatureArray*)},
+	{"<init>", "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Z)V", "(Ljava/lang/String;Ljava/lang/String;Z)V", $PRIVATE, $method(CatalogFeatures$Feature, init$, void, $String*, int32_t, $String*, $String*, bool)},
+	{"defaultValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(CatalogFeatures$Feature, defaultValue, $String*)},
+	{"equalsPropertyName", "(Ljava/lang/String;)Z", nullptr, 0, $method(CatalogFeatures$Feature, equalsPropertyName, bool, $String*)},
+	{"getPropertyName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(CatalogFeatures$Feature, getPropertyName, $String*)},
+	{"getValue", "()Ljava/lang/String;", nullptr, 0, $method(CatalogFeatures$Feature, getValue, $String*)},
+	{"hasSystemProperty", "()Z", nullptr, 0, $method(CatalogFeatures$Feature, hasSystemProperty, bool)},
+	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/catalog/CatalogFeatures$Feature;", nullptr, $PUBLIC | $STATIC, $staticMethod(CatalogFeatures$Feature, valueOf, CatalogFeatures$Feature*, $String*)},
+	{"values", "()[Ljavax/xml/catalog/CatalogFeatures$Feature;", nullptr, $PUBLIC | $STATIC, $staticMethod(CatalogFeatures$Feature, values, $CatalogFeatures$FeatureArray*)},
 	{}
 };
 

@@ -48,9 +48,9 @@ $FieldInfo _XML11DTDDVFactoryImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11DTDDVFactoryImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11DTDDVFactoryImpl::*)()>(&XML11DTDDVFactoryImpl::init$))},
-	{"getBuiltInDV", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/dv/DatatypeValidator;", nullptr, $PUBLIC},
-	{"getBuiltInTypes", "()Ljava/util/Map;", "()Ljava/util/Map<Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/DatatypeValidator;>;", $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11DTDDVFactoryImpl, init$, void)},
+	{"getBuiltInDV", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/dv/DatatypeValidator;", nullptr, $PUBLIC, $virtualMethod(XML11DTDDVFactoryImpl, getBuiltInDV, $DatatypeValidator*, $String*)},
+	{"getBuiltInTypes", "()Ljava/util/Map;", "()Ljava/util/Map<Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/DatatypeValidator;>;", $PUBLIC, $virtualMethod(XML11DTDDVFactoryImpl, getBuiltInTypes, $Map*)},
 	{}
 };
 

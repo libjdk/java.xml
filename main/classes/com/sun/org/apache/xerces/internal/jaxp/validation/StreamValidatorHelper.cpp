@@ -138,9 +138,9 @@ $FieldInfo _StreamValidatorHelper_FieldInfo_[] = {
 };
 
 $MethodInfo _StreamValidatorHelper_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/XMLSchemaValidatorComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(StreamValidatorHelper::*)($XMLSchemaValidatorComponentManager*)>(&StreamValidatorHelper::init$))},
-	{"initialize", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;", nullptr, $PRIVATE, $method(static_cast<$XMLParserConfiguration*(StreamValidatorHelper::*)()>(&StreamValidatorHelper::initialize))},
-	{"validate", "(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/XMLSchemaValidatorComponentManager;)V", nullptr, $PUBLIC, $method(StreamValidatorHelper, init$, void, $XMLSchemaValidatorComponentManager*)},
+	{"initialize", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;", nullptr, $PRIVATE, $method(StreamValidatorHelper, initialize, $XMLParserConfiguration*)},
+	{"validate", "(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V", nullptr, $PUBLIC, $virtualMethod(StreamValidatorHelper, validate, void, $Source*, $Result*), "org.xml.sax.SAXException,java.io.IOException"},
 	{}
 };
 

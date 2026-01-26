@@ -100,8 +100,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::fieldInf
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::*)(XPathFactoryFinder*)>(&XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0, init$, void, XPathFactoryFinder*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$0::classInfo$ = {
@@ -140,8 +140,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::fieldI
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::*)(XPathFactoryFinder*)>(&XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1, init$, void, XPathFactoryFinder*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$1$1::classInfo$ = {
@@ -180,8 +180,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::fieldI
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::*)(XPathFactoryFinder*)>(&XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2, init$, void, XPathFactoryFinder*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$debugDisplayClassLoader$2$2::classInfo$ = {
@@ -223,8 +223,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$newFactory$3$3::fieldInfos[3] = {
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$newFactory$3$3::methodInfos[3] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$newFactory$3$3::*)($XPathFactory*,$String*)>(&XPathFactoryFinder$$Lambda$lambda$newFactory$3$3::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$newFactory$3$3, init$, void, $XPathFactory*, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$newFactory$3$3, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$newFactory$3$3::classInfo$ = {
@@ -263,8 +263,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$newFactory$4$4::fieldInfos[2] = {
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$newFactory$4$4::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$newFactory$4$4::*)($String*)>(&XPathFactoryFinder$$Lambda$lambda$newFactory$4$4::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$newFactory$4$4, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$newFactory$4$4, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$newFactory$4$4::classInfo$ = {
@@ -303,8 +303,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$5$5::fieldInfos[2] = {
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$5$5::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$5$5::*)($String*)>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$5$5::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$5$5, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$5$5, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$5$5::classInfo$ = {
@@ -343,8 +343,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$6$6::fieldInfos[2] = {
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$6$6::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$6$6::*)($String*)>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$6$6::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$6$6, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$6$6, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$6$6::classInfo$ = {
@@ -376,8 +376,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$7$7::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$7$7::*)()>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$7$7::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$7$7, init$, void)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$7$7, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$7$7::classInfo$ = {
@@ -416,8 +416,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8::fieldInfos[2] = {
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8::*)($String*)>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$8$8::classInfo$ = {
@@ -456,8 +456,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$9$9::fieldInfos[2] = {
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$9$9::methodInfos[3] = {
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$9$9::*)($File*)>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$9$9::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$9$9, init$, void, $File*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$9$9, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$9$9::classInfo$ = {
@@ -496,8 +496,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$10$10::fieldInfos[2] = 
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$10$10::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$10$10::*)($String*)>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$10$10::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$10$10, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$10$10, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$10$10::classInfo$ = {
@@ -529,8 +529,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$11$11::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$11$11::*)()>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$11$11::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$11$11, init$, void)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$11$11, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$11$11::classInfo$ = {
@@ -562,8 +562,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$12$12::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$_newFactory$12$12::*)()>(&XPathFactoryFinder$$Lambda$lambda$_newFactory$12$12::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$_newFactory$12$12, init$, void)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$_newFactory$12$12, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$_newFactory$12$12::classInfo$ = {
@@ -602,8 +602,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$createInstance$13$13::fieldInfos[2]
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$createInstance$13$13::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$createInstance$13$13::*)($String*)>(&XPathFactoryFinder$$Lambda$lambda$createInstance$13$13::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$createInstance$13$13, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$createInstance$13$13, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$createInstance$13$13::classInfo$ = {
@@ -642,8 +642,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$createInstance$14$14::fieldInfos[2]
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$createInstance$14$14::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$createInstance$14$14::*)($String*)>(&XPathFactoryFinder$$Lambda$lambda$createInstance$14$14::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$createInstance$14$14, init$, void, $String*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$createInstance$14$14, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$createInstance$14$14::classInfo$ = {
@@ -685,8 +685,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$createInstance$15$15::fieldInfos[3]
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$createInstance$15$15::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$createInstance$15$15::*)($String*,$Class*)>(&XPathFactoryFinder$$Lambda$lambda$createInstance$15$15::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$createInstance$15$15, init$, void, $String*, $Class*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$createInstance$15$15, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$createInstance$15$15::classInfo$ = {
@@ -725,8 +725,8 @@ $FieldInfo XPathFactoryFinder$$Lambda$lambda$createInstance$16$16::fieldInfos[2]
 	{}
 };
 $MethodInfo XPathFactoryFinder$$Lambda$lambda$createInstance$16$16::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16::*)($Class*)>(&XPathFactoryFinder$$Lambda$lambda$createInstance$16$16::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, init$, void, $Class*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$$Lambda$lambda$createInstance$16$16, get, $Object*)},
 	{}
 };
 $ClassInfo XPathFactoryFinder$$Lambda$lambda$createInstance$16$16::classInfo$ = {
@@ -755,33 +755,33 @@ $FieldInfo _XPathFactoryFinder_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathFactoryFinder_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryFinder::*)($ClassLoader*)>(&XPathFactoryFinder::init$))},
-	{"_newFactory", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, $PRIVATE, $method(static_cast<$XPathFactory*(XPathFactoryFinder::*)($String*)>(&XPathFactoryFinder::_newFactory)), "javax.xml.xpath.XPathFactoryConfigurationException"},
-	{"createClass", "(Ljava/lang/String;)Ljava/lang/Class;", "(Ljava/lang/String;)Ljava/lang/Class<*>;", $PRIVATE, $method(static_cast<$Class*(XPathFactoryFinder::*)($String*)>(&XPathFactoryFinder::createClass))},
-	{"createInstance", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, 0, nullptr, "javax.xml.xpath.XPathFactoryConfigurationException"},
-	{"debugDisplayClassLoader", "()V", nullptr, $PRIVATE, $method(static_cast<void(XPathFactoryFinder::*)()>(&XPathFactoryFinder::debugDisplayClassLoader))},
-	{"debugPrintln", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $method(static_cast<void(*)($Supplier*)>(&XPathFactoryFinder::debugPrintln))},
-	{"findServiceProvider", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, $PRIVATE, $method(static_cast<$XPathFactory*(XPathFactoryFinder::*)($String*)>(&XPathFactoryFinder::findServiceProvider)), "javax.xml.xpath.XPathFactoryConfigurationException"},
-	{"isObjectModelSupportedBy", "(Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;Ljava/security/AccessControlContext;)Z", nullptr, $PRIVATE, $method(static_cast<bool(XPathFactoryFinder::*)($XPathFactory*,$String*,$AccessControlContext*)>(&XPathFactoryFinder::isObjectModelSupportedBy))},
-	{"lambda$_newFactory$10", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&XPathFactoryFinder::lambda$_newFactory$10))},
-	{"lambda$_newFactory$11", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)()>(&XPathFactoryFinder::lambda$_newFactory$11))},
-	{"lambda$_newFactory$12", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)()>(&XPathFactoryFinder::lambda$_newFactory$12))},
-	{"lambda$_newFactory$5", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&XPathFactoryFinder::lambda$_newFactory$5))},
-	{"lambda$_newFactory$6", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&XPathFactoryFinder::lambda$_newFactory$6))},
-	{"lambda$_newFactory$7", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)()>(&XPathFactoryFinder::lambda$_newFactory$7))},
-	{"lambda$_newFactory$8", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&XPathFactoryFinder::lambda$_newFactory$8))},
-	{"lambda$_newFactory$9", "(Ljava/io/File;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($File*)>(&XPathFactoryFinder::lambda$_newFactory$9))},
-	{"lambda$createInstance$13", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&XPathFactoryFinder::lambda$createInstance$13))},
-	{"lambda$createInstance$14", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&XPathFactoryFinder::lambda$createInstance$14))},
-	{"lambda$createInstance$15", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*,$Class*)>(&XPathFactoryFinder::lambda$createInstance$15))},
-	{"lambda$createInstance$16", "(Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($Class*)>(&XPathFactoryFinder::lambda$createInstance$16))},
-	{"lambda$debugDisplayClassLoader$0", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<$String*(XPathFactoryFinder::*)()>(&XPathFactoryFinder::lambda$debugDisplayClassLoader$0))},
-	{"lambda$debugDisplayClassLoader$1", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<$String*(XPathFactoryFinder::*)()>(&XPathFactoryFinder::lambda$debugDisplayClassLoader$1))},
-	{"lambda$debugDisplayClassLoader$2", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(static_cast<$String*(XPathFactoryFinder::*)()>(&XPathFactoryFinder::lambda$debugDisplayClassLoader$2))},
-	{"lambda$newFactory$3", "(Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($XPathFactory*,$String*)>(&XPathFactoryFinder::lambda$newFactory$3))},
-	{"lambda$newFactory$4", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&XPathFactoryFinder::lambda$newFactory$4))},
-	{"newFactory", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, $PUBLIC, nullptr, "javax.xml.xpath.XPathFactoryConfigurationException"},
-	{"which", "(Ljava/lang/Class;)Ljava/lang/String;", "(Ljava/lang/Class<*>;)Ljava/lang/String;", $PRIVATE | $STATIC, $method(static_cast<$String*(*)($Class*)>(&XPathFactoryFinder::which))},
+	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(XPathFactoryFinder, init$, void, $ClassLoader*)},
+	{"_newFactory", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, $PRIVATE, $method(XPathFactoryFinder, _newFactory, $XPathFactory*, $String*), "javax.xml.xpath.XPathFactoryConfigurationException"},
+	{"createClass", "(Ljava/lang/String;)Ljava/lang/Class;", "(Ljava/lang/String;)Ljava/lang/Class<*>;", $PRIVATE, $method(XPathFactoryFinder, createClass, $Class*, $String*)},
+	{"createInstance", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, 0, $virtualMethod(XPathFactoryFinder, createInstance, $XPathFactory*, $String*), "javax.xml.xpath.XPathFactoryConfigurationException"},
+	{"debugDisplayClassLoader", "()V", nullptr, $PRIVATE, $method(XPathFactoryFinder, debugDisplayClassLoader, void)},
+	{"debugPrintln", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $staticMethod(XPathFactoryFinder, debugPrintln, void, $Supplier*)},
+	{"findServiceProvider", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, $PRIVATE, $method(XPathFactoryFinder, findServiceProvider, $XPathFactory*, $String*), "javax.xml.xpath.XPathFactoryConfigurationException"},
+	{"isObjectModelSupportedBy", "(Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;Ljava/security/AccessControlContext;)Z", nullptr, $PRIVATE, $method(XPathFactoryFinder, isObjectModelSupportedBy, bool, $XPathFactory*, $String*, $AccessControlContext*)},
+	{"lambda$_newFactory$10", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$10, $String*, $String*)},
+	{"lambda$_newFactory$11", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$11, $String*)},
+	{"lambda$_newFactory$12", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$12, $String*)},
+	{"lambda$_newFactory$5", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$5, $String*, $String*)},
+	{"lambda$_newFactory$6", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$6, $String*, $String*)},
+	{"lambda$_newFactory$7", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$7, $String*)},
+	{"lambda$_newFactory$8", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$8, $String*, $String*)},
+	{"lambda$_newFactory$9", "(Ljava/io/File;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$_newFactory$9, $String*, $File*)},
+	{"lambda$createInstance$13", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$createInstance$13, $String*, $String*)},
+	{"lambda$createInstance$14", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$createInstance$14, $String*, $String*)},
+	{"lambda$createInstance$15", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$createInstance$15, $String*, $String*, $Class*)},
+	{"lambda$createInstance$16", "(Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$createInstance$16, $String*, $Class*)},
+	{"lambda$debugDisplayClassLoader$0", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(XPathFactoryFinder, lambda$debugDisplayClassLoader$0, $String*)},
+	{"lambda$debugDisplayClassLoader$1", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(XPathFactoryFinder, lambda$debugDisplayClassLoader$1, $String*)},
+	{"lambda$debugDisplayClassLoader$2", "()Ljava/lang/String;", nullptr, $PRIVATE | $SYNTHETIC, $method(XPathFactoryFinder, lambda$debugDisplayClassLoader$2, $String*)},
+	{"lambda$newFactory$3", "(Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$newFactory$3, $String*, $XPathFactory*, $String*)},
+	{"lambda$newFactory$4", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathFactoryFinder, lambda$newFactory$4, $String*, $String*)},
+	{"newFactory", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathFactory;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder, newFactory, $XPathFactory*, $String*), "javax.xml.xpath.XPathFactoryConfigurationException"},
+	{"which", "(Ljava/lang/Class;)Ljava/lang/String;", "(Ljava/lang/Class<*>;)Ljava/lang/String;", $PRIVATE | $STATIC, $staticMethod(XPathFactoryFinder, which, $String*, $Class*)},
 	{}
 };
 

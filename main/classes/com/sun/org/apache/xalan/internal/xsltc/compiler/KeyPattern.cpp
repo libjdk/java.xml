@@ -17,7 +17,7 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _KeyPattern_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(KeyPattern::*)($String*,$String*)>(&KeyPattern::init$))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(KeyPattern, init$, void, $String*, $String*)},
 	{}
 };
 

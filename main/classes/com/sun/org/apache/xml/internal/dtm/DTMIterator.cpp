@@ -8,6 +8,8 @@
 #undef FILTER_REJECT
 #undef FILTER_SKIP
 
+using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
+using $DTMManager = ::com::sun::org::apache::xml::internal::dtm::DTMManager;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -28,31 +30,31 @@ $FieldInfo _DTMIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMIterator_MethodInfo_[] = {
-	{"allowDetachToRelease", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"allowDetachToRelease", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, allowDetachToRelease, void, bool)},
 	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.CloneNotSupportedException"},
-	{"detach", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAxis", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCurrentNode", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCurrentPos", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDTM", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDTMManager", "()Lcom/sun/org/apache/xml/internal/dtm/DTMManager;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getRoot", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"isDocOrdered", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isFresh", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isMutable", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"nextNode", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"previousNode", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"runTo", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setCurrentPos", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setItem", "(II)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setShouldCacheNodes", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, cloneWithReset, DTMIterator*), "java.lang.CloneNotSupportedException"},
+	{"detach", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, detach, void)},
+	{"getAxis", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getAxis, int32_t)},
+	{"getCurrentNode", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getCurrentNode, int32_t)},
+	{"getCurrentPos", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getCurrentPos, int32_t)},
+	{"getDTM", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTM;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getDTM, $DTM*, int32_t)},
+	{"getDTMManager", "()Lcom/sun/org/apache/xml/internal/dtm/DTMManager;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getDTMManager, $DTMManager*)},
+	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getExpandEntityReferences, bool)},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getLength, int32_t)},
+	{"getRoot", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getRoot, int32_t)},
+	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, getWhatToShow, int32_t)},
+	{"isDocOrdered", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, isDocOrdered, bool)},
+	{"isFresh", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, isFresh, bool)},
+	{"isMutable", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, isMutable, bool)},
+	{"item", "(I)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, item, int32_t, int32_t)},
+	{"nextNode", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, nextNode, int32_t)},
+	{"previousNode", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, previousNode, int32_t)},
+	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, reset, void)},
+	{"runTo", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, runTo, void, int32_t)},
+	{"setCurrentPos", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, setCurrentPos, void, int32_t)},
+	{"setItem", "(II)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, setItem, void, int32_t, int32_t)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, setRoot, void, int32_t, Object$*)},
+	{"setShouldCacheNodes", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMIterator, setShouldCacheNodes, void, bool)},
 	{}
 };
 

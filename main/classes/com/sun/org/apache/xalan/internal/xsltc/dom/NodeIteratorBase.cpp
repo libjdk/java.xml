@@ -35,16 +35,16 @@ $FieldInfo _NodeIteratorBase_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeIteratorBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NodeIteratorBase::*)()>(&NodeIteratorBase::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"includeSelf", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC},
-	{"resetPosition", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PROTECTED | $FINAL, $method(static_cast<$NodeIterator*(NodeIteratorBase::*)()>(&NodeIteratorBase::resetPosition))},
-	{"returnNode", "(I)I", nullptr, $PROTECTED | $FINAL, $method(static_cast<int32_t(NodeIteratorBase::*)(int32_t)>(&NodeIteratorBase::returnNode))},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NodeIteratorBase, init$, void)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC, $virtualMethod(NodeIteratorBase, cloneIterator, $NodeIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(NodeIteratorBase, getLast, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(NodeIteratorBase, getPosition, int32_t)},
+	{"includeSelf", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC, $virtualMethod(NodeIteratorBase, includeSelf, $NodeIterator*)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(NodeIteratorBase, isReverse, bool)},
+	{"reset", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC, $virtualMethod(NodeIteratorBase, reset, $NodeIterator*)},
+	{"resetPosition", "()Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PROTECTED | $FINAL, $method(NodeIteratorBase, resetPosition, $NodeIterator*)},
+	{"returnNode", "(I)I", nullptr, $PROTECTED | $FINAL, $method(NodeIteratorBase, returnNode, int32_t, int32_t)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(NodeIteratorBase, setRestartable, void, bool)},
 	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT},
 	{}
 };

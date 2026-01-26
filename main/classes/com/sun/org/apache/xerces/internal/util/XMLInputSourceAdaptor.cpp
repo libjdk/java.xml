@@ -26,9 +26,9 @@ $FieldInfo _XMLInputSourceAdaptor_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLInputSourceAdaptor_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLInputSourceAdaptor::*)($XMLInputSource*)>(&XMLInputSourceAdaptor::init$))},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC, $method(XMLInputSourceAdaptor, init$, void, $XMLInputSource*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLInputSourceAdaptor, getSystemId, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLInputSourceAdaptor, setSystemId, void, $String*)},
 	{}
 };
 

@@ -26,9 +26,9 @@ $FieldInfo _DTMDefaultBaseTraversers$DescendantOrSelfTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$DescendantOrSelfTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$DescendantOrSelfTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$DescendantOrSelfTraverser::init$))},
-	{"first", "(I)I", nullptr, $PUBLIC},
-	{"getFirstPotential", "(I)I", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$DescendantOrSelfTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"first", "(I)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$DescendantOrSelfTraverser, first, int32_t, int32_t)},
+	{"getFirstPotential", "(I)I", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantOrSelfTraverser, getFirstPotential, int32_t, int32_t)},
 	{}
 };
 

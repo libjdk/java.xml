@@ -18,9 +18,9 @@ namespace com {
 						namespace objects {
 
 $MethodInfo _NotEqualComparator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(NotEqualComparator::*)()>(&NotEqualComparator::init$))},
-	{"compareNumbers", "(DD)Z", nullptr, 0},
-	{"compareStrings", "(Lcom/sun/org/apache/xml/internal/utils/XMLString;Lcom/sun/org/apache/xml/internal/utils/XMLString;)Z", nullptr, 0},
+	{"<init>", "()V", nullptr, 0, $method(NotEqualComparator, init$, void)},
+	{"compareNumbers", "(DD)Z", nullptr, 0, $virtualMethod(NotEqualComparator, compareNumbers, bool, double, double)},
+	{"compareStrings", "(Lcom/sun/org/apache/xml/internal/utils/XMLString;Lcom/sun/org/apache/xml/internal/utils/XMLString;)Z", nullptr, 0, $virtualMethod(NotEqualComparator, compareStrings, bool, $XMLString*, $XMLString*)},
 	{}
 };
 

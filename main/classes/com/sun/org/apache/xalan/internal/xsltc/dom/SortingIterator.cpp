@@ -44,17 +44,17 @@ $FieldInfo _SortingIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SortingIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecordFactory;)V", nullptr, $PUBLIC, $method(static_cast<void(SortingIterator::*)($DTMAxisIterator*,$NodeSortRecordFactory*)>(&SortingIterator::init$))},
-	{"addRecord", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecord;)V", nullptr, $PRIVATE, $method(static_cast<void(SortingIterator::*)($NodeSortRecord*)>(&SortingIterator::addRecord))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"partition", "(II)I", nullptr, $PRIVATE, $method(static_cast<int32_t(SortingIterator::*)(int32_t,int32_t)>(&SortingIterator::partition))},
-	{"quicksort", "(II)V", nullptr, $PRIVATE, $method(static_cast<void(SortingIterator::*)(int32_t,int32_t)>(&SortingIterator::quicksort))},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecordFactory;)V", nullptr, $PUBLIC, $method(SortingIterator, init$, void, $DTMAxisIterator*, $NodeSortRecordFactory*)},
+	{"addRecord", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeSortRecord;)V", nullptr, $PRIVATE, $method(SortingIterator, addRecord, void, $NodeSortRecord*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SortingIterator, cloneIterator, $DTMAxisIterator*)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(SortingIterator, getLast, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(SortingIterator, getPosition, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(SortingIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SortingIterator, next, int32_t)},
+	{"partition", "(II)I", nullptr, $PRIVATE, $method(SortingIterator, partition, int32_t, int32_t, int32_t)},
+	{"quicksort", "(II)V", nullptr, $PRIVATE, $method(SortingIterator, quicksort, void, int32_t, int32_t)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(SortingIterator, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SortingIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

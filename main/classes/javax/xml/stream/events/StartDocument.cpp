@@ -11,12 +11,12 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _StartDocument_MethodInfo_[] = {
-	{"encodingSet", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCharacterEncodingScheme", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isStandalone", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"standaloneSet", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"encodingSet", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartDocument, encodingSet, bool)},
+	{"getCharacterEncodingScheme", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartDocument, getCharacterEncodingScheme, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartDocument, getSystemId, $String*)},
+	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartDocument, getVersion, $String*)},
+	{"isStandalone", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartDocument, isStandalone, bool)},
+	{"standaloneSet", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartDocument, standaloneSet, bool)},
 	{}
 };
 

@@ -28,8 +28,8 @@ $FieldInfo _XMLErrorReporter$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLErrorReporter$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, 0, $method(static_cast<void(XMLErrorReporter$1::*)($XMLErrorReporter*)>(&XMLErrorReporter$1::init$))},
-	{"getErrorHandler", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler;", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLErrorReporter;)V", nullptr, 0, $method(XMLErrorReporter$1, init$, void, $XMLErrorReporter*)},
+	{"getErrorHandler", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLErrorHandler;", nullptr, $PROTECTED, $virtualMethod(XMLErrorReporter$1, getErrorHandler, $XMLErrorHandler*)},
 	{}
 };
 

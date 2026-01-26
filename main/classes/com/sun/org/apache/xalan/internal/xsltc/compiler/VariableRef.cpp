@@ -60,8 +60,8 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _VariableRef_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Variable;)V", nullptr, $PUBLIC, $method(static_cast<void(VariableRef::*)($Variable*)>(&VariableRef::init$))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Variable;)V", nullptr, $PUBLIC, $method(VariableRef, init$, void, $Variable*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(VariableRef, translate, void, $ClassGenerator*, $MethodGenerator*)},
 	{}
 };
 

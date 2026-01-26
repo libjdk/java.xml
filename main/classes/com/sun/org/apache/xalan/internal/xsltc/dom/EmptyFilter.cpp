@@ -15,8 +15,8 @@ namespace com {
 							namespace dom {
 
 $MethodInfo _EmptyFilter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(EmptyFilter::*)()>(&EmptyFilter::init$))},
-	{"test", "(I)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(EmptyFilter, init$, void)},
+	{"test", "(I)Z", nullptr, $PUBLIC, $virtualMethod(EmptyFilter, test, bool, int32_t)},
 	{}
 };
 

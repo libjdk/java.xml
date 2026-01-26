@@ -22,16 +22,16 @@ $FieldInfo _LocatorImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _LocatorImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(LocatorImpl::*)()>(&LocatorImpl::init$))},
-	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(static_cast<void(LocatorImpl::*)($Locator*)>(&LocatorImpl::init$))},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setColumnNumber", "(I)V", nullptr, $PUBLIC},
-	{"setLineNumber", "(I)V", nullptr, $PUBLIC},
-	{"setPublicId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(LocatorImpl, init$, void)},
+	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(LocatorImpl, init$, void, $Locator*)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, getSystemId, $String*)},
+	{"setColumnNumber", "(I)V", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, setColumnNumber, void, int32_t)},
+	{"setLineNumber", "(I)V", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, setLineNumber, void, int32_t)},
+	{"setPublicId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, setPublicId, void, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(LocatorImpl, setSystemId, void, $String*)},
 	{}
 };
 

@@ -35,8 +35,8 @@ $FieldInfo _XResources_ja_JP_I_FieldInfo_[] = {
 };
 
 $MethodInfo _XResources_ja_JP_I_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XResources_ja_JP_I::*)()>(&XResources_ja_JP_I::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XResources_ja_JP_I, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XResources_ja_JP_I, getContents, $ObjectArray2*)},
 	{}
 };
 

@@ -22,8 +22,8 @@ namespace com {
 							namespace dom3 {
 
 $MethodInfo _DOMErrorHandlerImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DOMErrorHandlerImpl::*)()>(&DOMErrorHandlerImpl::init$))},
-	{"handleError", "(Lorg/w3c/dom/DOMError;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(DOMErrorHandlerImpl, init$, void)},
+	{"handleError", "(Lorg/w3c/dom/DOMError;)Z", nullptr, $PUBLIC, $virtualMethod(DOMErrorHandlerImpl, handleError, bool, $DOMError*)},
 	{}
 };
 

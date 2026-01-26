@@ -26,12 +26,12 @@ $FieldInfo _XMLSchemaLoader$LocationArray_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaLoader$LocationArray_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaLoader$LocationArray::*)()>(&XMLSchemaLoader$LocationArray::init$))},
-	{"addLocation", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"getFirstLocation", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getLocationArray", "()[Ljava/lang/String;", nullptr, $PUBLIC},
-	{"resize", "(II)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSchemaLoader$LocationArray, init$, void)},
+	{"addLocation", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaLoader$LocationArray, addLocation, void, $String*)},
+	{"getFirstLocation", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaLoader$LocationArray, getFirstLocation, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(XMLSchemaLoader$LocationArray, getLength, int32_t)},
+	{"getLocationArray", "()[Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaLoader$LocationArray, getLocationArray, $StringArray*)},
+	{"resize", "(II)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaLoader$LocationArray, resize, void, int32_t, int32_t)},
 	{}
 };
 

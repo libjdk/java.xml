@@ -24,10 +24,10 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _Utility$JavaWriter_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(static_cast<void(Utility$JavaWriter::*)($Writer*)>(&Utility$JavaWriter::init$))},
-	{"write", "(I)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "([CII)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"write", "(Ljava/lang/String;II)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Ljava/io/Writer;)V", nullptr, $PUBLIC, $method(Utility$JavaWriter, init$, void, $Writer*)},
+	{"write", "(I)V", nullptr, $PUBLIC, $virtualMethod(Utility$JavaWriter, write, void, int32_t), "java.io.IOException"},
+	{"write", "([CII)V", nullptr, $PUBLIC, $virtualMethod(Utility$JavaWriter, write, void, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"write", "(Ljava/lang/String;II)V", nullptr, $PUBLIC, $virtualMethod(Utility$JavaWriter, write, void, $String*, int32_t, int32_t), "java.io.IOException"},
 	{}
 };
 

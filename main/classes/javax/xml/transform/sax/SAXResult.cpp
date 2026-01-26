@@ -26,14 +26,14 @@ $FieldInfo _SAXResult_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXResult_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAXResult::*)()>(&SAXResult::init$))},
-	{"<init>", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXResult::*)($ContentHandler*)>(&SAXResult::init$))},
-	{"getHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC},
-	{"getLexicalHandler", "()Lorg/xml/sax/ext/LexicalHandler;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC},
-	{"setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAXResult, init$, void)},
+	{"<init>", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $method(SAXResult, init$, void, $ContentHandler*)},
+	{"getHandler", "()Lorg/xml/sax/ContentHandler;", nullptr, $PUBLIC, $virtualMethod(SAXResult, getHandler, $ContentHandler*)},
+	{"getLexicalHandler", "()Lorg/xml/sax/ext/LexicalHandler;", nullptr, $PUBLIC, $virtualMethod(SAXResult, getLexicalHandler, $LexicalHandler*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXResult, getSystemId, $String*)},
+	{"setHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC, $virtualMethod(SAXResult, setHandler, void, $ContentHandler*)},
+	{"setLexicalHandler", "(Lorg/xml/sax/ext/LexicalHandler;)V", nullptr, $PUBLIC, $virtualMethod(SAXResult, setLexicalHandler, void, $LexicalHandler*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SAXResult, setSystemId, void, $String*)},
 	{}
 };
 

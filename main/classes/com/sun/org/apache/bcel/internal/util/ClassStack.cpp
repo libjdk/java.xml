@@ -24,11 +24,11 @@ $FieldInfo _ClassStack_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ClassStack::*)()>(&ClassStack::init$))},
-	{"empty", "()Z", nullptr, $PUBLIC},
-	{"pop", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC},
-	{"push", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC},
-	{"top", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ClassStack, init$, void)},
+	{"empty", "()Z", nullptr, $PUBLIC, $virtualMethod(ClassStack, empty, bool)},
+	{"pop", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $virtualMethod(ClassStack, pop, $JavaClass*)},
+	{"push", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC, $virtualMethod(ClassStack, push, void, $JavaClass*)},
+	{"top", "()Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $virtualMethod(ClassStack, top, $JavaClass*)},
 	{}
 };
 

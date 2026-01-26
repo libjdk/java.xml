@@ -21,9 +21,9 @@ $FieldInfo _StringArrayWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _StringArrayWrapper_MethodInfo_[] = {
-	{"<init>", "([Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(StringArrayWrapper::*)($StringArray*)>(&StringArrayWrapper::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "([Ljava/lang/String;)V", nullptr, $PUBLIC, $method(StringArrayWrapper, init$, void, $StringArray*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(StringArrayWrapper, getLength, int32_t)},
+	{"getString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StringArrayWrapper, getString, $String*, int32_t)},
 	{}
 };
 

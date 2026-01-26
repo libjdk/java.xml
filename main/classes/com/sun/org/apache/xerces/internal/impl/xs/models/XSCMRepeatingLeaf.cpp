@@ -25,9 +25,9 @@ $FieldInfo _XSCMRepeatingLeaf_FieldInfo_[] = {
 };
 
 $MethodInfo _XSCMRepeatingLeaf_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/Object;IIII)V", nullptr, $PUBLIC, $method(static_cast<void(XSCMRepeatingLeaf::*)(int32_t,Object$*,int32_t,int32_t,int32_t,int32_t)>(&XSCMRepeatingLeaf::init$))},
-	{"getMaxOccurs", "()I", nullptr, $FINAL, $method(static_cast<int32_t(XSCMRepeatingLeaf::*)()>(&XSCMRepeatingLeaf::getMaxOccurs))},
-	{"getMinOccurs", "()I", nullptr, $FINAL, $method(static_cast<int32_t(XSCMRepeatingLeaf::*)()>(&XSCMRepeatingLeaf::getMinOccurs))},
+	{"<init>", "(ILjava/lang/Object;IIII)V", nullptr, $PUBLIC, $method(XSCMRepeatingLeaf, init$, void, int32_t, Object$*, int32_t, int32_t, int32_t, int32_t)},
+	{"getMaxOccurs", "()I", nullptr, $FINAL, $method(XSCMRepeatingLeaf, getMaxOccurs, int32_t)},
+	{"getMinOccurs", "()I", nullptr, $FINAL, $method(XSCMRepeatingLeaf, getMinOccurs, int32_t)},
 	{}
 };
 

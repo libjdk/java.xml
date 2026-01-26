@@ -48,8 +48,8 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _SerializerFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(SerializerFactory::*)()>(&SerializerFactory::init$))},
-	{"getSerializer", "(Ljava/util/Properties;)Lcom/sun/org/apache/xml/internal/serializer/Serializer;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Serializer*(*)($Properties*)>(&SerializerFactory::getSerializer))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(SerializerFactory, init$, void)},
+	{"getSerializer", "(Ljava/util/Properties;)Lcom/sun/org/apache/xml/internal/serializer/Serializer;", nullptr, $PUBLIC | $STATIC, $staticMethod(SerializerFactory, getSerializer, $Serializer*, $Properties*)},
 	{}
 };
 

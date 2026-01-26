@@ -105,14 +105,14 @@ $FieldInfo _XMLNSDocumentScannerImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLNSDocumentScannerImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLNSDocumentScannerImpl::*)()>(&XMLNSDocumentScannerImpl::init$))},
-	{"createContentDriver", "()Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl$Driver;", nullptr, $PROTECTED},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"scanAttribute", "(Lcom/sun/org/apache/xerces/internal/util/XMLAttributesImpl;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanStartElement", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"setDTDValidator", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidatorFilter;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLNSDocumentScannerImpl, init$, void)},
+	{"createContentDriver", "()Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl$Driver;", nullptr, $PROTECTED, $virtualMethod(XMLNSDocumentScannerImpl, createContentDriver, $XMLDocumentFragmentScannerImpl$Driver*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XMLNSDocumentScannerImpl, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $virtualMethod(XMLNSDocumentScannerImpl, reset, void, $PropertyManager*)},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $virtualMethod(XMLNSDocumentScannerImpl, reset, void, $XMLComponentManager*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"scanAttribute", "(Lcom/sun/org/apache/xerces/internal/util/XMLAttributesImpl;)V", nullptr, $PROTECTED, $virtualMethod(XMLNSDocumentScannerImpl, scanAttribute, void, $XMLAttributesImpl*), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanStartElement", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLNSDocumentScannerImpl, scanStartElement, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"setDTDValidator", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidatorFilter;)V", nullptr, $PUBLIC, $virtualMethod(XMLNSDocumentScannerImpl, setDTDValidator, void, $XMLDTDValidatorFilter*)},
 	{}
 };
 

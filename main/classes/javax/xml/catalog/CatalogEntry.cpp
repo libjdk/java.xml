@@ -19,8 +19,8 @@ namespace javax {
 		namespace catalog {
 
 $MethodInfo _CatalogEntry_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;[Ljava/lang/String;)V", nullptr, $PUBLIC | $TRANSIENT, $method(static_cast<void(CatalogEntry::*)($String*,$StringArray*)>(&CatalogEntry::init$))},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;[Ljava/lang/String;)V", nullptr, $PUBLIC | $TRANSIENT, $method(CatalogEntry, init$, void, $String*, $StringArray*)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CatalogEntry, match, $String*, $String*)},
 	{}
 };
 

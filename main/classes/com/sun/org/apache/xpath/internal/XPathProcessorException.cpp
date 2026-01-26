@@ -22,8 +22,8 @@ $FieldInfo _XPathProcessorException_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathProcessorException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathProcessorException::*)($String*)>(&XPathProcessorException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathProcessorException::*)($String*,$Exception*)>(&XPathProcessorException::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathProcessorException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(XPathProcessorException, init$, void, $String*, $Exception*)},
 	{}
 };
 

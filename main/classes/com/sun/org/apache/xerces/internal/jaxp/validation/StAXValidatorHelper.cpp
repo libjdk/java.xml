@@ -75,8 +75,8 @@ $FieldInfo _StAXValidatorHelper_FieldInfo_[] = {
 };
 
 $MethodInfo _StAXValidatorHelper_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/XMLSchemaValidatorComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(StAXValidatorHelper::*)($XMLSchemaValidatorComponentManager*)>(&StAXValidatorHelper::init$))},
-	{"validate", "(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/XMLSchemaValidatorComponentManager;)V", nullptr, $PUBLIC, $method(StAXValidatorHelper, init$, void, $XMLSchemaValidatorComponentManager*)},
+	{"validate", "(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V", nullptr, $PUBLIC, $virtualMethod(StAXValidatorHelper, validate, void, $Source*, $Result*), "org.xml.sax.SAXException,java.io.IOException"},
 	{}
 };
 

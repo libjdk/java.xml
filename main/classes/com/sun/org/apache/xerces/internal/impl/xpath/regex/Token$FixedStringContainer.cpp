@@ -25,7 +25,7 @@ $FieldInfo _Token$FixedStringContainer_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$FixedStringContainer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Token$FixedStringContainer::*)()>(&Token$FixedStringContainer::init$))},
+	{"<init>", "()V", nullptr, 0, $method(Token$FixedStringContainer, init$, void)},
 	{}
 };
 

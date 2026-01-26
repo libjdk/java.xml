@@ -22,7 +22,7 @@ $FieldInfo _EventException_FieldInfo_[] = {
 };
 
 $MethodInfo _EventException_MethodInfo_[] = {
-	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(EventException::*)(int16_t,$String*)>(&EventException::init$))},
+	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(EventException, init$, void, int16_t, $String*)},
 	{}
 };
 

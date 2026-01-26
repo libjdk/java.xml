@@ -519,8 +519,8 @@ $FieldInfo _XSLTErrorResources_it_FieldInfo_[] = {
 };
 
 $MethodInfo _XSLTErrorResources_it_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSLTErrorResources_it::*)()>(&XSLTErrorResources_it::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSLTErrorResources_it, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSLTErrorResources_it, getContents, $ObjectArray2*)},
 	{}
 };
 

@@ -5,6 +5,9 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSWildcard.h>
 #include <jcpp.h>
 
+using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $XSWildcard = ::com::sun::org::apache::xerces::internal::xs::XSWildcard;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,10 +20,10 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSAttributeGroupDefinition_MethodInfo_[] = {
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAttributeUses", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAttributeWildcard", "()Lcom/sun/org/apache/xerces/internal/xs/XSWildcard;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeGroupDefinition, getAnnotation, $XSAnnotation*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeGroupDefinition, getAnnotations, $XSObjectList*)},
+	{"getAttributeUses", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeGroupDefinition, getAttributeUses, $XSObjectList*)},
+	{"getAttributeWildcard", "()Lcom/sun/org/apache/xerces/internal/xs/XSWildcard;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeGroupDefinition, getAttributeWildcard, $XSWildcard*)},
 	{}
 };
 

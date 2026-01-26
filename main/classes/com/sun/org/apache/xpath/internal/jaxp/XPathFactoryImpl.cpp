@@ -72,13 +72,13 @@ $FieldInfo _XPathFactoryImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathFactoryImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathFactoryImpl::*)()>(&XPathFactoryImpl::init$))},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "javax.xml.xpath.XPathFactoryConfigurationException"},
-	{"isObjectModelSupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"newXPath", "()Ljavax/xml/xpath/XPath;", nullptr, $PUBLIC},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "javax.xml.xpath.XPathFactoryConfigurationException"},
-	{"setXPathFunctionResolver", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", nullptr, $PUBLIC},
-	{"setXPathVariableResolver", "(Ljavax/xml/xpath/XPathVariableResolver;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPathFactoryImpl, init$, void)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XPathFactoryImpl, getFeature, bool, $String*), "javax.xml.xpath.XPathFactoryConfigurationException"},
+	{"isObjectModelSupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(XPathFactoryImpl, isObjectModelSupported, bool, $String*)},
+	{"newXPath", "()Ljavax/xml/xpath/XPath;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryImpl, newXPath, $XPath*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(XPathFactoryImpl, setFeature, void, $String*, bool), "javax.xml.xpath.XPathFactoryConfigurationException"},
+	{"setXPathFunctionResolver", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", nullptr, $PUBLIC, $virtualMethod(XPathFactoryImpl, setXPathFunctionResolver, void, $XPathFunctionResolver*)},
+	{"setXPathVariableResolver", "(Ljavax/xml/xpath/XPathVariableResolver;)V", nullptr, $PUBLIC, $virtualMethod(XPathFactoryImpl, setXPathVariableResolver, void, $XPathVariableResolver*)},
 	{}
 };
 

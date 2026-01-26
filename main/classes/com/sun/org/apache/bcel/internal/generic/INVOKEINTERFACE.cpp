@@ -61,15 +61,15 @@ $FieldInfo _INVOKEINTERFACE_FieldInfo_[] = {
 };
 
 $MethodInfo _INVOKEINTERFACE_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(INVOKEINTERFACE::*)()>(&INVOKEINTERFACE::init$))},
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(INVOKEINTERFACE::*)(int32_t,int32_t)>(&INVOKEINTERFACE::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getCount", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(INVOKEINTERFACE::*)()>(&INVOKEINTERFACE::getCount))},
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC},
-	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
-	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(INVOKEINTERFACE, init$, void)},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(INVOKEINTERFACE, init$, void, int32_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(INVOKEINTERFACE, accept, void, $Visitor*)},
+	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC, $virtualMethod(INVOKEINTERFACE, consumeStack, int32_t, $ConstantPoolGen*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(INVOKEINTERFACE, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getCount", "()I", nullptr, $PUBLIC, $method(INVOKEINTERFACE, getCount, int32_t)},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(INVOKEINTERFACE, getExceptions, $ClassArray*)},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, $virtualMethod(INVOKEINTERFACE, initFromFile, void, $ByteSequence*, bool), "java.io.IOException"},
+	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(INVOKEINTERFACE, toString, $String*, $ConstantPool*)},
 	{}
 };
 

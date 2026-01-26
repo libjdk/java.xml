@@ -30,11 +30,11 @@ $FieldInfo _NamespaceSupport$IteratorPrefixes_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceSupport$IteratorPrefixes_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/NamespaceSupport;[Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(NamespaceSupport$IteratorPrefixes::*)($NamespaceSupport*,$StringArray*,int32_t)>(&NamespaceSupport$IteratorPrefixes::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"remove", "()V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/NamespaceSupport;[Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(NamespaceSupport$IteratorPrefixes, init$, void, $NamespaceSupport*, $StringArray*, int32_t)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport$IteratorPrefixes, hasNext, bool)},
+	{"next", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport$IteratorPrefixes, next, $Object*)},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport$IteratorPrefixes, remove, void)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport$IteratorPrefixes, toString, $String*)},
 	{}
 };
 

@@ -136,8 +136,8 @@ namespace com {
 								namespace util {
 
 $MethodInfo _ErrorMessages_es_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ErrorMessages_es::*)()>(&ErrorMessages_es::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ErrorMessages_es, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ErrorMessages_es, getContents, $ObjectArray2*)},
 	{}
 };
 

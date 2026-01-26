@@ -22,7 +22,7 @@ $FieldInfo _DeferredNode_FieldInfo_[] = {
 };
 
 $MethodInfo _DeferredNode_MethodInfo_[] = {
-	{"getNodeIndex", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{"getNodeIndex", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DeferredNode, getNodeIndex, int32_t)},
 	{}
 };
 

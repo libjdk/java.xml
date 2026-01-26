@@ -41,10 +41,10 @@ $FieldInfo _EncodingInfo$EncodingImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _EncodingInfo$EncodingImpl_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;)V", nullptr, $PRIVATE, $method(static_cast<void(EncodingInfo$EncodingImpl::*)($EncodingInfo*)>(&EncodingInfo$EncodingImpl::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;Ljava/lang/String;III)V", nullptr, $PRIVATE, $method(static_cast<void(EncodingInfo$EncodingImpl::*)($EncodingInfo*,$String*,int32_t,int32_t,int32_t)>(&EncodingInfo$EncodingImpl::init$))},
-	{"isInEncoding", "(C)Z", nullptr, $PUBLIC},
-	{"isInEncoding", "(CC)Z", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;)V", nullptr, $PRIVATE, $method(EncodingInfo$EncodingImpl, init$, void, $EncodingInfo*)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/EncodingInfo;Ljava/lang/String;III)V", nullptr, $PRIVATE, $method(EncodingInfo$EncodingImpl, init$, void, $EncodingInfo*, $String*, int32_t, int32_t, int32_t)},
+	{"isInEncoding", "(C)Z", nullptr, $PUBLIC, $virtualMethod(EncodingInfo$EncodingImpl, isInEncoding, bool, char16_t)},
+	{"isInEncoding", "(CC)Z", nullptr, $PUBLIC, $virtualMethod(EncodingInfo$EncodingImpl, isInEncoding, bool, char16_t, char16_t)},
 	{}
 };
 

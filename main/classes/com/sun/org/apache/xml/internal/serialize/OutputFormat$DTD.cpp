@@ -25,7 +25,7 @@ $FieldInfo _OutputFormat$DTD_FieldInfo_[] = {
 };
 
 $MethodInfo _OutputFormat$DTD_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(OutputFormat$DTD::*)()>(&OutputFormat$DTD::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(OutputFormat$DTD, init$, void)},
 	{}
 };
 

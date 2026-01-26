@@ -27,13 +27,23 @@
 #undef SUPPORT_DTD
 
 using $XMLInputFactoryImpl = ::com::sun::xml::internal::stream::XMLInputFactoryImpl;
+using $InputStream = ::java::io::InputStream;
+using $Reader = ::java::io::Reader;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $ClassLoader = ::java::lang::ClassLoader;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 using $NamedAttribute = ::java::lang::NamedAttribute;
+using $EventFilter = ::javax::xml::stream::EventFilter;
 using $FactoryFinder = ::javax::xml::stream::FactoryFinder;
+using $StreamFilter = ::javax::xml::stream::StreamFilter;
+using $XMLEventReader = ::javax::xml::stream::XMLEventReader;
+using $XMLReporter = ::javax::xml::stream::XMLReporter;
+using $XMLResolver = ::javax::xml::stream::XMLResolver;
+using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
+using $XMLEventAllocator = ::javax::xml::stream::util::XMLEventAllocator;
+using $Source = ::javax::xml::transform::Source;
 
 namespace javax {
 	namespace xml {
@@ -64,36 +74,36 @@ $FieldInfo _XMLInputFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLInputFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(XMLInputFactory::*)()>(&XMLInputFactory::init$))},
-	{"createFilteredReader", "(Ljavax/xml/stream/XMLStreamReader;Ljavax/xml/stream/StreamFilter;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createFilteredReader", "(Ljavax/xml/stream/XMLEventReader;Ljavax/xml/stream/EventFilter;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLEventReader", "(Ljava/io/Reader;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLEventReader", "(Ljava/lang/String;Ljava/io/Reader;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLEventReader", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLEventReader", "(Ljavax/xml/transform/Source;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLEventReader", "(Ljava/io/InputStream;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLEventReader", "(Ljava/io/InputStream;Ljava/lang/String;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLEventReader", "(Ljava/lang/String;Ljava/io/InputStream;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLStreamReader", "(Ljava/io/Reader;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLStreamReader", "(Ljavax/xml/transform/Source;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLStreamReader", "(Ljava/io/InputStream;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLStreamReader", "(Ljava/io/InputStream;Ljava/lang/String;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLStreamReader", "(Ljava/lang/String;Ljava/io/InputStream;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"createXMLStreamReader", "(Ljava/lang/String;Ljava/io/Reader;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"getEventAllocator", "()Ljavax/xml/stream/util/XMLEventAllocator;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.IllegalArgumentException"},
-	{"getXMLReporter", "()Ljavax/xml/stream/XMLReporter;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getXMLResolver", "()Ljavax/xml/stream/XMLResolver;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isPropertySupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"newDefaultFactory", "()Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLInputFactory*(*)()>(&XMLInputFactory::newDefaultFactory))},
-	{"newFactory", "()Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLInputFactory*(*)()>(&XMLInputFactory::newFactory)), "javax.xml.stream.FactoryConfigurationError"},
-	{"newFactory", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLInputFactory*(*)($String*,$ClassLoader*)>(&XMLInputFactory::newFactory)), "javax.xml.stream.FactoryConfigurationError"},
-	{"newInstance", "()Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLInputFactory*(*)()>(&XMLInputFactory::newInstance)), "javax.xml.stream.FactoryConfigurationError"},
-	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $method(static_cast<XMLInputFactory*(*)($String*,$ClassLoader*)>(&XMLInputFactory::newInstance)), "javax.xml.stream.FactoryConfigurationError", nullptr, _XMLInputFactory_MethodAnnotations_newInstance25},
-	{"setEventAllocator", "(Ljavax/xml/stream/util/XMLEventAllocator;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.IllegalArgumentException"},
-	{"setXMLReporter", "(Ljavax/xml/stream/XMLReporter;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setXMLResolver", "(Ljavax/xml/stream/XMLResolver;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(XMLInputFactory, init$, void)},
+	{"createFilteredReader", "(Ljavax/xml/stream/XMLStreamReader;Ljavax/xml/stream/StreamFilter;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createFilteredReader, $XMLStreamReader*, $XMLStreamReader*, $StreamFilter*), "javax.xml.stream.XMLStreamException"},
+	{"createFilteredReader", "(Ljavax/xml/stream/XMLEventReader;Ljavax/xml/stream/EventFilter;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createFilteredReader, $XMLEventReader*, $XMLEventReader*, $EventFilter*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLEventReader", "(Ljava/io/Reader;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLEventReader, $XMLEventReader*, $Reader*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLEventReader", "(Ljava/lang/String;Ljava/io/Reader;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLEventReader, $XMLEventReader*, $String*, $Reader*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLEventReader", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLEventReader, $XMLEventReader*, $XMLStreamReader*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLEventReader", "(Ljavax/xml/transform/Source;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLEventReader, $XMLEventReader*, $Source*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLEventReader", "(Ljava/io/InputStream;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLEventReader, $XMLEventReader*, $InputStream*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLEventReader", "(Ljava/io/InputStream;Ljava/lang/String;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLEventReader, $XMLEventReader*, $InputStream*, $String*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLEventReader", "(Ljava/lang/String;Ljava/io/InputStream;)Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLEventReader, $XMLEventReader*, $String*, $InputStream*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLStreamReader", "(Ljava/io/Reader;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLStreamReader, $XMLStreamReader*, $Reader*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLStreamReader", "(Ljavax/xml/transform/Source;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLStreamReader, $XMLStreamReader*, $Source*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLStreamReader", "(Ljava/io/InputStream;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLStreamReader, $XMLStreamReader*, $InputStream*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLStreamReader", "(Ljava/io/InputStream;Ljava/lang/String;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLStreamReader, $XMLStreamReader*, $InputStream*, $String*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLStreamReader", "(Ljava/lang/String;Ljava/io/InputStream;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLStreamReader, $XMLStreamReader*, $String*, $InputStream*), "javax.xml.stream.XMLStreamException"},
+	{"createXMLStreamReader", "(Ljava/lang/String;Ljava/io/Reader;)Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, createXMLStreamReader, $XMLStreamReader*, $String*, $Reader*), "javax.xml.stream.XMLStreamException"},
+	{"getEventAllocator", "()Ljavax/xml/stream/util/XMLEventAllocator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, getEventAllocator, $XMLEventAllocator*)},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, getProperty, $Object*, $String*), "java.lang.IllegalArgumentException"},
+	{"getXMLReporter", "()Ljavax/xml/stream/XMLReporter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, getXMLReporter, $XMLReporter*)},
+	{"getXMLResolver", "()Ljavax/xml/stream/XMLResolver;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, getXMLResolver, $XMLResolver*)},
+	{"isPropertySupported", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, isPropertySupported, bool, $String*)},
+	{"newDefaultFactory", "()Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLInputFactory, newDefaultFactory, XMLInputFactory*)},
+	{"newFactory", "()Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLInputFactory, newFactory, XMLInputFactory*), "javax.xml.stream.FactoryConfigurationError"},
+	{"newFactory", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLInputFactory, newFactory, XMLInputFactory*, $String*, $ClassLoader*), "javax.xml.stream.FactoryConfigurationError"},
+	{"newInstance", "()Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLInputFactory, newInstance, XMLInputFactory*), "javax.xml.stream.FactoryConfigurationError"},
+	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/stream/XMLInputFactory;", nullptr, $PUBLIC | $STATIC | $DEPRECATED, $staticMethod(XMLInputFactory, newInstance, XMLInputFactory*, $String*, $ClassLoader*), "javax.xml.stream.FactoryConfigurationError", nullptr, _XMLInputFactory_MethodAnnotations_newInstance25},
+	{"setEventAllocator", "(Ljavax/xml/stream/util/XMLEventAllocator;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, setEventAllocator, void, $XMLEventAllocator*)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, setProperty, void, $String*, Object$*), "java.lang.IllegalArgumentException"},
+	{"setXMLReporter", "(Ljavax/xml/stream/XMLReporter;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, setXMLReporter, void, $XMLReporter*)},
+	{"setXMLResolver", "(Ljavax/xml/stream/XMLResolver;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLInputFactory, setXMLResolver, void, $XMLResolver*)},
 	{}
 };
 

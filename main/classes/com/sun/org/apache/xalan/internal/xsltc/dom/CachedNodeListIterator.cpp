@@ -35,17 +35,17 @@ $FieldInfo _CachedNodeListIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _CachedNodeListIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(CachedNodeListIterator::*)($DTMAxisIterator*)>(&CachedNodeListIterator::init$))},
-	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"getNode", "(I)I", nullptr, $PUBLIC, $method(static_cast<int32_t(CachedNodeListIterator::*)(int32_t)>(&CachedNodeListIterator::getNode))},
-	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setRestartable", "(Z)V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(CachedNodeListIterator, init$, void, $DTMAxisIterator*)},
+	{"cloneIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, cloneIterator, $DTMAxisIterator*)},
+	{"getNode", "(I)I", nullptr, $PUBLIC, $method(CachedNodeListIterator, getNode, int32_t, int32_t)},
+	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, getNodeByPosition, int32_t, int32_t)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, getPosition, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, next, int32_t)},
+	{"reset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, reset, $DTMAxisIterator*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, setMark, void)},
+	{"setRestartable", "(Z)V", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, setRestartable, void, bool)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(CachedNodeListIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

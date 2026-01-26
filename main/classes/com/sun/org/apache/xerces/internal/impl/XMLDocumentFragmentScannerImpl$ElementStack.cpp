@@ -33,16 +33,16 @@ $FieldInfo _XMLDocumentFragmentScannerImpl$ElementStack_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentFragmentScannerImpl$ElementStack_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLDocumentFragmentScannerImpl$ElementStack::*)($XMLDocumentFragmentScannerImpl*)>(&XMLDocumentFragmentScannerImpl$ElementStack::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"getLastPoppedElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"getNext", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"matchElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Z", nullptr, $PUBLIC},
-	{"nextElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"popElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"push", "()V", nullptr, $PUBLIC},
-	{"pushElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC},
-	{"reposition", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl;)V", nullptr, $PUBLIC, $method(XMLDocumentFragmentScannerImpl$ElementStack, init$, void, $XMLDocumentFragmentScannerImpl*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, clear, void)},
+	{"getLastPoppedElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, getLastPoppedElement, $QName*)},
+	{"getNext", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, getNext, $QName*)},
+	{"matchElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Z", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, matchElement, bool, $QName*)},
+	{"nextElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, nextElement, $QName*)},
+	{"popElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, popElement, $QName*)},
+	{"push", "()V", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, push, void)},
+	{"pushElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, pushElement, $QName*, $QName*)},
+	{"reposition", "()V", nullptr, $PUBLIC, $virtualMethod(XMLDocumentFragmentScannerImpl$ElementStack, reposition, void)},
 	{}
 };
 

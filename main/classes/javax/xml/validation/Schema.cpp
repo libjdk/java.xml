@@ -6,15 +6,17 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Validator = ::javax::xml::validation::Validator;
+using $ValidatorHandler = ::javax::xml::validation::ValidatorHandler;
 
 namespace javax {
 	namespace xml {
 		namespace validation {
 
 $MethodInfo _Schema_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(Schema::*)()>(&Schema::init$))},
-	{"newValidator", "()Ljavax/xml/validation/Validator;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newValidatorHandler", "()Ljavax/xml/validation/ValidatorHandler;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(Schema, init$, void)},
+	{"newValidator", "()Ljavax/xml/validation/Validator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Schema, newValidator, $Validator*)},
+	{"newValidatorHandler", "()Ljavax/xml/validation/ValidatorHandler;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Schema, newValidatorHandler, $ValidatorHandler*)},
 	{}
 };
 

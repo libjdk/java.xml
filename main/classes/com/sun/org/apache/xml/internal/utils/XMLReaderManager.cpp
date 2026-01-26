@@ -78,15 +78,15 @@ $FieldInfo _XMLReaderManager_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLReaderManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLReaderManager::*)()>(&XMLReaderManager::init$))},
-	{"getInstance", "(Z)Lcom/sun/org/apache/xml/internal/utils/XMLReaderManager;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XMLReaderManager*(*)(bool)>(&XMLReaderManager::getInstance))},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getXMLReader", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC | $SYNCHRONIZED, nullptr, "org.xml.sax.SAXException"},
-	{"overrideDefaultParser", "()Z", nullptr, $PUBLIC},
-	{"releaseXMLReader", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC},
-	{"setOverrideDefaultParser", "(Z)V", nullptr, $PUBLIC},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(XMLReaderManager, init$, void)},
+	{"getInstance", "(Z)Lcom/sun/org/apache/xml/internal/utils/XMLReaderManager;", nullptr, $PUBLIC | $STATIC, $staticMethod(XMLReaderManager, getInstance, XMLReaderManager*, bool)},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XMLReaderManager, getProperty, $Object*, $String*)},
+	{"getXMLReader", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(XMLReaderManager, getXMLReader, $XMLReader*), "org.xml.sax.SAXException"},
+	{"overrideDefaultParser", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLReaderManager, overrideDefaultParser, bool)},
+	{"releaseXMLReader", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(XMLReaderManager, releaseXMLReader, void, $XMLReader*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(XMLReaderManager, setFeature, void, $String*, bool)},
+	{"setOverrideDefaultParser", "(Z)V", nullptr, $PUBLIC, $virtualMethod(XMLReaderManager, setOverrideDefaultParser, void, bool)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(XMLReaderManager, setProperty, void, $String*, Object$*)},
 	{}
 };
 

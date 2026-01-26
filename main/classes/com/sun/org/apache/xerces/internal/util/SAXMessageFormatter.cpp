@@ -27,8 +27,8 @@ namespace com {
 						namespace util {
 
 $MethodInfo _SAXMessageFormatter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAXMessageFormatter::*)()>(&SAXMessageFormatter::init$))},
-	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($Locale*,$String*,$ObjectArray*)>(&SAXMessageFormatter::formatMessage)), "java.util.MissingResourceException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAXMessageFormatter, init$, void)},
+	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXMessageFormatter, formatMessage, $String*, $Locale*, $String*, $ObjectArray*), "java.util.MissingResourceException"},
 	{}
 };
 

@@ -30,19 +30,19 @@ $FieldInfo _CMNode_FieldInfo_[] = {
 };
 
 $MethodInfo _CMNode_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(CMNode::*)(int32_t)>(&CMNode::init$))},
-	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED | $ABSTRACT},
-	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED | $ABSTRACT},
-	{"firstPos", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$CMStateSet*(CMNode::*)()>(&CMNode::firstPos))},
-	{"getUserData", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC},
-	{"isNullable", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"lastPos", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$CMStateSet*(CMNode::*)()>(&CMNode::lastPos))},
-	{"setFollowPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $FINAL, $method(static_cast<void(CMNode::*)($CMStateSet*)>(&CMNode::setFollowPos))},
-	{"setIsCompactUPAModel", "(Z)V", nullptr, $PUBLIC},
-	{"setMaxStates", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(CMNode::*)(int32_t)>(&CMNode::setMaxStates))},
-	{"setUserData", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
-	{"type", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(CMNode::*)()>(&CMNode::type))},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(CMNode, init$, void, int32_t)},
+	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(CMNode, calcFirstPos, void, $CMStateSet*)},
+	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(CMNode, calcLastPos, void, $CMStateSet*)},
+	{"firstPos", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;", nullptr, $PUBLIC | $FINAL, $method(CMNode, firstPos, $CMStateSet*)},
+	{"getUserData", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(CMNode, getUserData, $Object*)},
+	{"isCompactedForUPA", "()Z", nullptr, $PUBLIC, $virtualMethod(CMNode, isCompactedForUPA, bool)},
+	{"isNullable", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CMNode, isNullable, bool)},
+	{"lastPos", "()Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;", nullptr, $PUBLIC | $FINAL, $method(CMNode, lastPos, $CMStateSet*)},
+	{"setFollowPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $FINAL, $method(CMNode, setFollowPos, void, $CMStateSet*)},
+	{"setIsCompactUPAModel", "(Z)V", nullptr, $PUBLIC, $virtualMethod(CMNode, setIsCompactUPAModel, void, bool)},
+	{"setMaxStates", "(I)V", nullptr, $PUBLIC | $FINAL, $method(CMNode, setMaxStates, void, int32_t)},
+	{"setUserData", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(CMNode, setUserData, void, Object$*)},
+	{"type", "()I", nullptr, $PUBLIC | $FINAL, $method(CMNode, type, int32_t)},
 	{}
 };
 

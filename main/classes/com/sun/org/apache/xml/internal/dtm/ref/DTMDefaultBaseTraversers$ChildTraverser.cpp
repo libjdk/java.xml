@@ -34,12 +34,12 @@ $FieldInfo _DTMDefaultBaseTraversers$ChildTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$ChildTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$ChildTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$ChildTraverser::init$))},
-	{"first", "(I)I", nullptr, $PUBLIC},
-	{"first", "(II)I", nullptr, $PUBLIC},
-	{"getNextIndexed", "(III)I", nullptr, $PROTECTED},
-	{"next", "(II)I", nullptr, $PUBLIC},
-	{"next", "(III)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$ChildTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"first", "(I)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$ChildTraverser, first, int32_t, int32_t)},
+	{"first", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$ChildTraverser, first, int32_t, int32_t, int32_t)},
+	{"getNextIndexed", "(III)I", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$ChildTraverser, getNextIndexed, int32_t, int32_t, int32_t, int32_t)},
+	{"next", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$ChildTraverser, next, int32_t, int32_t, int32_t)},
+	{"next", "(III)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$ChildTraverser, next, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

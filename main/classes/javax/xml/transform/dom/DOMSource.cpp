@@ -23,14 +23,14 @@ $FieldInfo _DOMSource_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMSource_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMSource::*)()>(&DOMSource::init$))},
-	{"<init>", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMSource::*)($Node*)>(&DOMSource::init$))},
-	{"<init>", "(Lorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMSource::*)($Node*,$String*)>(&DOMSource::init$))},
-	{"getNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isEmpty", "()Z", nullptr, $PUBLIC},
-	{"setNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMSource, init$, void)},
+	{"<init>", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $method(DOMSource, init$, void, $Node*)},
+	{"<init>", "(Lorg/w3c/dom/Node;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DOMSource, init$, void, $Node*, $String*)},
+	{"getNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DOMSource, getNode, $Node*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMSource, getSystemId, $String*)},
+	{"isEmpty", "()Z", nullptr, $PUBLIC, $virtualMethod(DOMSource, isEmpty, bool)},
+	{"setNode", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC, $virtualMethod(DOMSource, setNode, void, $Node*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(DOMSource, setSystemId, void, $String*)},
 	{}
 };
 

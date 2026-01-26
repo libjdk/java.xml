@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xalan/internal/xsltc/Translet.h>
 #include <jcpp.h>
 
+using $DOM = ::com::sun::org::apache::xalan::internal::xsltc::DOM;
+using $Translet = ::com::sun::org::apache::xalan::internal::xsltc::Translet;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,7 +18,7 @@ namespace com {
 						namespace xsltc {
 
 $MethodInfo _DOMCache_MethodInfo_[] = {
-	{"retrieveDocument", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;)Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC | $ABSTRACT},
+	{"retrieveDocument", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/Translet;)Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMCache, retrieveDocument, $DOM*, $String*, $String*, $Translet*)},
 	{}
 };
 

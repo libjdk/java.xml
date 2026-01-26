@@ -14,9 +14,9 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _ShortList_MethodInfo_[] = {
-	{"contains", "(S)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)S", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException"},
+	{"contains", "(S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ShortList, contains, bool, int16_t)},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ShortList, getLength, int32_t)},
+	{"item", "(I)S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ShortList, item, int16_t, int32_t), "com.sun.org.apache.xerces.internal.xs.XSException"},
 	{}
 };
 

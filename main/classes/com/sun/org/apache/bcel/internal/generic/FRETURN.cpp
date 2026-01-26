@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _FRETURN_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FRETURN::*)()>(&FRETURN::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FRETURN, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(FRETURN, accept, void, $Visitor*)},
 	{}
 };
 

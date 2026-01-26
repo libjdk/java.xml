@@ -35,10 +35,10 @@ $FieldInfo _ExceptionConst$EXCS_FieldInfo_[] = {
 };
 
 $MethodInfo _ExceptionConst$EXCS_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ExceptionConst$EXCSArray*(*)()>(&ExceptionConst$EXCS::$values))},
-	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(static_cast<void(ExceptionConst$EXCS::*)($String*,int32_t)>(&ExceptionConst$EXCS::init$))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;", nullptr, $PUBLIC | $STATIC, $method(static_cast<ExceptionConst$EXCS*(*)($String*)>(&ExceptionConst$EXCS::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ExceptionConst$EXCSArray*(*)()>(&ExceptionConst$EXCS::values))},
+	{"$values", "()[Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(ExceptionConst$EXCS, $values, $ExceptionConst$EXCSArray*)},
+	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(ExceptionConst$EXCS, init$, void, $String*, int32_t)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExceptionConst$EXCS, valueOf, ExceptionConst$EXCS*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExceptionConst$EXCS, values, $ExceptionConst$EXCSArray*)},
 	{}
 };
 

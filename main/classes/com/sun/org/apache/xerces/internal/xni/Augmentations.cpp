@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Enumeration = ::java::util::Enumeration;
 
 namespace com {
 	namespace sun {
@@ -15,11 +16,11 @@ namespace com {
 						namespace xni {
 
 $MethodInfo _Augmentations_MethodInfo_[] = {
-	{"getItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $ABSTRACT},
-	{"putItem", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"removeAllItems", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"removeItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Augmentations, getItem, $Object*, $String*)},
+	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $ABSTRACT, $virtualMethod(Augmentations, keys, $Enumeration*)},
+	{"putItem", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Augmentations, putItem, $Object*, $String*, Object$*)},
+	{"removeAllItems", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Augmentations, removeAllItems, void)},
+	{"removeItem", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Augmentations, removeItem, $Object*, $String*)},
 	{}
 };
 

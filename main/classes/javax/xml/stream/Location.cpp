@@ -10,11 +10,11 @@ namespace javax {
 		namespace stream {
 
 $MethodInfo _Location_MethodInfo_[] = {
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLineNumber", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Location, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Location, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Location, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Location, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Location, getSystemId, $String*)},
 	{}
 };
 

@@ -52,19 +52,19 @@ $FieldInfo _XMLLimitAnalyzer_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLLimitAnalyzer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLLimitAnalyzer::*)()>(&XMLLimitAnalyzer::init$))},
-	{"addValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLLimitAnalyzer::*)($XMLSecurityManager$Limit*,$String*,int32_t)>(&XMLLimitAnalyzer::addValue))},
-	{"addValue", "(ILjava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLLimitAnalyzer::*)(int32_t,$String*,int32_t)>(&XMLLimitAnalyzer::addValue))},
-	{"debugPrint", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLLimitAnalyzer::*)($XMLSecurityManager*)>(&XMLLimitAnalyzer::debugPrint))},
-	{"endEntity", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLLimitAnalyzer::*)($XMLSecurityManager$Limit*,$String*)>(&XMLLimitAnalyzer::endEntity))},
-	{"getTotalValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;)I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLLimitAnalyzer::*)($XMLSecurityManager$Limit*)>(&XMLLimitAnalyzer::getTotalValue))},
-	{"getTotalValue", "(I)I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLLimitAnalyzer::*)(int32_t)>(&XMLLimitAnalyzer::getTotalValue))},
-	{"getValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;)I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLLimitAnalyzer::*)($XMLSecurityManager$Limit*)>(&XMLLimitAnalyzer::getValue))},
-	{"getValue", "(I)I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLLimitAnalyzer::*)(int32_t)>(&XMLLimitAnalyzer::getValue))},
-	{"getValueByIndex", "(I)I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLLimitAnalyzer::*)(int32_t)>(&XMLLimitAnalyzer::getValueByIndex))},
-	{"isTracking", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(static_cast<bool(XMLLimitAnalyzer::*)($String*)>(&XMLLimitAnalyzer::isTracking))},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLLimitAnalyzer::*)($XMLSecurityManager$Limit*)>(&XMLLimitAnalyzer::reset))},
-	{"startEntity", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLLimitAnalyzer::*)($String*)>(&XMLLimitAnalyzer::startEntity))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, init$, void)},
+	{"addValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, addValue, void, $XMLSecurityManager$Limit*, $String*, int32_t)},
+	{"addValue", "(ILjava/lang/String;I)V", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, addValue, void, int32_t, $String*, int32_t)},
+	{"debugPrint", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager;)V", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, debugPrint, void, $XMLSecurityManager*)},
+	{"endEntity", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, endEntity, void, $XMLSecurityManager$Limit*, $String*)},
+	{"getTotalValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;)I", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, getTotalValue, int32_t, $XMLSecurityManager$Limit*)},
+	{"getTotalValue", "(I)I", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, getTotalValue, int32_t, int32_t)},
+	{"getValue", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;)I", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, getValue, int32_t, $XMLSecurityManager$Limit*)},
+	{"getValue", "(I)I", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, getValue, int32_t, int32_t)},
+	{"getValueByIndex", "(I)I", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, getValueByIndex, int32_t, int32_t)},
+	{"isTracking", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, isTracking, bool, $String*)},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/utils/XMLSecurityManager$Limit;)V", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, reset, void, $XMLSecurityManager$Limit*)},
+	{"startEntity", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLLimitAnalyzer, startEntity, void, $String*)},
 	{}
 };
 

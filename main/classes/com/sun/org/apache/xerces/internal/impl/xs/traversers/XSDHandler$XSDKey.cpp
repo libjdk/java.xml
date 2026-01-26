@@ -26,9 +26,9 @@ $FieldInfo _XSDHandler$XSDKey_FieldInfo_[] = {
 };
 
 $MethodInfo _XSDHandler$XSDKey_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;SLjava/lang/String;)V", nullptr, 0, $method(static_cast<void(XSDHandler$XSDKey::*)($String*,int16_t,$String*)>(&XSDHandler$XSDKey::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;SLjava/lang/String;)V", nullptr, 0, $method(XSDHandler$XSDKey, init$, void, $String*, int16_t, $String*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSDKey, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSDKey, hashCode, int32_t)},
 	{}
 };
 

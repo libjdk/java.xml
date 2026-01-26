@@ -84,22 +84,22 @@ $FieldInfo _FilterExprWalker_FieldInfo_[] = {
 };
 
 $MethodInfo _FilterExprWalker_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/WalkingIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(FilterExprWalker::*)($WalkingIterator*)>(&FilterExprWalker::init$))},
-	{"acceptNode", "(I)S", nullptr, $PUBLIC},
-	{"callPredicateVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getAnalysisBits", "()I", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getInnerExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PUBLIC},
-	{"init", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"isDocOrdered", "()Z", nullptr, $PUBLIC},
-	{"setInnerExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
-	{"setRoot", "(I)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/WalkingIterator;)V", nullptr, $PUBLIC, $method(FilterExprWalker, init$, void, $WalkingIterator*)},
+	{"acceptNode", "(I)S", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, acceptNode, int16_t, int32_t)},
+	{"callPredicateVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, callPredicateVisitors, void, $XPathVisitor*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, clone, $Object*), "java.lang.CloneNotSupportedException"},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, deepEquals, bool, $Expression*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, detach, void)},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FilterExprWalker, fixupVariables, void, $List*, int32_t)},
+	{"getAnalysisBits", "()I", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, getAnalysisBits, int32_t)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, getAxis, int32_t)},
+	{"getInnerExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, getInnerExpression, $Expression*)},
+	{"getLastPos", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, getLastPos, int32_t, $XPathContext*)},
+	{"getNextNode", "()I", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, getNextNode, int32_t)},
+	{"init", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, init, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"isDocOrdered", "()Z", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, isDocOrdered, bool)},
+	{"setInnerExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, setInnerExpression, void, $Expression*)},
+	{"setRoot", "(I)V", nullptr, $PUBLIC, $virtualMethod(FilterExprWalker, setRoot, void, int32_t)},
 	{}
 };
 

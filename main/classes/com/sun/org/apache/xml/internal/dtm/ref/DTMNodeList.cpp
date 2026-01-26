@@ -33,11 +33,11 @@ $FieldInfo _DTMNodeList_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMNodeList_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(DTMNodeList::*)()>(&DTMNodeList::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMNodeList::*)($DTMIterator*)>(&DTMNodeList::init$))},
-	{"getDTMIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(DTMNodeList, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC, $method(DTMNodeList, init$, void, $DTMIterator*)},
+	{"getDTMIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, $virtualMethod(DTMNodeList, getDTMIterator, $DTMIterator*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(DTMNodeList, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DTMNodeList, item, $Node*, int32_t)},
 	{}
 };
 

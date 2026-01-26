@@ -15,7 +15,7 @@ namespace com {
 							namespace dom {
 
 $MethodInfo _Filter_MethodInfo_[] = {
-	{"test", "(I)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"test", "(I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Filter, test, bool, int32_t)},
 	{}
 };
 

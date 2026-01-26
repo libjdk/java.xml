@@ -50,8 +50,8 @@ $FieldInfo _DTMFilter_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMFilter_MethodInfo_[] = {
-	{"acceptNode", "(II)S", nullptr, $PUBLIC | $ABSTRACT},
-	{"acceptNode", "(III)S", nullptr, $PUBLIC | $ABSTRACT},
+	{"acceptNode", "(II)S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMFilter, acceptNode, int16_t, int32_t, int32_t)},
+	{"acceptNode", "(III)S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMFilter, acceptNode, int16_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

@@ -23,7 +23,7 @@ $FieldInfo _InvalidDatatypeFacetException_FieldInfo_[] = {
 };
 
 $MethodInfo _InvalidDatatypeFacetException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(InvalidDatatypeFacetException::*)($String*,$ObjectArray*)>(&InvalidDatatypeFacetException::init$))},
+	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(InvalidDatatypeFacetException, init$, void, $String*, $ObjectArray*)},
 	{}
 };
 

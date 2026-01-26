@@ -32,13 +32,13 @@ $FieldInfo _SortSettings_FieldInfo_[] = {
 };
 
 $MethodInfo _SortSettings_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;[I[I[Ljava/util/Locale;[Ljava/text/Collator;[Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(SortSettings::*)($AbstractTranslet*,$ints*,$ints*,$LocaleArray*,$CollatorArray*,$StringArray*)>(&SortSettings::init$))},
-	{"getCaseOrders", "()[Ljava/lang/String;", nullptr, 0, $method(static_cast<$StringArray*(SortSettings::*)()>(&SortSettings::getCaseOrders))},
-	{"getCollators", "()[Ljava/text/Collator;", nullptr, 0, $method(static_cast<$CollatorArray*(SortSettings::*)()>(&SortSettings::getCollators))},
-	{"getLocales", "()[Ljava/util/Locale;", nullptr, 0, $method(static_cast<$LocaleArray*(SortSettings::*)()>(&SortSettings::getLocales))},
-	{"getSortOrders", "()[I", nullptr, 0, $method(static_cast<$ints*(SortSettings::*)()>(&SortSettings::getSortOrders))},
-	{"getTranslet", "()Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;", nullptr, 0, $method(static_cast<$AbstractTranslet*(SortSettings::*)()>(&SortSettings::getTranslet))},
-	{"getTypes", "()[I", nullptr, 0, $method(static_cast<$ints*(SortSettings::*)()>(&SortSettings::getTypes))},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;[I[I[Ljava/util/Locale;[Ljava/text/Collator;[Ljava/lang/String;)V", nullptr, 0, $method(SortSettings, init$, void, $AbstractTranslet*, $ints*, $ints*, $LocaleArray*, $CollatorArray*, $StringArray*)},
+	{"getCaseOrders", "()[Ljava/lang/String;", nullptr, 0, $method(SortSettings, getCaseOrders, $StringArray*)},
+	{"getCollators", "()[Ljava/text/Collator;", nullptr, 0, $method(SortSettings, getCollators, $CollatorArray*)},
+	{"getLocales", "()[Ljava/util/Locale;", nullptr, 0, $method(SortSettings, getLocales, $LocaleArray*)},
+	{"getSortOrders", "()[I", nullptr, 0, $method(SortSettings, getSortOrders, $ints*)},
+	{"getTranslet", "()Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;", nullptr, 0, $method(SortSettings, getTranslet, $AbstractTranslet*)},
+	{"getTypes", "()[I", nullptr, 0, $method(SortSettings, getTypes, $ints*)},
 	{}
 };
 

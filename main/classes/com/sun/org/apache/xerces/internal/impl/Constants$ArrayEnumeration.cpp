@@ -25,9 +25,9 @@ $FieldInfo _Constants$ArrayEnumeration_FieldInfo_[] = {
 };
 
 $MethodInfo _Constants$ArrayEnumeration_MethodInfo_[] = {
-	{"<init>", "([Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(Constants$ArrayEnumeration::*)($ObjectArray*)>(&Constants$ArrayEnumeration::init$))},
-	{"hasMoreElements", "()Z", nullptr, $PUBLIC},
-	{"nextElement", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "([Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(Constants$ArrayEnumeration, init$, void, $ObjectArray*)},
+	{"hasMoreElements", "()Z", nullptr, $PUBLIC, $virtualMethod(Constants$ArrayEnumeration, hasMoreElements, bool)},
+	{"nextElement", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(Constants$ArrayEnumeration, nextElement, $Object*)},
 	{}
 };
 

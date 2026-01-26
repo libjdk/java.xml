@@ -56,12 +56,12 @@ $FieldInfo _XMLDocumentScannerImpl$ContentDriver_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentScannerImpl$ContentDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLDocumentScannerImpl$ContentDriver::*)($XMLDocumentScannerImpl*)>(&XMLDocumentScannerImpl$ContentDriver::init$))},
-	{"elementDepthIsZeroHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"endOfFileHook", "(Ljava/io/EOFException;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"resolveExternalSubsetAndRead", "()V", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanForDoctypeHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(XMLDocumentScannerImpl$ContentDriver, init$, void, $XMLDocumentScannerImpl*)},
+	{"elementDepthIsZeroHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLDocumentScannerImpl$ContentDriver, elementDepthIsZeroHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"endOfFileHook", "(Ljava/io/EOFException;)V", nullptr, $PROTECTED, $virtualMethod(XMLDocumentScannerImpl$ContentDriver, endOfFileHook, void, $EOFException*), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"resolveExternalSubsetAndRead", "()V", nullptr, $PROTECTED, $virtualMethod(XMLDocumentScannerImpl$ContentDriver, resolveExternalSubsetAndRead, void), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanForDoctypeHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLDocumentScannerImpl$ContentDriver, scanForDoctypeHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanRootElementHook", "()Z", nullptr, $PROTECTED, $virtualMethod(XMLDocumentScannerImpl$ContentDriver, scanRootElementHook, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

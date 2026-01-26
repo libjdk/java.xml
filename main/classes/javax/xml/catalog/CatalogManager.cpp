@@ -26,10 +26,10 @@ namespace javax {
 		namespace catalog {
 
 $MethodInfo _CatalogManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(CatalogManager::*)()>(&CatalogManager::init$))},
-	{"catalog", "(Ljavax/xml/catalog/CatalogFeatures;[Ljava/net/URI;)Ljavax/xml/catalog/Catalog;", nullptr, $PUBLIC | $STATIC | $TRANSIENT, $method(static_cast<$Catalog*(*)($CatalogFeatures*,$URIArray*)>(&CatalogManager::catalog))},
-	{"catalogResolver", "(Ljavax/xml/catalog/Catalog;)Ljavax/xml/catalog/CatalogResolver;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$CatalogResolver*(*)($Catalog*)>(&CatalogManager::catalogResolver))},
-	{"catalogResolver", "(Ljavax/xml/catalog/CatalogFeatures;[Ljava/net/URI;)Ljavax/xml/catalog/CatalogResolver;", nullptr, $PUBLIC | $STATIC | $TRANSIENT, $method(static_cast<$CatalogResolver*(*)($CatalogFeatures*,$URIArray*)>(&CatalogManager::catalogResolver))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(CatalogManager, init$, void)},
+	{"catalog", "(Ljavax/xml/catalog/CatalogFeatures;[Ljava/net/URI;)Ljavax/xml/catalog/Catalog;", nullptr, $PUBLIC | $STATIC | $TRANSIENT, $staticMethod(CatalogManager, catalog, $Catalog*, $CatalogFeatures*, $URIArray*)},
+	{"catalogResolver", "(Ljavax/xml/catalog/Catalog;)Ljavax/xml/catalog/CatalogResolver;", nullptr, $PUBLIC | $STATIC, $staticMethod(CatalogManager, catalogResolver, $CatalogResolver*, $Catalog*)},
+	{"catalogResolver", "(Ljavax/xml/catalog/CatalogFeatures;[Ljava/net/URI;)Ljavax/xml/catalog/CatalogResolver;", nullptr, $PUBLIC | $STATIC | $TRANSIENT, $staticMethod(CatalogManager, catalogResolver, $CatalogResolver*, $CatalogFeatures*, $URIArray*)},
 	{}
 };
 

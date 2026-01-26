@@ -35,13 +35,13 @@ $FieldInfo _FlowList_FieldInfo_[] = {
 };
 
 $MethodInfo _FlowList_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FlowList::*)()>(&FlowList::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(FlowList::*)($InstructionHandle*)>(&FlowList::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;)V", nullptr, $PUBLIC, $method(static_cast<void(FlowList::*)(FlowList*)>(&FlowList::init$))},
-	{"add", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;", nullptr, $PUBLIC, $method(static_cast<FlowList*(FlowList::*)($InstructionHandle*)>(&FlowList::add))},
-	{"append", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;", nullptr, $PUBLIC, $method(static_cast<FlowList*(FlowList::*)(FlowList*)>(&FlowList::append))},
-	{"backPatch", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(FlowList::*)($InstructionHandle*)>(&FlowList::backPatch))},
-	{"copyAndRedirect", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;", nullptr, $PUBLIC, $method(static_cast<FlowList*(FlowList::*)($InstructionList*,$InstructionList*)>(&FlowList::copyAndRedirect))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FlowList, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(FlowList, init$, void, $InstructionHandle*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;)V", nullptr, $PUBLIC, $method(FlowList, init$, void, FlowList*)},
+	{"add", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;", nullptr, $PUBLIC, $method(FlowList, add, FlowList*, $InstructionHandle*)},
+	{"append", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;", nullptr, $PUBLIC, $method(FlowList, append, FlowList*, FlowList*)},
+	{"backPatch", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(FlowList, backPatch, void, $InstructionHandle*)},
+	{"copyAndRedirect", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/FlowList;", nullptr, $PUBLIC, $method(FlowList, copyAndRedirect, FlowList*, $InstructionList*, $InstructionList*)},
 	{}
 };
 

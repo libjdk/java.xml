@@ -33,11 +33,11 @@ namespace com {
 							namespace xs {
 
 $MethodInfo _SchemaGrammar$BuiltinAttrDecl_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;S)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaGrammar$BuiltinAttrDecl::*)($String*,$String*,$XSSimpleType*,int16_t)>(&SchemaGrammar$BuiltinAttrDecl::init$))},
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC},
-	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;SSLcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/XSComplexTypeDecl;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;S)V", nullptr, $PUBLIC, $method(SchemaGrammar$BuiltinAttrDecl, init$, void, $String*, $String*, $XSSimpleType*, int16_t)},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$BuiltinAttrDecl, getAnnotation, $XSAnnotation*)},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$BuiltinAttrDecl, getNamespaceItem, $XSNamespaceItem*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$BuiltinAttrDecl, reset, void)},
+	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/XSSimpleType;SSLcom/sun/org/apache/xerces/internal/impl/dv/ValidatedInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/XSComplexTypeDecl;)V", nullptr, $PUBLIC, $virtualMethod(SchemaGrammar$BuiltinAttrDecl, setValues, void, $String*, $String*, $XSSimpleType*, int16_t, int16_t, $ValidatedInfo*, $XSComplexTypeDecl*)},
 	{}
 };
 

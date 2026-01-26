@@ -36,8 +36,8 @@ $FieldInfo _SoftReferenceGrammarPool$Entry_FieldInfo_[] = {
 };
 
 $MethodInfo _SoftReferenceGrammarPool$Entry_MethodInfo_[] = {
-	{"<init>", "(IILcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;Lcom/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool$Entry;Ljava/lang/ref/ReferenceQueue;)V", "(IILcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;Lcom/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool$Entry;Ljava/lang/ref/ReferenceQueue<Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;>;)V", $PROTECTED, $method(static_cast<void(SoftReferenceGrammarPool$Entry::*)(int32_t,int32_t,$XMLGrammarDescription*,$Grammar*,SoftReferenceGrammarPool$Entry*,$ReferenceQueue*)>(&SoftReferenceGrammarPool$Entry::init$))},
-	{"clear", "()V", nullptr, $PROTECTED, $method(static_cast<void(SoftReferenceGrammarPool$Entry::*)()>(&SoftReferenceGrammarPool$Entry::clear))},
+	{"<init>", "(IILcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;Lcom/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool$Entry;Ljava/lang/ref/ReferenceQueue;)V", "(IILcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;Lcom/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool$Entry;Ljava/lang/ref/ReferenceQueue<Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;>;)V", $PROTECTED, $method(SoftReferenceGrammarPool$Entry, init$, void, int32_t, int32_t, $XMLGrammarDescription*, $Grammar*, SoftReferenceGrammarPool$Entry*, $ReferenceQueue*)},
+	{"clear", "()V", nullptr, $PROTECTED, $method(SoftReferenceGrammarPool$Entry, clear, void)},
 	{}
 };
 

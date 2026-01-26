@@ -31,10 +31,10 @@ $FieldInfo _InstructionList$1_FieldInfo_[] = {
 };
 
 $MethodInfo _InstructionList$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, 0, $method(static_cast<void(InstructionList$1::*)($InstructionList*)>(&InstructionList$1::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, nullptr, "java.util.NoSuchElementException"},
-	{"remove", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionList;)V", nullptr, 0, $method(InstructionList$1, init$, void, $InstructionList*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(InstructionList$1, hasNext, bool)},
+	{"next", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $virtualMethod(InstructionList$1, next, $Object*), "java.util.NoSuchElementException"},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(InstructionList$1, remove, void)},
 	{}
 };
 

@@ -26,8 +26,8 @@ $FieldInfo _XSAnnotation_FieldInfo_[] = {
 };
 
 $MethodInfo _XSAnnotation_MethodInfo_[] = {
-	{"getAnnotationString", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"writeAnnotation", "(Ljava/lang/Object;S)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnnotationString", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAnnotation, getAnnotationString, $String*)},
+	{"writeAnnotation", "(Ljava/lang/Object;S)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAnnotation, writeAnnotation, bool, Object$*, int16_t)},
 	{}
 };
 

@@ -24,7 +24,7 @@ $FieldInfo _OutputFormat$Defaults_FieldInfo_[] = {
 };
 
 $MethodInfo _OutputFormat$Defaults_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(OutputFormat$Defaults::*)()>(&OutputFormat$Defaults::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(OutputFormat$Defaults, init$, void)},
 	{}
 };
 

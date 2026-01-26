@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ALOAD_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ALOAD::*)()>(&ALOAD::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ALOAD::*)(int32_t)>(&ALOAD::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(ALOAD, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(ALOAD, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ALOAD, accept, void, $Visitor*)},
 	{}
 };
 

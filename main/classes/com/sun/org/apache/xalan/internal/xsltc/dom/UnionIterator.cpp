@@ -32,8 +32,8 @@ $FieldInfo _UnionIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _UnionIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)V", nullptr, $PUBLIC, $method(static_cast<void(UnionIterator::*)($DOM*)>(&UnionIterator::init$))},
-	{"addIterator", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/UnionIterator;", nullptr, $PUBLIC, $method(static_cast<UnionIterator*(UnionIterator::*)($DTMAxisIterator*)>(&UnionIterator::addIterator))},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/DOM;)V", nullptr, $PUBLIC, $method(UnionIterator, init$, void, $DOM*)},
+	{"addIterator", "(Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)Lcom/sun/org/apache/xalan/internal/xsltc/dom/UnionIterator;", nullptr, $PUBLIC, $method(UnionIterator, addIterator, UnionIterator*, $DTMAxisIterator*)},
 	{}
 };
 

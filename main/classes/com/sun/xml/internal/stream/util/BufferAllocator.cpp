@@ -31,11 +31,11 @@ $FieldInfo _BufferAllocator_FieldInfo_[] = {
 };
 
 $MethodInfo _BufferAllocator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(BufferAllocator::*)()>(&BufferAllocator::init$))},
-	{"getByteBuffer", "(I)[B", nullptr, $PUBLIC},
-	{"getCharBuffer", "(I)[C", nullptr, $PUBLIC},
-	{"returnByteBuffer", "([B)V", nullptr, $PUBLIC},
-	{"returnCharBuffer", "([C)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(BufferAllocator, init$, void)},
+	{"getByteBuffer", "(I)[B", nullptr, $PUBLIC, $virtualMethod(BufferAllocator, getByteBuffer, $bytes*, int32_t)},
+	{"getCharBuffer", "(I)[C", nullptr, $PUBLIC, $virtualMethod(BufferAllocator, getCharBuffer, $chars*, int32_t)},
+	{"returnByteBuffer", "([B)V", nullptr, $PUBLIC, $virtualMethod(BufferAllocator, returnByteBuffer, void, $bytes*)},
+	{"returnCharBuffer", "([C)V", nullptr, $PUBLIC, $virtualMethod(BufferAllocator, returnCharBuffer, void, $chars*)},
 	{}
 };
 

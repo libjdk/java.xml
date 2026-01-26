@@ -23,6 +23,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace org {
 	namespace w3c {
@@ -50,7 +51,7 @@ $FieldInfo _NodeFilter_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeFilter_MethodInfo_[] = {
-	{"acceptNode", "(Lorg/w3c/dom/Node;)S", nullptr, $PUBLIC | $ABSTRACT},
+	{"acceptNode", "(Lorg/w3c/dom/Node;)S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeFilter, acceptNode, int16_t, $Node*)},
 	{}
 };
 

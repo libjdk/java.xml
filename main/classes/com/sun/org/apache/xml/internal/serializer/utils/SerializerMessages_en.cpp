@@ -17,7 +17,7 @@ namespace com {
 							namespace utils {
 
 $MethodInfo _SerializerMessages_en_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SerializerMessages_en::*)()>(&SerializerMessages_en::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SerializerMessages_en, init$, void)},
 	{}
 };
 

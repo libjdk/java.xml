@@ -32,11 +32,11 @@ $FieldInfo _XSNamedMap4Types_FieldInfo_[] = {
 };
 
 $MethodInfo _XSNamedMap4Types_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolHash;S)V", nullptr, $PUBLIC, $method(static_cast<void(XSNamedMap4Types::*)($String*,$SymbolHash*,int16_t)>(&XSNamedMap4Types::init$))},
-	{"<init>", "([Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/util/SymbolHash;IS)V", nullptr, $PUBLIC, $method(static_cast<void(XSNamedMap4Types::*)($StringArray*,$SymbolHashArray*,int32_t,int16_t)>(&XSNamedMap4Types::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"item", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"itemByName", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolHash;S)V", nullptr, $PUBLIC, $method(XSNamedMap4Types, init$, void, $String*, $SymbolHash*, int16_t)},
+	{"<init>", "([Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/util/SymbolHash;IS)V", nullptr, $PUBLIC, $method(XSNamedMap4Types, init$, void, $StringArray*, $SymbolHashArray*, int32_t, int16_t)},
+	{"getLength", "()I", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(XSNamedMap4Types, getLength, int32_t)},
+	{"item", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(XSNamedMap4Types, item, $XSObject*, int32_t)},
+	{"itemByName", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $virtualMethod(XSNamedMap4Types, itemByName, $XSObject*, $String*, $String*)},
 	{}
 };
 

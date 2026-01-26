@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace javax {
 	namespace xml {
@@ -12,7 +13,7 @@ namespace javax {
 			namespace dom {
 
 $MethodInfo _DOMLocator_MethodInfo_[] = {
-	{"getOriginatingNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getOriginatingNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMLocator, getOriginatingNode, $Node*)},
 	{}
 };
 

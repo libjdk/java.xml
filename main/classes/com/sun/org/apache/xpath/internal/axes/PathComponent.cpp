@@ -14,7 +14,7 @@ namespace com {
 						namespace axes {
 
 $MethodInfo _PathComponent_MethodInfo_[] = {
-	{"getAnalysisBits", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnalysisBits", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(PathComponent, getAnalysisBits, int32_t)},
 	{}
 };
 

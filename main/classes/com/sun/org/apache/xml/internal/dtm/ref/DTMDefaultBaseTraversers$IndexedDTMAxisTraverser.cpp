@@ -33,11 +33,11 @@ $FieldInfo _DTMDefaultBaseTraversers$IndexedDTMAxisTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$IndexedDTMAxisTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$IndexedDTMAxisTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$IndexedDTMAxisTraverser::init$))},
-	{"axisHasBeenProcessed", "(I)Z", nullptr, $PROTECTED | $ABSTRACT},
-	{"getNextIndexed", "(III)I", nullptr, $PROTECTED},
-	{"isAfterAxis", "(II)Z", nullptr, $PROTECTED | $ABSTRACT},
-	{"isIndexed", "(I)Z", nullptr, $PROTECTED | $FINAL, $method(static_cast<bool(DTMDefaultBaseTraversers$IndexedDTMAxisTraverser::*)(int32_t)>(&DTMDefaultBaseTraversers$IndexedDTMAxisTraverser::isIndexed))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$IndexedDTMAxisTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"axisHasBeenProcessed", "(I)Z", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(DTMDefaultBaseTraversers$IndexedDTMAxisTraverser, axisHasBeenProcessed, bool, int32_t)},
+	{"getNextIndexed", "(III)I", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$IndexedDTMAxisTraverser, getNextIndexed, int32_t, int32_t, int32_t, int32_t)},
+	{"isAfterAxis", "(II)Z", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(DTMDefaultBaseTraversers$IndexedDTMAxisTraverser, isAfterAxis, bool, int32_t, int32_t)},
+	{"isIndexed", "(I)Z", nullptr, $PROTECTED | $FINAL, $method(DTMDefaultBaseTraversers$IndexedDTMAxisTraverser, isIndexed, bool, int32_t)},
 	{}
 };
 

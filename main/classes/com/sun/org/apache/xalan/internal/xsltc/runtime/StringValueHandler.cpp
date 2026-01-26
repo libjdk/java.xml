@@ -29,14 +29,14 @@ $FieldInfo _StringValueHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _StringValueHandler_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringValueHandler::*)()>(&StringValueHandler::init$))},
-	{"characters", "([CII)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"characters", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"endElement", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"getValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(StringValueHandler::*)()>(&StringValueHandler::getValue))},
-	{"getValueOfPI", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(StringValueHandler::*)()>(&StringValueHandler::getValueOfPI))},
-	{"setEscaping", "(Z)Z", nullptr, $PUBLIC},
-	{"startElement", "(Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StringValueHandler, init$, void)},
+	{"characters", "([CII)V", nullptr, $PUBLIC, $virtualMethod(StringValueHandler, characters, void, $chars*, int32_t, int32_t), "org.xml.sax.SAXException"},
+	{"characters", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StringValueHandler, characters, void, $String*), "org.xml.sax.SAXException"},
+	{"endElement", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StringValueHandler, endElement, void, $String*), "org.xml.sax.SAXException"},
+	{"getValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(StringValueHandler, getValue, $String*)},
+	{"getValueOfPI", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(StringValueHandler, getValueOfPI, $String*)},
+	{"setEscaping", "(Z)Z", nullptr, $PUBLIC, $virtualMethod(StringValueHandler, setEscaping, bool, bool)},
+	{"startElement", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(StringValueHandler, startElement, void, $String*), "org.xml.sax.SAXException"},
 	{}
 };
 

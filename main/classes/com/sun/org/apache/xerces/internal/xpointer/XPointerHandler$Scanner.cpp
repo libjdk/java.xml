@@ -72,11 +72,11 @@ $FieldInfo _XPointerHandler$Scanner_FieldInfo_[] = {
 };
 
 $MethodInfo _XPointerHandler$Scanner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(static_cast<void(XPointerHandler$Scanner::*)($XPointerHandler*,$SymbolTable*)>(&XPointerHandler$Scanner::init$))},
-	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler$Tokens;I)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanData", "(Ljava/lang/String;Ljava/lang/StringBuffer;II)I", nullptr, $PRIVATE, $method(static_cast<int32_t(XPointerHandler$Scanner::*)($String*,$StringBuffer*,int32_t,int32_t)>(&XPointerHandler$Scanner::scanData))},
-	{"scanExpr", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler$Tokens;Ljava/lang/String;II)Z", nullptr, $PRIVATE, $method(static_cast<bool(XPointerHandler$Scanner::*)($SymbolTable*,$XPointerHandler$Tokens*,$String*,int32_t,int32_t)>(&XPointerHandler$Scanner::scanExpr)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanNCName", "(Ljava/lang/String;II)I", nullptr, $PRIVATE, $method(static_cast<int32_t(XPointerHandler$Scanner::*)($String*,int32_t,int32_t)>(&XPointerHandler$Scanner::scanNCName))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(XPointerHandler$Scanner, init$, void, $XPointerHandler*, $SymbolTable*)},
+	{"addToken", "(Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler$Tokens;I)V", nullptr, $PROTECTED, $virtualMethod(XPointerHandler$Scanner, addToken, void, $XPointerHandler$Tokens*, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanData", "(Ljava/lang/String;Ljava/lang/StringBuffer;II)I", nullptr, $PRIVATE, $method(XPointerHandler$Scanner, scanData, int32_t, $String*, $StringBuffer*, int32_t, int32_t)},
+	{"scanExpr", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xpointer/XPointerHandler$Tokens;Ljava/lang/String;II)Z", nullptr, $PRIVATE, $method(XPointerHandler$Scanner, scanExpr, bool, $SymbolTable*, $XPointerHandler$Tokens*, $String*, int32_t, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanNCName", "(Ljava/lang/String;II)I", nullptr, $PRIVATE, $method(XPointerHandler$Scanner, scanNCName, int32_t, $String*, int32_t, int32_t)},
 	{}
 };
 

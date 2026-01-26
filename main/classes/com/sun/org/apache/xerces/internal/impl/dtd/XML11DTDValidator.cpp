@@ -35,9 +35,9 @@ $FieldInfo _XML11DTDValidator_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11DTDValidator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11DTDValidator::*)()>(&XML11DTDValidator::init$))},
-	{"init", "()V", nullptr, $PROTECTED},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11DTDValidator, init$, void)},
+	{"init", "()V", nullptr, $PROTECTED, $virtualMethod(XML11DTDValidator, init, void)},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $virtualMethod(XML11DTDValidator, reset, void, $XMLComponentManager*)},
 	{}
 };
 

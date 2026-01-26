@@ -30,10 +30,10 @@ $FieldInfo _XIncludeHandler$Notation_FieldInfo_[] = {
 };
 
 $MethodInfo _XIncludeHandler$Notation_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(XIncludeHandler$Notation::*)()>(&XIncludeHandler$Notation::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"isDuplicate", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(XIncludeHandler$Notation, init$, void)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XIncludeHandler$Notation, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XIncludeHandler$Notation, hashCode, int32_t)},
+	{"isDuplicate", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XIncludeHandler$Notation, isDuplicate, bool, Object$*)},
 	{}
 };
 

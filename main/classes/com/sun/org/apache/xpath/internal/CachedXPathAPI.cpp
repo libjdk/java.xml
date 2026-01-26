@@ -48,18 +48,18 @@ $FieldInfo _CachedXPathAPI_FieldInfo_[] = {
 };
 
 $MethodInfo _CachedXPathAPI_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CachedXPathAPI::*)()>(&CachedXPathAPI::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/CachedXPathAPI;)V", nullptr, $PUBLIC, $method(static_cast<void(CachedXPathAPI::*)(CachedXPathAPI*)>(&CachedXPathAPI::init$))},
-	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"getXPathContext", "()Lcom/sun/org/apache/xpath/internal/XPathContext;", nullptr, $PUBLIC},
-	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CachedXPathAPI, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/CachedXPathAPI;)V", nullptr, $PUBLIC, $method(CachedXPathAPI, init$, void, CachedXPathAPI*)},
+	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, eval, $XObject*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, eval, $XObject*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
+	{"eval", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, eval, $XObject*, $Node*, $String*, $PrefixResolver*), "javax.xml.transform.TransformerException"},
+	{"getXPathContext", "()Lcom/sun/org/apache/xpath/internal/XPathContext;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, getXPathContext, $XPathContext*)},
+	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, selectNodeIterator, $NodeIterator*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"selectNodeIterator", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, selectNodeIterator, $NodeIterator*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
+	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, selectNodeList, $NodeList*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"selectNodeList", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, selectNodeList, $NodeList*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
+	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, selectSingleNode, $Node*, $Node*, $String*), "javax.xml.transform.TransformerException"},
+	{"selectSingleNode", "(Lorg/w3c/dom/Node;Ljava/lang/String;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(CachedXPathAPI, selectSingleNode, $Node*, $Node*, $String*, $Node*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

@@ -59,9 +59,9 @@ $FieldInfo _MethodHTML_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodHTML_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;[Lcom/sun/org/apache/bcel/internal/classfile/Method;[Lcom/sun/org/apache/bcel/internal/classfile/Field;Lcom/sun/org/apache/bcel/internal/util/ConstantHTML;Lcom/sun/org/apache/bcel/internal/util/AttributeHTML;)V", nullptr, 0, $method(static_cast<void(MethodHTML::*)($String*,$String*,$MethodArray*,$FieldArray*,$ConstantHTML*,$AttributeHTML*)>(&MethodHTML::init$)), "java.io.IOException"},
-	{"writeField", "(Lcom/sun/org/apache/bcel/internal/classfile/Field;)V", nullptr, $PRIVATE, $method(static_cast<void(MethodHTML::*)($Field*)>(&MethodHTML::writeField)), "java.io.IOException"},
-	{"writeMethod", "(Lcom/sun/org/apache/bcel/internal/classfile/Method;I)V", nullptr, $PRIVATE, $method(static_cast<void(MethodHTML::*)($Method*,int32_t)>(&MethodHTML::writeMethod))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;[Lcom/sun/org/apache/bcel/internal/classfile/Method;[Lcom/sun/org/apache/bcel/internal/classfile/Field;Lcom/sun/org/apache/bcel/internal/util/ConstantHTML;Lcom/sun/org/apache/bcel/internal/util/AttributeHTML;)V", nullptr, 0, $method(MethodHTML, init$, void, $String*, $String*, $MethodArray*, $FieldArray*, $ConstantHTML*, $AttributeHTML*), "java.io.IOException"},
+	{"writeField", "(Lcom/sun/org/apache/bcel/internal/classfile/Field;)V", nullptr, $PRIVATE, $method(MethodHTML, writeField, void, $Field*), "java.io.IOException"},
+	{"writeMethod", "(Lcom/sun/org/apache/bcel/internal/classfile/Method;I)V", nullptr, $PRIVATE, $method(MethodHTML, writeMethod, void, $Method*, int32_t)},
 	{}
 };
 

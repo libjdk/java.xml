@@ -26,9 +26,9 @@ $FieldInfo _FunctionCall$JavaType_FieldInfo_[] = {
 };
 
 $MethodInfo _FunctionCall$JavaType_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/Class;I)V", "(Ljava/lang/Class<*>;I)V", $PUBLIC, $method(static_cast<void(FunctionCall$JavaType::*)($Class*,int32_t)>(&FunctionCall$JavaType::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/Class;I)V", "(Ljava/lang/Class<*>;I)V", $PUBLIC, $method(FunctionCall$JavaType, init$, void, $Class*, int32_t)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(FunctionCall$JavaType, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(FunctionCall$JavaType, hashCode, int32_t)},
 	{}
 };
 

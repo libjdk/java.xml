@@ -35,10 +35,10 @@ namespace com {
 						namespace parsers {
 
 $MethodInfo _XMLDocumentParser_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLDocumentParser::*)()>(&XMLDocumentParser::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLDocumentParser::*)($XMLParserConfiguration*)>(&XMLDocumentParser::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLDocumentParser::*)($SymbolTable*)>(&XMLDocumentParser::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLDocumentParser::*)($SymbolTable*,$XMLGrammarPool*)>(&XMLDocumentParser::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLDocumentParser, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PUBLIC, $method(XMLDocumentParser, init$, void, $XMLParserConfiguration*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(XMLDocumentParser, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(XMLDocumentParser, init$, void, $SymbolTable*, $XMLGrammarPool*)},
 	{}
 };
 

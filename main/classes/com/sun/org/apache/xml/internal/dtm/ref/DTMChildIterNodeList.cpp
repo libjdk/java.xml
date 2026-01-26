@@ -30,10 +30,10 @@ $FieldInfo _DTMChildIterNodeList_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMChildIterNodeList_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(DTMChildIterNodeList::*)()>(&DTMChildIterNodeList::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTM;I)V", nullptr, $PUBLIC, $method(static_cast<void(DTMChildIterNodeList::*)($DTM*,int32_t)>(&DTMChildIterNodeList::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(DTMChildIterNodeList, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTM;I)V", nullptr, $PUBLIC, $method(DTMChildIterNodeList, init$, void, $DTM*, int32_t)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(DTMChildIterNodeList, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DTMChildIterNodeList, item, $Node*, int32_t)},
 	{}
 };
 

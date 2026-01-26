@@ -28,14 +28,14 @@ $FieldInfo _ChildNode_FieldInfo_[] = {
 };
 
 $MethodInfo _ChildNode_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(ChildNode::*)($CoreDocumentImpl*)>(&ChildNode::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ChildNode::*)()>(&ChildNode::init$))},
-	{"cloneNode", "(Z)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getNextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getParentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"getPreviousSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"parentNode", "()Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;", nullptr, $FINAL},
-	{"previousSibling", "()Lcom/sun/org/apache/xerces/internal/dom/ChildNode;", nullptr, $FINAL},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/CoreDocumentImpl;)V", nullptr, $PROTECTED, $method(ChildNode, init$, void, $CoreDocumentImpl*)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ChildNode, init$, void)},
+	{"cloneNode", "(Z)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(ChildNode, cloneNode, $Node*, bool)},
+	{"getNextSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(ChildNode, getNextSibling, $Node*)},
+	{"getParentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(ChildNode, getParentNode, $Node*)},
+	{"getPreviousSibling", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(ChildNode, getPreviousSibling, $Node*)},
+	{"parentNode", "()Lcom/sun/org/apache/xerces/internal/dom/NodeImpl;", nullptr, $FINAL, $virtualMethod(ChildNode, parentNode, $NodeImpl*)},
+	{"previousSibling", "()Lcom/sun/org/apache/xerces/internal/dom/ChildNode;", nullptr, $FINAL, $virtualMethod(ChildNode, previousSibling, ChildNode*)},
 	{}
 };
 

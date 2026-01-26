@@ -32,8 +32,8 @@ $FieldInfo _SchemaFactoryFinder$2_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaFactoryFinder$2_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;Ljava/lang/String;Ljava/security/AccessControlContext;)V", "()V", 0, $method(static_cast<void(SchemaFactoryFinder$2::*)($SchemaFactoryFinder*,$String*,$AccessControlContext*)>(&SchemaFactoryFinder$2::init$))},
-	{"run", "()Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;Ljava/lang/String;Ljava/security/AccessControlContext;)V", "()V", 0, $method(SchemaFactoryFinder$2, init$, void, $SchemaFactoryFinder*, $String*, $AccessControlContext*)},
+	{"run", "()Ljavax/xml/validation/SchemaFactory;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$2, run, $Object*)},
 	{}
 };
 

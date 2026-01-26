@@ -77,16 +77,16 @@ $FieldInfo _CompareGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _CompareGenerator_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(static_cast<void(CompareGenerator::*)(int32_t,$Type*,$TypeArray*,$StringArray*,$String*,$String*,$InstructionList*,$ConstantPoolGen*)>(&CompareGenerator::init$))},
-	{"getHandlerIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(CompareGenerator::*)()>(&CompareGenerator::getHandlerIndex))},
-	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(CompareGenerator::*)()>(&CompareGenerator::getIteratorIndex))},
-	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"loadCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"loadDOM", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"loadIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"loadLastNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(static_cast<$Instruction*(CompareGenerator::*)()>(&CompareGenerator::loadLastNode))},
-	{"storeCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"storeIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(CompareGenerator, init$, void, int32_t, $Type*, $TypeArray*, $StringArray*, $String*, $String*, $InstructionList*, $ConstantPoolGen*)},
+	{"getHandlerIndex", "()I", nullptr, $PUBLIC, $method(CompareGenerator, getHandlerIndex, int32_t)},
+	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(CompareGenerator, getIteratorIndex, int32_t)},
+	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(CompareGenerator, getLocalIndex, int32_t, $String*)},
+	{"loadCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(CompareGenerator, loadCurrentNode, $Instruction*)},
+	{"loadDOM", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(CompareGenerator, loadDOM, $Instruction*)},
+	{"loadIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(CompareGenerator, loadIterator, $Instruction*)},
+	{"loadLastNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(CompareGenerator, loadLastNode, $Instruction*)},
+	{"storeCurrentNode", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(CompareGenerator, storeCurrentNode, $Instruction*)},
+	{"storeIterator", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(CompareGenerator, storeIterator, $Instruction*)},
 	{}
 };
 

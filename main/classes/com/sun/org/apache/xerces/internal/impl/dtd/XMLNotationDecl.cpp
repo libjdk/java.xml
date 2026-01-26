@@ -24,9 +24,9 @@ $FieldInfo _XMLNotationDecl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLNotationDecl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLNotationDecl::*)()>(&XMLNotationDecl::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLNotationDecl, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLNotationDecl, clear, void)},
+	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLNotationDecl, setValues, void, $String*, $String*, $String*, $String*)},
 	{}
 };
 

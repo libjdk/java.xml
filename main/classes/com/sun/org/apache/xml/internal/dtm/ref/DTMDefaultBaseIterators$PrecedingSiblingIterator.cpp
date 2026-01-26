@@ -42,10 +42,10 @@ $FieldInfo _DTMDefaultBaseIterators$PrecedingSiblingIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseIterators$PrecedingSiblingIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(static_cast<void(DTMDefaultBaseIterators$PrecedingSiblingIterator::*)($DTMDefaultBaseIterators*)>(&DTMDefaultBaseIterators$PrecedingSiblingIterator::init$))},
-	{"isReverse", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators;)V", nullptr, $PUBLIC, $method(DTMDefaultBaseIterators$PrecedingSiblingIterator, init$, void, $DTMDefaultBaseIterators*)},
+	{"isReverse", "()Z", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$PrecedingSiblingIterator, isReverse, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$PrecedingSiblingIterator, next, int32_t)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseIterators$PrecedingSiblingIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

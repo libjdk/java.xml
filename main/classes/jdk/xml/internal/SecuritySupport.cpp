@@ -85,8 +85,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getSystemProperty$0::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getSystemProperty$0::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getSystemProperty$0::*)($String*)>(&SecuritySupport$$Lambda$lambda$getSystemProperty$0::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getSystemProperty$0, init$, void, $String*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getSystemProperty$0, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getSystemProperty$0::classInfo$ = {
@@ -125,8 +125,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$isDirectory$1$1::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$isDirectory$1$1::methodInfos[3] = {
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$isDirectory$1$1::*)($File*)>(&SecuritySupport$$Lambda$lambda$isDirectory$1$1::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$isDirectory$1$1, init$, void, $File*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$isDirectory$1$1, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$isDirectory$1$1::classInfo$ = {
@@ -165,8 +165,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$isFileExists$2$2::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$isFileExists$2$2::methodInfos[3] = {
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$isFileExists$2$2::*)($File*)>(&SecuritySupport$$Lambda$lambda$isFileExists$2$2::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$isFileExists$2$2, init$, void, $File*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$isFileExists$2$2, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$isFileExists$2$2::classInfo$ = {
@@ -205,8 +205,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getFileInputStream$3$3::fieldInfos[2] 
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getFileInputStream$3$3::methodInfos[3] = {
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getFileInputStream$3$3::*)($File*)>(&SecuritySupport$$Lambda$lambda$getFileInputStream$3$3::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getFileInputStream$3$3, init$, void, $File*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getFileInputStream$3$3, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getFileInputStream$3$3::classInfo$ = {
@@ -245,8 +245,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getResourceAsStream$4$4::fieldInfos[2]
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getResourceAsStream$4$4::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getResourceAsStream$4$4::*)($String*)>(&SecuritySupport$$Lambda$lambda$getResourceAsStream$4$4::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getResourceAsStream$4$4, init$, void, $String*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getResourceAsStream$4$4, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getResourceAsStream$4$4::classInfo$ = {
@@ -288,8 +288,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getResourceBundle$5$5::fieldInfos[3] =
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getResourceBundle$5$5::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/String;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getResourceBundle$5$5::*)($String*,$Locale*)>(&SecuritySupport$$Lambda$lambda$getResourceBundle$5$5::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getResourceBundle$5$5, init$, void, $String*, $Locale*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getResourceBundle$5$5, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getResourceBundle$5$5::classInfo$ = {
@@ -328,8 +328,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getLastModified$7$6::fieldInfos[2] = {
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getLastModified$7$6::methodInfos[3] = {
-	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getLastModified$7$6::*)($File*)>(&SecuritySupport$$Lambda$lambda$getLastModified$7$6::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/io/File;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getLastModified$7$6, init$, void, $File*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getLastModified$7$6, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getLastModified$7$6::classInfo$ = {
@@ -361,8 +361,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getContextClassLoader$8$7::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getContextClassLoader$8$7::*)()>(&SecuritySupport$$Lambda$lambda$getContextClassLoader$8$7::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getContextClassLoader$8$7, init$, void)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getContextClassLoader$8$7, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getContextClassLoader$8$7::classInfo$ = {
@@ -394,8 +394,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getSystemClassLoader$9$8::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getSystemClassLoader$9$8::*)()>(&SecuritySupport$$Lambda$lambda$getSystemClassLoader$9$8::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getSystemClassLoader$9$8, init$, void)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getSystemClassLoader$9$8, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getSystemClassLoader$9$8::classInfo$ = {
@@ -434,8 +434,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getParentClassLoader$10$9::fieldInfos[
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getParentClassLoader$10$9::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getParentClassLoader$10$9::*)($ClassLoader*)>(&SecuritySupport$$Lambda$lambda$getParentClassLoader$10$9::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getParentClassLoader$10$9, init$, void, $ClassLoader*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getParentClassLoader$10$9, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getParentClassLoader$10$9::classInfo$ = {
@@ -474,8 +474,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getClassSource$11$10::fieldInfos[2] = 
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getClassSource$11$10::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getClassSource$11$10::*)($Class*)>(&SecuritySupport$$Lambda$lambda$getClassSource$11$10::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/Class;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getClassSource$11$10, init$, void, $Class*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getClassSource$11$10, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getClassSource$11$10::classInfo$ = {
@@ -507,8 +507,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getClassLoader$12$11::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getClassLoader$12$11::*)()>(&SecuritySupport$$Lambda$lambda$getClassLoader$12$11::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getClassLoader$12$11, init$, void)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getClassLoader$12$11, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getClassLoader$12$11::classInfo$ = {
@@ -550,8 +550,8 @@ $FieldInfo SecuritySupport$$Lambda$lambda$getResourceAsStream$13$12::fieldInfos[
 	{}
 };
 $MethodInfo SecuritySupport$$Lambda$lambda$getResourceAsStream$13$12::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/ClassLoader;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SecuritySupport$$Lambda$lambda$getResourceAsStream$13$12::*)($ClassLoader*,$String*)>(&SecuritySupport$$Lambda$lambda$getResourceAsStream$13$12::init$))},
-	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/ClassLoader;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SecuritySupport$$Lambda$lambda$getResourceAsStream$13$12, init$, void, $ClassLoader*, $String*)},
+	{"run", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SecuritySupport$$Lambda$lambda$getResourceAsStream$13$12, run, $Object*)},
 	{}
 };
 $ClassInfo SecuritySupport$$Lambda$lambda$getResourceAsStream$13$12::classInfo$ = {
@@ -576,44 +576,44 @@ $FieldInfo _SecuritySupport_FieldInfo_[] = {
 };
 
 $MethodInfo _SecuritySupport_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(SecuritySupport::*)()>(&SecuritySupport::init$))},
-	{"checkAccess", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$String*,$String*)>(&SecuritySupport::checkAccess)), "java.io.IOException"},
-	{"doesFileExist", "(Ljava/io/File;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($File*)>(&SecuritySupport::doesFileExist))},
-	{"getClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ClassLoader*(*)()>(&SecuritySupport::getClassLoader)), "java.lang.SecurityException"},
-	{"getClassSource", "(Ljava/lang/Class;)Ljava/lang/String;", "(Ljava/lang/Class<*>;)Ljava/lang/String;", $PUBLIC | $STATIC, $method(static_cast<$String*(*)($Class*)>(&SecuritySupport::getClassSource))},
-	{"getContextClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ClassLoader*(*)()>(&SecuritySupport::getContextClassLoader))},
-	{"getErrorMessage", "(Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($Locale*,$String*,$String*,$ObjectArray*)>(&SecuritySupport::getErrorMessage))},
-	{"getFileInputStream", "(Ljava/io/File;)Ljava/io/FileInputStream;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$FileInputStream*(*)($File*)>(&SecuritySupport::getFileInputStream)), "java.io.FileNotFoundException"},
-	{"getJAXPSystemProperty", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/String;)TT;", $PUBLIC | $STATIC, $method(static_cast<$Object*(*)($Class*,$String*,$String*)>(&SecuritySupport::getJAXPSystemProperty))},
-	{"getJAXPSystemProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&SecuritySupport::getJAXPSystemProperty))},
-	{"getLastModified", "(Ljava/io/File;)J", nullptr, $STATIC, $method(static_cast<int64_t(*)($File*)>(&SecuritySupport::getLastModified))},
-	{"getParentClassLoader", "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ClassLoader*(*)($ClassLoader*)>(&SecuritySupport::getParentClassLoader))},
-	{"getResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$InputStream*(*)($String*)>(&SecuritySupport::getResourceAsStream))},
-	{"getResourceAsStream", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$InputStream*(*)($ClassLoader*,$String*)>(&SecuritySupport::getResourceAsStream))},
-	{"getResourceBundle", "(Ljava/lang/String;)Ljava/util/ResourceBundle;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ResourceBundle*(*)($String*)>(&SecuritySupport::getResourceBundle))},
-	{"getResourceBundle", "(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ResourceBundle*(*)($String*,$Locale*)>(&SecuritySupport::getResourceBundle))},
-	{"getSystemClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ClassLoader*(*)()>(&SecuritySupport::getSystemClassLoader))},
-	{"getSystemProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&SecuritySupport::getSystemProperty))},
-	{"getSystemProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$String*)>(&SecuritySupport::getSystemProperty))},
-	{"getSystemProperty", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/String;)TT;", $PUBLIC | $STATIC, $method(static_cast<$Object*(*)($Class*,$String*,$String*)>(&SecuritySupport::getSystemProperty))},
-	{"isDirectory", "(Ljava/io/File;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($File*)>(&SecuritySupport::isDirectory))},
-	{"isFileExists", "(Ljava/io/File;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($File*)>(&SecuritySupport::isFileExists))},
-	{"isProtocolAllowed", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)($String*,$String*)>(&SecuritySupport::isProtocolAllowed))},
-	{"lambda$getClassLoader$12", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ClassLoader*(*)()>(&SecuritySupport::lambda$getClassLoader$12))},
-	{"lambda$getClassSource$11", "(Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($Class*)>(&SecuritySupport::lambda$getClassSource$11))},
-	{"lambda$getContextClassLoader$8", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ClassLoader*(*)()>(&SecuritySupport::lambda$getContextClassLoader$8))},
-	{"lambda$getFileInputStream$3", "(Ljava/io/File;)Ljava/io/FileInputStream;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$FileInputStream*(*)($File*)>(&SecuritySupport::lambda$getFileInputStream$3)), "java.lang.Exception"},
-	{"lambda$getLastModified$7", "(Ljava/io/File;)Ljava/lang/Long;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$Long*(*)($File*)>(&SecuritySupport::lambda$getLastModified$7))},
-	{"lambda$getParentClassLoader$10", "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ClassLoader*(*)($ClassLoader*)>(&SecuritySupport::lambda$getParentClassLoader$10))},
-	{"lambda$getResourceAsStream$13", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$InputStream*(*)($ClassLoader*,$String*)>(&SecuritySupport::lambda$getResourceAsStream$13))},
-	{"lambda$getResourceAsStream$4", "(Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$InputStream*(*)($String*)>(&SecuritySupport::lambda$getResourceAsStream$4))},
-	{"lambda$getResourceBundle$5", "(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ResourceBundle*(*)($String*,$Locale*)>(&SecuritySupport::lambda$getResourceBundle$5))},
-	{"lambda$getSystemClassLoader$9", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$ClassLoader*(*)()>(&SecuritySupport::lambda$getSystemClassLoader$9))},
-	{"lambda$getSystemProperty$0", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($String*)>(&SecuritySupport::lambda$getSystemProperty$0))},
-	{"lambda$isDirectory$1", "(Ljava/io/File;)Ljava/lang/Boolean;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$Boolean*(*)($File*)>(&SecuritySupport::lambda$isDirectory$1))},
-	{"lambda$isFileExists$2", "(Ljava/io/File;)Ljava/lang/Boolean;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$Boolean*(*)($File*)>(&SecuritySupport::lambda$isFileExists$2))},
-	{"readJAXPProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&SecuritySupport::readJAXPProperty))},
-	{"sanitizePath", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&SecuritySupport::sanitizePath))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(SecuritySupport, init$, void)},
+	{"checkAccess", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, checkAccess, $String*, $String*, $String*, $String*), "java.io.IOException"},
+	{"doesFileExist", "(Ljava/io/File;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, doesFileExist, bool, $File*)},
+	{"getClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getClassLoader, $ClassLoader*), "java.lang.SecurityException"},
+	{"getClassSource", "(Ljava/lang/Class;)Ljava/lang/String;", "(Ljava/lang/Class<*>;)Ljava/lang/String;", $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getClassSource, $String*, $Class*)},
+	{"getContextClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getContextClassLoader, $ClassLoader*)},
+	{"getErrorMessage", "(Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getErrorMessage, $String*, $Locale*, $String*, $String*, $ObjectArray*)},
+	{"getFileInputStream", "(Ljava/io/File;)Ljava/io/FileInputStream;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getFileInputStream, $FileInputStream*, $File*), "java.io.FileNotFoundException"},
+	{"getJAXPSystemProperty", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/String;)TT;", $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getJAXPSystemProperty, $Object*, $Class*, $String*, $String*)},
+	{"getJAXPSystemProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getJAXPSystemProperty, $String*, $String*)},
+	{"getLastModified", "(Ljava/io/File;)J", nullptr, $STATIC, $staticMethod(SecuritySupport, getLastModified, int64_t, $File*)},
+	{"getParentClassLoader", "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getParentClassLoader, $ClassLoader*, $ClassLoader*)},
+	{"getResourceAsStream", "(Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getResourceAsStream, $InputStream*, $String*)},
+	{"getResourceAsStream", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getResourceAsStream, $InputStream*, $ClassLoader*, $String*)},
+	{"getResourceBundle", "(Ljava/lang/String;)Ljava/util/ResourceBundle;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getResourceBundle, $ResourceBundle*, $String*)},
+	{"getResourceBundle", "(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getResourceBundle, $ResourceBundle*, $String*, $Locale*)},
+	{"getSystemClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getSystemClassLoader, $ClassLoader*)},
+	{"getSystemProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getSystemProperty, $String*, $String*)},
+	{"getSystemProperty", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getSystemProperty, $String*, $String*, $String*)},
+	{"getSystemProperty", "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/lang/String;Ljava/lang/String;)TT;", $PUBLIC | $STATIC, $staticMethod(SecuritySupport, getSystemProperty, $Object*, $Class*, $String*, $String*)},
+	{"isDirectory", "(Ljava/io/File;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, isDirectory, bool, $File*)},
+	{"isFileExists", "(Ljava/io/File;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, isFileExists, bool, $File*)},
+	{"isProtocolAllowed", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(SecuritySupport, isProtocolAllowed, bool, $String*, $String*)},
+	{"lambda$getClassLoader$12", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getClassLoader$12, $ClassLoader*)},
+	{"lambda$getClassSource$11", "(Ljava/lang/Class;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getClassSource$11, $String*, $Class*)},
+	{"lambda$getContextClassLoader$8", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getContextClassLoader$8, $ClassLoader*)},
+	{"lambda$getFileInputStream$3", "(Ljava/io/File;)Ljava/io/FileInputStream;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getFileInputStream$3, $FileInputStream*, $File*), "java.lang.Exception"},
+	{"lambda$getLastModified$7", "(Ljava/io/File;)Ljava/lang/Long;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getLastModified$7, $Long*, $File*)},
+	{"lambda$getParentClassLoader$10", "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getParentClassLoader$10, $ClassLoader*, $ClassLoader*)},
+	{"lambda$getResourceAsStream$13", "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getResourceAsStream$13, $InputStream*, $ClassLoader*, $String*)},
+	{"lambda$getResourceAsStream$4", "(Ljava/lang/String;)Ljava/io/InputStream;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getResourceAsStream$4, $InputStream*, $String*)},
+	{"lambda$getResourceBundle$5", "(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getResourceBundle$5, $ResourceBundle*, $String*, $Locale*)},
+	{"lambda$getSystemClassLoader$9", "()Ljava/lang/ClassLoader;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getSystemClassLoader$9, $ClassLoader*)},
+	{"lambda$getSystemProperty$0", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$getSystemProperty$0, $String*, $String*)},
+	{"lambda$isDirectory$1", "(Ljava/io/File;)Ljava/lang/Boolean;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$isDirectory$1, $Boolean*, $File*)},
+	{"lambda$isFileExists$2", "(Ljava/io/File;)Ljava/lang/Boolean;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(SecuritySupport, lambda$isFileExists$2, $Boolean*, $File*)},
+	{"readJAXPProperty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, readJAXPProperty, $String*, $String*)},
+	{"sanitizePath", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(SecuritySupport, sanitizePath, $String*, $String*)},
 	{}
 };
 

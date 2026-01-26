@@ -27,14 +27,14 @@ $FieldInfo _StaxXMLInputSource_FieldInfo_[] = {
 };
 
 $MethodInfo _StaxXMLInputSource_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;Z)V", nullptr, $PUBLIC, $method(static_cast<void(StaxXMLInputSource::*)($XMLStreamReader*,bool)>(&StaxXMLInputSource::init$))},
-	{"<init>", "(Ljavax/xml/stream/XMLEventReader;Z)V", nullptr, $PUBLIC, $method(static_cast<void(StaxXMLInputSource::*)($XMLEventReader*,bool)>(&StaxXMLInputSource::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Z)V", nullptr, $PUBLIC, $method(static_cast<void(StaxXMLInputSource::*)($XMLInputSource*,bool)>(&StaxXMLInputSource::init$))},
-	{"getXMLEventReader", "()Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC},
-	{"getXMLInputSource", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC},
-	{"getXMLStreamReader", "()Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC},
-	{"hasXMLStreamOrXMLEventReader", "()Z", nullptr, $PUBLIC},
-	{"isCreatedByResolver", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;Z)V", nullptr, $PUBLIC, $method(StaxXMLInputSource, init$, void, $XMLStreamReader*, bool)},
+	{"<init>", "(Ljavax/xml/stream/XMLEventReader;Z)V", nullptr, $PUBLIC, $method(StaxXMLInputSource, init$, void, $XMLEventReader*, bool)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Z)V", nullptr, $PUBLIC, $method(StaxXMLInputSource, init$, void, $XMLInputSource*, bool)},
+	{"getXMLEventReader", "()Ljavax/xml/stream/XMLEventReader;", nullptr, $PUBLIC, $virtualMethod(StaxXMLInputSource, getXMLEventReader, $XMLEventReader*)},
+	{"getXMLInputSource", "()Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC, $virtualMethod(StaxXMLInputSource, getXMLInputSource, $XMLInputSource*)},
+	{"getXMLStreamReader", "()Ljavax/xml/stream/XMLStreamReader;", nullptr, $PUBLIC, $virtualMethod(StaxXMLInputSource, getXMLStreamReader, $XMLStreamReader*)},
+	{"hasXMLStreamOrXMLEventReader", "()Z", nullptr, $PUBLIC, $virtualMethod(StaxXMLInputSource, hasXMLStreamOrXMLEventReader, bool)},
+	{"isCreatedByResolver", "()Z", nullptr, $PUBLIC, $virtualMethod(StaxXMLInputSource, isCreatedByResolver, bool)},
 	{}
 };
 

@@ -39,8 +39,8 @@ $FieldInfo _FuncSum_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncSum_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncSum::*)()>(&FuncSum::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncSum, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncSum, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

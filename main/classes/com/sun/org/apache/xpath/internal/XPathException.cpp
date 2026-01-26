@@ -42,19 +42,19 @@ $FieldInfo _XPathException_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xpath/internal/ExpressionNode;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathException::*)($String*,$ExpressionNode*)>(&XPathException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathException::*)($String*)>(&XPathException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathException::*)($String*,Object$*)>(&XPathException::init$))},
-	{"<init>", "(Ljava/lang/String;Lorg/w3c/dom/Node;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathException::*)($String*,$Node*,$Exception*)>(&XPathException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathException::*)($String*,$Exception*)>(&XPathException::init$))},
-	{"getException", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
-	{"getExpressionOwner", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)Lcom/sun/org/apache/xpath/internal/ExpressionNode;", nullptr, $PROTECTED},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getStylesheetNode", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getStylesheetNode", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
-	{"printStackTrace", "(Ljava/io/PrintStream;)V", nullptr, $PUBLIC},
-	{"printStackTrace", "(Ljava/io/PrintWriter;)V", nullptr, $PUBLIC},
-	{"setStylesheetNode", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xpath/internal/ExpressionNode;)V", nullptr, $PUBLIC, $method(XPathException, init$, void, $String*, $ExpressionNode*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XPathException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(XPathException, init$, void, $String*, Object$*)},
+	{"<init>", "(Ljava/lang/String;Lorg/w3c/dom/Node;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(XPathException, init$, void, $String*, $Node*, $Exception*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(XPathException, init$, void, $String*, $Exception*)},
+	{"getException", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(XPathException, getException, $Throwable*)},
+	{"getExpressionOwner", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)Lcom/sun/org/apache/xpath/internal/ExpressionNode;", nullptr, $PROTECTED, $virtualMethod(XPathException, getExpressionOwner, $ExpressionNode*, $ExpressionNode*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPathException, getMessage, $String*)},
+	{"getStylesheetNode", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPathException, getStylesheetNode, $Object*)},
+	{"getStylesheetNode", "(Lcom/sun/org/apache/xpath/internal/ExpressionNode;)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(XPathException, getStylesheetNode, $Node*, $ExpressionNode*)},
+	{"printStackTrace", "(Ljava/io/PrintStream;)V", nullptr, $PUBLIC, $virtualMethod(XPathException, printStackTrace, void, $PrintStream*)},
+	{"printStackTrace", "(Ljava/io/PrintWriter;)V", nullptr, $PUBLIC, $virtualMethod(XPathException, printStackTrace, void, $PrintWriter*)},
+	{"setStylesheetNode", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(XPathException, setStylesheetNode, void, Object$*)},
 	{}
 };
 

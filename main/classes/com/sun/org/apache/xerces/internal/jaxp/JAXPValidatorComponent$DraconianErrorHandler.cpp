@@ -26,11 +26,11 @@ $FieldInfo _JAXPValidatorComponent$DraconianErrorHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _JAXPValidatorComponent$DraconianErrorHandler_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(JAXPValidatorComponent$DraconianErrorHandler::*)()>(&JAXPValidatorComponent$DraconianErrorHandler::init$))},
-	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
-	{"getInstance", "()Lcom/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent$DraconianErrorHandler;", nullptr, $PUBLIC | $STATIC, $method(static_cast<JAXPValidatorComponent$DraconianErrorHandler*(*)()>(&JAXPValidatorComponent$DraconianErrorHandler::getInstance))},
-	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(JAXPValidatorComponent$DraconianErrorHandler, init$, void)},
+	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$DraconianErrorHandler, error, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"fatalError", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$DraconianErrorHandler, fatalError, void, $SAXParseException*), "org.xml.sax.SAXException"},
+	{"getInstance", "()Lcom/sun/org/apache/xerces/internal/jaxp/JAXPValidatorComponent$DraconianErrorHandler;", nullptr, $PUBLIC | $STATIC, $staticMethod(JAXPValidatorComponent$DraconianErrorHandler, getInstance, JAXPValidatorComponent$DraconianErrorHandler*)},
+	{"warning", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(JAXPValidatorComponent$DraconianErrorHandler, warning, void, $SAXParseException*), "org.xml.sax.SAXException"},
 	{}
 };
 

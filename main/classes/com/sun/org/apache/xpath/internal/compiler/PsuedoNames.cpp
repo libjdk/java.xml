@@ -32,7 +32,7 @@ $FieldInfo _PsuedoNames_FieldInfo_[] = {
 };
 
 $MethodInfo _PsuedoNames_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(PsuedoNames::*)()>(&PsuedoNames::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(PsuedoNames, init$, void)},
 	{}
 };
 

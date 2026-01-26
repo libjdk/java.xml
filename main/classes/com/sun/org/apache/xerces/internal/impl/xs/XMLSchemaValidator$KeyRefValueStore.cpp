@@ -38,9 +38,9 @@ $FieldInfo _XMLSchemaValidator$KeyRefValueStore_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidator$KeyRefValueStore_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/KeyRef;Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator$KeyValueStore;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$KeyRefValueStore::*)($XMLSchemaValidator*,$KeyRef*,$XMLSchemaValidator$KeyValueStore*)>(&XMLSchemaValidator$KeyRefValueStore::init$))},
-	{"endDocument", "()V", nullptr, $PUBLIC},
-	{"endDocumentFragment", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator;Lcom/sun/org/apache/xerces/internal/impl/xs/identity/KeyRef;Lcom/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator$KeyValueStore;)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$KeyRefValueStore, init$, void, $XMLSchemaValidator*, $KeyRef*, $XMLSchemaValidator$KeyValueStore*)},
+	{"endDocument", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$KeyRefValueStore, endDocument, void)},
+	{"endDocumentFragment", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$KeyRefValueStore, endDocumentFragment, void)},
 	{}
 };
 

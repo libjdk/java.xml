@@ -40,6 +40,7 @@ using $Calendar = ::java::util::Calendar;
 using $Date = ::java::util::Date;
 using $GregorianCalendar = ::java::util::GregorianCalendar;
 using $DatatypeConstants = ::javax::xml::datatype::DatatypeConstants;
+using $DatatypeConstants$Field = ::javax::xml::datatype::DatatypeConstants$Field;
 using $QName = ::javax::xml::namespace$::QName;
 
 namespace javax {
@@ -53,34 +54,34 @@ $FieldInfo _Duration_FieldInfo_[] = {
 
 $MethodInfo _Duration_MethodInfo_[] = {
 	{"hashCode", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Duration::*)()>(&Duration::init$))},
-	{"add", "(Ljavax/xml/datatype/Duration;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"addTo", "(Ljava/util/Calendar;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"addTo", "(Ljava/util/Date;)V", nullptr, $PUBLIC},
-	{"compare", "(Ljavax/xml/datatype/Duration;)I", nullptr, $PUBLIC | $ABSTRACT},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getCalendarTimeInMillis", "(Ljava/util/Calendar;)J", nullptr, $PRIVATE | $STATIC, $method(static_cast<int64_t(*)($Calendar*)>(&Duration::getCalendarTimeInMillis))},
-	{"getDays", "()I", nullptr, $PUBLIC},
-	{"getField", "(Ljavax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getHours", "()I", nullptr, $PUBLIC},
-	{"getMinutes", "()I", nullptr, $PUBLIC},
-	{"getMonths", "()I", nullptr, $PUBLIC},
-	{"getSeconds", "()I", nullptr, $PUBLIC},
-	{"getSign", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTimeInMillis", "(Ljava/util/Calendar;)J", nullptr, $PUBLIC},
-	{"getTimeInMillis", "(Ljava/util/Date;)J", nullptr, $PUBLIC},
-	{"getXMLSchemaType", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getYears", "()I", nullptr, $PUBLIC},
-	{"isLongerThan", "(Ljavax/xml/datatype/Duration;)Z", nullptr, $PUBLIC},
-	{"isSet", "(Ljavax/xml/datatype/DatatypeConstants$Field;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isShorterThan", "(Ljavax/xml/datatype/Duration;)Z", nullptr, $PUBLIC},
-	{"multiply", "(I)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"multiply", "(Ljava/math/BigDecimal;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"negate", "()Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"normalizeWith", "(Ljava/util/Calendar;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"subtract", "(Ljavax/xml/datatype/Duration;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"toString", "(Ljava/math/BigDecimal;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(Duration::*)($BigDecimal*)>(&Duration::toString))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Duration, init$, void)},
+	{"add", "(Ljavax/xml/datatype/Duration;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, add, Duration*, Duration*)},
+	{"addTo", "(Ljava/util/Calendar;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, addTo, void, $Calendar*)},
+	{"addTo", "(Ljava/util/Date;)V", nullptr, $PUBLIC, $virtualMethod(Duration, addTo, void, $Date*)},
+	{"compare", "(Ljavax/xml/datatype/Duration;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, compare, int32_t, Duration*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(Duration, equals, bool, Object$*)},
+	{"getCalendarTimeInMillis", "(Ljava/util/Calendar;)J", nullptr, $PRIVATE | $STATIC, $staticMethod(Duration, getCalendarTimeInMillis, int64_t, $Calendar*)},
+	{"getDays", "()I", nullptr, $PUBLIC, $virtualMethod(Duration, getDays, int32_t)},
+	{"getField", "(Ljavax/xml/datatype/DatatypeConstants$Field;)Ljava/lang/Number;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, getField, $Number*, $DatatypeConstants$Field*)},
+	{"getHours", "()I", nullptr, $PUBLIC, $virtualMethod(Duration, getHours, int32_t)},
+	{"getMinutes", "()I", nullptr, $PUBLIC, $virtualMethod(Duration, getMinutes, int32_t)},
+	{"getMonths", "()I", nullptr, $PUBLIC, $virtualMethod(Duration, getMonths, int32_t)},
+	{"getSeconds", "()I", nullptr, $PUBLIC, $virtualMethod(Duration, getSeconds, int32_t)},
+	{"getSign", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, getSign, int32_t)},
+	{"getTimeInMillis", "(Ljava/util/Calendar;)J", nullptr, $PUBLIC, $virtualMethod(Duration, getTimeInMillis, int64_t, $Calendar*)},
+	{"getTimeInMillis", "(Ljava/util/Date;)J", nullptr, $PUBLIC, $virtualMethod(Duration, getTimeInMillis, int64_t, $Date*)},
+	{"getXMLSchemaType", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(Duration, getXMLSchemaType, $QName*)},
+	{"getYears", "()I", nullptr, $PUBLIC, $virtualMethod(Duration, getYears, int32_t)},
+	{"isLongerThan", "(Ljavax/xml/datatype/Duration;)Z", nullptr, $PUBLIC, $virtualMethod(Duration, isLongerThan, bool, Duration*)},
+	{"isSet", "(Ljavax/xml/datatype/DatatypeConstants$Field;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, isSet, bool, $DatatypeConstants$Field*)},
+	{"isShorterThan", "(Ljavax/xml/datatype/Duration;)Z", nullptr, $PUBLIC, $virtualMethod(Duration, isShorterThan, bool, Duration*)},
+	{"multiply", "(I)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(Duration, multiply, Duration*, int32_t)},
+	{"multiply", "(Ljava/math/BigDecimal;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, multiply, Duration*, $BigDecimal*)},
+	{"negate", "()Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, negate, Duration*)},
+	{"normalizeWith", "(Ljava/util/Calendar;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Duration, normalizeWith, Duration*, $Calendar*)},
+	{"subtract", "(Ljavax/xml/datatype/Duration;)Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC, $virtualMethod(Duration, subtract, Duration*, Duration*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Duration, toString, $String*)},
+	{"toString", "(Ljava/math/BigDecimal;)Ljava/lang/String;", nullptr, $PRIVATE, $method(Duration, toString, $String*, $BigDecimal*)},
 	{}
 };
 

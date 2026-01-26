@@ -11,9 +11,9 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _Namespace_MethodInfo_[] = {
-	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isDefaultNamespaceDeclaration", "()Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Namespace, getNamespaceURI, $String*)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Namespace, getPrefix, $String*)},
+	{"isDefaultNamespaceDeclaration", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Namespace, isDefaultNamespaceDeclaration, bool)},
 	{}
 };
 

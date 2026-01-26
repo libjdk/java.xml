@@ -24,9 +24,9 @@ $FieldInfo _TypeInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _TypeInfo_MethodInfo_[] = {
-	{"getTypeName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTypeNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isDerivedFrom", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"getTypeName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeInfo, getTypeName, $String*)},
+	{"getTypeNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeInfo, getTypeNamespace, $String*)},
+	{"isDerivedFrom", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeInfo, isDerivedFrom, bool, $String*, $String*, int32_t)},
 	{}
 };
 

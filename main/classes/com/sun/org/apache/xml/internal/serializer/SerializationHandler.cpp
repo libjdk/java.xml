@@ -7,8 +7,11 @@
 #include <jcpp.h>
 
 using $ExtendedContentHandler = ::com::sun::org::apache::xml::internal::serializer::ExtendedContentHandler;
+using $NamespaceMappings = ::com::sun::org::apache::xml::internal::serializer::NamespaceMappings;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Transformer = ::javax::xml::transform::Transformer;
+using $ContentHandler = ::org::xml::sax::ContentHandler;
 
 namespace com {
 	namespace sun {
@@ -20,20 +23,20 @@ namespace com {
 
 $MethodInfo _SerializationHandler_MethodInfo_[] = {
 	{"*clone", "()Ljava/lang/Object;", nullptr, $PROTECTED | $NATIVE},
-	{"close", "()V", nullptr, $PUBLIC | $ABSTRACT},
+	{"close", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, close, void)},
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
-	{"flushPending", "()V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
-	{"getTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT},
+	{"flushPending", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, flushPending, void), "org.xml.sax.SAXException"},
+	{"getTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, getTransformer, $Transformer*)},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
 	{"serialize", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setDTDEntityExpansion", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setEscaping", "(Z)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
-	{"setIndentAmount", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setIsStandalone", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setNamespaceMappings", "(Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setTransformer", "(Ljavax/xml/transform/Transformer;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"setContentHandler", "(Lorg/xml/sax/ContentHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, setContentHandler, void, $ContentHandler*)},
+	{"setDTDEntityExpansion", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, setDTDEntityExpansion, void, bool)},
+	{"setEscaping", "(Z)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, setEscaping, bool, bool), "org.xml.sax.SAXException"},
+	{"setIndentAmount", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, setIndentAmount, void, int32_t)},
+	{"setIsStandalone", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, setIsStandalone, void, bool)},
+	{"setNamespaceMappings", "(Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, setNamespaceMappings, void, $NamespaceMappings*)},
+	{"setTransformer", "(Ljavax/xml/transform/Transformer;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SerializationHandler, setTransformer, void, $Transformer*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

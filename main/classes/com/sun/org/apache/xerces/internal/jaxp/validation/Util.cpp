@@ -29,10 +29,10 @@ namespace com {
 							namespace validation {
 
 $MethodInfo _Util_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Util::*)()>(&Util::init$))},
-	{"toSAXException", "(Lcom/sun/org/apache/xerces/internal/xni/XNIException;)Lorg/xml/sax/SAXException;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$SAXException*(*)($XNIException*)>(&Util::toSAXException))},
-	{"toSAXParseException", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)Lorg/xml/sax/SAXParseException;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$SAXParseException*(*)($XMLParseException*)>(&Util::toSAXParseException))},
-	{"toXMLInputSource", "(Ljavax/xml/transform/stream/StreamSource;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$XMLInputSource*(*)($StreamSource*)>(&Util::toXMLInputSource))},
+	{"<init>", "()V", nullptr, 0, $method(Util, init$, void)},
+	{"toSAXException", "(Lcom/sun/org/apache/xerces/internal/xni/XNIException;)Lorg/xml/sax/SAXException;", nullptr, $PUBLIC | $STATIC, $staticMethod(Util, toSAXException, $SAXException*, $XNIException*)},
+	{"toSAXParseException", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)Lorg/xml/sax/SAXParseException;", nullptr, $PUBLIC | $STATIC, $staticMethod(Util, toSAXParseException, $SAXParseException*, $XMLParseException*)},
+	{"toXMLInputSource", "(Ljavax/xml/transform/stream/StreamSource;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(Util, toXMLInputSource, $XMLInputSource*, $StreamSource*)},
 	{}
 };
 

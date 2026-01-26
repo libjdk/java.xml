@@ -39,19 +39,19 @@ $FieldInfo _BaseEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _BaseEntry_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;)V", nullptr, $PUBLIC, $method(static_cast<void(BaseEntry::*)($BaseEntry$CatalogEntryType*)>(&BaseEntry::init$))},
-	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(BaseEntry::*)($BaseEntry$CatalogEntryType*,$String*)>(&BaseEntry::init$))},
-	{"getBaseURI", "()Ljava/net/URL;", nullptr, $PUBLIC},
-	{"getId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getMatchId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "()Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setBaseURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(BaseEntry::*)($String*)>(&BaseEntry::setBaseURI))},
-	{"setId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setMatchId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setType", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;)V", nullptr, $PUBLIC},
-	{"verifyURI", "(Ljava/lang/String;Ljava/net/URL;Ljava/lang/String;)Ljava/net/URL;", nullptr, 0},
+	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;)V", nullptr, $PUBLIC, $method(BaseEntry, init$, void, $BaseEntry$CatalogEntryType*)},
+	{"<init>", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(BaseEntry, init$, void, $BaseEntry$CatalogEntryType*, $String*)},
+	{"getBaseURI", "()Ljava/net/URL;", nullptr, $PUBLIC, $virtualMethod(BaseEntry, getBaseURI, $URL*)},
+	{"getId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(BaseEntry, getId, $String*)},
+	{"getMatchId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(BaseEntry, getMatchId, $String*)},
+	{"getType", "()Ljavax/xml/catalog/BaseEntry$CatalogEntryType;", nullptr, $PUBLIC, $virtualMethod(BaseEntry, getType, $BaseEntry$CatalogEntryType*)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(BaseEntry, match, $String*, $String*)},
+	{"match", "(Ljava/lang/String;I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(BaseEntry, match, $String*, $String*, int32_t)},
+	{"setBaseURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(BaseEntry, setBaseURI, void, $String*)},
+	{"setId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(BaseEntry, setId, void, $String*)},
+	{"setMatchId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(BaseEntry, setMatchId, void, $String*)},
+	{"setType", "(Ljavax/xml/catalog/BaseEntry$CatalogEntryType;)V", nullptr, $PUBLIC, $virtualMethod(BaseEntry, setType, void, $BaseEntry$CatalogEntryType*)},
+	{"verifyURI", "(Ljava/lang/String;Ljava/net/URL;Ljava/lang/String;)Ljava/net/URL;", nullptr, 0, $virtualMethod(BaseEntry, verifyURI, $URL*, $String*, $URL*, $String*)},
 	{}
 };
 

@@ -29,8 +29,8 @@ $FieldInfo _Op$RangeOp_FieldInfo_[] = {
 };
 
 $MethodInfo _Op$RangeOp_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(static_cast<void(Op$RangeOp::*)(int32_t,$Token*)>(&Op$RangeOp::init$))},
-	{"getToken", "()Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/RangeToken;", nullptr, 0},
+	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(Op$RangeOp, init$, void, int32_t, $Token*)},
+	{"getToken", "()Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/RangeToken;", nullptr, 0, $virtualMethod(Op$RangeOp, getToken, $RangeToken*)},
 	{}
 };
 

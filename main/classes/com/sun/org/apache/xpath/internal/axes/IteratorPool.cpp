@@ -33,10 +33,10 @@ $FieldInfo _IteratorPool_FieldInfo_[] = {
 };
 
 $MethodInfo _IteratorPool_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(IteratorPool::*)($DTMIterator*)>(&IteratorPool::init$))},
-	{"freeInstance", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC | $SYNCHRONIZED, $method(static_cast<void(IteratorPool::*)($DTMIterator*)>(&IteratorPool::freeInstance))},
-	{"getInstance", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC | $SYNCHRONIZED, $method(static_cast<$DTMIterator*(IteratorPool::*)()>(&IteratorPool::getInstance))},
-	{"getInstanceOrThrow", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC | $SYNCHRONIZED, $method(static_cast<$DTMIterator*(IteratorPool::*)()>(&IteratorPool::getInstanceOrThrow)), "java.lang.CloneNotSupportedException"},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC, $method(IteratorPool, init$, void, $DTMIterator*)},
+	{"freeInstance", "(Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;)V", nullptr, $PUBLIC | $SYNCHRONIZED, $method(IteratorPool, freeInstance, void, $DTMIterator*)},
+	{"getInstance", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC | $SYNCHRONIZED, $method(IteratorPool, getInstance, $DTMIterator*)},
+	{"getInstanceOrThrow", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC | $SYNCHRONIZED, $method(IteratorPool, getInstanceOrThrow, $DTMIterator*), "java.lang.CloneNotSupportedException"},
 	{}
 };
 

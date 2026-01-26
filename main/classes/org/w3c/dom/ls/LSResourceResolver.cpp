@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $LSInput = ::org::w3c::dom::ls::LSInput;
 
 namespace org {
 	namespace w3c {
@@ -12,7 +13,7 @@ namespace org {
 			namespace ls {
 
 $MethodInfo _LSResourceResolver_MethodInfo_[] = {
-	{"resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT},
+	{"resolveResource", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSResourceResolver, resolveResource, $LSInput*, $String*, $String*, $String*, $String*, $String*)},
 	{}
 };
 

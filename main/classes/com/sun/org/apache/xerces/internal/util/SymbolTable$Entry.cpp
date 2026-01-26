@@ -24,8 +24,8 @@ $FieldInfo _SymbolTable$Entry_FieldInfo_[] = {
 };
 
 $MethodInfo _SymbolTable$Entry_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable$Entry;)V", nullptr, $PUBLIC, $method(static_cast<void(SymbolTable$Entry::*)($String*,SymbolTable$Entry*)>(&SymbolTable$Entry::init$))},
-	{"<init>", "([CIILcom/sun/org/apache/xerces/internal/util/SymbolTable$Entry;)V", nullptr, $PUBLIC, $method(static_cast<void(SymbolTable$Entry::*)($chars*,int32_t,int32_t,SymbolTable$Entry*)>(&SymbolTable$Entry::init$))},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable$Entry;)V", nullptr, $PUBLIC, $method(SymbolTable$Entry, init$, void, $String*, SymbolTable$Entry*)},
+	{"<init>", "([CIILcom/sun/org/apache/xerces/internal/util/SymbolTable$Entry;)V", nullptr, $PUBLIC, $method(SymbolTable$Entry, init$, void, $chars*, int32_t, int32_t, SymbolTable$Entry*)},
 	{}
 };
 

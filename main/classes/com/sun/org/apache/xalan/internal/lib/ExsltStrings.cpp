@@ -36,16 +36,16 @@ namespace com {
 						namespace lib {
 
 $MethodInfo _ExsltStrings_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExsltStrings::*)()>(&ExsltStrings::init$))},
-	{"align", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$String*,$String*)>(&ExsltStrings::align))},
-	{"align", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,$String*)>(&ExsltStrings::align))},
-	{"concat", "(Lorg/w3c/dom/NodeList;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($NodeList*)>(&ExsltStrings::concat))},
-	{"padding", "(DLjava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(double,$String*)>(&ExsltStrings::padding))},
-	{"padding", "(D)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)(double)>(&ExsltStrings::padding))},
-	{"split", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($String*,$String*)>(&ExsltStrings::split))},
-	{"split", "(Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($String*)>(&ExsltStrings::split))},
-	{"tokenize", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($String*,$String*)>(&ExsltStrings::tokenize))},
-	{"tokenize", "(Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($String*)>(&ExsltStrings::tokenize))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExsltStrings, init$, void)},
+	{"align", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, align, $String*, $String*, $String*, $String*)},
+	{"align", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, align, $String*, $String*, $String*)},
+	{"concat", "(Lorg/w3c/dom/NodeList;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, concat, $String*, $NodeList*)},
+	{"padding", "(DLjava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, padding, $String*, double, $String*)},
+	{"padding", "(D)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, padding, $String*, double)},
+	{"split", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, split, $NodeList*, $String*, $String*)},
+	{"split", "(Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, split, $NodeList*, $String*)},
+	{"tokenize", "(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, tokenize, $NodeList*, $String*, $String*)},
+	{"tokenize", "(Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltStrings, tokenize, $NodeList*, $String*)},
 	{}
 };
 

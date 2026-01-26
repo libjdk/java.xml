@@ -30,10 +30,10 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _IFLT_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(IFLT::*)()>(&IFLT::init$))},
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(IFLT::*)($InstructionHandle*)>(&IFLT::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(IFLT, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(IFLT, init$, void, $InstructionHandle*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(IFLT, accept, void, $Visitor*)},
+	{"negate", "()Lcom/sun/org/apache/bcel/internal/generic/IfInstruction;", nullptr, $PUBLIC, $virtualMethod(IFLT, negate, $IfInstruction*)},
 	{}
 };
 

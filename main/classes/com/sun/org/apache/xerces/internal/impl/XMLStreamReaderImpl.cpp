@@ -110,7 +110,7 @@ using $XMLAttributesImpl = ::com::sun::org::apache::xerces::internal::util::XMLA
 using $XMLAttributesIteratorImpl = ::com::sun::org::apache::xerces::internal::util::XMLAttributesIteratorImpl;
 using $XMLChar = ::com::sun::org::apache::xerces::internal::util::XMLChar;
 using $XMLStringBuffer = ::com::sun::org::apache::xerces::internal::util::XMLStringBuffer;
-using $NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
+using $1NamespaceContext = ::com::sun::org::apache::xerces::internal::xni::NamespaceContext;
 using $1QName = ::com::sun::org::apache::xerces::internal::xni::QName;
 using $XMLResourceIdentifier = ::com::sun::org::apache::xerces::internal::xni::XMLResourceIdentifier;
 using $XMLString = ::com::sun::org::apache::xerces::internal::xni::XMLString;
@@ -152,7 +152,7 @@ using $Map$Entry = ::java::util::Map$Entry;
 using $NoSuchElementException = ::java::util::NoSuchElementException;
 using $Set = ::java::util::Set;
 using $XMLConstants = ::javax::xml::XMLConstants;
-using $1NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
+using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
 using $QName = ::javax::xml::namespace$::QName;
 using $Location = ::javax::xml::stream::Location;
 using $XMLInputFactory = ::javax::xml::stream::XMLInputFactory;
@@ -191,75 +191,75 @@ $FieldInfo _XMLStreamReaderImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStreamReaderImpl_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/InputStream;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamReaderImpl::*)($InputStream*,$PropertyManager*)>(&XMLStreamReaderImpl::init$)), "javax.xml.stream.XMLStreamException"},
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamReaderImpl::*)($String*,$PropertyManager*)>(&XMLStreamReaderImpl::init$)), "javax.xml.stream.XMLStreamException"},
-	{"<init>", "(Ljava/io/InputStream;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamReaderImpl::*)($InputStream*,$String*,$PropertyManager*)>(&XMLStreamReaderImpl::init$)), "javax.xml.stream.XMLStreamException"},
-	{"<init>", "(Ljava/io/Reader;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamReaderImpl::*)($Reader*,$PropertyManager*)>(&XMLStreamReaderImpl::init$)), "javax.xml.stream.XMLStreamException"},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamReaderImpl::*)($XMLInputSource*,$PropertyManager*)>(&XMLStreamReaderImpl::init$)), "javax.xml.stream.XMLStreamException"},
-	{"canReuse", "()Z", nullptr, $PUBLIC},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"convertXNIQNametoJavaxQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getAttributeCount", "()I", nullptr, $PUBLIC},
-	{"getAttributeLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getAttributeName", "(I)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getAttributeNamespace", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getAttributePrefix", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getAttributeQName", "(I)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getAttributeType", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getAttributeValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getAttributeValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getCharacterEncodingScheme", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getElementText", "()Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getEntityDecls", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/EntityDeclaration;>;", $PROTECTED},
-	{"getEventType", "()I", nullptr, $PUBLIC},
-	{"getEventTypeString", "(I)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $method(static_cast<$String*(*)(int32_t)>(&XMLStreamReaderImpl::getEventTypeString))},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLocation", "()Ljavax/xml/stream/Location;", nullptr, $PUBLIC},
-	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
-	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC},
-	{"getNamespaceCount", "()I", nullptr, $PUBLIC},
-	{"getNamespacePrefix", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNotationDecls", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/NotationDeclaration;>;", $PROTECTED},
-	{"getPIData", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPITarget", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.IllegalArgumentException"},
-	{"getPropertyManager", "()Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;", nullptr, $PROTECTED},
-	{"getScanner", "()Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;", nullptr, $PUBLIC},
-	{"getText", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getTextCharacters", "()[C", nullptr, $PUBLIC},
-	{"getTextCharacters", "(I[CII)I", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"getTextLength", "()I", nullptr, $PUBLIC},
-	{"getTextStart", "()I", nullptr, $PUBLIC},
-	{"getValue", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"hasAttributes", "()Z", nullptr, $PUBLIC},
-	{"hasName", "()Z", nullptr, $PUBLIC},
-	{"hasNext", "()Z", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"hasText", "()Z", nullptr, $PUBLIC},
-	{"hasValue", "()Z", nullptr, $PUBLIC},
-	{"init", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $FINAL, $method(static_cast<void(XMLStreamReaderImpl::*)($PropertyManager*)>(&XMLStreamReaderImpl::init)), "javax.xml.stream.XMLStreamException"},
-	{"isAttributeSpecified", "(I)Z", nullptr, $PUBLIC},
-	{"isCharacters", "()Z", nullptr, $PUBLIC},
-	{"isEndElement", "()Z", nullptr, $PUBLIC},
-	{"isStandalone", "()Z", nullptr, $PUBLIC},
-	{"isStartElement", "()Z", nullptr, $PUBLIC},
-	{"isWhiteSpace", "()Z", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"nextTag", "()I", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"pr", "(Ljava/lang/String;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*)>(&XMLStreamReaderImpl::pr))},
-	{"require", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setInputSource", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(XMLStreamReaderImpl::*)($XMLInputSource*)>(&XMLStreamReaderImpl::setInputSource)), "javax.xml.stream.XMLStreamException"},
-	{"setPropertyManager", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PROTECTED},
-	{"standaloneSet", "()Z", nullptr, $PUBLIC},
-	{"switchToXML11Scanner", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLStreamReaderImpl::*)()>(&XMLStreamReaderImpl::switchToXML11Scanner)), "java.io.IOException"},
+	{"<init>", "(Ljava/io/InputStream;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(XMLStreamReaderImpl, init$, void, $InputStream*, $PropertyManager*), "javax.xml.stream.XMLStreamException"},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(XMLStreamReaderImpl, init$, void, $String*, $PropertyManager*), "javax.xml.stream.XMLStreamException"},
+	{"<init>", "(Ljava/io/InputStream;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(XMLStreamReaderImpl, init$, void, $InputStream*, $String*, $PropertyManager*), "javax.xml.stream.XMLStreamException"},
+	{"<init>", "(Ljava/io/Reader;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(XMLStreamReaderImpl, init$, void, $Reader*, $PropertyManager*), "javax.xml.stream.XMLStreamException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(XMLStreamReaderImpl, init$, void, $XMLInputSource*, $PropertyManager*), "javax.xml.stream.XMLStreamException"},
+	{"canReuse", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, canReuse, bool)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, close, void), "javax.xml.stream.XMLStreamException"},
+	{"convertXNIQNametoJavaxQName", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, convertXNIQNametoJavaxQName, $QName*, $1QName*)},
+	{"getAttributeCount", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeCount, int32_t)},
+	{"getAttributeLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeLocalName, $String*, int32_t)},
+	{"getAttributeName", "(I)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeName, $QName*, int32_t)},
+	{"getAttributeNamespace", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeNamespace, $String*, int32_t)},
+	{"getAttributePrefix", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributePrefix, $String*, int32_t)},
+	{"getAttributeQName", "(I)Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeQName, $QName*, int32_t)},
+	{"getAttributeType", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeType, $String*, int32_t)},
+	{"getAttributeValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeValue, $String*, int32_t)},
+	{"getAttributeValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getAttributeValue, $String*, $String*, $String*)},
+	{"getCharacterEncodingScheme", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getCharacterEncodingScheme, $String*)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getColumnNumber, int32_t)},
+	{"getElementText", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getElementText, $String*), "javax.xml.stream.XMLStreamException"},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getEncoding, $String*)},
+	{"getEntityDecls", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/EntityDeclaration;>;", $PROTECTED, $virtualMethod(XMLStreamReaderImpl, getEntityDecls, $List*)},
+	{"getEventType", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getEventType, int32_t)},
+	{"getEventTypeString", "(I)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $staticMethod(XMLStreamReaderImpl, getEventTypeString, $String*, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getLineNumber, int32_t)},
+	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getLocalName, $String*)},
+	{"getLocation", "()Ljavax/xml/stream/Location;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getLocation, $Location*)},
+	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getName, $QName*)},
+	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getNamespaceContext, $NamespaceContext*)},
+	{"getNamespaceCount", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getNamespaceCount, int32_t)},
+	{"getNamespacePrefix", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getNamespacePrefix, $String*, int32_t)},
+	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getNamespaceURI, $String*)},
+	{"getNamespaceURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getNamespaceURI, $String*, int32_t)},
+	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getNamespaceURI, $String*, $String*)},
+	{"getNotationDecls", "()Ljava/util/List;", "()Ljava/util/List<Ljavax/xml/stream/events/NotationDeclaration;>;", $PROTECTED, $virtualMethod(XMLStreamReaderImpl, getNotationDecls, $List*)},
+	{"getPIData", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getPIData, $String*)},
+	{"getPITarget", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getPITarget, $String*)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getPrefix, $String*)},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getProperty, $Object*, $String*), "java.lang.IllegalArgumentException"},
+	{"getPropertyManager", "()Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;", nullptr, $PROTECTED, $virtualMethod(XMLStreamReaderImpl, getPropertyManager, $PropertyManager*)},
+	{"getScanner", "()Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getScanner, $XMLDocumentScannerImpl*)},
+	{"getText", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getText, $String*)},
+	{"getTextCharacters", "()[C", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getTextCharacters, $chars*)},
+	{"getTextCharacters", "(I[CII)I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getTextCharacters, int32_t, int32_t, $chars*, int32_t, int32_t), "javax.xml.stream.XMLStreamException"},
+	{"getTextLength", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getTextLength, int32_t)},
+	{"getTextStart", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getTextStart, int32_t)},
+	{"getValue", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getValue, $String*)},
+	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, getVersion, $String*)},
+	{"hasAttributes", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, hasAttributes, bool)},
+	{"hasName", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, hasName, bool)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, hasNext, bool), "javax.xml.stream.XMLStreamException"},
+	{"hasText", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, hasText, bool)},
+	{"hasValue", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, hasValue, bool)},
+	{"init", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $FINAL, $method(XMLStreamReaderImpl, init, void, $PropertyManager*), "javax.xml.stream.XMLStreamException"},
+	{"isAttributeSpecified", "(I)Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, isAttributeSpecified, bool, int32_t)},
+	{"isCharacters", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, isCharacters, bool)},
+	{"isEndElement", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, isEndElement, bool)},
+	{"isStandalone", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, isStandalone, bool)},
+	{"isStartElement", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, isStartElement, bool)},
+	{"isWhiteSpace", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, isWhiteSpace, bool)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, next, int32_t), "javax.xml.stream.XMLStreamException"},
+	{"nextTag", "()I", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, nextTag, int32_t), "javax.xml.stream.XMLStreamException"},
+	{"pr", "(Ljava/lang/String;)V", nullptr, $STATIC, $staticMethod(XMLStreamReaderImpl, pr, void, $String*)},
+	{"require", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, require, void, int32_t, $String*, $String*), "javax.xml.stream.XMLStreamException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, reset, void)},
+	{"setInputSource", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V", nullptr, $PUBLIC | $FINAL, $method(XMLStreamReaderImpl, setInputSource, void, $XMLInputSource*), "javax.xml.stream.XMLStreamException"},
+	{"setPropertyManager", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PROTECTED, $virtualMethod(XMLStreamReaderImpl, setPropertyManager, void, $PropertyManager*)},
+	{"standaloneSet", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLStreamReaderImpl, standaloneSet, bool)},
+	{"switchToXML11Scanner", "()V", nullptr, $PRIVATE, $method(XMLStreamReaderImpl, switchToXML11Scanner, void), "java.io.IOException"},
 	{}
 };
 
@@ -676,7 +676,7 @@ int32_t XMLStreamReaderImpl::next() {
 
 void XMLStreamReaderImpl::switchToXML11Scanner() {
 	int32_t oldEntityDepth = $nc(this->fScanner)->fEntityDepth;
-	$var($NamespaceContext, oldNamespaceContext, $nc(this->fScanner)->fNamespaceContext);
+	$var($1NamespaceContext, oldNamespaceContext, $nc(this->fScanner)->fNamespaceContext);
 	$set(this, fScanner, $new($XML11NSDocumentScannerImpl));
 	$nc(this->fScanner)->reset(this->fPropertyManager);
 	$nc(this->fScanner)->setPropertyManager(this->fPropertyManager);
@@ -886,7 +886,7 @@ $QName* XMLStreamReaderImpl::getName() {
 	}
 }
 
-$1NamespaceContext* XMLStreamReaderImpl::getNamespaceContext() {
+$NamespaceContext* XMLStreamReaderImpl::getNamespaceContext() {
 	return this->fNamespaceContextWrapper;
 }
 

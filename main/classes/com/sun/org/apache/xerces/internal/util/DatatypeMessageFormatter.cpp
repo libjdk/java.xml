@@ -35,8 +35,8 @@ $FieldInfo _DatatypeMessageFormatter_FieldInfo_[] = {
 };
 
 $MethodInfo _DatatypeMessageFormatter_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DatatypeMessageFormatter::*)()>(&DatatypeMessageFormatter::init$))},
-	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($Locale*,$String*,$ObjectArray*)>(&DatatypeMessageFormatter::formatMessage)), "java.util.MissingResourceException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DatatypeMessageFormatter, init$, void)},
+	{"formatMessage", "(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(DatatypeMessageFormatter, formatMessage, $String*, $Locale*, $String*, $ObjectArray*), "java.util.MissingResourceException"},
 	{}
 };
 

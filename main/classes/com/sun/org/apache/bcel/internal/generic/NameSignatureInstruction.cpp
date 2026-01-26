@@ -27,11 +27,11 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _NameSignatureInstruction_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NameSignatureInstruction::*)()>(&NameSignatureInstruction::init$))},
-	{"<init>", "(SI)V", nullptr, $PUBLIC, $method(static_cast<void(NameSignatureInstruction::*)(int16_t,int32_t)>(&NameSignatureInstruction::init$))},
-	{"getName", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNameAndType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/classfile/ConstantNameAndType;", nullptr, $PUBLIC},
-	{"getSignature", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NameSignatureInstruction, init$, void)},
+	{"<init>", "(SI)V", nullptr, $PUBLIC, $method(NameSignatureInstruction, init$, void, int16_t, int32_t)},
+	{"getName", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NameSignatureInstruction, getName, $String*, $ConstantPoolGen*)},
+	{"getNameAndType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/classfile/ConstantNameAndType;", nullptr, $PUBLIC, $virtualMethod(NameSignatureInstruction, getNameAndType, $ConstantNameAndType*, $ConstantPoolGen*)},
+	{"getSignature", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NameSignatureInstruction, getSignature, $String*, $ConstantPoolGen*)},
 	{}
 };
 

@@ -11,7 +11,7 @@ namespace org {
 			namespace ls {
 
 $MethodInfo _LSSerializerFilter_MethodInfo_[] = {
-	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSSerializerFilter, getWhatToShow, int32_t)},
 	{}
 };
 

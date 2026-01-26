@@ -28,15 +28,15 @@ $FieldInfo _BranchHandle_FieldInfo_[] = {
 };
 
 $MethodInfo _BranchHandle_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/BranchInstruction;)V", nullptr, $PRIVATE, $method(static_cast<void(BranchHandle::*)($BranchInstruction*)>(&BranchHandle::init$))},
-	{"getBranchHandle", "(Lcom/sun/org/apache/bcel/internal/generic/BranchInstruction;)Lcom/sun/org/apache/bcel/internal/generic/BranchHandle;", nullptr, $STATIC, $method(static_cast<BranchHandle*(*)($BranchInstruction*)>(&BranchHandle::getBranchHandle))},
-	{"getPosition", "()I", nullptr, $PUBLIC},
-	{"getTarget", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $method(static_cast<$InstructionHandle*(BranchHandle::*)()>(&BranchHandle::getTarget))},
-	{"setInstruction", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;)V", nullptr, $PUBLIC},
-	{"setPosition", "(I)V", nullptr, 0},
-	{"setTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(BranchHandle::*)($InstructionHandle*)>(&BranchHandle::setTarget))},
-	{"updatePosition", "(II)I", nullptr, $PROTECTED},
-	{"updateTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(BranchHandle::*)($InstructionHandle*,$InstructionHandle*)>(&BranchHandle::updateTarget))},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/generic/BranchInstruction;)V", nullptr, $PRIVATE, $method(BranchHandle, init$, void, $BranchInstruction*)},
+	{"getBranchHandle", "(Lcom/sun/org/apache/bcel/internal/generic/BranchInstruction;)Lcom/sun/org/apache/bcel/internal/generic/BranchHandle;", nullptr, $STATIC, $staticMethod(BranchHandle, getBranchHandle, BranchHandle*, $BranchInstruction*)},
+	{"getPosition", "()I", nullptr, $PUBLIC, $virtualMethod(BranchHandle, getPosition, int32_t)},
+	{"getTarget", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;", nullptr, $PUBLIC, $method(BranchHandle, getTarget, $InstructionHandle*)},
+	{"setInstruction", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;)V", nullptr, $PUBLIC, $virtualMethod(BranchHandle, setInstruction, void, $Instruction*)},
+	{"setPosition", "(I)V", nullptr, 0, $virtualMethod(BranchHandle, setPosition, void, int32_t)},
+	{"setTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(BranchHandle, setTarget, void, $InstructionHandle*)},
+	{"updatePosition", "(II)I", nullptr, $PROTECTED, $virtualMethod(BranchHandle, updatePosition, int32_t, int32_t, int32_t)},
+	{"updateTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(BranchHandle, updateTarget, void, $InstructionHandle*, $InstructionHandle*)},
 	{}
 };
 

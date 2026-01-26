@@ -28,10 +28,10 @@ $FieldInfo _XMLEntityDecl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLEntityDecl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLEntityDecl::*)()>(&XMLEntityDecl::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V", nullptr, $PUBLIC},
-	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLEntityDecl, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLEntityDecl, clear, void)},
+	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V", nullptr, $PUBLIC, $virtualMethod(XMLEntityDecl, setValues, void, $String*, $String*, $String*, $String*, $String*, bool, bool)},
+	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V", nullptr, $PUBLIC, $virtualMethod(XMLEntityDecl, setValues, void, $String*, $String*, $String*, $String*, $String*, $String*, bool, bool)},
 	{}
 };
 

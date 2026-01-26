@@ -91,17 +91,17 @@ namespace com {
 					namespace events {
 
 $MethodInfo _XMLEventAllocatorImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLEventAllocatorImpl::*)()>(&XMLEventAllocatorImpl::init$))},
-	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;Ljavax/xml/stream/util/XMLEventConsumer;)V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"fillAttributes", "(Lcom/sun/xml/internal/stream/events/StartElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PROTECTED},
-	{"fillNamespaceAttributes", "(Lcom/sun/xml/internal/stream/events/StartElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PROTECTED},
-	{"fillNamespaceAttributes", "(Lcom/sun/xml/internal/stream/events/EndElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PROTECTED},
-	{"getNextEvent", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, $PROTECTED, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"getQName", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/namespace/QName;", nullptr, $PRIVATE, $method(static_cast<$QName*(XMLEventAllocatorImpl::*)($XMLStreamReader*)>(&XMLEventAllocatorImpl::getQName))},
-	{"getXMLEvent", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, 0},
-	{"newInstance", "()Ljavax/xml/stream/util/XMLEventAllocator;", nullptr, $PUBLIC},
-	{"setNamespaceContext", "(Lcom/sun/xml/internal/stream/events/StartElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(static_cast<void(XMLEventAllocatorImpl::*)($StartElementEvent*,$XMLStreamReader*)>(&XMLEventAllocatorImpl::setNamespaceContext))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLEventAllocatorImpl, init$, void)},
+	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, $virtualMethod(XMLEventAllocatorImpl, allocate, $XMLEvent*, $XMLStreamReader*), "javax.xml.stream.XMLStreamException"},
+	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;Ljavax/xml/stream/util/XMLEventConsumer;)V", nullptr, $PUBLIC, $virtualMethod(XMLEventAllocatorImpl, allocate, void, $XMLStreamReader*, $XMLEventConsumer*), "javax.xml.stream.XMLStreamException"},
+	{"fillAttributes", "(Lcom/sun/xml/internal/stream/events/StartElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PROTECTED, $virtualMethod(XMLEventAllocatorImpl, fillAttributes, void, $StartElementEvent*, $XMLStreamReader*)},
+	{"fillNamespaceAttributes", "(Lcom/sun/xml/internal/stream/events/StartElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PROTECTED, $virtualMethod(XMLEventAllocatorImpl, fillNamespaceAttributes, void, $StartElementEvent*, $XMLStreamReader*)},
+	{"fillNamespaceAttributes", "(Lcom/sun/xml/internal/stream/events/EndElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PROTECTED, $virtualMethod(XMLEventAllocatorImpl, fillNamespaceAttributes, void, $EndElementEvent*, $XMLStreamReader*)},
+	{"getNextEvent", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, $PROTECTED, $virtualMethod(XMLEventAllocatorImpl, getNextEvent, $XMLEvent*, $XMLStreamReader*), "javax.xml.stream.XMLStreamException"},
+	{"getQName", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/namespace/QName;", nullptr, $PRIVATE, $method(XMLEventAllocatorImpl, getQName, $QName*, $XMLStreamReader*)},
+	{"getXMLEvent", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, 0, $virtualMethod(XMLEventAllocatorImpl, getXMLEvent, $XMLEvent*, $XMLStreamReader*)},
+	{"newInstance", "()Ljavax/xml/stream/util/XMLEventAllocator;", nullptr, $PUBLIC, $virtualMethod(XMLEventAllocatorImpl, newInstance, $XMLEventAllocator*)},
+	{"setNamespaceContext", "(Lcom/sun/xml/internal/stream/events/StartElementEvent;Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PRIVATE, $method(XMLEventAllocatorImpl, setNamespaceContext, void, $StartElementEvent*, $XMLStreamReader*)},
 	{}
 };
 

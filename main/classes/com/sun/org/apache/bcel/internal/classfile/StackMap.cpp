@@ -37,15 +37,15 @@ $FieldInfo _StackMap_FieldInfo_[] = {
 };
 
 $MethodInfo _StackMap_MethodInfo_[] = {
-	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/StackMapEntry;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(StackMap::*)(int32_t,int32_t,$StackMapEntryArray*,$ConstantPool*)>(&StackMap::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(StackMap::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&StackMap::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getMapLength", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(StackMap::*)()>(&StackMap::getMapLength))},
-	{"getStackMap", "()[Lcom/sun/org/apache/bcel/internal/classfile/StackMapEntry;", nullptr, $PUBLIC, $method(static_cast<$StackMapEntryArray*(StackMap::*)()>(&StackMap::getStackMap))},
-	{"setStackMap", "([Lcom/sun/org/apache/bcel/internal/classfile/StackMapEntry;)V", nullptr, $PUBLIC, $method(static_cast<void(StackMap::*)($StackMapEntryArray*)>(&StackMap::setStackMap))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/StackMapEntry;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(StackMap, init$, void, int32_t, int32_t, $StackMapEntryArray*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(StackMap, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(StackMap, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(StackMap, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(StackMap, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getMapLength", "()I", nullptr, $PUBLIC, $method(StackMap, getMapLength, int32_t)},
+	{"getStackMap", "()[Lcom/sun/org/apache/bcel/internal/classfile/StackMapEntry;", nullptr, $PUBLIC, $method(StackMap, getStackMap, $StackMapEntryArray*)},
+	{"setStackMap", "([Lcom/sun/org/apache/bcel/internal/classfile/StackMapEntry;)V", nullptr, $PUBLIC, $method(StackMap, setStackMap, void, $StackMapEntryArray*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StackMap, toString, $String*)},
 	{}
 };
 

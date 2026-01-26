@@ -30,15 +30,15 @@ $FieldInfo _XMLSchemaValidator$XPathMatcherStack_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidator$XPathMatcherStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$XPathMatcherStack::*)()>(&XMLSchemaValidator$XPathMatcherStack::init$))},
-	{"addMatcher", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/XPathMatcher;)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"ensureMatcherCapacity", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLSchemaValidator$XPathMatcherStack::*)()>(&XMLSchemaValidator$XPathMatcherStack::ensureMatcherCapacity))},
-	{"getMatcherAt", "(I)Lcom/sun/org/apache/xerces/internal/impl/xs/identity/XPathMatcher;", nullptr, $PUBLIC},
-	{"getMatcherCount", "()I", nullptr, $PUBLIC},
-	{"popContext", "()V", nullptr, $PUBLIC},
-	{"pushContext", "()V", nullptr, $PUBLIC},
-	{"size", "()I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSchemaValidator$XPathMatcherStack, init$, void)},
+	{"addMatcher", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/XPathMatcher;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$XPathMatcherStack, addMatcher, void, $XPathMatcher*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$XPathMatcherStack, clear, void)},
+	{"ensureMatcherCapacity", "()V", nullptr, $PRIVATE, $method(XMLSchemaValidator$XPathMatcherStack, ensureMatcherCapacity, void)},
+	{"getMatcherAt", "(I)Lcom/sun/org/apache/xerces/internal/impl/xs/identity/XPathMatcher;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$XPathMatcherStack, getMatcherAt, $XPathMatcher*, int32_t)},
+	{"getMatcherCount", "()I", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$XPathMatcherStack, getMatcherCount, int32_t)},
+	{"popContext", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$XPathMatcherStack, popContext, void)},
+	{"pushContext", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$XPathMatcherStack, pushContext, void)},
+	{"size", "()I", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$XPathMatcherStack, size, int32_t)},
 	{}
 };
 

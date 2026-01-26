@@ -26,13 +26,13 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _FieldInstruction_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(FieldInstruction::*)()>(&FieldInstruction::init$))},
-	{"<init>", "(SI)V", nullptr, $PROTECTED, $method(static_cast<void(FieldInstruction::*)(int16_t,int32_t)>(&FieldInstruction::init$))},
-	{"getFieldName", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getFieldSize", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PROTECTED},
-	{"getFieldType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
-	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
-	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(FieldInstruction, init$, void)},
+	{"<init>", "(SI)V", nullptr, $PROTECTED, $method(FieldInstruction, init$, void, int16_t, int32_t)},
+	{"getFieldName", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FieldInstruction, getFieldName, $String*, $ConstantPoolGen*)},
+	{"getFieldSize", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PROTECTED, $virtualMethod(FieldInstruction, getFieldSize, int32_t, $ConstantPoolGen*)},
+	{"getFieldType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $virtualMethod(FieldInstruction, getFieldType, $Type*, $ConstantPoolGen*)},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $virtualMethod(FieldInstruction, getType, $Type*, $ConstantPoolGen*)},
+	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FieldInstruction, toString, $String*, $ConstantPool*)},
 	{}
 };
 

@@ -25,7 +25,7 @@ $FieldInfo _WrappedSAXException_FieldInfo_[] = {
 };
 
 $MethodInfo _WrappedSAXException_MethodInfo_[] = {
-	{"<init>", "(Lorg/xml/sax/SAXException;)V", nullptr, 0, $method(static_cast<void(WrappedSAXException::*)($SAXException*)>(&WrappedSAXException::init$))},
+	{"<init>", "(Lorg/xml/sax/SAXException;)V", nullptr, 0, $method(WrappedSAXException, init$, void, $SAXException*)},
 	{}
 };
 

@@ -29,11 +29,11 @@ namespace javax {
 		namespace catalog {
 
 $MethodInfo _Normalizer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Normalizer::*)()>(&Normalizer::init$))},
-	{"decodeURN", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Normalizer::decodeURN))},
-	{"encodeURN", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Normalizer::encodeURN))},
-	{"normalizePublicId", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Normalizer::normalizePublicId))},
-	{"normalizeURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Normalizer::normalizeURI))},
+	{"<init>", "()V", nullptr, 0, $method(Normalizer, init$, void)},
+	{"decodeURN", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Normalizer, decodeURN, $String*, $String*)},
+	{"encodeURN", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Normalizer, encodeURN, $String*, $String*)},
+	{"normalizePublicId", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Normalizer, normalizePublicId, $String*, $String*)},
+	{"normalizeURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Normalizer, normalizeURI, $String*, $String*)},
 	{}
 };
 

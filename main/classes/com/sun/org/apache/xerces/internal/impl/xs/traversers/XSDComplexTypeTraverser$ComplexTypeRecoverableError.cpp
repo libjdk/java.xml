@@ -29,8 +29,8 @@ $FieldInfo _XSDComplexTypeTraverser$ComplexTypeRecoverableError_FieldInfo_[] = {
 };
 
 $MethodInfo _XSDComplexTypeTraverser$ComplexTypeRecoverableError_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XSDComplexTypeTraverser$ComplexTypeRecoverableError::*)()>(&XSDComplexTypeTraverser$ComplexTypeRecoverableError::init$))},
-	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Element;)V", nullptr, 0, $method(static_cast<void(XSDComplexTypeTraverser$ComplexTypeRecoverableError::*)($String*,$ObjectArray*,$Element*)>(&XSDComplexTypeTraverser$ComplexTypeRecoverableError::init$))},
+	{"<init>", "()V", nullptr, 0, $method(XSDComplexTypeTraverser$ComplexTypeRecoverableError, init$, void)},
+	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Element;)V", nullptr, 0, $method(XSDComplexTypeTraverser$ComplexTypeRecoverableError, init$, void, $String*, $ObjectArray*, $Element*)},
 	{}
 };
 

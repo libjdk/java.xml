@@ -69,11 +69,11 @@ $FieldInfo _SAXParser_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXParser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXParser::*)($XMLParserConfiguration*)>(&SAXParser::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAXParser::*)()>(&SAXParser::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXParser::*)($SymbolTable*)>(&SAXParser::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXParser::*)($SymbolTable*,$XMLGrammarPool*)>(&SAXParser::init$))},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParserConfiguration;)V", nullptr, $PUBLIC, $method(SAXParser, init$, void, $XMLParserConfiguration*)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAXParser, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(SAXParser, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(SAXParser, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(SAXParser, setProperty, void, $String*, Object$*), "org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
 	{}
 };
 

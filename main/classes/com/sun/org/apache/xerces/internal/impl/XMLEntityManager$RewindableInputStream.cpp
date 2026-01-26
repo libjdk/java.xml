@@ -36,18 +36,18 @@ $FieldInfo _XMLEntityManager$RewindableInputStream_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLEntityManager$RewindableInputStream_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLEntityManager;Ljava/io/InputStream;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLEntityManager$RewindableInputStream::*)($XMLEntityManager*,$InputStream*)>(&XMLEntityManager$RewindableInputStream::init$))},
-	{"available", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"mark", "(I)V", nullptr, $PUBLIC},
-	{"markSupported", "()Z", nullptr, $PUBLIC},
-	{"read", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"read", "([BII)I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"readAndBuffer", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(XMLEntityManager$RewindableInputStream::*)()>(&XMLEntityManager$RewindableInputStream::readAndBuffer)), "java.io.IOException"},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"rewind", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLEntityManager$RewindableInputStream::*)()>(&XMLEntityManager$RewindableInputStream::rewind))},
-	{"setStartOffset", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLEntityManager$RewindableInputStream::*)(int32_t)>(&XMLEntityManager$RewindableInputStream::setStartOffset))},
-	{"skip", "(J)J", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLEntityManager;Ljava/io/InputStream;)V", nullptr, $PUBLIC, $method(XMLEntityManager$RewindableInputStream, init$, void, $XMLEntityManager*, $InputStream*)},
+	{"available", "()I", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, available, int32_t), "java.io.IOException"},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, close, void), "java.io.IOException"},
+	{"mark", "(I)V", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, mark, void, int32_t)},
+	{"markSupported", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, markSupported, bool)},
+	{"read", "()I", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, read, int32_t), "java.io.IOException"},
+	{"read", "([BII)I", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, read, int32_t, $bytes*, int32_t, int32_t), "java.io.IOException"},
+	{"readAndBuffer", "()I", nullptr, $PUBLIC, $method(XMLEntityManager$RewindableInputStream, readAndBuffer, int32_t), "java.io.IOException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, reset, void)},
+	{"rewind", "()V", nullptr, $PUBLIC, $method(XMLEntityManager$RewindableInputStream, rewind, void)},
+	{"setStartOffset", "(I)V", nullptr, $PUBLIC, $method(XMLEntityManager$RewindableInputStream, setStartOffset, void, int32_t)},
+	{"skip", "(J)J", nullptr, $PUBLIC, $virtualMethod(XMLEntityManager$RewindableInputStream, skip, int64_t, int64_t), "java.io.IOException"},
 	{}
 };
 

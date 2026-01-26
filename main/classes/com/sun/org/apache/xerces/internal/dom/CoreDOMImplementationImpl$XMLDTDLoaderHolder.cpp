@@ -24,7 +24,7 @@ $FieldInfo _CoreDOMImplementationImpl$XMLDTDLoaderHolder_FieldInfo_[] = {
 };
 
 $MethodInfo _CoreDOMImplementationImpl$XMLDTDLoaderHolder_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDLoader;)V", nullptr, 0, $method(static_cast<void(CoreDOMImplementationImpl$XMLDTDLoaderHolder::*)($XMLDTDLoader*)>(&CoreDOMImplementationImpl$XMLDTDLoaderHolder::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDLoader;)V", nullptr, 0, $method(CoreDOMImplementationImpl$XMLDTDLoaderHolder, init$, void, $XMLDTDLoader*)},
 	{}
 };
 

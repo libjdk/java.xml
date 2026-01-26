@@ -26,8 +26,8 @@ $FieldInfo _DeferredDOMImplementationImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DeferredDOMImplementationImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DeferredDOMImplementationImpl::*)()>(&DeferredDOMImplementationImpl::init$))},
-	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DOMImplementation*(*)()>(&DeferredDOMImplementationImpl::getDOMImplementation))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DeferredDOMImplementationImpl, init$, void)},
+	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $staticMethod(DeferredDOMImplementationImpl, getDOMImplementation, $DOMImplementation*)},
 	{}
 };
 

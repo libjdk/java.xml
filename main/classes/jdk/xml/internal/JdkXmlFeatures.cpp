@@ -49,18 +49,18 @@ $FieldInfo _JdkXmlFeatures_FieldInfo_[] = {
 };
 
 $MethodInfo _JdkXmlFeatures_MethodInfo_[] = {
-	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(JdkXmlFeatures::*)(bool)>(&JdkXmlFeatures::init$))},
-	{"findByName", "(Ljava/lang/String;)Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;", nullptr, $PUBLIC},
-	{"getFeature", "(Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;)Z", nullptr, $PUBLIC},
-	{"getFeature", "(I)Z", nullptr, $PUBLIC},
-	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"getSystemProperty", "(Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;Ljava/lang/String;)Z", nullptr, $PRIVATE, $method(static_cast<bool(JdkXmlFeatures::*)($JdkXmlFeatures$XmlFeature*,$String*)>(&JdkXmlFeatures::getSystemProperty))},
-	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(static_cast<void(JdkXmlFeatures::*)()>(&JdkXmlFeatures::readSystemProperties))},
-	{"setFeature", "(Ljava/lang/String;Ljdk/xml/internal/JdkProperty$State;Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"setFeature", "(Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;Ljdk/xml/internal/JdkProperty$State;Z)V", nullptr, $PUBLIC},
-	{"setFeature", "(ILjdk/xml/internal/JdkProperty$State;Ljava/lang/Object;)V", nullptr, $PUBLIC},
-	{"setFeature", "(ILjdk/xml/internal/JdkProperty$State;Z)V", nullptr, $PUBLIC},
-	{"update", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(JdkXmlFeatures, init$, void, bool)},
+	{"findByName", "(Ljava/lang/String;)Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, findByName, $JdkXmlFeatures$XmlFeature*, $String*)},
+	{"getFeature", "(Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;)Z", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, getFeature, bool, $JdkXmlFeatures$XmlFeature*)},
+	{"getFeature", "(I)Z", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, getFeature, bool, int32_t)},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, getIndex, int32_t, $String*)},
+	{"getSystemProperty", "(Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;Ljava/lang/String;)Z", nullptr, $PRIVATE, $method(JdkXmlFeatures, getSystemProperty, bool, $JdkXmlFeatures$XmlFeature*, $String*)},
+	{"readSystemProperties", "()V", nullptr, $PRIVATE, $method(JdkXmlFeatures, readSystemProperties, void)},
+	{"setFeature", "(Ljava/lang/String;Ljdk/xml/internal/JdkProperty$State;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, setFeature, bool, $String*, $JdkProperty$State*, Object$*)},
+	{"setFeature", "(Ljdk/xml/internal/JdkXmlFeatures$XmlFeature;Ljdk/xml/internal/JdkProperty$State;Z)V", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, setFeature, void, $JdkXmlFeatures$XmlFeature*, $JdkProperty$State*, bool)},
+	{"setFeature", "(ILjdk/xml/internal/JdkProperty$State;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, setFeature, void, int32_t, $JdkProperty$State*, Object$*)},
+	{"setFeature", "(ILjdk/xml/internal/JdkProperty$State;Z)V", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, setFeature, void, int32_t, $JdkProperty$State*, bool)},
+	{"update", "()V", nullptr, $PUBLIC, $virtualMethod(JdkXmlFeatures, update, void)},
 	{}
 };
 

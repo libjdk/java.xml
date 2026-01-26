@@ -50,6 +50,7 @@ using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::Const
 using $EnumElementValueGen = ::com::sun::org::apache::bcel::internal::generic::EnumElementValueGen;
 using $SimpleElementValueGen = ::com::sun::org::apache::bcel::internal::generic::SimpleElementValueGen;
 using $DataInput = ::java::io::DataInput;
+using $DataOutputStream = ::java::io::DataOutputStream;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $IllegalArgumentException = ::java::lang::IllegalArgumentException;
@@ -84,14 +85,14 @@ $FieldInfo _ElementValueGen_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementValueGen_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PROTECTED, $method(static_cast<void(ElementValueGen::*)(int32_t,$ConstantPoolGen*)>(&ElementValueGen::init$))},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;Z)Lcom/sun/org/apache/bcel/internal/generic/ElementValueGen;", nullptr, $PUBLIC | $STATIC, $method(static_cast<ElementValueGen*(*)($ElementValue*,$ConstantPoolGen*,bool)>(&ElementValueGen::copy))},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
-	{"getConstantPool", "()Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;", nullptr, $PROTECTED},
-	{"getElementValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getElementValueType", "()I", nullptr, $PUBLIC},
-	{"readElementValue", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/ElementValueGen;", nullptr, $PUBLIC | $STATIC, $method(static_cast<ElementValueGen*(*)($DataInput*,$ConstantPoolGen*)>(&ElementValueGen::readElementValue)), "java.io.IOException"},
-	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PROTECTED, $method(ElementValueGen, init$, void, int32_t, $ConstantPoolGen*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;Z)Lcom/sun/org/apache/bcel/internal/generic/ElementValueGen;", nullptr, $PUBLIC | $STATIC, $staticMethod(ElementValueGen, copy, ElementValueGen*, $ElementValue*, $ConstantPoolGen*, bool)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementValueGen, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getConstantPool", "()Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;", nullptr, $PROTECTED, $virtualMethod(ElementValueGen, getConstantPool, $ConstantPoolGen*)},
+	{"getElementValue", "()Lcom/sun/org/apache/bcel/internal/classfile/ElementValue;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementValueGen, getElementValue, $ElementValue*)},
+	{"getElementValueType", "()I", nullptr, $PUBLIC, $virtualMethod(ElementValueGen, getElementValueType, int32_t)},
+	{"readElementValue", "(Ljava/io/DataInput;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/ElementValueGen;", nullptr, $PUBLIC | $STATIC, $staticMethod(ElementValueGen, readElementValue, ElementValueGen*, $DataInput*, $ConstantPoolGen*), "java.io.IOException"},
+	{"stringifyValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ElementValueGen, stringifyValue, $String*)},
 	{}
 };
 

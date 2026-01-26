@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
+using $NodeIterator = ::org::w3c::dom::traversal::NodeIterator;
 
 namespace com {
 	namespace sun {
@@ -17,17 +19,17 @@ namespace com {
 
 $MethodInfo _ContextNodeList_MethodInfo_[] = {
 	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"cloneWithReset", "()Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.lang.CloneNotSupportedException"},
-	{"getCurrentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCurrentPos", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLast", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"isFresh", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"runTo", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setCurrentPos", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setLast", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setShouldCacheNodes", "(Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"size", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{"cloneWithReset", "()Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, cloneWithReset, $NodeIterator*), "java.lang.CloneNotSupportedException"},
+	{"getCurrentNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, getCurrentNode, $Node*)},
+	{"getCurrentPos", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, getCurrentPos, int32_t)},
+	{"getLast", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, getLast, int32_t)},
+	{"isFresh", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, isFresh, bool)},
+	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, reset, void)},
+	{"runTo", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, runTo, void, int32_t)},
+	{"setCurrentPos", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, setCurrentPos, void, int32_t)},
+	{"setLast", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, setLast, void, int32_t)},
+	{"setShouldCacheNodes", "(Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, setShouldCacheNodes, void, bool)},
+	{"size", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ContextNodeList, size, int32_t)},
 	{}
 };
 

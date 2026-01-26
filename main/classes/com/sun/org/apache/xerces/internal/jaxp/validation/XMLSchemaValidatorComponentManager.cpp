@@ -198,22 +198,22 @@ $FieldInfo _XMLSchemaValidatorComponentManager_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidatorComponentManager_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)($XSGrammarPoolContainer*)>(&XMLSchemaValidatorComponentManager::init$))},
-	{"addRecognizedParamsAndSetDefaults", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponent;Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)($XMLComponent*,$XSGrammarPoolContainer*)>(&XMLSchemaValidatorComponentManager::addRecognizedParamsAndSetDefaults))},
-	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, 0, $method(static_cast<$ErrorHandler*(XMLSchemaValidatorComponentManager::*)()>(&XMLSchemaValidatorComponentManager::getErrorHandler))},
-	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"getLocale", "()Ljava/util/Locale;", nullptr, 0, $method(static_cast<$Locale*(XMLSchemaValidatorComponentManager::*)()>(&XMLSchemaValidatorComponentManager::getLocale))},
-	{"getPropertyState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, 0, $method(static_cast<$LSResourceResolver*(XMLSchemaValidatorComponentManager::*)()>(&XMLSchemaValidatorComponentManager::getResourceResolver))},
-	{"reset", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)()>(&XMLSchemaValidatorComponentManager::reset)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"restoreInitialState", "()V", nullptr, 0, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)()>(&XMLSchemaValidatorComponentManager::restoreInitialState))},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, 0, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)($ErrorHandler*)>(&XMLSchemaValidatorComponentManager::setErrorHandler))},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"setFeatureDefaults", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponent;[Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;)V", nullptr, $PRIVATE, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)($XMLComponent*,$StringArray*,$XSGrammarPoolContainer*)>(&XMLSchemaValidatorComponentManager::setFeatureDefaults))},
-	{"setLocale", "(Ljava/util/Locale;)V", nullptr, 0, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)($Locale*)>(&XMLSchemaValidatorComponentManager::setLocale))},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"setPropertyDefaults", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponent;[Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)($XMLComponent*,$StringArray*)>(&XMLSchemaValidatorComponentManager::setPropertyDefaults))},
-	{"setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, 0, $method(static_cast<void(XMLSchemaValidatorComponentManager::*)($LSResourceResolver*)>(&XMLSchemaValidatorComponentManager::setResourceResolver))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;)V", nullptr, $PUBLIC, $method(XMLSchemaValidatorComponentManager, init$, void, $XSGrammarPoolContainer*)},
+	{"addRecognizedParamsAndSetDefaults", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponent;Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;)V", nullptr, $PUBLIC, $method(XMLSchemaValidatorComponentManager, addRecognizedParamsAndSetDefaults, void, $XMLComponent*, $XSGrammarPoolContainer*)},
+	{"getErrorHandler", "()Lorg/xml/sax/ErrorHandler;", nullptr, 0, $method(XMLSchemaValidatorComponentManager, getErrorHandler, $ErrorHandler*)},
+	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidatorComponentManager, getFeatureState, $FeatureState*, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"getLocale", "()Ljava/util/Locale;", nullptr, 0, $method(XMLSchemaValidatorComponentManager, getLocale, $Locale*)},
+	{"getPropertyState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidatorComponentManager, getPropertyState, $PropertyState*, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"getResourceResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, 0, $method(XMLSchemaValidatorComponentManager, getResourceResolver, $LSResourceResolver*)},
+	{"reset", "()V", nullptr, $PUBLIC, $method(XMLSchemaValidatorComponentManager, reset, void), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"restoreInitialState", "()V", nullptr, 0, $method(XMLSchemaValidatorComponentManager, restoreInitialState, void)},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, 0, $method(XMLSchemaValidatorComponentManager, setErrorHandler, void, $ErrorHandler*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidatorComponentManager, setFeature, void, $String*, bool), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"setFeatureDefaults", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponent;[Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;)V", nullptr, $PRIVATE, $method(XMLSchemaValidatorComponentManager, setFeatureDefaults, void, $XMLComponent*, $StringArray*, $XSGrammarPoolContainer*)},
+	{"setLocale", "(Ljava/util/Locale;)V", nullptr, 0, $method(XMLSchemaValidatorComponentManager, setLocale, void, $Locale*)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidatorComponentManager, setProperty, void, $String*, Object$*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"setPropertyDefaults", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponent;[Ljava/lang/String;)V", nullptr, $PRIVATE, $method(XMLSchemaValidatorComponentManager, setPropertyDefaults, void, $XMLComponent*, $StringArray*)},
+	{"setResourceResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, 0, $method(XMLSchemaValidatorComponentManager, setResourceResolver, void, $LSResourceResolver*)},
 	{}
 };
 

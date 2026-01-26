@@ -14,7 +14,7 @@ namespace com {
 						namespace compiler {
 
 $MethodInfo _XPathDumper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPathDumper::*)()>(&XPathDumper::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPathDumper, init$, void)},
 	{}
 };
 

@@ -20,9 +20,9 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _ThreadControllerWrapper$ThreadController_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ThreadControllerWrapper$ThreadController::*)()>(&ThreadControllerWrapper$ThreadController::init$))},
-	{"run", "(Ljava/lang/Runnable;I)Ljava/lang/Thread;", nullptr, $PUBLIC},
-	{"waitThread", "(Ljava/lang/Thread;Ljava/lang/Runnable;)V", nullptr, $PUBLIC, nullptr, "java.lang.InterruptedException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ThreadControllerWrapper$ThreadController, init$, void)},
+	{"run", "(Ljava/lang/Runnable;I)Ljava/lang/Thread;", nullptr, $PUBLIC, $virtualMethod(ThreadControllerWrapper$ThreadController, run, $Thread*, $Runnable*, int32_t)},
+	{"waitThread", "(Ljava/lang/Thread;Ljava/lang/Runnable;)V", nullptr, $PUBLIC, $virtualMethod(ThreadControllerWrapper$ThreadController, waitThread, void, $Thread*, $Runnable*), "java.lang.InterruptedException"},
 	{}
 };
 

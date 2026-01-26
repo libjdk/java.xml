@@ -19,9 +19,9 @@ $FieldInfo _DatatypeConstants$Field_FieldInfo_[] = {
 };
 
 $MethodInfo _DatatypeConstants$Field_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;I)V", nullptr, $PRIVATE, $method(static_cast<void(DatatypeConstants$Field::*)($String*,int32_t)>(&DatatypeConstants$Field::init$))},
-	{"getId", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(DatatypeConstants$Field::*)()>(&DatatypeConstants$Field::getId))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;I)V", nullptr, $PRIVATE, $method(DatatypeConstants$Field, init$, void, $String*, int32_t)},
+	{"getId", "()I", nullptr, $PUBLIC, $method(DatatypeConstants$Field, getId, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DatatypeConstants$Field, toString, $String*)},
 	{}
 };
 

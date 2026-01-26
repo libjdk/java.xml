@@ -45,8 +45,8 @@ namespace com {
 							namespace runtime {
 
 $MethodInfo _ErrorMessages_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ErrorMessages::*)()>(&ErrorMessages::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ErrorMessages, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ErrorMessages, getContents, $ObjectArray2*)},
 	{}
 };
 

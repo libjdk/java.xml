@@ -26,7 +26,7 @@ $FieldInfo _ToHTMLStream$Trie$Node_FieldInfo_[] = {
 };
 
 $MethodInfo _ToHTMLStream$Trie$Node_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToHTMLStream$Trie;)V", nullptr, 0, $method(static_cast<void(ToHTMLStream$Trie$Node::*)($ToHTMLStream$Trie*)>(&ToHTMLStream$Trie$Node::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serializer/ToHTMLStream$Trie;)V", nullptr, 0, $method(ToHTMLStream$Trie$Node, init$, void, $ToHTMLStream$Trie*)},
 	{}
 };
 

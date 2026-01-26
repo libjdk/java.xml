@@ -16,7 +16,7 @@ namespace com {
 						namespace res {
 
 $MethodInfo _XPATHErrorResources_en_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPATHErrorResources_en::*)()>(&XPATHErrorResources_en::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPATHErrorResources_en, init$, void)},
 	{}
 };
 

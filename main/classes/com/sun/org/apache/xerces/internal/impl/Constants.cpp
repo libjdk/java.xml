@@ -361,13 +361,13 @@ $FieldInfo _Constants_FieldInfo_[] = {
 };
 
 $MethodInfo _Constants_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(Constants::*)()>(&Constants::init$))},
-	{"getSAXFeatures", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $method(static_cast<$Enumeration*(*)()>(&Constants::getSAXFeatures))},
-	{"getSAXProperties", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $method(static_cast<$Enumeration*(*)()>(&Constants::getSAXProperties))},
-	{"getXercesFeatures", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $method(static_cast<$Enumeration*(*)()>(&Constants::getXercesFeatures))},
-	{"getXercesProperties", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $method(static_cast<$Enumeration*(*)()>(&Constants::getXercesProperties))},
-	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&Constants::main))},
-	{"print", "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PRIVATE | $STATIC, $method(static_cast<void(*)($String*,$String*,$ObjectArray*)>(&Constants::print))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(Constants, init$, void)},
+	{"getSAXFeatures", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $staticMethod(Constants, getSAXFeatures, $Enumeration*)},
+	{"getSAXProperties", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $staticMethod(Constants, getSAXProperties, $Enumeration*)},
+	{"getXercesFeatures", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $staticMethod(Constants, getXercesFeatures, $Enumeration*)},
+	{"getXercesProperties", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC | $STATIC, $staticMethod(Constants, getXercesProperties, $Enumeration*)},
+	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(Constants, main, void, $StringArray*)},
+	{"print", "(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PRIVATE | $STATIC, $staticMethod(Constants, print, void, $String*, $String*, $ObjectArray*)},
 	{}
 };
 

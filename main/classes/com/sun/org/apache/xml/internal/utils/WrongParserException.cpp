@@ -21,7 +21,7 @@ $FieldInfo _WrongParserException_FieldInfo_[] = {
 };
 
 $MethodInfo _WrongParserException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(WrongParserException::*)($String*)>(&WrongParserException::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(WrongParserException, init$, void, $String*)},
 	{}
 };
 

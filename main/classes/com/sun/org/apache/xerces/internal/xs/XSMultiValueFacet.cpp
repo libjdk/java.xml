@@ -5,6 +5,9 @@
 #include <com/sun/org/apache/xerces/internal/xs/datatypes/ObjectList.h>
 #include <jcpp.h>
 
+using $StringList = ::com::sun::org::apache::xerces::internal::xs::StringList;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $ObjectList = ::com::sun::org::apache::xerces::internal::xs::datatypes::ObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,10 +20,10 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSMultiValueFacet_MethodInfo_[] = {
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEnumerationValues", "()Lcom/sun/org/apache/xerces/internal/xs/datatypes/ObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFacetKind", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLexicalFacetValues", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSMultiValueFacet, getAnnotations, $XSObjectList*)},
+	{"getEnumerationValues", "()Lcom/sun/org/apache/xerces/internal/xs/datatypes/ObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSMultiValueFacet, getEnumerationValues, $ObjectList*)},
+	{"getFacetKind", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSMultiValueFacet, getFacetKind, int16_t)},
+	{"getLexicalFacetValues", "()Lcom/sun/org/apache/xerces/internal/xs/StringList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSMultiValueFacet, getLexicalFacetValues, $StringList*)},
 	{}
 };
 

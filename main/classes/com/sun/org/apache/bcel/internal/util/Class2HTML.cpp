@@ -63,12 +63,12 @@ $FieldInfo _Class2HTML_FieldInfo_[] = {
 };
 
 $MethodInfo _Class2HTML_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(Class2HTML::*)($JavaClass*,$String*)>(&Class2HTML::init$)), "java.io.IOException"},
-	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&Class2HTML::main)), "java.io.IOException"},
-	{"referenceClass", "(I)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)(int32_t)>(&Class2HTML::referenceClass))},
-	{"referenceType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Class2HTML::referenceType))},
-	{"toHTML", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Class2HTML::toHTML))},
-	{"writeMainHTML", "(Lcom/sun/org/apache/bcel/internal/util/AttributeHTML;)V", nullptr, $PRIVATE, $method(static_cast<void(Class2HTML::*)($AttributeHTML*)>(&Class2HTML::writeMainHTML)), "java.io.IOException"},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(Class2HTML, init$, void, $JavaClass*, $String*), "java.io.IOException"},
+	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(Class2HTML, main, void, $StringArray*), "java.io.IOException"},
+	{"referenceClass", "(I)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Class2HTML, referenceClass, $String*, int32_t)},
+	{"referenceType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Class2HTML, referenceType, $String*, $String*)},
+	{"toHTML", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Class2HTML, toHTML, $String*, $String*)},
+	{"writeMainHTML", "(Lcom/sun/org/apache/bcel/internal/util/AttributeHTML;)V", nullptr, $PRIVATE, $method(Class2HTML, writeMainHTML, void, $AttributeHTML*), "java.io.IOException"},
 	{}
 };
 

@@ -42,18 +42,18 @@ $FieldInfo _NamespaceMappings_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceMappings_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NamespaceMappings::*)()>(&NamespaceMappings::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"generateNextPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getMappingFromPrefix", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings$MappingRecord;", nullptr, 0},
-	{"getMappingFromURI", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings$MappingRecord;", nullptr, 0},
-	{"initNamespaces", "()V", nullptr, $PRIVATE, $method(static_cast<void(NamespaceMappings::*)()>(&NamespaceMappings::initNamespaces))},
-	{"lookupNamespace", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"lookupPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"popNamespace", "(Ljava/lang/String;)Z", nullptr, 0},
-	{"popNamespaces", "(ILorg/xml/sax/ContentHandler;)V", nullptr, 0},
-	{"pushNamespace", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, 0},
-	{"reset", "()V", nullptr, $FINAL, $method(static_cast<void(NamespaceMappings::*)()>(&NamespaceMappings::reset))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NamespaceMappings, init$, void)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(NamespaceMappings, clone, $Object*), "java.lang.CloneNotSupportedException"},
+	{"generateNextPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceMappings, generateNextPrefix, $String*)},
+	{"getMappingFromPrefix", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings$MappingRecord;", nullptr, 0, $virtualMethod(NamespaceMappings, getMappingFromPrefix, $NamespaceMappings$MappingRecord*, $String*)},
+	{"getMappingFromURI", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/serializer/NamespaceMappings$MappingRecord;", nullptr, 0, $virtualMethod(NamespaceMappings, getMappingFromURI, $NamespaceMappings$MappingRecord*, $String*)},
+	{"initNamespaces", "()V", nullptr, $PRIVATE, $method(NamespaceMappings, initNamespaces, void)},
+	{"lookupNamespace", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceMappings, lookupNamespace, $String*, $String*)},
+	{"lookupPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceMappings, lookupPrefix, $String*, $String*)},
+	{"popNamespace", "(Ljava/lang/String;)Z", nullptr, 0, $virtualMethod(NamespaceMappings, popNamespace, bool, $String*)},
+	{"popNamespaces", "(ILorg/xml/sax/ContentHandler;)V", nullptr, 0, $virtualMethod(NamespaceMappings, popNamespaces, void, int32_t, $ContentHandler*)},
+	{"pushNamespace", "(Ljava/lang/String;Ljava/lang/String;I)Z", nullptr, 0, $virtualMethod(NamespaceMappings, pushNamespace, bool, $String*, $String*, int32_t)},
+	{"reset", "()V", nullptr, $FINAL, $method(NamespaceMappings, reset, void)},
 	{}
 };
 

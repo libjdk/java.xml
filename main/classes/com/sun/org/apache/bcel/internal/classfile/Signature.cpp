@@ -46,22 +46,22 @@ $FieldInfo _Signature_FieldInfo_[] = {
 };
 
 $MethodInfo _Signature_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/Signature;)V", nullptr, $PUBLIC, $method(static_cast<void(Signature::*)(Signature*)>(&Signature::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(Signature::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&Signature::init$)), "java.io.IOException"},
-	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(Signature::*)(int32_t,int32_t,int32_t,$ConstantPool*)>(&Signature::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getSignature", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(Signature::*)()>(&Signature::getSignature))},
-	{"getSignatureIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(Signature::*)()>(&Signature::getSignatureIndex))},
-	{"identStart", "(I)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)(int32_t)>(&Signature::identStart))},
-	{"isActualParameterList", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&Signature::isActualParameterList))},
-	{"isFormalParameterList", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*)>(&Signature::isFormalParameterList))},
-	{"matchGJIdent", "(Lcom/sun/org/apache/bcel/internal/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V", nullptr, $PRIVATE | $STATIC, $method(static_cast<void(*)($Signature$MyByteArrayInputStream*,$StringBuilder*)>(&Signature::matchGJIdent))},
-	{"matchIdent", "(Lcom/sun/org/apache/bcel/internal/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V", nullptr, $PRIVATE | $STATIC, $method(static_cast<void(*)($Signature$MyByteArrayInputStream*,$StringBuilder*)>(&Signature::matchIdent))},
-	{"setSignatureIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(Signature::*)(int32_t)>(&Signature::setSignatureIndex))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translate", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&Signature::translate))},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/Signature;)V", nullptr, $PUBLIC, $method(Signature, init$, void, Signature*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(Signature, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"<init>", "(IIILcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(Signature, init$, void, int32_t, int32_t, int32_t, $ConstantPool*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(Signature, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(Signature, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(Signature, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getSignature", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(Signature, getSignature, $String*)},
+	{"getSignatureIndex", "()I", nullptr, $PUBLIC, $method(Signature, getSignatureIndex, int32_t)},
+	{"identStart", "(I)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(Signature, identStart, bool, int32_t)},
+	{"isActualParameterList", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(Signature, isActualParameterList, bool, $String*)},
+	{"isFormalParameterList", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(Signature, isFormalParameterList, bool, $String*)},
+	{"matchGJIdent", "(Lcom/sun/org/apache/bcel/internal/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V", nullptr, $PRIVATE | $STATIC, $staticMethod(Signature, matchGJIdent, void, $Signature$MyByteArrayInputStream*, $StringBuilder*)},
+	{"matchIdent", "(Lcom/sun/org/apache/bcel/internal/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V", nullptr, $PRIVATE | $STATIC, $staticMethod(Signature, matchIdent, void, $Signature$MyByteArrayInputStream*, $StringBuilder*)},
+	{"setSignatureIndex", "(I)V", nullptr, $PUBLIC, $method(Signature, setSignatureIndex, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Signature, toString, $String*)},
+	{"translate", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Signature, translate, $String*, $String*)},
 	{}
 };
 

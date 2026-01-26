@@ -60,16 +60,16 @@ $FieldInfo _XMLEventReaderImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLEventReaderImpl_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLEventReaderImpl::*)($XMLStreamReader*)>(&XMLEventReaderImpl::init$)), "javax.xml.stream.XMLStreamException"},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"getElementText", "()Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.IllegalArgumentException"},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"nextEvent", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"nextTag", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"peek", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"remove", "()V", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/stream/XMLStreamReader;)V", nullptr, $PUBLIC, $method(XMLEventReaderImpl, init$, void, $XMLStreamReader*), "javax.xml.stream.XMLStreamException"},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, close, void), "javax.xml.stream.XMLStreamException"},
+	{"getElementText", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, getElementText, $String*), "javax.xml.stream.XMLStreamException"},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, getProperty, $Object*, $String*), "java.lang.IllegalArgumentException"},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, hasNext, bool)},
+	{"next", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, next, $Object*)},
+	{"nextEvent", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, nextEvent, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
+	{"nextTag", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, nextTag, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
+	{"peek", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, peek, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(XMLEventReaderImpl, remove, void)},
 	{}
 };
 

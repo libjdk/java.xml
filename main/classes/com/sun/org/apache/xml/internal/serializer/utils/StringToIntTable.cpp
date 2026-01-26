@@ -28,14 +28,14 @@ $FieldInfo _StringToIntTable_FieldInfo_[] = {
 };
 
 $MethodInfo _StringToIntTable_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringToIntTable::*)()>(&StringToIntTable::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(StringToIntTable::*)(int32_t)>(&StringToIntTable::init$))},
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringToIntTable::*)($String*)>(&StringToIntTable::contains))},
-	{"get", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToIntTable::*)($String*)>(&StringToIntTable::get))},
-	{"getIgnoreCase", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToIntTable::*)($String*)>(&StringToIntTable::getIgnoreCase))},
-	{"getLength", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringToIntTable::*)()>(&StringToIntTable::getLength))},
-	{"keys", "()[Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$StringArray*(StringToIntTable::*)()>(&StringToIntTable::keys))},
-	{"put", "(Ljava/lang/String;I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringToIntTable::*)($String*,int32_t)>(&StringToIntTable::put))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StringToIntTable, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(StringToIntTable, init$, void, int32_t)},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(StringToIntTable, contains, bool, $String*)},
+	{"get", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $method(StringToIntTable, get, int32_t, $String*)},
+	{"getIgnoreCase", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $method(StringToIntTable, getIgnoreCase, int32_t, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC | $FINAL, $method(StringToIntTable, getLength, int32_t)},
+	{"keys", "()[Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringToIntTable, keys, $StringArray*)},
+	{"put", "(Ljava/lang/String;I)V", nullptr, $PUBLIC | $FINAL, $method(StringToIntTable, put, void, $String*, int32_t)},
 	{}
 };
 

@@ -29,7 +29,7 @@ $FieldInfo _LineSeparator_FieldInfo_[] = {
 };
 
 $MethodInfo _LineSeparator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(LineSeparator::*)()>(&LineSeparator::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(LineSeparator, init$, void)},
 	{}
 };
 

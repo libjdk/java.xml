@@ -17,11 +17,11 @@ namespace com {
 							namespace xs {
 
 $MethodInfo _SchemaNamespaceSupport_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaNamespaceSupport::*)()>(&SchemaNamespaceSupport::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaNamespaceSupport;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaNamespaceSupport::*)(SchemaNamespaceSupport*)>(&SchemaNamespaceSupport::init$))},
-	{"getEffectiveLocalContext", "()[Ljava/lang/String;", nullptr, $PUBLIC},
-	{"makeGlobal", "()V", nullptr, $PUBLIC},
-	{"setEffectiveContext", "([Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaNamespaceSupport, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaNamespaceSupport;)V", nullptr, $PUBLIC, $method(SchemaNamespaceSupport, init$, void, SchemaNamespaceSupport*)},
+	{"getEffectiveLocalContext", "()[Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SchemaNamespaceSupport, getEffectiveLocalContext, $StringArray*)},
+	{"makeGlobal", "()V", nullptr, $PUBLIC, $virtualMethod(SchemaNamespaceSupport, makeGlobal, void)},
+	{"setEffectiveContext", "([Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SchemaNamespaceSupport, setEffectiveContext, void, $StringArray*)},
 	{}
 };
 

@@ -519,8 +519,8 @@ $FieldInfo _XSLTErrorResources_zh_CN_FieldInfo_[] = {
 };
 
 $MethodInfo _XSLTErrorResources_zh_CN_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSLTErrorResources_zh_CN::*)()>(&XSLTErrorResources_zh_CN::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSLTErrorResources_zh_CN, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSLTErrorResources_zh_CN, getContents, $ObjectArray2*)},
 	{}
 };
 

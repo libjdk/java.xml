@@ -27,9 +27,9 @@ $FieldInfo _Operation$LeftExprOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _Operation$LeftExprOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/operations/Operation;)V", nullptr, 0, $method(static_cast<void(Operation$LeftExprOwner::*)($Operation*)>(&Operation$LeftExprOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/operations/Operation;)V", nullptr, 0, $method(Operation$LeftExprOwner, init$, void, $Operation*)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(Operation$LeftExprOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(Operation$LeftExprOwner, setExpression, void, $Expression*)},
 	{}
 };
 

@@ -32,9 +32,9 @@ $FieldInfo _AttributeIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _AttributeIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(AttributeIterator::*)($Compiler*,int32_t,int32_t)>(&AttributeIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(AttributeIterator, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(AttributeIterator, getAxis, int32_t)},
+	{"getNextNode", "()I", nullptr, $PROTECTED, $virtualMethod(AttributeIterator, getNextNode, int32_t)},
 	{}
 };
 

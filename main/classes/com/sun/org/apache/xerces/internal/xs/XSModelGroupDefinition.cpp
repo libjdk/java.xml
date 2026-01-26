@@ -5,6 +5,9 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObjectList.h>
 #include <jcpp.h>
 
+using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
+using $XSModelGroup = ::com::sun::org::apache::xerces::internal::xs::XSModelGroup;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,9 +20,9 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSModelGroupDefinition_MethodInfo_[] = {
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getModelGroup", "()Lcom/sun/org/apache/xerces/internal/xs/XSModelGroup;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSModelGroupDefinition, getAnnotation, $XSAnnotation*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSModelGroupDefinition, getAnnotations, $XSObjectList*)},
+	{"getModelGroup", "()Lcom/sun/org/apache/xerces/internal/xs/XSModelGroup;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSModelGroupDefinition, getModelGroup, $XSModelGroup*)},
 	{}
 };
 

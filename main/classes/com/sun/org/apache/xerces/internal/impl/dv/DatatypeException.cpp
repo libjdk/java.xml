@@ -32,10 +32,10 @@ $FieldInfo _DatatypeException_FieldInfo_[] = {
 };
 
 $MethodInfo _DatatypeException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(DatatypeException::*)($String*,$ObjectArray*)>(&DatatypeException::init$))},
-	{"getArgs", "()[Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(DatatypeException, init$, void, $String*, $ObjectArray*)},
+	{"getArgs", "()[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DatatypeException, getArgs, $ObjectArray*)},
+	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DatatypeException, getKey, $String*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DatatypeException, getMessage, $String*)},
 	{}
 };
 

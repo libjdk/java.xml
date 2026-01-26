@@ -5,17 +5,18 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $TypeInfo = ::org::w3c::dom::TypeInfo;
 
 namespace javax {
 	namespace xml {
 		namespace validation {
 
 $MethodInfo _TypeInfoProvider_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(TypeInfoProvider::*)()>(&TypeInfoProvider::init$))},
-	{"getAttributeTypeInfo", "(I)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getElementTypeInfo", "()Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isIdAttribute", "(I)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isSpecified", "(I)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(TypeInfoProvider, init$, void)},
+	{"getAttributeTypeInfo", "(I)Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeInfoProvider, getAttributeTypeInfo, $TypeInfo*, int32_t)},
+	{"getElementTypeInfo", "()Lorg/w3c/dom/TypeInfo;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeInfoProvider, getElementTypeInfo, $TypeInfo*)},
+	{"isIdAttribute", "(I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeInfoProvider, isIdAttribute, bool, int32_t)},
+	{"isSpecified", "(I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TypeInfoProvider, isSpecified, bool, int32_t)},
 	{}
 };
 

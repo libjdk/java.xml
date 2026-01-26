@@ -47,22 +47,22 @@ $FieldInfo _REUtil_FieldInfo_[] = {
 };
 
 $MethodInfo _REUtil_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(REUtil::*)()>(&REUtil::init$))},
-	{"composeFromSurrogates", "(II)I", nullptr, $STATIC | $FINAL, $method(static_cast<int32_t(*)(int32_t,int32_t)>(&REUtil::composeFromSurrogates))},
-	{"createOptionString", "(I)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $method(static_cast<$String*(*)(int32_t)>(&REUtil::createOptionString))},
-	{"createRegex", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$RegularExpression*(*)($String*,$String*)>(&REUtil::createRegex)), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
-	{"decomposeToSurrogates", "(I)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $method(static_cast<$String*(*)(int32_t)>(&REUtil::decomposeToSurrogates))},
-	{"dumpString", "(Ljava/lang/String;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*)>(&REUtil::dumpString))},
-	{"getOptionValue", "(I)I", nullptr, $STATIC | $FINAL, $method(static_cast<int32_t(*)(int32_t)>(&REUtil::getOptionValue))},
-	{"isHighSurrogate", "(I)Z", nullptr, $STATIC | $FINAL, $method(static_cast<bool(*)(int32_t)>(&REUtil::isHighSurrogate))},
-	{"isLowSurrogate", "(I)Z", nullptr, $STATIC | $FINAL, $method(static_cast<bool(*)(int32_t)>(&REUtil::isLowSurrogate))},
-	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&REUtil::main))},
-	{"matches", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*,$String*)>(&REUtil::matches)), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
-	{"matches", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $method(static_cast<bool(*)($String*,$String*,$String*)>(&REUtil::matches)), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
-	{"parseOptions", "(Ljava/lang/String;)I", nullptr, $STATIC | $FINAL, $method(static_cast<int32_t(*)($String*)>(&REUtil::parseOptions)), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
-	{"quoteMeta", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*)>(&REUtil::quoteMeta))},
-	{"stripExtendedComment", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&REUtil::stripExtendedComment))},
-	{"substring", "(Ljava/text/CharacterIterator;II)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $method(static_cast<$String*(*)($CharacterIterator*,int32_t,int32_t)>(&REUtil::substring))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(REUtil, init$, void)},
+	{"composeFromSurrogates", "(II)I", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, composeFromSurrogates, int32_t, int32_t, int32_t)},
+	{"createOptionString", "(I)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, createOptionString, $String*, int32_t)},
+	{"createRegex", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression;", nullptr, $PUBLIC | $STATIC, $staticMethod(REUtil, createRegex, $RegularExpression*, $String*, $String*), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
+	{"decomposeToSurrogates", "(I)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, decomposeToSurrogates, $String*, int32_t)},
+	{"dumpString", "(Ljava/lang/String;)V", nullptr, $STATIC, $staticMethod(REUtil, dumpString, void, $String*)},
+	{"getOptionValue", "(I)I", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, getOptionValue, int32_t, int32_t)},
+	{"isHighSurrogate", "(I)Z", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, isHighSurrogate, bool, int32_t)},
+	{"isLowSurrogate", "(I)Z", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, isLowSurrogate, bool, int32_t)},
+	{"main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(REUtil, main, void, $StringArray*)},
+	{"matches", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(REUtil, matches, bool, $String*, $String*), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
+	{"matches", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $STATIC, $staticMethod(REUtil, matches, bool, $String*, $String*, $String*), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
+	{"parseOptions", "(Ljava/lang/String;)I", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, parseOptions, int32_t, $String*), "com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException"},
+	{"quoteMeta", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(REUtil, quoteMeta, $String*, $String*)},
+	{"stripExtendedComment", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(REUtil, stripExtendedComment, $String*, $String*)},
+	{"substring", "(Ljava/text/CharacterIterator;II)Ljava/lang/String;", nullptr, $STATIC | $FINAL, $staticMethod(REUtil, substring, $String*, $CharacterIterator*, int32_t, int32_t)},
 	{}
 };
 

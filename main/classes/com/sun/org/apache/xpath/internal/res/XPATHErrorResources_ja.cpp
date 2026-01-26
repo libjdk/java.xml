@@ -329,8 +329,8 @@ $FieldInfo _XPATHErrorResources_ja_FieldInfo_[] = {
 };
 
 $MethodInfo _XPATHErrorResources_ja_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPATHErrorResources_ja::*)()>(&XPATHErrorResources_ja::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPATHErrorResources_ja, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPATHErrorResources_ja, getContents, $ObjectArray2*)},
 	{}
 };
 

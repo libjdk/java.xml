@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ISTORE_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ISTORE::*)()>(&ISTORE::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ISTORE::*)(int32_t)>(&ISTORE::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(ISTORE, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(ISTORE, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ISTORE, accept, void, $Visitor*)},
 	{}
 };
 

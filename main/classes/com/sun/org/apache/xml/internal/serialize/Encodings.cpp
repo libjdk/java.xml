@@ -52,8 +52,8 @@ $FieldInfo _Encodings_FieldInfo_[] = {
 };
 
 $MethodInfo _Encodings_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Encodings::*)()>(&Encodings::init$))},
-	{"getEncodingInfo", "(Ljava/lang/String;Z)Lcom/sun/org/apache/xml/internal/serialize/EncodingInfo;", nullptr, $STATIC, $method(static_cast<$EncodingInfo*(*)($String*,bool)>(&Encodings::getEncodingInfo)), "java.io.UnsupportedEncodingException"},
+	{"<init>", "()V", nullptr, 0, $method(Encodings, init$, void)},
+	{"getEncodingInfo", "(Ljava/lang/String;Z)Lcom/sun/org/apache/xml/internal/serialize/EncodingInfo;", nullptr, $STATIC, $staticMethod(Encodings, getEncodingInfo, $EncodingInfo*, $String*, bool), "java.io.UnsupportedEncodingException"},
 	{}
 };
 

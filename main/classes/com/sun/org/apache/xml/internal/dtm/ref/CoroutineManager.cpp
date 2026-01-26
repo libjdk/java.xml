@@ -42,12 +42,12 @@ $FieldInfo _CoroutineManager_FieldInfo_[] = {
 };
 
 $MethodInfo _CoroutineManager_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CoroutineManager::*)()>(&CoroutineManager::init$))},
-	{"co_entry_pause", "(I)Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED, nullptr, "java.lang.NoSuchMethodException"},
-	{"co_exit", "(I)V", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"co_exit_to", "(Ljava/lang/Object;II)V", nullptr, $PUBLIC | $SYNCHRONIZED, nullptr, "java.lang.NoSuchMethodException"},
-	{"co_joinCoroutineSet", "(I)I", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"co_resume", "(Ljava/lang/Object;II)Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED, nullptr, "java.lang.NoSuchMethodException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CoroutineManager, init$, void)},
+	{"co_entry_pause", "(I)Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(CoroutineManager, co_entry_pause, $Object*, int32_t), "java.lang.NoSuchMethodException"},
+	{"co_exit", "(I)V", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(CoroutineManager, co_exit, void, int32_t)},
+	{"co_exit_to", "(Ljava/lang/Object;II)V", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(CoroutineManager, co_exit_to, void, Object$*, int32_t, int32_t), "java.lang.NoSuchMethodException"},
+	{"co_joinCoroutineSet", "(I)I", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(CoroutineManager, co_joinCoroutineSet, int32_t, int32_t)},
+	{"co_resume", "(Ljava/lang/Object;II)Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(CoroutineManager, co_resume, $Object*, Object$*, int32_t, int32_t), "java.lang.NoSuchMethodException"},
 	{}
 };
 

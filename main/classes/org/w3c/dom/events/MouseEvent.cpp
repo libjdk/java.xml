@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $EventTarget = ::org::w3c::dom::events::EventTarget;
+using $AbstractView = ::org::w3c::dom::views::AbstractView;
 
 namespace org {
 	namespace w3c {
@@ -13,17 +15,17 @@ namespace org {
 			namespace events {
 
 $MethodInfo _MouseEvent_MethodInfo_[] = {
-	{"getAltKey", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getButton", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getClientX", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getClientY", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCtrlKey", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMetaKey", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getRelatedTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getScreenX", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getScreenY", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getShiftKey", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"initMouseEvent", "(Ljava/lang/String;ZZLorg/w3c/dom/views/AbstractView;IIIIIZZZZSLorg/w3c/dom/events/EventTarget;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getAltKey", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getAltKey, bool)},
+	{"getButton", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getButton, int16_t)},
+	{"getClientX", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getClientX, int32_t)},
+	{"getClientY", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getClientY, int32_t)},
+	{"getCtrlKey", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getCtrlKey, bool)},
+	{"getMetaKey", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getMetaKey, bool)},
+	{"getRelatedTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getRelatedTarget, $EventTarget*)},
+	{"getScreenX", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getScreenX, int32_t)},
+	{"getScreenY", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getScreenY, int32_t)},
+	{"getShiftKey", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, getShiftKey, bool)},
+	{"initMouseEvent", "(Ljava/lang/String;ZZLorg/w3c/dom/views/AbstractView;IIIIIZZZZSLorg/w3c/dom/events/EventTarget;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(MouseEvent, initMouseEvent, void, $String*, bool, bool, $AbstractView*, int32_t, int32_t, int32_t, int32_t, int32_t, bool, bool, bool, bool, int16_t, $EventTarget*)},
 	{}
 };
 

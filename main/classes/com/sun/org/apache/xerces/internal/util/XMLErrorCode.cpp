@@ -21,10 +21,10 @@ $FieldInfo _XMLErrorCode_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLErrorCode_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLErrorCode::*)($String*,$String*)>(&XMLErrorCode::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"setValues", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLErrorCode::*)($String*,$String*)>(&XMLErrorCode::setValues))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLErrorCode, init$, void, $String*, $String*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XMLErrorCode, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XMLErrorCode, hashCode, int32_t)},
+	{"setValues", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLErrorCode, setValues, void, $String*, $String*)},
 	{}
 };
 

@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
+using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
 
 namespace org {
 	namespace w3c {
@@ -13,13 +15,13 @@ namespace org {
 			namespace traversal {
 
 $MethodInfo _NodeIterator_MethodInfo_[] = {
-	{"detach", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFilter", "()Lorg/w3c/dom/traversal/NodeFilter;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getRoot", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"nextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"previousNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"detach", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, detach, void)},
+	{"getExpandEntityReferences", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, getExpandEntityReferences, bool)},
+	{"getFilter", "()Lorg/w3c/dom/traversal/NodeFilter;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, getFilter, $NodeFilter*)},
+	{"getRoot", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, getRoot, $Node*)},
+	{"getWhatToShow", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, getWhatToShow, int32_t)},
+	{"nextNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, nextNode, $Node*), "org.w3c.dom.DOMException"},
+	{"previousNode", "()Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeIterator, previousNode, $Node*), "org.w3c.dom.DOMException"},
 	{}
 };
 

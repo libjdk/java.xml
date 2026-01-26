@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace com {
 	namespace sun {
@@ -15,7 +16,7 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _DOMSerializer_MethodInfo_[] = {
-	{"serialize", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "java.io.IOException"},
+	{"serialize", "(Lorg/w3c/dom/Node;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMSerializer, serialize, void, $Node*), "java.io.IOException"},
 	{}
 };
 

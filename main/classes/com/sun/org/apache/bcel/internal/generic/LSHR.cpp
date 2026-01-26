@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _LSHR_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(LSHR::*)()>(&LSHR::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(LSHR, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(LSHR, accept, void, $Visitor*)},
 	{}
 };
 

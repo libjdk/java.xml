@@ -38,7 +38,7 @@ $FieldInfo _XMLGrammarParser_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLGrammarParser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLGrammarParser::*)($SymbolTable*)>(&XMLGrammarParser::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PROTECTED, $method(XMLGrammarParser, init$, void, $SymbolTable*)},
 	{}
 };
 

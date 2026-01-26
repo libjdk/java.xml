@@ -34,9 +34,9 @@ namespace com {
 							namespace dom {
 
 $MethodInfo _SingleNodeCounter$DefaultSingleNodeCounter_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(static_cast<void(SingleNodeCounter$DefaultSingleNodeCounter::*)($Translet*,$DOM*,$DTMAxisIterator*)>(&SingleNodeCounter$DefaultSingleNodeCounter::init$))},
-	{"getCounter", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeCounter;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/Translet;Lcom/sun/org/apache/xalan/internal/xsltc/DOM;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)V", nullptr, $PUBLIC, $method(SingleNodeCounter$DefaultSingleNodeCounter, init$, void, $Translet*, $DOM*, $DTMAxisIterator*)},
+	{"getCounter", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SingleNodeCounter$DefaultSingleNodeCounter, getCounter, $String*)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/dom/NodeCounter;", nullptr, $PUBLIC, $virtualMethod(SingleNodeCounter$DefaultSingleNodeCounter, setStartNode, $NodeCounter*, int32_t)},
 	{}
 };
 

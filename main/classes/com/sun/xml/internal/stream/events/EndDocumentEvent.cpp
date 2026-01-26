@@ -41,8 +41,8 @@ $MethodInfo _EndDocumentEvent_MethodInfo_[] = {
 	{"*getLocation", "()Ljavax/xml/stream/Location;", nullptr, $PUBLIC},
 	{"*getSchemaType", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC},
 	{"*hashCode", "()I", nullptr, $PUBLIC | $NATIVE},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(EndDocumentEvent::*)()>(&EndDocumentEvent::init$))},
-	{"init", "()V", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(EndDocumentEvent, init$, void)},
+	{"init", "()V", nullptr, $PROTECTED, $virtualMethod(EndDocumentEvent, init, void)},
 	{"*isAttribute", "()Z", nullptr, $PUBLIC},
 	{"*isCharacters", "()Z", nullptr, $PUBLIC},
 	{"*isEndDocument", "()Z", nullptr, $PUBLIC},
@@ -52,9 +52,9 @@ $MethodInfo _EndDocumentEvent_MethodInfo_[] = {
 	{"*isProcessingInstruction", "()Z", nullptr, $PUBLIC},
 	{"*isStartDocument", "()Z", nullptr, $PUBLIC},
 	{"*isStartElement", "()Z", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(EndDocumentEvent, toString, $String*)},
 	{"*writeAsEncodedUnicode", "(Ljava/io/Writer;)V", nullptr, $PUBLIC},
-	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"writeAsEncodedUnicodeEx", "(Ljava/io/Writer;)V", nullptr, $PROTECTED, $virtualMethod(EndDocumentEvent, writeAsEncodedUnicodeEx, void, $Writer*), "java.io.IOException"},
 	{}
 };
 

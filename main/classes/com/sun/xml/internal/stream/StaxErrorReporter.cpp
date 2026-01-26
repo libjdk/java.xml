@@ -51,11 +51,11 @@ $FieldInfo _StaxErrorReporter_FieldInfo_[] = {
 };
 
 $MethodInfo _StaxErrorReporter_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(static_cast<void(StaxErrorReporter::*)($PropertyManager*)>(&StaxErrorReporter::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StaxErrorReporter::*)()>(&StaxErrorReporter::init$))},
-	{"convertToStaxLocation", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)Ljavax/xml/stream/Location;", nullptr, 0},
-	{"reportError", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;S)Ljava/lang/String;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $method(StaxErrorReporter, init$, void, $PropertyManager*)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StaxErrorReporter, init$, void)},
+	{"convertToStaxLocation", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;)Ljavax/xml/stream/Location;", nullptr, 0, $virtualMethod(StaxErrorReporter, convertToStaxLocation, $Location*, $XMLLocator*)},
+	{"reportError", "(Lcom/sun/org/apache/xerces/internal/xni/XMLLocator;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;S)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter, reportError, $String*, $XMLLocator*, $String*, $String*, $ObjectArray*, int16_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/impl/PropertyManager;)V", nullptr, $PUBLIC, $virtualMethod(StaxErrorReporter, reset, void, $PropertyManager*)},
 	{}
 };
 

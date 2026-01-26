@@ -24,9 +24,9 @@ $FieldInfo _SymbolHash$Entry_FieldInfo_[] = {
 };
 
 $MethodInfo _SymbolHash$Entry_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SymbolHash$Entry::*)()>(&SymbolHash$Entry::init$))},
-	{"<init>", "(Ljava/lang/Object;Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/util/SymbolHash$Entry;)V", nullptr, $PUBLIC, $method(static_cast<void(SymbolHash$Entry::*)(Object$*,Object$*,SymbolHash$Entry*)>(&SymbolHash$Entry::init$))},
-	{"makeClone", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash$Entry;", nullptr, $PUBLIC, $method(static_cast<SymbolHash$Entry*(SymbolHash$Entry::*)()>(&SymbolHash$Entry::makeClone))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SymbolHash$Entry, init$, void)},
+	{"<init>", "(Ljava/lang/Object;Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/util/SymbolHash$Entry;)V", nullptr, $PUBLIC, $method(SymbolHash$Entry, init$, void, Object$*, Object$*, SymbolHash$Entry*)},
+	{"makeClone", "()Lcom/sun/org/apache/xerces/internal/util/SymbolHash$Entry;", nullptr, $PUBLIC, $method(SymbolHash$Entry, makeClone, SymbolHash$Entry*)},
 	{}
 };
 

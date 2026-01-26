@@ -43,13 +43,13 @@ $FieldInfo _XSGrammarBucket_FieldInfo_[] = {
 };
 
 $MethodInfo _XSGrammarBucket_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSGrammarBucket::*)()>(&XSGrammarBucket::init$))},
-	{"getGrammar", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PUBLIC},
-	{"getGrammars", "()[Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PUBLIC},
-	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC},
-	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;Z)Z", nullptr, $PUBLIC},
-	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;ZZ)Z", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSGrammarBucket, init$, void)},
+	{"getGrammar", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PUBLIC, $virtualMethod(XSGrammarBucket, getGrammar, $SchemaGrammar*, $String*)},
+	{"getGrammars", "()[Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, $PUBLIC, $virtualMethod(XSGrammarBucket, getGrammars, $SchemaGrammarArray*)},
+	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)V", nullptr, $PUBLIC, $virtualMethod(XSGrammarBucket, putGrammar, void, $SchemaGrammar*)},
+	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;Z)Z", nullptr, $PUBLIC, $virtualMethod(XSGrammarBucket, putGrammar, bool, $SchemaGrammar*, bool)},
+	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;ZZ)Z", nullptr, $PUBLIC, $virtualMethod(XSGrammarBucket, putGrammar, bool, $SchemaGrammar*, bool, bool)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(XSGrammarBucket, reset, void)},
 	{}
 };
 

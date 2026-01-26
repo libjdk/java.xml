@@ -24,18 +24,18 @@ namespace com {
 								namespace util {
 
 $MethodInfo _XSObjectListImpl$EmptyIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XSObjectListImpl$EmptyIterator::*)()>(&XSObjectListImpl$EmptyIterator::init$))},
-	{"add", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC},
-	{"add", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"hasPrevious", "()Z", nullptr, $PUBLIC},
-	{"next", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC},
-	{"nextIndex", "()I", nullptr, $PUBLIC},
-	{"previous", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC},
-	{"previousIndex", "()I", nullptr, $PUBLIC},
-	{"remove", "()V", nullptr, $PUBLIC},
-	{"set", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC},
-	{"set", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
+	{"<init>", "()V", nullptr, 0, $method(XSObjectListImpl$EmptyIterator, init$, void)},
+	{"add", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, add, void, $XSObject*)},
+	{"add", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSObjectListImpl$EmptyIterator, add, void, Object$*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, hasNext, bool)},
+	{"hasPrevious", "()Z", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, hasPrevious, bool)},
+	{"next", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, next, $Object*)},
+	{"nextIndex", "()I", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, nextIndex, int32_t)},
+	{"previous", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, previous, $Object*)},
+	{"previousIndex", "()I", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, previousIndex, int32_t)},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, remove, void)},
+	{"set", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$EmptyIterator, set, void, $XSObject*)},
+	{"set", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSObjectListImpl$EmptyIterator, set, void, Object$*)},
 	{}
 };
 

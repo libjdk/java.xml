@@ -69,19 +69,19 @@ $FieldInfo _ExpandedNameTable_FieldInfo_[] = {
 };
 
 $MethodInfo _ExpandedNameTable_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExpandedNameTable::*)()>(&ExpandedNameTable::init$))},
-	{"getExpandedTypeID", "(Ljava/lang/String;Ljava/lang/String;I)I", nullptr, $PUBLIC},
-	{"getExpandedTypeID", "(Ljava/lang/String;Ljava/lang/String;IZ)I", nullptr, $PUBLIC},
-	{"getExpandedTypeID", "(I)I", nullptr, $PUBLIC},
-	{"getExtendedTypes", "()[Lcom/sun/org/apache/xml/internal/dtm/ref/ExtendedType;", nullptr, $PUBLIC},
-	{"getLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLocalNameID", "(I)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(ExpandedNameTable::*)(int32_t)>(&ExpandedNameTable::getLocalNameID))},
-	{"getNamespace", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceID", "(I)I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(ExpandedNameTable::*)(int32_t)>(&ExpandedNameTable::getNamespaceID))},
-	{"getSize", "()I", nullptr, $PUBLIC},
-	{"getType", "(I)S", nullptr, $PUBLIC | $FINAL, $method(static_cast<int16_t(ExpandedNameTable::*)(int32_t)>(&ExpandedNameTable::getType))},
-	{"initExtendedTypes", "()V", nullptr, $PRIVATE, $method(static_cast<void(ExpandedNameTable::*)()>(&ExpandedNameTable::initExtendedTypes))},
-	{"rehash", "()V", nullptr, $PRIVATE, $method(static_cast<void(ExpandedNameTable::*)()>(&ExpandedNameTable::rehash))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExpandedNameTable, init$, void)},
+	{"getExpandedTypeID", "(Ljava/lang/String;Ljava/lang/String;I)I", nullptr, $PUBLIC, $virtualMethod(ExpandedNameTable, getExpandedTypeID, int32_t, $String*, $String*, int32_t)},
+	{"getExpandedTypeID", "(Ljava/lang/String;Ljava/lang/String;IZ)I", nullptr, $PUBLIC, $virtualMethod(ExpandedNameTable, getExpandedTypeID, int32_t, $String*, $String*, int32_t, bool)},
+	{"getExpandedTypeID", "(I)I", nullptr, $PUBLIC, $virtualMethod(ExpandedNameTable, getExpandedTypeID, int32_t, int32_t)},
+	{"getExtendedTypes", "()[Lcom/sun/org/apache/xml/internal/dtm/ref/ExtendedType;", nullptr, $PUBLIC, $virtualMethod(ExpandedNameTable, getExtendedTypes, $ExtendedTypeArray*)},
+	{"getLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ExpandedNameTable, getLocalName, $String*, int32_t)},
+	{"getLocalNameID", "(I)I", nullptr, $PUBLIC | $FINAL, $method(ExpandedNameTable, getLocalNameID, int32_t, int32_t)},
+	{"getNamespace", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ExpandedNameTable, getNamespace, $String*, int32_t)},
+	{"getNamespaceID", "(I)I", nullptr, $PUBLIC | $FINAL, $method(ExpandedNameTable, getNamespaceID, int32_t, int32_t)},
+	{"getSize", "()I", nullptr, $PUBLIC, $virtualMethod(ExpandedNameTable, getSize, int32_t)},
+	{"getType", "(I)S", nullptr, $PUBLIC | $FINAL, $method(ExpandedNameTable, getType, int16_t, int32_t)},
+	{"initExtendedTypes", "()V", nullptr, $PRIVATE, $method(ExpandedNameTable, initExtendedTypes, void)},
+	{"rehash", "()V", nullptr, $PRIVATE, $method(ExpandedNameTable, rehash, void)},
 	{}
 };
 

@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ILOAD_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ILOAD::*)()>(&ILOAD::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ILOAD::*)(int32_t)>(&ILOAD::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(ILOAD, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(ILOAD, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ILOAD, accept, void, $Visitor*)},
 	{}
 };
 

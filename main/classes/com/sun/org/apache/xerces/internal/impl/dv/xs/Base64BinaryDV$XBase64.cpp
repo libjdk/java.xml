@@ -22,10 +22,10 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _Base64BinaryDV$XBase64_MethodInfo_[] = {
-	{"<init>", "([B)V", nullptr, $PUBLIC, $method(static_cast<void(Base64BinaryDV$XBase64::*)($bytes*)>(&Base64BinaryDV$XBase64::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "([B)V", nullptr, $PUBLIC, $method(Base64BinaryDV$XBase64, init$, void, $bytes*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(Base64BinaryDV$XBase64, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(Base64BinaryDV$XBase64, hashCode, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(Base64BinaryDV$XBase64, toString, $String*)},
 	{}
 };
 

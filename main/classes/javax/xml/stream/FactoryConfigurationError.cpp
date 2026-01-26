@@ -20,14 +20,14 @@ $FieldInfo _FactoryConfigurationError_FieldInfo_[] = {
 };
 
 $MethodInfo _FactoryConfigurationError_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FactoryConfigurationError::*)()>(&FactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryConfigurationError::*)($Exception*)>(&FactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/Exception;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryConfigurationError::*)($Exception*,$String*)>(&FactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryConfigurationError::*)($String*,$Exception*)>(&FactoryConfigurationError::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(FactoryConfigurationError::*)($String*)>(&FactoryConfigurationError::init$))},
-	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
-	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FactoryConfigurationError, init$, void)},
+	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(FactoryConfigurationError, init$, void, $Exception*)},
+	{"<init>", "(Ljava/lang/Exception;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(FactoryConfigurationError, init$, void, $Exception*, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(FactoryConfigurationError, init$, void, $String*, $Exception*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(FactoryConfigurationError, init$, void, $String*)},
+	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(FactoryConfigurationError, getCause, $Throwable*)},
+	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC, $virtualMethod(FactoryConfigurationError, getException, $Exception*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(FactoryConfigurationError, getMessage, $String*)},
 	{}
 };
 

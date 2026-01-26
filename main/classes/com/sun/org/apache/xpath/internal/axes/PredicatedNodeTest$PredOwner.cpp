@@ -30,9 +30,9 @@ $FieldInfo _PredicatedNodeTest$PredOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _PredicatedNodeTest$PredOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/PredicatedNodeTest;I)V", nullptr, 0, $method(static_cast<void(PredicatedNodeTest$PredOwner::*)($PredicatedNodeTest*,int32_t)>(&PredicatedNodeTest$PredOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/axes/PredicatedNodeTest;I)V", nullptr, 0, $method(PredicatedNodeTest$PredOwner, init$, void, $PredicatedNodeTest*, int32_t)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(PredicatedNodeTest$PredOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(PredicatedNodeTest$PredOwner, setExpression, void, $Expression*)},
 	{}
 };
 

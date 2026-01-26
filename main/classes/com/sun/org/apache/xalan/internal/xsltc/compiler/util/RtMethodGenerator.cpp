@@ -48,11 +48,11 @@ $FieldInfo _RtMethodGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _RtMethodGenerator_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(static_cast<void(RtMethodGenerator::*)(int32_t,$Type*,$TypeArray*,$StringArray*,$String*,$String*,$InstructionList*,$ConstantPoolGen*)>(&RtMethodGenerator::init$))},
-	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(RtMethodGenerator::*)()>(&RtMethodGenerator::getIteratorIndex))},
-	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"loadHandler", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $FINAL},
-	{"storeHandler", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "(ILcom/sun/org/apache/bcel/internal/generic/Type;[Lcom/sun/org/apache/bcel/internal/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/generic/InstructionList;Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)V", nullptr, $PUBLIC, $method(RtMethodGenerator, init$, void, int32_t, $Type*, $TypeArray*, $StringArray*, $String*, $String*, $InstructionList*, $ConstantPoolGen*)},
+	{"getIteratorIndex", "()I", nullptr, $PUBLIC, $method(RtMethodGenerator, getIteratorIndex, int32_t)},
+	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(RtMethodGenerator, getLocalIndex, int32_t, $String*)},
+	{"loadHandler", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $FINAL, $virtualMethod(RtMethodGenerator, loadHandler, $Instruction*)},
+	{"storeHandler", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $FINAL, $virtualMethod(RtMethodGenerator, storeHandler, $Instruction*)},
 	{}
 };
 

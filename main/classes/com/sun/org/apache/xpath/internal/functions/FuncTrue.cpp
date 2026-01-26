@@ -32,9 +32,9 @@ $FieldInfo _FuncTrue_FieldInfo_[] = {
 };
 
 $MethodInfo _FuncTrue_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FuncTrue::*)()>(&FuncTrue::init$))},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FuncTrue, init$, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(FuncTrue, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FuncTrue, fixupVariables, void, $List*, int32_t)},
 	{}
 };
 

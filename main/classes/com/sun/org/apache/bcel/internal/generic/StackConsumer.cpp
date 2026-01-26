@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.h>
 #include <jcpp.h>
 
+using $ConstantPoolGen = ::com::sun::org::apache::bcel::internal::generic::ConstantPoolGen;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _StackConsumer_MethodInfo_[] = {
-	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC | $ABSTRACT},
+	{"consumeStack", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StackConsumer, consumeStack, int32_t, $ConstantPoolGen*)},
 	{}
 };
 

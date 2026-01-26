@@ -167,11 +167,11 @@ $FieldInfo _Keywords_FieldInfo_[] = {
 };
 
 $MethodInfo _Keywords_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Keywords::*)()>(&Keywords::init$))},
-	{"getAxisName", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $method(static_cast<$Integer*(*)($String*)>(&Keywords::getAxisName))},
-	{"getKeyWord", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $method(static_cast<$Integer*(*)($String*)>(&Keywords::getKeyWord))},
-	{"getNodeType", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $method(static_cast<$Integer*(*)($String*)>(&Keywords::getNodeType))},
-	{"lookupNodeTest", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $method(static_cast<$Integer*(*)($String*)>(&Keywords::lookupNodeTest))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Keywords, init$, void)},
+	{"getAxisName", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $staticMethod(Keywords, getAxisName, $Integer*, $String*)},
+	{"getKeyWord", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $staticMethod(Keywords, getKeyWord, $Integer*, $String*)},
+	{"getNodeType", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $staticMethod(Keywords, getNodeType, $Integer*, $String*)},
+	{"lookupNodeTest", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, $STATIC, $staticMethod(Keywords, lookupNodeTest, $Integer*, $String*)},
 	{}
 };
 

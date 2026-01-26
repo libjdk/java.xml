@@ -53,7 +53,7 @@ $FieldInfo _DOMException_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMException_MethodInfo_[] = {
-	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMException::*)(int16_t,$String*)>(&DOMException::init$))},
+	{"<init>", "(SLjava/lang/String;)V", nullptr, $PUBLIC, $method(DOMException, init$, void, int16_t, $String*)},
 	{}
 };
 

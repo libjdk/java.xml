@@ -74,20 +74,20 @@ $FieldInfo _Text_FieldInfo_[] = {
 };
 
 $MethodInfo _Text_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Text::*)()>(&Text::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(Text::*)($String*)>(&Text::init$))},
-	{"canLoadAsArrayOffsetLength", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(Text::*)()>(&Text::canLoadAsArrayOffsetLength))},
-	{"contextDependent", "()Z", nullptr, $PROTECTED},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"getText", "()Ljava/lang/String;", nullptr, $PROTECTED, $method(static_cast<$String*(Text::*)()>(&Text::getText))},
-	{"ignore", "()V", nullptr, $PUBLIC, $method(static_cast<void(Text::*)()>(&Text::ignore))},
-	{"isIgnore", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(Text::*)()>(&Text::isIgnore))},
-	{"isTextElement", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(Text::*)()>(&Text::isTextElement))},
-	{"isWhitespace", "(C)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)(char16_t)>(&Text::isWhitespace))},
-	{"loadAsArrayOffsetLength", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(static_cast<void(Text::*)($ClassGenerator*,$MethodGenerator*)>(&Text::loadAsArrayOffsetLength))},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"setText", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(Text::*)($String*)>(&Text::setText))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Text, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(Text, init$, void, $String*)},
+	{"canLoadAsArrayOffsetLength", "()Z", nullptr, $PUBLIC, $method(Text, canLoadAsArrayOffsetLength, bool)},
+	{"contextDependent", "()Z", nullptr, $PROTECTED, $virtualMethod(Text, contextDependent, bool)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(Text, display, void, int32_t)},
+	{"getText", "()Ljava/lang/String;", nullptr, $PROTECTED, $method(Text, getText, $String*)},
+	{"ignore", "()V", nullptr, $PUBLIC, $method(Text, ignore, void)},
+	{"isIgnore", "()Z", nullptr, $PUBLIC, $method(Text, isIgnore, bool)},
+	{"isTextElement", "()Z", nullptr, $PUBLIC, $method(Text, isTextElement, bool)},
+	{"isWhitespace", "(C)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(Text, isWhitespace, bool, char16_t)},
+	{"loadAsArrayOffsetLength", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $method(Text, loadAsArrayOffsetLength, void, $ClassGenerator*, $MethodGenerator*)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(Text, parseContents, void, $Parser*)},
+	{"setText", "(Ljava/lang/String;)V", nullptr, $PROTECTED, $method(Text, setText, void, $String*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(Text, translate, void, $ClassGenerator*, $MethodGenerator*)},
 	{}
 };
 

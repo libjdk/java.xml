@@ -17,9 +17,9 @@ namespace com {
 							namespace ref {
 
 $MethodInfo _DTMNodeListBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DTMNodeListBase::*)()>(&DTMNodeListBase::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DTMNodeListBase, init$, void)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(DTMNodeListBase, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(DTMNodeListBase, item, $Node*, int32_t)},
 	{}
 };
 

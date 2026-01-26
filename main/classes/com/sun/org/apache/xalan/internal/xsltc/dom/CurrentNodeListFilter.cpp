@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xml/internal/dtm/DTMAxisIterator.h>
 #include <jcpp.h>
 
+using $AbstractTranslet = ::com::sun::org::apache::xalan::internal::xsltc::runtime::AbstractTranslet;
+using $DTMAxisIterator = ::com::sun::org::apache::xml::internal::dtm::DTMAxisIterator;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,7 +19,7 @@ namespace com {
 							namespace dom {
 
 $MethodInfo _CurrentNodeListFilter_MethodInfo_[] = {
-	{"test", "(IIIILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"test", "(IIIILcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CurrentNodeListFilter, test, bool, int32_t, int32_t, int32_t, int32_t, $AbstractTranslet*, $DTMAxisIterator*)},
 	{}
 };
 

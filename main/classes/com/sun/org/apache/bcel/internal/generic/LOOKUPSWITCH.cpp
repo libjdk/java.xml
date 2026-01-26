@@ -35,11 +35,11 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _LOOKUPSWITCH_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(LOOKUPSWITCH::*)()>(&LOOKUPSWITCH::init$))},
-	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(LOOKUPSWITCH::*)($ints*,$InstructionHandleArray*,$InstructionHandle*)>(&LOOKUPSWITCH::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, 0, $method(LOOKUPSWITCH, init$, void)},
+	{"<init>", "([I[Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC, $method(LOOKUPSWITCH, init$, void, $ints*, $InstructionHandleArray*, $InstructionHandle*)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(LOOKUPSWITCH, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(LOOKUPSWITCH, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, $virtualMethod(LOOKUPSWITCH, initFromFile, void, $ByteSequence*, bool), "java.io.IOException"},
 	{}
 };
 

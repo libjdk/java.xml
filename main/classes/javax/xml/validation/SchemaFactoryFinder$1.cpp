@@ -25,8 +25,8 @@ $FieldInfo _SchemaFactoryFinder$1_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaFactoryFinder$1_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;)V", "()V", 0, $method(static_cast<void(SchemaFactoryFinder$1::*)($SchemaFactoryFinder*,$SchemaFactory*,$String*)>(&SchemaFactoryFinder$1::init$))},
-	{"run", "()Ljava/lang/Boolean;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/validation/SchemaFactoryFinder;Ljavax/xml/validation/SchemaFactory;Ljava/lang/String;)V", "()V", 0, $method(SchemaFactoryFinder$1, init$, void, $SchemaFactoryFinder*, $SchemaFactory*, $String*)},
+	{"run", "()Ljava/lang/Boolean;", nullptr, $PUBLIC, $virtualMethod(SchemaFactoryFinder$1, run, $Object*)},
 	{}
 };
 

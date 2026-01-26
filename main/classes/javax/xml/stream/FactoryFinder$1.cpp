@@ -26,8 +26,8 @@ $FieldInfo _FactoryFinder$1_FieldInfo_[] = {
 };
 
 $MethodInfo _FactoryFinder$1_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/ClassLoader;Ljava/lang/Class;)V", "()V", 0, $method(static_cast<void(FactoryFinder$1::*)($ClassLoader*,$Class*)>(&FactoryFinder$1::init$))},
-	{"run", "()Ljava/lang/Object;", "()TT;", $PUBLIC},
+	{"<init>", "(Ljava/lang/ClassLoader;Ljava/lang/Class;)V", "()V", 0, $method(FactoryFinder$1, init$, void, $ClassLoader*, $Class*)},
+	{"run", "()Ljava/lang/Object;", "()TT;", $PUBLIC, $virtualMethod(FactoryFinder$1, run, $Object*)},
 	{}
 };
 

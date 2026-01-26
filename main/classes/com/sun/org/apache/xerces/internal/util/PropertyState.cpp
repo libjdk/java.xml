@@ -35,10 +35,10 @@ $FieldInfo _PropertyState_FieldInfo_[] = {
 };
 
 $MethodInfo _PropertyState_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(PropertyState::*)($Status*,Object$*)>(&PropertyState::init$))},
-	{"is", "(Ljava/lang/Object;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC | $STATIC, $method(static_cast<PropertyState*(*)(Object$*)>(&PropertyState::is))},
-	{"isExceptional", "()Z", nullptr, $PUBLIC},
-	{"of", "(Lcom/sun/org/apache/xerces/internal/util/Status;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC | $STATIC, $method(static_cast<PropertyState*(*)($Status*)>(&PropertyState::of))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/Status;Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(PropertyState, init$, void, $Status*, Object$*)},
+	{"is", "(Ljava/lang/Object;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC | $STATIC, $staticMethod(PropertyState, is, PropertyState*, Object$*)},
+	{"isExceptional", "()Z", nullptr, $PUBLIC, $virtualMethod(PropertyState, isExceptional, bool)},
+	{"of", "(Lcom/sun/org/apache/xerces/internal/util/Status;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC | $STATIC, $staticMethod(PropertyState, of, PropertyState*, $Status*)},
 	{}
 };
 

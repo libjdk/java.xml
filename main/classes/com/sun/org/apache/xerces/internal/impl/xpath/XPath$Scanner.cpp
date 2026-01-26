@@ -159,11 +159,11 @@ $FieldInfo _XPath$Scanner_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath$Scanner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Scanner::*)($SymbolTable*)>(&XPath$Scanner::init$))},
-	{"addToken", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;I)V", nullptr, $PROTECTED, nullptr, "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"scanExpr", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;Ljava/lang/String;II)Z", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"scanNCName", "(Ljava/lang/String;II)I", nullptr, 0},
-	{"scanNumber", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;Ljava/lang/String;II)I", nullptr, $PRIVATE, $method(static_cast<int32_t(XPath$Scanner::*)($XPath$Tokens*,$String*,int32_t,int32_t)>(&XPath$Scanner::scanNumber))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(XPath$Scanner, init$, void, $SymbolTable*)},
+	{"addToken", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;I)V", nullptr, $PROTECTED, $virtualMethod(XPath$Scanner, addToken, void, $XPath$Tokens*, int32_t), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"scanExpr", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;Ljava/lang/String;II)Z", nullptr, $PUBLIC, $virtualMethod(XPath$Scanner, scanExpr, bool, $SymbolTable*, $XPath$Tokens*, $String*, int32_t, int32_t), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"scanNCName", "(Ljava/lang/String;II)I", nullptr, 0, $virtualMethod(XPath$Scanner, scanNCName, int32_t, $String*, int32_t, int32_t)},
+	{"scanNumber", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Tokens;Ljava/lang/String;II)I", nullptr, $PRIVATE, $method(XPath$Scanner, scanNumber, int32_t, $XPath$Tokens*, $String*, int32_t, int32_t)},
 	{}
 };
 

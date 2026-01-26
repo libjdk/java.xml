@@ -15,7 +15,12 @@ using $TransformerFactoryImpl = ::com::sun::org::apache::xalan::internal::xsltc:
 using $ClassInfo = ::java::lang::ClassInfo;
 using $ClassLoader = ::java::lang::ClassLoader;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $ErrorListener = ::javax::xml::transform::ErrorListener;
 using $FactoryFinder = ::javax::xml::transform::FactoryFinder;
+using $Source = ::javax::xml::transform::Source;
+using $Templates = ::javax::xml::transform::Templates;
+using $Transformer = ::javax::xml::transform::Transformer;
+using $URIResolver = ::javax::xml::transform::URIResolver;
 using $SAXTransformerFactory = ::javax::xml::transform::sax::SAXTransformerFactory;
 
 namespace javax {
@@ -23,22 +28,22 @@ namespace javax {
 		namespace transform {
 
 $MethodInfo _TransformerFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(TransformerFactory::*)()>(&TransformerFactory::init$))},
-	{"getAssociatedStylesheet", "(Ljavax/xml/transform/Source;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getURIResolver", "()Ljavax/xml/transform/URIResolver;", nullptr, $PUBLIC | $ABSTRACT},
-	{"newDefaultInstance", "()Ljavax/xml/transform/TransformerFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<TransformerFactory*(*)()>(&TransformerFactory::newDefaultInstance))},
-	{"newInstance", "()Ljavax/xml/transform/TransformerFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<TransformerFactory*(*)()>(&TransformerFactory::newInstance)), "javax.xml.transform.TransformerFactoryConfigurationError"},
-	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/transform/TransformerFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<TransformerFactory*(*)($String*,$ClassLoader*)>(&TransformerFactory::newInstance)), "javax.xml.transform.TransformerFactoryConfigurationError"},
-	{"newTemplates", "(Ljavax/xml/transform/Source;)Ljavax/xml/transform/Templates;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"newTransformer", "(Ljavax/xml/transform/Source;)Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"newTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerConfigurationException"},
-	{"setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(TransformerFactory, init$, void)},
+	{"getAssociatedStylesheet", "(Ljavax/xml/transform/Source;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, getAssociatedStylesheet, $Source*, $Source*, $String*, $String*, $String*), "javax.xml.transform.TransformerConfigurationException"},
+	{"getAttribute", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, getAttribute, $Object*, $String*)},
+	{"getErrorListener", "()Ljavax/xml/transform/ErrorListener;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, getErrorListener, $ErrorListener*)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, getFeature, bool, $String*)},
+	{"getURIResolver", "()Ljavax/xml/transform/URIResolver;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, getURIResolver, $URIResolver*)},
+	{"newDefaultInstance", "()Ljavax/xml/transform/TransformerFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(TransformerFactory, newDefaultInstance, TransformerFactory*)},
+	{"newInstance", "()Ljavax/xml/transform/TransformerFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(TransformerFactory, newInstance, TransformerFactory*), "javax.xml.transform.TransformerFactoryConfigurationError"},
+	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/transform/TransformerFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(TransformerFactory, newInstance, TransformerFactory*, $String*, $ClassLoader*), "javax.xml.transform.TransformerFactoryConfigurationError"},
+	{"newTemplates", "(Ljavax/xml/transform/Source;)Ljavax/xml/transform/Templates;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, newTemplates, $Templates*, $Source*), "javax.xml.transform.TransformerConfigurationException"},
+	{"newTransformer", "(Ljavax/xml/transform/Source;)Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, newTransformer, $Transformer*, $Source*), "javax.xml.transform.TransformerConfigurationException"},
+	{"newTransformer", "()Ljavax/xml/transform/Transformer;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, newTransformer, $Transformer*), "javax.xml.transform.TransformerConfigurationException"},
+	{"setAttribute", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, setAttribute, void, $String*, Object$*)},
+	{"setErrorListener", "(Ljavax/xml/transform/ErrorListener;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, setErrorListener, void, $ErrorListener*)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, setFeature, void, $String*, bool), "javax.xml.transform.TransformerConfigurationException"},
+	{"setURIResolver", "(Ljavax/xml/transform/URIResolver;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(TransformerFactory, setURIResolver, void, $URIResolver*)},
 	{}
 };
 

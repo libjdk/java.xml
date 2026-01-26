@@ -10,6 +10,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $EventTarget = ::org::w3c::dom::events::EventTarget;
 
 namespace org {
 	namespace w3c {
@@ -24,16 +25,16 @@ $FieldInfo _Event_FieldInfo_[] = {
 };
 
 $MethodInfo _Event_MethodInfo_[] = {
-	{"getBubbles", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCancelable", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getCurrentTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getEventPhase", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTimeStamp", "()J", nullptr, $PUBLIC | $ABSTRACT},
-	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"initEvent", "(Ljava/lang/String;ZZ)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"preventDefault", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"stopPropagation", "()V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getBubbles", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, getBubbles, bool)},
+	{"getCancelable", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, getCancelable, bool)},
+	{"getCurrentTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, getCurrentTarget, $EventTarget*)},
+	{"getEventPhase", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, getEventPhase, int16_t)},
+	{"getTarget", "()Lorg/w3c/dom/events/EventTarget;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, getTarget, $EventTarget*)},
+	{"getTimeStamp", "()J", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, getTimeStamp, int64_t)},
+	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, getType, $String*)},
+	{"initEvent", "(Ljava/lang/String;ZZ)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, initEvent, void, $String*, bool, bool)},
+	{"preventDefault", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, preventDefault, void)},
+	{"stopPropagation", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Event, stopPropagation, void)},
 	{}
 };
 

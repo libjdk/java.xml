@@ -30,7 +30,7 @@ $FieldInfo _XPathConstants_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathConstants_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(XPathConstants::*)()>(&XPathConstants::init$))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(XPathConstants, init$, void)},
 	{}
 };
 

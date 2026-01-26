@@ -81,17 +81,17 @@ $FieldInfo _XMLGrammarCachingConfiguration_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLGrammarCachingConfiguration_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLGrammarCachingConfiguration::*)()>(&XMLGrammarCachingConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLGrammarCachingConfiguration::*)($SymbolTable*)>(&XMLGrammarCachingConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLGrammarCachingConfiguration::*)($SymbolTable*,$XMLGrammarPool*)>(&XMLGrammarCachingConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLGrammarCachingConfiguration::*)($SymbolTable*,$XMLGrammarPool*,$XMLComponentManager*)>(&XMLGrammarCachingConfiguration::init$))},
-	{"clearGrammarPool", "()V", nullptr, $PUBLIC},
-	{"lockGrammarPool", "()V", nullptr, $PUBLIC},
-	{"parseDTD", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;", nullptr, 0, nullptr, "java.io.IOException"},
-	{"parseGrammar", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
-	{"parseGrammar", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
-	{"parseXMLSchema", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, 0, nullptr, "java.io.IOException"},
-	{"unlockGrammarPool", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLGrammarCachingConfiguration, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(XMLGrammarCachingConfiguration, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(XMLGrammarCachingConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(XMLGrammarCachingConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*, $XMLComponentManager*)},
+	{"clearGrammarPool", "()V", nullptr, $PUBLIC, $virtualMethod(XMLGrammarCachingConfiguration, clearGrammarPool, void)},
+	{"lockGrammarPool", "()V", nullptr, $PUBLIC, $virtualMethod(XMLGrammarCachingConfiguration, lockGrammarPool, void)},
+	{"parseDTD", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Lcom/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar;", nullptr, 0, $virtualMethod(XMLGrammarCachingConfiguration, parseDTD, $DTDGrammar*, $XMLInputSource*), "java.io.IOException"},
+	{"parseGrammar", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XMLGrammarCachingConfiguration, parseGrammar, $Grammar*, $String*, $String*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"parseGrammar", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XMLGrammarCachingConfiguration, parseGrammar, $Grammar*, $String*, $XMLInputSource*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"parseXMLSchema", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;", nullptr, 0, $virtualMethod(XMLGrammarCachingConfiguration, parseXMLSchema, $SchemaGrammar*, $XMLInputSource*), "java.io.IOException"},
+	{"unlockGrammarPool", "()V", nullptr, $PUBLIC, $virtualMethod(XMLGrammarCachingConfiguration, unlockGrammarPool, void)},
 	{}
 };
 

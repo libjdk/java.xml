@@ -36,7 +36,7 @@ $FieldInfo _OutputKeys_FieldInfo_[] = {
 };
 
 $MethodInfo _OutputKeys_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(OutputKeys::*)()>(&OutputKeys::init$))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(OutputKeys, init$, void)},
 	{}
 };
 

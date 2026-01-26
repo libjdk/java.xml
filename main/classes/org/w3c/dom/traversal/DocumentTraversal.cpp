@@ -8,6 +8,10 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
+using $NodeFilter = ::org::w3c::dom::traversal::NodeFilter;
+using $NodeIterator = ::org::w3c::dom::traversal::NodeIterator;
+using $TreeWalker = ::org::w3c::dom::traversal::TreeWalker;
 
 namespace org {
 	namespace w3c {
@@ -15,8 +19,8 @@ namespace org {
 			namespace traversal {
 
 $MethodInfo _DocumentTraversal_MethodInfo_[] = {
-	{"createNodeIterator", "(Lorg/w3c/dom/Node;ILorg/w3c/dom/traversal/NodeFilter;Z)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"createTreeWalker", "(Lorg/w3c/dom/Node;ILorg/w3c/dom/traversal/NodeFilter;Z)Lorg/w3c/dom/traversal/TreeWalker;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"createNodeIterator", "(Lorg/w3c/dom/Node;ILorg/w3c/dom/traversal/NodeFilter;Z)Lorg/w3c/dom/traversal/NodeIterator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentTraversal, createNodeIterator, $NodeIterator*, $Node*, int32_t, $NodeFilter*, bool), "org.w3c.dom.DOMException"},
+	{"createTreeWalker", "(Lorg/w3c/dom/Node;ILorg/w3c/dom/traversal/NodeFilter;Z)Lorg/w3c/dom/traversal/TreeWalker;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentTraversal, createTreeWalker, $TreeWalker*, $Node*, int32_t, $NodeFilter*, bool), "org.w3c.dom.DOMException"},
 	{}
 };
 

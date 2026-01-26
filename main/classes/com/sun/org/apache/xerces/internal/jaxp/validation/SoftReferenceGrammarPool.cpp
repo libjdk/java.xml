@@ -46,22 +46,22 @@ $FieldInfo _SoftReferenceGrammarPool_FieldInfo_[] = {
 };
 
 $MethodInfo _SoftReferenceGrammarPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SoftReferenceGrammarPool::*)()>(&SoftReferenceGrammarPool::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(SoftReferenceGrammarPool::*)(int32_t)>(&SoftReferenceGrammarPool::init$))},
-	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC},
-	{"clean", "()V", nullptr, $PRIVATE, $method(static_cast<void(SoftReferenceGrammarPool::*)()>(&SoftReferenceGrammarPool::clean))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"containsGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC, $method(static_cast<bool(SoftReferenceGrammarPool::*)($XMLGrammarDescription*)>(&SoftReferenceGrammarPool::containsGrammar))},
-	{"equals", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC, $method(static_cast<bool(SoftReferenceGrammarPool::*)($XMLGrammarDescription*,$XMLGrammarDescription*)>(&SoftReferenceGrammarPool::equals))},
-	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $method(static_cast<$Grammar*(SoftReferenceGrammarPool::*)($XMLGrammarDescription*)>(&SoftReferenceGrammarPool::getGrammar))},
-	{"hashCode", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)I", nullptr, $PUBLIC, $method(static_cast<int32_t(SoftReferenceGrammarPool::*)($XMLGrammarDescription*)>(&SoftReferenceGrammarPool::hashCode))},
-	{"lockPool", "()V", nullptr, $PUBLIC},
-	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $method(static_cast<void(SoftReferenceGrammarPool::*)($Grammar*)>(&SoftReferenceGrammarPool::putGrammar))},
-	{"removeEntry", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool$Entry;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PRIVATE, $method(static_cast<$Grammar*(SoftReferenceGrammarPool::*)($SoftReferenceGrammarPool$Entry*)>(&SoftReferenceGrammarPool::removeEntry))},
-	{"removeGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $method(static_cast<$Grammar*(SoftReferenceGrammarPool::*)($XMLGrammarDescription*)>(&SoftReferenceGrammarPool::removeGrammar))},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"unlockPool", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, init$, void, int32_t)},
+	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $virtualMethod(SoftReferenceGrammarPool, cacheGrammars, void, $String*, $GrammarArray*)},
+	{"clean", "()V", nullptr, $PRIVATE, $method(SoftReferenceGrammarPool, clean, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(SoftReferenceGrammarPool, clear, void)},
+	{"containsGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, containsGrammar, bool, $XMLGrammarDescription*)},
+	{"equals", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Z", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, equals, bool, $XMLGrammarDescription*, $XMLGrammarDescription*)},
+	{"getGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, getGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"hashCode", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)I", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, hashCode, int32_t, $XMLGrammarDescription*)},
+	{"lockPool", "()V", nullptr, $PUBLIC, $virtualMethod(SoftReferenceGrammarPool, lockPool, void)},
+	{"putGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, putGrammar, void, $Grammar*)},
+	{"removeEntry", "(Lcom/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool$Entry;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PRIVATE, $method(SoftReferenceGrammarPool, removeEntry, $Grammar*, $SoftReferenceGrammarPool$Entry*)},
+	{"removeGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $method(SoftReferenceGrammarPool, removeGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(SoftReferenceGrammarPool, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(SoftReferenceGrammarPool, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
+	{"unlockPool", "()V", nullptr, $PUBLIC, $virtualMethod(SoftReferenceGrammarPool, unlockPool, void)},
 	{}
 };
 

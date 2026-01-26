@@ -25,8 +25,8 @@ $FieldInfo _URI$MalformedURIException_FieldInfo_[] = {
 };
 
 $MethodInfo _URI$MalformedURIException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(URI$MalformedURIException::*)()>(&URI$MalformedURIException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(URI$MalformedURIException::*)($String*)>(&URI$MalformedURIException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(URI$MalformedURIException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(URI$MalformedURIException, init$, void, $String*)},
 	{}
 };
 

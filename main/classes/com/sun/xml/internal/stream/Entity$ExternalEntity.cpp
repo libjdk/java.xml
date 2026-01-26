@@ -24,13 +24,13 @@ $FieldInfo _Entity$ExternalEntity_FieldInfo_[] = {
 };
 
 $MethodInfo _Entity$ExternalEntity_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Entity$ExternalEntity::*)()>(&Entity$ExternalEntity::init$))},
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(static_cast<void(Entity$ExternalEntity::*)($String*,$XMLResourceIdentifier*,$String*,bool)>(&Entity$ExternalEntity::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"isExternal", "()Z", nullptr, $PUBLIC | $FINAL},
-	{"isUnparsed", "()Z", nullptr, $PUBLIC | $FINAL},
-	{"setValues", "(Lcom/sun/xml/internal/stream/Entity;)V", nullptr, $PUBLIC},
-	{"setValues", "(Lcom/sun/xml/internal/stream/Entity$ExternalEntity;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Entity$ExternalEntity, init$, void)},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $method(Entity$ExternalEntity, init$, void, $String*, $XMLResourceIdentifier*, $String*, bool)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(Entity$ExternalEntity, clear, void)},
+	{"isExternal", "()Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(Entity$ExternalEntity, isExternal, bool)},
+	{"isUnparsed", "()Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(Entity$ExternalEntity, isUnparsed, bool)},
+	{"setValues", "(Lcom/sun/xml/internal/stream/Entity;)V", nullptr, $PUBLIC, $virtualMethod(Entity$ExternalEntity, setValues, void, $Entity*)},
+	{"setValues", "(Lcom/sun/xml/internal/stream/Entity$ExternalEntity;)V", nullptr, $PUBLIC, $virtualMethod(Entity$ExternalEntity, setValues, void, Entity$ExternalEntity*)},
 	{}
 };
 

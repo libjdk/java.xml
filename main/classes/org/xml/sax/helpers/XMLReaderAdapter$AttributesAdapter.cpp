@@ -23,14 +23,14 @@ $FieldInfo _XMLReaderAdapter$AttributesAdapter_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLReaderAdapter$AttributesAdapter_MethodInfo_[] = {
-	{"<init>", "(Lorg/xml/sax/helpers/XMLReaderAdapter;)V", nullptr, 0, $method(static_cast<void(XMLReaderAdapter$AttributesAdapter::*)($XMLReaderAdapter*)>(&XMLReaderAdapter$AttributesAdapter::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setAttributes", "(Lorg/xml/sax/Attributes;)V", nullptr, 0, $method(static_cast<void(XMLReaderAdapter$AttributesAdapter::*)($Attributes*)>(&XMLReaderAdapter$AttributesAdapter::setAttributes))},
+	{"<init>", "(Lorg/xml/sax/helpers/XMLReaderAdapter;)V", nullptr, 0, $method(XMLReaderAdapter$AttributesAdapter, init$, void, $XMLReaderAdapter*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(XMLReaderAdapter$AttributesAdapter, getLength, int32_t)},
+	{"getName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLReaderAdapter$AttributesAdapter, getName, $String*, int32_t)},
+	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLReaderAdapter$AttributesAdapter, getType, $String*, int32_t)},
+	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLReaderAdapter$AttributesAdapter, getType, $String*, $String*)},
+	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLReaderAdapter$AttributesAdapter, getValue, $String*, int32_t)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLReaderAdapter$AttributesAdapter, getValue, $String*, $String*)},
+	{"setAttributes", "(Lorg/xml/sax/Attributes;)V", nullptr, 0, $method(XMLReaderAdapter$AttributesAdapter, setAttributes, void, $Attributes*)},
 	{}
 };
 

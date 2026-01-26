@@ -36,9 +36,9 @@ namespace com {
 								namespace identity {
 
 $MethodInfo _Field$XPath_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(Field$XPath::*)($String*,$SymbolTable*,$NamespaceContext*)>(&Field$XPath::init$)), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
-	{"fixupXPath", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*)>(&Field$XPath::fixupXPath))},
-	{"fixupXPath2", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)($String*,int32_t,int32_t)>(&Field$XPath::fixupXPath2))},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(Field$XPath, init$, void, $String*, $SymbolTable*, $NamespaceContext*), "com.sun.org.apache.xerces.internal.impl.xpath.XPathException"},
+	{"fixupXPath", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(Field$XPath, fixupXPath, $String*, $String*)},
+	{"fixupXPath2", "(Ljava/lang/String;II)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(Field$XPath, fixupXPath2, $String*, $String*, int32_t, int32_t)},
 	{}
 };
 

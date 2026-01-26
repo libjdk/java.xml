@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _FSTORE_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(FSTORE::*)()>(&FSTORE::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(FSTORE::*)(int32_t)>(&FSTORE::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(FSTORE, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(FSTORE, init$, void, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(FSTORE, accept, void, $Visitor*)},
 	{}
 };
 

@@ -27,11 +27,11 @@ $FieldInfo _DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser_FieldInfo
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser::init$))},
-	{"first", "(I)I", nullptr, $PUBLIC},
-	{"first", "(II)I", nullptr, $PUBLIC},
-	{"getFirstPotential", "(I)I", nullptr, $PROTECTED},
-	{"getSubtreeRoot", "(I)I", nullptr, $PROTECTED},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"first", "(I)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser, first, int32_t, int32_t)},
+	{"first", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser, first, int32_t, int32_t, int32_t)},
+	{"getFirstPotential", "(I)I", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser, getFirstPotential, int32_t, int32_t)},
+	{"getSubtreeRoot", "(I)I", nullptr, $PROTECTED, $virtualMethod(DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser, getSubtreeRoot, int32_t, int32_t)},
 	{}
 };
 

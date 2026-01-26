@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _INEG_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(INEG::*)()>(&INEG::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(INEG, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(INEG, accept, void, $Visitor*)},
 	{}
 };
 

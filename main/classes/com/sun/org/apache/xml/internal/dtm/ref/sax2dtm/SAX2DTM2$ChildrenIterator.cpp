@@ -43,9 +43,9 @@ $FieldInfo _SAX2DTM2$ChildrenIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2DTM2$ChildrenIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2DTM2$ChildrenIterator::*)($SAX2DTM2*)>(&SAX2DTM2$ChildrenIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;)V", nullptr, $PUBLIC, $method(SAX2DTM2$ChildrenIterator, init$, void, $SAX2DTM2*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$ChildrenIterator, next, int32_t)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$ChildrenIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

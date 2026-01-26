@@ -34,8 +34,8 @@ $FieldInfo _DefaultValidationErrorHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _DefaultValidationErrorHandler_MethodInfo_[] = {
-	{"<init>", "(Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(DefaultValidationErrorHandler::*)($Locale*)>(&DefaultValidationErrorHandler::init$))},
-	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException"},
+	{"<init>", "(Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(DefaultValidationErrorHandler, init$, void, $Locale*)},
+	{"error", "(Lorg/xml/sax/SAXParseException;)V", nullptr, $PUBLIC, $virtualMethod(DefaultValidationErrorHandler, error, void, $SAXParseException*), "org.xml.sax.SAXException"},
 	{}
 };
 

@@ -39,13 +39,13 @@ namespace com {
 								namespace xs {
 
 $MethodInfo _PrecisionDecimalDV_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(PrecisionDecimalDV::*)()>(&PrecisionDecimalDV::init$))},
-	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
-	{"getAllowedFacets", "()S", nullptr, $PUBLIC},
-	{"getFractionDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"getTotalDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC},
-	{"isIdentical", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(PrecisionDecimalDV, init$, void)},
+	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(PrecisionDecimalDV, compare, int32_t, Object$*, Object$*)},
+	{"getActualValue", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(PrecisionDecimalDV, getActualValue, $Object*, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"getAllowedFacets", "()S", nullptr, $PUBLIC, $virtualMethod(PrecisionDecimalDV, getAllowedFacets, int16_t)},
+	{"getFractionDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(PrecisionDecimalDV, getFractionDigits, int32_t, Object$*)},
+	{"getTotalDigits", "(Ljava/lang/Object;)I", nullptr, $PUBLIC, $virtualMethod(PrecisionDecimalDV, getTotalDigits, int32_t, Object$*)},
+	{"isIdentical", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(PrecisionDecimalDV, isIdentical, bool, Object$*, Object$*)},
 	{}
 };
 

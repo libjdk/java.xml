@@ -51,20 +51,20 @@ $FieldInfo _UTF8Reader_FieldInfo_[] = {
 };
 
 $MethodInfo _UTF8Reader_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC, $method(static_cast<void(UTF8Reader::*)($InputStream*)>(&UTF8Reader::init$))},
-	{"<init>", "(Ljava/io/InputStream;Lcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(UTF8Reader::*)($InputStream*,$MessageFormatter*,$Locale*)>(&UTF8Reader::init$))},
-	{"<init>", "(Ljava/io/InputStream;ILcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(UTF8Reader::*)($InputStream*,int32_t,$MessageFormatter*,$Locale*)>(&UTF8Reader::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"expectedByte", "(II)V", nullptr, $PRIVATE, $method(static_cast<void(UTF8Reader::*)(int32_t,int32_t)>(&UTF8Reader::expectedByte)), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
-	{"invalidByte", "(III)V", nullptr, $PRIVATE, $method(static_cast<void(UTF8Reader::*)(int32_t,int32_t,int32_t)>(&UTF8Reader::invalidByte)), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
-	{"invalidSurrogate", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(UTF8Reader::*)(int32_t)>(&UTF8Reader::invalidSurrogate)), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
-	{"mark", "(I)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"markSupported", "()Z", nullptr, $PUBLIC},
-	{"read", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"read", "([CII)I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"ready", "()Z", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"reset", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"skip", "(J)J", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC, $method(UTF8Reader, init$, void, $InputStream*)},
+	{"<init>", "(Ljava/io/InputStream;Lcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(UTF8Reader, init$, void, $InputStream*, $MessageFormatter*, $Locale*)},
+	{"<init>", "(Ljava/io/InputStream;ILcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(UTF8Reader, init$, void, $InputStream*, int32_t, $MessageFormatter*, $Locale*)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, close, void), "java.io.IOException"},
+	{"expectedByte", "(II)V", nullptr, $PRIVATE, $method(UTF8Reader, expectedByte, void, int32_t, int32_t), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
+	{"invalidByte", "(III)V", nullptr, $PRIVATE, $method(UTF8Reader, invalidByte, void, int32_t, int32_t, int32_t), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
+	{"invalidSurrogate", "(I)V", nullptr, $PRIVATE, $method(UTF8Reader, invalidSurrogate, void, int32_t), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
+	{"mark", "(I)V", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, mark, void, int32_t), "java.io.IOException"},
+	{"markSupported", "()Z", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, markSupported, bool)},
+	{"read", "()I", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, read, int32_t), "java.io.IOException"},
+	{"read", "([CII)I", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, read, int32_t, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"ready", "()Z", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, ready, bool), "java.io.IOException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, reset, void), "java.io.IOException"},
+	{"skip", "(J)J", nullptr, $PUBLIC, $virtualMethod(UTF8Reader, skip, int64_t, int64_t), "java.io.IOException"},
 	{}
 };
 

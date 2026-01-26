@@ -115,9 +115,9 @@ $FieldInfo _ExceptionConst_FieldInfo_[] = {
 };
 
 $MethodInfo _ExceptionConst_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExceptionConst::*)()>(&ExceptionConst::init$))},
-	{"createExceptions", "(Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class;", "(Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;[Ljava/lang/Class<*>;)[Ljava/lang/Class<*>;", $PUBLIC | $STATIC | $TRANSIENT, $method(static_cast<$ClassArray*(*)($ExceptionConst$EXCS*,$ClassArray*)>(&ExceptionConst::createExceptions))},
-	{"mergeExceptions", "([Ljava/lang/Class;[Ljava/lang/Class;)[Ljava/lang/Class;", "([Ljava/lang/Class<*>;[Ljava/lang/Class<*>;)[Ljava/lang/Class<*>;", $PRIVATE | $STATIC | $TRANSIENT, $method(static_cast<$ClassArray*(*)($ClassArray*,$ClassArray*)>(&ExceptionConst::mergeExceptions))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExceptionConst, init$, void)},
+	{"createExceptions", "(Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class;", "(Lcom/sun/org/apache/bcel/internal/ExceptionConst$EXCS;[Ljava/lang/Class<*>;)[Ljava/lang/Class<*>;", $PUBLIC | $STATIC | $TRANSIENT, $staticMethod(ExceptionConst, createExceptions, $ClassArray*, $ExceptionConst$EXCS*, $ClassArray*)},
+	{"mergeExceptions", "([Ljava/lang/Class;[Ljava/lang/Class;)[Ljava/lang/Class;", "([Ljava/lang/Class<*>;[Ljava/lang/Class<*>;)[Ljava/lang/Class<*>;", $PRIVATE | $STATIC | $TRANSIENT, $staticMethod(ExceptionConst, mergeExceptions, $ClassArray*, $ClassArray*, $ClassArray*)},
 	{}
 };
 

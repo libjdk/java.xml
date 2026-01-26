@@ -37,12 +37,12 @@ $FieldInfo _MethodParameters_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodParameters_MethodInfo_[] = {
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(MethodParameters::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&MethodParameters::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getParameters", "()[Lcom/sun/org/apache/bcel/internal/classfile/MethodParameter;", nullptr, $PUBLIC},
-	{"setParameters", "([Lcom/sun/org/apache/bcel/internal/classfile/MethodParameter;)V", nullptr, $PUBLIC},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(MethodParameters, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(MethodParameters, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC, $virtualMethod(MethodParameters, copy, $Attribute*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(MethodParameters, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getParameters", "()[Lcom/sun/org/apache/bcel/internal/classfile/MethodParameter;", nullptr, $PUBLIC, $virtualMethod(MethodParameters, getParameters, $MethodParameterArray*)},
+	{"setParameters", "([Lcom/sun/org/apache/bcel/internal/classfile/MethodParameter;)V", nullptr, $PUBLIC, $virtualMethod(MethodParameters, setParameters, void, $MethodParameterArray*)},
 	{}
 };
 

@@ -143,7 +143,7 @@ $FieldInfo _MsgKey_FieldInfo_[] = {
 };
 
 $MethodInfo _MsgKey_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(MsgKey::*)()>(&MsgKey::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(MsgKey, init$, void)},
 	{}
 };
 

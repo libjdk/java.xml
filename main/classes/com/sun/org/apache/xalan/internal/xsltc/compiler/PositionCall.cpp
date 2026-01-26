@@ -53,9 +53,9 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _PositionCall_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC, $method(static_cast<void(PositionCall::*)($QName*)>(&PositionCall::init$))},
-	{"hasPositionCall", "()Z", nullptr, $PUBLIC},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC, $method(PositionCall, init$, void, $QName*)},
+	{"hasPositionCall", "()Z", nullptr, $PUBLIC, $virtualMethod(PositionCall, hasPositionCall, bool)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(PositionCall, translate, void, $ClassGenerator*, $MethodGenerator*)},
 	{}
 };
 

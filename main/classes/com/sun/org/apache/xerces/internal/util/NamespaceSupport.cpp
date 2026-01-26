@@ -48,21 +48,21 @@ $FieldInfo _NamespaceSupport_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceSupport_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NamespaceSupport::*)()>(&NamespaceSupport::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(static_cast<void(NamespaceSupport::*)($NamespaceContext*)>(&NamespaceSupport::init$))},
-	{"containsPrefix", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"containsPrefixInCurrentContext", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
-	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefixes", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC},
-	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/List;", "(Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;", $PUBLIC},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"popContext", "()V", nullptr, $PUBLIC},
-	{"pushContext", "()V", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NamespaceSupport, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/NamespaceContext;)V", nullptr, $PUBLIC, $method(NamespaceSupport, init$, void, $NamespaceContext*)},
+	{"containsPrefix", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, containsPrefix, bool, $String*)},
+	{"containsPrefixInCurrentContext", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, containsPrefixInCurrentContext, bool, $String*)},
+	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, declarePrefix, bool, $String*, $String*)},
+	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(NamespaceSupport, getAllPrefixes, $Enumeration*)},
+	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, getDeclaredPrefixAt, $String*, int32_t)},
+	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, getDeclaredPrefixCount, int32_t)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, getPrefix, $String*, $String*)},
+	{"getPrefixes", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(NamespaceSupport, getPrefixes, $Iterator*)},
+	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/List;", "(Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(NamespaceSupport, getPrefixes, $List*, $String*)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, getURI, $String*, $String*)},
+	{"popContext", "()V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, popContext, void)},
+	{"pushContext", "()V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, pushContext, void)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, reset, void)},
 	{}
 };
 

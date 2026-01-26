@@ -71,15 +71,15 @@ $FieldInfo _DescendantIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _DescendantIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(DescendantIterator::*)($Compiler*,int32_t,int32_t)>(&DescendantIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DescendantIterator::*)()>(&DescendantIterator::init$))},
-	{"asNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"getAxis", "()I", nullptr, $PUBLIC},
-	{"nextNode", "()I", nullptr, $PUBLIC},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(DescendantIterator, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DescendantIterator, init$, void)},
+	{"asNode", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)I", nullptr, $PUBLIC, $virtualMethod(DescendantIterator, asNode, int32_t, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, $virtualMethod(DescendantIterator, cloneWithReset, $DTMIterator*), "java.lang.CloneNotSupportedException"},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(DescendantIterator, deepEquals, bool, $Expression*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(DescendantIterator, detach, void)},
+	{"getAxis", "()I", nullptr, $PUBLIC, $virtualMethod(DescendantIterator, getAxis, int32_t)},
+	{"nextNode", "()I", nullptr, $PUBLIC, $virtualMethod(DescendantIterator, nextNode, int32_t)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(DescendantIterator, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

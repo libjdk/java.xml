@@ -42,19 +42,19 @@ $FieldInfo _XNumber_FieldInfo_[] = {
 };
 
 $MethodInfo _XNumber_MethodInfo_[] = {
-	{"<init>", "(D)V", nullptr, $PUBLIC, $method(static_cast<void(XNumber::*)(double)>(&XNumber::init$))},
-	{"<init>", "(Ljava/lang/Number;)V", nullptr, $PUBLIC, $method(static_cast<void(XNumber::*)($Number*)>(&XNumber::init$))},
-	{"bool", "()Z", nullptr, $PUBLIC},
-	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC},
-	{"getType", "()I", nullptr, $PUBLIC},
-	{"getTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isStableNumber", "()Z", nullptr, $PUBLIC},
-	{"num", "()D", nullptr, $PUBLIC},
-	{"num", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)D", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"zeros", "(I)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)(int32_t)>(&XNumber::zeros))},
+	{"<init>", "(D)V", nullptr, $PUBLIC, $method(XNumber, init$, void, double)},
+	{"<init>", "(Ljava/lang/Number;)V", nullptr, $PUBLIC, $method(XNumber, init$, void, $Number*)},
+	{"bool", "()Z", nullptr, $PUBLIC, $virtualMethod(XNumber, bool$, bool)},
+	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(XNumber, callVisitors, void, $ExpressionOwner*, $XPathVisitor*)},
+	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC, $virtualMethod(XNumber, equals, bool, $XObject*)},
+	{"getType", "()I", nullptr, $PUBLIC, $virtualMethod(XNumber, getType, int32_t)},
+	{"getTypeString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XNumber, getTypeString, $String*)},
+	{"isStableNumber", "()Z", nullptr, $PUBLIC, $virtualMethod(XNumber, isStableNumber, bool)},
+	{"num", "()D", nullptr, $PUBLIC, $virtualMethod(XNumber, num, double)},
+	{"num", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)D", nullptr, $PUBLIC, $virtualMethod(XNumber, num, double, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"object", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XNumber, object, $Object*)},
+	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XNumber, str, $String*)},
+	{"zeros", "(I)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(XNumber, zeros, $String*, int32_t)},
 	{}
 };
 

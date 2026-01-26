@@ -24,9 +24,9 @@ $FieldInfo _XMLSchemaException_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaException::*)($String*,$ObjectArray*)>(&XMLSchemaException::init$))},
-	{"getArgs", "()[Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC, $method(XMLSchemaException, init$, void, $String*, $ObjectArray*)},
+	{"getArgs", "()[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaException, getArgs, $ObjectArray*)},
+	{"getKey", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XMLSchemaException, getKey, $String*)},
 	{}
 };
 

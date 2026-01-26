@@ -23,9 +23,9 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _LDC_W_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(LDC_W::*)()>(&LDC_W::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(LDC_W::*)(int32_t)>(&LDC_W::init$))},
-	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, 0, $method(LDC_W, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(LDC_W, init$, void, int32_t)},
+	{"initFromFile", "(Lcom/sun/org/apache/bcel/internal/util/ByteSequence;Z)V", nullptr, $PROTECTED, $virtualMethod(LDC_W, initFromFile, void, $ByteSequence*, bool), "java.io.IOException"},
 	{}
 };
 

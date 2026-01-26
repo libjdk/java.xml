@@ -62,10 +62,10 @@ $MethodInfo _ArrayInstruction_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ArrayInstruction::*)()>(&ArrayInstruction::init$))},
-	{"<init>", "(S)V", nullptr, $PROTECTED, $method(static_cast<void(ArrayInstruction::*)(int16_t)>(&ArrayInstruction::init$))},
-	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC},
-	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(ArrayInstruction, init$, void)},
+	{"<init>", "(S)V", nullptr, $PROTECTED, $method(ArrayInstruction, init$, void, int16_t)},
+	{"getExceptions", "()[Ljava/lang/Class;", "()[Ljava/lang/Class<*>;", $PUBLIC, $virtualMethod(ArrayInstruction, getExceptions, $ClassArray*)},
+	{"getType", "(Lcom/sun/org/apache/bcel/internal/generic/ConstantPoolGen;)Lcom/sun/org/apache/bcel/internal/generic/Type;", nullptr, $PUBLIC, $virtualMethod(ArrayInstruction, getType, $Type*, $ConstantPoolGen*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

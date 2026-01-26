@@ -47,14 +47,14 @@ $FieldInfo _XSDHandler$XSAnnotationGrammarPool_FieldInfo_[] = {
 };
 
 $MethodInfo _XSDHandler$XSAnnotationGrammarPool_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(XSDHandler$XSAnnotationGrammarPool::*)()>(&XSDHandler$XSAnnotationGrammarPool::init$))},
-	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"lockPool", "()V", nullptr, $PUBLIC},
-	{"refreshGrammars", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSGrammarBucket;)V", nullptr, $PUBLIC},
-	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC},
-	{"unlockPool", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(XSDHandler$XSAnnotationGrammarPool, init$, void)},
+	{"cacheGrammars", "(Ljava/lang/String;[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;)V", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSAnnotationGrammarPool, cacheGrammars, void, $String*, $GrammarArray*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSAnnotationGrammarPool, clear, void)},
+	{"lockPool", "()V", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSAnnotationGrammarPool, lockPool, void)},
+	{"refreshGrammars", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSGrammarBucket;)V", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSAnnotationGrammarPool, refreshGrammars, void, $XSGrammarBucket*)},
+	{"retrieveGrammar", "(Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarDescription;)Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSAnnotationGrammarPool, retrieveGrammar, $Grammar*, $XMLGrammarDescription*)},
+	{"retrieveInitialGrammarSet", "(Ljava/lang/String;)[Lcom/sun/org/apache/xerces/internal/xni/grammars/Grammar;", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSAnnotationGrammarPool, retrieveInitialGrammarSet, $GrammarArray*, $String*)},
+	{"unlockPool", "()V", nullptr, $PUBLIC, $virtualMethod(XSDHandler$XSAnnotationGrammarPool, unlockPool, void)},
 	{}
 };
 

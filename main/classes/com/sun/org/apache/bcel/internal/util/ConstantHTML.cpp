@@ -57,10 +57,10 @@ $FieldInfo _ConstantHTML_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantHTML_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Lcom/sun/org/apache/bcel/internal/classfile/Method;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(ConstantHTML::*)($String*,$String*,$String*,$MethodArray*,$ConstantPool*)>(&ConstantHTML::init$)), "java.io.IOException"},
-	{"getMethodNumber", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(static_cast<int32_t(ConstantHTML::*)($String*)>(&ConstantHTML::getMethodNumber))},
-	{"referenceConstant", "(I)Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(ConstantHTML::*)(int32_t)>(&ConstantHTML::referenceConstant))},
-	{"writeConstant", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(ConstantHTML::*)(int32_t)>(&ConstantHTML::writeConstant))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Lcom/sun/org/apache/bcel/internal/classfile/Method;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(ConstantHTML, init$, void, $String*, $String*, $String*, $MethodArray*, $ConstantPool*), "java.io.IOException"},
+	{"getMethodNumber", "(Ljava/lang/String;)I", nullptr, $PRIVATE, $method(ConstantHTML, getMethodNumber, int32_t, $String*)},
+	{"referenceConstant", "(I)Ljava/lang/String;", nullptr, 0, $method(ConstantHTML, referenceConstant, $String*, int32_t)},
+	{"writeConstant", "(I)V", nullptr, $PRIVATE, $method(ConstantHTML, writeConstant, void, int32_t)},
 	{}
 };
 

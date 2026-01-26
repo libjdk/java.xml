@@ -14,7 +14,7 @@ namespace com {
 						namespace utils {
 
 $MethodInfo _RawCharacterHandler_MethodInfo_[] = {
-	{"charactersRaw", "([CII)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerException"},
+	{"charactersRaw", "([CII)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(RawCharacterHandler, charactersRaw, void, $chars*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
 	{}
 };
 

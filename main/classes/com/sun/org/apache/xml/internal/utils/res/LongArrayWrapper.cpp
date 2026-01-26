@@ -21,9 +21,9 @@ $FieldInfo _LongArrayWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _LongArrayWrapper_MethodInfo_[] = {
-	{"<init>", "([J)V", nullptr, $PUBLIC, $method(static_cast<void(LongArrayWrapper::*)($longs*)>(&LongArrayWrapper::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getLong", "(I)J", nullptr, $PUBLIC},
+	{"<init>", "([J)V", nullptr, $PUBLIC, $method(LongArrayWrapper, init$, void, $longs*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(LongArrayWrapper, getLength, int32_t)},
+	{"getLong", "(I)J", nullptr, $PUBLIC, $virtualMethod(LongArrayWrapper, getLong, int64_t, int32_t)},
 	{}
 };
 

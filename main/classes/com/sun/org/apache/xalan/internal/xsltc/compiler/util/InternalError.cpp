@@ -24,7 +24,7 @@ $FieldInfo _InternalError_FieldInfo_[] = {
 };
 
 $MethodInfo _InternalError_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(InternalError::*)($String*)>(&InternalError::init$))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(InternalError, init$, void, $String*)},
 	{}
 };
 

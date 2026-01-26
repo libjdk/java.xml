@@ -29,18 +29,18 @@ $FieldInfo _CMStateSet_FieldInfo_[] = {
 };
 
 $MethodInfo _CMStateSet_MethodInfo_[] = {
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(CMStateSet::*)(int32_t)>(&CMStateSet::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getBit", "(I)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(CMStateSet::*)(int32_t)>(&CMStateSet::getBit))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"intersection", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(CMStateSet::*)(CMStateSet*)>(&CMStateSet::intersection))},
-	{"isEmpty", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(CMStateSet::*)()>(&CMStateSet::isEmpty))},
-	{"isSameSet", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)Z", nullptr, $FINAL, $method(static_cast<bool(CMStateSet::*)(CMStateSet*)>(&CMStateSet::isSameSet))},
-	{"setBit", "(I)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(CMStateSet::*)(int32_t)>(&CMStateSet::setBit))},
-	{"setTo", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(CMStateSet::*)(CMStateSet*)>(&CMStateSet::setTo))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"union", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(CMStateSet::*)(CMStateSet*)>(&CMStateSet::union$))},
-	{"zeroBits", "()V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(CMStateSet::*)()>(&CMStateSet::zeroBits))},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(CMStateSet, init$, void, int32_t)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(CMStateSet, equals, bool, Object$*)},
+	{"getBit", "(I)Z", nullptr, $PUBLIC | $FINAL, $method(CMStateSet, getBit, bool, int32_t)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(CMStateSet, hashCode, int32_t)},
+	{"intersection", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PUBLIC | $FINAL, $method(CMStateSet, intersection, void, CMStateSet*)},
+	{"isEmpty", "()Z", nullptr, $PUBLIC | $FINAL, $method(CMStateSet, isEmpty, bool)},
+	{"isSameSet", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)Z", nullptr, $FINAL, $method(CMStateSet, isSameSet, bool, CMStateSet*)},
+	{"setBit", "(I)V", nullptr, $PUBLIC | $FINAL, $method(CMStateSet, setBit, void, int32_t)},
+	{"setTo", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PUBLIC | $FINAL, $method(CMStateSet, setTo, void, CMStateSet*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CMStateSet, toString, $String*)},
+	{"union", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PUBLIC | $FINAL, $method(CMStateSet, union$, void, CMStateSet*)},
+	{"zeroBits", "()V", nullptr, $PUBLIC | $FINAL, $method(CMStateSet, zeroBits, void)},
 	{}
 };
 

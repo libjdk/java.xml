@@ -57,13 +57,13 @@ $FieldInfo _ObjectPool_FieldInfo_[] = {
 };
 
 $MethodInfo _ObjectPool_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/Class;)V", "(Ljava/lang/Class<*>;)V", $PUBLIC, $method(static_cast<void(ObjectPool::*)($Class*)>(&ObjectPool::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ObjectPool::*)($String*)>(&ObjectPool::init$))},
-	{"<init>", "(Ljava/lang/Class;I)V", "(Ljava/lang/Class<*>;I)V", $PUBLIC, $method(static_cast<void(ObjectPool::*)($Class*,int32_t)>(&ObjectPool::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ObjectPool::*)()>(&ObjectPool::init$))},
-	{"freeInstance", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"getInstance", "()Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"getInstanceIfFree", "()Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "(Ljava/lang/Class;)V", "(Ljava/lang/Class<*>;)V", $PUBLIC, $method(ObjectPool, init$, void, $Class*)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ObjectPool, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Class;I)V", "(Ljava/lang/Class<*>;I)V", $PUBLIC, $method(ObjectPool, init$, void, $Class*, int32_t)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ObjectPool, init$, void)},
+	{"freeInstance", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(ObjectPool, freeInstance, void, Object$*)},
+	{"getInstance", "()Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(ObjectPool, getInstance, $Object*)},
+	{"getInstanceIfFree", "()Ljava/lang/Object;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(ObjectPool, getInstanceIfFree, $Object*)},
 	{}
 };
 

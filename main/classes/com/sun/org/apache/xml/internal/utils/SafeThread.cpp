@@ -29,11 +29,11 @@ $FieldInfo _SafeThread_FieldInfo_[] = {
 };
 
 $MethodInfo _SafeThread_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/Runnable;)V", nullptr, $PUBLIC, $method(static_cast<void(SafeThread::*)($Runnable*)>(&SafeThread::init$))},
-	{"<init>", "(Ljava/lang/Runnable;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SafeThread::*)($Runnable*,$String*)>(&SafeThread::init$))},
-	{"<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SafeThread::*)($ThreadGroup*,$Runnable*,$String*)>(&SafeThread::init$))},
-	{"run", "()V", nullptr, $PUBLIC | $FINAL},
-	{"threadName", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $method(static_cast<$String*(*)()>(&SafeThread::threadName))},
+	{"<init>", "(Ljava/lang/Runnable;)V", nullptr, $PUBLIC, $method(SafeThread, init$, void, $Runnable*)},
+	{"<init>", "(Ljava/lang/Runnable;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SafeThread, init$, void, $Runnable*, $String*)},
+	{"<init>", "(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SafeThread, init$, void, $ThreadGroup*, $Runnable*, $String*)},
+	{"run", "()V", nullptr, $PUBLIC | $FINAL, $virtualMethod(SafeThread, run, void)},
+	{"threadName", "()Ljava/lang/String;", nullptr, $PRIVATE | $STATIC, $staticMethod(SafeThread, threadName, $String*)},
 	{}
 };
 

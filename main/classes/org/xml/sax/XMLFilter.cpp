@@ -1,17 +1,19 @@
 #include <org/xml/sax/XMLFilter.h>
 
+#include <org/xml/sax/XMLReader.h>
 #include <jcpp.h>
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $XMLReader = ::org::xml::sax::XMLReader;
 
 namespace org {
 	namespace xml {
 		namespace sax {
 
 $MethodInfo _XMLFilter_MethodInfo_[] = {
-	{"getParent", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setParent", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getParent", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLFilter, getParent, $XMLReader*)},
+	{"setParent", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLFilter, setParent, void, $XMLReader*)},
 	{}
 };
 

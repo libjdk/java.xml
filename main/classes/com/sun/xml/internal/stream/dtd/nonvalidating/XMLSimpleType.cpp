@@ -51,10 +51,10 @@ $FieldInfo _XMLSimpleType_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSimpleType_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSimpleType::*)()>(&XMLSimpleType::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"setValues", "(SLjava/lang/String;[Ljava/lang/String;ZSLjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setValues", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/XMLSimpleType;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSimpleType, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLSimpleType, clear, void)},
+	{"setValues", "(SLjava/lang/String;[Ljava/lang/String;ZSLjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XMLSimpleType, setValues, void, int16_t, $String*, $StringArray*, bool, int16_t, $String*, $String*)},
+	{"setValues", "(Lcom/sun/xml/internal/stream/dtd/nonvalidating/XMLSimpleType;)V", nullptr, $PUBLIC, $virtualMethod(XMLSimpleType, setValues, void, XMLSimpleType*)},
 	{}
 };
 

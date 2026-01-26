@@ -18,7 +18,7 @@ namespace com {
 								namespace identity {
 
 $MethodInfo _UniqueOrKey_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V", nullptr, $PUBLIC, $method(static_cast<void(UniqueOrKey::*)($String*,$String*,$String*,int16_t)>(&UniqueOrKey::init$))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V", nullptr, $PUBLIC, $method(UniqueOrKey, init$, void, $String*, $String*, $String*, int16_t)},
 	{}
 };
 

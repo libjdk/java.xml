@@ -39,10 +39,10 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _BasicType_MethodInfo_[] = {
-	{"<init>", "(B)V", nullptr, 0, $method(static_cast<void(BasicType::*)(int8_t)>(&BasicType::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getType", "(B)Lcom/sun/org/apache/bcel/internal/generic/BasicType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<BasicType*(*)(int8_t)>(&BasicType::getType))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
+	{"<init>", "(B)V", nullptr, 0, $method(BasicType, init$, void, int8_t)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(BasicType, equals, bool, Object$*)},
+	{"getType", "(B)Lcom/sun/org/apache/bcel/internal/generic/BasicType;", nullptr, $PUBLIC | $STATIC, $staticMethod(BasicType, getType, BasicType*, int8_t)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(BasicType, hashCode, int32_t)},
 	{}
 };
 

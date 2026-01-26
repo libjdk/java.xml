@@ -21,8 +21,8 @@ namespace com {
 							namespace runtime {
 
 $MethodInfo _BasisLibrary$4_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(BasisLibrary$4::*)()>(&BasisLibrary$4::init$))},
-	{"initialValue", "()Ljava/util/concurrent/atomic/AtomicInteger;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, 0, $method(BasisLibrary$4, init$, void)},
+	{"initialValue", "()Ljava/util/concurrent/atomic/AtomicInteger;", nullptr, $PROTECTED, $virtualMethod(BasisLibrary$4, initialValue, $Object*)},
 	{}
 };
 

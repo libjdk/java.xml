@@ -30,12 +30,12 @@ $FieldInfo _EventFilterSupport_FieldInfo_[] = {
 };
 
 $MethodInfo _EventFilterSupport_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/stream/XMLEventReader;Ljavax/xml/stream/EventFilter;)V", nullptr, $PUBLIC, $method(static_cast<void(EventFilterSupport::*)($XMLEventReader*,$EventFilter*)>(&EventFilterSupport::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"nextEvent", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"nextTag", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"peek", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, nullptr, "javax.xml.stream.XMLStreamException"},
+	{"<init>", "(Ljavax/xml/stream/XMLEventReader;Ljavax/xml/stream/EventFilter;)V", nullptr, $PUBLIC, $method(EventFilterSupport, init$, void, $XMLEventReader*, $EventFilter*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(EventFilterSupport, hasNext, bool)},
+	{"next", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(EventFilterSupport, next, $Object*)},
+	{"nextEvent", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, $virtualMethod(EventFilterSupport, nextEvent, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
+	{"nextTag", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, $virtualMethod(EventFilterSupport, nextTag, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
+	{"peek", "()Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC, $virtualMethod(EventFilterSupport, peek, $XMLEvent*), "javax.xml.stream.XMLStreamException"},
 	{}
 };
 

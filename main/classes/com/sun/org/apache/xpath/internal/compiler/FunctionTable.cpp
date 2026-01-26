@@ -236,12 +236,12 @@ $FieldInfo _FunctionTable_FieldInfo_[] = {
 };
 
 $MethodInfo _FunctionTable_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FunctionTable::*)()>(&FunctionTable::init$))},
-	{"functionAvailable", "(Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"getFunction", "(I)Lcom/sun/org/apache/xpath/internal/functions/Function;", nullptr, 0, nullptr, "javax.xml.transform.TransformerException"},
-	{"getFunctionID", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, 0},
-	{"getFunctionName", "(I)Ljava/lang/String;", nullptr, 0},
-	{"installFunction", "(Ljava/lang/String;Ljava/lang/Class;)I", "(Ljava/lang/String;Ljava/lang/Class<*>;)I", $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FunctionTable, init$, void)},
+	{"functionAvailable", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(FunctionTable, functionAvailable, bool, $String*)},
+	{"getFunction", "(I)Lcom/sun/org/apache/xpath/internal/functions/Function;", nullptr, 0, $virtualMethod(FunctionTable, getFunction, $Function*, int32_t), "javax.xml.transform.TransformerException"},
+	{"getFunctionID", "(Ljava/lang/String;)Ljava/lang/Integer;", nullptr, 0, $virtualMethod(FunctionTable, getFunctionID, $Integer*, $String*)},
+	{"getFunctionName", "(I)Ljava/lang/String;", nullptr, 0, $virtualMethod(FunctionTable, getFunctionName, $String*, int32_t)},
+	{"installFunction", "(Ljava/lang/String;Ljava/lang/Class;)I", "(Ljava/lang/String;Ljava/lang/Class<*>;)I", $PUBLIC, $virtualMethod(FunctionTable, installFunction, int32_t, $String*, $Class*)},
 	{}
 };
 

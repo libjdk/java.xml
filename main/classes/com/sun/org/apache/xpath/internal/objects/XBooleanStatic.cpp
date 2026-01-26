@@ -30,8 +30,8 @@ $FieldInfo _XBooleanStatic_FieldInfo_[] = {
 };
 
 $MethodInfo _XBooleanStatic_MethodInfo_[] = {
-	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(XBooleanStatic::*)(bool)>(&XBooleanStatic::init$))},
-	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC},
+	{"<init>", "(Z)V", nullptr, $PUBLIC, $method(XBooleanStatic, init$, void, bool)},
+	{"equals", "(Lcom/sun/org/apache/xpath/internal/objects/XObject;)Z", nullptr, $PUBLIC, $virtualMethod(XBooleanStatic, equals, bool, $XObject*)},
 	{}
 };
 

@@ -16,8 +16,8 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _EncodingInfo$InEncoding_MethodInfo_[] = {
-	{"isInEncoding", "(C)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isInEncoding", "(CC)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"isInEncoding", "(C)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EncodingInfo$InEncoding, isInEncoding, bool, char16_t)},
+	{"isInEncoding", "(CC)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EncodingInfo$InEncoding, isInEncoding, bool, char16_t, char16_t)},
 	{}
 };
 

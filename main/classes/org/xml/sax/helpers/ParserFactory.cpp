@@ -31,9 +31,9 @@ $CompoundAttribute _ParserFactory_Annotations_[] = {
 };
 
 $MethodInfo _ParserFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(ParserFactory::*)()>(&ParserFactory::init$))},
-	{"makeParser", "()Lorg/xml/sax/Parser;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Parser*(*)()>(&ParserFactory::makeParser)), "java.lang.ClassNotFoundException,java.lang.IllegalAccessException,java.lang.InstantiationException,java.lang.NullPointerException,java.lang.ClassCastException"},
-	{"makeParser", "(Ljava/lang/String;)Lorg/xml/sax/Parser;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Parser*(*)($String*)>(&ParserFactory::makeParser)), "java.lang.ClassNotFoundException,java.lang.IllegalAccessException,java.lang.InstantiationException,java.lang.ClassCastException"},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(ParserFactory, init$, void)},
+	{"makeParser", "()Lorg/xml/sax/Parser;", nullptr, $PUBLIC | $STATIC, $staticMethod(ParserFactory, makeParser, $Parser*), "java.lang.ClassNotFoundException,java.lang.IllegalAccessException,java.lang.InstantiationException,java.lang.NullPointerException,java.lang.ClassCastException"},
+	{"makeParser", "(Ljava/lang/String;)Lorg/xml/sax/Parser;", nullptr, $PUBLIC | $STATIC, $staticMethod(ParserFactory, makeParser, $Parser*, $String*), "java.lang.ClassNotFoundException,java.lang.IllegalAccessException,java.lang.InstantiationException,java.lang.ClassCastException"},
 	{}
 };
 

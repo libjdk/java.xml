@@ -27,8 +27,8 @@ $FieldInfo _ThreadLocalBufferAllocator_FieldInfo_[] = {
 };
 
 $MethodInfo _ThreadLocalBufferAllocator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ThreadLocalBufferAllocator::*)()>(&ThreadLocalBufferAllocator::init$))},
-	{"getBufferAllocator", "()Lcom/sun/xml/internal/stream/util/BufferAllocator;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$BufferAllocator*(*)()>(&ThreadLocalBufferAllocator::getBufferAllocator))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ThreadLocalBufferAllocator, init$, void)},
+	{"getBufferAllocator", "()Lcom/sun/xml/internal/stream/util/BufferAllocator;", nullptr, $PUBLIC | $STATIC, $staticMethod(ThreadLocalBufferAllocator, getBufferAllocator, $BufferAllocator*)},
 	{}
 };
 

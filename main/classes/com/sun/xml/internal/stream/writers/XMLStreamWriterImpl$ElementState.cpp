@@ -25,9 +25,9 @@ $FieldInfo _XMLStreamWriterImpl$ElementState_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStreamWriterImpl$ElementState_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamWriterImpl$ElementState::*)($XMLStreamWriterImpl*)>(&XMLStreamWriterImpl$ElementState::init$))},
-	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XMLStreamWriterImpl$ElementState::*)($XMLStreamWriterImpl*,$String*,$String*,$String*,$String*)>(&XMLStreamWriterImpl$ElementState::init$))},
-	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;)V", nullptr, $PUBLIC, $method(XMLStreamWriterImpl$ElementState, init$, void, $XMLStreamWriterImpl*)},
+	{"<init>", "(Lcom/sun/xml/internal/stream/writers/XMLStreamWriterImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XMLStreamWriterImpl$ElementState, init$, void, $XMLStreamWriterImpl*, $String*, $String*, $String*, $String*)},
+	{"setValues", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V", nullptr, $PUBLIC, $virtualMethod(XMLStreamWriterImpl$ElementState, setValues, void, $String*, $String*, $String*, $String*, bool)},
 	{}
 };
 

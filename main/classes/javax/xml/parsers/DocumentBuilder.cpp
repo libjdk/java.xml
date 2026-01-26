@@ -22,7 +22,10 @@ using $Package = ::java::lang::Package;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
 using $URI = ::java::net::URI;
 using $Schema = ::javax::xml::validation::Schema;
+using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
 using $Document = ::org::w3c::dom::Document;
+using $EntityResolver = ::org::xml::sax::EntityResolver;
+using $ErrorHandler = ::org::xml::sax::ErrorHandler;
 using $InputSource = ::org::xml::sax::InputSource;
 
 namespace javax {
@@ -30,21 +33,21 @@ namespace javax {
 		namespace parsers {
 
 $MethodInfo _DocumentBuilder_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(DocumentBuilder::*)()>(&DocumentBuilder::init$))},
-	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC},
-	{"isNamespaceAware", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isValidating", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isXIncludeAware", "()Z", nullptr, $PUBLIC},
-	{"newDocument", "()Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT},
-	{"parse", "(Ljava/io/InputStream;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"parse", "(Ljava/io/InputStream;Ljava/lang/String;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"parse", "(Ljava/lang/String;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"parse", "(Ljava/io/File;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"parse", "(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(DocumentBuilder, init$, void)},
+	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilder, getDOMImplementation, $DOMImplementation*)},
+	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilder, getSchema, $Schema*)},
+	{"isNamespaceAware", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilder, isNamespaceAware, bool)},
+	{"isValidating", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilder, isValidating, bool)},
+	{"isXIncludeAware", "()Z", nullptr, $PUBLIC, $virtualMethod(DocumentBuilder, isXIncludeAware, bool)},
+	{"newDocument", "()Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilder, newDocument, $Document*)},
+	{"parse", "(Ljava/io/InputStream;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilder, parse, $Document*, $InputStream*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"parse", "(Ljava/io/InputStream;Ljava/lang/String;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilder, parse, $Document*, $InputStream*, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"parse", "(Ljava/lang/String;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilder, parse, $Document*, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"parse", "(Ljava/io/File;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $virtualMethod(DocumentBuilder, parse, $Document*, $File*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"parse", "(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilder, parse, $Document*, $InputSource*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(DocumentBuilder, reset, void)},
+	{"setEntityResolver", "(Lorg/xml/sax/EntityResolver;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilder, setEntityResolver, void, $EntityResolver*)},
+	{"setErrorHandler", "(Lorg/xml/sax/ErrorHandler;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DocumentBuilder, setErrorHandler, void, $ErrorHandler*)},
 	{}
 };
 

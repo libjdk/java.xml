@@ -11,12 +11,12 @@ namespace org {
 			namespace ext {
 
 $MethodInfo _Attributes2_MethodInfo_[] = {
-	{"isDeclared", "(I)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isDeclared", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isSpecified", "(I)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isSpecified", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isSpecified", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"isDeclared", "(I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attributes2, isDeclared, bool, int32_t)},
+	{"isDeclared", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attributes2, isDeclared, bool, $String*)},
+	{"isDeclared", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attributes2, isDeclared, bool, $String*, $String*)},
+	{"isSpecified", "(I)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attributes2, isSpecified, bool, int32_t)},
+	{"isSpecified", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attributes2, isSpecified, bool, $String*, $String*)},
+	{"isSpecified", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(Attributes2, isSpecified, bool, $String*)},
 	{}
 };
 

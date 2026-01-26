@@ -22,11 +22,11 @@ $FieldInfo _CharInfo$CharKey_FieldInfo_[] = {
 };
 
 $MethodInfo _CharInfo$CharKey_MethodInfo_[] = {
-	{"<init>", "(C)V", nullptr, $PUBLIC, $method(static_cast<void(CharInfo$CharKey::*)(char16_t)>(&CharInfo$CharKey::init$))},
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(CharInfo$CharKey::*)()>(&CharInfo$CharKey::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $FINAL},
-	{"hashCode", "()I", nullptr, $PUBLIC | $FINAL},
-	{"setChar", "(C)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(CharInfo$CharKey::*)(char16_t)>(&CharInfo$CharKey::setChar))},
+	{"<init>", "(C)V", nullptr, $PUBLIC, $method(CharInfo$CharKey, init$, void, char16_t)},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(CharInfo$CharKey, init$, void)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $FINAL, $virtualMethod(CharInfo$CharKey, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC | $FINAL, $virtualMethod(CharInfo$CharKey, hashCode, int32_t)},
+	{"setChar", "(C)V", nullptr, $PUBLIC | $FINAL, $method(CharInfo$CharKey, setChar, void, char16_t)},
 	{}
 };
 

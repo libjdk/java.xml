@@ -29,15 +29,15 @@ $FieldInfo _NodeImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NodeImpl::*)()>(&NodeImpl::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V", nullptr, $PUBLIC, $method(static_cast<void(NodeImpl::*)($String*,$String*,$String*,$String*,int16_t)>(&NodeImpl::init$))},
-	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNodeName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNodeType", "()S", nullptr, $PUBLIC},
-	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getReadOnly", "()Z", nullptr, $PUBLIC},
-	{"setReadOnly", "(ZZ)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NodeImpl, init$, void)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;S)V", nullptr, $PUBLIC, $method(NodeImpl, init$, void, $String*, $String*, $String*, $String*, int16_t)},
+	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NodeImpl, getLocalName, $String*)},
+	{"getNamespaceURI", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NodeImpl, getNamespaceURI, $String*)},
+	{"getNodeName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NodeImpl, getNodeName, $String*)},
+	{"getNodeType", "()S", nullptr, $PUBLIC, $virtualMethod(NodeImpl, getNodeType, int16_t)},
+	{"getPrefix", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NodeImpl, getPrefix, $String*)},
+	{"getReadOnly", "()Z", nullptr, $PUBLIC, $virtualMethod(NodeImpl, getReadOnly, bool)},
+	{"setReadOnly", "(ZZ)V", nullptr, $PUBLIC, $virtualMethod(NodeImpl, setReadOnly, void, bool, bool)},
 	{}
 };
 

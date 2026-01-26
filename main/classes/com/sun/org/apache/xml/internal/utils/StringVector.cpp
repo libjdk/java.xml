@@ -24,17 +24,17 @@ $FieldInfo _StringVector_FieldInfo_[] = {
 };
 
 $MethodInfo _StringVector_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(StringVector::*)()>(&StringVector::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(StringVector::*)(int32_t)>(&StringVector::init$))},
-	{"addElement", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringVector::*)($String*)>(&StringVector::addElement))},
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringVector::*)($String*)>(&StringVector::contains))},
-	{"containsIgnoreCase", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(StringVector::*)($String*)>(&StringVector::containsIgnoreCase))},
-	{"elementAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringVector::*)(int32_t)>(&StringVector::elementAt))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"peek", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringVector::*)()>(&StringVector::peek))},
-	{"pop", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(StringVector::*)()>(&StringVector::pop))},
-	{"push", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(StringVector::*)($String*)>(&StringVector::push))},
-	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(StringVector::*)()>(&StringVector::size))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(StringVector, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(StringVector, init$, void, int32_t)},
+	{"addElement", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(StringVector, addElement, void, $String*)},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(StringVector, contains, bool, $String*)},
+	{"containsIgnoreCase", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $FINAL, $method(StringVector, containsIgnoreCase, bool, $String*)},
+	{"elementAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringVector, elementAt, $String*, int32_t)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(StringVector, getLength, int32_t)},
+	{"peek", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringVector, peek, $String*)},
+	{"pop", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(StringVector, pop, $String*)},
+	{"push", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $method(StringVector, push, void, $String*)},
+	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(StringVector, size, int32_t)},
 	{}
 };
 

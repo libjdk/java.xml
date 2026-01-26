@@ -18,7 +18,7 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _Type$2_MethodInfo_[] = {
-	{"<init>", "(BLjava/lang/String;)V", nullptr, 0, $method(static_cast<void(Type$2::*)(int8_t,$String*)>(&Type$2::init$))},
+	{"<init>", "(BLjava/lang/String;)V", nullptr, 0, $method(Type$2, init$, void, int8_t, $String*)},
 	{}
 };
 

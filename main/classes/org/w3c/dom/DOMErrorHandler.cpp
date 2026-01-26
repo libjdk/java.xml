@@ -5,13 +5,14 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $DOMError = ::org::w3c::dom::DOMError;
 
 namespace org {
 	namespace w3c {
 		namespace dom {
 
 $MethodInfo _DOMErrorHandler_MethodInfo_[] = {
-	{"handleError", "(Lorg/w3c/dom/DOMError;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"handleError", "(Lorg/w3c/dom/DOMError;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMErrorHandler, handleError, bool, $DOMError*)},
 	{}
 };
 

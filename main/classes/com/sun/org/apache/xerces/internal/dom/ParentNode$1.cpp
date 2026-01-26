@@ -26,9 +26,9 @@ $FieldInfo _ParentNode$1_FieldInfo_[] = {
 };
 
 $MethodInfo _ParentNode$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ParentNode;)V", nullptr, 0, $method(static_cast<void(ParentNode$1::*)($ParentNode*)>(&ParentNode$1::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ParentNode;)V", nullptr, 0, $method(ParentNode$1, init$, void, $ParentNode*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(ParentNode$1, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(ParentNode$1, item, $Node*, int32_t)},
 	{}
 };
 

@@ -38,12 +38,12 @@ $FieldInfo _SimpleResultTreeImpl$SingletonIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SimpleResultTreeImpl$SingletonIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(SimpleResultTreeImpl$SingletonIterator::*)($SimpleResultTreeImpl*)>(&SimpleResultTreeImpl$SingletonIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;I)V", nullptr, $PUBLIC, $method(static_cast<void(SimpleResultTreeImpl$SingletonIterator::*)($SimpleResultTreeImpl*,int32_t)>(&SimpleResultTreeImpl$SingletonIterator::init$))},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;)V", nullptr, $PUBLIC, $method(SimpleResultTreeImpl$SingletonIterator, init$, void, $SimpleResultTreeImpl*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;I)V", nullptr, $PUBLIC, $method(SimpleResultTreeImpl$SingletonIterator, init$, void, $SimpleResultTreeImpl*, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SingletonIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SingletonIterator, next, int32_t)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SingletonIterator, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SingletonIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

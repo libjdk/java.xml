@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _IXOR_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(IXOR::*)()>(&IXOR::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(IXOR, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(IXOR, accept, void, $Visitor*)},
 	{}
 };
 

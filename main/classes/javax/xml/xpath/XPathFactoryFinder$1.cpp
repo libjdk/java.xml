@@ -25,8 +25,8 @@ $FieldInfo _XPathFactoryFinder$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathFactoryFinder$1_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;)V", "()V", 0, $method(static_cast<void(XPathFactoryFinder$1::*)($XPathFactoryFinder*,$XPathFactory*,$String*)>(&XPathFactoryFinder$1::init$))},
-	{"run", "()Ljava/lang/Boolean;", nullptr, $PUBLIC},
+	{"<init>", "(Ljavax/xml/xpath/XPathFactoryFinder;Ljavax/xml/xpath/XPathFactory;Ljava/lang/String;)V", "()V", 0, $method(XPathFactoryFinder$1, init$, void, $XPathFactoryFinder*, $XPathFactory*, $String*)},
+	{"run", "()Ljava/lang/Boolean;", nullptr, $PUBLIC, $virtualMethod(XPathFactoryFinder$1, run, $Object*)},
 	{}
 };
 

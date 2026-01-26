@@ -47,8 +47,8 @@ $FieldInfo _DOMWSFilter_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMWSFilter_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMWSFilter::*)($AbstractTranslet*)>(&DOMWSFilter::init$))},
-	{"getShouldStripSpace", "(ILcom/sun/org/apache/xml/internal/dtm/DTM;)S", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)V", nullptr, $PUBLIC, $method(DOMWSFilter, init$, void, $AbstractTranslet*)},
+	{"getShouldStripSpace", "(ILcom/sun/org/apache/xml/internal/dtm/DTM;)S", nullptr, $PUBLIC, $virtualMethod(DOMWSFilter, getShouldStripSpace, int16_t, int32_t, $DTM*)},
 	{}
 };
 

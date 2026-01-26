@@ -28,12 +28,12 @@ $FieldInfo _SAX2StAXBaseWriter$SAXLocation_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2StAXBaseWriter$SAXLocation_MethodInfo_[] = {
-	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PRIVATE, $method(static_cast<void(SAX2StAXBaseWriter$SAXLocation::*)($Locator*)>(&SAX2StAXBaseWriter$SAXLocation::init$))},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/xml/sax/Locator;)V", nullptr, $PRIVATE, $method(SAX2StAXBaseWriter$SAXLocation, init$, void, $Locator*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2StAXBaseWriter$SAXLocation, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2StAXBaseWriter$SAXLocation, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2StAXBaseWriter$SAXLocation, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAX2StAXBaseWriter$SAXLocation, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAX2StAXBaseWriter$SAXLocation, getSystemId, $String*)},
 	{}
 };
 

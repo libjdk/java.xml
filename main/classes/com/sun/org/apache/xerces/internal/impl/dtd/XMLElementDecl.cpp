@@ -42,9 +42,9 @@ $FieldInfo _XMLElementDecl_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLElementDecl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLElementDecl::*)()>(&XMLElementDecl::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"setValues", "(Lcom/sun/org/apache/xerces/internal/xni/QName;ISLcom/sun/org/apache/xerces/internal/impl/dtd/models/ContentModelValidator;Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLSimpleType;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLElementDecl, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(XMLElementDecl, clear, void)},
+	{"setValues", "(Lcom/sun/org/apache/xerces/internal/xni/QName;ISLcom/sun/org/apache/xerces/internal/impl/dtd/models/ContentModelValidator;Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLSimpleType;)V", nullptr, $PUBLIC, $virtualMethod(XMLElementDecl, setValues, void, $QName*, int32_t, int16_t, $ContentModelValidator*, $XMLSimpleType*)},
 	{}
 };
 

@@ -31,9 +31,9 @@ $MethodInfo _StoreInstruction_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "(SS)V", nullptr, 0, $method(static_cast<void(StoreInstruction::*)(int16_t,int16_t)>(&StoreInstruction::init$))},
-	{"<init>", "(SSI)V", nullptr, $PROTECTED, $method(static_cast<void(StoreInstruction::*)(int16_t,int16_t,int32_t)>(&StoreInstruction::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "(SS)V", nullptr, 0, $method(StoreInstruction, init$, void, int16_t, int16_t)},
+	{"<init>", "(SSI)V", nullptr, $PROTECTED, $method(StoreInstruction, init$, void, int16_t, int16_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(StoreInstruction, accept, void, $Visitor*)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

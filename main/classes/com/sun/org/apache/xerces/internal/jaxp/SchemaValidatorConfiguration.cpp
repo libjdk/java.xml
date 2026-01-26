@@ -70,13 +70,13 @@ $FieldInfo _SchemaValidatorConfiguration_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaValidatorConfiguration_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;Lcom/sun/org/apache/xerces/internal/impl/validation/ValidationManager;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaValidatorConfiguration::*)($XMLComponentManager*,$XSGrammarPoolContainer*,$ValidationManager*)>(&SchemaValidatorConfiguration::init$))},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"getFeature", "(Ljava/lang/String;Z)Z", nullptr, $PUBLIC},
-	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"getProperty", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getPropertyState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;Lcom/sun/org/apache/xerces/internal/jaxp/validation/XSGrammarPoolContainer;Lcom/sun/org/apache/xerces/internal/impl/validation/ValidationManager;)V", nullptr, $PUBLIC, $method(SchemaValidatorConfiguration, init$, void, $XMLComponentManager*, $XSGrammarPoolContainer*, $ValidationManager*)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(SchemaValidatorConfiguration, getFeature, bool, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"getFeature", "(Ljava/lang/String;Z)Z", nullptr, $PUBLIC, $virtualMethod(SchemaValidatorConfiguration, getFeature, bool, $String*, bool)},
+	{"getFeatureState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/FeatureState;", nullptr, $PUBLIC, $virtualMethod(SchemaValidatorConfiguration, getFeatureState, $FeatureState*, $String*)},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaValidatorConfiguration, getProperty, $Object*, $String*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"getProperty", "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(SchemaValidatorConfiguration, getProperty, $Object*, $String*, Object$*)},
+	{"getPropertyState", "(Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/util/PropertyState;", nullptr, $PUBLIC, $virtualMethod(SchemaValidatorConfiguration, getPropertyState, $PropertyState*, $String*)},
 	{}
 };
 

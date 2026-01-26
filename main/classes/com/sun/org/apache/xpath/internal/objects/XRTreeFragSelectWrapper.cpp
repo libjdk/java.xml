@@ -48,16 +48,16 @@ $FieldInfo _XRTreeFragSelectWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _XRTreeFragSelectWrapper_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $method(static_cast<void(XRTreeFragSelectWrapper::*)($Expression*)>(&XRTreeFragSelectWrapper::init$))},
-	{"asNodeIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getType", "()I", nullptr, $PUBLIC},
-	{"num", "()D", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"rtf", "()I", nullptr, $PUBLIC},
-	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"xstr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $method(XRTreeFragSelectWrapper, init$, void, $Expression*)},
+	{"asNodeIterator", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, asNodeIterator, $DTMIterator*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, detach, void)},
+	{"execute", "(Lcom/sun/org/apache/xpath/internal/XPathContext;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, execute, $XObject*, $XPathContext*), "javax.xml.transform.TransformerException"},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, fixupVariables, void, $List*, int32_t)},
+	{"getType", "()I", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, getType, int32_t)},
+	{"num", "()D", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, num, double), "javax.xml.transform.TransformerException"},
+	{"rtf", "()I", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, rtf, int32_t)},
+	{"str", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, str, $String*)},
+	{"xstr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XRTreeFragSelectWrapper, xstr, $XMLString*)},
 	{}
 };
 

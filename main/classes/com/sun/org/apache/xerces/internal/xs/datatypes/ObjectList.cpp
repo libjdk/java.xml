@@ -16,8 +16,8 @@ namespace com {
 
 $MethodInfo _ObjectList_MethodInfo_[] = {
 	{"contains", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ObjectList, getLength, int32_t)},
+	{"item", "(I)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ObjectList, item, $Object*, int32_t)},
 	{}
 };
 

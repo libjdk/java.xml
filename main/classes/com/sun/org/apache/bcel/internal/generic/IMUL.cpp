@@ -28,8 +28,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _IMUL_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(IMUL::*)()>(&IMUL::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(IMUL, init$, void)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/generic/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(IMUL, accept, void, $Visitor*)},
 	{}
 };
 

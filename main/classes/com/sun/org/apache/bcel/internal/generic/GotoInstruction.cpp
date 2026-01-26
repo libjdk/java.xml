@@ -22,8 +22,8 @@ $MethodInfo _GotoInstruction_MethodInfo_[] = {
 	{"*equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
 	{"*finalize", "()V", nullptr, $PROTECTED | $DEPRECATED},
 	{"*hashCode", "()I", nullptr, $PUBLIC},
-	{"<init>", "(SLcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, 0, $method(static_cast<void(GotoInstruction::*)(int16_t,$InstructionHandle*)>(&GotoInstruction::init$))},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(GotoInstruction::*)()>(&GotoInstruction::init$))},
+	{"<init>", "(SLcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, 0, $method(GotoInstruction, init$, void, int16_t, $InstructionHandle*)},
+	{"<init>", "()V", nullptr, 0, $method(GotoInstruction, init$, void)},
 	{"*toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
 	{}
 };

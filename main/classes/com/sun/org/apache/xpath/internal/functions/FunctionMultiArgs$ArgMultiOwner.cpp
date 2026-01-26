@@ -36,9 +36,9 @@ $FieldInfo _FunctionMultiArgs$ArgMultiOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _FunctionMultiArgs$ArgMultiOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/functions/FunctionMultiArgs;I)V", nullptr, 0, $method(static_cast<void(FunctionMultiArgs$ArgMultiOwner::*)($FunctionMultiArgs*,int32_t)>(&FunctionMultiArgs$ArgMultiOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/functions/FunctionMultiArgs;I)V", nullptr, 0, $method(FunctionMultiArgs$ArgMultiOwner, init$, void, $FunctionMultiArgs*, int32_t)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs$ArgMultiOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FunctionMultiArgs$ArgMultiOwner, setExpression, void, $Expression*)},
 	{}
 };
 

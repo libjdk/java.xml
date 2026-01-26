@@ -33,10 +33,10 @@ $FieldInfo _Token$ConditionToken_FieldInfo_[] = {
 };
 
 $MethodInfo _Token$ConditionToken_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(static_cast<void(Token$ConditionToken::*)(int32_t,$Token*,$Token*,$Token*)>(&Token$ConditionToken::init$))},
-	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0},
-	{"size", "()I", nullptr, 0},
-	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;)V", nullptr, 0, $method(Token$ConditionToken, init$, void, int32_t, $Token*, $Token*, $Token*)},
+	{"getChild", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Token;", nullptr, 0, $virtualMethod(Token$ConditionToken, getChild, $Token*, int32_t)},
+	{"size", "()I", nullptr, 0, $virtualMethod(Token$ConditionToken, size, int32_t)},
+	{"toString", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Token$ConditionToken, toString, $String*, int32_t)},
 	{}
 };
 

@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xerces/internal/xs/ShortList.h>
 #include <jcpp.h>
 
+using $Field = ::com::sun::org::apache::xerces::internal::impl::xs::identity::Field;
+using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -18,8 +20,8 @@ namespace com {
 								namespace identity {
 
 $MethodInfo _ValueStore_MethodInfo_[] = {
-	{"addValue", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Field;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"reportError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"addValue", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/Field;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ValueStore, addValue, void, $Field*, bool, Object$*, int16_t, $ShortList*)},
+	{"reportError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ValueStore, reportError, void, $String*, $ObjectArray*)},
 	{}
 };
 

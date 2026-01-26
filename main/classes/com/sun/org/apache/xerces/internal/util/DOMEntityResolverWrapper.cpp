@@ -42,12 +42,12 @@ $FieldInfo _DOMEntityResolverWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMEntityResolverWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMEntityResolverWrapper::*)()>(&DOMEntityResolverWrapper::init$))},
-	{"<init>", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMEntityResolverWrapper::*)($LSResourceResolver*)>(&DOMEntityResolverWrapper::init$))},
-	{"getEntityResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC},
-	{"getType", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(DOMEntityResolverWrapper::*)($XMLResourceIdentifier*)>(&DOMEntityResolverWrapper::getType))},
-	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
-	{"setEntityResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMEntityResolverWrapper, init$, void)},
+	{"<init>", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $method(DOMEntityResolverWrapper, init$, void, $LSResourceResolver*)},
+	{"getEntityResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC, $virtualMethod(DOMEntityResolverWrapper, getEntityResolver, $LSResourceResolver*)},
+	{"getType", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Ljava/lang/String;", nullptr, $PRIVATE, $method(DOMEntityResolverWrapper, getType, $String*, $XMLResourceIdentifier*)},
+	{"resolveEntity", "(Lcom/sun/org/apache/xerces/internal/xni/XMLResourceIdentifier;)Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;", nullptr, $PUBLIC, $virtualMethod(DOMEntityResolverWrapper, resolveEntity, $XMLInputSource*, $XMLResourceIdentifier*), "com.sun.org.apache.xerces.internal.xni.XNIException,java.io.IOException"},
+	{"setEntityResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $virtualMethod(DOMEntityResolverWrapper, setEntityResolver, void, $LSResourceResolver*)},
 	{}
 };
 

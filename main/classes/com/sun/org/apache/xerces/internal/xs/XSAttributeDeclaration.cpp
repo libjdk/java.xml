@@ -8,6 +8,12 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSValue.h>
 #include <jcpp.h>
 
+using $ShortList = ::com::sun::org::apache::xerces::internal::xs::ShortList;
+using $XSAnnotation = ::com::sun::org::apache::xerces::internal::xs::XSAnnotation;
+using $XSComplexTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSComplexTypeDefinition;
+using $XSObjectList = ::com::sun::org::apache::xerces::internal::xs::XSObjectList;
+using $XSSimpleTypeDefinition = ::com::sun::org::apache::xerces::internal::xs::XSSimpleTypeDefinition;
+using $XSValue = ::com::sun::org::apache::xerces::internal::xs::XSValue;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $CompoundAttribute = ::java::lang::CompoundAttribute;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -41,17 +47,17 @@ $CompoundAttribute _XSAttributeDeclaration_MethodAnnotations_getItemValueTypes7[
 };
 
 $MethodInfo _XSAttributeDeclaration_MethodInfo_[] = {
-	{"getActualVC", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSAttributeDeclaration_MethodAnnotations_getActualVC0},
-	{"getActualVCType", "()S", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSAttributeDeclaration_MethodAnnotations_getActualVCType1},
-	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getConstraintType", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getConstraintValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, nullptr, nullptr, _XSAttributeDeclaration_MethodAnnotations_getConstraintValue5},
-	{"getEnclosingCTDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSComplexTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, nullptr, "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSAttributeDeclaration_MethodAnnotations_getItemValueTypes7},
-	{"getScope", "()S", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getValueConstraintValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getActualVC", "()Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSAttributeDeclaration, getActualVC, $Object*), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSAttributeDeclaration_MethodAnnotations_getActualVC0},
+	{"getActualVCType", "()S", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSAttributeDeclaration, getActualVCType, int16_t), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSAttributeDeclaration_MethodAnnotations_getActualVCType1},
+	{"getAnnotation", "()Lcom/sun/org/apache/xerces/internal/xs/XSAnnotation;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeDeclaration, getAnnotation, $XSAnnotation*)},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeDeclaration, getAnnotations, $XSObjectList*)},
+	{"getConstraintType", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeDeclaration, getConstraintType, int16_t)},
+	{"getConstraintValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSAttributeDeclaration, getConstraintValue, $String*), nullptr, nullptr, _XSAttributeDeclaration_MethodAnnotations_getConstraintValue5},
+	{"getEnclosingCTDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSComplexTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeDeclaration, getEnclosingCTDefinition, $XSComplexTypeDefinition*)},
+	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $ABSTRACT | $DEPRECATED, $virtualMethod(XSAttributeDeclaration, getItemValueTypes, $ShortList*), "com.sun.org.apache.xerces.internal.xs.XSException", nullptr, _XSAttributeDeclaration_MethodAnnotations_getItemValueTypes7},
+	{"getScope", "()S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeDeclaration, getScope, int16_t)},
+	{"getTypeDefinition", "()Lcom/sun/org/apache/xerces/internal/xs/XSSimpleTypeDefinition;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeDeclaration, getTypeDefinition, $XSSimpleTypeDefinition*)},
+	{"getValueConstraintValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSAttributeDeclaration, getValueConstraintValue, $XSValue*)},
 	{}
 };
 

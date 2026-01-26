@@ -98,16 +98,16 @@ $FieldInfo _XML11NSDocumentScannerImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XML11NSDocumentScannerImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XML11NSDocumentScannerImpl::*)()>(&XML11NSDocumentScannerImpl::init$))},
-	{"createContentDriver", "()Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl$Driver;", nullptr, $PROTECTED},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
-	{"scanAttribute", "(Lcom/sun/org/apache/xerces/internal/util/XMLAttributesImpl;)V", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanEndElement", "()I", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanStartElement", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanStartElementAfterName", "()Z", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"scanStartElementName", "()V", nullptr, $PROTECTED, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"setDTDValidator", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidatorFilter;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XML11NSDocumentScannerImpl, init$, void)},
+	{"createContentDriver", "()Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl$Driver;", nullptr, $PROTECTED, $virtualMethod(XML11NSDocumentScannerImpl, createContentDriver, $XMLDocumentFragmentScannerImpl$Driver*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XML11NSDocumentScannerImpl, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $virtualMethod(XML11NSDocumentScannerImpl, reset, void, $XMLComponentManager*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"scanAttribute", "(Lcom/sun/org/apache/xerces/internal/util/XMLAttributesImpl;)V", nullptr, $PROTECTED, $virtualMethod(XML11NSDocumentScannerImpl, scanAttribute, void, $XMLAttributesImpl*), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanEndElement", "()I", nullptr, $PROTECTED, $virtualMethod(XML11NSDocumentScannerImpl, scanEndElement, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanStartElement", "()Z", nullptr, $PROTECTED, $virtualMethod(XML11NSDocumentScannerImpl, scanStartElement, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanStartElementAfterName", "()Z", nullptr, $PROTECTED, $virtualMethod(XML11NSDocumentScannerImpl, scanStartElementAfterName, bool), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"scanStartElementName", "()V", nullptr, $PROTECTED, $virtualMethod(XML11NSDocumentScannerImpl, scanStartElementName, void), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"setDTDValidator", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidatorFilter;)V", nullptr, $PUBLIC, $virtualMethod(XML11NSDocumentScannerImpl, setDTDValidator, void, $XMLDTDValidatorFilter*)},
 	{}
 };
 

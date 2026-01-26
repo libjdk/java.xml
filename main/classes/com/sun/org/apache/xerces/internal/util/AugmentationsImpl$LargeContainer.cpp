@@ -42,15 +42,15 @@ $FieldInfo _AugmentationsImpl$LargeContainer_FieldInfo_[] = {
 };
 
 $MethodInfo _AugmentationsImpl$LargeContainer_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl;)V", nullptr, 0, $method(static_cast<void(AugmentationsImpl$LargeContainer::*)($AugmentationsImpl*)>(&AugmentationsImpl$LargeContainer::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"expand", "()Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl$AugmentationsItemsContainer;", nullptr, $PUBLIC},
-	{"getItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"isFull", "()Z", nullptr, $PUBLIC},
-	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC},
-	{"putItem", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"removeItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl;)V", nullptr, 0, $method(AugmentationsImpl$LargeContainer, init$, void, $AugmentationsImpl*)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, clear, void)},
+	{"expand", "()Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl$AugmentationsItemsContainer;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, expand, $AugmentationsImpl$AugmentationsItemsContainer*)},
+	{"getItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, getItem, $Object*, Object$*)},
+	{"isFull", "()Z", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, isFull, bool)},
+	{"keys", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/Object;>;", $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, keys, $Enumeration*)},
+	{"putItem", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, putItem, $Object*, Object$*, Object$*)},
+	{"removeItem", "(Ljava/lang/Object;)Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, removeItem, $Object*, Object$*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$LargeContainer, toString, $String*)},
 	{}
 };
 

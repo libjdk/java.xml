@@ -64,12 +64,12 @@ $FieldInfo _JAXPExtensionsProvider_FieldInfo_[] = {
 };
 
 $MethodInfo _JAXPExtensionsProvider_MethodInfo_[] = {
-	{"<init>", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPExtensionsProvider::*)($XPathFunctionResolver*)>(&JAXPExtensionsProvider::init$))},
-	{"<init>", "(Ljavax/xml/xpath/XPathFunctionResolver;ZLjdk/xml/internal/JdkXmlFeatures;)V", nullptr, $PUBLIC, $method(static_cast<void(JAXPExtensionsProvider::*)($XPathFunctionResolver*,bool,$JdkXmlFeatures*)>(&JAXPExtensionsProvider::init$))},
-	{"elementAvailable", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"extFunction", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Object;)Ljava/lang/Object;", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List<Lcom/sun/org/apache/xpath/internal/objects/XObject;>;Ljava/lang/Object;)Ljava/lang/Object;", $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"extFunction", "(Lcom/sun/org/apache/xpath/internal/functions/FuncExtFunction;Ljava/util/List;)Ljava/lang/Object;", "(Lcom/sun/org/apache/xpath/internal/functions/FuncExtFunction;Ljava/util/List<Lcom/sun/org/apache/xpath/internal/objects/XObject;>;)Ljava/lang/Object;", $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"functionAvailable", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "(Ljavax/xml/xpath/XPathFunctionResolver;)V", nullptr, $PUBLIC, $method(JAXPExtensionsProvider, init$, void, $XPathFunctionResolver*)},
+	{"<init>", "(Ljavax/xml/xpath/XPathFunctionResolver;ZLjdk/xml/internal/JdkXmlFeatures;)V", nullptr, $PUBLIC, $method(JAXPExtensionsProvider, init$, void, $XPathFunctionResolver*, bool, $JdkXmlFeatures*)},
+	{"elementAvailable", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(JAXPExtensionsProvider, elementAvailable, bool, $String*, $String*), "javax.xml.transform.TransformerException"},
+	{"extFunction", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Object;)Ljava/lang/Object;", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List<Lcom/sun/org/apache/xpath/internal/objects/XObject;>;Ljava/lang/Object;)Ljava/lang/Object;", $PUBLIC, $virtualMethod(JAXPExtensionsProvider, extFunction, $Object*, $String*, $String*, $List*, Object$*), "javax.xml.transform.TransformerException"},
+	{"extFunction", "(Lcom/sun/org/apache/xpath/internal/functions/FuncExtFunction;Ljava/util/List;)Ljava/lang/Object;", "(Lcom/sun/org/apache/xpath/internal/functions/FuncExtFunction;Ljava/util/List<Lcom/sun/org/apache/xpath/internal/objects/XObject;>;)Ljava/lang/Object;", $PUBLIC, $virtualMethod(JAXPExtensionsProvider, extFunction, $Object*, $FuncExtFunction*, $List*), "javax.xml.transform.TransformerException"},
+	{"functionAvailable", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(JAXPExtensionsProvider, functionAvailable, bool, $String*, $String*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

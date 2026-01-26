@@ -25,20 +25,20 @@ $FieldInfo _ParserAdapter$AttributeListAdapter_FieldInfo_[] = {
 };
 
 $MethodInfo _ParserAdapter$AttributeListAdapter_MethodInfo_[] = {
-	{"<init>", "(Lorg/xml/sax/helpers/ParserAdapter;)V", nullptr, 0, $method(static_cast<void(ParserAdapter$AttributeListAdapter::*)($ParserAdapter*)>(&ParserAdapter$AttributeListAdapter::init$))},
-	{"getIndex", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"getLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getQName", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setAttributeList", "(Lorg/xml/sax/AttributeList;)V", nullptr, 0, $method(static_cast<void(ParserAdapter$AttributeListAdapter::*)($AttributeList*)>(&ParserAdapter$AttributeListAdapter::setAttributeList))},
+	{"<init>", "(Lorg/xml/sax/helpers/ParserAdapter;)V", nullptr, 0, $method(ParserAdapter$AttributeListAdapter, init$, void, $ParserAdapter*)},
+	{"getIndex", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getIndex, int32_t, $String*, $String*)},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getIndex, int32_t, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getLength, int32_t)},
+	{"getLocalName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getLocalName, $String*, int32_t)},
+	{"getQName", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getQName, $String*, int32_t)},
+	{"getType", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getType, $String*, int32_t)},
+	{"getType", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getType, $String*, $String*, $String*)},
+	{"getType", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getType, $String*, $String*)},
+	{"getURI", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getURI, $String*, int32_t)},
+	{"getValue", "(I)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getValue, $String*, int32_t)},
+	{"getValue", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getValue, $String*, $String*, $String*)},
+	{"getValue", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ParserAdapter$AttributeListAdapter, getValue, $String*, $String*)},
+	{"setAttributeList", "(Lorg/xml/sax/AttributeList;)V", nullptr, 0, $method(ParserAdapter$AttributeListAdapter, setAttributeList, void, $AttributeList*)},
 	{}
 };
 

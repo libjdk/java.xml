@@ -21,8 +21,8 @@ namespace com {
 							namespace runtime {
 
 $MethodInfo _BasisLibrary$2_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(BasisLibrary$2::*)()>(&BasisLibrary$2::init$))},
-	{"initialValue", "()Ljava/lang/StringBuffer;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, 0, $method(BasisLibrary$2, init$, void)},
+	{"initialValue", "()Ljava/lang/StringBuffer;", nullptr, $PROTECTED, $virtualMethod(BasisLibrary$2, initialValue, $Object*)},
 	{}
 };
 

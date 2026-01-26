@@ -62,15 +62,15 @@ $FieldInfo _ModularRuntimeImage_FieldInfo_[] = {
 };
 
 $MethodInfo _ModularRuntimeImage_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ModularRuntimeImage::*)()>(&ModularRuntimeImage::init$)), "java.io.IOException"},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ModularRuntimeImage::*)($String*)>(&ModularRuntimeImage::init$)), "java.io.IOException"},
-	{"<init>", "(Ljava/net/URLClassLoader;Ljava/nio/file/FileSystem;)V", nullptr, $PRIVATE, $method(static_cast<void(ModularRuntimeImage::*)($URLClassLoader*,$FileSystem*)>(&ModularRuntimeImage::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getFileSystem", "()Ljava/nio/file/FileSystem;", nullptr, $PUBLIC},
-	{"list", "(Ljava/nio/file/Path;)Ljava/util/List;", "(Ljava/nio/file/Path;)Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, nullptr, "java.io.IOException"},
-	{"list", "(Ljava/lang/String;)Ljava/util/List;", "(Ljava/lang/String;)Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, nullptr, "java.io.IOException"},
-	{"modules", "()Ljava/util/List;", "()Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, nullptr, "java.io.IOException"},
-	{"packages", "()Ljava/util/List;", "()Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ModularRuntimeImage, init$, void), "java.io.IOException"},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ModularRuntimeImage, init$, void, $String*), "java.io.IOException"},
+	{"<init>", "(Ljava/net/URLClassLoader;Ljava/nio/file/FileSystem;)V", nullptr, $PRIVATE, $method(ModularRuntimeImage, init$, void, $URLClassLoader*, $FileSystem*)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(ModularRuntimeImage, close, void), "java.io.IOException"},
+	{"getFileSystem", "()Ljava/nio/file/FileSystem;", nullptr, $PUBLIC, $virtualMethod(ModularRuntimeImage, getFileSystem, $FileSystem*)},
+	{"list", "(Ljava/nio/file/Path;)Ljava/util/List;", "(Ljava/nio/file/Path;)Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, $virtualMethod(ModularRuntimeImage, list, $List*, $Path*), "java.io.IOException"},
+	{"list", "(Ljava/lang/String;)Ljava/util/List;", "(Ljava/lang/String;)Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, $virtualMethod(ModularRuntimeImage, list, $List*, $String*), "java.io.IOException"},
+	{"modules", "()Ljava/util/List;", "()Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, $virtualMethod(ModularRuntimeImage, modules, $List*), "java.io.IOException"},
+	{"packages", "()Ljava/util/List;", "()Ljava/util/List<Ljava/nio/file/Path;>;", $PUBLIC, $virtualMethod(ModularRuntimeImage, packages, $List*), "java.io.IOException"},
 	{}
 };
 

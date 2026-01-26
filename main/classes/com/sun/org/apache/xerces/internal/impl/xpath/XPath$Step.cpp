@@ -33,10 +33,10 @@ $FieldInfo _XPath$Step_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath$Step_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Axis;Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$Step::*)($XPath$Axis*,$XPath$NodeTest*)>(&XPath$Step::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Step;)V", nullptr, $PROTECTED, $method(static_cast<void(XPath$Step::*)(XPath$Step*)>(&XPath$Step::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Axis;Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;)V", nullptr, $PUBLIC, $method(XPath$Step, init$, void, $XPath$Axis*, $XPath$NodeTest*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Step;)V", nullptr, $PROTECTED, $method(XPath$Step, init$, void, XPath$Step*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPath$Step, clone, $Object*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPath$Step, toString, $String*)},
 	{}
 };
 

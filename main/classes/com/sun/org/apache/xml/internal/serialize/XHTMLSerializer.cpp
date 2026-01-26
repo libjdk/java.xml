@@ -33,11 +33,11 @@ $CompoundAttribute _XHTMLSerializer_Annotations_[] = {
 };
 
 $MethodInfo _XHTMLSerializer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XHTMLSerializer::*)()>(&XHTMLSerializer::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(static_cast<void(XHTMLSerializer::*)($OutputFormat*)>(&XHTMLSerializer::init$))},
-	{"<init>", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(static_cast<void(XHTMLSerializer::*)($Writer*,$OutputFormat*)>(&XHTMLSerializer::init$))},
-	{"<init>", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(static_cast<void(XHTMLSerializer::*)($OutputStream*,$OutputFormat*)>(&XHTMLSerializer::init$))},
-	{"setOutputFormat", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XHTMLSerializer, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(XHTMLSerializer, init$, void, $OutputFormat*)},
+	{"<init>", "(Ljava/io/Writer;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(XHTMLSerializer, init$, void, $Writer*, $OutputFormat*)},
+	{"<init>", "(Ljava/io/OutputStream;Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $method(XHTMLSerializer, init$, void, $OutputStream*, $OutputFormat*)},
+	{"setOutputFormat", "(Lcom/sun/org/apache/xml/internal/serialize/OutputFormat;)V", nullptr, $PUBLIC, $virtualMethod(XHTMLSerializer, setOutputFormat, void, $OutputFormat*)},
 	{}
 };
 

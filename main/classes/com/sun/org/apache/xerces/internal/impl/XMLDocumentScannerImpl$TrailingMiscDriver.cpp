@@ -59,8 +59,8 @@ $FieldInfo _XMLDocumentScannerImpl$TrailingMiscDriver_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentScannerImpl$TrailingMiscDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLDocumentScannerImpl$TrailingMiscDriver::*)($XMLDocumentScannerImpl*)>(&XMLDocumentScannerImpl$TrailingMiscDriver::init$))},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(XMLDocumentScannerImpl$TrailingMiscDriver, init$, void, $XMLDocumentScannerImpl*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XMLDocumentScannerImpl$TrailingMiscDriver, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

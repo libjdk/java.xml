@@ -38,10 +38,10 @@ $FieldInfo _Messages_FieldInfo_[] = {
 };
 
 $MethodInfo _Messages_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(Messages::*)($String*)>(&Messages::init$))},
-	{"createMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(Messages::*)($String*,$ObjectArray*)>(&Messages::createMessage))},
-	{"createMsg", "(Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PRIVATE | $FINAL, $method(static_cast<$String*(Messages::*)($ResourceBundle*,$String*,$ObjectArray*)>(&Messages::createMsg))},
-	{"getLocale", "()Ljava/util/Locale;", nullptr, $PRIVATE, $method(static_cast<$Locale*(Messages::*)()>(&Messages::getLocale))},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, 0, $method(Messages, init$, void, $String*)},
+	{"createMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(Messages, createMessage, $String*, $String*, $ObjectArray*)},
+	{"createMsg", "(Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PRIVATE | $FINAL, $method(Messages, createMsg, $String*, $ResourceBundle*, $String*, $ObjectArray*)},
+	{"getLocale", "()Ljava/util/Locale;", nullptr, $PRIVATE, $method(Messages, getLocale, $Locale*)},
 	{}
 };
 

@@ -6,14 +6,16 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $DOMImplementation = ::org::w3c::dom::DOMImplementation;
+using $DOMImplementationList = ::org::w3c::dom::DOMImplementationList;
 
 namespace org {
 	namespace w3c {
 		namespace dom {
 
 $MethodInfo _DOMImplementationSource_MethodInfo_[] = {
-	{"getDOMImplementation", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDOMImplementationList", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementationList;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDOMImplementation", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMImplementationSource, getDOMImplementation, $DOMImplementation*, $String*)},
+	{"getDOMImplementationList", "(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementationList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMImplementationSource, getDOMImplementationList, $DOMImplementationList*, $String*)},
 	{}
 };
 

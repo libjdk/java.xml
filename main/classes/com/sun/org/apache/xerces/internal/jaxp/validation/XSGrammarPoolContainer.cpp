@@ -3,6 +3,8 @@
 #include <com/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool.h>
 #include <jcpp.h>
 
+using $XMLGrammarPool = ::com::sun::org::apache::xerces::internal::xni::grammars::XMLGrammarPool;
+using $Boolean = ::java::lang::Boolean;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -16,12 +18,12 @@ namespace com {
 							namespace validation {
 
 $MethodInfo _XSGrammarPoolContainer_MethodInfo_[] = {
-	{"getFeature", "(Ljava/lang/String;)Ljava/lang/Boolean;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT},
-	{"isFullyComposed", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getFeature", "(Ljava/lang/String;)Ljava/lang/Boolean;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammarPoolContainer, getFeature, $Boolean*, $String*)},
+	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammarPoolContainer, getGrammarPool, $XMLGrammarPool*)},
+	{"getProperty", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammarPoolContainer, getProperty, $Object*, $String*)},
+	{"isFullyComposed", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammarPoolContainer, isFullyComposed, bool)},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammarPoolContainer, setFeature, void, $String*, bool)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSGrammarPoolContainer, setProperty, void, $String*, Object$*)},
 	{}
 };
 

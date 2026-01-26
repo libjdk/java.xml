@@ -30,8 +30,8 @@ $FieldInfo _ListDatatypeValidator_FieldInfo_[] = {
 };
 
 $MethodInfo _ListDatatypeValidator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dv/DatatypeValidator;)V", nullptr, $PUBLIC, $method(static_cast<void(ListDatatypeValidator::*)($DatatypeValidator*)>(&ListDatatypeValidator::init$))},
-	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dv/DatatypeValidator;)V", nullptr, $PUBLIC, $method(ListDatatypeValidator, init$, void, $DatatypeValidator*)},
+	{"validate", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/impl/dv/ValidationContext;)V", nullptr, $PUBLIC, $virtualMethod(ListDatatypeValidator, validate, void, $String*, $ValidationContext*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
 	{}
 };
 

@@ -31,17 +31,17 @@ $FieldInfo _SAXSource_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXSource_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAXSource::*)()>(&SAXSource::init$))},
-	{"<init>", "(Lorg/xml/sax/XMLReader;Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXSource::*)($XMLReader*,$InputSource*)>(&SAXSource::init$))},
-	{"<init>", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXSource::*)($InputSource*)>(&SAXSource::init$))},
-	{"getInputSource", "()Lorg/xml/sax/InputSource;", nullptr, $PUBLIC},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLReader", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC},
-	{"isEmpty", "()Z", nullptr, $PUBLIC},
-	{"setInputSource", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setXMLReader", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC},
-	{"sourceToInputSource", "(Ljavax/xml/transform/Source;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$InputSource*(*)($Source*)>(&SAXSource::sourceToInputSource))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAXSource, init$, void)},
+	{"<init>", "(Lorg/xml/sax/XMLReader;Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(SAXSource, init$, void, $XMLReader*, $InputSource*)},
+	{"<init>", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(SAXSource, init$, void, $InputSource*)},
+	{"getInputSource", "()Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $virtualMethod(SAXSource, getInputSource, $InputSource*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXSource, getSystemId, $String*)},
+	{"getXMLReader", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC, $virtualMethod(SAXSource, getXMLReader, $XMLReader*)},
+	{"isEmpty", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXSource, isEmpty, bool)},
+	{"setInputSource", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $virtualMethod(SAXSource, setInputSource, void, $InputSource*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SAXSource, setSystemId, void, $String*)},
+	{"setXMLReader", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC, $virtualMethod(SAXSource, setXMLReader, void, $XMLReader*)},
+	{"sourceToInputSource", "(Ljavax/xml/transform/Source;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXSource, sourceToInputSource, $InputSource*, $Source*)},
 	{}
 };
 

@@ -7,6 +7,9 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $XMLStreamReader = ::javax::xml::stream::XMLStreamReader;
+using $XMLEvent = ::javax::xml::stream::events::XMLEvent;
+using $XMLEventConsumer = ::javax::xml::stream::util::XMLEventConsumer;
 
 namespace javax {
 	namespace xml {
@@ -14,9 +17,9 @@ namespace javax {
 			namespace util {
 
 $MethodInfo _XMLEventAllocator_MethodInfo_[] = {
-	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;Ljavax/xml/stream/util/XMLEventConsumer;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
-	{"newInstance", "()Ljavax/xml/stream/util/XMLEventAllocator;", nullptr, $PUBLIC | $ABSTRACT},
+	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;)Ljavax/xml/stream/events/XMLEvent;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLEventAllocator, allocate, $XMLEvent*, $XMLStreamReader*), "javax.xml.stream.XMLStreamException"},
+	{"allocate", "(Ljavax/xml/stream/XMLStreamReader;Ljavax/xml/stream/util/XMLEventConsumer;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLEventAllocator, allocate, void, $XMLStreamReader*, $XMLEventConsumer*), "javax.xml.stream.XMLStreamException"},
+	{"newInstance", "()Ljavax/xml/stream/util/XMLEventAllocator;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLEventAllocator, newInstance, XMLEventAllocator*)},
 	{}
 };
 

@@ -7,6 +7,7 @@
 #undef NOTSTRIP
 #undef STRIP
 
+using $DTM = ::com::sun::org::apache::xml::internal::dtm::DTM;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
@@ -27,7 +28,7 @@ $FieldInfo _DTMWSFilter_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMWSFilter_MethodInfo_[] = {
-	{"getShouldStripSpace", "(ILcom/sun/org/apache/xml/internal/dtm/DTM;)S", nullptr, $PUBLIC | $ABSTRACT},
+	{"getShouldStripSpace", "(ILcom/sun/org/apache/xml/internal/dtm/DTM;)S", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DTMWSFilter, getShouldStripSpace, int16_t, int32_t, $DTM*)},
 	{}
 };
 

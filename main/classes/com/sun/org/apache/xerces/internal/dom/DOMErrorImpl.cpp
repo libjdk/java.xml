@@ -39,16 +39,16 @@ $FieldInfo _DOMErrorImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMErrorImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMErrorImpl::*)()>(&DOMErrorImpl::init$))},
-	{"<init>", "(SLcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $method(static_cast<void(DOMErrorImpl::*)(int16_t,$XMLParseException*)>(&DOMErrorImpl::init$))},
-	{"createDOMLocator", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)Lcom/sun/org/apache/xerces/internal/dom/DOMLocatorImpl;", nullptr, $PRIVATE, $method(static_cast<$DOMLocatorImpl*(DOMErrorImpl::*)($XMLParseException*)>(&DOMErrorImpl::createDOMLocator))},
-	{"getLocation", "()Lorg/w3c/dom/DOMLocator;", nullptr, $PUBLIC},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getRelatedData", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getRelatedException", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getSeverity", "()S", nullptr, $PUBLIC},
-	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMErrorImpl, init$, void)},
+	{"<init>", "(SLcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)V", nullptr, $PUBLIC, $method(DOMErrorImpl, init$, void, int16_t, $XMLParseException*)},
+	{"createDOMLocator", "(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLParseException;)Lcom/sun/org/apache/xerces/internal/dom/DOMLocatorImpl;", nullptr, $PRIVATE, $method(DOMErrorImpl, createDOMLocator, $DOMLocatorImpl*, $XMLParseException*)},
+	{"getLocation", "()Lorg/w3c/dom/DOMLocator;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getLocation, $DOMLocator*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getMessage, $String*)},
+	{"getRelatedData", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getRelatedData, $Object*)},
+	{"getRelatedException", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getRelatedException, $Object*)},
+	{"getSeverity", "()S", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getSeverity, int16_t)},
+	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getType, $String*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, reset, void)},
 	{}
 };
 

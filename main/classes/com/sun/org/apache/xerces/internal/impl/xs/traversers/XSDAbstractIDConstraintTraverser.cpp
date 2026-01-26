@@ -59,8 +59,8 @@ namespace com {
 								namespace traversers {
 
 $MethodInfo _XSDAbstractIDConstraintTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;)V", nullptr, $PUBLIC, $method(static_cast<void(XSDAbstractIDConstraintTraverser::*)($XSDHandler*,$XSAttributeChecker*)>(&XSDAbstractIDConstraintTraverser::init$))},
-	{"traverseIdentityConstraint", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;[Ljava/lang/Object;)Z", nullptr, 0},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;)V", nullptr, $PUBLIC, $method(XSDAbstractIDConstraintTraverser, init$, void, $XSDHandler*, $XSAttributeChecker*)},
+	{"traverseIdentityConstraint", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;[Ljava/lang/Object;)Z", nullptr, 0, $virtualMethod(XSDAbstractIDConstraintTraverser, traverseIdentityConstraint, bool, $IdentityConstraint*, $Element*, $XSDocumentInfo*, $ObjectArray*)},
 	{}
 };
 

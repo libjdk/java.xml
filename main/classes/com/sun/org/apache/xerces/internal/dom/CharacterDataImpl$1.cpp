@@ -18,9 +18,9 @@ namespace com {
 						namespace dom {
 
 $MethodInfo _CharacterDataImpl$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(CharacterDataImpl$1::*)()>(&CharacterDataImpl$1::init$))},
-	{"getLength", "()I", nullptr, $PUBLIC},
-	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(CharacterDataImpl$1, init$, void)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(CharacterDataImpl$1, getLength, int32_t)},
+	{"item", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(CharacterDataImpl$1, item, $Node*, int32_t)},
 	{}
 };
 

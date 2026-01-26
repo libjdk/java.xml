@@ -5,6 +5,9 @@
 #include <java/io/DataInput.h>
 #include <jcpp.h>
 
+using $Attribute = ::com::sun::org::apache::bcel::internal::classfile::Attribute;
+using $ConstantPool = ::com::sun::org::apache::bcel::internal::classfile::ConstantPool;
+using $DataInput = ::java::io::DataInput;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -17,7 +20,7 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _UnknownAttributeReader_MethodInfo_[] = {
-	{"createAttribute", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC | $ABSTRACT},
+	{"createAttribute", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/Attribute;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(UnknownAttributeReader, createAttribute, $Attribute*, int32_t, int32_t, $DataInput*, $ConstantPool*)},
 	{}
 };
 

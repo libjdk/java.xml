@@ -14,9 +14,9 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _StringList_MethodInfo_[] = {
-	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"contains", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StringList, contains, bool, $String*)},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StringList, getLength, int32_t)},
+	{"item", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StringList, item, $String*, int32_t)},
 	{}
 };
 

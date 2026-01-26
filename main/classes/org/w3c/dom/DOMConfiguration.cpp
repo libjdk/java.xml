@@ -5,16 +5,17 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $DOMStringList = ::org::w3c::dom::DOMStringList;
 
 namespace org {
 	namespace w3c {
 		namespace dom {
 
 $MethodInfo _DOMConfiguration_MethodInfo_[] = {
-	{"canSetParameter", "(Ljava/lang/String;Ljava/lang/Object;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getParameter", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
-	{"getParameterNames", "()Lorg/w3c/dom/DOMStringList;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setParameter", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.w3c.dom.DOMException"},
+	{"canSetParameter", "(Ljava/lang/String;Ljava/lang/Object;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMConfiguration, canSetParameter, bool, $String*, Object$*)},
+	{"getParameter", "(Ljava/lang/String;)Ljava/lang/Object;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMConfiguration, getParameter, $Object*, $String*), "org.w3c.dom.DOMException"},
+	{"getParameterNames", "()Lorg/w3c/dom/DOMStringList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMConfiguration, getParameterNames, $DOMStringList*)},
+	{"setParameter", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(DOMConfiguration, setParameter, void, $String*, Object$*), "org.w3c.dom.DOMException"},
 	{}
 };
 

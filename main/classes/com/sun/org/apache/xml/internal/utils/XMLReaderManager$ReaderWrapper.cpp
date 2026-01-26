@@ -27,7 +27,7 @@ $FieldInfo _XMLReaderManager$ReaderWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLReaderManager$ReaderWrapper_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/XMLReaderManager;Lorg/xml/sax/XMLReader;Z)V", nullptr, $PUBLIC, $method(static_cast<void(XMLReaderManager$ReaderWrapper::*)($XMLReaderManager*,$XMLReader*,bool)>(&XMLReaderManager$ReaderWrapper::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/XMLReaderManager;Lorg/xml/sax/XMLReader;Z)V", nullptr, $PUBLIC, $method(XMLReaderManager$ReaderWrapper, init$, void, $XMLReaderManager*, $XMLReader*, bool)},
 	{}
 };
 

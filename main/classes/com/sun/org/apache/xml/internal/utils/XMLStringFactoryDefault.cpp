@@ -30,11 +30,11 @@ $FieldInfo _XMLStringFactoryDefault_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLStringFactoryDefault_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLStringFactoryDefault::*)()>(&XMLStringFactoryDefault::init$))},
-	{"emptystr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
-	{"newstr", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
-	{"newstr", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;II)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
-	{"newstr", "([CII)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLStringFactoryDefault, init$, void)},
+	{"emptystr", "()Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryDefault, emptystr, $XMLString*)},
+	{"newstr", "(Ljava/lang/String;)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryDefault, newstr, $XMLString*, $String*)},
+	{"newstr", "(Lcom/sun/org/apache/xml/internal/utils/FastStringBuffer;II)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryDefault, newstr, $XMLString*, $FastStringBuffer*, int32_t, int32_t)},
+	{"newstr", "([CII)Lcom/sun/org/apache/xml/internal/utils/XMLString;", nullptr, $PUBLIC, $virtualMethod(XMLStringFactoryDefault, newstr, $XMLString*, $chars*, int32_t, int32_t)},
 	{}
 };
 

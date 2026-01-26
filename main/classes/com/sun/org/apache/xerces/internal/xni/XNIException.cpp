@@ -23,11 +23,11 @@ $FieldInfo _XNIException_FieldInfo_[] = {
 };
 
 $MethodInfo _XNIException_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XNIException::*)($String*)>(&XNIException::init$))},
-	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(XNIException::*)($Exception*)>(&XNIException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(static_cast<void(XNIException::*)($String*,$Exception*)>(&XNIException::init$))},
-	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
-	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XNIException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(XNIException, init$, void, $Exception*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, $PUBLIC, $method(XNIException, init$, void, $String*, $Exception*)},
+	{"getCause", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(XNIException, getCause, $Throwable*)},
+	{"getException", "()Ljava/lang/Exception;", nullptr, $PUBLIC, $virtualMethod(XNIException, getException, $Exception*)},
 	{}
 };
 

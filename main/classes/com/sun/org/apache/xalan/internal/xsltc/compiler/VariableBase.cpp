@@ -66,7 +66,7 @@ using $InvokeInstruction = ::com::sun::org::apache::bcel::internal::generic::Inv
 using $LocalVariableGen = ::com::sun::org::apache::bcel::internal::generic::LocalVariableGen;
 using $NEW = ::com::sun::org::apache::bcel::internal::generic::NEW;
 using $PUSH = ::com::sun::org::apache::bcel::internal::generic::PUSH;
-using $Type = ::com::sun::org::apache::bcel::internal::generic::Type;
+using $1Type = ::com::sun::org::apache::bcel::internal::generic::Type;
 using $Constants = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Constants;
 using $Expression = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Expression;
 using $Parser = ::com::sun::org::apache::xalan::internal::xsltc::compiler::Parser;
@@ -80,7 +80,7 @@ using $ErrorMsg = ::com::sun::org::apache::xalan::internal::xsltc::compiler::uti
 using $MethodGenerator = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::MethodGenerator;
 using $NodeSetType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::NodeSetType;
 using $ResultTreeType = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::ResultTreeType;
-using $1Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
+using $Type = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Type;
 using $Util = ::com::sun::org::apache::xalan::internal::xsltc::compiler::util::Util;
 using $XML11Char = ::com::sun::org::apache::xml::internal::utils::XML11Char;
 using $PrintStream = ::java::io::PrintStream;
@@ -116,24 +116,24 @@ $FieldInfo _VariableBase_FieldInfo_[] = {
 };
 
 $MethodInfo _VariableBase_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(VariableBase::*)()>(&VariableBase::init$))},
-	{"addReference", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableRefBase;)V", nullptr, $PUBLIC},
-	{"copyReferences", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableBase;)V", nullptr, $PUBLIC},
-	{"disable", "()V", nullptr, $PUBLIC},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"getEscapedName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getExpression", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC},
-	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;", nullptr, $PUBLIC},
-	{"getType", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC},
-	{"isLocal", "()Z", nullptr, $PUBLIC},
-	{"loadInstruction", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"mapRegister", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"setName", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC},
-	{"storeInstruction", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"translateValue", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"unmapRegister", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(VariableBase, init$, void)},
+	{"addReference", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableRefBase;)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, addReference, void, $VariableRefBase*)},
+	{"copyReferences", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/VariableBase;)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, copyReferences, void, VariableBase*)},
+	{"disable", "()V", nullptr, $PUBLIC, $virtualMethod(VariableBase, disable, void)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, display, void, int32_t)},
+	{"getEscapedName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(VariableBase, getEscapedName, $String*)},
+	{"getExpression", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Expression;", nullptr, $PUBLIC, $virtualMethod(VariableBase, getExpression, $Expression*)},
+	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;", nullptr, $PUBLIC, $virtualMethod(VariableBase, getName, $QName*)},
+	{"getType", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(VariableBase, getType, $Type*)},
+	{"isLocal", "()Z", nullptr, $PUBLIC, $virtualMethod(VariableBase, isLocal, bool)},
+	{"loadInstruction", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(VariableBase, loadInstruction, $Instruction*)},
+	{"mapRegister", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, mapRegister, void, $MethodGenerator*)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, parseContents, void, $Parser*)},
+	{"setName", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, setName, void, $QName*)},
+	{"storeInstruction", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(VariableBase, storeInstruction, $Instruction*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(VariableBase, toString, $String*)},
+	{"translateValue", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, translateValue, void, $ClassGenerator*, $MethodGenerator*)},
+	{"unmapRegister", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(VariableBase, unmapRegister, void, $ClassGenerator*, $MethodGenerator*)},
 	{}
 };
 
@@ -177,7 +177,7 @@ void VariableBase::mapRegister($MethodGenerator* methodGen) {
 	if (this->_local == nullptr) {
 		$var($InstructionList, il, $nc(methodGen)->getInstructionList());
 		$var($String, name, getEscapedName());
-		$var($Type, varType, $nc(this->_type)->toJCType());
+		$var($1Type, varType, $nc(this->_type)->toJCType());
 		$set(this, _local, methodGen->addLocalVariable2(name, varType, $($nc(il)->getEnd())));
 	}
 }
@@ -242,7 +242,7 @@ void VariableBase::display(int32_t indent) {
 	displayContents(indent + $SyntaxTreeNode::IndentIncrement);
 }
 
-$1Type* VariableBase::getType() {
+$Type* VariableBase::getType() {
 	return this->_type;
 }
 

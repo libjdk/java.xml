@@ -6,6 +6,8 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Duration = ::javax::xml::datatype::Duration;
+using $XMLGregorianCalendar = ::javax::xml::datatype::XMLGregorianCalendar;
 
 namespace com {
 	namespace sun {
@@ -17,20 +19,20 @@ namespace com {
 							namespace datatypes {
 
 $MethodInfo _XSDateTime_MethodInfo_[] = {
-	{"getDays", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDuration", "()Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getHours", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLexicalValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMinutes", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getMonths", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSeconds", "()D", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTimeZoneHours", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTimeZoneMinutes", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getXMLGregorianCalendar", "()Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getYears", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"hasTimeZone", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"isNormalized", "()Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"normalize", "()Lcom/sun/org/apache/xerces/internal/xs/datatypes/XSDateTime;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDays", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getDays, int32_t)},
+	{"getDuration", "()Ljavax/xml/datatype/Duration;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getDuration, $Duration*)},
+	{"getHours", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getHours, int32_t)},
+	{"getLexicalValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getLexicalValue, $String*)},
+	{"getMinutes", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getMinutes, int32_t)},
+	{"getMonths", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getMonths, int32_t)},
+	{"getSeconds", "()D", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getSeconds, double)},
+	{"getTimeZoneHours", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getTimeZoneHours, int32_t)},
+	{"getTimeZoneMinutes", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getTimeZoneMinutes, int32_t)},
+	{"getXMLGregorianCalendar", "()Ljavax/xml/datatype/XMLGregorianCalendar;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getXMLGregorianCalendar, $XMLGregorianCalendar*)},
+	{"getYears", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, getYears, int32_t)},
+	{"hasTimeZone", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, hasTimeZone, bool)},
+	{"isNormalized", "()Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, isNormalized, bool)},
+	{"normalize", "()Lcom/sun/org/apache/xerces/internal/xs/datatypes/XSDateTime;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSDateTime, normalize, XSDateTime*)},
 	{}
 };
 

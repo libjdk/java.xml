@@ -65,10 +65,10 @@ namespace com {
 								namespace traversers {
 
 $MethodInfo _XSDWildcardTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;)V", nullptr, 0, $method(static_cast<void(XSDWildcardTraverser::*)($XSDHandler*,$XSAttributeChecker*)>(&XSDWildcardTraverser::init$))},
-	{"traverseAny", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;", nullptr, 0},
-	{"traverseAnyAttribute", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSWildcardDecl;", nullptr, 0},
-	{"traverseWildcardDecl", "(Lorg/w3c/dom/Element;[Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSWildcardDecl;", nullptr, 0},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSAttributeChecker;)V", nullptr, 0, $method(XSDWildcardTraverser, init$, void, $XSDHandler*, $XSAttributeChecker*)},
+	{"traverseAny", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;", nullptr, 0, $virtualMethod(XSDWildcardTraverser, traverseAny, $XSParticleDecl*, $Element*, $XSDocumentInfo*, $SchemaGrammar*)},
+	{"traverseAnyAttribute", "(Lorg/w3c/dom/Element;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSWildcardDecl;", nullptr, 0, $virtualMethod(XSDWildcardTraverser, traverseAnyAttribute, $XSWildcardDecl*, $Element*, $XSDocumentInfo*, $SchemaGrammar*)},
+	{"traverseWildcardDecl", "(Lorg/w3c/dom/Element;[Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSWildcardDecl;", nullptr, 0, $virtualMethod(XSDWildcardTraverser, traverseWildcardDecl, $XSWildcardDecl*, $Element*, $ObjectArray*, $XSDocumentInfo*, $SchemaGrammar*)},
 	{}
 };
 

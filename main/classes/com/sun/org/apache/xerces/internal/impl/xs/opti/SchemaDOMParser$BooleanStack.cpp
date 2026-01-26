@@ -25,12 +25,12 @@ $FieldInfo _SchemaDOMParser$BooleanStack_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaDOMParser$BooleanStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaDOMParser$BooleanStack::*)()>(&SchemaDOMParser$BooleanStack::init$))},
-	{"clear", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaDOMParser$BooleanStack::*)()>(&SchemaDOMParser$BooleanStack::clear))},
-	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(SchemaDOMParser$BooleanStack::*)(int32_t)>(&SchemaDOMParser$BooleanStack::ensureCapacity))},
-	{"pop", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(SchemaDOMParser$BooleanStack::*)()>(&SchemaDOMParser$BooleanStack::pop))},
-	{"push", "(Z)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaDOMParser$BooleanStack::*)(bool)>(&SchemaDOMParser$BooleanStack::push))},
-	{"size", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(SchemaDOMParser$BooleanStack::*)()>(&SchemaDOMParser$BooleanStack::size))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaDOMParser$BooleanStack, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $method(SchemaDOMParser$BooleanStack, clear, void)},
+	{"ensureCapacity", "(I)V", nullptr, $PRIVATE, $method(SchemaDOMParser$BooleanStack, ensureCapacity, void, int32_t)},
+	{"pop", "()Z", nullptr, $PUBLIC, $method(SchemaDOMParser$BooleanStack, pop, bool)},
+	{"push", "(Z)V", nullptr, $PUBLIC, $method(SchemaDOMParser$BooleanStack, push, void, bool)},
+	{"size", "()I", nullptr, $PUBLIC, $method(SchemaDOMParser$BooleanStack, size, int32_t)},
 	{}
 };
 

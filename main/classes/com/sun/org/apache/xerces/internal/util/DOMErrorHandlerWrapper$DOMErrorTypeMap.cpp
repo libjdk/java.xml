@@ -36,8 +36,8 @@ $FieldInfo _DOMErrorHandlerWrapper$DOMErrorTypeMap_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMErrorHandlerWrapper$DOMErrorTypeMap_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(DOMErrorHandlerWrapper$DOMErrorTypeMap::*)()>(&DOMErrorHandlerWrapper$DOMErrorTypeMap::init$))},
-	{"getDOMErrorType", "(Lcom/sun/org/apache/xerces/internal/util/XMLErrorCode;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($XMLErrorCode*)>(&DOMErrorHandlerWrapper$DOMErrorTypeMap::getDOMErrorType))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(DOMErrorHandlerWrapper$DOMErrorTypeMap, init$, void)},
+	{"getDOMErrorType", "(Lcom/sun/org/apache/xerces/internal/util/XMLErrorCode;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(DOMErrorHandlerWrapper$DOMErrorTypeMap, getDOMErrorType, $String*, $XMLErrorCode*)},
 	{}
 };
 

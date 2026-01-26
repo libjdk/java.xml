@@ -49,19 +49,19 @@ $FieldInfo _NamespaceSupport_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceSupport_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NamespaceSupport::*)()>(&NamespaceSupport::init$))},
-	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
-	{"getDeclaredPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
-	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/Enumeration;", "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"isNamespaceDeclUris", "()Z", nullptr, $PUBLIC},
-	{"popContext", "()V", nullptr, $PUBLIC},
-	{"processName", "(Ljava/lang/String;[Ljava/lang/String;Z)[Ljava/lang/String;", nullptr, $PUBLIC},
-	{"pushContext", "()V", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"setNamespaceDeclUris", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NamespaceSupport, init$, void)},
+	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, declarePrefix, bool, $String*, $String*)},
+	{"getDeclaredPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(NamespaceSupport, getDeclaredPrefixes, $Enumeration*)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, getPrefix, $String*, $String*)},
+	{"getPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(NamespaceSupport, getPrefixes, $Enumeration*)},
+	{"getPrefixes", "(Ljava/lang/String;)Ljava/util/Enumeration;", "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC, $virtualMethod(NamespaceSupport, getPrefixes, $Enumeration*, $String*)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, getURI, $String*, $String*)},
+	{"isNamespaceDeclUris", "()Z", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, isNamespaceDeclUris, bool)},
+	{"popContext", "()V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, popContext, void)},
+	{"processName", "(Ljava/lang/String;[Ljava/lang/String;Z)[Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, processName, $StringArray*, $String*, $StringArray*, bool)},
+	{"pushContext", "()V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, pushContext, void)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, reset, void)},
+	{"setNamespaceDeclUris", "(Z)V", nullptr, $PUBLIC, $virtualMethod(NamespaceSupport, setNamespaceDeclUris, void, bool)},
 	{}
 };
 

@@ -486,18 +486,18 @@ $FieldInfo _XSAttributeChecker_FieldInfo_[] = {
 };
 
 $MethodInfo _XSAttributeChecker_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;)V", nullptr, $PUBLIC, $method(static_cast<void(XSAttributeChecker::*)($XSDHandler*)>(&XSAttributeChecker::init$))},
-	{"checkAttributes", "(Lorg/w3c/dom/Element;ZLcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;)[Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"checkAttributes", "(Lorg/w3c/dom/Element;ZLcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Z)[Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"checkNonSchemaAttributes", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSGrammarBucket;)V", nullptr, $PUBLIC},
-	{"getAvailableArray", "()[Ljava/lang/Object;", nullptr, $PROTECTED},
-	{"normalize", "(Ljava/lang/String;S)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)($String*,int16_t)>(&XSAttributeChecker::normalize))},
-	{"reportSchemaError", "(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Element;)V", nullptr, 0},
-	{"reportSchemaFatalError", "(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Element;)V", nullptr, 0},
-	{"reset", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC},
-	{"resolveNamespace", "(Lorg/w3c/dom/Element;[Lorg/w3c/dom/Attr;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaNamespaceSupport;)V", nullptr, $PUBLIC},
-	{"returnAttrArray", "([Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;)V", nullptr, $PUBLIC},
-	{"validate", "([Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;ILcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;)Ljava/lang/Object;", nullptr, $PRIVATE, $method(static_cast<$Object*(XSAttributeChecker::*)($ObjectArray*,$String*,$String*,int32_t,$XSDocumentInfo*)>(&XSAttributeChecker::validate)), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDHandler;)V", nullptr, $PUBLIC, $method(XSAttributeChecker, init$, void, $XSDHandler*)},
+	{"checkAttributes", "(Lorg/w3c/dom/Element;ZLcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;)[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSAttributeChecker, checkAttributes, $ObjectArray*, $Element*, bool, $XSDocumentInfo*)},
+	{"checkAttributes", "(Lorg/w3c/dom/Element;ZLcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;Z)[Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XSAttributeChecker, checkAttributes, $ObjectArray*, $Element*, bool, $XSDocumentInfo*, bool)},
+	{"checkNonSchemaAttributes", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSGrammarBucket;)V", nullptr, $PUBLIC, $virtualMethod(XSAttributeChecker, checkNonSchemaAttributes, void, $XSGrammarBucket*)},
+	{"getAvailableArray", "()[Ljava/lang/Object;", nullptr, $PROTECTED, $virtualMethod(XSAttributeChecker, getAvailableArray, $ObjectArray*)},
+	{"normalize", "(Ljava/lang/String;S)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(XSAttributeChecker, normalize, $String*, $String*, int16_t)},
+	{"reportSchemaError", "(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Element;)V", nullptr, 0, $virtualMethod(XSAttributeChecker, reportSchemaError, void, $String*, $ObjectArray*, $Element*)},
+	{"reportSchemaFatalError", "(Ljava/lang/String;[Ljava/lang/Object;Lorg/w3c/dom/Element;)V", nullptr, 0, $virtualMethod(XSAttributeChecker, reportSchemaFatalError, void, $String*, $ObjectArray*, $Element*)},
+	{"reset", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $virtualMethod(XSAttributeChecker, reset, void, $SymbolTable*)},
+	{"resolveNamespace", "(Lorg/w3c/dom/Element;[Lorg/w3c/dom/Attr;Lcom/sun/org/apache/xerces/internal/impl/xs/SchemaNamespaceSupport;)V", nullptr, $PUBLIC, $virtualMethod(XSAttributeChecker, resolveNamespace, void, $Element*, $AttrArray*, $SchemaNamespaceSupport*)},
+	{"returnAttrArray", "([Ljava/lang/Object;Lcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;)V", nullptr, $PUBLIC, $virtualMethod(XSAttributeChecker, returnAttrArray, void, $ObjectArray*, $XSDocumentInfo*)},
+	{"validate", "([Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;ILcom/sun/org/apache/xerces/internal/impl/xs/traversers/XSDocumentInfo;)Ljava/lang/Object;", nullptr, $PRIVATE, $method(XSAttributeChecker, validate, $Object*, $ObjectArray*, $String*, $String*, int32_t, $XSDocumentInfo*), "com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException"},
 	{}
 };
 

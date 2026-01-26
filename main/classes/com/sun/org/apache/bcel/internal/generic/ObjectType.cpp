@@ -43,17 +43,17 @@ $FieldInfo _ObjectType_FieldInfo_[] = {
 };
 
 $MethodInfo _ObjectType_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ObjectType::*)($String*)>(&ObjectType::init$))},
-	{"accessibleTo", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;)Z", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getClassName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getInstance", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/generic/ObjectType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<ObjectType*(*)($String*)>(&ObjectType::getInstance))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"referencesClass", "()Z", nullptr, $PUBLIC | $DEPRECATED, nullptr, nullptr, nullptr, _ObjectType_MethodAnnotations_referencesClass6},
-	{"referencesClassExact", "()Z", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
-	{"referencesInterface", "()Z", nullptr, $PUBLIC | $DEPRECATED, nullptr, nullptr, nullptr, _ObjectType_MethodAnnotations_referencesInterface8},
-	{"referencesInterfaceExact", "()Z", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
-	{"subclassOf", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;)Z", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ObjectType, init$, void, $String*)},
+	{"accessibleTo", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;)Z", nullptr, $PUBLIC, $virtualMethod(ObjectType, accessibleTo, bool, ObjectType*), "java.lang.ClassNotFoundException"},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(ObjectType, equals, bool, Object$*)},
+	{"getClassName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ObjectType, getClassName, $String*)},
+	{"getInstance", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/generic/ObjectType;", nullptr, $PUBLIC | $STATIC, $staticMethod(ObjectType, getInstance, ObjectType*, $String*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(ObjectType, hashCode, int32_t)},
+	{"referencesClass", "()Z", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(ObjectType, referencesClass, bool), nullptr, nullptr, _ObjectType_MethodAnnotations_referencesClass6},
+	{"referencesClassExact", "()Z", nullptr, $PUBLIC, $virtualMethod(ObjectType, referencesClassExact, bool), "java.lang.ClassNotFoundException"},
+	{"referencesInterface", "()Z", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(ObjectType, referencesInterface, bool), nullptr, nullptr, _ObjectType_MethodAnnotations_referencesInterface8},
+	{"referencesInterfaceExact", "()Z", nullptr, $PUBLIC, $virtualMethod(ObjectType, referencesInterfaceExact, bool), "java.lang.ClassNotFoundException"},
+	{"subclassOf", "(Lcom/sun/org/apache/bcel/internal/generic/ObjectType;)Z", nullptr, $PUBLIC, $virtualMethod(ObjectType, subclassOf, bool, ObjectType*), "java.lang.ClassNotFoundException"},
 	{}
 };
 

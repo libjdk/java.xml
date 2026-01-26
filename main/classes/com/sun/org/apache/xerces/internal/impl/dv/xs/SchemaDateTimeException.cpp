@@ -23,8 +23,8 @@ $FieldInfo _SchemaDateTimeException_FieldInfo_[] = {
 };
 
 $MethodInfo _SchemaDateTimeException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SchemaDateTimeException::*)()>(&SchemaDateTimeException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SchemaDateTimeException::*)($String*)>(&SchemaDateTimeException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SchemaDateTimeException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(SchemaDateTimeException, init$, void, $String*)},
 	{}
 };
 

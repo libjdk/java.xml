@@ -24,20 +24,20 @@ $FieldInfo _BoolStack_FieldInfo_[] = {
 };
 
 $MethodInfo _BoolStack_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(BoolStack::*)()>(&BoolStack::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(BoolStack::*)(int32_t)>(&BoolStack::init$))},
-	{"clear", "()V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(BoolStack::*)()>(&BoolStack::clear))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"grow", "()V", nullptr, $PRIVATE, $method(static_cast<void(BoolStack::*)()>(&BoolStack::grow))},
-	{"isEmpty", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(BoolStack::*)()>(&BoolStack::isEmpty))},
-	{"peek", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(BoolStack::*)()>(&BoolStack::peek))},
-	{"peekOrFalse", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(BoolStack::*)()>(&BoolStack::peekOrFalse))},
-	{"peekOrTrue", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(BoolStack::*)()>(&BoolStack::peekOrTrue))},
-	{"pop", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(BoolStack::*)()>(&BoolStack::pop))},
-	{"popAndTop", "()Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(BoolStack::*)()>(&BoolStack::popAndTop))},
-	{"push", "(Z)Z", nullptr, $PUBLIC | $FINAL, $method(static_cast<bool(BoolStack::*)(bool)>(&BoolStack::push))},
-	{"setTop", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(BoolStack::*)(bool)>(&BoolStack::setTop))},
-	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(static_cast<int32_t(BoolStack::*)()>(&BoolStack::size))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(BoolStack, init$, void)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(BoolStack, init$, void, int32_t)},
+	{"clear", "()V", nullptr, $PUBLIC | $FINAL, $method(BoolStack, clear, void)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(BoolStack, clone, $Object*), "java.lang.CloneNotSupportedException"},
+	{"grow", "()V", nullptr, $PRIVATE, $method(BoolStack, grow, void)},
+	{"isEmpty", "()Z", nullptr, $PUBLIC, $method(BoolStack, isEmpty, bool)},
+	{"peek", "()Z", nullptr, $PUBLIC | $FINAL, $method(BoolStack, peek, bool)},
+	{"peekOrFalse", "()Z", nullptr, $PUBLIC | $FINAL, $method(BoolStack, peekOrFalse, bool)},
+	{"peekOrTrue", "()Z", nullptr, $PUBLIC | $FINAL, $method(BoolStack, peekOrTrue, bool)},
+	{"pop", "()Z", nullptr, $PUBLIC | $FINAL, $method(BoolStack, pop, bool)},
+	{"popAndTop", "()Z", nullptr, $PUBLIC | $FINAL, $method(BoolStack, popAndTop, bool)},
+	{"push", "(Z)Z", nullptr, $PUBLIC | $FINAL, $method(BoolStack, push, bool, bool)},
+	{"setTop", "(Z)V", nullptr, $PUBLIC | $FINAL, $method(BoolStack, setTop, void, bool)},
+	{"size", "()I", nullptr, $PUBLIC | $FINAL, $method(BoolStack, size, int32_t)},
 	{}
 };
 

@@ -34,10 +34,10 @@ $FieldInfo _NodeCounterGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _NodeCounterGenerator_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(static_cast<void(NodeCounterGenerator::*)($String*,$String*,$String*,int32_t,$StringArray*,$Stylesheet*)>(&NodeCounterGenerator::init$))},
-	{"isExternal", "()Z", nullptr, $PUBLIC},
-	{"loadTranslet", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC},
-	{"setTransletIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(NodeCounterGenerator::*)(int32_t)>(&NodeCounterGenerator::setTransletIndex))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(NodeCounterGenerator, init$, void, $String*, $String*, $String*, int32_t, $StringArray*, $Stylesheet*)},
+	{"isExternal", "()Z", nullptr, $PUBLIC, $virtualMethod(NodeCounterGenerator, isExternal, bool)},
+	{"loadTranslet", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $virtualMethod(NodeCounterGenerator, loadTranslet, $Instruction*)},
+	{"setTransletIndex", "(I)V", nullptr, $PUBLIC, $method(NodeCounterGenerator, setTransletIndex, void, int32_t)},
 	{}
 };
 

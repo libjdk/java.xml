@@ -31,7 +31,7 @@ $FieldInfo _XSDAbstractTraverser$FacetInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _XSDAbstractTraverser$FacetInfo_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dv/XSFacets;Lorg/w3c/dom/Element;SS)V", nullptr, 0, $method(static_cast<void(XSDAbstractTraverser$FacetInfo::*)($XSFacets*,$Element*,int16_t,int16_t)>(&XSDAbstractTraverser$FacetInfo::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dv/XSFacets;Lorg/w3c/dom/Element;SS)V", nullptr, 0, $method(XSDAbstractTraverser$FacetInfo, init$, void, $XSFacets*, $Element*, int16_t, int16_t)},
 	{}
 };
 

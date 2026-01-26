@@ -33,12 +33,12 @@ $FieldInfo _UriEntry_FieldInfo_[] = {
 };
 
 $MethodInfo _UriEntry_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(UriEntry::*)($String*,$String*,$String*)>(&UriEntry::init$))},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(UriEntry::*)()>(&UriEntry::getName))},
-	{"getURI", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(static_cast<$URL*(UriEntry::*)()>(&UriEntry::getURI))},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setName", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(UriEntry::*)($String*)>(&UriEntry::setName))},
-	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(UriEntry::*)($String*)>(&UriEntry::setURI))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(UriEntry, init$, void, $String*, $String*, $String*)},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(UriEntry, getName, $String*)},
+	{"getURI", "()Ljava/net/URL;", nullptr, $PUBLIC, $method(UriEntry, getURI, $URL*)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(UriEntry, match, $String*, $String*)},
+	{"setName", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(UriEntry, setName, void, $String*)},
+	{"setURI", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(UriEntry, setURI, void, $String*)},
 	{}
 };
 

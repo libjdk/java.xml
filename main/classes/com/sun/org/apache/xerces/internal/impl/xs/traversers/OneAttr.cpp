@@ -25,7 +25,7 @@ $FieldInfo _OneAttr_FieldInfo_[] = {
 };
 
 $MethodInfo _OneAttr_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;IILjava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(OneAttr::*)($String*,int32_t,int32_t,Object$*)>(&OneAttr::init$))},
+	{"<init>", "(Ljava/lang/String;IILjava/lang/Object;)V", nullptr, $PUBLIC, $method(OneAttr, init$, void, $String*, int32_t, int32_t, Object$*)},
 	{}
 };
 

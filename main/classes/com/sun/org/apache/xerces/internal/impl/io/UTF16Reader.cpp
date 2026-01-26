@@ -43,21 +43,21 @@ $FieldInfo _UTF16Reader_FieldInfo_[] = {
 };
 
 $MethodInfo _UTF16Reader_MethodInfo_[] = {
-	{"<init>", "(Ljava/io/InputStream;Z)V", nullptr, $PUBLIC, $method(static_cast<void(UTF16Reader::*)($InputStream*,bool)>(&UTF16Reader::init$))},
-	{"<init>", "(Ljava/io/InputStream;ZLcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(UTF16Reader::*)($InputStream*,bool,$MessageFormatter*,$Locale*)>(&UTF16Reader::init$))},
-	{"<init>", "(Ljava/io/InputStream;IZLcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(UTF16Reader::*)($InputStream*,int32_t,bool,$MessageFormatter*,$Locale*)>(&UTF16Reader::init$))},
-	{"<init>", "(Ljava/io/InputStream;[BZLcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(static_cast<void(UTF16Reader::*)($InputStream*,$bytes*,bool,$MessageFormatter*,$Locale*)>(&UTF16Reader::init$))},
-	{"close", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"expectedTwoBytes", "()V", nullptr, $PRIVATE, $method(static_cast<void(UTF16Reader::*)()>(&UTF16Reader::expectedTwoBytes)), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
-	{"mark", "(I)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"markSupported", "()Z", nullptr, $PUBLIC},
-	{"processBE", "([CII)V", nullptr, $PRIVATE, $method(static_cast<void(UTF16Reader::*)($chars*,int32_t,int32_t)>(&UTF16Reader::processBE))},
-	{"processLE", "([CII)V", nullptr, $PRIVATE, $method(static_cast<void(UTF16Reader::*)($chars*,int32_t,int32_t)>(&UTF16Reader::processLE))},
-	{"read", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"read", "([CII)I", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"ready", "()Z", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"reset", "()V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"skip", "(J)J", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
+	{"<init>", "(Ljava/io/InputStream;Z)V", nullptr, $PUBLIC, $method(UTF16Reader, init$, void, $InputStream*, bool)},
+	{"<init>", "(Ljava/io/InputStream;ZLcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(UTF16Reader, init$, void, $InputStream*, bool, $MessageFormatter*, $Locale*)},
+	{"<init>", "(Ljava/io/InputStream;IZLcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(UTF16Reader, init$, void, $InputStream*, int32_t, bool, $MessageFormatter*, $Locale*)},
+	{"<init>", "(Ljava/io/InputStream;[BZLcom/sun/org/apache/xerces/internal/util/MessageFormatter;Ljava/util/Locale;)V", nullptr, $PUBLIC, $method(UTF16Reader, init$, void, $InputStream*, $bytes*, bool, $MessageFormatter*, $Locale*)},
+	{"close", "()V", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, close, void), "java.io.IOException"},
+	{"expectedTwoBytes", "()V", nullptr, $PRIVATE, $method(UTF16Reader, expectedTwoBytes, void), "com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException"},
+	{"mark", "(I)V", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, mark, void, int32_t), "java.io.IOException"},
+	{"markSupported", "()Z", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, markSupported, bool)},
+	{"processBE", "([CII)V", nullptr, $PRIVATE, $method(UTF16Reader, processBE, void, $chars*, int32_t, int32_t)},
+	{"processLE", "([CII)V", nullptr, $PRIVATE, $method(UTF16Reader, processLE, void, $chars*, int32_t, int32_t)},
+	{"read", "()I", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, read, int32_t), "java.io.IOException"},
+	{"read", "([CII)I", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, read, int32_t, $chars*, int32_t, int32_t), "java.io.IOException"},
+	{"ready", "()Z", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, ready, bool), "java.io.IOException"},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, reset, void), "java.io.IOException"},
+	{"skip", "(J)J", nullptr, $PUBLIC, $virtualMethod(UTF16Reader, skip, int64_t, int64_t), "java.io.IOException"},
 	{}
 };
 

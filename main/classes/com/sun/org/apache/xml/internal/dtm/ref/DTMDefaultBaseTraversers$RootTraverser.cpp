@@ -26,10 +26,10 @@ $FieldInfo _DTMDefaultBaseTraversers$RootTraverser_FieldInfo_[] = {
 };
 
 $MethodInfo _DTMDefaultBaseTraversers$RootTraverser_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(static_cast<void(DTMDefaultBaseTraversers$RootTraverser::*)($DTMDefaultBaseTraversers*)>(&DTMDefaultBaseTraversers$RootTraverser::init$))},
-	{"first", "(II)I", nullptr, $PUBLIC},
-	{"next", "(II)I", nullptr, $PUBLIC},
-	{"next", "(III)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers;)V", nullptr, $PRIVATE, $method(DTMDefaultBaseTraversers$RootTraverser, init$, void, $DTMDefaultBaseTraversers*)},
+	{"first", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$RootTraverser, first, int32_t, int32_t, int32_t)},
+	{"next", "(II)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$RootTraverser, next, int32_t, int32_t, int32_t)},
+	{"next", "(III)I", nullptr, $PUBLIC, $virtualMethod(DTMDefaultBaseTraversers$RootTraverser, next, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

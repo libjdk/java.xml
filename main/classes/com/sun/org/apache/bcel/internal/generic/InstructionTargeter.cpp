@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/InstructionHandle.h>
 #include <jcpp.h>
 
+using $InstructionHandle = ::com::sun::org::apache::bcel::internal::generic::InstructionHandle;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,8 +16,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _InstructionTargeter_MethodInfo_[] = {
-	{"containsTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"updateTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "com.sun.org.apache.bcel.internal.generic.ClassGenException"},
+	{"containsTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(InstructionTargeter, containsTarget, bool, $InstructionHandle*)},
+	{"updateTarget", "(Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;Lcom/sun/org/apache/bcel/internal/generic/InstructionHandle;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(InstructionTargeter, updateTarget, void, $InstructionHandle*, $InstructionHandle*), "com.sun.org.apache.bcel.internal.generic.ClassGenException"},
 	{}
 };
 

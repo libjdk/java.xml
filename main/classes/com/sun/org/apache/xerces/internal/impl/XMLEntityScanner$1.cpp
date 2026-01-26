@@ -27,8 +27,8 @@ $FieldInfo _XMLEntityScanner$1_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLEntityScanner$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XMLEntityScanner$1::*)()>(&XMLEntityScanner$1::init$))},
-	{"fillInStackTrace", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, 0, $method(XMLEntityScanner$1, init$, void)},
+	{"fillInStackTrace", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(XMLEntityScanner$1, fillInStackTrace, $Throwable*)},
 	{}
 };
 

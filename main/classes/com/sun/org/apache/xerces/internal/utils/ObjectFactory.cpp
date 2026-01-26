@@ -71,8 +71,8 @@ $FieldInfo ObjectFactory$$Lambda$lambda$newInstance$0::fieldInfos[3] = {
 	{}
 };
 $MethodInfo ObjectFactory$$Lambda$lambda$newInstance$0::methodInfos[3] = {
-	{"<init>", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(static_cast<void(ObjectFactory$$Lambda$lambda$newInstance$0::*)($Class*,$ClassLoader*)>(&ObjectFactory$$Lambda$lambda$newInstance$0::init$))},
-	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)V", nullptr, $PUBLIC, $method(ObjectFactory$$Lambda$lambda$newInstance$0, init$, void, $Class*, $ClassLoader*)},
+	{"get", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(ObjectFactory$$Lambda$lambda$newInstance$0, get, $Object*)},
 	{}
 };
 $ClassInfo ObjectFactory$$Lambda$lambda$newInstance$0::classInfo$ = {
@@ -97,15 +97,15 @@ $FieldInfo _ObjectFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _ObjectFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ObjectFactory::*)()>(&ObjectFactory::init$))},
-	{"debugPrintln", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $method(static_cast<void(*)($Supplier*)>(&ObjectFactory::debugPrintln))},
-	{"findClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$ClassLoader*(*)()>(&ObjectFactory::findClassLoader)), "com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
-	{"findProviderClass", "(Ljava/lang/String;Z)Ljava/lang/Class;", "(Ljava/lang/String;Z)Ljava/lang/Class<*>;", $PUBLIC | $STATIC, $method(static_cast<$Class*(*)($String*,bool)>(&ObjectFactory::findProviderClass)), "java.lang.ClassNotFoundException,com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
-	{"findProviderClass", "(Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Class;", "(Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Class<*>;", $PUBLIC | $STATIC, $method(static_cast<$Class*(*)($String*,$ClassLoader*,bool)>(&ObjectFactory::findProviderClass)), "java.lang.ClassNotFoundException,com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
-	{"isDebugEnabled", "()Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)()>(&ObjectFactory::isDebugEnabled))},
-	{"lambda$newInstance$0", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$String*(*)($Class*,$ClassLoader*)>(&ObjectFactory::lambda$newInstance$0))},
-	{"newInstance", "(Ljava/lang/String;Z)Ljava/lang/Object;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Object*(*)($String*,bool)>(&ObjectFactory::newInstance)), "com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
-	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Object;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Object*(*)($String*,$ClassLoader*,bool)>(&ObjectFactory::newInstance)), "com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ObjectFactory, init$, void)},
+	{"debugPrintln", "(Ljava/util/function/Supplier;)V", "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V", $PRIVATE | $STATIC, $staticMethod(ObjectFactory, debugPrintln, void, $Supplier*)},
+	{"findClassLoader", "()Ljava/lang/ClassLoader;", nullptr, $PUBLIC | $STATIC, $staticMethod(ObjectFactory, findClassLoader, $ClassLoader*), "com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
+	{"findProviderClass", "(Ljava/lang/String;Z)Ljava/lang/Class;", "(Ljava/lang/String;Z)Ljava/lang/Class<*>;", $PUBLIC | $STATIC, $staticMethod(ObjectFactory, findProviderClass, $Class*, $String*, bool), "java.lang.ClassNotFoundException,com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
+	{"findProviderClass", "(Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Class;", "(Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Class<*>;", $PUBLIC | $STATIC, $staticMethod(ObjectFactory, findProviderClass, $Class*, $String*, $ClassLoader*, bool), "java.lang.ClassNotFoundException,com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
+	{"isDebugEnabled", "()Z", nullptr, $PRIVATE | $STATIC, $staticMethod(ObjectFactory, isDebugEnabled, bool)},
+	{"lambda$newInstance$0", "(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(ObjectFactory, lambda$newInstance$0, $String*, $Class*, $ClassLoader*)},
+	{"newInstance", "(Ljava/lang/String;Z)Ljava/lang/Object;", nullptr, $PUBLIC | $STATIC, $staticMethod(ObjectFactory, newInstance, $Object*, $String*, bool), "com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
+	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;Z)Ljava/lang/Object;", nullptr, $PUBLIC | $STATIC, $staticMethod(ObjectFactory, newInstance, $Object*, $String*, $ClassLoader*, bool), "com.sun.org.apache.xerces.internal.utils.ConfigurationError"},
 	{}
 };
 

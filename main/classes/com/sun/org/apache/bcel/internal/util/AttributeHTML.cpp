@@ -80,11 +80,11 @@ $FieldInfo _AttributeHTML_FieldInfo_[] = {
 };
 
 $MethodInfo _AttributeHTML_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Lcom/sun/org/apache/bcel/internal/util/ConstantHTML;)V", nullptr, 0, $method(static_cast<void(AttributeHTML::*)($String*,$String*,$ConstantPool*,$ConstantHTML*)>(&AttributeHTML::init$)), "java.io.IOException"},
-	{"close", "()V", nullptr, 0, $method(static_cast<void(AttributeHTML::*)()>(&AttributeHTML::close))},
-	{"codeLink", "(II)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(AttributeHTML::*)(int32_t,int32_t)>(&AttributeHTML::codeLink))},
-	{"writeAttribute", "(Lcom/sun/org/apache/bcel/internal/classfile/Attribute;Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(AttributeHTML::*)($Attribute*,$String*)>(&AttributeHTML::writeAttribute))},
-	{"writeAttribute", "(Lcom/sun/org/apache/bcel/internal/classfile/Attribute;Ljava/lang/String;I)V", nullptr, 0, $method(static_cast<void(AttributeHTML::*)($Attribute*,$String*,int32_t)>(&AttributeHTML::writeAttribute))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;Lcom/sun/org/apache/bcel/internal/util/ConstantHTML;)V", nullptr, 0, $method(AttributeHTML, init$, void, $String*, $String*, $ConstantPool*, $ConstantHTML*), "java.io.IOException"},
+	{"close", "()V", nullptr, 0, $method(AttributeHTML, close, void)},
+	{"codeLink", "(II)Ljava/lang/String;", nullptr, $PRIVATE, $method(AttributeHTML, codeLink, $String*, int32_t, int32_t)},
+	{"writeAttribute", "(Lcom/sun/org/apache/bcel/internal/classfile/Attribute;Ljava/lang/String;)V", nullptr, 0, $method(AttributeHTML, writeAttribute, void, $Attribute*, $String*)},
+	{"writeAttribute", "(Lcom/sun/org/apache/bcel/internal/classfile/Attribute;Ljava/lang/String;I)V", nullptr, 0, $method(AttributeHTML, writeAttribute, void, $Attribute*, $String*, int32_t)},
 	{}
 };
 

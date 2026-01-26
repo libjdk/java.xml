@@ -89,16 +89,16 @@ $FieldInfo _XPathMatcher_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathMatcher_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath;)V", nullptr, $PUBLIC, $method(static_cast<void(XPathMatcher::*)($XPath*)>(&XPathMatcher::init$))},
-	{"endElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PUBLIC},
-	{"handleContent", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PROTECTED},
-	{"isMatched", "()Z", nullptr, $PUBLIC},
-	{"matched", "(Ljava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;Z)V", nullptr, $PROTECTED},
-	{"matches", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;Lcom/sun/org/apache/xerces/internal/xni/QName;)Z", nullptr, $PRIVATE | $STATIC, $method(static_cast<bool(*)($XPath$NodeTest*,$QName*)>(&XPathMatcher::matches))},
-	{"normalize", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(XPathMatcher::*)($String*)>(&XPathMatcher::normalize))},
-	{"startDocumentFragment", "()V", nullptr, $PUBLIC},
-	{"startElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath;)V", nullptr, $PUBLIC, $method(XPathMatcher, init$, void, $XPath*)},
+	{"endElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PUBLIC, $virtualMethod(XPathMatcher, endElement, void, $QName*, $XSTypeDefinition*, bool, Object$*, int16_t, $ShortList*)},
+	{"handleContent", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;ZLjava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;)V", nullptr, $PROTECTED, $virtualMethod(XPathMatcher, handleContent, void, $XSTypeDefinition*, bool, Object$*, int16_t, $ShortList*)},
+	{"isMatched", "()Z", nullptr, $PUBLIC, $virtualMethod(XPathMatcher, isMatched, bool)},
+	{"matched", "(Ljava/lang/Object;SLcom/sun/org/apache/xerces/internal/xs/ShortList;Z)V", nullptr, $PROTECTED, $virtualMethod(XPathMatcher, matched, void, Object$*, int16_t, $ShortList*, bool)},
+	{"matches", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$NodeTest;Lcom/sun/org/apache/xerces/internal/xni/QName;)Z", nullptr, $PRIVATE | $STATIC, $staticMethod(XPathMatcher, matches, bool, $XPath$NodeTest*, $QName*)},
+	{"normalize", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(XPathMatcher, normalize, $String*, $String*)},
+	{"startDocumentFragment", "()V", nullptr, $PUBLIC, $virtualMethod(XPathMatcher, startDocumentFragment, void)},
+	{"startElement", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/xni/XMLAttributes;)V", nullptr, $PUBLIC, $virtualMethod(XPathMatcher, startElement, void, $QName*, $XMLAttributes*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPathMatcher, toString, $String*)},
 	{}
 };
 

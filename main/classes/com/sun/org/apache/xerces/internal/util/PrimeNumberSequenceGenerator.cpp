@@ -55,8 +55,8 @@ $FieldInfo PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0::field
 	{}
 };
 $MethodInfo PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0::methodInfos[3] = {
-	{"<init>", "([ILjava/util/Random;)V", nullptr, $PUBLIC, $method(static_cast<void(PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0::*)($ints*,$Random*)>(&PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0::init$))},
-	{"accept", "(I)V", nullptr, $PUBLIC},
+	{"<init>", "([ILjava/util/Random;)V", nullptr, $PUBLIC, $method(PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0, init$, void, $ints*, $Random*)},
+	{"accept", "(I)V", nullptr, $PUBLIC, $virtualMethod(PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0, accept, void, int32_t)},
 	{}
 };
 $ClassInfo PrimeNumberSequenceGenerator$$Lambda$lambda$generateSequence$0::classInfo$ = {
@@ -79,9 +79,9 @@ $FieldInfo _PrimeNumberSequenceGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _PrimeNumberSequenceGenerator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(PrimeNumberSequenceGenerator::*)()>(&PrimeNumberSequenceGenerator::init$))},
-	{"generateSequence", "([I)V", nullptr, $STATIC, $method(static_cast<void(*)($ints*)>(&PrimeNumberSequenceGenerator::generateSequence))},
-	{"lambda$generateSequence$0", "([ILjava/util/Random;I)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<void(*)($ints*,$Random*,int32_t)>(&PrimeNumberSequenceGenerator::lambda$generateSequence$0))},
+	{"<init>", "()V", nullptr, 0, $method(PrimeNumberSequenceGenerator, init$, void)},
+	{"generateSequence", "([I)V", nullptr, $STATIC, $staticMethod(PrimeNumberSequenceGenerator, generateSequence, void, $ints*)},
+	{"lambda$generateSequence$0", "([ILjava/util/Random;I)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(PrimeNumberSequenceGenerator, lambda$generateSequence$0, void, $ints*, $Random*, int32_t)},
 	{}
 };
 

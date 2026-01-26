@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $LSInput = ::org::w3c::dom::ls::LSInput;
 
 namespace org {
 	namespace w3c {
@@ -12,9 +13,9 @@ namespace org {
 			namespace ls {
 
 $MethodInfo _LSProgressEvent_MethodInfo_[] = {
-	{"getInput", "()Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPosition", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getTotalSize", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{"getInput", "()Lorg/w3c/dom/ls/LSInput;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSProgressEvent, getInput, $LSInput*)},
+	{"getPosition", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSProgressEvent, getPosition, int32_t)},
+	{"getTotalSize", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(LSProgressEvent, getTotalSize, int32_t)},
 	{}
 };
 

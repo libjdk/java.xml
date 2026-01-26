@@ -19,6 +19,7 @@ using $MethodInfo = ::java::lang::MethodInfo;
 using $Package = ::java::lang::Package;
 using $UnsupportedOperationException = ::java::lang::UnsupportedOperationException;
 using $FactoryFinder = ::javax::xml::parsers::FactoryFinder;
+using $SAXParser = ::javax::xml::parsers::SAXParser;
 using $Schema = ::javax::xml::validation::Schema;
 
 namespace javax {
@@ -33,25 +34,25 @@ $FieldInfo _SAXParserFactory_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXParserFactory_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(SAXParserFactory::*)()>(&SAXParserFactory::init$))},
-	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC},
-	{"isNamespaceAware", "()Z", nullptr, $PUBLIC},
-	{"isValidating", "()Z", nullptr, $PUBLIC},
-	{"isXIncludeAware", "()Z", nullptr, $PUBLIC},
-	{"makeNSAware", "(Ljavax/xml/parsers/SAXParserFactory;)Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PRIVATE | $STATIC, $method(static_cast<SAXParserFactory*(*)(SAXParserFactory*)>(&SAXParserFactory::makeNSAware))},
-	{"newDefaultInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SAXParserFactory*(*)()>(&SAXParserFactory::newDefaultInstance))},
-	{"newDefaultNSInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SAXParserFactory*(*)()>(&SAXParserFactory::newDefaultNSInstance))},
-	{"newInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SAXParserFactory*(*)()>(&SAXParserFactory::newInstance))},
-	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SAXParserFactory*(*)($String*,$ClassLoader*)>(&SAXParserFactory::newInstance))},
-	{"newNSInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SAXParserFactory*(*)()>(&SAXParserFactory::newNSInstance))},
-	{"newNSInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SAXParserFactory*(*)($String*,$ClassLoader*)>(&SAXParserFactory::newNSInstance))},
-	{"newSAXParser", "()Ljavax/xml/parsers/SAXParser;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException"},
-	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
-	{"setNamespaceAware", "(Z)V", nullptr, $PUBLIC},
-	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC},
-	{"setValidating", "(Z)V", nullptr, $PUBLIC},
-	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(SAXParserFactory, init$, void)},
+	{"getFeature", "(Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXParserFactory, getFeature, bool, $String*), "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"getSchema", "()Ljavax/xml/validation/Schema;", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, getSchema, $Schema*)},
+	{"isNamespaceAware", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, isNamespaceAware, bool)},
+	{"isValidating", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, isValidating, bool)},
+	{"isXIncludeAware", "()Z", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, isXIncludeAware, bool)},
+	{"makeNSAware", "(Ljavax/xml/parsers/SAXParserFactory;)Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PRIVATE | $STATIC, $staticMethod(SAXParserFactory, makeNSAware, SAXParserFactory*, SAXParserFactory*)},
+	{"newDefaultInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXParserFactory, newDefaultInstance, SAXParserFactory*)},
+	{"newDefaultNSInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXParserFactory, newDefaultNSInstance, SAXParserFactory*)},
+	{"newInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXParserFactory, newInstance, SAXParserFactory*)},
+	{"newInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXParserFactory, newInstance, SAXParserFactory*, $String*, $ClassLoader*)},
+	{"newNSInstance", "()Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXParserFactory, newNSInstance, SAXParserFactory*)},
+	{"newNSInstance", "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljavax/xml/parsers/SAXParserFactory;", nullptr, $PUBLIC | $STATIC, $staticMethod(SAXParserFactory, newNSInstance, SAXParserFactory*, $String*, $ClassLoader*)},
+	{"newSAXParser", "()Ljavax/xml/parsers/SAXParser;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXParserFactory, newSAXParser, $SAXParser*), "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXException"},
+	{"setFeature", "(Ljava/lang/String;Z)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SAXParserFactory, setFeature, void, $String*, bool), "javax.xml.parsers.ParserConfigurationException,org.xml.sax.SAXNotRecognizedException,org.xml.sax.SAXNotSupportedException"},
+	{"setNamespaceAware", "(Z)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, setNamespaceAware, void, bool)},
+	{"setSchema", "(Ljavax/xml/validation/Schema;)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, setSchema, void, $Schema*)},
+	{"setValidating", "(Z)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, setValidating, void, bool)},
+	{"setXIncludeAware", "(Z)V", nullptr, $PUBLIC, $virtualMethod(SAXParserFactory, setXIncludeAware, void, bool)},
 	{}
 };
 

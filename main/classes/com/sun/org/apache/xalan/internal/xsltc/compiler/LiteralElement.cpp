@@ -163,8 +163,8 @@ $FieldInfo LiteralElement$$Lambda$lambda$getNamespaceScope$0::fieldInfos[2] = {
 	{}
 };
 $MethodInfo LiteralElement$$Lambda$lambda$getNamespaceScope$0::methodInfos[3] = {
-	{"<init>", "(Ljava/util/Map;)V", nullptr, $PUBLIC, $method(static_cast<void(LiteralElement$$Lambda$lambda$getNamespaceScope$0::*)($Map*)>(&LiteralElement$$Lambda$lambda$getNamespaceScope$0::init$))},
-	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/util/Map;)V", nullptr, $PUBLIC, $method(LiteralElement$$Lambda$lambda$getNamespaceScope$0, init$, void, $Map*)},
+	{"accept", "(Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(LiteralElement$$Lambda$lambda$getNamespaceScope$0, accept, void, Object$*)},
 	{}
 };
 $ClassInfo LiteralElement$$Lambda$lambda$getNamespaceScope$0::classInfo$ = {
@@ -191,25 +191,25 @@ $FieldInfo _LiteralElement_FieldInfo_[] = {
 };
 
 $MethodInfo _LiteralElement_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(LiteralElement::*)()>(&LiteralElement::init$))},
-	{"accessedNamespace", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(LiteralElement::*)($String*)>(&LiteralElement::accessedNamespace))},
-	{"addAttribute", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)V", nullptr, $PUBLIC, $method(static_cast<void(LiteralElement::*)($SyntaxTreeNode*)>(&LiteralElement::addAttribute))},
-	{"allAttributesUnique", "()Z", nullptr, $PUBLIC, $method(static_cast<bool(LiteralElement::*)()>(&LiteralElement::allAttributesUnique))},
-	{"canProduceAttributeNodes", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;Z)Z", nullptr, $PRIVATE, $method(static_cast<bool(LiteralElement::*)($SyntaxTreeNode*,bool)>(&LiteralElement::canProduceAttributeNodes))},
-	{"checkAttributesUnique", "()Z", nullptr, $PRIVATE, $method(static_cast<bool(LiteralElement::*)()>(&LiteralElement::checkAttributesUnique))},
-	{"contextDependent", "()Z", nullptr, $PROTECTED},
-	{"display", "(I)V", nullptr, $PUBLIC},
-	{"getElemDesc", "()Lcom/sun/org/apache/xml/internal/serializer/ElemDesc;", nullptr, $PUBLIC, $method(static_cast<$ElemDesc*(LiteralElement::*)()>(&LiteralElement::getElemDesc))},
-	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;", nullptr, $PUBLIC, $method(static_cast<$QName*(LiteralElement::*)()>(&LiteralElement::getName))},
-	{"getNamespaceScope", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)Ljava/util/Set;", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;", $PUBLIC, $method(static_cast<$Set*(LiteralElement::*)($SyntaxTreeNode*)>(&LiteralElement::getNamespaceScope))},
-	{"isHTMLOutput", "()Z", nullptr, $PRIVATE, $method(static_cast<bool(LiteralElement::*)()>(&LiteralElement::isHTMLOutput))},
-	{"lambda$getNamespaceScope$0", "(Ljava/util/Map;Ljava/util/Map$Entry;)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<void(*)($Map*,$Map$Entry*)>(&LiteralElement::lambda$getNamespaceScope$0))},
-	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC},
-	{"registerNamespace", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;Z)V", nullptr, $PUBLIC, $method(static_cast<void(LiteralElement::*)($String*,$String*,$SymbolTable*,bool)>(&LiteralElement::registerNamespace))},
-	{"setFirstAttribute", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)V", nullptr, $PUBLIC, $method(static_cast<void(LiteralElement::*)($SyntaxTreeNode*)>(&LiteralElement::setFirstAttribute))},
-	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC},
-	{"translateQName", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(LiteralElement::*)($QName*,$SymbolTable*)>(&LiteralElement::translateQName))},
-	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
+	{"<init>", "()V", nullptr, 0, $method(LiteralElement, init$, void)},
+	{"accessedNamespace", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(LiteralElement, accessedNamespace, $String*, $String*)},
+	{"addAttribute", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)V", nullptr, $PUBLIC, $method(LiteralElement, addAttribute, void, $SyntaxTreeNode*)},
+	{"allAttributesUnique", "()Z", nullptr, $PUBLIC, $method(LiteralElement, allAttributesUnique, bool)},
+	{"canProduceAttributeNodes", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;Z)Z", nullptr, $PRIVATE, $method(LiteralElement, canProduceAttributeNodes, bool, $SyntaxTreeNode*, bool)},
+	{"checkAttributesUnique", "()Z", nullptr, $PRIVATE, $method(LiteralElement, checkAttributesUnique, bool)},
+	{"contextDependent", "()Z", nullptr, $PROTECTED, $virtualMethod(LiteralElement, contextDependent, bool)},
+	{"display", "(I)V", nullptr, $PUBLIC, $virtualMethod(LiteralElement, display, void, int32_t)},
+	{"getElemDesc", "()Lcom/sun/org/apache/xml/internal/serializer/ElemDesc;", nullptr, $PUBLIC, $method(LiteralElement, getElemDesc, $ElemDesc*)},
+	{"getName", "()Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;", nullptr, $PUBLIC, $method(LiteralElement, getName, $QName*)},
+	{"getNamespaceScope", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)Ljava/util/Set;", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;", $PUBLIC, $method(LiteralElement, getNamespaceScope, $Set*, $SyntaxTreeNode*)},
+	{"isHTMLOutput", "()Z", nullptr, $PRIVATE, $method(LiteralElement, isHTMLOutput, bool)},
+	{"lambda$getNamespaceScope$0", "(Ljava/util/Map;Ljava/util/Map$Entry;)V", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(LiteralElement, lambda$getNamespaceScope$0, void, $Map*, $Map$Entry*)},
+	{"parseContents", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)V", nullptr, $PUBLIC, $virtualMethod(LiteralElement, parseContents, void, $Parser*)},
+	{"registerNamespace", "(Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;Z)V", nullptr, $PUBLIC, $method(LiteralElement, registerNamespace, void, $String*, $String*, $SymbolTable*, bool)},
+	{"setFirstAttribute", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;)V", nullptr, $PUBLIC, $method(LiteralElement, setFirstAttribute, void, $SyntaxTreeNode*)},
+	{"translate", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;)V", nullptr, $PUBLIC, $virtualMethod(LiteralElement, translate, void, $ClassGenerator*, $MethodGenerator*)},
+	{"translateQName", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/QName;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Ljava/lang/String;", nullptr, $PRIVATE, $method(LiteralElement, translateQName, $String*, $QName*, $SymbolTable*)},
+	{"typeCheck", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SymbolTable;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/Type;", nullptr, $PUBLIC, $virtualMethod(LiteralElement, typeCheck, $Type*, $SymbolTable*), "com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError"},
 	{}
 };
 

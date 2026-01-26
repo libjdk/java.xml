@@ -14,7 +14,7 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _ExtendedLexicalHandler_MethodInfo_[] = {
-	{"comment", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "org.xml.sax.SAXException"},
+	{"comment", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ExtendedLexicalHandler, comment, void, $String*), "org.xml.sax.SAXException"},
 	{}
 };
 

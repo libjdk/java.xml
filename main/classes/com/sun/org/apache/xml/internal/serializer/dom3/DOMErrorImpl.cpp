@@ -35,17 +35,17 @@ $FieldInfo _DOMErrorImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMErrorImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DOMErrorImpl::*)()>(&DOMErrorImpl::init$))},
-	{"<init>", "(SLjava/lang/String;Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(DOMErrorImpl::*)(int16_t,$String*,$String*)>(&DOMErrorImpl::init$))},
-	{"<init>", "(SLjava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, 0, $method(static_cast<void(DOMErrorImpl::*)(int16_t,$String*,$String*,$Exception*)>(&DOMErrorImpl::init$))},
-	{"<init>", "(SLjava/lang/String;Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/Object;Lcom/sun/org/apache/xml/internal/serializer/dom3/DOMLocatorImpl;)V", nullptr, 0, $method(static_cast<void(DOMErrorImpl::*)(int16_t,$String*,$String*,$Exception*,Object$*,$DOMLocatorImpl*)>(&DOMErrorImpl::init$))},
-	{"getLocation", "()Lorg/w3c/dom/DOMLocator;", nullptr, $PUBLIC},
-	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getRelatedData", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getRelatedException", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"getSeverity", "()S", nullptr, $PUBLIC},
-	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMErrorImpl::*)()>(&DOMErrorImpl::reset))},
+	{"<init>", "()V", nullptr, 0, $method(DOMErrorImpl, init$, void)},
+	{"<init>", "(SLjava/lang/String;Ljava/lang/String;)V", nullptr, 0, $method(DOMErrorImpl, init$, void, int16_t, $String*, $String*)},
+	{"<init>", "(SLjava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V", nullptr, 0, $method(DOMErrorImpl, init$, void, int16_t, $String*, $String*, $Exception*)},
+	{"<init>", "(SLjava/lang/String;Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/Object;Lcom/sun/org/apache/xml/internal/serializer/dom3/DOMLocatorImpl;)V", nullptr, 0, $method(DOMErrorImpl, init$, void, int16_t, $String*, $String*, $Exception*, Object$*, $DOMLocatorImpl*)},
+	{"getLocation", "()Lorg/w3c/dom/DOMLocator;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getLocation, $DOMLocator*)},
+	{"getMessage", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getMessage, $String*)},
+	{"getRelatedData", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getRelatedData, $Object*)},
+	{"getRelatedException", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getRelatedException, $Object*)},
+	{"getSeverity", "()S", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getSeverity, int16_t)},
+	{"getType", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMErrorImpl, getType, $String*)},
+	{"reset", "()V", nullptr, $PUBLIC, $method(DOMErrorImpl, reset, void)},
 	{}
 };
 

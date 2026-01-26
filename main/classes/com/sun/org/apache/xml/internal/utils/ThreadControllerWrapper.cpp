@@ -25,9 +25,9 @@ $FieldInfo _ThreadControllerWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _ThreadControllerWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ThreadControllerWrapper::*)()>(&ThreadControllerWrapper::init$))},
-	{"runThread", "(Ljava/lang/Runnable;I)Ljava/lang/Thread;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$Thread*(*)($Runnable*,int32_t)>(&ThreadControllerWrapper::runThread))},
-	{"waitThread", "(Ljava/lang/Thread;Ljava/lang/Runnable;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($Thread*,$Runnable*)>(&ThreadControllerWrapper::waitThread)), "java.lang.InterruptedException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ThreadControllerWrapper, init$, void)},
+	{"runThread", "(Ljava/lang/Runnable;I)Ljava/lang/Thread;", nullptr, $PUBLIC | $STATIC, $staticMethod(ThreadControllerWrapper, runThread, $Thread*, $Runnable*, int32_t)},
+	{"waitThread", "(Ljava/lang/Thread;Ljava/lang/Runnable;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(ThreadControllerWrapper, waitThread, void, $Thread*, $Runnable*), "java.lang.InterruptedException"},
 	{}
 };
 

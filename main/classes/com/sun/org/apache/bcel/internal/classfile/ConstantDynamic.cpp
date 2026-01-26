@@ -24,12 +24,12 @@ namespace com {
 						namespace classfile {
 
 $MethodInfo _ConstantDynamic_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantDynamic;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantDynamic::*)(ConstantDynamic*)>(&ConstantDynamic::init$))},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(ConstantDynamic::*)($DataInput*)>(&ConstantDynamic::init$)), "java.io.IOException"},
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantDynamic::*)(int32_t,int32_t)>(&ConstantDynamic::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"getBootstrapMethodAttrIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ConstantDynamic::*)()>(&ConstantDynamic::getBootstrapMethodAttrIndex))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantDynamic;)V", nullptr, $PUBLIC, $method(ConstantDynamic, init$, void, ConstantDynamic*)},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(ConstantDynamic, init$, void, $DataInput*), "java.io.IOException"},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(ConstantDynamic, init$, void, int32_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ConstantDynamic, accept, void, $Visitor*)},
+	{"getBootstrapMethodAttrIndex", "()I", nullptr, $PUBLIC, $method(ConstantDynamic, getBootstrapMethodAttrIndex, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ConstantDynamic, toString, $String*)},
 	{}
 };
 

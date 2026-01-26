@@ -6,13 +6,15 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $QName = ::javax::xml::namespace$::QName;
+using $XPathFunction = ::javax::xml::xpath::XPathFunction;
 
 namespace javax {
 	namespace xml {
 		namespace xpath {
 
 $MethodInfo _XPathFunctionResolver_MethodInfo_[] = {
-	{"resolveFunction", "(Ljavax/xml/namespace/QName;I)Ljavax/xml/xpath/XPathFunction;", nullptr, $PUBLIC | $ABSTRACT},
+	{"resolveFunction", "(Ljavax/xml/namespace/QName;I)Ljavax/xml/xpath/XPathFunction;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPathFunctionResolver, resolveFunction, $XPathFunction*, $QName*, int32_t)},
 	{}
 };
 

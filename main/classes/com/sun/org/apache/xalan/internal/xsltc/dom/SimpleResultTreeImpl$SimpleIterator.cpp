@@ -44,13 +44,13 @@ $FieldInfo _SimpleResultTreeImpl$SimpleIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SimpleResultTreeImpl$SimpleIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;)V", nullptr, $PUBLIC, $method(static_cast<void(SimpleResultTreeImpl$SimpleIterator::*)($SimpleResultTreeImpl*)>(&SimpleResultTreeImpl$SimpleIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;I)V", nullptr, $PUBLIC, $method(static_cast<void(SimpleResultTreeImpl$SimpleIterator::*)($SimpleResultTreeImpl*,int32_t)>(&SimpleResultTreeImpl$SimpleIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;II)V", nullptr, $PUBLIC, $method(static_cast<void(SimpleResultTreeImpl$SimpleIterator::*)($SimpleResultTreeImpl*,int32_t,int32_t)>(&SimpleResultTreeImpl$SimpleIterator::init$))},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"next", "()I", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;)V", nullptr, $PUBLIC, $method(SimpleResultTreeImpl$SimpleIterator, init$, void, $SimpleResultTreeImpl*)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;I)V", nullptr, $PUBLIC, $method(SimpleResultTreeImpl$SimpleIterator, init$, void, $SimpleResultTreeImpl*, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/SimpleResultTreeImpl;II)V", nullptr, $PUBLIC, $method(SimpleResultTreeImpl$SimpleIterator, init$, void, $SimpleResultTreeImpl*, int32_t, int32_t)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SimpleIterator, gotoMark, void)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SimpleIterator, next, int32_t)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SimpleIterator, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SimpleResultTreeImpl$SimpleIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

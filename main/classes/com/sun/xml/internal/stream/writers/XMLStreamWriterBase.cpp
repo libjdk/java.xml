@@ -13,7 +13,7 @@ namespace com {
 					namespace writers {
 
 $MethodInfo _XMLStreamWriterBase_MethodInfo_[] = {
-	{"writeStartDocument", "(Ljava/lang/String;Ljava/lang/String;ZZ)V", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.stream.XMLStreamException"},
+	{"writeStartDocument", "(Ljava/lang/String;Ljava/lang/String;ZZ)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLStreamWriterBase, writeStartDocument, void, $String*, $String*, bool, bool), "javax.xml.stream.XMLStreamException"},
 	{}
 };
 

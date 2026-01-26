@@ -58,18 +58,18 @@ $FieldInfo _CatalogMessages_FieldInfo_[] = {
 };
 
 $MethodInfo _CatalogMessages_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(CatalogMessages::*)()>(&CatalogMessages::init$))},
-	{"formatMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*,$ObjectArray*)>(&CatalogMessages::formatMessage))},
-	{"formatMessage", "(Ljava/lang/String;[Ljava/lang/Object;Ljava/util/Locale;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*,$ObjectArray*,$Locale*)>(&CatalogMessages::formatMessage))},
-	{"reportError", "(Ljava/lang/String;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*)>(&CatalogMessages::reportError))},
-	{"reportError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*,$ObjectArray*)>(&CatalogMessages::reportError))},
-	{"reportIAE", "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*,$ObjectArray*,$Throwable*)>(&CatalogMessages::reportIAE))},
-	{"reportIAEOnNull", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*,$String*)>(&CatalogMessages::reportIAEOnNull))},
-	{"reportNPEOnNull", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*,Object$*)>(&CatalogMessages::reportNPEOnNull))},
-	{"reportRunTimeError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*,$ObjectArray*)>(&CatalogMessages::reportRunTimeError))},
-	{"reportRunTimeError", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*,$Throwable*)>(&CatalogMessages::reportRunTimeError))},
-	{"reportRunTimeError", "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V", nullptr, $STATIC, $method(static_cast<void(*)($String*,$ObjectArray*,$Throwable*)>(&CatalogMessages::reportRunTimeError))},
-	{"sanitize", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&CatalogMessages::sanitize))},
+	{"<init>", "()V", nullptr, 0, $method(CatalogMessages, init$, void)},
+	{"formatMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(CatalogMessages, formatMessage, $String*, $String*, $ObjectArray*)},
+	{"formatMessage", "(Ljava/lang/String;[Ljava/lang/Object;Ljava/util/Locale;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(CatalogMessages, formatMessage, $String*, $String*, $ObjectArray*, $Locale*)},
+	{"reportError", "(Ljava/lang/String;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportError, void, $String*)},
+	{"reportError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportError, void, $String*, $ObjectArray*)},
+	{"reportIAE", "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportIAE, void, $String*, $ObjectArray*, $Throwable*)},
+	{"reportIAEOnNull", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportIAEOnNull, void, $String*, $String*)},
+	{"reportNPEOnNull", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportNPEOnNull, void, $String*, Object$*)},
+	{"reportRunTimeError", "(Ljava/lang/String;[Ljava/lang/Object;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportRunTimeError, void, $String*, $ObjectArray*)},
+	{"reportRunTimeError", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportRunTimeError, void, $String*, $Throwable*)},
+	{"reportRunTimeError", "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V", nullptr, $STATIC, $staticMethod(CatalogMessages, reportRunTimeError, void, $String*, $ObjectArray*, $Throwable*)},
+	{"sanitize", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(CatalogMessages, sanitize, $String*, $String*)},
 	{}
 };
 

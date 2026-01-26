@@ -14,8 +14,8 @@ namespace com {
 						namespace impl {
 
 $MethodInfo _XMLEntityDescription_MethodInfo_[] = {
-	{"getEntityName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"setEntityName", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getEntityName", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLEntityDescription, getEntityName, $String*)},
+	{"setEntityName", "(Ljava/lang/String;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XMLEntityDescription, setEntityName, void, $String*)},
 	{}
 };
 

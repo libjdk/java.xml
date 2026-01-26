@@ -63,8 +63,8 @@ $FieldInfo _XMLEntityManager$EncodingInfo_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLEntityManager$EncodingInfo_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Boolean;Z)V", nullptr, $PRIVATE, $method(static_cast<void(XMLEntityManager$EncodingInfo::*)($String*,$Boolean*,bool)>(&XMLEntityManager$EncodingInfo::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Z)V", nullptr, $PRIVATE, $method(static_cast<void(XMLEntityManager$EncodingInfo::*)($String*,$String*,$Boolean*,bool)>(&XMLEntityManager$EncodingInfo::init$))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Boolean;Z)V", nullptr, $PRIVATE, $method(XMLEntityManager$EncodingInfo, init$, void, $String*, $Boolean*, bool)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Z)V", nullptr, $PRIVATE, $method(XMLEntityManager$EncodingInfo, init$, void, $String*, $String*, $Boolean*, bool)},
 	{}
 };
 

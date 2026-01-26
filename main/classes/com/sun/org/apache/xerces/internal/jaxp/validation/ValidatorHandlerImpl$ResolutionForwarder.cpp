@@ -42,14 +42,14 @@ $FieldInfo _ValidatorHandlerImpl$ResolutionForwarder_FieldInfo_[] = {
 };
 
 $MethodInfo _ValidatorHandlerImpl$ResolutionForwarder_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ValidatorHandlerImpl$ResolutionForwarder::*)()>(&ValidatorHandlerImpl$ResolutionForwarder::init$))},
-	{"<init>", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(ValidatorHandlerImpl$ResolutionForwarder::*)($LSResourceResolver*)>(&ValidatorHandlerImpl$ResolutionForwarder::init$))},
-	{"getEntityResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC, $method(static_cast<$LSResourceResolver*(ValidatorHandlerImpl$ResolutionForwarder::*)()>(&ValidatorHandlerImpl$ResolutionForwarder::getEntityResolver))},
-	{"getExternalSubset", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, nullptr, "org.xml.sax.SAXException,java.io.IOException"},
-	{"resolveSystemId", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(ValidatorHandlerImpl$ResolutionForwarder::*)($String*,$String*)>(&ValidatorHandlerImpl$ResolutionForwarder::resolveSystemId))},
-	{"setEntityResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $method(static_cast<void(ValidatorHandlerImpl$ResolutionForwarder::*)($LSResourceResolver*)>(&ValidatorHandlerImpl$ResolutionForwarder::setEntityResolver))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ValidatorHandlerImpl$ResolutionForwarder, init$, void)},
+	{"<init>", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $method(ValidatorHandlerImpl$ResolutionForwarder, init$, void, $LSResourceResolver*)},
+	{"getEntityResolver", "()Lorg/w3c/dom/ls/LSResourceResolver;", nullptr, $PUBLIC, $method(ValidatorHandlerImpl$ResolutionForwarder, getEntityResolver, $LSResourceResolver*)},
+	{"getExternalSubset", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $virtualMethod(ValidatorHandlerImpl$ResolutionForwarder, getExternalSubset, $InputSource*, $String*, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $virtualMethod(ValidatorHandlerImpl$ResolutionForwarder, resolveEntity, $InputSource*, $String*, $String*, $String*, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"resolveEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $virtualMethod(ValidatorHandlerImpl$ResolutionForwarder, resolveEntity, $InputSource*, $String*, $String*), "org.xml.sax.SAXException,java.io.IOException"},
+	{"resolveSystemId", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $PRIVATE, $method(ValidatorHandlerImpl$ResolutionForwarder, resolveSystemId, $String*, $String*, $String*)},
+	{"setEntityResolver", "(Lorg/w3c/dom/ls/LSResourceResolver;)V", nullptr, $PUBLIC, $method(ValidatorHandlerImpl$ResolutionForwarder, setEntityResolver, void, $LSResourceResolver*)},
 	{}
 };
 

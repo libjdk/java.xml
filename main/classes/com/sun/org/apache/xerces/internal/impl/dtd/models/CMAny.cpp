@@ -28,15 +28,15 @@ $FieldInfo _CMAny_FieldInfo_[] = {
 };
 
 $MethodInfo _CMAny_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(CMAny::*)(int32_t,$String*,int32_t)>(&CMAny::init$))},
-	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"getPosition", "()I", nullptr, $FINAL, $method(static_cast<int32_t(CMAny::*)()>(&CMAny::getPosition))},
-	{"getType", "()I", nullptr, $FINAL, $method(static_cast<int32_t(CMAny::*)()>(&CMAny::getType))},
-	{"getURI", "()Ljava/lang/String;", nullptr, $FINAL, $method(static_cast<$String*(CMAny::*)()>(&CMAny::getURI))},
-	{"isNullable", "()Z", nullptr, $PUBLIC},
-	{"setPosition", "(I)V", nullptr, $FINAL, $method(static_cast<void(CMAny::*)(int32_t)>(&CMAny::setPosition))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(ILjava/lang/String;I)V", nullptr, $PUBLIC, $method(CMAny, init$, void, int32_t, $String*, int32_t)},
+	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(CMAny, calcFirstPos, void, $CMStateSet*)},
+	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(CMAny, calcLastPos, void, $CMStateSet*)},
+	{"getPosition", "()I", nullptr, $FINAL, $method(CMAny, getPosition, int32_t)},
+	{"getType", "()I", nullptr, $FINAL, $method(CMAny, getType, int32_t)},
+	{"getURI", "()Ljava/lang/String;", nullptr, $FINAL, $method(CMAny, getURI, $String*)},
+	{"isNullable", "()Z", nullptr, $PUBLIC, $virtualMethod(CMAny, isNullable, bool)},
+	{"setPosition", "(I)V", nullptr, $FINAL, $method(CMAny, setPosition, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CMAny, toString, $String*)},
 	{}
 };
 

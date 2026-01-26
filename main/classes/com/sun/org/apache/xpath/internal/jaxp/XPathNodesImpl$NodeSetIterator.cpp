@@ -28,9 +28,9 @@ $FieldInfo _XPathNodesImpl$NodeSetIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathNodesImpl$NodeSetIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/jaxp/XPathNodesImpl;Ljava/lang/Class;)V", "(Ljava/lang/Class<TE;>;)V", 0, $method(static_cast<void(XPathNodesImpl$NodeSetIterator::*)($XPathNodesImpl*,$Class*)>(&XPathNodesImpl$NodeSetIterator::init$))},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"next", "()Ljava/lang/Object;", "()TE;", $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/jaxp/XPathNodesImpl;Ljava/lang/Class;)V", "(Ljava/lang/Class<TE;>;)V", 0, $method(XPathNodesImpl$NodeSetIterator, init$, void, $XPathNodesImpl*, $Class*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XPathNodesImpl$NodeSetIterator, hasNext, bool)},
+	{"next", "()Ljava/lang/Object;", "()TE;", $PUBLIC, $virtualMethod(XPathNodesImpl$NodeSetIterator, next, $Object*)},
 	{}
 };
 

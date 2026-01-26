@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $AbstractView = ::org::w3c::dom::views::AbstractView;
 
 namespace org {
 	namespace w3c {
@@ -12,9 +13,9 @@ namespace org {
 			namespace events {
 
 $MethodInfo _UIEvent_MethodInfo_[] = {
-	{"getDetail", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getView", "()Lorg/w3c/dom/views/AbstractView;", nullptr, $PUBLIC | $ABSTRACT},
-	{"initUIEvent", "(Ljava/lang/String;ZZLorg/w3c/dom/views/AbstractView;I)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getDetail", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(UIEvent, getDetail, int32_t)},
+	{"getView", "()Lorg/w3c/dom/views/AbstractView;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(UIEvent, getView, $AbstractView*)},
+	{"initUIEvent", "(Ljava/lang/String;ZZLorg/w3c/dom/views/AbstractView;I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(UIEvent, initUIEvent, void, $String*, bool, bool, $AbstractView*, int32_t)},
 	{}
 };
 

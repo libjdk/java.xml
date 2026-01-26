@@ -74,16 +74,16 @@ $FieldInfo _SubstitutionGroupHandler_FieldInfo_[] = {
 };
 
 $MethodInfo _SubstitutionGroupHandler_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDeclHelper;)V", nullptr, $PUBLIC, $method(static_cast<void(SubstitutionGroupHandler::*)($XSElementDeclHelper*)>(&SubstitutionGroupHandler::init$))},
-	{"addSubstitutionGroup", "([Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)V", nullptr, $PUBLIC},
-	{"getDBMethods", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler$OneSubGroup;)Z", nullptr, $PRIVATE, $method(static_cast<bool(SubstitutionGroupHandler::*)($XSTypeDefinition*,$XSTypeDefinition*,$SubstitutionGroupHandler$OneSubGroup*)>(&SubstitutionGroupHandler::getDBMethods))},
-	{"getMatchingElemDecl", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;", nullptr, $PUBLIC},
-	{"getSubGroupB", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler$OneSubGroup;)[Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler$OneSubGroup;", nullptr, $PRIVATE, $method(static_cast<$SubstitutionGroupHandler$OneSubGroupArray*(SubstitutionGroupHandler::*)($XSElementDecl*,$SubstitutionGroupHandler$OneSubGroup*)>(&SubstitutionGroupHandler::getSubGroupB))},
-	{"getSubstitutionGroup", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)[Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;", nullptr, $PUBLIC},
-	{"inSubstitutionGroup", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)Z", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
-	{"substitutionGroupOK", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;S)Z", nullptr, $PROTECTED},
-	{"typeDerivationOK", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;S)Z", nullptr, $PRIVATE, $method(static_cast<bool(SubstitutionGroupHandler::*)($XSTypeDefinition*,$XSTypeDefinition*,int16_t)>(&SubstitutionGroupHandler::typeDerivationOK))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDeclHelper;)V", nullptr, $PUBLIC, $method(SubstitutionGroupHandler, init$, void, $XSElementDeclHelper*)},
+	{"addSubstitutionGroup", "([Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)V", nullptr, $PUBLIC, $virtualMethod(SubstitutionGroupHandler, addSubstitutionGroup, void, $XSElementDeclArray*)},
+	{"getDBMethods", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler$OneSubGroup;)Z", nullptr, $PRIVATE, $method(SubstitutionGroupHandler, getDBMethods, bool, $XSTypeDefinition*, $XSTypeDefinition*, $SubstitutionGroupHandler$OneSubGroup*)},
+	{"getMatchingElemDecl", "(Lcom/sun/org/apache/xerces/internal/xni/QName;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;", nullptr, $PUBLIC, $virtualMethod(SubstitutionGroupHandler, getMatchingElemDecl, $XSElementDecl*, $QName*, $XSElementDecl*)},
+	{"getSubGroupB", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler$OneSubGroup;)[Lcom/sun/org/apache/xerces/internal/impl/xs/SubstitutionGroupHandler$OneSubGroup;", nullptr, $PRIVATE, $method(SubstitutionGroupHandler, getSubGroupB, $SubstitutionGroupHandler$OneSubGroupArray*, $XSElementDecl*, $SubstitutionGroupHandler$OneSubGroup*)},
+	{"getSubstitutionGroup", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)[Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;", nullptr, $PUBLIC, $virtualMethod(SubstitutionGroupHandler, getSubstitutionGroup, $XSElementDeclArray*, $XSElementDecl*)},
+	{"inSubstitutionGroup", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;)Z", nullptr, $PUBLIC, $virtualMethod(SubstitutionGroupHandler, inSubstitutionGroup, bool, $XSElementDecl*, $XSElementDecl*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(SubstitutionGroupHandler, reset, void)},
+	{"substitutionGroupOK", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;S)Z", nullptr, $PROTECTED, $virtualMethod(SubstitutionGroupHandler, substitutionGroupOK, bool, $XSElementDecl*, $XSElementDecl*, int16_t)},
+	{"typeDerivationOK", "(Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;Lcom/sun/org/apache/xerces/internal/xs/XSTypeDefinition;S)Z", nullptr, $PRIVATE, $method(SubstitutionGroupHandler, typeDerivationOK, bool, $XSTypeDefinition*, $XSTypeDefinition*, int16_t)},
 	{}
 };
 

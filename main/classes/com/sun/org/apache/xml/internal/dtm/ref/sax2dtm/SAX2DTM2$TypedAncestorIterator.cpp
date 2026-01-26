@@ -45,10 +45,10 @@ $FieldInfo _SAX2DTM2$TypedAncestorIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2DTM2$TypedAncestorIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;I)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2DTM2$TypedAncestorIterator::*)($SAX2DTM2*,int32_t)>(&SAX2DTM2$TypedAncestorIterator::init$))},
-	{"getLast", "()I", nullptr, $PUBLIC},
-	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;I)V", nullptr, $PUBLIC, $method(SAX2DTM2$TypedAncestorIterator, init$, void, $SAX2DTM2*, int32_t)},
+	{"getLast", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$TypedAncestorIterator, getLast, int32_t)},
+	{"getNodeByPosition", "(I)I", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$TypedAncestorIterator, getNodeByPosition, int32_t, int32_t)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xml/internal/dtm/DTMAxisIterator;", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$TypedAncestorIterator, setStartNode, $DTMAxisIterator*, int32_t)},
 	{}
 };
 

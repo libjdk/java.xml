@@ -44,12 +44,12 @@ $CompoundAttribute _ReferenceType_MethodAnnotations_firstCommonSuperclass2[] = {
 };
 
 $MethodInfo _ReferenceType_MethodInfo_[] = {
-	{"<init>", "(BLjava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(ReferenceType::*)(int8_t,$String*)>(&ReferenceType::init$))},
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(ReferenceType::*)()>(&ReferenceType::init$))},
-	{"firstCommonSuperclass", "(Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;)Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;", nullptr, $PUBLIC | $DEPRECATED, nullptr, "java.lang.ClassNotFoundException", nullptr, _ReferenceType_MethodAnnotations_firstCommonSuperclass2},
-	{"getFirstCommonSuperclass", "(Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;)Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
-	{"isAssignmentCompatibleWith", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)Z", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
-	{"isCastableTo", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)Z", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
+	{"<init>", "(BLjava/lang/String;)V", nullptr, $PROTECTED, $method(ReferenceType, init$, void, int8_t, $String*)},
+	{"<init>", "()V", nullptr, 0, $method(ReferenceType, init$, void)},
+	{"firstCommonSuperclass", "(Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;)Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(ReferenceType, firstCommonSuperclass, ReferenceType*, ReferenceType*), "java.lang.ClassNotFoundException", nullptr, _ReferenceType_MethodAnnotations_firstCommonSuperclass2},
+	{"getFirstCommonSuperclass", "(Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;)Lcom/sun/org/apache/bcel/internal/generic/ReferenceType;", nullptr, $PUBLIC, $virtualMethod(ReferenceType, getFirstCommonSuperclass, ReferenceType*, ReferenceType*), "java.lang.ClassNotFoundException"},
+	{"isAssignmentCompatibleWith", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)Z", nullptr, $PUBLIC, $virtualMethod(ReferenceType, isAssignmentCompatibleWith, bool, $Type*), "java.lang.ClassNotFoundException"},
+	{"isCastableTo", "(Lcom/sun/org/apache/bcel/internal/generic/Type;)Z", nullptr, $PUBLIC, $virtualMethod(ReferenceType, isCastableTo, bool, $Type*), "java.lang.ClassNotFoundException"},
 	{}
 };
 

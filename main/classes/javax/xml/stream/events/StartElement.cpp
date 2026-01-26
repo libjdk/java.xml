@@ -8,6 +8,10 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Iterator = ::java::util::Iterator;
+using $NamespaceContext = ::javax::xml::namespace$::NamespaceContext;
+using $QName = ::javax::xml::namespace$::QName;
+using $Attribute = ::javax::xml::stream::events::Attribute;
 
 namespace javax {
 	namespace xml {
@@ -15,12 +19,12 @@ namespace javax {
 			namespace events {
 
 $MethodInfo _StartElement_MethodInfo_[] = {
-	{"getAttributeByName", "(Ljavax/xml/namespace/QName;)Ljavax/xml/stream/events/Attribute;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAttributes", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljavax/xml/stream/events/Attribute;>;", $PUBLIC | $ABSTRACT},
-	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getNamespaces", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljavax/xml/stream/events/Namespace;>;", $PUBLIC | $ABSTRACT},
+	{"getAttributeByName", "(Ljavax/xml/namespace/QName;)Ljavax/xml/stream/events/Attribute;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartElement, getAttributeByName, $Attribute*, $QName*)},
+	{"getAttributes", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljavax/xml/stream/events/Attribute;>;", $PUBLIC | $ABSTRACT, $virtualMethod(StartElement, getAttributes, $Iterator*)},
+	{"getName", "()Ljavax/xml/namespace/QName;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartElement, getName, $QName*)},
+	{"getNamespaceContext", "()Ljavax/xml/namespace/NamespaceContext;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartElement, getNamespaceContext, $NamespaceContext*)},
+	{"getNamespaceURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(StartElement, getNamespaceURI, $String*, $String*)},
+	{"getNamespaces", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Ljavax/xml/stream/events/Namespace;>;", $PUBLIC | $ABSTRACT, $virtualMethod(StartElement, getNamespaces, $Iterator*)},
 	{}
 };
 

@@ -32,18 +32,18 @@ $FieldInfo _XSObjectListImpl$XSObjectListIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _XSObjectListImpl$XSObjectListIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSObjectListImpl;I)V", nullptr, $PUBLIC, $method(static_cast<void(XSObjectListImpl$XSObjectListIterator::*)($XSObjectListImpl*,int32_t)>(&XSObjectListImpl$XSObjectListIterator::init$))},
-	{"add", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(static_cast<void(XSObjectListImpl$XSObjectListIterator::*)($XSObject*)>(&XSObjectListImpl$XSObjectListIterator::add))},
-	{"add", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
-	{"hasNext", "()Z", nullptr, $PUBLIC},
-	{"hasPrevious", "()Z", nullptr, $PUBLIC},
-	{"next", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC},
-	{"nextIndex", "()I", nullptr, $PUBLIC},
-	{"previous", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC},
-	{"previousIndex", "()I", nullptr, $PUBLIC},
-	{"remove", "()V", nullptr, $PUBLIC},
-	{"set", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(static_cast<void(XSObjectListImpl$XSObjectListIterator::*)($XSObject*)>(&XSObjectListImpl$XSObjectListIterator::set))},
-	{"set", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/util/XSObjectListImpl;I)V", nullptr, $PUBLIC, $method(XSObjectListImpl$XSObjectListIterator, init$, void, $XSObjectListImpl*, int32_t)},
+	{"add", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(XSObjectListImpl$XSObjectListIterator, add, void, $XSObject*)},
+	{"add", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, add, void, Object$*)},
+	{"hasNext", "()Z", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, hasNext, bool)},
+	{"hasPrevious", "()Z", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, hasPrevious, bool)},
+	{"next", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, next, $Object*)},
+	{"nextIndex", "()I", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, nextIndex, int32_t)},
+	{"previous", "()Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, previous, $Object*)},
+	{"previousIndex", "()I", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, previousIndex, int32_t)},
+	{"remove", "()V", nullptr, $PUBLIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, remove, void)},
+	{"set", "(Lcom/sun/org/apache/xerces/internal/xs/XSObject;)V", nullptr, $PUBLIC, $method(XSObjectListImpl$XSObjectListIterator, set, void, $XSObject*)},
+	{"set", "(Ljava/lang/Object;)V", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSObjectListImpl$XSObjectListIterator, set, void, Object$*)},
 	{}
 };
 

@@ -4,6 +4,8 @@
 #include <com/sun/org/apache/xpath/internal/XPathVisitor.h>
 #include <jcpp.h>
 
+using $ExpressionOwner = ::com::sun::org::apache::xpath::internal::ExpressionOwner;
+using $XPathVisitor = ::com::sun::org::apache::xpath::internal::XPathVisitor;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +17,7 @@ namespace com {
 					namespace internal {
 
 $MethodInfo _XPathVisitable_MethodInfo_[] = {
-	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"callVisitors", "(Lcom/sun/org/apache/xpath/internal/ExpressionOwner;Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPathVisitable, callVisitors, void, $ExpressionOwner*, $XPathVisitor*)},
 	{}
 };
 

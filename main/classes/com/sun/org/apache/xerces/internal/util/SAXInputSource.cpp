@@ -31,18 +31,18 @@ $FieldInfo _SAXInputSource_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXInputSource_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAXInputSource::*)()>(&SAXInputSource::init$))},
-	{"<init>", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXInputSource::*)($InputSource*)>(&SAXInputSource::init$))},
-	{"<init>", "(Lorg/xml/sax/XMLReader;Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXInputSource::*)($XMLReader*,$InputSource*)>(&SAXInputSource::init$))},
-	{"getInputSource", "()Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $method(static_cast<$InputSource*(SAXInputSource::*)()>(&SAXInputSource::getInputSource))},
-	{"getXMLReader", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC, $method(static_cast<$XMLReader*(SAXInputSource::*)()>(&SAXInputSource::getXMLReader))},
-	{"setByteStream", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC},
-	{"setCharacterStream", "(Ljava/io/Reader;)V", nullptr, $PUBLIC},
-	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setInputSource", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXInputSource::*)($InputSource*)>(&SAXInputSource::setInputSource))},
-	{"setPublicId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
-	{"setXMLReader", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXInputSource::*)($XMLReader*)>(&SAXInputSource::setXMLReader))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAXInputSource, init$, void)},
+	{"<init>", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(SAXInputSource, init$, void, $InputSource*)},
+	{"<init>", "(Lorg/xml/sax/XMLReader;Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(SAXInputSource, init$, void, $XMLReader*, $InputSource*)},
+	{"getInputSource", "()Lorg/xml/sax/InputSource;", nullptr, $PUBLIC, $method(SAXInputSource, getInputSource, $InputSource*)},
+	{"getXMLReader", "()Lorg/xml/sax/XMLReader;", nullptr, $PUBLIC, $method(SAXInputSource, getXMLReader, $XMLReader*)},
+	{"setByteStream", "(Ljava/io/InputStream;)V", nullptr, $PUBLIC, $virtualMethod(SAXInputSource, setByteStream, void, $InputStream*)},
+	{"setCharacterStream", "(Ljava/io/Reader;)V", nullptr, $PUBLIC, $virtualMethod(SAXInputSource, setCharacterStream, void, $Reader*)},
+	{"setEncoding", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SAXInputSource, setEncoding, void, $String*)},
+	{"setInputSource", "(Lorg/xml/sax/InputSource;)V", nullptr, $PUBLIC, $method(SAXInputSource, setInputSource, void, $InputSource*)},
+	{"setPublicId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SAXInputSource, setPublicId, void, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(SAXInputSource, setSystemId, void, $String*)},
+	{"setXMLReader", "(Lorg/xml/sax/XMLReader;)V", nullptr, $PUBLIC, $method(SAXInputSource, setXMLReader, void, $XMLReader*)},
 	{}
 };
 

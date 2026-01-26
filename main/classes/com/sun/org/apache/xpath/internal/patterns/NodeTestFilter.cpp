@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xpath/internal/patterns/NodeTest.h>
 #include <jcpp.h>
 
+using $NodeTest = ::com::sun::org::apache::xpath::internal::patterns::NodeTest;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace patterns {
 
 $MethodInfo _NodeTestFilter_MethodInfo_[] = {
-	{"setNodeTest", "(Lcom/sun/org/apache/xpath/internal/patterns/NodeTest;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"setNodeTest", "(Lcom/sun/org/apache/xpath/internal/patterns/NodeTest;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NodeTestFilter, setNodeTest, void, $NodeTest*)},
 	{}
 };
 

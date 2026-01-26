@@ -10,10 +10,10 @@ namespace javax {
 		namespace transform {
 
 $MethodInfo _SourceLocator_MethodInfo_[] = {
-	{"getColumnNumber", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getLineNumber", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SourceLocator, getColumnNumber, int32_t)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SourceLocator, getLineNumber, int32_t)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SourceLocator, getPublicId, $String*)},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(SourceLocator, getSystemId, $String*)},
 	{}
 };
 

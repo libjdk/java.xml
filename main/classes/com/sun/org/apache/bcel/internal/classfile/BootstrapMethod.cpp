@@ -36,19 +36,19 @@ $FieldInfo _BootstrapMethod_FieldInfo_[] = {
 };
 
 $MethodInfo _BootstrapMethod_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;)V", nullptr, $PUBLIC, $method(static_cast<void(BootstrapMethod::*)(BootstrapMethod*)>(&BootstrapMethod::init$))},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(BootstrapMethod::*)($DataInput*)>(&BootstrapMethod::init$)), "java.io.IOException"},
-	{"<init>", "(II)V", nullptr, $PRIVATE, $method(static_cast<void(BootstrapMethod::*)(int32_t,int32_t)>(&BootstrapMethod::init$))},
-	{"<init>", "(I[I)V", nullptr, $PUBLIC, $method(static_cast<void(BootstrapMethod::*)(int32_t,$ints*)>(&BootstrapMethod::init$))},
-	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(BootstrapMethod::*)($DataOutputStream*)>(&BootstrapMethod::dump)), "java.io.IOException"},
-	{"getBootstrapArguments", "()[I", nullptr, $PUBLIC},
-	{"getBootstrapMethodRef", "()I", nullptr, $PUBLIC},
-	{"getNumBootstrapArguments", "()I", nullptr, $PUBLIC},
-	{"setBootstrapArguments", "([I)V", nullptr, $PUBLIC},
-	{"setBootstrapMethodRef", "(I)V", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL},
-	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$String*(BootstrapMethod::*)($ConstantPool*)>(&BootstrapMethod::toString))},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;)V", nullptr, $PUBLIC, $method(BootstrapMethod, init$, void, BootstrapMethod*)},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(BootstrapMethod, init$, void, $DataInput*), "java.io.IOException"},
+	{"<init>", "(II)V", nullptr, $PRIVATE, $method(BootstrapMethod, init$, void, int32_t, int32_t)},
+	{"<init>", "(I[I)V", nullptr, $PUBLIC, $method(BootstrapMethod, init$, void, int32_t, $ints*)},
+	{"copy", "()Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;", nullptr, $PUBLIC, $virtualMethod(BootstrapMethod, copy, BootstrapMethod*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $method(BootstrapMethod, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getBootstrapArguments", "()[I", nullptr, $PUBLIC, $virtualMethod(BootstrapMethod, getBootstrapArguments, $ints*)},
+	{"getBootstrapMethodRef", "()I", nullptr, $PUBLIC, $virtualMethod(BootstrapMethod, getBootstrapMethodRef, int32_t)},
+	{"getNumBootstrapArguments", "()I", nullptr, $PUBLIC, $virtualMethod(BootstrapMethod, getNumBootstrapArguments, int32_t)},
+	{"setBootstrapArguments", "([I)V", nullptr, $PUBLIC, $virtualMethod(BootstrapMethod, setBootstrapArguments, void, $ints*)},
+	{"setBootstrapMethodRef", "(I)V", nullptr, $PUBLIC, $virtualMethod(BootstrapMethod, setBootstrapMethodRef, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $virtualMethod(BootstrapMethod, toString, $String*)},
+	{"toString", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $method(BootstrapMethod, toString, $String*, $ConstantPool*)},
 	{}
 };
 

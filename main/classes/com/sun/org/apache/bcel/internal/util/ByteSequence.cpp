@@ -30,9 +30,9 @@ $FieldInfo _ByteSequence_FieldInfo_[] = {
 };
 
 $MethodInfo _ByteSequence_MethodInfo_[] = {
-	{"<init>", "([B)V", nullptr, $PUBLIC, $method(static_cast<void(ByteSequence::*)($bytes*)>(&ByteSequence::init$))},
-	{"getIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ByteSequence::*)()>(&ByteSequence::getIndex))},
-	{"unreadByte", "()V", nullptr, 0, $method(static_cast<void(ByteSequence::*)()>(&ByteSequence::unreadByte))},
+	{"<init>", "([B)V", nullptr, $PUBLIC, $method(ByteSequence, init$, void, $bytes*)},
+	{"getIndex", "()I", nullptr, $PUBLIC, $method(ByteSequence, getIndex, int32_t)},
+	{"unreadByte", "()V", nullptr, 0, $method(ByteSequence, unreadByte, void)},
 	{}
 };
 

@@ -29,15 +29,15 @@ $FieldInfo _RegularExpression$CharacterIteratorTarget_FieldInfo_[] = {
 };
 
 $MethodInfo _RegularExpression$CharacterIteratorTarget_MethodInfo_[] = {
-	{"<init>", "(Ljava/text/CharacterIterator;)V", nullptr, 0, $method(static_cast<void(RegularExpression$CharacterIteratorTarget::*)($CharacterIterator*)>(&RegularExpression$CharacterIteratorTarget::init$))},
-	{"charAt", "(I)C", nullptr, $FINAL},
-	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $FINAL},
-	{"regionMatches", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharacterIteratorTarget::*)(int32_t,int32_t,$String*,int32_t)>(&RegularExpression$CharacterIteratorTarget::regionMatches))},
-	{"regionMatches", "(ZIIII)Z", nullptr, $FINAL},
-	{"regionMatches", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharacterIteratorTarget::*)(int32_t,int32_t,int32_t,int32_t)>(&RegularExpression$CharacterIteratorTarget::regionMatches))},
-	{"regionMatchesIgnoreCase", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharacterIteratorTarget::*)(int32_t,int32_t,$String*,int32_t)>(&RegularExpression$CharacterIteratorTarget::regionMatchesIgnoreCase))},
-	{"regionMatchesIgnoreCase", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(static_cast<bool(RegularExpression$CharacterIteratorTarget::*)(int32_t,int32_t,int32_t,int32_t)>(&RegularExpression$CharacterIteratorTarget::regionMatchesIgnoreCase))},
-	{"resetTarget", "(Ljava/text/CharacterIterator;)V", nullptr, $FINAL, $method(static_cast<void(RegularExpression$CharacterIteratorTarget::*)($CharacterIterator*)>(&RegularExpression$CharacterIteratorTarget::resetTarget))},
+	{"<init>", "(Ljava/text/CharacterIterator;)V", nullptr, 0, $method(RegularExpression$CharacterIteratorTarget, init$, void, $CharacterIterator*)},
+	{"charAt", "(I)C", nullptr, $FINAL, $virtualMethod(RegularExpression$CharacterIteratorTarget, charAt, char16_t, int32_t)},
+	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $FINAL, $virtualMethod(RegularExpression$CharacterIteratorTarget, regionMatches, bool, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatches", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharacterIteratorTarget, regionMatches, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatches", "(ZIIII)Z", nullptr, $FINAL, $virtualMethod(RegularExpression$CharacterIteratorTarget, regionMatches, bool, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"regionMatches", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharacterIteratorTarget, regionMatches, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"regionMatchesIgnoreCase", "(IILjava/lang/String;I)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharacterIteratorTarget, regionMatchesIgnoreCase, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatchesIgnoreCase", "(IIII)Z", nullptr, $PRIVATE | $FINAL, $method(RegularExpression$CharacterIteratorTarget, regionMatchesIgnoreCase, bool, int32_t, int32_t, int32_t, int32_t)},
+	{"resetTarget", "(Ljava/text/CharacterIterator;)V", nullptr, $FINAL, $method(RegularExpression$CharacterIteratorTarget, resetTarget, void, $CharacterIterator*)},
 	{}
 };
 

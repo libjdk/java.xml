@@ -27,9 +27,9 @@ $FieldInfo _AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration_FieldI
 };
 
 $MethodInfo _AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl$SmallContainer;)V", nullptr, 0, $method(static_cast<void(AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration::*)($AugmentationsImpl$SmallContainer*)>(&AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration::init$))},
-	{"hasMoreElements", "()Z", nullptr, $PUBLIC},
-	{"nextElement", "()Ljava/lang/Object;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/AugmentationsImpl$SmallContainer;)V", nullptr, 0, $method(AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration, init$, void, $AugmentationsImpl$SmallContainer*)},
+	{"hasMoreElements", "()Z", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration, hasMoreElements, bool)},
+	{"nextElement", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration, nextElement, $Object*)},
 	{}
 };
 

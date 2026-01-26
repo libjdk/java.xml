@@ -20,7 +20,7 @@ $FieldInfo _SourceTree_FieldInfo_[] = {
 };
 
 $MethodInfo _SourceTree_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(SourceTree::*)(int32_t,$String*)>(&SourceTree::init$))},
+	{"<init>", "(ILjava/lang/String;)V", nullptr, $PUBLIC, $method(SourceTree, init$, void, int32_t, $String*)},
 	{}
 };
 

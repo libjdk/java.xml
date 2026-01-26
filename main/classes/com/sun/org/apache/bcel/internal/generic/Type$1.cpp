@@ -18,7 +18,7 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _Type$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Type$1::*)()>(&Type$1::init$))},
+	{"<init>", "()V", nullptr, 0, $method(Type$1, init$, void)},
 	{}
 };
 

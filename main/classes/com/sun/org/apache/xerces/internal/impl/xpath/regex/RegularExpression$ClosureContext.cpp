@@ -25,11 +25,11 @@ $FieldInfo _RegularExpression$ClosureContext_FieldInfo_[] = {
 };
 
 $MethodInfo _RegularExpression$ClosureContext_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(RegularExpression$ClosureContext::*)()>(&RegularExpression$ClosureContext::init$))},
-	{"addOffset", "(I)V", nullptr, 0, $method(static_cast<void(RegularExpression$ClosureContext::*)(int32_t)>(&RegularExpression$ClosureContext::addOffset))},
-	{"contains", "(I)Z", nullptr, 0, $method(static_cast<bool(RegularExpression$ClosureContext::*)(int32_t)>(&RegularExpression$ClosureContext::contains))},
-	{"expandOffsets", "()[I", nullptr, $PRIVATE, $method(static_cast<$ints*(RegularExpression$ClosureContext::*)()>(&RegularExpression$ClosureContext::expandOffsets))},
-	{"reset", "()V", nullptr, 0, $method(static_cast<void(RegularExpression$ClosureContext::*)()>(&RegularExpression$ClosureContext::reset))},
+	{"<init>", "()V", nullptr, 0, $method(RegularExpression$ClosureContext, init$, void)},
+	{"addOffset", "(I)V", nullptr, 0, $method(RegularExpression$ClosureContext, addOffset, void, int32_t)},
+	{"contains", "(I)Z", nullptr, 0, $method(RegularExpression$ClosureContext, contains, bool, int32_t)},
+	{"expandOffsets", "()[I", nullptr, $PRIVATE, $method(RegularExpression$ClosureContext, expandOffsets, $ints*)},
+	{"reset", "()V", nullptr, 0, $method(RegularExpression$ClosureContext, reset, void)},
 	{}
 };
 

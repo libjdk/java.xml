@@ -182,8 +182,8 @@ $FieldInfo _XMLErrorResources_fr_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLErrorResources_fr_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLErrorResources_fr::*)()>(&XMLErrorResources_fr::init$))},
-	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PROTECTED},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLErrorResources_fr, init$, void)},
+	{"getContents", "()[[Ljava/lang/Object;", nullptr, $PROTECTED, $virtualMethod(XMLErrorResources_fr, getContents, $ObjectArray2*)},
 	{}
 };
 

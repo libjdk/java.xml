@@ -18,10 +18,10 @@ namespace com {
 								namespace regex {
 
 $MethodInfo _RegularExpression$ExpressionTarget_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(RegularExpression$ExpressionTarget::*)()>(&RegularExpression$ExpressionTarget::init$))},
-	{"charAt", "(I)C", nullptr, $ABSTRACT},
-	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $ABSTRACT},
-	{"regionMatches", "(ZIIII)Z", nullptr, $ABSTRACT},
+	{"<init>", "()V", nullptr, 0, $method(RegularExpression$ExpressionTarget, init$, void)},
+	{"charAt", "(I)C", nullptr, $ABSTRACT, $virtualMethod(RegularExpression$ExpressionTarget, charAt, char16_t, int32_t)},
+	{"regionMatches", "(ZIILjava/lang/String;I)Z", nullptr, $ABSTRACT, $virtualMethod(RegularExpression$ExpressionTarget, regionMatches, bool, bool, int32_t, int32_t, $String*, int32_t)},
+	{"regionMatches", "(ZIIII)Z", nullptr, $ABSTRACT, $virtualMethod(RegularExpression$ExpressionTarget, regionMatches, bool, bool, int32_t, int32_t, int32_t, int32_t)},
 	{}
 };
 

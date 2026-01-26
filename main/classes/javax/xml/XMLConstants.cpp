@@ -47,7 +47,7 @@ $FieldInfo _XMLConstants_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLConstants_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(XMLConstants::*)()>(&XMLConstants::init$))},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(XMLConstants, init$, void)},
 	{}
 };
 

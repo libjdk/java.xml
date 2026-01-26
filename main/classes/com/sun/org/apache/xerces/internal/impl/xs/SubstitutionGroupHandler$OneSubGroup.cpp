@@ -27,8 +27,8 @@ $FieldInfo _SubstitutionGroupHandler$OneSubGroup_FieldInfo_[] = {
 };
 
 $MethodInfo _SubstitutionGroupHandler$OneSubGroup_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(SubstitutionGroupHandler$OneSubGroup::*)()>(&SubstitutionGroupHandler$OneSubGroup::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;SS)V", nullptr, 0, $method(static_cast<void(SubstitutionGroupHandler$OneSubGroup::*)($XSElementDecl*,int16_t,int16_t)>(&SubstitutionGroupHandler$OneSubGroup::init$))},
+	{"<init>", "()V", nullptr, 0, $method(SubstitutionGroupHandler$OneSubGroup, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSElementDecl;SS)V", nullptr, 0, $method(SubstitutionGroupHandler$OneSubGroup, init$, void, $XSElementDecl*, int16_t, int16_t)},
 	{}
 };
 

@@ -43,8 +43,8 @@ $FieldInfo _SAX2DTM2$TypedSingletonIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _SAX2DTM2$TypedSingletonIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;I)V", nullptr, $PUBLIC, $method(static_cast<void(SAX2DTM2$TypedSingletonIterator::*)($SAX2DTM2*,int32_t)>(&SAX2DTM2$TypedSingletonIterator::init$))},
-	{"next", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2;I)V", nullptr, $PUBLIC, $method(SAX2DTM2$TypedSingletonIterator, init$, void, $SAX2DTM2*, int32_t)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(SAX2DTM2$TypedSingletonIterator, next, int32_t)},
 	{}
 };
 

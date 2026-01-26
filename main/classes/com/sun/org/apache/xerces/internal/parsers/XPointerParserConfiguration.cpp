@@ -93,13 +93,13 @@ $FieldInfo _XPointerParserConfiguration_FieldInfo_[] = {
 };
 
 $MethodInfo _XPointerParserConfiguration_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPointerParserConfiguration::*)()>(&XPointerParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(static_cast<void(XPointerParserConfiguration::*)($SymbolTable*)>(&XPointerParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(static_cast<void(XPointerParserConfiguration::*)($SymbolTable*,$XMLGrammarPool*)>(&XPointerParserConfiguration::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(static_cast<void(XPointerParserConfiguration::*)($SymbolTable*,$XMLGrammarPool*,$XMLComponentManager*)>(&XPointerParserConfiguration::init$))},
-	{"configurePipeline", "()V", nullptr, $PROTECTED},
-	{"configureXML11Pipeline", "()V", nullptr, $PROTECTED},
-	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, nullptr, "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPointerParserConfiguration, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PUBLIC, $method(XPointerParserConfiguration, init$, void, $SymbolTable*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;)V", nullptr, $PUBLIC, $method(XPointerParserConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/util/SymbolTable;Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;Lcom/sun/org/apache/xerces/internal/xni/parser/XMLComponentManager;)V", nullptr, $PUBLIC, $method(XPointerParserConfiguration, init$, void, $SymbolTable*, $XMLGrammarPool*, $XMLComponentManager*)},
+	{"configurePipeline", "()V", nullptr, $PROTECTED, $virtualMethod(XPointerParserConfiguration, configurePipeline, void)},
+	{"configureXML11Pipeline", "()V", nullptr, $PROTECTED, $virtualMethod(XPointerParserConfiguration, configureXML11Pipeline, void)},
+	{"setProperty", "(Ljava/lang/String;Ljava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(XPointerParserConfiguration, setProperty, void, $String*, Object$*), "com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException"},
 	{}
 };
 

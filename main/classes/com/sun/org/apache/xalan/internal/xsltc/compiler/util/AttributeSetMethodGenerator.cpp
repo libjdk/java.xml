@@ -67,10 +67,10 @@ $FieldInfo _AttributeSetMethodGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _AttributeSetMethodGenerator_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", nullptr, $PUBLIC, $method(static_cast<void(AttributeSetMethodGenerator::*)($String*,$ClassGenerator*)>(&AttributeSetMethodGenerator::init$))},
-	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC},
-	{"loadParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(static_cast<$Instruction*(AttributeSetMethodGenerator::*)(int32_t)>(&AttributeSetMethodGenerator::loadParameter))},
-	{"storeParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(static_cast<$Instruction*(AttributeSetMethodGenerator::*)(int32_t)>(&AttributeSetMethodGenerator::storeParameter))},
+	{"<init>", "(Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/ClassGenerator;)V", nullptr, $PUBLIC, $method(AttributeSetMethodGenerator, init$, void, $String*, $ClassGenerator*)},
+	{"getLocalIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC, $virtualMethod(AttributeSetMethodGenerator, getLocalIndex, int32_t, $String*)},
+	{"loadParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(AttributeSetMethodGenerator, loadParameter, $Instruction*, int32_t)},
+	{"storeParameter", "(I)Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC, $method(AttributeSetMethodGenerator, storeParameter, $Instruction*, int32_t)},
 	{}
 };
 

@@ -72,21 +72,21 @@ $FieldInfo _XSAttributeUseImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XSAttributeUseImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XSAttributeUseImpl::*)()>(&XSAttributeUseImpl::init$))},
-	{"getActualVC", "()Ljava/lang/Object;", nullptr, $PUBLIC | $DEPRECATED, nullptr, nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getActualVC1},
-	{"getActualVCType", "()S", nullptr, $PUBLIC | $DEPRECATED, nullptr, nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getActualVCType2},
-	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC},
-	{"getAttrDeclaration", "()Lcom/sun/org/apache/xerces/internal/xs/XSAttributeDeclaration;", nullptr, $PUBLIC},
-	{"getConstraintType", "()S", nullptr, $PUBLIC},
-	{"getConstraintValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $DEPRECATED, nullptr, nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getConstraintValue6},
-	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $DEPRECATED, nullptr, nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getItemValueTypes7},
-	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC},
-	{"getRequired", "()Z", nullptr, $PUBLIC},
-	{"getType", "()S", nullptr, $PUBLIC},
-	{"getValueConstraintValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC},
-	{"reset", "()V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XSAttributeUseImpl, init$, void)},
+	{"getActualVC", "()Ljava/lang/Object;", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(XSAttributeUseImpl, getActualVC, $Object*), nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getActualVC1},
+	{"getActualVCType", "()S", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(XSAttributeUseImpl, getActualVCType, int16_t), nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getActualVCType2},
+	{"getAnnotations", "()Lcom/sun/org/apache/xerces/internal/xs/XSObjectList;", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getAnnotations, $XSObjectList*)},
+	{"getAttrDeclaration", "()Lcom/sun/org/apache/xerces/internal/xs/XSAttributeDeclaration;", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getAttrDeclaration, $XSAttributeDeclaration*)},
+	{"getConstraintType", "()S", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getConstraintType, int16_t)},
+	{"getConstraintValue", "()Ljava/lang/String;", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(XSAttributeUseImpl, getConstraintValue, $String*), nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getConstraintValue6},
+	{"getItemValueTypes", "()Lcom/sun/org/apache/xerces/internal/xs/ShortList;", nullptr, $PUBLIC | $DEPRECATED, $virtualMethod(XSAttributeUseImpl, getItemValueTypes, $ShortList*), nullptr, nullptr, _XSAttributeUseImpl_MethodAnnotations_getItemValueTypes7},
+	{"getName", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getName, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getNamespace, $String*)},
+	{"getNamespaceItem", "()Lcom/sun/org/apache/xerces/internal/xs/XSNamespaceItem;", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getNamespaceItem, $XSNamespaceItem*)},
+	{"getRequired", "()Z", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getRequired, bool)},
+	{"getType", "()S", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getType, int16_t)},
+	{"getValueConstraintValue", "()Lcom/sun/org/apache/xerces/internal/xs/XSValue;", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, getValueConstraintValue, $XSValue*)},
+	{"reset", "()V", nullptr, $PUBLIC, $virtualMethod(XSAttributeUseImpl, reset, void)},
 	{}
 };
 

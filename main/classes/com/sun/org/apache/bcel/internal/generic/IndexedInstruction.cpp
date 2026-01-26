@@ -14,8 +14,8 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _IndexedInstruction_MethodInfo_[] = {
-	{"getIndex", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"setIndex", "(I)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"getIndex", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IndexedInstruction, getIndex, int32_t)},
+	{"setIndex", "(I)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(IndexedInstruction, setIndex, void, int32_t)},
 	{}
 };
 

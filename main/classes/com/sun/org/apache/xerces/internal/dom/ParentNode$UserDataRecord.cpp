@@ -28,7 +28,7 @@ $FieldInfo _ParentNode$UserDataRecord_FieldInfo_[] = {
 };
 
 $MethodInfo _ParentNode$UserDataRecord_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ParentNode;Ljava/lang/Object;Lorg/w3c/dom/UserDataHandler;)V", nullptr, 0, $method(static_cast<void(ParentNode$UserDataRecord::*)($ParentNode*,Object$*,$UserDataHandler*)>(&ParentNode$UserDataRecord::init$))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/dom/ParentNode;Ljava/lang/Object;Lorg/w3c/dom/UserDataHandler;)V", nullptr, 0, $method(ParentNode$UserDataRecord, init$, void, $ParentNode*, Object$*, $UserDataHandler*)},
 	{}
 };
 

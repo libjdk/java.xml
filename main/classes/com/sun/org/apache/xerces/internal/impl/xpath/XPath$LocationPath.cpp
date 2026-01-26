@@ -32,10 +32,10 @@ $FieldInfo _XPath$LocationPath_FieldInfo_[] = {
 };
 
 $MethodInfo _XPath$LocationPath_MethodInfo_[] = {
-	{"<init>", "([Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Step;)V", nullptr, $PUBLIC, $method(static_cast<void(XPath$LocationPath::*)($XPath$StepArray*)>(&XPath$LocationPath::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;)V", nullptr, $PROTECTED, $method(static_cast<void(XPath$LocationPath::*)(XPath$LocationPath*)>(&XPath$LocationPath::init$))},
-	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "([Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$Step;)V", nullptr, $PUBLIC, $method(XPath$LocationPath, init$, void, $XPath$StepArray*)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/XPath$LocationPath;)V", nullptr, $PROTECTED, $method(XPath$LocationPath, init$, void, XPath$LocationPath*)},
+	{"clone", "()Ljava/lang/Object;", nullptr, $PUBLIC, $virtualMethod(XPath$LocationPath, clone, $Object*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XPath$LocationPath, toString, $String*)},
 	{}
 };
 

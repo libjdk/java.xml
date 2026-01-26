@@ -36,7 +36,7 @@ $FieldInfo _Method_FieldInfo_[] = {
 };
 
 $MethodInfo _Method_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Method::*)()>(&Method::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Method, init$, void)},
 	{}
 };
 

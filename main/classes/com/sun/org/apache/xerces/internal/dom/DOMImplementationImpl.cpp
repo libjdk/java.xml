@@ -44,10 +44,10 @@ $FieldInfo _DOMImplementationImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMImplementationImpl_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(DOMImplementationImpl::*)()>(&DOMImplementationImpl::init$))},
-	{"createDocument", "(Ljava/lang/String;Ljava/lang/String;Lorg/w3c/dom/DocumentType;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, nullptr, "org.w3c.dom.DOMException"},
-	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$DOMImplementation*(*)()>(&DOMImplementationImpl::getDOMImplementation))},
-	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(DOMImplementationImpl, init$, void)},
+	{"createDocument", "(Ljava/lang/String;Ljava/lang/String;Lorg/w3c/dom/DocumentType;)Lorg/w3c/dom/Document;", nullptr, $PUBLIC, $virtualMethod(DOMImplementationImpl, createDocument, $Document*, $String*, $String*, $DocumentType*), "org.w3c.dom.DOMException"},
+	{"getDOMImplementation", "()Lorg/w3c/dom/DOMImplementation;", nullptr, $PUBLIC | $STATIC, $staticMethod(DOMImplementationImpl, getDOMImplementation, $DOMImplementation*)},
+	{"hasFeature", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC, $virtualMethod(DOMImplementationImpl, hasFeature, bool, $String*, $String*)},
 	{}
 };
 

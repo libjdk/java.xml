@@ -5,13 +5,14 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Source = ::javax::xml::transform::Source;
 
 namespace javax {
 	namespace xml {
 		namespace transform {
 
 $MethodInfo _URIResolver_MethodInfo_[] = {
-	{"resolve", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.transform.TransformerException"},
+	{"resolve", "(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/transform/Source;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(URIResolver, resolve, $Source*, $String*, $String*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

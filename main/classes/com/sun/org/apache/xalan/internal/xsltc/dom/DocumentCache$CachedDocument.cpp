@@ -48,19 +48,19 @@ $FieldInfo _DocumentCache$CachedDocument_FieldInfo_[] = {
 };
 
 $MethodInfo _DocumentCache$CachedDocument_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache$CachedDocument::*)($DocumentCache*,$String*)>(&DocumentCache$CachedDocument::init$))},
-	{"getAccessCount", "()J", nullptr, $PUBLIC, $method(static_cast<int64_t(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getAccessCount))},
-	{"getDocument", "()Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC, $method(static_cast<$DOM*(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getDocument))},
-	{"getEstimatedSize", "()J", nullptr, $PUBLIC, $method(static_cast<int64_t(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getEstimatedSize))},
-	{"getFirstReferenced", "()J", nullptr, $PUBLIC, $method(static_cast<int64_t(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getFirstReferenced))},
-	{"getLastChecked", "()J", nullptr, $PUBLIC, $method(static_cast<int64_t(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getLastChecked))},
-	{"getLastModified", "()J", nullptr, $PUBLIC, $method(static_cast<int64_t(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getLastModified))},
-	{"getLastReferenced", "()J", nullptr, $PUBLIC, $method(static_cast<int64_t(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getLastReferenced))},
-	{"getLatency", "()J", nullptr, $PUBLIC, $method(static_cast<int64_t(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::getLatency))},
-	{"incAccessCount", "()V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache$CachedDocument::*)()>(&DocumentCache$CachedDocument::incAccessCount))},
-	{"loadDocument", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache$CachedDocument::*)($String*)>(&DocumentCache$CachedDocument::loadDocument))},
-	{"setLastChecked", "(J)V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache$CachedDocument::*)(int64_t)>(&DocumentCache$CachedDocument::setLastChecked))},
-	{"setLastModified", "(J)V", nullptr, $PUBLIC, $method(static_cast<void(DocumentCache$CachedDocument::*)(int64_t)>(&DocumentCache$CachedDocument::setLastModified))},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/DocumentCache;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, init$, void, $DocumentCache*, $String*)},
+	{"getAccessCount", "()J", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getAccessCount, int64_t)},
+	{"getDocument", "()Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getDocument, $DOM*)},
+	{"getEstimatedSize", "()J", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getEstimatedSize, int64_t)},
+	{"getFirstReferenced", "()J", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getFirstReferenced, int64_t)},
+	{"getLastChecked", "()J", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getLastChecked, int64_t)},
+	{"getLastModified", "()J", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getLastModified, int64_t)},
+	{"getLastReferenced", "()J", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getLastReferenced, int64_t)},
+	{"getLatency", "()J", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, getLatency, int64_t)},
+	{"incAccessCount", "()V", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, incAccessCount, void)},
+	{"loadDocument", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, loadDocument, void, $String*)},
+	{"setLastChecked", "(J)V", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, setLastChecked, void, int64_t)},
+	{"setLastModified", "(J)V", nullptr, $PUBLIC, $method(DocumentCache$CachedDocument, setLastModified, void, int64_t)},
 	{}
 };
 

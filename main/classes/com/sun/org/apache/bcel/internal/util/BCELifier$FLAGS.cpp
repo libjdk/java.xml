@@ -32,10 +32,10 @@ $FieldInfo _BCELifier$FLAGS_FieldInfo_[] = {
 };
 
 $MethodInfo _BCELifier$FLAGS_MethodInfo_[] = {
-	{"$values", "()[Lcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$BCELifier$FLAGSArray*(*)()>(&BCELifier$FLAGS::$values))},
-	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(static_cast<void(BCELifier$FLAGS::*)($String*,int32_t)>(&BCELifier$FLAGS::init$))},
-	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;", nullptr, $PUBLIC | $STATIC, $method(static_cast<BCELifier$FLAGS*(*)($String*)>(&BCELifier$FLAGS::valueOf))},
-	{"values", "()[Lcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$BCELifier$FLAGSArray*(*)()>(&BCELifier$FLAGS::values))},
+	{"$values", "()[Lcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(BCELifier$FLAGS, $values, $BCELifier$FLAGSArray*)},
+	{"<init>", "(Ljava/lang/String;I)V", "()V", $PRIVATE, $method(BCELifier$FLAGS, init$, void, $String*, int32_t)},
+	{"valueOf", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;", nullptr, $PUBLIC | $STATIC, $staticMethod(BCELifier$FLAGS, valueOf, BCELifier$FLAGS*, $String*)},
+	{"values", "()[Lcom/sun/org/apache/bcel/internal/util/BCELifier$FLAGS;", nullptr, $PUBLIC | $STATIC, $staticMethod(BCELifier$FLAGS, values, $BCELifier$FLAGSArray*)},
 	{}
 };
 

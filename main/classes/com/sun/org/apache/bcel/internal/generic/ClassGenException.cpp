@@ -21,9 +21,9 @@ $FieldInfo _ClassGenException_FieldInfo_[] = {
 };
 
 $MethodInfo _ClassGenException_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ClassGenException::*)()>(&ClassGenException::init$))},
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassGenException::*)($String*)>(&ClassGenException::init$))},
-	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(static_cast<void(ClassGenException::*)($String*,$Throwable*)>(&ClassGenException::init$))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ClassGenException, init$, void)},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ClassGenException, init$, void, $String*)},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/Throwable;)V", nullptr, $PUBLIC, $method(ClassGenException, init$, void, $String*, $Throwable*)},
 	{}
 };
 

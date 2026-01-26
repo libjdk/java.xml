@@ -18,9 +18,9 @@ namespace com {
 								namespace util {
 
 $MethodInfo _NumberType_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(NumberType::*)()>(&NumberType::init$))},
-	{"isNumber", "()Z", nullptr, $PUBLIC},
-	{"isSimple", "()Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(NumberType, init$, void)},
+	{"isNumber", "()Z", nullptr, $PUBLIC, $virtualMethod(NumberType, isNumber, bool)},
+	{"isSimple", "()Z", nullptr, $PUBLIC, $virtualMethod(NumberType, isSimple, bool)},
 	{}
 };
 

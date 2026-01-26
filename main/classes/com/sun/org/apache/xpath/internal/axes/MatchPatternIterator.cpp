@@ -80,12 +80,12 @@ $FieldInfo _MatchPatternIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _MatchPatternIterator_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(static_cast<void(MatchPatternIterator::*)($Compiler*,int32_t,int32_t)>(&MatchPatternIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"acceptNode", "(ILcom/sun/org/apache/xpath/internal/XPathContext;)S", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PROTECTED},
-	{"nextNode", "()I", nullptr, $PUBLIC},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, 0, $method(MatchPatternIterator, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"acceptNode", "(ILcom/sun/org/apache/xpath/internal/XPathContext;)S", nullptr, $PUBLIC, $virtualMethod(MatchPatternIterator, acceptNode, int16_t, int32_t, $XPathContext*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(MatchPatternIterator, detach, void)},
+	{"getNextNode", "()I", nullptr, $PROTECTED, $virtualMethod(MatchPatternIterator, getNextNode, int32_t)},
+	{"nextNode", "()I", nullptr, $PUBLIC, $virtualMethod(MatchPatternIterator, nextNode, int32_t)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(MatchPatternIterator, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

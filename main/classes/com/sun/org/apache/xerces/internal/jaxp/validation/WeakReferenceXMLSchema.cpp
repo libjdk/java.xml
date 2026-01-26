@@ -29,9 +29,9 @@ $FieldInfo _WeakReferenceXMLSchema_FieldInfo_[] = {
 };
 
 $MethodInfo _WeakReferenceXMLSchema_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(WeakReferenceXMLSchema::*)()>(&WeakReferenceXMLSchema::init$))},
-	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC | $SYNCHRONIZED},
-	{"isFullyComposed", "()Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(WeakReferenceXMLSchema, init$, void)},
+	{"getGrammarPool", "()Lcom/sun/org/apache/xerces/internal/xni/grammars/XMLGrammarPool;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(WeakReferenceXMLSchema, getGrammarPool, $XMLGrammarPool*)},
+	{"isFullyComposed", "()Z", nullptr, $PUBLIC, $virtualMethod(WeakReferenceXMLSchema, isFullyComposed, bool)},
 	{}
 };
 

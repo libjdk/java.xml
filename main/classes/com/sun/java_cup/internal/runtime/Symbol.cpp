@@ -23,12 +23,12 @@ $FieldInfo _Symbol_FieldInfo_[] = {
 };
 
 $MethodInfo _Symbol_MethodInfo_[] = {
-	{"<init>", "(IIILjava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(Symbol::*)(int32_t,int32_t,int32_t,Object$*)>(&Symbol::init$))},
-	{"<init>", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $method(static_cast<void(Symbol::*)(int32_t,Object$*)>(&Symbol::init$))},
-	{"<init>", "(III)V", nullptr, $PUBLIC, $method(static_cast<void(Symbol::*)(int32_t,int32_t,int32_t)>(&Symbol::init$))},
-	{"<init>", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(Symbol::*)(int32_t)>(&Symbol::init$))},
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(Symbol::*)(int32_t,int32_t)>(&Symbol::init$))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(IIILjava/lang/Object;)V", nullptr, $PUBLIC, $method(Symbol, init$, void, int32_t, int32_t, int32_t, Object$*)},
+	{"<init>", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $method(Symbol, init$, void, int32_t, Object$*)},
+	{"<init>", "(III)V", nullptr, $PUBLIC, $method(Symbol, init$, void, int32_t, int32_t, int32_t)},
+	{"<init>", "(I)V", nullptr, $PUBLIC, $method(Symbol, init$, void, int32_t)},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(Symbol, init$, void, int32_t, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(Symbol, toString, $String*)},
 	{}
 };
 

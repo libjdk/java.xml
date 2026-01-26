@@ -20,8 +20,8 @@ $FieldInfo _DOMImplementationRegistry$3_FieldInfo_[] = {
 };
 
 $MethodInfo _DOMImplementationRegistry$3_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", "()V", 0, $method(static_cast<void(DOMImplementationRegistry$3::*)($String*)>(&DOMImplementationRegistry$3::init$))},
-	{"run", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", "()V", 0, $method(DOMImplementationRegistry$3, init$, void, $String*)},
+	{"run", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DOMImplementationRegistry$3, run, $Object*)},
 	{}
 };
 

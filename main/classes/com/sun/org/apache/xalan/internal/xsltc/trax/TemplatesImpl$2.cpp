@@ -33,9 +33,9 @@ $FieldInfo _TemplatesImpl$2_FieldInfo_[] = {
 };
 
 $MethodInfo _TemplatesImpl$2_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl;Ljava/lang/String;Ljava/lang/module/ModuleReference;)V", "()V", 0, $method(static_cast<void(TemplatesImpl$2::*)($TemplatesImpl*,$String*,$ModuleReference*)>(&TemplatesImpl$2::init$))},
-	{"find", "(Ljava/lang/String;)Ljava/util/Optional;", "(Ljava/lang/String;)Ljava/util/Optional<Ljava/lang/module/ModuleReference;>;", $PUBLIC},
-	{"findAll", "()Ljava/util/Set;", "()Ljava/util/Set<Ljava/lang/module/ModuleReference;>;", $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/trax/TemplatesImpl;Ljava/lang/String;Ljava/lang/module/ModuleReference;)V", "()V", 0, $method(TemplatesImpl$2, init$, void, $TemplatesImpl*, $String*, $ModuleReference*)},
+	{"find", "(Ljava/lang/String;)Ljava/util/Optional;", "(Ljava/lang/String;)Ljava/util/Optional<Ljava/lang/module/ModuleReference;>;", $PUBLIC, $virtualMethod(TemplatesImpl$2, find, $Optional*, $String*)},
+	{"findAll", "()Ljava/util/Set;", "()Ljava/util/Set<Ljava/lang/module/ModuleReference;>;", $PUBLIC, $virtualMethod(TemplatesImpl$2, findAll, $Set*)},
 	{}
 };
 

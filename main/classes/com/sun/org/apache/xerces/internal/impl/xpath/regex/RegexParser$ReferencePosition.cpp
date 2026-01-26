@@ -25,7 +25,7 @@ $FieldInfo _RegexParser$ReferencePosition_FieldInfo_[] = {
 };
 
 $MethodInfo _RegexParser$ReferencePosition_MethodInfo_[] = {
-	{"<init>", "(II)V", nullptr, 0, $method(static_cast<void(RegexParser$ReferencePosition::*)(int32_t,int32_t)>(&RegexParser$ReferencePosition::init$))},
+	{"<init>", "(II)V", nullptr, 0, $method(RegexParser$ReferencePosition, init$, void, int32_t, int32_t)},
 	{}
 };
 

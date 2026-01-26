@@ -18,15 +18,15 @@ namespace com {
 						namespace serializer {
 
 $MethodInfo _Version_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(Version::*)()>(&Version::init$))},
-	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $method(static_cast<void(*)($StringArray*)>(&Version::_main))},
-	{"getDevelopmentVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)()>(&Version::getDevelopmentVersionNum))},
-	{"getImplementationLanguage", "()Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)()>(&Version::getImplementationLanguage))},
-	{"getMaintenanceVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)()>(&Version::getMaintenanceVersionNum))},
-	{"getMajorVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)()>(&Version::getMajorVersionNum))},
-	{"getProduct", "()Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)()>(&Version::getProduct))},
-	{"getReleaseVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $method(static_cast<int32_t(*)()>(&Version::getReleaseVersionNum))},
-	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$String*(*)()>(&Version::getVersion))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(Version, init$, void)},
+	{"_main", "([Ljava/lang/String;)V", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, _main, void, $StringArray*)},
+	{"getDevelopmentVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, getDevelopmentVersionNum, int32_t)},
+	{"getImplementationLanguage", "()Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, getImplementationLanguage, $String*)},
+	{"getMaintenanceVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, getMaintenanceVersionNum, int32_t)},
+	{"getMajorVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, getMajorVersionNum, int32_t)},
+	{"getProduct", "()Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, getProduct, $String*)},
+	{"getReleaseVersionNum", "()I", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, getReleaseVersionNum, int32_t)},
+	{"getVersion", "()Ljava/lang/String;", nullptr, $PUBLIC | $STATIC, $staticMethod(Version, getVersion, $String*)},
 	{}
 };
 

@@ -37,9 +37,9 @@ $FieldInfo _FilterGenerator_FieldInfo_[] = {
 };
 
 $MethodInfo _FilterGenerator_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(static_cast<void(FilterGenerator::*)($String*,$String*,$String*,int32_t,$StringArray*,$Stylesheet*)>(&FilterGenerator::init$))},
-	{"isExternal", "()Z", nullptr, $PUBLIC},
-	{"loadTranslet", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, $PUBLIC, $method(FilterGenerator, init$, void, $String*, $String*, $String*, int32_t, $StringArray*, $Stylesheet*)},
+	{"isExternal", "()Z", nullptr, $PUBLIC, $virtualMethod(FilterGenerator, isExternal, bool)},
+	{"loadTranslet", "()Lcom/sun/org/apache/bcel/internal/generic/Instruction;", nullptr, $PUBLIC | $FINAL, $virtualMethod(FilterGenerator, loadTranslet, $Instruction*)},
 	{}
 };
 

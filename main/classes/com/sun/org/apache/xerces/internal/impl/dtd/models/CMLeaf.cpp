@@ -33,15 +33,15 @@ $FieldInfo _CMLeaf_FieldInfo_[] = {
 };
 
 $MethodInfo _CMLeaf_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;I)V", nullptr, $PUBLIC, $method(static_cast<void(CMLeaf::*)($QName*,int32_t)>(&CMLeaf::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, $method(static_cast<void(CMLeaf::*)($QName*)>(&CMLeaf::init$))},
-	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED},
-	{"getElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $FINAL, $method(static_cast<$QName*(CMLeaf::*)()>(&CMLeaf::getElement))},
-	{"getPosition", "()I", nullptr, $FINAL, $method(static_cast<int32_t(CMLeaf::*)()>(&CMLeaf::getPosition))},
-	{"isNullable", "()Z", nullptr, $PUBLIC},
-	{"setPosition", "(I)V", nullptr, $FINAL, $method(static_cast<void(CMLeaf::*)(int32_t)>(&CMLeaf::setPosition))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;I)V", nullptr, $PUBLIC, $method(CMLeaf, init$, void, $QName*, int32_t)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xni/QName;)V", nullptr, $PUBLIC, $method(CMLeaf, init$, void, $QName*)},
+	{"calcFirstPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(CMLeaf, calcFirstPos, void, $CMStateSet*)},
+	{"calcLastPos", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMStateSet;)V", nullptr, $PROTECTED, $virtualMethod(CMLeaf, calcLastPos, void, $CMStateSet*)},
+	{"getElement", "()Lcom/sun/org/apache/xerces/internal/xni/QName;", nullptr, $FINAL, $method(CMLeaf, getElement, $QName*)},
+	{"getPosition", "()I", nullptr, $FINAL, $method(CMLeaf, getPosition, int32_t)},
+	{"isNullable", "()Z", nullptr, $PUBLIC, $virtualMethod(CMLeaf, isNullable, bool)},
+	{"setPosition", "(I)V", nullptr, $FINAL, $method(CMLeaf, setPosition, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(CMLeaf, toString, $String*)},
 	{}
 };
 

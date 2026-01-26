@@ -29,11 +29,11 @@ $FieldInfo _DelegateSystem_FieldInfo_[] = {
 };
 
 $MethodInfo _DelegateSystem_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DelegateSystem::*)($String*,$String*,$String*)>(&DelegateSystem::init$))},
-	{"getSystemIdStartString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(DelegateSystem::*)()>(&DelegateSystem::getSystemIdStartString))},
-	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC},
-	{"matchURI", "(Ljava/lang/String;I)Ljava/net/URI;", nullptr, $PUBLIC},
-	{"setSystemIdStartString", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DelegateSystem::*)($String*)>(&DelegateSystem::setSystemIdStartString))},
+	{"<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DelegateSystem, init$, void, $String*, $String*, $String*)},
+	{"getSystemIdStartString", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(DelegateSystem, getSystemIdStartString, $String*)},
+	{"match", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(DelegateSystem, match, $String*, $String*)},
+	{"matchURI", "(Ljava/lang/String;I)Ljava/net/URI;", nullptr, $PUBLIC, $virtualMethod(DelegateSystem, matchURI, $URI*, $String*, int32_t)},
+	{"setSystemIdStartString", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DelegateSystem, setSystemIdStartString, void, $String*)},
 	{}
 };
 

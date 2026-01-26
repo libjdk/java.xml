@@ -43,16 +43,16 @@ $FieldInfo _ElementSchemePointer$Tokens_FieldInfo_[] = {
 };
 
 $MethodInfo _ElementSchemePointer$Tokens_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(static_cast<void(ElementSchemePointer$Tokens::*)($ElementSchemePointer*,$SymbolTable*)>(&ElementSchemePointer$Tokens::init$))},
-	{"addToken", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(static_cast<void(ElementSchemePointer$Tokens::*)($String*)>(&ElementSchemePointer$Tokens::addToken))},
-	{"addToken", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(ElementSchemePointer$Tokens::*)(int32_t)>(&ElementSchemePointer$Tokens::addToken))},
-	{"getTokenCount", "()I", nullptr, $PRIVATE, $method(static_cast<int32_t(ElementSchemePointer$Tokens::*)()>(&ElementSchemePointer$Tokens::getTokenCount))},
-	{"getTokenString", "(I)Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(ElementSchemePointer$Tokens::*)(int32_t)>(&ElementSchemePointer$Tokens::getTokenString))},
-	{"hasMore", "()Z", nullptr, $PRIVATE, $method(static_cast<bool(ElementSchemePointer$Tokens::*)()>(&ElementSchemePointer$Tokens::hasMore))},
-	{"nextToken", "()I", nullptr, $PRIVATE, $method(static_cast<int32_t(ElementSchemePointer$Tokens::*)()>(&ElementSchemePointer$Tokens::nextToken)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"nextTokenAsString", "()Ljava/lang/String;", nullptr, $PRIVATE, $method(static_cast<$String*(ElementSchemePointer$Tokens::*)()>(&ElementSchemePointer$Tokens::nextTokenAsString)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"peekToken", "()I", nullptr, $PRIVATE, $method(static_cast<int32_t(ElementSchemePointer$Tokens::*)()>(&ElementSchemePointer$Tokens::peekToken)), "com.sun.org.apache.xerces.internal.xni.XNIException"},
-	{"rewind", "()V", nullptr, $PRIVATE, $method(static_cast<void(ElementSchemePointer$Tokens::*)()>(&ElementSchemePointer$Tokens::rewind))},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/xpointer/ElementSchemePointer;Lcom/sun/org/apache/xerces/internal/util/SymbolTable;)V", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, init$, void, $ElementSchemePointer*, $SymbolTable*)},
+	{"addToken", "(Ljava/lang/String;)V", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, addToken, void, $String*)},
+	{"addToken", "(I)V", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, addToken, void, int32_t)},
+	{"getTokenCount", "()I", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, getTokenCount, int32_t)},
+	{"getTokenString", "(I)Ljava/lang/String;", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, getTokenString, $String*, int32_t)},
+	{"hasMore", "()Z", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, hasMore, bool)},
+	{"nextToken", "()I", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, nextToken, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"nextTokenAsString", "()Ljava/lang/String;", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, nextTokenAsString, $String*), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"peekToken", "()I", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, peekToken, int32_t), "com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"rewind", "()V", nullptr, $PRIVATE, $method(ElementSchemePointer$Tokens, rewind, void)},
 	{}
 };
 

@@ -26,10 +26,10 @@ $FieldInfo _XMLSchemaValidator$LocalIDKey_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLSchemaValidator$LocalIDKey_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$LocalIDKey::*)()>(&XMLSchemaValidator$LocalIDKey::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;I)V", nullptr, $PUBLIC, $method(static_cast<void(XMLSchemaValidator$LocalIDKey::*)($IdentityConstraint*,int32_t)>(&XMLSchemaValidator$LocalIDKey::init$))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XMLSchemaValidator$LocalIDKey, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint;I)V", nullptr, $PUBLIC, $method(XMLSchemaValidator$LocalIDKey, init$, void, $IdentityConstraint*, int32_t)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$LocalIDKey, equals, bool, Object$*)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(XMLSchemaValidator$LocalIDKey, hashCode, int32_t)},
 	{}
 };
 

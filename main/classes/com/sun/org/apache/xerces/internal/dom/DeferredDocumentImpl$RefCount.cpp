@@ -22,7 +22,7 @@ $FieldInfo _DeferredDocumentImpl$RefCount_FieldInfo_[] = {
 };
 
 $MethodInfo _DeferredDocumentImpl$RefCount_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(DeferredDocumentImpl$RefCount::*)()>(&DeferredDocumentImpl$RefCount::init$))},
+	{"<init>", "()V", nullptr, 0, $method(DeferredDocumentImpl$RefCount, init$, void)},
 	{}
 };
 

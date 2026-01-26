@@ -14,8 +14,8 @@ namespace com {
 						namespace util {
 
 $MethodInfo _BCELComparator_MethodInfo_[] = {
-	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $ABSTRACT},
+	{"equals", "(Ljava/lang/Object;Ljava/lang/Object;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(BCELComparator, equals, bool, Object$*, Object$*)},
+	{"hashCode", "(Ljava/lang/Object;)I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(BCELComparator, hashCode, int32_t, Object$*)},
 	{}
 };
 

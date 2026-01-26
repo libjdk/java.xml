@@ -79,13 +79,13 @@ $FieldInfo _ExsltDynamic_FieldInfo_[] = {
 };
 
 $MethodInfo _ExsltDynamic_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(ExsltDynamic::*)()>(&ExsltDynamic::init$))},
-	{"closure", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($ExpressionContext*,$NodeList*,$String*)>(&ExsltDynamic::closure)), "org.xml.sax.SAXNotSupportedException"},
-	{"evaluate", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XObject*(*)($ExpressionContext*,$String*)>(&ExsltDynamic::evaluate)), "org.xml.sax.SAXNotSupportedException"},
-	{"map", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$NodeList*(*)($ExpressionContext*,$NodeList*,$String*)>(&ExsltDynamic::map)), "org.xml.sax.SAXNotSupportedException"},
-	{"max", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)D", nullptr, $PUBLIC | $STATIC, $method(static_cast<double(*)($ExpressionContext*,$NodeList*,$String*)>(&ExsltDynamic::max)), "org.xml.sax.SAXNotSupportedException"},
-	{"min", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)D", nullptr, $PUBLIC | $STATIC, $method(static_cast<double(*)($ExpressionContext*,$NodeList*,$String*)>(&ExsltDynamic::min)), "org.xml.sax.SAXNotSupportedException"},
-	{"sum", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)D", nullptr, $PUBLIC | $STATIC, $method(static_cast<double(*)($ExpressionContext*,$NodeList*,$String*)>(&ExsltDynamic::sum)), "org.xml.sax.SAXNotSupportedException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(ExsltDynamic, init$, void)},
+	{"closure", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltDynamic, closure, $NodeList*, $ExpressionContext*, $NodeList*, $String*), "org.xml.sax.SAXNotSupportedException"},
+	{"evaluate", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Ljava/lang/String;)Lcom/sun/org/apache/xpath/internal/objects/XObject;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltDynamic, evaluate, $XObject*, $ExpressionContext*, $String*), "org.xml.sax.SAXNotSupportedException"},
+	{"map", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)Lorg/w3c/dom/NodeList;", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltDynamic, map, $NodeList*, $ExpressionContext*, $NodeList*, $String*), "org.xml.sax.SAXNotSupportedException"},
+	{"max", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)D", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltDynamic, max, double, $ExpressionContext*, $NodeList*, $String*), "org.xml.sax.SAXNotSupportedException"},
+	{"min", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)D", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltDynamic, min, double, $ExpressionContext*, $NodeList*, $String*), "org.xml.sax.SAXNotSupportedException"},
+	{"sum", "(Lcom/sun/org/apache/xalan/internal/extensions/ExpressionContext;Lorg/w3c/dom/NodeList;Ljava/lang/String;)D", nullptr, $PUBLIC | $STATIC, $staticMethod(ExsltDynamic, sum, double, $ExpressionContext*, $NodeList*, $String*), "org.xml.sax.SAXNotSupportedException"},
 	{}
 };
 

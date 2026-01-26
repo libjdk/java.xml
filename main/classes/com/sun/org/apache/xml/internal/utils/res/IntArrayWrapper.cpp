@@ -21,9 +21,9 @@ $FieldInfo _IntArrayWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _IntArrayWrapper_MethodInfo_[] = {
-	{"<init>", "([I)V", nullptr, $PUBLIC, $method(static_cast<void(IntArrayWrapper::*)($ints*)>(&IntArrayWrapper::init$))},
-	{"getInt", "(I)I", nullptr, $PUBLIC},
-	{"getLength", "()I", nullptr, $PUBLIC},
+	{"<init>", "([I)V", nullptr, $PUBLIC, $method(IntArrayWrapper, init$, void, $ints*)},
+	{"getInt", "(I)I", nullptr, $PUBLIC, $virtualMethod(IntArrayWrapper, getInt, int32_t, int32_t)},
+	{"getLength", "()I", nullptr, $PUBLIC, $virtualMethod(IntArrayWrapper, getLength, int32_t)},
 	{}
 };
 

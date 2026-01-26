@@ -50,13 +50,13 @@ $FieldInfo _BasicTestIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _BasicTestIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PROTECTED, $method(static_cast<void(BasicTestIterator::*)()>(&BasicTestIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)V", nullptr, $PROTECTED, $method(static_cast<void(BasicTestIterator::*)($PrefixResolver*)>(&BasicTestIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, $PROTECTED, $method(static_cast<void(BasicTestIterator::*)($Compiler*,int32_t,int32_t)>(&BasicTestIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;IIZ)V", nullptr, $PROTECTED, $method(static_cast<void(BasicTestIterator::*)($Compiler*,int32_t,int32_t,bool)>(&BasicTestIterator::init$)), "javax.xml.transform.TransformerException"},
-	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, nullptr, "java.lang.CloneNotSupportedException"},
-	{"getNextNode", "()I", nullptr, $PROTECTED | $ABSTRACT},
-	{"nextNode", "()I", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PROTECTED, $method(BasicTestIterator, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;)V", nullptr, $PROTECTED, $method(BasicTestIterator, init$, void, $PrefixResolver*)},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;II)V", nullptr, $PROTECTED, $method(BasicTestIterator, init$, void, $Compiler*, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;IIZ)V", nullptr, $PROTECTED, $method(BasicTestIterator, init$, void, $Compiler*, int32_t, int32_t, bool), "javax.xml.transform.TransformerException"},
+	{"cloneWithReset", "()Lcom/sun/org/apache/xml/internal/dtm/DTMIterator;", nullptr, $PUBLIC, $virtualMethod(BasicTestIterator, cloneWithReset, $DTMIterator*), "java.lang.CloneNotSupportedException"},
+	{"getNextNode", "()I", nullptr, $PROTECTED | $ABSTRACT, $virtualMethod(BasicTestIterator, getNextNode, int32_t)},
+	{"nextNode", "()I", nullptr, $PUBLIC, $virtualMethod(BasicTestIterator, nextNode, int32_t)},
 	{}
 };
 

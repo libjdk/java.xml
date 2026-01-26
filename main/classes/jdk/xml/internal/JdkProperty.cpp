@@ -27,9 +27,9 @@ $FieldInfo _JdkProperty_FieldInfo_[] = {
 };
 
 $MethodInfo _JdkProperty_MethodInfo_[] = {
-	{"<init>", "(Ljdk/xml/internal/JdkProperty$ImplPropMap;Ljava/lang/Object;Ljdk/xml/internal/JdkProperty$State;)V", "(Ljdk/xml/internal/JdkProperty$ImplPropMap;TT;Ljdk/xml/internal/JdkProperty$State;)V", $PUBLIC, $method(static_cast<void(JdkProperty::*)($JdkProperty$ImplPropMap*,Object$*,$JdkProperty$State*)>(&JdkProperty::init$))},
-	{"getValue", "()Ljava/lang/Object;", "()TT;", $PUBLIC, $method(static_cast<$Object*(JdkProperty::*)()>(&JdkProperty::getValue))},
-	{"setValue", "(Ljava/lang/String;Ljava/lang/Object;Ljdk/xml/internal/JdkProperty$State;)Z", "(Ljava/lang/String;TT;Ljdk/xml/internal/JdkProperty$State;)Z", $PUBLIC, $method(static_cast<bool(JdkProperty::*)($String*,Object$*,$JdkProperty$State*)>(&JdkProperty::setValue))},
+	{"<init>", "(Ljdk/xml/internal/JdkProperty$ImplPropMap;Ljava/lang/Object;Ljdk/xml/internal/JdkProperty$State;)V", "(Ljdk/xml/internal/JdkProperty$ImplPropMap;TT;Ljdk/xml/internal/JdkProperty$State;)V", $PUBLIC, $method(JdkProperty, init$, void, $JdkProperty$ImplPropMap*, Object$*, $JdkProperty$State*)},
+	{"getValue", "()Ljava/lang/Object;", "()TT;", $PUBLIC, $method(JdkProperty, getValue, $Object*)},
+	{"setValue", "(Ljava/lang/String;Ljava/lang/Object;Ljdk/xml/internal/JdkProperty$State;)Z", "(Ljava/lang/String;TT;Ljdk/xml/internal/JdkProperty$State;)Z", $PUBLIC, $method(JdkProperty, setValue, bool, $String*, Object$*, $JdkProperty$State*)},
 	{}
 };
 

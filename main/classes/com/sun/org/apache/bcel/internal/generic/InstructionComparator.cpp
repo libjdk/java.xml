@@ -51,8 +51,8 @@ public:
 	static $ClassInfo classInfo$;
 };
 $MethodInfo InstructionComparator$$Lambda$lambda$static$0::methodInfos[3] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(InstructionComparator$$Lambda$lambda$static$0::*)()>(&InstructionComparator$$Lambda$lambda$static$0::init$))},
-	{"equals", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;Lcom/sun/org/apache/bcel/internal/generic/Instruction;)Z", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(InstructionComparator$$Lambda$lambda$static$0, init$, void)},
+	{"equals", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;Lcom/sun/org/apache/bcel/internal/generic/Instruction;)Z", nullptr, $PUBLIC, $virtualMethod(InstructionComparator$$Lambda$lambda$static$0, equals, bool, $Instruction*, $Instruction*)},
 	{}
 };
 $ClassInfo InstructionComparator$$Lambda$lambda$static$0::classInfo$ = {
@@ -75,8 +75,8 @@ $FieldInfo _InstructionComparator_FieldInfo_[] = {
 };
 
 $MethodInfo _InstructionComparator_MethodInfo_[] = {
-	{"equals", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;Lcom/sun/org/apache/bcel/internal/generic/Instruction;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"lambda$static$0", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;Lcom/sun/org/apache/bcel/internal/generic/Instruction;)Z", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<bool(*)($Instruction*,$Instruction*)>(&InstructionComparator::lambda$static$0))},
+	{"equals", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;Lcom/sun/org/apache/bcel/internal/generic/Instruction;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(InstructionComparator, equals, bool, $Instruction*, $Instruction*)},
+	{"lambda$static$0", "(Lcom/sun/org/apache/bcel/internal/generic/Instruction;Lcom/sun/org/apache/bcel/internal/generic/Instruction;)Z", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(InstructionComparator, lambda$static$0, bool, $Instruction*, $Instruction*)},
 	{}
 };
 

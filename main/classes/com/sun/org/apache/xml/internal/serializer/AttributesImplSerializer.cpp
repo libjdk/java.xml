@@ -38,13 +38,13 @@ $FieldInfo _AttributesImplSerializer_FieldInfo_[] = {
 };
 
 $MethodInfo _AttributesImplSerializer_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(AttributesImplSerializer::*)()>(&AttributesImplSerializer::init$))},
-	{"addAttribute", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL},
-	{"clear", "()V", nullptr, $PUBLIC | $FINAL},
-	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL},
-	{"getIndex", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL},
-	{"setAttributes", "(Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC | $FINAL},
-	{"switchOverToHash", "(I)V", nullptr, $PRIVATE, $method(static_cast<void(AttributesImplSerializer::*)(int32_t)>(&AttributesImplSerializer::switchOverToHash))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(AttributesImplSerializer, init$, void)},
+	{"addAttribute", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(AttributesImplSerializer, addAttribute, void, $String*, $String*, $String*, $String*, $String*)},
+	{"clear", "()V", nullptr, $PUBLIC | $FINAL, $virtualMethod(AttributesImplSerializer, clear, void)},
+	{"getIndex", "(Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $virtualMethod(AttributesImplSerializer, getIndex, int32_t, $String*)},
+	{"getIndex", "(Ljava/lang/String;Ljava/lang/String;)I", nullptr, $PUBLIC | $FINAL, $virtualMethod(AttributesImplSerializer, getIndex, int32_t, $String*, $String*)},
+	{"setAttributes", "(Lorg/xml/sax/Attributes;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(AttributesImplSerializer, setAttributes, void, $Attributes*)},
+	{"switchOverToHash", "(I)V", nullptr, $PRIVATE, $method(AttributesImplSerializer, switchOverToHash, void, int32_t)},
 	{}
 };
 

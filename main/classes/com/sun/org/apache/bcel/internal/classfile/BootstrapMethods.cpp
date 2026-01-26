@@ -37,15 +37,15 @@ $FieldInfo _BootstrapMethods_FieldInfo_[] = {
 };
 
 $MethodInfo _BootstrapMethods_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethods;)V", nullptr, $PUBLIC, $method(static_cast<void(BootstrapMethods::*)(BootstrapMethods*)>(&BootstrapMethods::init$))},
-	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(static_cast<void(BootstrapMethods::*)(int32_t,int32_t,$BootstrapMethodArray*,$ConstantPool*)>(&BootstrapMethods::init$))},
-	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(static_cast<void(BootstrapMethods::*)(int32_t,int32_t,$DataInput*,$ConstantPool*)>(&BootstrapMethods::init$)), "java.io.IOException"},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethods;", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, nullptr, "java.io.IOException"},
-	{"getBootstrapMethods", "()[Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;", nullptr, $PUBLIC | $FINAL, $method(static_cast<$BootstrapMethodArray*(BootstrapMethods::*)()>(&BootstrapMethods::getBootstrapMethods))},
-	{"setBootstrapMethods", "([Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;)V", nullptr, $PUBLIC | $FINAL, $method(static_cast<void(BootstrapMethods::*)($BootstrapMethodArray*)>(&BootstrapMethods::setBootstrapMethods))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethods;)V", nullptr, $PUBLIC, $method(BootstrapMethods, init$, void, BootstrapMethods*)},
+	{"<init>", "(II[Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, $PUBLIC, $method(BootstrapMethods, init$, void, int32_t, int32_t, $BootstrapMethodArray*, $ConstantPool*)},
+	{"<init>", "(IILjava/io/DataInput;Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)V", nullptr, 0, $method(BootstrapMethods, init$, void, int32_t, int32_t, $DataInput*, $ConstantPool*), "java.io.IOException"},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(BootstrapMethods, accept, void, $Visitor*)},
+	{"copy", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantPool;)Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethods;", nullptr, $PUBLIC, $virtualMethod(BootstrapMethods, copy, BootstrapMethods*, $ConstantPool*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC | $FINAL, $virtualMethod(BootstrapMethods, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getBootstrapMethods", "()[Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;", nullptr, $PUBLIC | $FINAL, $method(BootstrapMethods, getBootstrapMethods, $BootstrapMethodArray*)},
+	{"setBootstrapMethods", "([Lcom/sun/org/apache/bcel/internal/classfile/BootstrapMethod;)V", nullptr, $PUBLIC | $FINAL, $method(BootstrapMethods, setBootstrapMethods, void, $BootstrapMethodArray*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $FINAL, $virtualMethod(BootstrapMethods, toString, $String*)},
 	{}
 };
 

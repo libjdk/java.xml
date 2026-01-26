@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/InstructionList.h>
 #include <jcpp.h>
 
+using $InstructionList = ::com::sun::org::apache::bcel::internal::generic::InstructionList;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _CompoundInstruction_MethodInfo_[] = {
-	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getInstructionList", "()Lcom/sun/org/apache/bcel/internal/generic/InstructionList;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(CompoundInstruction, getInstructionList, $InstructionList*)},
 	{}
 };
 

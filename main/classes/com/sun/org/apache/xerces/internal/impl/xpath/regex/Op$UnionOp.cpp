@@ -27,10 +27,10 @@ $FieldInfo _Op$UnionOp_FieldInfo_[] = {
 };
 
 $MethodInfo _Op$UnionOp_MethodInfo_[] = {
-	{"<init>", "(II)V", nullptr, 0, $method(static_cast<void(Op$UnionOp::*)(int32_t,int32_t)>(&Op$UnionOp::init$))},
-	{"addElement", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;)V", nullptr, 0},
-	{"elementAt", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;", nullptr, 0},
-	{"size", "()I", nullptr, 0},
+	{"<init>", "(II)V", nullptr, 0, $method(Op$UnionOp, init$, void, int32_t, int32_t)},
+	{"addElement", "(Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;)V", nullptr, 0, $virtualMethod(Op$UnionOp, addElement, void, $Op*)},
+	{"elementAt", "(I)Lcom/sun/org/apache/xerces/internal/impl/xpath/regex/Op;", nullptr, 0, $virtualMethod(Op$UnionOp, elementAt, $Op*, int32_t)},
+	{"size", "()I", nullptr, 0, $virtualMethod(Op$UnionOp, size, int32_t)},
 	{}
 };
 

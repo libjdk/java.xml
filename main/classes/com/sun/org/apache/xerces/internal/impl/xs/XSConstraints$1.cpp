@@ -22,9 +22,9 @@ namespace com {
 							namespace xs {
 
 $MethodInfo _XSConstraints$1_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(XSConstraints$1::*)()>(&XSConstraints$1::init$))},
-	{"compare", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)I", nullptr, $PUBLIC},
-	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC},
+	{"<init>", "()V", nullptr, 0, $method(XSConstraints$1, init$, void)},
+	{"compare", "(Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;Lcom/sun/org/apache/xerces/internal/impl/xs/XSParticleDecl;)I", nullptr, $PUBLIC, $virtualMethod(XSConstraints$1, compare, int32_t, $XSParticleDecl*, $XSParticleDecl*)},
+	{"compare", "(Ljava/lang/Object;Ljava/lang/Object;)I", nullptr, $PUBLIC | $VOLATILE | $SYNTHETIC, $virtualMethod(XSConstraints$1, compare, int32_t, Object$*, Object$*)},
 	{}
 };
 

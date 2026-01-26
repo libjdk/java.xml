@@ -25,18 +25,18 @@ $FieldInfo _SAXLocatorWrapper_FieldInfo_[] = {
 };
 
 $MethodInfo _SAXLocatorWrapper_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(SAXLocatorWrapper::*)()>(&SAXLocatorWrapper::init$))},
-	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getCharacterOffset", "()I", nullptr, $PUBLIC},
-	{"getColumnNumber", "()I", nullptr, $PUBLIC},
-	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLineNumber", "()I", nullptr, $PUBLIC},
-	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getLocator", "()Lorg/xml/sax/Locator;", nullptr, $PUBLIC, $method(static_cast<$Locator*(SAXLocatorWrapper::*)()>(&SAXLocatorWrapper::getLocator))},
-	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setLocator", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(static_cast<void(SAXLocatorWrapper::*)($Locator*)>(&SAXLocatorWrapper::setLocator))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(SAXLocatorWrapper, init$, void)},
+	{"getBaseSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getBaseSystemId, $String*)},
+	{"getCharacterOffset", "()I", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getCharacterOffset, int32_t)},
+	{"getColumnNumber", "()I", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getColumnNumber, int32_t)},
+	{"getEncoding", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getEncoding, $String*)},
+	{"getExpandedSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getExpandedSystemId, $String*)},
+	{"getLineNumber", "()I", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getLineNumber, int32_t)},
+	{"getLiteralSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getLiteralSystemId, $String*)},
+	{"getLocator", "()Lorg/xml/sax/Locator;", nullptr, $PUBLIC, $method(SAXLocatorWrapper, getLocator, $Locator*)},
+	{"getPublicId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getPublicId, $String*)},
+	{"getXMLVersion", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(SAXLocatorWrapper, getXMLVersion, $String*)},
+	{"setLocator", "(Lorg/xml/sax/Locator;)V", nullptr, $PUBLIC, $method(SAXLocatorWrapper, setLocator, void, $Locator*)},
 	{}
 };
 

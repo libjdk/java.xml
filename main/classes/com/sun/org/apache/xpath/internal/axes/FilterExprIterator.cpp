@@ -62,18 +62,18 @@ $FieldInfo _FilterExprIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _FilterExprIterator_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(FilterExprIterator::*)()>(&FilterExprIterator::init$))},
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $method(static_cast<void(FilterExprIterator::*)($Expression*)>(&FilterExprIterator::init$))},
-	{"callPredicateVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC},
-	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC},
-	{"detach", "()V", nullptr, $PUBLIC},
-	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC},
-	{"getAnalysisBits", "()I", nullptr, $PUBLIC},
-	{"getInnerExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"getNextNode", "()I", nullptr, $PROTECTED},
-	{"isDocOrdered", "()Z", nullptr, $PUBLIC},
-	{"setInnerExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
-	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(FilterExprIterator, init$, void)},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $method(FilterExprIterator, init$, void, $Expression*)},
+	{"callPredicateVisitors", "(Lcom/sun/org/apache/xpath/internal/XPathVisitor;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, callPredicateVisitors, void, $XPathVisitor*)},
+	{"deepEquals", "(Lcom/sun/org/apache/xpath/internal/Expression;)Z", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, deepEquals, bool, $Expression*)},
+	{"detach", "()V", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, detach, void)},
+	{"fixupVariables", "(Ljava/util/List;I)V", "(Ljava/util/List<Lcom/sun/org/apache/xml/internal/utils/QName;>;I)V", $PUBLIC, $virtualMethod(FilterExprIterator, fixupVariables, void, $List*, int32_t)},
+	{"getAnalysisBits", "()I", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, getAnalysisBits, int32_t)},
+	{"getInnerExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, getInnerExpression, $Expression*)},
+	{"getNextNode", "()I", nullptr, $PROTECTED, $virtualMethod(FilterExprIterator, getNextNode, int32_t)},
+	{"isDocOrdered", "()Z", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, isDocOrdered, bool)},
+	{"setInnerExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, setInnerExpression, void, $Expression*)},
+	{"setRoot", "(ILjava/lang/Object;)V", nullptr, $PUBLIC, $virtualMethod(FilterExprIterator, setRoot, void, int32_t, Object$*)},
 	{}
 };
 

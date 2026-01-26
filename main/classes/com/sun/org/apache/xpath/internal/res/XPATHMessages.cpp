@@ -37,10 +37,10 @@ $FieldInfo _XPATHMessages_FieldInfo_[] = {
 };
 
 $MethodInfo _XPATHMessages_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(XPATHMessages::*)()>(&XPATHMessages::init$))},
-	{"createXPATHMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$String*(*)($String*,$ObjectArray*)>(&XPATHMessages::createXPATHMessage))},
-	{"createXPATHMsg", "(Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $FINAL, $method(static_cast<$String*(*)($ResourceBundle*,$String*,$ObjectArray*)>(&XPATHMessages::createXPATHMsg))},
-	{"createXPATHWarning", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<$String*(*)($String*,$ObjectArray*)>(&XPATHMessages::createXPATHWarning))},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(XPATHMessages, init$, void)},
+	{"createXPATHMessage", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(XPATHMessages, createXPATHMessage, $String*, $String*, $ObjectArray*)},
+	{"createXPATHMsg", "(Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PRIVATE | $STATIC | $FINAL, $staticMethod(XPATHMessages, createXPATHMsg, $String*, $ResourceBundle*, $String*, $ObjectArray*)},
+	{"createXPATHWarning", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(XPATHMessages, createXPATHWarning, $String*, $String*, $ObjectArray*)},
 	{}
 };
 

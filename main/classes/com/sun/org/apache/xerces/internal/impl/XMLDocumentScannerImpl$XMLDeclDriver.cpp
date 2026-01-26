@@ -52,8 +52,8 @@ $FieldInfo _XMLDocumentScannerImpl$XMLDeclDriver_FieldInfo_[] = {
 };
 
 $MethodInfo _XMLDocumentScannerImpl$XMLDeclDriver_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(static_cast<void(XMLDocumentScannerImpl$XMLDeclDriver::*)($XMLDocumentScannerImpl*)>(&XMLDocumentScannerImpl$XMLDeclDriver::init$))},
-	{"next", "()I", nullptr, $PUBLIC, nullptr, "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/XMLDocumentScannerImpl;)V", nullptr, $PROTECTED, $method(XMLDocumentScannerImpl$XMLDeclDriver, init$, void, $XMLDocumentScannerImpl*)},
+	{"next", "()I", nullptr, $PUBLIC, $virtualMethod(XMLDocumentScannerImpl$XMLDeclDriver, next, int32_t), "java.io.IOException,com.sun.org.apache.xerces.internal.xni.XNIException"},
 	{}
 };
 

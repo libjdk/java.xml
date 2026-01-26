@@ -30,8 +30,8 @@ $FieldInfo _MethodGenerator$1_FieldInfo_[] = {
 };
 
 $MethodInfo _MethodGenerator$1_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, 0, $method(static_cast<void(MethodGenerator$1::*)($MethodGenerator*,$String*,$String*,$String*,int32_t,$StringArray*,$Stylesheet*)>(&MethodGenerator$1::init$))},
-	{"isExternal", "()Z", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/util/MethodGenerator;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Stylesheet;)V", nullptr, 0, $method(MethodGenerator$1, init$, void, $MethodGenerator*, $String*, $String*, $String*, int32_t, $StringArray*, $Stylesheet*)},
+	{"isExternal", "()Z", nullptr, $PUBLIC, $virtualMethod(MethodGenerator$1, isExternal, bool)},
 	{}
 };
 

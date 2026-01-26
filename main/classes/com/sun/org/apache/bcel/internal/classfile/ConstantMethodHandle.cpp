@@ -31,16 +31,16 @@ $FieldInfo _ConstantMethodHandle_FieldInfo_[] = {
 };
 
 $MethodInfo _ConstantMethodHandle_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantMethodHandle;)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantMethodHandle::*)(ConstantMethodHandle*)>(&ConstantMethodHandle::init$))},
-	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(static_cast<void(ConstantMethodHandle::*)($DataInput*)>(&ConstantMethodHandle::init$)), "java.io.IOException"},
-	{"<init>", "(II)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantMethodHandle::*)(int32_t,int32_t)>(&ConstantMethodHandle::init$))},
-	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC},
-	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, nullptr, "java.io.IOException"},
-	{"getReferenceIndex", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ConstantMethodHandle::*)()>(&ConstantMethodHandle::getReferenceIndex))},
-	{"getReferenceKind", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ConstantMethodHandle::*)()>(&ConstantMethodHandle::getReferenceKind))},
-	{"setReferenceIndex", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantMethodHandle::*)(int32_t)>(&ConstantMethodHandle::setReferenceIndex))},
-	{"setReferenceKind", "(I)V", nullptr, $PUBLIC, $method(static_cast<void(ConstantMethodHandle::*)(int32_t)>(&ConstantMethodHandle::setReferenceKind))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/bcel/internal/classfile/ConstantMethodHandle;)V", nullptr, $PUBLIC, $method(ConstantMethodHandle, init$, void, ConstantMethodHandle*)},
+	{"<init>", "(Ljava/io/DataInput;)V", nullptr, 0, $method(ConstantMethodHandle, init$, void, $DataInput*), "java.io.IOException"},
+	{"<init>", "(II)V", nullptr, $PUBLIC, $method(ConstantMethodHandle, init$, void, int32_t, int32_t)},
+	{"accept", "(Lcom/sun/org/apache/bcel/internal/classfile/Visitor;)V", nullptr, $PUBLIC, $virtualMethod(ConstantMethodHandle, accept, void, $Visitor*)},
+	{"dump", "(Ljava/io/DataOutputStream;)V", nullptr, $PUBLIC, $virtualMethod(ConstantMethodHandle, dump, void, $DataOutputStream*), "java.io.IOException"},
+	{"getReferenceIndex", "()I", nullptr, $PUBLIC, $method(ConstantMethodHandle, getReferenceIndex, int32_t)},
+	{"getReferenceKind", "()I", nullptr, $PUBLIC, $method(ConstantMethodHandle, getReferenceKind, int32_t)},
+	{"setReferenceIndex", "(I)V", nullptr, $PUBLIC, $method(ConstantMethodHandle, setReferenceIndex, void, int32_t)},
+	{"setReferenceKind", "(I)V", nullptr, $PUBLIC, $method(ConstantMethodHandle, setReferenceKind, void, int32_t)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(ConstantMethodHandle, toString, $String*)},
 	{}
 };
 

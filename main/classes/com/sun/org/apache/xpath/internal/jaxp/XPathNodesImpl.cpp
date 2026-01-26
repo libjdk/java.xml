@@ -32,10 +32,10 @@ $FieldInfo _XPathNodesImpl_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathNodesImpl_MethodInfo_[] = {
-	{"<init>", "(Lorg/w3c/dom/NodeList;Ljava/lang/Class;)V", "(Lorg/w3c/dom/NodeList;Ljava/lang/Class<Lorg/w3c/dom/Node;>;)V", $PUBLIC, $method(static_cast<void(XPathNodesImpl::*)($NodeList*,$Class*)>(&XPathNodesImpl::init$))},
-	{"get", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, nullptr, "javax.xml.xpath.XPathException"},
-	{"iterator", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Lorg/w3c/dom/Node;>;", $PUBLIC},
-	{"size", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lorg/w3c/dom/NodeList;Ljava/lang/Class;)V", "(Lorg/w3c/dom/NodeList;Ljava/lang/Class<Lorg/w3c/dom/Node;>;)V", $PUBLIC, $method(XPathNodesImpl, init$, void, $NodeList*, $Class*)},
+	{"get", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC, $virtualMethod(XPathNodesImpl, get, $Node*, int32_t), "javax.xml.xpath.XPathException"},
+	{"iterator", "()Ljava/util/Iterator;", "()Ljava/util/Iterator<Lorg/w3c/dom/Node;>;", $PUBLIC, $virtualMethod(XPathNodesImpl, iterator, $Iterator*)},
+	{"size", "()I", nullptr, $PUBLIC, $virtualMethod(XPathNodesImpl, size, int32_t)},
 	{}
 };
 

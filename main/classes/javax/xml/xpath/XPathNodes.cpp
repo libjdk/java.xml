@@ -5,15 +5,16 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Node = ::org::w3c::dom::Node;
 
 namespace javax {
 	namespace xml {
 		namespace xpath {
 
 $MethodInfo _XPathNodes_MethodInfo_[] = {
-	{"get", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, nullptr, "javax.xml.xpath.XPathException"},
+	{"get", "(I)Lorg/w3c/dom/Node;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPathNodes, get, $Node*, int32_t), "javax.xml.xpath.XPathException"},
 	{"iterator", "()Ljava/util/Iterator;", nullptr, $PUBLIC | $ABSTRACT},
-	{"size", "()I", nullptr, $PUBLIC | $ABSTRACT},
+	{"size", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XPathNodes, size, int32_t)},
 	{}
 };
 

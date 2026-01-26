@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xs/XSObject.h>
 #include <jcpp.h>
 
+using $XSObject = ::com::sun::org::apache::xerces::internal::xs::XSObject;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,9 +16,9 @@ namespace com {
 						namespace xs {
 
 $MethodInfo _XSNamedMap_MethodInfo_[] = {
-	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"item", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $ABSTRACT},
-	{"itemByName", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $ABSTRACT},
+	{"getLength", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSNamedMap, getLength, int32_t)},
+	{"item", "(I)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSNamedMap, item, $XSObject*, int32_t)},
+	{"itemByName", "(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/org/apache/xerces/internal/xs/XSObject;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(XSNamedMap, itemByName, $XSObject*, $String*, $String*)},
 	{}
 };
 

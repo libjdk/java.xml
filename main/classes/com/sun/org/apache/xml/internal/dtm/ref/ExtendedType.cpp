@@ -25,15 +25,15 @@ $FieldInfo _ExtendedType_FieldInfo_[] = {
 };
 
 $MethodInfo _ExtendedType_MethodInfo_[] = {
-	{"<init>", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(ExtendedType::*)(int32_t,$String*,$String*)>(&ExtendedType::init$))},
-	{"<init>", "(ILjava/lang/String;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(static_cast<void(ExtendedType::*)(int32_t,$String*,$String*,int32_t)>(&ExtendedType::init$))},
-	{"equals", "(Lcom/sun/org/apache/xml/internal/dtm/ref/ExtendedType;)Z", nullptr, $PUBLIC, $method(static_cast<bool(ExtendedType::*)(ExtendedType*)>(&ExtendedType::equals))},
-	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(ExtendedType::*)()>(&ExtendedType::getLocalName))},
-	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(static_cast<$String*(ExtendedType::*)()>(&ExtendedType::getNamespace))},
-	{"getNodeType", "()I", nullptr, $PUBLIC, $method(static_cast<int32_t(ExtendedType::*)()>(&ExtendedType::getNodeType))},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"redefine", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(static_cast<void(ExtendedType::*)(int32_t,$String*,$String*)>(&ExtendedType::redefine))},
-	{"redefine", "(ILjava/lang/String;Ljava/lang/String;I)V", nullptr, $PROTECTED, $method(static_cast<void(ExtendedType::*)(int32_t,$String*,$String*,int32_t)>(&ExtendedType::redefine))},
+	{"<init>", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PUBLIC, $method(ExtendedType, init$, void, int32_t, $String*, $String*)},
+	{"<init>", "(ILjava/lang/String;Ljava/lang/String;I)V", nullptr, $PUBLIC, $method(ExtendedType, init$, void, int32_t, $String*, $String*, int32_t)},
+	{"equals", "(Lcom/sun/org/apache/xml/internal/dtm/ref/ExtendedType;)Z", nullptr, $PUBLIC, $method(ExtendedType, equals, bool, ExtendedType*)},
+	{"getLocalName", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(ExtendedType, getLocalName, $String*)},
+	{"getNamespace", "()Ljava/lang/String;", nullptr, $PUBLIC, $method(ExtendedType, getNamespace, $String*)},
+	{"getNodeType", "()I", nullptr, $PUBLIC, $method(ExtendedType, getNodeType, int32_t)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(ExtendedType, hashCode, int32_t)},
+	{"redefine", "(ILjava/lang/String;Ljava/lang/String;)V", nullptr, $PROTECTED, $method(ExtendedType, redefine, void, int32_t, $String*, $String*)},
+	{"redefine", "(ILjava/lang/String;Ljava/lang/String;I)V", nullptr, $PROTECTED, $method(ExtendedType, redefine, void, int32_t, $String*, $String*, int32_t)},
 	{}
 };
 

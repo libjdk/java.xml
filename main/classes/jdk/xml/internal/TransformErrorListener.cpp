@@ -12,10 +12,10 @@ namespace jdk {
 		namespace internal {
 
 $MethodInfo _TransformErrorListener_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PUBLIC, $method(static_cast<void(TransformErrorListener::*)()>(&TransformErrorListener::init$))},
-	{"error", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"fatalError", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
-	{"warning", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "()V", nullptr, $PUBLIC, $method(TransformErrorListener, init$, void)},
+	{"error", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, $virtualMethod(TransformErrorListener, error, void, $TransformerException*), "javax.xml.transform.TransformerException"},
+	{"fatalError", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, $virtualMethod(TransformErrorListener, fatalError, void, $TransformerException*), "javax.xml.transform.TransformerException"},
+	{"warning", "(Ljavax/xml/transform/TransformerException;)V", nullptr, $PUBLIC, $virtualMethod(TransformErrorListener, warning, void, $TransformerException*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

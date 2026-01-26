@@ -53,13 +53,13 @@ $FieldInfo _XPathEvaluationResult$XPathResultType_FieldInfo_[] = {
 };
 
 $MethodInfo _XPathEvaluationResult$XPathResultType_MethodInfo_[] = {
-	{"$values", "()[Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $method(static_cast<$XPathEvaluationResult$XPathResultTypeArray*(*)()>(&XPathEvaluationResult$XPathResultType::$values))},
-	{"<init>", "(Ljava/lang/String;ILjavax/xml/namespace/QName;Ljava/lang/Class;)V", "(Ljavax/xml/namespace/QName;Ljava/lang/Class<*>;)V", $PRIVATE, $method(static_cast<void(XPathEvaluationResult$XPathResultType::*)($String*,int32_t,$QName*,$Class*)>(&XPathEvaluationResult$XPathResultType::init$))},
-	{"equalsClassType", "(Ljava/lang/Class;)Z", "(Ljava/lang/Class<*>;)Z", $PRIVATE, $method(static_cast<bool(XPathEvaluationResult$XPathResultType::*)($Class*)>(&XPathEvaluationResult$XPathResultType::equalsClassType))},
-	{"getQNameType", "(Ljava/lang/Class;)Ljavax/xml/namespace/QName;", "(Ljava/lang/Class<*>;)Ljavax/xml/namespace/QName;", $PUBLIC | $STATIC, $method(static_cast<$QName*(*)($Class*)>(&XPathEvaluationResult$XPathResultType::getQNameType))},
-	{"isAcceptedNumberSubType", "(Ljava/lang/Class;)Z", "(Ljava/lang/Class<*>;)Z", $PRIVATE, $method(static_cast<bool(XPathEvaluationResult$XPathResultType::*)($Class*)>(&XPathEvaluationResult$XPathResultType::isAcceptedNumberSubType))},
-	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<XPathEvaluationResult$XPathResultType*(*)($String*)>(&XPathEvaluationResult$XPathResultType::valueOf))},
-	{"values", "()[Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC | $STATIC, $method(static_cast<$XPathEvaluationResult$XPathResultTypeArray*(*)()>(&XPathEvaluationResult$XPathResultType::values))},
+	{"$values", "()[Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PRIVATE | $STATIC | $SYNTHETIC, $staticMethod(XPathEvaluationResult$XPathResultType, $values, $XPathEvaluationResult$XPathResultTypeArray*)},
+	{"<init>", "(Ljava/lang/String;ILjavax/xml/namespace/QName;Ljava/lang/Class;)V", "(Ljavax/xml/namespace/QName;Ljava/lang/Class<*>;)V", $PRIVATE, $method(XPathEvaluationResult$XPathResultType, init$, void, $String*, int32_t, $QName*, $Class*)},
+	{"equalsClassType", "(Ljava/lang/Class;)Z", "(Ljava/lang/Class<*>;)Z", $PRIVATE, $method(XPathEvaluationResult$XPathResultType, equalsClassType, bool, $Class*)},
+	{"getQNameType", "(Ljava/lang/Class;)Ljavax/xml/namespace/QName;", "(Ljava/lang/Class<*>;)Ljavax/xml/namespace/QName;", $PUBLIC | $STATIC, $staticMethod(XPathEvaluationResult$XPathResultType, getQNameType, $QName*, $Class*)},
+	{"isAcceptedNumberSubType", "(Ljava/lang/Class;)Z", "(Ljava/lang/Class<*>;)Z", $PRIVATE, $method(XPathEvaluationResult$XPathResultType, isAcceptedNumberSubType, bool, $Class*)},
+	{"valueOf", "(Ljava/lang/String;)Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathEvaluationResult$XPathResultType, valueOf, XPathEvaluationResult$XPathResultType*, $String*)},
+	{"values", "()[Ljavax/xml/xpath/XPathEvaluationResult$XPathResultType;", nullptr, $PUBLIC | $STATIC, $staticMethod(XPathEvaluationResult$XPathResultType, values, $XPathEvaluationResult$XPathResultTypeArray*)},
 	{}
 };
 

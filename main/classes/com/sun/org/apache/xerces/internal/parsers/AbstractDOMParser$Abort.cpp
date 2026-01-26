@@ -27,8 +27,8 @@ $FieldInfo _AbstractDOMParser$Abort_FieldInfo_[] = {
 };
 
 $MethodInfo _AbstractDOMParser$Abort_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(AbstractDOMParser$Abort::*)()>(&AbstractDOMParser$Abort::init$))},
-	{"fillInStackTrace", "()Ljava/lang/Throwable;", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(AbstractDOMParser$Abort, init$, void)},
+	{"fillInStackTrace", "()Ljava/lang/Throwable;", nullptr, $PUBLIC, $virtualMethod(AbstractDOMParser$Abort, fillInStackTrace, $Throwable*)},
 	{}
 };
 

@@ -61,16 +61,16 @@ $FieldInfo _Util_FieldInfo_[] = {
 };
 
 $MethodInfo _Util_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(Util::*)()>(&Util::init$))},
-	{"getCatalogFiles", "(Ljava/lang/String;)[Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$StringArray*(*)($String*)>(&Util::getCatalogFiles))},
-	{"getNotNullOrEmpty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($String*)>(&Util::getNotNullOrEmpty))},
-	{"isFileUri", "(Ljava/net/URI;)Z", nullptr, $STATIC, $method(static_cast<bool(*)($URI*)>(&Util::isFileUri))},
-	{"isFileUriExist", "(Ljava/net/URI;Z)Z", nullptr, $STATIC, $method(static_cast<bool(*)($URI*,bool)>(&Util::isFileUriExist))},
-	{"resolve", "(Ljavax/xml/catalog/CatalogImpl;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $method(static_cast<$String*(*)($CatalogImpl*,$String*,$String*)>(&Util::resolve))},
-	{"validateFeatureInput", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljava/lang/String;)V", nullptr, $STATIC, $method(static_cast<void(*)($CatalogFeatures$Feature*,$String*)>(&Util::validateFeatureInput))},
-	{"validateUriSyntax", "(Ljava/net/URI;)V", nullptr, $STATIC, $method(static_cast<void(*)($URI*)>(&Util::validateUriSyntax))},
-	{"validateUrisSyntax", "([Ljava/net/URI;)V", nullptr, $STATIC | $TRANSIENT, $method(static_cast<void(*)($URIArray*)>(&Util::validateUrisSyntax))},
-	{"validateUrisSyntax", "([Ljava/lang/String;)V", nullptr, $STATIC | $TRANSIENT, $method(static_cast<void(*)($StringArray*)>(&Util::validateUrisSyntax))},
+	{"<init>", "()V", nullptr, 0, $method(Util, init$, void)},
+	{"getCatalogFiles", "(Ljava/lang/String;)[Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Util, getCatalogFiles, $StringArray*, $String*)},
+	{"getNotNullOrEmpty", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Util, getNotNullOrEmpty, $String*, $String*)},
+	{"isFileUri", "(Ljava/net/URI;)Z", nullptr, $STATIC, $staticMethod(Util, isFileUri, bool, $URI*)},
+	{"isFileUriExist", "(Ljava/net/URI;Z)Z", nullptr, $STATIC, $staticMethod(Util, isFileUriExist, bool, $URI*, bool)},
+	{"resolve", "(Ljavax/xml/catalog/CatalogImpl;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", nullptr, $STATIC, $staticMethod(Util, resolve, $String*, $CatalogImpl*, $String*, $String*)},
+	{"validateFeatureInput", "(Ljavax/xml/catalog/CatalogFeatures$Feature;Ljava/lang/String;)V", nullptr, $STATIC, $staticMethod(Util, validateFeatureInput, void, $CatalogFeatures$Feature*, $String*)},
+	{"validateUriSyntax", "(Ljava/net/URI;)V", nullptr, $STATIC, $staticMethod(Util, validateUriSyntax, void, $URI*)},
+	{"validateUrisSyntax", "([Ljava/net/URI;)V", nullptr, $STATIC | $TRANSIENT, $staticMethod(Util, validateUrisSyntax, void, $URIArray*)},
+	{"validateUrisSyntax", "([Ljava/lang/String;)V", nullptr, $STATIC | $TRANSIENT, $staticMethod(Util, validateUrisSyntax, void, $StringArray*)},
 	{}
 };
 

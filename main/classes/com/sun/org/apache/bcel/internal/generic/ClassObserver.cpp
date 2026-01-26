@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/bcel/internal/generic/ClassGen.h>
 #include <jcpp.h>
 
+using $ClassGen = ::com::sun::org::apache::bcel::internal::generic::ClassGen;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace generic {
 
 $MethodInfo _ClassObserver_MethodInfo_[] = {
-	{"notify", "(Lcom/sun/org/apache/bcel/internal/generic/ClassGen;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"notify", "(Lcom/sun/org/apache/bcel/internal/generic/ClassGen;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(ClassObserver, notify, void, $ClassGen*)},
 	{}
 };
 

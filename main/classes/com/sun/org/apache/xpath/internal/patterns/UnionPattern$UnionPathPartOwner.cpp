@@ -32,9 +32,9 @@ $FieldInfo _UnionPattern$UnionPathPartOwner_FieldInfo_[] = {
 };
 
 $MethodInfo _UnionPattern$UnionPathPartOwner_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/patterns/UnionPattern;I)V", nullptr, 0, $method(static_cast<void(UnionPattern$UnionPathPartOwner::*)($UnionPattern*,int32_t)>(&UnionPattern$UnionPathPartOwner::init$))},
-	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC},
-	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/patterns/UnionPattern;I)V", nullptr, 0, $method(UnionPattern$UnionPathPartOwner, init$, void, $UnionPattern*, int32_t)},
+	{"getExpression", "()Lcom/sun/org/apache/xpath/internal/Expression;", nullptr, $PUBLIC, $virtualMethod(UnionPattern$UnionPathPartOwner, getExpression, $Expression*)},
+	{"setExpression", "(Lcom/sun/org/apache/xpath/internal/Expression;)V", nullptr, $PUBLIC, $virtualMethod(UnionPattern$UnionPathPartOwner, setExpression, void, $Expression*)},
 	{}
 };
 

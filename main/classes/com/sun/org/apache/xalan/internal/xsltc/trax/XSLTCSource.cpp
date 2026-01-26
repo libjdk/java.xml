@@ -56,11 +56,11 @@ $FieldInfo _XSLTCSource_FieldInfo_[] = {
 };
 
 $MethodInfo _XSLTCSource_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(XSLTCSource::*)($String*)>(&XSLTCSource::init$))},
-	{"<init>", "(Ljavax/xml/transform/Source;)V", nullptr, $PUBLIC, $method(static_cast<void(XSLTCSource::*)($Source*)>(&XSLTCSource::init$))},
-	{"getDOM", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PROTECTED, $method(static_cast<$DOM*(XSLTCSource::*)($XSLTCDTMManager*,$AbstractTranslet*)>(&XSLTCSource::getDOM)), "org.xml.sax.SAXException"},
-	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC},
-	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(XSLTCSource, init$, void, $String*)},
+	{"<init>", "(Ljavax/xml/transform/Source;)V", nullptr, $PUBLIC, $method(XSLTCSource, init$, void, $Source*)},
+	{"getDOM", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/XSLTCDTMManager;Lcom/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet;)Lcom/sun/org/apache/xalan/internal/xsltc/DOM;", nullptr, $PROTECTED, $method(XSLTCSource, getDOM, $DOM*, $XSLTCDTMManager*, $AbstractTranslet*), "org.xml.sax.SAXException"},
+	{"getSystemId", "()Ljava/lang/String;", nullptr, $PUBLIC, $virtualMethod(XSLTCSource, getSystemId, $String*)},
+	{"setSystemId", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $virtualMethod(XSLTCSource, setSystemId, void, $String*)},
 	{}
 };
 

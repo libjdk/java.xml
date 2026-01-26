@@ -3,6 +3,7 @@
 #include <com/sun/org/apache/xerces/internal/xni/Augmentations.h>
 #include <jcpp.h>
 
+using $Augmentations = ::com::sun::org::apache::xerces::internal::xni::Augmentations;
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
 
@@ -15,7 +16,7 @@ namespace com {
 						namespace impl {
 
 $MethodInfo _RevalidationHandler_MethodInfo_[] = {
-	{"characterData", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)Z", nullptr, $PUBLIC | $ABSTRACT},
+	{"characterData", "(Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(RevalidationHandler, characterData, bool, $String*, $Augmentations*)},
 	{}
 };
 

@@ -5,6 +5,7 @@
 
 using $ClassInfo = ::java::lang::ClassInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Event = ::org::w3c::dom::events::Event;
 
 namespace org {
 	namespace w3c {
@@ -12,7 +13,7 @@ namespace org {
 			namespace events {
 
 $MethodInfo _EventListener_MethodInfo_[] = {
-	{"handleEvent", "(Lorg/w3c/dom/events/Event;)V", nullptr, $PUBLIC | $ABSTRACT},
+	{"handleEvent", "(Lorg/w3c/dom/events/Event;)V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(EventListener, handleEvent, void, $Event*)},
 	{}
 };
 

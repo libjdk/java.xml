@@ -24,7 +24,7 @@ $FieldInfo _RTFIterator_FieldInfo_[] = {
 };
 
 $MethodInfo _RTFIterator_MethodInfo_[] = {
-	{"<init>", "(ILcom/sun/org/apache/xml/internal/dtm/DTMManager;)V", nullptr, $PUBLIC, $method(static_cast<void(RTFIterator::*)(int32_t,$DTMManager*)>(&RTFIterator::init$))},
+	{"<init>", "(ILcom/sun/org/apache/xml/internal/dtm/DTMManager;)V", nullptr, $PUBLIC, $method(RTFIterator, init$, void, int32_t, $DTMManager*)},
 	{}
 };
 

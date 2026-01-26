@@ -42,15 +42,15 @@ $FieldInfo _SyntheticRepository_FieldInfo_[] = {
 };
 
 $MethodInfo _SyntheticRepository_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, $PRIVATE, $method(static_cast<void(SyntheticRepository::*)()>(&SyntheticRepository::init$))},
-	{"clear", "()V", nullptr, $PUBLIC},
-	{"findClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC},
-	{"getInstance", "()Lcom/sun/org/apache/bcel/internal/util/SyntheticRepository;", nullptr, $PUBLIC | $STATIC, $method(static_cast<SyntheticRepository*(*)()>(&SyntheticRepository::getInstance))},
-	{"loadClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
-	{"loadClass", "(Ljava/lang/Class;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", "(Ljava/lang/Class<*>;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", $PUBLIC, nullptr, "java.lang.ClassNotFoundException"},
-	{"loadClass", "(Ljava/io/InputStream;Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PRIVATE, $method(static_cast<$JavaClass*(SyntheticRepository::*)($InputStream*,$String*)>(&SyntheticRepository::loadClass)), "java.lang.ClassNotFoundException"},
-	{"removeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC},
-	{"storeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC},
+	{"<init>", "()V", nullptr, $PRIVATE, $method(SyntheticRepository, init$, void)},
+	{"clear", "()V", nullptr, $PUBLIC, $virtualMethod(SyntheticRepository, clear, void)},
+	{"findClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $virtualMethod(SyntheticRepository, findClass, $JavaClass*, $String*)},
+	{"getInstance", "()Lcom/sun/org/apache/bcel/internal/util/SyntheticRepository;", nullptr, $PUBLIC | $STATIC, $staticMethod(SyntheticRepository, getInstance, SyntheticRepository*)},
+	{"loadClass", "(Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PUBLIC, $virtualMethod(SyntheticRepository, loadClass, $JavaClass*, $String*), "java.lang.ClassNotFoundException"},
+	{"loadClass", "(Ljava/lang/Class;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", "(Ljava/lang/Class<*>;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", $PUBLIC, $virtualMethod(SyntheticRepository, loadClass, $JavaClass*, $Class*), "java.lang.ClassNotFoundException"},
+	{"loadClass", "(Ljava/io/InputStream;Ljava/lang/String;)Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;", nullptr, $PRIVATE, $method(SyntheticRepository, loadClass, $JavaClass*, $InputStream*, $String*), "java.lang.ClassNotFoundException"},
+	{"removeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC, $virtualMethod(SyntheticRepository, removeClass, void, $JavaClass*)},
+	{"storeClass", "(Lcom/sun/org/apache/bcel/internal/classfile/JavaClass;)V", nullptr, $PUBLIC, $virtualMethod(SyntheticRepository, storeClass, void, $JavaClass*)},
 	{}
 };
 

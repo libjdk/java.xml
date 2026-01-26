@@ -32,13 +32,13 @@ $FieldInfo _DoubleDV$XDouble_FieldInfo_[] = {
 };
 
 $MethodInfo _DoubleDV$XDouble_MethodInfo_[] = {
-	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(static_cast<void(DoubleDV$XDouble::*)($String*)>(&DoubleDV$XDouble::init$)), "java.lang.NumberFormatException"},
-	{"compareTo", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DoubleDV$XDouble;)I", nullptr, $PRIVATE, $method(static_cast<int32_t(DoubleDV$XDouble::*)(DoubleDV$XDouble*)>(&DoubleDV$XDouble::compareTo))},
-	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC},
-	{"getValue", "()D", nullptr, $PUBLIC},
-	{"hashCode", "()I", nullptr, $PUBLIC},
-	{"isIdentical", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DoubleDV$XDouble;)Z", nullptr, $PUBLIC, $method(static_cast<bool(DoubleDV$XDouble::*)(DoubleDV$XDouble*)>(&DoubleDV$XDouble::isIdentical))},
-	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED},
+	{"<init>", "(Ljava/lang/String;)V", nullptr, $PUBLIC, $method(DoubleDV$XDouble, init$, void, $String*), "java.lang.NumberFormatException"},
+	{"compareTo", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DoubleDV$XDouble;)I", nullptr, $PRIVATE, $method(DoubleDV$XDouble, compareTo, int32_t, DoubleDV$XDouble*)},
+	{"equals", "(Ljava/lang/Object;)Z", nullptr, $PUBLIC, $virtualMethod(DoubleDV$XDouble, equals, bool, Object$*)},
+	{"getValue", "()D", nullptr, $PUBLIC, $virtualMethod(DoubleDV$XDouble, getValue, double)},
+	{"hashCode", "()I", nullptr, $PUBLIC, $virtualMethod(DoubleDV$XDouble, hashCode, int32_t)},
+	{"isIdentical", "(Lcom/sun/org/apache/xerces/internal/impl/dv/xs/DoubleDV$XDouble;)Z", nullptr, $PUBLIC, $method(DoubleDV$XDouble, isIdentical, bool, DoubleDV$XDouble*)},
+	{"toString", "()Ljava/lang/String;", nullptr, $PUBLIC | $SYNCHRONIZED, $virtualMethod(DoubleDV$XDouble, toString, $String*)},
 	{}
 };
 

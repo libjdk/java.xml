@@ -71,16 +71,16 @@ $FieldInfo _Lexer_FieldInfo_[] = {
 };
 
 $MethodInfo _Lexer_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;Lcom/sun/org/apache/xpath/internal/compiler/XPathParser;)V", nullptr, 0, $method(static_cast<void(Lexer::*)($Compiler*,$PrefixResolver*,$XPathParser*)>(&Lexer::init$))},
-	{"addToTokenQueue", "(Ljava/lang/String;)V", nullptr, $PRIVATE | $FINAL, $method(static_cast<void(Lexer::*)($String*)>(&Lexer::addToTokenQueue))},
-	{"getKeywordToken", "(Ljava/lang/String;)I", nullptr, $FINAL, $method(static_cast<int32_t(Lexer::*)($String*)>(&Lexer::getKeywordToken))},
-	{"getTokenQueuePosFromMap", "(I)I", nullptr, $PRIVATE, $method(static_cast<int32_t(Lexer::*)(int32_t)>(&Lexer::getTokenQueuePosFromMap))},
-	{"mapNSTokens", "(Ljava/lang/String;III)I", nullptr, $PRIVATE, $method(static_cast<int32_t(Lexer::*)($String*,int32_t,int32_t,int32_t)>(&Lexer::mapNSTokens)), "javax.xml.transform.TransformerException"},
-	{"mapPatternElemPos", "(IZZ)Z", nullptr, $PRIVATE, $method(static_cast<bool(Lexer::*)(int32_t,bool,bool)>(&Lexer::mapPatternElemPos))},
-	{"recordTokenString", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", $PRIVATE, $method(static_cast<void(Lexer::*)($List*)>(&Lexer::recordTokenString))},
-	{"resetTokenMark", "(I)V", nullptr, $PRIVATE | $FINAL, $method(static_cast<void(Lexer::*)(int32_t)>(&Lexer::resetTokenMark))},
-	{"tokenize", "(Ljava/lang/String;)V", nullptr, 0, nullptr, "javax.xml.transform.TransformerException"},
-	{"tokenize", "(Ljava/lang/String;Ljava/util/List;)V", "(Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;)V", 0, nullptr, "javax.xml.transform.TransformerException"},
+	{"<init>", "(Lcom/sun/org/apache/xpath/internal/compiler/Compiler;Lcom/sun/org/apache/xml/internal/utils/PrefixResolver;Lcom/sun/org/apache/xpath/internal/compiler/XPathParser;)V", nullptr, 0, $method(Lexer, init$, void, $Compiler*, $PrefixResolver*, $XPathParser*)},
+	{"addToTokenQueue", "(Ljava/lang/String;)V", nullptr, $PRIVATE | $FINAL, $method(Lexer, addToTokenQueue, void, $String*)},
+	{"getKeywordToken", "(Ljava/lang/String;)I", nullptr, $FINAL, $method(Lexer, getKeywordToken, int32_t, $String*)},
+	{"getTokenQueuePosFromMap", "(I)I", nullptr, $PRIVATE, $method(Lexer, getTokenQueuePosFromMap, int32_t, int32_t)},
+	{"mapNSTokens", "(Ljava/lang/String;III)I", nullptr, $PRIVATE, $method(Lexer, mapNSTokens, int32_t, $String*, int32_t, int32_t, int32_t), "javax.xml.transform.TransformerException"},
+	{"mapPatternElemPos", "(IZZ)Z", nullptr, $PRIVATE, $method(Lexer, mapPatternElemPos, bool, int32_t, bool, bool)},
+	{"recordTokenString", "(Ljava/util/List;)V", "(Ljava/util/List<Ljava/lang/String;>;)V", $PRIVATE, $method(Lexer, recordTokenString, void, $List*)},
+	{"resetTokenMark", "(I)V", nullptr, $PRIVATE | $FINAL, $method(Lexer, resetTokenMark, void, int32_t)},
+	{"tokenize", "(Ljava/lang/String;)V", nullptr, 0, $virtualMethod(Lexer, tokenize, void, $String*), "javax.xml.transform.TransformerException"},
+	{"tokenize", "(Ljava/lang/String;Ljava/util/List;)V", "(Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;)V", 0, $virtualMethod(Lexer, tokenize, void, $String*, $List*), "javax.xml.transform.TransformerException"},
 	{}
 };
 

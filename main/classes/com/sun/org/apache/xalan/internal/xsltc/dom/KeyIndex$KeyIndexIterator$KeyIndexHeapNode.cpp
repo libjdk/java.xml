@@ -37,14 +37,14 @@ $FieldInfo _KeyIndex$KeyIndexIterator$KeyIndexHeapNode_FieldInfo_[] = {
 };
 
 $MethodInfo _KeyIndex$KeyIndexIterator$KeyIndexHeapNode_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/KeyIndex$KeyIndexIterator;Lcom/sun/org/apache/xalan/internal/xsltc/util/IntegerArray;)V", nullptr, 0, $method(static_cast<void(KeyIndex$KeyIndexIterator$KeyIndexHeapNode::*)($KeyIndex$KeyIndexIterator*,$IntegerArray*)>(&KeyIndex$KeyIndexIterator$KeyIndexHeapNode::init$))},
-	{"cloneHeapNode", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;", nullptr, $PUBLIC},
-	{"gotoMark", "()V", nullptr, $PUBLIC},
-	{"isLessThan", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;)Z", nullptr, $PUBLIC},
-	{"reset", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;", nullptr, $PUBLIC},
-	{"setMark", "()V", nullptr, $PUBLIC},
-	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;", nullptr, $PUBLIC},
-	{"step", "()I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/KeyIndex$KeyIndexIterator;Lcom/sun/org/apache/xalan/internal/xsltc/util/IntegerArray;)V", nullptr, 0, $method(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, init$, void, $KeyIndex$KeyIndexIterator*, $IntegerArray*)},
+	{"cloneHeapNode", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, cloneHeapNode, $MultiValuedNodeHeapIterator$HeapNode*)},
+	{"gotoMark", "()V", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, gotoMark, void)},
+	{"isLessThan", "(Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;)Z", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, isLessThan, bool, $MultiValuedNodeHeapIterator$HeapNode*)},
+	{"reset", "()Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, reset, $MultiValuedNodeHeapIterator$HeapNode*)},
+	{"setMark", "()V", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, setMark, void)},
+	{"setStartNode", "(I)Lcom/sun/org/apache/xalan/internal/xsltc/dom/MultiValuedNodeHeapIterator$HeapNode;", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, setStartNode, $MultiValuedNodeHeapIterator$HeapNode*, int32_t)},
+	{"step", "()I", nullptr, $PUBLIC, $virtualMethod(KeyIndex$KeyIndexIterator$KeyIndexHeapNode, step, int32_t)},
 	{}
 };
 

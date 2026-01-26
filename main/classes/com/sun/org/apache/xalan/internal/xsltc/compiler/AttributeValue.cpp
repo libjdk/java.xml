@@ -25,8 +25,8 @@ namespace com {
 							namespace compiler {
 
 $MethodInfo _AttributeValue_MethodInfo_[] = {
-	{"<init>", "()V", nullptr, 0, $method(static_cast<void(AttributeValue::*)()>(&AttributeValue::init$))},
-	{"create", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/AttributeValue;", nullptr, $PUBLIC | $STATIC | $FINAL, $method(static_cast<AttributeValue*(*)($SyntaxTreeNode*,$String*,$Parser*)>(&AttributeValue::create))},
+	{"<init>", "()V", nullptr, 0, $method(AttributeValue, init$, void)},
+	{"create", "(Lcom/sun/org/apache/xalan/internal/xsltc/compiler/SyntaxTreeNode;Ljava/lang/String;Lcom/sun/org/apache/xalan/internal/xsltc/compiler/Parser;)Lcom/sun/org/apache/xalan/internal/xsltc/compiler/AttributeValue;", nullptr, $PUBLIC | $STATIC | $FINAL, $staticMethod(AttributeValue, create, AttributeValue*, $SyntaxTreeNode*, $String*, $Parser*)},
 	{}
 };
 

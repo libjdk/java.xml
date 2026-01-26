@@ -80,13 +80,13 @@ $FieldInfo _DFAContentModel_FieldInfo_[] = {
 };
 
 $MethodInfo _DFAContentModel_MethodInfo_[] = {
-	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;IZ)V", nullptr, $PUBLIC, $method(static_cast<void(DFAContentModel::*)($CMNode*,int32_t,bool)>(&DFAContentModel::init$))},
-	{"buildDFA", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PRIVATE, $method(static_cast<void(DFAContentModel::*)($CMNode*)>(&DFAContentModel::buildDFA))},
-	{"calcFollowList", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PRIVATE, $method(static_cast<void(DFAContentModel::*)($CMNode*)>(&DFAContentModel::calcFollowList))},
-	{"dumpTree", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;I)V", nullptr, $PRIVATE, $method(static_cast<void(DFAContentModel::*)($CMNode*,int32_t)>(&DFAContentModel::dumpTree))},
-	{"makeDefStateList", "()[I", nullptr, $PRIVATE, $method(static_cast<$ints*(DFAContentModel::*)()>(&DFAContentModel::makeDefStateList))},
-	{"postTreeBuildInit", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;I)I", nullptr, $PRIVATE, $method(static_cast<int32_t(DFAContentModel::*)($CMNode*,int32_t)>(&DFAContentModel::postTreeBuildInit))},
-	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC},
+	{"<init>", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;IZ)V", nullptr, $PUBLIC, $method(DFAContentModel, init$, void, $CMNode*, int32_t, bool)},
+	{"buildDFA", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PRIVATE, $method(DFAContentModel, buildDFA, void, $CMNode*)},
+	{"calcFollowList", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;)V", nullptr, $PRIVATE, $method(DFAContentModel, calcFollowList, void, $CMNode*)},
+	{"dumpTree", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;I)V", nullptr, $PRIVATE, $method(DFAContentModel, dumpTree, void, $CMNode*, int32_t)},
+	{"makeDefStateList", "()[I", nullptr, $PRIVATE, $method(DFAContentModel, makeDefStateList, $ints*)},
+	{"postTreeBuildInit", "(Lcom/sun/org/apache/xerces/internal/impl/dtd/models/CMNode;I)I", nullptr, $PRIVATE, $method(DFAContentModel, postTreeBuildInit, int32_t, $CMNode*, int32_t)},
+	{"validate", "([Lcom/sun/org/apache/xerces/internal/xni/QName;II)I", nullptr, $PUBLIC, $virtualMethod(DFAContentModel, validate, int32_t, $QNameArray*, int32_t, int32_t)},
 	{}
 };
 

@@ -9,6 +9,7 @@
 using $ClassInfo = ::java::lang::ClassInfo;
 using $FieldInfo = ::java::lang::FieldInfo;
 using $MethodInfo = ::java::lang::MethodInfo;
+using $Enumeration = ::java::util::Enumeration;
 
 namespace com {
 	namespace sun {
@@ -25,15 +26,15 @@ $FieldInfo _NamespaceContext_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceContext_MethodInfo_[] = {
-	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT},
-	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC | $ABSTRACT},
-	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC | $ABSTRACT},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT},
-	{"popContext", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"pushContext", "()V", nullptr, $PUBLIC | $ABSTRACT},
-	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT},
+	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)Z", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, declarePrefix, bool, $String*, $String*)},
+	{"getAllPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, getAllPrefixes, $Enumeration*)},
+	{"getDeclaredPrefixAt", "(I)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, getDeclaredPrefixAt, $String*, int32_t)},
+	{"getDeclaredPrefixCount", "()I", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, getDeclaredPrefixCount, int32_t)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, getPrefix, $String*, $String*)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, getURI, $String*, $String*)},
+	{"popContext", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, popContext, void)},
+	{"pushContext", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, pushContext, void)},
+	{"reset", "()V", nullptr, $PUBLIC | $ABSTRACT, $virtualMethod(NamespaceContext, reset, void)},
 	{}
 };
 

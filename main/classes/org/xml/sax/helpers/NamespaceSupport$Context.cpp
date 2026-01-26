@@ -49,16 +49,16 @@ $FieldInfo _NamespaceSupport$Context_FieldInfo_[] = {
 };
 
 $MethodInfo _NamespaceSupport$Context_MethodInfo_[] = {
-	{"<init>", "(Lorg/xml/sax/helpers/NamespaceSupport;)V", nullptr, 0, $method(static_cast<void(NamespaceSupport$Context::*)($NamespaceSupport*)>(&NamespaceSupport$Context::init$))},
-	{"clear", "()V", nullptr, 0, $method(static_cast<void(NamespaceSupport$Context::*)()>(&NamespaceSupport$Context::clear))},
-	{"copyTables", "()V", nullptr, $PRIVATE, $method(static_cast<void(NamespaceSupport$Context::*)()>(&NamespaceSupport$Context::copyTables))},
-	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, 0, $method(static_cast<void(NamespaceSupport$Context::*)($String*,$String*)>(&NamespaceSupport$Context::declarePrefix))},
-	{"getDeclaredPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", 0, $method(static_cast<$Enumeration*(NamespaceSupport$Context::*)()>(&NamespaceSupport$Context::getDeclaredPrefixes))},
-	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(NamespaceSupport$Context::*)($String*)>(&NamespaceSupport$Context::getPrefix))},
-	{"getPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", 0, $method(static_cast<$Enumeration*(NamespaceSupport$Context::*)()>(&NamespaceSupport$Context::getPrefixes))},
-	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(static_cast<$String*(NamespaceSupport$Context::*)($String*)>(&NamespaceSupport$Context::getURI))},
-	{"processName", "(Ljava/lang/String;Z)[Ljava/lang/String;", nullptr, 0, $method(static_cast<$StringArray*(NamespaceSupport$Context::*)($String*,bool)>(&NamespaceSupport$Context::processName))},
-	{"setParent", "(Lorg/xml/sax/helpers/NamespaceSupport$Context;)V", nullptr, 0, $method(static_cast<void(NamespaceSupport$Context::*)(NamespaceSupport$Context*)>(&NamespaceSupport$Context::setParent))},
+	{"<init>", "(Lorg/xml/sax/helpers/NamespaceSupport;)V", nullptr, 0, $method(NamespaceSupport$Context, init$, void, $NamespaceSupport*)},
+	{"clear", "()V", nullptr, 0, $method(NamespaceSupport$Context, clear, void)},
+	{"copyTables", "()V", nullptr, $PRIVATE, $method(NamespaceSupport$Context, copyTables, void)},
+	{"declarePrefix", "(Ljava/lang/String;Ljava/lang/String;)V", nullptr, 0, $method(NamespaceSupport$Context, declarePrefix, void, $String*, $String*)},
+	{"getDeclaredPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", 0, $method(NamespaceSupport$Context, getDeclaredPrefixes, $Enumeration*)},
+	{"getPrefix", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(NamespaceSupport$Context, getPrefix, $String*, $String*)},
+	{"getPrefixes", "()Ljava/util/Enumeration;", "()Ljava/util/Enumeration<Ljava/lang/String;>;", 0, $method(NamespaceSupport$Context, getPrefixes, $Enumeration*)},
+	{"getURI", "(Ljava/lang/String;)Ljava/lang/String;", nullptr, 0, $method(NamespaceSupport$Context, getURI, $String*, $String*)},
+	{"processName", "(Ljava/lang/String;Z)[Ljava/lang/String;", nullptr, 0, $method(NamespaceSupport$Context, processName, $StringArray*, $String*, bool)},
+	{"setParent", "(Lorg/xml/sax/helpers/NamespaceSupport$Context;)V", nullptr, 0, $method(NamespaceSupport$Context, setParent, void, NamespaceSupport$Context*)},
 	{}
 };
 
